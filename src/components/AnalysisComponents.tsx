@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { TrendingUp, PlusCircle, Minus, Zap } from "lucide-react";
 import { Card, CardBody, CardHeader, Chip, Progress, CircularProgress, Divider } from "@heroui/react";
 
 interface MetricCardProps {
@@ -115,25 +116,64 @@ export function ScenarioCard({
   );
 }
 
+const statusConfig = {
+  'Strong Buy': {
+    hex: "#17c964",
+    dimHex: "rgba(23,201,100,0.12)",
+    label: "High Conviction — Core Position",
+    icon: <TrendingUp size={18} />,
+  },
+  'Accumulate': {
+    hex: "#006fee",
+    dimHex: "rgba(0,111,238,0.12)",
+    label: "Adding on Dips — Active Accumulation",
+    icon: <PlusCircle size={18} />,
+  },
+  'Hold': {
+    hex: "#71717a",
+    dimHex: "rgba(113,113,122,0.12)",
+    label: "Hold for Long-Term Compounding",
+    icon: <Minus size={18} />,
+  },
+  'Speculative Buy': {
+    hex: "#f5a524",
+    dimHex: "rgba(245,165,36,0.12)",
+    label: "Higher Risk / Asymmetric Reward",
+    icon: <Zap size={18} />,
+  },
+};
+
 export function RecommendationBadge({ status }: { status: 'Strong Buy' | 'Accumulate' | 'Hold' | 'Speculative Buy' }) {
-  const colorMap: Record<string, "success" | "primary" | "default" | "warning"> = {
-    'Strong Buy': "success",
-    'Accumulate': "primary",
-    'Hold': "default",
-    'Speculative Buy': "warning"
-  };
+  const cfg = statusConfig[status];
 
   return (
-    <div className="mt-4">
-      <Chip 
-        color={colorMap[status]} 
-        variant="dot" 
-        className="backdrop-blur-md bg-white/5 p-4 py-6 border-white/10 max-w-full"
-        size="lg"
-      >
-        <span className="text-[10px] md:text-xs text-white/60 mr-2 uppercase">Portfolio Status:</span>
-        <span className="font-bold uppercase text-xs md:text-sm">{status}</span>
-      </Chip>
+    <div
+      className="relative mt-4 inline-flex items-center gap-4 rounded-xl border backdrop-blur-md px-5 py-3.5 overflow-hidden"
+      style={{ borderColor: `${cfg.hex}30`, background: cfg.dimHex }}
+    >
+      {/* Colored left accent bar */}
+      <div className="absolute left-0 top-0 bottom-0 w-[3px] rounded-l-xl" style={{ background: cfg.hex }} />
+
+      {/* Pulsing dot */}
+      <div className="relative shrink-0 ml-1">
+        <div className="w-2 h-2 rounded-full" style={{ background: cfg.hex }} />
+        <div
+          className="absolute inset-0 w-2 h-2 rounded-full animate-ping opacity-40"
+          style={{ background: cfg.hex }}
+        />
+      </div>
+
+      {/* Text */}
+      <div>
+        <p className="text-[10px] uppercase tracking-widest font-black text-white/40 mb-0.5">Portfolio Status</p>
+        <p className="font-black uppercase text-sm leading-none" style={{ color: cfg.hex }}>{status}</p>
+        <p className="text-[11px] text-white/40 mt-1">{cfg.label}</p>
+      </div>
+
+      {/* Icon */}
+      <div className="shrink-0 ml-2" style={{ color: cfg.hex }}>
+        {cfg.icon}
+      </div>
     </div>
   );
 }
