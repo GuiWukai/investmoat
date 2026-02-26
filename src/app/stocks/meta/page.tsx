@@ -1,4 +1,4 @@
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge } from "@/components/AnalysisComponents";
 import { Users, Cpu, Share2, DollarSign } from "lucide-react";
 
 export default function MetaPage() {
@@ -15,6 +15,7 @@ export default function MetaPage() {
           <span>Market Cap: <strong>$1.25T</strong></span>
           <span>Current Price: <strong>$492.30</strong></span>
         </div>
+        <RecommendationBadge status="Accumulate" />
       </header>
 
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>

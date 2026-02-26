@@ -1,4 +1,4 @@
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge } from "@/components/AnalysisComponents";
 import { Calculator, Wallet, BarChart, DollarSign } from "lucide-react";
 
 export default function IntuitPage() {
@@ -15,6 +15,7 @@ export default function IntuitPage() {
           <span>Market Cap: <strong>$185B</strong></span>
           <span>Price: <strong>$658.10</strong></span>
         </div>
+        <RecommendationBadge status="Accumulate" />
       </header>
 
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>

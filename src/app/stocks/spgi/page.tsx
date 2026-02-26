@@ -1,4 +1,4 @@
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge } from "@/components/AnalysisComponents";
 import { Landmark, TrendingUp, Shield, BarChart3 } from "lucide-react";
 
 export default function SPGlobalPage() {
@@ -15,6 +15,7 @@ export default function SPGlobalPage() {
           <span>Market Cap: <strong>$142B</strong></span>
           <span>Price: <strong>$448.20</strong></span>
         </div>
+        <RecommendationBadge status="Hold" />
       </header>
 
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>

@@ -1,4 +1,4 @@
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge } from "@/components/AnalysisComponents";
 import { Zap, Car, Battery, Cpu } from "lucide-react";
 
 export default function TeslaPage() {
@@ -15,6 +15,7 @@ export default function TeslaPage() {
           <span>Market Cap: <strong>$560B</strong></span>
           <span>Price: <strong>$175.20</strong></span>
         </div>
+        <RecommendationBadge status="Hold" />
       </header>
 
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>

@@ -1,4 +1,4 @@
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge } from "@/components/AnalysisComponents";
 import { ShoppingCart, Cloud, Truck, DollarSign } from "lucide-react";
 
 export default function AmazonPage() {
@@ -15,6 +15,7 @@ export default function AmazonPage() {
           <span>Market Cap: <strong>$1.92T</strong></span>
           <span>Current Price: <strong>$185.20</strong></span>
         </div>
+        <RecommendationBadge status="Strong Buy" />
       </header>
 
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>

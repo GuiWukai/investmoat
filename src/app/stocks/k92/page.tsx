@@ -1,4 +1,4 @@
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge } from "@/components/AnalysisComponents";
 import { Pickaxe, Drill, Zap, Gem } from "lucide-react";
 
 export default function K92Page() {
@@ -15,6 +15,7 @@ export default function K92Page() {
           <span>Market Cap: <strong>$1.45B (CAD)</strong></span>
           <span>Mine: <strong>Kainantu, PNG</strong></span>
         </div>
+        <RecommendationBadge status="Speculative Buy" />
       </header>
 
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>

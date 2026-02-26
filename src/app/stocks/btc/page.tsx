@@ -1,4 +1,4 @@
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge } from "@/components/AnalysisComponents";
 import { Coins, Shield, Globe, Lock } from "lucide-react";
 
 export default function BitcoinPage() {
@@ -15,6 +15,7 @@ export default function BitcoinPage() {
           <span>Market Cap: <strong>$1.3T</strong></span>
           <span>Circulating Supply: <strong>19.7M / 21M</strong></span>
         </div>
+        <RecommendationBadge status="Strong Buy" />
       </header>
 
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>

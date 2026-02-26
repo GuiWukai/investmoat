@@ -100,3 +100,34 @@ export function ScenarioCard({
     </div>
   );
 }
+
+export function RecommendationBadge({ status }: { status: 'Strong Buy' | 'Accumulate' | 'Hold' | 'Speculative Buy' }) {
+  const styles = {
+    'Strong Buy': { bg: 'rgba(16, 185, 129, 0.1)', color: '#10b981', border: 'rgba(16, 185, 129, 0.3)' },
+    'Accumulate': { bg: 'rgba(59, 130, 246, 0.1)', color: '#3b82f6', border: 'rgba(59, 130, 246, 0.3)' },
+    'Hold': { bg: 'rgba(100, 116, 139, 0.1)', color: '#94a3b8', border: 'rgba(100, 116, 139, 0.3)' },
+    'Speculative Buy': { bg: 'rgba(245, 158, 11, 0.1)', color: '#f59e0b', border: 'rgba(245, 158, 11, 0.3)' }
+  };
+
+  const current = styles[status];
+
+  return (
+    <div style={{ 
+      display: 'inline-flex', 
+      alignItems: 'center', 
+      padding: '0.5rem 1rem', 
+      background: current.bg, 
+      color: current.color, 
+      border: `1px solid ${current.border}`,
+      borderRadius: '8px',
+      fontSize: '0.875rem',
+      fontWeight: 700,
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
+      marginTop: '1rem',
+      backdropFilter: 'blur(4px)'
+    }}>
+      <span style={{ marginRight: '0.5rem', opacity: 0.7 }}>Portfolio Status:</span> {status}
+    </div>
+  );
+}

@@ -1,4 +1,4 @@
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge } from "@/components/AnalysisComponents";
 import { Laptop, Cloud, Database, DollarSign } from "lucide-react";
 
 export default function MicrosoftPage() {
@@ -15,6 +15,7 @@ export default function MicrosoftPage() {
           <span>Market Cap: <strong>$3.1T</strong></span>
           <span>Price: <strong>$415.50</strong></span>
         </div>
+        <RecommendationBadge status="Strong Buy" />
       </header>
 
       <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
