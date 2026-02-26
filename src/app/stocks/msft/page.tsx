@@ -1,4 +1,4 @@
-import { MetricCard, ScoreGauge, AnalysisSection } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard } from "@/components/AnalysisComponents";
 import { Laptop, Cloud, Database, DollarSign } from "lucide-react";
 
 export default function MicrosoftPage() {
@@ -55,6 +55,40 @@ export default function MicrosoftPage() {
             <li><strong style={{ color: 'white' }}>Network Effects:</strong> LinkedIn's value grows with every professional user, creating a monopoly on professional networking and recruitment data.</li>
             <li><strong style={{ color: 'white' }}>Mission Critical:</strong> Their tools are not discretionary; they are the "oxygen" of the modern workplace.</li>
           </ul>
+        </div>
+      </AnalysisSection>
+      <AnalysisSection title="Price Scenarios (12-24 Months)">
+        <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+          <ScenarioCard 
+            type="Bear" 
+            priceTarget="$320" 
+            description="Cloud growth matures faster than expected and AI ROI remains elusive."
+            points={[
+              "Azure growth slows to sub-20%",
+              "Office subscriptions hit peak saturation",
+              "OpenAI partnership faces regulatory hurdles"
+            ]}
+          />
+          <ScenarioCard 
+            type="Base" 
+            priceTarget="$460" 
+            description="Robust enterprise demand for Azure and successful Copilot monetization."
+            points={[
+              "Azure growth stays consistently above 25%",
+              "Microsoft 365 Copilot sees 15%+ adoption",
+              "Steady margin expansion through operational leverage"
+            ]}
+          />
+          <ScenarioCard 
+            type="Bull" 
+            priceTarget="$580" 
+            description="AI becomes the dominant operating system for all enterprise workflows."
+            points={[
+              "Azure becomes a $150B+ annual run-rate business",
+              "GitHub Copilot dominates the developer market",
+              "Massive gaming expansion post-Activision integration"
+            ]}
+          />
         </div>
       </AnalysisSection>
     </div>

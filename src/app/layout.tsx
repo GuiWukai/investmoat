@@ -40,7 +40,8 @@ export default function RootLayout({
               <Link href="/stocks/intuit" className="nav-item">Intuit (INTU)</Link>
               <Link href="/stocks/spgi" className="nav-item">S&P Global (SPGI)</Link>
               
-              <div style={{ marginTop: '1.25rem', marginBottom: '0.5rem', fontSize: '0.7rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Niche & Commodities</div>
+              <div style={{ marginTop: '1.25rem', marginBottom: '0.5rem', fontSize: '0.7rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Hard Assets & Crypto</div>
+              <Link href="/stocks/btc" className="nav-item">Bitcoin (BTC)</Link>
               <Link href="/stocks/k92" className="nav-item">K92 Mining (KNT)</Link>
             </nav>
 

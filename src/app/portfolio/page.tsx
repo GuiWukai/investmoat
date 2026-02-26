@@ -2,13 +2,14 @@ import { PieChart, List, Target, ShieldCheck } from "lucide-react";
 
 export default function PortfolioPage() {
   const distribution = [
-    { ticker: "MSFT", name: "Microsoft", weight: 22, color: "#00a4ef", category: "Core SaaS" },
-    { ticker: "AMZN", name: "Amazon", weight: 20, color: "#f59e0b", category: "Eco-System" },
-    { ticker: "META", name: "Meta", weight: 15, color: "#1877F2", category: "Social Network" },
-    { ticker: "SPGI", name: "S&P Global", weight: 12, color: "#cf102d", category: "Financial Toll-Bridge" },
-    { ticker: "INTU", name: "Intuit", weight: 12, color: "#2ca01c", category: "FinTech" },
+    { ticker: "MSFT", name: "Microsoft", weight: 20, color: "#00a4ef", category: "Core SaaS" },
+    { ticker: "AMZN", name: "Amazon", weight: 18, color: "#f59e0b", category: "Eco-System" },
+    { ticker: "META", name: "Meta", weight: 14, color: "#1877F2", category: "Social Network" },
+    { ticker: "BTC", name: "Bitcoin", weight: 10, color: "#f7931a", category: "Digital Asset" },
+    { ticker: "SPGI", name: "S&P Global", weight: 10, color: "#cf102d", category: "Financial Toll-Bridge" },
+    { ticker: "INTU", name: "Intuit", weight: 10, color: "#2ca01c", category: "FinTech" },
     { ticker: "TSLA", name: "Tesla", weight: 10, color: "#cc0000", category: "Hyper-Growth" },
-    { ticker: "KNT", name: "K92 Mining", weight: 9, color: "#f59e0b", category: "Speculative/Mining" },
+    { ticker: "KNT", name: "K92 Mining", weight: 8, color: "#64748b", category: "Mining/Commodity" },
   ];
 
   return (
@@ -59,11 +60,11 @@ export default function PortfolioPage() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <div>
               <div style={{ fontSize: '0.75rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Risk Profile</div>
-              <div style={{ fontWeight: 600 }}>Balanced Growth / Aggressive Moat</div>
+              <div style={{ fontWeight: 600 }}>Aggressive Growth / Wide Moat</div>
             </div>
             <div>
               <div style={{ fontSize: '0.75rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Concentration</div>
-              <div style={{ fontWeight: 600 }}>Top 3 (MSFT, AMZN, META) = 57%</div>
+              <div style={{ fontWeight: 600 }}>Top 3 (MSFT, AMZN, META) = 52%</div>
             </div>
             <div>
               <div style={{ fontSize: '0.75rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Portfolio Rebalance</div>
@@ -82,7 +83,7 @@ export default function PortfolioPage() {
           <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
             <thead>
               <tr style={{ borderBottom: '1px solid var(--glass-border)' }}>
-                <th style={{ padding: '1.5rem', fontSize: '0.875rem', color: 'var(--muted-foreground)' }}>Stock</th>
+                <th style={{ padding: '1.5rem', fontSize: '0.875rem', color: 'var(--muted-foreground)' }}>Asset</th>
                 <th style={{ padding: '1.5rem', fontSize: '0.875rem', color: 'var(--muted-foreground)' }}>Category</th>
                 <th style={{ padding: '1.5rem', fontSize: '0.875rem', color: 'var(--muted-foreground)' }}>Target Weight</th>
                 <th style={{ padding: '1.5rem', fontSize: '0.875rem', color: 'var(--muted-foreground)' }}>Conviction</th>
@@ -110,7 +111,7 @@ export default function PortfolioPage() {
                             width: '12px', 
                             height: '4px', 
                             borderRadius: '2px', 
-                            background: i < (stock.weight / 4.5) ? 'var(--primary)' : 'var(--glass-border)' 
+                            background: i < Math.ceil(stock.weight / 4) ? 'var(--primary)' : 'var(--glass-border)' 
                           }} 
                         />
                       ))}

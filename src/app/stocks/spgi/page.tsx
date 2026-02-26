@@ -1,4 +1,4 @@
-import { MetricCard, ScoreGauge, AnalysisSection } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard } from "@/components/AnalysisComponents";
 import { Landmark, TrendingUp, Shield, BarChart3 } from "lucide-react";
 
 export default function SPGlobalPage() {
@@ -55,6 +55,40 @@ export default function SPGlobalPage() {
             <li><strong style={{ color: 'white' }}>IP Moat:</strong> The S&P 500 brand is the most licensed index in the world. Asset managers pay SPGI every time a new ETF is created.</li>
             <li><strong style={{ color: 'white' }}>Low Capex:</strong> Once the rating methodologies and data platforms are built, every additional dollar of revenue flows straight to the bottom line.</li>
           </ul>
+        </div>
+      </AnalysisSection>
+      <AnalysisSection title="Price Scenarios (12-24 Months)">
+        <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+          <ScenarioCard 
+            type="Bear" 
+            priceTarget="$350" 
+            description="Global debt issuance freezes and market data subscription churn."
+            points={[
+              "High interest rates kill new corporate bond issuance",
+              "Consolidation in the financial sector reduces terminal counts",
+              "ESG revenue faces political and regulatory backlash"
+            ]}
+          />
+          <ScenarioCard 
+            type="Base" 
+            priceTarget="$480" 
+            description="Steady 7-9% revenue growth and ratings recovery post-2024."
+            points={[
+              "Refinancing 'wall' leads to steady ratings demand",
+              "Index licensing grows with equity market appreciation",
+              "Operating margins remain above 45%"
+            ]}
+          />
+          <ScenarioCard 
+            type="Bull" 
+            priceTarget="$560" 
+            description="Massive expansion into private market data and ESG dominance."
+            points={[
+              "Acquisition integration creates significant cost synergies",
+              "Private credit ratings become a standard requirement",
+              "Dividend growth re-accelerates to >15%"
+            ]}
+          />
         </div>
       </AnalysisSection>
     </div>

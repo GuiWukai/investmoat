@@ -1,4 +1,4 @@
-import { MetricCard, ScoreGauge, AnalysisSection } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard } from "@/components/AnalysisComponents";
 import { Calculator, Wallet, BarChart, DollarSign } from "lucide-react";
 
 export default function IntuitPage() {
@@ -55,6 +55,40 @@ export default function IntuitPage() {
             <li><strong style={{ color: 'white' }}>Regulatory Tailwinds:</strong> Tax complexity ensures TurboTax remains a necessity for the consumer segment.</li>
             <li><strong style={{ color: 'white' }}>Data Advantage:</strong> Intuit sees more SMB transaction data than almost any bank, allowing for superior credit underwriting.</li>
           </ul>
+        </div>
+      </AnalysisSection>
+      <AnalysisSection title="Price Scenarios (12-24 Months)">
+        <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+          <ScenarioCard 
+            type="Bear" 
+            priceTarget="$520" 
+            description="IRS Direct File impacts TurboTax market share and SMB churn rises."
+            points={[
+              "TurboTax units decline as government option gains traction",
+              "SMB bankruptcy rates increase in high-rate environment",
+              "Credit Karma segment continues to face lending headwinds"
+            ]}
+          />
+          <ScenarioCard 
+            type="Base" 
+            priceTarget="$700" 
+            description="Strong QuickBooks pricing power and AI-driven efficiency gains."
+            points={[
+              "Mid-market QuickBooks expansion continues",
+              "Successful monetization of 'Intuit Assist' AI tools",
+              "Operating margins expand by 100-200 bps"
+            ]}
+          />
+          <ScenarioCard 
+            type="Bull" 
+            priceTarget="$850" 
+            description="Complete automation of accounting flow for 10M+ SMBs globally."
+            points={[
+              "International expansion reaches critical mass",
+              "B2B payments volume through QuickBooks doubles",
+              "Credit Karma becomes a leading financial super-app"
+            ]}
+          />
         </div>
       </AnalysisSection>
     </div>

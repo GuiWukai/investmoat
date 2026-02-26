@@ -1,4 +1,4 @@
-import { MetricCard, ScoreGauge, AnalysisSection } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard } from "@/components/AnalysisComponents";
 import { Users, Cpu, Share2, DollarSign } from "lucide-react";
 
 export default function MetaPage() {
@@ -92,6 +92,40 @@ export default function MetaPage() {
               AI-generated ad creatives and video recommendations are significantly increasing time spent per user and conversion rates for advertisers.
             </p>
           </div>
+        </div>
+      </AnalysisSection>
+      <AnalysisSection title="Price Scenarios (12-24 Months)">
+        <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+          <ScenarioCard 
+            type="Bear" 
+            priceTarget="$350" 
+            description="Engagement declines due to TikTok/competition and ad market weakens."
+            points={[
+              "DAP growth turns negative in top markets",
+              "Operating margins contract back to sub-30%",
+              "Massive AI CapEx fails to yield ROI"
+            ]}
+          />
+          <ScenarioCard 
+            type="Base" 
+            priceTarget="$550" 
+            description="Steady ad revenue and AI integration improves targeting/monetization."
+            points={[
+              "Ad revenue grows 10-12% annually",
+              "Reels reaches parity with main feed revenue",
+              "Free cash flow supports significant buybacks"
+            ]}
+          />
+          <ScenarioCard 
+            type="Bull" 
+            priceTarget="$750" 
+            description="Llama becomes the industry standard and Threads monetization explodes."
+            points={[
+              "Enterprise AI licensing becomes major revenue stream",
+              "Threads captures significant X (Twitter) market share",
+              "Metaverse R&D burns decrease significantly"
+            ]}
+          />
         </div>
       </AnalysisSection>
     </div>

@@ -1,4 +1,4 @@
-import { MetricCard, ScoreGauge, AnalysisSection } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard } from "@/components/AnalysisComponents";
 import { Pickaxe, Drill, Zap, Gem } from "lucide-react";
 
 export default function K92Page() {
@@ -94,6 +94,40 @@ export default function K92Page() {
               <div style={{ fontSize: '1.25rem', fontWeight: 600 }}>300k+ oz AuEq</div>
             </div>
           </div>
+        </div>
+      </AnalysisSection>
+      <AnalysisSection title="Price Scenarios (12-24 Months)">
+        <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+          <ScenarioCard 
+            type="Bear" 
+            priceTarget="$5.50" 
+            description="Gold price drops below $2000 and expansion projects face delays."
+            points={[
+              "PNG jurisdictional risk leads to tax/permit issues",
+              "Stage 3 commissioning delayed by 12+ months",
+              "Production grades underperform geological model"
+            ]}
+          />
+          <ScenarioCard 
+            type="Base" 
+            priceTarget="$12.00" 
+            description="Stage 3 expansion success with gold prices holding >$2300."
+            points={[
+              "Production grows to 250k+ oz annually",
+              "AISC (All-In Sustaining Costs) remains in bottom quartile",
+              "Continued exploration success at Kora/Judd"
+            ]}
+          />
+          <ScenarioCard 
+            type="Bull" 
+            priceTarget="$18.00" 
+            description="Gold hits $3000 and Stage 4 expansion proves a world-class resource."
+            points={[
+              "Total production exceeds 400k oz per year",
+              "Major gold producer makes an acquisition bid",
+              "Massive new porphyry discovery on property"
+            ]}
+          />
         </div>
       </AnalysisSection>
     </div>

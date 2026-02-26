@@ -9,6 +9,7 @@ export default function HomePage() {
     { name: "Tesla Inc.", ticker: "TSLA", desc: "Vertically integrated leader in EV, Energy, and Autonomy.", href: "/stocks/tesla" },
     { name: "Intuit Inc.", ticker: "INTU", desc: "High-switching cost platform for small business and tax software.", href: "/stocks/intuit" },
     { name: "S&P Global", ticker: "SPGI", desc: "Oligopoly control over global debt ratings and financial data.", href: "/stocks/spgi" },
+    { name: "Bitcoin", ticker: "BTC", desc: "Foundational digital asset with absolute scarcity and network security.", href: "/stocks/btc" },
     { name: "K92 Mining Ltd.", ticker: "KNT", desc: "High-grade gold production with massive exploration upside.", href: "/stocks/k92" },
   ];
 

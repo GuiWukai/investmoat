@@ -1,4 +1,4 @@
-import { MetricCard, ScoreGauge, AnalysisSection } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard } from "@/components/AnalysisComponents";
 import { ShoppingCart, Cloud, Truck, DollarSign } from "lucide-react";
 
 export default function AmazonPage() {
@@ -103,6 +103,40 @@ export default function AmazonPage() {
               Using a 10-year DCF with a 9% WACC and a 3.5% terminal growth rate, our fair value estimate for AMZN is <strong>$215/share</strong>. With current trading at $185, this provides a 14% margin of safety.
             </p>
           </div>
+        </div>
+      </AnalysisSection>
+      <AnalysisSection title="Price Scenarios (12-24 Months)">
+        <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+          <ScenarioCard 
+            type="Bear" 
+            priceTarget="$140" 
+            description="Macro slowdown hits consumer spending and AWS margins compress."
+            points={[
+              "E-commerce growth falls below 5%",
+              "AWS revenue decelerates to mid-teens",
+              "Regulatory pressure on marketplace fees"
+            ]}
+          />
+          <ScenarioCard 
+            type="Base" 
+            priceTarget="$210" 
+            description="Continued efficiency gains in fulfillment and steady AWS growth."
+            points={[
+              "AWS growth stays in 17-20% range",
+              "Advertising revenue remains major margin driver",
+              "International retail reaches sustainable profit"
+            ]}
+          />
+          <ScenarioCard 
+            type="Bull" 
+            priceTarget="$265" 
+            description="AI demand triggers massive AWS expansion and logistics monetization."
+            points={[
+              "AWS growth re-accelerates above 25%",
+              "Logistics-as-a-service becomes 4th pillar",
+              "Massive FCF generation leads to buybacks"
+            ]}
+          />
         </div>
       </AnalysisSection>
     </div>

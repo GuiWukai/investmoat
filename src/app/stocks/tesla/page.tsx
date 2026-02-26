@@ -1,4 +1,4 @@
-import { MetricCard, ScoreGauge, AnalysisSection } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard } from "@/components/AnalysisComponents";
 import { Zap, Car, Battery, Cpu } from "lucide-react";
 
 export default function TeslaPage() {
@@ -55,6 +55,40 @@ export default function TeslaPage() {
             <li><strong style={{ color: 'white' }}>Data Flywheel:</strong> Millions of cars on the road feeding data into Tesla's AI Dojo training cluster creates a gap in autonomous software.</li>
             <li><strong style={{ color: 'white' }}>Brand Authority:</strong> Zero marketing spend with 100% brand recognition creates a unique customer acquisition advantage.</li>
           </ul>
+        </div>
+      </AnalysisSection>
+      <AnalysisSection title="Price Scenarios (12-24 Months)">
+        <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+          <ScenarioCard 
+            type="Bear" 
+            priceTarget="$100" 
+            description="EV margins continue to slide and FSD timeline is pushed indefinitely."
+            points={[
+              "Auto gross margins fall below 12%",
+              "Competition from BYD/Xiaomi erodes China share",
+              "Robotaxi regulatory hurdles remain insurmountable"
+            ]}
+          />
+          <ScenarioCard 
+            type="Base" 
+            priceTarget="$220" 
+            description="Stabilizing margins and high growth in Energy Storage offset EV cyclicality."
+            points={[
+              "Next-gen platform ('Model 2') enters production",
+              "Energy storage deployment grows 100% YoY",
+              "FSD licensing talks with major OEMs begin"
+            ]}
+          />
+          <ScenarioCard 
+            type="Bull" 
+            priceTarget="$450" 
+            description="Robotaxi network launch and Optimus robotics production readiness."
+            points={[
+              "Software revenue becomes >30% of total EBIT",
+              "Unsupervised FSD approved in major US cities",
+              "Tesla Energy becomes as large as the Auto business"
+            ]}
+          />
         </div>
       </AnalysisSection>
     </div>

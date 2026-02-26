@@ -67,3 +67,36 @@ export function AnalysisSection({ title, children }: { title: string, children: 
     </section>
   );
 }
+
+export function ScenarioCard({ 
+  type, 
+  priceTarget, 
+  description, 
+  points 
+}: { 
+  type: 'Bear' | 'Base' | 'Bull', 
+  priceTarget: string, 
+  description: string,
+  points: string[]
+}) {
+  const colors = {
+    Bear: 'var(--destructive)',
+    Base: 'var(--primary)',
+    Bull: 'var(--accent)'
+  };
+
+  return (
+    <div className="glass-card" style={{ flex: 1, borderTop: `4px solid ${colors[type]}` }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+        <h4 style={{ color: colors[type], fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>{type} CASE</h4>
+        <span style={{ fontSize: '1.25rem', fontWeight: 700 }}>{priceTarget}</span>
+      </div>
+      <p style={{ fontSize: '0.875rem', color: 'white', marginBottom: '1rem', fontWeight: 500 }}>{description}</p>
+      <ul style={{ paddingLeft: '1rem', fontSize: '0.8125rem', color: 'var(--muted-foreground)', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+        {points.map((point, i) => (
+          <li key={i}>{point}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
