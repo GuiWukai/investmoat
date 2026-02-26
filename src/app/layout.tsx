@@ -67,7 +67,7 @@ export default function RootLayout({
         <Providers>
           <div className="main-container">
             {/* Mobile Top Bar */}
-            <div className="lg:hidden sticky top-0 z-50 flex items-center px-4 h-16 bg-background/70 backdrop-blur-lg border-b border-white/5">
+            <div className="lg:hidden sticky top-0 z-50 flex items-center justify-start px-4 h-16 bg-background/70 backdrop-blur-lg border-b border-white/5">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 aria-label={isMenuOpen ? "Close menu" : "Open menu"}
