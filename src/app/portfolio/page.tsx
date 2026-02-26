@@ -5,20 +5,22 @@ import { Card, CardBody, CardHeader, Progress, Table, TableHeader, TableColumn, 
 
 export default function PortfolioPage() {
   const distribution = [
-    { ticker: "MSFT", name: "Microsoft", weight: 12, color: "#00a4ef", category: "Core SaaS" },
-    { ticker: "AMZN", name: "Amazon", weight: 12, color: "#f59e0b", category: "Eco-System" },
-    { ticker: "META", name: "Meta", weight: 10, color: "#1877F2", category: "Social Network" },
-    { ticker: "NVDA", name: "NVIDIA", weight: 8, color: "#76b900", category: "AI Infrastructure" },
+    { ticker: "MSFT", name: "Microsoft", weight: 11, color: "#00a4ef", category: "Core SaaS" },
+    { ticker: "AMZN", name: "Amazon", weight: 11, color: "#f59e0b", category: "Eco-System" },
+    { ticker: "META", name: "Meta", weight: 9, color: "#1877F2", category: "Social Network" },
+    { ticker: "NVDA", name: "NVIDIA", weight: 7, color: "#76b900", category: "AI Infrastructure" },
     { ticker: "V", name: "Visa", weight: 8, color: "#1a1f71", category: "Payments" },
     { ticker: "MA", name: "Mastercard", weight: 8, color: "#eb001b", category: "Payments" },
-    { ticker: "BTC", name: "Bitcoin", weight: 8, color: "#f7931a", category: "Digital Asset" },
-    { ticker: "ADBE", name: "Adobe", weight: 6, color: "#ff0000", category: "Creative SaaS" },
+    { ticker: "BTC", name: "Bitcoin", weight: 7, color: "#f7931a", category: "Digital Asset" },
+    { ticker: "ADBE", name: "Adobe", weight: 5, color: "#ff0000", category: "Creative SaaS" },
     { ticker: "CRM", name: "Salesforce", weight: 6, color: "#00a1e0", category: "Enterprise SaaS" },
     { ticker: "ASML", name: "ASML", weight: 6, color: "#0071c5", category: "Lithography" },
+    { ticker: "TSLA", name: "Tesla", weight: 4, color: "#e31937", category: "Autonomous EV" },
     { ticker: "NFLX", name: "Netflix", weight: 4, color: "#e50914", category: "Streaming" },
     { ticker: "SPGI", name: "S&P Global", weight: 4, color: "#cf102d", category: "Financials" },
     { ticker: "INTU", name: "Intuit", weight: 4, color: "#2ca01c", category: "FinTech" },
     { ticker: "KNT", name: "K92 Mining", weight: 4, color: "#64748b", category: "Commodities" },
+    { ticker: "AMD", name: "AMD", weight: 2, color: "#007db8", category: "AI Chips" },
   ];
 
   return (
@@ -28,7 +30,7 @@ export default function PortfolioPage() {
           Portfolio Distribution
         </h1>
         <p className="text-white/60 text-base md:text-xl max-w-2xl">
-          Optimized allocation across 14 high-conviction assets based on moat durability and growth scaling.
+          Optimized allocation across 16 high-conviction assets based on moat durability and growth scaling.
         </p>
       </header>
 
@@ -69,16 +71,16 @@ export default function PortfolioPage() {
           <CardBody className="p-6 gap-6">
             <div>
               <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Diversification</p>
-              <p className="text-lg font-bold">14 Core Positions</p>
+              <p className="text-lg font-bold">16 Core Positions</p>
             </div>
             <div>
               <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Alpha Generators</p>
-              <p className="text-lg font-bold">ASML, NVDA, BTC (22% Total)</p>
+              <p className="text-lg font-bold">ASML, NVDA, AMD, BTC (22% Total)</p>
             </div>
             <div>
               <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Concentration</p>
               <Progress 
-                value={64} 
+                value={61}
                 label="Tech & SaaS" 
                 size="sm" 
                 color="primary"
