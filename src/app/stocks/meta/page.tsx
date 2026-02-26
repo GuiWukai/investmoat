@@ -1,6 +1,7 @@
 'use client';
 
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
+import { tenMoatsData } from "@/app/tenMoatsData";
 import { Users, Cpu, Share2, DollarSign } from "lucide-react";
 import { Card, CardBody, Chip } from "@heroui/react";
 
@@ -68,9 +69,9 @@ export default function MetaPage() {
 
       <AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <ScenarioCard 
-            type="Bear" 
-            priceTarget="$380" 
+          <ScenarioCard
+            type="Bear"
+            priceTarget="$380"
             description="Regulatory fines and a shift in user engagement to newer platforms."
             points={[
               "EU privacy laws severely impact targeting precision",
@@ -78,9 +79,9 @@ export default function MetaPage() {
               "Ad-market recession hits digital spend"
             ]}
           />
-          <ScenarioCard 
-            type="Base" 
-            priceTarget="$520" 
+          <ScenarioCard
+            type="Base"
+            priceTarget="$520"
             description="Steady ad-revenue growth and AI-driven efficiency gains."
             points={[
               "Ad revenue grows 12-15% annually",
@@ -88,9 +89,9 @@ export default function MetaPage() {
               "Share buybacks continue at $50B+ clip"
             ]}
           />
-          <ScenarioCard 
-            type="Bull" 
-            priceTarget="$650" 
+          <ScenarioCard
+            type="Bull"
+            priceTarget="$650"
             description="Llama becomes the industry standard and WhatsApp monetization explodes."
             points={[
               "WhatsApp business messaging becomes a $10B high-margin pillar",
@@ -99,6 +100,10 @@ export default function MetaPage() {
             ]}
           />
         </div>
+      </AnalysisSection>
+
+      <AnalysisSection title="Ten Moats Framework">
+        <TenMoatsCard data={tenMoatsData['META']} />
       </AnalysisSection>
     </div>
   );

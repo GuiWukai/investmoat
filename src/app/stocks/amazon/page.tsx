@@ -1,6 +1,7 @@
 'use client';
 
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
+import { tenMoatsData } from "@/app/tenMoatsData";
 import { ShoppingCart, Cloud, Truck, DollarSign } from "lucide-react";
 import { Card, CardBody, CardHeader, Chip, Divider } from "@heroui/react";
 
@@ -128,9 +129,9 @@ export default function AmazonPage() {
 
       <AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <ScenarioCard 
-            type="Bear" 
-            priceTarget="$140" 
+          <ScenarioCard
+            type="Bear"
+            priceTarget="$140"
             description="Macro slowdown hits consumer spending and AWS margins compress."
             points={[
               "E-commerce growth falls below 5%",
@@ -138,9 +139,9 @@ export default function AmazonPage() {
               "Regulatory pressure on marketplace fees"
             ]}
           />
-          <ScenarioCard 
-            type="Base" 
-            priceTarget="$210" 
+          <ScenarioCard
+            type="Base"
+            priceTarget="$210"
             description="Continued efficiency gains in fulfillment and steady AWS growth."
             points={[
               "AWS growth stays in 17-20% range",
@@ -148,9 +149,9 @@ export default function AmazonPage() {
               "International retail reaches sustainable profit"
             ]}
           />
-          <ScenarioCard 
-            type="Bull" 
-            priceTarget="$265" 
+          <ScenarioCard
+            type="Bull"
+            priceTarget="$265"
             description="AI demand triggers massive AWS expansion and logistics monetization."
             points={[
               "AWS growth re-accelerates above 25%",
@@ -159,6 +160,10 @@ export default function AmazonPage() {
             ]}
           />
         </div>
+      </AnalysisSection>
+
+      <AnalysisSection title="Ten Moats Framework">
+        <TenMoatsCard data={tenMoatsData['AMZN']} />
       </AnalysisSection>
     </div>
   );

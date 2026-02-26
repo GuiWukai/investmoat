@@ -1,6 +1,7 @@
 'use client';
 
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
+import { tenMoatsData } from "@/app/tenMoatsData";
 import { Cpu, Zap, Target, Layers } from "lucide-react";
 import { Card, CardBody, Chip } from "@heroui/react";
 
@@ -68,9 +69,9 @@ export default function AsmlPage() {
 
       <AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <ScenarioCard 
-            type="Bear" 
-            priceTarget="$750" 
+          <ScenarioCard
+            type="Bear"
+            priceTarget="$750"
             description="Geopolitical restrictions on China revenue tighten further."
             points={[
               "Banning of older DUV machine exports to China",
@@ -78,9 +79,9 @@ export default function AsmlPage() {
               "Cyclical downturn in consumer electronics demand"
             ]}
           />
-          <ScenarioCard 
-            type="Base" 
-            priceTarget="$1,100" 
+          <ScenarioCard
+            type="Base"
+            priceTarget="$1,100"
             description="Continued 2nm/3nm capacity buildout and High-NA rollout."
             points={[
               "Successful scaling of High-NA EUV production",
@@ -88,9 +89,9 @@ export default function AsmlPage() {
               "Consistent 15%+ EPS growth"
             ]}
           />
-          <ScenarioCard 
-            type="Bull" 
-            priceTarget="$1,400" 
+          <ScenarioCard
+            type="Bull"
+            priceTarget="$1,400"
             description="Massive acceleration in global foundry building (Sovereign Foundries)."
             points={[
               "Nations building domestic chip capacity significantly increases demand",
@@ -99,6 +100,10 @@ export default function AsmlPage() {
             ]}
           />
         </div>
+      </AnalysisSection>
+
+      <AnalysisSection title="Ten Moats Framework">
+        <TenMoatsCard data={tenMoatsData['ASML']} />
       </AnalysisSection>
     </div>
   );

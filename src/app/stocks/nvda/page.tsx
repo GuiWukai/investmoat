@@ -1,6 +1,7 @@
 'use client';
 
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
+import { tenMoatsData } from "@/app/tenMoatsData";
 import { Cpu, Zap, Share2, DollarSign } from "lucide-react";
 import { Card, CardBody, Chip } from "@heroui/react";
 
@@ -68,9 +69,9 @@ export default function NvidiaPage() {
 
       <AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <ScenarioCard 
-            type="Bear" 
-            priceTarget="$600" 
+          <ScenarioCard
+            type="Bear"
+            priceTarget="$600"
             description="Hyperscaler demand peaks and transitions to internal silicon (ASICs)."
             points={[
               "Major cloud providers reduce H100 orders by 30%+",
@@ -78,9 +79,9 @@ export default function NvidiaPage() {
               "China export restrictions bite harder than expected"
             ]}
           />
-          <ScenarioCard 
-            type="Base" 
-            priceTarget="$950" 
+          <ScenarioCard
+            type="Base"
+            priceTarget="$950"
             description="Blackwell cycle maintains ASPs and software revenue starts to scale."
             points={[
               "Data center growth stays above 50% throughout 2025",
@@ -88,9 +89,9 @@ export default function NvidiaPage() {
               "High margins are maintained through product mix shift"
             ]}
           />
-          <ScenarioCard 
-            type="Bull" 
-            priceTarget="$1,200+" 
+          <ScenarioCard
+            type="Bull"
+            priceTarget="$1,200+"
             description="Sovereign AI demand and Blackwell architectural dominance."
             points={[
               "Nations building domestic AI capacity creates a new $50B market",
@@ -99,6 +100,10 @@ export default function NvidiaPage() {
             ]}
           />
         </div>
+      </AnalysisSection>
+
+      <AnalysisSection title="Ten Moats Framework">
+        <TenMoatsCard data={tenMoatsData['NVDA']} />
       </AnalysisSection>
     </div>
   );

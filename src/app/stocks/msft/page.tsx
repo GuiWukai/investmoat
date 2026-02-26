@@ -1,6 +1,7 @@
 'use client';
 
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
+import { tenMoatsData } from "@/app/tenMoatsData";
 import { Laptop, Cloud, Database, DollarSign } from "lucide-react";
 import { Card, CardBody, Chip } from "@heroui/react";
 
@@ -68,9 +69,9 @@ export default function MicrosoftPage() {
 
       <AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <ScenarioCard 
-            type="Bear" 
-            priceTarget="$350" 
+          <ScenarioCard
+            type="Bear"
+            priceTarget="$350"
             description="Azure growth decelerates faster than expected and margins compress."
             points={[
               "Azure growth falls below 20%",
@@ -78,9 +79,9 @@ export default function MicrosoftPage() {
               "Cybersecurity breach impacts enterprise trust"
             ]}
           />
-          <ScenarioCard 
-            type="Base" 
-            priceTarget="$450" 
+          <ScenarioCard
+            type="Base"
+            priceTarget="$450"
             description="Steady 15% revenue growth and successful Copilot monetization."
             points={[
               "Copilot achieves 20% penetration of commercial seats",
@@ -88,9 +89,9 @@ export default function MicrosoftPage() {
               "Dividend growth continues at 10%+"
             ]}
           />
-          <ScenarioCard 
-            type="Bull" 
-            priceTarget="$550" 
+          <ScenarioCard
+            type="Bull"
+            priceTarget="$550"
             description="Azure becomes the undisputed AI backbone of the global economy."
             points={[
               "Azure re-accelerates to 35%+ growth",
@@ -99,6 +100,10 @@ export default function MicrosoftPage() {
             ]}
           />
         </div>
+      </AnalysisSection>
+
+      <AnalysisSection title="Ten Moats Framework">
+        <TenMoatsCard data={tenMoatsData['MSFT']} />
       </AnalysisSection>
     </div>
   );

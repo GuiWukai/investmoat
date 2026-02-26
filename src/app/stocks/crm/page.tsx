@@ -1,6 +1,7 @@
 'use client';
 
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
+import { tenMoatsData } from "@/app/tenMoatsData";
 import { Cloud, Users, Zap, BarChart3 } from "lucide-react";
 import { Card, CardBody, Chip } from "@heroui/react";
 
@@ -88,9 +89,9 @@ export default function SalesforcePage() {
               "Consistent share buyback execution"
             ]}
           />
-          <ScenarioCard 
-            type="Bull" 
-            priceTarget="$400" 
+          <ScenarioCard
+            type="Bull"
+            priceTarget="$400"
             description="AI Agentic workflow becomes a massive revenue driver."
             points={[
               "Agents and autonomous AI tools drive 20% growth in ARPU",
@@ -99,6 +100,10 @@ export default function SalesforcePage() {
             ]}
           />
         </div>
+      </AnalysisSection>
+
+      <AnalysisSection title="Ten Moats Framework">
+        <TenMoatsCard data={tenMoatsData['CRM']} />
       </AnalysisSection>
     </div>
   );

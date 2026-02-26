@@ -1,6 +1,7 @@
 'use client';
 
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
+import { tenMoatsData } from "@/app/tenMoatsData";
 import { Coins, Shield, Globe, Lock } from "lucide-react";
 import { Card, CardBody, Chip } from "@heroui/react";
 
@@ -68,9 +69,9 @@ export default function BitcoinPage() {
 
       <AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <ScenarioCard 
-            type="Bear" 
-            priceTarget="$45,000" 
+          <ScenarioCard
+            type="Bear"
+            priceTarget="$45,000"
             description="Severe regulatory crackdown and a mass-market risk-off event."
             points={[
               "Banning of self-custody wallets in major jurisdictions",
@@ -78,9 +79,9 @@ export default function BitcoinPage() {
               "Recession leads to liquidations across all risk assets"
             ]}
           />
-          <ScenarioCard 
-            type="Base" 
-            priceTarget="$95,000" 
+          <ScenarioCard
+            type="Base"
+            priceTarget="$95,000"
             description="Continued ETF inflows and steady adoption as a gold alternative."
             points={[
               "Institutional weighting increases to 1-2% in traditional portfolios",
@@ -88,9 +89,9 @@ export default function BitcoinPage() {
               "Development of Bitcoin Layer 2s increases network utility"
             ]}
           />
-          <ScenarioCard 
-            type="Bull" 
-            priceTarget="$250,000+" 
+          <ScenarioCard
+            type="Bull"
+            priceTarget="$250,000+"
             description="Sovereign nation adoption and global currency volatility."
             points={[
               "Global central banks begin adding BTC to reserves",
@@ -99,6 +100,10 @@ export default function BitcoinPage() {
             ]}
           />
         </div>
+      </AnalysisSection>
+
+      <AnalysisSection title="Ten Moats Framework">
+        <TenMoatsCard data={tenMoatsData['BTC']} />
       </AnalysisSection>
     </div>
   );
