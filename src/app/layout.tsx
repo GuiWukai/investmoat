@@ -1,11 +1,39 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
+import { stockData, getAverageScore } from "./stockData";
 
 export const metadata: Metadata = {
   title: "InvestMoat | Professional Stock Analysis",
   description: "Analyze stock moats, growth potential, and intrinsic valuation for long-term investing.",
 };
+
+function NavStockItem({ stock }: { stock: typeof stockData[0] }) {
+  const avg = getAverageScore(stock.scores);
+  const getScoreColor = (s: number) => {
+    if (s >= 90) return '#10b981';
+    if (s >= 80) return '#3b82f6';
+    if (s >= 70) return '#f59e0b';
+    return '#ef4444';
+  };
+
+  return (
+    <Link href={stock.href} className="nav-item" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <span>{stock.name} ({stock.ticker})</span>
+      <span style={{ 
+        fontSize: '0.7rem', 
+        fontWeight: 800, 
+        background: 'rgba(255,255,255,0.05)', 
+        padding: '2px 6px', 
+        borderRadius: '4px',
+        color: getScoreColor(avg),
+        border: `1px solid ${getScoreColor(avg)}33`
+      }}>
+        {avg}
+      </span>
+    </Link>
+  );
+}
 
 export default function RootLayout({
   children,
@@ -17,7 +45,7 @@ export default function RootLayout({
       <body>
         <div className="main-container">
           <aside className="sidebar glass">
-            <div style={{ marginBottom: '2.5rem' }}>
+            <div style={{ marginBottom: '2rem' }}>
               <Link href="/" style={{ textDecoration: 'none' }}>
                 <h2 style={{ fontSize: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'white' }}>
                   <span className="primary-gradient" style={{ width: '32px', height: '32px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem' }}>M</span>
@@ -26,25 +54,18 @@ export default function RootLayout({
               </Link>
             </div>
             
-            <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem', overflowY: 'auto' }}>
+            <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem', overflowY: 'auto' }}>
               <Link href="/" className="nav-item">Dashboard</Link>
               <Link href="/portfolio" className="nav-item">Portfolio Distribution</Link>
               
-              <div style={{ marginTop: '1.25rem', marginBottom: '0.5rem', fontSize: '0.7rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Large Cap Tech</div>
-              <Link href="/stocks/amazon" className="nav-item">Amazon (AMZN)</Link>
-              <Link href="/stocks/meta" className="nav-item">Meta (META)</Link>
-              <Link href="/stocks/msft" className="nav-item">Microsoft (MSFT)</Link>
-              <Link href="/stocks/tesla" className="nav-item">Tesla (TSLA)</Link>
+              <div style={{ marginTop: '1rem', marginBottom: '0.4rem', fontSize: '0.65rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Large Cap Tech</div>
+              {stockData.filter(s => s.category === 'Big Tech').map(s => <NavStockItem key={s.ticker} stock={s} />)}
               
-              <div style={{ marginTop: '1.25rem', marginBottom: '0.5rem', fontSize: '0.7rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Financials & SaaS</div>
-              <Link href="/stocks/visa" className="nav-item">Visa (V)</Link>
-              <Link href="/stocks/mastercard" className="nav-item">Mastercard (MA)</Link>
-              <Link href="/stocks/spgi" className="nav-item">S&P Global (SPGI)</Link>
-              <Link href="/stocks/intuit" className="nav-item">Intuit (INTU)</Link>
+              <div style={{ marginTop: '1rem', marginBottom: '0.4rem', fontSize: '0.65rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Financials & SaaS</div>
+              {stockData.filter(s => s.category === 'Financials').map(s => <NavStockItem key={s.ticker} stock={s} />)}
               
-              <div style={{ marginTop: '1.25rem', marginBottom: '0.5rem', fontSize: '0.7rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Hard Assets & Crypto</div>
-              <Link href="/stocks/btc" className="nav-item">Bitcoin (BTC)</Link>
-              <Link href="/stocks/k92" className="nav-item">K92 Mining (KNT)</Link>
+              <div style={{ marginTop: '1rem', marginBottom: '0.4rem', fontSize: '0.65rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Hard Assets & Crypto</div>
+              {stockData.filter(s => s.category === 'Hard Assets').map(s => <NavStockItem key={s.ticker} stock={s} />)}
             </nav>
 
             <div style={{ marginTop: 'auto', padding: '1rem', borderTop: '1px solid var(--glass-border)', fontSize: '0.75rem', color: 'var(--muted-foreground)' }}>
