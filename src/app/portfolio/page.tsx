@@ -2,16 +2,20 @@ import { PieChart, List, Target, ShieldCheck } from "lucide-react";
 
 export default function PortfolioPage() {
   const distribution = [
-    { ticker: "MSFT", name: "Microsoft", weight: 15, color: "#00a4ef", category: "Core SaaS" },
-    { ticker: "AMZN", name: "Amazon", weight: 15, color: "#f59e0b", category: "Eco-System" },
-    { ticker: "META", name: "Meta", weight: 12, color: "#1877F2", category: "Social Network" },
-    { ticker: "V", name: "Visa", weight: 10, color: "#1a1f71", category: "Payments Moat" },
-    { ticker: "MA", name: "Mastercard", weight: 10, color: "#eb001b", category: "Payments Moat" },
-    { ticker: "BTC", name: "Bitcoin", weight: 10, color: "#f7931a", category: "Digital Asset" },
-    { ticker: "SPGI", name: "S&P Global", weight: 8, color: "#cf102d", category: "Financial Duopoly" },
-    { ticker: "INTU", name: "Intuit", weight: 8, color: "#2ca01c", category: "FinTech" },
-    { ticker: "TSLA", name: "Tesla", weight: 7, color: "#cc0000", category: "Engineered Growth" },
-    { ticker: "KNT", name: "K92 Mining", weight: 5, color: "#64748b", category: "Commodity Upside" },
+    { ticker: "MSFT", name: "Microsoft", weight: 12, color: "#00a4ef", category: "Core SaaS" },
+    { ticker: "AMZN", name: "Amazon", weight: 12, color: "#f59e0b", category: "Eco-System" },
+    { ticker: "META", name: "Meta", weight: 10, color: "#1877F2", category: "Social Network" },
+    { ticker: "NVDA", name: "NVIDIA", weight: 8, color: "#76b900", category: "AI Infrastructure" },
+    { ticker: "V", name: "Visa", weight: 8, color: "#1a1f71", category: "Payments" },
+    { ticker: "MA", name: "Mastercard", weight: 8, color: "#eb001b", category: "Payments" },
+    { ticker: "BTC", name: "Bitcoin", weight: 8, color: "#f7931a", category: "Digital Asset" },
+    { ticker: "ADBE", name: "Adobe", weight: 6, color: "#ff0000", category: "Creative SaaS" },
+    { ticker: "CRM", name: "Salesforce", weight: 6, color: "#00a1e0", category: "Enterprise SaaS" },
+    { ticker: "ASML", name: "ASML", weight: 6, color: "#0071c5", category: "Lithography" },
+    { ticker: "NFLX", name: "Netflix", weight: 4, color: "#e50914", category: "Streaming" },
+    { ticker: "SPGI", name: "S&P Global", weight: 4, color: "#cf102d", category: "Financials" },
+    { ticker: "INTU", name: "Intuit", weight: 4, color: "#2ca01c", category: "FinTech" },
+    { ticker: "KNT", name: "K92 Mining", weight: 4, color: "#64748b", category: "Commodities" },
   ];
 
   return (
@@ -19,7 +23,7 @@ export default function PortfolioPage() {
       <header style={{ marginBottom: '3rem' }}>
         <h1 className="gradient-text" style={{ fontSize: '3rem', marginBottom: '0.5rem' }}>Portfolio Distribution</h1>
         <p style={{ color: 'var(--muted-foreground)', fontSize: '1.2rem', maxWidth: '600px' }}>
-          Optimized allocation based on moat durability, growth acceleration, and risk-adjusted valuation.
+          Optimized allocation across 14 high-conviction assets based on moat durability and growth scaling.
         </p>
       </header>
 
@@ -29,7 +33,7 @@ export default function PortfolioPage() {
             <PieChart size={24} color="var(--primary)" />
             Visual Allocation
           </h3>
-          <div style={{ display: 'flex', height: '40px', borderRadius: '10px', overflow: 'hidden', marginBottom: '2rem' }}>
+          <div style={{ display: 'flex', height: '44px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2.5rem', border: '1px solid var(--glass-border)' }}>
             {distribution.map((stock) => (
               <div 
                 key={stock.ticker} 
@@ -37,15 +41,15 @@ export default function PortfolioPage() {
                   width: `${stock.weight}%`, 
                   background: stock.color, 
                   height: '100%',
-                  transition: 'width 1s ease-in-out'
+                  transition: 'width 1.2s cubic-bezier(0.4, 0, 0.2, 1)'
                 }} 
                 title={`${stock.name}: ${stock.weight}%`}
               />
             ))}
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '1rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: '1rem' }}>
             {distribution.map((stock) => (
-              <div key={stock.ticker} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.75rem' }}>
+              <div key={stock.ticker} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.7rem' }}>
                 <div style={{ width: '10px', height: '10px', borderRadius: '2px', background: stock.color, flexShrink: 0 }}></div>
                 <span style={{ fontWeight: 600 }}>{stock.ticker}</span>
                 <span style={{ color: 'var(--muted-foreground)' }}>{stock.weight}%</span>
@@ -61,16 +65,16 @@ export default function PortfolioPage() {
           </h3>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Risk Profile</div>
-              <div style={{ fontWeight: 600 }}>Wide Moat Diversification</div>
+              <div style={{ fontSize: '0.7rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Diversification</div>
+              <div style={{ fontWeight: 600 }}>14 Core Positions</div>
             </div>
             <div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Concentration</div>
-              <div style={{ fontWeight: 600 }}>Top 5 (Big Tech + Payments) = 62%</div>
+              <div style={{ fontSize: '0.7rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Alpha Generators</div>
+              <div style={{ fontWeight: 600 }}>ASML, NVDA, BTC (22% Total)</div>
             </div>
             <div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Network Effect Exposure</div>
-              <div style={{ fontWeight: 600 }}>85% of AUM</div>
+              <div style={{ fontSize: '0.7rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Sector Concentration</div>
+              <div style={{ fontWeight: 600 }}>Tech & SaaS: 64% | Financials: 24% | Assets: 12%</div>
             </div>
           </div>
         </div>
@@ -94,26 +98,26 @@ export default function PortfolioPage() {
             <tbody>
               {distribution.map((stock) => (
                 <tr key={stock.ticker} style={{ borderBottom: '1px solid var(--glass-border)', transition: 'background 0.2s' }}>
-                  <td style={{ padding: '1.5rem' }}>
-                    <div style={{ fontWeight: 600 }}>{stock.name}</div>
-                    <div style={{ fontSize: '0.75rem', color: 'var(--muted-foreground)' }}>{stock.ticker}</div>
+                  <td style={{ padding: '1.25rem 1.5rem' }}>
+                    <div style={{ fontWeight: 600, fontSize: '0.9rem' }}>{stock.name}</div>
+                    <div style={{ fontSize: '0.7rem', color: 'var(--muted-foreground)' }}>{stock.ticker}</div>
                   </td>
-                  <td style={{ padding: '1.5rem' }}>
-                    <span className="badge badge-info" style={{ fontSize: '0.7rem' }}>{stock.category}</span>
+                  <td style={{ padding: '1.25rem 1.5rem' }}>
+                    <span className="badge badge-info" style={{ fontSize: '0.65rem' }}>{stock.category}</span>
                   </td>
-                  <td style={{ padding: '1.5rem' }}>
-                    <div style={{ fontSize: '1.25rem', fontWeight: 700 }}>{stock.weight}%</div>
+                  <td style={{ padding: '1.25rem 1.5rem' }}>
+                    <div style={{ fontSize: '1.1rem', fontWeight: 700 }}>{stock.weight}%</div>
                   </td>
-                  <td style={{ padding: '1.5rem' }}>
-                    <div style={{ display: 'flex', gap: '4px' }}>
+                  <td style={{ padding: '1.25rem 1.5rem' }}>
+                    <div style={{ display: 'flex', gap: '3px' }}>
                       {[...Array(5)].map((_, i) => (
                         <div 
                           key={i} 
                           style={{ 
-                            width: '12px', 
+                            width: '10px', 
                             height: '4px', 
                             borderRadius: '2px', 
-                            background: i < Math.ceil(stock.weight / 3.5) ? 'var(--primary)' : 'var(--glass-border)' 
+                            background: i < Math.ceil(stock.weight / 2.5) ? 'var(--primary)' : 'var(--glass-border)' 
                           }} 
                         />
                       ))}

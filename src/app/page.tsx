@@ -1,20 +1,8 @@
 import { ArrowUpRight, ShieldCheck, TrendingUp, BarChart3 } from "lucide-react";
 import Link from "next/link";
+import { stockData } from "./stockData";
 
 export default function HomePage() {
-  const stocks = [
-    { name: "Amazon.com Inc.", ticker: "AMZN", desc: "The ultimate ecosystem moat powered by AWS and Logistics.", href: "/stocks/amazon" },
-    { name: "Meta Platforms", ticker: "META", desc: "Unrivaled network effects across social media and AI infrastructure.", href: "/stocks/meta" },
-    { name: "Microsoft Corp.", ticker: "MSFT", desc: "The enterprise standard with massive AI and Cloud tailwinds.", href: "/stocks/msft" },
-    { name: "Tesla Inc.", ticker: "TSLA", desc: "Vertically integrated leader in EV, Energy, and Autonomy.", href: "/stocks/tesla" },
-    { name: "Visa Inc.", ticker: "V", desc: "The global gold standard for payment processing network effects.", href: "/stocks/visa" },
-    { name: "Mastercard Inc.", ticker: "MA", desc: "Data and services-driven global payment infrastructure.", href: "/stocks/mastercard" },
-    { name: "Intuit Inc.", ticker: "INTU", desc: "High-switching cost platform for small business and tax software.", href: "/stocks/intuit" },
-    { name: "S&P Global", ticker: "SPGI", desc: "Oligopoly control over global debt ratings and financial data.", href: "/stocks/spgi" },
-    { name: "Bitcoin", ticker: "BTC", desc: "Foundational digital asset with absolute scarcity and network security.", href: "/stocks/btc" },
-    { name: "K92 Mining Ltd.", ticker: "KNT", desc: "High-grade gold production with massive exploration upside.", href: "/stocks/k92" },
-  ];
-
   return (
     <div className="animate-fade-in">
       <header style={{ marginBottom: '3rem' }}>
@@ -67,17 +55,17 @@ export default function HomePage() {
 
       <section style={{ marginTop: '4rem' }}>
         <h2 style={{ fontSize: '1.75rem', marginBottom: '2rem' }}>Portfolio Coverage</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))', gap: '1.5rem' }}>
-          {stocks.map((stock) => (
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(380px, 1fr))', gap: '1.5rem' }}>
+          {stockData.map((stock) => (
             <Link key={stock.ticker} href={stock.href} className="glass-card" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.5rem' }}>
-                  <h3 style={{ fontSize: '1.25rem' }}>{stock.name}</h3>
-                  <span className="badge badge-info">{stock.ticker}</span>
+                  <h3 style={{ fontSize: '1.1rem' }}>{stock.name}</h3>
+                  <span className="badge badge-info" style={{ fontSize: '0.65rem' }}>{stock.ticker}</span>
                 </div>
-                <p style={{ color: 'var(--muted-foreground)', fontSize: '0.875rem' }}>{stock.desc}</p>
+                <p style={{ color: 'var(--muted-foreground)', fontSize: '0.8rem', lineHeight: '1.4' }}>Wide-moat investment candidates.</p>
               </div>
-              <ArrowUpRight size={20} color="var(--primary)" />
+              <ArrowUpRight size={18} color="var(--primary)" />
             </Link>
           ))}
         </div>
