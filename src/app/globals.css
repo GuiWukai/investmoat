@@ -26,6 +26,7 @@ body {
   color: var(--foreground);
   font-family: 'Inter', sans-serif;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -100,7 +101,7 @@ h1, h2, h3, h4 {
 
 .metric-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: 1rem;
 }
 

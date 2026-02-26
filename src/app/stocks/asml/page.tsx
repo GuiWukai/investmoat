@@ -8,7 +8,7 @@ export default function AsmlPage() {
   return (
     <div className="animate-fade-in space-y-12 pb-12">
       <header className="space-y-6">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center flex-wrap gap-3">
           <Chip color="primary" variant="flat" size="sm">Semiconductors | Lithography</Chip>
           <Chip color="success" variant="flat" size="sm">Monopoly Moat</Chip>
         </div>
@@ -55,7 +55,7 @@ export default function AsmlPage() {
 
       <AnalysisSection title="The Strategic Bottleneck Moat">
         <Card className="bg-white/5 border-none backdrop-blur-md">
-          <CardBody className="p-8">
+          <CardBody className="p-4 md:p-8">
             <p className="mb-4">ASML is the <strong>Sole Provider</strong> of the world's most complex machines:</p>
             <ul className="list-disc pl-6 space-y-4 text-white/60">
               <li><strong className="text-white">EUV Monopoly:</strong> Extreme Ultraviolet (EUV) lithography is required for every advanced chip from Apple, Nvidia, and Intel. ASML is the only company that can build them.</li>

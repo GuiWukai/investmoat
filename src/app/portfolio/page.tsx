@@ -105,10 +105,11 @@ export default function PortfolioPage() {
           <div className="h-px flex-1 bg-white/10" />
         </div>
         
-        <Table 
+        <div className="overflow-x-auto bg-white/5 backdrop-blur-lg rounded-2xl">
+        <Table
           aria-label="Portfolio Allocation Table"
           classNames={{
-            base: "bg-white/5 backdrop-blur-lg rounded-2xl overflow-x-auto",
+            base: "overflow-visible",
             table: "min-h-[400px] min-w-[600px] lg:min-w-full",
             th: "bg-transparent text-white/40 border-b border-white/10",
             td: "py-4 text-white/80 border-b border-white/5"
@@ -148,6 +149,7 @@ export default function PortfolioPage() {
             ))}
           </TableBody>
         </Table>
+        </div>
       </section>
     </div>
   );

@@ -8,7 +8,7 @@ export default function AmazonPage() {
   return (
     <div className="animate-fade-in space-y-12 pb-12">
       <header className="space-y-6">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center flex-wrap gap-3">
           <Chip color="primary" variant="flat" size="sm">Consumer Discretionary | Tech</Chip>
           <Chip color="success" variant="flat" size="sm">Strong Buy</Chip>
         </div>
@@ -67,7 +67,7 @@ export default function AmazonPage() {
 
       <AnalysisSection title="The Economic Moat">
         <Card className="bg-white/5 border-none backdrop-blur-md">
-          <CardBody className="p-8">
+          <CardBody className="p-4 md:p-8">
             <p className="mb-6 text-lg">
               Amazon possesses a <strong className="text-primary italic">Wide Economic Moat</strong> driven by three primary pillars:
             </p>
