@@ -81,11 +81,12 @@ export default function RootLayout({
               onMenuOpenChange={setIsMenuOpen}
               className="lg:hidden bg-background/70 backdrop-blur-lg border-white/5"
             >
-              <NavbarContent>
+              <NavbarContent justify="start">
                 <NavbarMenuToggle
                   aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                  className="lg:hidden"
                 />
+              </NavbarContent>
+              <NavbarContent justify="center">
                 <NavbarBrand>
                   <Link href="/" className="flex items-center gap-2">
                     <span className="primary-gradient w-8 h-8 rounded-lg flex items-center justify-center font-bold">M</span>
