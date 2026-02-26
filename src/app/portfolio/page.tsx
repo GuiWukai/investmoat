@@ -2,14 +2,16 @@ import { PieChart, List, Target, ShieldCheck } from "lucide-react";
 
 export default function PortfolioPage() {
   const distribution = [
-    { ticker: "MSFT", name: "Microsoft", weight: 20, color: "#00a4ef", category: "Core SaaS" },
-    { ticker: "AMZN", name: "Amazon", weight: 18, color: "#f59e0b", category: "Eco-System" },
-    { ticker: "META", name: "Meta", weight: 14, color: "#1877F2", category: "Social Network" },
+    { ticker: "MSFT", name: "Microsoft", weight: 15, color: "#00a4ef", category: "Core SaaS" },
+    { ticker: "AMZN", name: "Amazon", weight: 15, color: "#f59e0b", category: "Eco-System" },
+    { ticker: "META", name: "Meta", weight: 12, color: "#1877F2", category: "Social Network" },
+    { ticker: "V", name: "Visa", weight: 10, color: "#1a1f71", category: "Payments Moat" },
+    { ticker: "MA", name: "Mastercard", weight: 10, color: "#eb001b", category: "Payments Moat" },
     { ticker: "BTC", name: "Bitcoin", weight: 10, color: "#f7931a", category: "Digital Asset" },
-    { ticker: "SPGI", name: "S&P Global", weight: 10, color: "#cf102d", category: "Financial Toll-Bridge" },
-    { ticker: "INTU", name: "Intuit", weight: 10, color: "#2ca01c", category: "FinTech" },
-    { ticker: "TSLA", name: "Tesla", weight: 10, color: "#cc0000", category: "Hyper-Growth" },
-    { ticker: "KNT", name: "K92 Mining", weight: 8, color: "#64748b", category: "Mining/Commodity" },
+    { ticker: "SPGI", name: "S&P Global", weight: 8, color: "#cf102d", category: "Financial Duopoly" },
+    { ticker: "INTU", name: "Intuit", weight: 8, color: "#2ca01c", category: "FinTech" },
+    { ticker: "TSLA", name: "Tesla", weight: 7, color: "#cc0000", category: "Engineered Growth" },
+    { ticker: "KNT", name: "K92 Mining", weight: 5, color: "#64748b", category: "Commodity Upside" },
   ];
 
   return (
@@ -41,10 +43,10 @@ export default function PortfolioPage() {
               />
             ))}
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '1rem' }}>
             {distribution.map((stock) => (
-              <div key={stock.ticker} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.875rem' }}>
-                <div style={{ width: '12px', height: '12px', borderRadius: '3px', background: stock.color }}></div>
+              <div key={stock.ticker} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.75rem' }}>
+                <div style={{ width: '10px', height: '10px', borderRadius: '2px', background: stock.color, flexShrink: 0 }}></div>
                 <span style={{ fontWeight: 600 }}>{stock.ticker}</span>
                 <span style={{ color: 'var(--muted-foreground)' }}>{stock.weight}%</span>
               </div>
@@ -60,15 +62,15 @@ export default function PortfolioPage() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <div>
               <div style={{ fontSize: '0.75rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Risk Profile</div>
-              <div style={{ fontWeight: 600 }}>Aggressive Growth / Wide Moat</div>
+              <div style={{ fontWeight: 600 }}>Wide Moat Diversification</div>
             </div>
             <div>
               <div style={{ fontSize: '0.75rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Concentration</div>
-              <div style={{ fontWeight: 600 }}>Top 3 (MSFT, AMZN, META) = 52%</div>
+              <div style={{ fontWeight: 600 }}>Top 5 (Big Tech + Payments) = 62%</div>
             </div>
             <div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Portfolio Rebalance</div>
-              <div style={{ fontWeight: 600 }}>Quarterly (Next: April 2026)</div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Network Effect Exposure</div>
+              <div style={{ fontWeight: 600 }}>85% of AUM</div>
             </div>
           </div>
         </div>
@@ -111,7 +113,7 @@ export default function PortfolioPage() {
                             width: '12px', 
                             height: '4px', 
                             borderRadius: '2px', 
-                            background: i < Math.ceil(stock.weight / 4) ? 'var(--primary)' : 'var(--glass-border)' 
+                            background: i < Math.ceil(stock.weight / 3.5) ? 'var(--primary)' : 'var(--glass-border)' 
                           }} 
                         />
                       ))}

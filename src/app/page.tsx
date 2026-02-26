@@ -7,6 +7,8 @@ export default function HomePage() {
     { name: "Meta Platforms", ticker: "META", desc: "Unrivaled network effects across social media and AI infrastructure.", href: "/stocks/meta" },
     { name: "Microsoft Corp.", ticker: "MSFT", desc: "The enterprise standard with massive AI and Cloud tailwinds.", href: "/stocks/msft" },
     { name: "Tesla Inc.", ticker: "TSLA", desc: "Vertically integrated leader in EV, Energy, and Autonomy.", href: "/stocks/tesla" },
+    { name: "Visa Inc.", ticker: "V", desc: "The global gold standard for payment processing network effects.", href: "/stocks/visa" },
+    { name: "Mastercard Inc.", ticker: "MA", desc: "Data and services-driven global payment infrastructure.", href: "/stocks/mastercard" },
     { name: "Intuit Inc.", ticker: "INTU", desc: "High-switching cost platform for small business and tax software.", href: "/stocks/intuit" },
     { name: "S&P Global", ticker: "SPGI", desc: "Oligopoly control over global debt ratings and financial data.", href: "/stocks/spgi" },
     { name: "Bitcoin", ticker: "BTC", desc: "Foundational digital asset with absolute scarcity and network security.", href: "/stocks/btc" },
