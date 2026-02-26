@@ -1,4 +1,7 @@
-import { PieChart, List, Target, ShieldCheck } from "lucide-react";
+'use client';
+
+import { PieChart, List, ShieldCheck } from "lucide-react";
+import { Card, CardBody, CardHeader, Progress, Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Chip } from "@heroui/react";
 
 export default function PortfolioPage() {
   const distribution = [
@@ -19,115 +22,132 @@ export default function PortfolioPage() {
   ];
 
   return (
-    <div className="animate-fade-in">
-      <header style={{ marginBottom: '3rem' }}>
-        <h1 className="gradient-text" style={{ fontSize: '3rem', marginBottom: '0.5rem' }}>Portfolio Distribution</h1>
-        <p style={{ color: 'var(--muted-foreground)', fontSize: '1.2rem', maxWidth: '600px' }}>
+    <div className="animate-fade-in space-y-12">
+      <header className="mb-12">
+        <h1 className="text-5xl font-extrabold bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent mb-4">
+          Portfolio Distribution
+        </h1>
+        <p className="text-white/60 text-xl max-w-2xl">
           Optimized allocation across 14 high-conviction assets based on moat durability and growth scaling.
         </p>
       </header>
 
-      <div className="metric-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))' }}>
-        <div className="glass-card">
-          <h3 style={{ marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-            <PieChart size={24} color="var(--primary)" />
-            Visual Allocation
-          </h3>
-          <div style={{ display: 'flex', height: '44px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2.5rem', border: '1px solid var(--glass-border)' }}>
-            {distribution.map((stock) => (
-              <div 
-                key={stock.ticker} 
-                style={{ 
-                  width: `${stock.weight}%`, 
-                  background: stock.color, 
-                  height: '100%',
-                  transition: 'width 1.2s cubic-bezier(0.4, 0, 0.2, 1)'
-                }} 
-                title={`${stock.name}: ${stock.weight}%`}
-              />
-            ))}
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: '1rem' }}>
-            {distribution.map((stock) => (
-              <div key={stock.ticker} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.7rem' }}>
-                <div style={{ width: '10px', height: '10px', borderRadius: '2px', background: stock.color, flexShrink: 0 }}></div>
-                <span style={{ fontWeight: 600 }}>{stock.ticker}</span>
-                <span style={{ color: 'var(--muted-foreground)' }}>{stock.weight}%</span>
-              </div>
-            ))}
-          </div>
-        </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <Card className="bg-white/5 border-none backdrop-blur-lg">
+          <CardHeader className="flex gap-3 p-6 pb-0">
+            <PieChart className="text-primary" />
+            <h3 className="text-xl font-bold">Visual Allocation</h3>
+          </CardHeader>
+          <CardBody className="p-6">
+            <div className="flex h-12 rounded-xl overflow-hidden mb-8 border border-white/10">
+              {distribution.map((stock) => (
+                <div 
+                  key={stock.ticker} 
+                  style={{ width: `${stock.weight}%`, background: stock.color }} 
+                  title={`${stock.name}: ${stock.weight}%`}
+                  className="hover:opacity-80 transition-opacity cursor-pointer"
+                />
+              ))}
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              {distribution.map((stock) => (
+                <div key={stock.ticker} className="flex items-center gap-3">
+                  <div className="w-2.5 h-2.5 rounded-full" style={{ background: stock.color }} />
+                  <span className="text-xs font-bold text-white/80">{stock.ticker}</span>
+                  <span className="text-xs text-white/40">{stock.weight}%</span>
+                </div>
+              ))}
+            </div>
+          </CardBody>
+        </Card>
 
-        <div className="glass-card">
-          <h3 style={{ marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-            <ShieldCheck size={24} color="var(--accent)" />
-            Strategy Summary
-          </h3>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+        <Card className="bg-white/5 border-none backdrop-blur-lg">
+          <CardHeader className="flex gap-3 p-6 pb-0">
+            <ShieldCheck className="text-success" />
+            <h3 className="text-xl font-bold">Strategy Summary</h3>
+          </CardHeader>
+          <CardBody className="p-6 gap-6">
             <div>
-              <div style={{ fontSize: '0.7rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Diversification</div>
-              <div style={{ fontWeight: 600 }}>14 Core Positions</div>
+              <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Diversification</p>
+              <p className="text-lg font-bold">14 Core Positions</p>
             </div>
             <div>
-              <div style={{ fontSize: '0.7rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Alpha Generators</div>
-              <div style={{ fontWeight: 600 }}>ASML, NVDA, BTC (22% Total)</div>
+              <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Alpha Generators</p>
+              <p className="text-lg font-bold">ASML, NVDA, BTC (22% Total)</p>
             </div>
             <div>
-              <div style={{ fontSize: '0.7rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Sector Concentration</div>
-              <div style={{ fontWeight: 600 }}>Tech & SaaS: 64% | Financials: 24% | Assets: 12%</div>
+              <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Concentration</p>
+              <Progress 
+                value={64} 
+                label="Tech & SaaS" 
+                size="sm" 
+                color="primary"
+                showValueLabel={true}
+                classNames={{ base: "max-w-md", label: "text-xs font-bold", value: "text-xs" }}
+              />
+              <Progress 
+                value={24} 
+                label="Financials" 
+                size="sm" 
+                color="success"
+                showValueLabel={true}
+                className="mt-2"
+                classNames={{ base: "max-w-md", label: "text-xs font-bold", value: "text-xs" }}
+              />
             </div>
-          </div>
-        </div>
+          </CardBody>
+        </Card>
       </div>
 
-      <section style={{ marginTop: '4rem' }}>
-        <h2 style={{ fontSize: '1.75rem', marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <List size={24} color="var(--primary)" />
-          Allocation Breakdown
-        </h2>
-        <div className="glass-card" style={{ padding: '0' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
-            <thead>
-              <tr style={{ borderBottom: '1px solid var(--glass-border)' }}>
-                <th style={{ padding: '1.5rem', fontSize: '0.875rem', color: 'var(--muted-foreground)' }}>Asset</th>
-                <th style={{ padding: '1.5rem', fontSize: '0.875rem', color: 'var(--muted-foreground)' }}>Category</th>
-                <th style={{ padding: '1.5rem', fontSize: '0.875rem', color: 'var(--muted-foreground)' }}>Target Weight</th>
-                <th style={{ padding: '1.5rem', fontSize: '0.875rem', color: 'var(--muted-foreground)' }}>Conviction</th>
-              </tr>
-            </thead>
-            <tbody>
-              {distribution.map((stock) => (
-                <tr key={stock.ticker} style={{ borderBottom: '1px solid var(--glass-border)', transition: 'background 0.2s' }}>
-                  <td style={{ padding: '1.25rem 1.5rem' }}>
-                    <div style={{ fontWeight: 600, fontSize: '0.9rem' }}>{stock.name}</div>
-                    <div style={{ fontSize: '0.7rem', color: 'var(--muted-foreground)' }}>{stock.ticker}</div>
-                  </td>
-                  <td style={{ padding: '1.25rem 1.5rem' }}>
-                    <span className="badge badge-info" style={{ fontSize: '0.65rem' }}>{stock.category}</span>
-                  </td>
-                  <td style={{ padding: '1.25rem 1.5rem' }}>
-                    <div style={{ fontSize: '1.1rem', fontWeight: 700 }}>{stock.weight}%</div>
-                  </td>
-                  <td style={{ padding: '1.25rem 1.5rem' }}>
-                    <div style={{ display: 'flex', gap: '3px' }}>
-                      {[...Array(5)].map((_, i) => (
-                        <div 
-                          key={i} 
-                          style={{ 
-                            width: '10px', 
-                            height: '4px', 
-                            borderRadius: '2px', 
-                            background: i < Math.ceil(stock.weight / 2.5) ? 'var(--primary)' : 'var(--glass-border)' 
-                          }} 
-                        />
-                      ))}
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+      <section>
+        <div className="flex items-center gap-4 mb-8">
+          <h2 className="text-2xl font-bold">Allocation Breakdown</h2>
+          <div className="h-px flex-1 bg-white/10" />
         </div>
+        
+        <Table 
+          aria-label="Portfolio Allocation Table"
+          classNames={{
+            base: "bg-white/5 backdrop-blur-lg rounded-2xl",
+            table: "min-h-[400px]",
+            th: "bg-transparent text-white/40 border-b border-white/10",
+            td: "py-4 text-white/80 border-b border-white/5"
+          }}
+          removeWrapper
+        >
+          <TableHeader>
+            <TableColumn>ASSET</TableColumn>
+            <TableColumn>CATEGORY</TableColumn>
+            <TableColumn>WEIGHT</TableColumn>
+            <TableColumn>CONVICTION</TableColumn>
+          </TableHeader>
+          <TableBody>
+            {distribution.map((stock) => (
+              <TableRow key={stock.ticker}>
+                <TableCell>
+                  <div>
+                    <div className="font-bold text-sm">{stock.name}</div>
+                    <div className="text-[10px] text-white/30 tracking-widest font-black uppercase">{stock.ticker}</div>
+                  </div>
+                </TableCell>
+                <TableCell>
+                  <Chip size="sm" variant="flat" color="primary">{stock.category}</Chip>
+                </TableCell>
+                <TableCell>
+                  <div className="text-lg font-black">{stock.weight}%</div>
+                </TableCell>
+                <TableCell>
+                  <Progress 
+                    value={stock.weight * 4} 
+                    size="sm" 
+                    color={stock.weight > 8 ? "success" : "primary"}
+                    className="max-w-[100px]"
+                  />
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
       </section>
     </div>
   );

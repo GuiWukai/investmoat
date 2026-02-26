@@ -1,48 +1,53 @@
+'use client';
+
 import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge } from "@/components/AnalysisComponents";
 import { ShoppingCart, Cloud, Truck, DollarSign } from "lucide-react";
+import { Card, CardBody, CardHeader, Chip, Divider } from "@heroui/react";
 
 export default function AmazonPage() {
   return (
-    <div className="animate-fade-in">
-      <header style={{ marginBottom: '3rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
-          <span className="badge badge-info">Consumer Discretionary | Tech</span>
-          <span className="badge badge-success">Strong Buy</span>
+    <div className="animate-fade-in space-y-12 pb-12">
+      <header className="space-y-6">
+        <div className="flex items-center gap-3">
+          <Chip color="primary" variant="flat" size="sm">Consumer Discretionary | Tech</Chip>
+          <Chip color="success" variant="flat" size="sm">Strong Buy</Chip>
         </div>
-        <h1 style={{ fontSize: '3.5rem', marginBottom: '0.5rem' }}>Amazon.com Inc.</h1>
-        <div style={{ display: 'flex', gap: '2rem', color: 'var(--muted-foreground)' }}>
-          <span>Ticker: <strong>AMZN</strong></span>
-          <span>Market Cap: <strong>$1.92T</strong></span>
-          <span>Current Price: <strong>$185.20</strong></span>
+        <div>
+          <h1 className="text-6xl font-black mb-2 tracking-tight">Amazon.com Inc.</h1>
+          <div className="flex gap-6 text-white/40 font-medium">
+            <span>Ticker: <strong className="text-white">AMZN</strong></span>
+            <span>Market Cap: <strong className="text-white">$1.92T</strong></span>
+            <span>Current Price: <strong className="text-white">$185.20</strong></span>
+          </div>
         </div>
         <RecommendationBadge status="Strong Buy" />
       </header>
 
-      <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <MetricCard 
           title="Revenue Growth" 
           value="13.2%" 
           label="YoY vs 11.5% Industry" 
-          icon={<ShoppingCart size={20} color="white" />} 
+          icon={<ShoppingCart size={20} className="text-white" />} 
           color="#f59e0b"
         />
         <MetricCard 
           title="AWS Margin" 
           value="31.8%" 
           label="Best-in-class profitability" 
-          icon={<Cloud size={20} color="white" />} 
-          color="#3b82f6"
+          icon={<Cloud size={20} className="text-white" />} 
+          color="#006fee"
         />
         <MetricCard 
           title="Free Cash Flow" 
           value="$50.1B" 
           label="TTM Expansion +400%" 
-          icon={<DollarSign size={20} color="white" />} 
-          color="#10b981"
+          icon={<DollarSign size={20} className="text-white" />} 
+          color="#17c964"
         />
       </div>
 
-      <div style={{ display: 'flex', gap: '1.5rem', marginTop: '2rem' }}>
+      <div className="flex flex-col md:flex-row gap-6">
         <ScoreGauge 
           score={95} 
           label="Moat Score" 
@@ -61,53 +66,68 @@ export default function AmazonPage() {
       </div>
 
       <AnalysisSection title="The Economic Moat">
-        <div className="glass-card">
-          <p style={{ marginBottom: '1rem' }}>
-            Amazon possesses a <strong>Wide Economic Moat</strong> driven by three primary pillars:
-          </p>
-          <ul style={{ paddingLeft: '1.5rem', color: 'var(--muted-foreground)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <li>
-              <strong style={{ color: 'white' }}>Cost Advantage:</strong> Its massive fulfillment infrastructure creates unit costs that no competitor can match, allowing for faster delivery and lower prices.
-            </li>
-            <li>
-              <strong style={{ color: 'white' }}>High Switching Costs:</strong> The Prime ecosystem locks in consumers. Once a household is integrated into Prime, the convenience makes shopping elsewhere a "costly" friction.
-            </li>
-            <li>
-              <strong style={{ color: 'white' }}>Network Effect:</strong> The 3rd party marketplace creates a flywheel where more sellers attract more buyers, which attracts more sellers.
-            </li>
-          </ul>
-        </div>
+        <Card className="bg-white/5 border-none backdrop-blur-md">
+          <CardBody className="p-8">
+            <p className="mb-6 text-lg">
+              Amazon possesses a <strong className="text-primary italic">Wide Economic Moat</strong> driven by three primary pillars:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="space-y-2">
+                <h4 className="font-bold text-white flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-primary" /> Cost Advantage
+                </h4>
+                <p className="text-sm text-white/50 leading-relaxed">Its massive fulfillment infrastructure creates unit costs that no competitor can match, allowing for faster delivery and lower prices.</p>
+              </div>
+              <div className="space-y-2">
+                <h4 className="font-bold text-white flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-primary" /> Switching Costs
+                </h4>
+                <p className="text-sm text-white/50 leading-relaxed">The Prime ecosystem locks in consumers. Once a household is integrated into Prime, the convenience makes shopping elsewhere a "costly" friction.</p>
+              </div>
+              <div className="space-y-2">
+                <h4 className="font-bold text-white flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-primary" /> Network Effect
+                </h4>
+                <p className="text-sm text-white/50 leading-relaxed">The 3rd party marketplace creates a flywheel where more sellers attract more buyers, which attracts more sellers.</p>
+              </div>
+            </div>
+          </CardBody>
+        </Card>
       </AnalysisSection>
 
       <AnalysisSection title="Financial Outlook">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
-          <div className="glass-card">
-            <h4 style={{ marginBottom: '1rem' }}>Growth Catalysts</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.875rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--accent)' }}></div>
-                <span>Generative AI demand driving AWS infrastructure refresh.</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--accent)' }}></div>
-                <span>Ad revenue margin expansion exceeding retail growth.</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--accent)' }}></div>
-                <span>International retail segments turning profitable.</span>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Card className="bg-white/5 border-none backdrop-blur-md p-6">
+            <h4 className="text-xl font-bold mb-6">Growth Catalysts</h4>
+            <div className="space-y-4">
+              {[
+                "Generative AI demand driving AWS infrastructure refresh.",
+                "Ad revenue margin expansion exceeding retail growth.",
+                "International retail segments turning profitable."
+              ].map((text, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-success flex-shrink-0" />
+                  <span className="text-sm text-white/70">{text}</span>
+                </div>
+              ))}
             </div>
-          </div>
-          <div className="glass-card">
-            <h4 style={{ marginBottom: '1rem' }}>Valuation Analysis</h4>
-            <p style={{ fontSize: '0.875rem', color: 'var(--muted-foreground)' }}>
-              Using a 10-year DCF with a 9% WACC and a 3.5% terminal growth rate, our fair value estimate for AMZN is <strong>$215/share</strong>. With current trading at $185, this provides a 14% margin of safety.
+          </Card>
+          <Card className="bg-white/5 border-none backdrop-blur-md p-6">
+            <h4 className="text-xl font-bold mb-6">Valuation Analysis</h4>
+            <p className="text-sm text-white/60 leading-relaxed">
+              Using a 10-year DCF with a 9% WACC and a 3.5% terminal growth rate, our fair value estimate for AMZN is <strong className="text-white text-lg">$215/share</strong>. 
             </p>
-          </div>
+            <Divider className="my-4 bg-white/10" />
+            <div className="flex justify-between items-center">
+              <span className="text-xs uppercase tracking-widest text-white/40">Margin of Safety</span>
+              <Chip color="success" variant="flat" className="font-bold">14%</Chip>
+            </div>
+          </Card>
         </div>
       </AnalysisSection>
+
       <AnalysisSection title="Price Scenarios (12-24 Months)">
-        <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <ScenarioCard 
             type="Bear" 
             priceTarget="$140" 

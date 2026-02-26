@@ -1,66 +1,73 @@
+'use client';
+
 import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge } from "@/components/AnalysisComponents";
 import { Coins, Shield, Globe, Lock } from "lucide-react";
+import { Card, CardBody, Chip } from "@heroui/react";
 
 export default function BitcoinPage() {
   return (
-    <div className="animate-fade-in">
-      <header style={{ marginBottom: '3rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
-          <span className="badge badge-warning">Digital Asset</span>
-          <span className="badge badge-success">Digital Gold</span>
+    <div className="animate-fade-in space-y-12 pb-12">
+      <header className="space-y-6">
+        <div className="flex items-center gap-3">
+          <Chip color="warning" variant="flat" size="sm">Digital Asset | Hard Money</Chip>
+          <Chip color="success" variant="flat" size="sm">Digital Gold</Chip>
         </div>
-        <h1 style={{ fontSize: '3.5rem', marginBottom: '0.5rem' }}>Bitcoin</h1>
-        <div style={{ display: 'flex', gap: '2rem', color: 'var(--muted-foreground)' }}>
-          <span>Ticker: <strong>BTC</strong></span>
-          <span>Market Cap: <strong>$1.3T</strong></span>
-          <span>Circulating Supply: <strong>19.7M / 21M</strong></span>
+        <div>
+          <h1 className="text-6xl font-black mb-2 tracking-tight text-[#f7931a]">Bitcoin</h1>
+          <div className="flex gap-6 text-white/40 font-medium">
+            <span>Ticker: <strong className="text-white">BTC</strong></span>
+            <span>Market Cap: <strong className="text-white">$1.3T</strong></span>
+            <span>Circulating Supply: <strong className="text-white">19.7M / 21M</strong></span>
+          </div>
         </div>
         <RecommendationBadge status="Strong Buy" />
       </header>
 
-      <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <MetricCard 
           title="Hash Rate" 
           value="650 EH/s" 
           label="Network Security Standard" 
-          icon={<Lock size={20} color="white" />} 
+          icon={<Lock size={20} className="text-white" />} 
           color="#f7931a"
         />
         <MetricCard 
           title="Exchange Balance" 
           value="1.8M BTC" 
           label="Multi-year Lows (Illicit Supply)" 
-          icon={<Shield size={20} color="white" />} 
+          icon={<Shield size={20} className="text-white" />} 
           color="#3b82f6"
         />
         <MetricCard 
           title="Address Count" 
           value="52.4M" 
           label="Unique Holders Worldwide" 
-          icon={<Globe size={20} color="white" />} 
+          icon={<Globe size={20} className="text-white" />} 
           color="#10b981"
         />
       </div>
 
-      <div style={{ display: 'flex', gap: '1.5rem', marginTop: '2rem' }}>
+      <div className="flex flex-col md:flex-row gap-6">
         <ScoreGauge score={99} label="Moat Score" description="Absolute scarcity and the largest decentralized network effect in history." />
         <ScoreGauge score={85} label="Growth Score" description="Institutional adoption via ETFs and sovereign treasury integration." />
         <ScoreGauge score={50} label="Valuation Score" description="Relative to M2 money supply and gold market cap parity." />
       </div>
 
       <AnalysisSection title="The Scarcity Moat">
-        <div className="glass-card">
-          <p style={{ marginBottom: '1rem' }}>Bitcoin's moat is built on <strong>Math and Decentralization</strong>:</p>
-          <ul style={{ paddingLeft: '1.5rem', color: 'var(--muted-foreground)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <li><strong style={{ color: 'white' }}>Absolute Scarcity:</strong> Only 21 million will ever exist. Unlike fiat or even gold, the supply curve is perfectly inelastic to demand.</li>
-            <li><strong style={{ color: 'white' }}>Network Effect:</strong> As the first and largest crypto asset, Bitcoin has the most liquidity, securest chain, and widest institutional support.</li>
-            <li><strong style={{ color: 'white' }}>Property Rights:</strong> A global, permissionless system for storing value that is independent of any central bank or government.</li>
-          </ul>
-        </div>
+        <Card className="bg-white/5 border-none backdrop-blur-md">
+          <CardBody className="p-8">
+            <p className="mb-4">Bitcoin's moat is built on <strong>Math and Decentralization</strong>:</p>
+            <ul className="list-disc pl-6 space-y-4 text-white/60">
+              <li><strong className="text-white">Absolute Scarcity:</strong> Only 21 million will ever exist. Unlike fiat or even gold, the supply curve is perfectly inelastic to demand.</li>
+              <li><strong className="text-white">Network Effect:</strong> As the first and largest crypto asset, Bitcoin has the most liquidity, securest chain, and widest institutional support.</li>
+              <li><strong className="text-white">Property Rights:</strong> A global, permissionless system for storing value that is independent of any central bank or government.</li>
+            </ul>
+          </CardBody>
+        </Card>
       </AnalysisSection>
 
       <AnalysisSection title="Price Scenarios (12-24 Months)">
-        <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <ScenarioCard 
             type="Bear" 
             priceTarget="$45,000" 

@@ -1,130 +1,101 @@
+'use client';
+
 import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge } from "@/components/AnalysisComponents";
 import { Users, Cpu, Share2, DollarSign } from "lucide-react";
+import { Card, CardBody, Chip } from "@heroui/react";
 
 export default function MetaPage() {
   return (
-    <div className="animate-fade-in">
-      <header style={{ marginBottom: '3rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
-          <span className="badge badge-info">Communication Services | AI</span>
-          <span className="badge badge-success">Accumulate</span>
+    <div className="animate-fade-in space-y-12 pb-12">
+      <header className="space-y-6">
+        <div className="flex items-center gap-3">
+          <Chip color="primary" variant="flat" size="sm">Communication Services | AI</Chip>
+          <Chip color="success" variant="flat" size="sm">Quality Yield</Chip>
         </div>
-        <h1 style={{ fontSize: '3.5rem', marginBottom: '0.5rem' }}>Meta Platforms</h1>
-        <div style={{ display: 'flex', gap: '2rem', color: 'var(--muted-foreground)' }}>
-          <span>Ticker: <strong>META</strong></span>
-          <span>Market Cap: <strong>$1.25T</strong></span>
-          <span>Current Price: <strong>$492.30</strong></span>
+        <div>
+          <h1 className="text-6xl font-black mb-2 tracking-tight">Meta Platforms Inc.</h1>
+          <div className="flex gap-6 text-white/40 font-medium">
+            <span>Ticker: <strong className="text-white">META</strong></span>
+            <span>Market Cap: <strong className="text-white">$1.25T</strong></span>
+            <span>Current Price: <strong className="text-white">$492.30</strong></span>
+          </div>
         </div>
         <RecommendationBadge status="Accumulate" />
       </header>
 
-      <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <MetricCard 
           title="Daily Active People" 
           value="3.24B" 
-          label="+7% YoY Reach" 
-          icon={<Users size={20} color="white" />} 
+          label="Family of Apps (7% YoY)" 
+          icon={<Users size={20} className="text-white" />} 
           color="#1877F2"
         />
         <MetricCard 
-          title="Operating Margin" 
-          value="38.2%" 
-          label="Efficiency Year Impact" 
-          icon={<Share2 size={20} color="white" />} 
-          color="#05070a"
+          title="Ad Impressions" 
+          value="+21%" 
+          label="Sustained CPM growth" 
+          icon={<Share2 size={20} className="text-white" />} 
+          color="#050505"
         />
         <MetricCard 
-          title="Ad Revenue" 
-          value="$38.7B" 
-          label="Quarterly (Q4 2024)" 
-          icon={<DollarSign size={20} color="white" />} 
-          color="#10b981"
+          title="Capex (AI)" 
+          value="$35B" 
+          label="Infrastructure investment" 
+          icon={<Cpu size={20} className="text-white" />} 
+          color="#3b82f6"
         />
       </div>
 
-      <div style={{ display: 'flex', gap: '1.5rem', marginTop: '2rem' }}>
-        <ScoreGauge 
-          score={92} 
-          label="Moat Score" 
-          description="Unrivaled social graph and network effects across IG, WhatsApp, FB." 
-        />
-        <ScoreGauge 
-          score={85} 
-          label="Growth Score" 
-          description="AI-driven ad targeting and Llama ecosystem monetization." 
-        />
-        <ScoreGauge 
-          score={65} 
-          label="Valuation Score" 
-          description="Trading at 24x forward P/E, near historical upper bound." 
-        />
+      <div className="flex flex-col md:flex-row gap-6">
+        <ScoreGauge score={92} label="Moat Score" description="Unrivaled social network effect and massive proprietary data for AI training." />
+        <ScoreGauge score={85} label="Growth Score" description="Advancements in Llama AI and monetization of Reels/Threads." />
+        <ScoreGauge score={65} label="Valuation Score" description="Attractive P/E relative to growth, but high capex intensive." />
       </div>
 
-      <AnalysisSection title="The Economic Moat">
-        <div className="glass-card">
-          <p style={{ marginBottom: '1rem' }}>
-            Meta's moat is built on <strong>Network Effects</strong> and <strong>Data Advantages</strong>:
-          </p>
-          <ul style={{ paddingLeft: '1.5rem', color: 'var(--muted-foreground)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <li>
-              <strong style={{ color: 'white' }}>Network Effect:</strong> Each new user on Instagram or WhatsApp increases the value for existing users. The cost to leave (social exclusion) is extremely high.
-            </li>
-            <li>
-              <strong style={{ color: 'white' }}>Proprietary Data:</strong> Meta possesses the world's most detailed interest graph, allowing for programmatic advertising precision that competitors cannot replicate.
-            </li>
-            <li>
-              <strong style={{ color: 'white' }}>Infrastructure:</strong> Massive GPU clusters (H100/B200) create a barrier to entry for AI-driven recommendation engines.
-            </li>
-          </ul>
-        </div>
+      <AnalysisSection title="The Advertising Moat">
+        <Card className="bg-white/5 border-none backdrop-blur-md">
+          <CardBody className="p-8">
+            <p className="mb-4">Meta's moat is built on <strong>Attention and Data</strong>:</p>
+            <ul className="list-disc pl-6 space-y-4 text-white/60">
+              <li><strong className="text-white">Social Graph Network Effect:</strong> Every new user on Instagram or WhatsApp increases the value for existing users. Breaking this flywheel requires a multi-billion person migration.</li>
+              <li><strong className="text-white">AI Content Flywheel:</strong> AI-driven recommendations are significantly increasing time-spent on Reels, which directly translates to more ad-inventory.</li>
+              <li><strong className="text-white">Vertical Integration of AI:</strong> By owning the compute, the models (Llama), and the distribution (FB/IG), Meta controls the entire AI value chain.</li>
+            </ul>
+          </CardBody>
+        </Card>
       </AnalysisSection>
 
-      <AnalysisSection title="Growth catalysts (AI Focus)">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
-          <div className="glass-card">
-            <h4 style={{ marginBottom: '1rem' }}>Llama Ecosystem</h4>
-            <p style={{ fontSize: '0.875rem', color: 'var(--muted-foreground)' }}>
-              Open-sourcing Llama makes Meta the default standard for enterprise AI infrastructure, reducing their own R&D costs while commoditizing competitors' proprietary models.
-            </p>
-          </div>
-          <div className="glass-card">
-            <h4 style={{ marginBottom: '1rem' }}>Reels & AI Creative</h4>
-            <p style={{ fontSize: '0.875rem', color: 'var(--muted-foreground)' }}>
-              AI-generated ad creatives and video recommendations are significantly increasing time spent per user and conversion rates for advertisers.
-            </p>
-          </div>
-        </div>
-      </AnalysisSection>
       <AnalysisSection title="Price Scenarios (12-24 Months)">
-        <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <ScenarioCard 
             type="Bear" 
-            priceTarget="$350" 
-            description="Engagement declines due to TikTok/competition and ad market weakens."
+            priceTarget="$380" 
+            description="Regulatory fines and a shift in user engagement to newer platforms."
             points={[
-              "DAP growth turns negative in top markets",
-              "Operating margins contract back to sub-30%",
-              "Massive AI CapEx fails to yield ROI"
+              "EU privacy laws severely impact targeting precision",
+              "Reality Labs losses exceed $20B annually",
+              "Ad-market recession hits digital spend"
             ]}
           />
           <ScenarioCard 
             type="Base" 
-            priceTarget="$550" 
-            description="Steady ad revenue and AI integration improves targeting/monetization."
+            priceTarget="$520" 
+            description="Steady ad-revenue growth and AI-driven efficiency gains."
             points={[
-              "Ad revenue grows 10-12% annually",
-              "Reels reaches parity with main feed revenue",
-              "Free cash flow supports significant buybacks"
+              "Ad revenue grows 12-15% annually",
+              "Reels monetization achieves parity with Feed",
+              "Share buybacks continue at $50B+ clip"
             ]}
           />
           <ScenarioCard 
             type="Bull" 
-            priceTarget="$750" 
-            description="Llama becomes the industry standard and Threads monetization explodes."
+            priceTarget="$650" 
+            description="Llama becomes the industry standard and WhatsApp monetization explodes."
             points={[
-              "Enterprise AI licensing becomes major revenue stream",
-              "Threads captures significant X (Twitter) market share",
-              "Metaverse R&D burns decrease significantly"
+              "WhatsApp business messaging becomes a $10B high-margin pillar",
+              "Generative AI ad-creation tools lower barriers for small biz",
+              "Reality Labs reaches an 'iPhone moment' with AR glasses"
             ]}
           />
         </div>
