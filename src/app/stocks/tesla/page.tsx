@@ -85,7 +85,7 @@ export default function TeslaPage() {
             priceTarget="$450" 
             description="Robotaxi network launch and Optimus robotics production readiness."
             points={[
-              "Software revenue becomes >30% of total EBIT",
+              "Software revenue becomes &gt;30% of total EBIT",
               "Unsupervised FSD approved in major US cities",
               "Tesla Energy becomes as large as the Auto business"
             ]}

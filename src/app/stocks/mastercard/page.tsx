@@ -50,7 +50,7 @@ export default function MastercardPage() {
 
       <AnalysisSection title="The Services Moat">
         <div className="glass-card">
-          <p style={{ marginBottom: '1rem' }}>Mastercard is more than a network; it's a <strong>Data & Services Powerhouse</strong>:</p>
+          <p style={{ marginBottom: '1rem' }}>Mastercard is more than a network; it's a <strong>Data &amp; Services Powerhouse</strong>:</p>
           <ul style={{ paddingLeft: '1.5rem', color: 'var(--muted-foreground)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <li><strong style={{ color: 'white' }}>Service Diversification:</strong> MA has been more aggressive in building security, fraud, and data analytics services, which are higher margin and stickier than core processing.</li>
             <li><strong style={{ color: 'white' }}>Technological Agility:</strong> Strong focus on open banking and digital identity solutions creates new moats in the evolving fintech landscape.</li>

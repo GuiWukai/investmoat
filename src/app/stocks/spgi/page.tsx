@@ -87,7 +87,7 @@ export default function SPGlobalPage() {
             points={[
               "Acquisition integration creates significant cost synergies",
               "Private credit ratings become a standard requirement",
-              "Dividend growth re-accelerates to >15%"
+              "Dividend growth re-accelerates to &gt;15%"
             ]}
           />
         </div>

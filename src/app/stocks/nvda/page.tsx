@@ -53,7 +53,7 @@ export default function NvidiaPage() {
           <p style={{ marginBottom: '1rem' }}>Nvidia's moat isn't just "fast chips", it's the <strong>Full-Stack Software Advantage</strong>:</p>
           <ul style={{ paddingLeft: '1.5rem', color: 'var(--muted-foreground)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <li><strong style={{ color: 'white' }}>CUDA Software Ecosystem:</strong> With over 4 million developers, CUDA is the industry standard. Moving to another hardware provider requires rewriting massive amounts of code.</li>
-            <li><strong style={{ color: 'white' }}>Innovation Velocity:</strong> Nvidia has moved to a 1-year product cycle (Hopper -> Blackwell -> Rubin), staying ahead of competitors who are still catching up to the last generation.</li>
+            <li><strong style={{ color: 'white' }}>Innovation Velocity:</strong> Nvidia has moved to a 1-year product cycle (Hopper -&gt; Blackwell -&gt; Rubin), staying ahead of competitors who are still catching up to the last generation.</li>
             <li><strong style={{ color: 'white' }}>Infiniband Networking:</strong> Their integration of networking (Mellanox) allows them to sell high-margin full-racks, not just individual GPUs.</li>
           </ul>
         </div>

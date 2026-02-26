@@ -51,7 +51,7 @@ export default function K92Page() {
         <ScoreGauge 
           score={95} 
           label="Growth Score" 
-          description="Stage 3 & 4 expansions set to more than double production profiles." 
+          description="Stage 3 &amp; 4 expansions set to more than double production profiles." 
         />
         <ScoreGauge 
           score={82} 
@@ -79,7 +79,7 @@ export default function K92Page() {
         </div>
       </AnalysisSection>
 
-      <AnalysisSection title="Stage 3 & 4 Expansion">
+      <AnalysisSection title="Stage 3 &amp; 4 Expansion">
         <div className="glass-card" style={{ borderLeft: '4px solid var(--accent)' }}>
           <h4 style={{ marginBottom: '1rem' }}>The Transformation Journey</h4>
           <p style={{ color: 'var(--muted-foreground)' }}>
@@ -112,7 +112,7 @@ export default function K92Page() {
           <ScenarioCard 
             type="Base" 
             priceTarget="$12.00" 
-            description="Stage 3 expansion success with gold prices holding >$2300."
+            description="Stage 3 expansion success with gold prices holding &gt;$2300."
             points={[
               "Production grows to 250k+ oz annually",
               "AISC (All-In Sustaining Costs) remains in bottom quartile",
