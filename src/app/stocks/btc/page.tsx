@@ -8,7 +8,7 @@ export default function BitcoinPage() {
   return (
     <div className="animate-fade-in space-y-12 pb-12">
       <header className="space-y-6">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center flex-wrap gap-3">
           <Chip color="warning" variant="flat" size="sm">Digital Asset | Hard Money</Chip>
           <Chip color="success" variant="flat" size="sm">Digital Gold</Chip>
         </div>
@@ -55,7 +55,7 @@ export default function BitcoinPage() {
 
       <AnalysisSection title="The Scarcity Moat">
         <Card className="bg-white/5 border-none backdrop-blur-md">
-          <CardBody className="p-8">
+          <CardBody className="p-4 md:p-8">
             <p className="mb-4">Bitcoin's moat is built on <strong>Math and Decentralization</strong>:</p>
             <ul className="list-disc pl-6 space-y-4 text-white/60">
               <li><strong className="text-white">Absolute Scarcity:</strong> Only 21 million will ever exist. Unlike fiat or even gold, the supply curve is perfectly inelastic to demand.</li>

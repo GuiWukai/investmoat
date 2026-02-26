@@ -1,48 +1,53 @@
+'use client';
+
 import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge } from "@/components/AnalysisComponents";
-import { PenTool, Image, Zap, MousePointer2 } from "lucide-react";
+import { PenTool, Image, Zap } from "lucide-react";
+import { Chip } from "@heroui/react";
 
 export default function AdobePage() {
   return (
-    <div className="animate-fade-in">
-      <header style={{ marginBottom: '3rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
-          <span className="badge badge-info">SaaS | Creative</span>
-          <span className="badge badge-success">Quality Compounder</span>
+    <div className="animate-fade-in pb-12">
+      <header className="mb-8 space-y-4">
+        <div className="flex items-center gap-3 flex-wrap">
+          <Chip color="primary" variant="flat" size="sm">SaaS | Creative</Chip>
+          <Chip color="success" variant="flat" size="sm">Quality Compounder</Chip>
         </div>
-        <h1 style={{ fontSize: '3.5rem', marginBottom: '0.5rem' }}>Adobe Inc.</h1>
-        <div style={{ display: 'flex', gap: '2rem', color: 'var(--muted-foreground)' }}>
-          <span>Ticker: <strong>ADBE</strong></span>
-          <span>Market Cap: <strong>$215B</strong></span>
-          <span>Price: <strong>$482.50</strong></span>
+        <div>
+          <h1 className="text-3xl md:text-5xl font-black mb-2 tracking-tight">Adobe Inc.</h1>
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-white/40 font-medium text-sm">
+            <span>Ticker: <strong className="text-white">ADBE</strong></span>
+            <span>Market Cap: <strong className="text-white">$215B</strong></span>
+            <span>Price: <strong className="text-white">$482.50</strong></span>
+          </div>
         </div>
         <RecommendationBadge status="Accumulate" />
       </header>
 
-      <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-        <MetricCard 
-          title="Digital Media ARR" 
-          value="$15.7B" 
-          label="Recurring Powerhouse" 
-          icon={<PenTool size={20} color="white" />} 
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <MetricCard
+          title="Digital Media ARR"
+          value="$15.7B"
+          label="Recurring Powerhouse"
+          icon={<PenTool size={20} color="white" />}
           color="#ff0000"
         />
-        <MetricCard 
-          title="Gross Margin" 
-          value="87.8%" 
-          label="Software Dominance" 
-          icon={<Zap size={20} color="white" />} 
+        <MetricCard
+          title="Gross Margin"
+          value="87.8%"
+          label="Software Dominance"
+          icon={<Zap size={20} color="white" />}
           color="#f7b600"
         />
-        <MetricCard 
-          title="Creative Cloud Users" 
-          value="30M+" 
-          label="Market Standard" 
-          icon={<Image size={20} color="white" />} 
+        <MetricCard
+          title="Creative Cloud Users"
+          value="30M+"
+          label="Market Standard"
+          icon={<Image size={20} color="white" />}
           color="#3b82f6"
         />
       </div>
 
-      <div style={{ display: 'flex', gap: '1.5rem', marginTop: '2rem' }}>
+      <div className="flex flex-col md:flex-row gap-6 mt-8">
         <ScoreGauge score={96} label="Moat Score" description="The Creative Cloud is the global industry standard for design, photo, and video." />
         <ScoreGauge score={82} label="Growth Score" description="Generative AI (Firefly) integration driving higher tiers and retention." />
         <ScoreGauge score={64} label="Valuation Score" description="Reasonable multiple for a company with 30%+ net margins." />
@@ -50,20 +55,20 @@ export default function AdobePage() {
 
       <AnalysisSection title="The Creative Standard Moat">
         <div className="glass-card">
-          <p style={{ marginBottom: '1rem' }}>Adobe's moat is built on <strong>Network Effects and Professional Reliance</strong>:</p>
-          <ul style={{ paddingLeft: '1.5rem', color: 'var(--muted-foreground)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <li><strong style={{ color: 'white' }}>Industry Standard:</strong> Photoshop, Premiere, and Illustrator are taught in universities. Hiring a designer means hiring someone who speaks "Adobe."</li>
-            <li><strong style={{ color: 'white' }}>Firefly AI Advantage:</strong> Adobe's AI is trained on licensed content (Adobe Stock), making it safe for commercial use—a critical differentiator for enterprise clients.</li>
+          <p style={{ marginBottom: '1rem' }}>Adobe&apos;s moat is built on <strong>Network Effects and Professional Reliance</strong>:</p>
+          <ul style={{ paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <li><strong style={{ color: 'white' }}>Industry Standard:</strong> Photoshop, Premiere, and Illustrator are taught in universities. Hiring a designer means hiring someone who speaks &quot;Adobe.&quot;</li>
+            <li><strong style={{ color: 'white' }}>Firefly AI Advantage:</strong> Adobe&apos;s AI is trained on licensed content (Adobe Stock), making it safe for commercial use—a critical differentiator for enterprise clients.</li>
             <li><strong style={{ color: 'white' }}>Document Cloud:</strong> Acrobat and PDF standards Create a separate, massive moat in professional and business workflows.</li>
           </ul>
         </div>
       </AnalysisSection>
 
       <AnalysisSection title="Price Scenarios (12-24 Months)">
-        <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-          <ScenarioCard 
-            type="Bear" 
-            priceTarget="$380" 
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <ScenarioCard
+            type="Bear"
+            priceTarget="$380"
             description="AI disruption from startups (Midjourney/Canva) erodes the 'low-end' market."
             points={[
               "New ARR growth slows to single digits",
@@ -71,9 +76,9 @@ export default function AdobePage() {
               "Integration of Figma-replacement features fails to gain traction"
             ]}
           />
-          <ScenarioCard 
-            type="Base" 
-            priceTarget="$550" 
+          <ScenarioCard
+            type="Base"
+            priceTarget="$550"
             description="Successful Firefly monetization and steady enterprise upgrades."
             points={[
               "Firefly adoption increases Creative Cloud ARPU by 5-8%",
@@ -81,9 +86,9 @@ export default function AdobePage() {
               "Operating margins remain above 45% (non-GAAP)"
             ]}
           />
-          <ScenarioCard 
-            type="Bull" 
-            priceTarget="$680" 
+          <ScenarioCard
+            type="Bull"
+            priceTarget="$680"
             description="Adobe becomes the default generative AI platform for the enterprise."
             points={[
               "AI credit consumption drives massive revenue upside",

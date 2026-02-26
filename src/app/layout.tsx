@@ -5,15 +5,7 @@ import "./globals.css";
 import Link from "next/link";
 import { stockData, getAverageScore } from "./stockData";
 import { Providers } from "./providers";
-import { 
-  Navbar, 
-  NavbarBrand, 
-  NavbarContent, 
-  NavbarItem, 
-  NavbarMenuToggle, 
-  NavbarMenu, 
-  NavbarMenuItem,
-  Button,
+import {
   Accordion,
   AccordionItem,
   ScrollShadow
@@ -74,58 +66,62 @@ export default function RootLayout({
       <body className="bg-background text-foreground antialiased">
         <Providers>
           <div className="main-container">
-            {/* Mobile Navbar */}
-            <Navbar 
-              isBordered 
-              isMenuOpen={isMenuOpen} 
-              onMenuOpenChange={setIsMenuOpen}
-              className="lg:hidden bg-background/70 backdrop-blur-lg border-white/5"
-            >
-              <NavbarContent>
-                <NavbarMenuToggle
-                  aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                  className="lg:hidden"
-                />
-                <NavbarBrand>
-                  <Link href="/" className="flex items-center gap-2">
-                    <span className="primary-gradient w-8 h-8 rounded-lg flex items-center justify-center font-bold">M</span>
-                    <p className="font-bold text-inherit">InvestMoat</p>
-                  </Link>
-                </NavbarBrand>
-              </NavbarContent>
+            {/* Mobile Top Bar */}
+            <div className="lg:hidden sticky top-0 z-50 flex items-center justify-start px-4 h-16 bg-background/70 backdrop-blur-lg border-b border-white/5">
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                className="p-2 mr-3 rounded-lg hover:bg-white/5 transition-colors text-white"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  {isMenuOpen ? (
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  ) : (
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                  )}
+                </svg>
+              </button>
+              <Link href="/" className="flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
+                <span className="primary-gradient w-8 h-8 rounded-lg flex items-center justify-center font-bold text-white">M</span>
+                <span className="font-bold text-white">InvestMoat</span>
+              </Link>
+            </div>
 
-              <NavbarMenu className="bg-background/95 backdrop-blur-xl border-t border-white/5 pt-6 flex flex-col gap-4">
-                {menuItems.map((item, index) => (
-                  <NavbarMenuItem key={`${item.name}-${index}`}>
+            {/* Mobile Menu Overlay */}
+            {isMenuOpen && (
+              <div className="lg:hidden fixed inset-0 top-16 z-[100] overflow-y-auto" style={{ background: 'rgba(5, 7, 10, 0.97)' }}>
+                <div className="flex flex-col p-4 gap-1 pb-24">
+                  {menuItems.map((item) => (
                     <Link
-                      className="w-full text-lg font-semibold py-2"
+                      key={item.href}
                       href={item.href}
+                      className="nav-item text-base font-semibold"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}
                     </Link>
-                  </NavbarMenuItem>
-                ))}
-                
-                <div className="h-px bg-white/10 my-2" />
-                
-                <Accordion variant="light" className="px-0">
-                  {categories.map((cat) => (
-                    <AccordionItem 
-                      key={cat.key} 
-                      title={<span className="text-white/40 text-xs font-bold uppercase tracking-wider">{cat.name}</span>}
-                      className="px-0"
-                    >
-                      <div className="flex flex-col gap-1">
-                        {stockData
-                          .filter(s => s.category === cat.key)
-                          .map(s => <NavStockItem key={s.ticker} stock={s} closeMenu={() => setIsMenuOpen(false)} />)}
-                      </div>
-                    </AccordionItem>
                   ))}
-                </Accordion>
-              </NavbarMenu>
-            </Navbar>
+
+                  <div className="h-px bg-white/10 my-4" />
+
+                  <Accordion variant="light" className="px-0">
+                    {categories.map((cat) => (
+                      <AccordionItem
+                        key={cat.key}
+                        title={<span className="text-white/40 text-xs font-bold uppercase tracking-wider">{cat.name}</span>}
+                        className="px-0"
+                      >
+                        <div className="flex flex-col gap-1">
+                          {stockData
+                            .filter(s => s.category === cat.key)
+                            .map(s => <NavStockItem key={s.ticker} stock={s} closeMenu={() => setIsMenuOpen(false)} />)}
+                        </div>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </div>
+              </div>
+            )}
 
             {/* Desktop Sidebar */}
             <aside className="sidebar glass hidden lg:flex">

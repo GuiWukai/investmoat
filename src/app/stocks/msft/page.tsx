@@ -8,7 +8,7 @@ export default function MicrosoftPage() {
   return (
     <div className="animate-fade-in space-y-12 pb-12">
       <header className="space-y-6">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center flex-wrap gap-3">
           <Chip color="primary" variant="flat" size="sm">Software | Cloud | AI</Chip>
           <Chip color="success" variant="flat" size="sm">Gold Standard</Chip>
         </div>
@@ -55,7 +55,7 @@ export default function MicrosoftPage() {
 
       <AnalysisSection title="The Enterprise Moat">
         <Card className="bg-white/5 border-none backdrop-blur-md">
-          <CardBody className="p-8">
+          <CardBody className="p-4 md:p-8">
             <p className="mb-4">Microsoft's moat is built on <strong>Ubiquity and Frictionless Scaling</strong>:</p>
             <ul className="list-disc pl-6 space-y-4 text-white/60">
               <li><strong className="text-white">The Bundle Moat:</strong> By integrating Office, Teams, Azure, and Security, Microsoft creates a "sticky" ecosystem where selecting a competitor point-product adds more complexity than value.</li>

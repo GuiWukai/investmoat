@@ -1,25 +1,30 @@
+'use client';
+
 import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge } from "@/components/AnalysisComponents";
-import { Pickaxe, Drill, Zap, Gem, CheckCircle } from "lucide-react";
+import { Pickaxe, Zap, Gem, CheckCircle } from "lucide-react";
+import { Chip } from "@heroui/react";
 
 export default function K92Page() {
   return (
-    <div className="animate-fade-in">
-      <header style={{ marginBottom: '3rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
-          <span className="badge badge-warning">Materials | Gold Mining</span>
-          <span className="badge badge-success">Speculative Buy</span>
+    <div className="animate-fade-in pb-12">
+      <header className="mb-8 space-y-4">
+        <div className="flex items-center gap-3 flex-wrap">
+          <Chip color="warning" variant="flat" size="sm">Materials | Gold Mining</Chip>
+          <Chip color="success" variant="flat" size="sm">Speculative Buy</Chip>
         </div>
-        <h1 style={{ fontSize: '3.5rem', marginBottom: '0.5rem' }}>K92 Mining Ltd.</h1>
-        <div style={{ display: 'flex', gap: '2rem', color: 'var(--muted-foreground)', flexWrap: 'wrap' }}>
-          <span>Ticker: <strong>KNT (TSX)</strong></span>
-          <span>Market Cap: <strong>~$3.9B (CAD)</strong></span>
-          <span>Price: <strong>~$27 CAD</strong></span>
-          <span>Mine: <strong>Kainantu, PNG</strong></span>
+        <div>
+          <h1 className="text-3xl md:text-5xl font-black mb-2 tracking-tight">K92 Mining Ltd.</h1>
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-white/40 font-medium text-sm">
+            <span>Ticker: <strong className="text-white">KNT (TSX)</strong></span>
+            <span>Market Cap: <strong className="text-white">~$3.9B (CAD)</strong></span>
+            <span>Price: <strong className="text-white">~$27 CAD</strong></span>
+            <span>Mine: <strong className="text-white">Kainantu, PNG</strong></span>
+          </div>
         </div>
         <RecommendationBadge status="Speculative Buy" />
       </header>
 
-      <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <MetricCard
           title="Gold Grade"
           value="10.2 g/t"
@@ -50,7 +55,7 @@ export default function K92Page() {
         />
       </div>
 
-      <div style={{ display: 'flex', gap: '1.5rem', marginTop: '2rem' }}>
+      <div className="flex flex-col md:flex-row gap-6 mt-8">
         <ScoreGauge
           score={65}
           label="Moat Score"
@@ -73,7 +78,7 @@ export default function K92Page() {
           <p style={{ marginBottom: '1rem' }}>
             In mining, the &quot;moat&quot; is the <strong>Quality of the Orebody</strong>:
           </p>
-          <ul style={{ paddingLeft: '1.5rem', color: 'var(--muted-foreground)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <ul style={{ paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <li>
               <strong style={{ color: 'white' }}>Exceptional Grades:</strong> K92&apos;s Kainantu mine averages ~10.2 g/t gold — top 5% globally. High grades provide a massive margin cushion during gold price downturns and justify the PNG risk premium.
             </li>
@@ -92,11 +97,11 @@ export default function K92Page() {
 
       <AnalysisSection title="Stage 3 Complete — Stage 4 Now Underway">
         <div className="glass-card" style={{ borderLeft: '4px solid var(--accent)' }}>
-          <h4 style={{ marginBottom: '1rem' }}>The Transformation Journey</h4>
-          <p style={{ color: 'var(--muted-foreground)', marginBottom: '1.5rem' }}>
-            The Stage 3 milestone has been achieved. The new 1.2 Mtpa process plant completed commissioning in December 2025, with ~95% of Stage 3 growth capital spent or committed. Attention now turns to Stage 4, which will push run-rate production toward <strong>400,000+ oz AuEq annually</strong>. K92 is allocating $75–80M in Stage 4 growth capital in 2026 alone.
+          <h4 className="text-lg font-bold mb-4">The Transformation Journey</h4>
+          <p className="text-white/60 mb-6 text-sm leading-relaxed">
+            The Stage 3 milestone has been achieved. The new 1.2 Mtpa process plant completed commissioning in December 2025, with ~95% of Stage 3 growth capital spent or committed. Attention now turns to Stage 4, which will push run-rate production toward <strong className="text-white">400,000+ oz AuEq annually</strong>. K92 is allocating $75–80M in Stage 4 growth capital in 2026 alone.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginTop: '0.5rem' }}>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             <div style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', borderRadius: '8px' }}>
               <span style={{ fontSize: '0.75rem', color: 'var(--accent)' }}>2024 Actual</span>
               <div style={{ fontSize: '1.25rem', fontWeight: 600 }}>150k oz AuEq</div>
@@ -114,14 +119,14 @@ export default function K92Page() {
               <div style={{ fontSize: '1.25rem', fontWeight: 600 }}>400k+ oz AuEq</div>
             </div>
           </div>
-          <p style={{ color: 'var(--muted-foreground)', marginTop: '1.5rem', fontSize: '0.875rem' }}>
+          <p className="text-white/60 mt-6 text-sm leading-relaxed">
             Production is expected to be weighted to H2 2026, as key enabler projects (pastefill plant, fleet expansion, power upgrade to 15.3 MW, 60-tonne truck river crossings) complete mostly in H1 2026.
           </p>
         </div>
       </AnalysisSection>
 
       <AnalysisSection title="Price Scenarios (12-24 Months)">
-        <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <ScenarioCard
             type="Bear"
             priceTarget="$16.00"
