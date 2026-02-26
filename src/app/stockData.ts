@@ -14,7 +14,7 @@ export const stockData = [
     { name: "S&P Global", ticker: "SPGI", scores: [97, 78, 75], href: "/stocks/spgi", category: "Financials" },
     { name: "Intuit", ticker: "INTU", scores: [94, 84, 62], href: "/stocks/intuit", category: "Financials" },
     { name: "Bitcoin", ticker: "BTC", scores: [99, 85, 50], href: "/stocks/btc", category: "Hard Assets" },
-    { name: "K92 Mining", ticker: "KNT", scores: [60, 95, 82], href: "/stocks/k92", category: "Hard Assets" },
+    { name: "K92 Mining", ticker: "KNT", scores: [65, 90, 60], href: "/stocks/k92", category: "Hard Assets" },
 ];
 
 export const getAverageScore = (scores: number[]) => {
