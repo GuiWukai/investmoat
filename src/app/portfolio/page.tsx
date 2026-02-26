@@ -2,10 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { PieChart, ShieldCheck, ChevronRight } from "lucide-react";
-import {
-  Card, CardBody, CardHeader, Progress,
-  Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Chip
-} from "@heroui/react";
+import { Card, CardBody, CardHeader, Progress, Chip } from "@heroui/react";
 
 const distribution = [
   { ticker: "MSFT", name: "Microsoft",  weight: 11, color: "#00a4ef", category: "Core SaaS",       href: "/stocks/msft" },
@@ -117,93 +114,64 @@ export default function PortfolioPage() {
       </div>
 
       <section>
-        <div className="flex items-center gap-4 mb-8">
+        <div className="flex items-center gap-4 mb-6">
           <h2 className="text-2xl font-bold">Allocation Breakdown</h2>
           <div className="h-px flex-1 bg-white/10" />
-          <span className="text-xs text-white/30 font-medium">Click a row to view analysis</span>
+          <span className="text-xs text-white/30 font-medium">Click to view analysis</span>
         </div>
 
-        <Table
-          aria-label="Portfolio Allocation Breakdown"
-          onRowAction={(key) => {
-            const stock = distribution.find((s) => s.ticker === key);
-            if (stock) router.push(stock.href);
-          }}
-          classNames={{
-            base: "overflow-x-auto",
-            wrapper: "bg-white/5 backdrop-blur-lg rounded-2xl shadow-none border border-white/5 p-0",
-            table: "min-w-[640px]",
-            thead: "[&>tr]:first:rounded-none",
-            th: "bg-white/5 text-white/40 border-b border-white/10 text-[10px] uppercase tracking-widest font-black first:rounded-none last:rounded-none",
-            td: "py-3.5 text-white/80 border-b border-white/5 last:border-b-0",
-            tr: "hover:bg-white/[0.06] transition-colors cursor-pointer group",
-          }}
-        >
-          <TableHeader>
-            <TableColumn>Asset</TableColumn>
-            <TableColumn>Category</TableColumn>
-            <TableColumn>Weight</TableColumn>
-            <TableColumn>Allocation</TableColumn>
-            <TableColumn> </TableColumn>
-          </TableHeader>
-          <TableBody>
-            {distribution.map((stock) => (
-              <TableRow key={stock.ticker}>
-                {/* Asset */}
-                <TableCell>
-                  <div className="flex items-center gap-3">
-                    <div
-                      className="w-3 h-3 rounded-full shrink-0 ring-2 ring-white/10"
-                      style={{ background: stock.color }}
-                    />
-                    <div>
-                      <div className="font-bold text-sm text-white">{stock.name}</div>
-                      <div className="text-[10px] text-white/30 tracking-widest font-black uppercase">{stock.ticker}</div>
-                    </div>
-                  </div>
-                </TableCell>
+        <div className="rounded-2xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-lg divide-y divide-white/5">
+          {distribution.map((stock) => (
+            <button
+              key={stock.ticker}
+              onClick={() => router.push(stock.href)}
+              className="w-full flex items-center gap-4 px-5 py-4 hover:bg-white/[0.06] transition-colors group text-left"
+            >
+              {/* Color swatch */}
+              <div
+                className="w-1 self-stretch rounded-full shrink-0"
+                style={{ background: stock.color }}
+              />
 
-                {/* Category */}
-                <TableCell>
-                  <Chip
-                    size="sm"
-                    variant="flat"
-                    color={categoryColor(stock.category)}
-                    classNames={{ content: "font-semibold" }}
-                  >
-                    {stock.category}
-                  </Chip>
-                </TableCell>
+              {/* Name & ticker */}
+              <div className="min-w-[130px]">
+                <div className="font-bold text-sm text-white">{stock.name}</div>
+                <div className="text-[10px] text-white/30 tracking-widest font-black uppercase">{stock.ticker}</div>
+              </div>
 
-                {/* Weight */}
-                <TableCell>
-                  <span className="text-base font-black text-white tabular-nums">{stock.weight}%</span>
-                </TableCell>
+              {/* Category chip */}
+              <div className="hidden sm:block">
+                <Chip
+                  size="sm"
+                  variant="flat"
+                  color={categoryColor(stock.category)}
+                  classNames={{ content: "font-semibold text-[11px]" }}
+                >
+                  {stock.category}
+                </Chip>
+              </div>
 
-                {/* Allocation bar */}
-                <TableCell>
-                  <div className="flex items-center gap-3 min-w-[140px]">
-                    <Progress
-                      value={(stock.weight / 11) * 100}
-                      size="sm"
-                      color={stock.weight >= 9 ? "success" : stock.weight >= 6 ? "primary" : "default"}
-                      className="flex-1 max-w-[120px]"
-                    />
-                    <span className="text-[10px] text-white/30 tabular-nums w-8">{stock.weight}%</span>
-                  </div>
-                </TableCell>
+              {/* Allocation bar */}
+              <div className="flex-1 flex items-center gap-3">
+                <Progress
+                  value={(stock.weight / 11) * 100}
+                  size="sm"
+                  color={stock.weight >= 9 ? "success" : stock.weight >= 6 ? "primary" : "default"}
+                  className="flex-1 max-w-[200px]"
+                />
+              </div>
 
-                {/* Chevron */}
-                <TableCell>
-                  <ChevronRight
-                    size={16}
-                    className="text-white/20 group-hover:text-white/60 transition-colors"
-                  />
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+              {/* Weight */}
+              <span className="text-base font-black text-white tabular-nums w-10 text-right">{stock.weight}%</span>
+
+              {/* Chevron */}
+              <ChevronRight
+                size={16}
+                className="text-white/20 group-hover:text-white/60 transition-colors shrink-0"
+              />
+            </button>
+          ))}
+        </div>
       </section>
     </div>
   );
