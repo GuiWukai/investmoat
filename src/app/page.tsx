@@ -15,11 +15,11 @@ export default function HomePage() {
 
   return (
     <div className="animate-fade-in space-y-12">
-      <header className="mb-12">
-        <h1 className="text-5xl font-extrabold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent mb-4">
+      <header className="mb-8 md:mb-12">
+        <h1 className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent mb-4">
           Investment Intelligence
         </h1>
-        <p className="text-white/60 text-xl max-w-2xl">
+        <p className="text-white/60 text-base md:text-xl max-w-2xl">
           Deep-dive analysis of wide-moat companies, growth catalysts, and value-based entry points.
         </p>
       </header>

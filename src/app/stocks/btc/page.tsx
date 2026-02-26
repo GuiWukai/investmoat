@@ -13,8 +13,8 @@ export default function BitcoinPage() {
           <Chip color="success" variant="flat" size="sm">Digital Gold</Chip>
         </div>
         <div>
-          <h1 className="text-6xl font-black mb-2 tracking-tight text-[#f7931a]">Bitcoin</h1>
-          <div className="flex gap-6 text-white/40 font-medium">
+          <h1 className="text-3xl md:text-6xl font-black mb-2 tracking-tight text-[#f7931a]">Bitcoin</h1>
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-white/40 font-medium text-sm md:text-base">
             <span>Ticker: <strong className="text-white">BTC</strong></span>
             <span>Market Cap: <strong className="text-white">$1.3T</strong></span>
             <span>Circulating Supply: <strong className="text-white">19.7M / 21M</strong></span>

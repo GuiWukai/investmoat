@@ -13,11 +13,11 @@ export default function AmazonPage() {
           <Chip color="success" variant="flat" size="sm">Strong Buy</Chip>
         </div>
         <div>
-          <h1 className="text-6xl font-black mb-2 tracking-tight">Amazon.com Inc.</h1>
-          <div className="flex gap-6 text-white/40 font-medium">
+          <h1 className="text-3xl md:text-6xl font-black mb-2 tracking-tight">Amazon.com Inc.</h1>
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-white/40 font-medium text-sm md:text-base">
             <span>Ticker: <strong className="text-white">AMZN</strong></span>
             <span>Market Cap: <strong className="text-white">$1.92T</strong></span>
-            <span>Current Price: <strong className="text-white">$185.20</strong></span>
+            <span>Price: <strong className="text-white">$185.20</strong></span>
           </div>
         </div>
         <RecommendationBadge status="Strong Buy" />

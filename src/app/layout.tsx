@@ -1,15 +1,25 @@
-import type { Metadata } from "next";
+'use client';
+
+import React from "react";
 import "./globals.css";
 import Link from "next/link";
 import { stockData, getAverageScore } from "./stockData";
 import { Providers } from "./providers";
+import { 
+  Navbar, 
+  NavbarBrand, 
+  NavbarContent, 
+  NavbarItem, 
+  NavbarMenuToggle, 
+  NavbarMenu, 
+  NavbarMenuItem,
+  Button,
+  Accordion,
+  AccordionItem,
+  ScrollShadow
+} from "@heroui/react";
 
-export const metadata: Metadata = {
-  title: "InvestMoat | Professional Stock Analysis",
-  description: "Analyze stock moats, growth potential, and intrinsic valuation for long-term investing.",
-};
-
-function NavStockItem({ stock }: { stock: typeof stockData[0] }) {
+function NavStockItem({ stock, closeMenu }: { stock: typeof stockData[0], closeMenu?: () => void }) {
   const avg = getAverageScore(stock.scores);
   const getScoreColor = (s: number) => {
     if (s >= 90) return '#10b981';
@@ -19,7 +29,12 @@ function NavStockItem({ stock }: { stock: typeof stockData[0] }) {
   };
 
   return (
-    <Link href={stock.href} className="nav-item" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+    <Link 
+      href={stock.href} 
+      className="nav-item" 
+      onClick={closeMenu}
+      style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+    >
       <span>{stock.name} ({stock.ticker})</span>
       <span style={{ 
         fontSize: '0.7rem', 
@@ -41,12 +56,79 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const menuItems = [
+    { name: "Dashboard", href: "/" },
+    { name: "Portfolio Distribution", href: "/portfolio" },
+  ];
+
+  const categories = [
+    { name: "Large Cap Tech", key: "Big Tech" },
+    { name: "Financials & SaaS", key: "Financials" },
+    { name: "Hard Assets & Crypto", key: "Hard Assets" },
+  ];
+
   return (
     <html lang="en" className="dark">
       <body className="bg-background text-foreground antialiased">
         <Providers>
           <div className="main-container">
-            <aside className="sidebar glass">
+            {/* Mobile Navbar */}
+            <Navbar 
+              isBordered 
+              isMenuOpen={isMenuOpen} 
+              onMenuOpenChange={setIsMenuOpen}
+              className="lg:hidden bg-background/70 backdrop-blur-lg border-white/5"
+            >
+              <NavbarContent>
+                <NavbarMenuToggle
+                  aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                  className="lg:hidden"
+                />
+                <NavbarBrand>
+                  <Link href="/" className="flex items-center gap-2">
+                    <span className="primary-gradient w-8 h-8 rounded-lg flex items-center justify-center font-bold">M</span>
+                    <p className="font-bold text-inherit">InvestMoat</p>
+                  </Link>
+                </NavbarBrand>
+              </NavbarContent>
+
+              <NavbarMenu className="bg-background/95 backdrop-blur-xl border-t border-white/5 pt-6 flex flex-col gap-4">
+                {menuItems.map((item, index) => (
+                  <NavbarMenuItem key={`${item.name}-${index}`}>
+                    <Link
+                      className="w-full text-lg font-semibold py-2"
+                      href={item.href}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  </NavbarMenuItem>
+                ))}
+                
+                <div className="h-px bg-white/10 my-2" />
+                
+                <Accordion variant="light" className="px-0">
+                  {categories.map((cat) => (
+                    <AccordionItem 
+                      key={cat.key} 
+                      title={<span className="text-white/40 text-xs font-bold uppercase tracking-wider">{cat.name}</span>}
+                      className="px-0"
+                    >
+                      <div className="flex flex-col gap-1">
+                        {stockData
+                          .filter(s => s.category === cat.key)
+                          .map(s => <NavStockItem key={s.ticker} stock={s} closeMenu={() => setIsMenuOpen(false)} />)}
+                      </div>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </NavbarMenu>
+            </Navbar>
+
+            {/* Desktop Sidebar */}
+            <aside className="sidebar glass hidden lg:flex">
               <div style={{ marginBottom: '2rem' }}>
                 <Link href="/" style={{ textDecoration: 'none' }}>
                   <h2 style={{ fontSize: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'white' }}>
@@ -56,21 +138,23 @@ export default function RootLayout({
                 </Link>
               </div>
               
-              <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem', overflowY: 'auto' }}>
-                <Link href="/" className="nav-item">Dashboard</Link>
-                <Link href="/portfolio" className="nav-item">Portfolio Distribution</Link>
-                
-                <div style={{ marginTop: '1rem', marginBottom: '0.4rem', fontSize: '0.65rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Large Cap Tech</div>
-                {stockData.filter(s => s.category === 'Big Tech').map(s => <NavStockItem key={s.ticker} stock={s} />)}
-                
-                <div style={{ marginTop: '1rem', marginBottom: '0.4rem', fontSize: '0.65rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Financials & SaaS</div>
-                {stockData.filter(s => s.category === 'Financials').map(s => <NavStockItem key={s.ticker} stock={s} />)}
-                
-                <div style={{ marginTop: '1rem', marginBottom: '0.4rem', fontSize: '0.65rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Hard Assets & Crypto</div>
-                {stockData.filter(s => s.category === 'Hard Assets').map(s => <NavStockItem key={s.ticker} stock={s} />)}
-              </nav>
+              <ScrollShadow className="flex-1 -mx-2 px-2">
+                <nav className="flex flex-col gap-1">
+                  <Link href="/" className="nav-item">Dashboard</Link>
+                  <Link href="/portfolio" className="nav-item">Portfolio Distribution</Link>
+                  
+                  {categories.map((cat) => (
+                    <React.Fragment key={cat.key}>
+                      <div className="mt-6 mb-2 px-4 text-[10px] font-black text-white/20 uppercase tracking-widest">{cat.name}</div>
+                      {stockData
+                        .filter(s => s.category === cat.key)
+                        .map(s => <NavStockItem key={s.ticker} stock={s} />)}
+                    </React.Fragment>
+                  ))}
+                </nav>
+              </ScrollShadow>
 
-              <div style={{ marginTop: 'auto', padding: '1rem', borderTop: '1px solid var(--glass-border)', fontSize: '0.75rem', color: 'var(--muted-foreground)' }}>
+              <div className="mt-auto pt-6 border-t border-white/5 text-[10px] text-white/20 font-medium">
                 &copy; 2026 InvestMoat
               </div>
             </aside>

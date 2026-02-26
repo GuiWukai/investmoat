@@ -13,8 +13,8 @@ export default function MetaPage() {
           <Chip color="success" variant="flat" size="sm">Quality Yield</Chip>
         </div>
         <div>
-          <h1 className="text-6xl font-black mb-2 tracking-tight">Meta Platforms Inc.</h1>
-          <div className="flex gap-6 text-white/40 font-medium">
+          <h1 className="text-3xl md:text-6xl font-black mb-2 tracking-tight">Meta Platforms Inc.</h1>
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-white/40 font-medium text-sm md:text-base">
             <span>Ticker: <strong className="text-white">META</strong></span>
             <span>Market Cap: <strong className="text-white">$1.25T</strong></span>
             <span>Current Price: <strong className="text-white">$492.30</strong></span>

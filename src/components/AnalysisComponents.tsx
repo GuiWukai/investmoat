@@ -22,8 +22,8 @@ export function MetricCard({ title, value, label, icon, color = 'var(--primary)'
           <span className="text-sm font-medium text-white/60">{title}</span>
         </div>
         <div>
-          <div className="text-3xl font-bold">{value}</div>
-          <div className="text-xs text-white/50">{label}</div>
+          <div className="text-2xl md:text-3xl font-bold">{value}</div>
+          <div className="text-[10px] md:text-xs text-white/50">{label}</div>
         </div>
       </CardBody>
     </Card>
@@ -45,7 +45,7 @@ export function ScoreGauge({ score, label, description }: ScoreGaugeProps) {
   };
 
   return (
-    <Card className="min-w-[240px] flex-1 bg-white/5 border-none backdrop-blur-md text-center p-4">
+    <Card className="w-full lg:min-w-[240px] flex-1 bg-white/5 border-none backdrop-blur-md text-center p-4">
       <CardHeader className="justify-center pb-0">
         <h3 className="text-lg font-semibold">{label}</h3>
       </CardHeader>
@@ -70,10 +70,10 @@ export function ScoreGauge({ score, label, description }: ScoreGaugeProps) {
 
 export function AnalysisSection({ title, children }: { title: string, children: React.ReactNode }) {
   return (
-    <section className="mt-12">
-      <div className="flex items-center gap-4 mb-6">
-        <h2 className="text-2xl font-bold">{title}</h2>
-        <Divider className="flex-1" />
+    <section className="mt-8 md:mt-12">
+      <div className="flex items-center gap-4 mb-4 md:mb-6">
+        <h2 className="text-xl md:text-2xl font-bold">{title}</h2>
+        <Divider className="flex-1 opacity-20" />
       </div>
       {children}
     </section>
@@ -128,11 +128,11 @@ export function RecommendationBadge({ status }: { status: 'Strong Buy' | 'Accumu
       <Chip 
         color={colorMap[status]} 
         variant="dot" 
-        className="backdrop-blur-md bg-white/5 p-4 py-6 border-white/10"
+        className="backdrop-blur-md bg-white/5 p-4 py-6 border-white/10 max-w-full"
         size="lg"
       >
-        <span className="text-white/60 mr-2 uppercase text-xs">Portfolio Status:</span>
-        <span className="font-bold uppercase">{status}</span>
+        <span className="text-[10px] md:text-xs text-white/60 mr-2 uppercase">Portfolio Status:</span>
+        <span className="font-bold uppercase text-xs md:text-sm">{status}</span>
       </Chip>
     </div>
   );

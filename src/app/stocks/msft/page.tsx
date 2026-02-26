@@ -13,8 +13,8 @@ export default function MicrosoftPage() {
           <Chip color="success" variant="flat" size="sm">Gold Standard</Chip>
         </div>
         <div>
-          <h1 className="text-6xl font-black mb-2 tracking-tight">Microsoft Corp.</h1>
-          <div className="flex gap-6 text-white/40 font-medium">
+          <h1 className="text-3xl md:text-6xl font-black mb-2 tracking-tight">Microsoft Corp.</h1>
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-white/40 font-medium text-sm md:text-base">
             <span>Ticker: <strong className="text-white">MSFT</strong></span>
             <span>Market Cap: <strong className="text-white">$3.1T</strong></span>
             <span>Price: <strong className="text-white">$415.50</strong></span>

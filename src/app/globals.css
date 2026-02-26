@@ -34,31 +34,52 @@ h1, h2, h3, h4 {
 
 .main-container {
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
   background: radial-gradient(circle at top right, rgba(0, 111, 238, 0.03), transparent),
               radial-gradient(circle at bottom left, rgba(99, 102, 241, 0.03), transparent);
 }
 
+@media (min-width: 1024px) {
+  .main-container {
+    flex-direction: row;
+  }
+}
+
 .sidebar {
-  width: 280px;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  background: rgba(15, 23, 42, 0.6);
-  backdrop-filter: var(--glass-blur);
-  border-right: 1px solid var(--glass-border);
-  padding: 2.5rem 1.5rem;
-  z-index: 50;
-  display: flex;
-  flex-direction: column;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .sidebar {
+    display: flex;
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: var(--glass-blur);
+    border-right: 1px solid var(--glass-border);
+    padding: 2.5rem 1.5rem;
+    z-index: 50;
+    flex-direction: column;
+  }
 }
 
 .content {
   flex: 1;
-  margin-left: 280px;
-  padding: 4rem;
+  padding: 1.5rem;
+  width: 100%;
   max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .content {
+    margin-left: 280px;
+    padding: 4rem;
+  }
 }
 
 .nav-item {
@@ -79,12 +100,19 @@ h1, h2, h3, h4 {
 
 .metric-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .metric-grid {
+    gap: 1.5rem;
+  }
 }
 
 .gradient-text {
   background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -122,7 +150,7 @@ h1, h2, h3, h4 {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* NextJS specifics for HeroUI */
+/* HeroUI overrides */
 [data-overlay-container="true"] {
   background-color: transparent !important;
 }

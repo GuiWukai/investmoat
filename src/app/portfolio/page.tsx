@@ -23,11 +23,11 @@ export default function PortfolioPage() {
 
   return (
     <div className="animate-fade-in space-y-12">
-      <header className="mb-12">
-        <h1 className="text-5xl font-extrabold bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent mb-4">
+      <header className="mb-8 md:mb-12">
+        <h1 className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent mb-4">
           Portfolio Distribution
         </h1>
-        <p className="text-white/60 text-xl max-w-2xl">
+        <p className="text-white/60 text-base md:text-xl max-w-2xl">
           Optimized allocation across 14 high-conviction assets based on moat durability and growth scaling.
         </p>
       </header>
@@ -108,8 +108,8 @@ export default function PortfolioPage() {
         <Table 
           aria-label="Portfolio Allocation Table"
           classNames={{
-            base: "bg-white/5 backdrop-blur-lg rounded-2xl",
-            table: "min-h-[400px]",
+            base: "bg-white/5 backdrop-blur-lg rounded-2xl overflow-x-auto",
+            table: "min-h-[400px] min-w-[600px] lg:min-w-full",
             th: "bg-transparent text-white/40 border-b border-white/10",
             td: "py-4 text-white/80 border-b border-white/5"
           }}

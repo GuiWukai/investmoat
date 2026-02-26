@@ -13,8 +13,8 @@ export default function AsmlPage() {
           <Chip color="success" variant="flat" size="sm">Monopoly Moat</Chip>
         </div>
         <div>
-          <h1 className="text-6xl font-black mb-2 tracking-tight">ASML Holding</h1>
-          <div className="flex gap-6 text-white/40 font-medium">
+          <h1 className="text-3xl md:text-6xl font-black mb-2 tracking-tight">ASML Holding</h1>
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-white/40 font-medium text-sm md:text-base">
             <span>Ticker: <strong className="text-white">ASML</strong></span>
             <span>Market Cap: <strong className="text-white">$380B</strong></span>
             <span>Price: <strong className="text-white">$945.80</strong></span>
