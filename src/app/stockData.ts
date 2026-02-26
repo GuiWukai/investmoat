@@ -13,6 +13,7 @@ export const stockData = [
     { name: "Adobe", ticker: "ADBE", scores: [96, 82, 64], href: "/stocks/adbe", category: "Financials" },
     { name: "S&P Global", ticker: "SPGI", scores: [97, 78, 75], href: "/stocks/spgi", category: "Financials" },
     { name: "Intuit", ticker: "INTU", scores: [94, 84, 62], href: "/stocks/intuit", category: "Financials" },
+    { name: "Gold", ticker: "XAU", scores: [88, 50, 55], href: "/stocks/gold", category: "Hard Assets" },
     { name: "Bitcoin", ticker: "BTC", scores: [99, 85, 50], href: "/stocks/btc", category: "Hard Assets" },
     { name: "K92 Mining", ticker: "KNT", scores: [65, 90, 60], href: "/stocks/k92", category: "Hard Assets" },
 ];

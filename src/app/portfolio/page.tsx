@@ -11,7 +11,8 @@ const distribution = [
   { ticker: "V",    name: "Visa",       weight: 8,  color: "#1a1f71", category: "Payments",         href: "/stocks/visa" },
   { ticker: "MA",   name: "Mastercard", weight: 8,  color: "#eb001b", category: "Payments",         href: "/stocks/mastercard" },
   { ticker: "NVDA", name: "NVIDIA",     weight: 7,  color: "#76b900", category: "AI Infrastructure",href: "/stocks/nvda" },
-  { ticker: "BTC",  name: "Bitcoin",    weight: 7,  color: "#f7931a", category: "Digital Asset",    href: "/stocks/btc" },
+  { ticker: "XAU",  name: "Gold",       weight: 4,  color: "#FFD700", category: "Commodities",      href: "/stocks/gold" },
+  { ticker: "BTC",  name: "Bitcoin",    weight: 5,  color: "#f7931a", category: "Digital Asset",    href: "/stocks/btc" },
   { ticker: "CRM",  name: "Salesforce", weight: 6,  color: "#00a1e0", category: "Enterprise SaaS",  href: "/stocks/crm" },
   { ticker: "ASML", name: "ASML",       weight: 6,  color: "#0071c5", category: "Lithography",      href: "/stocks/asml" },
   { ticker: "ADBE", name: "Adobe",      weight: 5,  color: "#ff0000", category: "Creative SaaS",    href: "/stocks/adbe" },
@@ -19,8 +20,8 @@ const distribution = [
   { ticker: "NFLX", name: "Netflix",    weight: 4,  color: "#e50914", category: "Streaming",        href: "/stocks/nflx" },
   { ticker: "SPGI", name: "S&P Global", weight: 4,  color: "#cf102d", category: "Financials",       href: "/stocks/spgi" },
   { ticker: "INTU", name: "Intuit",     weight: 4,  color: "#2ca01c", category: "FinTech",          href: "/stocks/intuit" },
-  { ticker: "KNT",  name: "K92 Mining", weight: 4,  color: "#64748b", category: "Commodities",      href: "/stocks/k92" },
-  { ticker: "AMD",  name: "AMD",        weight: 2,  color: "#007db8", category: "AI Chips",         href: "/stocks/amd" },
+  { ticker: "KNT",  name: "K92 Mining", weight: 3,  color: "#64748b", category: "Commodities",      href: "/stocks/k92" },
+  { ticker: "AMD",  name: "AMD",        weight: 1,  color: "#007db8", category: "AI Chips",         href: "/stocks/amd" },
 ];
 
 function categoryColor(category: string): "primary" | "success" | "warning" | "secondary" | "danger" | "default" {
@@ -42,7 +43,7 @@ export default function PortfolioPage() {
           Portfolio Distribution
         </h1>
         <p className="text-white/60 text-base md:text-xl max-w-2xl">
-          Optimized allocation across 16 high-conviction assets based on moat durability and growth scaling.
+          Optimized allocation across 17 high-conviction assets based on moat durability and growth scaling.
         </p>
       </header>
 
@@ -83,11 +84,11 @@ export default function PortfolioPage() {
           <CardBody className="p-6 gap-6">
             <div>
               <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Diversification</p>
-              <p className="text-lg font-bold">16 Core Positions</p>
+              <p className="text-lg font-bold">17 Core Positions</p>
             </div>
             <div>
               <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Alpha Generators</p>
-              <p className="text-lg font-bold">ASML, NVDA, AMD, BTC (22% Total)</p>
+              <p className="text-lg font-bold">ASML, NVDA, AMD, BTC, XAU (24% Total)</p>
             </div>
             <div>
               <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Concentration</p>
