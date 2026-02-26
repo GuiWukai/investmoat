@@ -1,27 +1,42 @@
 'use client';
 
-import { PieChart, List, ShieldCheck } from "lucide-react";
-import { Card, CardBody, CardHeader, Progress, Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Chip } from "@heroui/react";
+import { useRouter } from "next/navigation";
+import { PieChart, ShieldCheck, ChevronRight } from "lucide-react";
+import {
+  Card, CardBody, CardHeader, Progress,
+  Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Chip
+} from "@heroui/react";
+
+const distribution = [
+  { ticker: "MSFT", name: "Microsoft",  weight: 11, color: "#00a4ef", category: "Core SaaS",       href: "/stocks/msft" },
+  { ticker: "AMZN", name: "Amazon",     weight: 11, color: "#f59e0b", category: "Eco-System",       href: "/stocks/amazon" },
+  { ticker: "META", name: "Meta",       weight: 9,  color: "#1877F2", category: "Social Network",   href: "/stocks/meta" },
+  { ticker: "V",    name: "Visa",       weight: 8,  color: "#1a1f71", category: "Payments",         href: "/stocks/visa" },
+  { ticker: "MA",   name: "Mastercard", weight: 8,  color: "#eb001b", category: "Payments",         href: "/stocks/mastercard" },
+  { ticker: "NVDA", name: "NVIDIA",     weight: 7,  color: "#76b900", category: "AI Infrastructure",href: "/stocks/nvda" },
+  { ticker: "BTC",  name: "Bitcoin",    weight: 7,  color: "#f7931a", category: "Digital Asset",    href: "/stocks/btc" },
+  { ticker: "CRM",  name: "Salesforce", weight: 6,  color: "#00a1e0", category: "Enterprise SaaS",  href: "/stocks/crm" },
+  { ticker: "ASML", name: "ASML",       weight: 6,  color: "#0071c5", category: "Lithography",      href: "/stocks/asml" },
+  { ticker: "ADBE", name: "Adobe",      weight: 5,  color: "#ff0000", category: "Creative SaaS",    href: "/stocks/adbe" },
+  { ticker: "TSLA", name: "Tesla",      weight: 4,  color: "#e31937", category: "Autonomous EV",    href: "/stocks/tesla" },
+  { ticker: "NFLX", name: "Netflix",    weight: 4,  color: "#e50914", category: "Streaming",        href: "/stocks/nflx" },
+  { ticker: "SPGI", name: "S&P Global", weight: 4,  color: "#cf102d", category: "Financials",       href: "/stocks/spgi" },
+  { ticker: "INTU", name: "Intuit",     weight: 4,  color: "#2ca01c", category: "FinTech",          href: "/stocks/intuit" },
+  { ticker: "KNT",  name: "K92 Mining", weight: 4,  color: "#64748b", category: "Commodities",      href: "/stocks/k92" },
+  { ticker: "AMD",  name: "AMD",        weight: 2,  color: "#007db8", category: "AI Chips",         href: "/stocks/amd" },
+];
+
+function categoryColor(category: string): "primary" | "success" | "warning" | "secondary" | "danger" | "default" {
+  if (["Core SaaS", "Creative SaaS", "Enterprise SaaS"].includes(category)) return "primary";
+  if (["Payments", "Financials", "FinTech"].includes(category)) return "success";
+  if (["AI Infrastructure", "AI Chips", "Lithography"].includes(category)) return "warning";
+  if (["Digital Asset", "Commodities"].includes(category)) return "secondary";
+  if (["Social Network", "Streaming", "Autonomous EV"].includes(category)) return "danger";
+  return "default";
+}
 
 export default function PortfolioPage() {
-  const distribution = [
-    { ticker: "MSFT", name: "Microsoft", weight: 11, color: "#00a4ef", category: "Core SaaS" },
-    { ticker: "AMZN", name: "Amazon", weight: 11, color: "#f59e0b", category: "Eco-System" },
-    { ticker: "META", name: "Meta", weight: 9, color: "#1877F2", category: "Social Network" },
-    { ticker: "NVDA", name: "NVIDIA", weight: 7, color: "#76b900", category: "AI Infrastructure" },
-    { ticker: "V", name: "Visa", weight: 8, color: "#1a1f71", category: "Payments" },
-    { ticker: "MA", name: "Mastercard", weight: 8, color: "#eb001b", category: "Payments" },
-    { ticker: "BTC", name: "Bitcoin", weight: 7, color: "#f7931a", category: "Digital Asset" },
-    { ticker: "ADBE", name: "Adobe", weight: 5, color: "#ff0000", category: "Creative SaaS" },
-    { ticker: "CRM", name: "Salesforce", weight: 6, color: "#00a1e0", category: "Enterprise SaaS" },
-    { ticker: "ASML", name: "ASML", weight: 6, color: "#0071c5", category: "Lithography" },
-    { ticker: "TSLA", name: "Tesla", weight: 4, color: "#e31937", category: "Autonomous EV" },
-    { ticker: "NFLX", name: "Netflix", weight: 4, color: "#e50914", category: "Streaming" },
-    { ticker: "SPGI", name: "S&P Global", weight: 4, color: "#cf102d", category: "Financials" },
-    { ticker: "INTU", name: "Intuit", weight: 4, color: "#2ca01c", category: "FinTech" },
-    { ticker: "KNT", name: "K92 Mining", weight: 4, color: "#64748b", category: "Commodities" },
-    { ticker: "AMD", name: "AMD", weight: 2, color: "#007db8", category: "AI Chips" },
-  ];
+  const router = useRouter();
 
   return (
     <div className="animate-fade-in space-y-12">
@@ -43,9 +58,9 @@ export default function PortfolioPage() {
           <CardBody className="p-6">
             <div className="flex h-12 rounded-xl overflow-hidden mb-8 border border-white/10">
               {distribution.map((stock) => (
-                <div 
-                  key={stock.ticker} 
-                  style={{ width: `${stock.weight}%`, background: stock.color }} 
+                <div
+                  key={stock.ticker}
+                  style={{ width: `${stock.weight}%`, background: stock.color }}
                   title={`${stock.name}: ${stock.weight}%`}
                   className="hover:opacity-80 transition-opacity cursor-pointer"
                 />
@@ -54,7 +69,7 @@ export default function PortfolioPage() {
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {distribution.map((stock) => (
                 <div key={stock.ticker} className="flex items-center gap-3">
-                  <div className="w-2.5 h-2.5 rounded-full" style={{ background: stock.color }} />
+                  <div className="w-2.5 h-2.5 rounded-full shrink-0" style={{ background: stock.color }} />
                   <span className="text-xs font-bold text-white/80">{stock.ticker}</span>
                   <span className="text-xs text-white/40">{stock.weight}%</span>
                 </div>
@@ -79,18 +94,18 @@ export default function PortfolioPage() {
             </div>
             <div>
               <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Concentration</p>
-              <Progress 
+              <Progress
                 value={61}
-                label="Tech & SaaS" 
-                size="sm" 
+                label="Tech & SaaS"
+                size="sm"
                 color="primary"
                 showValueLabel={true}
                 classNames={{ base: "max-w-md", label: "text-xs font-bold", value: "text-xs" }}
               />
-              <Progress 
-                value={24} 
-                label="Financials" 
-                size="sm" 
+              <Progress
+                value={24}
+                label="Financials"
+                size="sm"
                 color="success"
                 showValueLabel={true}
                 className="mt-2"
@@ -105,46 +120,84 @@ export default function PortfolioPage() {
         <div className="flex items-center gap-4 mb-8">
           <h2 className="text-2xl font-bold">Allocation Breakdown</h2>
           <div className="h-px flex-1 bg-white/10" />
+          <span className="text-xs text-white/30 font-medium">Click a row to view analysis</span>
         </div>
-        
+
         <Table
-          aria-label="Portfolio Allocation Table"
+          aria-label="Portfolio Allocation Breakdown"
+          onRowAction={(key) => {
+            const stock = distribution.find((s) => s.ticker === key);
+            if (stock) router.push(stock.href);
+          }}
           classNames={{
             base: "overflow-x-auto",
-            wrapper: "bg-white/5 backdrop-blur-lg rounded-2xl shadow-none",
-            table: "min-w-[600px]",
-            th: "bg-transparent text-white/40 border-b border-white/10 text-xs uppercase tracking-widest font-black",
-            td: "py-4 text-white/80 border-b border-white/5",
-            tr: "hover:bg-white/5 transition-colors",
+            wrapper: "bg-white/5 backdrop-blur-lg rounded-2xl shadow-none border border-white/5 p-0",
+            table: "min-w-[640px]",
+            thead: "[&>tr]:first:rounded-none",
+            th: "bg-white/5 text-white/40 border-b border-white/10 text-[10px] uppercase tracking-widest font-black first:rounded-none last:rounded-none",
+            td: "py-3.5 text-white/80 border-b border-white/5 last:border-b-0",
+            tr: "hover:bg-white/[0.06] transition-colors cursor-pointer group",
           }}
         >
           <TableHeader>
-            <TableColumn>ASSET</TableColumn>
-            <TableColumn>CATEGORY</TableColumn>
-            <TableColumn>WEIGHT</TableColumn>
-            <TableColumn>CONVICTION</TableColumn>
+            <TableColumn>Asset</TableColumn>
+            <TableColumn>Category</TableColumn>
+            <TableColumn>Weight</TableColumn>
+            <TableColumn>Allocation</TableColumn>
+            <TableColumn> </TableColumn>
           </TableHeader>
           <TableBody>
             {distribution.map((stock) => (
               <TableRow key={stock.ticker}>
+                {/* Asset */}
                 <TableCell>
-                  <div>
-                    <div className="font-bold text-sm">{stock.name}</div>
-                    <div className="text-[10px] text-white/30 tracking-widest font-black uppercase">{stock.ticker}</div>
+                  <div className="flex items-center gap-3">
+                    <div
+                      className="w-3 h-3 rounded-full shrink-0 ring-2 ring-white/10"
+                      style={{ background: stock.color }}
+                    />
+                    <div>
+                      <div className="font-bold text-sm text-white">{stock.name}</div>
+                      <div className="text-[10px] text-white/30 tracking-widest font-black uppercase">{stock.ticker}</div>
+                    </div>
                   </div>
                 </TableCell>
+
+                {/* Category */}
                 <TableCell>
-                  <Chip size="sm" variant="flat" color="primary">{stock.category}</Chip>
+                  <Chip
+                    size="sm"
+                    variant="flat"
+                    color={categoryColor(stock.category)}
+                    classNames={{ content: "font-semibold" }}
+                  >
+                    {stock.category}
+                  </Chip>
                 </TableCell>
+
+                {/* Weight */}
                 <TableCell>
-                  <div className="text-lg font-black">{stock.weight}%</div>
+                  <span className="text-base font-black text-white tabular-nums">{stock.weight}%</span>
                 </TableCell>
+
+                {/* Allocation bar */}
                 <TableCell>
-                  <Progress 
-                    value={stock.weight * 4} 
-                    size="sm" 
-                    color={stock.weight > 8 ? "success" : "primary"}
-                    className="max-w-[100px]"
+                  <div className="flex items-center gap-3 min-w-[140px]">
+                    <Progress
+                      value={(stock.weight / 11) * 100}
+                      size="sm"
+                      color={stock.weight >= 9 ? "success" : stock.weight >= 6 ? "primary" : "default"}
+                      className="flex-1 max-w-[120px]"
+                    />
+                    <span className="text-[10px] text-white/30 tabular-nums w-8">{stock.weight}%</span>
+                  </div>
+                </TableCell>
+
+                {/* Chevron */}
+                <TableCell>
+                  <ChevronRight
+                    size={16}
+                    className="text-white/20 group-hover:text-white/60 transition-colors"
                   />
                 </TableCell>
               </TableRow>
