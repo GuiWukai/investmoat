@@ -135,7 +135,7 @@ export default function MastercardPage() {
         },
       ]} />
 
-      <AnalysisSection title="The Services Moat">
+      <div className="hidden md:block"><AnalysisSection title="The Services Moat">
         <div className="space-y-6">
           <div className="glass-card">
             <p style={{ marginBottom: '1rem' }}>Mastercard is more than a network; it&apos;s a <strong>Data &amp; Services Powerhouse</strong>:</p>
@@ -145,11 +145,9 @@ export default function MastercardPage() {
               <li><strong style={{ color: 'white' }}>Global Presence:</strong> Strong positioning in Europe and emerging markets where digital adoption is accelerating.</li>
             </ul>
           </div>
-          <div className="hidden md:block">
-            <TenMoatsCard data={tenMoatsData['MA']} />
-          </div>
+          <TenMoatsCard data={tenMoatsData['MA']} />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
       <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

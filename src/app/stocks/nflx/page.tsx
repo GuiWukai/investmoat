@@ -135,7 +135,7 @@ export default function NetflixPage() {
         },
       ]} />
 
-      <AnalysisSection title="The Scale Moat">
+      <div className="hidden md:block"><AnalysisSection title="The Scale Moat">
         <div className="space-y-6">
           <div className="glass-card">
             <p style={{ marginBottom: '1rem' }}>Netflix&apos;s advantage is its <strong>Content Efficiency</strong>:</p>
@@ -145,11 +145,9 @@ export default function NetflixPage() {
               <li><strong style={{ color: 'white' }}>Global Reach:</strong> Unlike US-centric platforms, Netflix is truly global, with local language content driving growth in EMEA, APAC, and LATAM.</li>
             </ul>
           </div>
-          <div className="hidden md:block">
-            <TenMoatsCard data={tenMoatsData['NFLX']} />
-          </div>
+          <TenMoatsCard data={tenMoatsData['NFLX']} />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
       <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

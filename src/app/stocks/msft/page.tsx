@@ -137,7 +137,7 @@ export default function MicrosoftPage() {
         },
       ]} />
 
-      <AnalysisSection title="The Enterprise Moat">
+      <div className="hidden md:block"><AnalysisSection title="The Enterprise Moat">
         <div className="space-y-6">
           <Card className="bg-white/5 border-none backdrop-blur-md">
             <CardBody className="p-4 md:p-8">
@@ -149,11 +149,9 @@ export default function MicrosoftPage() {
               </ul>
             </CardBody>
           </Card>
-          <div className="hidden md:block">
-            <TenMoatsCard data={tenMoatsData['MSFT']} />
-          </div>
+          <TenMoatsCard data={tenMoatsData['MSFT']} />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
       <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

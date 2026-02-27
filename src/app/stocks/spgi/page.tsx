@@ -135,7 +135,7 @@ export default function SPGlobalPage() {
         },
       ]} />
 
-      <AnalysisSection title="The Toll-Bridge Moat">
+      <div className="hidden md:block"><AnalysisSection title="The Toll-Bridge Moat">
         <div className="space-y-6">
           <div className="glass-card">
             <p style={{ marginBottom: '1rem' }}>S&amp;P Global operates a <strong>Financial Toll Bridge</strong>:</p>
@@ -145,11 +145,9 @@ export default function SPGlobalPage() {
               <li><strong style={{ color: 'white' }}>Low Capex:</strong> Once the rating methodologies and data platforms are built, every additional dollar of revenue flows straight to the bottom line.</li>
             </ul>
           </div>
-          <div className="hidden md:block">
-            <TenMoatsCard data={tenMoatsData['SPGI']} />
-          </div>
+          <TenMoatsCard data={tenMoatsData['SPGI']} />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
       <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

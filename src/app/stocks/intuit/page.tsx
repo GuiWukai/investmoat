@@ -135,7 +135,7 @@ export default function IntuitPage() {
         },
       ]} />
 
-      <AnalysisSection title="The Ecosystem Moat">
+      <div className="hidden md:block"><AnalysisSection title="The Ecosystem Moat">
         <div className="space-y-6">
           <div className="glass-card">
             <p style={{ marginBottom: '1rem' }}>Intuit owns the <strong>Financial Workflow</strong> for small businesses and individuals:</p>
@@ -145,11 +145,9 @@ export default function IntuitPage() {
               <li><strong style={{ color: 'white' }}>Data Advantage:</strong> Intuit sees more SMB transaction data than almost any bank, allowing for superior credit underwriting.</li>
             </ul>
           </div>
-          <div className="hidden md:block">
-            <TenMoatsCard data={tenMoatsData['INTU']} />
-          </div>
+          <TenMoatsCard data={tenMoatsData['INTU']} />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
       <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

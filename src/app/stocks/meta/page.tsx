@@ -137,7 +137,7 @@ export default function MetaPage() {
         },
       ]} />
 
-      <AnalysisSection title="The Advertising Moat">
+      <div className="hidden md:block"><AnalysisSection title="The Advertising Moat">
         <div className="space-y-6">
           <Card className="bg-white/5 border-none backdrop-blur-md">
             <CardBody className="p-4 md:p-8">
@@ -149,11 +149,9 @@ export default function MetaPage() {
               </ul>
             </CardBody>
           </Card>
-          <div className="hidden md:block">
-            <TenMoatsCard data={tenMoatsData['META']} />
-          </div>
+          <TenMoatsCard data={tenMoatsData['META']} />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
       <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

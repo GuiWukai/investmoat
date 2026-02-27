@@ -135,7 +135,7 @@ export default function VisaPage() {
         },
       ]} />
 
-      <AnalysisSection title="The Duopoly Moat">
+      <div className="hidden md:block"><AnalysisSection title="The Duopoly Moat">
         <div className="space-y-6">
           <div className="glass-card">
             <p style={{ marginBottom: '1rem' }}>Visa operates a <strong>Global Toll Bridge</strong> for commerce:</p>
@@ -145,11 +145,9 @@ export default function VisaPage() {
               <li><strong style={{ color: 'white' }}>Operating Leverage:</strong> Once code is written, an additional transaction costs virtually nothing, leading to industry-leading margins.</li>
             </ul>
           </div>
-          <div className="hidden md:block">
-            <TenMoatsCard data={tenMoatsData['V']} />
-          </div>
+          <TenMoatsCard data={tenMoatsData['V']} />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
       <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

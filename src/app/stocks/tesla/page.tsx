@@ -135,7 +135,7 @@ export default function TeslaPage() {
         },
       ]} />
 
-      <AnalysisSection title="The Vertical Integration Moat">
+      <div className="hidden md:block"><AnalysisSection title="The Vertical Integration Moat">
         <div className="space-y-6">
           <div className="glass-card">
             <p style={{ marginBottom: '1rem' }}>Tesla&apos;s moat isn&apos;t just &quot;selling cars&quot;, it&apos;s <strong>Manufacturing Complexity</strong>:</p>
@@ -145,11 +145,9 @@ export default function TeslaPage() {
               <li><strong style={{ color: 'white' }}>Brand Authority:</strong> Zero marketing spend with 100% brand recognition creates a unique customer acquisition advantage.</li>
             </ul>
           </div>
-          <div className="hidden md:block">
-            <TenMoatsCard data={tenMoatsData['TSLA']} />
-          </div>
+          <TenMoatsCard data={tenMoatsData['TSLA']} />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
       <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

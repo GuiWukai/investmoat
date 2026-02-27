@@ -56,7 +56,38 @@ export default function AmazonPage() {
           label="Moat Score" 
           description="Dominant scale, switching costs (Prime), and cost advantage (Logistics)." 
         />),
-          detail: <TenMoatsCard data={tenMoatsData['AMZN']} />,
+          detail: (
+            <div className="space-y-4">
+              <Card className="bg-white/5 border-none backdrop-blur-md">
+                <CardBody className="p-4 md:p-8">
+                  <p className="mb-6 text-lg">
+                    Amazon possesses a <strong className="text-primary italic">Wide Economic Moat</strong> driven by three primary pillars:
+                  </p>
+                  <div className="grid grid-cols-1 gap-6">
+                    <div className="space-y-2">
+                      <h4 className="font-bold text-white flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-primary" /> Cost Advantage
+                      </h4>
+                      <p className="text-sm text-white/50 leading-relaxed">Its massive fulfillment infrastructure creates unit costs that no competitor can match, allowing for faster delivery and lower prices.</p>
+                    </div>
+                    <div className="space-y-2">
+                      <h4 className="font-bold text-white flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-primary" /> Switching Costs
+                      </h4>
+                      <p className="text-sm text-white/50 leading-relaxed">The Prime ecosystem locks in consumers. Once a household is integrated into Prime, the convenience makes shopping elsewhere a "costly" friction.</p>
+                    </div>
+                    <div className="space-y-2">
+                      <h4 className="font-bold text-white flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-primary" /> Network Effect
+                      </h4>
+                      <p className="text-sm text-white/50 leading-relaxed">The 3rd party marketplace creates a flywheel where more sellers attract more buyers, which attracts more sellers.</p>
+                    </div>
+                  </div>
+                </CardBody>
+              </Card>
+              <TenMoatsCard data={tenMoatsData['AMZN']} />
+            </div>
+          ),
         },
         {
           label: "Growth",
@@ -161,7 +192,7 @@ export default function AmazonPage() {
         },
       ]} />
 
-      <AnalysisSection title="The Economic Moat">
+      <div className="hidden md:block"><AnalysisSection title="The Economic Moat">
         <div className="space-y-6">
           <Card className="bg-white/5 border-none backdrop-blur-md">
             <CardBody className="p-4 md:p-8">
@@ -190,11 +221,9 @@ export default function AmazonPage() {
               </div>
             </CardBody>
           </Card>
-          <div className="hidden md:block">
-            <TenMoatsCard data={tenMoatsData['AMZN']} />
-          </div>
+          <TenMoatsCard data={tenMoatsData['AMZN']} />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
       <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
