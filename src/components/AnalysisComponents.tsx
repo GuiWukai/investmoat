@@ -244,27 +244,8 @@ export function TenMoatsCard({ data }: { data: TenMoatsAssessment }) {
       {/* Score + Verdict */}
       <Card className="bg-white/5 border-none backdrop-blur-md">
         <CardBody className="p-4 md:p-6">
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-            <div className="shrink-0 flex flex-col items-center gap-1">
-              <CircularProgress
-                classNames={{
-                  svg: "w-24 h-24 drop-shadow-md",
-                  indicator: "stroke-primary",
-                  track: "stroke-white/10",
-                  value: "text-2xl font-extrabold text-white",
-                }}
-                value={data.aiResilienceScore}
-                strokeWidth={4}
-                showValueLabel={true}
-                color={getResilienceColor(data.aiResilienceScore)}
-              />
-              <p className="text-[10px] uppercase tracking-widest text-white/40 font-bold text-center">AI Resilience<br/>Score</p>
-            </div>
-            <div>
-              <p className="text-xs uppercase tracking-widest text-white/40 font-bold mb-2">Ten Moats Verdict</p>
-              <p className="text-sm text-white/70 leading-relaxed">{data.verdict}</p>
-            </div>
-          </div>
+          <p className="text-xs uppercase tracking-widest text-white/40 font-bold mb-2">Ten Moats Verdict</p>
+          <p className="text-sm text-white/70 leading-relaxed">{data.verdict}</p>
         </CardBody>
       </Card>
 
