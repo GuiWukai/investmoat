@@ -52,7 +52,21 @@ export default function AsmlPage() {
         {
           label: "Moat",
           gauge: (<ScoreGauge score={tenMoatsData['ASML'].aiResilienceScore} label="Moat Score" description="The only company in the world capable of producing EUV machines required for &lt;7nm chips." />),
-          detail: <TenMoatsCard data={tenMoatsData['ASML']} />,
+          detail: (
+            <div className="space-y-4">
+              <Card className="bg-white/5 border-none backdrop-blur-md">
+                <CardBody className="p-4 md:p-8">
+                  <p className="mb-4">ASML is the <strong>Sole Provider</strong> of the world's most complex machines:</p>
+                  <ul className="list-disc pl-6 space-y-4 text-white/60">
+                    <li><strong className="text-white">EUV Monopoly:</strong> Extreme Ultraviolet (EUV) lithography is required for every advanced chip from Apple, Nvidia, and Intel. ASML is the only company that can build them.</li>
+                    <li><strong className="text-white">Technological Barrier:</strong> Developing EUV took 20+ years and billions in funding. A competitor would need decades to catch up.</li>
+                    <li><strong className="text-white">Service Ecosystem:</strong> Once a machine is installed (costing $200M+), ASML generates recurring service revenue for 20+ years.</li>
+                  </ul>
+                </CardBody>
+              </Card>
+              <TenMoatsCard data={tenMoatsData['ASML']} />
+            </div>
+          ),
         },
         {
           label: "Growth",
@@ -123,7 +137,7 @@ export default function AsmlPage() {
         },
       ]} />
 
-      <AnalysisSection title="The Strategic Bottleneck Moat">
+      <div className="hidden md:block"><AnalysisSection title="The Strategic Bottleneck Moat">
         <div className="space-y-6">
           <Card className="bg-white/5 border-none backdrop-blur-md">
             <CardBody className="p-4 md:p-8">
@@ -135,11 +149,9 @@ export default function AsmlPage() {
               </ul>
             </CardBody>
           </Card>
-          <div className="hidden md:block">
-            <TenMoatsCard data={tenMoatsData['ASML']} />
-          </div>
+          <TenMoatsCard data={tenMoatsData['ASML']} />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
       <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

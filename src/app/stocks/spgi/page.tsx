@@ -52,7 +52,19 @@ export default function SPGlobalPage() {
         {
           label: "Moat",
           gauge: (<ScoreGauge score={tenMoatsData['SPGI'].aiResilienceScore} label="Moat Score" description="A global duopoly with Moody's in debt ratings. Regulatory and brand moat." />),
-          detail: <TenMoatsCard data={tenMoatsData['SPGI']} />,
+          detail: (
+            <div className="space-y-4">
+              <div className="glass-card">
+                <p style={{ marginBottom: '1rem' }}>S&amp;P Global operates a <strong>Financial Toll Bridge</strong>:</p>
+                <ul style={{ paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                  <li><strong style={{ color: 'white' }}>Regulatory Oligopoly:</strong> You cannot issue global debt without a rating from S&amp;P or Moody&apos;s. It is a legally-embedded requirement for institutional investors.</li>
+                  <li><strong style={{ color: 'white' }}>IP Moat:</strong> The S&amp;P 500 brand is the most licensed index in the world. Asset managers pay SPGI every time a new ETF is created.</li>
+                  <li><strong style={{ color: 'white' }}>Low Capex:</strong> Once the rating methodologies and data platforms are built, every additional dollar of revenue flows straight to the bottom line.</li>
+                </ul>
+              </div>
+              <TenMoatsCard data={tenMoatsData['SPGI']} />
+            </div>
+          ),
         },
         {
           label: "Growth",

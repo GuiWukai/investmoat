@@ -52,7 +52,19 @@ export default function AdobePage() {
         {
           label: "Moat",
           gauge: (<ScoreGauge score={tenMoatsData['ADBE'].aiResilienceScore} label="Moat Score" description="The Creative Cloud is the global industry standard for design, photo, and video." />),
-          detail: <TenMoatsCard data={tenMoatsData['ADBE']} />,
+          detail: (
+            <div className="space-y-4">
+              <div className="glass-card">
+                <p style={{ marginBottom: '1rem' }}>Adobe&apos;s moat is built on <strong>Network Effects and Professional Reliance</strong>:</p>
+                <ul style={{ paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                  <li><strong style={{ color: 'white' }}>Industry Standard:</strong> Photoshop, Premiere, and Illustrator are taught in universities. Hiring a designer means hiring someone who speaks &quot;Adobe.&quot;</li>
+                  <li><strong style={{ color: 'white' }}>Firefly AI Advantage:</strong> Adobe&apos;s AI is trained on licensed content (Adobe Stock), making it safe for commercial use—a critical differentiator for enterprise clients.</li>
+                  <li><strong style={{ color: 'white' }}>Document Cloud:</strong> Acrobat and PDF standards Create a separate, massive moat in professional and business workflows.</li>
+                </ul>
+              </div>
+              <TenMoatsCard data={tenMoatsData['ADBE']} />
+            </div>
+          ),
         },
         {
           label: "Growth",
@@ -123,7 +135,7 @@ export default function AdobePage() {
         },
       ]} />
 
-      <AnalysisSection title="The Creative Standard Moat">
+      <div className="hidden md:block"><AnalysisSection title="The Creative Standard Moat">
         <div className="space-y-6">
           <div className="glass-card">
             <p style={{ marginBottom: '1rem' }}>Adobe&apos;s moat is built on <strong>Network Effects and Professional Reliance</strong>:</p>
@@ -133,11 +145,9 @@ export default function AdobePage() {
               <li><strong style={{ color: 'white' }}>Document Cloud:</strong> Acrobat and PDF standards Create a separate, massive moat in professional and business workflows.</li>
             </ul>
           </div>
-          <div className="hidden md:block">
-            <TenMoatsCard data={tenMoatsData['ADBE']} />
-          </div>
+          <TenMoatsCard data={tenMoatsData['ADBE']} />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
       <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

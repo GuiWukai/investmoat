@@ -52,7 +52,21 @@ export default function BitcoinPage() {
         {
           label: "Moat",
           gauge: (<ScoreGauge score={tenMoatsData['BTC'].aiResilienceScore} label="Moat Score" description="Absolute scarcity and the largest decentralized network effect in history." />),
-          detail: <TenMoatsCard data={tenMoatsData['BTC']} />,
+          detail: (
+            <div className="space-y-4">
+              <Card className="bg-white/5 border-none backdrop-blur-md">
+                <CardBody className="p-4 md:p-8">
+                  <p className="mb-4">Bitcoin's moat is built on <strong>Math and Decentralization</strong>:</p>
+                  <ul className="list-disc pl-6 space-y-4 text-white/60">
+                    <li><strong className="text-white">Absolute Scarcity:</strong> Only 21 million will ever exist. Unlike fiat or even gold, the supply curve is perfectly inelastic to demand.</li>
+                    <li><strong className="text-white">Network Effect:</strong> As the first and largest crypto asset, Bitcoin has the most liquidity, securest chain, and widest institutional support.</li>
+                    <li><strong className="text-white">Property Rights:</strong> A global, permissionless system for storing value that is independent of any central bank or government.</li>
+                  </ul>
+                </CardBody>
+              </Card>
+              <TenMoatsCard data={tenMoatsData['BTC']} />
+            </div>
+          ),
         },
         {
           label: "Growth",
@@ -123,7 +137,7 @@ export default function BitcoinPage() {
         },
       ]} />
 
-      <AnalysisSection title="The Scarcity Moat">
+      <div className="hidden md:block"><AnalysisSection title="The Scarcity Moat">
         <div className="space-y-6">
           <Card className="bg-white/5 border-none backdrop-blur-md">
             <CardBody className="p-4 md:p-8">
@@ -135,11 +149,9 @@ export default function BitcoinPage() {
               </ul>
             </CardBody>
           </Card>
-          <div className="hidden md:block">
-            <TenMoatsCard data={tenMoatsData['BTC']} />
-          </div>
+          <TenMoatsCard data={tenMoatsData['BTC']} />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
       <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

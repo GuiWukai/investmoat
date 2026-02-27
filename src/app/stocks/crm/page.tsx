@@ -52,7 +52,21 @@ export default function SalesforcePage() {
         {
           label: "Moat",
           gauge: (<ScoreGauge score={tenMoatsData['CRM'].aiResilienceScore} label="Moat Score" description="High switching costs and 'Data Gravity' makes it the system of record for sales." />),
-          detail: <TenMoatsCard data={tenMoatsData['CRM']} />,
+          detail: (
+            <div className="space-y-4">
+              <Card className="bg-white/5 border-none backdrop-blur-md">
+                <CardBody className="p-4 md:p-8">
+                  <p className="mb-4">Salesforce's moat is built on <strong>Ecosystem Stickiness</strong>:</p>
+                  <ul className="list-disc pl-6 space-y-4 text-white/60">
+                    <li><strong className="text-white">High Switching Costs:</strong> Once an enterprise integrates its entire sales workflow and data into CRM, the cost and risk of migrating to a competitor like Oracle or SAP are prohibitive.</li>
+                    <li><strong className="text-white">Platform Breadth:</strong> With Sales, Service, Marketing, and Slack, Salesforce offers a unified platform that individual point-solutions cannot match.</li>
+                    <li><strong className="text-white">Data Cloud:</strong> The ability to harmonize disparate data streams into a single customer profile creates a new layer of value for AI modeling.</li>
+                  </ul>
+                </CardBody>
+              </Card>
+              <TenMoatsCard data={tenMoatsData['CRM']} />
+            </div>
+          ),
         },
         {
           label: "Growth",
@@ -123,7 +137,7 @@ export default function SalesforcePage() {
         },
       ]} />
 
-      <AnalysisSection title="The Data Gravity Moat">
+      <div className="hidden md:block"><AnalysisSection title="The Data Gravity Moat">
         <div className="space-y-6">
           <Card className="bg-white/5 border-none backdrop-blur-md">
             <CardBody className="p-4 md:p-8">
@@ -135,11 +149,9 @@ export default function SalesforcePage() {
               </ul>
             </CardBody>
           </Card>
-          <div className="hidden md:block">
-            <TenMoatsCard data={tenMoatsData['CRM']} />
-          </div>
+          <TenMoatsCard data={tenMoatsData['CRM']} />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
       <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

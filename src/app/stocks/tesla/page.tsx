@@ -52,7 +52,19 @@ export default function TeslaPage() {
         {
           label: "Moat",
           gauge: (<ScoreGauge score={tenMoatsData['TSLA'].aiResilienceScore} label="Moat Score" description="Vertical integration and massive manufacturing cost advantages." />),
-          detail: <TenMoatsCard data={tenMoatsData['TSLA']} />,
+          detail: (
+            <div className="space-y-4">
+              <div className="glass-card">
+                <p style={{ marginBottom: '1rem' }}>Tesla&apos;s moat isn&apos;t just &quot;selling cars&quot;, it&apos;s <strong>Manufacturing Complexity</strong>:</p>
+                <ul style={{ paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                  <li><strong style={{ color: 'white' }}>Cost Advantage:</strong> From battery chem to casting machines, Tesla&apos;s unit cost for EVs is unmatched by legacy OEMs.</li>
+                  <li><strong style={{ color: 'white' }}>Data Flywheel:</strong> Millions of cars on the road feeding data into Tesla&apos;s AI Dojo training cluster creates a gap in autonomous software.</li>
+                  <li><strong style={{ color: 'white' }}>Brand Authority:</strong> Zero marketing spend with 100% brand recognition creates a unique customer acquisition advantage.</li>
+                </ul>
+              </div>
+              <TenMoatsCard data={tenMoatsData['TSLA']} />
+            </div>
+          ),
         },
         {
           label: "Growth",

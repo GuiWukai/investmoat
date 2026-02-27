@@ -52,7 +52,21 @@ export default function NvidiaPage() {
         {
           label: "Moat",
           gauge: (<ScoreGauge score={tenMoatsData['NVDA'].aiResilienceScore} label="Moat Score" description="CUDA software ecosystem and 10-year hardware lead in AI compute." />),
-          detail: <TenMoatsCard data={tenMoatsData['NVDA']} />,
+          detail: (
+            <div className="space-y-4">
+              <Card className="bg-white/5 border-none backdrop-blur-md">
+                <CardBody className="p-4 md:p-8">
+                  <p className="mb-4">Nvidia's moat isn't just "fast chips", it's the <strong>Full-Stack Software Advantage</strong>:</p>
+                  <ul className="list-disc pl-6 space-y-4 text-white/60">
+                    <li><strong className="text-white">CUDA Software Ecosystem:</strong> With over 4 million developers, CUDA is the industry standard. Moving to another hardware provider requires rewriting massive amounts of code.</li>
+                    <li><strong className="text-white">Innovation Velocity:</strong> Nvidia has moved to a 1-year product cycle (Hopper -&gt; Blackwell -&gt; Rubin), staying ahead of competitors who are still catching up to the last generation.</li>
+                    <li><strong className="text-white">Infiniband Networking:</strong> Their integration of networking (Mellanox) allows them to sell high-margin full-racks, not just individual GPUs.</li>
+                  </ul>
+                </CardBody>
+              </Card>
+              <TenMoatsCard data={tenMoatsData['NVDA']} />
+            </div>
+          ),
         },
         {
           label: "Growth",

@@ -52,7 +52,19 @@ export default function NetflixPage() {
         {
           label: "Moat",
           gauge: (<ScoreGauge score={tenMoatsData['NFLX'].aiResilienceScore} label="Moat Score" description="Massive scale allows for better unit economics on content than any competitor." />),
-          detail: <TenMoatsCard data={tenMoatsData['NFLX']} />,
+          detail: (
+            <div className="space-y-4">
+              <div className="glass-card">
+                <p style={{ marginBottom: '1rem' }}>Netflix&apos;s advantage is its <strong>Content Efficiency</strong>:</p>
+                <ul style={{ paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                  <li><strong style={{ color: 'white' }}>Unit Economics of Joy:</strong> With 270M subs, a $100M show costs Netflix $0.37 per subscriber. For a competitor with 50M subs, that same show costs $2.00. This is the ultimate barrier.</li>
+                  <li><strong style={{ color: 'white' }}>Data Flywheel:</strong> Their recommendation engine reduces churn and ensures that content spend is targeted at the highest-probability hits.</li>
+                  <li><strong style={{ color: 'white' }}>Global Reach:</strong> Unlike US-centric platforms, Netflix is truly global, with local language content driving growth in EMEA, APAC, and LATAM.</li>
+                </ul>
+              </div>
+              <TenMoatsCard data={tenMoatsData['NFLX']} />
+            </div>
+          ),
         },
         {
           label: "Growth",

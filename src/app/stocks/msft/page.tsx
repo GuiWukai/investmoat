@@ -52,7 +52,21 @@ export default function MicrosoftPage() {
         {
           label: "Moat",
           gauge: (<ScoreGauge score={tenMoatsData['MSFT'].aiResilienceScore} label="Moat Score" description="Total enterprise ubiquity and the strongest bundling power in software history." />),
-          detail: <TenMoatsCard data={tenMoatsData['MSFT']} />,
+          detail: (
+            <div className="space-y-4">
+              <Card className="bg-white/5 border-none backdrop-blur-md">
+                <CardBody className="p-4 md:p-8">
+                  <p className="mb-4">Microsoft's moat is built on <strong>Ubiquity and Frictionless Scaling</strong>:</p>
+                  <ul className="list-disc pl-6 space-y-4 text-white/60">
+                    <li><strong className="text-white">The Bundle Moat:</strong> By integrating Office, Teams, Azure, and Security, Microsoft creates a "sticky" ecosystem where selecting a competitor point-product adds more complexity than value.</li>
+                    <li><strong className="text-white">Commercial Switching Costs:</strong> Migrating a global enterprise away from the Active Directory and Office environment is an IT operation that takes years and carries immense risk.</li>
+                    <li><strong className="text-white">First-Mover AI Advantage:</strong> The partnership with OpenAI has allowed Microsoft to productize AI faster than any peer, securing early market share.</li>
+                  </ul>
+                </CardBody>
+              </Card>
+              <TenMoatsCard data={tenMoatsData['MSFT']} />
+            </div>
+          ),
         },
         {
           label: "Growth",

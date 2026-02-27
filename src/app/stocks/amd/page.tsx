@@ -52,7 +52,19 @@ export default function AmdPage() {
         {
           label: "Moat",
           gauge: (<ScoreGauge score={tenMoatsData['AMD'].aiResilienceScore} label="Moat Score" description="Strong positioning as the primary x86 alternative and growing software (ROCm) ecosystem." />),
-          detail: <TenMoatsCard data={tenMoatsData['AMD']} />,
+          detail: (
+            <div className="space-y-4">
+              <div className="glass-card">
+                <p style={{ marginBottom: '1rem' }}>AMD&apos;s advantage lies in <strong>Architectural Efficiency</strong>:</p>
+                <ul style={{ paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                  <li><strong style={{ color: 'white' }}>Chiplet Innovation:</strong> AMD led the transition to chiplets, allowing for higher yields and more flexible SKU creation compared to monolithic designs.</li>
+                  <li><strong style={{ color: 'white' }}>x86 Market Share Capture:</strong> Continues to erode Intel&apos;s dominance in the server (EPYC) and consumer (Ryzen) markets.</li>
+                  <li><strong style={{ color: 'white' }}>Open Ecosystem:</strong> ROCm software suite is becoming a viable open-source alternative to Nvidia&apos;s proprietary CUDA, attracting hyperscalers looking for vendor flexibility.</li>
+                </ul>
+              </div>
+              <TenMoatsCard data={tenMoatsData['AMD']} />
+            </div>
+          ),
         },
         {
           label: "Growth",
@@ -123,7 +135,7 @@ export default function AmdPage() {
         },
       ]} />
 
-      <AnalysisSection title="The Chiplet Moat">
+      <div className="hidden md:block"><AnalysisSection title="The Chiplet Moat">
         <div className="space-y-6">
           <div className="glass-card">
             <p style={{ marginBottom: '1rem' }}>AMD&apos;s advantage lies in <strong>Architectural Efficiency</strong>:</p>
@@ -133,11 +145,9 @@ export default function AmdPage() {
               <li><strong style={{ color: 'white' }}>Open Ecosystem:</strong> ROCm software suite is becoming a viable open-source alternative to Nvidia&apos;s proprietary CUDA, attracting hyperscalers looking for vendor flexibility.</li>
             </ul>
           </div>
-          <div className="hidden md:block">
-            <TenMoatsCard data={tenMoatsData['AMD']} />
-          </div>
+          <TenMoatsCard data={tenMoatsData['AMD']} />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
       <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

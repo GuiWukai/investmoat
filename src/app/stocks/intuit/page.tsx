@@ -52,7 +52,19 @@ export default function IntuitPage() {
         {
           label: "Moat",
           gauge: (<ScoreGauge score={tenMoatsData['INTU'].aiResilienceScore} label="Moat Score" description="Extreme switching costs; once a SMB has QuickBooks, they almost never leave." />),
-          detail: <TenMoatsCard data={tenMoatsData['INTU']} />,
+          detail: (
+            <div className="space-y-4">
+              <div className="glass-card">
+                <p style={{ marginBottom: '1rem' }}>Intuit owns the <strong>Financial Workflow</strong> for small businesses and individuals:</p>
+                <ul style={{ paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                  <li><strong style={{ color: 'white' }}>Mission-Critical Software:</strong> QuickBooks is the system of record for millions. Migrating accounting data is a nightmare, creating a &quot;sticky&quot; moat.</li>
+                  <li><strong style={{ color: 'white' }}>Regulatory Tailwinds:</strong> Tax complexity ensures TurboTax remains a necessity for the consumer segment.</li>
+                  <li><strong style={{ color: 'white' }}>Data Advantage:</strong> Intuit sees more SMB transaction data than almost any bank, allowing for superior credit underwriting.</li>
+                </ul>
+              </div>
+              <TenMoatsCard data={tenMoatsData['INTU']} />
+            </div>
+          ),
         },
         {
           label: "Growth",
