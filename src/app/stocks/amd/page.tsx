@@ -1,7 +1,7 @@
 'use client';
 
 import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
-import { tenMoatsData, computeMoatScore } from "@/app/tenMoatsData";
+import { tenMoatsData } from "@/app/tenMoatsData";
 import { Cpu, Layers, Zap } from "lucide-react";
 import { Chip } from "@heroui/react";
 
@@ -49,7 +49,7 @@ export default function AmdPage() {
       </div>
 
       <div className="flex flex-col md:flex-row gap-6 mt-8">
-        <ScoreGauge score={computeMoatScore(tenMoatsData['AMD'])} label="Moat Score" description="Strong positioning as the primary x86 alternative and growing software (ROCm) ecosystem." />
+        <ScoreGauge score={tenMoatsData['AMD'].aiResilienceScore} label="Moat Score" description="Strong positioning as the primary x86 alternative and growing software (ROCm) ecosystem." />
         <ScoreGauge score={92} label="Growth Score" description="Catching up rapidly in the AI accelerator market with chiplet architectures." />
         <ScoreGauge score={58} label="Valuation Score" description="High P/E (45x) requires high execution to justify multiple." />
       </div>

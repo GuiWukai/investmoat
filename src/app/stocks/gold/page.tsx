@@ -1,7 +1,7 @@
 'use client';
 
 import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
-import { tenMoatsData, computeMoatScore } from "@/app/tenMoatsData";
+import { tenMoatsData } from "@/app/tenMoatsData";
 import { ShieldCheck, TrendingUp, Globe, Coins } from "lucide-react";
 import { Card, CardBody, Chip } from "@heroui/react";
 
@@ -58,7 +58,7 @@ export default function GoldPage() {
 
       <div className="flex flex-col md:flex-row gap-6">
         <ScoreGauge
-          score={computeMoatScore(tenMoatsData['XAU'])}
+          score={tenMoatsData['XAU'].aiResilienceScore}
           label="Moat Score"
           description="5,000+ years as humanity's store of value. No counterparty risk, finite supply, universally recognised across all civilisations and geopolitical systems."
         />

@@ -1,6 +1,6 @@
-import { computeMoatScore, tenMoatsData } from "@/app/tenMoatsData";
+import { tenMoatsData } from "@/app/tenMoatsData";
 
-const m = (ticker: string) => computeMoatScore(tenMoatsData[ticker]);
+const m = (ticker: string) => tenMoatsData[ticker].aiResilienceScore;
 
 export const stockData = [
     { name: "Amazon", ticker: "AMZN", scores: [m("AMZN"), 88, 72], href: "/stocks/amazon", category: "Big Tech" },

@@ -1,7 +1,7 @@
 'use client';
 
 import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
-import { tenMoatsData, computeMoatScore } from "@/app/tenMoatsData";
+import { tenMoatsData } from "@/app/tenMoatsData";
 import { ShoppingCart, Cloud, Truck, DollarSign } from "lucide-react";
 import { Card, CardBody, CardHeader, Chip, Divider } from "@heroui/react";
 
@@ -50,7 +50,7 @@ export default function AmazonPage() {
 
       <div className="flex flex-col md:flex-row gap-6">
         <ScoreGauge 
-          score={95} 
+          score={tenMoatsData['AMZN'].aiResilienceScore}
           label="Moat Score" 
           description="Dominant scale, switching costs (Prime), and cost advantage (Logistics)." 
         />

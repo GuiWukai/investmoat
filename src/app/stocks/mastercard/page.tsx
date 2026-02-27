@@ -1,7 +1,7 @@
 'use client';
 
 import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
-import { tenMoatsData, computeMoatScore } from "@/app/tenMoatsData";
+import { tenMoatsData } from "@/app/tenMoatsData";
 import { CreditCard, ShieldCheck, TrendingUp } from "lucide-react";
 import { Chip } from "@heroui/react";
 
@@ -49,7 +49,7 @@ export default function MastercardPage() {
       </div>
 
       <div className="flex flex-col md:flex-row gap-6 mt-8">
-        <ScoreGauge score={computeMoatScore(tenMoatsData['MA'])} label="Moat Score" description="Critical global infrastructure with deep brand trust and technological advantage." />
+        <ScoreGauge score={tenMoatsData['MA'].aiResilienceScore} label="Moat Score" description="Critical global infrastructure with deep brand trust and technological advantage." />
         <ScoreGauge score={88} label="Growth Score" description="Faster growth than Visa in service revenue and data analytics." />
         <ScoreGauge score={70} label="Valuation Score" description="Trades at a premium (32x P/E) but justified by higher growth profile." />
       </div>

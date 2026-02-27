@@ -1,7 +1,7 @@
 'use client';
 
 import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
-import { tenMoatsData, computeMoatScore } from "@/app/tenMoatsData";
+import { tenMoatsData } from "@/app/tenMoatsData";
 import { Users, Cpu, Share2, DollarSign } from "lucide-react";
 import { Card, CardBody, Chip } from "@heroui/react";
 
@@ -49,7 +49,7 @@ export default function MetaPage() {
       </div>
 
       <div className="flex flex-col md:flex-row gap-6">
-        <ScoreGauge score={computeMoatScore(tenMoatsData['META'])} label="Moat Score" description="Unrivaled social network effect and massive proprietary data for AI training." />
+        <ScoreGauge score={tenMoatsData['META'].aiResilienceScore} label="Moat Score" description="Unrivaled social network effect and massive proprietary data for AI training." />
         <ScoreGauge score={85} label="Growth Score" description="Advancements in Llama AI and monetization of Reels/Threads." />
         <ScoreGauge score={65} label="Valuation Score" description="Attractive P/E relative to growth, but high capex intensive." />
       </div>

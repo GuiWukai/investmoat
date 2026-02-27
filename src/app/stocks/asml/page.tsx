@@ -1,7 +1,7 @@
 'use client';
 
 import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
-import { tenMoatsData, computeMoatScore } from "@/app/tenMoatsData";
+import { tenMoatsData } from "@/app/tenMoatsData";
 import { Cpu, Zap, Target, Layers } from "lucide-react";
 import { Card, CardBody, Chip } from "@heroui/react";
 
@@ -49,7 +49,7 @@ export default function AsmlPage() {
       </div>
 
       <div className="flex flex-col md:flex-row gap-6">
-        <ScoreGauge score={computeMoatScore(tenMoatsData['ASML'])} label="Moat Score" description="The only company in the world capable of producing EUV machines required for &lt;7nm chips." />
+        <ScoreGauge score={tenMoatsData['ASML'].aiResilienceScore} label="Moat Score" description="The only company in the world capable of producing EUV machines required for &lt;7nm chips." />
         <ScoreGauge score={85} label="Growth Score" description="Moore's Law continues to drive demand for High-NA EUV and increased wafer capacity." />
         <ScoreGauge score={72} label="Valuation Score" description="High multiple but justified by being the bottleneck of the entire AI economy." />
       </div>
