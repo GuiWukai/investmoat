@@ -1,7 +1,7 @@
 'use client';
 
 import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
-import { tenMoatsData } from "@/app/tenMoatsData";
+import { tenMoatsData, computeMoatScore } from "@/app/tenMoatsData";
 import { Globe, Zap, DollarSign } from "lucide-react";
 import { Chip } from "@heroui/react";
 
@@ -49,7 +49,7 @@ export default function VisaPage() {
       </div>
 
       <div className="flex flex-col md:flex-row gap-6 mt-8">
-        <ScoreGauge score={99} label="Moat Score" description="The world's largest payment network with massive barriers to entry and network effects." />
+        <ScoreGauge score={computeMoatScore(tenMoatsData['V'])} label="Moat Score" description="The world's largest payment network with massive barriers to entry and network effects." />
         <ScoreGauge score={82} label="Growth Score" description="Ongoing shift from cash to digital and expansion into B2B payments." />
         <ScoreGauge score={75} label="Valuation Score" description="Trading at 28x forward P/E, reasonable for a consistent 15%+ EPS compounder." />
       </div>

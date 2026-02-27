@@ -1,7 +1,7 @@
 'use client';
 
 import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
-import { tenMoatsData } from "@/app/tenMoatsData";
+import { tenMoatsData, computeMoatScore } from "@/app/tenMoatsData";
 import { Calculator, BarChart, DollarSign } from "lucide-react";
 import { Chip } from "@heroui/react";
 
@@ -49,7 +49,7 @@ export default function IntuitPage() {
       </div>
 
       <div className="flex flex-col md:flex-row gap-6 mt-8">
-        <ScoreGauge score={94} label="Moat Score" description="Extreme switching costs; once a SMB has QuickBooks, they almost never leave." />
+        <ScoreGauge score={computeMoatScore(tenMoatsData['INTU'])} label="Moat Score" description="Extreme switching costs; once a SMB has QuickBooks, they almost never leave." />
         <ScoreGauge score={84} label="Growth Score" description="Credit Karma integration and AI-assisted tax filing driving ARPU." />
         <ScoreGauge score={62} label="Valuation Score" description="Consistent mid-20s P/E, fair for a high-quality compounder." />
       </div>

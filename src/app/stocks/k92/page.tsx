@@ -1,7 +1,7 @@
 'use client';
 
 import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
-import { tenMoatsData } from "@/app/tenMoatsData";
+import { tenMoatsData, computeMoatScore } from "@/app/tenMoatsData";
 import { Pickaxe, Zap, Gem, CheckCircle } from "lucide-react";
 import { Chip } from "@heroui/react";
 
@@ -58,7 +58,7 @@ export default function K92Page() {
 
       <div className="flex flex-col md:flex-row gap-6 mt-8">
         <ScoreGauge
-          score={65}
+          score={computeMoatScore(tenMoatsData['KNT'])}
           label="Moat Score"
           description="World-class high-grade orebody; Stage 3 execution proves operational quality. PNG jurisdictional risk remains the key offset."
         />

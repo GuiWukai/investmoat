@@ -1,7 +1,7 @@
 'use client';
 
 import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
-import { tenMoatsData } from "@/app/tenMoatsData";
+import { tenMoatsData, computeMoatScore } from "@/app/tenMoatsData";
 import { ShoppingCart, Cloud, Truck, DollarSign } from "lucide-react";
 import { Card, CardBody, CardHeader, Chip, Divider } from "@heroui/react";
 

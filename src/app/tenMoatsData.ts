@@ -23,6 +23,33 @@ export interface TenMoatsAssessment {
   verdict: string;
 }
 
+const STATUS_VALUES: Record<MoatStatus, number> = {
+  strong: 100,
+  intact: 75,
+  weakened: 25,
+  destroyed: 0,
+};
+
+export function computeMoatScore(assessment: TenMoatsAssessment): number {
+  const resilientAvg = [
+    assessment.proprietaryData,
+    assessment.regulatoryLockIn,
+    assessment.networkEffects,
+    assessment.transactionEmbedding,
+    assessment.systemOfRecord,
+  ].reduce((sum, m) => sum + STATUS_VALUES[m.status], 0) / 5;
+
+  const vulnerableAvg = [
+    assessment.learnedInterfaces,
+    assessment.businessLogic,
+    assessment.publicDataAccess,
+    assessment.talentScarcity,
+    assessment.bundling,
+  ].reduce((sum, m) => sum + STATUS_VALUES[m.status], 0) / 5;
+
+  return Math.round(resilientAvg * 0.65 + vulnerableAvg * 0.35);
+}
+
 export const tenMoatsData: Record<string, TenMoatsAssessment> = {
   MSFT: {
     learnedInterfaces: { status: 'weakened', note: 'Copilot abstracts traditional Office UI, but enterprise muscle-memory and training investment remain entrenched.' },
