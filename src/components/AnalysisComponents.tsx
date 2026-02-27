@@ -70,6 +70,71 @@ export function ScoreGauge({ score, label, description }: ScoreGaugeProps) {
   );
 }
 
+export function OverallScoreCard({ score }: { score: number }) {
+  const getTier = (s: number): { label: string; hex: string; color: "success" | "primary" | "warning" | "danger" } => {
+    if (s >= 90) return { label: 'Exceptional', hex: '#17c964', color: 'success' };
+    if (s >= 80) return { label: 'Strong',      hex: '#006fee', color: 'primary' };
+    if (s >= 70) return { label: 'Above Avg',   hex: '#f5a524', color: 'warning' };
+    if (s >= 60) return { label: 'Average',     hex: '#f59e0b', color: 'warning' };
+    return              { label: 'Weak',        hex: '#f31260', color: 'danger'  };
+  };
+
+  const { label, hex, color } = getTier(score);
+
+  return (
+    <Card className="w-full flex-1 bg-white/5 border-none backdrop-blur-md">
+      <CardBody className="p-5 md:p-6 gap-5">
+        {/* Header */}
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="w-1.5 h-5 rounded-full shrink-0" style={{ background: hex }} />
+            <span className="text-[10px] font-black uppercase tracking-widest text-white/40">Composite Score</span>
+          </div>
+          <Chip size="sm" color={color} variant="flat" classNames={{ content: "font-bold text-[11px]" }}>
+            {label}
+          </Chip>
+        </div>
+
+        {/* Big number */}
+        <div className="flex items-baseline gap-2">
+          <span className="text-6xl md:text-7xl font-black leading-none tabular-nums" style={{ color: hex }}>
+            {score}
+          </span>
+          <span className="text-white/25 font-bold text-2xl">/100</span>
+        </div>
+
+        {/* Horizontal bar */}
+        <div className="space-y-1.5">
+          <div className="relative h-3 rounded-full overflow-hidden bg-white/10">
+            {/* Zone tint */}
+            <div
+              className="absolute inset-0 opacity-20"
+              style={{ background: 'linear-gradient(to right, #f31260 0% 25%, #f5a524 25% 60%, #006fee 60% 80%, #17c964 80% 100%)' }}
+            />
+            {/* Fill */}
+            <div
+              className="absolute left-0 top-0 h-full rounded-full"
+              style={{ width: `${score}%`, background: `linear-gradient(to right, ${hex}55, ${hex})` }}
+            />
+            {/* Marker */}
+            <div
+              className="absolute top-1/2 -translate-y-1/2 w-[3px] h-5 rounded-full"
+              style={{ left: `calc(${score}% - 1.5px)`, background: hex, boxShadow: `0 0 6px ${hex}` }}
+            />
+          </div>
+          <div className="flex justify-between px-0.5 text-[9px] text-white/20 font-bold select-none">
+            <span>0</span><span>25</span><span>50</span><span>75</span><span>100</span>
+          </div>
+        </div>
+
+        <p className="text-xs text-white/40 leading-relaxed">
+          Combined average of Moat (AI Resilience), Growth, and Valuation scores.
+        </p>
+      </CardBody>
+    </Card>
+  );
+}
+
 interface ScoreTab {
   label: string;
   gauge: React.ReactNode;
@@ -87,11 +152,7 @@ export function ScoreTabsRow({ tabs, overallScore }: { tabs: ScoreTab[], overall
         {/* Overall score always shown at top */}
         {hasOverall && (
           <div className="mb-4">
-            <ScoreGauge
-              score={overallScore!}
-              label="Overall Score"
-              description="Combined average of Moat, Growth & Valuation scores."
-            />
+            <OverallScoreCard score={overallScore!} />
           </div>
         )}
         {/* Tab strip for individual scores */}
@@ -116,15 +177,8 @@ export function ScoreTabsRow({ tabs, overallScore }: { tabs: ScoreTab[], overall
       {/* Desktop: side by side */}
       <div className="hidden md:flex gap-6">
         {hasOverall && (
-          <div className="relative flex-1 lg:min-w-[240px]" style={{ borderRadius: '12px', outline: '1.5px solid rgba(139,92,246,0.35)' }}>
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 text-[9px] font-black uppercase tracking-widest rounded px-2 py-0.5 whitespace-nowrap" style={{ background: 'rgba(139,92,246,0.2)', color: '#a78bfa', border: '1px solid rgba(139,92,246,0.35)' }}>
-              Overall Score
-            </div>
-            <ScoreGauge
-              score={overallScore!}
-              label="Overall Score"
-              description="Combined average of Moat, Growth & Valuation."
-            />
+          <div className="flex-1 lg:min-w-[240px]">
+            <OverallScoreCard score={overallScore!} />
           </div>
         )}
         {tabs.map(tab => (
