@@ -109,8 +109,9 @@ function ProductionTimelineSection({ section }: { section: NonNullable<StockAnal
 
 // ─── Page component ────────────────────────────────────────────────────────────
 
-export default function StockPage({ params }: { params: { ticker: string } }) {
-  const data = getStockData(params.ticker);
+export default function StockPage({ params }: { params: Promise<{ ticker: string }> }) {
+  const { ticker } = React.use(params);
+  const data = getStockData(ticker);
   if (!data) notFound();
 
   const stockEntry = stockData.find(s => s.ticker === data.ticker);
