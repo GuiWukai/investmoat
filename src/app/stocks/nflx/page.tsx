@@ -124,13 +124,18 @@ export default function NetflixPage() {
       ]} />
 
       <AnalysisSection title="The Scale Moat">
-        <div className="glass-card">
-          <p style={{ marginBottom: '1rem' }}>Netflix&apos;s advantage is its <strong>Content Efficiency</strong>:</p>
-          <ul style={{ paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <li><strong style={{ color: 'white' }}>Unit Economics of Joy:</strong> With 270M subs, a $100M show costs Netflix $0.37 per subscriber. For a competitor with 50M subs, that same show costs $2.00. This is the ultimate barrier.</li>
-            <li><strong style={{ color: 'white' }}>Data Flywheel:</strong> Their recommendation engine reduces churn and ensures that content spend is targeted at the highest-probability hits.</li>
-            <li><strong style={{ color: 'white' }}>Global Reach:</strong> Unlike US-centric platforms, Netflix is truly global, with local language content driving growth in EMEA, APAC, and LATAM.</li>
-          </ul>
+        <div className="space-y-6">
+          <div className="glass-card">
+            <p style={{ marginBottom: '1rem' }}>Netflix&apos;s advantage is its <strong>Content Efficiency</strong>:</p>
+            <ul style={{ paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <li><strong style={{ color: 'white' }}>Unit Economics of Joy:</strong> With 270M subs, a $100M show costs Netflix $0.37 per subscriber. For a competitor with 50M subs, that same show costs $2.00. This is the ultimate barrier.</li>
+              <li><strong style={{ color: 'white' }}>Data Flywheel:</strong> Their recommendation engine reduces churn and ensures that content spend is targeted at the highest-probability hits.</li>
+              <li><strong style={{ color: 'white' }}>Global Reach:</strong> Unlike US-centric platforms, Netflix is truly global, with local language content driving growth in EMEA, APAC, and LATAM.</li>
+            </ul>
+          </div>
+          <div className="hidden md:block">
+            <TenMoatsCard data={tenMoatsData['NFLX']} />
+          </div>
         </div>
       </AnalysisSection>
 
@@ -169,9 +174,6 @@ export default function NetflixPage() {
         </div>
       </AnalysisSection></div>
 
-      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
-        <TenMoatsCard data={tenMoatsData['NFLX']} />
-      </AnalysisSection></div>
     </div>
   );
 }

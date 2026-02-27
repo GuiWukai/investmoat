@@ -124,13 +124,18 @@ export default function AmdPage() {
       ]} />
 
       <AnalysisSection title="The Chiplet Moat">
-        <div className="glass-card">
-          <p style={{ marginBottom: '1rem' }}>AMD&apos;s advantage lies in <strong>Architectural Efficiency</strong>:</p>
-          <ul style={{ paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <li><strong style={{ color: 'white' }}>Chiplet Innovation:</strong> AMD led the transition to chiplets, allowing for higher yields and more flexible SKU creation compared to monolithic designs.</li>
-            <li><strong style={{ color: 'white' }}>x86 Market Share Capture:</strong> Continues to erode Intel&apos;s dominance in the server (EPYC) and consumer (Ryzen) markets.</li>
-            <li><strong style={{ color: 'white' }}>Open Ecosystem:</strong> ROCm software suite is becoming a viable open-source alternative to Nvidia&apos;s proprietary CUDA, attracting hyperscalers looking for vendor flexibility.</li>
-          </ul>
+        <div className="space-y-6">
+          <div className="glass-card">
+            <p style={{ marginBottom: '1rem' }}>AMD&apos;s advantage lies in <strong>Architectural Efficiency</strong>:</p>
+            <ul style={{ paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <li><strong style={{ color: 'white' }}>Chiplet Innovation:</strong> AMD led the transition to chiplets, allowing for higher yields and more flexible SKU creation compared to monolithic designs.</li>
+              <li><strong style={{ color: 'white' }}>x86 Market Share Capture:</strong> Continues to erode Intel&apos;s dominance in the server (EPYC) and consumer (Ryzen) markets.</li>
+              <li><strong style={{ color: 'white' }}>Open Ecosystem:</strong> ROCm software suite is becoming a viable open-source alternative to Nvidia&apos;s proprietary CUDA, attracting hyperscalers looking for vendor flexibility.</li>
+            </ul>
+          </div>
+          <div className="hidden md:block">
+            <TenMoatsCard data={tenMoatsData['AMD']} />
+          </div>
         </div>
       </AnalysisSection>
 
@@ -169,9 +174,6 @@ export default function AmdPage() {
         </div>
       </AnalysisSection></div>
 
-      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
-        <TenMoatsCard data={tenMoatsData['AMD']} />
-      </AnalysisSection></div>
     </div>
   );
 }

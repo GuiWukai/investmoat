@@ -124,16 +124,21 @@ export default function BitcoinPage() {
       ]} />
 
       <AnalysisSection title="The Scarcity Moat">
-        <Card className="bg-white/5 border-none backdrop-blur-md">
-          <CardBody className="p-4 md:p-8">
-            <p className="mb-4">Bitcoin's moat is built on <strong>Math and Decentralization</strong>:</p>
-            <ul className="list-disc pl-6 space-y-4 text-white/60">
-              <li><strong className="text-white">Absolute Scarcity:</strong> Only 21 million will ever exist. Unlike fiat or even gold, the supply curve is perfectly inelastic to demand.</li>
-              <li><strong className="text-white">Network Effect:</strong> As the first and largest crypto asset, Bitcoin has the most liquidity, securest chain, and widest institutional support.</li>
-              <li><strong className="text-white">Property Rights:</strong> A global, permissionless system for storing value that is independent of any central bank or government.</li>
-            </ul>
-          </CardBody>
-        </Card>
+        <div className="space-y-6">
+          <Card className="bg-white/5 border-none backdrop-blur-md">
+            <CardBody className="p-4 md:p-8">
+              <p className="mb-4">Bitcoin's moat is built on <strong>Math and Decentralization</strong>:</p>
+              <ul className="list-disc pl-6 space-y-4 text-white/60">
+                <li><strong className="text-white">Absolute Scarcity:</strong> Only 21 million will ever exist. Unlike fiat or even gold, the supply curve is perfectly inelastic to demand.</li>
+                <li><strong className="text-white">Network Effect:</strong> As the first and largest crypto asset, Bitcoin has the most liquidity, securest chain, and widest institutional support.</li>
+                <li><strong className="text-white">Property Rights:</strong> A global, permissionless system for storing value that is independent of any central bank or government.</li>
+              </ul>
+            </CardBody>
+          </Card>
+          <div className="hidden md:block">
+            <TenMoatsCard data={tenMoatsData['BTC']} />
+          </div>
+        </div>
       </AnalysisSection>
 
       <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
@@ -171,9 +176,6 @@ export default function BitcoinPage() {
         </div>
       </AnalysisSection></div>
 
-      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
-        <TenMoatsCard data={tenMoatsData['BTC']} />
-      </AnalysisSection></div>
     </div>
   );
 }

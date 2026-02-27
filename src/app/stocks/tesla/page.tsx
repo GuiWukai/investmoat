@@ -124,13 +124,18 @@ export default function TeslaPage() {
       ]} />
 
       <AnalysisSection title="The Vertical Integration Moat">
-        <div className="glass-card">
-          <p style={{ marginBottom: '1rem' }}>Tesla&apos;s moat isn&apos;t just &quot;selling cars&quot;, it&apos;s <strong>Manufacturing Complexity</strong>:</p>
-          <ul style={{ paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <li><strong style={{ color: 'white' }}>Cost Advantage:</strong> From battery chem to casting machines, Tesla&apos;s unit cost for EVs is unmatched by legacy OEMs.</li>
-            <li><strong style={{ color: 'white' }}>Data Flywheel:</strong> Millions of cars on the road feeding data into Tesla&apos;s AI Dojo training cluster creates a gap in autonomous software.</li>
-            <li><strong style={{ color: 'white' }}>Brand Authority:</strong> Zero marketing spend with 100% brand recognition creates a unique customer acquisition advantage.</li>
-          </ul>
+        <div className="space-y-6">
+          <div className="glass-card">
+            <p style={{ marginBottom: '1rem' }}>Tesla&apos;s moat isn&apos;t just &quot;selling cars&quot;, it&apos;s <strong>Manufacturing Complexity</strong>:</p>
+            <ul style={{ paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <li><strong style={{ color: 'white' }}>Cost Advantage:</strong> From battery chem to casting machines, Tesla&apos;s unit cost for EVs is unmatched by legacy OEMs.</li>
+              <li><strong style={{ color: 'white' }}>Data Flywheel:</strong> Millions of cars on the road feeding data into Tesla&apos;s AI Dojo training cluster creates a gap in autonomous software.</li>
+              <li><strong style={{ color: 'white' }}>Brand Authority:</strong> Zero marketing spend with 100% brand recognition creates a unique customer acquisition advantage.</li>
+            </ul>
+          </div>
+          <div className="hidden md:block">
+            <TenMoatsCard data={tenMoatsData['TSLA']} />
+          </div>
         </div>
       </AnalysisSection>
 
@@ -169,9 +174,6 @@ export default function TeslaPage() {
         </div>
       </AnalysisSection></div>
 
-      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
-        <TenMoatsCard data={tenMoatsData['TSLA']} />
-      </AnalysisSection></div>
     </div>
   );
 }

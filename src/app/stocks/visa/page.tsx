@@ -124,13 +124,18 @@ export default function VisaPage() {
       ]} />
 
       <AnalysisSection title="The Duopoly Moat">
-        <div className="glass-card">
-          <p style={{ marginBottom: '1rem' }}>Visa operates a <strong>Global Toll Bridge</strong> for commerce:</p>
-          <ul style={{ paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <li><strong style={{ color: 'white' }}>Network Effect:</strong> More merchants accept Visa because more consumers carry the card. More consumers carry the card because more merchants accept it. A classic winner-take-all flywheel.</li>
-            <li><strong style={{ color: 'white' }}>High Barriers to Entry:</strong> The infrastructure required to process 250+ billion transactions annually with zero downtime is nearly impossible to replicate.</li>
-            <li><strong style={{ color: 'white' }}>Operating Leverage:</strong> Once code is written, an additional transaction costs virtually nothing, leading to industry-leading margins.</li>
-          </ul>
+        <div className="space-y-6">
+          <div className="glass-card">
+            <p style={{ marginBottom: '1rem' }}>Visa operates a <strong>Global Toll Bridge</strong> for commerce:</p>
+            <ul style={{ paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <li><strong style={{ color: 'white' }}>Network Effect:</strong> More merchants accept Visa because more consumers carry the card. More consumers carry the card because more merchants accept it. A classic winner-take-all flywheel.</li>
+              <li><strong style={{ color: 'white' }}>High Barriers to Entry:</strong> The infrastructure required to process 250+ billion transactions annually with zero downtime is nearly impossible to replicate.</li>
+              <li><strong style={{ color: 'white' }}>Operating Leverage:</strong> Once code is written, an additional transaction costs virtually nothing, leading to industry-leading margins.</li>
+            </ul>
+          </div>
+          <div className="hidden md:block">
+            <TenMoatsCard data={tenMoatsData['V']} />
+          </div>
         </div>
       </AnalysisSection>
 
@@ -169,9 +174,6 @@ export default function VisaPage() {
         </div>
       </AnalysisSection></div>
 
-      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
-        <TenMoatsCard data={tenMoatsData['V']} />
-      </AnalysisSection></div>
     </div>
   );
 }

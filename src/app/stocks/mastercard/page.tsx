@@ -124,13 +124,18 @@ export default function MastercardPage() {
       ]} />
 
       <AnalysisSection title="The Services Moat">
-        <div className="glass-card">
-          <p style={{ marginBottom: '1rem' }}>Mastercard is more than a network; it&apos;s a <strong>Data &amp; Services Powerhouse</strong>:</p>
-          <ul style={{ paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <li><strong style={{ color: 'white' }}>Service Diversification:</strong> MA has been more aggressive in building security, fraud, and data analytics services, which are higher margin and stickier than core processing.</li>
-            <li><strong style={{ color: 'white' }}>Technological Agility:</strong> Strong focus on open banking and digital identity solutions creates new moats in the evolving fintech landscape.</li>
-            <li><strong style={{ color: 'white' }}>Global Presence:</strong> Strong positioning in Europe and emerging markets where digital adoption is accelerating.</li>
-          </ul>
+        <div className="space-y-6">
+          <div className="glass-card">
+            <p style={{ marginBottom: '1rem' }}>Mastercard is more than a network; it&apos;s a <strong>Data &amp; Services Powerhouse</strong>:</p>
+            <ul style={{ paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <li><strong style={{ color: 'white' }}>Service Diversification:</strong> MA has been more aggressive in building security, fraud, and data analytics services, which are higher margin and stickier than core processing.</li>
+              <li><strong style={{ color: 'white' }}>Technological Agility:</strong> Strong focus on open banking and digital identity solutions creates new moats in the evolving fintech landscape.</li>
+              <li><strong style={{ color: 'white' }}>Global Presence:</strong> Strong positioning in Europe and emerging markets where digital adoption is accelerating.</li>
+            </ul>
+          </div>
+          <div className="hidden md:block">
+            <TenMoatsCard data={tenMoatsData['MA']} />
+          </div>
         </div>
       </AnalysisSection>
 
@@ -169,9 +174,6 @@ export default function MastercardPage() {
         </div>
       </AnalysisSection></div>
 
-      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
-        <TenMoatsCard data={tenMoatsData['MA']} />
-      </AnalysisSection></div>
     </div>
   );
 }

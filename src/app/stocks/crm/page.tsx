@@ -124,16 +124,21 @@ export default function SalesforcePage() {
       ]} />
 
       <AnalysisSection title="The Data Gravity Moat">
-        <Card className="bg-white/5 border-none backdrop-blur-md">
-          <CardBody className="p-4 md:p-8">
-            <p className="mb-4">Salesforce's moat is built on <strong>Ecosystem Stickiness</strong>:</p>
-            <ul className="list-disc pl-6 space-y-4 text-white/60">
-              <li><strong className="text-white">High Switching Costs:</strong> Once an enterprise integrates its entire sales workflow and data into CRM, the cost and risk of migrating to a competitor like Oracle or SAP are prohibitive.</li>
-              <li><strong className="text-white">Platform Breadth:</strong> With Sales, Service, Marketing, and Slack, Salesforce offers a unified platform that individual point-solutions cannot match.</li>
-              <li><strong className="text-white">Data Cloud:</strong> The ability to harmonize disparate data streams into a single customer profile creates a new layer of value for AI modeling.</li>
-            </ul>
-          </CardBody>
-        </Card>
+        <div className="space-y-6">
+          <Card className="bg-white/5 border-none backdrop-blur-md">
+            <CardBody className="p-4 md:p-8">
+              <p className="mb-4">Salesforce's moat is built on <strong>Ecosystem Stickiness</strong>:</p>
+              <ul className="list-disc pl-6 space-y-4 text-white/60">
+                <li><strong className="text-white">High Switching Costs:</strong> Once an enterprise integrates its entire sales workflow and data into CRM, the cost and risk of migrating to a competitor like Oracle or SAP are prohibitive.</li>
+                <li><strong className="text-white">Platform Breadth:</strong> With Sales, Service, Marketing, and Slack, Salesforce offers a unified platform that individual point-solutions cannot match.</li>
+                <li><strong className="text-white">Data Cloud:</strong> The ability to harmonize disparate data streams into a single customer profile creates a new layer of value for AI modeling.</li>
+              </ul>
+            </CardBody>
+          </Card>
+          <div className="hidden md:block">
+            <TenMoatsCard data={tenMoatsData['CRM']} />
+          </div>
+        </div>
       </AnalysisSection>
 
       <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
@@ -171,9 +176,6 @@ export default function SalesforcePage() {
         </div>
       </AnalysisSection></div>
 
-      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
-        <TenMoatsCard data={tenMoatsData['CRM']} />
-      </AnalysisSection></div>
     </div>
   );
 }

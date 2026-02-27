@@ -151,24 +151,29 @@ export default function K92Page() {
       ]} />
 
       <AnalysisSection title="The Mining Moat (Asset Quality)">
-        <div className="glass-card">
-          <p style={{ marginBottom: '1rem' }}>
-            In mining, the &quot;moat&quot; is the <strong>Quality of the Orebody</strong>:
-          </p>
-          <ul style={{ paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <li>
-              <strong style={{ color: 'white' }}>Exceptional Grades:</strong> K92&apos;s Kainantu mine averages ~10.2 g/t gold — top 5% globally. High grades provide a massive margin cushion during gold price downturns and justify the PNG risk premium.
-            </li>
-            <li>
-              <strong style={{ color: 'white' }}>Proven Execution:</strong> Stage 3 1.2 Mtpa process plant commissioned in December 2025, hitting daily throughput records within weeks. Record 2025 annual production of 174k oz AuEq came in at the upper end of guidance — the fourth consecutive year of beating targets.
-            </li>
-            <li>
-              <strong style={{ color: 'white' }}>Exploration Engine:</strong> The Kora and Judd vein systems remain open in multiple directions. A record $31–35M exploration program is planned for 2026, including two additional drill rigs arriving in Q1. The Blue Lake Porphyry could be a company-defining discovery.
-            </li>
-            <li>
-              <strong style={{ color: 'white' }}>Strong Balance Sheet:</strong> Record cash position of $183M (including $124M net cash) entering 2026 provides full funding for Stage 4 without dilutive equity raises.
-            </li>
-          </ul>
+        <div className="space-y-6">
+          <div className="glass-card">
+            <p style={{ marginBottom: '1rem' }}>
+              In mining, the &quot;moat&quot; is the <strong>Quality of the Orebody</strong>:
+            </p>
+            <ul style={{ paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <li>
+                <strong style={{ color: 'white' }}>Exceptional Grades:</strong> K92&apos;s Kainantu mine averages ~10.2 g/t gold — top 5% globally. High grades provide a massive margin cushion during gold price downturns and justify the PNG risk premium.
+              </li>
+              <li>
+                <strong style={{ color: 'white' }}>Proven Execution:</strong> Stage 3 1.2 Mtpa process plant commissioned in December 2025, hitting daily throughput records within weeks. Record 2025 annual production of 174k oz AuEq came in at the upper end of guidance — the fourth consecutive year of beating targets.
+              </li>
+              <li>
+                <strong style={{ color: 'white' }}>Exploration Engine:</strong> The Kora and Judd vein systems remain open in multiple directions. A record $31–35M exploration program is planned for 2026, including two additional drill rigs arriving in Q1. The Blue Lake Porphyry could be a company-defining discovery.
+              </li>
+              <li>
+                <strong style={{ color: 'white' }}>Strong Balance Sheet:</strong> Record cash position of $183M (including $124M net cash) entering 2026 provides full funding for Stage 4 without dilutive equity raises.
+              </li>
+            </ul>
+          </div>
+          <div className="hidden md:block">
+            <TenMoatsCard data={tenMoatsData['KNT']} />
+          </div>
         </div>
       </AnalysisSection>
 
@@ -237,9 +242,6 @@ export default function K92Page() {
         </div>
       </AnalysisSection></div>
 
-      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
-        <TenMoatsCard data={tenMoatsData['KNT']} />
-      </AnalysisSection></div>
     </div>
   );
 }

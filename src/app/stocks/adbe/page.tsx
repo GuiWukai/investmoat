@@ -124,13 +124,18 @@ export default function AdobePage() {
       ]} />
 
       <AnalysisSection title="The Creative Standard Moat">
-        <div className="glass-card">
-          <p style={{ marginBottom: '1rem' }}>Adobe&apos;s moat is built on <strong>Network Effects and Professional Reliance</strong>:</p>
-          <ul style={{ paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <li><strong style={{ color: 'white' }}>Industry Standard:</strong> Photoshop, Premiere, and Illustrator are taught in universities. Hiring a designer means hiring someone who speaks &quot;Adobe.&quot;</li>
-            <li><strong style={{ color: 'white' }}>Firefly AI Advantage:</strong> Adobe&apos;s AI is trained on licensed content (Adobe Stock), making it safe for commercial use—a critical differentiator for enterprise clients.</li>
-            <li><strong style={{ color: 'white' }}>Document Cloud:</strong> Acrobat and PDF standards Create a separate, massive moat in professional and business workflows.</li>
-          </ul>
+        <div className="space-y-6">
+          <div className="glass-card">
+            <p style={{ marginBottom: '1rem' }}>Adobe&apos;s moat is built on <strong>Network Effects and Professional Reliance</strong>:</p>
+            <ul style={{ paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <li><strong style={{ color: 'white' }}>Industry Standard:</strong> Photoshop, Premiere, and Illustrator are taught in universities. Hiring a designer means hiring someone who speaks &quot;Adobe.&quot;</li>
+              <li><strong style={{ color: 'white' }}>Firefly AI Advantage:</strong> Adobe&apos;s AI is trained on licensed content (Adobe Stock), making it safe for commercial use—a critical differentiator for enterprise clients.</li>
+              <li><strong style={{ color: 'white' }}>Document Cloud:</strong> Acrobat and PDF standards Create a separate, massive moat in professional and business workflows.</li>
+            </ul>
+          </div>
+          <div className="hidden md:block">
+            <TenMoatsCard data={tenMoatsData['ADBE']} />
+          </div>
         </div>
       </AnalysisSection>
 
@@ -169,9 +174,6 @@ export default function AdobePage() {
         </div>
       </AnalysisSection></div>
 
-      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
-        <TenMoatsCard data={tenMoatsData['ADBE']} />
-      </AnalysisSection></div>
     </div>
   );
 }

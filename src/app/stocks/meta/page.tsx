@@ -124,16 +124,21 @@ export default function MetaPage() {
       ]} />
 
       <AnalysisSection title="The Advertising Moat">
-        <Card className="bg-white/5 border-none backdrop-blur-md">
-          <CardBody className="p-4 md:p-8">
-            <p className="mb-4">Meta's moat is built on <strong>Attention and Data</strong>:</p>
-            <ul className="list-disc pl-6 space-y-4 text-white/60">
-              <li><strong className="text-white">Social Graph Network Effect:</strong> Every new user on Instagram or WhatsApp increases the value for existing users. Breaking this flywheel requires a multi-billion person migration.</li>
-              <li><strong className="text-white">AI Content Flywheel:</strong> AI-driven recommendations are significantly increasing time-spent on Reels, which directly translates to more ad-inventory.</li>
-              <li><strong className="text-white">Vertical Integration of AI:</strong> By owning the compute, the models (Llama), and the distribution (FB/IG), Meta controls the entire AI value chain.</li>
-            </ul>
-          </CardBody>
-        </Card>
+        <div className="space-y-6">
+          <Card className="bg-white/5 border-none backdrop-blur-md">
+            <CardBody className="p-4 md:p-8">
+              <p className="mb-4">Meta's moat is built on <strong>Attention and Data</strong>:</p>
+              <ul className="list-disc pl-6 space-y-4 text-white/60">
+                <li><strong className="text-white">Social Graph Network Effect:</strong> Every new user on Instagram or WhatsApp increases the value for existing users. Breaking this flywheel requires a multi-billion person migration.</li>
+                <li><strong className="text-white">AI Content Flywheel:</strong> AI-driven recommendations are significantly increasing time-spent on Reels, which directly translates to more ad-inventory.</li>
+                <li><strong className="text-white">Vertical Integration of AI:</strong> By owning the compute, the models (Llama), and the distribution (FB/IG), Meta controls the entire AI value chain.</li>
+              </ul>
+            </CardBody>
+          </Card>
+          <div className="hidden md:block">
+            <TenMoatsCard data={tenMoatsData['META']} />
+          </div>
+        </div>
       </AnalysisSection>
 
       <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
@@ -171,9 +176,6 @@ export default function MetaPage() {
         </div>
       </AnalysisSection></div>
 
-      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
-        <TenMoatsCard data={tenMoatsData['META']} />
-      </AnalysisSection></div>
     </div>
   );
 }

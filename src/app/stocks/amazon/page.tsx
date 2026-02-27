@@ -60,46 +60,72 @@ export default function AmazonPage() {
         },
         {
           label: "Growth",
-          gauge: (<ScoreGauge 
-          score={88} 
-          label="Growth Score" 
-          description="Cloud (AWS) and Advertising continue to outpace e-commerce growth." 
+          gauge: (<ScoreGauge
+          score={88}
+          label="Growth Score"
+          description="Cloud (AWS) and Advertising continue to outpace e-commerce growth."
         />),
           detail: (
             <div className="space-y-4">
-              <MetricCard 
-          title="Revenue Growth" 
-          value="13.2%" 
-          label="YoY vs 11.5% Industry" 
-          icon={<ShoppingCart size={20} className="text-white" />} 
+              <MetricCard
+          title="Revenue Growth"
+          value="13.2%"
+          label="YoY vs 11.5% Industry"
+          icon={<ShoppingCart size={20} className="text-white" />}
           color="#f59e0b"
         />
-              <MetricCard 
-          title="AWS Margin" 
-          value="31.8%" 
-          label="Best-in-class profitability" 
-          icon={<Cloud size={20} className="text-white" />} 
+              <MetricCard
+          title="AWS Margin"
+          value="31.8%"
+          label="Best-in-class profitability"
+          icon={<Cloud size={20} className="text-white" />}
           color="#006fee"
         />
-              <MetricCard 
-          title="Free Cash Flow" 
-          value="$50.1B" 
-          label="TTM Expansion +400%" 
-          icon={<DollarSign size={20} className="text-white" />} 
+              <MetricCard
+          title="Free Cash Flow"
+          value="$50.1B"
+          label="TTM Expansion +400%"
+          icon={<DollarSign size={20} className="text-white" />}
           color="#17c964"
         />
+              <Card className="bg-white/5 border-none backdrop-blur-md p-6">
+                <h4 className="text-xl font-bold mb-6">Financial Outlook</h4>
+                <div className="space-y-4">
+                  {[
+                    "Generative AI demand driving AWS infrastructure refresh.",
+                    "Ad revenue margin expansion exceeding retail growth.",
+                    "International retail segments turning profitable."
+                  ].map((text, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-success flex-shrink-0" />
+                      <span className="text-sm text-white/70">{text}</span>
+                    </div>
+                  ))}
+                </div>
+              </Card>
             </div>
           ),
         },
         {
           label: "Value",
-          gauge: (<ScoreGauge 
-          score={72} 
-          label="Valuation Score" 
-          description="Trading at 14x forward Cash Flow, slightly above historical mean." 
+          gauge: (<ScoreGauge
+          score={72}
+          label="Valuation Score"
+          description="Trading at 14x forward Cash Flow, slightly above historical mean."
         />),
           detail: (
             <div className="space-y-4">
+              <Card className="bg-white/5 border-none backdrop-blur-md p-6">
+                <h4 className="text-xl font-bold mb-6">Valuation Analysis</h4>
+                <p className="text-sm text-white/60 leading-relaxed">
+                  Using a 10-year DCF with a 9% WACC and a 3.5% terminal growth rate, our fair value estimate for AMZN is <strong className="text-white text-lg">$215/share</strong>.
+                </p>
+                <Divider className="my-4 bg-white/10" />
+                <div className="flex justify-between items-center">
+                  <span className="text-xs uppercase tracking-widest text-white/40">Margin of Safety</span>
+                  <Chip color="success" variant="flat" className="font-bold">14%</Chip>
+                </div>
+              </Card>
               <ScenarioCard
             type="Bear"
             priceTarget="$140"
@@ -136,63 +162,37 @@ export default function AmazonPage() {
       ]} />
 
       <AnalysisSection title="The Economic Moat">
-        <Card className="bg-white/5 border-none backdrop-blur-md">
-          <CardBody className="p-4 md:p-8">
-            <p className="mb-6 text-lg">
-              Amazon possesses a <strong className="text-primary italic">Wide Economic Moat</strong> driven by three primary pillars:
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="space-y-2">
-                <h4 className="font-bold text-white flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-primary" /> Cost Advantage
-                </h4>
-                <p className="text-sm text-white/50 leading-relaxed">Its massive fulfillment infrastructure creates unit costs that no competitor can match, allowing for faster delivery and lower prices.</p>
-              </div>
-              <div className="space-y-2">
-                <h4 className="font-bold text-white flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-primary" /> Switching Costs
-                </h4>
-                <p className="text-sm text-white/50 leading-relaxed">The Prime ecosystem locks in consumers. Once a household is integrated into Prime, the convenience makes shopping elsewhere a "costly" friction.</p>
-              </div>
-              <div className="space-y-2">
-                <h4 className="font-bold text-white flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-primary" /> Network Effect
-                </h4>
-                <p className="text-sm text-white/50 leading-relaxed">The 3rd party marketplace creates a flywheel where more sellers attract more buyers, which attracts more sellers.</p>
-              </div>
-            </div>
-          </CardBody>
-        </Card>
-      </AnalysisSection>
-
-      <AnalysisSection title="Financial Outlook">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Card className="bg-white/5 border-none backdrop-blur-md p-6">
-            <h4 className="text-xl font-bold mb-6">Growth Catalysts</h4>
-            <div className="space-y-4">
-              {[
-                "Generative AI demand driving AWS infrastructure refresh.",
-                "Ad revenue margin expansion exceeding retail growth.",
-                "International retail segments turning profitable."
-              ].map((text, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-success flex-shrink-0" />
-                  <span className="text-sm text-white/70">{text}</span>
+        <div className="space-y-6">
+          <Card className="bg-white/5 border-none backdrop-blur-md">
+            <CardBody className="p-4 md:p-8">
+              <p className="mb-6 text-lg">
+                Amazon possesses a <strong className="text-primary italic">Wide Economic Moat</strong> driven by three primary pillars:
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="space-y-2">
+                  <h4 className="font-bold text-white flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-primary" /> Cost Advantage
+                  </h4>
+                  <p className="text-sm text-white/50 leading-relaxed">Its massive fulfillment infrastructure creates unit costs that no competitor can match, allowing for faster delivery and lower prices.</p>
                 </div>
-              ))}
-            </div>
+                <div className="space-y-2">
+                  <h4 className="font-bold text-white flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-primary" /> Switching Costs
+                  </h4>
+                  <p className="text-sm text-white/50 leading-relaxed">The Prime ecosystem locks in consumers. Once a household is integrated into Prime, the convenience makes shopping elsewhere a "costly" friction.</p>
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-bold text-white flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-primary" /> Network Effect
+                  </h4>
+                  <p className="text-sm text-white/50 leading-relaxed">The 3rd party marketplace creates a flywheel where more sellers attract more buyers, which attracts more sellers.</p>
+                </div>
+              </div>
+            </CardBody>
           </Card>
-          <Card className="bg-white/5 border-none backdrop-blur-md p-6">
-            <h4 className="text-xl font-bold mb-6">Valuation Analysis</h4>
-            <p className="text-sm text-white/60 leading-relaxed">
-              Using a 10-year DCF with a 9% WACC and a 3.5% terminal growth rate, our fair value estimate for AMZN is <strong className="text-white text-lg">$215/share</strong>. 
-            </p>
-            <Divider className="my-4 bg-white/10" />
-            <div className="flex justify-between items-center">
-              <span className="text-xs uppercase tracking-widest text-white/40">Margin of Safety</span>
-              <Chip color="success" variant="flat" className="font-bold">14%</Chip>
-            </div>
-          </Card>
+          <div className="hidden md:block">
+            <TenMoatsCard data={tenMoatsData['AMZN']} />
+          </div>
         </div>
       </AnalysisSection>
 
@@ -231,9 +231,6 @@ export default function AmazonPage() {
         </div>
       </AnalysisSection></div>
 
-      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
-        <TenMoatsCard data={tenMoatsData['AMZN']} />
-      </AnalysisSection></div>
     </div>
   );
 }
