@@ -24,7 +24,7 @@ export default function IntuitPage() {
         <RecommendationBadge status="Accumulate" />
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="hidden md:grid grid-cols-3 gap-6">
         <MetricCard
           title="Subscriber Growth"
           value="12%"
@@ -48,11 +48,80 @@ export default function IntuitPage() {
         />
       </div>
 
-      <ScoreTabsRow>
-        <ScoreGauge score={tenMoatsData['INTU'].aiResilienceScore} label="Moat Score" description="Extreme switching costs; once a SMB has QuickBooks, they almost never leave." />
-        <ScoreGauge score={84} label="Growth Score" description="Credit Karma integration and AI-assisted tax filing driving ARPU." />
-        <ScoreGauge score={62} label="Valuation Score" description="Consistent mid-20s P/E, fair for a high-quality compounder." />
-      </ScoreTabsRow>
+      <ScoreTabsRow tabs={[
+        {
+          label: "Moat",
+          gauge: (<ScoreGauge score={tenMoatsData['INTU'].aiResilienceScore} label="Moat Score" description="Extreme switching costs; once a SMB has QuickBooks, they almost never leave." />),
+          detail: <TenMoatsCard data={tenMoatsData['INTU']} />,
+        },
+        {
+          label: "Growth",
+          gauge: (<ScoreGauge score={84} label="Growth Score" description="Credit Karma integration and AI-assisted tax filing driving ARPU." />),
+          detail: (
+            <div className="space-y-4">
+              <MetricCard
+          title="Subscriber Growth"
+          value="12%"
+          label="SBCB Segment Expansion"
+          icon={<Calculator size={20} color="white" />}
+          color="#2ca01c"
+        />
+              <MetricCard
+          title="Op. Margin"
+          value="24.5%"
+          label="GAAP Basis"
+          icon={<BarChart size={20} color="white" />}
+          color="#3b82f6"
+        />
+              <MetricCard
+          title="Free Cash Flow"
+          value="$4.8B"
+          label="Strong Cash Conversion"
+          icon={<DollarSign size={20} color="white" />}
+          color="#10b981"
+        />
+            </div>
+          ),
+        },
+        {
+          label: "Value",
+          gauge: (<ScoreGauge score={62} label="Valuation Score" description="Consistent mid-20s P/E, fair for a high-quality compounder." />),
+          detail: (
+            <div className="space-y-4">
+              <ScenarioCard
+            type="Bear"
+            priceTarget="$520"
+            description="IRS Direct File impacts TurboTax market share and SMB churn rises."
+            points={[
+              "TurboTax units decline as government option gains traction",
+              "SMB bankruptcy rates increase in high-rate environment",
+              "Credit Karma segment continues to face lending headwinds"
+            ]}
+          />
+              <ScenarioCard
+            type="Base"
+            priceTarget="$700"
+            description="Strong QuickBooks pricing power and AI-driven efficiency gains."
+            points={[
+              "Mid-market QuickBooks expansion continues",
+              "Successful monetization of 'Intuit Assist' AI tools",
+              "Operating margins expand by 100-200 bps"
+            ]}
+          />
+              <ScenarioCard
+            type="Bull"
+            priceTarget="$850"
+            description="Complete automation of accounting flow for 10M+ SMBs globally."
+            points={[
+              "International expansion reaches critical mass",
+              "B2B payments volume through QuickBooks doubles",
+              "Credit Karma becomes a leading financial super-app"
+            ]}
+          />
+            </div>
+          ),
+        },
+      ]} />
 
       <AnalysisSection title="The Ecosystem Moat">
         <div className="glass-card">
@@ -65,7 +134,7 @@ export default function IntuitPage() {
         </div>
       </AnalysisSection>
 
-      <AnalysisSection title="Price Scenarios (12-24 Months)">
+      <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <ScenarioCard
             type="Bear"
@@ -98,11 +167,11 @@ export default function IntuitPage() {
             ]}
           />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
-      <AnalysisSection title="Ten Moats Framework">
+      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
         <TenMoatsCard data={tenMoatsData['INTU']} />
-      </AnalysisSection>
+      </AnalysisSection></div>
     </div>
   );
 }

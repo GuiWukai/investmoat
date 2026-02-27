@@ -24,7 +24,7 @@ export default function TeslaPage() {
         <RecommendationBadge status="Hold" />
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="hidden md:grid grid-cols-3 gap-6">
         <MetricCard
           title="Vehicle Deliveries"
           value="1.81M"
@@ -48,11 +48,80 @@ export default function TeslaPage() {
         />
       </div>
 
-      <ScoreTabsRow>
-        <ScoreGauge score={tenMoatsData['TSLA'].aiResilienceScore} label="Moat Score" description="Vertical integration and massive manufacturing cost advantages." />
-        <ScoreGauge score={89} label="Growth Score" description="Robotics (Optimus) and energy storage are the next 10x frontier." />
-        <ScoreGauge score={55} label="Valuation Score" description="High P/E reflects optionality, but core auto margins are pressured." />
-      </ScoreTabsRow>
+      <ScoreTabsRow tabs={[
+        {
+          label: "Moat",
+          gauge: (<ScoreGauge score={tenMoatsData['TSLA'].aiResilienceScore} label="Moat Score" description="Vertical integration and massive manufacturing cost advantages." />),
+          detail: <TenMoatsCard data={tenMoatsData['TSLA']} />,
+        },
+        {
+          label: "Growth",
+          gauge: (<ScoreGauge score={89} label="Growth Score" description="Robotics (Optimus) and energy storage are the next 10x frontier." />),
+          detail: (
+            <div className="space-y-4">
+              <MetricCard
+          title="Vehicle Deliveries"
+          value="1.81M"
+          label="Trailing 12 Months"
+          icon={<Car size={20} color="white" />}
+          color="#cc0000"
+        />
+              <MetricCard
+          title="Energy Storage"
+          value="14.7 GWh"
+          label="125% YoY Growth"
+          icon={<Battery size={20} color="white" />}
+          color="#10b981"
+        />
+              <MetricCard
+          title="FSD Miles"
+          value="1.3B+"
+          label="Data Advantage"
+          icon={<Cpu size={20} color="white" />}
+          color="#3b82f6"
+        />
+            </div>
+          ),
+        },
+        {
+          label: "Value",
+          gauge: (<ScoreGauge score={55} label="Valuation Score" description="High P/E reflects optionality, but core auto margins are pressured." />),
+          detail: (
+            <div className="space-y-4">
+              <ScenarioCard
+            type="Bear"
+            priceTarget="$100"
+            description="EV margins continue to slide and FSD timeline is pushed indefinitely."
+            points={[
+              "Auto gross margins fall below 12%",
+              "Competition from BYD/Xiaomi erodes China share",
+              "Robotaxi regulatory hurdles remain insurmountable"
+            ]}
+          />
+              <ScenarioCard
+            type="Base"
+            priceTarget="$220"
+            description="Stabilizing margins and high growth in Energy Storage offset EV cyclicality."
+            points={[
+              "Next-gen platform ('Model 2') enters production",
+              "Energy storage deployment grows 100% YoY",
+              "FSD licensing talks with major OEMs begin"
+            ]}
+          />
+              <ScenarioCard
+            type="Bull"
+            priceTarget="$450"
+            description="Robotaxi network launch and Optimus robotics production readiness."
+            points={[
+              "Software revenue becomes >30% of total EBIT",
+              "Unsupervised FSD approved in major US cities",
+              "Tesla Energy becomes as large as the Auto business"
+            ]}
+          />
+            </div>
+          ),
+        },
+      ]} />
 
       <AnalysisSection title="The Vertical Integration Moat">
         <div className="glass-card">
@@ -65,7 +134,7 @@ export default function TeslaPage() {
         </div>
       </AnalysisSection>
 
-      <AnalysisSection title="Price Scenarios (12-24 Months)">
+      <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <ScenarioCard
             type="Bear"
@@ -98,11 +167,11 @@ export default function TeslaPage() {
             ]}
           />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
-      <AnalysisSection title="Ten Moats Framework">
+      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
         <TenMoatsCard data={tenMoatsData['TSLA']} />
-      </AnalysisSection>
+      </AnalysisSection></div>
     </div>
   );
 }

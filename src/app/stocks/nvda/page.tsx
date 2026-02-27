@@ -24,7 +24,7 @@ export default function NvidiaPage() {
         <RecommendationBadge status="Strong Buy" />
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="hidden md:grid grid-cols-3 gap-6">
         <MetricCard 
           title="Data Center Rev" 
           value="$18.4B" 
@@ -48,11 +48,80 @@ export default function NvidiaPage() {
         />
       </div>
 
-      <ScoreTabsRow>
-        <ScoreGauge score={tenMoatsData['NVDA'].aiResilienceScore} label="Moat Score" description="CUDA software ecosystem and 10-year hardware lead in AI compute." />
-        <ScoreGauge score={95} label="Growth Score" description="Generative AI spend is still in the 'Build-out' phase globally." />
-        <ScoreGauge score={65} label="Valuation Score" description="High expectation hurdle; every earnings must be a massive beat." />
-      </ScoreTabsRow>
+      <ScoreTabsRow tabs={[
+        {
+          label: "Moat",
+          gauge: (<ScoreGauge score={tenMoatsData['NVDA'].aiResilienceScore} label="Moat Score" description="CUDA software ecosystem and 10-year hardware lead in AI compute." />),
+          detail: <TenMoatsCard data={tenMoatsData['NVDA']} />,
+        },
+        {
+          label: "Growth",
+          gauge: (<ScoreGauge score={95} label="Growth Score" description="Generative AI spend is still in the 'Build-out' phase globally." />),
+          detail: (
+            <div className="space-y-4">
+              <MetricCard 
+          title="Data Center Rev" 
+          value="$18.4B" 
+          label="409% YoY Growth" 
+          icon={<Cpu size={20} className="text-white" />} 
+          color="#76b900"
+        />
+              <MetricCard 
+          title="Gross Margin" 
+          value="76.7%" 
+          label="Software-like Profitability" 
+          icon={<Zap size={20} className="text-white" />} 
+          color="#3b82f6"
+        />
+              <MetricCard 
+          title="H100 Demand" 
+          value="Infinite" 
+          label="Supply Constraint Era" 
+          icon={<Share2 size={20} className="text-white" />} 
+          color="#10b981"
+        />
+            </div>
+          ),
+        },
+        {
+          label: "Value",
+          gauge: (<ScoreGauge score={65} label="Valuation Score" description="High expectation hurdle; every earnings must be a massive beat." />),
+          detail: (
+            <div className="space-y-4">
+              <ScenarioCard
+            type="Bear"
+            priceTarget="$600"
+            description="Hyperscaler demand peaks and transitions to internal silicon (ASICs)."
+            points={[
+              "Major cloud providers reduce H100 orders by 30%+",
+              "Competition from AMD MI300 series gains 15% share",
+              "China export restrictions bite harder than expected"
+            ]}
+          />
+              <ScenarioCard
+            type="Base"
+            priceTarget="$950"
+            description="Blackwell cycle maintains ASPs and software revenue starts to scale."
+            points={[
+              "Data center growth stays above 50% throughout 2025",
+              "Software subscriptions (AI Enterprise) reach $1B+ ARR",
+              "High margins are maintained through product mix shift"
+            ]}
+          />
+              <ScenarioCard
+            type="Bull"
+            priceTarget="$1,200+"
+            description="Sovereign AI demand and Blackwell architectural dominance."
+            points={[
+              "Nations building domestic AI capacity creates a new $50B market",
+              "Omniverse becomes the backbone for industrial robotics",
+              "Dividend hike and massive share buyback program"
+            ]}
+          />
+            </div>
+          ),
+        },
+      ]} />
 
       <AnalysisSection title="The Ecosystem Moat (CUDA)">
         <Card className="bg-white/5 border-none backdrop-blur-md">
@@ -67,7 +136,7 @@ export default function NvidiaPage() {
         </Card>
       </AnalysisSection>
 
-      <AnalysisSection title="Price Scenarios (12-24 Months)">
+      <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <ScenarioCard
             type="Bear"
@@ -100,11 +169,11 @@ export default function NvidiaPage() {
             ]}
           />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
-      <AnalysisSection title="Ten Moats Framework">
+      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
         <TenMoatsCard data={tenMoatsData['NVDA']} />
-      </AnalysisSection>
+      </AnalysisSection></div>
     </div>
   );
 }

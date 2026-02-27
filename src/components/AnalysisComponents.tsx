@@ -70,17 +70,21 @@ export function ScoreGauge({ score, label, description }: ScoreGaugeProps) {
   );
 }
 
-export function ScoreTabsRow({ children }: { children: React.ReactNode }) {
+interface ScoreTab {
+  label: string;
+  gauge: React.ReactNode;
+  detail?: React.ReactNode;
+}
+
+export function ScoreTabsRow({ tabs }: { tabs: ScoreTab[] }) {
   const [active, setActive] = React.useState(0);
-  const items = React.Children.toArray(children);
-  const labels = ['Moat', 'Growth', 'Value'];
 
   return (
     <>
       {/* Mobile: segmented tab strip */}
       <div className="md:hidden">
         <div className="flex rounded-xl bg-white/5 p-1 mb-4">
-          {labels.map((label, i) => (
+          {tabs.map((tab, i) => (
             <button
               key={i}
               onClick={() => setActive(i)}
@@ -88,15 +92,20 @@ export function ScoreTabsRow({ children }: { children: React.ReactNode }) {
                 active === i ? 'bg-white/15 text-white' : 'text-white/40'
               }`}
             >
-              {label}
+              {tab.label}
             </button>
           ))}
         </div>
-        {items[active]}
+        {tabs[active].gauge}
+        {tabs[active].detail && (
+          <div className="mt-6 space-y-4">{tabs[active].detail}</div>
+        )}
       </div>
       {/* Desktop: side by side */}
       <div className="hidden md:flex gap-6">
-        {children}
+        {tabs.map(tab => (
+          <React.Fragment key={tab.label}>{tab.gauge}</React.Fragment>
+        ))}
       </div>
     </>
   );

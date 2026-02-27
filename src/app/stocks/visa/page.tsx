@@ -24,7 +24,7 @@ export default function VisaPage() {
         <RecommendationBadge status="Strong Buy" />
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="hidden md:grid grid-cols-3 gap-6">
         <MetricCard
           title="Payment Volume"
           value="$15.1T"
@@ -48,11 +48,80 @@ export default function VisaPage() {
         />
       </div>
 
-      <ScoreTabsRow>
-        <ScoreGauge score={tenMoatsData['V'].aiResilienceScore} label="Moat Score" description="The world's largest payment network with massive barriers to entry and network effects." />
-        <ScoreGauge score={82} label="Growth Score" description="Ongoing shift from cash to digital and expansion into B2B payments." />
-        <ScoreGauge score={75} label="Valuation Score" description="Trading at 28x forward P/E, reasonable for a consistent 15%+ EPS compounder." />
-      </ScoreTabsRow>
+      <ScoreTabsRow tabs={[
+        {
+          label: "Moat",
+          gauge: (<ScoreGauge score={tenMoatsData['V'].aiResilienceScore} label="Moat Score" description="The world's largest payment network with massive barriers to entry and network effects." />),
+          detail: <TenMoatsCard data={tenMoatsData['V']} />,
+        },
+        {
+          label: "Growth",
+          gauge: (<ScoreGauge score={82} label="Growth Score" description="Ongoing shift from cash to digital and expansion into B2B payments." />),
+          detail: (
+            <div className="space-y-4">
+              <MetricCard
+          title="Payment Volume"
+          value="$15.1T"
+          label="Trailing 12 Months"
+          icon={<DollarSign size={20} color="white" />}
+          color="#1a1f71"
+        />
+              <MetricCard
+          title="Operating Margin"
+          value="67.2%"
+          label="Incredible Scalability"
+          icon={<Zap size={20} color="white" />}
+          color="#f7b600"
+        />
+              <MetricCard
+          title="Countries"
+          value="200+"
+          label="Global Acceptance"
+          icon={<Globe size={20} color="white" />}
+          color="#3b82f6"
+        />
+            </div>
+          ),
+        },
+        {
+          label: "Value",
+          gauge: (<ScoreGauge score={75} label="Valuation Score" description="Trading at 28x forward P/E, reasonable for a consistent 15%+ EPS compounder." />),
+          detail: (
+            <div className="space-y-4">
+              <ScenarioCard
+            type="Bear"
+            priceTarget="$240"
+            description="Global recession leads to cross-border travel slump and lower consumer spending."
+            points={[
+              "Cross-border volume growth slows to low single digits",
+              "Regulatory caps on interchange fees in major markets",
+              "Adoption of government-led real-time payment rails"
+            ]}
+          />
+              <ScenarioCard
+            type="Base"
+            priceTarget="$320"
+            description="Steady growth in PCE and continued digitization of payments."
+            points={[
+              "International volume grows 10-12%",
+              "Value-added services revenue grows 20%+",
+              "Consistent 10%+ dividend growth"
+            ]}
+          />
+              <ScenarioCard
+            type="Bull"
+            priceTarget="$380"
+            description="B2B and 'Visa Direct' capture massive share of non-card payments."
+            points={[
+              "Successful expansion into account-to-account payments",
+              "Major reduction in operating expenses via AI automation",
+              "New cross-border corridors open in emerging markets"
+            ]}
+          />
+            </div>
+          ),
+        },
+      ]} />
 
       <AnalysisSection title="The Duopoly Moat">
         <div className="glass-card">
@@ -65,7 +134,7 @@ export default function VisaPage() {
         </div>
       </AnalysisSection>
 
-      <AnalysisSection title="Price Scenarios (12-24 Months)">
+      <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <ScenarioCard
             type="Bear"
@@ -98,11 +167,11 @@ export default function VisaPage() {
             ]}
           />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
-      <AnalysisSection title="Ten Moats Framework">
+      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
         <TenMoatsCard data={tenMoatsData['V']} />
-      </AnalysisSection>
+      </AnalysisSection></div>
     </div>
   );
 }

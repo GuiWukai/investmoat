@@ -56,23 +56,99 @@ export default function GoldPage() {
         />
       </div>
 
-      <ScoreTabsRow>
-        <ScoreGauge
+      <ScoreTabsRow tabs={[
+        {
+          label: "Moat",
+          gauge: (<ScoreGauge
           score={tenMoatsData['XAU'].aiResilienceScore}
           label="Moat Score"
           description="5,000+ years as humanity's store of value. No counterparty risk, finite supply, universally recognised across all civilisations and geopolitical systems."
-        />
-        <ScoreGauge
+        />),
+          detail: <TenMoatsCard data={tenMoatsData['XAU']} />,
+        },
+        {
+          label: "Growth",
+          gauge: (<ScoreGauge
           score={50}
           label="Growth Score"
           description="Tracks long-run monetary debasement. De-dollarisation tailwinds and record central bank accumulation support structural demand, but gold does not compound like a business."
+        />),
+          detail: (
+            <div className="space-y-4">
+              <MetricCard
+          title="Spot Price"
+          value="~$2,900/oz"
+          label="Near All-Time High (Feb 2026)"
+          icon={<Coins size={20} className="text-white" />}
+          color="#FFD700"
         />
-        <ScoreGauge
+              <MetricCard
+          title="Central Bank Buying"
+          value="1,045t"
+          label="3rd Consecutive Year >1,000t (2024)"
+          icon={<TrendingUp size={20} className="text-white" />}
+          color="#10b981"
+        />
+              <MetricCard
+          title="Above-Ground Stock"
+          value="~212,582t"
+          label="Ever Mined; ~54,000t in Reserves"
+          icon={<Globe size={20} className="text-white" />}
+          color="#3b82f6"
+        />
+              <MetricCard
+          title="Stock-to-Flow"
+          value="~62x"
+          label="Annual Production vs. Total Supply"
+          icon={<ShieldCheck size={20} className="text-white" />}
+          color="#8b5cf6"
+        />
+            </div>
+          ),
+        },
+        {
+          label: "Value",
+          gauge: (<ScoreGauge
           score={55}
           label="Valuation Score"
           description="At ~$2,900/oz gold is elevated but justified relative to M2 money supply growth. Not cheap, but not stretched given geopolitical and inflationary backdrop."
-        />
-      </ScoreTabsRow>
+        />),
+          detail: (
+            <div className="space-y-4">
+              <ScenarioCard
+            type="Bear"
+            priceTarget="$2,200/oz"
+            description="Fed pivots hawkish amid re-accelerating inflation, dollar surges, risk-off reversal."
+            points={[
+              "Strong USD and rising real yields pressure gold price",
+              "Central bank buying slows as EM FX reserves come under strain",
+              "Risk assets rally broadly, reducing safe-haven demand"
+            ]}
+          />
+              <ScenarioCard
+            type="Base"
+            priceTarget="$3,200/oz"
+            description="Fed easing cycle continues, central bank demand stays above 1,000t/yr, de-dollarisation accelerates."
+            points={[
+              "Real yields remain negative or near zero in key markets",
+              "BRICS+ gold settlement mechanism gains traction",
+              "Retail and institutional ETF flows resume after 2023–24 outflows"
+            ]}
+          />
+              <ScenarioCard
+            type="Bull"
+            priceTarget="$4,500+/oz"
+            description="Sovereign debt crisis or major currency devaluation triggers flight to hard assets."
+            points={[
+              "US fiscal trajectory triggers a bond market dislocation",
+              "One or more G20 central banks announce a gold-backed currency peg",
+              "Geopolitical shock drives mass retail flight from fiat savings globally"
+            ]}
+          />
+            </div>
+          ),
+        },
+      ]} />
 
       <AnalysisSection title="The Timeless Moat">
         <Card className="bg-white/5 border-none backdrop-blur-md">
@@ -127,8 +203,8 @@ export default function GoldPage() {
         </div>
       </AnalysisSection>
 
-      <AnalysisSection title="Price Scenarios (12-24 Months)">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
+        <div className="hidden md:grid grid-cols-3 gap-6">
           <ScenarioCard
             type="Bear"
             priceTarget="$2,200/oz"
@@ -160,11 +236,11 @@ export default function GoldPage() {
             ]}
           />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
-      <AnalysisSection title="Ten Moats Framework">
+      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
         <TenMoatsCard data={tenMoatsData['XAU']} />
-      </AnalysisSection>
+      </AnalysisSection></div>
     </div>
   );
 }

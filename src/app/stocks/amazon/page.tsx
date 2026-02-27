@@ -24,7 +24,7 @@ export default function AmazonPage() {
         <RecommendationBadge status="Strong Buy" />
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="hidden md:grid grid-cols-3 gap-6">
         <MetricCard 
           title="Revenue Growth" 
           value="13.2%" 
@@ -48,23 +48,92 @@ export default function AmazonPage() {
         />
       </div>
 
-      <ScoreTabsRow>
-        <ScoreGauge 
+      <ScoreTabsRow tabs={[
+        {
+          label: "Moat",
+          gauge: (<ScoreGauge 
           score={tenMoatsData['AMZN'].aiResilienceScore}
           label="Moat Score" 
           description="Dominant scale, switching costs (Prime), and cost advantage (Logistics)." 
-        />
-        <ScoreGauge 
+        />),
+          detail: <TenMoatsCard data={tenMoatsData['AMZN']} />,
+        },
+        {
+          label: "Growth",
+          gauge: (<ScoreGauge 
           score={88} 
           label="Growth Score" 
           description="Cloud (AWS) and Advertising continue to outpace e-commerce growth." 
+        />),
+          detail: (
+            <div className="space-y-4">
+              <MetricCard 
+          title="Revenue Growth" 
+          value="13.2%" 
+          label="YoY vs 11.5% Industry" 
+          icon={<ShoppingCart size={20} className="text-white" />} 
+          color="#f59e0b"
         />
-        <ScoreGauge 
+              <MetricCard 
+          title="AWS Margin" 
+          value="31.8%" 
+          label="Best-in-class profitability" 
+          icon={<Cloud size={20} className="text-white" />} 
+          color="#006fee"
+        />
+              <MetricCard 
+          title="Free Cash Flow" 
+          value="$50.1B" 
+          label="TTM Expansion +400%" 
+          icon={<DollarSign size={20} className="text-white" />} 
+          color="#17c964"
+        />
+            </div>
+          ),
+        },
+        {
+          label: "Value",
+          gauge: (<ScoreGauge 
           score={72} 
           label="Valuation Score" 
           description="Trading at 14x forward Cash Flow, slightly above historical mean." 
-        />
-      </ScoreTabsRow>
+        />),
+          detail: (
+            <div className="space-y-4">
+              <ScenarioCard
+            type="Bear"
+            priceTarget="$140"
+            description="Macro slowdown hits consumer spending and AWS margins compress."
+            points={[
+              "E-commerce growth falls below 5%",
+              "AWS revenue decelerates to mid-teens",
+              "Regulatory pressure on marketplace fees"
+            ]}
+          />
+              <ScenarioCard
+            type="Base"
+            priceTarget="$210"
+            description="Continued efficiency gains in fulfillment and steady AWS growth."
+            points={[
+              "AWS growth stays in 17-20% range",
+              "Advertising revenue remains major margin driver",
+              "International retail reaches sustainable profit"
+            ]}
+          />
+              <ScenarioCard
+            type="Bull"
+            priceTarget="$265"
+            description="AI demand triggers massive AWS expansion and logistics monetization."
+            points={[
+              "AWS growth re-accelerates above 25%",
+              "Logistics-as-a-service becomes 4th pillar",
+              "Massive FCF generation leads to buybacks"
+            ]}
+          />
+            </div>
+          ),
+        },
+      ]} />
 
       <AnalysisSection title="The Economic Moat">
         <Card className="bg-white/5 border-none backdrop-blur-md">
@@ -127,7 +196,7 @@ export default function AmazonPage() {
         </div>
       </AnalysisSection>
 
-      <AnalysisSection title="Price Scenarios (12-24 Months)">
+      <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <ScenarioCard
             type="Bear"
@@ -160,11 +229,11 @@ export default function AmazonPage() {
             ]}
           />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
-      <AnalysisSection title="Ten Moats Framework">
+      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
         <TenMoatsCard data={tenMoatsData['AMZN']} />
-      </AnalysisSection>
+      </AnalysisSection></div>
     </div>
   );
 }

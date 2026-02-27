@@ -24,7 +24,7 @@ export default function SalesforcePage() {
         <RecommendationBadge status="Accumulate" />
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="hidden md:grid grid-cols-3 gap-6">
         <MetricCard 
           title="Revenue Growth" 
           value="11.2%" 
@@ -48,11 +48,80 @@ export default function SalesforcePage() {
         />
       </div>
 
-      <ScoreTabsRow>
-        <ScoreGauge score={tenMoatsData['CRM'].aiResilienceScore} label="Moat Score" description="High switching costs and 'Data Gravity' makes it the system of record for sales." />
-        <ScoreGauge score={80} label="Growth Score" description="Data Cloud and AI (Einstein) are the primary expansion vectors." />
-        <ScoreGauge score={68} label="Valuation Score" description="Strong FCF generation justifies a premium SaaS multiple." />
-      </ScoreTabsRow>
+      <ScoreTabsRow tabs={[
+        {
+          label: "Moat",
+          gauge: (<ScoreGauge score={tenMoatsData['CRM'].aiResilienceScore} label="Moat Score" description="High switching costs and 'Data Gravity' makes it the system of record for sales." />),
+          detail: <TenMoatsCard data={tenMoatsData['CRM']} />,
+        },
+        {
+          label: "Growth",
+          gauge: (<ScoreGauge score={80} label="Growth Score" description="Data Cloud and AI (Einstein) are the primary expansion vectors." />),
+          detail: (
+            <div className="space-y-4">
+              <MetricCard 
+          title="Revenue Growth" 
+          value="11.2%" 
+          label="Sustained Enterprise Demand" 
+          icon={<Cloud size={20} className="text-white" />} 
+          color="#00a1e0"
+        />
+              <MetricCard 
+          title="Op. Margin" 
+          value="32.5%" 
+          label="Non-GAAP Basis" 
+          icon={<BarChart3 size={20} className="text-white" />} 
+          color="#3b82f6"
+        />
+              <MetricCard 
+          title="Customer Count" 
+          value="150k+" 
+          label="Global Enterprises" 
+          icon={<Users size={20} className="text-white" />} 
+          color="#17c964"
+        />
+            </div>
+          ),
+        },
+        {
+          label: "Value",
+          gauge: (<ScoreGauge score={68} label="Valuation Score" description="Strong FCF generation justifies a premium SaaS multiple." />),
+          detail: (
+            <div className="space-y-4">
+              <ScenarioCard 
+            type="Bear" 
+            priceTarget="$240" 
+            description="Macro slowdown hits enterprise IT budgets and AI monetization lags."
+            points={[
+              "Seat growth turns flat due to global downsizing",
+              "Execution issues with Data Cloud integration",
+              "Increased competition from Microsoft's Dynamics 365"
+            ]}
+          />
+              <ScenarioCard 
+            type="Base" 
+            priceTarget="$330" 
+            description="Steady 10-12% growth and margin expansion via efficiency."
+            points={[
+              "Successful multi-cloud bundling strategies",
+              "Operating margins reach 35% targets early",
+              "Consistent share buyback execution"
+            ]}
+          />
+              <ScenarioCard
+            type="Bull"
+            priceTarget="$400"
+            description="AI Agentic workflow becomes a massive revenue driver."
+            points={[
+              "Agents and autonomous AI tools drive 20% growth in ARPU",
+              "Data Cloud becomes the fastest-growing product in company history",
+              "Major acquisition of a strategic AI-first software company"
+            ]}
+          />
+            </div>
+          ),
+        },
+      ]} />
 
       <AnalysisSection title="The Data Gravity Moat">
         <Card className="bg-white/5 border-none backdrop-blur-md">
@@ -67,7 +136,7 @@ export default function SalesforcePage() {
         </Card>
       </AnalysisSection>
 
-      <AnalysisSection title="Price Scenarios (12-24 Months)">
+      <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <ScenarioCard 
             type="Bear" 
@@ -100,11 +169,11 @@ export default function SalesforcePage() {
             ]}
           />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
-      <AnalysisSection title="Ten Moats Framework">
+      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
         <TenMoatsCard data={tenMoatsData['CRM']} />
-      </AnalysisSection>
+      </AnalysisSection></div>
     </div>
   );
 }

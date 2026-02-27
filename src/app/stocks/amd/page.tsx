@@ -24,7 +24,7 @@ export default function AmdPage() {
         <RecommendationBadge status="Accumulate" />
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="hidden md:grid grid-cols-3 gap-6">
         <MetricCard
           title="Data Center Rev"
           value="$2.3B"
@@ -48,11 +48,80 @@ export default function AmdPage() {
         />
       </div>
 
-      <ScoreTabsRow>
-        <ScoreGauge score={tenMoatsData['AMD'].aiResilienceScore} label="Moat Score" description="Strong positioning as the primary x86 alternative and growing software (ROCm) ecosystem." />
-        <ScoreGauge score={92} label="Growth Score" description="Catching up rapidly in the AI accelerator market with chiplet architectures." />
-        <ScoreGauge score={58} label="Valuation Score" description="High P/E (45x) requires high execution to justify multiple." />
-      </ScoreTabsRow>
+      <ScoreTabsRow tabs={[
+        {
+          label: "Moat",
+          gauge: (<ScoreGauge score={tenMoatsData['AMD'].aiResilienceScore} label="Moat Score" description="Strong positioning as the primary x86 alternative and growing software (ROCm) ecosystem." />),
+          detail: <TenMoatsCard data={tenMoatsData['AMD']} />,
+        },
+        {
+          label: "Growth",
+          gauge: (<ScoreGauge score={92} label="Growth Score" description="Catching up rapidly in the AI accelerator market with chiplet architectures." />),
+          detail: (
+            <div className="space-y-4">
+              <MetricCard
+          title="Data Center Rev"
+          value="$2.3B"
+          label="80% YoY Growth"
+          icon={<Cpu size={20} color="white" />}
+          color="#ed1c24"
+        />
+              <MetricCard
+          title="Instinct Pipeline"
+          value="$4.0B+"
+          label="MI300 Series Momentum"
+          icon={<Zap size={20} color="white" />}
+          color="#00a4ef"
+        />
+              <MetricCard
+          title="Client Segment"
+          value="46%"
+          label="Ryzen Market Share (Q4)"
+          icon={<Layers size={20} color="white" />}
+          color="#10b981"
+        />
+            </div>
+          ),
+        },
+        {
+          label: "Value",
+          gauge: (<ScoreGauge score={58} label="Valuation Score" description="High P/E (45x) requires high execution to justify multiple." />),
+          detail: (
+            <div className="space-y-4">
+              <ScenarioCard
+            type="Bear"
+            priceTarget="$120"
+            description="Intel re-captures server market and MI300 series adoption stalls."
+            points={[
+              "Intel's 18A process node beats expectations",
+              "ROCm software fails to achieve critical developer weight",
+              "PC market recovery significantly underwhelms"
+            ]}
+          />
+              <ScenarioCard
+            type="Base"
+            priceTarget="$210"
+            description="Continued steady EPYC share gains and $5B+ in AI revenue."
+            points={[
+              "AI GPU revenue meets or exceeds raised guidance",
+              "Server market share reaches 35%+",
+              "Client PC segment returns to mid-single digit growth"
+            ]}
+          />
+              <ScenarioCard
+            type="Bull"
+            priceTarget="$280"
+            description="AMD becomes the true 'Second Source' for global AI infrastructure."
+            points={[
+              "MI350/400 series achieve performance parity with Nvidia",
+              "Substantial licensing of ROCm by major cloud providers",
+              "Strategic acquisition of a major networking or software player"
+            ]}
+          />
+            </div>
+          ),
+        },
+      ]} />
 
       <AnalysisSection title="The Chiplet Moat">
         <div className="glass-card">
@@ -65,7 +134,7 @@ export default function AmdPage() {
         </div>
       </AnalysisSection>
 
-      <AnalysisSection title="Price Scenarios (12-24 Months)">
+      <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <ScenarioCard
             type="Bear"
@@ -98,11 +167,11 @@ export default function AmdPage() {
             ]}
           />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
-      <AnalysisSection title="Ten Moats Framework">
+      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
         <TenMoatsCard data={tenMoatsData['AMD']} />
-      </AnalysisSection>
+      </AnalysisSection></div>
     </div>
   );
 }

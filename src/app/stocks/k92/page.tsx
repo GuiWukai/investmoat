@@ -25,7 +25,7 @@ export default function K92Page() {
         <RecommendationBadge status="Speculative Buy" />
       </header>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <MetricCard
           title="Gold Grade"
           value="10.2 g/t"
@@ -56,23 +56,99 @@ export default function K92Page() {
         />
       </div>
 
-      <ScoreTabsRow>
-        <ScoreGauge
+      <ScoreTabsRow tabs={[
+        {
+          label: "Moat",
+          gauge: (<ScoreGauge
           score={tenMoatsData['KNT'].aiResilienceScore}
           label="Moat Score"
           description="World-class high-grade orebody; Stage 3 execution proves operational quality. PNG jurisdictional risk remains the key offset."
-        />
-        <ScoreGauge
+        />),
+          detail: <TenMoatsCard data={tenMoatsData['KNT']} />,
+        },
+        {
+          label: "Growth",
+          gauge: (<ScoreGauge
           score={90}
           label="Growth Score"
           description="Stage 3 plant commissioned (Dec 2025); Stage 4 expansion underway targeting 400k+ oz run-rate. 2026 guidance implies 9–29% YoY production growth."
+        />),
+          detail: (
+            <div className="space-y-4">
+              <MetricCard
+          title="Gold Grade"
+          value="10.2 g/t"
+          label="Top 5% Globally (High Grade)"
+          icon={<Gem size={20} color="white" />}
+          color="#f59e0b"
         />
-        <ScoreGauge
+              <MetricCard
+          title="All-In Sustaining Cost"
+          value="~$1,010/oz"
+          label="2025 Actual (By-Product Basis)"
+          icon={<Pickaxe size={20} color="white" />}
+          color="#64748b"
+        />
+              <MetricCard
+          title="2025 Annual Production"
+          value="174k oz AuEq"
+          label="Record; 2026E: 190k–225k oz"
+          icon={<Zap size={20} color="white" />}
+          color="#10b981"
+        />
+              <MetricCard
+          title="Stage 3 Plant"
+          value="Commissioned"
+          label="Completed December 2025"
+          icon={<CheckCircle size={20} color="white" />}
+          color="#6366f1"
+        />
+            </div>
+          ),
+        },
+        {
+          label: "Value",
+          gauge: (<ScoreGauge
           score={60}
           label="Valuation Score"
           description="Stock up ~164% YoY, now trading near analyst consensus (~$27–33 CAD target). Meaningful upside only on Stage 4 execution or gold price re-rating."
-        />
-      </ScoreTabsRow>
+        />),
+          detail: (
+            <div className="space-y-4">
+              <ScenarioCard
+            type="Bear"
+            priceTarget="$16.00"
+            description="Gold falls below $2,200 and Stage 4 faces significant delays."
+            points={[
+              "PNG jurisdictional risk leads to tax/permit disruptions",
+              "Stage 4 commissioning pushed back 12+ months",
+              "Rising costs squeeze margins if gold price drops"
+            ]}
+          />
+              <ScenarioCard
+            type="Base"
+            priceTarget="$30.00"
+            description="Stage 4 ramp-up proceeds on schedule with gold holding above $2,700."
+            points={[
+              "2026 production reaches the top half of 190–225k oz guidance",
+              "Stage 4 DFS confirms 400k+ oz pathway, re-rates the stock",
+              "Analysts upgrade targets to the $33–38 CAD range"
+            ]}
+          />
+              <ScenarioCard
+            type="Bull"
+            priceTarget="$45.00"
+            description="Gold surges above $3,500 and Stage 4 delivers ahead of schedule."
+            points={[
+              "Total production exceeds 350k oz in 2027, 400k+ by 2028",
+              "Major gold producer tables an acquisition bid",
+              "Blue Lake Porphyry emerges as a world-class discovery"
+            ]}
+          />
+            </div>
+          ),
+        },
+      ]} />
 
       <AnalysisSection title="The Mining Moat (Asset Quality)">
         <div className="glass-card">
@@ -126,8 +202,8 @@ export default function K92Page() {
         </div>
       </AnalysisSection>
 
-      <AnalysisSection title="Price Scenarios (12-24 Months)">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
+        <div className="hidden md:grid grid-cols-3 gap-6">
           <ScenarioCard
             type="Bear"
             priceTarget="$16.00"
@@ -159,11 +235,11 @@ export default function K92Page() {
             ]}
           />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
-      <AnalysisSection title="Ten Moats Framework">
+      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
         <TenMoatsCard data={tenMoatsData['KNT']} />
-      </AnalysisSection>
+      </AnalysisSection></div>
     </div>
   );
 }

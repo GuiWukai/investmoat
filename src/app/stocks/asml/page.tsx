@@ -24,7 +24,7 @@ export default function AsmlPage() {
         <RecommendationBadge status="Strong Buy" />
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="hidden md:grid grid-cols-3 gap-6">
         <MetricCard 
           title="EUV Monopoly" 
           value="100%" 
@@ -48,11 +48,80 @@ export default function AsmlPage() {
         />
       </div>
 
-      <ScoreTabsRow>
-        <ScoreGauge score={tenMoatsData['ASML'].aiResilienceScore} label="Moat Score" description="The only company in the world capable of producing EUV machines required for &lt;7nm chips." />
-        <ScoreGauge score={85} label="Growth Score" description="Moore's Law continues to drive demand for High-NA EUV and increased wafer capacity." />
-        <ScoreGauge score={72} label="Valuation Score" description="High multiple but justified by being the bottleneck of the entire AI economy." />
-      </ScoreTabsRow>
+      <ScoreTabsRow tabs={[
+        {
+          label: "Moat",
+          gauge: (<ScoreGauge score={tenMoatsData['ASML'].aiResilienceScore} label="Moat Score" description="The only company in the world capable of producing EUV machines required for &lt;7nm chips." />),
+          detail: <TenMoatsCard data={tenMoatsData['ASML']} />,
+        },
+        {
+          label: "Growth",
+          gauge: (<ScoreGauge score={85} label="Growth Score" description="Moore's Law continues to drive demand for High-NA EUV and increased wafer capacity." />),
+          detail: (
+            <div className="space-y-4">
+              <MetricCard 
+          title="EUV Monopoly" 
+          value="100%" 
+          label="Market Share" 
+          icon={<Target size={20} className="text-white" />} 
+          color="#00a1e0"
+        />
+              <MetricCard 
+          title="Gross Margin" 
+          value="51.3%" 
+          label="Sustained High Quality" 
+          icon={<Zap size={20} className="text-white" />} 
+          color="#17c964"
+        />
+              <MetricCard 
+          title="R&D Intensity" 
+          value="€4.0B" 
+          label="Annual Investment" 
+          icon={<Cpu size={20} className="text-white" />} 
+          color="#3b82f6"
+        />
+            </div>
+          ),
+        },
+        {
+          label: "Value",
+          gauge: (<ScoreGauge score={72} label="Valuation Score" description="High multiple but justified by being the bottleneck of the entire AI economy." />),
+          detail: (
+            <div className="space-y-4">
+              <ScenarioCard
+            type="Bear"
+            priceTarget="$750"
+            description="Geopolitical restrictions on China revenue tighten further."
+            points={[
+              "Banning of older DUV machine exports to China",
+              "Slowdown in capacity expansion from major foundries (TSMC/Intel/Samsung)",
+              "Cyclical downturn in consumer electronics demand"
+            ]}
+          />
+              <ScenarioCard
+            type="Base"
+            priceTarget="$1,100"
+            description="Continued 2nm/3nm capacity buildout and High-NA rollout."
+            points={[
+              "Successful scaling of High-NA EUV production",
+              "China revenue stabilized at lower but steady levels",
+              "Consistent 15%+ EPS growth"
+            ]}
+          />
+              <ScenarioCard
+            type="Bull"
+            priceTarget="$1,400"
+            description="Massive acceleration in global foundry building (Sovereign Foundries)."
+            points={[
+              "Nations building domestic chip capacity significantly increases demand",
+              "AI-driven demand for HBM and advanced logic exceeds all forecasts",
+              "Substantial margin expansion from 'high-end' product mix shift"
+            ]}
+          />
+            </div>
+          ),
+        },
+      ]} />
 
       <AnalysisSection title="The Strategic Bottleneck Moat">
         <Card className="bg-white/5 border-none backdrop-blur-md">
@@ -67,7 +136,7 @@ export default function AsmlPage() {
         </Card>
       </AnalysisSection>
 
-      <AnalysisSection title="Price Scenarios (12-24 Months)">
+      <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <ScenarioCard
             type="Bear"
@@ -100,11 +169,11 @@ export default function AsmlPage() {
             ]}
           />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
-      <AnalysisSection title="Ten Moats Framework">
+      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
         <TenMoatsCard data={tenMoatsData['ASML']} />
-      </AnalysisSection>
+      </AnalysisSection></div>
     </div>
   );
 }

@@ -24,7 +24,7 @@ export default function AdobePage() {
         <RecommendationBadge status="Accumulate" />
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="hidden md:grid grid-cols-3 gap-6">
         <MetricCard
           title="Digital Media ARR"
           value="$15.7B"
@@ -48,11 +48,80 @@ export default function AdobePage() {
         />
       </div>
 
-      <ScoreTabsRow>
-        <ScoreGauge score={tenMoatsData['ADBE'].aiResilienceScore} label="Moat Score" description="The Creative Cloud is the global industry standard for design, photo, and video." />
-        <ScoreGauge score={82} label="Growth Score" description="Generative AI (Firefly) integration driving higher tiers and retention." />
-        <ScoreGauge score={64} label="Valuation Score" description="Reasonable multiple for a company with 30%+ net margins." />
-      </ScoreTabsRow>
+      <ScoreTabsRow tabs={[
+        {
+          label: "Moat",
+          gauge: (<ScoreGauge score={tenMoatsData['ADBE'].aiResilienceScore} label="Moat Score" description="The Creative Cloud is the global industry standard for design, photo, and video." />),
+          detail: <TenMoatsCard data={tenMoatsData['ADBE']} />,
+        },
+        {
+          label: "Growth",
+          gauge: (<ScoreGauge score={82} label="Growth Score" description="Generative AI (Firefly) integration driving higher tiers and retention." />),
+          detail: (
+            <div className="space-y-4">
+              <MetricCard
+          title="Digital Media ARR"
+          value="$15.7B"
+          label="Recurring Powerhouse"
+          icon={<PenTool size={20} color="white" />}
+          color="#ff0000"
+        />
+              <MetricCard
+          title="Gross Margin"
+          value="87.8%"
+          label="Software Dominance"
+          icon={<Zap size={20} color="white" />}
+          color="#f7b600"
+        />
+              <MetricCard
+          title="Creative Cloud Users"
+          value="30M+"
+          label="Market Standard"
+          icon={<Image size={20} color="white" />}
+          color="#3b82f6"
+        />
+            </div>
+          ),
+        },
+        {
+          label: "Value",
+          gauge: (<ScoreGauge score={64} label="Valuation Score" description="Reasonable multiple for a company with 30%+ net margins." />),
+          detail: (
+            <div className="space-y-4">
+              <ScenarioCard
+            type="Bear"
+            priceTarget="$380"
+            description="AI disruption from startups (Midjourney/Canva) erodes the 'low-end' market."
+            points={[
+              "New ARR growth slows to single digits",
+              "Pricing pressure from 'good enough' AI tools",
+              "Integration of Figma-replacement features fails to gain traction"
+            ]}
+          />
+              <ScenarioCard
+            type="Base"
+            priceTarget="$550"
+            description="Successful Firefly monetization and steady enterprise upgrades."
+            points={[
+              "Firefly adoption increases Creative Cloud ARPU by 5-8%",
+              "Document Cloud continues to grow at high double digits",
+              "Operating margins remain above 45% (non-GAAP)"
+            ]}
+          />
+              <ScenarioCard
+            type="Bull"
+            priceTarget="$680"
+            description="Adobe becomes the default generative AI platform for the enterprise."
+            points={[
+              "AI credit consumption drives massive revenue upside",
+              "Complete automation of creative workflows attracts mass-market users",
+              "Strategic partnership with major social media / ad platforms"
+            ]}
+          />
+            </div>
+          ),
+        },
+      ]} />
 
       <AnalysisSection title="The Creative Standard Moat">
         <div className="glass-card">
@@ -65,7 +134,7 @@ export default function AdobePage() {
         </div>
       </AnalysisSection>
 
-      <AnalysisSection title="Price Scenarios (12-24 Months)">
+      <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <ScenarioCard
             type="Bear"
@@ -98,11 +167,11 @@ export default function AdobePage() {
             ]}
           />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
-      <AnalysisSection title="Ten Moats Framework">
+      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
         <TenMoatsCard data={tenMoatsData['ADBE']} />
-      </AnalysisSection>
+      </AnalysisSection></div>
     </div>
   );
 }

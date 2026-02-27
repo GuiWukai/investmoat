@@ -24,7 +24,7 @@ export default function MetaPage() {
         <RecommendationBadge status="Accumulate" />
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="hidden md:grid grid-cols-3 gap-6">
         <MetricCard 
           title="Daily Active People" 
           value="3.24B" 
@@ -48,11 +48,80 @@ export default function MetaPage() {
         />
       </div>
 
-      <ScoreTabsRow>
-        <ScoreGauge score={tenMoatsData['META'].aiResilienceScore} label="Moat Score" description="Unrivaled social network effect and massive proprietary data for AI training." />
-        <ScoreGauge score={85} label="Growth Score" description="Advancements in Llama AI and monetization of Reels/Threads." />
-        <ScoreGauge score={65} label="Valuation Score" description="Attractive P/E relative to growth, but high capex intensive." />
-      </ScoreTabsRow>
+      <ScoreTabsRow tabs={[
+        {
+          label: "Moat",
+          gauge: (<ScoreGauge score={tenMoatsData['META'].aiResilienceScore} label="Moat Score" description="Unrivaled social network effect and massive proprietary data for AI training." />),
+          detail: <TenMoatsCard data={tenMoatsData['META']} />,
+        },
+        {
+          label: "Growth",
+          gauge: (<ScoreGauge score={85} label="Growth Score" description="Advancements in Llama AI and monetization of Reels/Threads." />),
+          detail: (
+            <div className="space-y-4">
+              <MetricCard 
+          title="Daily Active People" 
+          value="3.24B" 
+          label="Family of Apps (7% YoY)" 
+          icon={<Users size={20} className="text-white" />} 
+          color="#1877F2"
+        />
+              <MetricCard 
+          title="Ad Impressions" 
+          value="+21%" 
+          label="Sustained CPM growth" 
+          icon={<Share2 size={20} className="text-white" />} 
+          color="#050505"
+        />
+              <MetricCard 
+          title="Capex (AI)" 
+          value="$35B" 
+          label="Infrastructure investment" 
+          icon={<Cpu size={20} className="text-white" />} 
+          color="#3b82f6"
+        />
+            </div>
+          ),
+        },
+        {
+          label: "Value",
+          gauge: (<ScoreGauge score={65} label="Valuation Score" description="Attractive P/E relative to growth, but high capex intensive." />),
+          detail: (
+            <div className="space-y-4">
+              <ScenarioCard
+            type="Bear"
+            priceTarget="$380"
+            description="Regulatory fines and a shift in user engagement to newer platforms."
+            points={[
+              "EU privacy laws severely impact targeting precision",
+              "Reality Labs losses exceed $20B annually",
+              "Ad-market recession hits digital spend"
+            ]}
+          />
+              <ScenarioCard
+            type="Base"
+            priceTarget="$520"
+            description="Steady ad-revenue growth and AI-driven efficiency gains."
+            points={[
+              "Ad revenue grows 12-15% annually",
+              "Reels monetization achieves parity with Feed",
+              "Share buybacks continue at $50B+ clip"
+            ]}
+          />
+              <ScenarioCard
+            type="Bull"
+            priceTarget="$650"
+            description="Llama becomes the industry standard and WhatsApp monetization explodes."
+            points={[
+              "WhatsApp business messaging becomes a $10B high-margin pillar",
+              "Generative AI ad-creation tools lower barriers for small biz",
+              "Reality Labs reaches an 'iPhone moment' with AR glasses"
+            ]}
+          />
+            </div>
+          ),
+        },
+      ]} />
 
       <AnalysisSection title="The Advertising Moat">
         <Card className="bg-white/5 border-none backdrop-blur-md">
@@ -67,7 +136,7 @@ export default function MetaPage() {
         </Card>
       </AnalysisSection>
 
-      <AnalysisSection title="Price Scenarios (12-24 Months)">
+      <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <ScenarioCard
             type="Bear"
@@ -100,11 +169,11 @@ export default function MetaPage() {
             ]}
           />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
-      <AnalysisSection title="Ten Moats Framework">
+      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
         <TenMoatsCard data={tenMoatsData['META']} />
-      </AnalysisSection>
+      </AnalysisSection></div>
     </div>
   );
 }

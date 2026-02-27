@@ -24,7 +24,7 @@ export default function SPGlobalPage() {
         <RecommendationBadge status="Hold" />
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="hidden md:grid grid-cols-3 gap-6">
         <MetricCard
           title="Ratings Revenue"
           value="$3.4B"
@@ -48,11 +48,80 @@ export default function SPGlobalPage() {
         />
       </div>
 
-      <ScoreTabsRow>
-        <ScoreGauge score={tenMoatsData['SPGI'].aiResilienceScore} label="Moat Score" description="A global duopoly with Moody's in debt ratings. Regulatory and brand moat." />
-        <ScoreGauge score={78} label="Growth Score" description="Index licensing (S&P 500) and ESG data integration." />
-        <ScoreGauge score={75} label="Valuation Score" description="Trading at a premium but justified by the 'toll bridge' business model." />
-      </ScoreTabsRow>
+      <ScoreTabsRow tabs={[
+        {
+          label: "Moat",
+          gauge: (<ScoreGauge score={tenMoatsData['SPGI'].aiResilienceScore} label="Moat Score" description="A global duopoly with Moody's in debt ratings. Regulatory and brand moat." />),
+          detail: <TenMoatsCard data={tenMoatsData['SPGI']} />,
+        },
+        {
+          label: "Growth",
+          gauge: (<ScoreGauge score={78} label="Growth Score" description="Index licensing (S&P 500) and ESG data integration." />),
+          detail: (
+            <div className="space-y-4">
+              <MetricCard
+          title="Ratings Revenue"
+          value="$3.4B"
+          label="Recurring Market Lead"
+          icon={<Landmark size={20} color="white" />}
+          color="#cf102d"
+        />
+              <MetricCard
+          title="EBITDA Margin"
+          value="48.5%"
+          label="Scalable Capital Markets"
+          icon={<TrendingUp size={20} color="white" />}
+          color="#3b82f6"
+        />
+              <MetricCard
+          title="Dividend Growth"
+          value="10%"
+          label="Consistent 5yr CAGR"
+          icon={<Shield size={20} color="white" />}
+          color="#10b981"
+        />
+            </div>
+          ),
+        },
+        {
+          label: "Value",
+          gauge: (<ScoreGauge score={75} label="Valuation Score" description="Trading at a premium but justified by the 'toll bridge' business model." />),
+          detail: (
+            <div className="space-y-4">
+              <ScenarioCard
+            type="Bear"
+            priceTarget="$350"
+            description="Global debt issuance freezes and market data subscription churn."
+            points={[
+              "High interest rates kill new corporate bond issuance",
+              "Consolidation in the financial sector reduces terminal counts",
+              "ESG revenue faces political and regulatory backlash"
+            ]}
+          />
+              <ScenarioCard
+            type="Base"
+            priceTarget="$480"
+            description="Steady 7-9% revenue growth and ratings recovery post-2024."
+            points={[
+              "Refinancing 'wall' leads to steady ratings demand",
+              "Index licensing grows with equity market appreciation",
+              "Operating margins remain above 45%"
+            ]}
+          />
+              <ScenarioCard
+            type="Bull"
+            priceTarget="$560"
+            description="Massive expansion into private market data and ESG dominance."
+            points={[
+              "Acquisition integration creates significant cost synergies",
+              "Private credit ratings become a standard requirement",
+              "Dividend growth re-accelerates to >15%"
+            ]}
+          />
+            </div>
+          ),
+        },
+      ]} />
 
       <AnalysisSection title="The Toll-Bridge Moat">
         <div className="glass-card">
@@ -65,7 +134,7 @@ export default function SPGlobalPage() {
         </div>
       </AnalysisSection>
 
-      <AnalysisSection title="Price Scenarios (12-24 Months)">
+      <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <ScenarioCard
             type="Bear"
@@ -98,11 +167,11 @@ export default function SPGlobalPage() {
             ]}
           />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
-      <AnalysisSection title="Ten Moats Framework">
+      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
         <TenMoatsCard data={tenMoatsData['SPGI']} />
-      </AnalysisSection>
+      </AnalysisSection></div>
     </div>
   );
 }

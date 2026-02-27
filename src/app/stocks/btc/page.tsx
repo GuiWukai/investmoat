@@ -24,7 +24,7 @@ export default function BitcoinPage() {
         <RecommendationBadge status="Strong Buy" />
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="hidden md:grid grid-cols-3 gap-6">
         <MetricCard 
           title="Hash Rate" 
           value="650 EH/s" 
@@ -48,11 +48,80 @@ export default function BitcoinPage() {
         />
       </div>
 
-      <ScoreTabsRow>
-        <ScoreGauge score={tenMoatsData['BTC'].aiResilienceScore} label="Moat Score" description="Absolute scarcity and the largest decentralized network effect in history." />
-        <ScoreGauge score={85} label="Growth Score" description="Institutional adoption via ETFs and sovereign treasury integration." />
-        <ScoreGauge score={50} label="Valuation Score" description="Relative to M2 money supply and gold market cap parity." />
-      </ScoreTabsRow>
+      <ScoreTabsRow tabs={[
+        {
+          label: "Moat",
+          gauge: (<ScoreGauge score={tenMoatsData['BTC'].aiResilienceScore} label="Moat Score" description="Absolute scarcity and the largest decentralized network effect in history." />),
+          detail: <TenMoatsCard data={tenMoatsData['BTC']} />,
+        },
+        {
+          label: "Growth",
+          gauge: (<ScoreGauge score={85} label="Growth Score" description="Institutional adoption via ETFs and sovereign treasury integration." />),
+          detail: (
+            <div className="space-y-4">
+              <MetricCard 
+          title="Hash Rate" 
+          value="650 EH/s" 
+          label="Network Security Standard" 
+          icon={<Lock size={20} className="text-white" />} 
+          color="#f7931a"
+        />
+              <MetricCard 
+          title="Exchange Balance" 
+          value="1.8M BTC" 
+          label="Multi-year Lows (Illicit Supply)" 
+          icon={<Shield size={20} className="text-white" />} 
+          color="#3b82f6"
+        />
+              <MetricCard 
+          title="Address Count" 
+          value="52.4M" 
+          label="Unique Holders Worldwide" 
+          icon={<Globe size={20} className="text-white" />} 
+          color="#10b981"
+        />
+            </div>
+          ),
+        },
+        {
+          label: "Value",
+          gauge: (<ScoreGauge score={50} label="Valuation Score" description="Relative to M2 money supply and gold market cap parity." />),
+          detail: (
+            <div className="space-y-4">
+              <ScenarioCard
+            type="Bear"
+            priceTarget="$45,000"
+            description="Severe regulatory crackdown and a mass-market risk-off event."
+            points={[
+              "Banning of self-custody wallets in major jurisdictions",
+              "Major ETF provider liquidation due to insolvency",
+              "Recession leads to liquidations across all risk assets"
+            ]}
+          />
+              <ScenarioCard
+            type="Base"
+            priceTarget="$95,000"
+            description="Continued ETF inflows and steady adoption as a gold alternative."
+            points={[
+              "Institutional weighting increases to 1-2% in traditional portfolios",
+              "Inflation remains sticky, driving demand for hard assets",
+              "Development of Bitcoin Layer 2s increases network utility"
+            ]}
+          />
+              <ScenarioCard
+            type="Bull"
+            priceTarget="$250,000+"
+            description="Sovereign nation adoption and global currency volatility."
+            points={[
+              "Global central banks begin adding BTC to reserves",
+              "Major Fortune 500 companies follow MicroStrategy's treasury model",
+              "Hyper-inflation in G7 currencies triggers global flight to safety"
+            ]}
+          />
+            </div>
+          ),
+        },
+      ]} />
 
       <AnalysisSection title="The Scarcity Moat">
         <Card className="bg-white/5 border-none backdrop-blur-md">
@@ -67,7 +136,7 @@ export default function BitcoinPage() {
         </Card>
       </AnalysisSection>
 
-      <AnalysisSection title="Price Scenarios (12-24 Months)">
+      <div className="hidden md:block"><AnalysisSection title="Price Scenarios (12-24 Months)">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <ScenarioCard
             type="Bear"
@@ -100,11 +169,11 @@ export default function BitcoinPage() {
             ]}
           />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
-      <AnalysisSection title="Ten Moats Framework">
+      <div className="hidden md:block"><AnalysisSection title="Ten Moats Framework">
         <TenMoatsCard data={tenMoatsData['BTC']} />
-      </AnalysisSection>
+      </AnalysisSection></div>
     </div>
   );
 }
