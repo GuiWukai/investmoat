@@ -1,6 +1,6 @@
 'use client';
 
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, ScoreTabsRow, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
 import { tenMoatsData } from "@/app/tenMoatsData";
 import { Laptop, Cloud, Database, DollarSign } from "lucide-react";
 import { Card, CardBody, Chip } from "@heroui/react";
@@ -48,11 +48,11 @@ export default function MicrosoftPage() {
         />
       </div>
 
-      <div className="flex flex-col md:flex-row gap-6">
+      <ScoreTabsRow>
         <ScoreGauge score={tenMoatsData['MSFT'].aiResilienceScore} label="Moat Score" description="Total enterprise ubiquity and the strongest bundling power in software history." />
         <ScoreGauge score={92} label="Growth Score" description="AI Copilot integration and Azure AI services are driving massive upsell." />
         <ScoreGauge score={68} label="Valuation Score" description="Trading at 32x forward P/E, premium but fair for the quality." />
-      </div>
+      </ScoreTabsRow>
 
       <AnalysisSection title="The Enterprise Moat">
         <Card className="bg-white/5 border-none backdrop-blur-md">

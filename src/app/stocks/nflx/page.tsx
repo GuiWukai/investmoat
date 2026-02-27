@@ -1,6 +1,6 @@
 'use client';
 
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, ScoreTabsRow, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
 import { tenMoatsData } from "@/app/tenMoatsData";
 import { Play, Users, TrendingUp } from "lucide-react";
 import { Chip } from "@heroui/react";
@@ -48,11 +48,11 @@ export default function NetflixPage() {
         />
       </div>
 
-      <div className="flex flex-col md:flex-row gap-6 mt-8">
+      <ScoreTabsRow>
         <ScoreGauge score={tenMoatsData['NFLX'].aiResilienceScore} label="Moat Score" description="Massive scale allows for better unit economics on content than any competitor." />
         <ScoreGauge score={88} label="Growth Score" description="Ad-tier expansion and paid sharing crackdown continue to drive ARPU and sub growth." />
         <ScoreGauge score={52} label="Valuation Score" description="Trading at 35x P/E, requires high execution on ad-revenue targets." />
-      </div>
+      </ScoreTabsRow>
 
       <AnalysisSection title="The Scale Moat">
         <div className="glass-card">

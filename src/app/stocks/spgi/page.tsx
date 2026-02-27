@@ -1,6 +1,6 @@
 'use client';
 
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, ScoreTabsRow, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
 import { tenMoatsData } from "@/app/tenMoatsData";
 import { Landmark, TrendingUp, Shield } from "lucide-react";
 import { Chip } from "@heroui/react";
@@ -48,11 +48,11 @@ export default function SPGlobalPage() {
         />
       </div>
 
-      <div className="flex flex-col md:flex-row gap-6 mt-8">
+      <ScoreTabsRow>
         <ScoreGauge score={tenMoatsData['SPGI'].aiResilienceScore} label="Moat Score" description="A global duopoly with Moody's in debt ratings. Regulatory and brand moat." />
         <ScoreGauge score={78} label="Growth Score" description="Index licensing (S&P 500) and ESG data integration." />
         <ScoreGauge score={75} label="Valuation Score" description="Trading at a premium but justified by the 'toll bridge' business model." />
-      </div>
+      </ScoreTabsRow>
 
       <AnalysisSection title="The Toll-Bridge Moat">
         <div className="glass-card">

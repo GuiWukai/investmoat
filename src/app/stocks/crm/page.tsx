@@ -1,6 +1,6 @@
 'use client';
 
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, ScoreTabsRow, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
 import { tenMoatsData } from "@/app/tenMoatsData";
 import { Cloud, Users, Zap, BarChart3 } from "lucide-react";
 import { Card, CardBody, Chip } from "@heroui/react";
@@ -48,11 +48,11 @@ export default function SalesforcePage() {
         />
       </div>
 
-      <div className="flex flex-col md:flex-row gap-6">
+      <ScoreTabsRow>
         <ScoreGauge score={tenMoatsData['CRM'].aiResilienceScore} label="Moat Score" description="High switching costs and 'Data Gravity' makes it the system of record for sales." />
         <ScoreGauge score={80} label="Growth Score" description="Data Cloud and AI (Einstein) are the primary expansion vectors." />
         <ScoreGauge score={68} label="Valuation Score" description="Strong FCF generation justifies a premium SaaS multiple." />
-      </div>
+      </ScoreTabsRow>
 
       <AnalysisSection title="The Data Gravity Moat">
         <Card className="bg-white/5 border-none backdrop-blur-md">

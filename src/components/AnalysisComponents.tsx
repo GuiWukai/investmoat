@@ -70,7 +70,39 @@ export function ScoreGauge({ score, label, description }: ScoreGaugeProps) {
   );
 }
 
-export function AnalysisSection({ title, children }: { title: string, children: React.ReactNode }) {
+export function ScoreTabsRow({ children }: { children: React.ReactNode }) {
+  const [active, setActive] = React.useState(0);
+  const items = React.Children.toArray(children);
+  const labels = ['Moat', 'Growth', 'Value'];
+
+  return (
+    <>
+      {/* Mobile: segmented tab strip */}
+      <div className="md:hidden">
+        <div className="flex rounded-xl bg-white/5 p-1 mb-4">
+          {labels.map((label, i) => (
+            <button
+              key={i}
+              onClick={() => setActive(i)}
+              className={`flex-1 py-1.5 text-sm font-semibold rounded-lg transition-all ${
+                active === i ? 'bg-white/15 text-white' : 'text-white/40'
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+        {items[active]}
+      </div>
+      {/* Desktop: side by side */}
+      <div className="hidden md:flex gap-6">
+        {children}
+      </div>
+    </>
+  );
+}
+
+({ title, children }: { title: string, children: React.ReactNode }) {
   return (
     <section className="mt-8 md:mt-12">
       <div className="flex items-center gap-4 mb-4 md:mb-6">

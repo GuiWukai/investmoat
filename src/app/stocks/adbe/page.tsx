@@ -1,6 +1,6 @@
 'use client';
 
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, ScoreTabsRow, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
 import { tenMoatsData } from "@/app/tenMoatsData";
 import { PenTool, Image, Zap } from "lucide-react";
 import { Chip } from "@heroui/react";
@@ -48,11 +48,11 @@ export default function AdobePage() {
         />
       </div>
 
-      <div className="flex flex-col md:flex-row gap-6 mt-8">
+      <ScoreTabsRow>
         <ScoreGauge score={tenMoatsData['ADBE'].aiResilienceScore} label="Moat Score" description="The Creative Cloud is the global industry standard for design, photo, and video." />
         <ScoreGauge score={82} label="Growth Score" description="Generative AI (Firefly) integration driving higher tiers and retention." />
         <ScoreGauge score={64} label="Valuation Score" description="Reasonable multiple for a company with 30%+ net margins." />
-      </div>
+      </ScoreTabsRow>
 
       <AnalysisSection title="The Creative Standard Moat">
         <div className="glass-card">

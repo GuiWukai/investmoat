@@ -1,6 +1,6 @@
 'use client';
 
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, ScoreTabsRow, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
 import { tenMoatsData } from "@/app/tenMoatsData";
 import { Zap, Car, Battery, Cpu } from "lucide-react";
 import { Chip } from "@heroui/react";
@@ -48,11 +48,11 @@ export default function TeslaPage() {
         />
       </div>
 
-      <div className="flex flex-col md:flex-row gap-6 mt-8">
+      <ScoreTabsRow>
         <ScoreGauge score={tenMoatsData['TSLA'].aiResilienceScore} label="Moat Score" description="Vertical integration and massive manufacturing cost advantages." />
         <ScoreGauge score={89} label="Growth Score" description="Robotics (Optimus) and energy storage are the next 10x frontier." />
         <ScoreGauge score={55} label="Valuation Score" description="High P/E reflects optionality, but core auto margins are pressured." />
-      </div>
+      </ScoreTabsRow>
 
       <AnalysisSection title="The Vertical Integration Moat">
         <div className="glass-card">

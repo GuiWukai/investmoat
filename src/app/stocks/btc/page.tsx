@@ -1,6 +1,6 @@
 'use client';
 
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, ScoreTabsRow, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
 import { tenMoatsData } from "@/app/tenMoatsData";
 import { Coins, Shield, Globe, Lock } from "lucide-react";
 import { Card, CardBody, Chip } from "@heroui/react";
@@ -48,11 +48,11 @@ export default function BitcoinPage() {
         />
       </div>
 
-      <div className="flex flex-col md:flex-row gap-6">
+      <ScoreTabsRow>
         <ScoreGauge score={tenMoatsData['BTC'].aiResilienceScore} label="Moat Score" description="Absolute scarcity and the largest decentralized network effect in history." />
         <ScoreGauge score={85} label="Growth Score" description="Institutional adoption via ETFs and sovereign treasury integration." />
         <ScoreGauge score={50} label="Valuation Score" description="Relative to M2 money supply and gold market cap parity." />
-      </div>
+      </ScoreTabsRow>
 
       <AnalysisSection title="The Scarcity Moat">
         <Card className="bg-white/5 border-none backdrop-blur-md">

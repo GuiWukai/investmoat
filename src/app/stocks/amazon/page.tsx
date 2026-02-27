@@ -1,6 +1,6 @@
 'use client';
 
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, ScoreTabsRow, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
 import { tenMoatsData } from "@/app/tenMoatsData";
 import { ShoppingCart, Cloud, Truck, DollarSign } from "lucide-react";
 import { Card, CardBody, CardHeader, Chip, Divider } from "@heroui/react";
@@ -48,7 +48,7 @@ export default function AmazonPage() {
         />
       </div>
 
-      <div className="flex flex-col md:flex-row gap-6">
+      <ScoreTabsRow>
         <ScoreGauge 
           score={tenMoatsData['AMZN'].aiResilienceScore}
           label="Moat Score" 
@@ -64,7 +64,7 @@ export default function AmazonPage() {
           label="Valuation Score" 
           description="Trading at 14x forward Cash Flow, slightly above historical mean." 
         />
-      </div>
+      </ScoreTabsRow>
 
       <AnalysisSection title="The Economic Moat">
         <Card className="bg-white/5 border-none backdrop-blur-md">

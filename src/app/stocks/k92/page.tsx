@@ -1,6 +1,6 @@
 'use client';
 
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, ScoreTabsRow, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
 import { tenMoatsData } from "@/app/tenMoatsData";
 import { Pickaxe, Zap, Gem, CheckCircle } from "lucide-react";
 import { Chip } from "@heroui/react";
@@ -56,7 +56,7 @@ export default function K92Page() {
         />
       </div>
 
-      <div className="flex flex-col md:flex-row gap-6 mt-8">
+      <ScoreTabsRow>
         <ScoreGauge
           score={tenMoatsData['KNT'].aiResilienceScore}
           label="Moat Score"
@@ -72,7 +72,7 @@ export default function K92Page() {
           label="Valuation Score"
           description="Stock up ~164% YoY, now trading near analyst consensus (~$27–33 CAD target). Meaningful upside only on Stage 4 execution or gold price re-rating."
         />
-      </div>
+      </ScoreTabsRow>
 
       <AnalysisSection title="The Mining Moat (Asset Quality)">
         <div className="glass-card">

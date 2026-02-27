@@ -1,6 +1,6 @@
 'use client';
 
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, ScoreTabsRow, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
 import { tenMoatsData } from "@/app/tenMoatsData";
 import { ShieldCheck, TrendingUp, Globe, Coins } from "lucide-react";
 import { Card, CardBody, Chip } from "@heroui/react";
@@ -56,7 +56,7 @@ export default function GoldPage() {
         />
       </div>
 
-      <div className="flex flex-col md:flex-row gap-6">
+      <ScoreTabsRow>
         <ScoreGauge
           score={tenMoatsData['XAU'].aiResilienceScore}
           label="Moat Score"
@@ -72,7 +72,7 @@ export default function GoldPage() {
           label="Valuation Score"
           description="At ~$2,900/oz gold is elevated but justified relative to M2 money supply growth. Not cheap, but not stretched given geopolitical and inflationary backdrop."
         />
-      </div>
+      </ScoreTabsRow>
 
       <AnalysisSection title="The Timeless Moat">
         <Card className="bg-white/5 border-none backdrop-blur-md">

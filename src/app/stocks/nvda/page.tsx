@@ -1,6 +1,6 @@
 'use client';
 
-import { MetricCard, ScoreGauge, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
+import { MetricCard, ScoreGauge, ScoreTabsRow, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
 import { tenMoatsData } from "@/app/tenMoatsData";
 import { Cpu, Zap, Share2, DollarSign } from "lucide-react";
 import { Card, CardBody, Chip } from "@heroui/react";
@@ -48,11 +48,11 @@ export default function NvidiaPage() {
         />
       </div>
 
-      <div className="flex flex-col md:flex-row gap-6">
+      <ScoreTabsRow>
         <ScoreGauge score={tenMoatsData['NVDA'].aiResilienceScore} label="Moat Score" description="CUDA software ecosystem and 10-year hardware lead in AI compute." />
         <ScoreGauge score={95} label="Growth Score" description="Generative AI spend is still in the 'Build-out' phase globally." />
         <ScoreGauge score={65} label="Valuation Score" description="High expectation hurdle; every earnings must be a massive beat." />
-      </div>
+      </ScoreTabsRow>
 
       <AnalysisSection title="The Ecosystem Moat (CUDA)">
         <Card className="bg-white/5 border-none backdrop-blur-md">
