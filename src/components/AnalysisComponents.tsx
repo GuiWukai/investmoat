@@ -102,7 +102,7 @@ export function ScoreTabsRow({ children }: { children: React.ReactNode }) {
   );
 }
 
-({ title, children }: { title: string, children: React.ReactNode }) {
+export function AnalysisSection({ title, children }: { title: string, children: React.ReactNode }) {
   return (
     <section className="mt-8 md:mt-12">
       <div className="flex items-center gap-4 mb-4 md:mb-6">
