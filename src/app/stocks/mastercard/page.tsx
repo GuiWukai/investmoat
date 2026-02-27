@@ -2,10 +2,12 @@
 
 import { MetricCard, ScoreGauge, ScoreTabsRow, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
 import { tenMoatsData } from "@/app/tenMoatsData";
+import { stockData, getAverageScore } from "@/app/stockData";
 import { CreditCard, ShieldCheck, TrendingUp } from "lucide-react";
 import { Chip } from "@heroui/react";
 
 export default function MastercardPage() {
+  const overallScore = getAverageScore(stockData.find(s => s.ticker === 'MA')!.scores);
   return (
     <div className="animate-fade-in pb-12">
       <header className="mb-8 space-y-4">
@@ -48,7 +50,7 @@ export default function MastercardPage() {
         />
       </div>
 
-      <ScoreTabsRow tabs={[
+      <ScoreTabsRow overallScore={overallScore} tabs={[
         {
           label: "Moat",
           gauge: (<ScoreGauge score={tenMoatsData['MA'].aiResilienceScore} label="Moat Score" description="Critical global infrastructure with deep brand trust and technological advantage." />),

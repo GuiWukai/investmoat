@@ -2,10 +2,12 @@
 
 import { MetricCard, ScoreGauge, ScoreTabsRow, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
 import { tenMoatsData } from "@/app/tenMoatsData";
+import { stockData, getAverageScore } from "@/app/stockData";
 import { Globe, Zap, DollarSign } from "lucide-react";
 import { Chip } from "@heroui/react";
 
 export default function VisaPage() {
+  const overallScore = getAverageScore(stockData.find(s => s.ticker === 'V')!.scores);
   return (
     <div className="animate-fade-in pb-12">
       <header className="mb-8 space-y-4">
@@ -48,7 +50,7 @@ export default function VisaPage() {
         />
       </div>
 
-      <ScoreTabsRow tabs={[
+      <ScoreTabsRow overallScore={overallScore} tabs={[
         {
           label: "Moat",
           gauge: (<ScoreGauge score={tenMoatsData['V'].aiResilienceScore} label="Moat Score" description="The world's largest payment network with massive barriers to entry and network effects." />),

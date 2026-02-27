@@ -2,10 +2,12 @@
 
 import { MetricCard, ScoreGauge, ScoreTabsRow, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
 import { tenMoatsData } from "@/app/tenMoatsData";
+import { stockData, getAverageScore } from "@/app/stockData";
 import { ShoppingCart, Cloud, Truck, DollarSign } from "lucide-react";
 import { Card, CardBody, CardHeader, Chip, Divider } from "@heroui/react";
 
 export default function AmazonPage() {
+  const overallScore = getAverageScore(stockData.find(s => s.ticker === 'AMZN')!.scores);
   return (
     <div className="animate-fade-in space-y-12 pb-12">
       <header className="space-y-6">
@@ -48,7 +50,7 @@ export default function AmazonPage() {
         />
       </div>
 
-      <ScoreTabsRow tabs={[
+      <ScoreTabsRow overallScore={overallScore} tabs={[
         {
           label: "Moat",
           gauge: (<ScoreGauge 

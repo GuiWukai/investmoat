@@ -2,10 +2,12 @@
 
 import { MetricCard, ScoreGauge, ScoreTabsRow, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
 import { tenMoatsData } from "@/app/tenMoatsData";
+import { stockData, getAverageScore } from "@/app/stockData";
 import { Cloud, Users, Zap, BarChart3 } from "lucide-react";
 import { Card, CardBody, Chip } from "@heroui/react";
 
 export default function SalesforcePage() {
+  const overallScore = getAverageScore(stockData.find(s => s.ticker === 'CRM')!.scores);
   return (
     <div className="animate-fade-in space-y-12 pb-12">
       <header className="space-y-6">
@@ -48,7 +50,7 @@ export default function SalesforcePage() {
         />
       </div>
 
-      <ScoreTabsRow tabs={[
+      <ScoreTabsRow overallScore={overallScore} tabs={[
         {
           label: "Moat",
           gauge: (<ScoreGauge score={tenMoatsData['CRM'].aiResilienceScore} label="Moat Score" description="High switching costs and 'Data Gravity' makes it the system of record for sales." />),

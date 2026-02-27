@@ -2,10 +2,12 @@
 
 import { MetricCard, ScoreGauge, ScoreTabsRow, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
 import { tenMoatsData } from "@/app/tenMoatsData";
+import { stockData, getAverageScore } from "@/app/stockData";
 import { Coins, Shield, Globe, Lock } from "lucide-react";
 import { Card, CardBody, Chip } from "@heroui/react";
 
 export default function BitcoinPage() {
+  const overallScore = getAverageScore(stockData.find(s => s.ticker === 'BTC')!.scores);
   return (
     <div className="animate-fade-in space-y-12 pb-12">
       <header className="space-y-6">
@@ -48,7 +50,7 @@ export default function BitcoinPage() {
         />
       </div>
 
-      <ScoreTabsRow tabs={[
+      <ScoreTabsRow overallScore={overallScore} tabs={[
         {
           label: "Moat",
           gauge: (<ScoreGauge score={tenMoatsData['BTC'].aiResilienceScore} label="Moat Score" description="Absolute scarcity and the largest decentralized network effect in history." />),
