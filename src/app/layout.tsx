@@ -28,15 +28,21 @@ function NavStockItem({ stock, closeMenu }: { stock: typeof stockData[0], closeM
       style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
     >
       <span>{stock.name} ({stock.ticker})</span>
-      <span style={{ 
-        fontSize: '0.7rem', 
-        fontWeight: 800, 
-        background: 'rgba(255,255,255,0.05)', 
-        padding: '2px 6px', 
+      <span style={{
+        fontSize: '0.7rem',
+        fontWeight: 800,
+        background: 'rgba(255,255,255,0.05)',
+        padding: '2px 6px',
         borderRadius: '4px',
         color: getScoreColor(avg),
-        border: `1px solid ${getScoreColor(avg)}33`
+        border: `1px solid ${getScoreColor(avg)}33`,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        lineHeight: 1.2,
+        gap: '1px'
       }}>
+        <span style={{ fontSize: '0.5rem', opacity: 0.7, letterSpacing: '0.05em', textTransform: 'uppercase', fontWeight: 700 }}>Overall</span>
         {avg}
       </span>
     </Link>

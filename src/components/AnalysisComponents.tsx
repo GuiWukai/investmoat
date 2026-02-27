@@ -76,14 +76,25 @@ interface ScoreTab {
   detail?: React.ReactNode;
 }
 
-export function ScoreTabsRow({ tabs }: { tabs: ScoreTab[] }) {
-  const [active, setActive] = React.useState(0);
+export function ScoreTabsRow({ tabs, overallScore }: { tabs: ScoreTab[], overallScore?: number }) {
+  const hasOverall = overallScore !== undefined;
+  const [active, setActive] = React.useState<number | 'overall'>(hasOverall ? 'overall' : 0);
 
   return (
     <>
       {/* Mobile: segmented tab strip */}
       <div className="md:hidden">
         <div className="flex rounded-xl bg-white/5 p-1 mb-4">
+          {hasOverall && (
+            <button
+              onClick={() => setActive('overall')}
+              className={`flex-1 py-1.5 text-sm font-semibold rounded-lg transition-all ${
+                active === 'overall' ? 'bg-white/15 text-white' : 'text-white/40'
+              }`}
+            >
+              Overall
+            </button>
+          )}
           {tabs.map((tab, i) => (
             <button
               key={i}
@@ -96,13 +107,32 @@ export function ScoreTabsRow({ tabs }: { tabs: ScoreTab[] }) {
             </button>
           ))}
         </div>
-        {tabs[active].gauge}
-        {tabs[active].detail && (
-          <div className="mt-6 space-y-4">{tabs[active].detail}</div>
+        {active === 'overall' && hasOverall && (
+          <ScoreGauge
+            score={overallScore!}
+            label="Overall Score"
+            description="Combined average of Moat, Growth & Valuation scores."
+          />
+        )}
+        {active !== 'overall' && tabs[active as number].gauge}
+        {active !== 'overall' && tabs[active as number].detail && (
+          <div className="mt-6 space-y-4">{tabs[active as number].detail}</div>
         )}
       </div>
       {/* Desktop: side by side */}
       <div className="hidden md:flex gap-6">
+        {hasOverall && (
+          <div className="relative flex-1 lg:min-w-[240px]" style={{ borderRadius: '12px', outline: '1.5px solid rgba(139,92,246,0.35)' }}>
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 text-[9px] font-black uppercase tracking-widest rounded px-2 py-0.5 whitespace-nowrap" style={{ background: 'rgba(139,92,246,0.2)', color: '#a78bfa', border: '1px solid rgba(139,92,246,0.35)' }}>
+              Overall Score
+            </div>
+            <ScoreGauge
+              score={overallScore!}
+              label="Overall Score"
+              description="Combined average of Moat, Growth & Valuation."
+            />
+          </div>
+        )}
         {tabs.map(tab => (
           <React.Fragment key={tab.label}>{tab.gauge}</React.Fragment>
         ))}

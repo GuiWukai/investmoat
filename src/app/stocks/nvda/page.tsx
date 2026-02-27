@@ -2,10 +2,12 @@
 
 import { MetricCard, ScoreGauge, ScoreTabsRow, AnalysisSection, ScenarioCard, RecommendationBadge, TenMoatsCard } from "@/components/AnalysisComponents";
 import { tenMoatsData } from "@/app/tenMoatsData";
+import { stockData, getAverageScore } from "@/app/stockData";
 import { Cpu, Zap, Share2, DollarSign } from "lucide-react";
 import { Card, CardBody, Chip } from "@heroui/react";
 
 export default function NvidiaPage() {
+  const overallScore = getAverageScore(stockData.find(s => s.ticker === 'NVDA')!.scores);
   return (
     <div className="animate-fade-in space-y-12 pb-12">
       <header className="space-y-6">
@@ -48,7 +50,7 @@ export default function NvidiaPage() {
         />
       </div>
 
-      <ScoreTabsRow tabs={[
+      <ScoreTabsRow overallScore={overallScore} tabs={[
         {
           label: "Moat",
           gauge: (<ScoreGauge score={tenMoatsData['NVDA'].aiResilienceScore} label="Moat Score" description="CUDA software ecosystem and 10-year hardware lead in AI compute." />),
