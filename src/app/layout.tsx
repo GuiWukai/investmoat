@@ -57,8 +57,7 @@ export default function RootLayout({
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    { name: "Dashboard", href: "/" },
-    { name: "Portfolio Distribution", href: "/portfolio" },
+    { name: "Portfolio", href: "/" },
   ];
 
   const categories = [
@@ -142,8 +141,7 @@ export default function RootLayout({
               
               <ScrollShadow className="flex-1 -mx-2 px-2">
                 <nav className="flex flex-col gap-1">
-                  <Link href="/" className="nav-item">Dashboard</Link>
-                  <Link href="/portfolio" className="nav-item">Portfolio Distribution</Link>
+                  <Link href="/" className="nav-item">Portfolio</Link>
                   
                   {categories.map((cat) => (
                     <React.Fragment key={cat.key}>
