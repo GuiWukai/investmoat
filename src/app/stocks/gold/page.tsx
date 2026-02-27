@@ -64,7 +64,24 @@ export default function GoldPage() {
           label="Moat Score"
           description="5,000+ years as humanity's store of value. No counterparty risk, finite supply, universally recognised across all civilisations and geopolitical systems."
         />),
-          detail: <TenMoatsCard data={tenMoatsData['XAU']} />,
+          detail: (
+            <div className="space-y-4">
+              <Card className="bg-white/5 border-none backdrop-blur-md">
+                <CardBody className="p-4 md:p-8">
+                  <p className="mb-4">
+                    Gold&apos;s moat is built on <strong>Scarcity, Trust, and Zero Counterparty Risk</strong>:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-4 text-white/60">
+                    <li><strong className="text-white">Physical Scarcity:</strong> All the gold ever mined would fit in roughly 3.5 Olympic swimming pools. Annual mine supply grows at ~1.5% — far below the rate of fiat money creation, preserving purchasing power over decades and centuries.</li>
+                    <li><strong className="text-white">No Counterparty Risk:</strong> Unlike bonds, bank deposits, or equities, physical gold carries no issuer default risk. It is nobody&apos;s liability — a feature that becomes uniquely valuable during financial crises and sovereign stress events.</li>
+                    <li><strong className="text-white">Universal Recognition:</strong> Gold is the only asset with a continuous 5,000-year track record as money across every major civilisation and empire. This cultural and institutional trust is impossible to replicate overnight.</li>
+                    <li><strong className="text-white">Central Bank Demand:</strong> Global central banks purchased over 1,000 tonnes for the third consecutive year in 2024, driven by de-dollarisation trends and a desire to hold a reserve asset outside the US-dominated financial system.</li>
+                  </ul>
+                </CardBody>
+              </Card>
+              <TenMoatsCard data={tenMoatsData['XAU']} />
+            </div>
+          ),
         },
         {
           label: "Growth",
@@ -150,7 +167,7 @@ export default function GoldPage() {
         },
       ]} />
 
-      <AnalysisSection title="The Timeless Moat">
+      <div className="hidden md:block"><AnalysisSection title="The Timeless Moat">
         <div className="space-y-6">
           <Card className="bg-white/5 border-none backdrop-blur-md">
             <CardBody className="p-4 md:p-8">
@@ -173,11 +190,9 @@ export default function GoldPage() {
               </ul>
             </CardBody>
           </Card>
-          <div className="hidden md:block">
-            <TenMoatsCard data={tenMoatsData['XAU']} />
-          </div>
+          <TenMoatsCard data={tenMoatsData['XAU']} />
         </div>
-      </AnalysisSection>
+      </AnalysisSection></div>
 
       <AnalysisSection title="Structural Tailwinds">
         <div className="glass-card" style={{ borderLeft: '4px solid #FFD700' }}>
