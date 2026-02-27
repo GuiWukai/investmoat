@@ -17,6 +17,7 @@ import intuit from './intuit.json';
 import gold from './gold.json';
 import btc from './btc.json';
 import k92 from './k92.json';
+import pltr from './pltr.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   amazon: amazon as StockAnalysisData,
@@ -36,6 +37,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   gold: gold as StockAnalysisData,
   btc: btc as StockAnalysisData,
   k92: k92 as StockAnalysisData,
+  pltr: pltr as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
