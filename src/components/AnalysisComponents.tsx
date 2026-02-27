@@ -1,8 +1,9 @@
 'use client';
 
 import React from 'react';
-import { TrendingUp, PlusCircle, Minus, Zap } from "lucide-react";
+import { TrendingUp, PlusCircle, Minus, Zap, ShieldCheck, ShieldX } from "lucide-react";
 import { Card, CardBody, CardHeader, Chip, Progress, CircularProgress, Divider } from "@heroui/react";
+import type { TenMoatsAssessment, MoatStatus } from "@/app/tenMoatsData";
 
 interface MetricCardProps {
   title: string;
@@ -66,6 +67,47 @@ export function ScoreGauge({ score, label, description }: ScoreGaugeProps) {
       </CardBody>
       <p className="text-sm text-white/60">{description}</p>
     </Card>
+  );
+}
+
+interface ScoreTab {
+  label: string;
+  gauge: React.ReactNode;
+  detail?: React.ReactNode;
+}
+
+export function ScoreTabsRow({ tabs }: { tabs: ScoreTab[] }) {
+  const [active, setActive] = React.useState(0);
+
+  return (
+    <>
+      {/* Mobile: segmented tab strip */}
+      <div className="md:hidden">
+        <div className="flex rounded-xl bg-white/5 p-1 mb-4">
+          {tabs.map((tab, i) => (
+            <button
+              key={i}
+              onClick={() => setActive(i)}
+              className={`flex-1 py-1.5 text-sm font-semibold rounded-lg transition-all ${
+                active === i ? 'bg-white/15 text-white' : 'text-white/40'
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+        {tabs[active].gauge}
+        {tabs[active].detail && (
+          <div className="mt-6 space-y-4">{tabs[active].detail}</div>
+        )}
+      </div>
+      {/* Desktop: side by side */}
+      <div className="hidden md:flex gap-6">
+        {tabs.map(tab => (
+          <React.Fragment key={tab.label}>{tab.gauge}</React.Fragment>
+        ))}
+      </div>
+    </>
   );
 }
 
@@ -142,6 +184,112 @@ const statusConfig = {
     icon: <Zap size={18} />,
   },
 };
+
+const moatStatusConfig: Record<MoatStatus, { label: string; color: string; bgColor: string; dot: string }> = {
+  strong:    { label: 'STRONG',    color: '#17c964', bgColor: 'rgba(23,201,100,0.12)',  dot: '#17c964' },
+  intact:    { label: 'INTACT',    color: '#006fee', bgColor: 'rgba(0,111,238,0.12)',   dot: '#006fee' },
+  weakened:  { label: 'WEAKENED',  color: '#f5a524', bgColor: 'rgba(245,165,36,0.12)', dot: '#f5a524' },
+  destroyed: { label: 'N/A',       color: '#71717a', bgColor: 'rgba(113,113,122,0.08)', dot: '#71717a' },
+};
+
+function MoatRow({ label, status, note }: { label: string; status: MoatStatus; note: string }) {
+  const cfg = moatStatusConfig[status];
+  return (
+    <div className="flex items-start gap-3 py-2.5 border-b border-white/5 last:border-none">
+      <div className="shrink-0 mt-1">
+        <div className="w-2 h-2 rounded-full" style={{ background: cfg.dot }} />
+      </div>
+      <div className="flex-1 min-w-0">
+        <div className="flex flex-wrap items-center gap-2 mb-0.5">
+          <span className="text-sm font-semibold text-white">{label}</span>
+          <span
+            className="text-[9px] font-black uppercase tracking-widest px-1.5 py-0.5 rounded"
+            style={{ color: cfg.color, background: cfg.bgColor }}
+          >
+            {cfg.label}
+          </span>
+        </div>
+        <p className="text-xs text-white/50 leading-relaxed">{note}</p>
+      </div>
+    </div>
+  );
+}
+
+export function TenMoatsCard({ data }: { data: TenMoatsAssessment }) {
+  const vulnerableMoats: Array<{ label: string; key: keyof TenMoatsAssessment }> = [
+    { label: 'Learned Interfaces',  key: 'learnedInterfaces' },
+    { label: 'Business Logic',      key: 'businessLogic' },
+    { label: 'Public Data Access',  key: 'publicDataAccess' },
+    { label: 'Talent Scarcity',     key: 'talentScarcity' },
+    { label: 'Bundling',            key: 'bundling' },
+  ];
+
+  const resilientMoats: Array<{ label: string; key: keyof TenMoatsAssessment }> = [
+    { label: 'Proprietary Data',       key: 'proprietaryData' },
+    { label: 'Regulatory Lock-In',     key: 'regulatoryLockIn' },
+    { label: 'Network Effects',        key: 'networkEffects' },
+    { label: 'Transaction Embedding',  key: 'transactionEmbedding' },
+    { label: 'System of Record',       key: 'systemOfRecord' },
+  ];
+
+  const getResilienceColor = (score: number) => {
+    if (score >= 80) return 'success';
+    if (score >= 65) return 'primary';
+    if (score >= 50) return 'warning';
+    return 'danger';
+  };
+
+  return (
+    <div className="space-y-6">
+      {/* Score + Verdict */}
+      <Card className="bg-white/5 border-none backdrop-blur-md">
+        <CardBody className="p-4 md:p-6">
+          <p className="text-xs uppercase tracking-widest text-white/40 font-bold mb-2">Ten Moats Verdict</p>
+          <p className="text-sm text-white/70 leading-relaxed">{data.verdict}</p>
+        </CardBody>
+      </Card>
+
+      {/* Moat Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        {/* AI-Vulnerable Column */}
+        <Card className="bg-white/5 border-none backdrop-blur-md">
+          <CardHeader className="pb-0 pt-4 px-4 md:px-6">
+            <div className="flex items-center gap-2">
+              <div className="p-1.5 rounded-md" style={{ background: 'rgba(243,18,96,0.15)' }}>
+                <ShieldX size={14} color="#f31260" />
+              </div>
+              <span className="text-xs font-black uppercase tracking-widest text-white/50">AI-Vulnerable Moats</span>
+            </div>
+          </CardHeader>
+          <CardBody className="px-4 md:px-6 pt-3">
+            {vulnerableMoats.map(({ label, key }) => {
+              const item = data[key] as { status: MoatStatus; note: string };
+              return <MoatRow key={key} label={label} status={item.status} note={item.note} />;
+            })}
+          </CardBody>
+        </Card>
+
+        {/* AI-Resilient Column */}
+        <Card className="bg-white/5 border-none backdrop-blur-md">
+          <CardHeader className="pb-0 pt-4 px-4 md:px-6">
+            <div className="flex items-center gap-2">
+              <div className="p-1.5 rounded-md" style={{ background: 'rgba(23,201,100,0.15)' }}>
+                <ShieldCheck size={14} color="#17c964" />
+              </div>
+              <span className="text-xs font-black uppercase tracking-widest text-white/50">AI-Resilient Moats</span>
+            </div>
+          </CardHeader>
+          <CardBody className="px-4 md:px-6 pt-3">
+            {resilientMoats.map(({ label, key }) => {
+              const item = data[key] as { status: MoatStatus; note: string };
+              return <MoatRow key={key} label={label} status={item.status} note={item.note} />;
+            })}
+          </CardBody>
+        </Card>
+      </div>
+    </div>
+  );
+}
 
 export function RecommendationBadge({ status }: { status: 'Strong Buy' | 'Accumulate' | 'Hold' | 'Speculative Buy' }) {
   const cfg = statusConfig[status];

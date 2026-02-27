@@ -1,0 +1,292 @@
+export type MoatStatus = 'strong' | 'intact' | 'weakened' | 'destroyed';
+
+export interface MoatAssessment {
+  status: MoatStatus;
+  note: string;
+}
+
+export interface TenMoatsAssessment {
+  // AI-Vulnerable Moats (weakened or destroyed by AI)
+  learnedInterfaces: MoatAssessment;
+  businessLogic: MoatAssessment;
+  publicDataAccess: MoatAssessment;
+  talentScarcity: MoatAssessment;
+  bundling: MoatAssessment;
+  // AI-Resilient Moats (intact or stronger with AI)
+  proprietaryData: MoatAssessment;
+  regulatoryLockIn: MoatAssessment;
+  networkEffects: MoatAssessment;
+  transactionEmbedding: MoatAssessment;
+  systemOfRecord: MoatAssessment;
+  // Summary
+  aiResilienceScore: number;
+  verdict: string;
+}
+
+const STATUS_VALUES: Record<MoatStatus, number> = {
+  strong: 100,
+  intact: 75,
+  weakened: 25,
+  destroyed: 0,
+};
+
+export function computeMoatScore(assessment: TenMoatsAssessment): number {
+  const resilientAvg = [
+    assessment.proprietaryData,
+    assessment.regulatoryLockIn,
+    assessment.networkEffects,
+    assessment.transactionEmbedding,
+    assessment.systemOfRecord,
+  ].reduce((sum, m) => sum + STATUS_VALUES[m.status], 0) / 5;
+
+  const vulnerableAvg = [
+    assessment.learnedInterfaces,
+    assessment.businessLogic,
+    assessment.publicDataAccess,
+    assessment.talentScarcity,
+    assessment.bundling,
+  ].reduce((sum, m) => sum + STATUS_VALUES[m.status], 0) / 5;
+
+  return Math.round(resilientAvg * 0.65 + vulnerableAvg * 0.35);
+}
+
+export const tenMoatsData: Record<string, TenMoatsAssessment> = {
+  MSFT: {
+    learnedInterfaces: { status: 'weakened', note: 'Copilot abstracts traditional Office UI, but enterprise muscle-memory and training investment remain entrenched.' },
+    businessLogic: { status: 'intact', note: "Azure's AI platform IS the new business logic layer for enterprises — Microsoft is the provider, not the victim." },
+    publicDataAccess: { status: 'destroyed', note: 'Bing search advantage commoditized; OpenAI partnership is table stakes, not a unique differentiator.' },
+    talentScarcity: { status: 'weakened', note: 'GitHub Copilot raises developer productivity, reducing reliance on rare senior engineering talent.' },
+    bundling: { status: 'strong', note: 'Office + Teams + Azure + Security + Copilot bundle is strengthened by AI integration, not weakened.' },
+    proprietaryData: { status: 'strong', note: 'Azure telemetry, LinkedIn social graph, and GitHub code corpus are unrivaled enterprise data assets.' },
+    regulatoryLockIn: { status: 'strong', note: 'JEDI/DoD contracts, FedRAMP High, HIPAA, and government cloud compliance create irreplaceable switching costs.' },
+    networkEffects: { status: 'strong', note: '400M Office commercial seats and the Azure developer ecosystem compound with every new user.' },
+    transactionEmbedding: { status: 'strong', note: 'Embedded in every enterprise workflow: procurement, finance, HR, legal, and collaboration.' },
+    systemOfRecord: { status: 'strong', note: 'Active Directory controls identity, SharePoint holds documents, Dynamics owns CRM — the enterprise OS.' },
+    aiResilienceScore: 84,
+    verdict: "Microsoft's AI-vulnerable bundling moat is offset by an unmatched enterprise data fortress and system-of-record dominance. AI integration strengthens, not threatens, their position.",
+  },
+  NVDA: {
+    learnedInterfaces: { status: 'destroyed', note: 'Not applicable — NVIDIA sells hardware and developer tools, not consumer UI experiences.' },
+    businessLogic: { status: 'destroyed', note: 'Not applicable to semiconductor chip design and manufacturing.' },
+    publicDataAccess: { status: 'destroyed', note: 'Not applicable — NVIDIA does not derive moat from public data access.' },
+    talentScarcity: { status: 'strong', note: 'GPU chip architects, CUDA kernel engineers, and AI systems researchers remain extraordinarily scarce and cannot be AI-replaced.' },
+    bundling: { status: 'intact', note: 'CUDA + hardware + Mellanox networking + NIM microservices = a full-stack AI infrastructure solution competitors cannot match.' },
+    proprietaryData: { status: 'strong', note: 'Millions of CUDA training runs generate proprietary AI workload optimization insights unavailable to competitors.' },
+    regulatoryLockIn: { status: 'weakened', note: 'Export controls on A100/H100 to China constrain revenue and create policy risk, cutting both ways.' },
+    networkEffects: { status: 'strong', note: '4M+ CUDA developers create the largest and most entrenched AI developer community — switching has a multi-year rewrite cost.' },
+    transactionEmbedding: { status: 'strong', note: 'Every major AI training and inference workload is embedded in NVIDIA infrastructure at the infrastructure layer.' },
+    systemOfRecord: { status: 'intact', note: 'CUDA is the de facto standard platform for AI compute — the PyTorch/TF ecosystem is CUDA-first by default.' },
+    aiResilienceScore: 85,
+    verdict: "NVIDIA's moat is almost entirely AI-resilient. The CUDA network effect and proprietary compute standard deepen as AI infrastructure spending grows — making NVIDIA the infrastructure of the AI economy.",
+  },
+  AMZN: {
+    learnedInterfaces: { status: 'weakened', note: 'Alexa voice interface and AWS console are table stakes easily replicated; not a durable differentiator.' },
+    businessLogic: { status: 'weakened', note: 'AI is commoditizing logistics routing and retail recommendation logic that once required years to build.' },
+    publicDataAccess: { status: 'destroyed', note: "Amazon's public product catalog data is no longer a defensible competitive advantage." },
+    talentScarcity: { status: 'weakened', note: 'AWS cloud operations require fewer skilled human operators thanks to AI-powered automation.' },
+    bundling: { status: 'strong', note: 'Prime bundle (shipping + video + music + Alexa + Pharmacy + Gaming) is deeply differentiated and drives 200M+ loyalty.' },
+    proprietaryData: { status: 'strong', note: 'Purchase intent data, AWS usage telemetry, and last-mile logistics operational data are genuinely irreplaceable.' },
+    regulatoryLockIn: { status: 'strong', note: 'AWS GovCloud, DoD JEDI, HIPAA, FedRAMP, and financial services compliance create enormous switching friction.' },
+    networkEffects: { status: 'strong', note: 'Marketplace two-sided flywheel: more buyers → more sellers → better selection → more buyers. Self-reinforcing.' },
+    transactionEmbedding: { status: 'strong', note: '1-click purchasing habits, Prime subscription, and AWS embedded in the infrastructure of the global internet.' },
+    systemOfRecord: { status: 'strong', note: 'AWS is the system of record for global cloud infrastructure; S3 stores more data than any competitor by a wide margin.' },
+    aiResilienceScore: 80,
+    verdict: "Amazon's moats are overwhelmingly AI-resilient: proprietary purchase data, AWS infrastructure lock-in, and the marketplace network flywheel are core strengths that AI cannot easily replicate.",
+  },
+  META: {
+    learnedInterfaces: { status: 'weakened', note: 'Social media UI patterns are easily copied — TikTok proved that consumer interfaces are not a durable moat.' },
+    businessLogic: { status: 'weakened', note: 'Ad targeting algorithms are being commoditized; Apple ATT weakened Meta\'s behavioral logic advantage significantly.' },
+    publicDataAccess: { status: 'destroyed', note: 'Open Graph API restrictions and GDPR have dismantled the public social data access advantage.' },
+    talentScarcity: { status: 'destroyed', note: 'AI tools have made social content creation, ad management, and campaign optimization accessible to small teams.' },
+    bundling: { status: 'weakened', note: 'Instagram + Facebook + WhatsApp is a bundle, but users freely hop between apps — no forced adoption.' },
+    proprietaryData: { status: 'strong', note: '3B+ users\' social graph, behavioral patterns, and relationship data is genuinely irreplaceable — the richest consumer dataset on Earth.' },
+    regulatoryLockIn: { status: 'weakened', note: 'GDPR and EU Digital Markets Act are actively constraining data monetization and cross-app data sharing.' },
+    networkEffects: { status: 'strong', note: 'The social graph itself IS the product — 3 billion users and their connections cannot be replicated by a new entrant in a decade.' },
+    transactionEmbedding: { status: 'intact', note: 'WhatsApp Pay, Marketplace, and Meta Pay represent growing embedded commerce layers across messaging and social platforms.' },
+    systemOfRecord: { status: 'intact', note: 'Facebook remains the social identity record and event management system for billions of users globally.' },
+    aiResilienceScore: 68,
+    verdict: "Meta's social graph network effect remains formidable, but regulatory headwinds on data monetization and the commoditization of ad-targeting logic are genuine threats to their AI-resilient advantages.",
+  },
+  ASML: {
+    learnedInterfaces: { status: 'destroyed', note: 'Not applicable — ASML sells precision lithography hardware to chip fabricators, not UI-based software.' },
+    businessLogic: { status: 'destroyed', note: 'Not applicable to extreme ultraviolet lithography physics and optics manufacturing.' },
+    publicDataAccess: { status: 'destroyed', note: 'Not applicable to this hardware monopoly business model.' },
+    talentScarcity: { status: 'strong', note: 'EUV optics engineers, plasma physicists, and precision mechatronic specialists are among the scarcest people on Earth — AI cannot replicate them.' },
+    bundling: { status: 'strong', note: 'Full EUV system bundle: laser light source + optics + scanner + metrology + software + service = inseparable, multi-year integration.' },
+    proprietaryData: { status: 'strong', note: '30+ years of machine performance data from every chip fab run generates yield-optimization intelligence no competitor can replicate.' },
+    regulatoryLockIn: { status: 'strong', note: 'Dutch export-controlled technology requires government approval per sale; TSMC/Samsung/Intel dependency = state-protected monopoly.' },
+    networkEffects: { status: 'intact', note: 'Deep co-development partnerships with TSMC, Samsung, and Intel create mutual IP dependency and long-term co-investment.' },
+    transactionEmbedding: { status: 'strong', note: 'ASML EUV machines run 24/7 inside fabs generating the chips the world runs on — there is no alternative mid-production-cycle.' },
+    systemOfRecord: { status: 'strong', note: 'Sole supplier of EUV lithography — ASML IS the system of record for cutting-edge semiconductor manufacturing globally.' },
+    aiResilienceScore: 94,
+    verdict: "ASML is the most AI-resilient company in the portfolio. Physical hardware monopolies, regulatory protection, and manufacturing expertise rooted in physics cannot be disrupted by software AI — ever.",
+  },
+  AMD: {
+    learnedInterfaces: { status: 'weakened', note: 'GPU programming interfaces are commoditized; ROCm still significantly lags CUDA in developer tooling.' },
+    businessLogic: { status: 'destroyed', note: 'Not applicable as a primary competitive moat for semiconductor design.' },
+    publicDataAccess: { status: 'destroyed', note: 'Not applicable to AMD\'s competitive position.' },
+    talentScarcity: { status: 'intact', note: 'Chip design engineers remain scarce; Lisa Su\'s executive team is world-class and hard to replicate.' },
+    bundling: { status: 'weakened', note: 'AMD sells chips, not full-stack AI infrastructure solutions — limited bundling moat vs. NVIDIA\'s CUDA ecosystem.' },
+    proprietaryData: { status: 'intact', note: 'CDNA architecture IP, ROCm optimization data, and foundry partnership integration data remain proprietary.' },
+    regulatoryLockIn: { status: 'weakened', note: 'Limited government contract footprint compared to NVIDIA; some defense wins but not entrenched.' },
+    networkEffects: { status: 'weakened', note: 'ROCm developer ecosystem is a fraction of CUDA\'s 4M+ developer community — the critical gap to close.' },
+    transactionEmbedding: { status: 'intact', note: 'Embedded in hyperscaler data centers as a second-source alternative, with growing MI300X adoption at Microsoft.' },
+    systemOfRecord: { status: 'weakened', note: 'Not yet the default standard; AMD operates in NVIDIA\'s shadow in AI compute despite superior price/performance in some workloads.' },
+    aiResilienceScore: 52,
+    verdict: "AMD's moat is weakening in AI-resilient categories vs. NVIDIA. Execution quality is world-class, but CUDA's network effect remains the dominant barrier — AMD\'s upside is a CUDA challenger, not a CUDA replacer.",
+  },
+  NFLX: {
+    learnedInterfaces: { status: 'weakened', note: 'Streaming UI/UX patterns are easily replicated by Disney+, Max, Apple TV+ — interface is not a differentiator.' },
+    businessLogic: { status: 'weakened', note: 'Content recommendation algorithms are being commoditized by AI across competing streaming platforms.' },
+    publicDataAccess: { status: 'destroyed', note: 'Content metadata and ratings data are widely available through public APIs and third-party providers.' },
+    talentScarcity: { status: 'weakened', note: 'AI is reducing the talent barrier for content localization, subtitling, VFX, and post-production operations.' },
+    bundling: { status: 'intact', note: 'Content + Platform + Live Events + Gaming = an increasingly differentiated entertainment bundle with 270M subscribers.' },
+    proprietaryData: { status: 'strong', note: 'Viewing patterns for 270M subscribers = unmatched content performance data for greenlight decisions — a genuine data moat.' },
+    regulatoryLockIn: { status: 'weakened', note: 'No significant regulatory protection; content licensing rules vary by market but provide no durable government moat.' },
+    networkEffects: { status: 'intact', note: 'Shared viewing culture, social viewing moments, and household account habits create community-level dependency.' },
+    transactionEmbedding: { status: 'intact', note: 'Monthly subscription embedded in household entertainment budgets globally with high inertia and low churn.' },
+    systemOfRecord: { status: 'intact', note: 'Netflix is the cultural reference point for quality streaming and original content globally.' },
+    aiResilienceScore: 63,
+    verdict: "Netflix's proprietary viewing data and content investment flywheel give them a genuine data moat, but the absence of regulatory lock-in and the commoditization of interfaces limit their AI resilience score.",
+  },
+  TSLA: {
+    learnedInterfaces: { status: 'weakened', note: 'EV touchscreen interface design is being replicated by BYD, Rivian, and legacy OEMs — no longer unique.' },
+    businessLogic: { status: 'destroyed', note: 'Not applicable as a primary competitive moat in automotive manufacturing.' },
+    publicDataAccess: { status: 'destroyed', note: 'Not applicable to Tesla\'s competitive advantage framework.' },
+    talentScarcity: { status: 'intact', note: 'Battery chemistry expertise, Gigafactory manufacturing know-how, and FSD AI/ML talent remain genuinely scarce and hard to recruit.' },
+    bundling: { status: 'strong', note: 'EV + FSD Software + Energy Storage + Supercharging + Insurance + Service = a vertical integration bundle no OEM has replicated.' },
+    proprietaryData: { status: 'strong', note: '1.3B+ FSD real-world driving miles, energy grid optimization data, and vehicle telemetry = the largest real-world AI training dataset.' },
+    regulatoryLockIn: { status: 'intact', note: 'Supercharger NACS standard adopted by Ford/GM/Rivian, federal EV incentives, and energy storage grid contracts.' },
+    networkEffects: { status: 'intact', note: 'Supercharger network flywheel and fleet-wide FSD data aggregation create compounding advantages with every new Tesla sold.' },
+    transactionEmbedding: { status: 'strong', note: 'OTA updates, FSD subscriptions, Powerwall energy management, and insurance are embedded in the daily life of Tesla owners.' },
+    systemOfRecord: { status: 'intact', note: 'Tesla is the definitive reference standard for EVs, autonomous driving, and energy storage technology.' },
+    aiResilienceScore: 74,
+    verdict: "Tesla's real-world autonomous driving data flywheel is a genuinely AI-resilient moat. The key risk: whether deep-pocketed OEMs can close the data gap before FSD achieves full commercialization.",
+  },
+  V: {
+    learnedInterfaces: { status: 'destroyed', note: 'Card terminals and payment apps are commodity interfaces — Visa\'s moat is not the interface layer.' },
+    businessLogic: { status: 'weakened', note: 'AI-native payment routing could theoretically allow merchants to bypass traditional card network rails in some corridors.' },
+    publicDataAccess: { status: 'destroyed', note: 'Not a competitive advantage for Visa\'s business model.' },
+    talentScarcity: { status: 'destroyed', note: 'Not a meaningful source of competitive advantage for a payment network.' },
+    bundling: { status: 'weakened', note: 'Card product bundles (rewards + credit) face competition from fintech-native alternatives like BNPL and real-time rails.' },
+    proprietaryData: { status: 'strong', note: '$15T+ in annual transaction data provides unmatched real-time fraud intelligence, merchant analytics, and economic insights.' },
+    regulatoryLockIn: { status: 'strong', note: 'Bank card association memberships, PCI compliance infrastructure, and regulatory approval in 200+ countries is a decades-long moat.' },
+    networkEffects: { status: 'strong', note: 'The quintessential two-sided network: 4.3B Visa cards × 130M merchant locations. More merchants → more cardholders → more merchants.' },
+    transactionEmbedding: { status: 'strong', note: 'Visa IS the transaction infrastructure — embedded in every point-of-sale, online checkout, and cross-border payment globally.' },
+    systemOfRecord: { status: 'strong', note: 'The global payment ledger and cardholder identity verification system trusted by every bank in 200+ countries.' },
+    aiResilienceScore: 90,
+    verdict: "Visa is among the most AI-resilient companies in the portfolio. Their moat lives entirely in AI-resistant categories: network effects, transaction embedding, and regulatory infrastructure that took decades to build.",
+  },
+  MA: {
+    learnedInterfaces: { status: 'destroyed', note: 'Payment interfaces are a commodity layer — Mastercard\'s moat is the network, not the interface.' },
+    businessLogic: { status: 'weakened', note: 'AI-powered payment optimization and real-time rails could erode some traditional card routing advantages over time.' },
+    publicDataAccess: { status: 'destroyed', note: 'Not a competitive advantage for Mastercard\'s business model.' },
+    talentScarcity: { status: 'destroyed', note: 'Not a meaningful source of durable competitive advantage for a payment network.' },
+    bundling: { status: 'weakened', note: 'Similar to Visa — card product bundles face fintech pressure, though Mastercard\'s data services add differentiation.' },
+    proprietaryData: { status: 'strong', note: 'SpendingPulse economic dataset and transaction-level insights are genuinely proprietary economic intelligence.' },
+    regulatoryLockIn: { status: 'strong', note: 'Global compliance infrastructure across 210+ countries, central bank relationships, and card association memberships.' },
+    networkEffects: { status: 'strong', note: 'Near-duopoly with Visa: 3.3B Mastercard cards × 100M+ merchants. The network is self-reinforcing at global scale.' },
+    transactionEmbedding: { status: 'strong', note: 'Mastercard processes 120B+ transactions annually — core infrastructure for global commerce that cannot simply be switched off.' },
+    systemOfRecord: { status: 'strong', note: 'Co-records the global payment ledger with Visa; the authoritative source for cross-border transaction settlement.' },
+    aiResilienceScore: 88,
+    verdict: "Mastercard mirrors Visa\'s AI-resilient moat profile. The payment network duopoly makes them among the safest compounders in an AI-disrupted world — AI enhances fraud detection without threatening the network itself.",
+  },
+  CRM: {
+    learnedInterfaces: { status: 'weakened', note: 'Traditional CRM dashboards are being replaced by AI-native conversational interfaces and agent-driven workflows.' },
+    businessLogic: { status: 'weakened', note: 'AI agents can now perform many tasks previously requiring complex Salesforce configuration and customization.' },
+    publicDataAccess: { status: 'destroyed', note: 'Customer data is proprietary, but public-facing API data access is not a durable competitive advantage.' },
+    talentScarcity: { status: 'weakened', note: 'Salesforce admins and developers remain in-demand, but AI reduces implementation complexity and talent barriers.' },
+    bundling: { status: 'strong', note: 'Sales Cloud + Service Cloud + Marketing Cloud + Slack + Einstein AI + Agentforce = the most complete enterprise CRM bundle.' },
+    proprietaryData: { status: 'strong', note: '150k+ enterprise customers\' CRM data harmonized in Salesforce Data Cloud — the definitive record of global B2B relationships.' },
+    regulatoryLockIn: { status: 'strong', note: 'Government Cloud (FedRAMP High), HIPAA, GDPR, and industry-specific compliance create deep enterprise switching costs.' },
+    networkEffects: { status: 'strong', note: 'AppExchange marketplace of 7,000+ ISV integrations creates a platform network effect that compounds with each new partner.' },
+    transactionEmbedding: { status: 'strong', note: 'Sales pipeline, service cases, marketing campaigns, and partner portals are embedded in daily business operations globally.' },
+    systemOfRecord: { status: 'strong', note: 'The de facto system of record for customer relationships, service history, and revenue pipeline in enterprise.' },
+    aiResilienceScore: 78,
+    verdict: "Salesforce\'s transition to an AI-first platform (Agentforce) could deepen their data lock-in and system-of-record status, turning AI from a threat into the engine that reinforces their enterprise moat.",
+  },
+  ADBE: {
+    learnedInterfaces: { status: 'weakened', note: 'Generative AI tools (Midjourney, DALL-E, Canva AI) are democratizing design — Adobe\'s UI complexity was once a barrier now eroding.' },
+    businessLogic: { status: 'weakened', note: 'AI is automating routine creative tasks (background removal, color grading, layout) that drove Adobe\'s professional value proposition.' },
+    publicDataAccess: { status: 'weakened', note: 'Adobe Stock\'s licensed imagery advantage is challenged by AI-generated imagery platforms that require no stock photos.' },
+    talentScarcity: { status: 'destroyed', note: 'AI has dramatically lowered the barrier to professional-quality design, video editing, and document creation.' },
+    bundling: { status: 'weakened', note: 'Creative Cloud bundle faces pressure from AI-native point solutions (Figma AI, Canva AI) that are simpler and cheaper.' },
+    proprietaryData: { status: 'strong', note: 'Adobe Firefly trained exclusively on licensed Adobe Stock = ethically sourced, legally protected generative AI training data.' },
+    regulatoryLockIn: { status: 'intact', note: 'Government and enterprise compliance for digital signatures (Adobe Sign/Acrobat Pro) and PDF standards remains intact.' },
+    networkEffects: { status: 'intact', note: 'PDF format dominance and the global creative professional community\'s standardization on Creative Cloud tools.' },
+    transactionEmbedding: { status: 'intact', note: 'Monthly Creative Cloud subscriptions deeply embedded in creative professional and enterprise marketing workflows.' },
+    systemOfRecord: { status: 'intact', note: 'PDF/Acrobat is the global document standard; the immovable system of record for contracts, reports, and official documents.' },
+    aiResilienceScore: 58,
+    verdict: "Adobe faces the most direct AI threat to AI-vulnerable moats in the portfolio. Its survival thesis rests on Firefly\'s proprietary training data and the PDF/document system-of-record — both genuinely durable.",
+  },
+  SPGI: {
+    learnedInterfaces: { status: 'weakened', note: 'Financial data terminal interfaces are being streamlined and commoditized by AI-powered analytics platforms.' },
+    businessLogic: { status: 'intact', note: 'Credit rating methodologies are proprietary, regulatory-recognized, and legally required — AI enhances but cannot replace the NRSRO designation.' },
+    publicDataAccess: { status: 'weakened', note: 'Some financial market data is becoming more accessible through open-source and alternative data providers.' },
+    talentScarcity: { status: 'intact', note: 'SEC-recognized credit analysts, regulatory relations specialists, and 160-year institutional knowledge cannot be replicated.' },
+    bundling: { status: 'intact', note: 'Credit Ratings + Market Intelligence + Platts Commodity Data + Mobility Data = a comprehensive financial intelligence bundle.' },
+    proprietaryData: { status: 'strong', note: '160 years of credit ratings history, Platts energy commodity benchmarks, and proprietary financial data — legally embedded in markets.' },
+    regulatoryLockIn: { status: 'strong', note: 'SEC-recognized NRSRO status is a legal moat. Replicating this designation requires decades of track record and regulatory approval.' },
+    networkEffects: { status: 'strong', note: 'Credit ratings are network-critical — bond issuers MUST use NRSRO-recognized agencies; investors MUST reference them.' },
+    transactionEmbedding: { status: 'strong', note: 'S&P ratings are legally embedded in every major bond covenant, loan agreement, regulatory filing, and pension fund mandate.' },
+    systemOfRecord: { status: 'strong', note: 'The authoritative system of record for global credit risk — no alternative source carries the same legal and institutional weight.' },
+    aiResilienceScore: 88,
+    verdict: "S&P Global\'s regulatory moat (NRSRO status) and role as the definitive system of record for credit risk makes them uniquely AI-resilient. AI disrupts analysis, not the legal requirement to use S&P ratings.",
+  },
+  INTU: {
+    learnedInterfaces: { status: 'weakened', note: 'TurboTax\'s guided interview format is being challenged by AI tax assistants that offer conversational, agent-driven filing.' },
+    businessLogic: { status: 'weakened', note: 'AI can increasingly replicate tax preparation and small business accounting logic; IRS Direct File is a zero-cost competitor.' },
+    publicDataAccess: { status: 'weakened', note: 'Tax forms and IRS regulations are public — AI can navigate them, reducing Intuit\'s simplification value proposition.' },
+    talentScarcity: { status: 'weakened', note: 'AI has democratized access to tax and accounting expertise, reducing the barrier that made TurboTax\'s guided logic so valuable.' },
+    bundling: { status: 'strong', note: 'TurboTax + QuickBooks + Credit Karma + Mailchimp = a unique SMB financial platform covering taxes, accounting, credit, and marketing.' },
+    proprietaryData: { status: 'strong', note: 'Tax return data, financial records, and credit data for 100M+ users = an irreplaceable financial profile dataset.' },
+    regulatoryLockIn: { status: 'strong', note: 'IRS authorized e-file partner status, state tax agency relationships, payroll tax compliance, and financial institution integrations.' },
+    networkEffects: { status: 'strong', note: 'CPA-client ecosystem: accountants recommend TurboTax → clients use it → data improves. QuickBooks SMB network self-reinforces.' },
+    transactionEmbedding: { status: 'strong', note: 'Payroll runs, invoicing, tax filing, expense tracking, and lending all embedded in the daily operations of 7M+ small businesses.' },
+    systemOfRecord: { status: 'strong', note: 'QuickBooks is the system of record for 7M+ small business finances; TurboTax is the tax history record for tens of millions of households.' },
+    aiResilienceScore: 80,
+    verdict: "Intuit\'s proprietary tax data and SMB system-of-record position are genuine AI-resilient moats. The IRS Direct File threat is real but limited to simple returns — Intuit\'s platform breadth compounds its defense.",
+  },
+  XAU: {
+    learnedInterfaces: { status: 'destroyed', note: 'Not applicable — gold is a physical commodity with no interface or UX consideration.' },
+    businessLogic: { status: 'destroyed', note: 'Not applicable to a millennia-old physical store of value.' },
+    publicDataAccess: { status: 'destroyed', note: 'Gold price is fully public and transparent — no proprietary data access advantage.' },
+    talentScarcity: { status: 'destroyed', note: 'Gold trading and storage requires minimal specialized talent; not a meaningful competitive dynamic.' },
+    bundling: { status: 'destroyed', note: 'Gold cannot be bundled — it is a singular commodity asset that derives value from scarcity and universality.' },
+    proprietaryData: { status: 'weakened', note: 'Gold mining companies hold geological survey data, but spot gold itself has no proprietary data component.' },
+    regulatoryLockIn: { status: 'strong', note: 'Basel III Tier 1 asset status, central bank reserve requirements, and 5,000 years of recognized monetary status.' },
+    networkEffects: { status: 'strong', note: 'Universal recognition across all civilizations, governments, and institutions for 5,000 years — the ultimate global network effect.' },
+    transactionEmbedding: { status: 'weakened', note: 'Gold is not meaningfully embedded in modern digital transactions; it functions as a store of value, not a medium of exchange.' },
+    systemOfRecord: { status: 'strong', note: 'Physical gold has zero counterparty risk — the ultimate \'true bearer\' record independent of any issuer, system, or government.' },
+    aiResilienceScore: 67,
+    verdict: "Gold\'s AI resilience comes from regulatory recognition and universal network acceptance earned over millennia. AI cannot disrupt gold, but it also cannot help gold compete with AI-native value stores.",
+  },
+  BTC: {
+    learnedInterfaces: { status: 'destroyed', note: 'Not applicable — Bitcoin is a decentralized monetary protocol, not a software interface product.' },
+    businessLogic: { status: 'destroyed', note: "Bitcoin's protocol rules are immutable by design — this is a feature, not a vulnerability. AI cannot alter consensus." },
+    publicDataAccess: { status: 'destroyed', note: 'The Bitcoin blockchain is fully public and transparent by design — data access is not a competitive moat.' },
+    talentScarcity: { status: 'weakened', note: 'Bitcoin core development talent remains specialized, but the protocol is intentionally simple and resistant to complex change.' },
+    bundling: { status: 'destroyed', note: 'Bitcoin is a single-purpose monetary protocol by design — bundling would undermine its simplicity and security guarantees.' },
+    proprietaryData: { status: 'strong', note: 'The Bitcoin blockchain is an immutable, cryptographically secured, tamper-proof record of all value transfers since 2009.' },
+    regulatoryLockIn: { status: 'strong', note: 'SEC ETF approvals, FASB accounting treatment, sovereign wealth fund adoption, and growing legal tender status in multiple nations.' },
+    networkEffects: { status: 'strong', note: 'The largest crypto network with 52.4M+ unique holders and the broadest institutional support — Metcalfe\'s Law compounding since 2009.' },
+    transactionEmbedding: { status: 'weakened', note: 'Bitcoin is primarily a store of value rather than a daily transaction medium; Layer 2 Lightning is growing but not yet embedded.' },
+    systemOfRecord: { status: 'strong', note: 'The original, most battle-tested, and most secure decentralized system of record — 15 years with zero successful protocol attacks.' },
+    aiResilienceScore: 76,
+    verdict: "Bitcoin\'s mathematical scarcity and decentralized consensus make it uniquely immune to AI disruption. No AI can inflate the supply, hack the network, or replicate the 15-year institutional trust-building.",
+  },
+  KNT: {
+    learnedInterfaces: { status: 'destroyed', note: 'Not applicable to underground gold mining operations in Papua New Guinea.' },
+    businessLogic: { status: 'weakened', note: 'AI is improving mine planning, drill pattern optimization, ore grade prediction, and processing efficiency across the industry.' },
+    publicDataAccess: { status: 'destroyed', note: 'Not applicable to K92\'s competitive moat in high-grade gold mining.' },
+    talentScarcity: { status: 'intact', note: 'Underground mining engineers, Papua New Guinea operational expertise, and high-grade ore processing specialists remain genuinely scarce.' },
+    bundling: { status: 'destroyed', note: 'Gold mining is a commodity operation — the product is fungible gold, not a bundled software or service offering.' },
+    proprietaryData: { status: 'intact', note: 'Kainantu mine geological survey data, ore body 3D models, and processing optimization data are proprietary operational assets.' },
+    regulatoryLockIn: { status: 'strong', note: 'PNG Special Mining Lease, government royalty agreements, environmental permits, and community agreements are near-impossible barriers to replicate.' },
+    networkEffects: { status: 'destroyed', note: 'Gold mining is a commodity business with no network effects — output is priced by global spot markets regardless of volume.' },
+    transactionEmbedding: { status: 'weakened', note: 'Gold sales are commodity transactions at spot price — K92 is a price-taker, not a price-maker, with limited embedding power.' },
+    systemOfRecord: { status: 'weakened', note: 'K92 is not a system of record in any meaningful strategic sense; value is in the ore body, not information systems.' },
+    aiResilienceScore: 42,
+    verdict: "K92\'s AI resilience is limited — only the PNG regulatory mining license and geological expertise provide durable competitive advantages. AI optimization could narrow cost advantages, but cannot replicate the ore body.",
+  },
+};
