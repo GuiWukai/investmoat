@@ -78,23 +78,24 @@ interface ScoreTab {
 
 export function ScoreTabsRow({ tabs, overallScore }: { tabs: ScoreTab[], overallScore?: number }) {
   const hasOverall = overallScore !== undefined;
-  const [active, setActive] = React.useState<number | 'overall'>(hasOverall ? 'overall' : 0);
+  const [active, setActive] = React.useState(0);
 
   return (
     <>
-      {/* Mobile: segmented tab strip */}
+      {/* Mobile */}
       <div className="md:hidden">
+        {/* Overall score always shown at top */}
+        {hasOverall && (
+          <div className="mb-4">
+            <ScoreGauge
+              score={overallScore!}
+              label="Overall Score"
+              description="Combined average of Moat, Growth & Valuation scores."
+            />
+          </div>
+        )}
+        {/* Tab strip for individual scores */}
         <div className="flex rounded-xl bg-white/5 p-1 mb-4">
-          {hasOverall && (
-            <button
-              onClick={() => setActive('overall')}
-              className={`flex-1 py-1.5 text-sm font-semibold rounded-lg transition-all ${
-                active === 'overall' ? 'bg-white/15 text-white' : 'text-white/40'
-              }`}
-            >
-              Overall
-            </button>
-          )}
           {tabs.map((tab, i) => (
             <button
               key={i}
@@ -107,16 +108,9 @@ export function ScoreTabsRow({ tabs, overallScore }: { tabs: ScoreTab[], overall
             </button>
           ))}
         </div>
-        {active === 'overall' && hasOverall && (
-          <ScoreGauge
-            score={overallScore!}
-            label="Overall Score"
-            description="Combined average of Moat, Growth & Valuation scores."
-          />
-        )}
-        {active !== 'overall' && tabs[active as number].gauge}
-        {active !== 'overall' && tabs[active as number].detail && (
-          <div className="mt-6 space-y-4">{tabs[active as number].detail}</div>
+        {tabs[active].gauge}
+        {tabs[active].detail && (
+          <div className="mt-6 space-y-4">{tabs[active].detail}</div>
         )}
       </div>
       {/* Desktop: side by side */}
