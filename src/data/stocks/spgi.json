@@ -1,0 +1,82 @@
+{
+  "slug": "spgi",
+  "ticker": "SPGI",
+  "name": "S&P Global",
+  "headerStats": [
+    { "label": "Ticker", "value": "SPGI" },
+    { "label": "Market Cap", "value": "$142B" },
+    { "label": "Price", "value": "$448.20" }
+  ],
+  "chips": [
+    { "label": "Financial Services", "color": "primary" },
+    { "label": "Oligopoly Moat", "color": "success" }
+  ],
+  "recommendation": "Hold",
+  "metrics": [
+    { "title": "Ratings Revenue", "value": "$3.4B", "label": "Recurring Market Lead", "icon": "Landmark", "color": "#cf102d" },
+    { "title": "EBITDA Margin", "value": "48.5%", "label": "Scalable Capital Markets", "icon": "TrendingUp", "color": "#3b82f6" },
+    { "title": "Dividend Growth", "value": "10%", "label": "Consistent 5yr CAGR", "icon": "Shield", "color": "#10b981" }
+  ],
+  "moat": {
+    "score": 88,
+    "description": "A global duopoly with Moody's in debt ratings. Regulatory and brand moat.",
+    "analysisTitle": "The Toll-Bridge Moat",
+    "analysisSummary": "S&P Global operates a **Financial Toll Bridge**:",
+    "analysisPoints": [
+      { "title": "Regulatory Oligopoly", "text": "You cannot issue global debt without a rating from S&P or Moody's. It is a legally-embedded requirement for institutional investors." },
+      { "title": "IP Moat", "text": "The S&P 500 brand is the most licensed index in the world. Asset managers pay SPGI every time a new ETF is created." },
+      { "title": "Low Capex", "text": "Once the rating methodologies and data platforms are built, every additional dollar of revenue flows straight to the bottom line." }
+    ]
+  },
+  "growth": {
+    "score": 78,
+    "description": "Index licensing (S&P 500) and ESG data integration."
+  },
+  "valuation": {
+    "score": 75,
+    "description": "Trading at a premium but justified by the 'toll bridge' business model."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$350",
+      "description": "Global debt issuance freezes and market data subscription churn.",
+      "points": [
+        "High interest rates kill new corporate bond issuance",
+        "Consolidation in the financial sector reduces terminal counts",
+        "ESG revenue faces political and regulatory backlash"
+      ]
+    },
+    "base": {
+      "priceTarget": "$480",
+      "description": "Steady 7-9% revenue growth and ratings recovery post-2024.",
+      "points": [
+        "Refinancing 'wall' leads to steady ratings demand",
+        "Index licensing grows with equity market appreciation",
+        "Operating margins remain above 45%"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$560",
+      "description": "Massive expansion into private market data and ESG dominance.",
+      "points": [
+        "Acquisition integration creates significant cost synergies",
+        "Private credit ratings become a standard requirement",
+        "Dividend growth re-accelerates to >15%"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": { "status": "weakened", "note": "Financial data terminal interfaces are being streamlined and commoditized by AI-powered analytics platforms." },
+    "businessLogic": { "status": "intact", "note": "Credit rating methodologies are proprietary, regulatory-recognized, and legally required — AI enhances but cannot replace the NRSRO designation." },
+    "publicDataAccess": { "status": "weakened", "note": "Some financial market data is becoming more accessible through open-source and alternative data providers." },
+    "talentScarcity": { "status": "intact", "note": "SEC-recognized credit analysts, regulatory relations specialists, and 160-year institutional knowledge cannot be replicated." },
+    "bundling": { "status": "intact", "note": "Credit Ratings + Market Intelligence + Platts Commodity Data + Mobility Data = a comprehensive financial intelligence bundle." },
+    "proprietaryData": { "status": "strong", "note": "160 years of credit ratings history, Platts energy commodity benchmarks, and proprietary financial data — legally embedded in markets." },
+    "regulatoryLockIn": { "status": "strong", "note": "SEC-recognized NRSRO status is a legal moat. Replicating this designation requires decades of track record and regulatory approval." },
+    "networkEffects": { "status": "strong", "note": "Credit ratings are network-critical — bond issuers MUST use NRSRO-recognized agencies; investors MUST reference them." },
+    "transactionEmbedding": { "status": "strong", "note": "S&P ratings are legally embedded in every major bond covenant, loan agreement, regulatory filing, and pension fund mandate." },
+    "systemOfRecord": { "status": "strong", "note": "The authoritative system of record for global credit risk — no alternative source carries the same legal and institutional weight." },
+    "aiResilienceScore": 88,
+    "verdict": "S&P Global's regulatory moat (NRSRO status) and role as the definitive system of record for credit risk makes them uniquely AI-resilient. AI disrupts analysis, not the legal requirement to use S&P ratings."
+  }
+}

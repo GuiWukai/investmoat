@@ -1,0 +1,82 @@
+{
+  "slug": "meta",
+  "ticker": "META",
+  "name": "Meta Platforms Inc.",
+  "headerStats": [
+    { "label": "Ticker", "value": "META" },
+    { "label": "Market Cap", "value": "$1.25T" },
+    { "label": "Current Price", "value": "$492.30" }
+  ],
+  "chips": [
+    { "label": "Communication Services | AI", "color": "primary" },
+    { "label": "Quality Yield", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    { "title": "Daily Active People", "value": "3.24B", "label": "Family of Apps (7% YoY)", "icon": "Users", "color": "#1877F2" },
+    { "title": "Ad Impressions", "value": "+21%", "label": "Sustained CPM growth", "icon": "Share2", "color": "#050505" },
+    { "title": "Capex (AI)", "value": "$35B", "label": "Infrastructure investment", "icon": "Cpu", "color": "#3b82f6" }
+  ],
+  "moat": {
+    "score": 68,
+    "description": "Unrivaled social network effect and massive proprietary data for AI training.",
+    "analysisTitle": "The Advertising Moat",
+    "analysisSummary": "Meta's moat is built on **Attention and Data**:",
+    "analysisPoints": [
+      { "title": "Social Graph Network Effect", "text": "Every new user on Instagram or WhatsApp increases the value for existing users. Breaking this flywheel requires a multi-billion person migration." },
+      { "title": "AI Content Flywheel", "text": "AI-driven recommendations are significantly increasing time-spent on Reels, which directly translates to more ad-inventory." },
+      { "title": "Vertical Integration of AI", "text": "By owning the compute, the models (Llama), and the distribution (FB/IG), Meta controls the entire AI value chain." }
+    ]
+  },
+  "growth": {
+    "score": 85,
+    "description": "Advancements in Llama AI and monetization of Reels/Threads."
+  },
+  "valuation": {
+    "score": 65,
+    "description": "Attractive P/E relative to growth, but high capex intensive."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$380",
+      "description": "Regulatory fines and a shift in user engagement to newer platforms.",
+      "points": [
+        "EU privacy laws severely impact targeting precision",
+        "Reality Labs losses exceed $20B annually",
+        "Ad-market recession hits digital spend"
+      ]
+    },
+    "base": {
+      "priceTarget": "$520",
+      "description": "Steady ad-revenue growth and AI-driven efficiency gains.",
+      "points": [
+        "Ad revenue grows 12-15% annually",
+        "Reels monetization achieves parity with Feed",
+        "Share buybacks continue at $50B+ clip"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$650",
+      "description": "Llama becomes the industry standard and WhatsApp monetization explodes.",
+      "points": [
+        "WhatsApp business messaging becomes a $10B high-margin pillar",
+        "Generative AI ad-creation tools lower barriers for small biz",
+        "Reality Labs reaches an 'iPhone moment' with AR glasses"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": { "status": "weakened", "note": "Social media UI patterns are easily copied — TikTok proved that consumer interfaces are not a durable moat." },
+    "businessLogic": { "status": "weakened", "note": "Ad targeting algorithms are being commoditized; Apple ATT weakened Meta's behavioral logic advantage significantly." },
+    "publicDataAccess": { "status": "destroyed", "note": "Open Graph API restrictions and GDPR have dismantled the public social data access advantage." },
+    "talentScarcity": { "status": "destroyed", "note": "AI tools have made social content creation, ad management, and campaign optimization accessible to small teams." },
+    "bundling": { "status": "weakened", "note": "Instagram + Facebook + WhatsApp is a bundle, but users freely hop between apps — no forced adoption." },
+    "proprietaryData": { "status": "strong", "note": "3B+ users' social graph, behavioral patterns, and relationship data is genuinely irreplaceable — the richest consumer dataset on Earth." },
+    "regulatoryLockIn": { "status": "weakened", "note": "GDPR and EU Digital Markets Act are actively constraining data monetization and cross-app data sharing." },
+    "networkEffects": { "status": "strong", "note": "The social graph itself IS the product — 3 billion users and their connections cannot be replicated by a new entrant in a decade." },
+    "transactionEmbedding": { "status": "intact", "note": "WhatsApp Pay, Marketplace, and Meta Pay represent growing embedded commerce layers across messaging and social platforms." },
+    "systemOfRecord": { "status": "intact", "note": "Facebook remains the social identity record and event management system for billions of users globally." },
+    "aiResilienceScore": 68,
+    "verdict": "Meta's social graph network effect remains formidable, but regulatory headwinds on data monetization and the commoditization of ad-targeting logic are genuine threats to their AI-resilient advantages."
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "slug": "tesla",
+  "ticker": "TSLA",
+  "name": "Tesla Inc.",
+  "headerStats": [
+    { "label": "Ticker", "value": "TSLA" },
+    { "label": "Market Cap", "value": "$560B" },
+    { "label": "Price", "value": "$175.20" }
+  ],
+  "chips": [
+    { "label": "Automotive | Energy", "color": "warning" },
+    { "label": "Growth Pioneer", "color": "primary" }
+  ],
+  "recommendation": "Hold",
+  "metrics": [
+    { "title": "Vehicle Deliveries", "value": "1.81M", "label": "Trailing 12 Months", "icon": "Car", "color": "#cc0000" },
+    { "title": "Energy Storage", "value": "14.7 GWh", "label": "125% YoY Growth", "icon": "Battery", "color": "#10b981" },
+    { "title": "FSD Miles", "value": "1.3B+", "label": "Data Advantage", "icon": "Cpu", "color": "#3b82f6" }
+  ],
+  "moat": {
+    "score": 74,
+    "description": "Vertical integration and massive manufacturing cost advantages.",
+    "analysisTitle": "The Vertical Integration Moat",
+    "analysisSummary": "Tesla's moat isn't just \"selling cars\", it's **Manufacturing Complexity**:",
+    "analysisPoints": [
+      { "title": "Cost Advantage", "text": "From battery chem to casting machines, Tesla's unit cost for EVs is unmatched by legacy OEMs." },
+      { "title": "Data Flywheel", "text": "Millions of cars on the road feeding data into Tesla's AI Dojo training cluster creates a gap in autonomous software." },
+      { "title": "Brand Authority", "text": "Zero marketing spend with 100% brand recognition creates a unique customer acquisition advantage." }
+    ]
+  },
+  "growth": {
+    "score": 89,
+    "description": "Robotics (Optimus) and energy storage are the next 10x frontier."
+  },
+  "valuation": {
+    "score": 55,
+    "description": "High P/E reflects optionality, but core auto margins are pressured."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$100",
+      "description": "EV margins continue to slide and FSD timeline is pushed indefinitely.",
+      "points": [
+        "Auto gross margins fall below 12%",
+        "Competition from BYD/Xiaomi erodes China share",
+        "Robotaxi regulatory hurdles remain insurmountable"
+      ]
+    },
+    "base": {
+      "priceTarget": "$220",
+      "description": "Stabilizing margins and high growth in Energy Storage offset EV cyclicality.",
+      "points": [
+        "Next-gen platform ('Model 2') enters production",
+        "Energy storage deployment grows 100% YoY",
+        "FSD licensing talks with major OEMs begin"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$450",
+      "description": "Robotaxi network launch and Optimus robotics production readiness.",
+      "points": [
+        "Software revenue becomes >30% of total EBIT",
+        "Unsupervised FSD approved in major US cities",
+        "Tesla Energy becomes as large as the Auto business"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": { "status": "weakened", "note": "EV touchscreen interface design is being replicated by BYD, Rivian, and legacy OEMs — no longer unique." },
+    "businessLogic": { "status": "destroyed", "note": "Not applicable as a primary competitive moat in automotive manufacturing." },
+    "publicDataAccess": { "status": "destroyed", "note": "Not applicable to Tesla's competitive advantage framework." },
+    "talentScarcity": { "status": "intact", "note": "Battery chemistry expertise, Gigafactory manufacturing know-how, and FSD AI/ML talent remain genuinely scarce and hard to recruit." },
+    "bundling": { "status": "strong", "note": "EV + FSD Software + Energy Storage + Supercharging + Insurance + Service = a vertical integration bundle no OEM has replicated." },
+    "proprietaryData": { "status": "strong", "note": "1.3B+ FSD real-world driving miles, energy grid optimization data, and vehicle telemetry = the largest real-world AI training dataset." },
+    "regulatoryLockIn": { "status": "intact", "note": "Supercharger NACS standard adopted by Ford/GM/Rivian, federal EV incentives, and energy storage grid contracts." },
+    "networkEffects": { "status": "intact", "note": "Supercharger network flywheel and fleet-wide FSD data aggregation create compounding advantages with every new Tesla sold." },
+    "transactionEmbedding": { "status": "strong", "note": "OTA updates, FSD subscriptions, Powerwall energy management, and insurance are embedded in the daily life of Tesla owners." },
+    "systemOfRecord": { "status": "intact", "note": "Tesla is the definitive reference standard for EVs, autonomous driving, and energy storage technology." },
+    "aiResilienceScore": 74,
+    "verdict": "Tesla's real-world autonomous driving data flywheel is a genuinely AI-resilient moat. The key risk: whether deep-pocketed OEMs can close the data gap before FSD achieves full commercialization."
+  }
+}
