@@ -1,0 +1,95 @@
+{
+  "slug": "amazon",
+  "ticker": "AMZN",
+  "name": "Amazon.com Inc.",
+  "headerStats": [
+    { "label": "Ticker", "value": "AMZN" },
+    { "label": "Market Cap", "value": "$1.92T" },
+    { "label": "Price", "value": "$185.20" }
+  ],
+  "chips": [
+    { "label": "Consumer Discretionary | Tech", "color": "primary" },
+    { "label": "Strong Buy", "color": "success" }
+  ],
+  "recommendation": "Strong Buy",
+  "metrics": [
+    { "title": "Revenue Growth", "value": "13.2%", "label": "YoY vs 11.5% Industry", "icon": "ShoppingCart", "color": "#f59e0b" },
+    { "title": "AWS Margin", "value": "31.8%", "label": "Best-in-class profitability", "icon": "Cloud", "color": "#006fee" },
+    { "title": "Free Cash Flow", "value": "$50.1B", "label": "TTM Expansion +400%", "icon": "DollarSign", "color": "#17c964" }
+  ],
+  "moat": {
+    "score": 80,
+    "description": "Dominant scale, switching costs (Prime), and cost advantage (Logistics).",
+    "analysisTitle": "The Economic Moat",
+    "analysisSummary": "Amazon possesses a **Wide Economic Moat** driven by three primary pillars:",
+    "analysisPoints": [
+      { "title": "Cost Advantage", "text": "Its massive fulfillment infrastructure creates unit costs that no competitor can match, allowing for faster delivery and lower prices." },
+      { "title": "Switching Costs", "text": "The Prime ecosystem locks in consumers. Once a household is integrated into Prime, the convenience makes shopping elsewhere a \"costly\" friction." },
+      { "title": "Network Effect", "text": "The 3rd party marketplace creates a flywheel where more sellers attract more buyers, which attracts more sellers." }
+    ]
+  },
+  "growth": {
+    "score": 88,
+    "description": "Cloud (AWS) and Advertising continue to outpace e-commerce growth.",
+    "additionalNote": {
+      "title": "Financial Outlook",
+      "points": [
+        "Generative AI demand driving AWS infrastructure refresh.",
+        "Ad revenue margin expansion exceeding retail growth.",
+        "International retail segments turning profitable."
+      ]
+    }
+  },
+  "valuation": {
+    "score": 72,
+    "description": "Trading at 14x forward Cash Flow, slightly above historical mean.",
+    "valuationNote": {
+      "text": "Using a 10-year DCF with a 9% WACC and a 3.5% terminal growth rate, our fair value estimate for AMZN is",
+      "fairValue": "$215/share",
+      "marginOfSafety": "14%"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$140",
+      "description": "Macro slowdown hits consumer spending and AWS margins compress.",
+      "points": [
+        "E-commerce growth falls below 5%",
+        "AWS revenue decelerates to mid-teens",
+        "Regulatory pressure on marketplace fees"
+      ]
+    },
+    "base": {
+      "priceTarget": "$210",
+      "description": "Continued efficiency gains in fulfillment and steady AWS growth.",
+      "points": [
+        "AWS growth stays in 17-20% range",
+        "Advertising revenue remains major margin driver",
+        "International retail reaches sustainable profit"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$265",
+      "description": "AI demand triggers massive AWS expansion and logistics monetization.",
+      "points": [
+        "AWS growth re-accelerates above 25%",
+        "Logistics-as-a-service becomes 4th pillar",
+        "Massive FCF generation leads to buybacks"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": { "status": "weakened", "note": "Alexa voice interface and AWS console are table stakes easily replicated; not a durable differentiator." },
+    "businessLogic": { "status": "weakened", "note": "AI is commoditizing logistics routing and retail recommendation logic that once required years to build." },
+    "publicDataAccess": { "status": "destroyed", "note": "Amazon's public product catalog data is no longer a defensible competitive advantage." },
+    "talentScarcity": { "status": "weakened", "note": "AWS cloud operations require fewer skilled human operators thanks to AI-powered automation." },
+    "bundling": { "status": "strong", "note": "Prime bundle (shipping + video + music + Alexa + Pharmacy + Gaming) is deeply differentiated and drives 200M+ loyalty." },
+    "proprietaryData": { "status": "strong", "note": "Purchase intent data, AWS usage telemetry, and last-mile logistics operational data are genuinely irreplaceable." },
+    "regulatoryLockIn": { "status": "strong", "note": "AWS GovCloud, DoD JEDI, HIPAA, FedRAMP, and financial services compliance create enormous switching friction." },
+    "networkEffects": { "status": "strong", "note": "Marketplace two-sided flywheel: more buyers → more sellers → better selection → more buyers. Self-reinforcing." },
+    "transactionEmbedding": { "status": "strong", "note": "1-click purchasing habits, Prime subscription, and AWS embedded in the infrastructure of the global internet." },
+    "systemOfRecord": { "status": "strong", "note": "AWS is the system of record for global cloud infrastructure; S3 stores more data than any competitor by a wide margin." },
+    "aiResilienceScore": 80,
+    "verdict": "Amazon's moats are overwhelmingly AI-resilient: proprietary purchase data, AWS infrastructure lock-in, and the marketplace network flywheel are core strengths that AI cannot easily replicate."
+  }
+}

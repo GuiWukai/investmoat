@@ -1,0 +1,82 @@
+{
+  "slug": "nflx",
+  "ticker": "NFLX",
+  "name": "Netflix Inc.",
+  "headerStats": [
+    { "label": "Ticker", "value": "NFLX" },
+    { "label": "Market Cap", "value": "$265B" },
+    { "label": "Price", "value": "$612.40" }
+  ],
+  "chips": [
+    { "label": "Tech | Media", "color": "primary" },
+    { "label": "Scaling Leader", "color": "success" }
+  ],
+  "recommendation": "Hold",
+  "metrics": [
+    { "title": "Paid Members", "value": "270M", "label": "Global Scale", "icon": "Users", "color": "#e50914" },
+    { "title": "FCF Generation", "value": "$6.5B", "label": "Expected 2024", "icon": "TrendingUp", "color": "#10b981" },
+    { "title": "Content Spend", "value": "$17B", "label": "Annual Budget", "icon": "Play", "color": "#3b82f6" }
+  ],
+  "moat": {
+    "score": 63,
+    "description": "Massive scale allows for better unit economics on content than any competitor.",
+    "analysisTitle": "The Scale Moat",
+    "analysisSummary": "Netflix's advantage is its **Content Efficiency**:",
+    "analysisPoints": [
+      { "title": "Unit Economics of Joy", "text": "With 270M subs, a $100M show costs Netflix $0.37 per subscriber. For a competitor with 50M subs, that same show costs $2.00. This is the ultimate barrier." },
+      { "title": "Data Flywheel", "text": "Their recommendation engine reduces churn and ensures that content spend is targeted at the highest-probability hits." },
+      { "title": "Global Reach", "text": "Unlike US-centric platforms, Netflix is truly global, with local language content driving growth in EMEA, APAC, and LATAM." }
+    ]
+  },
+  "growth": {
+    "score": 88,
+    "description": "Ad-tier expansion and paid sharing crackdown continue to drive ARPU and sub growth."
+  },
+  "valuation": {
+    "score": 52,
+    "description": "Trading at 35x P/E, requires high execution on ad-revenue targets."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$450",
+      "description": "Ad-tier adoption cannibalizes higher price plans and churn rises.",
+      "points": [
+        "ARM (Average Revenue per Member) growth stagnates",
+        "Major competitors (YouTube/Disney) win more 'watch time' share",
+        "Increase in content production costs due to inflation"
+      ]
+    },
+    "base": {
+      "priceTarget": "$680",
+      "description": "Successful monetization of ad-tier and steady subscriber gains.",
+      "points": [
+        "Ad-revenue becomes a meaningful 10% portion of total top-line",
+        "Operating margins expand beyond 25% target",
+        "Continued success in non-English content exports"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$850",
+      "description": "Netflix becomes the default 'Live TV' replacement including sports.",
+      "points": [
+        "Live sports (WWE/NFL) drive a new massive wave of ad-inventory",
+        "Gaming integration leads to material improvement in churn and engagement",
+        "ARM exceeds $20 in core US/EU markets"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": { "status": "weakened", "note": "Streaming UI/UX patterns are easily replicated by Disney+, Max, Apple TV+ — interface is not a differentiator." },
+    "businessLogic": { "status": "weakened", "note": "Content recommendation algorithms are being commoditized by AI across competing streaming platforms." },
+    "publicDataAccess": { "status": "destroyed", "note": "Content metadata and ratings data are widely available through public APIs and third-party providers." },
+    "talentScarcity": { "status": "weakened", "note": "AI is reducing the talent barrier for content localization, subtitling, VFX, and post-production operations." },
+    "bundling": { "status": "intact", "note": "Content + Platform + Live Events + Gaming = an increasingly differentiated entertainment bundle with 270M subscribers." },
+    "proprietaryData": { "status": "strong", "note": "Viewing patterns for 270M subscribers = unmatched content performance data for greenlight decisions — a genuine data moat." },
+    "regulatoryLockIn": { "status": "weakened", "note": "No significant regulatory protection; content licensing rules vary by market but provide no durable government moat." },
+    "networkEffects": { "status": "intact", "note": "Shared viewing culture, social viewing moments, and household account habits create community-level dependency." },
+    "transactionEmbedding": { "status": "intact", "note": "Monthly subscription embedded in household entertainment budgets globally with high inertia and low churn." },
+    "systemOfRecord": { "status": "intact", "note": "Netflix is the cultural reference point for quality streaming and original content globally." },
+    "aiResilienceScore": 63,
+    "verdict": "Netflix's proprietary viewing data and content investment flywheel give them a genuine data moat, but the absence of regulatory lock-in and the commoditization of interfaces limit their AI resilience score."
+  }
+}

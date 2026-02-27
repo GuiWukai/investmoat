@@ -1,0 +1,82 @@
+{
+  "slug": "msft",
+  "ticker": "MSFT",
+  "name": "Microsoft Corp.",
+  "headerStats": [
+    { "label": "Ticker", "value": "MSFT" },
+    { "label": "Market Cap", "value": "$3.1T" },
+    { "label": "Price", "value": "$415.50" }
+  ],
+  "chips": [
+    { "label": "Software | Cloud | AI", "color": "primary" },
+    { "label": "Gold Standard", "color": "success" }
+  ],
+  "recommendation": "Strong Buy",
+  "metrics": [
+    { "title": "Azure Growth", "value": "30%", "label": "Constant Currency (Q4)", "icon": "Cloud", "color": "#00a4ef" },
+    { "title": "Office 365", "value": "400M", "label": "Commercial Seats", "icon": "Laptop", "color": "#ffb900" },
+    { "title": "Operating Margin", "value": "44.2%", "label": "Unmatched Efficiency", "icon": "Database", "color": "#7fba00" }
+  ],
+  "moat": {
+    "score": 84,
+    "description": "Total enterprise ubiquity and the strongest bundling power in software history.",
+    "analysisTitle": "The Enterprise Moat",
+    "analysisSummary": "Microsoft's moat is built on **Ubiquity and Frictionless Scaling**:",
+    "analysisPoints": [
+      { "title": "The Bundle Moat", "text": "By integrating Office, Teams, Azure, and Security, Microsoft creates a \"sticky\" ecosystem where selecting a competitor point-product adds more complexity than value." },
+      { "title": "Commercial Switching Costs", "text": "Migrating a global enterprise away from the Active Directory and Office environment is an IT operation that takes years and carries immense risk." },
+      { "title": "First-Mover AI Advantage", "text": "The partnership with OpenAI has allowed Microsoft to productize AI faster than any peer, securing early market share." }
+    ]
+  },
+  "growth": {
+    "score": 92,
+    "description": "AI Copilot integration and Azure AI services are driving massive upsell."
+  },
+  "valuation": {
+    "score": 68,
+    "description": "Trading at 32x forward P/E, premium but fair for the quality."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$350",
+      "description": "Azure growth decelerates faster than expected and margins compress.",
+      "points": [
+        "Azure growth falls below 20%",
+        "Regulatory hurdles in AI and Cloud dominance",
+        "Cybersecurity breach impacts enterprise trust"
+      ]
+    },
+    "base": {
+      "priceTarget": "$450",
+      "description": "Steady 15% revenue growth and successful Copilot monetization.",
+      "points": [
+        "Copilot achieves 20% penetration of commercial seats",
+        "Azure AI revenues contribute 500+ bps to growth",
+        "Dividend growth continues at 10%+"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$550",
+      "description": "Azure becomes the undisputed AI backbone of the global economy.",
+      "points": [
+        "Azure re-accelerates to 35%+ growth",
+        "Gaming (Activision) delivers massive synergetic margins",
+        "Successful expansion into Sovereign AI clouds"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": { "status": "weakened", "note": "Copilot abstracts traditional Office UI, but enterprise muscle-memory and training investment remain entrenched." },
+    "businessLogic": { "status": "intact", "note": "Azure's AI platform IS the new business logic layer for enterprises — Microsoft is the provider, not the victim." },
+    "publicDataAccess": { "status": "destroyed", "note": "Bing search advantage commoditized; OpenAI partnership is table stakes, not a unique differentiator." },
+    "talentScarcity": { "status": "weakened", "note": "GitHub Copilot raises developer productivity, reducing reliance on rare senior engineering talent." },
+    "bundling": { "status": "strong", "note": "Office + Teams + Azure + Security + Copilot bundle is strengthened by AI integration, not weakened." },
+    "proprietaryData": { "status": "strong", "note": "Azure telemetry, LinkedIn social graph, and GitHub code corpus are unrivaled enterprise data assets." },
+    "regulatoryLockIn": { "status": "strong", "note": "JEDI/DoD contracts, FedRAMP High, HIPAA, and government cloud compliance create irreplaceable switching costs." },
+    "networkEffects": { "status": "strong", "note": "400M Office commercial seats and the Azure developer ecosystem compound with every new user." },
+    "transactionEmbedding": { "status": "strong", "note": "Embedded in every enterprise workflow: procurement, finance, HR, legal, and collaboration." },
+    "systemOfRecord": { "status": "strong", "note": "Active Directory controls identity, SharePoint holds documents, Dynamics owns CRM — the enterprise OS." },
+    "aiResilienceScore": 84,
+    "verdict": "Microsoft's AI-vulnerable bundling moat is offset by an unmatched enterprise data fortress and system-of-record dominance. AI integration strengthens, not threatens, their position."
+  }
+}

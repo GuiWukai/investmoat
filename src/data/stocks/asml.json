@@ -1,0 +1,82 @@
+{
+  "slug": "asml",
+  "ticker": "ASML",
+  "name": "ASML Holding",
+  "headerStats": [
+    { "label": "Ticker", "value": "ASML" },
+    { "label": "Market Cap", "value": "$380B" },
+    { "label": "Price", "value": "$945.80" }
+  ],
+  "chips": [
+    { "label": "Semiconductors | Lithography", "color": "primary" },
+    { "label": "Monopoly Moat", "color": "success" }
+  ],
+  "recommendation": "Strong Buy",
+  "metrics": [
+    { "title": "EUV Monopoly", "value": "100%", "label": "Market Share", "icon": "Target", "color": "#00a1e0" },
+    { "title": "Gross Margin", "value": "51.3%", "label": "Sustained High Quality", "icon": "Zap", "color": "#17c964" },
+    { "title": "R&D Intensity", "value": "€4.0B", "label": "Annual Investment", "icon": "Cpu", "color": "#3b82f6" }
+  ],
+  "moat": {
+    "score": 94,
+    "description": "The only company in the world capable of producing EUV machines required for <7nm chips.",
+    "analysisTitle": "The Strategic Bottleneck Moat",
+    "analysisSummary": "ASML is the **Sole Provider** of the world's most complex machines:",
+    "analysisPoints": [
+      { "title": "EUV Monopoly", "text": "Extreme Ultraviolet (EUV) lithography is required for every advanced chip from Apple, Nvidia, and Intel. ASML is the only company that can build them." },
+      { "title": "Technological Barrier", "text": "Developing EUV took 20+ years and billions in funding. A competitor would need decades to catch up." },
+      { "title": "Service Ecosystem", "text": "Once a machine is installed (costing $200M+), ASML generates recurring service revenue for 20+ years." }
+    ]
+  },
+  "growth": {
+    "score": 85,
+    "description": "Moore's Law continues to drive demand for High-NA EUV and increased wafer capacity."
+  },
+  "valuation": {
+    "score": 72,
+    "description": "High multiple but justified by being the bottleneck of the entire AI economy."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$750",
+      "description": "Geopolitical restrictions on China revenue tighten further.",
+      "points": [
+        "Banning of older DUV machine exports to China",
+        "Slowdown in capacity expansion from major foundries (TSMC/Intel/Samsung)",
+        "Cyclical downturn in consumer electronics demand"
+      ]
+    },
+    "base": {
+      "priceTarget": "$1,100",
+      "description": "Continued 2nm/3nm capacity buildout and High-NA rollout.",
+      "points": [
+        "Successful scaling of High-NA EUV production",
+        "China revenue stabilized at lower but steady levels",
+        "Consistent 15%+ EPS growth"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$1,400",
+      "description": "Massive acceleration in global foundry building (Sovereign Foundries).",
+      "points": [
+        "Nations building domestic chip capacity significantly increases demand",
+        "AI-driven demand for HBM and advanced logic exceeds all forecasts",
+        "Substantial margin expansion from 'high-end' product mix shift"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": { "status": "destroyed", "note": "Not applicable — ASML sells precision lithography hardware to chip fabricators, not UI-based software." },
+    "businessLogic": { "status": "destroyed", "note": "Not applicable to extreme ultraviolet lithography physics and optics manufacturing." },
+    "publicDataAccess": { "status": "destroyed", "note": "Not applicable to this hardware monopoly business model." },
+    "talentScarcity": { "status": "strong", "note": "EUV optics engineers, plasma physicists, and precision mechatronic specialists are among the scarcest people on Earth — AI cannot replicate them." },
+    "bundling": { "status": "strong", "note": "Full EUV system bundle: laser light source + optics + scanner + metrology + software + service = inseparable, multi-year integration." },
+    "proprietaryData": { "status": "strong", "note": "30+ years of machine performance data from every chip fab run generates yield-optimization intelligence no competitor can replicate." },
+    "regulatoryLockIn": { "status": "strong", "note": "Dutch export-controlled technology requires government approval per sale; TSMC/Samsung/Intel dependency = state-protected monopoly." },
+    "networkEffects": { "status": "intact", "note": "Deep co-development partnerships with TSMC, Samsung, and Intel create mutual IP dependency and long-term co-investment." },
+    "transactionEmbedding": { "status": "strong", "note": "ASML EUV machines run 24/7 inside fabs generating the chips the world runs on — there is no alternative mid-production-cycle." },
+    "systemOfRecord": { "status": "strong", "note": "Sole supplier of EUV lithography — ASML IS the system of record for cutting-edge semiconductor manufacturing globally." },
+    "aiResilienceScore": 94,
+    "verdict": "ASML is the most AI-resilient company in the portfolio. Physical hardware monopolies, regulatory protection, and manufacturing expertise rooted in physics cannot be disrupted by software AI — ever."
+  }
+}

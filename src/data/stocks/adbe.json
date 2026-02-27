@@ -1,0 +1,82 @@
+{
+  "slug": "adbe",
+  "ticker": "ADBE",
+  "name": "Adobe Inc.",
+  "headerStats": [
+    { "label": "Ticker", "value": "ADBE" },
+    { "label": "Market Cap", "value": "$215B" },
+    { "label": "Price", "value": "$482.50" }
+  ],
+  "chips": [
+    { "label": "SaaS | Creative", "color": "primary" },
+    { "label": "Quality Compounder", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    { "title": "Digital Media ARR", "value": "$15.7B", "label": "Recurring Powerhouse", "icon": "PenTool", "color": "#ff0000" },
+    { "title": "Gross Margin", "value": "87.8%", "label": "Software Dominance", "icon": "Zap", "color": "#f7b600" },
+    { "title": "Creative Cloud Users", "value": "30M+", "label": "Market Standard", "icon": "Image", "color": "#3b82f6" }
+  ],
+  "moat": {
+    "score": 58,
+    "description": "The Creative Cloud is the global industry standard for design, photo, and video.",
+    "analysisTitle": "The Creative Standard Moat",
+    "analysisSummary": "Adobe's moat is built on **Network Effects and Professional Reliance**:",
+    "analysisPoints": [
+      { "title": "Industry Standard", "text": "Photoshop, Premiere, and Illustrator are taught in universities. Hiring a designer means hiring someone who speaks \"Adobe.\"" },
+      { "title": "Firefly AI Advantage", "text": "Adobe's AI is trained on licensed content (Adobe Stock), making it safe for commercial use — a critical differentiator for enterprise clients." },
+      { "title": "Document Cloud", "text": "Acrobat and PDF standards create a separate, massive moat in professional and business workflows." }
+    ]
+  },
+  "growth": {
+    "score": 82,
+    "description": "Generative AI (Firefly) integration driving higher tiers and retention."
+  },
+  "valuation": {
+    "score": 64,
+    "description": "Reasonable multiple for a company with 30%+ net margins."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$380",
+      "description": "AI disruption from startups (Midjourney/Canva) erodes the 'low-end' market.",
+      "points": [
+        "New ARR growth slows to single digits",
+        "Pricing pressure from 'good enough' AI tools",
+        "Integration of Figma-replacement features fails to gain traction"
+      ]
+    },
+    "base": {
+      "priceTarget": "$550",
+      "description": "Successful Firefly monetization and steady enterprise upgrades.",
+      "points": [
+        "Firefly adoption increases Creative Cloud ARPU by 5-8%",
+        "Document Cloud continues to grow at high double digits",
+        "Operating margins remain above 45% (non-GAAP)"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$680",
+      "description": "Adobe becomes the default generative AI platform for the enterprise.",
+      "points": [
+        "AI credit consumption drives massive revenue upside",
+        "Complete automation of creative workflows attracts mass-market users",
+        "Strategic partnership with major social media / ad platforms"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": { "status": "weakened", "note": "Generative AI tools (Midjourney, DALL-E, Canva AI) are democratizing design — Adobe's UI complexity was once a barrier now eroding." },
+    "businessLogic": { "status": "weakened", "note": "AI is automating routine creative tasks (background removal, color grading, layout) that drove Adobe's professional value proposition." },
+    "publicDataAccess": { "status": "weakened", "note": "Adobe Stock's licensed imagery advantage is challenged by AI-generated imagery platforms that require no stock photos." },
+    "talentScarcity": { "status": "destroyed", "note": "AI has dramatically lowered the barrier to professional-quality design, video editing, and document creation." },
+    "bundling": { "status": "weakened", "note": "Creative Cloud bundle faces pressure from AI-native point solutions (Figma AI, Canva AI) that are simpler and cheaper." },
+    "proprietaryData": { "status": "strong", "note": "Adobe Firefly trained exclusively on licensed Adobe Stock = ethically sourced, legally protected generative AI training data." },
+    "regulatoryLockIn": { "status": "intact", "note": "Government and enterprise compliance for digital signatures (Adobe Sign/Acrobat Pro) and PDF standards remains intact." },
+    "networkEffects": { "status": "intact", "note": "PDF format dominance and the global creative professional community's standardization on Creative Cloud tools." },
+    "transactionEmbedding": { "status": "intact", "note": "Monthly Creative Cloud subscriptions deeply embedded in creative professional and enterprise marketing workflows." },
+    "systemOfRecord": { "status": "intact", "note": "PDF/Acrobat is the global document standard; the immovable system of record for contracts, reports, and official documents." },
+    "aiResilienceScore": 58,
+    "verdict": "Adobe faces the most direct AI threat to AI-vulnerable moats in the portfolio. Its survival thesis rests on Firefly's proprietary training data and the PDF/document system-of-record — both genuinely durable."
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "slug": "visa",
+  "ticker": "V",
+  "name": "Visa Inc.",
+  "headerStats": [
+    { "label": "Ticker", "value": "V" },
+    { "label": "Market Cap", "value": "$550B" },
+    { "label": "Price", "value": "$282.10" }
+  ],
+  "chips": [
+    { "label": "Financial Services", "color": "primary" },
+    { "label": "Wide Moat", "color": "success" }
+  ],
+  "recommendation": "Strong Buy",
+  "metrics": [
+    { "title": "Payment Volume", "value": "$15.1T", "label": "Trailing 12 Months", "icon": "DollarSign", "color": "#1a1f71" },
+    { "title": "Operating Margin", "value": "67.2%", "label": "Incredible Scalability", "icon": "Zap", "color": "#f7b600" },
+    { "title": "Countries", "value": "200+", "label": "Global Acceptance", "icon": "Globe", "color": "#3b82f6" }
+  ],
+  "moat": {
+    "score": 90,
+    "description": "The world's largest payment network with massive barriers to entry and network effects.",
+    "analysisTitle": "The Duopoly Moat",
+    "analysisSummary": "Visa operates a **Global Toll Bridge** for commerce:",
+    "analysisPoints": [
+      { "title": "Network Effect", "text": "More merchants accept Visa because more consumers carry the card. More consumers carry the card because more merchants accept it. A classic winner-take-all flywheel." },
+      { "title": "High Barriers to Entry", "text": "The infrastructure required to process 250+ billion transactions annually with zero downtime is nearly impossible to replicate." },
+      { "title": "Operating Leverage", "text": "Once code is written, an additional transaction costs virtually nothing, leading to industry-leading margins." }
+    ]
+  },
+  "growth": {
+    "score": 82,
+    "description": "Ongoing shift from cash to digital and expansion into B2B payments."
+  },
+  "valuation": {
+    "score": 75,
+    "description": "Trading at 28x forward P/E, reasonable for a consistent 15%+ EPS compounder."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$240",
+      "description": "Global recession leads to cross-border travel slump and lower consumer spending.",
+      "points": [
+        "Cross-border volume growth slows to low single digits",
+        "Regulatory caps on interchange fees in major markets",
+        "Adoption of government-led real-time payment rails"
+      ]
+    },
+    "base": {
+      "priceTarget": "$320",
+      "description": "Steady growth in PCE and continued digitization of payments.",
+      "points": [
+        "International volume grows 10-12%",
+        "Value-added services revenue grows 20%+",
+        "Consistent 10%+ dividend growth"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$380",
+      "description": "B2B and 'Visa Direct' capture massive share of non-card payments.",
+      "points": [
+        "Successful expansion into account-to-account payments",
+        "Major reduction in operating expenses via AI automation",
+        "New cross-border corridors open in emerging markets"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": { "status": "destroyed", "note": "Card terminals and payment apps are commodity interfaces — Visa's moat is not the interface layer." },
+    "businessLogic": { "status": "weakened", "note": "AI-native payment routing could theoretically allow merchants to bypass traditional card network rails in some corridors." },
+    "publicDataAccess": { "status": "destroyed", "note": "Not a competitive advantage for Visa's business model." },
+    "talentScarcity": { "status": "destroyed", "note": "Not a meaningful source of competitive advantage for a payment network." },
+    "bundling": { "status": "weakened", "note": "Card product bundles (rewards + credit) face competition from fintech-native alternatives like BNPL and real-time rails." },
+    "proprietaryData": { "status": "strong", "note": "$15T+ in annual transaction data provides unmatched real-time fraud intelligence, merchant analytics, and economic insights." },
+    "regulatoryLockIn": { "status": "strong", "note": "Bank card association memberships, PCI compliance infrastructure, and regulatory approval in 200+ countries is a decades-long moat." },
+    "networkEffects": { "status": "strong", "note": "The quintessential two-sided network: 4.3B Visa cards × 130M merchant locations. More merchants → more cardholders → more merchants." },
+    "transactionEmbedding": { "status": "strong", "note": "Visa IS the transaction infrastructure — embedded in every point-of-sale, online checkout, and cross-border payment globally." },
+    "systemOfRecord": { "status": "strong", "note": "The global payment ledger and cardholder identity verification system trusted by every bank in 200+ countries." },
+    "aiResilienceScore": 90,
+    "verdict": "Visa is among the most AI-resilient companies in the portfolio. Their moat lives entirely in AI-resistant categories: network effects, transaction embedding, and regulatory infrastructure that took decades to build."
+  }
+}

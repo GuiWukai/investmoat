@@ -1,0 +1,82 @@
+{
+  "slug": "nvda",
+  "ticker": "NVDA",
+  "name": "NVIDIA Corp.",
+  "headerStats": [
+    { "label": "Ticker", "value": "NVDA" },
+    { "label": "Market Cap", "value": "$2.2T" },
+    { "label": "Current Price", "value": "$885.20" }
+  ],
+  "chips": [
+    { "label": "Semiconductors | AI Infrastructure", "color": "primary" },
+    { "label": "Market Monopoly", "color": "success" }
+  ],
+  "recommendation": "Strong Buy",
+  "metrics": [
+    { "title": "Data Center Rev", "value": "$18.4B", "label": "409% YoY Growth", "icon": "Cpu", "color": "#76b900" },
+    { "title": "Gross Margin", "value": "76.7%", "label": "Software-like Profitability", "icon": "Zap", "color": "#3b82f6" },
+    { "title": "H100 Demand", "value": "Infinite", "label": "Supply Constraint Era", "icon": "Share2", "color": "#10b981" }
+  ],
+  "moat": {
+    "score": 85,
+    "description": "CUDA software ecosystem and 10-year hardware lead in AI compute.",
+    "analysisTitle": "The Ecosystem Moat (CUDA)",
+    "analysisSummary": "Nvidia's moat isn't just \"fast chips\", it's the **Full-Stack Software Advantage**:",
+    "analysisPoints": [
+      { "title": "CUDA Software Ecosystem", "text": "With over 4 million developers, CUDA is the industry standard. Moving to another hardware provider requires rewriting massive amounts of code." },
+      { "title": "Innovation Velocity", "text": "Nvidia has moved to a 1-year product cycle (Hopper → Blackwell → Rubin), staying ahead of competitors who are still catching up to the last generation." },
+      { "title": "Infiniband Networking", "text": "Their integration of networking (Mellanox) allows them to sell high-margin full-racks, not just individual GPUs." }
+    ]
+  },
+  "growth": {
+    "score": 95,
+    "description": "Generative AI spend is still in the 'Build-out' phase globally."
+  },
+  "valuation": {
+    "score": 65,
+    "description": "High expectation hurdle; every earnings must be a massive beat."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$600",
+      "description": "Hyperscaler demand peaks and transitions to internal silicon (ASICs).",
+      "points": [
+        "Major cloud providers reduce H100 orders by 30%+",
+        "Competition from AMD MI300 series gains 15% share",
+        "China export restrictions bite harder than expected"
+      ]
+    },
+    "base": {
+      "priceTarget": "$950",
+      "description": "Blackwell cycle maintains ASPs and software revenue starts to scale.",
+      "points": [
+        "Data center growth stays above 50% throughout 2025",
+        "Software subscriptions (AI Enterprise) reach $1B+ ARR",
+        "High margins are maintained through product mix shift"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$1,200+",
+      "description": "Sovereign AI demand and Blackwell architectural dominance.",
+      "points": [
+        "Nations building domestic AI capacity creates a new $50B market",
+        "Omniverse becomes the backbone for industrial robotics",
+        "Dividend hike and massive share buyback program"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": { "status": "destroyed", "note": "Not applicable — NVIDIA sells hardware and developer tools, not consumer UI experiences." },
+    "businessLogic": { "status": "destroyed", "note": "Not applicable to semiconductor chip design and manufacturing." },
+    "publicDataAccess": { "status": "destroyed", "note": "Not applicable — NVIDIA does not derive moat from public data access." },
+    "talentScarcity": { "status": "strong", "note": "GPU chip architects, CUDA kernel engineers, and AI systems researchers remain extraordinarily scarce and cannot be AI-replaced." },
+    "bundling": { "status": "intact", "note": "CUDA + hardware + Mellanox networking + NIM microservices = a full-stack AI infrastructure solution competitors cannot match." },
+    "proprietaryData": { "status": "strong", "note": "Millions of CUDA training runs generate proprietary AI workload optimization insights unavailable to competitors." },
+    "regulatoryLockIn": { "status": "weakened", "note": "Export controls on A100/H100 to China constrain revenue and create policy risk, cutting both ways." },
+    "networkEffects": { "status": "strong", "note": "4M+ CUDA developers create the largest and most entrenched AI developer community — switching has a multi-year rewrite cost." },
+    "transactionEmbedding": { "status": "strong", "note": "Every major AI training and inference workload is embedded in NVIDIA infrastructure at the infrastructure layer." },
+    "systemOfRecord": { "status": "intact", "note": "CUDA is the de facto standard platform for AI compute — the PyTorch/TF ecosystem is CUDA-first by default." },
+    "aiResilienceScore": 85,
+    "verdict": "NVIDIA's moat is almost entirely AI-resilient. The CUDA network effect and proprietary compute standard deepen as AI infrastructure spending grows — making NVIDIA the infrastructure of the AI economy."
+  }
+}
