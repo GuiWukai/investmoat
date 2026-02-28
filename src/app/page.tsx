@@ -31,6 +31,12 @@ const excluded = [
     reason: "Lowest valuation score (55) among active candidates — significantly overpriced on fundamentals. Brand and FSD software lead is thinning as legacy OEMs and Chinese EV makers close the gap. High execution risk and CEO concentration risk compound the valuation concern.",
   },
   {
+    ticker: "PLTR",
+    name: "Palantir",
+    href: "/stocks/pltr",
+    reason: "Among the most compelling businesses in coverage — 6 of 10 AI moats are strong, and US commercial growth of 54% YoY is category-defining. But the valuation (48) is the lowest score in the portfolio. The base case ($120) matches the current price, leaving zero margin of safety. A 54% drawdown to the bear case ($55) reflects the asymmetric risk of buying a premium AI platform at peak optimism. High-conviction watch-list addition on any significant pullback.",
+  },
+  {
     ticker: "BTC",
     name: "Bitcoin",
     href: "/stocks/btc",
