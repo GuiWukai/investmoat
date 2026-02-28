@@ -22,7 +22,7 @@ const excluded = [
     ticker: "META",
     name: "Meta",
     href: "/stocks/meta",
-    reason: "Moat score of 73 reflects a strengthening AI platform — Meta AI (800M+ users), Llama's open-source ecosystem traction, and WhatsApp Business growth all upgrade the AI-resilience outlook. Composite of 74 sits just one point below the 75 portfolio threshold. Watchlist candidate as WhatsApp commerce and Meta AI platform moats continue to deepen.",
+    reason: "Composite of 75 now sits exactly at the portfolio threshold. Strongest PEG ratio (~1.1x) of any peer at ~25x forward P/E with 20%+ EPS growth — but near-zero FCF yield from a $60B+ capex cycle and ongoing Reality Labs losses keep conviction below a core position. Active portfolio candidate if capex normalizes and WhatsApp commerce inflects.",
   },
   {
     ticker: "TSLA",

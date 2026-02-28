@@ -34,8 +34,13 @@
     "description": "Advancements in Llama AI and monetization of Reels/Threads."
   },
   "valuation": {
-    "score": 65,
-    "description": "Attractive P/E relative to growth, but high capex intensive."
+    "score": 68,
+    "description": "Trading at ~25x forward P/E — the most attractive PEG ratio (~1.1x) in its peer group, offset by near-zero FCF yield from a $60B+ capex cycle.",
+    "valuationNote": {
+      "text": "Using a 10-year DCF with a 9% WACC, 20% near-term EPS growth decelerating to 3.5% terminal growth, and adjusting for Reality Labs losses and capex normalization, our fair value estimate for META is",
+      "fairValue": "$590/share",
+      "marginOfSafety": "N/A at current price"
+    }
   },
   "scenarios": {
     "bear": {
