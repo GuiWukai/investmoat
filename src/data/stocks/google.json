@@ -1,0 +1,98 @@
+{
+  "slug": "google",
+  "ticker": "GOOGL",
+  "name": "Alphabet Inc.",
+  "headerStats": [
+    { "label": "Ticker", "value": "GOOGL (NASDAQ)" },
+    { "label": "Market Cap", "value": "~$2.3T" },
+    { "label": "Price", "value": "~$185" }
+  ],
+  "chips": [
+    { "label": "Search | Cloud | AI", "color": "primary" },
+    { "label": "Accumulate", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    { "title": "Google Cloud", "value": "$48B+", "label": "Annualized Run-Rate; ~28% YoY", "icon": "Cloud", "color": "#4285f4" },
+    { "title": "Search Revenue", "value": "~$200B+", "label": "Annualized; 90%+ Global Share", "icon": "Search", "color": "#ea4335" },
+    { "title": "Operating Margin", "value": "35%+", "label": "Class-Leading FCF Machine", "icon": "TrendingUp", "color": "#34a853" }
+  ],
+  "moat": {
+    "score": 82,
+    "description": "Irreplaceable behavioral data flywheel, default distribution across Android and Chrome, and a self-reinforcing ad auction system that compounds with every query.",
+    "analysisTitle": "The Data Network Moat",
+    "analysisSummary": "Google's moat is built on **Behavioral Data Dominance and Default Distribution**:",
+    "analysisPoints": [
+      { "title": "The Behavioral Data Flywheel", "text": "Every Google search, YouTube watch, Maps navigation, and Gmail interaction trains a proprietary behavioral model that no competitor can replicate. This data flywheel makes Google's ad targeting and AI models more accurate with every passing second — a compounding advantage built over 25+ years of user engagement at planetary scale." },
+      { "title": "Default Distribution at Scale", "text": "Android powers 72%+ of global smartphones; Chrome commands 65%+ global browser share. Google Search is the default starting point for the majority of humanity's internet activity. No rival can purchase or replicate this distribution — it was constructed over decades of platform investments and ecosystem deals that are now the subject of antitrust scrutiny." },
+      { "title": "AI Overviews as a Retention Mechanism", "text": "Rather than losing traffic to AI chatbots, Google converted the threat into a feature. AI Overviews keep users in the Google ecosystem by answering queries directly on the search results page. The feared 'zero-click' disruption is being managed on Google's terms, with advertisers still paying for the ad layer beneath AI-generated answers." },
+      { "title": "Google Cloud as the Second Growth Engine", "text": "Google Cloud is growing 28%+ YoY, powered by unique AI infrastructure advantages — custom TPU chips and Gemini model integration that AWS and Azure cannot directly replicate. Cloud is transitioning from a cost center to a profit engine, and AI workloads are the primary demand driver across all three hyperscalers." }
+    ]
+  },
+  "growth": {
+    "score": 80,
+    "description": "Google Cloud growing 28%+ YoY on a $48B+ annualized run-rate; Search revenue resilient despite AI headwinds; YouTube and Shorts monetization accelerating. Overall Alphabet revenue growing ~14% YoY on a $350B+ base — broad-based and durable, but below the growth rate of pure-play cloud peers given Search's relative maturity."
+  },
+  "valuation": {
+    "score": 70,
+    "description": "Trading at ~22x forward earnings — meaningfully cheaper than Microsoft (32x) or NVIDIA while offering comparable AI-driven growth optionality. Antitrust overhang creates a persistent valuation discount; resolution of DOJ remedies could be a significant re-rating catalyst."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$120",
+      "description": "DOJ forces structural remedies and AI-native search alternatives capture meaningful query share.",
+      "points": [
+        "Court-ordered ban on default search deals eliminates ~$20B/year in Apple and carrier payments",
+        "AI-native search (ChatGPT Search, Perplexity) captures 15%+ of query volume within 18 months",
+        "Google Cloud growth decelerates below 15% as hyperscaler competition and commoditization intensify"
+      ]
+    },
+    "base": {
+      "priceTarget": "$210",
+      "description": "Antitrust remedies are behavioral rather than structural; Search holds 85%+ share; Cloud sustains 25%+ growth.",
+      "points": [
+        "DOJ remedies modify default search contracts but stop short of Android or Chrome divestiture",
+        "Google Cloud crosses $60B annualized run-rate and approaches Microsoft Azure-level operating margins",
+        "Gemini 2.x becomes a leading enterprise AI assistant, driving Workspace upsells and Cloud adoption"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$290",
+      "description": "Gemini becomes the dominant AI platform, Waymo monetizes at scale, and Cloud re-rates as a true profit engine.",
+      "points": [
+        "Gemini emerges as the top enterprise AI assistant platform, driving massive AI API revenue through Google Cloud",
+        "Waymo autonomous ride-hailing expands to 25+ cities, generating $5B+ annual revenue and a standalone valuation",
+        "Google Cloud surpasses Azure to become the #2 cloud globally, earning a premium re-rating of the entire business"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": { "status": "strong", "note": "Billions of users have 25+ years of behavioral conditioning around Google Search, Gmail, YouTube, and Maps. Habitual interface loyalty at this scale — across every age group and geography — is among the most durable competitive advantages in technology." },
+    "businessLogic": { "status": "strong", "note": "Google's ad auction algorithms, YouTube recommendation engine, and Maps routing logic encode decades of optimization and proprietary signal weighting. These systems are the operational backbone of the global digital advertising economy and cannot be replicated by a new entrant." },
+    "publicDataAccess": { "status": "weakened", "note": "Google indexes more of the public web than any competitor, but AI-powered alternatives (ChatGPT Search, Perplexity) increasingly provide direct answers without requiring a click to Google.com, applying structural pressure to the query-to-click-to-ad pipeline." },
+    "talentScarcity": { "status": "strong", "note": "Google DeepMind houses the world's highest concentration of AI research talent. The merger of DeepMind and Google Brain created an unrivaled internal AI capability, with decades of published research, proprietary model lineage, and compensation structures that retain elite researchers at scale." },
+    "bundling": { "status": "strong", "note": "Android + Chrome + Workspace + YouTube Premium + Google One + Google Cloud forms one of the most comprehensive digital bundles ever assembled — free at the consumer layer, deeply monetized through behavioral data and enterprise services, and nearly impossible to exit once adopted." },
+    "proprietaryData": { "status": "strong", "note": "25+ years of search intent signals, YouTube behavioral graphs, Maps mobility patterns, and Gmail contextual data represent the most valuable behavioral dataset on Earth. This data cannot be purchased, scraped, or replicated at any price — it is the product of billions of people sharing their attention daily." },
+    "regulatoryLockIn": { "status": "weakened", "note": "The 2024 DOJ ruling found Google illegally maintained its search monopoly through exclusionary default agreements. Pending remedies could ban default search exclusivity deals (~$20B/year risk from Apple alone) or require sharing of search index data with rivals. EU enforcement and potential AI Act obligations add further pressure." },
+    "networkEffects": { "status": "strong", "note": "YouTube's creator-viewer flywheel (2B+ daily active users, millions of creators) compounds with every upload. Google Maps improves with every navigation and review. Android's 3M+ app ecosystem becomes more valuable with every device sold — classic multi-sided platform network effects at global scale." },
+    "transactionEmbedding": { "status": "intact", "note": "Google Pay, YouTube channel memberships and Super Chats, Google Shopping, and Workspace billing create meaningful transaction relationships. Growing but not yet at the operational embedding depth of Visa or Palantir — Google remains primarily an attention and data business rather than a deeply embedded transaction layer." },
+    "systemOfRecord": { "status": "intact", "note": "Google Workspace (Gmail, Drive, Docs, Calendar) is the system of record for millions of SMBs and growing enterprises. Google Cloud and BigQuery serve enterprise analytics workflows. A real and expanding position, though still below Microsoft's depth of Active Directory and Dynamics system-of-record dominance." },
+    "aiResilienceScore": 82,
+    "verdict": "Google is uniquely positioned at the intersection of AI threat and AI opportunity. The behavioral data flywheel and default distribution advantages are AI-resilient — they become more valuable as AI personalization deepens, not less. The primary risk is regulatory, not technological disruption: the DOJ antitrust case is the largest known uncertainty for this thesis."
+  },
+  "extraSections": [
+    {
+      "type": "grid-cards",
+      "title": "Four Business Engines",
+      "accentColor": "#4285f4",
+      "gridHeader": "Alphabet's revenue is more diversified than its search-centric reputation implies:",
+      "intro": "While Search advertising remains the dominant profit engine, three additional segments are each approaching or exceeding $50B in annualized revenue — creating a compounding revenue base that is increasingly resilient to disruption in any single area.",
+      "cards": [
+        { "label": "Google Search & Other", "text": "~$200B+ annualized revenue at 90%+ global market share. The most profitable advertising platform in history — ROAS advantages compound via the behavioral data flywheel, and AI Overviews are converting the generative AI threat into a retention tool." },
+        { "label": "Google Cloud (GCP)", "text": "$48B+ annualized run-rate growing 28%+ YoY. AI workloads (Gemini API, TPU infrastructure, Vertex AI platform) are the primary demand driver. Cloud is transitioning from a cost center to a meaningful profit contributor as utilization scales." },
+        { "label": "YouTube", "text": "~$50B+ annualized revenue across advertising, Premium subscriptions, and YouTube TV. Shorts is closing the TikTok monetization gap; connected TV advertising is a multi-year tailwind as linear TV budgets migrate to streaming platforms." },
+        { "label": "Other Bets (Waymo)", "text": "Waymo is the most advanced commercially deployed autonomous vehicle program globally, operating robotaxi services across multiple US cities. Pre-profit today but representing potential $100B+ standalone value creation as the autonomous mobility market scales over the next decade." }
+      ]
+    }
+  ]
+}

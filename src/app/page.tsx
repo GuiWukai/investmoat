@@ -6,15 +6,16 @@ import { Card, CardBody, CardHeader, Progress, Chip } from "@heroui/react";
 import { stockData, getAverageScore } from "./stockData";
 
 const portfolio = [
-  { ticker: "MSFT", name: "Microsoft",  weight: 16, color: "#00a4ef", category: "Core SaaS",        href: "/stocks/msft" },
-  { ticker: "AMZN", name: "Amazon",     weight: 14, color: "#f59e0b", category: "Eco-System",        href: "/stocks/amazon" },
-  { ticker: "ASML", name: "ASML",       weight: 12, color: "#0071c5", category: "Lithography",       href: "/stocks/asml" },
-  { ticker: "V",    name: "Visa",       weight: 12, color: "#1a1f71", category: "Payments",          href: "/stocks/visa" },
-  { ticker: "MA",   name: "Mastercard", weight: 11, color: "#eb001b", category: "Payments",          href: "/stocks/mastercard" },
-  { ticker: "NVDA", name: "NVIDIA",     weight: 11, color: "#76b900", category: "AI Infrastructure", href: "/stocks/nvda" },
-  { ticker: "SPGI", name: "S&P Global", weight: 10, color: "#cf102d", category: "Financials",        href: "/stocks/spgi" },
-  { ticker: "CRM",  name: "Salesforce", weight: 8,  color: "#00a1e0", category: "Enterprise SaaS",   href: "/stocks/crm" },
-  { ticker: "INTU", name: "Intuit",     weight: 6,  color: "#2ca01c", category: "FinTech",           href: "/stocks/intuit" },
+  { ticker: "MSFT",  name: "Microsoft",  weight: 15, color: "#00a4ef", category: "Core SaaS",        href: "/stocks/msft" },
+  { ticker: "AMZN",  name: "Amazon",     weight: 13, color: "#f59e0b", category: "Eco-System",        href: "/stocks/amazon" },
+  { ticker: "ASML",  name: "ASML",       weight: 11, color: "#0071c5", category: "Lithography",       href: "/stocks/asml" },
+  { ticker: "V",     name: "Visa",       weight: 11, color: "#1a1f71", category: "Payments",          href: "/stocks/visa" },
+  { ticker: "MA",    name: "Mastercard", weight: 10, color: "#eb001b", category: "Payments",          href: "/stocks/mastercard" },
+  { ticker: "NVDA",  name: "NVIDIA",     weight: 10, color: "#76b900", category: "AI Infrastructure", href: "/stocks/nvda" },
+  { ticker: "GOOGL", name: "Google",     weight: 9,  color: "#4285f4", category: "AI & Cloud",        href: "/stocks/google" },
+  { ticker: "SPGI",  name: "S&P Global", weight: 9,  color: "#cf102d", category: "Financials",        href: "/stocks/spgi" },
+  { ticker: "CRM",   name: "Salesforce", weight: 7,  color: "#00a1e0", category: "Enterprise SaaS",   href: "/stocks/crm" },
+  { ticker: "INTU",  name: "Intuit",     weight: 5,  color: "#2ca01c", category: "FinTech",           href: "/stocks/intuit" },
 ];
 
 const excluded = [
@@ -77,7 +78,7 @@ const excluded = [
 function categoryColor(category: string): "primary" | "success" | "warning" | "secondary" | "danger" | "default" {
   if (["Core SaaS", "Enterprise SaaS"].includes(category)) return "primary";
   if (["Payments", "Financials", "FinTech"].includes(category)) return "success";
-  if (["AI Infrastructure", "Lithography"].includes(category)) return "warning";
+  if (["AI Infrastructure", "Lithography", "AI & Cloud"].includes(category)) return "warning";
   if (["Eco-System"].includes(category)) return "secondary";
   return "default";
 }
@@ -111,7 +112,7 @@ export default function HomePage() {
           Portfolio Distribution
         </h1>
         <p className="text-white/60 text-base md:text-xl max-w-2xl">
-          9 high-conviction positions selected for moat durability, growth scaling, and valuation discipline.
+          10 high-conviction positions selected for moat durability, growth scaling, and valuation discipline.
           Minimum overall score of 75 required for inclusion.
         </p>
       </header>
@@ -153,7 +154,7 @@ export default function HomePage() {
           <CardBody className="p-6 gap-6">
             <div>
               <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Positions</p>
-              <p className="text-lg font-bold">9 High-Conviction Holdings</p>
+              <p className="text-lg font-bold">10 High-Conviction Holdings</p>
             </div>
             <div>
               <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Selection Threshold</p>
@@ -162,7 +163,7 @@ export default function HomePage() {
             <div>
               <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Concentration</p>
               <Progress
-                value={61}
+                value={65}
                 label="Tech & SaaS"
                 size="sm"
                 color="primary"
@@ -170,7 +171,7 @@ export default function HomePage() {
                 classNames={{ base: "max-w-md", label: "text-xs font-bold", value: "text-xs" }}
               />
               <Progress
-                value={39}
+                value={35}
                 label="Financials & Payments"
                 size="sm"
                 color="success"
@@ -218,7 +219,7 @@ export default function HomePage() {
 
               <div className="flex-1 flex items-center gap-3">
                 <Progress
-                  value={(stock.weight / 16) * 100}
+                  value={(stock.weight / 15) * 100}
                   size="sm"
                   color={stock.weight >= 12 ? "success" : stock.weight >= 8 ? "primary" : "default"}
                   className="flex-1 max-w-[200px]"

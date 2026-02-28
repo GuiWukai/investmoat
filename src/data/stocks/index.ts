@@ -18,6 +18,7 @@ import gold from './gold.json';
 import btc from './btc.json';
 import k92 from './k92.json';
 import pltr from './pltr.json';
+import google from './google.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   amazon: amazon as StockAnalysisData,
@@ -38,6 +39,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   btc: btc as StockAnalysisData,
   k92: k92 as StockAnalysisData,
   pltr: pltr as StockAnalysisData,
+  google: google as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
