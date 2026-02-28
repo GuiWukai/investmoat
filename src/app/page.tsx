@@ -22,7 +22,7 @@ const excluded = [
     ticker: "META",
     name: "Meta",
     href: "/stocks/meta",
-    reason: "Moat score of 68 reflects AI vulnerability. The core advantage of social graph data and targeted advertising faces disruption as AI commoditizes content recommendation. Watchlist candidate if Llama AI creates a proprietary data flywheel, but the moat is not yet wide enough.",
+    reason: "Moat score of 73 reflects a strengthening AI platform — Meta AI (800M+ users), Llama's open-source ecosystem traction, and WhatsApp Business growth all upgrade the AI-resilience outlook. Composite of 74 sits just one point below the 75 portfolio threshold. Watchlist candidate as WhatsApp commerce and Meta AI platform moats continue to deepen.",
   },
   {
     ticker: "TSLA",

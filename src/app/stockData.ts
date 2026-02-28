@@ -3,7 +3,7 @@
 
 export const stockData = [
     { name: "Amazon",     ticker: "AMZN", scores: [80, 88, 72], href: "/stocks/amazon",     category: "Big Tech"    },
-    { name: "Meta",       ticker: "META", scores: [68, 85, 65], href: "/stocks/meta",       category: "Big Tech"    },
+    { name: "Meta",       ticker: "META", scores: [73, 85, 65], href: "/stocks/meta",       category: "Big Tech"    },
     { name: "Microsoft",  ticker: "MSFT", scores: [84, 92, 68], href: "/stocks/msft",       category: "Big Tech"    },
     { name: "NVIDIA",     ticker: "NVDA", scores: [85, 95, 65], href: "/stocks/nvda",       category: "Big Tech"    },
     { name: "AMD",        ticker: "AMD",  scores: [52, 92, 58], href: "/stocks/amd",        category: "Big Tech"    },

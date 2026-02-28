@@ -18,14 +18,15 @@
     { "title": "Capex (AI)", "value": "$35B", "label": "Infrastructure investment", "icon": "Cpu", "color": "#3b82f6" }
   ],
   "moat": {
-    "score": 68,
-    "description": "Unrivaled social network effect and massive proprietary data for AI training.",
+    "score": 73,
+    "description": "Unrivaled social graph network effect, irreplaceable proprietary data, and a rapidly growing AI platform across 3B+ users.",
     "analysisTitle": "The Advertising Moat",
-    "analysisSummary": "Meta's moat is built on **Attention and Data**:",
+    "analysisSummary": "Meta's moat is built on **Attention, Data, and AI Platform**:",
     "analysisPoints": [
       { "title": "Social Graph Network Effect", "text": "Every new user on Instagram or WhatsApp increases the value for existing users. Breaking this flywheel requires a multi-billion person migration." },
       { "title": "AI Content Flywheel", "text": "AI-driven recommendations are significantly increasing time-spent on Reels, which directly translates to more ad-inventory." },
-      { "title": "Vertical Integration of AI", "text": "By owning the compute, the models (Llama), and the distribution (FB/IG), Meta controls the entire AI value chain." }
+      { "title": "Vertical Integration of AI", "text": "By owning the compute, the models (Llama), and the distribution (FB/IG), Meta controls the entire AI value chain." },
+      { "title": "Meta AI Platform Moat", "text": "With 800M+ monthly Meta AI users and Llama establishing the open-source AI standard, Meta is building a new AI platform layer atop its social graph — creating a developer ecosystem and AI memory moat that compounds with scale." }
     ]
   },
   "growth": {
@@ -72,11 +73,11 @@
     "talentScarcity": { "status": "destroyed", "note": "AI tools have made social content creation, ad management, and campaign optimization accessible to small teams." },
     "bundling": { "status": "weakened", "note": "Instagram + Facebook + WhatsApp is a bundle, but users freely hop between apps — no forced adoption." },
     "proprietaryData": { "status": "strong", "note": "3B+ users' social graph, behavioral patterns, and relationship data is genuinely irreplaceable — the richest consumer dataset on Earth." },
-    "regulatoryLockIn": { "status": "weakened", "note": "GDPR and EU Digital Markets Act are actively constraining data monetization and cross-app data sharing." },
+    "regulatoryLockIn": { "status": "weakened", "note": "Advertisers have built compliance infrastructure around Meta's Conversions API and privacy tools, creating some switching friction. However, GDPR and the EU Digital Markets Act actively constrain cross-app data sharing and limit the full expression of this lock-in." },
     "networkEffects": { "status": "strong", "note": "The social graph itself IS the product — 3 billion users and their connections cannot be replicated by a new entrant in a decade." },
-    "transactionEmbedding": { "status": "intact", "note": "WhatsApp Pay, Marketplace, and Meta Pay represent growing embedded commerce layers across messaging and social platforms." },
-    "systemOfRecord": { "status": "intact", "note": "Facebook remains the social identity record and event management system for billions of users globally." },
-    "aiResilienceScore": 68,
-    "verdict": "Meta's social graph network effect remains formidable, but regulatory headwinds on data monetization and the commoditization of ad-targeting logic are genuine threats to their AI-resilient advantages."
+    "transactionEmbedding": { "status": "strong", "note": "WhatsApp Business serves 200M+ businesses globally; WhatsApp Pay is active in India and Brazil with expanding markets. Meta Pay and Marketplace create deeply embedded commerce infrastructure that is increasingly difficult to displace." },
+    "systemOfRecord": { "status": "strong", "note": "Facebook remains the global social identity and event management layer. Meta AI's persistent memory features across all apps are creating a new personal AI system-of-record, while WhatsApp serves as the primary communication record for billions in emerging markets." },
+    "aiResilienceScore": 73,
+    "verdict": "Meta's social graph and proprietary data moats remain the most defensible consumer moats on Earth. The upgrade in transaction embedding and system-of-record reflects WhatsApp Business traction and Meta AI's platform emergence. Regulatory pressure from GDPR and DMA remains a structural drag, keeping the score below Tier-1 peers with enterprise lock-in."
   }
 }
