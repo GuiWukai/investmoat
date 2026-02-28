@@ -58,7 +58,7 @@ const excluded = [
     ticker: "KNT",
     name: "K92 Mining",
     href: "/stocks/k92",
-    reason: "Weakest moat score in the entire coverage universe (42). Mining is a commodity business with no pricing power, no network effects, and no switching costs. High growth (90) reflects junior miner speculation and exploration upside — not the quality compounding this portfolio targets.",
+    reason: "Weakest moat score in the entire coverage universe (42). Mining is a commodity business with no pricing power, no network effects, and no switching costs. High growth (85) reflects production expansion upside — not the scalable, capital-light compounding this portfolio targets.",
   },
   {
     ticker: "XAU",
