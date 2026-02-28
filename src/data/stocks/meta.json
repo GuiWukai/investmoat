@@ -4,8 +4,8 @@
   "name": "Meta Platforms Inc.",
   "headerStats": [
     { "label": "Ticker", "value": "META" },
-    { "label": "Market Cap", "value": "$1.25T" },
-    { "label": "Current Price", "value": "$492.30" }
+    { "label": "Market Cap", "value": "$1.67T" },
+    { "label": "Current Price", "value": "$657.00" }
   ],
   "chips": [
     { "label": "Communication Services | AI", "color": "primary" },
@@ -13,61 +13,61 @@
   ],
   "recommendation": "Accumulate",
   "metrics": [
-    { "title": "Daily Active People", "value": "3.24B", "label": "Family of Apps (7% YoY)", "icon": "Users", "color": "#1877F2" },
+    { "title": "Daily Active People", "value": "3.58B", "label": "Family of Apps (11% YoY)", "icon": "Users", "color": "#1877F2" },
     { "title": "Ad Impressions", "value": "+21%", "label": "Sustained CPM growth", "icon": "Share2", "color": "#050505" },
-    { "title": "Capex (AI)", "value": "$35B", "label": "Infrastructure investment", "icon": "Cpu", "color": "#3b82f6" }
+    { "title": "Capex 2026E", "value": "$115–135B", "label": "AI infrastructure guidance", "icon": "Cpu", "color": "#3b82f6" }
   ],
   "moat": {
-    "score": 73,
-    "description": "Unrivaled social graph network effect, irreplaceable proprietary data, and a rapidly growing AI platform across 3B+ users.",
+    "score": 76,
+    "description": "Unrivaled social graph network effect, irreplaceable proprietary data, and Llama-powered AI vertical integration across 3.58B daily active people — with proven ad-gain traction.",
     "analysisTitle": "The Advertising Moat",
     "analysisSummary": "Meta's moat is built on **Attention, Data, and AI Platform**:",
     "analysisPoints": [
       { "title": "Social Graph Network Effect", "text": "Every new user on Instagram or WhatsApp increases the value for existing users. Breaking this flywheel requires a multi-billion person migration." },
       { "title": "AI Content Flywheel", "text": "AI-driven recommendations are significantly increasing time-spent on Reels, which directly translates to more ad-inventory." },
-      { "title": "Vertical Integration of AI", "text": "By owning the compute, the models (Llama), and the distribution (FB/IG), Meta controls the entire AI value chain." },
+      { "title": "Vertical Integration of AI", "text": "By owning the compute, the models (Llama), and the distribution (FB/IG/WA), Meta controls the entire AI value chain — powering ad targeting, creative tools, and content recommendations with its own stack." },
       { "title": "Meta AI Platform Moat", "text": "With 800M+ monthly Meta AI users and Llama establishing the open-source AI standard, Meta is building a new AI platform layer atop its social graph — creating a developer ecosystem and AI memory moat that compounds with scale." }
     ]
   },
   "growth": {
-    "score": 85,
-    "description": "Advancements in Llama AI and monetization of Reels/Threads."
+    "score": 87,
+    "description": "2025 actuals: $201B revenue (+22% YoY), Q4 $59.9B (+24%). Reels monetization scaling, Threads is a real engagement engine, WhatsApp Business expanding, and AI is already lifting CPMs and ad efficiency."
   },
   "valuation": {
-    "score": 68,
-    "description": "Trading at ~25x forward P/E — the most attractive PEG ratio (~1.1x) in its peer group, offset by near-zero FCF yield from a $60B+ capex cycle.",
+    "score": 62,
+    "description": "Trading at ~21.5–22.5x 2026E P/E (~$29–30 consensus EPS) — reasonable for a wide-moat 20%+ grower, but $115–135B 2026 capex guidance creates short-term FCF pressure and elevated near-term execution risk.",
     "valuationNote": {
-      "text": "Using a 10-year DCF with a 9% WACC, 20% near-term EPS growth decelerating to 3.5% terminal growth, and adjusting for Reality Labs losses and capex normalization, our fair value estimate for META is",
-      "fairValue": "$590/share",
-      "marginOfSafety": "N/A at current price"
+      "text": "Using a 10-year DCF with a 9% WACC, 22% near-term EPS growth decelerating to 3.5% terminal growth, and adjusting for Reality Labs losses and capex normalization, our fair value estimate for META is",
+      "fairValue": "$780/share",
+      "marginOfSafety": "~19% upside to DCF fair value"
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$380",
-      "description": "Regulatory fines and a shift in user engagement to newer platforms.",
+      "priceTarget": "$510",
+      "description": "Capex ROI disappoints and regulatory action constrains targeting.",
       "points": [
-        "EU privacy laws severely impact targeting precision",
-        "Reality Labs losses exceed $20B annually",
-        "Ad-market recession hits digital spend"
+        "2026 capex of $115–135B yields limited measurable AI revenue lift",
+        "EU Digital Markets Act forces family-of-apps data separation",
+        "Ad-market softness compresses CPMs"
       ]
     },
     "base": {
-      "priceTarget": "$520",
-      "description": "Steady ad-revenue growth and AI-driven efficiency gains.",
+      "priceTarget": "$750",
+      "description": "Consistent AI-driven revenue growth with gradual capex normalization.",
       "points": [
-        "Ad revenue grows 12-15% annually",
-        "Reels monetization achieves parity with Feed",
-        "Share buybacks continue at $50B+ clip"
+        "Revenue grows 18–20% annually on AI-enhanced ad products",
+        "WhatsApp Business monetization reaches $5–8B",
+        "Capex normalizes toward 2027; FCF recovers strongly"
       ]
     },
     "bull": {
-      "priceTarget": "$650",
-      "description": "Llama becomes the industry standard and WhatsApp monetization explodes.",
+      "priceTarget": "$850",
+      "description": "Llama becomes the industry standard and WhatsApp commerce inflects.",
       "points": [
-        "WhatsApp business messaging becomes a $10B high-margin pillar",
-        "Generative AI ad-creation tools lower barriers for small biz",
-        "Reality Labs reaches an 'iPhone moment' with AR glasses"
+        "WhatsApp business messaging and Pay become a $15B+ high-margin pillar",
+        "Generative AI ad-creation tools dramatically expand small-business advertiser base",
+        "Reality Labs smart glasses reach mainstream consumer adoption"
       ]
     }
   },
@@ -77,12 +77,12 @@
     "publicDataAccess": { "status": "destroyed", "note": "Open Graph API restrictions and GDPR have dismantled the public social data access advantage." },
     "talentScarcity": { "status": "destroyed", "note": "AI tools have made social content creation, ad management, and campaign optimization accessible to small teams." },
     "bundling": { "status": "weakened", "note": "Instagram + Facebook + WhatsApp is a bundle, but users freely hop between apps — no forced adoption." },
-    "proprietaryData": { "status": "strong", "note": "3B+ users' social graph, behavioral patterns, and relationship data is genuinely irreplaceable — the richest consumer dataset on Earth." },
+    "proprietaryData": { "status": "strong", "note": "3.58B daily active people's social graph, behavioral patterns, and relationship data is genuinely irreplaceable — the richest consumer dataset on Earth." },
     "regulatoryLockIn": { "status": "weakened", "note": "Advertisers have built compliance infrastructure around Meta's Conversions API and privacy tools, creating some switching friction. However, GDPR and the EU Digital Markets Act actively constrain cross-app data sharing and limit the full expression of this lock-in." },
-    "networkEffects": { "status": "strong", "note": "The social graph itself IS the product — 3 billion users and their connections cannot be replicated by a new entrant in a decade." },
+    "networkEffects": { "status": "strong", "note": "The social graph itself IS the product — 3.58 billion users and their connections cannot be replicated by a new entrant in a decade." },
     "transactionEmbedding": { "status": "strong", "note": "WhatsApp Business serves 200M+ businesses globally; WhatsApp Pay is active in India and Brazil with expanding markets. Meta Pay and Marketplace create deeply embedded commerce infrastructure that is increasingly difficult to displace." },
     "systemOfRecord": { "status": "strong", "note": "Facebook remains the global social identity and event management layer. Meta AI's persistent memory features across all apps are creating a new personal AI system-of-record, while WhatsApp serves as the primary communication record for billions in emerging markets." },
-    "aiResilienceScore": 73,
-    "verdict": "Meta's social graph and proprietary data moats remain the most defensible consumer moats on Earth. The upgrade in transaction embedding and system-of-record reflects WhatsApp Business traction and Meta AI's platform emergence. Regulatory pressure from GDPR and DMA remains a structural drag, keeping the score below Tier-1 peers with enterprise lock-in."
+    "aiResilienceScore": 76,
+    "verdict": "Meta's social graph and proprietary data moats remain the most defensible consumer moats on Earth. Llama's real-world traction — powering ad targeting, creative tools, and recommendations — and vertical integration across owned compute, models, and 3.58B daily active people have made the moat more durable than initially scored. Regulatory pressure from GDPR and DMA remains a structural drag, keeping the score below Tier-1 peers with enterprise lock-in. Morningstar maintains a Wide moat rating."
   }
 }

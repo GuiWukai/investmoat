@@ -22,7 +22,7 @@ const excluded = [
     ticker: "META",
     name: "Meta",
     href: "/stocks/meta",
-    reason: "Composite of 75 now sits exactly at the portfolio threshold. Strongest PEG ratio (~1.1x) of any peer at ~25x forward P/E with 20%+ EPS growth — but near-zero FCF yield from a $60B+ capex cycle and ongoing Reality Labs losses keep conviction below a core position. Active portfolio candidate if capex normalizes and WhatsApp commerce inflects.",
+    reason: "Composite of 75 sits at the portfolio threshold. At ~$657 (~21.5–22.5x 2026E P/E), the AI + social flywheel has executed — $201B revenue (+22% YoY), Reels scaling, Threads real. The 2026 capex guide of $115–135B creates near-term FCF pressure and volatility risk that keeps conviction below a core position. Active portfolio candidate when capex normalizes and WhatsApp commerce inflects. Consensus target ~$835–850 (~30% upside).",
   },
   {
     ticker: "TSLA",
