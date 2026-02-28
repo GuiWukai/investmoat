@@ -1,0 +1,82 @@
+{
+  "slug": "pltr",
+  "ticker": "PLTR",
+  "name": "Palantir Technologies",
+  "headerStats": [
+    { "label": "Ticker", "value": "PLTR" },
+    { "label": "Market Cap", "value": "$270B" },
+    { "label": "Current Price", "value": "$120.00" }
+  ],
+  "chips": [
+    { "label": "AI & Data Analytics | Defense & Enterprise", "color": "primary" },
+    { "label": "Government Contracts", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    { "title": "US Commercial Rev", "value": "$255M", "label": "54% YoY Growth", "icon": "TrendingUp", "color": "#7c3aed" },
+    { "title": "Rule of 40", "value": "83", "label": "Best-in-Class SaaS", "icon": "Zap", "color": "#3b82f6" },
+    { "title": "US Govt Rev", "value": "$320M", "label": "Steady Mission-Critical", "icon": "Shield", "color": "#10b981" }
+  ],
+  "moat": {
+    "score": 78,
+    "description": "Ontological data integration platform with deep government and enterprise switching costs.",
+    "analysisTitle": "The Ontology Moat (AIP)",
+    "analysisSummary": "Palantir's moat is built on **Operational Data Depth and AI Integration Complexity**:",
+    "analysisPoints": [
+      { "title": "Ontology Platform", "text": "Palantir's Ontology links raw data to real-world business operations. Once deployed, it becomes the operational backbone of an organization — replacing it requires years of re-integration." },
+      { "title": "AIP (Artificial Intelligence Platform)", "text": "AIP Boot Camps turn prospects into customers within days by demonstrating real ROI on their own data. This compressed sales cycle is creating a commercial moat with extraordinary velocity." },
+      { "title": "Government Lock-In", "text": "15+ year relationships with US DoD, CIA, and allied intelligence agencies embed Palantir at the mission-critical layer. Switching costs are measured in years, not months." }
+    ]
+  },
+  "growth": {
+    "score": 88,
+    "description": "US commercial segment growing at 50%+ YoY; AIP creating an entirely new demand curve for enterprise AI."
+  },
+  "valuation": {
+    "score": 48,
+    "description": "Trades at a significant premium to SaaS peers; requires sustained hyper-growth to justify current multiples."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$55",
+      "description": "US commercial growth decelerates and government budget constraints compress defense spending.",
+      "points": [
+        "US commercial growth slows to sub-20% as AIP boot camp pipeline saturates",
+        "Continuing resolution or defense budget cuts reduce government contract renewals",
+        "Competitor platforms (Microsoft Fabric, Databricks) close the ontology gap"
+      ]
+    },
+    "base": {
+      "priceTarget": "$120",
+      "description": "AIP-driven commercial expansion continues at 40%+ while government revenue provides stable floor.",
+      "points": [
+        "US commercial revenue crosses $1.5B annualized run-rate by end of 2025",
+        "International commercial segment returns to growth",
+        "Rule of 40 score stays above 60, confirming elite operating efficiency"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$200+",
+      "description": "Palantir becomes the de facto AI operating system for Fortune 500 and allied governments.",
+      "points": [
+        "AIP becomes the enterprise standard for AI-to-action workflows",
+        "NATO and Five Eyes expansion drives international government revenue surge",
+        "Palantir OS abstracts away all underlying AI models, creating durable platform lock-in"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": { "status": "strong", "note": "Palantir's Foundry and AIP interfaces require significant analyst and operator training — creating deep personal switching costs for power users." },
+    "businessLogic": { "status": "strong", "note": "Palantir encodes customer-specific workflows, decision trees, and ontologies directly into the platform — making it nearly impossible to replicate in a competitor tool." },
+    "publicDataAccess": { "status": "weakened", "note": "Palantir does not primarily derive moat from public data; its edge comes from customer's own proprietary operational data." },
+    "talentScarcity": { "status": "intact", "note": "Forward deployed engineers (FDEs) who embed with clients are a scarce talent model that competitors have not successfully replicated at scale." },
+    "bundling": { "status": "intact", "note": "Foundry + AIP + Gotham + Apollo creates an integrated stack that is increasingly difficult to unbundle once adopted enterprise-wide." },
+    "proprietaryData": { "status": "strong", "note": "Years of government AI/ML training pipelines and enterprise operational ontologies represent proprietary data assets unavailable to competitors." },
+    "regulatoryLockIn": { "status": "strong", "note": "FedRAMP, IL4/IL5, and classified environment certifications create significant regulatory moats that take years for competitors to replicate." },
+    "networkEffects": { "status": "weakened", "note": "Limited direct network effects — value is primarily per-customer depth rather than cross-customer scale." },
+    "transactionEmbedding": { "status": "strong", "note": "Palantir's Ontology is embedded at the operational transaction layer — logistics decisions, targeting workflows, and supply chain actions run through the platform daily." },
+    "systemOfRecord": { "status": "strong", "note": "For defense and intelligence clients, Palantir IS the system of record for operational AI — there is no competing alternative at the same security clearance level." },
+    "aiResilienceScore": 78,
+    "verdict": "Palantir's moat is highly AI-resilient because AI is the product, not a threat to it. The Ontology platform deepens in value as more AI models are layered on top, making Palantir the connective tissue of enterprise AI operations."
+  }
+}
