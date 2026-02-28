@@ -22,7 +22,7 @@ const excluded = [
     ticker: "META",
     name: "Meta",
     href: "/stocks/meta",
-    reason: "Moat score of 68 reflects AI vulnerability. The core advantage of social graph data and targeted advertising faces disruption as AI commoditizes content recommendation. Watchlist candidate if Llama AI creates a proprietary data flywheel, but the moat is not yet wide enough.",
+    reason: "Composite of 75 now sits exactly at the portfolio threshold. Strongest PEG ratio (~1.1x) of any peer at ~25x forward P/E with 20%+ EPS growth — but near-zero FCF yield from a $60B+ capex cycle and ongoing Reality Labs losses keep conviction below a core position. Active portfolio candidate if capex normalizes and WhatsApp commerce inflects.",
   },
   {
     ticker: "TSLA",
