@@ -11,6 +11,7 @@ import {
   RecommendationBadge,
   TenMoatsCard,
 } from '@/components/AnalysisComponents';
+import { LivePriceWidget } from '@/components/LivePriceWidget';
 import { stockData, getAverageScore } from '@/app/stockData';
 import { getStockData } from '@/data/stocks';
 import type { TenMoatsAssessment } from '@/app/tenMoatsData';
@@ -249,6 +250,10 @@ export default function StockPage({ params }: { params: Promise<{ ticker: string
             ),
             detail: (
               <div className="space-y-4">
+                <LivePriceWidget
+                  slug={data.slug}
+                  fairValue={data.valuation.valuationNote?.fairValue}
+                />
                 {data.valuation.valuationNote && (
                   <Card className="bg-white/5 border-none backdrop-blur-md p-6">
                     <h4 className="text-xl font-bold mb-6">Valuation Analysis</h4>
@@ -310,7 +315,11 @@ export default function StockPage({ params }: { params: Promise<{ ticker: string
       {/* ── Price scenarios (desktop only) ── */}
       <div className="hidden md:block">
         <AnalysisSection title="Price Scenarios (12-24 Months)">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <LivePriceWidget
+            slug={data.slug}
+            fairValue={data.valuation.valuationNote?.fairValue}
+          />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
             <ScenarioCard
               type="Bear"
               priceTarget={data.scenarios.bear.priceTarget}
