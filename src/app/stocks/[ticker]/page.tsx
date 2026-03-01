@@ -155,6 +155,7 @@ export default function StockPage({ params }: { params: Promise<{ ticker: string
 
   const stockEntry = stockData.find(s => s.ticker === data.ticker);
   const [liveValScore, setLiveValScore] = useState<number>(data.valuation.score);
+  const [valLoading, setValLoading] = useState(true);
   const dynamicOverallScore = Math.round((data.moat.score + data.growth.score + liveValScore) / 3);
 
   const metricsCount = data.metrics.length;
@@ -228,6 +229,7 @@ export default function StockPage({ params }: { params: Promise<{ ticker: string
       {/* ── Score tabs ── */}
       <ScoreTabsRow
         overallScore={dynamicOverallScore}
+        overallLoading={valLoading}
         tabs={[
           {
             label: 'Moat',
@@ -293,6 +295,7 @@ export default function StockPage({ params }: { params: Promise<{ ticker: string
                 fallbackScore={data.valuation.score}
                 fallbackDescription={data.valuation.description}
                 onScoreChange={setLiveValScore}
+                onLoadingEnd={() => setValLoading(false)}
               />
             ),
             detail: (

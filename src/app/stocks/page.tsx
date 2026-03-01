@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ChevronRight, BarChart3 } from "lucide-react";
-import { Chip } from "@heroui/react";
+import { Chip, Spinner } from "@heroui/react";
 import { stockData } from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
 
@@ -37,24 +37,30 @@ function DynamicOverall({
   bearTarget: string; baseTarget: string; bullTarget: string;
 }) {
   const [avg, setAvg] = useState(() => Math.round((moat + growth + fallbackVal) / 3));
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const bear = parseScenarioPrice(bearTarget);
     const base = parseScenarioPrice(baseTarget);
     const bull = parseScenarioPrice(bullTarget);
-    if (!bear || !base || !bull) return;
+    if (!bear || !base || !bull) { setLoading(false); return; }
 
     let cancelled = false;
     fetch(`/api/stock-price/${slug}`)
       .then(r => (r.ok ? r.json() : null))
       .then(d => {
-        if (cancelled || d?.price == null) return;
-        const liveVal = computeValuationScore(d.price, bear, base, bull);
-        setAvg(Math.round((moat + growth + liveVal) / 3));
+        if (cancelled) return;
+        if (d?.price != null) {
+          const liveVal = computeValuationScore(d.price, bear, base, bull);
+          setAvg(Math.round((moat + growth + liveVal) / 3));
+        }
+        setLoading(false);
       })
-      .catch(() => {});
+      .catch(() => { if (!cancelled) setLoading(false); });
     return () => { cancelled = true; };
   }, [slug, moat, growth, bearTarget, baseTarget, bullTarget]);
+
+  if (loading) return <Spinner size="sm" color="default" />;
 
   const color = avg >= 90 ? "success" : avg >= 80 ? "primary" : avg >= 70 ? "warning" : "danger";
   return (

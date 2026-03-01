@@ -16,6 +16,7 @@ interface DynamicValuationGaugeProps {
   fallbackScore: number;
   fallbackDescription: string;
   onScoreChange?: (score: number) => void;
+  onLoadingEnd?: () => void;
 }
 
 export function DynamicValuationGauge({
@@ -26,6 +27,7 @@ export function DynamicValuationGauge({
   fallbackScore,
   fallbackDescription,
   onScoreChange,
+  onLoadingEnd,
 }: DynamicValuationGaugeProps) {
   const [score, setScore] = useState<number>(fallbackScore);
   const [description, setDescription] = useState<string>(fallbackDescription);
@@ -51,11 +53,12 @@ export function DynamicValuationGauge({
         setScore(liveScore);
         setDescription(liveDesc);
         onScoreChange?.(liveScore);
+        onLoadingEnd?.();
       })
-      .catch(() => {});
+      .catch(() => { if (!cancelled) onLoadingEnd?.(); });
 
     return () => { cancelled = true; };
-  }, [slug, bear, base, bull, bearTarget, baseTarget, bullTarget, onScoreChange]);
+  }, [slug, bear, base, bull, bearTarget, baseTarget, bullTarget, onScoreChange, onLoadingEnd]);
 
   return (
     <ScoreGauge

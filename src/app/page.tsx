@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState, type ReactNode } from "react";
 import { PieChart, ShieldCheck, ChevronRight, AlertTriangle } from "lucide-react";
-import { Card, CardBody, CardHeader, Progress, Chip } from "@heroui/react";
+import { Card, CardBody, CardHeader, Progress, Chip, Spinner } from "@heroui/react";
 import { stockData } from "./stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
 
@@ -24,31 +24,35 @@ function DynamicScore({
   bearTarget: string;
   baseTarget: string;
   bullTarget: string;
-  children: (avg: number) => ReactNode;
+  children: (avg: number, loading: boolean) => ReactNode;
 }) {
   const [avg, setAvg] = useState(() =>
     Math.round((moat + growth + fallbackVal) / 3)
   );
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const bear = parseScenarioPrice(bearTarget);
     const base = parseScenarioPrice(baseTarget);
     const bull = parseScenarioPrice(bullTarget);
-    if (!bear || !base || !bull) return;
+    if (!bear || !base || !bull) { setLoading(false); return; }
 
     let cancelled = false;
     fetch(`/api/stock-price/${slug}`)
       .then(r => (r.ok ? r.json() : null))
       .then(d => {
-        if (cancelled || d?.price == null) return;
-        const liveVal = computeValuationScore(d.price, bear, base, bull);
-        setAvg(Math.round((moat + growth + liveVal) / 3));
+        if (cancelled) return;
+        if (d?.price != null) {
+          const liveVal = computeValuationScore(d.price, bear, base, bull);
+          setAvg(Math.round((moat + growth + liveVal) / 3));
+        }
+        setLoading(false);
       })
-      .catch(() => {});
+      .catch(() => { if (!cancelled) setLoading(false); });
     return () => { cancelled = true; };
   }, [slug, moat, growth, bearTarget, baseTarget, bullTarget]);
 
-  return <>{children(avg)}</>;
+  return <>{children(avg, loading)}</>;
 }
 
 const portfolio = [
@@ -279,10 +283,13 @@ export default function HomePage() {
                   baseTarget={stock.stock.baseTarget}
                   bullTarget={stock.stock.bullTarget}
                 >
-                  {(avg) => (
-                    <div className="text-right mr-2 shrink-0">
+                  {(avg, loading) => (
+                    <div className="text-right mr-2 shrink-0 w-12">
                       <div className="text-[10px] text-white/30 uppercase font-bold">Score</div>
-                      <div className={`text-sm font-black text-${getScoreColor(avg)}`}>{avg}</div>
+                      {loading
+                        ? <Spinner size="sm" color="default" className="mt-0.5" />
+                        : <div className={`text-sm font-black text-${getScoreColor(avg)}`}>{avg}</div>
+                      }
                     </div>
                   )}
                 </DynamicScore>
@@ -332,17 +339,20 @@ export default function HomePage() {
                     baseTarget={stock.stock.baseTarget}
                     bullTarget={stock.stock.bullTarget}
                   >
-                    {(avg) => (
-                      <div className="text-right shrink-0 ml-4">
+                    {(avg, loading) => (
+                      <div className="text-right shrink-0 ml-4 min-w-[52px]">
                         <div className="text-[10px] text-white/30 uppercase font-bold mb-1">Overall</div>
-                        <Chip
-                          size="sm"
-                          color={getScoreColor(avg)}
-                          variant="flat"
-                          classNames={{ content: "font-black text-sm" }}
-                        >
-                          {avg}
-                        </Chip>
+                        {loading
+                          ? <Spinner size="sm" color="default" />
+                          : <Chip
+                              size="sm"
+                              color={getScoreColor(avg)}
+                              variant="flat"
+                              classNames={{ content: "font-black text-sm" }}
+                            >
+                              {avg}
+                            </Chip>
+                        }
                       </div>
                     )}
                   </DynamicScore>
