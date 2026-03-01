@@ -12,6 +12,7 @@ import {
   TenMoatsCard,
 } from '@/components/AnalysisComponents';
 import { LivePriceWidget } from '@/components/LivePriceWidget';
+import { DynamicValuationGauge } from '@/components/DynamicValuationGauge';
 import { stockData, getAverageScore } from '@/app/stockData';
 import { getStockData } from '@/data/stocks';
 import type { TenMoatsAssessment } from '@/app/tenMoatsData';
@@ -283,10 +284,13 @@ export default function StockPage({ params }: { params: Promise<{ ticker: string
           {
             label: 'Value',
             gauge: (
-              <ScoreGauge
-                score={data.valuation.score}
-                label="Valuation Score"
-                description={data.valuation.description}
+              <DynamicValuationGauge
+                slug={data.slug}
+                bearTarget={data.scenarios.bear.priceTarget}
+                baseTarget={data.scenarios.base.priceTarget}
+                bullTarget={data.scenarios.bull.priceTarget}
+                fallbackScore={data.valuation.score}
+                fallbackDescription={data.valuation.description}
               />
             ),
             detail: (
