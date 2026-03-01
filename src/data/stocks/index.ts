@@ -1,6 +1,7 @@
 import type { StockAnalysisData } from '@/types/stockAnalysis';
 
 import amazon from './amazon.json';
+import google from './google.json';
 import msft from './msft.json';
 import nvda from './nvda.json';
 import meta from './meta.json';
@@ -21,6 +22,7 @@ import pltr from './pltr.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   amazon: amazon as StockAnalysisData,
+  google: google as StockAnalysisData,
   msft: msft as StockAnalysisData,
   nvda: nvda as StockAnalysisData,
   meta: meta as StockAnalysisData,

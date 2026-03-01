@@ -1,0 +1,87 @@
+{
+  "slug": "google",
+  "ticker": "GOOGL",
+  "name": "Alphabet Inc.",
+  "headerStats": [
+    { "label": "Ticker", "value": "GOOGL" },
+    { "label": "Market Cap", "value": "$2.1T" },
+    { "label": "Price", "value": "$172.00" }
+  ],
+  "chips": [
+    { "label": "Search | Cloud | AI", "color": "primary" },
+    { "label": "Wide Moat", "color": "success" }
+  ],
+  "recommendation": "Buy",
+  "metrics": [
+    { "title": "Search Revenue", "value": "$49B", "label": "Q4 2024 (YoY +12%)", "icon": "Globe", "color": "#4285F4" },
+    { "title": "Google Cloud", "value": "$12B", "label": "Q4 2024 (YoY +30%)", "icon": "Cloud", "color": "#34A853" },
+    { "title": "Operating Margin", "value": "32%", "label": "Industry-leading efficiency", "icon": "BarChart3", "color": "#FBBC05" }
+  ],
+  "moat": {
+    "score": 88,
+    "description": "Search monopoly, Android OS, YouTube dominance, and Maps form an unassailable data flywheel.",
+    "analysisTitle": "The Information Moat",
+    "analysisSummary": "Google's moat rests on **Data Supremacy and Ecosystem Lock-In**:",
+    "analysisPoints": [
+      { "title": "Search Monopoly", "text": "With ~90% global search market share, Google captures intent-based ad spend that no rival has been able to dislodge. AI Overviews extend this advantage into the AI era rather than displacing it." },
+      { "title": "The Android Ecosystem", "text": "Android runs on over 3 billion active devices, giving Google default access to mobile search, Maps, Gmail, and Play Store — an on-ramp for the entire Google ad stack that is nearly impossible for competitors to replicate." },
+      { "title": "YouTube & Video Ad Dominance", "text": "YouTube's 2.7B+ monthly active users and its creator monetization flywheel make it the world's second-largest search engine and the dominant platform for video advertising." }
+    ]
+  },
+  "growth": {
+    "score": 82,
+    "description": "Google Cloud re-accelerating at 30%+, Search resilient, AI Overviews expanding monetizable query volume."
+  },
+  "valuation": {
+    "score": 72,
+    "description": "Trading at ~20x forward P/E — cheapest of the Magnificent 7, with buybacks reducing share count ~5% annually.",
+    "valuationNote": {
+      "text": "At ~20x forward earnings with 15%+ EPS growth, Google offers the best risk/reward in mega-cap tech. Our fair value estimate is",
+      "fairValue": "$195",
+      "marginOfSafety": "~12%"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$130",
+      "description": "AI disrupts core search; regulatory break-up risk materializes.",
+      "points": [
+        "AI chatbots erode Search query volume by 15%+",
+        "DOJ forces divestiture of Chrome or Android",
+        "YouTube ad market share lost to TikTok and streaming"
+      ]
+    },
+    "base": {
+      "priceTarget": "$195",
+      "description": "Search stable, Cloud at 28%+ growth, AI Overviews monetize well.",
+      "points": [
+        "Google Cloud exits 2025 at $60B+ ARR run rate",
+        "AI Overviews increase Search CPCs rather than cannibalize them",
+        "Waymo commercialization adds optionality upside"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$250",
+      "description": "Gemini becomes the enterprise AI standard; Cloud accelerates to 35%+.",
+      "points": [
+        "Gemini Ultra wins Fortune 500 AI deployments vs. GPT-4",
+        "Google Cloud re-accelerates to 35%+ and narrows AWS gap",
+        "YouTube Shorts monetization reaches parity with TikTok"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": { "status": "strong", "note": "Google.com, Maps, and Gmail are the most habitual interfaces on the internet. 90%+ of users never leave Google's search UI regardless of AI alternatives." },
+    "businessLogic": { "status": "weakened", "note": "AI agents could bypass traditional search for transactional queries, but Google's Gemini integration keeps them in the loop for most workflows." },
+    "publicDataAccess": { "status": "strong", "note": "Google's web crawl, real-time indexing, and Knowledge Graph represent decades of indexing that no newcomer can replicate at scale or recency." },
+    "talentScarcity": { "status": "strong", "note": "Google DeepMind is one of the world's foremost AI research organizations. Gemini, AlphaFold, and other breakthroughs reflect an extraordinary concentration of ML talent." },
+    "bundling": { "status": "strong", "note": "Google Workspace (Docs, Sheets, Meet, Drive) + Android + Chrome creates an ecosystem that serves both consumers and enterprises with deep cross-product integration." },
+    "proprietaryData": { "status": "strong", "note": "Google's data assets — Search intent, Maps traffic, YouTube watch history, Gmail metadata — form the world's largest behavioral dataset, powering superior ad targeting and AI training." },
+    "regulatoryLockIn": { "status": "weakened", "note": "Ongoing DOJ antitrust cases targeting default search agreements and ad tech market practices represent the most significant structural risk to the moat." },
+    "networkEffects": { "status": "strong", "note": "YouTube's creator-viewer flywheel, Google Maps' user-contributed data, and Android's developer ecosystem all compound with scale in ways competitors cannot match." },
+    "transactionEmbedding": { "status": "strong", "note": "Google Pay, Google Shopping, and hotel/flight search embed Google directly into the transaction layer of commerce, capturing high-intent consumer spend." },
+    "systemOfRecord": { "status": "intact", "note": "Google Workspace is the system of record for email, calendar, and documents for hundreds of millions of businesses, with migration costs comparable to Microsoft 365." },
+    "aiResilienceScore": 88,
+    "verdict": "Alphabet's moat is surprisingly AI-resilient. Its data flywheel, Android distribution, and Gemini integration mean AI is more likely to extend than disrupt its competitive advantages — with regulatory risk being the primary long-term concern."
+  }
+}
