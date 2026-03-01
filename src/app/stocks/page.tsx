@@ -1,0 +1,152 @@
+'use client';
+
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { ChevronRight, BarChart3 } from "lucide-react";
+import { Chip } from "@heroui/react";
+import { stockData } from "../stockData";
+import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
+
+const TICKER_COLORS: Record<string, string> = {
+  MSFT: "#00a4ef", AMZN: "#f59e0b", ASML: "#0071c5", V: "#1a1f71",
+  MA: "#eb001b",   NVDA: "#76b900", SPGI: "#cf102d", CRM: "#00a1e0",
+  INTU: "#2ca01c", META: "#1877f2", TSLA: "#cc0000", PLTR: "#7c3aed",
+  ADBE: "#ff0000", NFLX: "#e50914", AMD: "#ed1c24",  XAU: "#f59e0b",
+  BTC:  "#f7931a", KNT:  "#6b7280",
+};
+
+const CATEGORIES = [
+  { label: "Large Cap Tech",       key: "Big Tech"     },
+  { label: "Financials & SaaS",    key: "Financials"   },
+  { label: "Hard Assets & Crypto", key: "Hard Assets"  },
+];
+
+function ScorePill({ label, value, color }: { label: string; value: number; color: string }) {
+  return (
+    <div className="flex flex-col items-center min-w-[44px]">
+      <span className="text-[9px] text-white/30 uppercase font-bold tracking-wider mb-0.5">{label}</span>
+      <span className={`text-sm font-black text-${color}`}>{value}</span>
+    </div>
+  );
+}
+
+function DynamicOverall({
+  slug, moat, growth, fallbackVal, bearTarget, baseTarget, bullTarget,
+}: {
+  slug: string; moat: number; growth: number; fallbackVal: number;
+  bearTarget: string; baseTarget: string; bullTarget: string;
+}) {
+  const [avg, setAvg] = useState(() => Math.round((moat + growth + fallbackVal) / 3));
+
+  useEffect(() => {
+    const bear = parseScenarioPrice(bearTarget);
+    const base = parseScenarioPrice(baseTarget);
+    const bull = parseScenarioPrice(bullTarget);
+    if (!bear || !base || !bull) return;
+
+    let cancelled = false;
+    fetch(`/api/stock-price/${slug}`)
+      .then(r => (r.ok ? r.json() : null))
+      .then(d => {
+        if (cancelled || d?.price == null) return;
+        const liveVal = computeValuationScore(d.price, bear, base, bull);
+        setAvg(Math.round((moat + growth + liveVal) / 3));
+      })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [slug, moat, growth, bearTarget, baseTarget, bullTarget]);
+
+  const color = avg >= 90 ? "success" : avg >= 80 ? "primary" : avg >= 70 ? "warning" : "danger";
+  return (
+    <Chip size="sm" color={color} variant="flat" classNames={{ content: "font-black text-sm tabular-nums" }}>
+      {avg}
+    </Chip>
+  );
+}
+
+function scoreColor(s: number) {
+  if (s >= 90) return "success";
+  if (s >= 80) return "primary";
+  if (s >= 70) return "warning";
+  return "danger";
+}
+
+export default function StocksPage() {
+  const router = useRouter();
+
+  return (
+    <div className="animate-fade-in space-y-12">
+      <header className="mb-8 md:mb-12">
+        <h1 className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent mb-4">
+          Stock Coverage
+        </h1>
+        <p className="text-white/60 text-base md:text-xl max-w-2xl">
+          18 stocks across three categories, scored on moat durability, growth trajectory, and live valuation.
+        </p>
+      </header>
+
+      {CATEGORIES.map((cat) => {
+        const stocks = stockData.filter(s => s.category === cat.key);
+        return (
+          <section key={cat.key}>
+            <div className="flex items-center gap-4 mb-5">
+              <BarChart3 size={18} className="text-white/40 shrink-0" />
+              <h2 className="text-lg font-bold text-white/80">{cat.label}</h2>
+              <div className="h-px flex-1 bg-white/10" />
+              <span className="text-xs text-white/20 font-medium">{stocks.length} stocks</span>
+            </div>
+
+            <div className="rounded-2xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-lg divide-y divide-white/5">
+              {stocks.map((stock) => (
+                <button
+                  key={stock.ticker}
+                  onClick={() => router.push(stock.href)}
+                  className="w-full flex items-center gap-4 px-5 py-4 hover:bg-white/[0.06] transition-colors group text-left"
+                >
+                  <div
+                    className="w-1 self-stretch rounded-full shrink-0"
+                    style={{ background: TICKER_COLORS[stock.ticker] ?? '#6b7280' }}
+                  />
+
+                  <div className="min-w-[150px]">
+                    <div className="font-bold text-sm text-white">{stock.name}</div>
+                    <div className="text-[10px] text-white/30 tracking-widest font-black uppercase">{stock.ticker}</div>
+                  </div>
+
+                  {/* Sub-scores */}
+                  <div className="hidden sm:flex items-center gap-5 flex-1">
+                    <ScorePill label="Moat"   value={stock.scores[0]} color={scoreColor(stock.scores[0])} />
+                    <div className="w-px h-6 bg-white/10" />
+                    <ScorePill label="Growth" value={stock.scores[1]} color={scoreColor(stock.scores[1])} />
+                    <div className="w-px h-6 bg-white/10" />
+                    <ScorePill label="Value"  value={stock.scores[2]} color={scoreColor(stock.scores[2])} />
+                  </div>
+
+                  {/* Dynamic overall */}
+                  <div className="ml-auto flex items-center gap-4 shrink-0">
+                    <div className="text-right hidden xs:block">
+                      <div className="text-[10px] text-white/30 uppercase font-bold mb-1">Overall</div>
+                      <DynamicOverall
+                        slug={stock.slug}
+                        moat={stock.scores[0]}
+                        growth={stock.scores[1]}
+                        fallbackVal={stock.scores[2]}
+                        bearTarget={stock.bearTarget}
+                        baseTarget={stock.baseTarget}
+                        bullTarget={stock.bullTarget}
+                      />
+                    </div>
+                    <ChevronRight
+                      size={16}
+                      className="text-white/20 group-hover:text-white/60 transition-colors"
+                    />
+                  </div>
+                </button>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
