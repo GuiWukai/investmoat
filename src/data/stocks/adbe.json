@@ -33,35 +33,35 @@
     "description": "Generative AI (Firefly) integration driving higher tiers and retention."
   },
   "valuation": {
-    "score": 64,
-    "description": "Reasonable multiple for a company with 30%+ net margins."
+    "score": 77,
+    "description": "Trading between bear ($200) and base ($320) — market pricing in significant AI disruption risk, creating a discount for patient investors who believe in Firefly's commercial differentiation."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$380",
-      "description": "AI disruption from startups (Midjourney/Canva) erodes the 'low-end' market.",
+      "priceTarget": "$200",
+      "description": "AI disruption accelerates — Canva AI, Figma, and native OS creative tools erode Creative Cloud's pricing power and net revenue retention.",
       "points": [
-        "New ARR growth slows to single digits",
-        "Pricing pressure from 'good enough' AI tools",
-        "Integration of Figma-replacement features fails to gain traction"
+        "New ARR growth slows to single digits as AI alternatives capture low-end market",
+        "Pricing pressure forces Creative Cloud plan downgrades en masse",
+        "Firefly credit monetization fails to offset churn from AI-native competitors"
       ]
     },
     "base": {
-      "priceTarget": "$550",
-      "description": "Successful Firefly monetization and steady enterprise upgrades.",
+      "priceTarget": "$320",
+      "description": "Firefly's commercially-safe AI training data differentiates Adobe in enterprise, sustaining mid-single-digit ARR growth.",
       "points": [
-        "Firefly adoption increases Creative Cloud ARPU by 5-8%",
-        "Document Cloud continues to grow at high double digits",
-        "Operating margins remain above 45% (non-GAAP)"
+        "Firefly adoption increases Creative Cloud ARPU by 8-12% via credit consumption",
+        "Document Cloud (Acrobat/Sign) continues compounding at high single digits",
+        "Operating margins remain above 42% (non-GAAP) as headcount efficiency improves"
       ]
     },
     "bull": {
-      "priceTarget": "$680",
-      "description": "Adobe becomes the default generative AI platform for the enterprise.",
+      "priceTarget": "$450",
+      "description": "Adobe becomes the trusted AI creative platform for enterprise compliance, with Firefly embedded in marketing workflows globally.",
       "points": [
-        "AI credit consumption drives massive revenue upside",
-        "Complete automation of creative workflows attracts mass-market users",
-        "Strategic partnership with major social media / ad platforms"
+        "AI credit consumption drives 20%+ revenue re-acceleration beyond consensus",
+        "Document Cloud becomes a leading digital signature and workflow automation platform",
+        "Strategic enterprise AI partnerships lock in Fortune 500 creative workflows"
       ]
     }
   },

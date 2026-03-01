@@ -33,35 +33,35 @@
     "description": "Data Cloud and AI (Einstein) are the primary expansion vectors."
   },
   "valuation": {
-    "score": 88,
-    "description": "Trading ~19% below the bear case target of $240 — deeply discounted relative to all modeled scenarios."
+    "score": 79,
+    "description": "Trading between bear ($150) and base ($250) — reasonable discount to fair value given macro headwinds and Agentforce monetization still early."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$240",
-      "description": "Macro slowdown hits enterprise IT budgets and AI monetization lags.",
+      "priceTarget": "$150",
+      "description": "Enterprise IT budgets compress further, Agentforce fails to monetize at scale, Microsoft Copilot gains more CRM share.",
       "points": [
-        "Seat growth turns flat due to global downsizing",
-        "Execution issues with Data Cloud integration",
-        "Increased competition from Microsoft's Dynamics 365"
+        "Seat growth turns flat due to global downsizing and AI-driven workforce reduction",
+        "Agentforce adoption remains limited to pilot programs, ARPU impact minimal",
+        "Increased competition from Microsoft Dynamics 365 Copilot accelerates churn"
       ]
     },
     "base": {
-      "priceTarget": "$330",
-      "description": "Steady 10-12% growth and margin expansion via efficiency.",
+      "priceTarget": "$250",
+      "description": "Steady 10-12% growth continues, Agentforce begins contributing meaningfully to ARPU, margins expand via efficiency.",
       "points": [
-        "Successful multi-cloud bundling strategies",
-        "Operating margins reach 35% targets early",
-        "Consistent share buyback execution"
+        "Successful multi-cloud bundling strategies drive net revenue retention above 110%",
+        "Agentforce adoption reaches 20%+ of enterprise base, lifting ARPU 8-12%",
+        "Operating margins reach 35%+ as AI reduces implementation headcount"
       ]
     },
     "bull": {
-      "priceTarget": "$400",
-      "description": "AI Agentic workflow becomes a massive revenue driver.",
+      "priceTarget": "$350",
+      "description": "Agentforce becomes a mainstream enterprise workflow layer, driving 20%+ revenue acceleration and significant ARPU expansion.",
       "points": [
-        "Agents and autonomous AI tools drive 20% growth in ARPU",
-        "Data Cloud becomes the fastest-growing product in company history",
-        "Major acquisition of a strategic AI-first software company"
+        "Agentforce becomes the default AI agent platform for Fortune 1000 enterprises",
+        "Data Cloud reaches $3B ARR, becoming a standalone business",
+        "Margin profile re-rates closer to best-in-class SaaS at 40%+ GAAP operating"
       ]
     }
   },

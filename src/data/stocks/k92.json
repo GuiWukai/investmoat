@@ -36,35 +36,35 @@
     "description": "Stage 3 plant commissioned (Dec 2025); Stage 4 expansion underway targeting 400k+ oz run-rate. 2026 guidance implies 9–29% YoY production growth. Score reflects strong production expansion potential, tempered by capital intensity ($75–80M Stage 4 capex in 2026) and execution dependency in an underground PNG mining context."
   },
   "valuation": {
-    "score": 60,
-    "description": "Stock up ~164% YoY, now trading near analyst consensus (~$27–33 CAD target). Meaningful upside only on Stage 4 execution or gold price re-rating."
+    "score": 80,
+    "description": "At ~$27 CAD, stock trades well below base case ($38) given ~$5,000/oz gold prices and sub-$1,100/oz AISC delivering ~$4,000/oz margins. Stage 4 execution is the primary re-rating catalyst."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$16.00",
-      "description": "Gold falls below $2,200 and Stage 4 faces significant delays.",
+      "priceTarget": "$22.00",
+      "description": "Gold corrects sharply to $3,500/oz and Stage 4 faces significant delays, compressing margins and delaying the production re-rating.",
       "points": [
-        "PNG jurisdictional risk leads to tax/permit disruptions",
-        "Stage 4 commissioning pushed back 12+ months",
-        "Rising costs squeeze margins if gold price drops"
+        "Gold price correction to $3,500/oz reduces operating cash flow by ~40%",
+        "PNG jurisdictional risk leads to tax/permit disruptions, delaying Stage 4 by 12+ months",
+        "Rising input costs and PNG Kina appreciation squeeze all-in sustaining cost margins"
       ]
     },
     "base": {
-      "priceTarget": "$30.00",
-      "description": "Stage 4 ramp-up proceeds on schedule with gold holding above $2,700.",
+      "priceTarget": "$38.00",
+      "description": "Gold holds above $4,500/oz and Stage 4 ramp-up proceeds on schedule, driving a production and cash flow re-rating.",
       "points": [
-        "2026 production reaches the top half of 190–225k oz guidance",
-        "Stage 4 DFS confirms 400k+ oz pathway, re-rates the stock",
-        "Analysts upgrade targets to the $33–38 CAD range"
+        "2026 production reaches the top half of 190–225k oz guidance at $4,000+/oz margins",
+        "Stage 4 DFS confirms 400k+ oz pathway, triggering analyst target upgrades",
+        "Blue Lake Porphyry drilling results attract strategic acquirer interest"
       ]
     },
     "bull": {
-      "priceTarget": "$45.00",
-      "description": "Gold surges above $3,500 and Stage 4 delivers ahead of schedule.",
+      "priceTarget": "$65.00",
+      "description": "Gold surges above $6,000/oz and Stage 4 delivers ahead of schedule, with Blue Lake emerging as a company-defining discovery.",
       "points": [
-        "Total production exceeds 350k oz in 2027, 400k+ by 2028",
-        "Major gold producer tables an acquisition bid",
-        "Blue Lake Porphyry emerges as a world-class discovery"
+        "Gold at $6,000+ with $1,100/oz AISC generates ~$5,000/oz margins on 225k+ oz production",
+        "Stage 4 commissioning accelerates to late 2027, pushing run-rate above 350k oz",
+        "Major gold producer tables a takeover bid at a significant premium"
       ]
     }
   },

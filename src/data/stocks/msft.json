@@ -33,35 +33,35 @@
     "description": "AI Copilot integration and Azure AI services are driving massive upsell."
   },
   "valuation": {
-    "score": 68,
-    "description": "Trading at 32x forward P/E, premium but fair for the quality."
+    "score": 75,
+    "description": "Trading between bear ($300) and base ($450) — valuation compression from peak reflects tariff macro uncertainty and Copilot monetization still in early innings; high-quality entry point for the AI infrastructure cycle."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$350",
-      "description": "Azure growth decelerates faster than expected and margins compress.",
+      "priceTarget": "$300",
+      "description": "Azure growth decelerates faster than expected, Copilot monetization disappoints, and macro headwinds compress the multiple.",
       "points": [
-        "Azure growth falls below 20%",
-        "Regulatory hurdles in AI and Cloud dominance",
-        "Cybersecurity breach impacts enterprise trust"
+        "Azure growth falls below 20% as enterprise AI spend moderates",
+        "Copilot fails to convert trials to paid seats at scale, limiting upsell revenue",
+        "Regulatory antitrust action in EU cloud market reduces Azure market share in Europe"
       ]
     },
     "base": {
       "priceTarget": "$450",
-      "description": "Steady 15% revenue growth and successful Copilot monetization.",
+      "description": "Steady 15-17% revenue growth and successful Copilot monetization drive durable EPS compounding.",
       "points": [
-        "Copilot achieves 20% penetration of commercial seats",
-        "Azure AI revenues contribute 500+ bps to growth",
-        "Dividend growth continues at 10%+"
+        "Copilot achieves 25% penetration of commercial seats at $30/seat/month",
+        "Azure AI workloads contribute 600+ bps to overall growth acceleration",
+        "Dividend growth continues at 10%+ alongside steady $20B+ annual buyback"
       ]
     },
     "bull": {
-      "priceTarget": "$550",
-      "description": "Azure becomes the undisputed AI backbone of the global economy.",
+      "priceTarget": "$580",
+      "description": "Azure becomes the undisputed AI backbone of the global economy, with Copilot driving a step-change in enterprise productivity.",
       "points": [
-        "Azure re-accelerates to 35%+ growth",
-        "Gaming (Activision) delivers massive synergetic margins",
-        "Successful expansion into Sovereign AI clouds"
+        "Azure re-accelerates to 35%+ as Sovereign AI cloud wins in major markets",
+        "Copilot penetration exceeds 40% of commercial seats, driving significant ARPU expansion",
+        "Activision gaming content drives Xbox platform to sustainable $5B+ operating income"
       ]
     }
   },

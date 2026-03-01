@@ -33,13 +33,13 @@
     "description": "2026 guidance calls for $50.7–51.7B revenue (+12–14% YoY), 31.5% op margin, and ad revenue doubling to ~$3B—execution on ads and international penetration is the key lever."
   },
   "valuation": {
-    "score": 52,
-    "description": "Trading at ~31x 2026 consensus EPS ($3.12); not cheap, but 13% growth + margin expansion + buybacks makes it defensible for a high-quality compounder with optionality."
+    "score": 71,
+    "description": "Post 10-for-1 split: trading ~9% below base case (~$96). WBD termination fee adds $2.8B buffer; live sports rights are the key bull catalyst."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$60–75",
-      "description": "Growth hits a wall in a saturated, competitive environment—multiple compresses on earnings misses.",
+      "priceTarget": "$65",
+      "description": "Ad-tier adoption stalls, password-sharing recovery runs its course, and competitive streaming intensifies from YouTube and Amazon.",
       "points": [
         "Subscriber net adds stall to low-single digits; password-sharing and ad-tier tailwinds fade; engagement flat or negative in US/Europe",
         "Ad monetization disappoints as YouTube, Amazon, and TikTok keep CPMs low; cannibalization of high-margin premium subs accelerates",
@@ -47,8 +47,8 @@
       ]
     },
     "base": {
-      "priceTarget": "$110–125",
-      "description": "Steady execution on 2026 guidance: 12–14% revenue growth, margins expanding, and ads scaling to ~$3B.",
+      "priceTarget": "$105",
+      "description": "Steady subscriber growth, successful sports rights monetization, and ARM expansion in core US/EU markets.",
       "points": [
         "Mid-single-digit sub adds to ~340–350M; ARPU lifts via pricing and ad mix; ads hit ~$3B (~6% of revenue)",
         "Op margin expands from 31.5% toward low-30s% long-term; FCF grows to $9–11B+; buybacks resume post-WBD termination fee",
@@ -56,8 +56,8 @@
       ]
     },
     "bull": {
-      "priceTarget": "$140–180+",
-      "description": "Ads become a real second engine, the content flywheel compounds, and new verticals scale materially.",
+      "priceTarget": "$160",
+      "description": "Netflix becomes the default live TV replacement: NFL, NBA, and boxing rights drive a new subscriber and ad-inventory wave.",
       "points": [
         "Ad revenue beats to >$3.5–4B+ in 2026, rising to 10–15%+ of total revenue long-term; high-margin data-driven ads win share from linear TV",
         "Subs hit 360M+ by end-2026 on deeper EM penetration; branded originals drive +10%+ viewing and engagement reaccelerates",

@@ -33,13 +33,13 @@
     "description": "Robotics (Optimus) and energy storage are the next 10x frontier."
   },
   "valuation": {
-    "score": 55,
-    "description": "High P/E reflects optionality, but core auto margins are pressured."
+    "score": 63,
+    "description": "Slightly above base (~$409 vs $380 base). TSLA has surged on Robotaxi/Optimus expectations and political tailwinds. Execution on autonomous driving is the key risk."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$100",
-      "description": "EV margins continue to slide and FSD timeline is pushed indefinitely.",
+      "priceTarget": "$180",
+      "description": "EV market share erosion accelerates, FSD regulatory approval delayed beyond 2027, and political tailwinds reverse sharply.",
       "points": [
         "Auto gross margins fall below 12%",
         "Competition from BYD/Xiaomi erodes China share",
@@ -47,8 +47,8 @@
       ]
     },
     "base": {
-      "priceTarget": "$220",
-      "description": "Stabilizing margins and high growth in Energy Storage offset EV cyclicality.",
+      "priceTarget": "$380",
+      "description": "Robotaxi limited launch in key US cities, Optimus ramp begins, and Energy Storage grows 100%+ YoY providing a stable earnings floor.",
       "points": [
         "Next-gen platform ('Model 2') enters production",
         "Energy storage deployment grows 100% YoY",
@@ -56,8 +56,8 @@
       ]
     },
     "bull": {
-      "priceTarget": "$450",
-      "description": "Robotaxi network launch and Optimus robotics production readiness.",
+      "priceTarget": "$650",
+      "description": "Robotaxi reaches profitability, Optimus scales to 1M+ units, and FSD licensing generates $5B+ in high-margin software revenue.",
       "points": [
         "Software revenue becomes >30% of total EBIT",
         "Unsupervised FSD approved in major US cities",

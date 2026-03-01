@@ -33,35 +33,35 @@
     "description": "Credit Karma integration and AI-assisted tax filing driving ARPU."
   },
   "valuation": {
-    "score": 62,
-    "description": "Consistent mid-20s P/E, fair for a high-quality compounder."
+    "score": 75,
+    "description": "Trading between bear ($300) and base ($480) — compressed multiple reflects IRS Direct File overhang and tariff-driven SMB uncertainty; priced attractively for a business with 7M+ switching-cost moats."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$520",
-      "description": "IRS Direct File impacts TurboTax market share and SMB churn rises.",
+      "priceTarget": "$300",
+      "description": "IRS Direct File gains significant traction, SMB churn rises in a prolonged macro slowdown, and AI alternatives erode TurboTax's value proposition.",
       "points": [
-        "TurboTax units decline as government option gains traction",
-        "SMB bankruptcy rates increase in high-rate environment",
-        "Credit Karma segment continues to face lending headwinds"
+        "TurboTax unit count declines 10-15% as IRS free-filing expands to all states",
+        "SMB failures in tariff-sensitive sectors accelerate QuickBooks churn",
+        "Credit Karma revenue stalls as consumer credit conditions remain tight"
       ]
     },
     "base": {
-      "priceTarget": "$700",
-      "description": "Strong QuickBooks pricing power and AI-driven efficiency gains.",
+      "priceTarget": "$480",
+      "description": "QuickBooks pricing power and Intuit Assist AI monetization offset TurboTax headwinds, with steady 10-12% platform revenue growth.",
       "points": [
-        "Mid-market QuickBooks expansion continues",
-        "Successful monetization of 'Intuit Assist' AI tools",
-        "Operating margins expand by 100-200 bps"
+        "Mid-market QuickBooks expansion drives ARPU above $2,000/customer",
+        "Intuit Assist AI copilot achieves meaningful paid penetration in SMB segment",
+        "Operating margins expand 100-200 bps as AI reduces support cost structure"
       ]
     },
     "bull": {
-      "priceTarget": "$850",
-      "description": "Complete automation of accounting flow for 10M+ SMBs globally.",
+      "priceTarget": "$650",
+      "description": "QuickBooks becomes the financial operating system for 15M+ SMBs globally, with B2B payments and lending creating a financial super-app.",
       "points": [
-        "International expansion reaches critical mass",
-        "B2B payments volume through QuickBooks doubles",
-        "Credit Karma becomes a leading financial super-app"
+        "International QuickBooks expansion reaches critical mass in UK, Canada, and ANZ",
+        "B2B payments volume through QuickBooks doubles, adding a high-margin revenue layer",
+        "Credit Karma's lending platform inflects as rate cycle normalizes"
       ]
     }
   },

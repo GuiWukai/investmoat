@@ -33,35 +33,35 @@
     "description": "Ongoing shift from cash to digital and expansion into B2B payments."
   },
   "valuation": {
-    "score": 75,
-    "description": "Trading at 28x forward P/E, reasonable for a consistent 15%+ EPS compounder."
+    "score": 71,
+    "description": "Trading between bear ($245) and base ($335) — consistent 10-12% EPS compounder at 28x forward P/E; modest discount to intrinsic value with cross-border volume as the key upside lever."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$240",
-      "description": "Global recession leads to cross-border travel slump and lower consumer spending.",
+      "priceTarget": "$245",
+      "description": "Tariff-driven global trade slowdown compresses cross-border volume, and regulatory interchange caps pressure the multiple.",
       "points": [
-        "Cross-border volume growth slows to low single digits",
-        "Regulatory caps on interchange fees in major markets",
-        "Adoption of government-led real-time payment rails"
+        "Tariff-driven trade slowdown reduces cross-border volume growth to low single digits",
+        "DOJ antitrust action or EU interchange fee caps reduce network economics",
+        "Consumer spending deceleration in key US and European markets compresses PCE growth"
       ]
     },
     "base": {
-      "priceTarget": "$320",
-      "description": "Steady growth in PCE and continued digitization of payments.",
+      "priceTarget": "$335",
+      "description": "Steady PCE growth, continued digitization of global commerce, and Visa Direct B2B expansion sustain 12-14% EPS compounding.",
       "points": [
-        "International volume grows 10-12%",
-        "Value-added services revenue grows 20%+",
-        "Consistent 10%+ dividend growth"
+        "International payment volume grows 10-12% as emerging market digitization accelerates",
+        "Value-added services revenue grows 20%+, expanding margins beyond core network",
+        "Consistent 15%+ EPS growth supported by share buybacks and operating leverage"
       ]
     },
     "bull": {
-      "priceTarget": "$380",
-      "description": "B2B and 'Visa Direct' capture massive share of non-card payments.",
+      "priceTarget": "$420",
+      "description": "Visa Direct and B2B payments capture massive share of the $200T+ non-card payment market.",
       "points": [
-        "Successful expansion into account-to-account payments",
-        "Major reduction in operating expenses via AI automation",
-        "New cross-border corridors open in emerging markets"
+        "Visa Direct real-time payment rails deployed at scale in 50+ new corridors globally",
+        "B2B commercial payment volume surpasses $2T as enterprise digitization accelerates",
+        "AI-driven fraud reduction expands merchant acceptance in historically resistant categories"
       ]
     }
   },
