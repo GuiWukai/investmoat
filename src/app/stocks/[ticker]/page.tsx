@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { notFound } from 'next/navigation';
 import {
   MetricCard,
@@ -11,6 +11,7 @@ import {
   RecommendationBadge,
   TenMoatsCard,
 } from '@/components/AnalysisComponents';
+import { LivePriceWidget } from '@/components/LivePriceWidget';
 import { stockData, getAverageScore } from '@/app/stockData';
 import { getStockData } from '@/data/stocks';
 import type { TenMoatsAssessment } from '@/app/tenMoatsData';
@@ -107,6 +108,43 @@ function ProductionTimelineSection({ section }: { section: NonNullable<StockAnal
   );
 }
 
+// ─── Inline live price for the page header ───────────────────────────────────
+
+function LiveHeaderPrice({ slug }: { slug: string }) {
+  const [price, setPrice] = useState<string | null>(null);
+  const [changePercent, setChangePercent] = useState<number | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`/api/stock-price/${slug}`)
+      .then(r => (r.ok ? r.json() : null))
+      .then(d => {
+        if (cancelled || d?.price == null) return;
+        const fmt = d.price.toLocaleString('en-US', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        });
+        setPrice(d.currency === 'USD' ? `$${fmt}` : `${fmt} ${d.currency}`);
+        if (d.changePercent != null) setChangePercent(d.changePercent);
+      })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [slug]);
+
+  if (!price) return <strong className="text-white">—</strong>;
+  const positive = changePercent == null || changePercent >= 0;
+  return (
+    <>
+      <strong className="text-white">{price}</strong>
+      {changePercent != null && (
+        <span className={`text-xs ml-1 ${positive ? 'text-success' : 'text-danger'}`}>
+          ({positive ? '+' : ''}{changePercent.toFixed(2)}%)
+        </span>
+      )}
+    </>
+  );
+}
+
 // ─── Page component ────────────────────────────────────────────────────────────
 
 export default function StockPage({ params }: { params: Promise<{ ticker: string }> }) {
@@ -159,7 +197,11 @@ export default function StockPage({ params }: { params: Promise<{ ticker: string
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-white/40 font-medium text-sm md:text-base">
             {data.headerStats.map((stat, i) => (
               <span key={i}>
-                {stat.label}: <strong className="text-white">{stat.value}</strong>
+                {stat.label}:{' '}
+                {stat.label === 'Price'
+                  ? <LiveHeaderPrice slug={data.slug} />
+                  : <strong className="text-white">{stat.value}</strong>
+                }
               </span>
             ))}
           </div>
@@ -249,6 +291,10 @@ export default function StockPage({ params }: { params: Promise<{ ticker: string
             ),
             detail: (
               <div className="space-y-4">
+                <LivePriceWidget
+                  slug={data.slug}
+                  fairValue={data.valuation.valuationNote?.fairValue}
+                />
                 {data.valuation.valuationNote && (
                   <Card className="bg-white/5 border-none backdrop-blur-md p-6">
                     <h4 className="text-xl font-bold mb-6">Valuation Analysis</h4>
@@ -310,7 +356,11 @@ export default function StockPage({ params }: { params: Promise<{ ticker: string
       {/* ── Price scenarios (desktop only) ── */}
       <div className="hidden md:block">
         <AnalysisSection title="Price Scenarios (12-24 Months)">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <LivePriceWidget
+            slug={data.slug}
+            fairValue={data.valuation.valuationNote?.fairValue}
+          />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
             <ScenarioCard
               type="Bear"
               priceTarget={data.scenarios.bear.priceTarget}
