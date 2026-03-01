@@ -1,9 +1,55 @@
 'use client';
 
 import { useRouter } from "next/navigation";
+import { useEffect, useState, type ReactNode } from "react";
 import { PieChart, ShieldCheck, ChevronRight, AlertTriangle } from "lucide-react";
 import { Card, CardBody, CardHeader, Progress, Chip } from "@heroui/react";
-import { stockData, getAverageScore } from "./stockData";
+import { stockData } from "./stockData";
+import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
+
+function DynamicScore({
+  slug,
+  moat,
+  growth,
+  fallbackVal,
+  bearTarget,
+  baseTarget,
+  bullTarget,
+  children,
+}: {
+  slug: string;
+  moat: number;
+  growth: number;
+  fallbackVal: number;
+  bearTarget: string;
+  baseTarget: string;
+  bullTarget: string;
+  children: (avg: number) => ReactNode;
+}) {
+  const [avg, setAvg] = useState(() =>
+    Math.round((moat + growth + fallbackVal) / 3)
+  );
+
+  useEffect(() => {
+    const bear = parseScenarioPrice(bearTarget);
+    const base = parseScenarioPrice(baseTarget);
+    const bull = parseScenarioPrice(bullTarget);
+    if (!bear || !base || !bull) return;
+
+    let cancelled = false;
+    fetch(`/api/stock-price/${slug}`)
+      .then(r => (r.ok ? r.json() : null))
+      .then(d => {
+        if (cancelled || d?.price == null) return;
+        const liveVal = computeValuationScore(d.price, bear, base, bull);
+        setAvg(Math.round((moat + growth + liveVal) / 3));
+      })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [slug, moat, growth, bearTarget, baseTarget, bullTarget]);
+
+  return <>{children(avg)}</>;
+}
 
 const portfolio = [
   { ticker: "MSFT", name: "Microsoft",  weight: 16, color: "#00a4ef", category: "Core SaaS",        href: "/stocks/msft" },
@@ -87,14 +133,12 @@ export default function HomePage() {
 
   const portfolioWithScores = portfolio.map((p) => {
     const stock = stockData.find((s) => s.ticker === p.ticker);
-    const avg = stock ? getAverageScore(stock.scores) : 0;
-    return { ...p, avg };
+    return { ...p, stock };
   });
 
   const excludedWithScores = excluded.map((e) => {
     const stock = stockData.find((s) => s.ticker === e.ticker);
-    const avg = stock ? getAverageScore(stock.scores) : 0;
-    return { ...e, avg };
+    return { ...e, stock };
   });
 
   const getScoreColor = (s: number): "success" | "primary" | "warning" | "danger" => {
@@ -225,10 +269,24 @@ export default function HomePage() {
                 />
               </div>
 
-              <div className="text-right mr-2 shrink-0">
-                <div className="text-[10px] text-white/30 uppercase font-bold">Score</div>
-                <div className={`text-sm font-black text-${getScoreColor(stock.avg)}`}>{stock.avg}</div>
-              </div>
+              {stock.stock ? (
+                <DynamicScore
+                  slug={stock.stock.slug}
+                  moat={stock.stock.scores[0]}
+                  growth={stock.stock.scores[1]}
+                  fallbackVal={stock.stock.scores[2]}
+                  bearTarget={stock.stock.bearTarget}
+                  baseTarget={stock.stock.baseTarget}
+                  bullTarget={stock.stock.bullTarget}
+                >
+                  {(avg) => (
+                    <div className="text-right mr-2 shrink-0">
+                      <div className="text-[10px] text-white/30 uppercase font-bold">Score</div>
+                      <div className={`text-sm font-black text-${getScoreColor(avg)}`}>{avg}</div>
+                    </div>
+                  )}
+                </DynamicScore>
+              ) : null}
 
               <span className="text-base font-black text-white tabular-nums w-10 text-right">{stock.weight}%</span>
 
@@ -264,17 +322,31 @@ export default function HomePage() {
                     {stock.ticker}
                   </span>
                 </div>
-                <div className="text-right shrink-0 ml-4">
-                  <div className="text-[10px] text-white/30 uppercase font-bold mb-1">Overall</div>
-                  <Chip
-                    size="sm"
-                    color={getScoreColor(stock.avg)}
-                    variant="flat"
-                    classNames={{ content: "font-black text-sm" }}
+                {stock.stock ? (
+                  <DynamicScore
+                    slug={stock.stock.slug}
+                    moat={stock.stock.scores[0]}
+                    growth={stock.stock.scores[1]}
+                    fallbackVal={stock.stock.scores[2]}
+                    bearTarget={stock.stock.bearTarget}
+                    baseTarget={stock.stock.baseTarget}
+                    bullTarget={stock.stock.bullTarget}
                   >
-                    {stock.avg}
-                  </Chip>
-                </div>
+                    {(avg) => (
+                      <div className="text-right shrink-0 ml-4">
+                        <div className="text-[10px] text-white/30 uppercase font-bold mb-1">Overall</div>
+                        <Chip
+                          size="sm"
+                          color={getScoreColor(avg)}
+                          variant="flat"
+                          classNames={{ content: "font-black text-sm" }}
+                        >
+                          {avg}
+                        </Chip>
+                      </div>
+                    )}
+                  </DynamicScore>
+                ) : null}
               </div>
               <p className="text-white/40 text-xs leading-relaxed">{stock.reason}</p>
             </button>
