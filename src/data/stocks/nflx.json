@@ -13,9 +13,9 @@
   ],
   "recommendation": "Hold",
   "metrics": [
-    { "title": "Paid Members", "value": "270M", "label": "Global Scale", "icon": "Users", "color": "#e50914" },
-    { "title": "FCF Generation", "value": "$6.5B", "label": "Expected 2024", "icon": "TrendingUp", "color": "#10b981" },
-    { "title": "Content Spend", "value": "$17B", "label": "Annual Budget", "icon": "Play", "color": "#3b82f6" }
+    { "title": "Paid Members", "value": "325M", "label": "End-2025", "icon": "Users", "color": "#e50914" },
+    { "title": "FCF Generation", "value": "$9–11B", "label": "2026 Projection", "icon": "TrendingUp", "color": "#10b981" },
+    { "title": "Content Spend", "value": "$20B", "label": "2026 Budget", "icon": "Play", "color": "#3b82f6" }
   ],
   "moat": {
     "score": 63,
@@ -30,38 +30,38 @@
   },
   "growth": {
     "score": 88,
-    "description": "Ad-tier expansion and paid sharing crackdown continue to drive ARPU and sub growth."
+    "description": "2026 guidance calls for $50.7–51.7B revenue (+12–14% YoY), 31.5% op margin, and ad revenue doubling to ~$3B—execution on ads and international penetration is the key lever."
   },
   "valuation": {
     "score": 52,
-    "description": "Trading at 35x P/E, requires high execution on ad-revenue targets."
+    "description": "Trading at ~31x 2026 consensus EPS ($3.12); not cheap, but 13% growth + margin expansion + buybacks makes it defensible for a high-quality compounder with optionality."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$450",
-      "description": "Ad-tier adoption cannibalizes higher price plans and churn rises.",
+      "priceTarget": "$60–75",
+      "description": "Growth hits a wall in a saturated, competitive environment—multiple compresses on earnings misses.",
       "points": [
-        "ARM (Average Revenue per Member) growth stagnates",
-        "Major competitors (YouTube/Disney) win more 'watch time' share",
-        "Increase in content production costs due to inflation"
+        "Subscriber net adds stall to low-single digits; password-sharing and ad-tier tailwinds fade; engagement flat or negative in US/Europe",
+        "Ad monetization disappoints as YouTube, Amazon, and TikTok keep CPMs low; cannibalization of high-margin premium subs accelerates",
+        "Revenue grows <10% in 2026–27; op margin stalls below 30% as $20B content spend delivers diminishing returns and live/games underperform"
       ]
     },
     "base": {
-      "priceTarget": "$680",
-      "description": "Successful monetization of ad-tier and steady subscriber gains.",
+      "priceTarget": "$110–125",
+      "description": "Steady execution on 2026 guidance: 12–14% revenue growth, margins expanding, and ads scaling to ~$3B.",
       "points": [
-        "Ad-revenue becomes a meaningful 10% portion of total top-line",
-        "Operating margins expand beyond 25% target",
-        "Continued success in non-English content exports"
+        "Mid-single-digit sub adds to ~340–350M; ARPU lifts via pricing and ad mix; ads hit ~$3B (~6% of revenue)",
+        "Op margin expands from 31.5% toward low-30s% long-term; FCF grows to $9–11B+; buybacks resume post-WBD termination fee",
+        "Live, games, and podcasts contribute modestly without blowing up costs; WBD walk maintains capital discipline"
       ]
     },
     "bull": {
-      "priceTarget": "$850",
-      "description": "Netflix becomes the default 'Live TV' replacement including sports.",
+      "priceTarget": "$140–180+",
+      "description": "Ads become a real second engine, the content flywheel compounds, and new verticals scale materially.",
       "points": [
-        "Live sports (WWE/NFL) drive a new massive wave of ad-inventory",
-        "Gaming integration leads to material improvement in churn and engagement",
-        "ARM exceeds $20 in core US/EU markets"
+        "Ad revenue beats to >$3.5–4B+ in 2026, rising to 10–15%+ of total revenue long-term; high-margin data-driven ads win share from linear TV",
+        "Subs hit 360M+ by end-2026 on deeper EM penetration; branded originals drive +10%+ viewing and engagement reaccelerates",
+        "Multiple expands to 40x+ as revenue growth reaccelerates to 15%+ and FCF compounds; no WBD deal highlights discipline vs. rivals"
       ]
     }
   },
