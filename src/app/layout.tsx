@@ -113,7 +113,7 @@ export default function RootLayout({
                     {categories.map((cat) => (
                       <AccordionItem
                         key={cat.key}
-                        title={<span className="text-white/40 text-xs font-bold uppercase tracking-wider">{cat.name}</span>}
+                        title={<span className="text-white/40 text-xs font-bold uppercase tracking-wider text-left w-full block">{cat.name}</span>}
                         className="px-0"
                       >
                         <div className="flex flex-col gap-1">
