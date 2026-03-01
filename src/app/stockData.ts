@@ -13,7 +13,7 @@ export const stockData = [
     { name: "Visa",       ticker: "V",    scores: [90, 82, 75], href: "/stocks/visa",       category: "Financials"  },
     { name: "Mastercard", ticker: "MA",   scores: [88, 88, 70], href: "/stocks/mastercard", category: "Financials"  },
     { name: "Palantir",   ticker: "PLTR", scores: [78, 88, 48], href: "/stocks/pltr",       category: "Big Tech"    },
-    { name: "Salesforce", ticker: "CRM",  scores: [78, 80, 68], href: "/stocks/crm",        category: "Financials"  },
+    { name: "Salesforce", ticker: "CRM",  scores: [78, 80, 88], href: "/stocks/crm",        category: "Financials"  },
     { name: "Adobe",      ticker: "ADBE", scores: [58, 82, 64], href: "/stocks/adbe",       category: "Financials"  },
     { name: "S&P Global", ticker: "SPGI", scores: [88, 78, 75], href: "/stocks/spgi",       category: "Financials"  },
     { name: "Intuit",     ticker: "INTU", scores: [80, 84, 62], href: "/stocks/intuit",     category: "Financials"  },
