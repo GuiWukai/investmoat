@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { notFound } from 'next/navigation';
 import {
   MetricCard,
@@ -108,6 +108,43 @@ function ProductionTimelineSection({ section }: { section: NonNullable<StockAnal
   );
 }
 
+// ─── Inline live price for the page header ───────────────────────────────────
+
+function LiveHeaderPrice({ slug }: { slug: string }) {
+  const [price, setPrice] = useState<string | null>(null);
+  const [changePercent, setChangePercent] = useState<number | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`/api/stock-price/${slug}`)
+      .then(r => (r.ok ? r.json() : null))
+      .then(d => {
+        if (cancelled || d?.price == null) return;
+        const fmt = d.price.toLocaleString('en-US', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        });
+        setPrice(d.currency === 'USD' ? `$${fmt}` : `${fmt} ${d.currency}`);
+        if (d.changePercent != null) setChangePercent(d.changePercent);
+      })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [slug]);
+
+  if (!price) return <strong className="text-white">—</strong>;
+  const positive = changePercent == null || changePercent >= 0;
+  return (
+    <>
+      <strong className="text-white">{price}</strong>
+      {changePercent != null && (
+        <span className={`text-xs ml-1 ${positive ? 'text-success' : 'text-danger'}`}>
+          ({positive ? '+' : ''}{changePercent.toFixed(2)}%)
+        </span>
+      )}
+    </>
+  );
+}
+
 // ─── Page component ────────────────────────────────────────────────────────────
 
 export default function StockPage({ params }: { params: Promise<{ ticker: string }> }) {
@@ -160,7 +197,11 @@ export default function StockPage({ params }: { params: Promise<{ ticker: string
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-white/40 font-medium text-sm md:text-base">
             {data.headerStats.map((stat, i) => (
               <span key={i}>
-                {stat.label}: <strong className="text-white">{stat.value}</strong>
+                {stat.label}:{' '}
+                {stat.label === 'Price'
+                  ? <LiveHeaderPrice slug={data.slug} />
+                  : <strong className="text-white">{stat.value}</strong>
+                }
               </span>
             ))}
           </div>
