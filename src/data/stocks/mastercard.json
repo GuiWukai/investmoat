@@ -33,35 +33,35 @@
     "description": "Faster growth than Visa in service revenue and data analytics."
   },
   "valuation": {
-    "score": 70,
-    "description": "Trades at a premium (32x P/E) but justified by higher growth profile."
+    "score": 71,
+    "description": "Trading between bear ($400) and base ($555) — premium justified by superior data services growth mix; consistent 15-18% EPS compounder at a reasonable price for long-term compounding."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$390",
-      "description": "Valuation multiple contraction and regulatory headwinds in cross-border fees.",
+      "priceTarget": "$400",
+      "description": "Multiple contraction from macro slowdown, regulatory interchange headwinds, and slower-than-expected commercial payments growth.",
       "points": [
-        "P/E compresses to 25x due to growth fears",
-        "New competition from domestic digital wallets (e.g., India, SE Asia)",
-        "Slower than expected recovery in high-yielding travel volume"
+        "P/E compresses to 25x as growth fears reduce premium vs. Visa",
+        "EU interchange fee regulation extends to new payment categories, compressing take rates",
+        "Cross-border travel volume recovery stalls in key high-yield corridors"
       ]
     },
     "base": {
-      "priceTarget": "$520",
-      "description": "Double-digit top and bottom line growth continues.",
+      "priceTarget": "$555",
+      "description": "Double-digit top and bottom line growth continues, driven by data services and emerging market digitization.",
       "points": [
-        "Cross-border volume remains robust",
-        "Cybersecurity and data services grow at 20%+",
-        "Share buybacks continue to drive EPS growth"
+        "Cross-border volume grows 12-15% as global travel normalizes post-tariff uncertainty",
+        "Cybersecurity and data analytics services grow 25%+, expanding margins beyond core network",
+        "Share buybacks retire 3-4% of float annually, compounding EPS growth"
       ]
     },
     "bull": {
-      "priceTarget": "$610",
-      "description": "Massive acceleration in commercial payments and value-added services.",
+      "priceTarget": "$700",
+      "description": "Mastercard's data services and B2B infrastructure become the dominant layer for global commercial payments.",
       "points": [
-        "Commercial B2B volume exceeds $2.5T",
-        "Margins expand significantly due to automation",
-        "New digital currency infrastructure becomes a standard protocol"
+        "Commercial B2B payment volume exceeds $2.5T as enterprise digitization accelerates",
+        "Multi-rail strategy captures significant share of real-time account-to-account payments",
+        "AI-powered fraud and analytics services double as a percentage of total revenue"
       ]
     }
   },

@@ -12,6 +12,7 @@ import {
   TenMoatsCard,
 } from '@/components/AnalysisComponents';
 import { LivePriceWidget } from '@/components/LivePriceWidget';
+import { DynamicValuationGauge } from '@/components/DynamicValuationGauge';
 import { stockData, getAverageScore } from '@/app/stockData';
 import { getStockData } from '@/data/stocks';
 import type { TenMoatsAssessment } from '@/app/tenMoatsData';
@@ -153,7 +154,9 @@ export default function StockPage({ params }: { params: Promise<{ ticker: string
   if (!data) notFound();
 
   const stockEntry = stockData.find(s => s.ticker === data.ticker);
-  const overallScore = stockEntry ? getAverageScore(stockEntry.scores) : 0;
+  const [liveValScore, setLiveValScore] = useState<number>(data.valuation.score);
+  const [valLoading, setValLoading] = useState(true);
+  const dynamicOverallScore = Math.round((data.moat.score + data.growth.score + liveValScore) / 3);
 
   const metricsCount = data.metrics.length;
   const gridCols = metricsCount === 4 ? 'grid-cols-2 md:grid-cols-4' : 'grid-cols-3';
@@ -225,7 +228,8 @@ export default function StockPage({ params }: { params: Promise<{ ticker: string
 
       {/* ── Score tabs ── */}
       <ScoreTabsRow
-        overallScore={overallScore}
+        overallScore={dynamicOverallScore}
+        overallLoading={valLoading}
         tabs={[
           {
             label: 'Moat',
@@ -283,10 +287,15 @@ export default function StockPage({ params }: { params: Promise<{ ticker: string
           {
             label: 'Value',
             gauge: (
-              <ScoreGauge
-                score={data.valuation.score}
-                label="Valuation Score"
-                description={data.valuation.description}
+              <DynamicValuationGauge
+                slug={data.slug}
+                bearTarget={data.scenarios.bear.priceTarget}
+                baseTarget={data.scenarios.base.priceTarget}
+                bullTarget={data.scenarios.bull.priceTarget}
+                fallbackScore={data.valuation.score}
+                fallbackDescription={data.valuation.description}
+                onScoreChange={setLiveValScore}
+                onLoadingEnd={() => setValLoading(false)}
               />
             ),
             detail: (

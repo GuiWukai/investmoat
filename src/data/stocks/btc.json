@@ -34,35 +34,35 @@
     "description": "Institutional adoption via ETFs and sovereign treasury integration."
   },
   "valuation": {
-    "score": 50,
-    "description": "Relative to M2 money supply and gold market cap parity."
+    "score": 77,
+    "description": "At ~$85,000, trading between bear ($45,000) and base ($120,000) — current price reflects post-halving momentum and ETF inflow narrative; meaningful upside to base on continued institutional adoption."
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$45,000",
-      "description": "Severe regulatory crackdown and a mass-market risk-off event.",
+      "description": "Macro risk-off event combined with regulatory shock triggers a sharp ETF outflow cycle and leveraged position unwind.",
       "points": [
-        "Banning of self-custody wallets in major jurisdictions",
-        "Major ETF provider liquidation due to insolvency",
-        "Recession leads to liquidations across all risk assets"
+        "US recession forces institutional portfolio de-risking, ETF outflows accelerate",
+        "Major G20 jurisdiction enacts restrictive self-custody or exchange legislation",
+        "Post-halving miner capitulation event drives forced selling pressure"
       ]
     },
     "base": {
-      "priceTarget": "$95,000",
-      "description": "Continued ETF inflows and steady adoption as a gold alternative.",
+      "priceTarget": "$120,000",
+      "description": "Continued institutional ETF accumulation and corporate treasury adoption drives a measured re-rating toward gold parity.",
       "points": [
-        "Institutional weighting increases to 1-2% in traditional portfolios",
-        "Inflation remains sticky, driving demand for hard assets",
-        "Development of Bitcoin Layer 2s increases network utility"
+        "Institutional weighting in traditional portfolios increases to 1-2% as more endowments adopt BTC",
+        "US Strategic Bitcoin Reserve formalized, removing sovereign selling overhang",
+        "Post-halving supply shock compounds with ETF demand, maintaining structural bid"
       ]
     },
     "bull": {
-      "priceTarget": "$250,000+",
-      "description": "Sovereign nation adoption and global currency volatility.",
+      "priceTarget": "$300,000+",
+      "description": "Sovereign nation adoption and global currency instability trigger a generational flight to decentralized hard assets.",
       "points": [
-        "Global central banks begin adding BTC to reserves",
-        "Major Fortune 500 companies follow MicroStrategy's treasury model",
-        "Hyper-inflation in G7 currencies triggers global flight to safety"
+        "Multiple G20 central banks begin formally adding BTC to foreign exchange reserves",
+        "G7 fiscal crisis triggers currency volatility, accelerating BTC safe-haven flows",
+        "MicroStrategy-model corporate treasury adoption reaches 500+ companies globally"
       ]
     }
   },

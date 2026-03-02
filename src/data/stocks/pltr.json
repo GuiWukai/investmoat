@@ -33,35 +33,35 @@
     "description": "US commercial segment growing at 50%+ YoY; AIP creating an entirely new demand curve for enterprise AI."
   },
   "valuation": {
-    "score": 48,
-    "description": "Trades at a significant premium to SaaS peers; requires sustained hyper-growth to justify current multiples."
+    "score": 71,
+    "description": "Trading between bear ($80) and base ($155) — elevated multiple (~70x forward sales) demands continued hyper-growth execution; current price reflects AIP commercial momentum but leaves limited margin of safety."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$55",
-      "description": "US commercial growth decelerates and government budget constraints compress defense spending.",
+      "priceTarget": "$80",
+      "description": "US commercial growth decelerates sharply, DOGE-driven defense cuts pressure government revenue, and valuation multiple compresses toward SaaS peers.",
       "points": [
-        "US commercial growth slows to sub-20% as AIP boot camp pipeline saturates",
-        "Continuing resolution or defense budget cuts reduce government contract renewals",
-        "Competitor platforms (Microsoft Fabric, Databricks) close the ontology gap"
+        "US commercial growth slows below 30% as AIP boot camp pipeline saturates",
+        "DOGE budget cuts or continuing resolution reduce government contract renewals",
+        "Competitor platforms (Microsoft Fabric, Databricks) close the ontology gap at lower cost"
       ]
     },
     "base": {
-      "priceTarget": "$120",
-      "description": "AIP-driven commercial expansion continues at 40%+ while government revenue provides stable floor.",
+      "priceTarget": "$155",
+      "description": "AIP-driven commercial expansion sustains 40%+ US commercial growth while government revenue holds steady.",
       "points": [
-        "US commercial revenue crosses $1.5B annualized run-rate by end of 2025",
-        "International commercial segment returns to growth",
-        "Rule of 40 score stays above 60, confirming elite operating efficiency"
+        "US commercial revenue crosses $2B annualized run-rate by end of 2026",
+        "International commercial segment returns to double-digit growth",
+        "Rule of 40 score stays above 70, confirming elite operating efficiency"
       ]
     },
     "bull": {
-      "priceTarget": "$200+",
-      "description": "Palantir becomes the de facto AI operating system for Fortune 500 and allied governments.",
+      "priceTarget": "$260",
+      "description": "Palantir becomes the de facto AI operating system for Fortune 500 and allied governments globally.",
       "points": [
-        "AIP becomes the enterprise standard for AI-to-action workflows",
-        "NATO and Five Eyes expansion drives international government revenue surge",
-        "Palantir OS abstracts away all underlying AI models, creating durable platform lock-in"
+        "AIP becomes the enterprise standard for AI-to-action workflows, displacing legacy BI tools",
+        "NATO and Five Eyes expansion drives international government revenue above $500M",
+        "Palantir OS abstracts away all underlying AI models, creating durable platform lock-in at 100+ enterprise accounts"
       ]
     }
   },

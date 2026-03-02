@@ -33,35 +33,35 @@
     "description": "Index licensing (S&P 500) and ESG data integration."
   },
   "valuation": {
-    "score": 75,
-    "description": "Trading at a premium but justified by the 'toll bridge' business model."
+    "score": 78,
+    "description": "Trading between bear ($400) and base ($500) — tariff and rate uncertainty compresses near-term issuance volumes; the refinancing wall and private credit expansion represent durable multi-year tailwinds."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$350",
-      "description": "Global debt issuance freezes and market data subscription churn.",
+      "priceTarget": "$400",
+      "description": "Tariff-driven uncertainty freezes debt capital markets activity, ESG backlash reduces data segment revenue, and multiple compresses.",
       "points": [
-        "High interest rates kill new corporate bond issuance",
-        "Consolidation in the financial sector reduces terminal counts",
-        "ESG revenue faces political and regulatory backlash"
+        "Tariff and geopolitical uncertainty freezes new corporate bond issuance for 6-12 months",
+        "ESG/sustainability data revenue faces continued political and institutional backlash in US market",
+        "Financial sector consolidation reduces Market Intelligence terminal and data subscription counts"
       ]
     },
     "base": {
-      "priceTarget": "$480",
-      "description": "Steady 7-9% revenue growth and ratings recovery post-2024.",
+      "priceTarget": "$500",
+      "description": "The refinancing wall drives sustained ratings demand through 2026-2027, with index licensing and private markets expanding the revenue mix.",
       "points": [
-        "Refinancing 'wall' leads to steady ratings demand",
-        "Index licensing grows with equity market appreciation",
-        "Operating margins remain above 45%"
+        "Refinancing wall of $10T+ in corporate debt drives steady ratings demand through 2027",
+        "Index licensing grows 12-15% annually as ETF AUM expansion continues globally",
+        "Private credit ratings become a standard requirement as the $1.5T+ market matures"
       ]
     },
     "bull": {
-      "priceTarget": "$560",
-      "description": "Massive expansion into private market data and ESG dominance.",
+      "priceTarget": "$610",
+      "description": "Private market data becomes a category-defining business, and AI-powered market intelligence creates a new high-growth revenue stream.",
       "points": [
-        "Acquisition integration creates significant cost synergies",
-        "Private credit ratings become a standard requirement",
-        "Dividend growth re-accelerates to >15%"
+        "Private credit and private equity data analytics become a $1B+ revenue segment",
+        "AI-powered Market Intelligence platform commands significant pricing power premium",
+        "Dividend growth re-accelerates to 15%+ as FCF generation exceeds $5B annually"
       ]
     }
   },

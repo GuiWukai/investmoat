@@ -34,12 +34,12 @@
   },
   "valuation": {
     "score": 65,
-    "description": "High expectation hurdle; every earnings must be a massive beat."
+    "description": "Post 10-for-1 split: trading at fair value (~$177). Blackwell demand is strong but priced for continued execution — every quarter must beat."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$600",
-      "description": "Hyperscaler demand peaks and transitions to internal silicon (ASICs).",
+      "priceTarget": "$100",
+      "description": "Hyperscaler capex cycle peaks as in-house ASICs (Google TPU, Amazon Trainium) displace merchant silicon and export controls bite.",
       "points": [
         "Major cloud providers reduce H100 orders by 30%+",
         "Competition from AMD MI300 series gains 15% share",
@@ -47,8 +47,8 @@
       ]
     },
     "base": {
-      "priceTarget": "$950",
-      "description": "Blackwell cycle maintains ASPs and software revenue starts to scale.",
+      "priceTarget": "$175",
+      "description": "Blackwell cycle sustains data center demand; AI Enterprise software revenue begins to scale meaningfully toward $3B+ ARR.",
       "points": [
         "Data center growth stays above 50% throughout 2025",
         "Software subscriptions (AI Enterprise) reach $1B+ ARR",
@@ -56,8 +56,8 @@
       ]
     },
     "bull": {
-      "priceTarget": "$1,200+",
-      "description": "Sovereign AI demand and Blackwell architectural dominance.",
+      "priceTarget": "$280",
+      "description": "Vera Rubin architecture dominance, sovereign AI buildout creates an incremental $60B+ market, and software revenue inflects.",
       "points": [
         "Nations building domestic AI capacity creates a new $50B market",
         "Omniverse becomes the backbone for industrial robotics",

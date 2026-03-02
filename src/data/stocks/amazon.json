@@ -41,40 +41,40 @@
     }
   },
   "valuation": {
-    "score": 72,
-    "description": "Trading at 14x forward Cash Flow, slightly above historical mean.",
+    "score": 76,
+    "description": "Trading below DCF fair value of ~$225; tariff uncertainty and AWS capex cycle weigh on multiple, creating an attractive entry for patient investors in a category-dominant business.",
     "valuationNote": {
       "text": "Using a 10-year DCF with a 9% WACC and a 3.5% terminal growth rate, our fair value estimate for AMZN is",
-      "fairValue": "$215/share",
-      "marginOfSafety": "14%"
+      "fairValue": "$225/share",
+      "marginOfSafety": "17%"
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$140",
-      "description": "Macro slowdown hits consumer spending and AWS margins compress.",
+      "priceTarget": "$145",
+      "description": "Tariff-driven consumer slowdown hits e-commerce, AWS growth decelerates sharply, and margin expansion stalls.",
       "points": [
-        "E-commerce growth falls below 5%",
-        "AWS revenue decelerates to mid-teens",
-        "Regulatory pressure on marketplace fees"
+        "E-commerce growth falls below 5% as tariff shock hits discretionary spending",
+        "AWS revenue decelerates to mid-teens as enterprise IT budgets compress",
+        "Regulatory pressure on marketplace fees and antitrust rulings compress retail margins"
       ]
     },
     "base": {
-      "priceTarget": "$210",
-      "description": "Continued efficiency gains in fulfillment and steady AWS growth.",
+      "priceTarget": "$225",
+      "description": "Continued efficiency gains in fulfillment and steady AWS growth with AI infrastructure demand as a new tailwind.",
       "points": [
-        "AWS growth stays in 17-20% range",
-        "Advertising revenue remains major margin driver",
-        "International retail reaches sustainable profit"
+        "AWS growth reaccelerates to 22-25% driven by AI inference and training workloads",
+        "Advertising revenue maintains 20%+ growth as the highest-ROI ad platform",
+        "International retail reaches sustainable profitability, unlocking a new FCF stream"
       ]
     },
     "bull": {
-      "priceTarget": "$265",
-      "description": "AI demand triggers massive AWS expansion and logistics monetization.",
+      "priceTarget": "$310",
+      "description": "AI demand triggers massive AWS re-acceleration and logistics monetization creates a fourth high-margin business pillar.",
       "points": [
-        "AWS growth re-accelerates above 25%",
-        "Logistics-as-a-service becomes 4th pillar",
-        "Massive FCF generation leads to buybacks"
+        "AWS growth re-accelerates above 30% as AI infrastructure becomes the dominant workload",
+        "Logistics-as-a-Service emerges as a $20B+ revenue business beyond Amazon packages",
+        "FCF generation exceeds $100B, enabling a transformative buyback program"
       ]
     }
   },

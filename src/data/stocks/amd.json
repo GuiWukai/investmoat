@@ -33,35 +33,35 @@
     "description": "Catching up rapidly in the AI accelerator market with chiplet architectures."
   },
   "valuation": {
-    "score": 58,
-    "description": "High P/E (45x) requires high execution to justify multiple."
+    "score": 71,
+    "description": "Trading between bear ($110) and base ($230) — multiple contraction from peak reflects NVIDIA's widening software moat; current price offers a reasonable entry for the AI second-source thesis."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$120",
-      "description": "Intel re-captures server market and MI300 series adoption stalls.",
+      "priceTarget": "$110",
+      "description": "MI300X/MI350 adoption stalls, CUDA continues to dominate, and AMD loses server CPU share to ARM-based competitors.",
       "points": [
-        "Intel's 18A process node beats expectations",
-        "ROCm software fails to achieve critical developer weight",
-        "PC market recovery significantly underwhelms"
+        "ROCm software ecosystem fails to reach critical developer mass vs CUDA's 4M+ community",
+        "Intel 18A process surprise recaptures meaningful server CPU share from EPYC",
+        "AI GPU revenue misses guidance as hyperscalers consolidate on NVIDIA infrastructure"
       ]
     },
     "base": {
-      "priceTarget": "$210",
-      "description": "Continued steady EPYC share gains and $5B+ in AI revenue.",
+      "priceTarget": "$230",
+      "description": "Continued EPYC share gains in servers and MI300/350 series captures 15-20% of AI GPU TAM as the clear alternative to NVIDIA.",
       "points": [
-        "AI GPU revenue meets or exceeds raised guidance",
-        "Server market share reaches 35%+",
-        "Client PC segment returns to mid-single digit growth"
+        "AI GPU revenue reaches $8-10B, with Microsoft and Meta as anchor MI350 customers",
+        "EPYC server market share reaches 35%+ as hyperscalers pursue vendor diversification",
+        "PC recovery lifts Client segment revenue, expanding overall margin profile"
       ]
     },
     "bull": {
-      "priceTarget": "$280",
-      "description": "AMD becomes the true 'Second Source' for global AI infrastructure.",
+      "priceTarget": "$320",
+      "description": "AMD becomes the true second-source for global AI infrastructure, with ROCm reaching parity with CUDA for key workloads.",
       "points": [
-        "MI350/400 series achieve performance parity with Nvidia",
-        "Substantial licensing of ROCm by major cloud providers",
-        "Strategic acquisition of a major networking or software player"
+        "MI400 series achieves competitive performance with NVIDIA on transformer training workloads",
+        "Major hyperscaler commits 30%+ of AI infrastructure budget to AMD for vendor diversification",
+        "ROCm achieves critical mass with 500k+ developers, enabling a genuine CUDA alternative"
       ]
     }
   },

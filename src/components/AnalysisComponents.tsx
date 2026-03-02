@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { TrendingUp, PlusCircle, Minus, Zap, ShieldCheck, ShieldX } from "lucide-react";
-import { Card, CardBody, CardHeader, Chip, Progress, CircularProgress, Divider } from "@heroui/react";
+import { Card, CardBody, CardHeader, Chip, Progress, CircularProgress, Divider, Spinner } from "@heroui/react";
 import type { TenMoatsAssessment, MoatStatus } from "@/app/tenMoatsData";
 
 interface MetricCardProps {
@@ -70,7 +70,7 @@ export function ScoreGauge({ score, label, description }: ScoreGaugeProps) {
   );
 }
 
-export function OverallScoreCard({ score }: { score: number }) {
+export function OverallScoreCard({ score, loading }: { score: number; loading?: boolean }) {
   const getTier = (s: number): { label: string; hex: string; color: "success" | "primary" | "warning" | "danger" } => {
     if (s >= 90) return { label: 'Exceptional', hex: '#17c964', color: 'success' };
     if (s >= 80) return { label: 'Strong',      hex: '#006fee', color: 'primary' };
@@ -89,6 +89,7 @@ export function OverallScoreCard({ score }: { score: number }) {
           <div className="flex items-center gap-2">
             <div className="w-1.5 h-5 rounded-full shrink-0" style={{ background: hex }} />
             <span className="text-[10px] font-black uppercase tracking-widest text-white/40">Composite Score</span>
+            {loading && <Spinner size="sm" color="default" classNames={{ circle1: "border-b-white/30", circle2: "border-b-white/30" }} />}
           </div>
           <Chip size="sm" color={color} variant="flat" classNames={{ content: "font-bold text-[11px]" }}>
             {label}
@@ -141,7 +142,7 @@ interface ScoreTab {
   detail?: React.ReactNode;
 }
 
-export function ScoreTabsRow({ tabs, overallScore }: { tabs: ScoreTab[], overallScore?: number }) {
+export function ScoreTabsRow({ tabs, overallScore, overallLoading }: { tabs: ScoreTab[], overallScore?: number, overallLoading?: boolean }) {
   const hasOverall = overallScore !== undefined;
   const [active, setActive] = React.useState(0);
 
@@ -152,7 +153,7 @@ export function ScoreTabsRow({ tabs, overallScore }: { tabs: ScoreTab[], overall
         {/* Overall score always shown at top */}
         {hasOverall && (
           <div className="mb-4">
-            <OverallScoreCard score={overallScore!} />
+            <OverallScoreCard score={overallScore!} loading={overallLoading} />
           </div>
         )}
         {/* Tab strip for individual scores */}
@@ -178,7 +179,7 @@ export function ScoreTabsRow({ tabs, overallScore }: { tabs: ScoreTab[], overall
       <div className="hidden md:flex gap-6">
         {hasOverall && (
           <div className="flex-1 lg:min-w-[240px]">
-            <OverallScoreCard score={overallScore!} />
+            <OverallScoreCard score={overallScore!} loading={overallLoading} />
           </div>
         )}
         {tabs.map(tab => (

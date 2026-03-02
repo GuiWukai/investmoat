@@ -33,13 +33,13 @@
     "description": "Moore's Law continues to drive demand for High-NA EUV and increased wafer capacity."
   },
   "valuation": {
-    "score": 72,
-    "description": "High multiple but justified by being the bottleneck of the entire AI economy."
+    "score": 67,
+    "description": "Near base case (~$1,451 vs $1,500 base). ASML has exceeded its prior bull target. China restriction risk and semiconductor cycle timing are the key headwinds."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$750",
-      "description": "Geopolitical restrictions on China revenue tighten further.",
+      "priceTarget": "$900",
+      "description": "Full DUV/EUV export ban to China, coupled with a broad semiconductor capex pause as demand normalises.",
       "points": [
         "Banning of older DUV machine exports to China",
         "Slowdown in capacity expansion from major foundries (TSMC/Intel/Samsung)",
@@ -47,8 +47,8 @@
       ]
     },
     "base": {
-      "priceTarget": "$1,100",
-      "description": "Continued 2nm/3nm capacity buildout and High-NA rollout.",
+      "priceTarget": "$1,500",
+      "description": "High-NA EUV rollout continues on schedule, 2nm/1.4nm capacity build sustains demand, China revenue stabilises at a lower but steady floor.",
       "points": [
         "Successful scaling of High-NA EUV production",
         "China revenue stabilized at lower but steady levels",
@@ -56,8 +56,8 @@
       ]
     },
     "bull": {
-      "priceTarget": "$1,400",
-      "description": "Massive acceleration in global foundry building (Sovereign Foundries).",
+      "priceTarget": "$2,200",
+      "description": "Sovereign foundry programmes accelerate globally (US, Europe, Japan, Middle East), High-NA becomes the dominant advanced-node architecture.",
       "points": [
         "Nations building domestic chip capacity significantly increases demand",
         "AI-driven demand for HBM and advanced logic exceeds all forecasts",

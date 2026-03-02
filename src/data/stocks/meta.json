@@ -34,18 +34,18 @@
     "description": "Advancements in Llama AI and monetization of Reels/Threads."
   },
   "valuation": {
-    "score": 68,
-    "description": "Trading at ~25x forward P/E — the most attractive PEG ratio (~1.1x) in its peer group, offset by near-zero FCF yield from a $60B+ capex cycle.",
+    "score": 72,
+    "description": "Between bear and new base (~$648). META has executed to its prior bull case. New targets raised to reflect Llama commercialisation and WhatsApp monetisation trajectory.",
     "valuationNote": {
-      "text": "Using a 10-year DCF with a 9% WACC, 20% near-term EPS growth decelerating to 3.5% terminal growth, and adjusting for Reality Labs losses and capex normalization, our fair value estimate for META is",
-      "fairValue": "$590/share",
-      "marginOfSafety": "N/A at current price"
+      "text": "Using a 10-year DCF with a 9% WACC, 20% near-term EPS growth decelerating to 3.5% terminal growth, and adjusting for Reality Labs losses and capex normalisation, our fair value estimate for META is",
+      "fairValue": "$720/share",
+      "marginOfSafety": "10%"
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$380",
-      "description": "Regulatory fines and a shift in user engagement to newer platforms.",
+      "priceTarget": "$460",
+      "description": "EU antitrust breakup or severe ad-market downturn amid global recession and regulatory overreach.",
       "points": [
         "EU privacy laws severely impact targeting precision",
         "Reality Labs losses exceed $20B annually",
@@ -53,8 +53,8 @@
       ]
     },
     "base": {
-      "priceTarget": "$520",
-      "description": "Steady ad-revenue growth and AI-driven efficiency gains.",
+      "priceTarget": "$720",
+      "description": "Llama 4 becomes a leading open model, ad revenue grows 12-15% annually, and WhatsApp business messaging scales to a $5B+ revenue line.",
       "points": [
         "Ad revenue grows 12-15% annually",
         "Reels monetization achieves parity with Feed",
@@ -62,8 +62,8 @@
       ]
     },
     "bull": {
-      "priceTarget": "$650",
-      "description": "Llama becomes the industry standard and WhatsApp monetization explodes.",
+      "priceTarget": "$950",
+      "description": "Llama becomes the enterprise AI standard, WhatsApp commerce inflects to $15B+ revenue, and AR glasses achieve mass-market adoption.",
       "points": [
         "WhatsApp business messaging becomes a $10B high-margin pillar",
         "Generative AI ad-creation tools lower barriers for small biz",
