@@ -80,33 +80,13 @@ const portfolio = [
   { ticker: "SPGI", name: "S&P Global", color: "#cf102d", category: "Financials",        href: "/stocks/spgi" },
   { ticker: "CRM",  name: "Salesforce", color: "#00a1e0", category: "Enterprise SaaS",   href: "/stocks/crm" },
   { ticker: "INTU", name: "Intuit",     color: "#2ca01c", category: "FinTech",           href: "/stocks/intuit" },
+  { ticker: "META", name: "Meta",       color: "#0082fb", category: "Big Tech",          href: "/stocks/meta" },
+  { ticker: "TSLA", name: "Tesla",      color: "#e82127", category: "Clean Tech",        href: "/stocks/tesla" },
+  { ticker: "PLTR", name: "Palantir",   color: "#7b5ea7", category: "AI Analytics",      href: "/stocks/pltr" },
+  { ticker: "BTC",  name: "Bitcoin",    color: "#f7931a", category: "Digital Assets",    href: "/stocks/btc" },
 ];
 
 const excluded = [
-  {
-    ticker: "META",
-    name: "Meta",
-    href: "/stocks/meta",
-    reason: "Composite of 75 now sits exactly at the portfolio threshold. Strongest PEG ratio (~1.1x) of any peer at ~25x forward P/E with 20%+ EPS growth — but near-zero FCF yield from a $60B+ capex cycle and ongoing Reality Labs losses keep conviction below a core position. Active portfolio candidate if capex normalizes and WhatsApp commerce inflects.",
-  },
-  {
-    ticker: "TSLA",
-    name: "Tesla",
-    href: "/stocks/tesla",
-    reason: "Lowest valuation score (55) among active candidates — significantly overpriced on fundamentals. Brand and FSD software lead is thinning as legacy OEMs and Chinese EV makers close the gap. High execution risk and CEO concentration risk compound the valuation concern.",
-  },
-  {
-    ticker: "PLTR",
-    name: "Palantir",
-    href: "/stocks/pltr",
-    reason: "Among the most compelling businesses in coverage — 6 of 10 AI moats are strong, and US commercial growth of 54% YoY is category-defining. But the valuation (48) is the lowest score in the portfolio. The base case ($120) matches the current price, leaving zero margin of safety. A 54% drawdown to the bear case ($55) reflects the asymmetric risk of buying a premium AI platform at peak optimism. High-conviction watch-list addition on any significant pullback.",
-  },
-  {
-    ticker: "BTC",
-    name: "Bitcoin",
-    href: "/stocks/btc",
-    reason: "Growth (85) is high but the moat is narrative-based digital scarcity with no productive cash flows. Valuation (50) is the weakest in the universe. Valid as a macro hedge in a separate satellite allocation, but lacks the durable compounding characteristics of a core portfolio holding.",
-  },
   {
     ticker: "ADBE",
     name: "Adobe",
@@ -140,10 +120,10 @@ const excluded = [
 ];
 
 function categoryColor(category: string): "primary" | "success" | "warning" | "secondary" | "danger" | "default" {
-  if (["Core SaaS", "Enterprise SaaS"].includes(category)) return "primary";
+  if (["Core SaaS", "Enterprise SaaS", "Big Tech"].includes(category)) return "primary";
   if (["Payments", "Financials", "FinTech"].includes(category)) return "success";
-  if (["AI Infrastructure", "Lithography"].includes(category)) return "warning";
-  if (["Eco-System"].includes(category)) return "secondary";
+  if (["AI Infrastructure", "Lithography", "AI Analytics"].includes(category)) return "warning";
+  if (["Eco-System", "Clean Tech", "Digital Assets"].includes(category)) return "secondary";
   return "default";
 }
 
@@ -181,7 +161,7 @@ export default function HomePage() {
 
   const maxWeight = Math.max(...portfolio.map((p) => dynamicWeights[p.ticker] ?? 0));
 
-  const techTickers = ["MSFT", "AMZN", "ASML", "NVDA", "CRM"];
+  const techTickers = ["MSFT", "AMZN", "ASML", "NVDA", "CRM", "META", "PLTR", "TSLA"];
   const finTickers = ["V", "MA", "SPGI", "INTU"];
   const techWeight = techTickers.reduce((s, t) => s + (dynamicWeights[t] ?? 0), 0);
   const finWeight = finTickers.reduce((s, t) => s + (dynamicWeights[t] ?? 0), 0);
@@ -212,7 +192,7 @@ export default function HomePage() {
           Portfolio Distribution
         </h1>
         <p className="text-white/60 text-base md:text-xl max-w-2xl">
-          9 high-conviction positions selected for moat durability, growth scaling, and valuation discipline.
+          13 high-conviction positions selected for moat durability, growth scaling, and valuation discipline.
           Allocation weights are proportional to each position&apos;s live composite score.
         </p>
       </header>
@@ -257,7 +237,7 @@ export default function HomePage() {
           <CardBody className="p-6 gap-6">
             <div>
               <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Positions</p>
-              <p className="text-lg font-bold">9 High-Conviction Holdings</p>
+              <p className="text-lg font-bold">13 High-Conviction Holdings</p>
             </div>
             <div>
               <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Selection Threshold</p>
@@ -374,7 +354,7 @@ export default function HomePage() {
           <AlertTriangle size={20} className="text-warning shrink-0" />
           <h2 className="text-2xl font-bold">Not in Portfolio</h2>
           <div className="h-px flex-1 bg-white/10" />
-          <span className="text-xs text-white/30 font-medium">Overall score below 75 or risk concerns</span>
+          <span className="text-xs text-white/30 font-medium">Overall score below 75</span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
