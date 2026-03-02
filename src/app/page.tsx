@@ -147,11 +147,42 @@ export default function HomePage() {
     setLoadedTickers((prev) => new Set([...prev, ticker]));
   };
 
-  // Compute proportional weights from live scores
-  const totalScore = Object.values(liveScores).reduce((s, v) => s + v, 0);
-  const rawWeights = Object.fromEntries(
-    portfolio.map((p) => [p.ticker, totalScore > 0 ? (liveScores[p.ticker] ?? 0) / totalScore * 100 : 0])
+  // Compute weights with amplified spread — subtract a baseline so score
+  // differences translate into meaningful allocation gaps; cap at 10% per position.
+  const SCORE_BASELINE = 70;
+  const MAX_WEIGHT_PCT = 10;
+
+  const adjusted = Object.fromEntries(
+    portfolio.map((p) => [p.ticker, Math.max((liveScores[p.ticker] ?? 0) - SCORE_BASELINE, 1)])
   );
+
+  const rawWeights: Record<string, number> = {};
+  const capped = new Set<string>();
+  let uncappedTickers = portfolio.map((p) => p.ticker);
+  let budget = 100;
+
+  while (uncappedTickers.length > 0) {
+    const poolScore = uncappedTickers.reduce((s, t) => s + adjusted[t], 0);
+    let anyCapped = false;
+    for (const t of uncappedTickers) {
+      const w = poolScore > 0 ? (adjusted[t] / poolScore) * budget : 0;
+      if (w > MAX_WEIGHT_PCT) {
+        rawWeights[t] = MAX_WEIGHT_PCT;
+        capped.add(t);
+        budget -= MAX_WEIGHT_PCT;
+        anyCapped = true;
+      }
+    }
+    if (!anyCapped) {
+      const poolTotal = uncappedTickers.reduce((s, t) => s + adjusted[t], 0);
+      for (const t of uncappedTickers) {
+        rawWeights[t] = poolTotal > 0 ? (adjusted[t] / poolTotal) * budget : 0;
+      }
+      break;
+    }
+    uncappedTickers = uncappedTickers.filter((t) => !capped.has(t));
+  }
+
   // Round weights while keeping sum at 100 (largest-remainder method)
   const floors = Object.fromEntries(portfolio.map((p) => [p.ticker, Math.floor(rawWeights[p.ticker])]));
   const remainder = 100 - Object.values(floors).reduce((a, b) => a + b, 0);
@@ -193,7 +224,7 @@ export default function HomePage() {
         </h1>
         <p className="text-white/60 text-base md:text-xl max-w-2xl">
           13 high-conviction positions selected for moat durability, growth scaling, and valuation discipline.
-          Allocation weights are proportional to each position&apos;s live composite score.
+          Higher-scoring positions receive proportionally larger allocations (max 10% per position).
         </p>
       </header>
 
