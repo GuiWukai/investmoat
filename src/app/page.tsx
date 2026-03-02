@@ -150,16 +150,6 @@ function categoryColor(category: string): "primary" | "success" | "warning" | "s
 export default function HomePage() {
   const router = useRouter();
 
-  const portfolioWithScores = portfolio.map((p) => {
-    const stock = stockData.find((s) => s.ticker === p.ticker);
-    return { ...p, stock };
-  });
-
-  const excludedWithScores = excluded.map((e) => {
-    const stock = stockData.find((s) => s.ticker === e.ticker);
-    return { ...e, stock };
-  });
-
   // Track live composite scores for each portfolio stock so we can compute dynamic weights
   const [liveScores, setLiveScores] = useState<Record<string, number>>(() => {
     const init: Record<string, number> = {};
@@ -195,6 +185,18 @@ export default function HomePage() {
   const finTickers = ["V", "MA", "SPGI", "INTU"];
   const techWeight = techTickers.reduce((s, t) => s + (dynamicWeights[t] ?? 0), 0);
   const finWeight = finTickers.reduce((s, t) => s + (dynamicWeights[t] ?? 0), 0);
+
+  const portfolioWithScores = portfolio
+    .map((p) => {
+      const stock = stockData.find((s) => s.ticker === p.ticker);
+      return { ...p, stock };
+    })
+    .sort((a, b) => (liveScores[b.ticker] ?? 0) - (liveScores[a.ticker] ?? 0));
+
+  const excludedWithScores = excluded.map((e) => {
+    const stock = stockData.find((s) => s.ticker === e.ticker);
+    return { ...e, stock };
+  });
 
   const getScoreColor = (s: number): "success" | "primary" | "warning" | "danger" => {
     if (s >= 90) return "success";
