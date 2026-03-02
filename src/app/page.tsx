@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from "next/navigation";
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { PieChart, ShieldCheck, ChevronRight, AlertTriangle } from "lucide-react";
 import { Card, CardBody, CardHeader, Progress, Chip, Spinner } from "@heroui/react";
 import { stockData } from "./stockData";
@@ -15,6 +15,7 @@ function DynamicScore({
   bearTarget,
   baseTarget,
   bullTarget,
+  onScore,
   children,
 }: {
   slug: string;
@@ -24,18 +25,26 @@ function DynamicScore({
   bearTarget: string;
   baseTarget: string;
   bullTarget: string;
+  onScore?: (score: number) => void;
   children: (avg: number, loading: boolean) => ReactNode;
 }) {
   const [avg, setAvg] = useState(() =>
     Math.round((moat + growth + fallbackVal) / 3)
   );
   const [loading, setLoading] = useState(true);
+  const onScoreRef = useRef(onScore);
+  useEffect(() => { onScoreRef.current = onScore; });
 
   useEffect(() => {
     const bear = parseScenarioPrice(bearTarget);
     const base = parseScenarioPrice(baseTarget);
     const bull = parseScenarioPrice(bullTarget);
-    if (!bear || !base || !bull) { setLoading(false); return; }
+    const fallbackAvg = Math.round((moat + growth + fallbackVal) / 3);
+    if (!bear || !base || !bull) {
+      onScoreRef.current?.(fallbackAvg);
+      setLoading(false);
+      return;
+    }
 
     let cancelled = false;
     fetch(`/api/stock-price/${slug}`)
@@ -44,27 +53,33 @@ function DynamicScore({
         if (cancelled) return;
         if (d?.price != null) {
           const liveVal = computeValuationScore(d.price, bear, base, bull);
-          setAvg(Math.round((moat + growth + liveVal) / 3));
+          const newAvg = Math.round((moat + growth + liveVal) / 3);
+          setAvg(newAvg);
+          onScoreRef.current?.(newAvg);
+        } else {
+          onScoreRef.current?.(fallbackAvg);
         }
         setLoading(false);
       })
-      .catch(() => { if (!cancelled) setLoading(false); });
+      .catch(() => {
+        if (!cancelled) { onScoreRef.current?.(fallbackAvg); setLoading(false); }
+      });
     return () => { cancelled = true; };
-  }, [slug, moat, growth, bearTarget, baseTarget, bullTarget]);
+  }, [slug, moat, growth, fallbackVal, bearTarget, baseTarget, bullTarget]);
 
   return <>{children(avg, loading)}</>;
 }
 
 const portfolio = [
-  { ticker: "MSFT", name: "Microsoft",  weight: 16, color: "#00a4ef", category: "Core SaaS",        href: "/stocks/msft" },
-  { ticker: "AMZN", name: "Amazon",     weight: 14, color: "#f59e0b", category: "Eco-System",        href: "/stocks/amazon" },
-  { ticker: "ASML", name: "ASML",       weight: 12, color: "#0071c5", category: "Lithography",       href: "/stocks/asml" },
-  { ticker: "V",    name: "Visa",       weight: 12, color: "#1a1f71", category: "Payments",          href: "/stocks/visa" },
-  { ticker: "MA",   name: "Mastercard", weight: 11, color: "#eb001b", category: "Payments",          href: "/stocks/mastercard" },
-  { ticker: "NVDA", name: "NVIDIA",     weight: 11, color: "#76b900", category: "AI Infrastructure", href: "/stocks/nvda" },
-  { ticker: "SPGI", name: "S&P Global", weight: 10, color: "#cf102d", category: "Financials",        href: "/stocks/spgi" },
-  { ticker: "CRM",  name: "Salesforce", weight: 8,  color: "#00a1e0", category: "Enterprise SaaS",   href: "/stocks/crm" },
-  { ticker: "INTU", name: "Intuit",     weight: 6,  color: "#2ca01c", category: "FinTech",           href: "/stocks/intuit" },
+  { ticker: "MSFT", name: "Microsoft",  color: "#00a4ef", category: "Core SaaS",        href: "/stocks/msft" },
+  { ticker: "AMZN", name: "Amazon",     color: "#f59e0b", category: "Eco-System",        href: "/stocks/amazon" },
+  { ticker: "ASML", name: "ASML",       color: "#0071c5", category: "Lithography",       href: "/stocks/asml" },
+  { ticker: "V",    name: "Visa",       color: "#1a1f71", category: "Payments",          href: "/stocks/visa" },
+  { ticker: "MA",   name: "Mastercard", color: "#eb001b", category: "Payments",          href: "/stocks/mastercard" },
+  { ticker: "NVDA", name: "NVIDIA",     color: "#76b900", category: "AI Infrastructure", href: "/stocks/nvda" },
+  { ticker: "SPGI", name: "S&P Global", color: "#cf102d", category: "Financials",        href: "/stocks/spgi" },
+  { ticker: "CRM",  name: "Salesforce", color: "#00a1e0", category: "Enterprise SaaS",   href: "/stocks/crm" },
+  { ticker: "INTU", name: "Intuit",     color: "#2ca01c", category: "FinTech",           href: "/stocks/intuit" },
 ];
 
 const excluded = [
@@ -145,6 +160,42 @@ export default function HomePage() {
     return { ...e, stock };
   });
 
+  // Track live composite scores for each portfolio stock so we can compute dynamic weights
+  const [liveScores, setLiveScores] = useState<Record<string, number>>(() => {
+    const init: Record<string, number> = {};
+    portfolio.forEach((p) => {
+      const stock = stockData.find((s) => s.ticker === p.ticker);
+      if (stock) init[p.ticker] = Math.round(stock.scores.reduce((a, b) => a + b, 0) / stock.scores.length);
+    });
+    return init;
+  });
+  const [loadedTickers, setLoadedTickers] = useState<Set<string>>(new Set());
+  const scoresLoading = loadedTickers.size < portfolio.length;
+
+  const handleScore = (ticker: string, score: number) => {
+    setLiveScores((prev) => ({ ...prev, [ticker]: score }));
+    setLoadedTickers((prev) => new Set([...prev, ticker]));
+  };
+
+  // Compute proportional weights from live scores
+  const totalScore = Object.values(liveScores).reduce((s, v) => s + v, 0);
+  const rawWeights = Object.fromEntries(
+    portfolio.map((p) => [p.ticker, totalScore > 0 ? (liveScores[p.ticker] ?? 0) / totalScore * 100 : 0])
+  );
+  // Round weights while keeping sum at 100 (largest-remainder method)
+  const floors = Object.fromEntries(portfolio.map((p) => [p.ticker, Math.floor(rawWeights[p.ticker])]));
+  const remainder = 100 - Object.values(floors).reduce((a, b) => a + b, 0);
+  const sorted = [...portfolio].sort((a, b) => (rawWeights[b.ticker] % 1) - (rawWeights[a.ticker] % 1));
+  sorted.slice(0, remainder).forEach((p) => { floors[p.ticker]++; });
+  const dynamicWeights = floors;
+
+  const maxWeight = Math.max(...portfolio.map((p) => dynamicWeights[p.ticker] ?? 0));
+
+  const techTickers = ["MSFT", "AMZN", "ASML", "NVDA", "CRM"];
+  const finTickers = ["V", "MA", "SPGI", "INTU"];
+  const techWeight = techTickers.reduce((s, t) => s + (dynamicWeights[t] ?? 0), 0);
+  const finWeight = finTickers.reduce((s, t) => s + (dynamicWeights[t] ?? 0), 0);
+
   const getScoreColor = (s: number): "success" | "primary" | "warning" | "danger" => {
     if (s >= 90) return "success";
     if (s >= 80) return "primary";
@@ -160,7 +211,7 @@ export default function HomePage() {
         </h1>
         <p className="text-white/60 text-base md:text-xl max-w-2xl">
           9 high-conviction positions selected for moat durability, growth scaling, and valuation discipline.
-          Minimum overall score of 75 required for inclusion.
+          Allocation weights are proportional to each position&apos;s live composite score.
         </p>
       </header>
 
@@ -175,9 +226,9 @@ export default function HomePage() {
               {portfolio.map((stock) => (
                 <div
                   key={stock.ticker}
-                  style={{ width: `${stock.weight}%`, background: stock.color }}
-                  title={`${stock.name}: ${stock.weight}%`}
-                  className="hover:opacity-80 transition-opacity cursor-pointer"
+                  style={{ width: `${dynamicWeights[stock.ticker] ?? 0}%`, background: stock.color }}
+                  title={`${stock.name}: ${dynamicWeights[stock.ticker] ?? 0}%`}
+                  className="hover:opacity-80 transition-[width,opacity] duration-500 cursor-pointer"
                 />
               ))}
             </div>
@@ -186,7 +237,10 @@ export default function HomePage() {
                 <div key={stock.ticker} className="flex items-center gap-3">
                   <div className="w-2.5 h-2.5 rounded-full shrink-0" style={{ background: stock.color }} />
                   <span className="text-xs font-bold text-white/80">{stock.ticker}</span>
-                  <span className="text-xs text-white/40">{stock.weight}%</span>
+                  {scoresLoading
+                    ? <Spinner size="sm" color="default" classNames={{ wrapper: "w-3 h-3" }} />
+                    : <span className="text-xs text-white/40">{dynamicWeights[stock.ticker] ?? 0}%</span>
+                  }
                 </div>
               ))}
             </div>
@@ -210,7 +264,7 @@ export default function HomePage() {
             <div>
               <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Concentration</p>
               <Progress
-                value={61}
+                value={techWeight}
                 label="Tech & SaaS"
                 size="sm"
                 color="primary"
@@ -218,7 +272,7 @@ export default function HomePage() {
                 classNames={{ base: "max-w-md", label: "text-xs font-bold", value: "text-xs" }}
               />
               <Progress
-                value={39}
+                value={finWeight}
                 label="Financials & Payments"
                 size="sm"
                 color="success"
@@ -266,9 +320,9 @@ export default function HomePage() {
 
               <div className="flex-1 flex items-center gap-3">
                 <Progress
-                  value={(stock.weight / 16) * 100}
+                  value={maxWeight > 0 ? ((dynamicWeights[stock.ticker] ?? 0) / maxWeight) * 100 : 0}
                   size="sm"
-                  color={stock.weight >= 12 ? "success" : stock.weight >= 8 ? "primary" : "default"}
+                  color="primary"
                   className="flex-1 max-w-[200px]"
                 />
               </div>
@@ -282,6 +336,7 @@ export default function HomePage() {
                   bearTarget={stock.stock.bearTarget}
                   baseTarget={stock.stock.baseTarget}
                   bullTarget={stock.stock.bullTarget}
+                  onScore={(score) => handleScore(stock.ticker, score)}
                 >
                   {(avg, loading) => (
                     <div className="text-right mr-2 shrink-0 w-12">
@@ -295,7 +350,12 @@ export default function HomePage() {
                 </DynamicScore>
               ) : null}
 
-              <span className="text-base font-black text-white tabular-nums w-10 text-right">{stock.weight}%</span>
+              <div className="tabular-nums w-10 text-right">
+                {scoresLoading
+                  ? <Spinner size="sm" color="default" />
+                  : <span className="text-base font-black text-white">{dynamicWeights[stock.ticker] ?? 0}%</span>
+                }
+              </div>
 
               <ChevronRight
                 size={16}
