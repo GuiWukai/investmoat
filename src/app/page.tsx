@@ -141,6 +141,7 @@ export default function HomePage() {
     return init;
   });
   const [loadedTickers, setLoadedTickers] = useState<Set<string>>(new Set());
+  const [hoveredPie, setHoveredPie] = useState<string | null>(null);
   const scoresLoading = loadedTickers.size < portfolio.length;
 
   const handleScore = (ticker: string, score: number) => {
@@ -236,15 +237,57 @@ export default function HomePage() {
             <h3 className="text-xl font-bold">Visual Allocation</h3>
           </CardHeader>
           <CardBody className="p-6">
-            <div className="flex h-12 rounded-xl overflow-hidden mb-8 border border-white/10">
-              {portfolio.map((stock) => (
-                <div
-                  key={stock.ticker}
-                  style={{ width: `${dynamicWeights[stock.ticker] ?? 0}%`, background: stock.color }}
-                  title={`${stock.name}: ${dynamicWeights[stock.ticker] ?? 0}%`}
-                  className="hover:opacity-80 transition-[width,opacity] duration-500 cursor-pointer"
-                />
-              ))}
+            <div className="flex justify-center mb-4">
+              <svg viewBox="0 0 200 200" className="w-52 h-52">
+                {(() => {
+                  const cx = 100, cy = 100, outerR = 88, innerR = 54;
+                  const sorted = [...portfolio].sort((a, b) => (dynamicWeights[b.ticker] ?? 0) - (dynamicWeights[a.ticker] ?? 0));
+                  const GAP = 0.018;
+                  let cumAngle = -Math.PI / 2;
+                  return sorted.map((stock) => {
+                    const w = dynamicWeights[stock.ticker] ?? 0;
+                    const sliceAngle = (w / 100) * 2 * Math.PI;
+                    const sa = cumAngle + GAP / 2;
+                    const ea = cumAngle + sliceAngle - GAP / 2;
+                    cumAngle += sliceAngle;
+                    const largeArc = (ea - sa) > Math.PI ? 1 : 0;
+                    const c = Math.cos, s = Math.sin;
+                    const d = [
+                      `M ${cx + outerR * c(sa)} ${cy + outerR * s(sa)}`,
+                      `A ${outerR} ${outerR} 0 ${largeArc} 1 ${cx + outerR * c(ea)} ${cy + outerR * s(ea)}`,
+                      `L ${cx + innerR * c(ea)} ${cy + innerR * s(ea)}`,
+                      `A ${innerR} ${innerR} 0 ${largeArc} 0 ${cx + innerR * c(sa)} ${cy + innerR * s(sa)}`,
+                      'Z',
+                    ].join(' ');
+                    const isHov = hoveredPie === stock.ticker;
+                    return (
+                      <path
+                        key={stock.ticker}
+                        d={d}
+                        fill={stock.color}
+                        opacity={hoveredPie && !isHov ? 0.3 : 1}
+                        className="transition-opacity duration-150 cursor-pointer"
+                        onMouseEnter={() => setHoveredPie(stock.ticker)}
+                        onMouseLeave={() => setHoveredPie(null)}
+                      />
+                    );
+                  });
+                })()}
+                {hoveredPie ? (() => {
+                  const s = portfolio.find(p => p.ticker === hoveredPie)!;
+                  return (
+                    <>
+                      <text x="100" y="97" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold" fontFamily="system-ui,sans-serif">{s.ticker}</text>
+                      <text x="100" y="114" textAnchor="middle" fill="rgba(255,255,255,0.45)" fontSize="11" fontFamily="system-ui,sans-serif">{dynamicWeights[s.ticker] ?? 0}%</text>
+                    </>
+                  );
+                })() : (
+                  <>
+                    <text x="100" y="97" textAnchor="middle" fill="rgba(255,255,255,0.3)" fontSize="8" fontFamily="system-ui,sans-serif" letterSpacing="2">PORTFOLIO</text>
+                    <text x="100" y="114" textAnchor="middle" fill="white" fontSize="13" fontWeight="bold" fontFamily="system-ui,sans-serif">{portfolio.length} Holdings</text>
+                  </>
+                )}
+              </svg>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {[...portfolio].sort((a, b) => (dynamicWeights[b.ticker] ?? 0) - (dynamicWeights[a.ticker] ?? 0)).map((stock) => (
