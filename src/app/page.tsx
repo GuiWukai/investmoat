@@ -84,6 +84,7 @@ const portfolio = [
   { ticker: "META", name: "Meta",       color: "#0082fb", category: "Big Tech",          href: "/stocks/meta" },
   { ticker: "TSLA", name: "Tesla",      color: "#e82127", category: "Clean Tech",        href: "/stocks/tesla" },
   { ticker: "PLTR", name: "Palantir",   color: "#7b5ea7", category: "AI Analytics",      href: "/stocks/pltr" },
+  { ticker: "CRWD", name: "CrowdStrike", color: "#e8281b", category: "Cybersecurity",    href: "/stocks/crowdstrike" },
   { ticker: "BTC",  name: "Bitcoin",    color: "#f7931a", category: "Digital Assets",    href: "/stocks/btc" },
 ];
 
