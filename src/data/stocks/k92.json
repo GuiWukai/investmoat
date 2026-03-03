@@ -20,8 +20,8 @@
     { "title": "Stage 3 Plant", "value": "Commissioned", "label": "Completed December 2025", "icon": "CheckCircle", "color": "#6366f1" }
   ],
   "moat": {
-    "score": 42,
-    "description": "World-class high-grade orebody; Stage 3 execution proves operational quality. PNG jurisdictional risk remains the key offset.",
+    "score": 52,
+    "description": "World-class high-grade orebody; Stage 3 execution proves operational quality. Strong PNG regulatory lock-in and top-5% ore grades provide durable structural advantages, partially offset by commodity pricing and single-mine concentration risk.",
     "analysisTitle": "The Mining Moat (Asset Quality)",
     "analysisSummary": "In mining, the \"moat\" is the **Quality of the Orebody**:",
     "analysisPoints": [
@@ -79,7 +79,7 @@
     "networkEffects": { "status": "destroyed", "note": "Gold mining is a commodity business with no network effects — output is priced by global spot markets regardless of volume." },
     "transactionEmbedding": { "status": "weakened", "note": "Gold sales are commodity transactions at spot price — K92 is a price-taker, not a price-maker, with limited embedding power." },
     "systemOfRecord": { "status": "weakened", "note": "K92 is not a system of record in any meaningful strategic sense; value is in the ore body, not information systems." },
-    "aiResilienceScore": 42,
+    "aiResilienceScore": 52,
     "verdict": "K92's AI resilience is limited — only the PNG regulatory mining license and geological expertise provide durable competitive advantages. AI optimization could narrow cost advantages, but cannot replicate the ore body."
   },
   "extraSections": [
