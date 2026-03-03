@@ -247,7 +247,7 @@ export default function HomePage() {
               ))}
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              {portfolio.map((stock) => (
+              {[...portfolio].sort((a, b) => (dynamicWeights[b.ticker] ?? 0) - (dynamicWeights[a.ticker] ?? 0)).map((stock) => (
                 <div key={stock.ticker} className="flex items-center gap-3">
                   <div className="w-2.5 h-2.5 rounded-full shrink-0" style={{ background: stock.color }} />
                   <span className="text-xs font-bold text-white/80">{stock.ticker}</span>
