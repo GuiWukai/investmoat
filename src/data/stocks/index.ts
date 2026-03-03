@@ -20,6 +20,7 @@ import btc from './btc.json';
 import k92 from './k92.json';
 import pltr from './pltr.json';
 import crowdstrike from './crowdstrike.json';
+import fcx from './fcx.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   amazon: amazon as StockAnalysisData,
@@ -42,6 +43,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   k92: k92 as StockAnalysisData,
   pltr: pltr as StockAnalysisData,
   crowdstrike: crowdstrike as StockAnalysisData,
+  fcx: fcx as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
