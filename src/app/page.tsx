@@ -80,6 +80,7 @@ const portfolio = [
   { ticker: "SPGI", name: "S&P Global", color: "#cf102d", category: "Financials",        href: "/stocks/spgi" },
   { ticker: "CRM",  name: "Salesforce", color: "#00a1e0", category: "Enterprise SaaS",   href: "/stocks/crm" },
   { ticker: "INTU", name: "Intuit",     color: "#2ca01c", category: "FinTech",           href: "/stocks/intuit" },
+  { ticker: "GOOGL", name: "Alphabet",  color: "#4285f4", category: "Big Tech",          href: "/stocks/google" },
   { ticker: "META", name: "Meta",       color: "#0082fb", category: "Big Tech",          href: "/stocks/meta" },
   { ticker: "TSLA", name: "Tesla",      color: "#e82127", category: "Clean Tech",        href: "/stocks/tesla" },
   { ticker: "PLTR", name: "Palantir",   color: "#7b5ea7", category: "AI Analytics",      href: "/stocks/pltr" },
