@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { TrendingUp, PlusCircle, Minus, Zap, ShieldCheck, ShieldX } from "lucide-react";
+import { TrendingUp, PlusCircle, Minus, Zap, ShieldCheck, ShieldX, RefreshCw } from "lucide-react";
 import { Card, CardBody, CardHeader, Chip, Progress, CircularProgress, Divider, Spinner } from "@heroui/react";
 import type { TenMoatsAssessment, MoatStatus } from "@/app/tenMoatsData";
 
@@ -370,7 +370,7 @@ export function TenMoatsCard({ data }: { data: TenMoatsAssessment }) {
   );
 }
 
-export function RecommendationBadge({ status }: { status: 'Strong Buy' | 'Accumulate' | 'Hold' | 'Speculative Buy' }) {
+export function RecommendationBadge({ status, loading }: { status: 'Strong Buy' | 'Accumulate' | 'Hold' | 'Speculative Buy'; loading?: boolean }) {
   const cfg = statusConfig[status];
 
   return (
@@ -392,7 +392,10 @@ export function RecommendationBadge({ status }: { status: 'Strong Buy' | 'Accumu
 
       {/* Text */}
       <div>
-        <p className="text-[10px] uppercase tracking-widest font-black text-white/40 mb-0.5">Portfolio Status</p>
+        <div className="flex items-center gap-1.5 mb-0.5">
+          <p className="text-[10px] uppercase tracking-widest font-black text-white/40">Rating</p>
+          {loading && <RefreshCw size={9} className="text-white/30 animate-spin" />}
+        </div>
         <p className="font-black uppercase text-sm leading-none" style={{ color: cfg.hex }}>{status}</p>
         <p className="text-[11px] text-white/40 mt-1">{cfg.label}</p>
       </div>

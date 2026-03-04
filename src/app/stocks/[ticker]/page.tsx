@@ -158,6 +158,12 @@ export default function StockPage({ params }: { params: Promise<{ ticker: string
   const [valLoading, setValLoading] = useState(true);
   const dynamicOverallScore = Math.round((data.moat.score + data.growth.score + liveValScore) / 3);
 
+  const dynamicRecommendation: 'Strong Buy' | 'Accumulate' | 'Hold' | 'Speculative Buy' =
+    dynamicOverallScore >= 85 ? 'Strong Buy' :
+    dynamicOverallScore >= 75 ? 'Accumulate' :
+    dynamicOverallScore >= 65 ? 'Hold' :
+    'Speculative Buy';
+
   const metricsCount = data.metrics.length;
   const gridCols = metricsCount === 4 ? 'grid-cols-2 md:grid-cols-4' : 'grid-cols-3';
 
@@ -209,7 +215,7 @@ export default function StockPage({ params }: { params: Promise<{ ticker: string
             ))}
           </div>
         </div>
-        <RecommendationBadge status={data.recommendation} />
+        <RecommendationBadge status={dynamicRecommendation} loading={valLoading} />
       </header>
 
       {/* ── Key metrics (desktop) ── */}
