@@ -95,7 +95,6 @@ export interface StockAnalysisData {
     valuationNote?: {
       text: string;
       fairValue: string;
-      marginOfSafety: string;
     };
   };
   scenarios: {
