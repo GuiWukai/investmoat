@@ -4,79 +4,100 @@
   "name": "Tesla Inc.",
   "headerStats": [
     { "label": "Ticker", "value": "TSLA" },
-    { "label": "Market Cap", "value": "$560B" },
-    { "label": "Price", "value": "$175.20" }
+    { "label": "Market Cap", "value": "$1.25T" },
+    { "label": "Price", "value": "$390.00" }
   ],
   "chips": [
-    { "label": "Automotive | Energy", "color": "warning" },
-    { "label": "Growth Pioneer", "color": "primary" }
+    { "label": "Autonomous AI | Robotics", "color": "warning" },
+    { "label": "Energy Storage", "color": "primary" }
   ],
-  "recommendation": "Hold",
+  "recommendation": "Accumulate",
   "metrics": [
-    { "title": "Vehicle Deliveries", "value": "1.81M", "label": "Trailing 12 Months", "icon": "Car", "color": "#cc0000" },
-    { "title": "Energy Storage", "value": "14.7 GWh", "label": "125% YoY Growth", "icon": "Battery", "color": "#10b981" },
-    { "title": "FSD Miles", "value": "1.3B+", "label": "Data Advantage", "icon": "Cpu", "color": "#3b82f6" }
+    { "title": "Vehicle Deliveries", "value": "~1.79M", "label": "2025 — Down ~7.7% YoY", "icon": "Car", "color": "#cc0000" },
+    { "title": "Operating Margin", "value": "5.8%", "label": "vs 10.8% in 2024 — Compressed", "icon": "TrendingUp", "color": "#f5a524" },
+    { "title": "FSD Miles", "value": "3B+", "label": "Real-World AI Training Data", "icon": "Cpu", "color": "#3b82f6" }
   ],
   "moat": {
     "score": 74,
-    "description": "Vertical integration and massive manufacturing cost advantages.",
-    "analysisTitle": "The Vertical Integration Moat",
-    "analysisSummary": "Tesla's moat isn't just \"selling cars\", it's **Manufacturing Complexity**:",
+    "description": "Vertical integration, a real-world autonomous driving data flywheel, and the Optimus robotics platform create a multi-year moat — though EV delivery headwinds and margin compression are testing it.",
+    "analysisTitle": "The Autonomous Data Flywheel",
+    "analysisSummary": "Tesla's moat is evolving from **manufacturing cost** to **real-world AI data**:",
     "analysisPoints": [
-      { "title": "Cost Advantage", "text": "From battery chem to casting machines, Tesla's unit cost for EVs is unmatched by legacy OEMs." },
-      { "title": "Data Flywheel", "text": "Millions of cars on the road feeding data into Tesla's AI Dojo training cluster creates a gap in autonomous software." },
-      { "title": "Brand Authority", "text": "Zero marketing spend with 100% brand recognition creates a unique customer acquisition advantage." }
+      { "title": "FSD Data Flywheel", "text": "3B+ real-world FSD miles logged across millions of active vehicles give Tesla the largest proprietary autonomous driving dataset on earth. Every mile widens the gap vs. competitors who rely on synthetic simulation data." },
+      { "title": "Optimus Robotics Platform", "text": "Tesla committed $20B toward autonomous and humanoid robots in 2026. If Optimus achieves commercial-scale production (target: 1M+ units by 2027), it creates an entirely new revenue stream in a TAM that dwarfs automotive." },
+      { "title": "Vertical Integration", "text": "From 4680 battery cells to Dojo supercomputer to Giga casting — Tesla's cost-per-vehicle is structurally below legacy OEMs. While BYD has closed the gap in China, no Western OEM can match Tesla's integrated manufacturing stack." }
     ]
   },
   "growth": {
-    "score": 89,
-    "description": "Robotics (Optimus) and energy storage are the next 10x frontier."
+    "score": 87,
+    "description": "Auto delivery growth stalled in 2025 (down 7.7%), but the next growth vectors — Robotaxi, Optimus, and Energy Storage — are pre-revenue or early-stage, implying the multiple is pricing in a successful autonomous pivot.",
+    "additionalNote": {
+      "title": "2026 Growth Catalysts",
+      "points": [
+        "Robotaxi commercial expansion beyond Austin — driverless rides represent near-100% gross margin software revenue",
+        "Optimus production ramp: early internal use in Gigafactories before consumer launch",
+        "Energy Storage on track for 200%+ deployment growth in 2026 as grid-scale demand surges",
+        "Next-gen affordable vehicle (sub-$30K) planned for H1 2026 to re-accelerate volume growth",
+        "FSD licensing negotiations with major OEMs could unlock high-margin B2B revenue"
+      ]
+    }
   },
   "valuation": {
-    "score": 63,
-    "description": "Slightly above base (~$409 vs $380 base). TSLA has surged on Robotaxi/Optimus expectations and political tailwinds. Execution on autonomous driving is the key risk."
+    "score": 65,
+    "description": "At ~$390, Tesla trades near consensus base case. The multiple (~115x 2026E EPS of ~$2.09) is extreme for an auto company but rational if the autonomous/robotics pivot succeeds. Operating margin compression (5.8% in 2025 vs 10.8% in 2024) is the key near-term headwind.",
+    "valuationNote": {
+      "text": "Base fair value of ~$400 reflects a sum-of-parts: ~$100 for the auto business at normalized margins, ~$150 for Energy & Services, and ~$150 option value on Robotaxi/Optimus. The stock is pricing in successful execution on autonomous AI — any delay reprices sharply toward the bear case.",
+      "fairValue": "~$400",
+      "marginOfSafety": "~3% upside at current price"
+    }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$180",
-      "description": "EV market share erosion accelerates, FSD regulatory approval delayed beyond 2027, and political tailwinds reverse sharply.",
+      "priceTarget": "$150",
+      "description": "EV delivery decline deepens, FSD regulatory approval stalls beyond 2027, Optimus delays compound, and Musk's political association continues to damage the brand in key markets.",
       "points": [
-        "Auto gross margins fall below 12%",
-        "Competition from BYD/Xiaomi erodes China share",
-        "Robotaxi regulatory hurdles remain insurmountable"
+        "Auto deliveries fall below 1.5M in 2026 as BYD and legacy OEMs take share in Europe and China",
+        "Operating margin fails to recover above 8% — earnings power significantly below consensus",
+        "Robotaxi regulatory hurdles delay commercial launch to 2028+ in major cities",
+        "Reputational damage from political association triggers sustained consumer boycott pressure",
+        "Multiple compresses to 40–50x as growth narrative shifts to restructuring story"
       ]
     },
     "base": {
-      "priceTarget": "$380",
-      "description": "Robotaxi limited launch in key US cities, Optimus ramp begins, and Energy Storage grows 100%+ YoY providing a stable earnings floor.",
+      "priceTarget": "$400",
+      "description": "Robotaxi expands to 5+ US cities, Optimus enters limited commercial production, Energy Storage grows 150%+ YoY, and the affordable vehicle re-accelerates auto deliveries in H2 2026.",
       "points": [
-        "Next-gen platform ('Model 2') enters production",
-        "Energy storage deployment grows 100% YoY",
-        "FSD licensing talks with major OEMs begin"
+        "Sub-$30K vehicle launches H1 2026, reigniting volume growth toward 2M+ deliveries",
+        "Robotaxi generates $1B+ in revenue with early profitability in core Austin/SF markets",
+        "Energy Storage deployment reaches 50+ GWh as grid-scale battery demand accelerates",
+        "FSD v14/15 achieves NHTSA approval for unsupervised operation in select US states",
+        "Operating margin recovers to 8–10% as cost reductions offset pricing pressure"
       ]
     },
     "bull": {
-      "priceTarget": "$650",
-      "description": "Robotaxi reaches profitability, Optimus scales to 1M+ units, and FSD licensing generates $5B+ in high-margin software revenue.",
+      "priceTarget": "$550",
+      "description": "Robotaxi reaches profitability across 20+ cities, Optimus ships first commercial units, FSD licensing signed with major OEM, and Tesla Energy rivals the auto business in revenue.",
       "points": [
-        "Software revenue becomes >30% of total EBIT",
-        "Unsupervised FSD approved in major US cities",
-        "Tesla Energy becomes as large as the Auto business"
+        "Robotaxi generates $5B+ revenue with 40%+ gross margins — re-rating the entire business as software",
+        "Optimus ships 10,000+ commercial units in 2026 at $20,000 ASP — $200M early-stage revenue",
+        "FSD licensing deal with a major OEM (e.g., Toyota, GM) unlocks $2B+ recurring B2B software revenue",
+        "Tesla Energy storage hits 80+ GWh annually — operating at semiconductor-like margins",
+        "Stock re-rates to 150x+ earnings as software/autonomous revenue becomes 25%+ of EBIT"
       ]
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "weakened", "note": "EV touchscreen interface design is being replicated by BYD, Rivian, and legacy OEMs — no longer unique." },
+    "learnedInterfaces": { "status": "weakened", "note": "EV touchscreen interfaces are being replicated by BYD, Rivian, and legacy OEMs — no longer a differentiating moat." },
     "businessLogic": { "status": "destroyed", "note": "Not applicable as a primary competitive moat in automotive manufacturing." },
     "publicDataAccess": { "status": "destroyed", "note": "Not applicable to Tesla's competitive advantage framework." },
-    "talentScarcity": { "status": "intact", "note": "Battery chemistry expertise, Gigafactory manufacturing know-how, and FSD AI/ML talent remain genuinely scarce and hard to recruit." },
-    "bundling": { "status": "strong", "note": "EV + FSD Software + Energy Storage + Supercharging + Insurance + Service = a vertical integration bundle no OEM has replicated." },
-    "proprietaryData": { "status": "strong", "note": "1.3B+ FSD real-world driving miles, energy grid optimization data, and vehicle telemetry = the largest real-world AI training dataset." },
-    "regulatoryLockIn": { "status": "intact", "note": "Supercharger NACS standard adopted by Ford/GM/Rivian, federal EV incentives, and energy storage grid contracts." },
-    "networkEffects": { "status": "intact", "note": "Supercharger network flywheel and fleet-wide FSD data aggregation create compounding advantages with every new Tesla sold." },
-    "transactionEmbedding": { "status": "strong", "note": "OTA updates, FSD subscriptions, Powerwall energy management, and insurance are embedded in the daily life of Tesla owners." },
-    "systemOfRecord": { "status": "intact", "note": "Tesla is the definitive reference standard for EVs, autonomous driving, and energy storage technology." },
-    "aiResilienceScore": 74,
-    "verdict": "Tesla's real-world autonomous driving data flywheel is a genuinely AI-resilient moat. The key risk: whether deep-pocketed OEMs can close the data gap before FSD achieves full commercialization."
+    "talentScarcity": { "status": "intact", "note": "Battery chemistry expertise, Gigafactory manufacturing engineers, FSD AI/ML researchers, and Optimus robotics talent remain genuinely scarce and concentrated at Tesla." },
+    "bundling": { "status": "strong", "note": "EV + FSD Software + Energy Storage + Supercharging + Insurance + Optimus + Service = a vertical integration bundle no OEM has replicated or can replicate without decades of investment." },
+    "proprietaryData": { "status": "strong", "note": "3B+ real-world FSD driving miles, energy grid optimization data from Megapack deployments, and Optimus telemetry constitute the world's most valuable AI training dataset for physical-world robotics." },
+    "regulatoryLockIn": { "status": "intact", "note": "Supercharger NACS standard adopted as the North American default, Megapack grid storage contracts with utilities, and federal infrastructure relationships create durable regulatory entrenchment." },
+    "networkEffects": { "status": "intact", "note": "Every new Tesla on the road contributes FSD training data for all other Teslas — a compounding fleet intelligence network effect. Supercharger density improves with each new vehicle sold." },
+    "transactionEmbedding": { "status": "strong", "note": "OTA updates, FSD subscriptions, Powerwall energy management, insurance, and Robotaxi platform are embedded in the daily life and infrastructure of Tesla owners and utility operators." },
+    "systemOfRecord": { "status": "intact", "note": "Tesla remains the definitive reference standard for consumer EVs, grid-scale battery storage, and autonomous driving technology benchmarks." },
+    "aiResilienceScore": 78,
+    "verdict": "Tesla's pivot from auto OEM to autonomous AI platform is the defining investment question of the decade. The FSD data flywheel and Optimus platform are genuinely AI-resilient moats — but the transition requires flawless execution while auto margins are under pressure. The bull case is transformative; the bear case is a very expensive car company."
   }
 }
