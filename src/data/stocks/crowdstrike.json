@@ -1,0 +1,85 @@
+{
+  "slug": "crowdstrike",
+  "ticker": "CRWD",
+  "name": "CrowdStrike Holdings",
+  "headerStats": [
+    { "label": "Ticker", "value": "CRWD" },
+    { "label": "Market Cap", "value": "$95B" },
+    { "label": "Current Price", "value": "$370.00" }
+  ],
+  "chips": [
+    { "label": "Cybersecurity | Cloud-Native Endpoint & Identity", "color": "primary" },
+    { "label": "Threat Intelligence Network", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    { "title": "ARR", "value": "$4.2B", "label": "~25% YoY Growth", "icon": "TrendingUp", "color": "#e8281b" },
+    { "title": "Modules/Customer", "value": "8+", "label": "Platform Consolidation", "icon": "Shield", "color": "#3b82f6" },
+    { "title": "Net Retention", "value": "~120%", "label": "Consistent Expansion", "icon": "Zap", "color": "#10b981" }
+  ],
+  "moat": {
+    "score": 85,
+    "description": "Falcon platform's single-agent architecture, Threat Graph network effects, and deep switching costs create a durable cybersecurity moat.",
+    "analysisTitle": "The Threat Graph Moat",
+    "analysisSummary": "CrowdStrike's moat is built on **Data Network Effects, Platform Depth, and Switching Costs**:",
+    "analysisPoints": [
+      { "title": "Threat Graph (Network Effects)", "text": "CrowdStrike's Threat Graph processes over 1 trillion security events per day across 24,000+ customers. Each new customer improves detection accuracy for all others — creating a self-reinforcing data moat that widens with scale." },
+      { "title": "Single-Agent Platform Depth", "text": "The Falcon platform delivers 28+ modules from one lightweight agent. As customers consolidate security vendors onto Falcon, the platform becomes deeply embedded in their infrastructure, making replacement a multi-year undertaking." },
+      { "title": "Switching Costs & Certification Lock-In", "text": "Ripping out an endpoint security platform requires re-imaging machines, retraining staff, and re-certifying compliance. FedRAMP High and IL5 certifications further lock in federal customers for years." }
+    ]
+  },
+  "growth": {
+    "score": 87,
+    "description": "ARR compounding at 25%+ driven by platform consolidation, identity security expansion, and cloud workload protection — with a $100B+ TAM still largely untapped."
+  },
+  "valuation": {
+    "score": 60,
+    "description": "Premium multiple (~12x forward ARR) reflects the quality of the franchise but limits near-term upside; current price is fair-to-slightly-stretched absent a re-acceleration in ARR growth."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$200",
+      "description": "ARR growth decelerates to sub-15% as Microsoft Defender and SentinelOne gain share, while macro headwinds pressure security budgets.",
+      "points": [
+        "ARR growth slows below 15% as federal spending cuts reduce government contract renewals",
+        "Microsoft Defender bundling erodes Falcon's SMB and mid-market share",
+        "Post-outage reputational damage from the July 2024 incident causes delayed enterprise deal closures",
+        "Valuation multiple compresses toward 7–8x ARR as growth-stock premium fades"
+      ]
+    },
+    "base": {
+      "priceTarget": "$380",
+      "description": "CrowdStrike sustains 20–25% ARR growth driven by platform consolidation and identity security, maintaining best-in-class NRR above 115%.",
+      "points": [
+        "ARR crosses $5B by end of FY2026 with module attach rate continuing to climb",
+        "Identity protection and cloud security modules each reach $500M+ ARR",
+        "Federal vertical stabilizes after DOGE-driven uncertainty; international markets accelerate",
+        "Free cash flow margin expands toward 30%+ as platform operating leverage kicks in"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$600",
+      "description": "CrowdStrike becomes the dominant security operating system, consolidating endpoint, identity, SIEM, and cloud security into a single platform used by the majority of the Fortune 500.",
+      "points": [
+        "ARR reaches $8B+ by FY2028 as CrowdStrike displaces legacy SIEM and SOAR vendors",
+        "Charlotte AI (generative AI security layer) drives a new adoption cycle across existing customers",
+        "International expansion and emerging-market government contracts add a new growth vector",
+        "Platform lock-in at 15+ modules per customer creates near-100% gross retention"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": { "status": "intact", "note": "Security analysts trained on Falcon's console, threat hunting workflows, and detection tuning are reluctant to migrate — institutional knowledge compounds switching costs." },
+    "businessLogic": { "status": "strong", "note": "Custom detection rules, threat hunting queries, and automated response playbooks are encoded into each customer's Falcon instance — rebuilding this logic in a competitor platform is a multi-quarter project." },
+    "publicDataAccess": { "status": "weakened", "note": "CrowdStrike publishes threat intelligence reports (Adversary Intelligence) but its primary moat is proprietary telemetry from its sensor network, not public data." },
+    "talentScarcity": { "status": "intact", "note": "CrowdStrike's threat intelligence team (Counter Adversary Operations) is a scarce talent pool — nation-state adversary tracking expertise is extremely difficult to replicate." },
+    "bundling": { "status": "strong", "note": "Falcon's 28+ modules (endpoint, identity, cloud, SIEM, threat intel) allow CrowdStrike to replace 5–10 point solutions, creating deep bundling stickiness as module counts rise." },
+    "proprietaryData": { "status": "strong", "note": "Threat Graph contains petabytes of attack telemetry across years and thousands of organizations — a dataset that cannot be replicated by any competitor regardless of resources." },
+    "regulatoryLockIn": { "status": "strong", "note": "FedRAMP High, IL4/IL5, StateRAMP, and DoD CMMC certifications create a multi-year regulatory moat for government and regulated-industry customers." },
+    "networkEffects": { "status": "strong", "note": "Each new sensor added to the Threat Graph improves detection accuracy for all customers — a genuine data network effect that compounds as the installed base grows." },
+    "transactionEmbedding": { "status": "strong", "note": "Falcon's single agent runs continuously on every endpoint and cloud workload — security decisions, alerts, and automated responses flow through it in real-time, embedding it at the operational layer." },
+    "systemOfRecord": { "status": "intact", "note": "For incident response and threat hunting, Falcon serves as the system of record for endpoint telemetry — compliance teams, IR firms, and SOC analysts depend on its data for forensic investigations." },
+    "aiResilienceScore": 85,
+    "verdict": "CrowdStrike's moat is highly AI-resilient — AI enhances the Threat Graph by processing more telemetry faster, and Charlotte AI adds a new consumption layer on top of existing data assets. AI is an accelerant to CrowdStrike's moat, not a disruptor."
+  }
+}

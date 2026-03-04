@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { PieChart, ShieldCheck, ChevronRight, AlertTriangle } from "lucide-react";
 import { Card, CardBody, CardHeader, Progress, Chip, Spinner } from "@heroui/react";
-import { stockData } from "./stockData";
+import { stockData, getAverageScore } from "./stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
 
 function DynamicScore({
@@ -70,63 +70,76 @@ function DynamicScore({
   return <>{children(avg, loading)}</>;
 }
 
-const portfolio = [
-  { ticker: "MSFT", name: "Microsoft",  color: "#00a4ef", category: "Core SaaS",        href: "/stocks/msft" },
-  { ticker: "AMZN", name: "Amazon",     color: "#f59e0b", category: "Eco-System",        href: "/stocks/amazon" },
-  { ticker: "ASML", name: "ASML",       color: "#0071c5", category: "Lithography",       href: "/stocks/asml" },
-  { ticker: "V",    name: "Visa",       color: "#1a1f71", category: "Payments",          href: "/stocks/visa" },
-  { ticker: "MA",   name: "Mastercard", color: "#eb001b", category: "Payments",          href: "/stocks/mastercard" },
-  { ticker: "NVDA", name: "NVIDIA",     color: "#76b900", category: "AI Infrastructure", href: "/stocks/nvda" },
-  { ticker: "SPGI", name: "S&P Global", color: "#cf102d", category: "Financials",        href: "/stocks/spgi" },
-  { ticker: "CRM",  name: "Salesforce", color: "#00a1e0", category: "Enterprise SaaS",   href: "/stocks/crm" },
-  { ticker: "INTU", name: "Intuit",     color: "#2ca01c", category: "FinTech",           href: "/stocks/intuit" },
-  { ticker: "GOOGL", name: "Alphabet",  color: "#4285f4", category: "Big Tech",          href: "/stocks/google" },
-  { ticker: "META", name: "Meta",       color: "#0082fb", category: "Big Tech",          href: "/stocks/meta" },
-  { ticker: "TSLA", name: "Tesla",      color: "#e82127", category: "Clean Tech",        href: "/stocks/tesla" },
-  { ticker: "PLTR", name: "Palantir",   color: "#7b5ea7", category: "AI Analytics",      href: "/stocks/pltr" },
-  { ticker: "BTC",  name: "Bitcoin",    color: "#f7931a", category: "Digital Assets",    href: "/stocks/btc" },
-];
+// ─── Portfolio threshold ──────────────────────────────────────────────────────
+const PORTFOLIO_THRESHOLD = 75;
 
-const excluded = [
-  {
-    ticker: "ADBE",
-    name: "Adobe",
-    href: "/stocks/adbe",
-    reason: "Second-lowest moat score (58) signals material AI disruption risk to Creative Cloud. Generative tools — Midjourney, Sora, Canva AI, and native OS features — directly attack Adobe's pricing power and switching costs. The structural moat that once defined this business is visibly weakening.",
-  },
-  {
-    ticker: "NFLX",
-    name: "Netflix",
-    href: "/stocks/nflx",
-    reason: "Content creation is a non-durable moat requiring perpetual capital reinvestment. Worst valuation score (52) reflects an expensive multiple for a business in an intensely competitive streaming market with no decisive technological edge. AI moat score of 63 is weak for the price paid.",
-  },
-  {
-    ticker: "AMD",
-    name: "AMD",
-    href: "/stocks/amd",
-    reason: "Lowest moat score (52) in the Big Tech category. AMD's competitive edge is execution excellence, not structural lock-in. NVIDIA's CUDA software ecosystem creates switching costs that AMD simply cannot replicate. Strong cyclical growth (92) but no wide moat — a momentum play, not a compounder.",
-  },
-  {
-    ticker: "KNT",
-    name: "K92 Mining",
-    href: "/stocks/k92",
-    reason: "Weakest moat score in the entire coverage universe (42). Mining is a commodity business with no pricing power, no network effects, and no switching costs. High growth (85) reflects production expansion upside — not the scalable, capital-light compounding this portfolio targets.",
-  },
-  {
-    ticker: "XAU",
-    name: "Gold",
-    href: "/stocks/gold",
-    reason: "Lowest overall score (57) driven by weak growth (50) and poor valuation basis (55). Gold produces no earnings or cash flows, making intrinsic value impossible to anchor. Valid as a macro fear hedge in a separate allocation, but has no place in a quality-focused compounder portfolio.",
-  },
-];
+// ─── Per-ticker metadata (display color, category, exclusion reason) ──────────
+const stockMeta: Record<string, { color: string; category: string; exclusionReason?: string }> = {
+  AMZN: { color: "#f59e0b", category: "Eco-System" },
+  GOOGL: { color: "#4285f4", category: "Big Tech" },
+  META:  { color: "#0082fb", category: "Big Tech" },
+  MSFT:  { color: "#00a4ef", category: "Core SaaS" },
+  NVDA:  { color: "#76b900", category: "AI Infrastructure" },
+  AMD:   { color: "#ed1c24", category: "Big Tech",        exclusionReason: "Lowest moat score (52) in the Big Tech category. AMD's competitive edge is execution excellence, not structural lock-in. NVIDIA's CUDA software ecosystem creates switching costs that AMD simply cannot replicate. Strong cyclical growth (92) but no wide moat — a momentum play, not a compounder." },
+  ASML:  { color: "#0071c5", category: "Lithography" },
+  NFLX:  { color: "#e50914", category: "Big Tech",        exclusionReason: "Content creation is a non-durable moat requiring perpetual capital reinvestment. Worst valuation score (52) reflects an expensive multiple for a business in an intensely competitive streaming market with no decisive technological edge. AI moat score of 63 is weak for the price paid." },
+  TSLA:  { color: "#e82127", category: "Clean Tech" },
+  V:     { color: "#1a1f71", category: "Payments" },
+  MA:    { color: "#eb001b", category: "Payments" },
+  PLTR:  { color: "#7b5ea7", category: "AI Analytics" },
+  CRWD:  { color: "#e8281b", category: "Cybersecurity" },
+  CRM:   { color: "#00a1e0", category: "Enterprise SaaS" },
+  ADBE:  { color: "#f44336", category: "Big Tech",        exclusionReason: "Second-lowest moat score (58) signals material AI disruption risk to Creative Cloud. Generative tools — Midjourney, Sora, Canva AI, and native OS features — directly attack Adobe's pricing power and switching costs. The structural moat that once defined this business is visibly weakening." },
+  SPGI:  { color: "#cf102d", category: "Financials" },
+  INTU:  { color: "#2ca01c", category: "FinTech" },
+  XAU:   { color: "#ffd700", category: "Hard Assets",     exclusionReason: "Lowest overall score (57) driven by weak growth (50) and poor valuation basis (55). Gold produces no earnings or cash flows, making intrinsic value impossible to anchor. Valid as a macro fear hedge in a separate allocation, but has no place in a quality-focused compounder portfolio." },
+  BTC:   { color: "#f7931a", category: "Digital Assets" },
+  KNT:   { color: "#8b7355", category: "Hard Assets",     exclusionReason: "Weakest moat score in the entire coverage universe (42). Mining is a commodity business with no pricing power, no network effects, and no switching costs. High growth (85) reflects production expansion upside — not the scalable, capital-light compounding this portfolio targets." },
+  FCX:   { color: "#b8732d", category: "Hard Assets",     exclusionReason: "Commodity copper producer with no pricing power — FCX sells at LME spot price regardless of asset quality. Indonesia sovereign risk at Grasberg, competition from major miners (Codelco, BHP, Glencore), and earnings volatility disqualify it from a portfolio targeting structural moats and durable compounding." },
+  TSM:   { color: "#0071c5", category: "Foundry" },
+  MU:    { color: "#0099cc", category: "Memory" },
+};
 
+// ─── Dynamic portfolio / excluded — derived from composite scores ─────────────
+const portfolio = stockData
+  .filter(s => getAverageScore(s.scores) >= PORTFOLIO_THRESHOLD)
+  .map(s => ({
+    ticker:   s.ticker,
+    name:     s.name,
+    slug:     s.slug,
+    href:     s.href,
+    color:    stockMeta[s.ticker]?.color    ?? "#888888",
+    category: stockMeta[s.ticker]?.category ?? "Other",
+    stock:    s,
+  }));
+
+const excluded = stockData
+  .filter(s => getAverageScore(s.scores) < PORTFOLIO_THRESHOLD)
+  .map(s => ({
+    ticker: s.ticker,
+    name:   s.name,
+    href:   s.href,
+    reason: stockMeta[s.ticker]?.exclusionReason ?? `Overall composite score below ${PORTFOLIO_THRESHOLD}.`,
+    stock:  s,
+  }));
+
+// ─── Category colour helper ───────────────────────────────────────────────────
 function categoryColor(category: string): "primary" | "success" | "warning" | "secondary" | "danger" | "default" {
   if (["Core SaaS", "Enterprise SaaS", "Big Tech"].includes(category)) return "primary";
   if (["Payments", "Financials", "FinTech"].includes(category)) return "success";
-  if (["AI Infrastructure", "Lithography", "AI Analytics"].includes(category)) return "warning";
+  if (["AI Infrastructure", "Lithography", "AI Analytics", "Cybersecurity", "Foundry", "Memory"].includes(category)) return "warning";
   if (["Eco-System", "Clean Tech", "Digital Assets"].includes(category)) return "secondary";
+  if (category === "Hard Assets") return "danger";
   return "default";
 }
+
+// ─── Sector sets for concentration display ────────────────────────────────────
+const TECH_CATEGORIES = new Set([
+  "Core SaaS", "Enterprise SaaS", "Big Tech",
+  "AI Infrastructure", "Lithography", "AI Analytics",
+  "Clean Tech", "Eco-System", "Cybersecurity", "Digital Assets", "Foundry", "Memory",
+]);
+const FIN_CATEGORIES = new Set(["Payments", "Financials", "FinTech"]);
 
 export default function HomePage() {
   const router = useRouter();
@@ -134,10 +147,7 @@ export default function HomePage() {
   // Track live composite scores for each portfolio stock so we can compute dynamic weights
   const [liveScores, setLiveScores] = useState<Record<string, number>>(() => {
     const init: Record<string, number> = {};
-    portfolio.forEach((p) => {
-      const stock = stockData.find((s) => s.ticker === p.ticker);
-      if (stock) init[p.ticker] = Math.round(stock.scores.reduce((a, b) => a + b, 0) / stock.scores.length);
-    });
+    portfolio.forEach((p) => { init[p.ticker] = getAverageScore(p.stock.scores); });
     return init;
   });
   const [loadedTickers, setLoadedTickers] = useState<Set<string>>(new Set());
@@ -194,22 +204,17 @@ export default function HomePage() {
 
   const maxWeight = Math.max(...portfolio.map((p) => dynamicWeights[p.ticker] ?? 0));
 
-  const techTickers = ["MSFT", "AMZN", "ASML", "NVDA", "CRM", "META", "PLTR", "TSLA"];
-  const finTickers = ["V", "MA", "SPGI", "INTU"];
-  const techWeight = techTickers.reduce((s, t) => s + (dynamicWeights[t] ?? 0), 0);
-  const finWeight = finTickers.reduce((s, t) => s + (dynamicWeights[t] ?? 0), 0);
+  // Sector concentrations derived from category metadata
+  const techWeight = portfolio.reduce(
+    (s, p) => TECH_CATEGORIES.has(p.category) ? s + (dynamicWeights[p.ticker] ?? 0) : s, 0
+  );
+  const finWeight = portfolio.reduce(
+    (s, p) => FIN_CATEGORIES.has(p.category) ? s + (dynamicWeights[p.ticker] ?? 0) : s, 0
+  );
 
-  const portfolioWithScores = portfolio
-    .map((p) => {
-      const stock = stockData.find((s) => s.ticker === p.ticker);
-      return { ...p, stock };
-    })
-    .sort((a, b) => (liveScores[b.ticker] ?? 0) - (liveScores[a.ticker] ?? 0));
-
-  const excludedWithScores = excluded.map((e) => {
-    const stock = stockData.find((s) => s.ticker === e.ticker);
-    return { ...e, stock };
-  });
+  const portfolioWithScores = [...portfolio].sort(
+    (a, b) => (liveScores[b.ticker] ?? 0) - (liveScores[a.ticker] ?? 0)
+  );
 
   const getScoreColor = (s: number): "success" | "primary" | "warning" | "danger" => {
     if (s >= 90) return "success";
@@ -225,7 +230,7 @@ export default function HomePage() {
           Portfolio Distribution
         </h1>
         <p className="text-white/60 text-base md:text-xl max-w-2xl">
-          13 high-conviction positions selected for moat durability, growth scaling, and valuation discipline.
+          {portfolio.length} high-conviction positions selected for moat durability, growth scaling, and valuation discipline.
           Higher-scoring positions receive proportionally larger allocations (max 10% per position).
         </p>
       </header>
@@ -312,11 +317,11 @@ export default function HomePage() {
           <CardBody className="p-6 gap-6">
             <div>
               <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Positions</p>
-              <p className="text-lg font-bold">13 High-Conviction Holdings</p>
+              <p className="text-lg font-bold">{portfolio.length} High-Conviction Holdings</p>
             </div>
             <div>
               <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Selection Threshold</p>
-              <p className="text-lg font-bold">Overall Score ≥ 75 / 100</p>
+              <p className="text-lg font-bold">Overall Score ≥ {PORTFOLIO_THRESHOLD} / 100</p>
             </div>
             <div>
               <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Concentration</p>
@@ -384,28 +389,26 @@ export default function HomePage() {
                 />
               </div>
 
-              {stock.stock ? (
-                <DynamicScore
-                  slug={stock.stock.slug}
-                  moat={stock.stock.scores[0]}
-                  growth={stock.stock.scores[1]}
-                  fallbackVal={stock.stock.scores[2]}
-                  bearTarget={stock.stock.bearTarget}
-                  baseTarget={stock.stock.baseTarget}
-                  bullTarget={stock.stock.bullTarget}
-                  onScore={(score) => handleScore(stock.ticker, score)}
-                >
-                  {(avg, loading) => (
-                    <div className="text-right mr-2 shrink-0 w-12">
-                      <div className="text-[10px] text-white/30 uppercase font-bold">Score</div>
-                      {loading
-                        ? <Spinner size="sm" color="default" className="mt-0.5" />
-                        : <div className={`text-sm font-black text-${getScoreColor(avg)}`}>{avg}</div>
-                      }
-                    </div>
-                  )}
-                </DynamicScore>
-              ) : null}
+              <DynamicScore
+                slug={stock.stock.slug}
+                moat={stock.stock.scores[0]}
+                growth={stock.stock.scores[1]}
+                fallbackVal={stock.stock.scores[2]}
+                bearTarget={stock.stock.bearTarget}
+                baseTarget={stock.stock.baseTarget}
+                bullTarget={stock.stock.bullTarget}
+                onScore={(score) => handleScore(stock.ticker, score)}
+              >
+                {(avg, loading) => (
+                  <div className="text-right mr-2 shrink-0 w-12">
+                    <div className="text-[10px] text-white/30 uppercase font-bold">Score</div>
+                    {loading
+                      ? <Spinner size="sm" color="default" className="mt-0.5" />
+                      : <div className={`text-sm font-black text-${getScoreColor(avg)}`}>{avg}</div>
+                    }
+                  </div>
+                )}
+              </DynamicScore>
 
               <div className="tabular-nums w-10 text-right">
                 {scoresLoading
@@ -429,11 +432,11 @@ export default function HomePage() {
           <AlertTriangle size={20} className="text-warning shrink-0" />
           <h2 className="text-2xl font-bold">Not in Portfolio</h2>
           <div className="h-px flex-1 bg-white/10" />
-          <span className="text-xs text-white/30 font-medium">Overall score below 75</span>
+          <span className="text-xs text-white/30 font-medium">Overall score below {PORTFOLIO_THRESHOLD}</span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {excludedWithScores.map((stock) => (
+          {excluded.map((stock) => (
             <button
               key={stock.ticker}
               onClick={() => router.push(stock.href)}
@@ -446,34 +449,32 @@ export default function HomePage() {
                     {stock.ticker}
                   </span>
                 </div>
-                {stock.stock ? (
-                  <DynamicScore
-                    slug={stock.stock.slug}
-                    moat={stock.stock.scores[0]}
-                    growth={stock.stock.scores[1]}
-                    fallbackVal={stock.stock.scores[2]}
-                    bearTarget={stock.stock.bearTarget}
-                    baseTarget={stock.stock.baseTarget}
-                    bullTarget={stock.stock.bullTarget}
-                  >
-                    {(avg, loading) => (
-                      <div className="text-right shrink-0 ml-4 min-w-[52px]">
-                        <div className="text-[10px] text-white/30 uppercase font-bold mb-1">Overall</div>
-                        {loading
-                          ? <Spinner size="sm" color="default" />
-                          : <Chip
-                              size="sm"
-                              color={getScoreColor(avg)}
-                              variant="flat"
-                              classNames={{ content: "font-black text-sm" }}
-                            >
-                              {avg}
-                            </Chip>
-                        }
-                      </div>
-                    )}
-                  </DynamicScore>
-                ) : null}
+                <DynamicScore
+                  slug={stock.stock.slug}
+                  moat={stock.stock.scores[0]}
+                  growth={stock.stock.scores[1]}
+                  fallbackVal={stock.stock.scores[2]}
+                  bearTarget={stock.stock.bearTarget}
+                  baseTarget={stock.stock.baseTarget}
+                  bullTarget={stock.stock.bullTarget}
+                >
+                  {(avg, loading) => (
+                    <div className="text-right shrink-0 ml-4 min-w-[52px]">
+                      <div className="text-[10px] text-white/30 uppercase font-bold mb-1">Overall</div>
+                      {loading
+                        ? <Spinner size="sm" color="default" />
+                        : <Chip
+                            size="sm"
+                            color={getScoreColor(avg)}
+                            variant="flat"
+                            classNames={{ content: "font-black text-sm" }}
+                          >
+                            {avg}
+                          </Chip>
+                      }
+                    </div>
+                  )}
+                </DynamicScore>
               </div>
               <p className="text-white/40 text-xs leading-relaxed">{stock.reason}</p>
             </button>

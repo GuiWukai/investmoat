@@ -1,0 +1,86 @@
+{
+  "slug": "fcx",
+  "ticker": "FCX",
+  "name": "Freeport-McMoRan Inc.",
+  "headerStats": [
+    { "label": "Ticker", "value": "FCX (NYSE)" },
+    { "label": "Market Cap", "value": "~$58B" },
+    { "label": "Current Price", "value": "~$40" },
+    { "label": "Primary Metal", "value": "Copper" }
+  ],
+  "chips": [
+    { "label": "Materials | Copper & Gold Mining", "color": "warning" },
+    { "label": "Electrification & AI Infrastructure Play", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    { "title": "Copper Production", "value": "~4.3B lbs", "label": "2024 Actual (Annual)", "icon": "TrendingUp", "color": "#b45309" },
+    { "title": "Grasberg Mine", "value": "#1", "label": "World's Largest Gold/Copper Mine", "icon": "Gem", "color": "#f59e0b" },
+    { "title": "Reserve Life", "value": "30+ yrs", "label": "Long-Duration Asset Base", "icon": "Shield", "color": "#10b981" }
+  ],
+  "moat": {
+    "score": 60,
+    "description": "World-class long-life copper reserves headlined by the Grasberg complex, with scale advantages and multi-decade permitting that new entrants cannot replicate — offset by commodity price exposure and Indonesia sovereign risk.",
+    "analysisTitle": "The Reserve Quality Moat",
+    "analysisSummary": "In large-scale mining, the moat is **Reserve Size, Grade, and Jurisdictional Control**:",
+    "analysisPoints": [
+      { "title": "Grasberg Complex (Indonesia)", "text": "The Grasberg underground block cave is one of the largest and richest copper-gold deposits ever discovered. Transitioning from open-pit to underground has unlocked a 30+ year mine life at grades that would be uneconomic to develop from scratch today. FCX's ownership through PT Freeport Indonesia represents a near-irreplicable asset." },
+      { "title": "Americas Portfolio Scale", "text": "Morenci (Arizona), Cerro Verde (Peru), and El Abra (Chile) give FCX a geographically diversified, multi-decade reserve base. Permitted, operating mines at this scale take 15–20 years and billions of dollars to build — creating a durable barrier to entry." },
+      { "title": "Copper as Critical Infrastructure Metal", "text": "FCX is structurally positioned at the intersection of three secular tailwinds: electrification, EV adoption, and AI data center buildout. Each megawatt of renewable energy and each data center rack requires substantially more copper than legacy infrastructure, with no viable substitute at scale." }
+    ]
+  },
+  "growth": {
+    "score": 75,
+    "description": "Grasberg underground ramp-up drives organic volume growth through 2027; copper demand acceleration from EVs, grid buildout, and AI data centers provides a structural tailwind that underpins above-consensus long-term copper pricing."
+  },
+  "valuation": {
+    "score": 68,
+    "description": "At ~$40, FCX trades at roughly 12–14x normalized earnings assuming $4.50/lb copper — fair value for a world-class producer with optionality to a copper supercycle. Material upside if copper re-rates to $5.50–6.00/lb on supply deficits."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$22",
+      "description": "Copper collapses below $3.50/lb on a global growth slowdown, Indonesia tightens PT-FI terms, and Grasberg underground faces production setbacks.",
+      "points": [
+        "Copper prices fall below $3.50/lb as China construction activity weakens and EV adoption stalls",
+        "Indonesia renegotiates PT Freeport Indonesia contract terms, increasing royalties and reducing FCX cash flows",
+        "Grasberg underground block cave encounters geotechnical challenges, delaying the production ramp",
+        "Multiple compression toward trough-cycle 6–7x EBITDA as commodity sentiment deteriorates"
+      ]
+    },
+    "base": {
+      "priceTarget": "$48",
+      "description": "Copper holds in the $4.25–5.00/lb range, Grasberg delivers on its underground ramp schedule, and FCX generates strong free cash flow to fund buybacks and dividends.",
+      "points": [
+        "Copper averages $4.50/lb driven by data center buildout and grid electrification demand",
+        "Grasberg underground ramp-up hits 200k+ tonnes per day, boosting copper equivalent output",
+        "FCX returns $2–3B annually to shareholders via dividends and buybacks",
+        "Americas mines sustain production at Morenci and Cerro Verde with stable operating costs"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$80",
+      "description": "A structural copper supply deficit driven by chronic underinvestment and surging electrification demand pushes copper to $6+ per pound, delivering record FCX earnings and cash flow.",
+      "points": [
+        "Copper surges to $6.00+ per pound as grid buildout, EV penetration, and AI data centers exhaust available supply",
+        "Grasberg underground achieves full production capacity of 240k+ tonnes per day on schedule",
+        "FCX initiates a major capital return program as free cash flow exceeds $8B annually",
+        "Re-rating to mid-cycle multiple of 14–16x EBITDA as copper is recognized as a critical infrastructure commodity"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": { "status": "destroyed", "note": "Not applicable — FCX sells copper and gold as commodities at global spot prices, not software or services with learned user interfaces." },
+    "businessLogic": { "status": "weakened", "note": "AI is improving mine planning, predictive maintenance, and ore-body modeling across the industry, but these gains are broadly available and do not create durable differentiation for FCX." },
+    "publicDataAccess": { "status": "destroyed", "note": "Not applicable to FCX's competitive position in copper and gold mining." },
+    "talentScarcity": { "status": "intact", "note": "Block cave mining engineers with Grasberg-scale underground experience are genuinely scarce. The Grasberg transition required decades of specialized expertise that cannot be hired off the shelf." },
+    "bundling": { "status": "destroyed", "note": "Copper and gold are globally fungible commodities — FCX cannot bundle or differentiate its product from competitors." },
+    "proprietaryData": { "status": "intact", "note": "Decades of Grasberg geological survey data, 3D ore-body models, geomechanical studies, and process plant optimization data represent proprietary operational assets unavailable to competitors." },
+    "regulatoryLockIn": { "status": "strong", "note": "The PT Freeport Indonesia special mining agreement, Morenci's Arizona water rights and permits, and Cerro Verde's Peruvian concessions represent regulatory moats that would take decades to replicate from scratch." },
+    "networkEffects": { "status": "destroyed", "note": "No network effects exist in copper mining — output is priced by global LME spot markets regardless of production volume." },
+    "transactionEmbedding": { "status": "weakened", "note": "FCX has offtake agreements with smelters, but copper is fungible and smelters can switch suppliers. Limited transaction embedding compared to software businesses." },
+    "systemOfRecord": { "status": "destroyed", "note": "Not applicable — FCX is a physical commodity producer, not an information system." },
+    "aiResilienceScore": 55,
+    "verdict": "FCX's AI resilience is limited in the traditional sense — copper mining is a physical commodity business immune to AI disruption of its core product. However, FCX is paradoxically a direct beneficiary of the AI infrastructure build-out, as data centers require massive copper volumes for power and connectivity. AI is a demand driver, not a competitive threat."
+  }
+}

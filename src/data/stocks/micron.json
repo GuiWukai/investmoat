@@ -1,0 +1,100 @@
+{
+  "slug": "micron",
+  "ticker": "MU",
+  "name": "Micron Technology",
+  "titleColor": "#0099cc",
+  "headerStats": [
+    { "label": "Ticker", "value": "MU" },
+    { "label": "Market Cap", "value": "$115B" },
+    { "label": "Current Price", "value": "$105.00" }
+  ],
+  "chips": [
+    { "label": "Semiconductors | DRAM & NAND Memory", "color": "primary" },
+    { "label": "HBM3E AI Memory", "color": "warning" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    { "title": "HBM Revenue", "value": "~$3B+", "label": "FY2025 Target, Sold Out", "icon": "Cpu", "color": "#0099cc" },
+    { "title": "Gross Margin", "value": "~38%", "label": "Recovering from Trough", "icon": "TrendingUp", "color": "#3b82f6" },
+    { "title": "DRAM Share", "value": "~24%", "label": "3rd Largest Globally", "icon": "Share2", "color": "#10b981" }
+  ],
+  "moat": {
+    "score": 62,
+    "description": "An oligopoly of three (Samsung, SK Hynix, Micron) with high capital barriers to entry, but commodity memory pricing limits true moat durability. HBM3E for AI creates genuine differentiation — though Samsung and SK Hynix maintain a lead.",
+    "analysisTitle": "Oligopoly with Thin Walls",
+    "analysisSummary": "Micron's competitive position rests on **Oligopoly Structure, Capital Barriers, and HBM Differentiation** — but these are weaker than they appear:",
+    "analysisPoints": [
+      { "title": "Three-Player Oligopoly", "text": "With Samsung, SK Hynix, and Micron controlling ~95% of DRAM supply, the market is structurally oligopolistic. New entrants face $30B+ capex requirements and decade-long learning curves that effectively preclude competition. Micron is the only US-based survivor of what was once a much larger industry." },
+      { "title": "HBM3E Differentiation (Emerging)", "text": "Micron's HBM3E memory for AI accelerators (used in NVIDIA's H200) is reportedly the most energy-efficient in the market. All HBM capacity for 2024 and most of 2025 is sold out. This is the segment where the business is decisively differentiating, and where the investment case is strongest." },
+      { "title": "Why the Moat is Thin", "text": "Outside HBM, DRAM and NAND are commodity products sold at spot market prices. When supply outpaces demand (as in 2022–23), margins collapse rapidly — Micron posted $5.8B in net losses. Pricing power depends on the industry's collective capital discipline, not Micron's own competitive advantage." }
+    ]
+  },
+  "growth": {
+    "score": 87,
+    "description": "AI-driven HBM demand is creating a structural step-change in Micron's revenue quality. Each H100/H200/B200 server rack requires 6–8 HBM stacks; hyperscaler build-out creates multi-year demand visibility that dwarfs prior DRAM cycles.",
+    "additionalNote": {
+      "title": "HBM Demand Structural Shift",
+      "points": [
+        "NVIDIA B200 uses 192GB HBM3E per GPU — 4x the memory content of H100 configurations",
+        "HBM ASPs are 5–8x higher than standard DRAM, permanently improving revenue mix",
+        "Micron is the only US supplier of HBM — CHIPS Act-funded Boise and Singapore fabs adding HBM capacity",
+        "DRAM content per server doubles with AI workloads; NAND for AI storage benefits from the same trend"
+      ]
+    }
+  },
+  "valuation": {
+    "score": 76,
+    "description": "Micron trades at ~12x NTM earnings — cheap vs. software peers at 20–25x, but memory is cyclical. The key question is whether HBM permanently elevates Micron's through-cycle margins above historical levels, which would justify a multiple re-rating.",
+    "valuationNote": {
+      "text": "Trough-to-peak EPS swings of 10:1 make Micron valuation inherently volatile. At ~$105, the market prices in a moderate HBM ramp without a full memory upcycle premium. If HBM revenue reaches $8B+ by FY2026, fair value is materially higher.",
+      "fairValue": "~$120",
+      "marginOfSafety": "~14% upside at current price"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$55",
+      "description": "Memory downturn repeats: AI capex slows, HBM oversupply emerges as Samsung and SK Hynix flood the market, and commodity DRAM prices collapse.",
+      "points": [
+        "AI hyperscaler capex normalizes, reducing HBM demand below sell-side estimates",
+        "Samsung and SK Hynix accelerate HBM3E capacity, creating oversupply by late 2025",
+        "Standard DRAM prices fall 30%+ as PC and server demand disappoints",
+        "Multiple compresses to 8x trough earnings as cyclicality concern dominates the narrative"
+      ]
+    },
+    "base": {
+      "priceTarget": "$120",
+      "description": "HBM ramp sustains above-cycle margins through 2026; DRAM/NAND upcycle supports the underlying business; Micron reaches $10B+ HBM revenue by FY2026.",
+      "points": [
+        "HBM3E revenue reaches $5B+ in FY2025, $10B+ in FY2026 with NVIDIA B200/GB200 ramp",
+        "Standard DRAM pricing stabilizes as SK Hynix and Samsung focus capacity on HBM",
+        "CHIPS Act $6.1B funding reduces capex burden and supports Idaho fab expansion",
+        "Gross margins sustain above 40% through the upcycle, re-rating P/E to 15–18x"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$200",
+      "description": "HBM becomes the dominant architecture for AI inference; Micron captures 30%+ HBM share and gross margins permanently re-rate above 50%.",
+      "points": [
+        "Micron's HBM3E efficiency advantage leads NVIDIA to select MU as primary HBM3E vendor",
+        "AI inference at scale requires 3–5x more HBM than training — creating an entirely new demand vector",
+        "Near-memory computing integration makes Micron a structural AI infrastructure play",
+        "Stock re-rates to 25x normalized earnings as HBM transforms Micron into a premium-multiple business"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": { "status": "destroyed", "note": "Not applicable — Micron is a B2B semiconductor manufacturer with no consumer interface lock-in." },
+    "businessLogic": { "status": "destroyed", "note": "Not applicable — memory chips have no embedded business-logic moat." },
+    "publicDataAccess": { "status": "destroyed", "note": "Not applicable — Micron does not derive competitive advantage from public data access." },
+    "talentScarcity": { "status": "intact", "note": "Leading-edge DRAM and HBM process engineers (sub-1β node specialists, CoWoS packaging engineers) are among the scarcest technical talent — Micron's Boise R&D center is a decade-deep talent cluster that competitors cannot quickly replicate." },
+    "bundling": { "status": "weakened", "note": "Micron sells DRAM, NAND, and HBM as distinct products with limited bundling; some system-level memory solutions exist but don't create meaningful lock-in vs. Samsung or SK Hynix." },
+    "proprietaryData": { "status": "intact", "note": "Proprietary DRAM cell designs (1-beta node), HBM3E stack architectures, and yield-learning data from high-volume HBM production represent genuine IP that competitors cannot quickly replicate." },
+    "regulatoryLockIn": { "status": "intact", "note": "CHIPS Act $6.1B grant for Idaho and New York fabs makes Micron a strategic US national security asset. The US government has an explicit interest in Micron's success as the only US-based DRAM manufacturer." },
+    "networkEffects": { "status": "destroyed", "note": "No network effects in memory — customers buy on price, availability, and quality specifications, not ecosystem lock-in." },
+    "transactionEmbedding": { "status": "weakened", "note": "HBM qualification is specific per GPU generation — once NVIDIA certifies Micron's HBM3E, there is some switching cost. But Samsung and SK Hynix are also qualified, limiting embed depth." },
+    "systemOfRecord": { "status": "destroyed", "note": "Memory is a commodity; Micron is not a system of record — customers can and do source from all three suppliers simultaneously." },
+    "aiResilienceScore": 62,
+    "verdict": "Micron's moat is structurally thin outside the current HBM upcycle. The oligopoly structure and US strategic importance provide a floor, but commodity memory pricing means this is a cyclical compounder, not a structural one. HBM is the differentiated opportunity — if that margin premium proves durable, the investment case strengthens materially."
+  }
+}

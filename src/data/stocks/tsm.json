@@ -1,0 +1,100 @@
+{
+  "slug": "tsm",
+  "ticker": "TSM",
+  "name": "Taiwan Semiconductor Manufacturing",
+  "titleColor": "#0071c5",
+  "headerStats": [
+    { "label": "Ticker", "value": "TSM" },
+    { "label": "Market Cap", "value": "$900B" },
+    { "label": "Current Price", "value": "$185.00" }
+  ],
+  "chips": [
+    { "label": "Semiconductors | Leading-Edge Foundry", "color": "primary" },
+    { "label": "Irreplaceable Monopoly", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    { "title": "Revenue", "value": "$88B", "label": "~30% YoY Growth", "icon": "TrendingUp", "color": "#0071c5" },
+    { "title": "Gross Margin", "value": "54%", "label": "Process-Led Pricing Power", "icon": "Zap", "color": "#3b82f6" },
+    { "title": "AI Chip Revenue", "value": "15%+", "label": "Of Total, Growing Fast", "icon": "Cpu", "color": "#10b981" }
+  ],
+  "moat": {
+    "score": 90,
+    "description": "Unmatched process-technology leadership at 3nm and below, with customer redesign costs making TSMC effectively irreplaceable for any leading-edge chip.",
+    "analysisTitle": "The Fabrication Monopoly",
+    "analysisSummary": "TSMC's moat rests on three reinforcing pillars: **Process Secrecy, Customer Lock-In, and Scale Economics**:",
+    "analysisPoints": [
+      { "title": "Process Technology Secrecy", "text": "TSMC's 3nm (N3E) and upcoming 2nm (N2) process nodes represent decades of proprietary yield-learning that no competitor has replicated. Intel Foundry and Samsung are 1–2 generations behind on leading-edge logic, and that gap is widening, not closing." },
+      { "title": "Customer Redesign Lock-In", "text": "Apple, NVIDIA, AMD, and Qualcomm design their chips specifically for TSMC's PDK (process design kit). Re-taping a chip for a different foundry costs $500M–$1B+ and 2–3 years of engineering time — making switching economically irrational for any customer at leading-edge nodes." },
+      { "title": "Yield-Learning Compounding", "text": "At leading-edge nodes, yield (the % of functional chips per wafer) is the decisive competitive variable. TSMC's decades of high-volume production have built an enormous yield-learning advantage that compounds with each new node — a gap competitors cannot close by simply spending more capital." }
+    ]
+  },
+  "growth": {
+    "score": 82,
+    "description": "AI accelerator demand (CoWoS-S/L packaging, N3/N2 logic) is driving a structural step-up in revenue beyond prior memory and consumer cycles. TSMC is the enabling infrastructure for every major AI chip.",
+    "additionalNote": {
+      "title": "AI Chip Tailwinds",
+      "points": [
+        "NVIDIA H100/H200/B100 and Apple silicon are all N3 or N4 customers — both growing fast",
+        "CoWoS-L advanced packaging for HBM+logic stacking is at full capacity with multi-year backlog",
+        "Arizona Fab 21 Phase 1 online; Phase 2 and Japan fab ramp de-risks geopolitical concentration",
+        "2nm (N2) ramp in 2025 with better performance/watt than any competitor at scale"
+      ]
+    }
+  },
+  "valuation": {
+    "score": 70,
+    "description": "TSMC trades at a permanent geopolitical discount (~20–25%) to its intrinsic value due to Taiwan cross-strait risk. Stripping out that discount, the business is modestly undervalued given AI-driven revenue acceleration.",
+    "valuationNote": {
+      "text": "Base-case fair value of ~$200 reflects ~24x NTM earnings — reasonable for a monopoly franchise growing EPS 25%+. Taiwan risk is real but arguably overpriced given TSMC is too strategically important for any party to destroy.",
+      "fairValue": "~$200",
+      "marginOfSafety": "~8% upside at current price"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$120",
+      "description": "Taiwan geopolitical crisis triggers customer diversification mandates and capex freezes; Intel Foundry gains meaningful share at advanced nodes.",
+      "points": [
+        "US–China tensions escalate, forcing major customers to accelerate Intel Foundry qualification",
+        "Global semiconductor downturn compresses ASPs and utilization rates fall below 80%",
+        "Arizona fab delays and cost overruns dampen margin expansion thesis",
+        "Multiple compresses to 15x NTM earnings on geopolitical risk premium widening"
+      ]
+    },
+    "base": {
+      "priceTarget": "$200",
+      "description": "N3/N2 ramp sustains 25%+ EPS growth through 2026; AI chip demand keeps CoWoS packaging at capacity; geographic diversification progresses without disruption.",
+      "points": [
+        "AI accelerator demand (NVDA, AMD, custom ASICs) sustains N3 utilization above 90%",
+        "2nm (N2) enters volume production in 2025 with Apple as anchor customer",
+        "Arizona Fab 21 Phase 2 approved, reducing US legislative risk to operations",
+        "Dividend growth of 15% annually continues as FCF inflects upward"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$280",
+      "description": "Sovereign AI buildout drives unprecedented wafer demand; 2nm and A16 become dominant for AI ASICs; geographic diversification removes geopolitical discount entirely.",
+      "points": [
+        "Nations building domestic AI capacity create incremental 50,000+ wafer/month demand",
+        "A16 (backside power delivery) becomes standard for inference chips, extending TSMC's lead",
+        "Geopolitical discount fully unwinds as Japan, US, and EU fabs reach meaningful scale",
+        "P/E re-rating to 30x as TSM is reclassified as critical infrastructure, not cyclical semis"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": { "status": "destroyed", "note": "Not applicable — TSMC is a B2B manufacturer with no consumer-facing interface dependency." },
+    "businessLogic": { "status": "destroyed", "note": "Not applicable — TSMC's moat is in physical process technology, not embedded software logic." },
+    "publicDataAccess": { "status": "destroyed", "note": "Not applicable — TSMC does not derive competitive advantage from public data access." },
+    "talentScarcity": { "status": "strong", "note": "TSMC employs over 70,000 engineers; leading-edge process engineers (N3/N2 yield engineers, EUV specialists) are among the scarcest technical talent on earth — AI cannot replace the physical intuition developed over decades at the fab floor." },
+    "bundling": { "status": "intact", "note": "TSMC bundles leading-edge logic nodes with advanced packaging (CoWoS, SoIC, InFO) and design services (DRC), creating a one-stop advanced semiconductor manufacturing platform no competitor can match end-to-end." },
+    "proprietaryData": { "status": "strong", "note": "Decades of proprietary process recipes, yield-learning data from billions of wafers, and customer chip geometry data are trade secrets protected by the most stringent IP regimes in the industry." },
+    "regulatoryLockIn": { "status": "strong", "note": "CHIPS Act, Japanese METI subsidies, and EU Chips Act all directly fund TSMC facilities. Governments have made TSMC's geographic diversification a national security priority — creating a regulatory moat no competitor can manufacture around." },
+    "networkEffects": { "status": "weakened", "note": "Limited traditional network effects, but the ecosystem of EDA tools (Synopsys, Cadence), IP vendors, and OSAT partners is calibrated to TSMC's PDKs — creating a design ecosystem that reinforces TSMC's dominance." },
+    "transactionEmbedding": { "status": "strong", "note": "Customers' entire chip design and validation workflows are embedded in TSMC's PDK. Re-taping a leading-edge chip for a competing foundry requires 2–3 years and $500M+ — making every tape-out a multi-year lock-in." },
+    "systemOfRecord": { "status": "intact", "note": "TSMC is the de facto foundry of record for every leading-edge chip. Apple, NVIDIA, AMD, Qualcomm, and MediaTek all depend on TSMC for their most advanced products — no alternative system exists at scale." },
+    "aiResilienceScore": 88,
+    "verdict": "TSMC's moat is among the deepest in all of technology — built on 35 years of irreplaceable process-technology knowledge. AI accelerates TSMC's relevance rather than threatening it: every frontier AI model requires more TSMC-made chips. The only structural risk is geopolitical, not competitive."
+  }
+}

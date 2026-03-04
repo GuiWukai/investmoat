@@ -11,10 +11,11 @@ export const stockData = [
     { name: "AMD",        ticker: "AMD",  slug: "amd",        scores: [52, 92, 71], href: "/stocks/amd",        category: "Big Tech",    bearTarget: "$110",        baseTarget: "$230",        bullTarget: "$320"         },
     { name: "ASML",       ticker: "ASML", slug: "asml",       scores: [94, 85, 67], href: "/stocks/asml",       category: "Big Tech",    bearTarget: "$900",        baseTarget: "$1,500",      bullTarget: "$2,200"       },
     { name: "Netflix",    ticker: "NFLX", slug: "nflx",       scores: [63, 88, 71], href: "/stocks/nflx",       category: "Big Tech",    bearTarget: "$65",         baseTarget: "$105",        bullTarget: "$160"         },
-    { name: "Tesla",      ticker: "TSLA", slug: "tesla",      scores: [74, 89, 63], href: "/stocks/tesla",      category: "Big Tech",    bearTarget: "$180",        baseTarget: "$380",        bullTarget: "$650"         },
+    { name: "Tesla",      ticker: "TSLA", slug: "tesla",      scores: [74, 87, 65], href: "/stocks/tesla",      category: "Big Tech",    bearTarget: "$150",        baseTarget: "$400",        bullTarget: "$550"         },
     { name: "Visa",       ticker: "V",    slug: "visa",       scores: [90, 82, 71], href: "/stocks/visa",       category: "Financials",  bearTarget: "$245",        baseTarget: "$335",        bullTarget: "$420"         },
     { name: "Mastercard", ticker: "MA",   slug: "mastercard", scores: [88, 88, 71], href: "/stocks/mastercard", category: "Financials",  bearTarget: "$400",        baseTarget: "$555",        bullTarget: "$700"         },
     { name: "Palantir",   ticker: "PLTR", slug: "pltr",       scores: [78, 88, 71], href: "/stocks/pltr",       category: "Big Tech",    bearTarget: "$80",         baseTarget: "$155",        bullTarget: "$260"         },
+    { name: "CrowdStrike", ticker: "CRWD", slug: "crowdstrike", scores: [85, 87, 60], href: "/stocks/crowdstrike", category: "Big Tech",   bearTarget: "$200",        baseTarget: "$380",        bullTarget: "$600"         },
     { name: "Salesforce", ticker: "CRM",  slug: "crm",        scores: [78, 80, 79], href: "/stocks/crm",        category: "Financials",  bearTarget: "$150",        baseTarget: "$250",        bullTarget: "$350"         },
     { name: "Adobe",      ticker: "ADBE", slug: "adbe",       scores: [58, 82, 77], href: "/stocks/adbe",       category: "Financials",  bearTarget: "$200",        baseTarget: "$320",        bullTarget: "$450"         },
     { name: "S&P Global", ticker: "SPGI", slug: "spgi",       scores: [88, 78, 78], href: "/stocks/spgi",       category: "Financials",  bearTarget: "$400",        baseTarget: "$500",        bullTarget: "$610"         },
@@ -22,6 +23,9 @@ export const stockData = [
     { name: "Gold",       ticker: "XAU",  slug: "gold",       scores: [67, 50, 68], href: "/stocks/gold",       category: "Hard Assets", bearTarget: "$3,800/oz",   baseTarget: "$5,500/oz",   bullTarget: "$7,500+/oz"   },
     { name: "Bitcoin",    ticker: "BTC",  slug: "btc",        scores: [76, 85, 77], href: "/stocks/btc",        category: "Hard Assets", bearTarget: "$45,000",     baseTarget: "$120,000",    bullTarget: "$300,000+"    },
     { name: "K92 Mining", ticker: "KNT",  slug: "k92",        scores: [42, 85, 80], href: "/stocks/k92",        category: "Hard Assets", bearTarget: "$22.00",      baseTarget: "$38.00",      bullTarget: "$65.00"       },
+    { name: "Freeport-McMoRan", ticker: "FCX", slug: "fcx",   scores: [60, 75, 68], href: "/stocks/fcx",        category: "Hard Assets", bearTarget: "$22",         baseTarget: "$48",         bullTarget: "$80"          },
+    { name: "TSMC",             ticker: "TSM", slug: "tsm",   scores: [90, 82, 70], href: "/stocks/tsm",        category: "Big Tech",    bearTarget: "$120",        baseTarget: "$200",        bullTarget: "$280"         },
+    { name: "Micron",           ticker: "MU",  slug: "micron", scores: [62, 87, 76], href: "/stocks/micron",    category: "Big Tech",    bearTarget: "$55",         baseTarget: "$120",        bullTarget: "$200"         },
 ];
 
 export const getAverageScore = (scores: number[]) => {

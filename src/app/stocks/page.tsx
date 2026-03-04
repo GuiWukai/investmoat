@@ -12,7 +12,7 @@ const TICKER_COLORS: Record<string, string> = {
   MA: "#eb001b",   NVDA: "#76b900", SPGI: "#cf102d", CRM: "#00a1e0",
   INTU: "#2ca01c", META: "#1877f2", TSLA: "#cc0000", PLTR: "#7c3aed",
   ADBE: "#ff0000", NFLX: "#e50914", AMD: "#ed1c24",  XAU: "#f59e0b",
-  BTC:  "#f7931a", KNT:  "#6b7280",
+  BTC:  "#f7931a", KNT:  "#6b7280", CRWD: "#e8281b", FCX:  "#b45309",
 };
 
 const CATEGORIES = [
@@ -87,7 +87,7 @@ export default function StocksPage() {
           Stock Coverage
         </h1>
         <p className="text-white/60 text-base md:text-xl max-w-2xl">
-          18 stocks across three categories, scored on moat durability, growth trajectory, and live valuation.
+          20 stocks across three categories, scored on moat durability, growth trajectory, and live valuation.
         </p>
       </header>
 
