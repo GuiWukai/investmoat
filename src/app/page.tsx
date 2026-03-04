@@ -96,6 +96,8 @@ const stockMeta: Record<string, { color: string; category: string; exclusionReas
   BTC:   { color: "#f7931a", category: "Digital Assets" },
   KNT:   { color: "#8b7355", category: "Hard Assets",     exclusionReason: "Weakest moat score in the entire coverage universe (42). Mining is a commodity business with no pricing power, no network effects, and no switching costs. High growth (85) reflects production expansion upside — not the scalable, capital-light compounding this portfolio targets." },
   FCX:   { color: "#b8732d", category: "Hard Assets",     exclusionReason: "Commodity copper producer with no pricing power — FCX sells at LME spot price regardless of asset quality. Indonesia sovereign risk at Grasberg, competition from major miners (Codelco, BHP, Glencore), and earnings volatility disqualify it from a portfolio targeting structural moats and durable compounding." },
+  TSM:   { color: "#0071c5", category: "Foundry" },
+  MU:    { color: "#0099cc", category: "Memory" },
 };
 
 // ─── Dynamic portfolio / excluded — derived from composite scores ─────────────
@@ -125,7 +127,7 @@ const excluded = stockData
 function categoryColor(category: string): "primary" | "success" | "warning" | "secondary" | "danger" | "default" {
   if (["Core SaaS", "Enterprise SaaS", "Big Tech"].includes(category)) return "primary";
   if (["Payments", "Financials", "FinTech"].includes(category)) return "success";
-  if (["AI Infrastructure", "Lithography", "AI Analytics", "Cybersecurity"].includes(category)) return "warning";
+  if (["AI Infrastructure", "Lithography", "AI Analytics", "Cybersecurity", "Foundry", "Memory"].includes(category)) return "warning";
   if (["Eco-System", "Clean Tech", "Digital Assets"].includes(category)) return "secondary";
   if (category === "Hard Assets") return "danger";
   return "default";
@@ -135,7 +137,7 @@ function categoryColor(category: string): "primary" | "success" | "warning" | "s
 const TECH_CATEGORIES = new Set([
   "Core SaaS", "Enterprise SaaS", "Big Tech",
   "AI Infrastructure", "Lithography", "AI Analytics",
-  "Clean Tech", "Eco-System", "Cybersecurity", "Digital Assets",
+  "Clean Tech", "Eco-System", "Cybersecurity", "Digital Assets", "Foundry", "Memory",
 ]);
 const FIN_CATEGORIES = new Set(["Payments", "Financials", "FinTech"]);
 

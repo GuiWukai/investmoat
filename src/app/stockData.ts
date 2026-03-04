@@ -24,6 +24,8 @@ export const stockData = [
     { name: "Bitcoin",    ticker: "BTC",  slug: "btc",        scores: [76, 85, 77], href: "/stocks/btc",        category: "Hard Assets", bearTarget: "$45,000",     baseTarget: "$120,000",    bullTarget: "$300,000+"    },
     { name: "K92 Mining", ticker: "KNT",  slug: "k92",        scores: [42, 85, 80], href: "/stocks/k92",        category: "Hard Assets", bearTarget: "$22.00",      baseTarget: "$38.00",      bullTarget: "$65.00"       },
     { name: "Freeport-McMoRan", ticker: "FCX", slug: "fcx",   scores: [60, 75, 68], href: "/stocks/fcx",        category: "Hard Assets", bearTarget: "$22",         baseTarget: "$48",         bullTarget: "$80"          },
+    { name: "TSMC",             ticker: "TSM", slug: "tsm",   scores: [90, 82, 70], href: "/stocks/tsm",        category: "Big Tech",    bearTarget: "$120",        baseTarget: "$200",        bullTarget: "$280"         },
+    { name: "Micron",           ticker: "MU",  slug: "micron", scores: [62, 87, 76], href: "/stocks/micron",    category: "Big Tech",    bearTarget: "$55",         baseTarget: "$120",        bullTarget: "$200"         },
 ];
 
 export const getAverageScore = (scores: number[]) => {
