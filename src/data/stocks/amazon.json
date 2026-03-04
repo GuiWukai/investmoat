@@ -4,8 +4,8 @@
   "name": "Amazon.com Inc.",
   "headerStats": [
     { "label": "Ticker", "value": "AMZN" },
-    { "label": "Market Cap", "value": "$1.92T" },
-    { "label": "Price", "value": "$185.20" }
+    { "label": "Market Cap", "value": "$2.24T" },
+    { "label": "Price", "value": "$208.73" }
   ],
   "chips": [
     { "label": "Consumer Discretionary | Tech", "color": "primary" },
@@ -13,13 +13,13 @@
   ],
   "recommendation": "Strong Buy",
   "metrics": [
-    { "title": "Revenue Growth", "value": "13.2%", "label": "YoY vs 11.5% Industry", "icon": "ShoppingCart", "color": "#f59e0b" },
-    { "title": "AWS Margin", "value": "31.8%", "label": "Best-in-class profitability", "icon": "Cloud", "color": "#006fee" },
-    { "title": "Free Cash Flow", "value": "$50.1B", "label": "TTM Expansion +400%", "icon": "DollarSign", "color": "#17c964" }
+    { "title": "Revenue Growth", "value": "14%", "label": "Q4 YoY vs 11.5% Industry", "icon": "ShoppingCart", "color": "#f59e0b" },
+    { "title": "AWS Margin", "value": "35%", "label": "Q4 2025 — 13-qtr high growth (+24%)", "icon": "Cloud", "color": "#006fee" },
+    { "title": "Operating Cash Flow", "value": "$139.5B", "label": "TTM; FCF compressed by $200B capex cycle", "icon": "DollarSign", "color": "#17c964" }
   ],
   "moat": {
-    "score": 80,
-    "description": "Dominant scale, switching costs (Prime), and cost advantage (Logistics).",
+    "score": 82,
+    "description": "Dominant scale, switching costs (Prime), and cost advantage (Logistics). AWS backlog hits $244B, up 40% YoY.",
     "analysisTitle": "The Economic Moat",
     "analysisSummary": "Amazon possesses a **Wide Economic Moat** driven by three primary pillars:",
     "analysisPoints": [
@@ -29,52 +29,53 @@
     ]
   },
   "growth": {
-    "score": 88,
-    "description": "Cloud (AWS) and Advertising continue to outpace e-commerce growth.",
+    "score": 90,
+    "description": "AWS re-accelerated to 24% in Q4 2025 — fastest growth in 13 quarters — with a $244B backlog (+40% YoY) underpinning durable AI-driven demand. Advertising grew 22% to $21.3B.",
     "additionalNote": {
       "title": "Financial Outlook",
       "points": [
-        "Generative AI demand driving AWS infrastructure refresh.",
-        "Ad revenue margin expansion exceeding retail growth.",
-        "International retail segments turning profitable."
+        "AWS growth re-accelerated to 24% in Q4 2025, highest rate in 13 quarters; $244B backlog up 40% YoY.",
+        "Advertising revenue reached $21.3B (+22% YoY), cementing Amazon as a top-3 digital ad platform.",
+        "Trainium2/3 custom AI chips now at $10B+ run rate with triple-digit YoY growth; Trainium4 targeting 2027.",
+        "International retail margins recovering: North America segment margin expanded to 9.0% in Q4."
       ]
     }
   },
   "valuation": {
-    "score": 76,
-    "description": "Trading below DCF fair value of ~$225; tariff uncertainty and AWS capex cycle weigh on multiple, creating an attractive entry for patient investors in a category-dominant business.",
+    "score": 72,
+    "description": "Stock at ~$209 vs DCF fair value of ~$225; the $200B capex plan for 2026 compresses near-term FCF but represents a long-duration infrastructure bet. Margin of safety narrows but thesis intact for patient investors.",
     "valuationNote": {
       "text": "Using a 10-year DCF with a 9% WACC and a 3.5% terminal growth rate, our fair value estimate for AMZN is",
       "fairValue": "$225/share",
-      "marginOfSafety": "17%"
+      "marginOfSafety": "8%"
     }
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$145",
-      "description": "Tariff-driven consumer slowdown hits e-commerce, AWS growth decelerates sharply, and margin expansion stalls.",
+      "description": "The $200B capex cycle proves premature — AI demand disappoints, FCF stays compressed for years, and macro weakness hits e-commerce and enterprise IT simultaneously.",
       "points": [
-        "E-commerce growth falls below 5% as tariff shock hits discretionary spending",
-        "AWS revenue decelerates to mid-teens as enterprise IT budgets compress",
-        "Regulatory pressure on marketplace fees and antitrust rulings compress retail margins"
+        "AI infrastructure overbuild leads to multi-year FCF destruction with no margin recovery in sight",
+        "AWS growth decelerates to low-teens as Azure and GCP take AI workloads on competitive pricing",
+        "Consumer recession hits e-commerce; tariff-driven cost inflation cannot be passed through"
       ]
     },
     "base": {
       "priceTarget": "$225",
-      "description": "Continued efficiency gains in fulfillment and steady AWS growth with AI infrastructure demand as a new tailwind.",
+      "description": "The $200B capex investment pays off: AWS sustains 20%+ growth, advertising scales, and FCF rebounds strongly by 2027 as depreciation cycles ease.",
       "points": [
-        "AWS growth reaccelerates to 22-25% driven by AI inference and training workloads",
-        "Advertising revenue maintains 20%+ growth as the highest-ROI ad platform",
-        "International retail reaches sustainable profitability, unlocking a new FCF stream"
+        "AWS maintains 20-25% growth driven by AI inference/training backlog ($244B); margins hold at 35%+",
+        "Advertising sustains 20%+ growth as the highest-ROI ad channel for third-party sellers",
+        "FCF rebounds above $50B by 2027 as the infrastructure investment cycle matures"
       ]
     },
     "bull": {
-      "priceTarget": "$310",
-      "description": "AI demand triggers massive AWS re-acceleration and logistics monetization creates a fourth high-margin business pillar.",
+      "priceTarget": "$320",
+      "description": "AI demand triggers massive AWS re-acceleration beyond 30%, custom Trainium chips become a competitive moat, and logistics monetization creates a fourth high-margin business pillar.",
       "points": [
-        "AWS growth re-accelerates above 30% as AI infrastructure becomes the dominant workload",
-        "Logistics-as-a-Service emerges as a $20B+ revenue business beyond Amazon packages",
-        "FCF generation exceeds $100B, enabling a transformative buyback program"
+        "AWS growth re-accelerates above 30% as sovereign AI and enterprise AI workloads concentrate on AWS",
+        "Trainium chips displace Nvidia GPUs for inference at scale, turning silicon into a durable moat",
+        "FCF generation surpasses $100B by 2028, enabling a transformative capital return program"
       ]
     }
   },
@@ -84,12 +85,12 @@
     "publicDataAccess": { "status": "destroyed", "note": "Amazon's public product catalog data is no longer a defensible competitive advantage." },
     "talentScarcity": { "status": "weakened", "note": "AWS cloud operations require fewer skilled human operators thanks to AI-powered automation." },
     "bundling": { "status": "strong", "note": "Prime bundle (shipping + video + music + Alexa + Pharmacy + Gaming) is deeply differentiated and drives 200M+ loyalty." },
-    "proprietaryData": { "status": "strong", "note": "Purchase intent data, AWS usage telemetry, and last-mile logistics operational data are genuinely irreplaceable." },
+    "proprietaryData": { "status": "strong", "note": "Purchase intent data, AWS usage telemetry, and last-mile logistics operational data are genuinely irreplaceable. AWS $244B backlog reflects deep customer commitment." },
     "regulatoryLockIn": { "status": "strong", "note": "AWS GovCloud, DoD JEDI, HIPAA, FedRAMP, and financial services compliance create enormous switching friction." },
     "networkEffects": { "status": "strong", "note": "Marketplace two-sided flywheel: more buyers → more sellers → better selection → more buyers. Self-reinforcing." },
     "transactionEmbedding": { "status": "strong", "note": "1-click purchasing habits, Prime subscription, and AWS embedded in the infrastructure of the global internet." },
-    "systemOfRecord": { "status": "strong", "note": "AWS is the system of record for global cloud infrastructure; S3 stores more data than any competitor by a wide margin." },
-    "aiResilienceScore": 80,
-    "verdict": "Amazon's moats are overwhelmingly AI-resilient: proprietary purchase data, AWS infrastructure lock-in, and the marketplace network flywheel are core strengths that AI cannot easily replicate."
+    "systemOfRecord": { "status": "strong", "note": "AWS is the system of record for global cloud infrastructure; $142B annualized run rate and S3 stores more data than any competitor by a wide margin." },
+    "aiResilienceScore": 82,
+    "verdict": "Amazon's moats are overwhelmingly AI-resilient: the $244B AWS backlog, Trainium custom silicon, proprietary purchase data, and the marketplace flywheel are core strengths that are strengthening — not weakening — in the AI era."
   }
 }
