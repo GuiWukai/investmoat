@@ -317,13 +317,6 @@ export default function StockPage({ params }: { params: Promise<{ ticker: string
                       {data.valuation.valuationNote.text}{' '}
                       <strong className="text-white text-lg">{data.valuation.valuationNote.fairValue}</strong>.
                     </p>
-                    <Divider className="my-4 bg-white/10" />
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs uppercase tracking-widest text-white/40">Margin of Safety</span>
-                      <Chip color="success" variant="flat" className="font-bold">
-                        {data.valuation.valuationNote.marginOfSafety}
-                      </Chip>
-                    </div>
                   </Card>
                 )}
                 <ScenarioCard
