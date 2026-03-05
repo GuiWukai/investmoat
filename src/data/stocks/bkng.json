@@ -1,0 +1,139 @@
+{
+  "slug": "bkng",
+  "ticker": "BKNG",
+  "name": "Booking Holdings Inc.",
+  "headerStats": [
+    { "label": "Ticker", "value": "BKNG" },
+    { "label": "Market Cap", "value": "$175B" },
+    { "label": "Price", "value": "$4,950" }
+  ],
+  "chips": [
+    { "label": "Travel | Online Marketplace", "color": "primary" },
+    { "label": "Network Moat", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Room Nights Booked",
+      "value": "~1B",
+      "label": "Annual (FY2024)",
+      "icon": "BedDouble",
+      "color": "#0071c2"
+    },
+    {
+      "title": "Operating Margin",
+      "value": "33%",
+      "label": "Expanding from 28% in 2022",
+      "icon": "TrendingUp",
+      "color": "#22c55e"
+    },
+    {
+      "title": "Free Cash Flow",
+      "value": "$6B+",
+      "label": "FY2024 — fuelling buybacks",
+      "icon": "DollarSign",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "score": 80,
+    "description": "Two-sided network effects and a 25-year proprietary data flywheel spanning 30+ languages and 220+ countries.",
+    "analysisTitle": "The Marketplace Moat",
+    "analysisSummary": "Booking Holdings' moat rests on **a self-reinforcing two-sided marketplace that is extraordinarily hard to replicate from scratch**:",
+    "analysisPoints": [
+      {
+        "title": "Two-Sided Network Effects",
+        "text": "Booking.com hosts 28M+ property listings — the largest globally. More properties attract more travellers, which attracts more properties. This flywheel has been compounding for 25+ years and gives Booking a selection advantage no new entrant can close quickly. The same dynamic drives Agoda in Asia-Pacific and Priceline in North America."
+      },
+      {
+        "title": "Proprietary Data Fortress",
+        "text": "Booking Holdings processes roughly one billion room nights annually across its platforms, generating pricing intelligence, demand forecasting, and traveller preference data at a scale competitors cannot match. This data powers its ranking algorithms, personalisation, and dynamic pricing — improving conversion rates and take rates simultaneously."
+      },
+      {
+        "title": "Brand and Global Distribution",
+        "text": "Booking.com commands dominant mindshare in Europe, Latin America, and Asia-Pacific, while Kayak functions as a meta-search aggregator pulling qualified demand. The multi-brand architecture lets the group occupy multiple consumer entry points in the travel purchase funnel, from inspiration (Kayak) to booking (Booking.com, Priceline) to dining (OpenTable)."
+      }
+    ]
+  },
+  "growth": {
+    "score": 74,
+    "description": "Revenue grew 25% in 2023 and ~11% in 2024 as post-COVID normalisation faded; a durable 8–12% CAGR trajectory underpinned by emerging-market expansion and the Connected Trip monetisation strategy."
+  },
+  "valuation": {
+    "score": 73,
+    "description": "At ~$4,950, BKNG trades below the base-case target of $5,500 — a reasonable entry for a world-class compounder generating $6B+ in annual free cash flow and actively shrinking its share count via buybacks."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$3,500",
+      "description": "AI-native travel agents (e.g., OpenAI Operator, Google AI Overviews) disintermediate OTAs faster than expected, compressing take rates and slowing room-night growth to low single digits.",
+      "points": [
+        "Google's AI travel assistant captures 15%+ of OTA-addressable search queries by 2026, reducing Booking's paid traffic efficiency and inflating customer acquisition costs",
+        "A macro recession cuts leisure travel spending in Europe (Booking's largest market) by 10–15%, driving revenue growth below 5% and margin deterioration",
+        "Alternative accommodation supply growth from Airbnb and new entrants erodes Booking's share of the non-hotel segment, shrinking its fastest-growing category"
+      ]
+    },
+    "base": {
+      "priceTarget": "$5,500",
+      "description": "Steady 8–10% revenue growth driven by emerging-market penetration and higher-margin ancillary services (flights, attractions, car hire) compounds with ongoing share buybacks to deliver 12–15% EPS growth annually.",
+      "points": [
+        "Connected Trip strategy — bundling accommodation, flights, and attractions — increases attach rates and raises average booking value by ~10% over two years",
+        "Share count continues to decline 4–5% annually via buybacks, amplifying EPS growth well above revenue growth",
+        "Expansion in under-penetrated markets (India, Southeast Asia, Middle East) contributes 2–3 percentage points of incremental room-night growth"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$7,500",
+      "description": "BKNG becomes the AI-native travel super-app — integrating generative AI planning, dynamic bundling, and loyalty into a seamless Connected Trip — while the flywheel accelerates in high-growth emerging markets.",
+      "points": [
+        "Booking.com's AI travel assistant becomes the default starting point for trip planning, increasing direct traffic and reducing reliance on Google performance marketing",
+        "Ancillary revenue (flights, attractions, insurance) scales to 30%+ of total revenue, driving margin expansion to 37%+ operating margin",
+        "India and Southeast Asia combined exceed Europe in room-night contribution by 2028, adding a decade-long second growth S-curve"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "AI travel agents can bypass Booking's UI entirely; however, 25 years of learnt behaviours and mobile app stickiness still drive repeat direct bookings from loyal customers."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Booking's proprietary ranking, pricing, and fraud-detection algorithms represent years of iteration on billions of transactions — logic competitors cannot replicate quickly."
+    },
+    "publicDataAccess": {
+      "status": "intact",
+      "note": "Booking aggregates real-time availability and pricing from 28M+ listings, a data aggregation advantage that new entrants would take a decade to replicate at equivalent depth."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "AI tools reduce the scarcity premium on data-science talent, and Booking relies more on scale and data than on uniquely hard-to-hire specialists."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "The Connected Trip strategy bundles accommodation, flights, attractions, and dining (via OpenTable) into one platform, increasing switching friction for repeat travellers."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "~1 billion annual room nights processed across 220+ countries generates an irreplaceable demand-and-pricing dataset that feeds personalisation, ranking, and dynamic-pricing models."
+    },
+    "regulatoryLockIn": {
+      "status": "weakened",
+      "note": "Booking faces EU Digital Markets Act scrutiny and parity-clause restrictions; regulation is a headwind here rather than a moat, limiting some pricing practices."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "The two-sided marketplace compounds: 28M+ property listings attract travellers, whose reviews and demand data attract more properties — a flywheel that has run for 25+ years."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Booking is deeply embedded in the travel purchase flow via its app, loyalty programme (Genius), and repeat-booking patterns, with over half of bookings now coming direct."
+    },
+    "systemOfRecord": {
+      "status": "weakened",
+      "note": "Hotels maintain their own property management systems as their true source of record; Booking is a distribution channel, not the authoritative booking ledger for property operators."
+    },
+    "aiResilienceScore": 67,
+    "verdict": "Booking's AI-resilient moats — primarily its proprietary data flywheel and two-sided network effects — are genuinely strong, but AI-native travel agents pose a structural disintermediation threat to its discovery and booking interface. The company is actively investing in AI integration (AI trip planner, smart itinerary), positioning it as a net adapter rather than a net loser, but the outcome is not yet certain."
+  }
+}
