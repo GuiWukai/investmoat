@@ -1,6 +1,8 @@
 import type { StockAnalysisData } from '@/types/stockAnalysis';
 
+import aapl from './aapl.json';
 import amazon from './amazon.json';
+import avgo from './avgo.json';
 import google from './google.json';
 import msft from './msft.json';
 import nvda from './nvda.json';
@@ -23,9 +25,12 @@ import crowdstrike from './crowdstrike.json';
 import fcx from './fcx.json';
 import tsm from './tsm.json';
 import micron from './micron.json';
+import isrg from './isrg.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
+  aapl: aapl as StockAnalysisData,
   amazon: amazon as StockAnalysisData,
+  avgo: avgo as StockAnalysisData,
   google: google as StockAnalysisData,
   msft: msft as StockAnalysisData,
   nvda: nvda as StockAnalysisData,
@@ -48,6 +53,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   fcx: fcx as StockAnalysisData,
   tsm: tsm as StockAnalysisData,
   micron: micron as StockAnalysisData,
+  isrg: isrg as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {

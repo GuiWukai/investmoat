@@ -4,21 +4,24 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ChevronRight, BarChart3 } from "lucide-react";
 import { Chip, Spinner } from "@heroui/react";
-import { stockData } from "../stockData";
+import { allCoverageData } from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
 
 const TICKER_COLORS: Record<string, string> = {
-  MSFT: "#00a4ef", AMZN: "#f59e0b", ASML: "#0071c5", V: "#1a1f71",
-  MA: "#eb001b",   NVDA: "#76b900", SPGI: "#cf102d", CRM: "#00a1e0",
+  MSFT: "#00a4ef", AMZN: "#f59e0b", ASML: "#0071c5", V:    "#1a1f71",
+  MA:   "#eb001b", NVDA: "#76b900", SPGI: "#cf102d", CRM:  "#00a1e0",
   INTU: "#2ca01c", META: "#1877f2", TSLA: "#cc0000", PLTR: "#7c3aed",
-  ADBE: "#ff0000", NFLX: "#e50914", AMD: "#ed1c24",  XAU: "#f59e0b",
+  ADBE: "#ff0000", NFLX: "#e50914", AMD:  "#ed1c24", XAU:  "#f59e0b",
   BTC:  "#f7931a", KNT:  "#6b7280", CRWD: "#e8281b", FCX:  "#b45309",
+  GOOGL:"#4285f4", AAPL: "#555555", AVGO: "#cc0000", TSM:  "#0071c5",
+  MU:   "#0099cc", ISRG: "#009688",
 };
 
 const CATEGORIES = [
   { label: "Large Cap Tech",       key: "Big Tech"     },
   { label: "Financials & SaaS",    key: "Financials"   },
   { label: "Hard Assets & Crypto", key: "Hard Assets"  },
+  { label: "Healthcare",           key: "Healthcare"   },
 ];
 
 function ScorePill({ label, value, color }: { label: string; value: number; color: string }) {
@@ -87,12 +90,12 @@ export default function StocksPage() {
           Stock Coverage
         </h1>
         <p className="text-white/60 text-base md:text-xl max-w-2xl">
-          20 stocks across three categories, scored on moat durability, growth trajectory, and live valuation.
+          {allCoverageData.length} stocks across four categories, scored on moat durability, growth trajectory, and live valuation.
         </p>
       </header>
 
       {CATEGORIES.map((cat) => {
-        const stocks = stockData.filter(s => s.category === cat.key);
+        const stocks = allCoverageData.filter(s => s.category === cat.key);
         return (
           <section key={cat.key}>
             <div className="flex items-center gap-4 mb-5">

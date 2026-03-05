@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { PieChart, ShieldCheck, ChevronRight, AlertTriangle } from "lucide-react";
 import { Card, CardBody, CardHeader, Progress, Chip, Spinner } from "@heroui/react";
-import { stockData, getAverageScore } from "./stockData";
+import { stockData, excludedStockData, getAverageScore } from "./stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
 
 function DynamicScore({
@@ -98,6 +98,8 @@ const stockMeta: Record<string, { color: string; category: string; exclusionReas
   FCX:   { color: "#b8732d", category: "Hard Assets",     exclusionReason: "Commodity copper producer with no pricing power — FCX sells at LME spot price regardless of asset quality. Indonesia sovereign risk at Grasberg, competition from major miners (Codelco, BHP, Glencore), and earnings volatility disqualify it from a portfolio targeting structural moats and durable compounding." },
   TSM:   { color: "#0071c5", category: "Foundry" },
   MU:    { color: "#0099cc", category: "Memory" },
+  ISRG:  { color: "#009688", category: "Healthcare" },
+  AVGO:  { color: "#cc0000", category: "Semiconductors" },
 };
 
 // ─── Dynamic portfolio / excluded — derived from composite scores ─────────────
@@ -113,9 +115,7 @@ const portfolio = stockData
     stock:    s,
   }));
 
-const excluded = stockData
-  .filter(s => getAverageScore(s.scores) < PORTFOLIO_THRESHOLD)
-  .map(s => ({
+const excluded = excludedStockData.map(s => ({
     ticker: s.ticker,
     name:   s.name,
     href:   s.href,
