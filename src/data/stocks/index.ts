@@ -25,6 +25,7 @@ import crowdstrike from './crowdstrike.json';
 import fcx from './fcx.json';
 import tsm from './tsm.json';
 import micron from './micron.json';
+import isrg from './isrg.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -52,6 +53,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   fcx: fcx as StockAnalysisData,
   tsm: tsm as StockAnalysisData,
   micron: micron as StockAnalysisData,
+  isrg: isrg as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {

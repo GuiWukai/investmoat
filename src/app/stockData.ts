@@ -2,6 +2,7 @@
 // The scores array is [moatScore, growthScore, valuationScore].
 // bearTarget/baseTarget/bullTarget mirror the scenarios in each stock's JSON.
 // RULE: Maximum 20 stocks in the portfolio — ranked by average score across all three dimensions.
+// RULE: Minimum average score of 75 required for inclusion.
 
 export const stockData = [
     { name: "Microsoft",  ticker: "MSFT", slug: "msft",       scores: [84, 92, 75], href: "/stocks/msft",       category: "Big Tech",    bearTarget: "$300",        baseTarget: "$450",        bullTarget: "$580"         },
@@ -23,7 +24,7 @@ export const stockData = [
     { name: "Apple",      ticker: "AAPL", slug: "aapl",       scores: [88, 72, 68], href: "/stocks/aapl",       category: "Big Tech",    bearTarget: "$155",        baseTarget: "$240",        bullTarget: "$350"         },
     { name: "Tesla",      ticker: "TSLA", slug: "tesla",      scores: [74, 87, 65], href: "/stocks/tesla",      category: "Big Tech",    bearTarget: "$150",        baseTarget: "$400",        bullTarget: "$550"         },
     { name: "Micron",     ticker: "MU",   slug: "micron",     scores: [62, 87, 76], href: "/stocks/micron",     category: "Big Tech",    bearTarget: "$55",         baseTarget: "$120",        bullTarget: "$200"         },
-    { name: "Netflix",    ticker: "NFLX", slug: "nflx",       scores: [63, 88, 71], href: "/stocks/nflx",       category: "Big Tech",    bearTarget: "$65",         baseTarget: "$105",        bullTarget: "$160"         },
+    { name: "Intuitive Surgical", ticker: "ISRG", slug: "isrg", scores: [88, 82, 62], href: "/stocks/isrg",   category: "Healthcare",  bearTarget: "$280",        baseTarget: "$520",        bullTarget: "$750"         },
 ];
 
 export const getAverageScore = (scores: number[]) => {

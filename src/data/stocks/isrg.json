@@ -1,0 +1,86 @@
+{
+  "slug": "isrg",
+  "ticker": "ISRG",
+  "name": "Intuitive Surgical, Inc.",
+  "headerStats": [
+    { "label": "Ticker", "value": "ISRG" },
+    { "label": "Market Cap", "value": "$195B" },
+    { "label": "Price", "value": "$530.00" }
+  ],
+  "chips": [
+    { "label": "Robotic Surgery | Medical Devices | AI", "color": "primary" },
+    { "label": "Gold Standard", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    { "title": "Installed Base", "value": "9,900+", "label": "da Vinci Systems Worldwide", "icon": "Cpu", "color": "#009688" },
+    { "title": "Revenue", "value": "$8.4B", "label": "FY2024 — 17% YoY Growth", "icon": "TrendingUp", "color": "#00796b" },
+    { "title": "Recurring Mix", "value": "83%", "label": "Instruments, Accessories & Services", "icon": "Database", "color": "#4db6ac" }
+  ],
+  "moat": {
+    "score": 88,
+    "description": "The most durable razor-and-blades moat in medical devices — once a hospital installs da Vinci and trains its surgeons, switching is a career-level commitment measured in years, not months.",
+    "analysisTitle": "The Surgical Flywheel",
+    "analysisSummary": "Intuitive Surgical's moat is built on **Installed Base Lock-In and Surgeon Muscle Memory**:",
+    "analysisPoints": [
+      { "title": "The Surgeon Training Moat", "text": "A surgeon who spends 2-5 years mastering the da Vinci console develops deeply ingrained psychomotor skills that do not transfer to a competing platform. Retraining on Medtronic's Hugo or J&J's Ottava is not a software migration — it is a manual dexterity re-education. Hospitals that switch face surgeon credentialing delays, OR scheduling disruption, and patient outcome uncertainty." },
+      { "title": "Razor-and-Blades at Scale", "text": "Intuitive sells capital equipment (da Vinci systems) at relatively modest margins, then earns 80%+ gross margins on the single-use instruments and accessories that are consumed in every procedure. With ~9,900 systems generating an average of 400+ procedures per year, this creates a durable, inflation-resistant recurring revenue stream that grows automatically with procedure volume." },
+      { "title": "Outcomes Data Network Effect", "text": "Over 14 million da Vinci procedures have generated the world's largest proprietary robotic surgery outcomes database. This data advantage enables faster FDA clearance for new indications, stronger clinical evidence for hospital purchasing committees, and continuous software improvement — a compounding moat that competitors entering the market today cannot replicate for a decade." },
+      { "title": "da Vinci 5 Platform Refresh", "text": "Launched in 2024, da Vinci 5 introduces force feedback, 10,000x more computing power, and AI-assisted surgical guidance. The upgrade cycle refreshes switching cost lock-in for the existing installed base while expanding Intuitive's AI surgery leadership. Each new system sold today embeds Intuitive deeper into hospital infrastructure for the next 10-15 years." }
+    ]
+  },
+  "growth": {
+    "score": 82,
+    "description": "Procedure volume growing 17%+ annually driven by international expansion (China, Europe), new indications (colorectal, thoracic), and the Ion lung biopsy platform. da Vinci 5 upgrade cycle adds a capital sales tailwind through 2026."
+  },
+  "valuation": {
+    "score": 62,
+    "description": "Consistently expensive at 60-70x earnings — the market prices in Intuitive's durability and pricing power correctly. Only attractive on material pullbacks. Bear ($280) reflects multiple compression; base ($520) reflects fair value for a compounder of this quality."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$280",
+      "description": "Competitive robotic platforms gain meaningful hospital share, procedure growth decelerates, and multiple compresses from peak as AI disrupts surgical training economics.",
+      "points": [
+        "Medtronic Hugo and J&J Ottava gain traction in general surgery, pressuring da Vinci ASPs and slowing new system placements in Europe and US",
+        "Procedure volume growth decelerates to high single digits as hospital capital budgets tighten amid reimbursement pressure",
+        "China regulatory headwinds persist — import restrictions or reimbursement caps limit da Vinci expansion in a key growth market",
+        "Multiple compresses from 65x to 40x earnings as growth moderates, erasing the valuation premium"
+      ]
+    },
+    "base": {
+      "priceTarget": "$520",
+      "description": "Procedure volume grows 15% annually through 2027 as international markets scale and da Vinci 5 drives the upgrade cycle; Ion platform establishes a second growth vector.",
+      "points": [
+        "International procedure growth accelerates to 20%+ as Japan, Germany, and India expand robotic surgery reimbursement coverage",
+        "da Vinci 5 upgrade cycle drives 1,200+ new system placements annually through 2026, maintaining 15%+ capital revenue growth",
+        "Ion lung biopsy platform reaches 2,000+ system installations, establishing Intuitive in the fast-growing early lung cancer detection market",
+        "Operating leverage drives non-GAAP operating margin expansion from 38% to 42%+ by FY2026"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$750",
+      "description": "da Vinci 5's AI-guided surgery becomes the standard of care for 80%+ of soft-tissue procedures globally; Ion disrupts interventional pulmonology; Intuitive enters new anatomical markets.",
+      "points": [
+        "AI-assisted surgical guidance on da Vinci 5 achieves FDA De Novo clearance as a clinical decision support tool, creating a new SaaS-like revenue layer on top of instruments",
+        "Procedure volume compounds at 20%+ for 5 years as robotic surgery penetration in general surgery reaches 30% (from ~10% today)",
+        "Ion platform captures 40%+ of the lung biopsy market, contributing $1B+ in revenue with 75%+ gross margins",
+        "Intuitive enters orthopedic or cardiovascular robotic surgery, opening a TAM 3x current addressable market"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": { "status": "strong", "note": "The da Vinci console is among the most deeply learned physical interfaces in professional practice. Surgeon muscle memory, hand-eye recalibration, and haptic intuition built over years of procedures do not transfer to competing platforms — retraining is a genuine career-level commitment." },
+    "businessLogic": { "status": "intact", "note": "Robotic surgical workflow is embedded into hospital OR scheduling systems, credentialing databases, and procedure coding. Every step from patient consent to billing references Intuitive's platform — migrating is an operational disruption, not merely a software swap." },
+    "publicDataAccess": { "status": "strong", "note": "14M+ da Vinci procedures represent the world's most comprehensive proprietary robotic surgery outcomes dataset. This data is used to accelerate FDA clearances for new indications, strengthen hospital purchasing arguments, and train AI surgical guidance models — a compounding advantage competitors cannot replicate." },
+    "talentScarcity": { "status": "intact", "note": "Surgical robotics R&D requires the intersection of mechanical engineering, control theory, medical imaging, and regulatory affairs expertise that is genuinely scarce. Intuitive's 30-year head start in recruiting and retaining this talent is a structural hiring moat." },
+    "bundling": { "status": "strong", "note": "Intuitive bundles hardware (da Vinci), consumables (instruments & accessories), service contracts, surgeon training programs, and data analytics into a single hospital relationship. The bundle deepens with each new capability added to the platform." },
+    "proprietaryData": { "status": "strong", "note": "Real-world surgical outcomes data from 14M+ procedures feeds continuous software improvement, AI model training, and clinical evidence generation. No competitor can buy or replicate this dataset — it only grows with each procedure performed on the installed base." },
+    "regulatoryLockIn": { "status": "strong", "note": "Each new surgical indication requires a separate FDA 510(k) or De Novo clearance, and hospital credentialing committees tie surgeon privileges to specific approved platforms. Competitor platforms must earn their own clearances per indication — a 3-7 year regulatory lag per procedure type." },
+    "networkEffects": { "status": "intact", "note": "As more surgeons train on da Vinci, they create demand pull when they move between hospitals — new employers purchase da Vinci to retain recruited surgeons. The peer influence network within surgical specialties also drives adoption, with leading academic centers setting the standard." },
+    "transactionEmbedding": { "status": "strong", "note": "Single-use instruments are consumed in every procedure and cannot be substituted mid-operation. Each surgical case generates $1,500-2,500 in consumable revenue that is physically inseparable from the procedure itself. This is as close to transaction-embedded revenue as medical devices get." },
+    "systemOfRecord": { "status": "weakened", "note": "Not a traditional system-of-record business. Intuitive's My Intuitive platform captures procedure analytics and training data, but the primary system of record for surgical data is the hospital EMR (Epic, Cerner). A secondary but growing data position." },
+    "aiResilienceScore": 82,
+    "verdict": "AI is a net tailwind for Intuitive Surgical. Unlike software companies where AI threatens to commoditize the product, AI strengthens Intuitive's moat by adding guided surgery intelligence on top of the installed base — creating a new monetization layer without displacing the physical lock-in. The primary competitive risk is not AI but well-funded platform challengers (Medtronic, J&J) in the next 5-10 years."
+  }
+}
