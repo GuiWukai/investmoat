@@ -1,33 +1,29 @@
 // Moat scores are sourced from each stock's JSON file (src/data/stocks/*.json).
 // The scores array is [moatScore, growthScore, valuationScore].
 // bearTarget/baseTarget/bullTarget mirror the scenarios in each stock's JSON.
+// RULE: Maximum 20 stocks in the portfolio — ranked by average score across all three dimensions.
 
 export const stockData = [
-    { name: "Apple",      ticker: "AAPL", slug: "aapl",       scores: [88, 72, 68], href: "/stocks/aapl",       category: "Big Tech",    bearTarget: "$155",        baseTarget: "$240",        bullTarget: "$350"         },
-    { name: "Broadcom",   ticker: "AVGO", slug: "avgo",       scores: [82, 88, 65], href: "/stocks/avgo",       category: "Big Tech",    bearTarget: "$120",        baseTarget: "$210",        bullTarget: "$320"         },
-    { name: "Amazon",     ticker: "AMZN", slug: "amazon",     scores: [80, 88, 76], href: "/stocks/amazon",     category: "Big Tech",    bearTarget: "$145",        baseTarget: "$225",        bullTarget: "$310"         },
-    { name: "Google",     ticker: "GOOGL", slug: "google",    scores: [88, 82, 72], href: "/stocks/google",     category: "Big Tech",    bearTarget: "$130",        baseTarget: "$200",        bullTarget: "$270"         },
-    { name: "Meta",       ticker: "META", slug: "meta",       scores: [73, 85, 72], href: "/stocks/meta",       category: "Big Tech",    bearTarget: "$460",        baseTarget: "$720",        bullTarget: "$950"         },
     { name: "Microsoft",  ticker: "MSFT", slug: "msft",       scores: [84, 92, 75], href: "/stocks/msft",       category: "Big Tech",    bearTarget: "$300",        baseTarget: "$450",        bullTarget: "$580"         },
-    { name: "NVIDIA",     ticker: "NVDA", slug: "nvda",       scores: [85, 95, 65], href: "/stocks/nvda",       category: "Big Tech",    bearTarget: "$100",        baseTarget: "$175",        bullTarget: "$280"         },
-    { name: "AMD",        ticker: "AMD",  slug: "amd",        scores: [52, 92, 71], href: "/stocks/amd",        category: "Big Tech",    bearTarget: "$110",        baseTarget: "$230",        bullTarget: "$320"         },
-    { name: "ASML",       ticker: "ASML", slug: "asml",       scores: [94, 85, 67], href: "/stocks/asml",       category: "Big Tech",    bearTarget: "$900",        baseTarget: "$1,500",      bullTarget: "$2,200"       },
-    { name: "Netflix",    ticker: "NFLX", slug: "nflx",       scores: [63, 88, 71], href: "/stocks/nflx",       category: "Big Tech",    bearTarget: "$65",         baseTarget: "$105",        bullTarget: "$160"         },
-    { name: "Tesla",      ticker: "TSLA", slug: "tesla",      scores: [74, 87, 65], href: "/stocks/tesla",      category: "Big Tech",    bearTarget: "$150",        baseTarget: "$400",        bullTarget: "$550"         },
-    { name: "Visa",       ticker: "V",    slug: "visa",       scores: [90, 82, 71], href: "/stocks/visa",       category: "Financials",  bearTarget: "$245",        baseTarget: "$335",        bullTarget: "$420"         },
     { name: "Mastercard", ticker: "MA",   slug: "mastercard", scores: [88, 88, 71], href: "/stocks/mastercard", category: "Financials",  bearTarget: "$400",        baseTarget: "$555",        bullTarget: "$700"         },
-    { name: "Palantir",   ticker: "PLTR", slug: "pltr",       scores: [78, 88, 71], href: "/stocks/pltr",       category: "Big Tech",    bearTarget: "$80",         baseTarget: "$155",        bullTarget: "$260"         },
-    { name: "CrowdStrike", ticker: "CRWD", slug: "crowdstrike", scores: [85, 87, 60], href: "/stocks/crowdstrike", category: "Big Tech",   bearTarget: "$200",        baseTarget: "$380",        bullTarget: "$600"         },
-    { name: "Salesforce", ticker: "CRM",  slug: "crm",        scores: [78, 80, 79], href: "/stocks/crm",        category: "Financials",  bearTarget: "$150",        baseTarget: "$250",        bullTarget: "$350"         },
-    { name: "Adobe",      ticker: "ADBE", slug: "adbe",       scores: [58, 82, 77], href: "/stocks/adbe",       category: "Financials",  bearTarget: "$200",        baseTarget: "$320",        bullTarget: "$450"         },
+    { name: "ASML",       ticker: "ASML", slug: "asml",       scores: [94, 85, 67], href: "/stocks/asml",       category: "Big Tech",    bearTarget: "$900",        baseTarget: "$1,500",      bullTarget: "$2,200"       },
+    { name: "NVIDIA",     ticker: "NVDA", slug: "nvda",       scores: [85, 95, 65], href: "/stocks/nvda",       category: "Big Tech",    bearTarget: "$100",        baseTarget: "$175",        bullTarget: "$280"         },
+    { name: "Amazon",     ticker: "AMZN", slug: "amazon",     scores: [80, 88, 76], href: "/stocks/amazon",     category: "Big Tech",    bearTarget: "$145",        baseTarget: "$225",        bullTarget: "$310"         },
     { name: "S&P Global", ticker: "SPGI", slug: "spgi",       scores: [88, 78, 78], href: "/stocks/spgi",       category: "Financials",  bearTarget: "$400",        baseTarget: "$500",        bullTarget: "$610"         },
+    { name: "Visa",       ticker: "V",    slug: "visa",       scores: [90, 82, 71], href: "/stocks/visa",       category: "Financials",  bearTarget: "$245",        baseTarget: "$335",        bullTarget: "$420"         },
+    { name: "Google",     ticker: "GOOGL", slug: "google",   scores: [88, 82, 72], href: "/stocks/google",     category: "Big Tech",    bearTarget: "$130",        baseTarget: "$200",        bullTarget: "$270"         },
+    { name: "TSMC",       ticker: "TSM",  slug: "tsm",        scores: [90, 82, 70], href: "/stocks/tsm",        category: "Big Tech",    bearTarget: "$120",        baseTarget: "$200",        bullTarget: "$280"         },
     { name: "Intuit",     ticker: "INTU", slug: "intuit",     scores: [80, 84, 75], href: "/stocks/intuit",     category: "Financials",  bearTarget: "$300",        baseTarget: "$480",        bullTarget: "$650"         },
-    { name: "Gold",       ticker: "XAU",  slug: "gold",       scores: [67, 50, 68], href: "/stocks/gold",       category: "Hard Assets", bearTarget: "$3,800/oz",   baseTarget: "$5,500/oz",   bullTarget: "$7,500+/oz"   },
     { name: "Bitcoin",    ticker: "BTC",  slug: "btc",        scores: [76, 85, 77], href: "/stocks/btc",        category: "Hard Assets", bearTarget: "$45,000",     baseTarget: "$120,000",    bullTarget: "$300,000+"    },
-    { name: "K92 Mining", ticker: "KNT",  slug: "k92",        scores: [42, 85, 80], href: "/stocks/k92",        category: "Hard Assets", bearTarget: "$22.00",      baseTarget: "$38.00",      bullTarget: "$65.00"       },
-    { name: "Freeport-McMoRan", ticker: "FCX", slug: "fcx",   scores: [60, 75, 68], href: "/stocks/fcx",        category: "Hard Assets", bearTarget: "$22",         baseTarget: "$48",         bullTarget: "$80"          },
-    { name: "TSMC",             ticker: "TSM", slug: "tsm",   scores: [90, 82, 70], href: "/stocks/tsm",        category: "Big Tech",    bearTarget: "$120",        baseTarget: "$200",        bullTarget: "$280"         },
-    { name: "Micron",           ticker: "MU",  slug: "micron", scores: [62, 87, 76], href: "/stocks/micron",    category: "Big Tech",    bearTarget: "$55",         baseTarget: "$120",        bullTarget: "$200"         },
+    { name: "Palantir",   ticker: "PLTR", slug: "pltr",       scores: [78, 88, 71], href: "/stocks/pltr",       category: "Big Tech",    bearTarget: "$80",         baseTarget: "$155",        bullTarget: "$260"         },
+    { name: "Salesforce", ticker: "CRM",  slug: "crm",        scores: [78, 80, 79], href: "/stocks/crm",        category: "Financials",  bearTarget: "$150",        baseTarget: "$250",        bullTarget: "$350"         },
+    { name: "Broadcom",   ticker: "AVGO", slug: "avgo",       scores: [82, 88, 65], href: "/stocks/avgo",       category: "Big Tech",    bearTarget: "$120",        baseTarget: "$210",        bullTarget: "$320"         },
+    { name: "CrowdStrike", ticker: "CRWD", slug: "crowdstrike", scores: [85, 87, 60], href: "/stocks/crowdstrike", category: "Big Tech", bearTarget: "$200",        baseTarget: "$380",        bullTarget: "$600"         },
+    { name: "Meta",       ticker: "META", slug: "meta",       scores: [73, 85, 72], href: "/stocks/meta",       category: "Big Tech",    bearTarget: "$460",        baseTarget: "$720",        bullTarget: "$950"         },
+    { name: "Apple",      ticker: "AAPL", slug: "aapl",       scores: [88, 72, 68], href: "/stocks/aapl",       category: "Big Tech",    bearTarget: "$155",        baseTarget: "$240",        bullTarget: "$350"         },
+    { name: "Tesla",      ticker: "TSLA", slug: "tesla",      scores: [74, 87, 65], href: "/stocks/tesla",      category: "Big Tech",    bearTarget: "$150",        baseTarget: "$400",        bullTarget: "$550"         },
+    { name: "Micron",     ticker: "MU",   slug: "micron",     scores: [62, 87, 76], href: "/stocks/micron",     category: "Big Tech",    bearTarget: "$55",         baseTarget: "$120",        bullTarget: "$200"         },
+    { name: "Netflix",    ticker: "NFLX", slug: "nflx",       scores: [63, 88, 71], href: "/stocks/nflx",       category: "Big Tech",    bearTarget: "$65",         baseTarget: "$105",        bullTarget: "$160"         },
 ];
 
 export const getAverageScore = (scores: number[]) => {
