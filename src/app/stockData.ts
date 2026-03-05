@@ -27,6 +27,8 @@ const allCoverageData = [
     { name: "TSMC",              ticker: "TSM",  slug: "tsm",         scores: [90, 82, 70], href: "/stocks/tsm",         category: "Big Tech",    bearTarget: "$120",      baseTarget: "$200",      bullTarget: "$280"      },
     { name: "Intuit",            ticker: "INTU", slug: "intuit",      scores: [80, 84, 75], href: "/stocks/intuit",      category: "Financials",  bearTarget: "$300",      baseTarget: "$480",      bullTarget: "$650"      },
     { name: "Bitcoin",           ticker: "BTC",  slug: "btc",         scores: [76, 85, 77], href: "/stocks/btc",         category: "Hard Assets", bearTarget: "$45,000",   baseTarget: "$120,000",  bullTarget: "$300,000+" },
+    { name: "Ethereum",          ticker: "ETH",  slug: "ethereum",    scores: [72, 80, 65], href: "/stocks/ethereum",    category: "Hard Assets", bearTarget: "$1,200",    baseTarget: "$5,500",    bullTarget: "$12,000"   },
+    { name: "Solana",            ticker: "SOL",  slug: "solana",      scores: [58, 82, 62], href: "/stocks/solana",      category: "Hard Assets", bearTarget: "$55",       baseTarget: "$350",      bullTarget: "$800"      },
     { name: "Palantir",          ticker: "PLTR", slug: "pltr",        scores: [78, 88, 71], href: "/stocks/pltr",        category: "Big Tech",    bearTarget: "$80",       baseTarget: "$155",      bullTarget: "$260"      },
     { name: "Salesforce",        ticker: "CRM",  slug: "crm",         scores: [78, 80, 79], href: "/stocks/crm",         category: "Financials",  bearTarget: "$150",      baseTarget: "$250",      bullTarget: "$350"      },
     { name: "Broadcom",          ticker: "AVGO", slug: "avgo",        scores: [82, 88, 65], href: "/stocks/avgo",        category: "Big Tech",    bearTarget: "$120",      baseTarget: "$210",      bullTarget: "$320"      },
@@ -39,9 +41,11 @@ const allCoverageData = [
     { name: "Netflix",           ticker: "NFLX", slug: "nflx",        scores: [63, 88, 71], href: "/stocks/nflx",        category: "Big Tech",    bearTarget: "$65",       baseTarget: "$105",      bullTarget: "$160"      },
     { name: "Adobe",             ticker: "ADBE", slug: "adbe",        scores: [58, 82, 77], href: "/stocks/adbe",        category: "Financials",  bearTarget: "$200",      baseTarget: "$320",      bullTarget: "$450"      },
     { name: "AMD",               ticker: "AMD",  slug: "amd",         scores: [52, 92, 71], href: "/stocks/amd",         category: "Big Tech",    bearTarget: "$110",      baseTarget: "$230",      bullTarget: "$320"      },
-    { name: "K92 Mining",        ticker: "KNT",  slug: "k92",         scores: [42, 85, 80], href: "/stocks/k92",         category: "Hard Assets", bearTarget: "$22.00",    baseTarget: "$38.00",    bullTarget: "$65.00"    },
+    { name: "K92 Mining",        ticker: "KNT",  slug: "k92",         scores: [52, 85, 80], href: "/stocks/k92",         category: "Hard Assets", bearTarget: "$17.00 CAD", baseTarget: "$38.00 CAD", bullTarget: "$65.00 CAD" },
     { name: "Freeport-McMoRan",  ticker: "FCX",  slug: "fcx",         scores: [60, 75, 68], href: "/stocks/fcx",         category: "Hard Assets", bearTarget: "$22",       baseTarget: "$48",       bullTarget: "$80"       },
     { name: "Gold",              ticker: "XAU",  slug: "gold",        scores: [67, 50, 68], href: "/stocks/gold",        category: "Hard Assets", bearTarget: "$3,800/oz", baseTarget: "$5,500/oz", bullTarget: "$7,500+/oz"},
+    { name: "Costco",            ticker: "COST", slug: "costco",      scores: [82, 70, 60], href: "/stocks/costco",      category: "Financials",  bearTarget: "$700",      baseTarget: "$1,050",    bullTarget: "$1,400"    },
+    { name: "Oracle",            ticker: "ORCL", slug: "orcl",        scores: [85, 80, 65], href: "/stocks/orcl",        category: "Big Tech",    bearTarget: "$120",      baseTarget: "$185",      bullTarget: "$280"      },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────

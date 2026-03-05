@@ -1,0 +1,112 @@
+{
+  "slug": "costco",
+  "ticker": "COST",
+  "name": "Costco Wholesale Corporation",
+  "headerStats": [
+    { "label": "Ticker", "value": "COST" },
+    { "label": "Market Cap", "value": "$440B" },
+    { "label": "Price", "value": "$990.00" }
+  ],
+  "chips": [
+    { "label": "Consumer Retail", "color": "primary" },
+    { "label": "Wide Moat", "color": "success" },
+    { "label": "Membership Model", "color": "secondary" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    { "title": "Revenue", "value": "$254B", "label": "FY2024 Net Sales", "icon": "DollarSign", "color": "#005DAA" },
+    { "title": "Membership Fee Income", "value": "$4.8B", "label": "High-Margin Recurring Revenue", "icon": "Users", "color": "#E31837" },
+    { "title": "Renewal Rate", "value": "92.9%", "label": "Global Member Retention", "icon": "RefreshCw", "color": "#10b981" }
+  ],
+  "moat": {
+    "score": 82,
+    "description": "A membership flywheel built on radical price discipline, extreme member loyalty, and buying power that compounds with scale.",
+    "analysisTitle": "The Membership Flywheel Moat",
+    "analysisSummary": "Costco operates a **Membership-Funded Price Machine** that other retailers cannot sustainably replicate:",
+    "analysisPoints": [
+      {
+        "title": "Membership Model Aligns Incentives",
+        "text": "Costco earns nearly all its profit from membership fees (~$4.8B annually), not merchandise markups. Products are sold at 10-14% gross margin — a level that would bankrupt most retailers. This forces the business to serve members, not shareholders, and creates a self-reinforcing loyalty loop."
+      },
+      {
+        "title": "Scale-Driven Buying Power",
+        "text": "With $254B in revenue flowing through a curated ~4,000 SKU catalog, Costco commands pricing power with suppliers that no mid-tier retailer can match. Fewer SKUs means each item sells in massive volume, giving Costco leverage to extract the lowest possible cost and pass savings to members."
+      },
+      {
+        "title": "The Treasure Hunt Experience",
+        "text": "A rotating selection of limited-time luxury and specialty items (Kirkland cashmere, high-end electronics, wine) creates urgency and repeat visits. Members plan trips around new inventory, a behavioral moat that e-commerce cannot replicate with infinite shelf space."
+      },
+      {
+        "title": "Kirkland Signature as a Private Label Fortress",
+        "text": "The Kirkland brand generates an estimated $60B+ in annual sales, rivaling the world's largest consumer brands. It signals quality at a discount and creates direct member-to-Costco loyalty that bypasses brand manufacturer relationships entirely."
+      }
+    ]
+  },
+  "growth": {
+    "score": 70,
+    "description": "New warehouse openings (25-30/year), international expansion, and e-commerce augment a durable low-single-digit comparable sales compounder. Membership fee increases provide a high-visibility earnings lever.",
+    "additionalNote": {
+      "title": "Key Growth Catalysts",
+      "points": [
+        "International warehouse expansion in Asia (China, Japan, Korea) and Europe showing strong membership uptake",
+        "E-commerce integration growing double digits while preserving warehouse traffic",
+        "Costco auto program, travel, pharmacy, and financial services extending member lifetime value",
+        "Next membership fee increase likely to drive $1B+ annual incremental income with minimal churn"
+      ]
+    }
+  },
+  "valuation": {
+    "score": 60,
+    "description": "Costco trades at 48x+ forward earnings — a significant premium reflecting the quality and predictability of its earnings stream. The stock prices in near-perfection and leaves limited margin of safety. Best accumulated on pullbacks toward base case.",
+    "valuationNote": {
+      "text": "At $990, the stock prices in sustained high-teens EPS growth — achievable but dependent on continued membership growth and fee increases. Patience is rewarded; wait for 10%+ pullbacks before adding.",
+      "fairValue": "$1,050"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$700",
+      "description": "A deep recession causes discretionary spending collapse, membership growth stalls, and the premium valuation compresses sharply.",
+      "points": [
+        "US consumer recession drives membership renewal rates below 88% for the first time in decades",
+        "Comparable sales growth turns negative as members trade down to discount grocery alternatives",
+        "P/E multiple compresses from 48x to 32x as growth decelerates, creating significant price downside",
+        "International expansion delays in China reduce the long-term growth narrative"
+      ]
+    },
+    "base": {
+      "priceTarget": "$1,050",
+      "description": "Steady warehouse openings, a membership fee increase, and continued international growth sustain 12-15% EPS compounding.",
+      "points": [
+        "25-30 net new warehouses annually sustains mid-single-digit unit growth globally",
+        "Next membership fee increase (~$10/year) adds ~$1.3B incremental high-margin income",
+        "E-commerce growing 20%+ annually while serving as a complement to warehouse visits",
+        "Kirkland Signature continues to expand market share at the expense of branded goods"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$1,400",
+      "description": "Aggressive international expansion, a larger-than-expected fee hike, and digital services monetization drive outsized earnings growth.",
+      "points": [
+        "China and India expansion materially accelerates, adding 100+ warehouses over 5 years",
+        "Membership fee raised to $80-$90 (from $65) with renewal rates holding above 90%",
+        "Costco Health (pharmacy, optical, hearing) and financial services grow into $5B+ revenue segments",
+        "Kirkland brand licensing or international direct-to-consumer channel adds new margin-accretive revenue"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": { "status": "weakened", "note": "The warehouse shopping format is learnable, but Costco's treasure hunt psychology and layout create habitual visit patterns that members deeply internalize over years." },
+    "businessLogic": { "status": "intact", "note": "The membership-funded, ultra-low-margin retail model is well-understood but extremely difficult to replicate without the decades of trust and scale Costco has built. No major retailer has successfully copied it." },
+    "publicDataAccess": { "status": "destroyed", "note": "Not a source of competitive advantage for Costco's business model." },
+    "talentScarcity": { "status": "destroyed", "note": "Costco's moat is not talent-driven. It is structural and behavioral." },
+    "bundling": { "status": "strong", "note": "A single membership fee unlocks access to fuel, pharmacy, optical, hearing, travel, auto, and financial services — a high-value bundle that compounds switching costs across every area of a member's life." },
+    "proprietaryData": { "status": "intact", "note": "Purchase data across 135M+ cardholders provides deep insight into consumer behavior, enabling precise inventory decisions and supplier negotiations that competitors cannot match." },
+    "regulatoryLockIn": { "status": "destroyed", "note": "Retail is not a heavily regulated industry. No meaningful regulatory moat exists for Costco." },
+    "networkEffects": { "status": "weakened", "note": "Some indirect network effects exist — more members mean better supplier terms, which enable lower prices, which attract more members — but this is not a classic two-sided network." },
+    "transactionEmbedding": { "status": "intact", "note": "The Costco Anywhere Visa card (issued by Citi) embeds Costco into members' daily spending far beyond the warehouse. Auto-renewed memberships on credit cards further deepen the financial relationship." },
+    "systemOfRecord": { "status": "intact", "note": "For tens of millions of households, Costco is the default and first-choice destination for bulk groceries, household goods, and seasonal purchases — a deeply ingrained behavioral record." },
+    "aiResilienceScore": 78,
+    "verdict": "Costco is highly resilient to AI disruption. Its moat is rooted in physical logistics, behavioral psychology, and supplier relationships — none of which AI can automate away. The membership flywheel and buying scale are structural advantages that compound over decades, making Costco one of the most durable retail businesses ever created."
+  }
+}

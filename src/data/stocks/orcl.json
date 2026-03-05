@@ -1,0 +1,113 @@
+{
+  "slug": "orcl",
+  "ticker": "ORCL",
+  "name": "Oracle Corporation",
+  "headerStats": [
+    { "label": "Ticker", "value": "ORCL" },
+    { "label": "Market Cap", "value": "$480B" },
+    { "label": "Price", "value": "$175.00" }
+  ],
+  "chips": [
+    { "label": "Enterprise Software", "color": "primary" },
+    { "label": "Wide Moat", "color": "success" },
+    { "label": "Cloud Infrastructure", "color": "secondary" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    { "title": "Cloud Revenue", "value": "$25B+", "label": "FY2025 Run Rate, Growing 50%+", "icon": "Cloud", "color": "#C74634" },
+    { "title": "Operating Margin", "value": "29%", "label": "Durable Software Profitability", "icon": "TrendingUp", "color": "#f59e0b" },
+    { "title": "Remaining Perf. Obligations", "value": "$97B", "label": "Contracted Future Revenue", "icon": "Lock", "color": "#3b82f6" }
+  ],
+  "moat": {
+    "score": 85,
+    "description": "Decades of mission-critical database embedding at the world's largest enterprises create switching costs so high that migration is measured in years, not months.",
+    "analysisTitle": "The Database Hostage Moat",
+    "analysisSummary": "Oracle operates a **Mission-Critical Lock-In Machine** built on four interlocking advantages:",
+    "analysisPoints": [
+      {
+        "title": "Database Embedding So Deep It Becomes Infrastructure",
+        "text": "Oracle Database runs the core financial, ERP, and operational systems of most Global 2000 companies. Migrating away requires rewriting thousands of stored procedures, custom PL/SQL logic, and application integrations — a multi-year, nine-figure project with high failure risk. The switching cost is not a feature; it is the moat."
+      },
+      {
+        "title": "OCI as the AI Cloud Challenger",
+        "text": "Oracle Cloud Infrastructure (OCI) is growing 50%+ annually and winning hyperscale AI workloads from NVIDIA, Microsoft, and Meta due to superior GPU cluster networking and pricing. The $97B+ remaining performance obligations backlog — including a landmark deal with OpenAI — signals that OCI has become a genuine tier-2 cloud with tier-1 AI infrastructure ambitions."
+      },
+      {
+        "title": "Autonomous Database Extends the Moat",
+        "text": "Oracle Autonomous Database automatically patches, tunes, and secures itself using machine learning — removing the DBA bottleneck while increasing dependency on Oracle's specific platform. Customers moving to Autonomous Database become more locked in, not less, as the AI-managed complexity discourages migration."
+      },
+      {
+        "title": "Cloud ERP Landgrab via Fusion and Cerner",
+        "text": "Oracle Fusion Cloud ERP is taking share from SAP in enterprise resource planning. The Cerner acquisition added the largest healthcare IT installed base in the US — embedding Oracle into the record-keeping infrastructure of thousands of hospitals and health systems, creating a second major system-of-record moat in a regulated industry."
+      }
+    ]
+  },
+  "growth": {
+    "score": 80,
+    "description": "OCI infrastructure growing 50%+ annually, cloud applications (Fusion ERP, NetSuite) compounding at 20%+, and a $97B+ contracted backlog provide exceptional revenue visibility. AI training workload demand is a meaningful new growth vector.",
+    "additionalNote": {
+      "title": "Key Growth Catalysts",
+      "points": [
+        "OCI GPU clusters winning large AI training contracts from hyperscalers and frontier AI labs",
+        "Oracle Fusion Cloud ERP displacing SAP at Global 2000 companies in multi-year migrations",
+        "NetSuite growing 20%+ in the mid-market ERP segment with low churn",
+        "Cerner powering Oracle Health's expansion into AI-assisted clinical workflows at scale",
+        "Multi-cloud database demand rising as enterprises run Oracle DB on AWS and Azure simultaneously"
+      ]
+    }
+  },
+  "valuation": {
+    "score": 65,
+    "description": "At $175, Oracle trades at 28x forward earnings — elevated but defensible given the $97B+ contracted backlog and OCI's 50%+ growth. The AI infrastructure tailwind justifies a premium multiple, but the stock prices in continued execution. Best accumulated below $160.",
+    "valuationNote": {
+      "text": "Oracle's contracted RPO backlog provides unusual earnings visibility for a company this size. If OCI sustains 40%+ growth through FY2027, current valuation is reasonable. Downside is limited by the database installed base generating $20B+ in high-margin support renewals annually.",
+      "fairValue": "$185"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$120",
+      "description": "OCI loses AI infrastructure share to AWS and Azure, cloud ERP migration stalls, and the legacy support business declines faster than cloud ramps.",
+      "points": [
+        "AWS Trainium and Azure custom silicon erode OCI's GPU networking advantage",
+        "Oracle Fusion ERP implementations underperform expectations, triggering high-profile churn",
+        "Legacy database support revenue declines 5%+ annually as AWS Aurora and PostgreSQL migrations accelerate",
+        "Cerner integration costs and healthcare IT complexity drag margins below 25%"
+      ]
+    },
+    "base": {
+      "priceTarget": "$185",
+      "description": "OCI sustains 40%+ growth as a primary AI training cloud, Fusion ERP and NetSuite compound steadily, and database support remains durable.",
+      "points": [
+        "OCI grows to $30B+ in annual revenue by FY2027 driven by GPU cluster deployments",
+        "Oracle Fusion Cloud ERP achieves $10B+ in annual revenue with industry-leading NRR",
+        "Autonomous Database adoption increases renewal rates and reduces churn in the installed base",
+        "Cerner becomes a $10B+ revenue segment as AI clinical applications roll out across 1,000+ hospitals"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$280",
+      "description": "OCI emerges as the dominant AI training cloud, Oracle Health transforms clinical workflows, and Fusion ERP displaces SAP at the enterprise tier.",
+      "points": [
+        "OCI wins 20%+ of the AI training infrastructure market, rivaling AWS and Azure in GPU density",
+        "Landmark multi-year AI cloud contracts with 5+ frontier AI labs and sovereign cloud deployments",
+        "Oracle Health AI platform becomes standard across US hospital systems, unlocking $20B+ revenue potential",
+        "SAP migration wave to Oracle Fusion ERP accelerates post-SAP S/4HANA end-of-life cycle"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": { "status": "intact", "note": "Oracle SQL, PL/SQL, and APEX are deeply learned by hundreds of thousands of enterprise developers. Institutional knowledge baked into development teams is a real switching cost even before touching migration complexity." },
+    "businessLogic": { "status": "strong", "note": "Oracle databases store decades of enterprise business logic in stored procedures, triggers, and custom PL/SQL — logic that is nearly impossible to fully document or migrate without business disruption. This is one of the most powerful switching costs in software." },
+    "publicDataAccess": { "status": "destroyed", "note": "Not a source of competitive advantage for Oracle's core business." },
+    "talentScarcity": { "status": "intact", "note": "Certified Oracle DBAs and Fusion ERP consultants are scarce and expensive. The partner ecosystem of implementation firms (Deloitte, Accenture, KPMG) certified on Oracle products reinforces adoption inertia." },
+    "bundling": { "status": "strong", "note": "Oracle bundles database, cloud infrastructure, ERP, HCM, SCM, CX, and analytics under a single enterprise license — creating a platform effect that is cheaper to stay within than to unbundle across best-of-breed alternatives." },
+    "proprietaryData": { "status": "intact", "note": "Oracle systems store the most sensitive and mission-critical enterprise data in the world — financials, HR records, supply chain, and clinical data. This data residency creates deep compliance and operational dependency." },
+    "regulatoryLockIn": { "status": "strong", "note": "Cerner (Oracle Health) serves as the EHR system for thousands of US hospitals subject to HIPAA, CMS interoperability, and ONC certification requirements. Government and defense cloud contracts (OCI FedRAMP) add further regulatory entrenchment." },
+    "networkEffects": { "status": "weakened", "note": "Oracle's partner certification ecosystem and ISV integrations create indirect network effects — more certified implementation partners make Oracle easier to adopt — but these are not classic two-sided network effects." },
+    "transactionEmbedding": { "status": "strong", "note": "Oracle Database processes the financial transactions, clinical records, and operational events of most Global 2000 companies. It is not adjacent to mission-critical transactions — it IS the transaction layer." },
+    "systemOfRecord": { "status": "strong", "note": "Oracle is the definitive system of record for enterprise finance, HR, and operations at thousands of the world's largest organizations. No other software vendor occupies this position at comparable scale." },
+    "aiResilienceScore": 82,
+    "verdict": "Oracle is highly AI-resilient. Its deepest moat — database embedding — is structural and physical, not software-replicable. OCI's rise as AI training infrastructure is additive rather than disruptive to the core. The combination of a 40-year database lock-in moat and a fast-growing AI cloud positions Oracle as one of the most durable compounders in enterprise technology."
+  }
+}

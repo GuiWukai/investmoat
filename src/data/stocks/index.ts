@@ -19,6 +19,8 @@ import spgi from './spgi.json';
 import intuit from './intuit.json';
 import gold from './gold.json';
 import btc from './btc.json';
+import ethereum from './ethereum.json';
+import solana from './solana.json';
 import k92 from './k92.json';
 import pltr from './pltr.json';
 import crowdstrike from './crowdstrike.json';
@@ -26,6 +28,8 @@ import fcx from './fcx.json';
 import tsm from './tsm.json';
 import micron from './micron.json';
 import isrg from './isrg.json';
+import costco from './costco.json';
+import orcl from './orcl.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -47,6 +51,8 @@ const stocksMap: Record<string, StockAnalysisData> = {
   intuit: intuit as StockAnalysisData,
   gold: gold as StockAnalysisData,
   btc: btc as StockAnalysisData,
+  ethereum: ethereum as StockAnalysisData,
+  solana: solana as StockAnalysisData,
   k92: k92 as StockAnalysisData,
   pltr: pltr as StockAnalysisData,
   crowdstrike: crowdstrike as StockAnalysisData,
@@ -54,6 +60,8 @@ const stocksMap: Record<string, StockAnalysisData> = {
   tsm: tsm as StockAnalysisData,
   micron: micron as StockAnalysisData,
   isrg: isrg as StockAnalysisData,
+  costco: costco as StockAnalysisData,
+  orcl: orcl as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
