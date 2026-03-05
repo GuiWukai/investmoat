@@ -151,6 +151,38 @@ h1, h2, h3, h4 {
   background: rgba(255, 255, 255, 0.2);
 }
 
+/* Stagger delay utilities */
+.stagger-1  { animation-delay: 0.05s; }
+.stagger-2  { animation-delay: 0.10s; }
+.stagger-3  { animation-delay: 0.15s; }
+.stagger-4  { animation-delay: 0.20s; }
+.stagger-5  { animation-delay: 0.25s; }
+.stagger-6  { animation-delay: 0.30s; }
+.stagger-7  { animation-delay: 0.35s; }
+.stagger-8  { animation-delay: 0.40s; }
+.stagger-9  { animation-delay: 0.45s; }
+.stagger-10 { animation-delay: 0.50s; }
+.stagger-11 { animation-delay: 0.55s; }
+.stagger-12 { animation-delay: 0.60s; }
+.stagger-fill-both { animation-fill-mode: both; }
+
+/* Shimmer gradient text */
+.gradient-text-animated {
+  background: linear-gradient(
+    90deg,
+    #34d399 0%,
+    #67e8f9 25%,
+    #a78bfa 50%,
+    #67e8f9 75%,
+    #34d399 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
 /* HeroUI overrides */
 [data-overlay-container="true"] {
   background-color: transparent !important;

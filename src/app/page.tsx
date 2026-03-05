@@ -225,17 +225,17 @@ export default function HomePage() {
 
   return (
     <div className="animate-fade-in space-y-12">
-      <header className="mb-8 md:mb-12">
-        <h1 className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent mb-4">
+      <header className="mb-8 md:mb-12 animate-fade-up stagger-fill-both" style={{ animationDelay: '0s' }}>
+        <h1 className="text-3xl md:text-5xl font-extrabold gradient-text-animated mb-4">
           Portfolio Distribution
         </h1>
-        <p className="text-white/60 text-base md:text-xl max-w-2xl">
+        <p className="text-white/60 text-base md:text-xl max-w-2xl animate-fade-up stagger-fill-both stagger-2">
           {portfolio.length} high-conviction positions selected for moat durability, growth scaling, and valuation discipline.
           Higher-scoring positions receive proportionally larger allocations (max 10% per position).
         </p>
       </header>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 animate-fade-up stagger-fill-both stagger-3">
         <Card className="bg-white/5 border-none backdrop-blur-lg">
           <CardHeader className="flex gap-3 p-6 pb-0">
             <PieChart className="text-primary" />
@@ -271,7 +271,12 @@ export default function HomePage() {
                         d={d}
                         fill={stock.color}
                         opacity={hoveredPie && !isHov ? 0.3 : 1}
-                        className="transition-opacity duration-150 cursor-pointer"
+                        className="transition-all duration-200 cursor-pointer"
+                        style={{
+                          transformOrigin: '100px 100px',
+                          animation: `fade-in-scale 0.6s ease-out ${0.1 + sorted.indexOf(stock) * 0.04}s both`,
+                          transform: isHov ? 'scale(1.04)' : 'scale(1)',
+                        }}
                         onMouseEnter={() => setHoveredPie(stock.ticker)}
                         onMouseLeave={() => setHoveredPie(null)}
                       />
@@ -348,7 +353,7 @@ export default function HomePage() {
       </div>
 
       {/* Curated Holdings */}
-      <section>
+      <section className="animate-fade-up stagger-fill-both stagger-5">
         <div className="flex items-center gap-4 mb-6">
           <h2 className="text-2xl font-bold">Allocation Breakdown</h2>
           <div className="h-px flex-1 bg-white/10" />
@@ -356,11 +361,12 @@ export default function HomePage() {
         </div>
 
         <div className="rounded-2xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-lg divide-y divide-white/5">
-          {portfolioWithScores.map((stock) => (
+          {portfolioWithScores.map((stock, idx) => (
             <button
               key={stock.ticker}
               onClick={() => router.push(stock.href)}
-              className="w-full flex items-center gap-4 px-5 py-4 hover:bg-white/[0.06] transition-colors group text-left"
+              className="w-full flex items-center gap-4 px-5 py-4 hover:bg-white/[0.06] transition-colors group text-left animate-slide-in-left stagger-fill-both"
+              style={{ animationDelay: `${0.3 + idx * 0.04}s` }}
             >
               <div className="w-1 self-stretch rounded-full shrink-0" style={{ background: stock.color }} />
 
@@ -427,7 +433,7 @@ export default function HomePage() {
       </section>
 
       {/* Excluded Stocks */}
-      <section>
+      <section className="animate-fade-up stagger-fill-both stagger-7">
         <div className="flex items-center gap-4 mb-6">
           <AlertTriangle size={20} className="text-warning shrink-0" />
           <h2 className="text-2xl font-bold">Not in Portfolio</h2>
@@ -436,11 +442,12 @@ export default function HomePage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {excluded.map((stock) => (
+          {excluded.map((stock, idx) => (
             <button
               key={stock.ticker}
               onClick={() => router.push(stock.href)}
-              className="text-left rounded-xl border border-white/5 bg-white/[0.03] hover:bg-white/[0.06] transition-colors p-5 group"
+              className="text-left rounded-xl border border-white/5 bg-white/[0.03] hover:bg-white/[0.06] transition-colors p-5 group animate-fade-up stagger-fill-both"
+              style={{ animationDelay: `${0.5 + idx * 0.06}s` }}
             >
               <div className="flex items-start justify-between mb-3">
                 <div className="flex items-center gap-2">

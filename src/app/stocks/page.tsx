@@ -85,19 +85,19 @@ export default function StocksPage() {
 
   return (
     <div className="animate-fade-in space-y-12">
-      <header className="mb-8 md:mb-12">
-        <h1 className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent mb-4">
+      <header className="mb-8 md:mb-12 animate-fade-up stagger-fill-both" style={{ animationDelay: '0s' }}>
+        <h1 className="text-3xl md:text-5xl font-extrabold gradient-text-animated mb-4">
           Stock Coverage
         </h1>
-        <p className="text-white/60 text-base md:text-xl max-w-2xl">
+        <p className="text-white/60 text-base md:text-xl max-w-2xl animate-fade-up stagger-fill-both stagger-2">
           {allCoverageData.length} stocks across four categories, scored on moat durability, growth trajectory, and live valuation.
         </p>
       </header>
 
-      {CATEGORIES.map((cat) => {
+      {CATEGORIES.map((cat, catIdx) => {
         const stocks = allCoverageData.filter(s => s.category === cat.key);
         return (
-          <section key={cat.key}>
+          <section key={cat.key} className="animate-fade-up stagger-fill-both" style={{ animationDelay: `${0.15 + catIdx * 0.1}s` }}>
             <div className="flex items-center gap-4 mb-5">
               <BarChart3 size={18} className="text-white/40 shrink-0" />
               <h2 className="text-lg font-bold text-white/80">{cat.label}</h2>
@@ -106,11 +106,12 @@ export default function StocksPage() {
             </div>
 
             <div className="rounded-2xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-lg divide-y divide-white/5">
-              {stocks.map((stock) => (
+              {stocks.map((stock, idx) => (
                 <button
                   key={stock.ticker}
                   onClick={() => router.push(stock.href)}
-                  className="w-full flex items-center gap-4 px-5 py-4 hover:bg-white/[0.06] transition-colors group text-left"
+                  className="w-full flex items-center gap-4 px-5 py-4 hover:bg-white/[0.06] transition-colors group text-left animate-slide-in-left stagger-fill-both"
+                  style={{ animationDelay: `${0.2 + catIdx * 0.1 + idx * 0.05}s` }}
                 >
                   <div
                     className="w-1 self-stretch rounded-full shrink-0"

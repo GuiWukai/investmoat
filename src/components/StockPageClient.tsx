@@ -190,12 +190,19 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
       <header className="space-y-6">
         <div className="flex items-center flex-wrap gap-3">
           {data.chips.map((chip, i) => (
-            <Chip key={i} color={chip.color as 'primary' | 'secondary' | 'success' | 'warning' | 'danger'} variant="flat" size="sm">
+            <Chip
+              key={i}
+              color={chip.color as 'primary' | 'secondary' | 'success' | 'warning' | 'danger'}
+              variant="flat"
+              size="sm"
+              className="animate-fade-in stagger-fill-both"
+              style={{ animationDelay: `${i * 0.06}s` }}
+            >
               {chip.label}
             </Chip>
           ))}
         </div>
-        <div>
+        <div className="animate-fade-up stagger-fill-both stagger-2">
           <h1
             className="text-3xl md:text-6xl font-black mb-2 tracking-tight"
             style={data.titleColor ? { color: data.titleColor } : undefined}
@@ -214,20 +221,23 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
             ))}
           </div>
         </div>
-        <RecommendationBadge status={dynamicRecommendation} loading={valLoading} />
+        <div className="animate-fade-up stagger-fill-both stagger-3">
+          <RecommendationBadge status={dynamicRecommendation} loading={valLoading} />
+        </div>
       </header>
 
       {/* ── Key metrics (desktop) ── */}
       <div className={`hidden md:grid ${gridCols} gap-6`}>
         {data.metrics.map((metric, i) => (
-          <MetricCard
-            key={i}
-            title={metric.title}
-            value={metric.value}
-            label={metric.label}
-            icon={<StockIcon name={metric.icon} />}
-            color={metric.color}
-          />
+          <div key={i} className="animate-fade-up stagger-fill-both" style={{ animationDelay: `${0.2 + i * 0.08}s` }}>
+            <MetricCard
+              title={metric.title}
+              value={metric.value}
+              label={metric.label}
+              icon={<StockIcon name={metric.icon} />}
+              color={metric.color}
+            />
+          </div>
         ))}
       </div>
 

@@ -1,9 +1,35 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { TrendingUp, PlusCircle, Minus, Zap, ShieldCheck, ShieldX, RefreshCw } from "lucide-react";
 import { Card, CardBody, CardHeader, Chip, Progress, CircularProgress, Divider, Spinner } from "@heroui/react";
 import type { TenMoatsAssessment, MoatStatus } from "@/app/tenMoatsData";
+
+/** Animates a number from 0 to `target` over `duration` ms using easeOut. */
+function useCountUp(target: number, duration = 900): number {
+  const [value, setValue] = useState(0);
+  const rafRef = useRef<number | null>(null);
+  const startRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    startRef.current = null;
+    const step = (timestamp: number) => {
+      if (!startRef.current) startRef.current = timestamp;
+      const elapsed = timestamp - startRef.current;
+      const progress = Math.min(elapsed / duration, 1);
+      // easeOutCubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setValue(Math.round(eased * target));
+      if (progress < 1) {
+        rafRef.current = requestAnimationFrame(step);
+      }
+    };
+    rafRef.current = requestAnimationFrame(step);
+    return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); };
+  }, [target, duration]);
+
+  return value;
+}
 
 interface MetricCardProps {
   title: string;
@@ -39,6 +65,8 @@ interface ScoreGaugeProps {
 }
 
 export function ScoreGauge({ score, label, description }: ScoreGaugeProps) {
+  const animated = useCountUp(score);
+
   const getColor = (s: number) => {
     if (s >= 90) return "success";
     if (s >= 75) return "primary";
@@ -47,7 +75,7 @@ export function ScoreGauge({ score, label, description }: ScoreGaugeProps) {
   };
 
   return (
-    <Card className="w-full lg:min-w-[240px] flex-1 bg-white/5 border-none backdrop-blur-md text-center p-4">
+    <Card className="w-full lg:min-w-[240px] flex-1 bg-white/5 border-none backdrop-blur-md text-center p-4 animate-fade-in-scale stagger-fill-both" style={{ animationDelay: '0.1s' }}>
       <CardHeader className="justify-center pb-0">
         <h3 className="text-lg font-semibold">{label}</h3>
       </CardHeader>
@@ -59,7 +87,7 @@ export function ScoreGauge({ score, label, description }: ScoreGaugeProps) {
             track: "stroke-white/10",
             value: "text-3xl font-extrabold text-white",
           }}
-          value={score}
+          value={animated}
           strokeWidth={4}
           showValueLabel={true}
           color={getColor(score)}
@@ -71,6 +99,8 @@ export function ScoreGauge({ score, label, description }: ScoreGaugeProps) {
 }
 
 export function OverallScoreCard({ score, loading }: { score: number; loading?: boolean }) {
+  const animatedScore = useCountUp(score, 1000);
+
   const getTier = (s: number): { label: string; hex: string; color: "success" | "primary" | "warning" | "danger" } => {
     if (s >= 90) return { label: 'Exceptional', hex: '#17c964', color: 'success' };
     if (s >= 80) return { label: 'Strong',      hex: '#006fee', color: 'primary' };
@@ -82,7 +112,7 @@ export function OverallScoreCard({ score, loading }: { score: number; loading?: 
   const { label, hex, color } = getTier(score);
 
   return (
-    <Card className="w-full flex-1 bg-white/5 border-none backdrop-blur-md">
+    <Card className="w-full flex-1 bg-white/5 border-none backdrop-blur-md animate-fade-in-scale stagger-fill-both" style={{ animationDelay: '0s' }}>
       <CardBody className="p-5 md:p-6 gap-5">
         {/* Header */}
         <div className="flex items-center justify-between">
@@ -99,7 +129,7 @@ export function OverallScoreCard({ score, loading }: { score: number; loading?: 
         {/* Big number */}
         <div className="flex items-baseline gap-2">
           <span className="text-6xl md:text-7xl font-black leading-none tabular-nums" style={{ color: hex }}>
-            {score}
+            {animatedScore}
           </span>
           <span className="text-white/25 font-bold text-2xl">/100</span>
         </div>
@@ -112,15 +142,15 @@ export function OverallScoreCard({ score, loading }: { score: number; loading?: 
               className="absolute inset-0 opacity-20"
               style={{ background: 'linear-gradient(to right, #f31260 0% 25%, #f5a524 25% 60%, #006fee 60% 80%, #17c964 80% 100%)' }}
             />
-            {/* Fill */}
+            {/* Fill — animated width */}
             <div
-              className="absolute left-0 top-0 h-full rounded-full"
-              style={{ width: `${score}%`, background: `linear-gradient(to right, ${hex}55, ${hex})` }}
+              className="absolute left-0 top-0 h-full rounded-full transition-all duration-1000 ease-out"
+              style={{ width: `${animatedScore}%`, background: `linear-gradient(to right, ${hex}55, ${hex})` }}
             />
             {/* Marker */}
             <div
-              className="absolute top-1/2 -translate-y-1/2 w-[3px] h-5 rounded-full"
-              style={{ left: `calc(${score}% - 1.5px)`, background: hex, boxShadow: `0 0 6px ${hex}` }}
+              className="absolute top-1/2 -translate-y-1/2 w-[3px] h-5 rounded-full transition-all duration-1000 ease-out"
+              style={{ left: `calc(${animatedScore}% - 1.5px)`, background: hex, boxShadow: `0 0 6px ${hex}` }}
             />
           </div>
           <div className="flex justify-between px-0.5 text-[9px] text-white/20 font-bold select-none">
@@ -170,10 +200,12 @@ export function ScoreTabsRow({ tabs, overallScore, overallLoading }: { tabs: Sco
             </button>
           ))}
         </div>
-        {tabs[active].gauge}
-        {tabs[active].detail && (
-          <div className="mt-6 space-y-4">{tabs[active].detail}</div>
-        )}
+        <div key={active} className="animate-fade-in stagger-fill-both">
+          {tabs[active].gauge}
+          {tabs[active].detail && (
+            <div className="mt-6 space-y-4">{tabs[active].detail}</div>
+          )}
+        </div>
       </div>
       {/* Desktop: side by side */}
       <div className="hidden md:flex gap-6">
