@@ -19,6 +19,7 @@ import spgi from './spgi.json';
 import intuit from './intuit.json';
 import gold from './gold.json';
 import btc from './btc.json';
+import ethereum from './ethereum.json';
 import k92 from './k92.json';
 import pltr from './pltr.json';
 import crowdstrike from './crowdstrike.json';
@@ -49,6 +50,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   intuit: intuit as StockAnalysisData,
   gold: gold as StockAnalysisData,
   btc: btc as StockAnalysisData,
+  ethereum: ethereum as StockAnalysisData,
   k92: k92 as StockAnalysisData,
   pltr: pltr as StockAnalysisData,
   crowdstrike: crowdstrike as StockAnalysisData,
