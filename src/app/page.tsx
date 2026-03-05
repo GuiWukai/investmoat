@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { PieChart, ShieldCheck, ChevronRight, AlertTriangle } from "lucide-react";
+import { PieChart, ShieldCheck, ChevronRight, ChevronDown, AlertTriangle } from "lucide-react";
 import { Card, CardBody, CardHeader, Progress, Chip, Spinner } from "@heroui/react";
 import { stockData, excludedStockData, getAverageScore } from "./stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
@@ -100,6 +100,8 @@ const stockMeta: Record<string, { color: string; category: string; exclusionReas
   MU:    { color: "#0099cc", category: "Memory" },
   ISRG:  { color: "#009688", category: "Healthcare" },
   AVGO:  { color: "#cc0000", category: "Semiconductors" },
+  COST:  { color: "#005DAA", category: "Consumer Retail", exclusionReason: "Composite score (71) falls below the portfolio threshold. Costco is a world-class business with an exceptional membership flywheel and 92.9% renewal rates, but a valuation score of 60 (48x+ forward P/E) reflects near-perfection already priced in, and a growth score of 70 is constrained by the pace of physical warehouse expansion. It ranks behind 20 higher-scoring compounders on a risk-adjusted basis." },
+  ORCL:  { color: "#C74634", category: "Enterprise Software" },
 };
 
 // ─── Dynamic portfolio / excluded — derived from composite scores ─────────────
@@ -152,6 +154,15 @@ export default function HomePage() {
   });
   const [loadedTickers, setLoadedTickers] = useState<Set<string>>(new Set());
   const [hoveredPie, setHoveredPie] = useState<string | null>(null);
+  const [expandedExcluded, setExpandedExcluded] = useState<Set<string>>(new Set());
+
+  const toggleExcluded = (ticker: string) => {
+    setExpandedExcluded(prev => {
+      const next = new Set(prev);
+      next.has(ticker) ? next.delete(ticker) : next.add(ticker);
+      return next;
+    });
+  };
   const scoresLoading = loadedTickers.size < portfolio.length;
 
   const handleScore = (ticker: string, score: number) => {
@@ -441,51 +452,73 @@ export default function HomePage() {
           <span className="text-xs text-white/30 font-medium">Overall score below {PORTFOLIO_THRESHOLD}</span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {excluded.map((stock, idx) => (
-            <button
-              key={stock.ticker}
-              onClick={() => router.push(stock.href)}
-              className="text-left rounded-xl border border-white/5 bg-white/[0.03] hover:bg-white/[0.06] transition-colors p-5 group animate-fade-up stagger-fill-both"
-              style={{ animationDelay: `${0.5 + idx * 0.06}s` }}
-            >
-              <div className="flex items-start justify-between mb-3">
-                <div className="flex items-center gap-2">
-                  <span className="font-bold text-white">{stock.name}</span>
-                  <span className="text-[10px] text-white/30 tracking-widest font-black uppercase border border-white/10 rounded px-1.5 py-0.5">
-                    {stock.ticker}
-                  </span>
-                </div>
-                <DynamicScore
-                  slug={stock.stock.slug}
-                  moat={stock.stock.scores[0]}
-                  growth={stock.stock.scores[1]}
-                  fallbackVal={stock.stock.scores[2]}
-                  bearTarget={stock.stock.bearTarget}
-                  baseTarget={stock.stock.baseTarget}
-                  bullTarget={stock.stock.bullTarget}
+        <div className="flex flex-col gap-2">
+          {excluded.map((stock, idx) => {
+            const isOpen = expandedExcluded.has(stock.ticker);
+            return (
+              <div
+                key={stock.ticker}
+                className="rounded-xl border border-white/5 bg-white/[0.03] overflow-hidden animate-fade-up stagger-fill-both"
+                style={{ animationDelay: `${0.5 + idx * 0.06}s` }}
+              >
+                {/* Header row — toggles accordion */}
+                <button
+                  onClick={() => toggleExcluded(stock.ticker)}
+                  className="w-full text-left flex items-center justify-between px-5 py-4 hover:bg-white/[0.03] transition-colors group"
                 >
-                  {(avg, loading) => (
-                    <div className="text-right shrink-0 ml-4 min-w-[52px]">
-                      <div className="text-[10px] text-white/30 uppercase font-bold mb-1">Overall</div>
-                      {loading
-                        ? <Spinner size="sm" color="default" />
-                        : <Chip
-                            size="sm"
-                            color={getScoreColor(avg)}
-                            variant="flat"
-                            classNames={{ content: "font-black text-sm" }}
-                          >
-                            {avg}
-                          </Chip>
-                      }
-                    </div>
-                  )}
-                </DynamicScore>
+                  <div className="flex items-center gap-3 min-w-0">
+                    <ChevronDown
+                      size={15}
+                      className={`text-white/30 group-hover:text-white/60 transition-all shrink-0 ${isOpen ? "rotate-180" : ""}`}
+                    />
+                    <span className="font-bold text-white truncate">{stock.name}</span>
+                    <span className="text-[10px] text-white/30 tracking-widest font-black uppercase border border-white/10 rounded px-1.5 py-0.5 shrink-0">
+                      {stock.ticker}
+                    </span>
+                  </div>
+                  <DynamicScore
+                    slug={stock.stock.slug}
+                    moat={stock.stock.scores[0]}
+                    growth={stock.stock.scores[1]}
+                    fallbackVal={stock.stock.scores[2]}
+                    bearTarget={stock.stock.bearTarget}
+                    baseTarget={stock.stock.baseTarget}
+                    bullTarget={stock.stock.bullTarget}
+                  >
+                    {(avg, loading) => (
+                      <div className="text-right shrink-0 ml-4 min-w-[52px]">
+                        <div className="text-[10px] text-white/30 uppercase font-bold mb-1">Overall</div>
+                        {loading
+                          ? <Spinner size="sm" color="default" />
+                          : <Chip
+                              size="sm"
+                              color={getScoreColor(avg)}
+                              variant="flat"
+                              classNames={{ content: "font-black text-sm" }}
+                            >
+                              {avg}
+                            </Chip>
+                        }
+                      </div>
+                    )}
+                  </DynamicScore>
+                </button>
+
+                {/* Expandable justification */}
+                {isOpen && (
+                  <div className="px-5 pb-4 border-t border-white/5">
+                    <p className="text-white/50 text-sm leading-relaxed pt-4">{stock.reason}</p>
+                    <button
+                      onClick={() => router.push(stock.href)}
+                      className="mt-3 flex items-center gap-1.5 text-xs text-white/30 hover:text-white/70 transition-colors"
+                    >
+                      View full analysis <ChevronRight size={12} />
+                    </button>
+                  </div>
+                )}
               </div>
-              <p className="text-white/40 text-xs leading-relaxed">{stock.reason}</p>
-            </button>
-          ))}
+            );
+          })}
         </div>
       </section>
     </div>
