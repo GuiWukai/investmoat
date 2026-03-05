@@ -3,6 +3,7 @@
 // bearTarget/baseTarget/bullTarget mirror the scenarios in each stock's JSON.
 
 export const stockData = [
+    { name: "Apple",      ticker: "AAPL", slug: "aapl",       scores: [88, 72, 68], href: "/stocks/aapl",       category: "Big Tech",    bearTarget: "$155",        baseTarget: "$240",        bullTarget: "$350"         },
     { name: "Amazon",     ticker: "AMZN", slug: "amazon",     scores: [80, 88, 76], href: "/stocks/amazon",     category: "Big Tech",    bearTarget: "$145",        baseTarget: "$225",        bullTarget: "$310"         },
     { name: "Google",     ticker: "GOOGL", slug: "google",    scores: [88, 82, 72], href: "/stocks/google",     category: "Big Tech",    bearTarget: "$130",        baseTarget: "$200",        bullTarget: "$270"         },
     { name: "Meta",       ticker: "META", slug: "meta",       scores: [73, 85, 72], href: "/stocks/meta",       category: "Big Tech",    bearTarget: "$460",        baseTarget: "$720",        bullTarget: "$950"         },
