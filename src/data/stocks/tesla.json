@@ -11,10 +11,10 @@
     { "label": "Autonomous AI | Robotics", "color": "warning" },
     { "label": "Energy Storage", "color": "primary" }
   ],
-  "recommendation": "Accumulate",
+  "recommendation": "Hold",
   "metrics": [
-    { "title": "Vehicle Deliveries", "value": "~1.79M", "label": "2025 — Down ~7.7% YoY", "icon": "Car", "color": "#cc0000" },
-    { "title": "Operating Margin", "value": "5.8%", "label": "vs 10.8% in 2024 — Compressed", "icon": "TrendingUp", "color": "#f5a524" },
+    { "title": "Vehicle Deliveries", "value": "~1.79M", "label": "FY2024 — Down ~1% YoY", "icon": "Car", "color": "#cc0000" },
+    { "title": "Operating Margin", "value": "5.8%", "label": "vs 10.8% in FY2023 — Compressed", "icon": "TrendingUp", "color": "#f5a524" },
     { "title": "FSD Miles", "value": "3B+", "label": "Real-World AI Training Data", "icon": "Cpu", "color": "#3b82f6" }
   ],
   "moat": {
@@ -44,9 +44,9 @@
   },
   "valuation": {
     "score": 65,
-    "description": "At ~$390, Tesla trades near consensus base case. The multiple (~115x 2026E EPS of ~$2.09) is extreme for an auto company but rational if the autonomous/robotics pivot succeeds. Operating margin compression (5.8% in 2025 vs 10.8% in 2024) is the key near-term headwind.",
+    "description": "At ~$390, Tesla trades near consensus base case — roughly 115x 2026E EPS of ~$3.40, an extreme multiple for an auto company but defensible if the autonomous/robotics pivot succeeds. Operating margin compression (5.8% vs 10.8% in FY2023) is the key near-term headwind; recovery to 8–10% is needed to justify the current price.",
     "valuationNote": {
-      "text": "Base fair value of ~$400 reflects a sum-of-parts: ~$100 for the auto business at normalized margins, ~$150 for Energy & Services, and ~$150 option value on Robotaxi/Optimus. The stock is pricing in successful execution on autonomous AI — any delay reprices sharply toward the bear case.",
+      "text": "Base fair value of ~$400 reflects a sum-of-parts: ~$100 for the auto business at normalized margins, ~$150 for Energy & Services, and ~$150 option value on Robotaxi/Optimus. With the stock already at $390, there is minimal margin of safety — Hold existing positions, accumulate only on meaningful pullbacks toward $300.",
       "fairValue": "~$400"
     }
   },
