@@ -44,6 +44,9 @@ const allCoverageData = [
     { name: "Gold",              ticker: "XAU",  slug: "gold",        scores: [67, 50, 68], href: "/stocks/gold",        category: "Hard Assets", bearTarget: "$3,800/oz", baseTarget: "$5,500/oz", bullTarget: "$7,500+/oz"},
 ];
 
+// ─── All coverage (exported for the stocks list page) ────────────────────────
+export { allCoverageData };
+
 // ─── Portfolio: top MAX_PORTFOLIO stocks with avg >= MIN_AVG_SCORE ────────────
 export const stockData = [...allCoverageData]
     .sort((a, b) => getAverageScore(b.scores) - getAverageScore(a.scores))
