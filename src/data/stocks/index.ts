@@ -1,5 +1,6 @@
 import type { StockAnalysisData } from '@/types/stockAnalysis';
 
+import aapl from './aapl.json';
 import amazon from './amazon.json';
 import google from './google.json';
 import msft from './msft.json';
@@ -25,6 +26,7 @@ import tsm from './tsm.json';
 import micron from './micron.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
+  aapl: aapl as StockAnalysisData,
   amazon: amazon as StockAnalysisData,
   google: google as StockAnalysisData,
   msft: msft as StockAnalysisData,
