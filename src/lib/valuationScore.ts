@@ -3,10 +3,10 @@
  *
  * Anchor points (piecewise linear between them):
  *   price ≤ 0.8 × bear  → 100   (deeply below bear case)
- *   price = bear         →  90
- *   price = base         →  65
- *   price = bull         →  45
- *   price ≥ 1.2 × bull  →  20   (well above bull case)
+ *   price = bear         →  92
+ *   price = base         →  60
+ *   price = bull         →  30
+ *   price ≥ 1.2 × bull  →   5   (well above bull case)
  */
 export function computeValuationScore(
   price: number,
@@ -18,25 +18,25 @@ export function computeValuationScore(
 
   if (price <= bear) {
     const t = (price - 0.8 * bear) / (0.2 * bear);
-    return Math.round(100 - t * 10); // 100 → 90
+    return Math.round(100 - t * 8); // 100 → 92
   }
 
   if (price <= base) {
     const t = (price - bear) / (base - bear);
-    return Math.round(90 - t * 25); // 90 → 65
+    return Math.round(92 - t * 32); // 92 → 60
   }
 
   if (price <= bull) {
     const t = (price - base) / (bull - base);
-    return Math.round(65 - t * 20); // 65 → 45
+    return Math.round(60 - t * 30); // 60 → 30
   }
 
   if (price <= 1.2 * bull) {
     const t = (price - bull) / (0.2 * bull);
-    return Math.round(45 - t * 25); // 45 → 20
+    return Math.round(30 - t * 25); // 30 → 5
   }
 
-  return 20;
+  return 5;
 }
 
 /** Parse a price string like "$1,200", "€950.80", "~$2,900/oz" into a number. */
