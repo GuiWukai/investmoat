@@ -42,6 +42,7 @@ const allCoverageData = [
     { name: "K92 Mining",        ticker: "KNT",  slug: "k92",         scores: [42, 85, 80], href: "/stocks/k92",         category: "Hard Assets", bearTarget: "$22.00",    baseTarget: "$38.00",    bullTarget: "$65.00"    },
     { name: "Freeport-McMoRan",  ticker: "FCX",  slug: "fcx",         scores: [60, 75, 68], href: "/stocks/fcx",         category: "Hard Assets", bearTarget: "$22",       baseTarget: "$48",       bullTarget: "$80"       },
     { name: "Gold",              ticker: "XAU",  slug: "gold",        scores: [67, 50, 68], href: "/stocks/gold",        category: "Hard Assets", bearTarget: "$3,800/oz", baseTarget: "$5,500/oz", bullTarget: "$7,500+/oz"},
+    { name: "Costco",            ticker: "COST", slug: "costco",      scores: [82, 70, 60], href: "/stocks/costco",      category: "Financials",  bearTarget: "$700",      baseTarget: "$1,050",    bullTarget: "$1,400"    },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────

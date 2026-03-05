@@ -26,6 +26,7 @@ import fcx from './fcx.json';
 import tsm from './tsm.json';
 import micron from './micron.json';
 import isrg from './isrg.json';
+import costco from './costco.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -54,6 +55,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   tsm: tsm as StockAnalysisData,
   micron: micron as StockAnalysisData,
   isrg: isrg as StockAnalysisData,
+  costco: costco as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
