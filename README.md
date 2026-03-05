@@ -1,8 +1,17 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# InvestMoat
+
+An open source project for building the best investment portfolio focused on **economic moat** in the era of AI.
+
+A portfolio that works for everyone — designed to beat the S&P 500 on average through disciplined value investing and a long-term mindset.
+
+## Philosophy
+
+- **Moat-first**: Focus on companies with durable competitive advantages that defend against disruption, especially in the AI era
+- **Value investing**: Buy great businesses at fair prices, not speculative plays
+- **Long-term horizon**: Patience over noise — compounding works best over years, not days
+- **Accessible**: Built for everyone, not just Wall Street professionals
 
 ## Getting Started
-
-First, run the development server:
 
 ```bash
 npm run dev
@@ -16,21 +25,19 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contributing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This is an open source project and contributions are welcome. Whether you're a developer, investor, or just someone who wants a better financial future — you're in the right place.
+
+## Tech Stack
+
+Built with [Next.js](https://nextjs.org), bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Learn Next.js](https://nextjs.org/learn)
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The easiest way to deploy is via the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
