@@ -4,18 +4,18 @@
   "name": "K92 Mining Ltd.",
   "headerStats": [
     { "label": "Ticker", "value": "KNT (TSX)" },
-    { "label": "Market Cap", "value": "~$3.9B (CAD)" },
-    { "label": "Price", "value": "~$27 CAD" },
+    { "label": "Market Cap", "value": "~$6.8B (CAD)" },
+    { "label": "Price", "value": "~$28 CAD" },
     { "label": "Mine", "value": "Kainantu, PNG" }
   ],
   "chips": [
     { "label": "Materials | Gold Mining", "color": "warning" },
-    { "label": "Speculative Buy", "color": "success" }
+    { "label": "Hold", "color": "info" }
   ],
-  "recommendation": "Speculative Buy",
+  "recommendation": "Hold",
   "metrics": [
     { "title": "Gold Grade", "value": "10.2 g/t", "label": "Top 5% Globally (High Grade)", "icon": "Gem", "color": "#f59e0b" },
-    { "title": "All-In Sustaining Cost", "value": "~$1,010/oz", "label": "2025 Actual (By-Product Basis)", "icon": "Pickaxe", "color": "#64748b" },
+    { "title": "All-In Sustaining Cost", "value": "~$1,308/oz", "label": "2025 Actual (Beat $1,460–$1,560 Guidance)", "icon": "Pickaxe", "color": "#64748b" },
     { "title": "2025 Annual Production", "value": "174k oz AuEq", "label": "Record; 2026E: 190k–225k oz", "icon": "Zap", "color": "#10b981" },
     { "title": "Stage 3 Plant", "value": "Commissioned", "label": "Completed December 2025", "icon": "CheckCircle", "color": "#6366f1" }
   ],
@@ -36,8 +36,8 @@
     "description": "Stage 3 plant commissioned (Dec 2025); Stage 4 expansion underway targeting 400k+ oz run-rate. 2026 guidance implies 9–29% YoY production growth. Score reflects strong production expansion potential, tempered by capital intensity ($75–80M Stage 4 capex in 2026) and execution dependency in an underground PNG mining context."
   },
   "valuation": {
-    "score": 80,
-    "description": "At ~$27 CAD, stock trades well below base case ($38 CAD) given ~$5,000/oz gold prices and ~$1,010/oz AISC delivering ~$3,990/oz margins. Stage 4 execution is the primary re-rating catalyst."
+    "score": 78,
+    "description": "At ~$28 CAD, stock trades well below the $38 CAD base case. Gold at ~$5,100/oz with confirmed 2025 AISC of $1,308/oz delivers ~$3,792/oz margins — already above the base scenario's assumed gold level. Price sits ~72% of the way from bear ($17) to base ($38), offering meaningful margin of safety. Stage 4 commissioning remains the primary re-rating catalyst."
   },
   "scenarios": {
     "bear": {
