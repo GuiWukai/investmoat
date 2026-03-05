@@ -100,7 +100,6 @@ const stockMeta: Record<string, { color: string; category: string; exclusionReas
   MU:    { color: "#0099cc", category: "Memory" },
   ISRG:  { color: "#009688", category: "Healthcare" },
   AVGO:  { color: "#cc0000", category: "Semiconductors" },
-  NFLX:  { color: "#e50914", category: "Big Tech",        exclusionReason: "Content creation is a non-durable moat requiring perpetual capital reinvestment. Average score of 74 falls below the portfolio minimum of 75. Streaming remains intensely competitive with no decisive technological edge, and the moat score of 63 reflects meaningful AI disruption risk to original content economics." },
 };
 
 // ─── Dynamic portfolio / excluded — derived from composite scores ─────────────
