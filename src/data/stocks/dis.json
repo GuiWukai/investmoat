@@ -1,0 +1,140 @@
+{
+  "slug": "dis",
+  "ticker": "DIS",
+  "name": "The Walt Disney Company",
+  "headerStats": [
+    { "label": "Ticker", "value": "DIS" },
+    { "label": "Market Cap", "value": "$183B" },
+    { "label": "Price", "value": "$103.04" }
+  ],
+  "chips": [
+    { "label": "Media | Entertainment | Parks", "color": "primary" },
+    { "label": "IP Dynasty", "color": "success" },
+    { "label": "Linear TV Risk", "color": "danger" }
+  ],
+  "recommendation": "Hold",
+  "metrics": [
+    {
+      "title": "Parks Operating Income",
+      "value": "$10B",
+      "label": "FY2025 record — 27.6% margin",
+      "icon": "Star",
+      "color": "#1a78c2"
+    },
+    {
+      "title": "Streaming DTC Margin",
+      "value": "8.4%",
+      "label": "Q1 FY2026 — up from -14% in FY2023",
+      "icon": "TrendingUp",
+      "color": "#22c55e"
+    },
+    {
+      "title": "Free Cash Flow",
+      "value": "$10.1B",
+      "label": "FY2025 — up from $4.9B in FY2023",
+      "icon": "DollarSign",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "score": 76,
+    "description": "A century of irreplaceable IP (Marvel, Star Wars, Pixar) anchored by the highest-margin theme park operation in entertainment — but structural linear TV decline is eroding a third of the business.",
+    "analysisTitle": "The IP and Experiences Moat",
+    "analysisSummary": "Disney's enduring advantage is a **dual flywheel of irreplaceable intellectual property and a physical Experiences moat that no capital can credibly replicate**:",
+    "analysisPoints": [
+      {
+        "title": "The IP Fortress",
+        "text": "Disney owns Marvel, Star Wars, Pixar, and the Disney animation canon — a century of culturally embedded characters that represent the most valuable character library on earth. These universes generate recurring revenue across streaming, theatrical, merchandise, and theme parks simultaneously. No competitor can buy or build this IP portfolio; it accrues compound interest with each new generation of fans."
+      },
+      {
+        "title": "The Experiences Moat",
+        "text": "The Experiences segment generated $10B in operating income at a 27.6% margin in FY2025 — performance that Universal, SeaWorld, and Merlin Entertainments cannot approach. Building a Disney-calibre resort requires 50+ years of Imagineering expertise, $20B+ in capital, globally recognised IP, and a hospitality operation at a scale where competitors simply do not exist. Disney Cruise Line is expanding with new ships, and the per-guest spending flywheel continues to compound annually."
+      },
+      {
+        "title": "The Bundle and Distribution Lock-In",
+        "text": "Disney+/Hulu/ESPN+ as a bundle creates a multi-category entertainment subscription that is stickier than any single-service competitor. The Hulu/FuboTV merger (70% Disney-owned) adds live TV, and the ESPN DTC launch ($29.99/month) is Disney's strategic pivot to replace lost cable affiliate fees with direct consumer relationships. Annual park passes, Disney Vacation Club, MagicBand, and the Disney credit card further embed the brand into consumer spending routines."
+      }
+    ]
+  },
+  "growth": {
+    "score": 69,
+    "description": "Revenue growth is modest (3–4% annually) but FCF has more than doubled in two years ($4.9B → $10.1B); FY2026 guidance for double-digit adjusted EPS growth and $19B in operating cash flow reflects a profitability transformation rather than a revenue story, driven by streaming turning profitable and parks delivering record results."
+  },
+  "valuation": {
+    "score": 74,
+    "description": "At ~$103, DIS trades 14% below the base-case target of $120 — reflecting unwarranted pessimism about ESPN DTC adoption and streaming trajectory given $10.1B in annual FCF and a clear path to double-digit EPS growth; ROIC still below WACC, but the trend is strongly positive."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$70",
+      "description": "ESPN DTC fails to replace lost cable economics, linear TV decline accelerates beyond management assumptions, a consumer recession dampens park attendance, and the market re-rates the stock toward a low-growth media conglomerate multiple.",
+      "points": [
+        "ESPN Unlimited adoption stalls below 5M subscribers at $29.99/month as consumers resist the price, leaving a multi-billion dollar gap that cable affiliate fee declines cannot offset",
+        "A U.S. consumer recession cuts domestic park spending by 8–12%, with international parks (Shanghai, Paris) facing FX headwinds; Experiences operating income falls to $8B",
+        "CEO succession from Bob Iger introduces strategic uncertainty and execution risk, depressing the multiple as the market awaits clarity on capital allocation priorities"
+      ]
+    },
+    "base": {
+      "priceTarget": "$120",
+      "description": "Streaming reaches 10%+ DTC operating margin in FY2026 as guided, parks sustain record performance, and ESPN DTC scales to 8–10M subscribers — producing double-digit annual EPS growth and a gradual valuation re-rating.",
+      "points": [
+        "DTC streaming operating margin hits 10% in FY2026 and continues expanding toward 15%+ by FY2028, with the Hulu/Disney+/ESPN bundle driving low churn and ARPU growth",
+        "Experiences segment delivers high-single-digit operating income growth, crossing $11B by FY2027, supported by new cruise ships and international park capacity expansion",
+        "ESPN DTC reaches 8–10M Unlimited subscribers by end of FY2027, meaningfully offsetting the 30M+ cable household losses from peak ESPN reach"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$165",
+      "description": "Disney becomes the clear #2 global streaming platform, ESPN DTC scales beyond expectations with live sports demand, and the Experiences segment continues its record operating performance — compressing FCF yield as the market re-rates the stock at a quality multiple.",
+      "points": [
+        "ESPN DTC exceeds 15M Unlimited subscribers by FY2028, replacing lost cable economics entirely and converting the Sports segment from a declining asset into a growing DTC business",
+        "Streaming DTC operating margin reaches 18–20% as content leverage improves, the Hulu integration drives ARPU, and AI-assisted production cuts per-content costs by 15–20%",
+        "Disney's OpenAI/Sora partnership scales into a major IP licensing revenue stream, with AI-generated Disney content adding $500M+ in incremental high-margin licensing fees annually"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "Disney+ and Hulu UIs are easily replicated by streaming competitors; the interface itself is not a differentiator, though MagicBand and My Disney Experience app create park-specific workflow stickiness."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Disney's content-greenlight processes, Imagineering park design systems, franchise management frameworks, and yield-management operations represent decades of accumulated institutional logic that competitors cannot quickly replicate."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — Disney is not a data aggregator or platform; it does not derive competitive advantage from controlling access to a public data source."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Imagineers, Marvel directors, Pixar animators, and ESPN sports talent represent rare creative and technical talent with deep institutional knowledge — AI reduces some production barriers but cannot replicate the creative legacy."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Disney+/Hulu/ESPN bundle creates a multi-category entertainment ecosystem where churn on any single service is mitigated by the others; parks, cruise, consumer products, and streaming reinforce each other in a flywheel no competitor can replicate."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "100 years of owned IP — Marvel (7,000+ characters), Star Wars, Pixar, Disney animation classics — constitutes an irreplaceable data asset of cultural capital that generates royalties and audience loyalty across every medium simultaneously."
+    },
+    "regulatoryLockIn": {
+      "status": "weakened",
+      "note": "FCC broadcast licenses for ABC and ABC affiliates, park operating permits, and theme park regulatory approvals exist but do not represent a durable structural moat; EU regulatory complexity is a headwind rather than a barrier."
+    },
+    "networkEffects": {
+      "status": "weakened",
+      "note": "Streaming has negligible direct network effects; Disney+ does not improve because more people subscribe. Fandom communities and shared cultural moments provide some indirect social reinforcement, but not Metcalfe's Law dynamics."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Annual passes, Disney Vacation Club timeshares, the Disney Visa credit card, MagicBand+, and recurring Disney+ subscriptions embed Disney into the financial routines and long-term spending plans of millions of households."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "Disney is the cultural authority and legal system of record for Marvel, Star Wars, and Pixar universes — every licensed product, sequel, and adaptation must originate from or be approved by Disney, creating an irreplaceable IP governance role."
+    },
+    "aiResilienceScore": 69,
+    "verdict": "Disney's IP portfolio and Experiences moat are structurally resilient to AI — physical theme parks and 100-year-old character libraries cannot be disintermediated by software. The primary AI risk is content creation commoditization eroding the entertainment segment's exclusivity, partially offset by Disney's OpenAI/Sora licensing partnership positioning it as an IP licensor rather than a disrupted incumbent."
+  }
+}
