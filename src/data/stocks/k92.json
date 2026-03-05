@@ -37,20 +37,21 @@
   },
   "valuation": {
     "score": 80,
-    "description": "At ~$27 CAD, stock trades well below base case ($38) given ~$5,000/oz gold prices and sub-$1,100/oz AISC delivering ~$4,000/oz margins. Stage 4 execution is the primary re-rating catalyst."
+    "description": "At ~$27 CAD, stock trades well below base case ($38 CAD) given ~$5,000/oz gold prices and ~$1,010/oz AISC delivering ~$3,990/oz margins. Stage 4 execution is the primary re-rating catalyst."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$22.00",
-      "description": "Gold corrects sharply to $3,500/oz and Stage 4 faces significant delays, compressing margins and delaying the production re-rating.",
+      "priceTarget": "$17.00 CAD",
+      "description": "Gold corrects sharply to $3,000/oz and Stage 4 faces significant delays, compressing margins and undermining the production re-rating thesis.",
       "points": [
-        "Gold price correction to $3,500/oz reduces operating cash flow by ~40%",
-        "PNG jurisdictional risk leads to tax/permit disruptions, delaying Stage 4 by 12+ months",
-        "Rising input costs and PNG Kina appreciation squeeze all-in sustaining cost margins"
+        "Gold price correction to $3,000/oz reduces operating cash flow by ~50% from peak levels",
+        "PNG jurisdictional risk leads to tax/permit disruptions, delaying Stage 4 by 18+ months",
+        "Rising input costs and PNG Kina appreciation push AISC toward $1,300/oz, further compressing margins",
+        "Multiple compression to 8x cash flow on reduced earnings power brings stock to $17 CAD"
       ]
     },
     "base": {
-      "priceTarget": "$38.00",
+      "priceTarget": "$38.00 CAD",
       "description": "Gold holds above $4,500/oz and Stage 4 ramp-up proceeds on schedule, driving a production and cash flow re-rating.",
       "points": [
         "2026 production reaches the top half of 190–225k oz guidance at $4,000+/oz margins",
@@ -59,7 +60,7 @@
       ]
     },
     "bull": {
-      "priceTarget": "$65.00",
+      "priceTarget": "$65.00 CAD",
       "description": "Gold surges above $6,000/oz and Stage 4 delivers ahead of schedule, with Blue Lake emerging as a company-defining discovery.",
       "points": [
         "Gold at $6,000+ with $1,100/oz AISC generates ~$5,000/oz margins on 225k+ oz production",
