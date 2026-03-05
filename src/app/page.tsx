@@ -117,13 +117,15 @@ const portfolio = stockData
     stock:    s,
   }));
 
-const excluded = excludedStockData.map(s => ({
+const excluded = excludedStockData
+  .map(s => ({
     ticker: s.ticker,
     name:   s.name,
     href:   s.href,
     reason: stockMeta[s.ticker]?.exclusionReason ?? `Overall composite score below ${PORTFOLIO_THRESHOLD}.`,
     stock:  s,
-  }));
+  }))
+  .sort((a, b) => getAverageScore(b.stock.scores) - getAverageScore(a.stock.scores));
 
 // ─── Category colour helper ───────────────────────────────────────────────────
 function categoryColor(category: string): "primary" | "success" | "warning" | "secondary" | "danger" | "default" {
