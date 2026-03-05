@@ -43,6 +43,7 @@ const allCoverageData = [
     { name: "Freeport-McMoRan",  ticker: "FCX",  slug: "fcx",         scores: [60, 75, 68], href: "/stocks/fcx",         category: "Hard Assets", bearTarget: "$22",       baseTarget: "$48",       bullTarget: "$80"       },
     { name: "Gold",              ticker: "XAU",  slug: "gold",        scores: [67, 50, 68], href: "/stocks/gold",        category: "Hard Assets", bearTarget: "$3,800/oz", baseTarget: "$5,500/oz", bullTarget: "$7,500+/oz"},
     { name: "Costco",            ticker: "COST", slug: "costco",      scores: [82, 70, 60], href: "/stocks/costco",      category: "Financials",  bearTarget: "$700",      baseTarget: "$1,050",    bullTarget: "$1,400"    },
+    { name: "Oracle",            ticker: "ORCL", slug: "orcl",        scores: [85, 80, 65], href: "/stocks/orcl",        category: "Big Tech",    bearTarget: "$120",      baseTarget: "$185",      bullTarget: "$280"      },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────
