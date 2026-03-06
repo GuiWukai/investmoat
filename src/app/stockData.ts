@@ -48,6 +48,7 @@ const allCoverageData = [
     { name: "Costco",            ticker: "COST", slug: "costco",      scores: [82, 70, 60], href: "/stocks/costco",      category: "Financials",  bearTarget: "$700",      baseTarget: "$1,050",    bullTarget: "$1,400"    },
     { name: "Oracle",            ticker: "ORCL", slug: "orcl",        scores: [85, 80, 65], href: "/stocks/orcl",        category: "Big Tech",    bearTarget: "$120",      baseTarget: "$185",      bullTarget: "$280"      },
     { name: "TransDigm",         ticker: "TDG",  slug: "tdg",         scores: [86, 75, 70], href: "/stocks/tdg",         category: "Industrials", bearTarget: "$850",      baseTarget: "$1,350",    bullTarget: "$1,900"    },
+    { name: "MSCI",              ticker: "MSCI", slug: "msci",        scores: [91, 75, 71], href: "/stocks/msci",        category: "Financials",  bearTarget: "$420",      baseTarget: "$620",      bullTarget: "$850"      },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────
