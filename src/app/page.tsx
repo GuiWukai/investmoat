@@ -29,7 +29,7 @@ function DynamicScore({
   children: (avg: number, loading: boolean) => ReactNode;
 }) {
   const [avg, setAvg] = useState(() =>
-    Math.round((moat + growth + fallbackVal) / 3)
+    getAverageScore([moat, growth, fallbackVal])
   );
   const [loading, setLoading] = useState(true);
   const onScoreRef = useRef(onScore);
@@ -39,7 +39,7 @@ function DynamicScore({
     const bear = parseScenarioPrice(bearTarget);
     const base = parseScenarioPrice(baseTarget);
     const bull = parseScenarioPrice(bullTarget);
-    const fallbackAvg = Math.round((moat + growth + fallbackVal) / 3);
+    const fallbackAvg = getAverageScore([moat, growth, fallbackVal]);
     if (!bear || !base || !bull) {
       onScoreRef.current?.(fallbackAvg);
       setLoading(false);
@@ -53,7 +53,7 @@ function DynamicScore({
         if (cancelled) return;
         if (d?.price != null) {
           const liveVal = computeValuationScore(d.price, bear, base, bull);
-          const newAvg = Math.round((moat + growth + liveVal) / 3);
+          const newAvg = getAverageScore([moat, growth, liveVal]);
           setAvg(newAvg);
           onScoreRef.current?.(newAvg);
         } else {
