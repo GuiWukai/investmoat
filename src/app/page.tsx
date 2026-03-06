@@ -102,6 +102,7 @@ const stockMeta: Record<string, { color: string; category: string; exclusionReas
   AVGO:  { color: "#cc0000", category: "Semiconductors" },
   COST:  { color: "#005DAA", category: "Consumer Retail", exclusionReason: "Composite score (71) falls below the portfolio threshold. Costco is a world-class business with an exceptional membership flywheel and 92.9% renewal rates, but a valuation score of 60 (48x+ forward P/E) reflects near-perfection already priced in, and a growth score of 70 is constrained by the pace of physical warehouse expansion. It ranks behind 20 higher-scoring compounders on a risk-adjusted basis." },
   ORCL:  { color: "#C74634", category: "Enterprise Software" },
+  TDG:   { color: "#1a5276", category: "Industrials" },
 };
 
 // ─── Dynamic portfolio / excluded — derived from composite scores ─────────────
