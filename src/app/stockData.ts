@@ -18,7 +18,7 @@ const MIN_AVG_SCORE  = 75;
 const allCoverageData = [
     { name: "Microsoft",         ticker: "MSFT", slug: "msft",        scores: [84, 88, 74], href: "/stocks/msft",        category: "Big Tech",    bearTarget: "$300",      baseTarget: "$450",      bullTarget: "$580"      },
     { name: "Mastercard",        ticker: "MA",   slug: "mastercard",  scores: [88, 88, 71], href: "/stocks/mastercard",  category: "Financials",  bearTarget: "$400",      baseTarget: "$555",      bullTarget: "$700"      },
-    { name: "ASML",              ticker: "ASML", slug: "asml",        scores: [94, 85, 67], href: "/stocks/asml",        category: "Big Tech",    bearTarget: "$900",      baseTarget: "$1,500",    bullTarget: "$2,200"    },
+    { name: "ASML",              ticker: "ASML", slug: "asml",        scores: [94, 80, 83], href: "/stocks/asml",        category: "Big Tech",    bearTarget: "$900",      baseTarget: "$1,500",    bullTarget: "$2,200"    },
     { name: "NVIDIA",            ticker: "NVDA", slug: "nvda",        scores: [85, 95, 65], href: "/stocks/nvda",        category: "Big Tech",    bearTarget: "$100",      baseTarget: "$175",      bullTarget: "$280"      },
     { name: "Amazon",            ticker: "AMZN", slug: "amazon",      scores: [80, 88, 76], href: "/stocks/amazon",      category: "Big Tech",    bearTarget: "$145",      baseTarget: "$225",      bullTarget: "$310"      },
     { name: "S&P Global",        ticker: "SPGI", slug: "spgi",        scores: [88, 78, 78], href: "/stocks/spgi",        category: "Financials",  bearTarget: "$400",      baseTarget: "$500",      bullTarget: "$610"      },
