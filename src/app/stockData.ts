@@ -16,6 +16,11 @@ const MIN_AVG_SCORE  = 75;
 
 // ─── All analyzed stocks (single source of truth) ─────────────────────────────
 const allCoverageData = [
+    { name: "MercadoLibre",      ticker: "MELI", slug: "meli",        scores: [78, 90, 78], href: "/stocks/meli",        category: "Other",       bearTarget: "$1,000",    baseTarget: "$2,200",    bullTarget: "$3,500"    },
+    { name: "Ferrari",           ticker: "RACE", slug: "race",        scores: [82, 67, 78], href: "/stocks/race",        category: "Other",       bearTarget: "$280",      baseTarget: "$480",      bullTarget: "$700"      },
+    { name: "Constellation Energy", ticker: "CEG", slug: "ceg",      scores: [84, 72, 71], href: "/stocks/ceg",         category: "Other",       bearTarget: "$200",      baseTarget: "$420",      bullTarget: "$650"      },
+    { name: "UnitedHealth",      ticker: "UNH",  slug: "unh",         scores: [83, 75, 78], href: "/stocks/unh",         category: "Healthcare",  bearTarget: "$200",      baseTarget: "$380",      bullTarget: "$600"      },
+    { name: "Moody's",           ticker: "MCO",  slug: "mco",         scores: [87, 80, 76], href: "/stocks/mco",         category: "Financials",  bearTarget: "$340",      baseTarget: "$560",      bullTarget: "$750"      },
     { name: "Microsoft",         ticker: "MSFT", slug: "msft",        scores: [84, 92, 75], href: "/stocks/msft",        category: "Big Tech",    bearTarget: "$300",      baseTarget: "$450",      bullTarget: "$580"      },
     { name: "Mastercard",        ticker: "MA",   slug: "mastercard",  scores: [88, 88, 71], href: "/stocks/mastercard",  category: "Financials",  bearTarget: "$400",      baseTarget: "$555",      bullTarget: "$700"      },
     { name: "ASML",              ticker: "ASML", slug: "asml",        scores: [94, 85, 67], href: "/stocks/asml",        category: "Big Tech",    bearTarget: "$900",      baseTarget: "$1,500",    bullTarget: "$2,200"    },
