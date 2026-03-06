@@ -33,6 +33,7 @@ import orcl from './orcl.json';
 import lly from './lly.json';
 import tdg from './tdg.json';
 import msci from './msci.json';
+import shop from './shop.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -68,6 +69,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   lly: lly as StockAnalysisData,
   tdg: tdg as StockAnalysisData,
   msci: msci as StockAnalysisData,
+  shop: shop as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
