@@ -1,0 +1,138 @@
+{
+  "slug": "msci",
+  "ticker": "MSCI",
+  "name": "MSCI Inc.",
+  "titleColor": "#c0392b",
+  "headerStats": [
+    { "label": "Ticker", "value": "MSCI" },
+    { "label": "Market Cap", "value": "$46B" },
+    { "label": "Price", "value": "$570" }
+  ],
+  "chips": [
+    { "label": "Financial Data | Indexes | Analytics", "color": "success" },
+    { "label": "Accumulate", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    { "title": "AUM Benchmarked", "value": "$15.5T", "label": "To MSCI Equity Indexes", "icon": "BarChart2", "color": "#c0392b" },
+    { "title": "Recurring Revenue", "value": "~95%", "label": "Subscription + AUM-Linked Fees", "icon": "RefreshCw", "color": "#922b21" },
+    { "title": "EBITDA Margin", "value": "~58%", "label": "Capital-Light Index Business", "icon": "TrendingUp", "color": "#76b041" }
+  ],
+  "moat": {
+    "score": 91,
+    "description": "MSCI owns the global standard for equity benchmarking — $15.5T in AUM is legally bound to its indexes through fund prospectuses and investment mandates that cannot be changed without regulatory filings and investor notification.",
+    "analysisTitle": "The Index Standard Monopoly",
+    "analysisSummary": "MSCI's moat is built on **Self-Reinforcing Network Effects and Regulatory Entrenchment**:",
+    "analysisPoints": [
+      {
+        "title": "The AUM Flywheel",
+        "text": "The more AUM benchmarked to MSCI indexes, the greater the market impact when MSCI rebalances — which forces active managers to track MSCI to manage benchmark risk, entrenching the standard further. This flywheel has been compounding for 50+ years and is structurally impossible to replicate."
+      },
+      {
+        "title": "Legal and Regulatory Lock-in",
+        "text": "Fund prospectuses, pension mandates, and institutional investment guidelines name MSCI benchmarks explicitly. Switching requires SEC filings, investor notifications, tracking error during transition, and operational overhaul across custodians, risk systems, and reporting — a multi-year, multi-million dollar exercise for any significant fund."
+      },
+      {
+        "title": "Data + Analytics Bundle",
+        "text": "The Barra risk factor models are built on decades of MSCI index data and are deeply embedded in portfolio management workflows at the world's largest asset managers. An MSCI index client has 3× the incentive to adopt MSCI analytics, ESG, and real assets data, creating a compounding cross-sell flywheel."
+      }
+    ]
+  },
+  "growth": {
+    "score": 75,
+    "description": "Passive investing growth, private assets expansion, and AI-enhanced analytics drive a durable 10–13% revenue CAGR. The AUM-linked fee structure means equity market appreciation generates revenue without incremental selling effort. The primary growth risk is regulatory ESG headwinds in the US and passive investing saturation.",
+    "additionalNote": {
+      "title": "Growth Drivers (3-Year Horizon)",
+      "points": [
+        "Global passive ETF AUM expected to grow 12–15% annually; MSCI's AUM-linked fees compound directly with market appreciation",
+        "Private assets analytics: MSCI's acquisitions of Burgiss and Real Capital Analytics position it as the data standard for private equity, real estate, and infrastructure — a $10B+ TAM expansion",
+        "ESG regulatory demand: EU SFDR, UK SDR, and SEC climate disclosure rules drive structural demand for MSCI ESG ratings regardless of US political environment",
+        "AI analytics layer: MSCI AI capabilities applied to factor models and portfolio construction tools command premium pricing"
+      ]
+    }
+  },
+  "valuation": {
+    "score": 71,
+    "description": "At ~$570, MSCI trades between bear ($420) and base ($620) — reasonable entry for one of the most durable financial data franchises in the world. The stock de-rated in 2022–2023 on ESG headwinds and rate sensitivity (high-multiple growth stock), providing a better entry than recent history.",
+    "valuationNote": {
+      "text": "MSCI trades at ~35–38× forward earnings — premium relative to market but justified by 95%+ recurring revenue, 58% EBITDA margins, and near-zero capital requirements. The AUM-linked fee structure means EPS grows even without new customer acquisition in rising equity markets.",
+      "fairValue": "$620"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$420",
+      "description": "Global equity bear market deflates AUM-linked revenues, ESG regulatory rollback collapses ESG segment, and passive investing growth stalls as active management resurges.",
+      "points": [
+        "30%+ global equity market decline reduces AUM-linked fee revenue by $300–400M",
+        "US regulatory hostility to ESG mandates spreads globally, reducing ESG segment revenues 40%+",
+        "Passive investing growth plateaus as AI-driven active management gains market share",
+        "Multiple compresses to 28–30× as AUM-linked revenue cyclicality is re-rated"
+      ]
+    },
+    "base": {
+      "priceTarget": "$620",
+      "description": "Steady 10–12% annual revenue growth driven by AUM expansion, private assets product ramp, and continued ESG institutional demand outside the US.",
+      "points": [
+        "Global ETF AUM grows 12–15% annually, driving AUM-linked revenue compounding",
+        "Private assets analytics segment reaches $400M+ run rate within 3 years",
+        "Analytics and ESG segments grow 8–10% annually on subscription renewal + upsell",
+        "Multiple holds at 37–40× forward earnings given superior recurring revenue quality"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$850",
+      "description": "MSCI becomes the data standard for private markets just as it did for public markets, while AI analytics commands significant premium pricing across all segments.",
+      "points": [
+        "Private assets segment reaches $800M–$1B run rate as Burgiss + Real Capital Analytics achieve the network effect flywheel in private markets",
+        "MSCI AI platform for portfolio construction and risk analytics commands 20–30% pricing premium vs. legacy tools",
+        "Emerging markets index AUM surges 30%+ as EM re-rates on China normalization and dollar weakness",
+        "Free cash flow per share exceeds $25, justifying $850+ at 35× FCF"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Barra risk analytics and MSCI index tools have complex interfaces that portfolio managers and risk teams invest significant time mastering. AI can simplify some queries but doesn't replace the factor model expertise required for portfolio construction."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "MSCI's Barra factor models are deeply configured per client — custom factor exposures, attribution templates, and risk reports embedded in daily workflows. Migrating requires rebuilding years of configuration and revalidating all risk reports against a new model."
+    },
+    "publicDataAccess": {
+      "status": "intact",
+      "note": "MSCI index constituent data (which stocks, at what weights) is proprietary and licensed. AI cannot scrape or replicate this data without violating MSCI's license terms — and the data itself is only valuable because MSCI controls the index standard."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Quantitative finance specialists, index methodology experts, and risk modeling professionals are genuinely scarce. AI augments their productivity but cannot replace the human governance layer required for index inclusion/exclusion decisions with multi-billion dollar market impact."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Indexes + Analytics + ESG + Real Assets form a deeply integrated data suite. An asset manager using MSCI indexes has strong workflow incentives to use MSCI Barra (compatible factor models), MSCI ESG (same company classifications), and MSCI Real Assets (unified reporting). AI makes the bundle more valuable, not less."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "MSCI owns 50+ years of index constituent history, Barra factor model data, and the definitive ESG and real assets databases. This data is used in fund prospectuses, regulatory filings, and academic research — the more it is cited, the more authoritative it becomes. AI makes this data more valuable by enabling new analytics products on top of it."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "Investment mandates, pension fund guidelines, and fund prospectuses name MSCI benchmarks explicitly. Switching requires SEC/FCA filings, investor notification periods, and operational overhaul. ESG segment increasingly tied to EU SFDR, UK SDR, and Basel III reporting requirements."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "The more AUM benchmarked to MSCI indexes, the greater the market impact of MSCI rebalances, which forces active managers to track MSCI to manage benchmark risk. This self-reinforcing flywheel has compounded for 50+ years and is structurally indistinguishable from a natural monopoly in equity benchmarking."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "MSCI is embedded in the daily operation of global investment managers — NAV calculations reference MSCI constituent data, risk reports run on Barra models, and ESG screening uses MSCI ratings. Not as transactionally embedded as payment networks, but operationally indispensable."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "MSCI indexes are THE system of record for global equity classification. When MSCI reclassifies a country or adjusts index weights, it triggers billions in institutional flows. Fund documents, regulatory filings, and investment mandates globally reference MSCI as the authoritative source — a standard that took 50 years to establish."
+    },
+    "aiResilienceScore": 92,
+    "verdict": "MSCI's moat is almost entirely AI-immune. The index standard network effect, legal lock-in via fund prospectuses, and 50-year data history cannot be replicated by AI — and AI analytics capabilities built on top of MSCI data actually strengthen the bundle moat. This is one of the most durable franchises in financial services."
+  }
+}

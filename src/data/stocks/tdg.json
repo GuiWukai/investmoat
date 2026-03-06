@@ -1,0 +1,138 @@
+{
+  "slug": "tdg",
+  "ticker": "TDG",
+  "name": "TransDigm Group Inc.",
+  "titleColor": "#1a5276",
+  "headerStats": [
+    { "label": "Ticker", "value": "TDG" },
+    { "label": "Market Cap", "value": "$67B" },
+    { "label": "Price", "value": "$1,250" }
+  ],
+  "chips": [
+    { "label": "Aerospace | Defense | MRO", "color": "primary" },
+    { "label": "Accumulate", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    { "title": "EBITDA Margin", "value": "57%", "label": "Best-in-Class Profitability", "icon": "TrendingUp", "color": "#1a5276" },
+    { "title": "Sole-Source Mix", "value": "~85%", "label": "Revenues from Sole-Source Parts", "icon": "Shield", "color": "#2e86c1" },
+    { "title": "Aftermarket Revenue", "value": "~55%", "label": "High-Margin MRO Revenue", "icon": "Wrench", "color": "#148f77" }
+  ],
+  "moat": {
+    "score": 86,
+    "description": "A regulatory certification monopoly — once a TransDigm part is on an aircraft, it is the only legal replacement for the life of that airframe.",
+    "analysisTitle": "The Sole-Source Monopoly",
+    "analysisSummary": "TransDigm's moat is built on **FAA Certification as an Unassailable Fortress**:",
+    "analysisPoints": [
+      {
+        "title": "Regulatory Lock-in at the Part Number Level",
+        "text": "FAA Parts Manufacturer Approval (PMA) and DOD MIL-SPEC certifications make TransDigm the only legal supplier for ~85% of its parts. Competitors must spend years and millions to certify an alternative — by which time the aircraft model is often approaching end-of-life."
+      },
+      {
+        "title": "The Aftermarket Flywheel",
+        "text": "TransDigm acquires sole-source aerospace businesses and raises prices 5–8% annually on replacement parts. Airlines accept because the parts are a trivially small cost versus grounding a $200M aircraft. This pricing power compounds for the 25–30 year life of each airframe."
+      },
+      {
+        "title": "Serial Acquisition Compounding",
+        "text": "Since 1993, TransDigm has acquired 90+ aerospace businesses, each selected for high sole-source aftermarket content. The acquisition playbook is repeatable and the pipeline of private aerospace suppliers remains deep."
+      }
+    ]
+  },
+  "growth": {
+    "score": 75,
+    "description": "Commercial air travel recovery, NATO defense spending increases, and a repeatable M&A engine drive durable 10–15% revenue CAGR. The primary risk is the company's intentional high-leverage balance sheet (~7× net debt/EBITDA), which limits flexibility in a sustained high-rate environment.",
+    "additionalNote": {
+      "title": "Growth Drivers (3-Year Horizon)",
+      "points": [
+        "Global passenger traffic expected to grow 4–5% annually, directly driving MRO demand for TransDigm-certified parts",
+        "NATO members committed to 2–3% GDP defense spending, benefiting the ~35% defense revenue segment",
+        "M&A pipeline: 3–5 acquisitions per year at 10–15× EBITDA contribute ~3–5% to annual revenue growth",
+        "Price escalation: 5–8% annual price increases on sole-source parts, essentially a contractual inflation hedge"
+      ]
+    }
+  },
+  "valuation": {
+    "score": 70,
+    "description": "At ~$1,250, TransDigm trades near the midpoint between bear ($850) and base ($1,350) — a reasonable entry for a business with near-monopoly economics. The high debt load (~$20B net debt) justifies a modest discount vs. comparable industrial compounders with cleaner balance sheets.",
+    "valuationNote": {
+      "text": "TransDigm intentionally operates with 6–8× net debt/EBITDA, returning capital via special dividends rather than buybacks. Adjust fair value down 10–15% for leverage risk in a sustained high-rate environment.",
+      "fairValue": "$1,350"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$850",
+      "description": "Rising rates sharply increase interest expense on $20B+ debt, air travel demand stalls, and the DoD implements significant budget cuts.",
+      "points": [
+        "Sustained high interest rates push annual interest expense above $1.5B, compressing free cash flow",
+        "Air travel demand shock (recession or pandemic-level event) reduces MRO volumes 20–30%",
+        "DoD sequestration or continuing resolutions cut defense procurement by 15%+",
+        "Multiple compresses to ~10× EBITDA as leverage risk is re-rated"
+      ]
+    },
+    "base": {
+      "priceTarget": "$1,350",
+      "description": "Steady commercial air traffic growth, continued 5–8% price escalation, and 2–3 annual acquisitions drive 12–15% EBITDA growth.",
+      "points": [
+        "Commercial segment grows 10–12% annually as global air traffic reaches and exceeds 2019 levels",
+        "Defense segment grows 8–10% annually on NATO spending commitments",
+        "Two to three acquisitions per year add $400–600M in acquired EBITDA over three years",
+        "Multiple holds at ~14–15× EBITDA as leverage gradually decreases toward 6× net debt/EBITDA"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$1,900",
+      "description": "Accelerated defense spending, a transformational $4–6B acquisition, and a commercial aviation super-cycle drive EPS well above consensus.",
+      "points": [
+        "NATO 3%+ GDP commitments accelerate defense budget growth, driving 15%+ growth in TransDigm's defense segment",
+        "A transformational acquisition ($4–6B) of a business with 90%+ sole-source aftermarket content",
+        "New narrow-body aircraft programs lock in TDG parts for the 2040s and beyond",
+        "Special dividend of $50–70/share funded by record free cash flow generation"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "MRO technicians learn aircraft-specific maintenance procedures tied to TransDigm part numbers. AI can assist with documentation but cannot bypass physical maintenance certification requirements."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "Not a software company — business logic lock-in does not meaningfully apply. Proprietary engineering specifications are protected, but this moat category is not a primary driver for an aerospace components manufacturer."
+    },
+    "publicDataAccess": {
+      "status": "weakened",
+      "note": "Not applicable in the traditional sense. Flight data is shared with regulators and does not constitute a competitive data moat. TransDigm's edge is in proprietary designs, not data access control."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Specialized aerospace engineers with FAA certification and MIL-SPEC expertise are genuinely scarce. AI can assist in design, but regulatory approval still requires certified human expertise and physical testing."
+    },
+    "bundling": {
+      "status": "weakened",
+      "note": "TransDigm does not sell product bundles. Airlines and militaries procure by individual part number. The acquisition platform creates breadth across aircraft types, but bundling pricing is not a mechanism in this market."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "60+ years of flight performance data, proprietary engineering designs, and certification test results underpin every TransDigm part. This data cannot be replicated without the actual fleet experience — completely immune to AI synthesis."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "FAA PMA and DOD MIL-SPEC certifications are the core moat. An alternative supplier must spend 5–10 years and tens of millions in certification costs. AI cannot bypass government airworthiness standards — the FAA will not certify AI-designed substitutes without decades of testing data."
+    },
+    "networkEffects": {
+      "status": "weakened",
+      "note": "No meaningful network effects. Each part is effectively a bilateral monopoly between TransDigm and the customer. Scale increases operational leverage and negotiating power in acquisitions, but there is no user-driven network flywheel."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "TransDigm is embedded in every airline's MRO supply chain and every military's maintenance schedule. Removing a sole-source part requires an engineering change order, FAA re-certification, and physical airframe modification — effectively impossible mid-fleet life."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "Aircraft Maintenance Manuals (AMM) list TransDigm part numbers as the certified component for each aircraft model. This system-of-record advantage persists for the 25–30 year life of the airframe, long after the original OEM specification."
+    },
+    "aiResilienceScore": 90,
+    "verdict": "TransDigm's moat is almost entirely AI-immune. Regulatory certification cannot be automated — the FAA and DOD will not approve AI-designed substitutes without decades of physical certification testing. The sole-source aftermarket model becomes more durable, not weaker, as aircraft fleets age and alternatives become even less economical to certify."
+  }
+}

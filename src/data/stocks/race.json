@@ -1,0 +1,153 @@
+{
+  "slug": "race",
+  "ticker": "RACE",
+  "name": "Ferrari N.V.",
+  "titleColor": "#D40000",
+  "headerStats": [
+    { "label": "Ticker", "value": "RACE" },
+    { "label": "Market Cap", "value": "~$67B" },
+    { "label": "Price", "value": "~$375" }
+  ],
+  "chips": [
+    { "label": "Luxury Goods | Automotive", "color": "primary" },
+    { "label": "Scarcity Moat", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "EBITDA Margin",
+      "value": "~39%",
+      "label": "FY2025 — targeting 40%+ by 2030",
+      "icon": "TrendingUp",
+      "color": "#D40000"
+    },
+    {
+      "title": "Operating Margin",
+      "value": "~28%",
+      "label": "FY2025 — closer to luxury house than automaker",
+      "icon": "BarChart2",
+      "color": "#D40000"
+    },
+    {
+      "title": "Return on Equity",
+      "value": "45%",
+      "label": "TTM — exceptional capital efficiency",
+      "icon": "Award",
+      "color": "#c0a060"
+    }
+  ],
+  "moat": {
+    "score": 82,
+    "description": "Ferrari's moat is artificial scarcity compounded by 75 years of brand heritage — it deliberately produces fewer cars than the market demands, creating permanent waiting lists that give it limitless pricing power and make its products investment assets rather than depreciating purchases.",
+    "analysisTitle": "The Scarcity Engine",
+    "analysisSummary": "Ferrari's competitive position is best understood as a **luxury brand masquerading as a car company** — its moat lies in brand scarcity, collector demand, and the F1 halo that competitors cannot buy:",
+    "analysisPoints": [
+      {
+        "title": "Deliberate Scarcity as Strategic Moat",
+        "text": "Ferrari caps production at levels well below demand — the Purosangue SUV is intentionally constrained to protect exclusivity, and the F80 hypercar (799 units at €3.6M each) sold out immediately. This scarcity is not a supply constraint but a strategic choice: Ferrari knows that the moment it can make all the cars buyers want, the brand becomes ordinary. This makes Ferrari structurally different from all other automakers and most luxury goods companies — demand perpetually exceeds supply, eliminating the need for discounting and creating sustained pricing power."
+      },
+      {
+        "title": "Pricing Power That Defies Economics",
+        "text": "Ferrari raised prices every year from 2019 through 2025 while its order book grew longer. Revenue climbed from €3.5B in 2019 to €8.3B in FY2025 — not through volume growth, but through price mix and personalization revenue (Tailor Made customization). The Classiche authenticity program for classic Ferraris creates a secondary market premium that reinforces new-car pricing power. When Ferraris resell above purchase price, buyers have zero incentive to negotiate — a dynamic that makes Ferrari's customer relationships more like luxury investment funds than car purchases."
+      },
+      {
+        "title": "F1 as an Irreplaceable Brand Moat",
+        "text": "Ferrari is the only Formula 1 team that has competed in every season since the championship's founding in 1950 — a 75-year marketing engine that reaches 500M+ fans globally and directly converts racing success to purchase intent. No competitor can buy this heritage. Ferrari's F1 involvement costs ~€600M per year but generates billions in brand value: each race is a global advertisement for exclusivity, performance, and Italian craftsmanship. The emotional connection between the racing team and road cars is a moat that cannot be acquired or replicated."
+      }
+    ]
+  },
+  "growth": {
+    "score": 67,
+    "description": "Ferrari grows revenue at 10-12% CAGR through price increases, personalization mix, and selective new model introductions — deliberately slow volume growth that preserves exclusivity, with long-term EBITDA compounding faster than revenue as operating leverage accrues.",
+    "additionalNote": {
+      "title": "Growth Drivers (3-Year Horizon)",
+      "points": [
+        "Personalization revenue (Tailor Made): customization now accounts for 20%+ of revenue on key models, growing faster than base vehicle revenue as wealthy buyers treat Ferrari as self-expression — this high-margin revenue stream grows without adding production volume",
+        "Electrification premium: Ferrari's first fully electric model (expected 2025-2026) targets the ultra-luxury EV segment at prices significantly above competitors, potentially opening new buyer demographics while pricing above production cost from launch",
+        "Purosangue expansion: the first Ferrari SUV is constrained to protect exclusivity but represents a durable new revenue stream — future variants could expand the TAM while maintaining per-unit economics above traditional sports cars",
+        "Asia-Pacific market deepening: China and Middle East remain underpenetrated relative to the brand's global awareness; as high-net-worth populations grow in these markets, waiting lists extend and regional mix improves revenue per car"
+      ]
+    }
+  },
+  "valuation": {
+    "score": 78,
+    "description": "At ~$375, Ferrari trades between the bear ($280) and base ($480) case — a reasonable entry point for a business with one of the most durable moats in global markets, trading at ~35x earnings for a luxury compounder with 40%+ EBITDA margins.",
+    "valuationNote": {
+      "text": "Ferrari's 35x P/E reflects its identity as a luxury goods business, not an automaker — Hermès trades at 55x and LVMH at 22x despite slower growth. Ferrari's combination of 10-12% earnings growth, 40%+ EBITDA margins, and unlimited pricing power justifies a premium multiple. The primary valuation risk is tariff impact (28.8% of sales in the US) and the electrification cost cycle, both of which are temporary headwinds rather than permanent impairments.",
+      "fairValue": "$480"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$280",
+      "description": "US tariffs add $50,000+ per car, reducing American demand materially while electrification investment compresses margins — the market de-rates Ferrari from a luxury premium to a transition discount.",
+      "points": [
+        "US tariffs of 25%+ are maintained for 2+ years, reducing US deliveries by 20-30% as the price premium pushes even wealthy buyers to alternatives; the US is 28.8% of net sales, making this a material revenue impact",
+        "Ferrari's first fully electric model requires more R&D and manufacturing capex than forecast, compressing FCF margins from 15% toward 10% during the electrification transition phase",
+        "A slowdown in global wealth creation reduces demand from aspirational first-time buyers, lengthening the wait to convert waiting lists to deliveries — the market re-rates Ferrari toward 25x P/E as growth visibility diminishes"
+      ]
+    },
+    "base": {
+      "priceTarget": "$480",
+      "description": "Ferrari executes its 2030 plan — EBITDA margins approach 40%, personalization revenue drives steady earnings growth, and the first EV launches successfully at ultra-luxury price points.",
+      "points": [
+        "Revenue reaches €9B by 2028 (5-year CAGR of ~8%) driven by price and mix improvements, with Tailor Made personalization growing to 30%+ of revenue on flagship models",
+        "The first Ferrari EV launches at €350,000+ base price, achieving sold-out status within weeks of announcement — reinforcing that electrification enhances rather than dilutes the Ferrari brand",
+        "EBITDA margins reach 40% by 2027-2028 as fixed cost leverage accrues; €3.5B share buyback program (through 2030) supports EPS growth of 12-15% annually even with modest revenue growth"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$700",
+      "description": "Ferrari's EV launch redefines ultra-luxury electric performance, the Purosangue becomes a multi-variant permanent segment, and the market re-rates Ferrari to Hermès-like multiples as earnings compound faster than expected.",
+      "points": [
+        "Ferrari EV achieves iconic status in the emerging ultra-luxury electric segment — attracting new buyer cohorts (tech billionaires, younger wealth) who previously aspired to the brand but preferred EVs, adding 500-1,000 incremental annual deliveries at 50%+ margins",
+        "Purosangue family expands to 2-3 variants over 5 years, each sold out on launch; SUV revenue grows to 25%+ of total, permanently expanding the addressable buyer universe without diluting exclusivity of the core sports car range",
+        "As earnings compound at 15-20% annually and the brand story strengthens, the market re-rates RACE toward 50x earnings — similar to Hermès — reflecting the recognition that Ferrari is a luxury goods company, not an automaker"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "N/A for a physical luxury goods company — there is no learned software interface; buyers invest in the Ferrari ownership experience (service centers, owner clubs, track days) but this is a lifestyle moat, not a learned interface in the software sense."
+    },
+    "businessLogic": {
+      "status": "destroyed",
+      "note": "N/A — Ferrari is a manufacturer of physical luxury goods; there is no proprietary software business logic that competitors could replicate or that creates operational switching costs."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — Ferrari does not control access to any unique public data source; this moat category does not apply to its business model."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Ferrari employs rare F1-derived engineering talent and master craftsmen from its Maranello facility — disciplines (aerodynamics, carbon fiber hand-laying, engine hand-assembly) that take decades to develop and cannot be quickly acquired; AI and robotics cannot replicate the craft-intensive production process that makes each Ferrari a unique object."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Ferrari ownership bundles the car with factory tours, the Tailor Made personalization program, Classiche authenticity certification for classic cars, Ferrari Challenge racing series access, and the Prancing Horse lifestyle ecosystem — this bundle creates recurring post-purchase revenue and switching costs that prevent owners from moving to competing brands."
+    },
+    "proprietaryData": {
+      "status": "weakened",
+      "note": "Ferrari maintains detailed buyer preference and personalization data that informs new model development, and F1 telemetry data that improves road car performance — but data is not the primary strategic moat, and this advantage is modest compared to data-driven businesses."
+    },
+    "regulatoryLockIn": {
+      "status": "destroyed",
+      "note": "Ferrari has no regulatory protection; it faces actual regulatory risk from emissions standards and tariff exposure — this moat category is not applicable and the regulatory environment is a headwind rather than a moat."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "The global Ferrari owner community amplifies brand desirability — each notable owner (F1 champions, tech founders, royalty) makes the brand more aspirational to the next generation of buyers; the F1 fanbase of 500M+ creates a cultural network that continuously refreshes purchase intent without Ferrari spending on traditional advertising."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Factory-authorized service centers, the Ferrari Approved pre-owned program, and Classiche authentication for classic Ferraris create recurring post-purchase revenue that keeps owners embedded in the Ferrari ecosystem; the Classiche program in particular creates financial incentives (authenticity premium) for owners to remain in the Ferrari service network."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — Ferrari is not a system of record for any business function; this moat category does not apply to a luxury goods manufacturer."
+    },
+    "aiResilienceScore": 38,
+    "verdict": "Ferrari's moat is built on physical scarcity, 75-year brand heritage, and collector psychology — dimensions that AI cannot replicate or erode, but also cannot enhance in the way it benefits data-driven businesses. The Ten Moats framework understates Ferrari's competitive position because its advantages (brand, scarcity, pricing power) are traditional luxury moats that predate the digital era and remain immune to AI disruption — AI is simply irrelevant to why a billionaire will wait two years and pay €500,000 for a Ferrari."
+  }
+}

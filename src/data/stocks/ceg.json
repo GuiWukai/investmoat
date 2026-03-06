@@ -1,0 +1,153 @@
+{
+  "slug": "ceg",
+  "ticker": "CEG",
+  "name": "Constellation Energy Corp.",
+  "titleColor": "#0072CE",
+  "headerStats": [
+    { "label": "Ticker", "value": "CEG" },
+    { "label": "Market Cap", "value": "~$116B" },
+    { "label": "Price", "value": "~$364" }
+  ],
+  "chips": [
+    { "label": "Energy | Nuclear Infrastructure", "color": "primary" },
+    { "label": "AI Power Backbone", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Nuclear Fleet Capacity",
+      "value": "22 GW",
+      "label": "23% of all US nuclear power generation",
+      "icon": "Zap",
+      "color": "#0072CE"
+    },
+    {
+      "title": "Fleet Capacity Factor",
+      "value": "96.8%",
+      "label": "Q3 2025 — ~4% above industry average",
+      "icon": "TrendingUp",
+      "color": "#00a650"
+    },
+    {
+      "title": "FY2024 Free Cash Flow",
+      "value": "$4B+",
+      "label": "From $24B revenue, expanding under AI contracts",
+      "icon": "DollarSign",
+      "color": "#0072CE"
+    }
+  ],
+  "moat": {
+    "score": 84,
+    "description": "Constellation Energy's moat is a physically unreplicable nuclear fleet — 22 GW of zero-carbon baseload power locked under 20-year contracts with Microsoft, Meta, and Alphabet, protected by NRC licensing barriers that make new entry decades away and billions of dollars expensive.",
+    "analysisTitle": "The Nuclear Infrastructure Lock-In",
+    "analysisSummary": "Constellation Energy sits at the intersection of **two irreversible megatrends** — AI data center power demand and the nuclear renaissance — with a moat built on physical assets that cannot be reproduced:",
+    "analysisPoints": [
+      {
+        "title": "Physically Unreplicable Nuclear Fleet",
+        "text": "Constellation's 21 nuclear power plants represent 22 GW of installed capacity — assets that took decades to permit, license, construct, and operate. The NRC licensing process alone takes 10-20 years for a new reactor; building one costs $10-20B. No competitor can replicate Constellation's fleet in any foreseeable timeframe, and the supply of 24/7 carbon-free nuclear power in the US is structurally fixed near current levels for decades. This physical scarcity is the foundation of all other competitive advantages."
+      },
+      {
+        "title": "20-Year Hyperscaler PPAs: Revenue Visibility at Scale",
+        "text": "Constellation has locked in 20-year Power Purchase Agreements with Microsoft (Three Mile Island, 835 MW), Meta (Clinton Clean Energy Center, 1.1 GW), and Alphabet (new reactor development, 500 MW) — providing extraordinary revenue visibility at premium prices. These contracts are priced above prevailing grid rates to reflect the value of 24/7 carbon-free power, which is the only energy source that meets hyperscaler sustainability mandates while delivering the reliability AI data centers require. No intermittent renewable can substitute; no fossil fuel competitor offers carbon-free baseload."
+      },
+      {
+        "title": "Inflation-Protected by Nuclear Production Tax Credits",
+        "text": "The Inflation Reduction Act's nuclear Production Tax Credit (PTC) provides a floor under Constellation's profitability: when power prices fall, the PTC value increases, effectively insuring the fleet against downside price cycles. This asymmetric protection — capped upside in high-price environments, protected downside via PTCs — gives Constellation the risk profile of a regulated utility combined with the upside of a competitive generator. The PTC adjusts annually for inflation, providing a permanently escalating revenue floor that no fossil fuel competitor possesses."
+      }
+    ]
+  },
+  "growth": {
+    "score": 72,
+    "description": "Constellation's revenue growth is modest (8% YoY) but EPS is compounding double-digits as old below-market contracts expire and are replaced by premium AI PPAs — the real growth story is margin expansion from contract repricing, not volume growth.",
+    "additionalNote": {
+      "title": "Growth Drivers (3-Year Horizon)",
+      "points": [
+        "Contract repricing cycle: legacy power contracts written when nuclear PTCs didn't exist and AI demand was unknown are rolling off and being replaced at 30-50% premium prices; this margin expansion drives double-digit EPS growth even with flat revenue",
+        "Three Mile Island restart (Crane Clean Energy Center): backed by $1B DOE loan and Microsoft's 20-year PPA, the restart of TMI Unit 1 (~835 MW) adds high-margin generation capacity already committed to premium contracts",
+        "Calpine acquisition: adding the largest US natural gas generator diversifies the portfolio, expands the data center PPA opportunity beyond nuclear, and creates cross-selling opportunities — projected to be meaningfully accretive to EPS and FCF within 2 years",
+        "Nuclear renaissance tailwind: US government policy is actively supporting nuclear extension and new builds; advanced Small Modular Reactor (SMR) technology could create a new growth phase for CEG's development expertise if regulatory timelines compress"
+      ]
+    }
+  },
+  "valuation": {
+    "score": 71,
+    "description": "At ~$364, CEG trades at a premium to traditional utilities (~42x P/E) but this reflects contract revenue visibility that no utility peer possesses — the 20-year hyperscaler PPAs and nuclear PTC floor justify a higher-than-average multiple for the sector.",
+    "valuationNote": {
+      "text": "Comparing CEG to traditional utilities on P/E or EV/EBITDA understates its quality — the appropriate peer group is contracted infrastructure (data center REITs, toll roads) where 20-year fixed-price contracts trade at 30-50x earnings. CEG's FCF yield of ~3.5% ($4B FCF / $116B market cap) is below historical averages for utilities, reflecting the AI contract premium. At the base case of $420, investors receive a 15% upside plus a growing dividend.",
+      "fairValue": "$420"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$200",
+      "description": "AI data center power demand peaks earlier than expected, nuclear regulatory headwinds emerge, and power prices fall sharply — stranding CEG's premium valuation without the revenue growth to support it.",
+      "points": [
+        "AI efficiency improvements (e.g., next-generation inference models requiring 80% less compute) cause hyperscalers to scale back power commitments; Microsoft and Meta negotiate contract modifications that reduce CEG's premium PPA pricing",
+        "Three Mile Island restart faces NRC regulatory delays, adding $500M+ in unexpected costs and pushing the online date from 2027 to 2030, impairing the economics of CEG's flagship growth project",
+        "Power prices collapse as record renewable capacity additions and demand response programs reduce grid scarcity; nuclear PTCs partially offset the decline but FCF falls to $2B, and the market de-rates CEG to 15-17x normalized earnings"
+      ]
+    },
+    "base": {
+      "priceTarget": "$420",
+      "description": "Three Mile Island restarts on schedule in 2027, existing AI PPAs deliver as contracted, and additional data center deals fill remaining capacity — EPS compounds at 12-15% annually through contract repricing.",
+      "points": [
+        "Crane Clean Energy Center (Three Mile Island) restarts in Q4 2027 under the 20-year Microsoft PPA, adding 835 MW of premium-priced carbon-free power and validating the nuclear restart playbook for future plant life extensions",
+        "2-3 additional 20-year data center PPAs are announced totaling 2-3 GW of additional committed capacity, from hyperscalers and/or AI infrastructure companies seeking carbon-free power for new data center clusters",
+        "EPS reaches $12-14 by FY2027 (from ~$8.50 in 2025) as legacy contracts reprice and PTC-protected margins expand; the stock re-rates to 30x forward earnings at $420"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$650",
+      "description": "Nuclear renaissance accelerates as AI power demand exceeds expectations — Constellation becomes the default power partner for all major hyperscalers, unlocking 10+ GW of new PPA commitments and positioning it as the infrastructure backbone of the AI economy.",
+      "points": [
+        "CEG announces 5-8 GW of new data center PPAs totaling 10+ 20-year contracts — becoming the default clean energy infrastructure provider for every major hyperscaler and AI infrastructure company, with demand exceeding available capacity",
+        "Congress passes nuclear SMR permitting reform reducing NRC approval timelines from 15 years to 5 years; CEG announces 3-5 SMR development partnerships, providing a next-generation growth platform that transforms it from a legacy fleet manager to a growth company",
+        "FCF reaches $8-10B annually by FY2030 as the full portfolio reprices to AI-premium levels; at 65x FCF (comparable to contracted infrastructure), the market cap reaches $520-650B, implying $650/share"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — Constellation Energy is a power generator; there is no user-facing interface that creates switching costs; this moat category does not apply to a utility business model."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Constellation's nuclear fleet management — fuel procurement, outage scheduling, NRC regulatory compliance, and power dispatch optimization — represents decades of proprietary operational expertise; replicating this knowledge base at a new nuclear facility would take 15-20 years of operating experience."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — Constellation Energy does not control access to any unique public data source; this moat category does not apply to its business model."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "NRC-licensed reactor operators, nuclear engineers, and health physicists are extraordinarily scarce — the NRC estimates a persistent 30%+ shortfall in qualified nuclear professionals; Constellation's ability to staff 21 operating nuclear plants with licensed operators is itself a competitive advantage that constrains the entire industry's growth capacity."
+    },
+    "bundling": {
+      "status": "weakened",
+      "note": "Constellation bundles power generation with carbon-free Renewable Energy Certificates (RECs) and long-term price hedging for corporate buyers — a real but limited bundling advantage that competitors offering renewable PPAs can partially replicate."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Decades of nuclear plant operational data, fuel cycle performance data, and grid dispatch optimization data create efficiency advantages (96.8% capacity factor, ~4% above industry average) that new operators could not achieve without a similar operational history."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "NRC licenses require multi-year approvals for each reactor and individual licensed operators for specific plant positions; once granted and staffed, these licenses create near-insurmountable barriers to entry and plant-specific operational rights that cannot be transferred or replicated — nuclear regulatory lock-in is arguably the strongest physical-world regulatory moat in US industry."
+    },
+    "networkEffects": {
+      "status": "weakened",
+      "note": "No meaningful network effects exist in power generation; the product (electrons) is a commodity when delivered to the grid; the value proposition is carbon-free attributes and 24/7 reliability, not network participation."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "20-year PPAs with Microsoft, Meta, and Alphabet embed Constellation as the power infrastructure partner for the next generation of AI data centers — contracts of this duration and strategic importance create deep bilateral dependencies; a hyperscaler replacing CEG would need to find alternative 24/7 carbon-free baseload power that effectively doesn't exist at scale today."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — Constellation Energy is not a system of record for any information function; this moat category does not apply to a power generation business."
+    },
+    "aiResilienceScore": 55,
+    "verdict": "Constellation Energy is a beneficiary of AI adoption through its data center PPA contracts, but AI cannot meaningfully strengthen or weaken its core nuclear infrastructure moat — the advantages (NRC licensing, physical plant ownership, operational expertise) are independent of AI. The primary risk is AI efficiency improvements reducing data center power demand growth; the primary upside is AI-driven demand accelerating faster than the grid can add capacity."
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "slug": "mco",
+  "ticker": "MCO",
+  "name": "Moody's Corporation",
+  "titleColor": "#23539A",
+  "headerStats": [
+    { "label": "Ticker", "value": "MCO" },
+    { "label": "Market Cap", "value": "~$83B" },
+    { "label": "Price", "value": "~$467" }
+  ],
+  "chips": [
+    { "label": "Financials | Credit Intelligence", "color": "primary" },
+    { "label": "Regulatory Duopoly", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "MIS Operating Margin",
+      "value": "65%",
+      "label": "Q3 2025 Adjusted — among the highest in financial services",
+      "icon": "TrendingUp",
+      "color": "#23539A"
+    },
+    {
+      "title": "FY2025 Revenue",
+      "value": "$7.72B",
+      "label": "+8.9% YoY, +14.2% 2-year CAGR",
+      "icon": "BarChart2",
+      "color": "#23539A"
+    },
+    {
+      "title": "5-Year Avg. Return on Equity",
+      "value": "63%",
+      "label": "Exceptional capital efficiency from regulatory moat",
+      "icon": "Award",
+      "color": "#23539A"
+    }
+  ],
+  "moat": {
+    "score": 87,
+    "description": "Moody's moat is one of the strongest in financial services — NRSRO regulatory designation mandated by the SEC means institutional investors are legally required to reference Moody's ratings, creating a government-sanctioned duopoly that has persisted for 100+ years and shows no sign of weakening.",
+    "analysisTitle": "The Government-Mandated Duopoly",
+    "analysisSummary": "Moody's competitive position is built on **regulatory mandation, 100-year trust compounding, and proprietary data assets** that make it effectively impervious to competitive attack:",
+    "analysisPoints": [
+      {
+        "title": "Regulatory Mandation: A Government-Protected Moat",
+        "text": "Moody's NRSRO (Nationally Recognized Statistical Rating Organization) designation means its ratings are referenced in hundreds of SEC regulations, Basel III bank capital rules, money market fund eligibility requirements, and pension fund investment mandates. Institutional investors — including insurance companies, pension funds, and banks — are often legally required to hold only securities rated by an NRSRO. This regulatory embedding means Moody's isn't competing for market share in the traditional sense; it is mandated into the financial system's legal architecture. No new entrant can replicate this positioning without a 10-20 year regulatory approval process."
+      },
+      {
+        "title": "100-Year Proprietary Data: The Unassailable Default Database",
+        "text": "Moody's default and recovery database spans 100+ years of credit performance data across every major economic cycle — the Great Depression, oil shocks, the 2008 financial crisis, COVID. This historical dataset is uniquely valuable because it is the only empirical record of how companies, sovereigns, and structured products perform across extreme stress scenarios. No competitor can replicate this dataset without waiting a century. Moody's Analytics' Bureau van Dijk division adds private company financial data on 50M+ entities globally — a proprietary dataset that commands premium subscription revenue from banks, insurers, and corporate risk teams."
+      },
+      {
+        "title": "The Duopoly Structure: Built to Last",
+        "text": "Moody's and S&P Global each control ~40% of global credit rating market share, with Fitch as a distant third at ~15%. The duopoly structure is self-perpetuating: most investment-grade bond offerings require at least two NRSRO ratings, but rarely more than three (adding cost and complexity). This creates exactly the right market equilibrium — competitive enough to satisfy regulators, concentrated enough to give incumbents pricing power. Every rated bond, CLO, and ABS explicitly references Moody's rating in its documentation, embedding MCO in trillions of dollars of outstanding financial contracts."
+      }
+    ]
+  },
+  "growth": {
+    "score": 80,
+    "description": "Moody's grows at 8-14% revenue CAGR through the debt issuance cycle, with Moody's Analytics providing 96% recurring subscription revenue that smooths the transactional volatility of the ratings business — EPS compounds at 15-20% as margins approach 50%.",
+    "additionalNote": {
+      "title": "Growth Drivers (3-Year Horizon)",
+      "points": [
+        "Debt issuance recovery: global debt issuance fell in 2022-2023 as interest rates rose sharply; as rates normalize, the refinancing wave of ~$12T in corporate debt maturing in 2024-2026 creates a multi-year MIS revenue tailwind that is already visible in the 14.2% 2-year revenue CAGR",
+        "Moody's Analytics recurring growth: MA now generates 96% recurring revenue with a 20%+ operating margin growing to 30%+ as scale increases; KYC (Know Your Customer) tools, ESG data, and private credit analytics are high-growth new verticals",
+        "Private credit expansion: as private credit markets grow from $1T to $3T+ in AUM, Moody's is positioning to rate private credit instruments that previously went unrated — a new market that didn't exist 5 years ago and grows the addressable TAM meaningfully",
+        "AI-enhanced analytics: Moody's is deploying AI across its analytics platform to enable customers to query credit data conversationally — these AI tools command premium pricing and expand the value proposition of MA subscriptions for risk teams"
+      ]
+    }
+  },
+  "valuation": {
+    "score": 76,
+    "description": "At ~$467, MCO trades at ~28x adjusted forward P/E — reasonable for a regulatory duopolist with 65% operating margins; the 12-month analyst consensus of $550 implies ~18% upside, and the debt refinancing wave tailwind is visible in current results.",
+    "valuationNote": {
+      "text": "Moody's is a cash-compounding machine: $2.5B annual FCF on a $83B market cap implies a 3% FCF yield — modest, but appropriate for a business with perpetual pricing power and a government-protected revenue stream. The $4B share buyback authorization (through open-ended timeline) reduces share count by ~2-3% annually. At the base case of $560, investors receive a 20% return plus dividends from a business that Berkshire Hathaway identifies as a permanent holding.",
+      "fairValue": "$560"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$340",
+      "description": "A severe recession triggers a corporate debt issuance freeze, MIS revenue falls 30-40% as in 2008-2009, and the market de-rates MCO to historical trough multiples despite Moody's Analytics providing a revenue floor.",
+      "points": [
+        "Global recession causes corporate high-yield issuance to collapse by 70%+ (as in 2008) and investment-grade issuance to fall 40%; MIS revenue drops from $5B toward $3B, compressing total revenue to $6B and EBIT margins to 30%",
+        "Rising defaults among private credit borrowers Moody's recently began rating create rating methodology controversy; regulators initiate a review of Moody's structured finance rating practices, creating headline risk and delaying new mandates",
+        "MCO de-rates to 18x trough earnings on $12 EPS at $340 — the historical bear-market multiple during the 2008-2009 trough"
+      ]
+    },
+    "base": {
+      "priceTarget": "$560",
+      "description": "Debt issuance normalization continues as the $12T+ corporate refinancing wave rolls through 2024-2026; Moody's Analytics subscription growth accelerates to 15%, and EPS reaches $17+ by FY2026.",
+      "points": [
+        "MIS revenue grows 10-12% annually as the refinancing cycle runs hot through 2026 — leveraged buyout activity recovers, investment-grade issuance accelerates, and structured finance (CLOs, CMBS) rebounds from post-2022 troughs",
+        "Moody's Analytics reaches $3.5B in revenue at 30%+ operating margins as KYC, ESG, and private credit analytics tools expand the subscriber base and drive net revenue retention above 110%",
+        "EPS reaches $16.50-17.50 by FY2026, and the market sustains a 32x multiple given the regulatory moat and FCF compounding quality — implying $530-560"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$750",
+      "description": "Private credit market growth creates a new multi-billion TAM for Moody's ratings, AI-powered analytics command premium pricing, and the market re-rates MCO to a technology company multiple reflecting its recurring revenue quality.",
+      "points": [
+        "Private credit market grows to $3T+ in AUM and Moody's captures 50%+ of the private credit rating market — adding $1.5-2B in annual MIS revenue at 80%+ margins from a market that barely existed in 2020",
+        "Moody's AI-powered credit intelligence platform (conversational queries on the full credit database) achieves $500M+ in incremental subscription revenue within 3 years, growing at 40%+ annually as banks and insurers pay premium for AI-native risk tools",
+        "The market recognizes MCO as a financial data/technology company rather than a ratings agency — re-rating from 32x to 42x earnings; at $18 EPS, this implies $756"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "strong",
+      "note": "Institutional investors, bond issuers, and regulators have built decades of workflows around Moody's rating nomenclature (Aaa, Aa1, etc.), research report formats, and analytical methodologies; ISDA master agreements, fund investment mandates, and regulatory reporting frameworks reference Moody's ratings explicitly — changing to an alternative system would require amending thousands of legal documents and retraining every fixed-income professional globally."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "Moody's credit rating methodologies — through-the-cycle analysis, sector-specific rating criteria, recovery rate frameworks, and stress testing models — represent 100+ years of refinement; this body of analytical logic is embedded in global credit market infrastructure and serves as the standard against which all credit risk is measured."
+    },
+    "publicDataAccess": {
+      "status": "strong",
+      "note": "Moody's Analytics aggregates public financial filings, court records, property data, and regulatory disclosures into proprietary datasets; Bureau van Dijk's private company database (50M+ private companies) and Orbis platform represent a unique public-data aggregation that has been assembled and curated over 20+ years and cannot be quickly replicated."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Credit analysts trained in Moody's methodology are genuinely scarce — the company develops some of the best fixed-income analysts in the industry; however, AI is beginning to partially automate routine credit analysis, slightly moderating this moat over the next decade."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Credit ratings + Moody's Analytics research + ESG data + private company data + risk management software form a deeply integrated bundle — institutional users who rely on multiple Moody's products face compounding switching costs, as replacing the bundle requires sourcing each component from different vendors offering inferior standalone products."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "MCO's proprietary default and recovery database spanning 100+ years of credit performance data across every major economic cycle is unique and non-replicable — this historical track record is what gives Moody's ratings their authority, and it compounds with each new credit cycle, becoming more valuable over time."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "NRSRO designation mandated by the SEC, Basel III capital adequacy requirements referencing Moody's ratings, pension fund and insurance company investment mandates requiring NRSRO ratings, and money market fund eligibility rules embed Moody's in the legal and regulatory architecture of the global financial system — this is the strongest regulatory moat in financial services outside of central banks."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "Issuers must obtain a Moody's rating to access institutional capital markets; institutional investors trust Moody's because issuers use it; regulators require it because investors trust it — a self-reinforcing trust loop between issuers, investors, and regulators that has operated for 100+ years and cannot be disrupted by a new entrant without the credibility earned over those same 100 years."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Moody's is embedded in the documentation of every rated bond, CLO, ABS, and structured product globally — covenant language, trust indentures, and ISDA agreements reference Moody's ratings explicitly; replacing Moody's would require amending or retiring trillions of dollars in outstanding financial contracts, making MCO removal from the financial system effectively impossible."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "Moody's is the global system of record for corporate and sovereign creditworthiness — its ratings are the authoritative reference in investment mandates, regulatory capital calculations, counterparty risk assessments, and portfolio reporting across the entire global financial industry."
+    },
+    "aiResilienceScore": 98,
+    "verdict": "Moody's is among the most AI-resilient businesses in existence — its regulatory mandation, 100-year proprietary data, and legally embedded ratings are structurally immune to AI disruption, while AI actively strengthens its analytics division. The primary AI opportunity is conversational credit intelligence that commands premium subscription pricing; the risk of AI commoditizing credit analysis is minimal because the credibility of a Moody's rating derives from regulatory recognition and historical track record, not the underlying analytical process."
+  }
+}

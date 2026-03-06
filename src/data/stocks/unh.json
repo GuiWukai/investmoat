@@ -1,0 +1,154 @@
+{
+  "slug": "unh",
+  "ticker": "UNH",
+  "name": "UnitedHealth Group Inc.",
+  "titleColor": "#003087",
+  "headerStats": [
+    { "label": "Ticker", "value": "UNH" },
+    { "label": "Market Cap", "value": "~$270B" },
+    { "label": "Price", "value": "~$288" }
+  ],
+  "chips": [
+    { "label": "Healthcare | Managed Care + Data", "color": "primary" },
+    { "label": "Vertical Integration", "color": "success" },
+    { "label": "Near-Term Risk", "color": "warning" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "FY2025 Revenue",
+      "value": "~$446B",
+      "label": "Largest private health insurer in the US",
+      "icon": "Building2",
+      "color": "#003087"
+    },
+    {
+      "title": "Forward P/E",
+      "value": "~10x",
+      "label": "vs. 5-year average of 17x — historically discounted",
+      "icon": "TrendingDown",
+      "color": "#d97706"
+    },
+    {
+      "title": "Operating Cash Flow",
+      "value": "$24.2B",
+      "label": "FY2024 — 1.6x net income conversion",
+      "icon": "DollarSign",
+      "color": "#003087"
+    }
+  ],
+  "moat": {
+    "score": 83,
+    "description": "UnitedHealth's moat is vertical integration across the entire healthcare value chain — as the largest insurer, pharmacy benefit manager, and healthcare data analytics provider simultaneously, it controls the clinical, financial, and administrative infrastructure that 140M+ Americans depend on.",
+    "analysisTitle": "The Healthcare OS",
+    "analysisSummary": "UnitedHealth Group has built a **vertically integrated healthcare system** that spans insurance, pharmacy, clinical services, and data analytics — creating switching costs at every layer of the healthcare ecosystem:",
+    "analysisPoints": [
+      {
+        "title": "Optum: The Healthcare Data Monopoly",
+        "text": "Optum processes roughly 1 in 6 US medical claims, giving it a uniquely comprehensive dataset of clinical and financial healthcare data across 140M+ members. Optum Analytics uses this proprietary data to power risk adjustment, care management, and population health programs that reduce costs for employers and governments — services competitors cannot offer without equivalent data scale. Optum Rx ($154B FY2025 revenue) is the third-largest pharmacy benefit manager in the US, giving UNH vertical integration from insurance premium collection to prescription dispensing that creates structural cost advantages."
+      },
+      {
+        "title": "Network Lock-In: 1.3 Million Provider Relationships",
+        "text": "UnitedHealthcare's provider network of 1.3M physicians and 6,500 hospitals creates network effects in both directions: employers choose UNH because their employees can see any doctor; providers accept UNH because they cannot lose access to UNH's 50M+ commercial members. This bilateral lock-in is decades in the making and would take a new entrant 20+ years to replicate — a smaller insurer simply cannot offer comparable network breadth, making UNH's membership proposition structurally superior."
+      },
+      {
+        "title": "Regulatory and Government Program Embedding",
+        "text": "UNH administers Medicare Advantage and Medicaid managed care programs for CMS — government contracts that represent multi-year regulatory commitments with built-in renewal mechanisms and state-by-state licensing requirements that make exit prohibitively complex. The embedded compliance infrastructure (HIPAA, HEDIS, CMS actuarial certification) represents hundreds of millions in fixed investment that new entrants cannot short-circuit. As the largest Medicare Advantage carrier, UNH's government program expertise is its most defensible long-term moat."
+      }
+    ]
+  },
+  "growth": {
+    "score": 75,
+    "description": "Long-term growth is driven by aging demographics (70M baby boomers entering Medicare age over the next decade), Optum expansion, and international healthcare services — but 2025-2026 represents a difficult transition as Medicare Advantage repricing and Optum Health restructuring compress near-term margins.",
+    "additionalNote": {
+      "title": "Growth Drivers (3-Year Horizon)",
+      "points": [
+        "Medicare Advantage repricing: UNH repriced its 2026 MA plans at a conservative 10% medical cost trend (vs. prior years' 5%), trading 1M members for restored profitability; once normalized, the demographic growth of seniors entering Medicare creates 5-8% annual enrollment tailwinds indefinitely",
+        "Optum recovery: Optum Health operated at a loss in 2025 after being hit simultaneously by V28 coding changes and value-based care cost pressures; management is restructuring the business by dropping unprofitable contracts — the reset creates a cleaner growth trajectory from 2026-2027",
+        "Optum Analytics and data products: as the largest health IT data company in the US, Optum's analytics, AI-powered care management, and provider enablement platforms represent high-margin recurring revenue that grows independent of insurance enrollment",
+        "International: UNH operates in 150+ countries through Optum Global; healthcare systems outside the US represent a massive underpenetrated market for managed care technology and data analytics services"
+      ]
+    }
+  },
+  "valuation": {
+    "score": 78,
+    "description": "At ~$288 — a 35% decline from 2025 highs — UNH trades at ~10x forward P/E vs. its 5-year historical average of 17x; the discount reflects execution risk and the DOJ investigation, not permanent moat impairment.",
+    "valuationNote": {
+      "text": "UNH at 10x forward P/E is the cheapest it has traded since the financial crisis. Warren Buffett's $1.6B stake announcement in August 2025 reflects the view that the moat remains structurally intact and the current discount is cyclical. The base case of $380 implies a re-rating to 13x forward P/E — still below the 5-year average — leaving significant upside without requiring a return to peak multiples. The primary risk is the DOJ investigation; if resolved favorably, the stock re-rates quickly.",
+      "fairValue": "$380"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$200",
+      "description": "The DOJ investigation results in material financial penalties, Medicare Advantage regulatory changes permanently impair the business model, and Optum Health restructuring fails to restore profitability.",
+      "points": [
+        "DOJ investigation into Medicare billing practices results in $5-10B in fines and consent decree requirements that restrict UNH's Medicare Advantage pricing and coding practices, permanently impairing the MCR structure of the most profitable business segment",
+        "Congress passes Medicare Advantage reform legislation reducing benchmarks by an additional 5-7%, causing UNH to exit 3-5M more members and shrink its MA book to below-scale economics in key markets",
+        "Optum Health's value-based care model proves structurally unprofitable at scale — the company writes down goodwill from its clinical acquisitions and exits the at-risk care delivery model, shrinking Optum's revenue base by 30%"
+      ]
+    },
+    "base": {
+      "priceTarget": "$380",
+      "description": "Medical cost ratio normalizes toward historical levels by mid-2026, Optum Health restructuring restores profitability, and the DOJ investigation concludes without existential penalties — UNH re-rates from distress to fair value.",
+      "points": [
+        "2026 Medicare Advantage repricing at conservative 10% medical cost trend succeeds: UNH trades 1M members for a Medical Care Ratio returning to the 84-85% range by Q3 2026, signaling margin normalization to the market",
+        "Optum Health returns to profitability in H2 2026 as unprofitable value-based contracts are exited and renegotiated; Optum Rx and Optum Analytics continue growing at 12-15% annually, restoring overall Optum operating earnings above $14B",
+        "DOJ investigation concludes with a civil settlement below $2B — material but not existential — and UNH stock re-rates from ~10x to 13-14x forward P/E at $380"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$600",
+      "description": "UNH fully normalizes operations by 2027, Optum becomes the dominant US healthcare data and AI platform, and the stock returns to historical premium multiples as the demographic Medicare tailwind is re-priced.",
+      "points": [
+        "Full MCR normalization to 82-83% by 2027, driving EPS recovery to $28-30, combined with a re-rating from 10x to 17x historical average P/E, implies $475-510 from earnings recovery alone — with Optum AI products providing upside",
+        "Optum Analytics launches a Medicare Advantage AI underwriting platform that achieves 85%+ MCR on new contracts vs. the industry's 89%, enabling UNH to accelerate MA membership growth profitably — reversing the 2025 member losses",
+        "International Optum wins major national healthcare system contracts in 3-5 countries (UK NHS, Middle East sovereign health systems), opening a healthcare-as-a-service revenue stream that the market values at 20-25x earnings"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "strong",
+      "note": "Healthcare professionals, hospital administrators, and HR benefits managers invest years learning UNH's provider portals, claim submission systems, and Optum care management workflows; replacing UNH requires retraining thousands of users across every provider in the network on new systems — switching costs are measured in years and hundreds of millions in IT reconfiguration."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "UNH's care management algorithms, risk adjustment models, actuarial systems, and Optum Health's clinical decision-support tools represent decades of proprietary healthcare data science — these systems are deeply specific to UNH's member populations, provider contracts, and government program requirements; no competitor has equivalent model sophistication without equivalent data scale."
+    },
+    "publicDataAccess": {
+      "status": "weakened",
+      "note": "Optum's health data platform aggregates some publicly available health data (CMS claims, NIH research) into proprietary analytical datasets, but public data access is not the primary moat — the irreplaceable advantage is UNH's private claims data spanning 140M+ members."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Actuaries, healthcare data scientists, and clinical informaticists are genuinely scarce; UNH's Optum division is one of the largest employers of health IT talent globally, and the specialized knowledge required to build healthcare AI models on HIPAA-compliant data creates real talent barriers to competition."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "UnitedHealthcare insurance + Optum Rx pharmacy + Optum Health clinical services + Optum Analytics data form a vertically integrated bundle that employers and governments cannot easily unbundle — replacing all components simultaneously would require contracting separately with 4-5 different vendors, each offering inferior standalone products to UNH's integrated version."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "UNH processes ~1 in 6 US medical claims — a 50+ year accumulation of claims data covering 140M+ members that powers Optum's risk models, care management programs, and population health analytics; this dataset is the most comprehensive private health claims database in existence and cannot be replicated by any new entrant regardless of capital invested."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "CMS government contracts for Medicare Advantage and Medicaid managed care create multi-year regulatory relationships with built-in renewal mechanisms; state licensure requirements, HIPAA compliance infrastructure, NCQA accreditation, and HEDIS performance standards embed UNH in the regulatory architecture of US healthcare at every level."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "1.3M provider relationships create bilateral network effects: employers choose UNH for broad network access, which forces providers to accept UNH contracts to access 50M+ commercially insured members; providers in the network make UNH more valuable to new employers, which expands membership, which makes the network more valuable to providers — a self-reinforcing dynamic that has compounded for 40+ years."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Pharmacy benefit management, care coordination, utilization management, and claims processing are embedded in the daily financial and clinical operations of employers, hospitals, and government agencies — replacing UNH requires simultaneously rebuilding provider contracting, pharmacy networks, care management programs, and claims infrastructure."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "UNH's claims processing systems are the authoritative system of record for member health history and financial transactions; Optum's EMR integration and care management platforms are the system of record for clinical decisions in thousands of provider practices; Optum Rx is the system of record for pharmaceutical benefits for tens of millions of members."
+    },
+    "aiResilienceScore": 93,
+    "verdict": "UnitedHealth is one of the most AI-resilient businesses in existence — its proprietary claims data, regulatory lock-in, and provider network relationships are all strengthened by AI, not threatened by it. Optum is already deploying AI for prior authorization, care gap identification, and fraud detection — AI makes the business better, and the data advantage that enables superior AI models is itself a deepening moat that no new entrant can bridge."
+  }
+}
