@@ -16,7 +16,7 @@ const MIN_AVG_SCORE  = 75;
 
 // ─── All analyzed stocks (single source of truth) ─────────────────────────────
 const allCoverageData = [
-    { name: "Microsoft",         ticker: "MSFT", slug: "msft",        scores: [84, 92, 75], href: "/stocks/msft",        category: "Big Tech",    bearTarget: "$300",      baseTarget: "$450",      bullTarget: "$580"      },
+    { name: "Microsoft",         ticker: "MSFT", slug: "msft",        scores: [84, 88, 74], href: "/stocks/msft",        category: "Big Tech",    bearTarget: "$300",      baseTarget: "$450",      bullTarget: "$580"      },
     { name: "Mastercard",        ticker: "MA",   slug: "mastercard",  scores: [88, 88, 71], href: "/stocks/mastercard",  category: "Financials",  bearTarget: "$400",      baseTarget: "$555",      bullTarget: "$700"      },
     { name: "ASML",              ticker: "ASML", slug: "asml",        scores: [94, 85, 67], href: "/stocks/asml",        category: "Big Tech",    bearTarget: "$900",      baseTarget: "$1,500",    bullTarget: "$2,200"    },
     { name: "NVIDIA",            ticker: "NVDA", slug: "nvda",        scores: [85, 95, 65], href: "/stocks/nvda",        category: "Big Tech",    bearTarget: "$100",      baseTarget: "$175",      bullTarget: "$280"      },
