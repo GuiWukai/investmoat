@@ -30,6 +30,7 @@ import micron from './micron.json';
 import isrg from './isrg.json';
 import costco from './costco.json';
 import orcl from './orcl.json';
+import lly from './lly.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -62,6 +63,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   isrg: isrg as StockAnalysisData,
   costco: costco as StockAnalysisData,
   orcl: orcl as StockAnalysisData,
+  lly: lly as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
