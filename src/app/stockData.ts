@@ -8,8 +8,10 @@
 //
 // To add a new stock: add it to allCoverageData. Portfolio/excluded are derived automatically.
 
-export const getAverageScore = (scores: number[]) =>
-    Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
+// Weighted composite: Moat 40% · Growth 35% · Valuation 25%
+// scores = [moatScore, growthScore, valuationScore]
+export const getAverageScore = ([moat, growth, valuation]: number[]) =>
+    Math.round(moat * 0.40 + growth * 0.35 + valuation * 0.25);
 
 const MAX_PORTFOLIO  = 20;
 const MIN_AVG_SCORE  = 75;
