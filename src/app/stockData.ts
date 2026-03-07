@@ -58,7 +58,7 @@ const allCoverageData = [
     { name: "Oracle",            ticker: "ORCL", slug: "orcl",        scores: [85, 80, 65], href: "/stocks/orcl",        category: "Big Tech",    bearTarget: "$120",      baseTarget: "$185",      bullTarget: "$280"      },
     { name: "TransDigm",         ticker: "TDG",  slug: "tdg",         scores: [86, 75, 70], href: "/stocks/tdg",         category: "Industrials", bearTarget: "$850",      baseTarget: "$1,350",    bullTarget: "$1,900"    },
     { name: "MSCI",              ticker: "MSCI", slug: "msci",        scores: [91, 75, 71], href: "/stocks/msci",        category: "Financials",  bearTarget: "$420",      baseTarget: "$620",      bullTarget: "$850"      },
-    { name: "SoFi Technologies", ticker: "SOFI", slug: "sofi",        scores: [68, 82, 77], href: "/stocks/sofi",        category: "Financials",  bearTarget: "$9",        baseTarget: "$26",       bullTarget: "$45"       },
+    { name: "SoFi Technologies", ticker: "SOFI", slug: "sofi",        scores: [68, 82, 79], href: "/stocks/sofi",        category: "Financials",  bearTarget: "$13",       baseTarget: "$26",       bullTarget: "$45"       },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────

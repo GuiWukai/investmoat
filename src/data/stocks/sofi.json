@@ -4,8 +4,8 @@
   "name": "SoFi Technologies",
   "headerStats": [
     { "label": "Ticker", "value": "SOFI" },
-    { "label": "Market Cap", "value": "~$18B" },
-    { "label": "Price", "value": "~$18" }
+    { "label": "Market Cap", "value": "~$24B" },
+    { "label": "Price", "value": "~$19" }
   ],
   "chips": [
     { "label": "FinTech | Digital Banking", "color": "primary" },
@@ -33,17 +33,17 @@
     "description": "25-35% revenue CAGR with fee-based revenue (now 37% of total) growing at 74% YoY in 2024, diversifying away from interest-rate-sensitive lending toward high-margin platform economics."
   },
   "valuation": {
-    "score": 77,
-    "description": "At ~$18 — 31% below the base case of $26 — SoFi offers a meaningful margin of safety on a business compounding revenue at 25-35% with expanding EBITDA margins; the discount reflects credit cycle and regulatory uncertainty that is already well-understood by the market."
+    "score": 79,
+    "description": "At ~$19 — 27% below the base case of $26 — SoFi offers a meaningful margin of safety on a business compounding revenue at 25-35% with expanding EBITDA margins; CEO Noto bought 56,000 shares in March 2026, signalling insider conviction amid the 40%+ drawdown from the $32.73 ATH."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$9",
-      "description": "Credit cycle turns sharply: personal loan delinquencies spike, NIM compresses, the Fed holds rates high, and growth-stock multiple compression rerates SoFi to distressed fintech valuations.",
+      "priceTarget": "$13",
+      "description": "Credit cycle turns: personal loan charge-offs spike above 4%, NIM compresses, and growth-stock multiple compression rerates SoFi back toward distressed fintech valuations as macro headwinds compound.",
       "points": [
-        "Personal loan net charge-off rates climb above 4.5% as consumer credit deteriorates in a mild recession, forcing SoFi to slow originations and take meaningful loan loss provisions that wipe out adjusted EBITDA gains",
-        "Interest rates remain elevated through 2026, compressing NIM on the deposit-funded lending book and making SoFi's rates uncompetitive vs. money-market funds for deposits; member growth decelerates below 15% YoY",
-        "Regulatory tightening on bank holding companies adds compliance costs and constrains SoFi's flexibility to run its Technology Platform as an unregulated B2B business; Galileo client churn accelerates as banks build proprietary alternatives"
+        "Personal loan net charge-off rates climb above 4% (from current 2.83%) as consumer credit deteriorates; SoFi's 69% personal loan book concentration forces provision increases that wipe out adjusted EBITDA gains and reignite GAAP loss fears",
+        "Interest rates remain elevated through 2026, compressing NIM below 5% on the $26B deposit book while making SoFi's rates uncompetitive vs. money-market funds; member growth decelerates below 15% YoY as new member acquisition economics deteriorate",
+        "Galileo client churn accelerates as hyperscalers (Google, AWS) launch competing payment-processing APIs at cost; Technology Platform revenue growth stalls below 5%, removing the key capital-light growth narrative that justified the premium valuation"
       ]
     },
     "base": {
