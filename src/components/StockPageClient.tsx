@@ -155,7 +155,7 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
   const stockEntry = stockData.find(s => s.ticker === data.ticker);
   const [liveValScore, setLiveValScore] = useState<number>(data.valuation.score);
   const [valLoading, setValLoading] = useState(true);
-  const dynamicOverallScore = getAverageScore([data.moat.score, data.growth.score, liveValScore]);
+  const dynamicOverallScore = Math.round(getAverageScore([data.moat.score, data.growth.score, liveValScore]));
 
   const dynamicRecommendation: 'Strong Buy' | 'Accumulate' | 'Hold' | 'Speculative Buy' =
     dynamicOverallScore >= 85 ? 'Strong Buy' :

@@ -10,8 +10,9 @@
 
 // Weighted composite: Moat 40% · Growth 35% · Valuation 25%
 // scores = [moatScore, growthScore, valuationScore]
+// Returns a float for precise sorting/comparison; callers round for display.
 export const getAverageScore = ([moat, growth, valuation]: number[]) =>
-    Math.round(moat * 0.40 + growth * 0.35 + valuation * 0.25);
+    moat * 0.40 + growth * 0.35 + valuation * 0.25;
 
 const MAX_PORTFOLIO  = 20;
 const MIN_AVG_SCORE  = 75;

@@ -29,7 +29,7 @@ function DynamicScore({
   children: (avg: number, loading: boolean) => ReactNode;
 }) {
   const [avg, setAvg] = useState(() =>
-    getAverageScore([moat, growth, fallbackVal])
+    Math.round(getAverageScore([moat, growth, fallbackVal]))
   );
   const [loading, setLoading] = useState(true);
   const onScoreRef = useRef(onScore);
@@ -39,7 +39,7 @@ function DynamicScore({
     const bear = parseScenarioPrice(bearTarget);
     const base = parseScenarioPrice(baseTarget);
     const bull = parseScenarioPrice(bullTarget);
-    const fallbackAvg = getAverageScore([moat, growth, fallbackVal]);
+    const fallbackAvg = Math.round(getAverageScore([moat, growth, fallbackVal]));
     if (!bear || !base || !bull) {
       onScoreRef.current?.(fallbackAvg);
       setLoading(false);
@@ -53,7 +53,7 @@ function DynamicScore({
         if (cancelled) return;
         if (d?.price != null) {
           const liveVal = computeValuationScore(d.price, bear, base, bull);
-          const newAvg = getAverageScore([moat, growth, liveVal]);
+          const newAvg = Math.round(getAverageScore([moat, growth, liveVal]));
           setAvg(newAvg);
           onScoreRef.current?.(newAvg);
         } else {
@@ -144,7 +144,7 @@ export default function HomePage() {
   // Track live composite scores for each portfolio stock so we can compute dynamic weights
   const [liveScores, setLiveScores] = useState<Record<string, number>>(() => {
     const init: Record<string, number> = {};
-    portfolio.forEach((p) => { init[p.ticker] = getAverageScore(p.stock.scores); });
+    portfolio.forEach((p) => { init[p.ticker] = Math.round(getAverageScore(p.stock.scores)); });
     return init;
   });
   const [loadedTickers, setLoadedTickers] = useState<Set<string>>(new Set());
