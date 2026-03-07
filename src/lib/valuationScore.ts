@@ -1,3 +1,47 @@
+import type { TenMoatsData } from '@/types/stockAnalysis';
+
+const MOAT_POINTS: Record<string, number> = { strong: 100, intact: 75, weakened: 40 };
+
+/** Returns null for N/A moats (excluded from group average), number otherwise. */
+function moatPoints(m: { status: string; note: string }): number | null {
+  if (m.status === 'destroyed') return m.note.startsWith('N/A') ? null : 0;
+  return MOAT_POINTS[m.status] ?? 0;
+}
+
+function groupAvg(moats: Array<{ status: string; note: string }>): number {
+  const pts = moats.map(moatPoints).filter((p): p is number => p !== null);
+  return pts.length ? pts.reduce((a, b) => a + b, 0) / pts.length : 0;
+}
+
+/**
+ * Compute a 0–100 moat score from the ten moats assessment.
+ *
+ * AI-resilient moats (proprietaryData, regulatoryLockIn, networkEffects,
+ * transactionEmbedding, systemOfRecord) → 60% weight.
+ * AI-vulnerable moats (learnedInterfaces, businessLogic, publicDataAccess,
+ * talentScarcity, bundling) → 40% weight.
+ *
+ * Moats rated destroyed with note starting "N/A" are excluded from their
+ * group average (N/A rule from the Ten Moats framework).
+ */
+export function computeMoatScore(tenMoats: TenMoatsData): number {
+  const resilient = groupAvg([
+    tenMoats.proprietaryData,
+    tenMoats.regulatoryLockIn,
+    tenMoats.networkEffects,
+    tenMoats.transactionEmbedding,
+    tenMoats.systemOfRecord,
+  ]);
+  const vulnerable = groupAvg([
+    tenMoats.learnedInterfaces,
+    tenMoats.businessLogic,
+    tenMoats.publicDataAccess,
+    tenMoats.talentScarcity,
+    tenMoats.bundling,
+  ]);
+  return Math.round(resilient * 0.6 + vulnerable * 0.4);
+}
+
 /**
  * Compute a 0–100 valuation score from a live price vs. bear/base/bull targets.
  *

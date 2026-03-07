@@ -16,6 +16,7 @@ import { DynamicValuationGauge } from '@/components/DynamicValuationGauge';
 import { stockData, getAverageScore } from '@/app/stockData';
 import { getStockData } from '@/data/stocks';
 import type { TenMoatsAssessment } from '@/app/tenMoatsData';
+import { computeMoatScore } from '@/lib/valuationScore';
 import type { StockAnalysisData } from '@/types/stockAnalysis';
 import { Card, CardBody, Chip, Divider } from '@heroui/react';
 
@@ -178,7 +179,8 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
   const stockEntry = stockData.find(s => s.ticker === data.ticker);
   const [liveValScore, setLiveValScore] = useState<number>(data.valuation.score);
   const [valLoading, setValLoading] = useState(true);
-  const dynamicOverallScore = Math.round(getAverageScore([data.moat.score, data.growth.score, liveValScore]));
+  const liveMoatScore = computeMoatScore(data.tenMoats);
+  const dynamicOverallScore = Math.round(getAverageScore([liveMoatScore, data.growth.score, liveValScore]));
 
   const dynamicRecommendation: 'Strong Buy' | 'Accumulate' | 'Hold' | 'Speculative Buy' =
     dynamicOverallScore >= 85 ? 'Strong Buy' :
@@ -273,7 +275,7 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
             label: 'Moat',
             gauge: (
               <ScoreGauge
-                score={data.moat.score}
+                score={liveMoatScore}
                 label="Moat Score"
                 description={data.moat.description}
               />

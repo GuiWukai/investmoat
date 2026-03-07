@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getStockData, getAllSlugs } from '@/data/stocks';
 import StockPageClient from '@/components/StockPageClient';
+import { computeMoatScore } from '@/lib/valuationScore';
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ ticker: slug }));
@@ -16,7 +17,7 @@ export async function generateMetadata(
 
   const title = `${data.name} (${data.ticker})`;
   const description =
-    `${data.moat.description} Moat: ${data.moat.score}/100 · Growth: ${data.growth.score}/100 · ${data.recommendation}.`;
+    `${data.moat.description} Moat: ${computeMoatScore(data.tenMoats)}/100 · Growth: ${data.growth.score}/100 · ${data.recommendation}.`;
 
   return {
     title,
