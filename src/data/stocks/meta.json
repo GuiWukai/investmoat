@@ -18,7 +18,7 @@
     { "title": "Capex (AI)", "value": "$35B", "label": "Infrastructure investment", "icon": "Cpu", "color": "#3b82f6" }
   ],
   "moat": {
-    "score": 73,
+    "score": 79,
     "description": "Unrivaled social graph network effect, irreplaceable proprietary data, and a rapidly growing AI platform across 3B+ users.",
     "analysisTitle": "The Advertising Moat",
     "analysisSummary": "Meta's moat is built on **Attention, Data, and AI Platform**:",
@@ -26,7 +26,8 @@
       { "title": "Social Graph Network Effect", "text": "Every new user on Instagram or WhatsApp increases the value for existing users. Breaking this flywheel requires a multi-billion person migration." },
       { "title": "AI Content Flywheel", "text": "AI-driven recommendations are significantly increasing time-spent on Reels, which directly translates to more ad-inventory." },
       { "title": "Vertical Integration of AI", "text": "By owning the compute, the models (Llama), and the distribution (FB/IG), Meta controls the entire AI value chain." },
-      { "title": "Meta AI Platform Moat", "text": "With 800M+ monthly Meta AI users and Llama establishing the open-source AI standard, Meta is building a new AI platform layer atop its social graph — creating a developer ecosystem and AI memory moat that compounds with scale." }
+      { "title": "Meta AI Platform Moat", "text": "With 800M+ monthly Meta AI users and Llama establishing the open-source AI standard, Meta is building a new AI platform layer atop its social graph — creating a developer ecosystem and AI memory moat that compounds with scale." },
+      { "title": "AI Infrastructure Ownership", "text": "By owning custom AI chips (MTIA), proprietary data centers, and exploring carbon-free energy sources, Meta controls its compute destiny at a cost structure no challenger can match — reducing reliance on AWS/Azure and locking in a capex-driven infrastructure moat that compounds with scale." }
     ]
   },
   "growth": {
@@ -72,16 +73,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": { "status": "weakened", "note": "Social media UI patterns are easily copied — TikTok proved that consumer interfaces are not a durable moat." },
-    "businessLogic": { "status": "weakened", "note": "Ad targeting algorithms are being commoditized; Apple ATT weakened Meta's behavioral logic advantage significantly." },
+    "businessLogic": { "status": "intact", "note": "Advantage+ AI and the Conversions API have largely rebuilt Meta's ad targeting moat post-ATT — server-side signals, AI-modeled conversions, and closed-loop attribution now outperform the pre-ATT pixel era for many advertisers. The business logic is more AI-dependent than before, but also harder for competitors to replicate without equivalent scale and feedback data." },
     "publicDataAccess": { "status": "destroyed", "note": "Open Graph API restrictions and GDPR have dismantled the public social data access advantage." },
     "talentScarcity": { "status": "destroyed", "note": "AI tools have made social content creation, ad management, and campaign optimization accessible to small teams." },
-    "bundling": { "status": "weakened", "note": "Instagram + Facebook + WhatsApp is a bundle, but users freely hop between apps — no forced adoption." },
+    "bundling": { "status": "intact", "note": "Meta AI with persistent memory across FB/IG/WA/Threads creates a new cross-app bundle lock-in that didn't exist pre-2024. Users accumulating Meta AI memory, preferences, and interaction history across the entire family of apps face meaningful switching costs — the AI layer is the new bundling glue that makes the multi-app family stickier than the pre-AI era." },
     "proprietaryData": { "status": "strong", "note": "3B+ users' social graph, behavioral patterns, and relationship data is genuinely irreplaceable — the richest consumer dataset on Earth." },
     "regulatoryLockIn": { "status": "weakened", "note": "Advertisers have built compliance infrastructure around Meta's Conversions API and privacy tools, creating some switching friction. However, GDPR and the EU Digital Markets Act actively constrain cross-app data sharing and limit the full expression of this lock-in." },
     "networkEffects": { "status": "strong", "note": "The social graph itself IS the product — 3 billion users and their connections cannot be replicated by a new entrant in a decade." },
     "transactionEmbedding": { "status": "strong", "note": "WhatsApp Business serves 200M+ businesses globally; WhatsApp Pay is active in India and Brazil with expanding markets. Meta Pay and Marketplace create deeply embedded commerce infrastructure that is increasingly difficult to displace." },
     "systemOfRecord": { "status": "strong", "note": "Facebook remains the global social identity and event management layer. Meta AI's persistent memory features across all apps are creating a new personal AI system-of-record, while WhatsApp serves as the primary communication record for billions in emerging markets." },
-    "aiResilienceScore": 73,
-    "verdict": "Meta's social graph and proprietary data moats remain the most defensible consumer moats on Earth. The upgrade in transaction embedding and system-of-record reflects WhatsApp Business traction and Meta AI's platform emergence. Regulatory pressure from GDPR and DMA remains a structural drag, keeping the score below Tier-1 peers with enterprise lock-in."
+    "aiResilienceScore": 79,
+    "verdict": "Meta holds the broadest and most formidable AI moat among consumer platforms. The combination of 3.5B+ daily users providing an unmatched AI training and feedback flywheel, proprietary compute infrastructure (MTIA chips, owned data centers), Llama establishing the open-source AI standard, and Meta AI's persistent memory across all apps creates a compounding AI platform moat that is genuinely difficult to replicate. The upgrade from 73 reflects: (1) Advantage+ AI rebuilding the post-ATT business logic moat, (2) Meta AI cross-app memory creating real bundling lock-in, and (3) infrastructure ownership securing long-term compute cost advantage. Regulatory drag from GDPR and DMA remains a structural cap, but Meta's AI moat is wider in absolute scale than any vertical-specific competitor including Shopify."
   }
 }
