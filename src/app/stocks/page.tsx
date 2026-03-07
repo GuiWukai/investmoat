@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ChevronRight, BarChart3 } from "lucide-react";
 import { Chip, Spinner } from "@heroui/react";
-import { allCoverageData } from "../stockData";
+import { allCoverageData, getAverageScore } from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
 
 const TICKER_COLORS: Record<string, string> = {
@@ -39,7 +39,7 @@ function DynamicOverall({
   slug: string; moat: number; growth: number; fallbackVal: number;
   bearTarget: string; baseTarget: string; bullTarget: string;
 }) {
-  const [avg, setAvg] = useState(() => Math.round((moat + growth + fallbackVal) / 3));
+  const [avg, setAvg] = useState(() => Math.round(getAverageScore([moat, growth, fallbackVal])));
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -55,7 +55,7 @@ function DynamicOverall({
         if (cancelled) return;
         if (d?.price != null) {
           const liveVal = computeValuationScore(d.price, bear, base, bull);
-          setAvg(Math.round((moat + growth + liveVal) / 3));
+          setAvg(Math.round(getAverageScore([moat, growth, liveVal])));
         }
         setLoading(false);
       })

@@ -1,10 +1,10 @@
 'use client';
 
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { PieChart, ShieldCheck, ChevronRight } from "lucide-react";
 import { Card, CardBody, CardHeader, Progress, Chip, Spinner } from "@heroui/react";
-import { stockData, getAverageScore } from "./stockData";
+import { allCoverageData, getAverageScore } from "./stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
 
 function DynamicScore({
@@ -15,7 +15,6 @@ function DynamicScore({
   bearTarget,
   baseTarget,
   bullTarget,
-  onScore,
   children,
 }: {
   slug: string;
@@ -25,15 +24,12 @@ function DynamicScore({
   bearTarget: string;
   baseTarget: string;
   bullTarget: string;
-  onScore?: (score: number) => void;
   children: (avg: number, loading: boolean) => ReactNode;
 }) {
   const [avg, setAvg] = useState(() =>
     Math.round(getAverageScore([moat, growth, fallbackVal]))
   );
   const [loading, setLoading] = useState(true);
-  const onScoreRef = useRef(onScore);
-  useEffect(() => { onScoreRef.current = onScore; });
 
   useEffect(() => {
     const bear = parseScenarioPrice(bearTarget);
@@ -41,7 +37,6 @@ function DynamicScore({
     const bull = parseScenarioPrice(bullTarget);
     const fallbackAvg = Math.round(getAverageScore([moat, growth, fallbackVal]));
     if (!bear || !base || !bull) {
-      onScoreRef.current?.(fallbackAvg);
       setLoading(false);
       return;
     }
@@ -53,16 +48,14 @@ function DynamicScore({
         if (cancelled) return;
         if (d?.price != null) {
           const liveVal = computeValuationScore(d.price, bear, base, bull);
-          const newAvg = Math.round(getAverageScore([moat, growth, liveVal]));
-          setAvg(newAvg);
-          onScoreRef.current?.(newAvg);
+          setAvg(Math.round(getAverageScore([moat, growth, liveVal])));
         } else {
-          onScoreRef.current?.(fallbackAvg);
+          setAvg(fallbackAvg);
         }
         setLoading(false);
       })
       .catch(() => {
-        if (!cancelled) { onScoreRef.current?.(fallbackAvg); setLoading(false); }
+        if (!cancelled) { setAvg(fallbackAvg); setLoading(false); }
       });
     return () => { cancelled = true; };
   }, [slug, moat, growth, fallbackVal, bearTarget, baseTarget, bullTarget]);
@@ -72,6 +65,7 @@ function DynamicScore({
 
 // ─── Portfolio threshold ──────────────────────────────────────────────────────
 const PORTFOLIO_THRESHOLD = 75;
+const MAX_PORTFOLIO = 20;
 
 // ─── Per-ticker metadata (display color, category, exclusion reason) ──────────
 const stockMeta: Record<string, { color: string; category: string; exclusionReason?: string }> = {
@@ -100,33 +94,28 @@ const stockMeta: Record<string, { color: string; category: string; exclusionReas
   MU:    { color: "#0099cc", category: "Memory" },
   ISRG:  { color: "#009688", category: "Healthcare" },
   AVGO:  { color: "#cc0000", category: "Semiconductors" },
-  COST:  { color: "#005DAA", category: "Consumer Retail", exclusionReason: "Composite score (71) falls below the portfolio threshold. Costco is a world-class business with an exceptional membership flywheel and 92.9% renewal rates, but a valuation score of 60 (48x+ forward P/E) reflects near-perfection already priced in, and a growth score of 70 is constrained by the pace of physical warehouse expansion. It ranks behind 20 higher-scoring compounders on a risk-adjusted basis." },
+  COST:  { color: "#005DAA", category: "Consumer Retail", exclusionReason: "Composite score falls below the portfolio threshold. Costco is a world-class business with an exceptional membership flywheel and 92.9% renewal rates, but a valuation score of 60 (48x+ forward P/E) reflects near-perfection already priced in, and a growth score of 70 is constrained by the pace of physical warehouse expansion. It ranks behind 20 higher-scoring compounders on a risk-adjusted basis." },
   ORCL:  { color: "#C74634", category: "Enterprise Software" },
   TDG:   { color: "#1a5276", category: "Industrials" },
   MSCI:  { color: "#c0392b", category: "Financial Data" },
+  UNH:   { color: "#003087", category: "Healthcare" },
+  MCO:   { color: "#23539A", category: "Financials" },
+  MELI:  { color: "#ffe600", category: "Eco-System" },
+  RACE:  { color: "#D40000", category: "Luxury" },
+  CEG:   { color: "#0057a8", category: "Utilities" },
+  SHOP:  { color: "#96bf48", category: "E-Commerce" },
+  LLY:   { color: "#c8102e", category: "Healthcare" },
+  ETH:   { color: "#627eea", category: "Digital Assets" },
+  SOL:   { color: "#9945ff", category: "Digital Assets" },
 };
-
-// ─── Dynamic portfolio / excluded — derived from composite scores ─────────────
-const portfolio = stockData
-  .filter(s => getAverageScore(s.scores) >= PORTFOLIO_THRESHOLD)
-  .map(s => ({
-    ticker:   s.ticker,
-    name:     s.name,
-    slug:     s.slug,
-    href:     s.href,
-    color:    stockMeta[s.ticker]?.color    ?? "#888888",
-    category: stockMeta[s.ticker]?.category ?? "Other",
-    stock:    s,
-  }));
-
 
 // ─── Category colour helper ───────────────────────────────────────────────────
 function categoryColor(category: string): "primary" | "success" | "warning" | "secondary" | "danger" | "default" {
   if (["Core SaaS", "Enterprise SaaS", "Big Tech"].includes(category)) return "primary";
-  if (["Payments", "Financials", "FinTech"].includes(category)) return "success";
-  if (["AI Infrastructure", "Lithography", "AI Analytics", "Cybersecurity", "Foundry", "Memory"].includes(category)) return "warning";
-  if (["Eco-System", "Clean Tech", "Digital Assets"].includes(category)) return "secondary";
-  if (category === "Hard Assets") return "danger";
+  if (["Payments", "Financials", "FinTech", "Financial Data"].includes(category)) return "success";
+  if (["AI Infrastructure", "Lithography", "AI Analytics", "Cybersecurity", "Foundry", "Memory", "Semiconductors"].includes(category)) return "warning";
+  if (["Eco-System", "Clean Tech", "Digital Assets", "E-Commerce"].includes(category)) return "secondary";
+  if (["Hard Assets", "Luxury", "Utilities"].includes(category)) return "danger";
   return "default";
 }
 
@@ -134,27 +123,68 @@ function categoryColor(category: string): "primary" | "success" | "warning" | "s
 const TECH_CATEGORIES = new Set([
   "Core SaaS", "Enterprise SaaS", "Big Tech",
   "AI Infrastructure", "Lithography", "AI Analytics",
-  "Clean Tech", "Eco-System", "Cybersecurity", "Digital Assets", "Foundry", "Memory",
+  "Clean Tech", "Eco-System", "Cybersecurity", "Digital Assets", "Foundry", "Memory", "Semiconductors", "E-Commerce",
 ]);
-const FIN_CATEGORIES = new Set(["Payments", "Financials", "FinTech"]);
+const FIN_CATEGORIES = new Set(["Payments", "Financials", "FinTech", "Financial Data"]);
 
 export default function HomePage() {
   const router = useRouter();
 
-  // Track live composite scores for each portfolio stock so we can compute dynamic weights
-  const [liveScores, setLiveScores] = useState<Record<string, number>>(() => {
-    const init: Record<string, number> = {};
-    portfolio.forEach((p) => { init[p.ticker] = Math.round(getAverageScore(p.stock.scores)); });
-    return init;
-  });
-  const [loadedTickers, setLoadedTickers] = useState<Set<string>>(new Set());
-  const [hoveredPie, setHoveredPie] = useState<string | null>(null);
-  const scoresLoading = loadedTickers.size < portfolio.length;
+  // Fetch all stock prices in parallel to enable dynamic portfolio selection
+  const [allPrices, setAllPrices] = useState<Record<string, number | null>>({});
+  const [allPricesLoaded, setAllPricesLoaded] = useState(false);
 
-  const handleScore = (ticker: string, score: number) => {
-    setLiveScores((prev) => ({ ...prev, [ticker]: score }));
-    setLoadedTickers((prev) => new Set([...prev, ticker]));
-  };
+  useEffect(() => {
+    let cancelled = false;
+    Promise.all(
+      allCoverageData.map(s =>
+        fetch(`/api/stock-price/${s.slug}`)
+          .then(r => r.ok ? r.json() : null)
+          .then(d => [s.ticker, d?.price ?? null] as const)
+          .catch(() => [s.ticker, null] as const)
+      )
+    ).then(entries => {
+      if (cancelled) return;
+      setAllPrices(Object.fromEntries(entries));
+      setAllPricesLoaded(true);
+    });
+    return () => { cancelled = true; };
+  }, []);
+
+  // Dynamic portfolio — top MAX_PORTFOLIO stocks with live composite >= PORTFOLIO_THRESHOLD
+  const portfolio = useMemo(() => {
+    return [...allCoverageData]
+      .map(s => {
+        const price = allPrices[s.ticker];
+        const bear = parseScenarioPrice(s.bearTarget);
+        const base = parseScenarioPrice(s.baseTarget);
+        const bull = parseScenarioPrice(s.bullTarget);
+        const composite = (price != null && bear && base && bull)
+          ? getAverageScore([s.scores[0], s.scores[1], computeValuationScore(price, bear, base, bull)])
+          : getAverageScore(s.scores);
+        return { s, composite };
+      })
+      .sort((a, b) => b.composite - a.composite)
+      .filter(({ composite }) => composite >= PORTFOLIO_THRESHOLD)
+      .slice(0, MAX_PORTFOLIO)
+      .map(({ s, composite }) => ({
+        ticker:    s.ticker,
+        name:      s.name,
+        slug:      s.slug,
+        href:      s.href,
+        color:     stockMeta[s.ticker]?.color    ?? "#888888",
+        category:  stockMeta[s.ticker]?.category ?? "Other",
+        stock:     s,
+        composite,
+      }));
+  }, [allPrices]);
+
+  // Live scores derived directly from portfolio composites (no separate state needed)
+  const liveScores: Record<string, number> = {};
+  portfolio.forEach(p => { liveScores[p.ticker] = Math.round(p.composite); });
+
+  const [hoveredPie, setHoveredPie] = useState<string | null>(null);
+  const scoresLoading = !allPricesLoaded;
 
   // Compute weights with amplified spread — subtract a baseline so score
   // differences translate into meaningful allocation gaps; cap at 10% per position.
@@ -400,7 +430,6 @@ export default function HomePage() {
                 bearTarget={stock.stock.bearTarget}
                 baseTarget={stock.stock.baseTarget}
                 bullTarget={stock.stock.bullTarget}
-                onScore={(score) => handleScore(stock.ticker, score)}
               >
                 {(avg, loading) => (
                   <div className="text-right mr-2 shrink-0 w-12">
