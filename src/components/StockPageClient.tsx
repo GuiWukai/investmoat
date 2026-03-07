@@ -84,6 +84,29 @@ function GridCardsSection({ section }: { section: NonNullable<StockAnalysisData[
   );
 }
 
+function ForwardPECard({ data }: { data: NonNullable<StockAnalysisData['valuation']['peAnalysis']> }) {
+  return (
+    <Card className="bg-white/5 border-none backdrop-blur-md p-6">
+      <h4 className="text-xl font-bold mb-4">Valuation Multiples</h4>
+      <table className="w-full text-sm">
+        <tbody>
+          {data.rows.map((row, i) => (
+            <tr key={i} className="border-b border-white/10 last:border-0">
+              <td className="py-2.5 text-white/50">{row.label}</td>
+              <td className="py-2.5 font-semibold text-white text-right">{row.value}</td>
+              {row.note && (
+                <td className="py-2.5 text-white/30 text-right text-xs pl-4 hidden sm:table-cell">{row.note}</td>
+              )}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p className="text-white/50 text-xs mt-4 leading-relaxed">{data.summary}</p>
+      {data.asOf && <p className="text-white/30 text-xs mt-1">Approximate figures as of {data.asOf}.</p>}
+    </Card>
+  );
+}
+
 function ProductionTimelineSection({ section }: { section: NonNullable<StockAnalysisData['extraSections']>[number] }) {
   const accent = section.accentColor ?? 'var(--accent)';
   return (
@@ -328,6 +351,9 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
                     </p>
                   </Card>
                 )}
+                {data.valuation.peAnalysis && (
+                  <ForwardPECard data={data.valuation.peAnalysis} />
+                )}
                 <ScenarioCard
                   type="Bear"
                   priceTarget={data.scenarios.bear.priceTarget}
@@ -377,6 +403,11 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
             slug={data.slug}
             fairValue={data.valuation.valuationNote?.fairValue}
           />
+          {data.valuation.peAnalysis && (
+            <div className="mt-6">
+              <ForwardPECard data={data.valuation.peAnalysis} />
+            </div>
+          )}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
             <ScenarioCard
               type="Bear"

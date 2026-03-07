@@ -96,6 +96,15 @@ export interface StockAnalysisData {
       text: string;
       fairValue: string;
     };
+    peAnalysis?: {
+      rows: Array<{
+        label: string;
+        value: string;
+        note?: string;
+      }>;
+      summary: string;
+      asOf?: string;
+    };
   };
   scenarios: {
     bear: Scenario;
