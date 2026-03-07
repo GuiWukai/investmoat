@@ -39,6 +39,18 @@
         "Trainium2/3 custom AI chips now at $10B+ run rate with triple-digit YoY growth; Trainium4 targeting 2027.",
         "International retail margins recovering: North America segment margin expanded to 9.0% in Q4."
       ]
+    },
+    "growthAnalysis": {
+      "cagrEstimate": "15–20%",
+      "scoreDerivation": "Base 80 (15–30% blended CAGR) + 5 recurring revenue (AWS contracts + Prime) + 5 TAM expansion (AI inference + sovereign cloud) − 2 Q1 2026 guidance width = 88",
+      "drivers": [
+        { "name": "AWS Cloud", "metric": "+24% YoY, $244B backlog (+40% YoY)", "trend": "accelerating" },
+        { "name": "Advertising", "metric": "+23% YoY, $21.3B Q4 ($85B+ annualised path)", "trend": "accelerating" },
+        { "name": "International Retail", "metric": "+17% YoY (Q4), margins recovering", "trend": "stable" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If Azure captures >40% of new enterprise AI inference workloads by end of 2026, AWS growth decelerates below 18% and the $200B 2026 capex cycle proves premature, compressing FCF for 3+ years",
+      "marginTrend": "expanding"
     }
   },
   "valuation": {

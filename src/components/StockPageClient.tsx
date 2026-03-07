@@ -23,7 +23,7 @@ import { Card, CardBody, Chip, Divider } from '@heroui/react';
 // ─── Lucide icon registry ────────────────────────────────────────────────────
 import {
   Laptop, Cloud, Database, Cpu, Zap, Share2, ShoppingCart,
-  DollarSign, Users, Target, Layers, Play, TrendingUp, Car,
+  DollarSign, Users, Target, Layers, Play, TrendingUp, TrendingDown, Minus, Car,
   Battery, Globe, CreditCard, ShieldCheck, BarChart3, PenTool,
   Image, Landmark, Shield, BarChart, Calculator, Coins, Lock,
   Pickaxe, Gem, CheckCircle,
@@ -170,6 +170,57 @@ function LiveHeaderPrice({ slug }: { slug: string }) {
   );
 }
 
+// ─── Growth Analysis Card ─────────────────────────────────────────────────────
+
+function TrendIcon({ trend }: { trend: 'accelerating' | 'stable' | 'decelerating' }) {
+  if (trend === 'accelerating') return <TrendingUp size={14} className="text-success flex-shrink-0 mt-0.5" />;
+  if (trend === 'decelerating') return <TrendingDown size={14} className="text-danger flex-shrink-0 mt-0.5" />;
+  return <Minus size={14} className="text-white/40 flex-shrink-0 mt-0.5" />;
+}
+
+function GrowthAnalysisCard({ ga }: { ga: NonNullable<import('@/types/stockAnalysis').StockAnalysisData['growth']['growthAnalysis']> }) {
+  const marginColor = ga.marginTrend === 'expanding' ? 'success' : ga.marginTrend === 'compressing' ? 'danger' : 'default';
+  const typeColor = ga.primaryType === 'TAM expansion' ? 'secondary' : ga.primaryType === 'market share' ? 'primary' : 'warning';
+  return (
+    <Card className="bg-white/5 border-none backdrop-blur-md">
+      <CardBody className="p-6 space-y-5">
+        <div className="flex flex-wrap gap-2">
+          <Chip size="sm" color="success" variant="flat">{ga.cagrEstimate} est. CAGR</Chip>
+          <Chip size="sm" color={typeColor} variant="flat">{ga.primaryType}</Chip>
+          <Chip size="sm" color={marginColor} variant="flat">{ga.marginTrend} margins</Chip>
+        </div>
+
+        <div>
+          <p className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-3">Growth Drivers</p>
+          <div className="space-y-2">
+            {ga.drivers.map((d, i) => (
+              <div key={i} className="flex items-start justify-between gap-3">
+                <div className="flex items-start gap-2 min-w-0">
+                  <TrendIcon trend={d.trend} />
+                  <div className="min-w-0">
+                    <span className="text-sm font-medium text-white">{d.name}</span>
+                    <span className="text-xs text-white/50 ml-2">{d.metric}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="border-t border-white/10 pt-4">
+          <p className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-1">Key Risk</p>
+          <p className="text-sm text-white/70">{ga.keyRisk}</p>
+        </div>
+
+        <div className="border-t border-white/10 pt-4">
+          <p className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-1">Score Derivation</p>
+          <p className="text-xs text-white/40 font-mono">{ga.scoreDerivation}</p>
+        </div>
+      </CardBody>
+    </Card>
+  );
+}
+
 // ─── Page component ────────────────────────────────────────────────────────────
 
 export default function StockPageClient({ ticker }: { ticker: string }) {
@@ -308,6 +359,9 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
                     color={metric.color}
                   />
                 ))}
+                {data.growth.growthAnalysis && (
+                  <GrowthAnalysisCard ga={data.growth.growthAnalysis} />
+                )}
                 {data.growth.additionalNote && (
                   <Card className="bg-white/5 border-none backdrop-blur-md p-6">
                     <h4 className="text-xl font-bold mb-6">{data.growth.additionalNote.title}</h4>

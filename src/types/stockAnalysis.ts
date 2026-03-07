@@ -88,6 +88,25 @@ export interface StockAnalysisData {
       title: string;
       points: string[];
     };
+    /** Structured growth analysis — required for new stocks, optional for legacy. */
+    growthAnalysis?: {
+      /** Blended 3–5 year revenue CAGR estimate, e.g. "15–20%". Anchors the score to the rubric. */
+      cagrEstimate: string;
+      /** Shows score derivation: base CAGR score + named adjustments = final. */
+      scoreDerivation: string;
+      /** Top 2–3 revenue drivers. */
+      drivers: Array<{
+        name: string;
+        metric: string;
+        trend: 'accelerating' | 'stable' | 'decelerating';
+      }>;
+      /** Whether this is a TAM expansion story, market share capture, or both. */
+      primaryType: 'TAM expansion' | 'market share' | 'both';
+      /** Specific, falsifiable risk with a named time horizon. */
+      keyRisk: string;
+      /** Operating margin direction — feeds the −5 margin compression adjustment. */
+      marginTrend: 'expanding' | 'stable' | 'compressing';
+    };
   };
   valuation: {
     score: number;
