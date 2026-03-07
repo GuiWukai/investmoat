@@ -11,7 +11,7 @@
     { "label": "Consumer Tech | Services | AI", "color": "primary" },
     { "label": "Gold Standard", "color": "success" }
   ],
-  "recommendation": "Buy",
+  "recommendation": "Accumulate",
   "metrics": [
     { "title": "Services Revenue", "value": "$108B", "label": "Annualized Run Rate", "icon": "Cloud", "color": "#555555" },
     { "title": "Gross Margin", "value": "46.2%", "label": "Record High (FY2024)", "icon": "TrendingUp", "color": "#34c759" },
@@ -80,7 +80,7 @@
     "networkEffects": { "status": "strong", "note": "iMessage (blue bubble), AirDrop, AirPlay, Handoff, and the Find My network all strengthen with scale. The 2.2B active device installed base is a network that compounds every year." },
     "transactionEmbedding": { "status": "strong", "note": "Apple Pay is embedded in hundreds of millions of daily commerce transactions. The App Store is the sole distribution channel for $1T+ in annual app commerce. Transaction embedding is deep and growing." },
     "systemOfRecord": { "status": "strong", "note": "iCloud Photos is the photo library. Contacts, Notes, Reminders, and Calendar are the default PIM stack. Health app is the health record. For hundreds of millions of consumers, Apple is the system of record for their personal data." },
-    "aiResilienceScore": 75,
+    "aiResilienceScore": 83,
     "verdict": "Apple's consumer ecosystem moat is remarkably resilient to AI disruption — in fact, Apple Intelligence deepens the platform advantage. The primary risks are regulatory (DMA/App Store) and competitive (China smartphone market). The on-device AI privacy architecture is a genuine differentiator that leverages Apple's hardware-software integration advantage."
   }
 }
