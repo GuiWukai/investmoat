@@ -107,6 +107,7 @@ const stockMeta: Record<string, { color: string; category: string; exclusionReas
   LLY:   { color: "#c8102e", category: "Healthcare" },
   ETH:   { color: "#627eea", category: "Digital Assets" },
   SOL:   { color: "#9945ff", category: "Digital Assets" },
+  SOFI:  { color: "#6366f1", category: "FinTech" },
 };
 
 // ─── Category colour helper ───────────────────────────────────────────────────
