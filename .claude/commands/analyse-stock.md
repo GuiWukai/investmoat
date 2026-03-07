@@ -31,6 +31,8 @@ Search for current data before scoring anything. Do not rely on training data fo
 - Free cash flow and ROIC for the trailing twelve months
 - Forward guidance from the most recent earnings call
 - Key recent news: product launches, regulatory changes, competitor moves
+- **Valuation multiples:** trailing P/E (GAAP), consensus forward EPS estimate (NTM), Price/Sales (NTM), Price/FCF, PEG ratio
+- Sector/peer median forward P/E for context (e.g. S&P 500 ~21×; growth tech ~28–35×)
 
 **Business Model Clarity — answer before scoring:**
 1. **What does the company actually sell?** (product/service, not the marketing description)
@@ -236,6 +238,37 @@ Compare current price to bear/base/bull scenarios using the piecewise scoring sy
 
 **Scenario internal consistency check:** Bull target must be ≥ 1.5× bear target. If not, widen the range.
 
+### Forward P/E Analysis
+
+After setting scenarios, assess valuation multiples:
+
+**Collect these metrics** (use NTM = next twelve months consensus where applicable):
+
+| Metric | What to use |
+|---|---|
+| Trailing P/E (GAAP) | TTM EPS from most recent filing |
+| Forward P/E (NTM) | Current price ÷ consensus NTM EPS estimate |
+| PEG Ratio | Forward P/E ÷ 3–5 year EPS CAGR estimate |
+| Price / Sales (NTM) | Market cap ÷ consensus NTM revenue estimate |
+| Price / FCF | Market cap ÷ TTM free cash flow (or NTM if guided) |
+| Price / Book | For banks/financials only; replace P/FCF |
+
+**Interpret the PEG ratio:**
+- PEG < 1.0 → growth at a reasonable price (GARP)
+- PEG 1.0–1.5 → fairly priced for growth
+- PEG 1.5–2.0 → premium; requires execution to justify
+- PEG > 2.0 → expensive; limited margin of safety
+
+**When P/E is not meaningful (mark rows as N/A):**
+- Pre-GAAP-profitability companies (negative EPS) → use P/S and EV/Revenue instead
+- Commodities, crypto, and metals → omit `peAnalysis` entirely; these assets don't have earnings multiples
+- Companies with highly distorted one-time items → note the distortion in the summary and use adjusted EPS if available
+
+**Write a `summary`** (2–3 sentences) that:
+1. States whether the current forward P/E is cheap, fair, or expensive vs the sector median
+2. Names the PEG and whether growth justifies the multiple
+3. Highlights any gap between trailing and forward P/E that signals an earnings ramp (bullish) or deceleration (bearish)
+
 ---
 
 ## Step 7 — Composite Score and Recommendation
@@ -293,6 +326,17 @@ Produce a structured report with these sections:
 ### Valuation Analysis (Score: X/100)
 [Where price sits vs scenarios, margin of safety commentary, DCF assumptions if relevant]
 
+**Forward P/E Analysis:**
+| Metric | Value | Note |
+|---|---|---|
+| Trailing P/E (GAAP) | X× | TTM EPS $X |
+| Forward P/E (NTM) | X× | consensus EPS est. $X |
+| PEG Ratio | X× | fwd P/E ÷ X% EPS CAGR |
+| Price / Sales (NTM) | X× | $XB NTM revenue |
+| Price / FCF | X× | $XB FCF (TTM) |
+
+[2–3 sentences interpreting the multiples: is the forward P/E cheap/fair/expensive vs sector? Does the PEG justify the growth premium? Any notable gap between trailing and forward P/E?]
+
 ### Scenarios
 **Bear ($X):** [1 sentence thesis]
 - [Specific falsifiable risk 1]
@@ -337,6 +381,31 @@ If you must review inline, compare the analysis to the current data and flag:
 6. **Recommendation consistency** — ensure recommendation aligns with the updated composite score
 
 Propose specific JSON edits for any fields that need updating.
+
+---
+
+## JSON — peAnalysis Field
+
+When generating the stock JSON, include `peAnalysis` inside the `valuation` object for all profitable public equities. Omit it entirely for commodities, crypto, and pre-profit companies where P/E is meaningless.
+
+```json
+"peAnalysis": {
+  "asOf": "Month YYYY",
+  "rows": [
+    { "label": "Trailing P/E (GAAP)", "value": "X×", "note": "$X TTM EPS" },
+    { "label": "Forward P/E (NTM)", "value": "~X×", "note": "consensus EPS est. $X" },
+    { "label": "PEG Ratio", "value": "~X×", "note": "fwd P/E ÷ X% EPS CAGR" },
+    { "label": "Price / Sales (NTM)", "value": "~X×", "note": "$XB NTM revenue" },
+    { "label": "Price / FCF", "value": "~X×", "note": "$XB FCF (TTM)" }
+  ],
+  "summary": "2–3 sentence interpretation covering: (1) cheap/fair/expensive vs sector median, (2) PEG commentary, (3) trailing vs forward gap signal."
+}
+```
+
+- Use `×` (multiplication sign, U+00D7) not `x` for multiples
+- Prefix approximate values with `~`
+- For banks/financials replace `Price / FCF` with `Price / Book`
+- Keep `note` fields short (≤ 8 words) — they are hidden on mobile
 
 ---
 
