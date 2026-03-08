@@ -20,14 +20,18 @@ function groupStats(moats: Array<{ status: string; note: string }>): { avg: numb
  * Compute a 0–100 moat score from the ten moats assessment.
  *
  * AI-resilient moats (proprietaryData, regulatoryLockIn, networkEffects,
- * transactionEmbedding, systemOfRecord) and AI-vulnerable moats
- * (learnedInterfaces, businessLogic, publicDataAccess, talentScarcity,
- * bundling) are weighted proportionally by their count of applicable moats.
- * Baseline split is 60/40 when all 10 moats apply; N/A moats are excluded
- * and their weight shifts to the other group.
+ * transactionEmbedding, systemOfRecord) carry a base weight of 12 each (60÷5).
+ * AI-vulnerable moats (learnedInterfaces, businessLogic, publicDataAccess,
+ * talentScarcity, bundling) carry a base weight of 8 each (40÷5).
  *
- * Moats rated destroyed with note starting "N/A" are excluded from their
- * group average (N/A rule from the Ten Moats framework).
+ * When all 10 moats apply the effective split is exactly 60/40. N/A moats
+ * (destroyed with note starting "N/A") are excluded; their base weight is
+ * dropped so it shifts naturally to whichever moats remain applicable.
+ *
+ * Examples:
+ *   5R + 5V (all apply)  → 60% / 40%
+ *   5R + 1V (4 N/A vul.) → 60/(60+8) ≈ 88% / 12%
+ *   5R + 0V (all N/A)    → 100% / 0%
  */
 export function computeMoatScore(tenMoats: TenMoatsData): number {
   const resilient = groupStats([
@@ -44,11 +48,12 @@ export function computeMoatScore(tenMoats: TenMoatsData): number {
     tenMoats.talentScarcity,
     tenMoats.bundling,
   ]);
-  const total = resilient.count + vulnerable.count;
+  // Each resilient moat has base weight 12 (=60/5); each vulnerable moat 8 (=40/5).
+  const rW = resilient.count * 12;
+  const vW = vulnerable.count * 8;
+  const total = rW + vW;
   if (total === 0) return 0;
-  const rWeight = resilient.count / total;
-  const vWeight = vulnerable.count / total;
-  return Math.round(resilient.avg * rWeight + vulnerable.avg * vWeight);
+  return Math.round(resilient.avg * rW / total + vulnerable.avg * vW / total);
 }
 
 /**
