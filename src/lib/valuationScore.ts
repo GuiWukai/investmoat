@@ -8,38 +8,47 @@ function moatPoints(m: { status: string; note: string }): number | null {
   return MOAT_POINTS[m.status] ?? 0;
 }
 
-function groupAvg(moats: Array<{ status: string; note: string }>): number {
+function groupStats(moats: Array<{ status: string; note: string }>): { avg: number; count: number } {
   const pts = moats.map(moatPoints).filter((p): p is number => p !== null);
-  return pts.length ? pts.reduce((a, b) => a + b, 0) / pts.length : 0;
+  return {
+    avg: pts.length ? pts.reduce((a, b) => a + b, 0) / pts.length : 0,
+    count: pts.length,
+  };
 }
 
 /**
  * Compute a 0–100 moat score from the ten moats assessment.
  *
  * AI-resilient moats (proprietaryData, regulatoryLockIn, networkEffects,
- * transactionEmbedding, systemOfRecord) → 60% weight.
- * AI-vulnerable moats (learnedInterfaces, businessLogic, publicDataAccess,
- * talentScarcity, bundling) → 40% weight.
+ * transactionEmbedding, systemOfRecord) and AI-vulnerable moats
+ * (learnedInterfaces, businessLogic, publicDataAccess, talentScarcity,
+ * bundling) are weighted proportionally by their count of applicable moats.
+ * Baseline split is 60/40 when all 10 moats apply; N/A moats are excluded
+ * and their weight shifts to the other group.
  *
  * Moats rated destroyed with note starting "N/A" are excluded from their
  * group average (N/A rule from the Ten Moats framework).
  */
 export function computeMoatScore(tenMoats: TenMoatsData): number {
-  const resilient = groupAvg([
+  const resilient = groupStats([
     tenMoats.proprietaryData,
     tenMoats.regulatoryLockIn,
     tenMoats.networkEffects,
     tenMoats.transactionEmbedding,
     tenMoats.systemOfRecord,
   ]);
-  const vulnerable = groupAvg([
+  const vulnerable = groupStats([
     tenMoats.learnedInterfaces,
     tenMoats.businessLogic,
     tenMoats.publicDataAccess,
     tenMoats.talentScarcity,
     tenMoats.bundling,
   ]);
-  return Math.round(resilient * 0.6 + vulnerable * 0.4);
+  const total = resilient.count + vulnerable.count;
+  if (total === 0) return 0;
+  const rWeight = resilient.count / total;
+  const vWeight = vulnerable.count / total;
+  return Math.round(resilient.avg * rWeight + vulnerable.avg * vWeight);
 }
 
 /**
