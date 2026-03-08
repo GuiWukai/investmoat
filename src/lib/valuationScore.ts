@@ -4,7 +4,7 @@ const MOAT_POINTS: Record<string, number> = { strong: 100, intact: 75, weakened:
 
 /** Returns null for N/A moats (excluded from group average), number otherwise. */
 function moatPoints(m: { status: string; note: string }): number | null {
-  if (m.status === 'destroyed') return m.note.startsWith('N/A') ? null : 0;
+  if (m.status === 'destroyed') return (m.note.startsWith('N/A') || m.note.startsWith('Not applicable')) ? null : 0;
   return MOAT_POINTS[m.status] ?? 0;
 }
 
