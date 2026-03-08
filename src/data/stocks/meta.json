@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$1.25T"
+      "value": "$1.62T"
     },
     {
       "label": "Current Price",
-      "value": "$492.30"
+      "value": "$648"
     }
   ],
   "chips": [
@@ -30,22 +30,22 @@
   "metrics": [
     {
       "title": "Daily Active People",
-      "value": "3.24B",
-      "label": "Family of Apps (7% YoY)",
+      "value": "3.58B",
+      "label": "Family of Apps Dec 2025 (+7% YoY)",
       "icon": "Users",
       "color": "#1877F2"
     },
     {
       "title": "Ad Impressions",
-      "value": "+21%",
-      "label": "Sustained CPM growth",
+      "value": "+18%",
+      "label": "Q4 2025 YoY; avg price/ad +6%",
       "icon": "Share2",
       "color": "#050505"
     },
     {
       "title": "Capex (AI)",
-      "value": "$35B",
-      "label": "Infrastructure investment",
+      "value": "$72B",
+      "label": "FY2025 actual; $115–135B guided 2026",
       "icon": "Cpu",
       "color": "#3b82f6"
     }
@@ -80,11 +80,32 @@
   },
   "growth": {
     "score": 85,
-    "description": "Advancements in Llama AI and monetization of Reels/Threads."
+    "description": "FY2025 revenue reached $201B (+22% YoY); Q4 2025 accelerated to +24% YoY ($59.9B). AI-driven ad optimisation (Advantage+), Reels monetisation, and WhatsApp Business all contributed. Q1 2026 guided $53.5–56.5B (+14–21% YoY), with the 2026 capex ramp ($115–135B) a key watch for FCF trajectory.",
+    "additionalNote": {
+      "title": "Growth Drivers (3-Year Horizon)",
+      "points": [
+        "Ad platform AI: Advantage+ and AI-optimised ad delivery drove 18% impression growth and 6% CPM expansion in Q4 2025 — AI is the engine behind sustained double-digit ad revenue compounding",
+        "WhatsApp monetisation: WhatsApp paid messaging and Meta Verified drove 54% YoY growth in 'Other Revenue' in Q4 2025; this remains an underpenetrated $10B+ opportunity across 2B+ WhatsApp users",
+        "Meta AI platform: 800M+ monthly Meta AI users in early 2026; Llama is establishing the open-source AI standard with enterprise adoption, creating a new developer platform revenue layer",
+        "Reels + Threads: Reels ad load has reached near-parity with Feed; Threads growing toward a $1B+ revenue contributor as engagement scales to 300M+ daily users"
+      ]
+    },
+    "growthAnalysis": {
+      "cagrEstimate": "18–22%",
+      "scoreDerivation": "Base 80 (18–22% revenue CAGR, dominant market share) + 5 AI advertising moat (Advantage+ re-builds post-ATT) + 3 WhatsApp/new revenue optionality − 3 2026 capex compression risk = 85",
+      "drivers": [
+        { "name": "Core Ad Revenue", "metric": "+22% FY2025; Q4 2025 +24% YoY, Family of Apps revenue $58.9B", "trend": "accelerating" },
+        { "name": "WhatsApp & Other Revenue", "metric": "+54% YoY Q4 2025; paid messaging + Meta Verified scaling", "trend": "accelerating" },
+        { "name": "Reality Labs", "metric": "Q4 2025 revenue $955M (−12% YoY); losses >$5B/yr ongoing", "trend": "stable" }
+      ],
+      "primaryType": "revenue",
+      "keyRisk": "If 2026 capex of $115–135B does not yield measurable AI revenue by H2 2026 — specifically no WhatsApp commerce inflection and no Llama licensing revenue above $1B — FCF compresses to <$30B and the market re-rates from a quality compounder to a capex-heavy infrastructure bet",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
     "score": 72,
-    "description": "Between bear and new base (~$648). META has executed to its prior bull case. New targets raised to reflect Llama commercialisation and WhatsApp monetisation trajectory.",
+    "description": "At ~$648, META sits between the bear ($460) and base ($720) targets — roughly 90% of base fair value. After Q4 2025 beat (revenue +24%, EPS $8.88 vs $8.19E), the stock rallied to $738 before retracing. The $115–135B 2026 capex guidance adds near-term FCF uncertainty but does not impair the core advertising earnings power.",
     "valuationNote": {
       "text": "Using a 10-year DCF with a 9% WACC, 20% near-term EPS growth decelerating to 3.5% terminal growth, and adjusting for Reality Labs losses and capex normalisation, our fair value estimate for META is",
       "fairValue": "$720/share"
@@ -94,12 +115,13 @@
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~27×"
+          "value": "~22×",
+          "note": "TTM EPS $29.23 (FY2025)"
         },
         {
           "label": "Forward P/E (NTM)",
           "value": "~22×",
-          "note": "consensus ~$29 EPS 2026E"
+          "note": "consensus ~$30 EPS 2026E"
         },
         {
           "label": "PEG Ratio",
@@ -108,15 +130,16 @@
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~9×"
+          "value": "~7.3×",
+          "note": "~$222B NTM revenue est."
         },
         {
           "label": "Price / Free Cash Flow",
-          "value": "~24×",
-          "note": "$50B+ FCF expected 2026"
+          "value": "~31×",
+          "note": "~$52B FY2025 FCF; 2026 capex ramp may compress"
         }
       ],
-      "summary": "META's ~22× forward P/E sits at a 10–15% discount to the S&P 500 despite superior free cash flow margins (~35%) and dominant ad-platform pricing power. Reality Labs losses inflate reported costs; stripping them out, the core social business trades closer to 18× forward earnings. The 1.2× PEG is undemanding for a business with 15–20% EPS compounding and $3B+ daily active users across its family of apps."
+      "summary": "META's ~22× forward P/E is in line with its trailing P/E — reflecting strong FY2025 EPS growth of ~37% YoY ($29.23 TTM). At this multiple, Meta trades at a modest discount to the S&P 500 despite superior FCF margins (~26%) and dominant ad-platform pricing power. The 1.2× PEG is reasonable for a business compounding EPS at 18–20%. The key 2026 variable is whether the $115–135B capex cycle compresses near-term FCF without a corresponding acceleration in AI-driven revenue."
     }
   },
   "scenarios": {
