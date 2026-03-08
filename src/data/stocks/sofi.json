@@ -1,0 +1,185 @@
+{
+  "slug": "sofi",
+  "ticker": "SOFI",
+  "name": "SoFi Technologies",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "SOFI"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$24B"
+    },
+    {
+      "label": "Price",
+      "value": "~$19"
+    }
+  ],
+  "chips": [
+    {
+      "label": "FinTech | Digital Banking",
+      "color": "primary"
+    },
+    {
+      "label": "Bank Charter Moat",
+      "color": "success"
+    }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Members",
+      "value": "10M+",
+      "label": "34% YoY Growth (FY2024)",
+      "icon": "Users",
+      "color": "#6366f1"
+    },
+    {
+      "title": "Fee Revenue",
+      "value": "$970M",
+      "label": "+74% YoY — 37% of Total Revenue",
+      "icon": "TrendingUp",
+      "color": "#22c55e"
+    },
+    {
+      "title": "Adj. EBITDA Mgn",
+      "value": "27%",
+      "label": "Q4 2024 — Expanding from 16% in '22",
+      "icon": "BarChart2",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "score": 68,
+    "description": "National bank charter + Galileo infrastructure moat creates structural advantages that non-bank fintechs cannot easily replicate.",
+    "analysisTitle": "The Charter & Infrastructure Moat",
+    "analysisSummary": "SoFi's competitive position rests on **three compounding structural advantages** that separate it from the crowded neobank field:",
+    "analysisPoints": [
+      {
+        "title": "The National Bank Charter",
+        "text": "Obtaining an OCC national bank charter in January 2022 was a watershed moment. It gives SoFi access to low-cost FDIC-insured deposit funding — generating an estimated $515 million in annualized interest expense savings vs. the pre-charter wholesale funding model. As the FDIC and OCC tightened scrutiny on sponsor-bank arrangements in 2024-25, non-chartered competitors like Chime face increasing regulatory headwinds. The charter is simultaneously a moat and a barrier to entry that took SoFi years and significant regulatory investment to achieve."
+      },
+      {
+        "title": "Galileo & Technisys — 'The AWS of Fintech'",
+        "text": "SoFi is the only company that owns a consumer bank, a payment processing infrastructure (Galileo, 160M enabled accounts), and a cloud-native core banking platform (Technisys/Cyberbank). Galileo was selected as the U.S. Treasury Direct Express processing partner (3.4M users); it also powers Southwest Airlines and Wyndham Hotels' rewards financial products and is expanding into Latin America and the Middle East. This B2B infrastructure generates 32% contribution margins and is targeting $1B revenue by 2026 — a capital-light recurring fee engine that transcends SoFi's own consumer business."
+      },
+      {
+        "title": "The One-Stop-Shop Flywheel",
+        "text": "SoFi's members average 1.5 products; its target is to become the financial services equivalent of an Amazon Prime membership. Cross-sell is accelerating: 32% of new products in Q1 2025 came from existing members, and multi-product members retain at significantly higher rates. This creates a self-reinforcing acquisition efficiency loop — better retention lowers CAC, which funds better rates, which attracts more members. The 10M member base at 34% YoY growth is the raw material for compounding ARPU."
+      }
+    ]
+  },
+  "growth": {
+    "score": 82,
+    "description": "25-35% revenue CAGR with fee-based revenue (now 37% of total) growing at 74% YoY in 2024, diversifying away from interest-rate-sensitive lending toward high-margin platform economics."
+  },
+  "valuation": {
+    "score": 79,
+    "description": "At ~$19 — 27% below the base case of $26 — SoFi offers a meaningful margin of safety on a business compounding revenue at 25-35% with expanding EBITDA margins; CEO Noto bought 56,000 shares in March 2026, signalling insider conviction amid the 40%+ drawdown from the $32.73 ATH.",
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "49.9×",
+          "note": "$498.7M net income FY2024"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~27×",
+          "note": "consensus EPS est. ~$0.70 2025E"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~0.8×",
+          "note": "fwd P/E ÷ 35% revenue CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~6.6×",
+          "note": "$3.6B 2025E revenue"
+        },
+        {
+          "label": "Price / Book",
+          "value": "~2.1×",
+          "note": "bank charter premium"
+        }
+      ],
+      "summary": "At ~27× forward earnings alongside 35%+ revenue growth, SoFi trades at a sub-1.0 PEG — rare for a profitable fintech. The elevated trailing P/E overstates true expensiveness: Q4 2024 run-rate annualises to ~$1.3B net income, implying a sub-20× P/E on current earnings power. Price/book of 2.1× is modest for a bank with 5.8% NIM and $26B in deposits."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$13",
+      "description": "Credit cycle turns: personal loan charge-offs spike above 4%, NIM compresses, and growth-stock multiple compression rerates SoFi back toward distressed fintech valuations as macro headwinds compound.",
+      "points": [
+        "Personal loan net charge-off rates climb above 4% (from current 2.83%) as consumer credit deteriorates; SoFi's 69% personal loan book concentration forces provision increases that wipe out adjusted EBITDA gains and reignite GAAP loss fears",
+        "Interest rates remain elevated through 2026, compressing NIM below 5% on the $26B deposit book while making SoFi's rates uncompetitive vs. money-market funds; member growth decelerates below 15% YoY as new member acquisition economics deteriorate",
+        "Galileo client churn accelerates as hyperscalers (Google, AWS) launch competing payment-processing APIs at cost; Technology Platform revenue growth stalls below 5%, removing the key capital-light growth narrative that justified the premium valuation"
+      ]
+    },
+    "base": {
+      "priceTarget": "$26",
+      "description": "Continued 20-25% revenue growth: Lending recovers with rate cuts, Financial Services reaches profitability, Galileo approaches $1B revenue milestone, and GAAP EPS expands to $0.30-0.40.",
+      "points": [
+        "Member count reaches 13-14M by end of 2026 as SoFi's rates, rewards, and one-stop-shop advantage sustain 25-28% YoY member growth; multi-product penetration lifts ARPU 10-15%",
+        "Galileo/Technisys revenue crosses $500M in 2026 on new client wins (10+ incremental revenue-contributing clients in 2026 already signed) and expansion into international markets; 32% segment margins hold",
+        "Rate cuts in 2025-26 reduce deposit cost pressure, expanding NIM and enabling SoFi to originate home loans at scale — adding a third major lending vertical alongside personal loans and student refinancing"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$45",
+      "description": "SoFi establishes itself as the dominant fintech infrastructure provider ('AWS of Fintech'), reaching 20M members and $5B+ revenue with operating leverage driving GAAP EPS of $0.80+, warranting a premium SaaS-like multiple.",
+      "points": [
+        "Galileo becomes a $1B revenue business by 2026 with 35%+ contribution margins as major international bank wins (Middle East, LatAm) scale; multiple SaaS platforms include SoFi's Cyberbank as the core banking standard",
+        "SoFi's 20M member target is achieved by 2027 as it expands into business banking, insurance, and wealth management — product revenue per member doubles from current $270 to $500+",
+        "Credit quality holds through the cycle as SoFi's AI-driven underwriting models (trained on 10M+ member profiles) generate loss rates materially below industry averages, validating a premium P/B multiple and attracting institutional investors who previously avoided high-beta fintech"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "SoFi's app design is award-winning but banking apps are increasingly commoditized; consumers can transfer accounts digitally in minutes, limiting interface lock-in to behavioral inertia rather than structural friction."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Proprietary credit underwriting models trained on 10M+ member profiles, income-verified lending, and the Galileo/Technisys payment processing and core banking logic represent genuinely complex, non-trivially replicable business logic."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — SoFi is not a data aggregator or media business; it has no preferential access to public data sources that competitors cannot also access."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "SoFi competes for fintech engineers and risk scientists but this is not a primary moat; AI tools are compressing engineering talent scarcity across the industry."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "The one-stop-shop strategy is delivering: 32% of new products in Q1 2025 came from existing members, and members with 3+ products churn at materially lower rates — the bundle creates real switching cost."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "10M+ member profiles with income-verified financial behavior across loans, deposits, investments, and credit cards create a compounding underwriting dataset that smaller fintechs and even large banks lack in this specific demographic segment."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "The national bank charter (OCC, 2022) is an extraordinarily difficult regulatory achievement that took SoFi years to obtain; combined with the U.S. Treasury Direct Express contract and FDIC-insured deposit infrastructure, this creates a regulatory moat that non-bank fintechs (Chime, Robinhood) cannot replicate without multi-year regulatory process."
+    },
+    "networkEffects": {
+      "status": "weakened",
+      "note": "Indirect network effects exist — more members generate richer underwriting data and lower CAC — but classic Metcalfe's Law does not apply to banking; a new SoFi member doesn't make the product more valuable for existing members directly."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Members who route their direct deposit through SoFi (earning the premium 4.5%+ APY) have their financial center-of-gravity anchored to SoFi; moving direct deposit is a deliberate multi-step process that most members avoid once established."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "For members with SoFi checking, savings, invest, credit card, and loans, SoFi becomes the system of record for their full financial life — though this is limited to members with 3+ products and doesn't yet reach the institutional depth of a Fiserv or FIS."
+    },
+    "aiResilienceScore": 67,
+    "verdict": "SoFi's bank charter (regulatoryLockIn: strong) is a genuine AI-era moat — it cannot be disrupted by a language model — and the Galileo/Technisys infrastructure creates a system-of-record and transaction-embedding position in the B2B fintech stack. However, AI threatens the interface layer and could compress the underwriting advantage as competitors access similar models, keeping the AI resilience score in the solid-but-not-exceptional range."
+  }
+}

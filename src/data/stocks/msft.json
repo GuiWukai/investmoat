@@ -3,19 +3,52 @@
   "ticker": "MSFT",
   "name": "Microsoft Corp.",
   "headerStats": [
-    { "label": "Ticker", "value": "MSFT" },
-    { "label": "Market Cap", "value": "~$3.0T" },
-    { "label": "Price", "value": "~$408" }
+    {
+      "label": "Ticker",
+      "value": "MSFT"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$3.0T"
+    },
+    {
+      "label": "Price",
+      "value": "~$408"
+    }
   ],
   "chips": [
-    { "label": "Software | Cloud | AI", "color": "primary" },
-    { "label": "Gold Standard", "color": "success" }
+    {
+      "label": "Software | Cloud | AI",
+      "color": "primary"
+    },
+    {
+      "label": "Gold Standard",
+      "color": "success"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
-    { "title": "Azure Growth", "value": "39%", "label": "38% CC / 39% USD (Q2 FY26)", "icon": "Cloud", "color": "#00a4ef" },
-    { "title": "Copilot Seats", "value": "15M", "label": "+160% YoY Paid Seats", "icon": "Laptop", "color": "#ffb900" },
-    { "title": "Operating Margin", "value": "47.1%", "label": "Expanding Efficiency", "icon": "Database", "color": "#7fba00" }
+    {
+      "title": "Azure Growth",
+      "value": "39%",
+      "label": "38% CC / 39% USD (Q2 FY26)",
+      "icon": "Cloud",
+      "color": "#00a4ef"
+    },
+    {
+      "title": "Copilot Seats",
+      "value": "15M",
+      "label": "+160% YoY Paid Seats",
+      "icon": "Laptop",
+      "color": "#ffb900"
+    },
+    {
+      "title": "Operating Margin",
+      "value": "47.1%",
+      "label": "Expanding Efficiency",
+      "icon": "Database",
+      "color": "#7fba00"
+    }
   ],
   "moat": {
     "score": 84,
@@ -23,9 +56,18 @@
     "analysisTitle": "The Enterprise Moat",
     "analysisSummary": "Microsoft's moat is built on **Ubiquity and Frictionless Scaling**:",
     "analysisPoints": [
-      { "title": "The Bundle Moat", "text": "By integrating Office, Teams, Azure, and Security with Copilot AI, Microsoft creates a sticky ecosystem where selecting a competitor point-product adds more complexity than value. AI integration strengthens this moat rather than threatening it." },
-      { "title": "Commercial Switching Costs", "text": "Migrating a global enterprise away from Active Directory, Office 365, and Azure is an IT operation that takes years and carries immense risk. The $625B commercial RPO (up 110% YoY) reflects deep enterprise commitment — though ~45% derives from OpenAI contracts alone, a concentration risk if the partnership restructures. Excluding OpenAI, the underlying RPO still grew ~28% YoY, confirming broad enterprise demand." },
-      { "title": "AI Supermarket Strategy", "text": "Microsoft AI chief Mustafa Suleyman confirmed in February 2026 that Microsoft is developing its own frontier-grade models with gigawatt-scale compute, reducing dependency on OpenAI. OpenAI is simultaneously gaining flexibility to run workloads elsewhere (Stargate). Paradoxically, this evolution strengthens Microsoft's position: as the cloud host for 1,900+ models from OpenAI, xAI, Meta, Mistral, and DeepSeek, Microsoft captures compute revenue regardless of which frontier AI provider wins — and is no longer a single-partner hostage." }
+      {
+        "title": "The Bundle Moat",
+        "text": "By integrating Office, Teams, Azure, and Security with Copilot AI, Microsoft creates a sticky ecosystem where selecting a competitor point-product adds more complexity than value. AI integration strengthens this moat rather than threatening it."
+      },
+      {
+        "title": "Commercial Switching Costs",
+        "text": "Migrating a global enterprise away from Active Directory, Office 365, and Azure is an IT operation that takes years and carries immense risk. The $625B commercial RPO (up 110% YoY) reflects deep enterprise commitment — though ~45% derives from OpenAI contracts alone, a concentration risk if the partnership restructures. Excluding OpenAI, the underlying RPO still grew ~28% YoY, confirming broad enterprise demand."
+      },
+      {
+        "title": "AI Supermarket Strategy",
+        "text": "Microsoft AI chief Mustafa Suleyman confirmed in February 2026 that Microsoft is developing its own frontier-grade models with gigawatt-scale compute, reducing dependency on OpenAI. OpenAI is simultaneously gaining flexibility to run workloads elsewhere (Stargate). Paradoxically, this evolution strengthens Microsoft's position: as the cloud host for 1,900+ models from OpenAI, xAI, Meta, Mistral, and DeepSeek, Microsoft captures compute revenue regardless of which frontier AI provider wins — and is no longer a single-partner hostage."
+      }
     ]
   },
   "growth": {
@@ -34,7 +76,36 @@
   },
   "valuation": {
     "score": 72,
-    "description": "At ~$408 — down ~15% from its all-time high of $555 — MSFT sits 9% below the base case ($450), offering a meaningful margin of safety on a business delivering 47% operating margins and $81B quarterly revenue. Antitrust risk (Japan FTC raid, OpenAI class action) and a decelerating Azure growth guide (37–38% for Q3) have weighed on the multiple, creating a patient accumulation entry point rather than a structural re-rating."
+    "description": "At ~$408 — down ~15% from its all-time high of $555 — MSFT sits 9% below the base case ($450), offering a meaningful margin of safety on a business delivering 47% operating margins and $81B quarterly revenue. Antitrust risk (Japan FTC raid, OpenAI class action) and a decelerating Azure growth guide (37–38% for Q3) have weighed on the multiple, creating a patient accumulation entry point rather than a structural re-rating.",
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~32×"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~27×",
+          "note": "consensus ~$15.50 EPS FY2027E"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.7×",
+          "note": "fwd P/E ÷ 16% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~11×"
+        },
+        {
+          "label": "Price / Free Cash Flow",
+          "value": "~30×",
+          "note": "$80B+ FCF expected FY2027"
+        }
+      ],
+      "summary": "MSFT's 27× forward P/E reflects the premium the market assigns to Azure's $200B+ revenue trajectory and Copilot monetisation, though at a 1.7× PEG the multiple requires sustained 15–17% EPS growth to justify. The 47% operating margin provides substantial downside protection — even in a bear scenario where AI capex disappoints, MSFT's SaaS installed base generates durable FCF."
+    }
   },
   "scenarios": {
     "bear": {
@@ -66,16 +137,46 @@
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "weakened", "note": "Copilot abstracts traditional Office UI but enterprise muscle-memory, deep training investments, and workflow integration remain entrenched. AI cuts both ways." },
-    "businessLogic": { "status": "strong", "note": "Azure AI Platform is now the enterprise AI OS — the destination enterprises migrate to, not from. Microsoft is the provider of business logic re-platforming. Emerging risk: OpenAI's ~$3B acquisition of coding IDE Windsurf creates a direct GitHub Copilot competitor backed by ChatGPT's user base, though Azure remains the underlying compute beneficiary regardless of which Copilot wins." },
-    "publicDataAccess": { "status": "destroyed", "note": "Bing search advantage commoditised; OpenAI partnership exclusivity is fracturing as OpenAI expands to Google/Oracle. No unique public data edge remains." },
-    "talentScarcity": { "status": "weakened", "note": "GitHub Copilot and Azure AI raise developer productivity broadly, reducing reliance on rare senior engineering talent as a moat." },
-    "bundling": { "status": "strong", "note": "Office + Teams + Azure + Security + Copilot bundle deepened by AI integration. 70% of Fortune 500 using Copilot creates emergent bundle value no point-solution replicates." },
-    "proprietaryData": { "status": "strong", "note": "Azure telemetry, LinkedIn social graph, and GitHub code corpus are unrivaled enterprise data assets. The AI flywheel compounds as more Copilot usage flows back into model training." },
-    "regulatoryLockIn": { "status": "strong", "note": "JEDI/DoD contracts, FedRAMP High, HIPAA, and government cloud compliance create irreplaceable switching costs. Significant new headwinds: the FTC launched what may be the broadest antitrust probe since the 1990s DOJ Microsoft case — examining cloud licensing and AI bundling — with the FTC and DOJ jointly probing Microsoft, OpenAI, and Nvidia. Japan FTC also raided Microsoft Japan. A San Francisco consumer class action challenges the OpenAI compute exclusivity arrangement. None of these change customer lock-in but create structural remedy risk and regulatory overhang through FY2027." },
-    "networkEffects": { "status": "strong", "note": "450M+ paid commercial Microsoft 365 seats (up from 400M) and the Azure developer ecosystem enhanced by an AI model marketplace of 1,900+ models — more models attract more workloads. GitHub Copilot reached 4.7M paid subscribers (+75% YoY), reinforcing developer flywheel." },
-    "transactionEmbedding": { "status": "strong", "note": "Embedded in every enterprise workflow: procurement, finance, HR, legal, and collaboration — with Copilot now embedded inside those workflows, deepening extraction costs." },
-    "systemOfRecord": { "status": "strong", "note": "Active Directory controls identity, SharePoint holds documents, Dynamics owns CRM, Teams owns communications. The enterprise OS. Migration remains a multi-year IT programme." },
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "Copilot abstracts traditional Office UI but enterprise muscle-memory, deep training investments, and workflow integration remain entrenched. AI cuts both ways."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "Azure AI Platform is now the enterprise AI OS — the destination enterprises migrate to, not from. Microsoft is the provider of business logic re-platforming. Emerging risk: OpenAI's ~$3B acquisition of coding IDE Windsurf creates a direct GitHub Copilot competitor backed by ChatGPT's user base, though Azure remains the underlying compute beneficiary regardless of which Copilot wins."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Bing search advantage commoditised; OpenAI partnership exclusivity is fracturing as OpenAI expands to Google/Oracle. No unique public data edge remains."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "GitHub Copilot and Azure AI raise developer productivity broadly, reducing reliance on rare senior engineering talent as a moat."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Office + Teams + Azure + Security + Copilot bundle deepened by AI integration. 70% of Fortune 500 using Copilot creates emergent bundle value no point-solution replicates."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Azure telemetry, LinkedIn social graph, and GitHub code corpus are unrivaled enterprise data assets. The AI flywheel compounds as more Copilot usage flows back into model training."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "JEDI/DoD contracts, FedRAMP High, HIPAA, and government cloud compliance create irreplaceable switching costs. Significant new headwinds: the FTC launched what may be the broadest antitrust probe since the 1990s DOJ Microsoft case — examining cloud licensing and AI bundling — with the FTC and DOJ jointly probing Microsoft, OpenAI, and Nvidia. Japan FTC also raided Microsoft Japan. A San Francisco consumer class action challenges the OpenAI compute exclusivity arrangement. None of these change customer lock-in but create structural remedy risk and regulatory overhang through FY2027."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "450M+ paid commercial Microsoft 365 seats (up from 400M) and the Azure developer ecosystem enhanced by an AI model marketplace of 1,900+ models — more models attract more workloads. GitHub Copilot reached 4.7M paid subscribers (+75% YoY), reinforcing developer flywheel."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Embedded in every enterprise workflow: procurement, finance, HR, legal, and collaboration — with Copilot now embedded inside those workflows, deepening extraction costs."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "Active Directory controls identity, SharePoint holds documents, Dynamics owns CRM, Teams owns communications. The enterprise OS. Migration remains a multi-year IT programme."
+    },
     "aiResilienceScore": 84,
     "verdict": "Microsoft's AI-vulnerable moats face moderate pressure (interfaces, talent scarcity), but its AI-resilient fortress — system of record, regulatory lock-in, transaction embedding, and the Azure proprietary data flywheel — is actively strengthened by AI. The businessLogic moat is upgraded to strong: Azure AI is the re-platforming destination, not the threatened incumbent."
   }

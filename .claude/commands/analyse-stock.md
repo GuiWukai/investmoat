@@ -31,6 +31,8 @@ Search for current data before scoring anything. Do not rely on training data fo
 - Free cash flow and ROIC for the trailing twelve months
 - Forward guidance from the most recent earnings call
 - Key recent news: product launches, regulatory changes, competitor moves
+- **Valuation multiples:** trailing P/E (GAAP), consensus forward EPS estimate (NTM), Price/Sales (NTM), Price/FCF, PEG ratio
+- Sector/peer median forward P/E for context (e.g. S&P 500 ~21×; growth tech ~28–35×)
 
 **Business Model Clarity — answer before scoring:**
 1. **What does the company actually sell?** (product/service, not the marketing description)
@@ -190,25 +192,74 @@ Write a `verdict` of 2–4 sentences that:
 
 ## Step 5 — Growth Score
 
-Assess the 3–5 year growth outlook:
+Work through the sub-steps in order. The output must include both a prose `description` and a structured `growthAnalysis` object in the JSON.
 
-**Revenue Growth Rate (primary driver)**
-- 30%+ CAGR → starts at 90+
-- 15–30% CAGR → 75–89
-- 8–15% CAGR → 60–74
-- 4–8% CAGR → 45–59
-- Below 4% → below 45
+### 5a — State the CAGR estimate first
 
-**Adjust for quality:**
-- +5 to +10 if growth is recurring/subscription-based with high net revenue retention (>110% NRR)
-- +5 if there is a new TAM expansion catalyst (e.g., AI monetisation layer on top of existing base)
-- -5 to -10 if growth is lumpy, cyclical, or dependent on a single customer (>20% revenue concentration)
-- -5 if margin compression accompanies growth (operating margin declining while revenue grows)
+Before scoring, estimate the blended 3–5 year revenue CAGR. For multi-segment companies, break it down by segment and weight by revenue mix (e.g., AWS ~19% of total at +20%, ads ~12% at +22%, retail ~69% at +8% → blended ~12%). State this as a range: `"15–20%"`.
 
-**Key questions to answer:**
-1. What drives the next 3 years of growth? Name the specific product or market.
-2. Is this a TAM expansion story or a market share story?
-3. What is the biggest risk to the growth thesis? (Be specific: regulation, competition, technology shift)
+### 5b — Derive the score explicitly
+
+**Base score from blended CAGR:**
+| CAGR | Base Score |
+|---|---|
+| 30%+ | 90 |
+| 15–30% | 80 |
+| 8–15% | 67 |
+| 4–8% | 52 |
+| Below 4% | 40 |
+
+**Named adjustments (show each applied):**
+| Condition | Adjustment |
+|---|---|
+| Recurring/subscription with NRR >110% | +5 to +10 |
+| New TAM expansion catalyst (AI layer, new geography, new product) | +5 |
+| Lumpy/cyclical or single-customer >20% concentration | −5 to −10 |
+| Margin compression accompanying growth | −5 |
+
+Show your work in `scoreDerivation`: `"Base 80 (15–30% CAGR) + 5 recurring + 5 TAM − 2 guidance width = 88"`. Do not pad the score — if the CAGR is 12%, the base is 67, not 80.
+
+### 5c — Answer the three required questions
+
+These must be specific and falsifiable. Vague answers are not acceptable:
+
+1. **What drives the next 3 years?** Name the specific product or service — not the category. Wrong: *"cloud growth"*. Right: *"AWS inference workloads from 200+ Bedrock enterprise customers on Trainium2 chips"*.
+
+2. **TAM expansion or market share?** State which, and give a rough TAM size or current market share figure. Wrong: *"both"* with no data. Right: *"TAM expansion — enterprise AI inference TAM estimated at $200B+ by 2027, AWS currently at ~30% cloud share with dedicated silicon advantage"*.
+
+3. **Biggest risk to the thesis?** Must be specific and falsifiable with a time horizon. Wrong: *"competition"*. Right: *"If Azure ROCm reaches 15% developer share by end of 2026, CUDA-alternative workflows accelerate and AWS Trainium capture stalls"*.
+
+### 5d — List the top 2–3 growth drivers
+
+For each driver:
+- `name`: Segment or product name
+- `metric`: Current YoY growth rate + a size/scale metric (e.g., "+24% YoY, $244B backlog")
+- `trend`: `accelerating` / `stable` / `decelerating` — based on the last 2 quarters of data
+
+### 5e — State the margin trend
+
+Is the operating margin expanding, stable, or compressing? Apply the −5 adjustment if compressing, and document it in `scoreDerivation`.
+
+### 5f — Output the `growthAnalysis` JSON field
+
+```json
+"growthAnalysis": {
+  "cagrEstimate": "15–20%",
+  "scoreDerivation": "Base 80 (15–30% CAGR) + 5 recurring (AWS/Prime) + 5 TAM expansion (AI inference) − 2 guidance width = 88",
+  "drivers": [
+    { "name": "AWS Cloud",    "metric": "+24% YoY, $244B backlog (+40% YoY)", "trend": "accelerating" },
+    { "name": "Advertising",  "metric": "+23% YoY, $21.3B Q4 (~$85B annualised)", "trend": "accelerating" },
+    { "name": "International","metric": "+17% YoY (Q4), margins recovering",    "trend": "stable" }
+  ],
+  "primaryType": "both",
+  "keyRisk": "If Azure captures >40% of new enterprise AI inference workloads by end of 2026, AWS growth decelerates below 18% and the $200B capex cycle proves premature",
+  "marginTrend": "expanding"
+}
+```
+
+**`primaryType` values:** `"TAM expansion"` | `"market share"` | `"both"`
+**`trend` values:** `"accelerating"` | `"stable"` | `"decelerating"`
+**`marginTrend` values:** `"expanding"` | `"stable"` | `"compressing"`
 
 ---
 
@@ -235,6 +286,37 @@ Compare current price to bear/base/bull scenarios using the piecewise scoring sy
 *Bull*: Upside if 1–2 key catalysts exceed expectations. Plausible, not fantasy. Typically 40–80% above base for growth stocks.
 
 **Scenario internal consistency check:** Bull target must be ≥ 1.5× bear target. If not, widen the range.
+
+### Forward P/E Analysis
+
+After setting scenarios, assess valuation multiples:
+
+**Collect these metrics** (use NTM = next twelve months consensus where applicable):
+
+| Metric | What to use |
+|---|---|
+| Trailing P/E (GAAP) | TTM EPS from most recent filing |
+| Forward P/E (NTM) | Current price ÷ consensus NTM EPS estimate |
+| PEG Ratio | Forward P/E ÷ 3–5 year EPS CAGR estimate |
+| Price / Sales (NTM) | Market cap ÷ consensus NTM revenue estimate |
+| Price / FCF | Market cap ÷ TTM free cash flow (or NTM if guided) |
+| Price / Book | For banks/financials only; replace P/FCF |
+
+**Interpret the PEG ratio:**
+- PEG < 1.0 → growth at a reasonable price (GARP)
+- PEG 1.0–1.5 → fairly priced for growth
+- PEG 1.5–2.0 → premium; requires execution to justify
+- PEG > 2.0 → expensive; limited margin of safety
+
+**When P/E is not meaningful (mark rows as N/A):**
+- Pre-GAAP-profitability companies (negative EPS) → use P/S and EV/Revenue instead
+- Commodities, crypto, and metals → omit `peAnalysis` entirely; these assets don't have earnings multiples
+- Companies with highly distorted one-time items → note the distortion in the summary and use adjusted EPS if available
+
+**Write a `summary`** (2–3 sentences) that:
+1. States whether the current forward P/E is cheap, fair, or expensive vs the sector median
+2. Names the PEG and whether growth justifies the multiple
+3. Highlights any gap between trailing and forward P/E that signals an earnings ramp (bullish) or deceleration (bearish)
 
 ---
 
@@ -288,10 +370,33 @@ Produce a structured report with these sections:
 **Verdict:** [2–4 sentences covering AI beneficiary/loser, strongest moats, biggest AI risks]
 
 ### Growth Analysis (Score: X/100)
-[Growth thesis, key drivers, named products/markets, 3–5 year CAGR estimate]
+**CAGR:** X–X% blended | **Type:** TAM expansion / market share / both | **Margins:** expanding / stable / compressing
+
+[1–2 sentences: the core growth thesis and the primary driver named specifically.]
+
+**Drivers:**
+| Segment | Metric | Trend |
+|---|---|---|
+| [Name] | [YoY% + size/backlog] | ↑ accelerating / → stable / ↓ decelerating |
+| [Name] | [YoY% + size/backlog] | ↑ / → / ↓ |
+| [Name] | [YoY% + size/backlog] | ↑ / → / ↓ |
+
+**Key Risk:** [Specific, falsifiable, time-bounded]
+**Score:** [Base X (CAGR band) + adjustments = final]
 
 ### Valuation Analysis (Score: X/100)
 [Where price sits vs scenarios, margin of safety commentary, DCF assumptions if relevant]
+
+**Forward P/E Analysis:**
+| Metric | Value | Note |
+|---|---|---|
+| Trailing P/E (GAAP) | X× | TTM EPS $X |
+| Forward P/E (NTM) | X× | consensus EPS est. $X |
+| PEG Ratio | X× | fwd P/E ÷ X% EPS CAGR |
+| Price / Sales (NTM) | X× | $XB NTM revenue |
+| Price / FCF | X× | $XB FCF (TTM) |
+
+[2–3 sentences interpreting the multiples: is the forward P/E cheap/fair/expensive vs sector? Does the PEG justify the growth premium? Any notable gap between trailing and forward P/E?]
 
 ### Scenarios
 **Bear ($X):** [1 sentence thesis]
@@ -337,6 +442,31 @@ If you must review inline, compare the analysis to the current data and flag:
 6. **Recommendation consistency** — ensure recommendation aligns with the updated composite score
 
 Propose specific JSON edits for any fields that need updating.
+
+---
+
+## JSON — peAnalysis Field
+
+When generating the stock JSON, include `peAnalysis` inside the `valuation` object for all profitable public equities. Omit it entirely for commodities, crypto, and pre-profit companies where P/E is meaningless.
+
+```json
+"peAnalysis": {
+  "asOf": "Month YYYY",
+  "rows": [
+    { "label": "Trailing P/E (GAAP)", "value": "X×", "note": "$X TTM EPS" },
+    { "label": "Forward P/E (NTM)", "value": "~X×", "note": "consensus EPS est. $X" },
+    { "label": "PEG Ratio", "value": "~X×", "note": "fwd P/E ÷ X% EPS CAGR" },
+    { "label": "Price / Sales (NTM)", "value": "~X×", "note": "$XB NTM revenue" },
+    { "label": "Price / FCF", "value": "~X×", "note": "$XB FCF (TTM)" }
+  ],
+  "summary": "2–3 sentence interpretation covering: (1) cheap/fair/expensive vs sector median, (2) PEG commentary, (3) trailing vs forward gap signal."
+}
+```
+
+- Use `×` (multiplication sign, U+00D7) not `x` for multiples
+- Prefix approximate values with `~`
+- For banks/financials replace `Price / FCF` with `Price / Book`
+- Keep `note` fields short (≤ 8 words) — they are hidden on mobile
 
 ---
 

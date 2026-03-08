@@ -4,21 +4,21 @@
   "name": "Amazon.com Inc.",
   "headerStats": [
     { "label": "Ticker", "value": "AMZN" },
-    { "label": "Market Cap", "value": "$2.24T" },
-    { "label": "Price", "value": "$208.73" }
+    { "label": "Market Cap", "value": "$2.29T" },
+    { "label": "Price", "value": "$212.89" }
   ],
   "chips": [
     { "label": "Consumer Discretionary | Tech", "color": "primary" },
-    { "label": "Strong Buy", "color": "success" }
+    { "label": "Accumulate", "color": "primary" }
   ],
-  "recommendation": "Strong Buy",
+  "recommendation": "Accumulate",
   "metrics": [
     { "title": "Revenue Growth", "value": "14%", "label": "Q4 YoY vs 11.5% Industry", "icon": "ShoppingCart", "color": "#f59e0b" },
     { "title": "AWS Margin", "value": "35%", "label": "Q4 2025 — 13-qtr high growth (+24%)", "icon": "Cloud", "color": "#006fee" },
     { "title": "Operating Cash Flow", "value": "$139.5B", "label": "TTM; FCF compressed by $200B capex cycle", "icon": "DollarSign", "color": "#17c964" }
   ],
   "moat": {
-    "score": 82,
+    "score": 78,
     "description": "Dominant scale, switching costs (Prime), and cost advantage (Logistics). AWS backlog hits $244B, up 40% YoY.",
     "analysisTitle": "The Economic Moat",
     "analysisSummary": "Amazon possesses a **Wide Economic Moat** driven by three primary pillars:",
@@ -29,8 +29,8 @@
     ]
   },
   "growth": {
-    "score": 90,
-    "description": "AWS re-accelerated to 24% in Q4 2025 — fastest growth in 13 quarters — with a $244B backlog (+40% YoY) underpinning durable AI-driven demand. Advertising grew 22% to $21.3B.",
+    "score": 88,
+    "description": "AWS re-accelerated to 24% in Q4 2025 — fastest growth in 13 quarters — with a $244B backlog (+40% YoY) underpinning durable AI-driven demand. Advertising grew 23% to $21.3B in Q4. Q1 2026 guidance ($16.5B–$21.5B operating income) has a wide range reflecting ongoing capex ramp, with the midpoint roughly in line with Q1 2025.",
     "additionalNote": {
       "title": "Financial Outlook",
       "points": [
@@ -39,14 +39,37 @@
         "Trainium2/3 custom AI chips now at $10B+ run rate with triple-digit YoY growth; Trainium4 targeting 2027.",
         "International retail margins recovering: North America segment margin expanded to 9.0% in Q4."
       ]
+    },
+    "growthAnalysis": {
+      "cagrEstimate": "15–20%",
+      "scoreDerivation": "Base 80 (15–30% blended CAGR) + 5 recurring revenue (AWS contracts + Prime) + 5 TAM expansion (AI inference + sovereign cloud) − 2 Q1 2026 guidance width = 88",
+      "drivers": [
+        { "name": "AWS Cloud", "metric": "+24% YoY, $244B backlog (+40% YoY)", "trend": "accelerating" },
+        { "name": "Advertising", "metric": "+23% YoY, $21.3B Q4 ($85B+ annualised path)", "trend": "accelerating" },
+        { "name": "International Retail", "metric": "+17% YoY (Q4), margins recovering", "trend": "stable" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If Azure captures >40% of new enterprise AI inference workloads by end of 2026, AWS growth decelerates below 18% and the $200B 2026 capex cycle proves premature, compressing FCF for 3+ years",
+      "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 72,
-    "description": "Stock at ~$209 vs DCF fair value of ~$225; the $200B capex plan for 2026 compresses near-term FCF but represents a long-duration infrastructure bet. Margin of safety narrows but thesis intact for patient investors.",
+    "score": 69,
+    "description": "Stock at ~$213 sits ~5% below our base fair value of $225. The $200B 2026 capex plan is expected to compress FCF to near-zero (Bloomberg consensus projects slightly negative FCF in 2026 — first time since 2022). Investors are paying for the multi-year AI infrastructure call option; margin of safety is thin but AWS + advertising earnings power justifies patience.",
     "valuationNote": {
       "text": "Using a 10-year DCF with a 9% WACC and a 3.5% terminal growth rate, our fair value estimate for AMZN is",
       "fairValue": "$225/share"
+    },
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~29.7×", "note": "$7.17 TTM EPS (FY 2025)" },
+        { "label": "Forward P/E (NTM)", "value": "~26.1×", "note": "consensus EPS est. $8.16" },
+        { "label": "PEG Ratio", "value": "~1.44×", "note": "fwd P/E ÷ ~18% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~2.79×", "note": "~$770B NTM revenue est." },
+        { "label": "Price / FCF", "value": "~280×", "note": "$7.7B TTM FCF (capex-distorted)" }
+      ],
+      "summary": "At ~26× forward earnings, AMZN trades at a modest 3-turn premium to the megacap peer median (~23×), consistent with its AWS and advertising quality mix. The PEG of 1.44× sits in the 'premium; requires execution' range — investors are paying for the AI infrastructure call option. The compression from 29.7× trailing to 26.1× forward signals a meaningful earnings ramp through 2026, contingent on the capex cycle beginning to monetise."
     }
   },
   "scenarios": {
