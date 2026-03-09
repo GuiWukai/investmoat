@@ -68,10 +68,10 @@
   },
   "tenMoats": {
     "learnedInterfaces": { "status": "destroyed", "note": "Not applicable — Bitcoin is a decentralized monetary protocol, not a software interface product." },
-    "businessLogic": { "status": "destroyed", "note": "Bitcoin's protocol rules are immutable by design — this is a feature, not a vulnerability. AI cannot alter consensus." },
-    "publicDataAccess": { "status": "destroyed", "note": "The Bitcoin blockchain is fully public and transparent by design — data access is not a competitive moat." },
+    "businessLogic": { "status": "destroyed", "note": "Not applicable — Bitcoin's protocol rules are immutable by design; there is no configurable business logic layer. This is a feature, not a vulnerability." },
+    "publicDataAccess": { "status": "destroyed", "note": "Not applicable — the Bitcoin blockchain is fully public and transparent by design; data access is not a competitive moat for a monetary protocol." },
     "talentScarcity": { "status": "weakened", "note": "Bitcoin core development talent remains specialized, but the protocol is intentionally simple and resistant to complex change." },
-    "bundling": { "status": "destroyed", "note": "Bitcoin is a single-purpose monetary protocol by design — bundling would undermine its simplicity and security guarantees." },
+    "bundling": { "status": "destroyed", "note": "Not applicable — Bitcoin is intentionally single-purpose; bundling products or features would undermine its core simplicity and security guarantees." },
     "proprietaryData": { "status": "strong", "note": "The Bitcoin blockchain is an immutable, cryptographically secured, tamper-proof record of all value transfers since 2009." },
     "regulatoryLockIn": { "status": "strong", "note": "SEC ETF approvals, FASB accounting treatment, sovereign wealth fund adoption, and growing legal tender status in multiple nations." },
     "networkEffects": { "status": "strong", "note": "The largest crypto network with 52.4M+ unique holders and the broadest institutional support — Metcalfe's Law compounding since 2009." },

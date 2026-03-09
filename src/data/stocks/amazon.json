@@ -4,21 +4,21 @@
   "name": "Amazon.com Inc.",
   "headerStats": [
     { "label": "Ticker", "value": "AMZN" },
-    { "label": "Market Cap", "value": "$2.24T" },
-    { "label": "Price", "value": "$208.73" }
+    { "label": "Market Cap", "value": "$2.29T" },
+    { "label": "Price", "value": "$212.89" }
   ],
   "chips": [
     { "label": "Consumer Discretionary | Tech", "color": "primary" },
-    { "label": "Strong Buy", "color": "success" }
+    { "label": "Accumulate", "color": "primary" }
   ],
-  "recommendation": "Strong Buy",
+  "recommendation": "Accumulate",
   "metrics": [
     { "title": "Revenue Growth", "value": "14%", "label": "Q4 YoY vs 11.5% Industry", "icon": "ShoppingCart", "color": "#f59e0b" },
     { "title": "AWS Margin", "value": "35%", "label": "Q4 2025 — 13-qtr high growth (+24%)", "icon": "Cloud", "color": "#006fee" },
     { "title": "Operating Cash Flow", "value": "$139.5B", "label": "TTM; FCF compressed by $200B capex cycle", "icon": "DollarSign", "color": "#17c964" }
   ],
   "moat": {
-    "score": 82,
+    "score": 78,
     "description": "Dominant scale, switching costs (Prime), and cost advantage (Logistics). AWS backlog hits $244B, up 40% YoY.",
     "analysisTitle": "The Economic Moat",
     "analysisSummary": "Amazon possesses a **Wide Economic Moat** driven by three primary pillars:",
@@ -29,8 +29,8 @@
     ]
   },
   "growth": {
-    "score": 90,
-    "description": "AWS re-accelerated to 24% in Q4 2025 — fastest growth in 13 quarters — with a $244B backlog (+40% YoY) underpinning durable AI-driven demand. Advertising grew 22% to $21.3B.",
+    "score": 88,
+    "description": "AWS re-accelerated to 24% in Q4 2025 — fastest growth in 13 quarters — with a $244B backlog (+40% YoY) underpinning durable AI-driven demand. Advertising grew 23% to $21.3B in Q4. Q1 2026 guidance (revenue $173.5–$178.5B) carries an unusually wide operating income range reflecting the accelerated $200B capex ramp and early tariff exposure; April earnings will be the first real read on capex monetisation pace.",
     "additionalNote": {
       "title": "Financial Outlook",
       "points": [
@@ -39,42 +39,65 @@
         "Trainium2/3 custom AI chips now at $10B+ run rate with triple-digit YoY growth; Trainium4 targeting 2027.",
         "International retail margins recovering: North America segment margin expanded to 9.0% in Q4."
       ]
+    },
+    "growthAnalysis": {
+      "cagrEstimate": "15–20%",
+      "scoreDerivation": "Base 80 (15–30% blended CAGR) + 5 recurring revenue (AWS contracts + Prime) + 5 TAM expansion (AI inference + sovereign cloud) − 2 Q1 2026 guidance width = 88",
+      "drivers": [
+        { "name": "AWS Cloud", "metric": "+24% YoY, $244B backlog (+40% YoY)", "trend": "accelerating" },
+        { "name": "Advertising", "metric": "+23% YoY, $21.3B Q4 ($85B+ annualised path)", "trend": "accelerating" },
+        { "name": "International Retail", "metric": "+17% YoY (Q4), margins recovering", "trend": "stable" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If Azure captures >40% of new enterprise AI inference workloads by end of 2026, AWS growth decelerates below 18% and the $200B 2026 capex cycle proves premature, compressing FCF for 3+ years",
+      "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 72,
-    "description": "Stock at ~$209 vs DCF fair value of ~$225; the $200B capex plan for 2026 compresses near-term FCF but represents a long-duration infrastructure bet. Margin of safety narrows but thesis intact for patient investors.",
+    "score": 78,
+    "description": "Stock at ~$213 sits ~18% below our updated base fair value of $260, offering a more meaningful margin of safety than last assessed. The confirmed $200B 2026 capex plan will drive negative FCF for the year — a structural pressure investors must tolerate — but the $244B AWS backlog (+40% YoY), advertising scaling toward $90B+ annualised, and Bedrock enterprise momentum (60% Q/Q spend growth) underpin the recovery case. The $2.5B FTC Prime settlement (Jan 2026) is a one-time charge with no structural impact on Prime economics. Q1 2026 guidance carries an unusually wide operating income range reflecting early-year capex ramp uncertainty and tariff exposure; the April earnings report is the next major catalyst.",
     "valuationNote": {
       "text": "Using a 10-year DCF with a 9% WACC and a 3.5% terminal growth rate, our fair value estimate for AMZN is",
-      "fairValue": "$225/share"
+      "fairValue": "$260/share"
+    },
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~29.7×", "note": "$7.17 TTM EPS (FY 2025)" },
+        { "label": "Forward P/E (NTM)", "value": "~26.1×", "note": "consensus EPS est. $8.16" },
+        { "label": "PEG Ratio", "value": "~1.44×", "note": "fwd P/E ÷ ~18% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~2.79×", "note": "~$770B NTM revenue est." },
+        { "label": "Price / FCF", "value": "~280×", "note": "$7.7B TTM FCF (capex-distorted)" }
+      ],
+      "summary": "At ~26× forward earnings, AMZN trades at a modest 3-turn premium to the megacap peer median (~23×), consistent with its AWS and advertising quality mix. The PEG of 1.44× sits in the 'premium; requires execution' range — investors are paying for the AI infrastructure call option. The compression from 29.7× trailing to 26.1× forward signals a meaningful earnings ramp through 2026, contingent on the capex cycle beginning to monetise."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$145",
-      "description": "The $200B capex cycle proves premature — AI demand disappoints, FCF stays compressed for years, and macro weakness hits e-commerce and enterprise IT simultaneously.",
+      "priceTarget": "$170",
+      "description": "Tariff headwinds of $5–10B in operating profit hit marketplace economics hard, the $200B capex cycle drives FCF negative in 2026, and AWS decelerates to low-teens growth as Azure and GCP win disproportionate AI inference workloads.",
       "points": [
-        "AI infrastructure overbuild leads to multi-year FCF destruction with no margin recovery in sight",
-        "AWS growth decelerates to low-teens as Azure and GCP take AI workloads on competitive pricing",
-        "Consumer recession hits e-commerce; tariff-driven cost inflation cannot be passed through"
+        "Tariff-driven cost inflation ($5–10B operating profit impact) materialises as Chinese sellers — 50%+ of marketplace — raise prices 20–50% or exit U.S. listings, disrupting the marketplace flywheel",
+        "AWS decelerates to low-teens % as Azure (+31% last quarter) and Google Cloud (+48%) win disproportionate enterprise AI inference workloads; AWS market share erodes below 28%",
+        "$200B capex drives negative FCF for 2026; consumer confidence at multi-decade lows amplifies e-commerce weakness, compressing the multiple to 20–22× forward earnings"
       ]
     },
     "base": {
-      "priceTarget": "$225",
-      "description": "The $200B capex investment pays off: AWS sustains 20%+ growth, advertising scales, and FCF rebounds strongly by 2027 as depreciation cycles ease.",
+      "priceTarget": "$260",
+      "description": "The $200B capex cycle begins monetising by late 2026 — AWS sustains 20%+ growth anchored by the $244B backlog, advertising scales past $90B annualised, and FCF rebounds above $50B by 2027 as infrastructure investment matures and tariff headwinds are absorbed.",
       "points": [
-        "AWS maintains 20-25% growth driven by AI inference/training backlog ($244B); margins hold at 35%+",
-        "Advertising sustains 20%+ growth as the highest-ROI ad channel for third-party sellers",
-        "FCF rebounds above $50B by 2027 as the infrastructure investment cycle matures"
+        "AWS maintains 20–25% growth with the $244B backlog (+40% YoY) providing 12+ months of demand visibility; 35%+ margins hold as Bedrock enterprise customers (60% Q/Q spend growth) ramp workloads",
+        "Advertising sustains 20%+ growth as Amazon's intent-based targeting delivers highest-ROI per dollar for third-party sellers, reaching $90B+ annualised run rate by end of 2026",
+        "FCF rebounds above $50B by 2027 as the capex cycle matures; the $2.5B FTC Prime settlement is absorbed as a one-time charge with no structural impairment to the Prime flywheel"
       ]
     },
     "bull": {
-      "priceTarget": "$320",
-      "description": "AI demand triggers massive AWS re-acceleration beyond 30%, custom Trainium chips become a competitive moat, and logistics monetization creates a fourth high-margin business pillar.",
+      "priceTarget": "$330",
+      "description": "AWS re-accelerates above 30% as sovereign AI and enterprise inference workloads concentrate on the platform, Trainium chips establish a durable silicon moat, and the capex cycle delivers transformational FCF by 2028.",
       "points": [
-        "AWS growth re-accelerates above 30% as sovereign AI and enterprise AI workloads concentrate on AWS",
-        "Trainium chips displace Nvidia GPUs for inference at scale, turning silicon into a durable moat",
-        "FCF generation surpasses $100B by 2028, enabling a transformative capital return program"
+        "AWS growth re-accelerates above 30% as sovereign AI demand + Bedrock enterprise adoption (60% Q/Q customer spend growth) drives the $244B backlog to $350B+ by end of 2026",
+        "Trainium3/4 chips achieve cost-performance parity with Nvidia H100/B200 for inference at scale — AWS silicon (Graviton + Trainium) at $10B+ annualised run rate growing triple digits — creating a 2–3 year lead-time moat",
+        "FCF surpasses $80B by 2027–2028 as capex transitions to depreciation tailwinds; a capital return programme (buybacks) is announced, triggering a re-rating toward 35× forward earnings"
       ]
     }
   },

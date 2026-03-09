@@ -1,3 +1,61 @@
+import type { TenMoatsData } from '@/types/stockAnalysis';
+
+const MOAT_POINTS: Record<string, number> = { strong: 100, intact: 75, weakened: 40 };
+
+/** Returns null for N/A moats (excluded from group average), number otherwise. */
+function moatPoints(m: { status: string; note: string }): number | null {
+  if (m.status === 'destroyed') return (m.note.startsWith('N/A') || m.note.startsWith('Not applicable')) ? null : 0;
+  return MOAT_POINTS[m.status] ?? 0;
+}
+
+function groupStats(moats: Array<{ status: string; note: string }>): { avg: number; count: number } {
+  const pts = moats.map(moatPoints).filter((p): p is number => p !== null);
+  return {
+    avg: pts.length ? pts.reduce((a, b) => a + b, 0) / pts.length : 0,
+    count: pts.length,
+  };
+}
+
+/**
+ * Compute a 0–100 moat score from the ten moats assessment.
+ *
+ * AI-resilient moats (proprietaryData, regulatoryLockIn, networkEffects,
+ * transactionEmbedding, systemOfRecord) carry a base weight of 12 each (60÷5).
+ * AI-vulnerable moats (learnedInterfaces, businessLogic, publicDataAccess,
+ * talentScarcity, bundling) carry a base weight of 8 each (40÷5).
+ *
+ * When all 10 moats apply the effective split is exactly 60/40. N/A moats
+ * (destroyed with note starting "N/A") are excluded; their base weight is
+ * dropped so it shifts naturally to whichever moats remain applicable.
+ *
+ * Examples:
+ *   5R + 5V (all apply)  → 60% / 40%
+ *   5R + 1V (4 N/A vul.) → 60/(60+8) ≈ 88% / 12%
+ *   5R + 0V (all N/A)    → 100% / 0%
+ */
+export function computeMoatScore(tenMoats: TenMoatsData): number {
+  const resilient = groupStats([
+    tenMoats.proprietaryData,
+    tenMoats.regulatoryLockIn,
+    tenMoats.networkEffects,
+    tenMoats.transactionEmbedding,
+    tenMoats.systemOfRecord,
+  ]);
+  const vulnerable = groupStats([
+    tenMoats.learnedInterfaces,
+    tenMoats.businessLogic,
+    tenMoats.publicDataAccess,
+    tenMoats.talentScarcity,
+    tenMoats.bundling,
+  ]);
+  // Each resilient moat has base weight 12 (=60/5); each vulnerable moat 8 (=40/5).
+  const rW = resilient.count * 12;
+  const vW = vulnerable.count * 8;
+  const total = rW + vW;
+  if (total === 0) return 0;
+  return Math.round(resilient.avg * rW / total + vulnerable.avg * vW / total);
+}
+
 /**
  * Compute a 0–100 valuation score from a live price vs. bear/base/bull targets.
  *

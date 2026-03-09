@@ -5,8 +5,8 @@
   "titleColor": "#96bf48",
   "headerStats": [
     { "label": "Ticker", "value": "SHOP" },
-    { "label": "Market Cap", "value": "$169B" },
-    { "label": "Price", "value": "$135" }
+    { "label": "Market Cap", "value": "$170B" },
+    { "label": "Price", "value": "$130" }
   ],
   "chips": [
     { "label": "E-Commerce | Commerce Platform", "color": "primary" },
@@ -16,29 +16,29 @@
   "metrics": [
     {
       "title": "Gross Merchandise Volume",
-      "value": "$292B",
-      "label": "FY2024, +24% YoY",
+      "value": "$378B",
+      "label": "FY2025 (+29.5% YoY); Q4 hit $124B milestone",
       "icon": "ShoppingCart",
       "color": "#96bf48"
     },
     {
-      "title": "Free Cash Flow Margin",
-      "value": "18%",
-      "label": "FY2024, up from 13% in 2023",
+      "title": "Free Cash Flow",
+      "value": "$2B+",
+      "label": "FY2025, 17% FCF margin (+26% YoY)",
       "icon": "TrendingUp",
       "color": "#5c6ac4"
     },
     {
-      "title": "Revenue CAGR",
-      "value": "26–30%",
-      "label": "FY2022–FY2025 (excl. logistics)",
-      "icon": "BarChart2",
+      "title": "Payments Penetration",
+      "value": "68%",
+      "label": "Q4 2025 GMV via Shopify Payments (+4pp YoY)",
+      "icon": "DollarSign",
       "color": "#96bf48"
     }
   ],
   "moat": {
     "score": 78,
-    "description": "Shopify's moat is a self-reinforcing ecosystem flywheel — 4.8M merchants attract 16,000+ app developers, while Shop Pay and Shopify Payments embed the platform into every transaction, creating switching costs that compound with merchant scale.",
+    "description": "Shopify's moat is a self-reinforcing ecosystem flywheel — 5M+ merchants attract 16,000+ app developers, while Shop Pay (68% GMV penetration in Q4 2025) and Shopify Payments embed the platform into every transaction, creating switching costs that compound with merchant scale.",
     "analysisTitle": "The Commerce OS Flywheel",
     "analysisSummary": "Shopify's moat is built on **compounding Network Effects, Deep Transaction Embedding, and Proprietary Commerce Data**:",
     "analysisPoints": [
@@ -48,32 +48,44 @@
       },
       {
         "title": "Transaction Embedding via Shop Pay",
-        "text": "Shop Pay reached 65% payments penetration among eligible merchants in 2025, meaning Shopify captures a fee on nearly every transaction its merchants process. Shop Pay's consumer-facing wallet creates a cross-merchant network effect — consumers save payment info once and get one-click checkout at any Shopify store, creating a Visa-like flywheel. Every percentage point gain in payments penetration deepens the financial relationship with merchants and expands the high-margin Merchant Solutions segment."
+        "text": "Shopify Payments reached 68% of Q4 2025 GMV (+4pp YoY), and Shop Pay exceeded 50% of US Gross Payment Volume — meaning Shopify captures a fee on the majority of transactions its merchants process. Shop Pay's consumer-facing wallet creates a cross-merchant network effect — consumers save payment info once and get one-click checkout at any Shopify store, creating a Visa-like flywheel. Every percentage point gain in payments penetration deepens the financial relationship with merchants and expands the high-margin Merchant Solutions segment."
       },
       {
         "title": "Proprietary Commerce Intelligence",
-        "text": "Shopify's cross-merchant purchase data — spanning $292B in annual GMV across 4.8M merchants — is unique and non-replicable. Shopify Audiences uses this data to cut merchant customer acquisition costs by up to 50%. Shopify Capital underwrites SMB loans using merchant GMV and sales velocity data unavailable to banks. This proprietary data layer compounds with every new merchant and transaction, creating AI-powered tools no standalone competitor can match."
+        "text": "Shopify's cross-merchant purchase data — spanning $378B in annual GMV across 5M+ merchants — is unique and non-replicable. Shopify Audiences uses this data to cut merchant customer acquisition costs by up to 50%. Shopify Capital underwrites SMB loans using merchant GMV and sales velocity data unavailable to banks. This proprietary data layer compounds with every new merchant and transaction, creating AI-powered tools no standalone competitor can match."
       }
     ]
   },
   "growth": {
     "score": 88,
-    "description": "Shopify is compounding at 26–30% revenue CAGR with multiple underpenetrated growth vectors: enterprise/B2B (GMV +100% YoY), international (49% Europe GMV growth), payments penetration expansion, and agentic commerce positioning as the default checkout layer for AI-driven shopping.",
+    "description": "FY2025 revenue reached $11.56B (+30.1% YoY), first year crossing $10B; Q4 2025 hit $3.67B (+30.6% YoY). B2B GMV surged 96% FY2025, Shopify Payments expanded to 68% of Q4 GMV, and AI-driven order volumes (up 15x since Jan 2025) position Shopify as the default commerce layer for AI-assisted shopping. Q1 2026 guided low-30s% revenue growth.",
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
-        "Enterprise and B2B: B2B GMV grew 100%+ YoY in Q2 2025; Shopify Plus is winning multi-brand enterprise deals (VF Corp, Starbucks, Canada Goose) as legacy platforms like Salesforce Commerce Cloud are displaced for cost and agility advantages",
-        "International expansion: Europe GMV grew 49% in 2025 but accounts for only 21% of total revenue — a large underpenetrated market with product localization and local payment methods accelerating adoption",
-        "Payments penetration: Shop Pay at 65% penetration with room to expand Shopify Payments globally; each percentage point drives ~$300–500M in incremental high-margin revenue and deeper merchant lock-in",
-        "Agentic commerce: AI-driven traffic to Shopify stores is up 7x and AI-attributed orders up 11x since January 2025; the 'Commerce for Agents' API (Catalog, Universal Cart, Checkout Kit) positions Shopify as the default checkout infrastructure for AI shopping assistants"
+        "Enterprise and B2B: B2B GMV grew 96% FY2025 (+84% in Q4); Shopify Plus is winning multi-brand enterprise deals (VF Corp, Starbucks, Canada Goose) as legacy platforms like Salesforce Commerce Cloud are displaced for cost and agility advantages",
+        "International expansion: International revenue grew 36% YoY in Q4 2025; nearly half of merchant base is now outside North America — a large underpenetrated market with product localization and local payment methods accelerating adoption",
+        "Payments penetration: Shopify Payments reached 68% of Q4 GMV (+4pp YoY); Shop Pay exceeded 50% of US Gross Payment Volume; each percentage point gain drives ~$300–500M in incremental high-margin revenue",
+        "Agentic commerce: AI-driven orders up 15x since January 2025; Universal Commerce Protocol (UCP) launched with Google; Sidekick AI generated 4,000 custom apps in weeks — positions Shopify as default checkout infrastructure for AI shopping assistants"
       ]
+    },
+    "growthAnalysis": {
+      "cagrEstimate": "26–30%",
+      "scoreDerivation": "Base 80 (26–30% sustained CAGR, crossed $10B revenue) + 5 B2B/enterprise flywheel (+96% GMV) + 5 agentic commerce positioning (15x AI order growth) − 2 FCF margin pressure (17%, below 20% target) = 88",
+      "drivers": [
+        { "name": "Merchant Solutions (Payments + Capital)", "metric": "+35% Q4 2025 YoY; Shopify Payments 68% GMV penetration", "trend": "accelerating" },
+        { "name": "B2B / Enterprise GMV", "metric": "+96% FY2025 YoY; +84% Q4 — still early innings of enterprise displacement", "trend": "accelerating" },
+        { "name": "International Revenue", "metric": "+36% Q4 2025 YoY; ~50% of merchant base now non-NA", "trend": "stable" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If GMV growth decelerates below 20% in two consecutive quarters by end of 2026 — due to Amazon Buy with Prime expansion or macro-driven merchant churn — FCF margin stalls at 15–17% and the market re-rates from 50x+ FCF to 25–30x, implying 40–50% downside from current prices",
+      "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 73,
-    "description": "At ~$135, SHOP trades $25 below the $160 base case — a reasonable discount for a high-quality compounder, though the premium FCF multiple (~105x) reflects execution-dependent margin expansion to justify current market cap.",
+    "score": 74,
+    "description": "At ~$130, SHOP trades $30 below the $160 base case — a reasonable entry for a high-quality compounder. After Q4 2025 beat ($3.67B revenue, 19% Q4 FCF margin), FY2025 FCF reached $2B+ (17% margin). The stock pulled back from a $182 52-week high, offering better value than mid-2025. FCF multiple remains elevated but is de-risked as FCF doubles toward $3.5B+ by FY2027.",
     "valuationNote": {
-      "text": "Shopify's valuation is best understood through FCF multiple: $1.6B FCF in FY2024 at a $169B market cap implies ~105x FCF — demanding but defensible if margins expand to 25–30% as management guides. At the base case FCF of ~$3.5B (FY2027E), that's ~50x FCF, reasonable for a 25%+ compounder with increasing operating leverage. The primary bear case risk is multiple compression if FCF growth disappoints.",
+      "text": "Shopify's valuation is best understood through FCF multiple: $2B FCF in FY2025 at a $170B market cap implies ~85x FCF — demanding but defensible if margins expand to 25–30% as management guides. At the base case FCF of ~$3.5B (FY2027E), that's ~49x FCF, reasonable for a 25–30% compounder with increasing operating leverage. The primary bear case risk is multiple compression if FCF growth disappoints.",
       "fairValue": "$160"
     }
   },
@@ -129,7 +141,7 @@
     },
     "proprietaryData": {
       "status": "strong",
-      "note": "Cross-merchant purchase data spanning $292B in annual GMV across 4.8M stores is Shopify's deepest AI-era moat — Shopify Audiences (cutting CAC by 50%), Shopify Capital underwriting, and personalization tools are powered by data no standalone competitor can replicate at this scale."
+      "note": "Cross-merchant purchase data spanning $378B in annual GMV across 5M+ stores is Shopify's deepest AI-era moat — Shopify Audiences (cutting CAC by 50%), Shopify Capital underwriting, and personalization tools are powered by data no standalone competitor can replicate at this scale."
     },
     "regulatoryLockIn": {
       "status": "weakened",
@@ -141,7 +153,7 @@
     },
     "transactionEmbedding": {
       "status": "strong",
-      "note": "Shop Pay at 65% payments penetration means Shopify processes the majority of GMV it facilitates; layered with Shopify Capital, Shopify Balance, Shopify Shipping, and Buy Button, the platform is embedded in every operational and financial workflow of its merchant base."
+      "note": "Shop Pay at 68% payments penetration of Q4 2025 GMV (+4pp YoY) means Shopify processes the large majority of GMV it facilitates; Shop Pay now exceeds 50% of US Gross Payment Volume. Layered with Shopify Capital, Shopify Balance, Shopify Shipping, and Buy Button, the platform is embedded in every operational and financial workflow of its merchant base."
     },
     "systemOfRecord": {
       "status": "intact",

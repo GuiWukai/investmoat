@@ -38,7 +38,7 @@ export async function GET(
     const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?interval=1d&range=1d`;
     const res = await fetch(url, {
       headers: { 'User-Agent': 'Mozilla/5.0 (compatible; investmoat/1.0)' },
-      next: { revalidate: 300 }, // cache for 5 minutes
+      next: { revalidate: 86400 }, // cache for 24 hours
     });
 
     if (!res.ok) {
@@ -62,7 +62,10 @@ export async function GET(
       ? new Date(meta.regularMarketTime * 1000).toISOString()
       : null;
 
-    return NextResponse.json({ symbol, price, previousClose, change, changePercent, currency, timestamp });
+    return NextResponse.json(
+      { symbol, price, previousClose, change, changePercent, currency, timestamp },
+      { headers: { 'Cache-Control': 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600' } },
+    );
   } catch {
     return NextResponse.json({ error: 'Internal error' }, { status: 500 });
   }

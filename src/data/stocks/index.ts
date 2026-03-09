@@ -39,6 +39,7 @@ import race from './race.json';
 import ceg from './ceg.json';
 import unh from './unh.json';
 import mco from './mco.json';
+import sofi from './sofi.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -80,6 +81,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   ceg: ceg as StockAnalysisData,
   unh: unh as StockAnalysisData,
   mco: mco as StockAnalysisData,
+  sofi: sofi as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {

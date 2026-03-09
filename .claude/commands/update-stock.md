@@ -54,10 +54,19 @@ Review the growth score if:
 - Revenue growth has re-accelerated or decelerated by more than 5 percentage points
 - Management has provided new forward guidance materially different from prior guidance
 - A new product/segment has launched that creates an incremental TAM
+- A driver's trend has changed (e.g., `"accelerating"` → `"stable"`)
 
 **Growth score adjustment rules:**
 - Update `growth.description` to reference the most recent quarter's growth rate
 - Reflect any management guidance changes for the next 2–4 quarters
+- If `growthAnalysis` is missing, add it (see Step 5 in `analyse-stock.md` for the required format)
+- If `growthAnalysis` is present, update:
+  - `cagrEstimate` if the blended CAGR has shifted materially (>3pp)
+  - `drivers[].metric` with the latest YoY figures from the most recent quarter
+  - `drivers[].trend` if the last 2 quarters show a directional change
+  - `keyRisk` if a new specific, falsifiable risk has emerged or the prior risk has been resolved
+  - `marginTrend` if operating margin direction has reversed
+  - `scoreDerivation` to match any score change, showing the updated base + adjustments
 
 ### 5. Valuation Score
 
