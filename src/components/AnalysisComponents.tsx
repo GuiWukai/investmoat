@@ -255,7 +255,7 @@ export function ScenarioCard({
     <Card className={`flex-1 bg-white/5 border-none backdrop-blur-md border-t-4 border-${colorMap[type]}`} style={{ borderTopColor: type === 'Bear' ? '#f31260' : type === 'Base' ? '#006fee' : '#17c964' }}>
       <CardBody className="p-4 md:p-5 gap-4">
         <div className="flex justify-between items-center">
-          <Chip color={colorMap[type]} variant="flat" className="font-bold">{type} CASE</Chip>
+          <Chip color={colorMap[type]} variant="flat" className="font-bold" classNames={{ base: "px-2 py-0.5" }}>{type} CASE</Chip>
           <span className="text-xl font-bold">{priceTarget}</span>
         </div>
         <p className="text-sm font-semibold text-white">{description}</p>
