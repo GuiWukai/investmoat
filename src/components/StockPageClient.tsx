@@ -87,7 +87,8 @@ function GridCardsSection({ section }: { section: NonNullable<StockAnalysisData[
 
 function ForwardPECard({ data }: { data: NonNullable<StockAnalysisData['valuation']['peAnalysis']> }) {
   return (
-    <Card className="bg-white/5 border-none backdrop-blur-md p-6">
+    <Card className="bg-white/5 border-none backdrop-blur-md">
+      <CardBody className="p-4 md:p-6">
       <h4 className="text-xl font-bold mb-4">Valuation Multiples</h4>
       <table className="w-full text-sm">
         <tbody>
@@ -104,6 +105,7 @@ function ForwardPECard({ data }: { data: NonNullable<StockAnalysisData['valuatio
       </table>
       <p className="text-white/50 text-xs mt-4 leading-relaxed">{data.summary}</p>
       {data.asOf && <p className="text-white/30 text-xs mt-1">Approximate figures as of {data.asOf}.</p>}
+      </CardBody>
     </Card>
   );
 }
@@ -245,7 +247,7 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
   // Moat analysis card content (shared between mobile tab and desktop section)
   const MoatAnalysisCard = (
     <Card className="bg-white/5 border-none backdrop-blur-md">
-      <CardBody className="p-4 md:p-8">
+      <CardBody className="p-4 md:p-6">
         <p className="mb-4">
           <BoldText text={data.moat.analysisSummary} />
         </p>
@@ -363,16 +365,18 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
                   <GrowthAnalysisCard ga={data.growth.growthAnalysis} />
                 )}
                 {data.growth.additionalNote && (
-                  <Card className="bg-white/5 border-none backdrop-blur-md p-6">
-                    <h4 className="text-xl font-bold mb-6">{data.growth.additionalNote.title}</h4>
-                    <div className="space-y-4">
-                      {data.growth.additionalNote.points.map((point, i) => (
-                        <div key={i} className="flex items-start gap-3">
-                          <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-success flex-shrink-0" />
-                          <span className="text-sm text-white/70">{point}</span>
-                        </div>
-                      ))}
-                    </div>
+                  <Card className="bg-white/5 border-none backdrop-blur-md">
+                    <CardBody className="p-4 md:p-6">
+                      <h4 className="text-xl font-bold mb-4">{data.growth.additionalNote.title}</h4>
+                      <div className="space-y-4">
+                        {data.growth.additionalNote.points.map((point, i) => (
+                          <div key={i} className="flex items-start gap-3">
+                            <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-success flex-shrink-0" />
+                            <span className="text-sm text-white/70">{point}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </CardBody>
                   </Card>
                 )}
               </div>
@@ -399,12 +403,14 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
                   fairValue={data.valuation.valuationNote?.fairValue}
                 />
                 {data.valuation.valuationNote && (
-                  <Card className="bg-white/5 border-none backdrop-blur-md p-6">
-                    <h4 className="text-xl font-bold mb-6">Valuation Analysis</h4>
-                    <p className="text-sm text-white/60 leading-relaxed">
-                      {data.valuation.valuationNote.text}{' '}
-                      <strong className="text-white text-lg">{data.valuation.valuationNote.fairValue}</strong>.
-                    </p>
+                  <Card className="bg-white/5 border-none backdrop-blur-md">
+                    <CardBody className="p-4 md:p-6">
+                      <h4 className="text-xl font-bold mb-4">Valuation Analysis</h4>
+                      <p className="text-sm text-white/60 leading-relaxed">
+                        {data.valuation.valuationNote.text}{' '}
+                        <strong className="text-white text-lg">{data.valuation.valuationNote.fairValue}</strong>.
+                      </p>
+                    </CardBody>
                   </Card>
                 )}
                 {data.valuation.peAnalysis && (
