@@ -251,11 +251,17 @@ export function ScenarioCard({
     Bull: "success"
   };
 
+  const chipColorStyle: Record<string, { background: string; color: string }> = {
+    Bear: { background: 'rgba(243,18,96,0.18)', color: '#f31260' },
+    Base: { background: 'rgba(0,111,238,0.18)', color: '#006fee' },
+    Bull: { background: 'rgba(23,201,100,0.18)', color: '#17c964' },
+  };
+
   return (
     <Card className={`flex-1 bg-white/5 border-none backdrop-blur-md border-t-4 border-${colorMap[type]}`} style={{ borderTopColor: type === 'Bear' ? '#f31260' : type === 'Base' ? '#006fee' : '#17c964' }}>
       <CardBody className="p-4 md:p-5 gap-4">
         <div className="flex justify-between items-center">
-          <Chip color={colorMap[type]} variant="flat" className="font-bold" classNames={{ base: "px-2 py-0.5" }}>{type} CASE</Chip>
+          <Chip color={colorMap[type]} variant="flat" className="font-bold" classNames={{ base: "px-2 py-0.5" }} style={chipColorStyle[type]}>{type} CASE</Chip>
           <span className="text-xl font-bold">{priceTarget}</span>
         </div>
         <p className="text-sm font-semibold text-white">{description}</p>
