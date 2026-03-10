@@ -42,7 +42,7 @@ interface MetricCardProps {
 export function MetricCard({ title, value, label, icon, color = 'var(--primary)' }: MetricCardProps) {
   return (
     <Card className="flex-1 bg-white/5 border-none backdrop-blur-md">
-      <CardBody className="gap-4">
+      <CardBody className="p-4 md:p-5 gap-4">
         <div className="flex items-center gap-4">
           <div className="p-2 rounded-lg" style={{ background: color }}>
             {icon}
@@ -253,9 +253,9 @@ export function ScenarioCard({
 
   return (
     <Card className={`flex-1 bg-white/5 border-none backdrop-blur-md border-t-4 border-${colorMap[type]}`} style={{ borderTopColor: type === 'Bear' ? '#f31260' : type === 'Base' ? '#006fee' : '#17c964' }}>
-      <CardBody className="p-4 gap-4">
+      <CardBody className="p-4 md:p-5 gap-4">
         <div className="flex justify-between items-center">
-          <Chip color={colorMap[type]} variant="flat" className="font-bold">{type} CASE</Chip>
+          <Chip color={colorMap[type]} variant="flat" className="font-bold" classNames={{ base: "px-2 py-0.5" }}>{type} CASE</Chip>
           <span className="text-xl font-bold">{priceTarget}</span>
         </div>
         <p className="text-sm font-semibold text-white">{description}</p>
@@ -372,7 +372,7 @@ export function TenMoatsCard({ data }: { data: TenMoatsAssessment }) {
               <span className="text-xs font-black uppercase tracking-widest text-white/50">AI-Vulnerable Moats</span>
             </div>
           </CardHeader>
-          <CardBody className="px-4 md:px-6 pt-3">
+          <CardBody className="px-4 md:px-6 pt-3 pb-4 md:pb-6">
             {vulnerableMoats.map(({ label, key }) => {
               const item = data[key] as { status: MoatStatus; note: string };
               return <MoatRow key={key} label={label} status={item.status} note={item.note} />;
@@ -390,7 +390,7 @@ export function TenMoatsCard({ data }: { data: TenMoatsAssessment }) {
               <span className="text-xs font-black uppercase tracking-widest text-white/50">AI-Resilient Moats</span>
             </div>
           </CardHeader>
-          <CardBody className="px-4 md:px-6 pt-3">
+          <CardBody className="px-4 md:px-6 pt-3 pb-4 md:pb-6">
             {resilientMoats.map(({ label, key }) => {
               const item = data[key] as { status: MoatStatus; note: string };
               return <MoatRow key={key} label={label} status={item.status} note={item.note} />;

@@ -4,8 +4,8 @@
   "name": "Netflix Inc.",
   "headerStats": [
     { "label": "Ticker", "value": "NFLX" },
-    { "label": "Market Cap", "value": "$265B" },
-    { "label": "Price", "value": "$612.40" }
+    { "label": "Market Cap", "value": "$408B" },
+    { "label": "Price", "value": "$99.00" }
   ],
   "chips": [
     { "label": "Tech | Media", "color": "primary" },
@@ -13,13 +13,13 @@
   ],
   "recommendation": "Hold",
   "metrics": [
-    { "title": "Paid Members", "value": "325M", "label": "End-2025", "icon": "Users", "color": "#e50914" },
-    { "title": "FCF Generation", "value": "$9–11B", "label": "2026 Projection", "icon": "TrendingUp", "color": "#10b981" },
-    { "title": "Content Spend", "value": "$20B", "label": "2026 Budget", "icon": "Play", "color": "#3b82f6" }
+    { "title": "Paid Members", "value": "325M", "label": "Q4 2025; ARPU +6.3% YoY", "icon": "Users", "color": "#e50914" },
+    { "title": "FCF 2026", "value": "$11B", "label": "Buybacks Resuming + $2.8B WBD Fee", "icon": "TrendingUp", "color": "#10b981" },
+    { "title": "Ad Revenue", "value": "$3B", "label": "2026 Target — Doubling YoY", "icon": "BarChart", "color": "#3b82f6" }
   ],
   "moat": {
     "score": 63,
-    "description": "Massive scale allows for better unit economics on content than any competitor.",
+    "description": "Massive scale allows for better unit economics on content than any competitor — 325M paid members generating $45.2B annual revenue funds a $20B content budget no new entrant can match.",
     "analysisTitle": "The Scale Moat",
     "analysisSummary": "Netflix's advantage is its **Content Efficiency**:",
     "analysisPoints": [
@@ -29,39 +29,65 @@
     ]
   },
   "growth": {
-    "score": 88,
-    "description": "2026 guidance calls for $50.7–51.7B revenue (+12–14% YoY), 31.5% op margin, and ad revenue doubling to ~$3B—execution on ads and international penetration is the key lever."
+    "score": 80,
+    "description": "Q4 2025 delivered $12.05B revenue (+18% YoY) and full-year 2025 FCF of $9.5B — but 2026 guidance of $50.7–51.7B (+12–14% YoY) marks a meaningful deceleration from the password-sharing tailwind era. The WBD acquisition was abandoned (Feb 2026), with Netflix receiving a $2.8B breakup fee and resuming share buybacks. The standalone growth engine is ad-tier scaling ($1.5B in 2025 → targeting $3B in 2026), live sports rights (NFL Sunday Ticket, NBA, WWE Raw, Jake Paul boxing), and international ARPU expansion.",
+    "growthAnalysis": {
+      "cagrEstimate": "12–16%",
+      "scoreDerivation": "Base 67 (12–16% blended standalone CAGR) + 5 recurring subscription model (high retention, 325M subs) + 5 ad-tier TAM ($1.5B→$3B→$5B+, ~70% margin incremental) + 5 live sports TAM expansion (NFL/NBA/boxing driving engagement and ad-inventory premium) − 2 margin guidance miss (31.5% vs 32.7% consensus) = 80",
+      "drivers": [
+        { "name": "Ad-Supported Tier", "metric": "+2.5× YoY to $1.5B in 2025; targeting $3B in 2026 (100% growth); 190M ad-tier MAU", "trend": "accelerating" },
+        { "name": "Subscriber Growth & Pricing", "metric": "+6.3% ARPU YoY in Q4 2025; 325M subs; mid-single-digit net adds guide for 2026", "trend": "stable" },
+        { "name": "Live Sports & Events", "metric": "NFL Sunday Ticket, NBA (starting 2025), WWE Raw, boxing — ad inventory premium + subscriber acquisition", "trend": "accelerating" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If ad CPMs disappoint in 2026 and ad revenue lands below $2.5B (vs $3B target) due to YouTube/Amazon CTV dominance, while operating margin misses the 31.5% guide, 2027 EPS estimates decline 10–15% and the stock re-rates toward $75–80",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
-    "score": 71,
-    "description": "Post 10-for-1 split: trading ~9% below base case (~$96). WBD termination fee adds $2.8B buffer; live sports rights are the key bull catalyst."
+    "score": 77,
+    "description": "At $99 (post 10-for-1 split), Netflix sits between the bear ($72) and base ($125) scenarios — roughly 21% below fair value. The WBD deal's death (Feb 2026) removed $42B+ in debt risk and resumed buybacks, triggering a 12% post-announcement rally. The stock trades at ~31× forward P/E with a PEG of ~1.0×, making it GARP-priced for a business compounding EPS 25–30% via operating leverage. Analyst consensus of $113–125 implies meaningful upside from here.",
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~39×", "note": "TTM EPS ~$2.56 (post-split); $11B net income" },
+        { "label": "Forward P/E (NTM)", "value": "~31×", "note": "consensus EPS est. ~$3.16 (post-split)" },
+        { "label": "PEG Ratio", "value": "~1.0×", "note": "fwd P/E ÷ 30% EPS CAGR (margin expansion)" },
+        { "label": "Price / Sales (NTM)", "value": "~8×", "note": "$51.2B NTM revenue (FY2026 guide)" },
+        { "label": "Price / FCF", "value": "~37×", "note": "$11B FCF (FY2026 guide)" }
+      ],
+      "summary": "Netflix's ~31× forward P/E is in line with consumer tech sector median (~30–35×), but the PEG of ~1.0× — driven by ~30% EPS CAGR from operating margin expansion (29.5%→31.5%→35%+ longer term) — puts it in genuine GARP territory rarely seen for a media franchise. P/S of ~8× and P/FCF of ~37× are reasonable for a business with $11B+ FCF and buybacks resuming. The gap from 39× trailing to 31× forward P/E signals a real earnings acceleration underway as ad revenue scales to a higher-margin mix."
+    }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$65",
-      "description": "Ad-tier adoption stalls, password-sharing recovery runs its course, and competitive streaming intensifies from YouTube and Amazon.",
+      "priceTarget": "$72",
+      "description": "Ad revenue disappoints as YouTube/Amazon CTV dominance caps CPMs, subscriber net adds slow to <5M annually, and content spend at $20B delivers diminishing engagement returns.",
       "points": [
-        "Subscriber net adds stall to low-single digits; password-sharing and ad-tier tailwinds fade; engagement flat or negative in US/Europe",
-        "Ad monetization disappoints as YouTube, Amazon, and TikTok keep CPMs low; cannibalization of high-margin premium subs accelerates",
-        "Revenue grows <10% in 2026–27; op margin stalls below 30% as $20B content spend delivers diminishing returns and live/games underperform"
+        "Ad revenue lands below $2.5B in 2026 (vs $3B target) as YouTube and Amazon dominate connected-TV CPMs; cannibalization of premium subs accelerates",
+        "Subscriber net adds disappoint at <5M for full year 2026; password-sharing and ad-tier tailwinds are fully exhausted",
+        "Op margin misses at 30% vs 31.5% guided, as $20B content budget and live sports rights costs outpace monetization",
+        "Multiple compresses to 25–27× forward P/E on a slower-growth narrative, implying $70–75/share at current EPS trajectory"
       ]
     },
     "base": {
-      "priceTarget": "$105",
-      "description": "Steady subscriber growth, successful sports rights monetization, and ARM expansion in core US/EU markets.",
+      "priceTarget": "$125",
+      "description": "2026 guidance achieved — $51B revenue, 31.5% op margin, $11B FCF — with ad revenue hitting $3B and buybacks providing EPS accretion of ~4–5% annually.",
       "points": [
-        "Mid-single-digit sub adds to ~340–350M; ARPU lifts via pricing and ad mix; ads hit ~$3B (~6% of revenue)",
-        "Op margin expands from 31.5% toward low-30s% long-term; FCF grows to $9–11B+; buybacks resume post-WBD termination fee",
-        "Live, games, and podcasts contribute modestly without blowing up costs; WBD walk maintains capital discipline"
+        "Ad revenue hits $3B in 2026 and scales toward $5B+ by 2028 as Netflix's ad tech matures and live sports inventory commands premium CPMs",
+        "Subscribers reach 340–345M by end-2026 with ARPU growing 5–7% via pricing and ad-tier mix shift",
+        "FCF of $11B+ funds $8–10B in annual buybacks (restarted post-WBD), reducing share count ~3–4% annually",
+        "Op margin expands toward 33–35% by 2027 as content spend efficiency improves and ad revenue scales to higher-margin mix"
       ]
     },
     "bull": {
-      "priceTarget": "$160",
-      "description": "Netflix becomes the default live TV replacement: NFL, NBA, and boxing rights drive a new subscriber and ad-inventory wave.",
+      "priceTarget": "$180",
+      "description": "Netflix becomes the default live entertainment platform — ad revenue compounds to $6B+ by 2028, live sports rights drive pricing power, and aggressive buybacks re-rate EPS above consensus.",
       "points": [
-        "Ad revenue beats to >$3.5–4B+ in 2026, rising to 10–15%+ of total revenue long-term; high-margin data-driven ads win share from linear TV",
-        "Subs hit 360M+ by end-2026 on deeper EM penetration; branded originals drive +10%+ viewing and engagement reaccelerates",
-        "Multiple expands to 40x+ as revenue growth reaccelerates to 15%+ and FCF compounds; no WBD deal highlights discipline vs. rivals"
+        "Ad revenue exceeds $4B in 2026, reaching $6B+ by 2028 as live sports (NFL, NBA, boxing) command $40–60 CPMs vs $10–15 for linear VOD",
+        "Subscribers reach 360M+ by end-2027 on international expansion and gaming/interactive content driving incremental adds",
+        "Op margin hits 35%+ by 2028 as fixed content costs spread over a larger revenue base; FCF compounds to $15B+",
+        "Buybacks and WBD breakup fee ($2.8B) deployed at $99/share retire 5%+ of outstanding shares, driving EPS well above consensus"
       ]
     }
   },
@@ -70,7 +96,7 @@
     "businessLogic": { "status": "weakened", "note": "Content recommendation algorithms are being commoditized by AI across competing streaming platforms." },
     "publicDataAccess": { "status": "destroyed", "note": "Content metadata and ratings data are widely available through public APIs and third-party providers." },
     "talentScarcity": { "status": "weakened", "note": "AI is reducing the talent barrier for content localization, subtitling, VFX, and post-production operations." },
-    "bundling": { "status": "intact", "note": "Content + Platform + Live Events + Gaming = an increasingly differentiated entertainment bundle with 270M subscribers." },
+    "bundling": { "status": "intact", "note": "Content + Platform + Live Sports (NFL, NBA, WWE, boxing) + Gaming = an increasingly differentiated entertainment bundle with 325M subscribers. Post-WBD-deal exit, Netflix remains the standalone streaming leader and is now doubling down on live as a bundling differentiator." },
     "proprietaryData": { "status": "strong", "note": "Viewing patterns for 270M subscribers = unmatched content performance data for greenlight decisions — a genuine data moat." },
     "regulatoryLockIn": { "status": "weakened", "note": "No significant regulatory protection; content licensing rules vary by market but provide no durable government moat." },
     "networkEffects": { "status": "intact", "note": "Shared viewing culture, social viewing moments, and household account habits create community-level dependency." },

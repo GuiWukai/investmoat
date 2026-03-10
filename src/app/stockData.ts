@@ -43,6 +43,7 @@ import orclData    from '@/data/stocks/orcl.json';
 import pltrData    from '@/data/stocks/pltr.json';
 import raceData    from '@/data/stocks/race.json';
 import shopData    from '@/data/stocks/shop.json';
+import mstrData    from '@/data/stocks/mstr.json';
 import sofiData    from '@/data/stocks/sofi.json';
 import solanaData  from '@/data/stocks/solana.json';
 import spgiData    from '@/data/stocks/spgi.json';
@@ -91,14 +92,14 @@ const allCoverageData = [
     { name: "Palantir",          ticker: "PLTR", slug: "pltr",        scores: [m(pltrData),        88, 71], href: "/stocks/pltr",        category: "Big Tech",    bearTarget: "$80",       baseTarget: "$155",      bullTarget: "$260"      },
     { name: "Salesforce",        ticker: "CRM",  slug: "crm",         scores: [m(crmData),         80, 79], href: "/stocks/crm",         category: "Financials",  bearTarget: "$150",      baseTarget: "$250",      bullTarget: "$350"      },
     { name: "Broadcom",          ticker: "AVGO", slug: "avgo",        scores: [m(avgoData),        88, 65], href: "/stocks/avgo",        category: "Big Tech",    bearTarget: "$120",      baseTarget: "$210",      bullTarget: "$320"      },
-    { name: "CrowdStrike",       ticker: "CRWD", slug: "crowdstrike", scores: [m(crowdstrikeData), 87, 60], href: "/stocks/crowdstrike", category: "Big Tech",    bearTarget: "$200",      baseTarget: "$380",      bullTarget: "$600"      },
+    { name: "CrowdStrike",       ticker: "CRWD", slug: "crowdstrike", scores: [m(crowdstrikeData), 87, 69], href: "/stocks/crowdstrike", category: "Big Tech",    bearTarget: "$260",      baseTarget: "$460",      bullTarget: "$700"      },
     { name: "Meta",              ticker: "META", slug: "meta",        scores: [m(metaData),        85, 72], href: "/stocks/meta",        category: "Big Tech",    bearTarget: "$460",      baseTarget: "$720",      bullTarget: "$950"      },
     { name: "Apple",             ticker: "AAPL", slug: "aapl",        scores: [m(aaplData),        72, 68], href: "/stocks/aapl",        category: "Big Tech",    bearTarget: "$155",      baseTarget: "$240",      bullTarget: "$350"      },
     { name: "Tesla",             ticker: "TSLA", slug: "tesla",       scores: [m(teslaData),       87, 65], href: "/stocks/tesla",       category: "Big Tech",    bearTarget: "$150",      baseTarget: "$400",      bullTarget: "$550"      },
     { name: "Micron",            ticker: "MU",   slug: "micron",      scores: [m(micronData),      87, 76], href: "/stocks/micron",      category: "Big Tech",    bearTarget: "$55",       baseTarget: "$120",      bullTarget: "$200"      },
     { name: "Intuitive Surgical",ticker: "ISRG", slug: "isrg",        scores: [m(isrgData),        82, 62], href: "/stocks/isrg",        category: "Healthcare",  bearTarget: "$280",      baseTarget: "$520",      bullTarget: "$750"      },
     { name: "Eli Lilly",          ticker: "LLY",  slug: "lly",         scores: [m(llyData),         90, 75], href: "/stocks/lly",         category: "Healthcare",  bearTarget: "$650",      baseTarget: "$1,200",    bullTarget: "$1,750"    },
-    { name: "Netflix",           ticker: "NFLX", slug: "nflx",        scores: [m(nflxData),        88, 71], href: "/stocks/nflx",        category: "Big Tech",    bearTarget: "$65",       baseTarget: "$105",      bullTarget: "$160"      },
+    { name: "Netflix",           ticker: "NFLX", slug: "nflx",        scores: [m(nflxData),        80, 77], href: "/stocks/nflx",        category: "Big Tech",    bearTarget: "$72",       baseTarget: "$125",      bullTarget: "$180"      },
     { name: "Adobe",             ticker: "ADBE", slug: "adbe",        scores: [m(adbeData),        82, 77], href: "/stocks/adbe",        category: "Financials",  bearTarget: "$200",      baseTarget: "$320",      bullTarget: "$450"      },
     { name: "AMD",               ticker: "AMD",  slug: "amd",         scores: [m(amdData),         92, 71], href: "/stocks/amd",         category: "Big Tech",    bearTarget: "$110",      baseTarget: "$230",      bullTarget: "$320"      },
     { name: "K92 Mining",        ticker: "KNT",  slug: "k92",         scores: [m(k92Data),         85, 80], href: "/stocks/k92",         category: "Hard Assets", bearTarget: "$17.00 CAD", baseTarget: "$38.00 CAD", bullTarget: "$65.00 CAD" },
@@ -109,6 +110,7 @@ const allCoverageData = [
     { name: "TransDigm",         ticker: "TDG",  slug: "tdg",         scores: [m(tdgData),         75, 70], href: "/stocks/tdg",         category: "Industrials", bearTarget: "$850",      baseTarget: "$1,350",    bullTarget: "$1,900"    },
     { name: "MSCI",              ticker: "MSCI", slug: "msci",        scores: [m(msciData),        75, 71], href: "/stocks/msci",        category: "Financials",  bearTarget: "$420",      baseTarget: "$620",      bullTarget: "$850"      },
     { name: "SoFi Technologies", ticker: "SOFI", slug: "sofi",        scores: [m(sofiData),        82, 79], href: "/stocks/sofi",        category: "Financials",  bearTarget: "$13",       baseTarget: "$26",       bullTarget: "$45"       },
+    { name: "Strategy Inc.",     ticker: "MSTR", slug: "mstr",        scores: [m(mstrData),        42, 71], href: "/stocks/mstr",        category: "Hard Assets", bearTarget: "$45",       baseTarget: "$160",      bullTarget: "$370"      },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────
