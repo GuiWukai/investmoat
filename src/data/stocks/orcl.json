@@ -99,7 +99,7 @@
   "tenMoats": {
     "learnedInterfaces": { "status": "intact", "note": "Oracle SQL, PL/SQL, and APEX are deeply learned by hundreds of thousands of enterprise developers. Institutional knowledge baked into development teams is a real switching cost even before touching migration complexity." },
     "businessLogic": { "status": "strong", "note": "Oracle databases store decades of enterprise business logic in stored procedures, triggers, and custom PL/SQL — logic that is nearly impossible to fully document or migrate without business disruption. This is one of the most powerful switching costs in software." },
-    "publicDataAccess": { "status": "destroyed", "note": "Not a source of competitive advantage for Oracle's core business." },
+    "publicDataAccess": { "status": "destroyed", "note": "N/A — not a source of competitive advantage for Oracle's core business; its data moat is proprietary customer data stored within Oracle systems." },
     "talentScarcity": { "status": "intact", "note": "Certified Oracle DBAs and Fusion ERP consultants are scarce and expensive. The partner ecosystem of implementation firms (Deloitte, Accenture, KPMG) certified on Oracle products reinforces adoption inertia." },
     "bundling": { "status": "strong", "note": "Oracle bundles database, cloud infrastructure, ERP, HCM, SCM, CX, and analytics under a single enterprise license — creating a platform effect that is cheaper to stay within than to unbundle across best-of-breed alternatives." },
     "proprietaryData": { "status": "intact", "note": "Oracle systems store the most sensitive and mission-critical enterprise data in the world — financials, HR records, supply chain, and clinical data. This data residency creates deep compliance and operational dependency." },
