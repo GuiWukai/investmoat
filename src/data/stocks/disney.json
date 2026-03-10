@@ -1,0 +1,136 @@
+{
+  "slug": "disney",
+  "ticker": "DIS",
+  "name": "The Walt Disney Company",
+  "titleColor": "#1560bd",
+  "headerStats": [
+    { "label": "Ticker", "value": "DIS" },
+    { "label": "Market Cap", "value": "~$175B" },
+    { "label": "Current Price", "value": "~$100" }
+  ],
+  "chips": [
+    { "label": "Media & Entertainment | Streaming + Parks", "color": "primary" },
+    { "label": "DTC Profitability Inflection", "color": "success" }
+  ],
+  "recommendation": "Hold",
+  "metrics": [
+    { "title": "FY2025 FCF", "value": "$10.1B", "label": "+17.7% YoY — Best in a Decade", "icon": "DollarSign", "color": "#1560bd" },
+    { "title": "DTC Operating Income", "value": "$450M", "label": "Q1 FY2026, +72% YoY", "icon": "TrendingUp", "color": "#10b981" },
+    { "title": "Parks Revenue", "value": "$10B", "label": "Q1 FY2026 Record Quarter", "icon": "Globe", "color": "#f59e0b" }
+  ],
+  "moat": {
+    "score": 67,
+    "description": "Disney's moat is built on three compounding assets: irreplaceable IP (Marvel, Star Wars, Pixar, Disney animation), exclusive long-term sports rights (NFL, NBA, SEC on ESPN), and the world's most visited theme park ecosystem. None of these are replicable by new entrants — but all face headwinds from cord cutting (ESPN) and AI-generated content competition (streaming).",
+    "analysisTitle": "IP, Sports Rights, and Physical Experience Moat",
+    "analysisSummary": "Disney's competitive position rests on **three structural advantages** that are partially insulated from technological disruption:",
+    "analysisPoints": [
+      {
+        "title": "IP Franchise Compounding Machine",
+        "text": "Marvel, Star Wars, Pixar, National Geographic, and Walt Disney Animation are the most valuable media franchises ever assembled under one roof. These properties generate self-reinforcing flywheel value across streaming, theatrical, parks, and consumer products simultaneously. In CY2025, Disney's studios grossed $6.5B+ at the global box office — its third biggest year ever — with 'Avatar: Fire and Ash', 'Zootopia 2', and 'Lilo and Stitch' each exceeding $1B. No AI can replicate 90 years of cultural canon or the trust these brands have with hundreds of millions of families worldwide."
+      },
+      {
+        "title": "ESPN Sports Rights Lock-in",
+        "text": "ESPN holds exclusive multi-year rights to the NFL (MNF/MNF+), NBA (after a new 11-year $2.6B/year deal), UFC, SEC football, and other premium sports properties. These contracts function as regulatory lock-in — competitors must wait years for rights windows to open. ESPN's advertising revenue grew 10% in Q1 FY2026, and a standalone ESPN streaming app is in development, which could be the defining catalyst for the next phase of Disney's streaming business."
+      },
+      {
+        "title": "Theme Park Experience — Physical Moat",
+        "text": "Disney's parks business generated a record $10B in quarterly revenue in Q1 FY2026 and represents ~$15B+ in annual operating income. The parks require capital of $40B+ to replicate and cannot be disintermediated by technology. Disney Vacation Club (DVC), annual passes, and cruise ships (13-ship fleet expanding) create multi-year behavioral embedding. The Disney Treasure cruise ship launched in late 2024 and pre-opening costs were a one-time drag; future ships provide recurring growth."
+      },
+      {
+        "title": "Why the Moat Has Limits",
+        "text": "Linear TV/ESPN is in structural decline due to cord cutting — 20M+ cable subscribers have been lost industry-wide in the last 5 years. Disney+ subscriber growth has plateaued (~125M), and the streaming market is increasingly competitive. Parks attendance growth domestically was flat (+1%) in Q1 FY2026, raising questions about domestic parks saturation. The moat is real but requires continuous reinvestment in content and attractions to remain relevant."
+      }
+    ]
+  },
+  "growth": {
+    "score": 60,
+    "description": "Disney is a slow-revenue-growth, fast-earnings-leverage story. FY2025 revenue grew only 3.4% to $94.4B, but FCF expanded 17.7% to $10.1B and streaming turned structurally profitable. Q1 FY2026 DTC operating income grew 72% YoY to $450M. FY2026 guidance calls for double-digit adjusted EPS growth (from ~$5.85 in FY2025), driven primarily by DTC margin expansion, not top-line acceleration.",
+    "additionalNote": {
+      "title": "DTC Profitability Inflection and ESPN Digital Transition",
+      "points": [
+        "DTC segment operating income: $450M in Q1 FY2026 (+72% YoY); company guides $500M for Q2 FY2026 and ~10% SVOD margin for full FY2026",
+        "Disney no longer reports streaming subscriber counts — following Netflix — signaling a shift to profitability focus over growth metrics",
+        "ESPN standalone streaming app in development; Disney+ already features an ESPN tile, building toward full direct-to-consumer sports",
+        "FY2025 FCF of $10.1B (+17.7% YoY) supports $7B buyback program; debt-to-equity has improved to 0.41",
+        "Third biggest box office year ever in CY2025 ($6.5B+); 'Zootopia 2' became Hollywood's #1 animated film all-time ($1.7B)"
+      ]
+    },
+    "growthAnalysis": {
+      "cagrEstimate": "4-6%",
+      "scoreDerivation": "Base 52 (4-6% blended revenue CAGR; FY2025 +3.4%, FY2026 guided ~5%) + 5 DTC profitability inflection (streaming moving from losses to $1.3B+ annual OI — transformative for earnings quality) + 3 ESPN digital transition (standalone streaming app = TAM expansion catalyst for sports-only subscribers) = 60",
+      "drivers": [
+        { "name": "DTC Streaming (Disney+/Hulu/ESPN+)", "metric": "Revenue +11% Q1 FY2026; OI $450M (+72% YoY)", "trend": "accelerating" },
+        { "name": "Experiences (Parks, Resorts, Cruise)", "metric": "Record $10B Q1 FY2026 revenue; international +28% YoY", "trend": "stable" },
+        { "name": "Theatrical Content", "metric": "$6.5B+ CY2025 box office; 3 films >$1B ('Avatar 2', 'Zootopia 2', 'Lilo and Stitch')", "trend": "stable" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If US domestic parks attendance declines >10% by end of 2026 due to consumer recession, the Experiences segment (>60% of total segment operating income) reverses, offsetting the DTC profit ramp and causing FY2026 EPS to miss the double-digit growth target — triggering multiple compression on the stocks already-depressed 15x forward P/E",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 79,
+    "description": "At ~$100, Disney trades at approximately 15× FY2026 consensus adjusted EPS of ~$6.50 — cheap relative to the S&P 500 (~21×) and deeply discounted vs. its own 10-year average P/E of ~22×. The current price reflects maximum pessimism on cord cutting and parks concerns. The 52-week low of $80.10 suggests the true bear case is already partially priced in. FCF yield of ~5.8% ($10.1B FCF on $175B market cap) is exceptional for a quality franchise.",
+    "valuationNote": {
+      "text": "At $100, Disney represents a quality franchise at a distressed-multiple. The DTC profitability story is validating (Q1 FY2026: $450M OI, +72% YoY), FCF is near record, and the buyback program ($7B authorized) provides a floor. The base case of $130 implies only 18-19× FY2026 adjusted EPS — still well below the 22-25× Disney commanded pre-pandemic. The primary risk is not valuation but execution: can ESPN's digital transition work, and can parks sustain record revenue in a softening consumer environment?",
+      "fairValue": "$130"
+    },
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~14.6×", "note": "FY2025 GAAP EPS $6.85 (incl. one-time $3.3B tax benefit)" },
+        { "label": "Forward P/E (NTM)", "value": "~15×", "note": "consensus FY2026 adj. EPS ~$6.50" },
+        { "label": "PEG Ratio", "value": "~1.3×", "note": "fwd P/E ÷ ~12% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~1.8×", "note": "~$97B NTM revenue est." },
+        { "label": "Price / FCF", "value": "~17×", "note": "$10.1B FCF (FY2025)" }
+      ],
+      "summary": "Disney's forward P/E of ~15× is cheap vs. the S&P 500 (~21×) and dramatically discounted vs. Netflix (~40×), reflecting lingering structural concerns about cord cutting and linear TV. The PEG of 1.3 is in the 'fairly priced for growth' zone — not screaming cheap, but offering reasonable margin of safety given franchise quality. The trailing GAAP EPS is distorted by a one-time $3.3B tax benefit; the adjusted forward multiple is the correct lens, and it points to a stock trading well below historical averages."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$75",
+      "description": "Cord cutting accelerates beyond expectations, parks attendance slumps in a recession, and ESPN's digital pivot fails to offset linear TV revenue losses — compressing the multiple on an earnings miss.",
+      "points": [
+        "ESPN loses 30% of remaining cable subscribers by 2027 as cord cutting accelerates, and the standalone streaming app launches too late or fails to gain traction",
+        "US domestic parks attendance declines 15%+ in a consumer recession, reversing the Experiences segment OI from $15B+ to $10-12B",
+        "Disney+ subscriber growth reverses as competitive pressure from Netflix, Prime, and Apple intensifies; ARPU stagnates",
+        "Multiple compresses to 11-12× trough adj. EPS of ~$4.50-5.00; stock falls toward $75"
+      ]
+    },
+    "base": {
+      "priceTarget": "$130",
+      "description": "DTC margins reach the guided 10% SVOD target, ESPN transitions successfully to digital, parks sustain record-level revenues, and double-digit adj. EPS growth re-rates the stock toward its historical average.",
+      "points": [
+        "DTC SVOD margin reaches ~10% in FY2026 as guided; DTC OI reaches $1.5-2B annually by FY2027",
+        "ESPN standalone streaming app launches, capturing 5-8M incremental subscribers by end of FY2027",
+        "Parks revenue sustains $10B+ quarterly; cruise fleet expansion adds 2 ships by 2027",
+        "FY2026 adj. EPS reaches $6.50+; multiple re-rates from 15× to 18-20× = $130 fair value"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$165",
+      "description": "ESPN streaming becomes the dominant sports streaming platform, DTC margins exceed guidance, and parks international expansion reaccelerates — triggering a full multiple re-rating to pre-pandemic levels.",
+      "points": [
+        "ESPN standalone streaming reaches 15M+ subscribers by end of 2027, adding $2-3B in incremental high-margin revenue",
+        "Disney+ Hulu bundle ARPU increases 20%+ as ad-supported tiers outperform and content flywheel accelerates",
+        "International parks (Tokyo, Paris, Hong Kong, Shanghai, and new locations) enter a sustained expansion cycle",
+        "FY2027 adj. EPS reaches $8.00+; multiple re-rates to 20-22× as streaming risk premium dissipates = $160-175 range"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": { "status": "weakened", "note": "Disney's streaming interface (Disney+, Hulu) is simple and easily substitutable. Parks and cruise experiences create deep habitual patterns, but the digital interface itself has no meaningful switching cost. AI can abstract away streaming UI differences trivially." },
+    "businessLogic": { "status": "weakened", "note": "Content licensing agreements, affiliate deals, and rights contracts are complex, but they are negotiated business relationships rather than embedded software logic. There is no Disney SaaS layer that encodes proprietary customer workflows — the business logic moat is weak." },
+    "publicDataAccess": { "status": "destroyed", "note": "N/A — Disney's competitive advantage is IP ownership and distribution, not access to unique public datasets. Its data advantage is proprietary (subscriber behavior, box office analytics), not derived from public data access." },
+    "talentScarcity": { "status": "intact", "note": "Top-tier Disney animators, Imagineers (park designers and experience architects), and sports rights negotiators represent genuinely scarce talent. While AI is beginning to automate parts of the animation pipeline, the creative vision behind billion-dollar IP like 'Moana 2' and 'Zootopia 2' still requires irreplaceable human storytelling talent. AI may lower production costs but cannot generate the cultural resonance of established IP." },
+    "bundling": { "status": "intact", "note": "The Disney Bundle (Disney+, Hulu, ESPN+) meaningfully reduces subscriber churn and increases ARPU. Subscribers who take the full bundle have materially lower cancellation rates than single-service subscribers. The bundle also creates cross-sell leverage: sports fans enter via ESPN and discover Disney+; families on Disney+ are upsold to Hulu for adult content. This multi-product lock-in is strengthening as the bundle evolves." },
+    "proprietaryData": { "status": "intact", "note": "Disney+ stopped reporting subscriber counts in Q1 FY2026, but the behavioral data from 100M+ streaming subscribers combined with parks visit patterns, merchandise purchases, and box office attendance creates a proprietary dataset on global entertainment consumption. This data informs content greenlight decisions, park investment priorities, and personalized marketing at scale that no new entrant can replicate without decades of audience relationships." },
+    "regulatoryLockIn": { "status": "strong", "note": "ESPN's multi-year exclusive rights to NFL Monday Night Football, a new 11-year NBA deal ($2.6B/year), UFC, and SEC football function as regulatory-equivalent lock-in — competitors cannot access these properties until rights windows reopen years from now. ABC holds FCC broadcast licenses that cannot be acquired without regulatory approval. Multi-billion dollar, multi-year rights contracts are the media industry's version of FDA approval." },
+    "networkEffects": { "status": "weakened", "note": "Disney's network effects are indirect and weak. More Disney+ subscribers do not directly improve the product for other subscribers (unlike Meta or Spotify). The indirect flywheel (more revenue → more content investment → more subscribers) exists but is slow and not self-reinforcing without continuous content investment." },
+    "transactionEmbedding": { "status": "intact", "note": "Disney Vacation Club (DVC) memberships, annual park passes, and cruise bookings create multi-year financial embedding — DVC members effectively prepay for decades of Disney experiences. The Disney Bundle is embedded in millions of households via auto-renewing subscriptions. MVPD/cable operators pay ESPN affiliate fees regardless of viewership trends, with contracts lasting multiple years. This embedding is solid but not as deep as payment networks." },
+    "systemOfRecord": { "status": "destroyed", "note": "N/A — Disney is not a system of record for any business process in the software sense. Its cultural canon (Marvel/Star Wars lore, Disney IP) functions as a form of irreplaceable reference, but this is better captured in the IP moat narrative than in this framework's definition of authoritative business data records." },
+    "aiResilienceScore": 65,
+    "verdict": "Disney is a mixed AI story: a partial beneficiary and partial loser. On the beneficiary side, AI is reducing content production costs (reducing animation and VFX expenses), improving ad targeting on Hulu, and strengthening Disney's data advantage through better personalization — helping the DTC profitability inflection. The biggest AI-resilient moats are regulatoryLockIn (ESPN sports rights contracts are AI-proof) and proprietaryData (decades of family entertainment behavior data). The biggest AI threat is that generative AI enables lower-cost competitors to produce compelling streaming content without Disney's capital investment, weakening the talentScarcity and bundling moats over a 5-10 year horizon. Disney's physical parks and exclusive sports rights provide a floor that pure-streaming peers like Netflix lack, making it more AI-durable than it first appears."
+  }
+}

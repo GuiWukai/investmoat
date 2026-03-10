@@ -5,7 +5,7 @@
   "headerStats": [
     { "label": "Ticker", "value": "COST" },
     { "label": "Market Cap", "value": "$440B" },
-    { "label": "Price", "value": "$990.00" }
+    { "label": "Price", "value": "$995.00" }
   ],
   "chips": [
     { "label": "Consumer Retail", "color": "primary" },
@@ -14,9 +14,9 @@
   ],
   "recommendation": "Accumulate",
   "metrics": [
-    { "title": "Revenue", "value": "$254B", "label": "FY2024 Net Sales", "icon": "DollarSign", "color": "#005DAA" },
-    { "title": "Membership Fee Income", "value": "$4.8B", "label": "High-Margin Recurring Revenue", "icon": "Users", "color": "#E31837" },
-    { "title": "Renewal Rate", "value": "92.9%", "label": "Global Member Retention", "icon": "RefreshCw", "color": "#10b981" }
+    { "title": "Revenue", "value": "$269.9B", "label": "FY2025 Net Sales (+8.1% YoY)", "icon": "DollarSign", "color": "#005DAA" },
+    { "title": "Membership Fee Income", "value": "$5.3B", "label": "FY2025 Recurring Revenue (+10.3% YoY)", "icon": "Users", "color": "#E31837" },
+    { "title": "Renewal Rate", "value": "92.3%", "label": "US/Canada Renewal (89.7% worldwide)", "icon": "RefreshCw", "color": "#10b981" }
   ],
   "moat": {
     "score": 82,
@@ -26,11 +26,11 @@
     "analysisPoints": [
       {
         "title": "Membership Model Aligns Incentives",
-        "text": "Costco earns nearly all its profit from membership fees (~$4.8B annually), not merchandise markups. Products are sold at 10-14% gross margin — a level that would bankrupt most retailers. This forces the business to serve members, not shareholders, and creates a self-reinforcing loyalty loop."
+        "text": "Costco earns nearly all its profit from membership fees ($5.3B in FY2025, +10.3% YoY), not merchandise markups. Products are sold at ~11% gross margin — a level that would bankrupt most retailers. Membership fee income grew 13.6% YoY in Q2 FY2026, driven by the September 2024 fee increase and 9.5% growth in paid memberships to 82.1M. This forces the business to serve members, not shareholders, creating a self-reinforcing loyalty loop."
       },
       {
         "title": "Scale-Driven Buying Power",
-        "text": "With $254B in revenue flowing through a curated ~4,000 SKU catalog, Costco commands pricing power with suppliers that no mid-tier retailer can match. Fewer SKUs means each item sells in massive volume, giving Costco leverage to extract the lowest possible cost and pass savings to members."
+        "text": "With $269.9B in revenue flowing through a curated ~4,000 SKU catalog across 924 warehouses (Q2 FY2026), Costco commands pricing power with suppliers that no mid-tier retailer can match. Fewer SKUs means each item sells in massive volume, giving Costco leverage to extract the lowest possible cost and pass savings to members. Q2 FY2026 comparable sales rose 7.4% (6.7% adjusted), while digital comparable sales surged 22.6%."
       },
       {
         "title": "The Treasure Hunt Experience",
@@ -44,44 +44,68 @@
   },
   "growth": {
     "score": 70,
-    "description": "New warehouse openings (25-30/year), international expansion, and e-commerce augment a durable low-single-digit comparable sales compounder. Membership fee increases provide a high-visibility earnings lever.",
+    "description": "New warehouse openings (targeting 28 net new in FY2026), international expansion, and digital commerce augment a durable high-single-digit revenue compounder. Q2 FY2026: comparable sales +7.4%, digital comparable sales +22.6% (app traffic +45%, site traffic +32%). Membership fee income grew 13.6% YoY to $1.36B in the quarter, underpinned by 9.5% paid member growth and the September 2024 fee increase.",
     "additionalNote": {
       "title": "Key Growth Catalysts",
       "points": [
-        "International warehouse expansion in Asia (China, Japan, Korea) and Europe showing strong membership uptake",
-        "E-commerce integration growing double digits while preserving warehouse traffic",
+        "International warehouse expansion in Asia (Canada, Asia double-digit comps in Q2 FY2026) and continued Europe penetration",
+        "Digitally enabled sales +22.6% with personalized product carousels generating $470M+ in e-commerce sales per quarter",
         "Costco auto program, travel, pharmacy, and financial services extending member lifetime value",
-        "Next membership fee increase likely to drive $1B+ annual incremental income with minimal churn"
+        "147.2M total cardholders (+4.7% YoY) creates long runway for lifetime value expansion",
+        "30+ net new warehouses planned annually over the medium term as sub-saturation international markets open"
       ]
+    },
+    "growthAnalysis": {
+      "cagrEstimate": "8-10%",
+      "scoreDerivation": "Base 67 (8-10% blended CAGR; net sales +9.1% in Q2 FY2026, membership +13.6% YoY) + 5 recurring membership (100% recurring fee income, NRR effectively >100% as members rarely churn) − 2 mature market (limited TAM expansion beyond gradual warehouse opens; large-format retail is a slow-growing global format) = 70",
+      "drivers": [
+        { "name": "Net New Warehouses", "metric": "+24 FY2025, targeting +28 FY2026; 924 total; ~$250M revenue/warehouse", "trend": "stable" },
+        { "name": "Membership Fee Income", "metric": "+13.6% Q2 FY2026, 82.1M paid members (+9.5% YoY), 89.7% worldwide renewal", "trend": "accelerating" },
+        { "name": "Digitally Enabled Sales", "metric": "+22.6% comparable Q2 FY2026; app +45%, site +32%, $470M+ per quarter", "trend": "accelerating" }
+      ],
+      "primaryType": "market share",
+      "keyRisk": "If US consumer spending contracts due to tariff-driven inflation by mid-2026, comparable sales growth decelerates below 4% and the premium 50x+ multiple compresses to 33-35x, implying a stock price of $700-800 on FY2026 EPS of ~$21-22",
+      "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 60,
-    "description": "Costco trades at 48x+ forward earnings — a significant premium reflecting the quality and predictability of its earnings stream. The stock prices in near-perfection and leaves limited margin of safety. Best accumulated on pullbacks toward base case.",
+    "score": 75,
+    "description": "At ~$995, Costco trades at approximately 47-50× forward earnings — a premium that reflects best-in-class earnings quality and predictability. The stock sits below the updated base case of $1,150, offering a modest margin of safety. Q2 FY2026 results (EPS $4.58, +14% YoY) confirm execution is intact, and double-digit digital growth is opening a new margin-accretive channel.",
     "valuationNote": {
-      "text": "At $990, the stock prices in sustained high-teens EPS growth — achievable but dependent on continued membership growth and fee increases. Patience is rewarded; wait for 10%+ pullbacks before adding.",
-      "fairValue": "$1,050"
+      "text": "At $995, Costco is priced for sustained 10-15% EPS compounding. FY2026 EPS estimates of ~$21-22 imply a 47-50× multiple — expensive vs. the market but historically fair for Costco. The digital channel (+22.6% comparable) and international momentum support the premium. The base case of $1,150 offers ~15% upside; the bull case of $1,400 requires an additional fee hike and digital monetization acceleration.",
+      "fairValue": "$1,150"
+    },
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~55×", "note": "FY2025 EPS $18.21" },
+        { "label": "Forward P/E (NTM)", "value": "~47×", "note": "consensus FY2026 EPS ~$21" },
+        { "label": "PEG Ratio", "value": "~4.7×", "note": "fwd P/E ÷ ~10% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~1.6×", "note": "~$285B NTM revenue est." },
+        { "label": "Price / FCF", "value": "~35×", "note": "~$12.5B FCF (NTM est.)" }
+      ],
+      "summary": "Costco's forward P/E of ~47× is expensive vs. the S&P 500 (~21×) and consumer staples peers (~25-30×), but has historically commanded this premium due to its unmatched earnings predictability and membership flywheel. The PEG of 4.7 signals the growth-adjusted case is weak — the stock is priced for perfection, not value. The trailing-to-forward P/E gap is modest (+8×), consistent with steady 10-15% EPS growth rather than an earnings ramp."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$700",
-      "description": "A deep recession causes discretionary spending collapse, membership growth stalls, and the premium valuation compresses sharply.",
+      "priceTarget": "$750",
+      "description": "A tariff-driven consumer recession causes comparable sales to stall, membership growth decelerates, and the premium multiple compresses to historical trough levels.",
       "points": [
-        "US consumer recession drives membership renewal rates below 88% for the first time in decades",
-        "Comparable sales growth turns negative as members trade down to discount grocery alternatives",
-        "P/E multiple compresses from 48x to 32x as growth decelerates, creating significant price downside",
-        "International expansion delays in China reduce the long-term growth narrative"
+        "US tariff-driven cost inflation raises COGS, forcing Costco to absorb or pass on increases — either margin contraction or member pushback",
+        "Comparable sales growth falls below 4% for two consecutive quarters as members reduce discretionary bulk purchasing",
+        "P/E multiple compresses from 50x to 33-35x on decelerated growth, implying $750 on FY2027 EPS of ~$22",
+        "International expansion slows in China and Asia as local competition and consumer sentiment deteriorate"
       ]
     },
     "base": {
-      "priceTarget": "$1,050",
-      "description": "Steady warehouse openings, a membership fee increase, and continued international growth sustain 12-15% EPS compounding.",
+      "priceTarget": "$1,150",
+      "description": "Steady warehouse openings, sustained digital momentum, and 10-15% EPS compounding drive the stock toward fair value.",
       "points": [
-        "25-30 net new warehouses annually sustains mid-single-digit unit growth globally",
-        "Next membership fee increase (~$10/year) adds ~$1.3B incremental high-margin income",
-        "E-commerce growing 20%+ annually while serving as a complement to warehouse visits",
-        "Kirkland Signature continues to expand market share at the expense of branded goods"
+        "28 net new warehouses in FY2026; 30+ annually thereafter; international markets provide above-average unit economics",
+        "Digital comparable sales sustain 20%+ growth, driving incremental margin via personalized sales and fulfillment efficiency",
+        "Membership fee income grows 10%+ annually via member base expansion; next fee hike expected within 3-4 years",
+        "Kirkland Signature continues to expand share; gross margin stable at ~11-12%"
       ]
     },
     "bull": {
@@ -101,11 +125,11 @@
     "publicDataAccess": { "status": "destroyed", "note": "N/A — retail purchasing data is not a public data access moat. Costco's data advantage is proprietary, not derived from exclusive access to public datasets." },
     "talentScarcity": { "status": "destroyed", "note": "N/A — Costco's moat is structural and behavioral, not dependent on scarce talent pools. Its advantages compound through scale and trust, not human capital." },
     "bundling": { "status": "strong", "note": "A single membership fee unlocks access to fuel, pharmacy, optical, hearing, travel, auto, and financial services — a high-value bundle that compounds switching costs across every area of a member's life." },
-    "proprietaryData": { "status": "strong", "note": "Purchase data across 135M+ cardholders — spanning grocery, fuel, pharmacy, travel, and financial services — provides unmatched granularity into household spending behavior. This enables precise inventory curation, supplier negotiation leverage, and predictive demand planning that no competitor can replicate without the same scale and tenure of member relationships." },
+    "proprietaryData": { "status": "strong", "note": "Purchase data across 147.2M+ cardholders (Q2 FY2026) — spanning grocery, fuel, pharmacy, travel, and financial services — provides unmatched granularity into household spending behavior. Personalized product carousels powered by this data generated $470M+ in digital sales in a single quarter. This enables precise inventory curation, supplier negotiation leverage, and predictive demand planning that no competitor can replicate without the same scale and tenure of member relationships." },
     "regulatoryLockIn": { "status": "destroyed", "note": "N/A — retail is not a heavily regulated industry. No meaningful regulatory moat exists for Costco's core business." },
     "networkEffects": { "status": "weakened", "note": "Some indirect network effects exist — more members mean better supplier terms, which enable lower prices, which attract more members — but this is not a classic two-sided network." },
     "transactionEmbedding": { "status": "strong", "note": "The Costco Anywhere Visa (issued by Citi) is the exclusive payment card for all Costco transactions. Auto-renewed memberships charged to this card make Costco the single largest recurring line item for tens of millions of households. The membership renewal loop — card on file, auto-charge, seamless access — creates deep financial embedding that is extraordinarily hard to displace." },
-    "systemOfRecord": { "status": "strong", "note": "For 135M+ cardholders, Costco is the primary and default destination for bulk groceries, household staples, fuel, and seasonal goods. This behavioral default compounds over decades: members plan their weekly routines around Costco trips. No digital substitute replicates the physical treasure hunt and scale pricing, making Costco the system of record for household procurement." },
+    "systemOfRecord": { "status": "strong", "note": "For 147.2M+ cardholders, Costco is the primary and default destination for bulk groceries, household staples, fuel, and seasonal goods. This behavioral default compounds over decades: members plan their weekly routines around Costco trips. With app traffic up 45% and site traffic up 32% YoY in Q2 FY2026, the digital layer is reinforcing physical habit, not replacing it. No digital substitute replicates the physical treasure hunt and scale pricing." },
     "aiResilienceScore": 78,
     "verdict": "Costco is highly resilient to AI disruption. Its moat is rooted in physical logistics, behavioral psychology, and supplier relationships — none of which AI can automate away. The membership flywheel and buying scale are structural advantages that compound over decades, making Costco one of the most durable retail businesses ever created."
   }
