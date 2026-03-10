@@ -1,0 +1,182 @@
+{
+  "slug": "mstr",
+  "ticker": "MSTR",
+  "name": "Strategy Inc.",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "MSTR"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$44.6B"
+    },
+    {
+      "label": "Current Price",
+      "value": "$133.53"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Bitcoin Treasury | Technology",
+      "color": "warning"
+    },
+    {
+      "label": "Speculative / Avoid",
+      "color": "danger"
+    }
+  ],
+  "recommendation": "Avoid",
+  "metrics": [
+    {
+      "title": "Bitcoin Holdings",
+      "value": "738,750 BTC",
+      "label": "~$48.8B at $66K; avg cost ~$66,384/BTC",
+      "icon": "DollarSign",
+      "color": "#f7931a"
+    },
+    {
+      "title": "Software Revenue",
+      "value": "$477M",
+      "label": "FY2025 (+3% YoY); subscription +62% YoY Q4",
+      "icon": "BarChart3",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "Total Debt",
+      "value": "$8.2B",
+      "label": "Convertible notes + preferred; preferred divs $904M/yr in 2026",
+      "icon": "TrendingDown",
+      "color": "#f31260"
+    }
+  ],
+  "moat": {
+    "score": 51,
+    "description": "Strategy's moat rests almost entirely on its first-mover status as the world's largest public Bitcoin treasury and its regulated access structure for institutional BTC exposure. The legacy BI software (Strategy ONE) provides minimal moat and is ceding ground to AI-native analytics. The mNAV premium that once justified a 4x valuation above Bitcoin NAV has collapsed to ~1.1x.",
+    "analysisTitle": "The Leveraged Bitcoin Vehicle",
+    "analysisSummary": "Strategy's investable thesis is built on **Bitcoin leverage, regulated access, and capital markets flywheel** — not software moats:",
+    "analysisPoints": [
+      {
+        "title": "Regulated BTC Exposure for Institutions",
+        "text": "Strategy is an SEC-regulated, Nasdaq-listed equity. Institutional investors (pension funds, insurance companies, 401k plans) who cannot directly hold Bitcoin can access leveraged BTC exposure through MSTR. This regulatory arbitrage was the core mNAV premium driver from 2020–2024."
+      },
+      {
+        "title": "Capital Markets Flywheel (Now Stalling)",
+        "text": "At peak mNAV of 4x, Strategy could issue equity at 4x the NAV of Bitcoin it received — creating immediate BTC yield per share. With mNAV at ~1.1x, new equity issuance is minimally accretive and risks becoming dilutive, fundamentally weakening the flywheel."
+      },
+      {
+        "title": "First-Mover Bitcoin Treasury Brand",
+        "text": "Michael Saylor's public advocacy and conviction since August 2020 created enormous brand recognition for the Bitcoin treasury strategy. But as Metaplanet (Japan), MARA Holdings, Semler Scientific, and dozens of other companies have adopted similar playbooks, the uniqueness premium has largely evaporated."
+      },
+      {
+        "title": "Strategy ONE — Legacy BI Software",
+        "text": "The original business intelligence software platform generates ~$477M annually with subscription services transitioning to cloud (+62% YoY). However, the total software business is nearly flat (+3% YoY) and faces direct AI-driven commoditization from Microsoft Copilot, Google Gemini, Databricks, and Snowflake."
+      }
+    ]
+  },
+  "growth": {
+    "score": 42,
+    "description": "Strategy ONE subscription services grew 62% YoY in Q4 2025, but total software revenue is nearly flat at $477M (+3% YoY) as legacy product revenue declines offset cloud growth. The real driver of equity value — BTC price appreciation — is not a revenue metric. BTC Yield was 22.8% in FY2025, but this measures BTC accumulation per share, not earnings. The software gross margin fell to 66% in Q4 2025 from 73% YoY, with cost of sales rising 22% as the cloud transition ramps costs.",
+    "additionalNote": {
+      "title": "Growth Drivers (3-Year Horizon)",
+      "points": [
+        "Strategy ONE cloud subscription: +62% YoY in Q4 2025, transitioning from legacy on-premise BI to cloud-native analytics; the cloud cohort likely has NRR >110% but starts from a small base within the $477M total",
+        "Bitcoin accumulation: 738,750 BTC at avg cost ~$66,384/BTC; BTC Yield of 22.8% in 2025 (101,873 BTC added); BTC price recovery from ~$66K to $90–100K would add ~$18–25B in NAV",
+        "Preferred equity capital raises: STRK preferred stock issuance funds ongoing BTC purchases, but $904M in estimated 2026 preferred dividends creates a growing fixed obligation that limits future flexibility"
+      ]
+    },
+    "growthAnalysis": {
+      "cagrEstimate": "5–8%",
+      "scoreDerivation": "Base 52 (5–8% software CAGR as subscription offsets legacy decline) + 5 cloud subscription acceleration (NRR >110% for cloud cohort) − 10 massive share dilution headwind (44% YoY shares outstanding growth) − 5 software gross margin compression (cost of sales +22% YoY, gross margin 73%→66%) = 42",
+      "drivers": [
+        { "name": "Strategy ONE Cloud", "metric": "+62% YoY Q4 2025; subscription within $477M total revenue", "trend": "accelerating" },
+        { "name": "Legacy Software/Services", "metric": "Declining; offsetting cloud growth; total rev +1.9% Q4 YoY", "trend": "decelerating" },
+        { "name": "BTC Treasury (NAV)", "metric": "738,750 BTC; BTC Yield 22.8% FY2025; not a revenue metric", "trend": "stable" }
+      ],
+      "primaryType": "market share",
+      "keyRisk": "If Bitcoin price remains below $65,000 through Q3 2026, Strategy's entire treasury is underwater vs avg cost ($66,384) — forcing equity issuance at or below NAV, which destroys BTC yield per share and breaks the capital markets flywheel that justified the mNAV premium",
+      "marginTrend": "compressing"
+    }
+  },
+  "valuation": {
+    "score": 73,
+    "description": "At $133.53, MSTR trades at ~1.1x EV/BTC NAV — historically cheap vs its 4x peak premium in late 2024. The stock dipped briefly below NAV in November 2025 (mNAV ~0.97), signaling the market is pricing MSTR as a near-pure BTC proxy. For pure Bitcoin exposure, ETFs (IBIT, FBTC) offer the same upside without leverage, dilution, or preferred dividend risk. MSTR is only interesting if the mNAV premium re-expands — which requires Bitcoin to rally and capital-raising conditions to remain favourable.",
+    "valuationNote": {
+      "text": "Strategy's fair value is fundamentally derived from BTC NAV: 738,750 BTC × BTC price, less $8.2B debt and preferred obligations, divided by ~332M diluted shares. At $66,000 BTC the net BTC NAV per share is approximately",
+      "fairValue": "$122/share (net of debt)"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$55",
+      "description": "Bitcoin falls to ~$35,000 on macro risk-off; leverage amplifies the decline and triggers capital structure stress.",
+      "points": [
+        "BTC at $35K → BTC value $25.9B; minus $8.2B debt = $17.7B / 332M shares ≈ $53/share",
+        "$904M/yr preferred dividend obligation strains free cash at depressed BTC valuations",
+        "Emergency dilutive equity issuance at sub-NAV prices accelerates per-share value destruction"
+      ]
+    },
+    "base": {
+      "priceTarget": "$170",
+      "description": "Bitcoin recovers to ~$90,000 on ETF inflows and halving cycle tailwinds; MSTR at ~1.0x mNAV.",
+      "points": [
+        "BTC at $90K → BTC value $66.5B; minus $8.2B debt = $58.3B / 332M shares ≈ $175",
+        "Cloud subscription NRR >110% drives the software segment back to 8–10% total revenue growth",
+        "BTC Yield of 10–15% maintained through disciplined capital raises above mNAV 1.0x"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$350",
+      "description": "Bitcoin surges to $150,000+; mNAV premium partially recovers to ~1.3x on institutional demand.",
+      "points": [
+        "BTC at $150K → BTC value $110.8B; minus $8.2B debt = $102.6B / 332M shares ≈ $309; with 1.3x premium ≈ $400",
+        "Potential S&P 500 inclusion criteria met, adding passive index demand for MSTR equity",
+        "Bitcoin ETF AUM exceeds $500B, driving persistent institutional BTC demand and validating treasury strategy"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "Strategy ONE BI software has enterprise UI complexity, but AI-native analytics tools (Copilot, Gemini, Databricks AI) are abstracting away the need to master traditional BI interfaces. The interface moat is eroding."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "Strategy ONE has some enterprise embedding in legacy business intelligence workflows, but the BI market is being commoditized by AI-native tools. An AI agent can increasingly replicate standard analytics workflows. The software is not growing meaningfully."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — Strategy does not control access to any unique public dataset. Bitcoin on-chain data is publicly accessible on explorers like Mempool and Glassnode."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Michael Saylor's early conviction and capital markets expertise around Bitcoin created a talent scarcity advantage in 2020–2023. As Bitcoin treasury strategies proliferate globally, the strategic expertise has commoditised. AI does not change this dynamic materially."
+    },
+    "bundling": {
+      "status": "destroyed",
+      "note": "N/A — Strategy does not offer a meaningful product bundle. The combination of BI software and Bitcoin treasury is not a moat-creating bundle; they are structurally unrelated businesses sharing only a balance sheet."
+    },
+    "proprietaryData": {
+      "status": "destroyed",
+      "note": "N/A — Bitcoin is a public blockchain with universally accessible on-chain data. Strategy does not own proprietary datasets that compound in value."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "Strategy is an SEC-regulated, Nasdaq-listed vehicle. Institutional investors (pension funds, insurance companies) who cannot directly hold Bitcoin or spot BTC ETFs in certain mandates can access leveraged BTC exposure through MSTR equity and convertible bonds. This regulatory structure creates meaningful friction-to-exit for some investor classes, and is AI-neutral."
+    },
+    "networkEffects": {
+      "status": "weakened",
+      "note": "Strategy's first-mover status created capital-raising advantages at a 4x mNAV premium — more BTC per dollar of equity enabled superior BTC Yield. But as Metaplanet, MARA, Semler Scientific, and dozens of other companies adopted Bitcoin treasury strategies through 2025, mNAV collapsed from 4x to ~1.1x. The network effect of being the dominant BTC treasury vehicle has been largely competed away."
+    },
+    "transactionEmbedding": {
+      "status": "destroyed",
+      "note": "N/A — Strategy is not embedded in any payment or transaction layer. The BI software has no meaningful transaction embedding either."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — Strategy is not the system of record for any critical business function. Bitcoin is a decentralized ledger not owned by Strategy."
+    },
+    "aiResilienceScore": 51,
+    "verdict": "Strategy is AI-neutral at the portfolio level. Bitcoin is structurally agnostic to AI — it neither benefits from AI-driven enterprise demand nor is threatened by AI commoditization in the way software platforms are. The sole AI-resilient moat is the regulatory lock-in (SEC-regulated BTC exposure for institutional mandates), which AI cannot disrupt. However, the BI software segment faces direct AI-driven commoditization from Copilot, Gemini, and AI-native analytics, which is gradually eroding the $477M software revenue base. The permanent compression of the mNAV premium from 4x to ~1.1x is the defining structural deterioration: Strategy can no longer leverage its public equity to accumulate BTC at 4x NAV, meaning the capital markets flywheel — the only durable advantage over simply buying Bitcoin — is largely broken."
+  }
+}
