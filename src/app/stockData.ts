@@ -43,6 +43,7 @@ import orclData    from '@/data/stocks/orcl.json';
 import pltrData    from '@/data/stocks/pltr.json';
 import raceData    from '@/data/stocks/race.json';
 import shopData    from '@/data/stocks/shop.json';
+import mstrData    from '@/data/stocks/mstr.json';
 import sofiData    from '@/data/stocks/sofi.json';
 import solanaData  from '@/data/stocks/solana.json';
 import spgiData    from '@/data/stocks/spgi.json';
@@ -109,6 +110,7 @@ const allCoverageData = [
     { name: "TransDigm",         ticker: "TDG",  slug: "tdg",         scores: [m(tdgData),         75, 70], href: "/stocks/tdg",         category: "Industrials", bearTarget: "$850",      baseTarget: "$1,350",    bullTarget: "$1,900"    },
     { name: "MSCI",              ticker: "MSCI", slug: "msci",        scores: [m(msciData),        75, 71], href: "/stocks/msci",        category: "Financials",  bearTarget: "$420",      baseTarget: "$620",      bullTarget: "$850"      },
     { name: "SoFi Technologies", ticker: "SOFI", slug: "sofi",        scores: [m(sofiData),        82, 79], href: "/stocks/sofi",        category: "Financials",  bearTarget: "$13",       baseTarget: "$26",       bullTarget: "$45"       },
+    { name: "Strategy Inc.",     ticker: "MSTR", slug: "mstr",        scores: [m(mstrData),        42, 71], href: "/stocks/mstr",        category: "Hard Assets", bearTarget: "$45",       baseTarget: "$160",      bullTarget: "$370"      },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────
