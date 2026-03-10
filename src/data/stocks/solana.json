@@ -69,10 +69,10 @@
   "tenMoats": {
     "learnedInterfaces": { "status": "weakened", "note": "Rust-based smart contracts have a steeper learning curve than Solidity, limiting developer portability but also slowing mass adoption relative to Ethereum's EVM ecosystem." },
     "businessLogic": { "status": "weakened", "note": "The Solana ecosystem is younger and has less locked-in protocol logic than Ethereum. Most high-value DeFi protocols still deploy on Ethereum first." },
-    "publicDataAccess": { "status": "destroyed", "note": "All on-chain data is public by design — not a competitive moat vs. any other L1." },
+    "publicDataAccess": { "status": "destroyed", "note": "N/A — all on-chain data is public by design; not a competitive moat vs. any other L1 blockchain." },
     "talentScarcity": { "status": "weakened", "note": "Growing developer community, but significantly smaller than Ethereum's. Rust expertise is scarcer than Solidity, creating both a barrier and a hiring constraint." },
     "bundling": { "status": "weakened", "note": "Solana bundles execution and settlement on one chain — simpler than Ethereum's L2 ecosystem, but the lack of modularity limits customization for institutional deployments." },
-    "proprietaryData": { "status": "destroyed", "note": "Fully public blockchain — no proprietary data advantage." },
+    "proprietaryData": { "status": "destroyed", "note": "N/A — fully public blockchain; no proprietary data advantage exists or can exist by design." },
     "regulatoryLockIn": { "status": "weakened", "note": "Spot ETF filings are pending but not yet approved. SOL was labeled a security in SEC lawsuits (later dropped), creating lingering regulatory uncertainty vs. ETH and BTC." },
     "networkEffects": { "status": "strong", "note": "Solana has the strongest consumer crypto network effects outside Ethereum — Phantom is the #1 mobile crypto wallet, and Jupiter dominates decentralized exchange aggregation." },
     "transactionEmbedding": { "status": "weakened", "note": "Growing DeFi and payments embedding (Visa, PayPal pilots), but most high-value financial activity still routes through Ethereum. Solana leads in consumer volume, not institutional value." },

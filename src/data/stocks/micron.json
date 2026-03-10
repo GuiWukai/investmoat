@@ -90,9 +90,9 @@
     "bundling": { "status": "weakened", "note": "Micron sells DRAM, NAND, and HBM as distinct products with limited bundling; some system-level memory solutions exist but don't create meaningful lock-in vs. Samsung or SK Hynix." },
     "proprietaryData": { "status": "intact", "note": "Proprietary DRAM cell designs (1-beta node), HBM3E stack architectures, and yield-learning data from high-volume HBM production represent genuine IP that competitors cannot quickly replicate." },
     "regulatoryLockIn": { "status": "intact", "note": "CHIPS Act $6.1B grant for Idaho and New York fabs makes Micron a strategic US national security asset. The US government has an explicit interest in Micron's success as the only US-based DRAM manufacturer." },
-    "networkEffects": { "status": "destroyed", "note": "No network effects in memory — customers buy on price, availability, and quality specifications, not ecosystem lock-in." },
+    "networkEffects": { "status": "destroyed", "note": "N/A — no network effects exist in commodity memory; customers buy on price, availability, and quality specifications, not ecosystem lock-in." },
     "transactionEmbedding": { "status": "weakened", "note": "HBM qualification is specific per GPU generation — once NVIDIA certifies Micron's HBM3E, there is some switching cost. But Samsung and SK Hynix are also qualified, limiting embed depth." },
-    "systemOfRecord": { "status": "destroyed", "note": "Memory is a commodity; Micron is not a system of record — customers can and do source from all three suppliers simultaneously." },
+    "systemOfRecord": { "status": "destroyed", "note": "N/A — memory is a commodity input; Micron is not a system of record for any business function; customers source from all three suppliers simultaneously." },
     "aiResilienceScore": 62,
     "verdict": "Micron's moat is structurally thin outside the current HBM upcycle. The oligopoly structure and US strategic importance provide a floor, but commodity memory pricing means this is a cyclical compounder, not a structural one. HBM is the differentiated opportunity — if that margin premium proves durable, the investment case strengthens materially."
   }

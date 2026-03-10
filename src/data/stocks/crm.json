@@ -68,7 +68,7 @@
   "tenMoats": {
     "learnedInterfaces": { "status": "weakened", "note": "Traditional CRM dashboards are being replaced by AI-native conversational interfaces and agent-driven workflows." },
     "businessLogic": { "status": "weakened", "note": "AI agents can now perform many tasks previously requiring complex Salesforce configuration and customization." },
-    "publicDataAccess": { "status": "destroyed", "note": "Customer data is proprietary, but public-facing API data access is not a durable competitive advantage." },
+    "publicDataAccess": { "status": "destroyed", "note": "N/A — public-facing API data access is not a meaningful moat for Salesforce; its advantage is proprietary customer CRM data, not access to public datasets." },
     "talentScarcity": { "status": "weakened", "note": "Salesforce admins and developers remain in-demand, but AI reduces implementation complexity and talent barriers." },
     "bundling": { "status": "strong", "note": "Sales Cloud + Service Cloud + Marketing Cloud + Slack + Einstein AI + Agentforce = the most complete enterprise CRM bundle." },
     "proprietaryData": { "status": "strong", "note": "150k+ enterprise customers' CRM data harmonized in Salesforce Data Cloud — the definitive record of global B2B relationships." },
