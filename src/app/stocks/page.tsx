@@ -162,7 +162,7 @@ export default function StocksPage() {
             value={query}
             onChange={e => setQuery(e.target.value)}
             placeholder="Search by name or ticker…"
-            className="w-full bg-white/5 border border-white/10 rounded-xl pl-10 pr-10 py-2.5 text-sm text-white placeholder:text-white/25 focus:outline-none focus:border-white/25 focus:bg-white/[0.07] transition-colors"
+            className="w-full bg-white/5 border border-white/10 rounded-xl pl-10 pr-10 py-2.5 text-base text-white placeholder:text-white/25 focus:outline-none focus:border-white/25 focus:bg-white/[0.07] transition-colors"
           />
           {query && (
             <button
