@@ -48,6 +48,7 @@ import mstrData    from '@/data/stocks/mstr.json';
 import sofiData    from '@/data/stocks/sofi.json';
 import solanaData  from '@/data/stocks/solana.json';
 import spgiData    from '@/data/stocks/spgi.json';
+import fanucData   from '@/data/stocks/fanuc.json';
 import tdgData     from '@/data/stocks/tdg.json';
 import teslaData   from '@/data/stocks/tesla.json';
 import tsmData     from '@/data/stocks/tsm.json';
@@ -98,6 +99,7 @@ const allCoverageData = [
     { name: "Apple",             ticker: "AAPL", slug: "aapl",        scores: [m(aaplData),        72, 68], href: "/stocks/aapl",        category: "Big Tech",    bearTarget: "$155",      baseTarget: "$240",      bullTarget: "$350"      },
     { name: "Tesla",             ticker: "TSLA", slug: "tesla",       scores: [m(teslaData),       87, 65], href: "/stocks/tesla",       category: "Big Tech",    bearTarget: "$150",      baseTarget: "$400",      bullTarget: "$550"      },
     { name: "Micron",            ticker: "MU",   slug: "micron",      scores: [m(micronData),      87, 67], href: "/stocks/micron",      category: "Big Tech",    bearTarget: "$200",      baseTarget: "$420",      bullTarget: "$650"      },
+    { name: "FANUC Corporation",  ticker: "FANUY",slug: "fanuc",       scores: [m(fanucData),       72, 76], href: "/stocks/fanuc",       category: "Industrials", bearTarget: "$13",       baseTarget: "$27",       bullTarget: "$42"       },
     { name: "Intuitive Surgical",ticker: "ISRG", slug: "isrg",        scores: [m(isrgData),        82, 62], href: "/stocks/isrg",        category: "Healthcare",  bearTarget: "$280",      baseTarget: "$520",      bullTarget: "$750"      },
     { name: "Eli Lilly",          ticker: "LLY",  slug: "lly",         scores: [m(llyData),         90, 75], href: "/stocks/lly",         category: "Healthcare",  bearTarget: "$650",      baseTarget: "$1,200",    bullTarget: "$1,750"    },
     { name: "Netflix",           ticker: "NFLX", slug: "nflx",        scores: [m(nflxData),        80, 77], href: "/stocks/nflx",        category: "Big Tech",    bearTarget: "$72",       baseTarget: "$125",      bullTarget: "$180"      },
