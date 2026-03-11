@@ -20,6 +20,7 @@ import avgoData    from '@/data/stocks/avgo.json';
 import btcData     from '@/data/stocks/btc.json';
 import cegData     from '@/data/stocks/ceg.json';
 import costcoData  from '@/data/stocks/costco.json';
+import disneyData  from '@/data/stocks/disney.json';
 import crmData     from '@/data/stocks/crm.json';
 import crowdstrikeData from '@/data/stocks/crowdstrike.json';
 import ethereumData from '@/data/stocks/ethereum.json';
@@ -96,7 +97,7 @@ const allCoverageData = [
     { name: "Meta",              ticker: "META", slug: "meta",        scores: [m(metaData),        85, 72], href: "/stocks/meta",        category: "Big Tech",    bearTarget: "$460",      baseTarget: "$720",      bullTarget: "$950"      },
     { name: "Apple",             ticker: "AAPL", slug: "aapl",        scores: [m(aaplData),        72, 68], href: "/stocks/aapl",        category: "Big Tech",    bearTarget: "$155",      baseTarget: "$240",      bullTarget: "$350"      },
     { name: "Tesla",             ticker: "TSLA", slug: "tesla",       scores: [m(teslaData),       87, 65], href: "/stocks/tesla",       category: "Big Tech",    bearTarget: "$150",      baseTarget: "$400",      bullTarget: "$550"      },
-    { name: "Micron",            ticker: "MU",   slug: "micron",      scores: [m(micronData),      87, 76], href: "/stocks/micron",      category: "Big Tech",    bearTarget: "$55",       baseTarget: "$120",      bullTarget: "$200"      },
+    { name: "Micron",            ticker: "MU",   slug: "micron",      scores: [m(micronData),      87, 67], href: "/stocks/micron",      category: "Big Tech",    bearTarget: "$200",      baseTarget: "$420",      bullTarget: "$650"      },
     { name: "Intuitive Surgical",ticker: "ISRG", slug: "isrg",        scores: [m(isrgData),        82, 62], href: "/stocks/isrg",        category: "Healthcare",  bearTarget: "$280",      baseTarget: "$520",      bullTarget: "$750"      },
     { name: "Eli Lilly",          ticker: "LLY",  slug: "lly",         scores: [m(llyData),         90, 75], href: "/stocks/lly",         category: "Healthcare",  bearTarget: "$650",      baseTarget: "$1,200",    bullTarget: "$1,750"    },
     { name: "Netflix",           ticker: "NFLX", slug: "nflx",        scores: [m(nflxData),        80, 77], href: "/stocks/nflx",        category: "Big Tech",    bearTarget: "$72",       baseTarget: "$125",      bullTarget: "$180"      },
@@ -105,7 +106,8 @@ const allCoverageData = [
     { name: "K92 Mining",        ticker: "KNT",  slug: "k92",         scores: [m(k92Data),         85, 80], href: "/stocks/k92",         category: "Hard Assets", bearTarget: "$17.00 CAD", baseTarget: "$38.00 CAD", bullTarget: "$65.00 CAD" },
     { name: "Freeport-McMoRan",  ticker: "FCX",  slug: "fcx",         scores: [m(fcxData),         75, 68], href: "/stocks/fcx",         category: "Hard Assets", bearTarget: "$22",       baseTarget: "$48",       bullTarget: "$80"       },
     { name: "Gold",              ticker: "XAU",  slug: "gold",        scores: [m(goldData),        50, 68], href: "/stocks/gold",        category: "Hard Assets", bearTarget: "$3,800/oz", baseTarget: "$5,500/oz", bullTarget: "$7,500+/oz"},
-    { name: "Costco",            ticker: "COST", slug: "costco",      scores: [m(costcoData),      70, 60], href: "/stocks/costco",      category: "Financials",  bearTarget: "$700",      baseTarget: "$1,050",    bullTarget: "$1,400"    },
+    { name: "Costco",            ticker: "COST", slug: "costco",      scores: [m(costcoData),      70, 75], href: "/stocks/costco",      category: "Financials",  bearTarget: "$750",      baseTarget: "$1,150",    bullTarget: "$1,400"    },
+    { name: "Walt Disney",       ticker: "DIS",  slug: "disney",      scores: [m(disneyData),      60, 79], href: "/stocks/disney",      category: "Other",       bearTarget: "$75",       baseTarget: "$130",      bullTarget: "$165"      },
     { name: "Oracle",            ticker: "ORCL", slug: "orcl",        scores: [m(orclData),        80, 65], href: "/stocks/orcl",        category: "Big Tech",    bearTarget: "$120",      baseTarget: "$185",      bullTarget: "$280"      },
     { name: "TransDigm",         ticker: "TDG",  slug: "tdg",         scores: [m(tdgData),         75, 70], href: "/stocks/tdg",         category: "Industrials", bearTarget: "$850",      baseTarget: "$1,350",    bullTarget: "$1,900"    },
     { name: "MSCI",              ticker: "MSCI", slug: "msci",        scores: [m(msciData),        75, 71], href: "/stocks/msci",        category: "Financials",  bearTarget: "$420",      baseTarget: "$620",      bullTarget: "$850"      },
