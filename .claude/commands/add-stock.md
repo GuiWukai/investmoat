@@ -237,18 +237,38 @@ Create `src/data/stocks/{slug}.json` using the schema below. Replace all placeho
 
 ---
 
-## Step 6 — Register in stockData.ts
+## Step 6 — Register in Both Data Files
 
-Add the stock to the `allCoverageData` array in `src/app/stockData.ts`:
+There are **two** files that must be updated. Missing either one causes a 404 on the stock page.
+
+### Step 6a — Register in `src/data/stocks/index.ts` (required for page routing)
+
+This is the registry the `[ticker]/page.tsx` route uses via `getStockData()`. Without it the page returns `notFound()`.
+
+Add an import at the top with the other imports:
+
+```typescript
+import {slug} from './{slug}.json';
+```
+
+Add an entry in the `stocksMap` object:
+
+```typescript
+{slug}: {slug} as StockAnalysisData,
+```
+
+### Step 6b — Register in `src/app/stockData.ts` (required for portfolio/coverage lists)
+
+Add the stock to the `allCoverageData` array:
 
 ```typescript
 {
   name: "{Display Name}",
   ticker: "{TICKER}",
   slug: "{slug}",
-  scores: [{moatScore}, {growthScore}, {valuationScore}],
+  scores: [m({slug}Data), {growthScore}, {valuationScore}],
   href: "/stocks/{slug}",
-  category: "{Big Tech | Financials | Healthcare | Hard Assets | Other}",
+  category: "{Big Tech | Financials | Healthcare | Hard Assets | Industrials | Other}",
   bearTarget: "{e.g. $300}",
   baseTarget: "{e.g. $450}",
   bullTarget: "{e.g. $580}"
@@ -262,9 +282,10 @@ Place it in the array sorted approximately by composite score (highest first). T
 ## Step 7 — Verify
 
 1. Check the JSON is valid (no trailing commas, all required fields present)
-2. Confirm the slug matches the filename and the `href` in `stockData.ts`
-3. Run `npm run lint` to catch any TypeScript errors
-4. If the stock qualifies for the portfolio, verify it appears on the main page by checking that its average score ≥ 75
+2. Confirm the slug matches: the filename (`{slug}.json`), the `slug` key in `index.ts`, the `slug` field in `stockData.ts`, and the `href` (`/stocks/{slug}`)
+3. Confirm **both** `src/data/stocks/index.ts` and `src/app/stockData.ts` have been updated — skipping `index.ts` causes a 404
+4. Run `npm run lint` to catch any TypeScript errors
+5. If the stock qualifies for the portfolio, verify it appears on the main page by checking that its average score ≥ 75
 
 ---
 

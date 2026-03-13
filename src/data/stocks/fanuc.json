@@ -1,0 +1,82 @@
+{
+  "slug": "fanuc",
+  "ticker": "FANUY",
+  "name": "FANUC Corporation",
+  "headerStats": [
+    { "label": "Ticker", "value": "FANUY" },
+    { "label": "Market Cap", "value": "~$42B" },
+    { "label": "Price", "value": "$21.00" }
+  ],
+  "chips": [
+    { "label": "Industrials | Robotics & CNC Automation", "color": "primary" },
+    { "label": "Category Monopoly", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    { "title": "CNC Market Share", "value": "~65%", "label": "Global CNC Controller Dominance", "icon": "Cpu", "color": "#f59e0b" },
+    { "title": "Revenue", "value": "$4.8B", "label": "FY2024 — Recovery from ¥916B FY2023 Peak", "icon": "TrendingUp", "color": "#f97316" },
+    { "title": "Net Cash", "value": "$8B+", "label": "Fortress Balance Sheet, Zero Meaningful Debt", "icon": "Shield", "color": "#eab308" }
+  ],
+  "moat": {
+    "score": 83,
+    "description": "FANUC's dual monopoly in CNC controllers and industrial robots is enforced by decades of embedded operator expertise, irreplaceable proprietary motion-control data, and machine certifications baked into every major automaker and aerospace OEM's production process.",
+    "analysisTitle": "The Yellow Robot Fortress",
+    "analysisSummary": "FANUC's moat rests on **four decades of motion-control expertise no competitor can accelerate through**:",
+    "analysisPoints": [
+      { "title": "The CNC Controller Monopoly", "text": "FANUC's CNC (Computer Numerical Control) systems command roughly 65% of global machine tool controller market share. Every machinist trained on G-code is effectively trained on FANUC — the programming language, the operator panel, the servo tuning interface, and the alarm system. Replacing a factory's CNC infrastructure requires retraining an entire workforce and rewriting hundreds of proprietary NC programs, a migration measured in years and millions of dollars rather than weeks and thousands." },
+      { "title": "Robots Made by Robots", "text": "FANUC manufactures its industrial robots at its Oshino, Japan campus almost entirely using its own robots — a closed-loop quality and cost advantage that competitors cannot replicate without first becoming FANUC. This vertical integration extends to servo motors, amplifiers, and machine tool controllers, giving FANUC full visibility into component quality, failure patterns, and performance margins that third-party suppliers never accumulate. The data from millions of field-deployed machines flows back into continuous product refinement." },
+      { "title": "OEM Certification Lock-In", "text": "Aerospace manufacturers (Boeing, Airbus) and semiconductor equipment makers qualify FANUC CNCs to their machining standards by serial number. Switching to a Siemens or Mitsubishi controller requires requalification that can take 6–18 months per machine class, generating hundreds of thousands of dollars in lost production per production line. This certification lock-in is self-reinforcing: OEMs keep specifying FANUC because their supply chains are already qualified on FANUC, creating an ecosystem flywheel that new entrants cannot cut into." }
+    ]
+  },
+  "growth": {
+    "score": 72,
+    "description": "CNC and robot demand is recovering from a deep post-pandemic destocking cycle driven by China weakness and EV-related auto capex hesitation; secular tailwinds from factory reshoring, semiconductor fab buildouts, EV battery gigafactory automation, and FANUC's emergent humanoid robot motion-control opportunity support 10–15% revenue CAGR through FY2028."
+  },
+  "valuation": {
+    "score": 76,
+    "description": "At $21 (FANUY ADR), FANUC trades roughly 23% below the base-case target of $27 — an attractive entry given the cyclical trough is likely behind us, the balance sheet carries $8B+ net cash, and the stock has historically re-rated sharply once CNC order intake inflects."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$13",
+      "description": "China's economy stagnates through 2027, North American auto capex freezes on EV transition uncertainty, and FANUC's operating margins compress to low-teens as volume fails to recover above FY2024 trough.",
+      "points": [
+        "China robot and CNC demand — still ~35% of FANUC's robot revenue — fails to recover as the property and auto sectors stagnate, dragging total company revenue back below ¥700B",
+        "North American reshoring capex delays as high interest rates suppress factory investment, removing the key growth narrative for the Americas segment",
+        "FANUC's operating margin compresses from ~27% toward 15% as fixed-cost leverage works against declining volumes, forcing the first meaningful EPS estimate cuts since 2020"
+      ]
+    },
+    "base": {
+      "priceTarget": "$27",
+      "description": "CNC and robot order intake normalises through H2 2025, semiconductor and EV battery factory buildouts drive incremental demand, and FANUC re-expands operating margins toward 30% as volumes recover toward FY2023 peak revenue.",
+      "points": [
+        "Semiconductor equipment OEM capex (TSMC Arizona, Samsung Texas, Intel Ohio) drives CNC controller demand as precision machining of semiconductor tooling scales in the US and Japan",
+        "EV battery gigafactory automation — a large and growing robot application — provides a multi-year demand stream that partially offsets weakness in traditional ICE auto factory spending",
+        "FANUC's FIELD (Field Intelligence Edge Link & Drive) IIoT platform gains adoption, adding a recurring software/analytics revenue layer on top of hardware shipments and improving segment margin mix"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$42",
+      "description": "AI-accelerated factory automation creates a step-change in robot demand globally; FANUC's motion-control IP becomes a critical enabling component for humanoid robot manufacturers; China demand recovers faster than feared.",
+      "points": [
+        "Humanoid robot manufacturers (Tesla Optimus, Figure AI, 1X Technologies) adopt FANUC servo motors and motion-control modules as the precision actuation standard — creating a high-margin, high-volume new revenue stream not priced into any current estimate",
+        "China stimulus succeeds in re-accelerating fixed asset investment, restoring Asia-ex-Japan robot revenue to FY2023 levels and adding 6–8 percentage points to total company growth",
+        "FANUC announces a meaningful capital return acceleration — deploying a portion of its $8B+ net cash via buybacks or special dividends — catalysing a re-rating from the historically undemanding Japanese industrial valuation multiple toward a global robotics premium"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": { "status": "strong", "note": "The FANUC CNC operator panel, G-code dialect, alarm nomenclature, and servo tuning interface represent 40+ years of embedded muscle memory across every major manufacturing nation. Operators who retrain on Siemens SINUMERIK or Mitsubishi M80 must re-map deep kinesthetic habits — a genuine switching cost measured in months of productivity loss per operator." },
+    "businessLogic": { "status": "strong", "note": "FANUC CNC firmware encodes four decades of proprietary motion-control algorithms — servo gain scheduling, backlash compensation, thermal expansion correction, and high-speed interpolation logic — that are not reverse-engineerable from the output. Competitors cannot buy or hire their way to this accumulated physics-tuned intelligence quickly." },
+    "publicDataAccess": { "status": "destroyed", "note": "Not applicable — FANUC is a precision hardware and motion-control software manufacturer with no reliance on public data aggregation as a moat source." },
+    "talentScarcity": { "status": "strong", "note": "Servo motor engineers, feedback control theorists, and precision mechatronics specialists who can optimise motion control at sub-micron tolerances are among the rarest engineers in the world. FANUC's tradition of hiring directly from Japan's top engineering faculties and retaining staff for entire careers creates a human capital concentration that cannot be assembled quickly." },
+    "bundling": { "status": "intact", "note": "FANUC sells CNC controllers, servo amplifiers, servo motors, and machine management software as an integrated system to machine tool OEMs (Mazak, Makino, Okuma), with each component optimised for the others. Substituting a single component with a third-party alternative degrades system performance in ways that are difficult to diagnose and attribute, making piecemeal defection rare." },
+    "proprietaryData": { "status": "strong", "note": "Decades of real-world performance data from millions of CNC machines and robots operating across every major industry feeds continuous improvement of servo algorithms, predictive maintenance models, and failure-mode analysis. FANUC's FIELD platform collects this data at scale in real time — a compounding data moat that grows faster the larger the installed base becomes." },
+    "regulatoryLockIn": { "status": "strong", "note": "Aerospace (Boeing D6-51991, Airbus APS3000) and semiconductor equipment OEM machining standards are qualified to specific FANUC CNC models and software revisions. Any controller change triggers requalification cycles that cost manufacturers hundreds of thousands of dollars in engineering time and lost production — a regulatory and certification barrier that makes incumbent displacement a last-resort decision." },
+    "networkEffects": { "status": "intact", "note": "The global ecosystem of FANUC-certified system integrators, FANUC-trained machinists, and FANUC G-code program libraries creates a self-reinforcing adoption loop: factories buy FANUC because integrators know it, integrators certify on FANUC because factories demand it. Not yet 'strong' as the network is industrial and bilateral rather than consumer-scale exponential." },
+    "transactionEmbedding": { "status": "weakened", "note": "FANUC earns recurring revenue from replacement parts, spindle repairs, and annual maintenance contracts on its installed base, but lacks the per-use consumable model of peers like Intuitive Surgical. Service revenue provides meaningful cash flow stability without being embedded at the transaction level." },
+    "systemOfRecord": { "status": "intact", "note": "NC programs, tool offset databases, machine parameters, and alarm histories are stored in FANUC proprietary formats and reside on FANUC CNCs. These data assets represent years of machining know-how in a format that does not export cleanly to competitor platforms, creating institutional inertia on top of the skills-based switching cost." },
+    "aiResilienceScore": 84,
+    "verdict": "FANUC is highly resilient to AI disruption — physical motion-control hardware and embedded servo algorithms represent physics-layer expertise that software AI cannot commoditise, and the rise of AI-driven factory automation is a direct demand accelerant for FANUC's robots and CNCs. The single genuine AI risk is that a software-defined motion-control startup could train general-purpose servo control on open hardware at far lower cost, but FANUC's certification ecosystem and data moat make this a 10+ year displacement scenario at best."
+  }
+}

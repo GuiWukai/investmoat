@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
-import { PieChart, ShieldCheck, ChevronRight } from "lucide-react";
+import { PieChart, ShieldCheck, ChevronRight, TrendingUp } from "lucide-react";
 import { Card, CardBody, CardHeader, Progress, Chip, Spinner } from "@heroui/react";
 import { allCoverageData, getAverageScore } from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
@@ -108,6 +108,7 @@ const stockMeta: Record<string, { color: string; category: string; exclusionReas
   ETH:   { color: "#627eea", category: "Digital Assets" },
   SOL:   { color: "#9945ff", category: "Digital Assets" },
   SOFI:  { color: "#6366f1", category: "FinTech" },
+  FANUY: { color: "#f59e0b", category: "Robotics" },
 };
 
 // ─── Category colour helper ───────────────────────────────────────────────────
@@ -117,6 +118,7 @@ function categoryColor(category: string): "primary" | "success" | "warning" | "s
   if (["AI Infrastructure", "Lithography", "AI Analytics", "Cybersecurity", "Foundry", "Memory", "Semiconductors"].includes(category)) return "warning";
   if (["Eco-System", "Clean Tech", "Digital Assets", "E-Commerce"].includes(category)) return "secondary";
   if (["Hard Assets", "Luxury", "Utilities"].includes(category)) return "danger";
+  if (["Industrials", "Robotics"].includes(category)) return "warning";
   return "default";
 }
 
@@ -231,6 +233,27 @@ export default function PortfolioPage() {
   const dynamicWeights = floors;
 
   const maxWeight = Math.max(...portfolio.map((p) => dynamicWeights[p.ticker] ?? 0));
+
+  // Weighted bear/base/bull expected returns across the portfolio
+  const weightedScenarioReturns: { bear: number | null; base: number | null; bull: number | null } = (() => {
+    if (!allPricesLoaded) return { bear: null, base: null, bull: null };
+    const acc = { bear: 0, base: 0, bull: 0, w: 0 };
+    portfolio.forEach(p => {
+      const price = allPrices[p.ticker];
+      const bear = parseScenarioPrice(p.stock.bearTarget);
+      const base = parseScenarioPrice(p.stock.baseTarget);
+      const bull = parseScenarioPrice(p.stock.bullTarget);
+      const w = dynamicWeights[p.ticker] ?? 0;
+      if (price != null && price > 0 && bear && base && bull && w > 0) {
+        acc.bear += ((bear - price) / price) * 100 * w;
+        acc.base += ((base - price) / price) * 100 * w;
+        acc.bull += ((bull - price) / price) * 100 * w;
+        acc.w    += w;
+      }
+    });
+    if (acc.w === 0) return { bear: null, base: null, bull: null };
+    return { bear: acc.bear / acc.w, base: acc.base / acc.w, bull: acc.bull / acc.w };
+  })();
 
   // Sector concentrations derived from category metadata
   const techWeight = portfolio.reduce(
@@ -357,6 +380,32 @@ export default function PortfolioPage() {
               <p className="text-lg font-bold">Overall Score ≥ {PORTFOLIO_THRESHOLD} / 100</p>
             </div>
             <div>
+              <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-3">Est. 1-Year Return</p>
+              {!allPricesLoaded ? (
+                <Spinner size="sm" color="default" />
+              ) : (
+                <div className="grid grid-cols-3 gap-2 text-center">
+                  {([
+                    { label: "Bear", value: weightedScenarioReturns.bear },
+                    { label: "Base", value: weightedScenarioReturns.base },
+                    { label: "Bull", value: weightedScenarioReturns.bull },
+                  ] as const).map(({ label, value }) => (
+                    <div key={label} className="bg-white/5 rounded-xl py-2 px-1">
+                      <p className="text-[10px] text-white/30 uppercase font-bold mb-1">{label}</p>
+                      {value != null ? (
+                        <p className={`text-lg font-black ${value >= 0 ? "text-success" : "text-danger"}`}>
+                          {value >= 0 ? "+" : ""}{value.toFixed(1)}%
+                        </p>
+                      ) : (
+                        <p className="text-lg font-black text-white/20">—</p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+              <p className="text-[10px] text-white/30 mt-2">weighted avg · allocation-adjusted</p>
+            </div>
+            <div>
               <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Concentration</p>
               <Progress
                 value={techWeight}
@@ -421,6 +470,41 @@ export default function PortfolioPage() {
                   color="primary"
                   className="flex-1 max-w-[200px]"
                 />
+              </div>
+
+              {/* Per-stock bear/base/bull upside */}
+              <div className="hidden lg:flex flex-col items-end shrink-0 w-40">
+                <div className="text-[10px] text-white/30 uppercase font-bold mb-1">1-Yr Return</div>
+                {!allPricesLoaded
+                  ? <Spinner size="sm" color="default" />
+                  : (() => {
+                      const price = allPrices[stock.ticker];
+                      const bear = parseScenarioPrice(stock.stock.bearTarget);
+                      const base = parseScenarioPrice(stock.stock.baseTarget);
+                      const bull = parseScenarioPrice(stock.stock.bullTarget);
+                      if (price == null || !bear || !base || !bull || price <= 0)
+                        return <span className="text-xs text-white/30">—</span>;
+                      const fmt = (t: number) => {
+                        const r = ((t - price) / price) * 100;
+                        return { r, str: `${r >= 0 ? "+" : ""}${r.toFixed(0)}%`, pos: r >= 0 };
+                      };
+                      const b = fmt(bear), m = fmt(base), u = fmt(bull);
+                      return (
+                        <div className="flex gap-2 text-center">
+                          {[
+                            { label: "Bear", ...b },
+                            { label: "Base", ...m },
+                            { label: "Bull", ...u },
+                          ].map(({ label, str, pos }) => (
+                            <div key={label}>
+                              <div className="text-[9px] text-white/20 uppercase">{label}</div>
+                              <div className={`text-xs font-black ${pos ? "text-success" : "text-danger"}`}>{str}</div>
+                            </div>
+                          ))}
+                        </div>
+                      );
+                    })()
+                }
               </div>
 
               <DynamicScore
