@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
-import { PieChart, ShieldCheck, ChevronRight } from "lucide-react";
+import { PieChart, ShieldCheck, ChevronRight, TrendingUp } from "lucide-react";
 import { Card, CardBody, CardHeader, Progress, Chip, Spinner } from "@heroui/react";
 import { allCoverageData, getAverageScore } from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
@@ -108,6 +108,7 @@ const stockMeta: Record<string, { color: string; category: string; exclusionReas
   ETH:   { color: "#627eea", category: "Digital Assets" },
   SOL:   { color: "#9945ff", category: "Digital Assets" },
   SOFI:  { color: "#6366f1", category: "FinTech" },
+  FANUY: { color: "#f59e0b", category: "Robotics" },
 };
 
 // ─── Category colour helper ───────────────────────────────────────────────────
@@ -117,6 +118,7 @@ function categoryColor(category: string): "primary" | "success" | "warning" | "s
   if (["AI Infrastructure", "Lithography", "AI Analytics", "Cybersecurity", "Foundry", "Memory", "Semiconductors"].includes(category)) return "warning";
   if (["Eco-System", "Clean Tech", "Digital Assets", "E-Commerce"].includes(category)) return "secondary";
   if (["Hard Assets", "Luxury", "Utilities"].includes(category)) return "danger";
+  if (["Industrials", "Robotics"].includes(category)) return "warning";
   return "default";
 }
 
@@ -231,6 +233,23 @@ export default function PortfolioPage() {
   const dynamicWeights = floors;
 
   const maxWeight = Math.max(...portfolio.map((p) => dynamicWeights[p.ticker] ?? 0));
+
+  // Weighted base-case expected return across the portfolio
+  const weightedBaseReturn: number | null = (() => {
+    if (!allPricesLoaded) return null;
+    let totalReturnWeight = 0;
+    let totalWeight = 0;
+    portfolio.forEach(p => {
+      const price = allPrices[p.ticker];
+      const base = parseScenarioPrice(p.stock.baseTarget);
+      const w = dynamicWeights[p.ticker] ?? 0;
+      if (price != null && price > 0 && base && w > 0) {
+        totalReturnWeight += ((base - price) / price) * 100 * w;
+        totalWeight += w;
+      }
+    });
+    return totalWeight > 0 ? totalReturnWeight / totalWeight : null;
+  })();
 
   // Sector concentrations derived from category metadata
   const techWeight = portfolio.reduce(
@@ -357,6 +376,21 @@ export default function PortfolioPage() {
               <p className="text-lg font-bold">Overall Score ≥ {PORTFOLIO_THRESHOLD} / 100</p>
             </div>
             <div>
+              <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Est. 1-Year Return (Base Case)</p>
+              {!allPricesLoaded ? (
+                <Spinner size="sm" color="default" />
+              ) : weightedBaseReturn != null ? (
+                <div className="flex items-baseline gap-2">
+                  <p className={`text-2xl font-black ${weightedBaseReturn >= 0 ? "text-success" : "text-danger"}`}>
+                    {weightedBaseReturn >= 0 ? "+" : ""}{weightedBaseReturn.toFixed(1)}%
+                  </p>
+                  <p className="text-xs text-white/30">weighted avg · base scenario</p>
+                </div>
+              ) : (
+                <p className="text-lg font-bold text-white/40">—</p>
+              )}
+            </div>
+            <div>
               <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Concentration</p>
               <Progress
                 value={techWeight}
@@ -421,6 +455,25 @@ export default function PortfolioPage() {
                   color="primary"
                   className="flex-1 max-w-[200px]"
                 />
+              </div>
+
+              {/* Per-stock base-case upside */}
+              <div className="hidden md:block text-right shrink-0 w-16">
+                <div className="text-[10px] text-white/30 uppercase font-bold">To Base</div>
+                {!allPricesLoaded
+                  ? <Spinner size="sm" color="default" className="mt-0.5" />
+                  : (() => {
+                      const price = allPrices[stock.ticker];
+                      const base = parseScenarioPrice(stock.stock.baseTarget);
+                      if (price == null || !base || price <= 0) return <span className="text-xs text-white/30">—</span>;
+                      const ret = ((base - price) / price) * 100;
+                      return (
+                        <div className={`text-sm font-black ${ret >= 0 ? "text-success" : "text-danger"}`}>
+                          {ret >= 0 ? "+" : ""}{ret.toFixed(0)}%
+                        </div>
+                      );
+                    })()
+                }
               </div>
 
               <DynamicScore
