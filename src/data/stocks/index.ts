@@ -41,6 +41,7 @@ import unh from './unh.json';
 import mco from './mco.json';
 import sofi from './sofi.json';
 import mstr from './mstr.json';
+import fanuc from './fanuc.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -84,6 +85,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   mco: mco as StockAnalysisData,
   sofi: sofi as StockAnalysisData,
   mstr: mstr as StockAnalysisData,
+  fanuc: fanuc as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
