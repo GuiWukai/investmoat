@@ -234,21 +234,25 @@ export default function PortfolioPage() {
 
   const maxWeight = Math.max(...portfolio.map((p) => dynamicWeights[p.ticker] ?? 0));
 
-  // Weighted base-case expected return across the portfolio
-  const weightedBaseReturn: number | null = (() => {
-    if (!allPricesLoaded) return null;
-    let totalReturnWeight = 0;
-    let totalWeight = 0;
+  // Weighted bear/base/bull expected returns across the portfolio
+  const weightedScenarioReturns: { bear: number | null; base: number | null; bull: number | null } = (() => {
+    if (!allPricesLoaded) return { bear: null, base: null, bull: null };
+    const acc = { bear: 0, base: 0, bull: 0, w: 0 };
     portfolio.forEach(p => {
       const price = allPrices[p.ticker];
+      const bear = parseScenarioPrice(p.stock.bearTarget);
       const base = parseScenarioPrice(p.stock.baseTarget);
+      const bull = parseScenarioPrice(p.stock.bullTarget);
       const w = dynamicWeights[p.ticker] ?? 0;
-      if (price != null && price > 0 && base && w > 0) {
-        totalReturnWeight += ((base - price) / price) * 100 * w;
-        totalWeight += w;
+      if (price != null && price > 0 && bear && base && bull && w > 0) {
+        acc.bear += ((bear - price) / price) * 100 * w;
+        acc.base += ((base - price) / price) * 100 * w;
+        acc.bull += ((bull - price) / price) * 100 * w;
+        acc.w    += w;
       }
     });
-    return totalWeight > 0 ? totalReturnWeight / totalWeight : null;
+    if (acc.w === 0) return { bear: null, base: null, bull: null };
+    return { bear: acc.bear / acc.w, base: acc.base / acc.w, bull: acc.bull / acc.w };
   })();
 
   // Sector concentrations derived from category metadata
@@ -376,19 +380,30 @@ export default function PortfolioPage() {
               <p className="text-lg font-bold">Overall Score ≥ {PORTFOLIO_THRESHOLD} / 100</p>
             </div>
             <div>
-              <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Est. 1-Year Return (Base Case)</p>
+              <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-3">Est. 1-Year Return</p>
               {!allPricesLoaded ? (
                 <Spinner size="sm" color="default" />
-              ) : weightedBaseReturn != null ? (
-                <div className="flex items-baseline gap-2">
-                  <p className={`text-2xl font-black ${weightedBaseReturn >= 0 ? "text-success" : "text-danger"}`}>
-                    {weightedBaseReturn >= 0 ? "+" : ""}{weightedBaseReturn.toFixed(1)}%
-                  </p>
-                  <p className="text-xs text-white/30">weighted avg · base scenario</p>
-                </div>
               ) : (
-                <p className="text-lg font-bold text-white/40">—</p>
+                <div className="grid grid-cols-3 gap-2 text-center">
+                  {([
+                    { label: "Bear", value: weightedScenarioReturns.bear },
+                    { label: "Base", value: weightedScenarioReturns.base },
+                    { label: "Bull", value: weightedScenarioReturns.bull },
+                  ] as const).map(({ label, value }) => (
+                    <div key={label} className="bg-white/5 rounded-xl py-2 px-1">
+                      <p className="text-[10px] text-white/30 uppercase font-bold mb-1">{label}</p>
+                      {value != null ? (
+                        <p className={`text-lg font-black ${value >= 0 ? "text-success" : "text-danger"}`}>
+                          {value >= 0 ? "+" : ""}{value.toFixed(1)}%
+                        </p>
+                      ) : (
+                        <p className="text-lg font-black text-white/20">—</p>
+                      )}
+                    </div>
+                  ))}
+                </div>
               )}
+              <p className="text-[10px] text-white/30 mt-2">weighted avg · allocation-adjusted</p>
             </div>
             <div>
               <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Concentration</p>
@@ -457,19 +472,35 @@ export default function PortfolioPage() {
                 />
               </div>
 
-              {/* Per-stock base-case upside */}
-              <div className="hidden md:block text-right shrink-0 w-16">
-                <div className="text-[10px] text-white/30 uppercase font-bold">To Base</div>
+              {/* Per-stock bear/base/bull upside */}
+              <div className="hidden lg:flex flex-col items-end shrink-0 w-40">
+                <div className="text-[10px] text-white/30 uppercase font-bold mb-1">1-Yr Return</div>
                 {!allPricesLoaded
-                  ? <Spinner size="sm" color="default" className="mt-0.5" />
+                  ? <Spinner size="sm" color="default" />
                   : (() => {
                       const price = allPrices[stock.ticker];
+                      const bear = parseScenarioPrice(stock.stock.bearTarget);
                       const base = parseScenarioPrice(stock.stock.baseTarget);
-                      if (price == null || !base || price <= 0) return <span className="text-xs text-white/30">—</span>;
-                      const ret = ((base - price) / price) * 100;
+                      const bull = parseScenarioPrice(stock.stock.bullTarget);
+                      if (price == null || !bear || !base || !bull || price <= 0)
+                        return <span className="text-xs text-white/30">—</span>;
+                      const fmt = (t: number) => {
+                        const r = ((t - price) / price) * 100;
+                        return { r, str: `${r >= 0 ? "+" : ""}${r.toFixed(0)}%`, pos: r >= 0 };
+                      };
+                      const b = fmt(bear), m = fmt(base), u = fmt(bull);
                       return (
-                        <div className={`text-sm font-black ${ret >= 0 ? "text-success" : "text-danger"}`}>
-                          {ret >= 0 ? "+" : ""}{ret.toFixed(0)}%
+                        <div className="flex gap-2 text-center">
+                          {[
+                            { label: "Bear", ...b },
+                            { label: "Base", ...m },
+                            { label: "Bull", ...u },
+                          ].map(({ label, str, pos }) => (
+                            <div key={label}>
+                              <div className="text-[9px] text-white/20 uppercase">{label}</div>
+                              <div className={`text-xs font-black ${pos ? "text-success" : "text-danger"}`}>{str}</div>
+                            </div>
+                          ))}
                         </div>
                       );
                     })()
