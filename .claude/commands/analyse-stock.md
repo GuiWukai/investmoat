@@ -445,6 +445,18 @@ Propose specific JSON edits for any fields that need updating.
 
 ---
 
+## lastAnalyzed Field
+
+**Always** include `lastAnalyzed` set to the current month and year at the top level of the JSON:
+
+```json
+"lastAnalyzed": "March 2026"
+```
+
+This must be present in every newly created or updated stock JSON. It tells users when the analysis was last reviewed by a human.
+
+---
+
 ## JSON — peAnalysis Field
 
 When generating the stock JSON, include `peAnalysis` inside the `valuation` object for all profitable public equities. Omit it entirely for commodities, crypto, and pre-profit companies where P/E is meaningless.
@@ -479,3 +491,4 @@ When generating the stock JSON, include `peAnalysis` inside the `valuation` obje
 - **Scenario targets must be internally consistent**: Bull target ≥ 1.5× bear target
 - **Score alignment**: moat.score and aiResilienceScore must be within 5 points unless you document the structural reason
 - **Peer calibration**: Always state which peer-group stocks you compared against before finalising the moat score
+- **Analysis date**: Always set `lastAnalyzed` to the current month and year (e.g., `"March 2026"`) in the JSON output. Never omit this field.
