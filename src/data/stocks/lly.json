@@ -4,8 +4,8 @@
   "name": "Eli Lilly and Company",
   "headerStats": [
     { "label": "Ticker", "value": "LLY" },
-    { "label": "Market Cap", "value": "$927B" },
-    { "label": "Price", "value": "$977.12" }
+    { "label": "Market Cap", "value": "~$1.04T" },
+    { "label": "Price", "value": "$1,100" }
   ],
   "chips": [
     { "label": "Healthcare | Pharmaceuticals", "color": "primary" },
@@ -13,12 +13,12 @@
   ],
   "recommendation": "Strong Buy",
   "metrics": [
-    { "title": "Revenue Growth", "value": "45%", "label": "FY2025 YoY", "icon": "TrendingUp", "color": "#e8294b" },
-    { "title": "GLP-1 Revenue", "value": "$36.5B", "label": "Mounjaro + Zepbound (2025)", "icon": "Activity", "color": "#7c3aed" },
-    { "title": "Operating Margin", "value": "40.4%", "label": "Best-in-class pharma efficiency", "icon": "BarChart2", "color": "#059669" }
+    { "title": "Revenue Growth", "value": "45%", "label": "FY2025 YoY — $65.2B total", "icon": "TrendingUp", "color": "#e8294b" },
+    { "title": "GLP-1 Revenue", "value": "$38B+", "label": "Mounjaro + Zepbound (FY2025)", "icon": "Activity", "color": "#7c3aed" },
+    { "title": "2026 Guidance", "value": "$80–83B", "label": "Revenue — ~25% growth, EPS $33.50–35.00", "icon": "BarChart2", "color": "#059669" }
   ],
   "moat": {
-    "score": 82,
+    "score": 84,
     "description": "Dominant GLP-1 franchise with patent protection into the late 2030s, reinforced by a deep clinical pipeline and manufacturing scale advantages.",
     "analysisTitle": "The GLP-1 Fortress",
     "analysisSummary": "Eli Lilly's moat is anchored in **scientific superiority and regulatory exclusivity** that cannot be replicated quickly:",
@@ -30,11 +30,11 @@
   },
   "growth": {
     "score": 90,
-    "description": "Hypergrowth driven by a $200B+ obesity TAM barely penetrated, with oral GLP-1 (orforglipron) and next-gen retatrutide expanding the addressable market further."
+    "description": "Hypergrowth sustained: Q4 2025 revenue +43% to $19.3B (Mounjaro +110%, Zepbound +122%); 2026 guidance of $80–83B implies ~25% growth with orforglipron oral GLP-1 launch in Q2 2026 and 36 active Phase III programs expanding the TAM."
   },
   "valuation": {
-    "score": 75,
-    "description": "At $977, LLY trades below the $1,200 base case — the stock has pulled back from its 52-week high of $1,134, creating a reasonable entry point for a company with 25%+ revenue growth guided for 2026 and EPS expected to grow 40%+."
+    "score": 70,
+    "description": "At $1,100, LLY trades 8% below the $1,200 base case — the stock surged 9.6% after Q4 2025's massive beat (EPS +51% YoY) and sits in the upper range of the bear-to-base corridor. Strong 2026 guidance ($80–83B revenue, EPS $33.50–35.00) with orforglipron launch in Q2 2026 supports the base thesis. Entry remains attractive relative to the bull case at $1,750."
   },
   "scenarios": {
     "bear": {
@@ -69,14 +69,14 @@
     "learnedInterfaces": { "status": "destroyed", "note": "N/A — physicians prescribe drugs based on clinical evidence and patient outcomes, not UI familiarity; interface learning costs do not apply to pharmaceuticals." },
     "businessLogic": { "status": "intact", "note": "Lilly's GLP-1 peptide synthesis, formulation IP, and cold-chain manufacturing know-how represent complex proprietary processes that competitors cannot decode from reverse engineering alone." },
     "publicDataAccess": { "status": "destroyed", "note": "N/A — Lilly's competitive moat does not rely on controlling access to a public data source; not applicable to the pharmaceutical business model." },
-    "talentScarcity": { "status": "strong", "note": "World-class endocrinologists, peptide chemists, and regulatory affairs specialists are scarce globally; Lilly's 140-year reputation and compensation attract the best pharma talent disproportionately." },
+    "talentScarcity": { "status": "intact", "note": "AI tools (ChatGPT, AlphaFold) are democratizing early-stage drug discovery — a non-scientist designed a working mRNA cancer vaccine in weeks using public AI tools (March 2026). The scarce talent that matters is now regulatory affairs, clinical trial execution, and peptide manufacturing expertise, not molecular biology discovery. Lilly's 140-year expertise in the downstream bottlenecks (manufacturing, regulatory, clinical operations) remains genuinely scarce, but the pure-discovery talent moat has weakened." },
     "bundling": { "status": "destroyed", "note": "N/A — pharmaceutical drugs are not sold in software-style bundles; individual drug approvals and prescriptions are the unit of sale." },
     "proprietaryData": { "status": "strong", "note": "Lilly holds decades of real-world clinical trial data for tirzepatide across thousands of patients — outcomes data that grows with every prescription and feeds future drug development and label expansions." },
     "regulatoryLockIn": { "status": "strong", "note": "FDA approvals, EU and global regulatory clearances, GMP manufacturing facility certifications, and payer formulary placements create compounding switching barriers that take years to displace." },
     "networkEffects": { "status": "intact", "note": "Growing physician experience with tirzepatide creates a prescribing flywheel — more patient success stories build physician confidence and peer recommendations, reinforcing Lilly's market share without additional marketing spend." },
     "transactionEmbedding": { "status": "intact", "note": "Mounjaro and Zepbound are embedded in major pharmacy benefit formularies, employer health plans, and Medicare Part D — removing them faces enormous patient, physician, and political resistance." },
     "systemOfRecord": { "status": "destroyed", "note": "N/A — Lilly is a drug manufacturer, not a system-of-record platform; this moat type does not apply to the pharmaceutical industry." },
-    "aiResilienceScore": 85,
-    "verdict": "Lilly's core moat — patent-protected biologics with regulatory approval — is structurally immune to AI disruption, and AI drug discovery tools actually accelerate Lilly's pipeline advantage by compressing early-stage discovery timelines. The company is a net beneficiary of AI adoption, using it to identify novel targets and optimize clinical trials faster than underfunded competitors."
+    "aiResilienceScore": 82,
+    "verdict": "Lilly is a net beneficiary of AI, but with a nuance: AI is eroding the upstream discovery talent moat (a tech entrepreneur with no biomedical degree designed a working mRNA cancer vaccine in weeks using ChatGPT and AlphaFold, March 2026), while simultaneously strengthening the downstream moats that actually matter. Regulatory lock-in, proprietary clinical outcomes data, and peptide manufacturing scale are structurally immune to AI disruption — no amount of AI-designed molecules bypasses Phase 3 trials or GMP manufacturing certification. The bottleneck in drug development has shifted from discovery to validation and manufacturing, precisely where Lilly's competitive advantages are most durable. Net verdict: Lilly is more defensible in the AI era than before, because its core moat was never molecular biology — it was the regulatory and clinical infrastructure competitors cannot replicate."
   }
 }
