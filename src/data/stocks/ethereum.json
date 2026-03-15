@@ -4,19 +4,52 @@
   "name": "Ethereum",
   "titleColor": "#627eea",
   "headerStats": [
-    { "label": "Ticker", "value": "ETH" },
-    { "label": "Market Cap", "value": "$290B" },
-    { "label": "Total Staked", "value": "~34M ETH" }
+    {
+      "label": "Ticker",
+      "value": "ETH"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$290B"
+    },
+    {
+      "label": "Total Staked",
+      "value": "~34M ETH"
+    }
   ],
   "chips": [
-    { "label": "Programmable Money | Smart Contracts", "color": "primary" },
-    { "label": "Decentralized World Computer", "color": "success" }
+    {
+      "label": "Programmable Money | Smart Contracts",
+      "color": "primary"
+    },
+    {
+      "label": "Decentralized World Computer",
+      "color": "success"
+    }
   ],
   "recommendation": "Buy",
   "metrics": [
-    { "title": "Active Validators", "value": "1,060,000+", "label": "Most Decentralized PoS Network", "icon": "Shield", "color": "#627eea" },
-    { "title": "DeFi TVL", "value": "$48B+", "label": "Ethereum + L2 Ecosystem", "icon": "Lock", "color": "#10b981" },
-    { "title": "Developer Share", "value": "~65%", "label": "Of All Crypto Developers", "icon": "Globe", "color": "#f7931a" }
+    {
+      "title": "Active Validators",
+      "value": "1,060,000+",
+      "label": "Most Decentralized PoS Network",
+      "icon": "Shield",
+      "color": "#627eea"
+    },
+    {
+      "title": "DeFi TVL",
+      "value": "$48B+",
+      "label": "Ethereum + L2 Ecosystem",
+      "icon": "Lock",
+      "color": "#10b981"
+    },
+    {
+      "title": "Developer Share",
+      "value": "~65%",
+      "label": "Of All Crypto Developers",
+      "icon": "Globe",
+      "color": "#f7931a"
+    }
   ],
   "moat": {
     "score": 72,
@@ -24,9 +57,18 @@
     "analysisTitle": "The Programmable Money Moat",
     "analysisSummary": "Ethereum's moat is built on **Ecosystem Depth and Developer Gravity**:",
     "analysisPoints": [
-      { "title": "Developer Network Effect", "text": "~65% of all active crypto developers build on Ethereum and its Layer 2s. The tooling, libraries, and talent pool compound each cycle." },
-      { "title": "DeFi & Stablecoin Dominance", "text": "Ethereum settles the majority of global DeFi volume and hosts the most liquid on-chain dollar markets (USDC, USDT, DAI). This creates sticky, self-reinforcing demand for ETH as gas." },
-      { "title": "Institutional Infrastructure", "text": "Spot ETH ETFs, regulated staking products, and EIP-1559 burn mechanics have created a credible institutional asset class — distinct from speculative altcoins." }
+      {
+        "title": "Developer Network Effect",
+        "text": "~65% of all active crypto developers build on Ethereum and its Layer 2s. The tooling, libraries, and talent pool compound each cycle."
+      },
+      {
+        "title": "DeFi & Stablecoin Dominance",
+        "text": "Ethereum settles the majority of global DeFi volume and hosts the most liquid on-chain dollar markets (USDC, USDT, DAI). This creates sticky, self-reinforcing demand for ETH as gas."
+      },
+      {
+        "title": "Institutional Infrastructure",
+        "text": "Spot ETH ETFs, regulated staking products, and EIP-1559 burn mechanics have created a credible institutional asset class — distinct from speculative altcoins."
+      }
     ]
   },
   "growth": {
@@ -67,17 +109,48 @@
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "strong", "note": "Solidity and the EVM are the default learned interface for smart contract developers — retraining costs are high and tooling is deeply entrenched." },
-    "businessLogic": { "status": "strong", "note": "Billions in DeFi protocol logic runs on Ethereum. Migrating audited, battle-tested contracts to a competing chain is a years-long, high-risk undertaking." },
-    "publicDataAccess": { "status": "weakened", "note": "Ethereum's data is public by design. Competing chains share this trait, so data access is not a differentiating moat." },
-    "talentScarcity": { "status": "strong", "note": "The deepest pool of audited smart contract developers, security researchers, and protocol engineers in crypto remains Ethereum-native." },
-    "bundling": { "status": "strong", "note": "Ethereum bundles settlement, staking yield, DeFi primitives, stablecoins, and NFT infrastructure — a composable stack competitors cannot easily replicate end-to-end." },
-    "proprietaryData": { "status": "weakened", "note": "On-chain data is fully public. Ethereum has no proprietary data advantage over competing L1s." },
-    "regulatoryLockIn": { "status": "strong", "note": "Spot ETH ETF approval, SEC commodity classification pathway, and institutional custody frameworks create meaningful regulatory moat vs. unregistered altcoins." },
-    "networkEffects": { "status": "strong", "note": "65%+ developer share, the largest DeFi TVL, and the deepest stablecoin liquidity create compounding Metcalfe-Law network effects." },
-    "transactionEmbedding": { "status": "strong", "note": "DeFi protocols, stablecoin settlements, NFT marketplaces, and DAO governance are deeply embedded in Ethereum's transaction fabric." },
-    "systemOfRecord": { "status": "strong", "note": "Ethereum is the canonical record for DeFi state, NFT ownership, and DAO governance — the highest-value smart contract history spans 9+ years." },
+    "learnedInterfaces": {
+      "status": "strong",
+      "note": "Solidity and the EVM are the default learned interface for smart contract developers — retraining costs are high and tooling is deeply entrenched."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "Billions in DeFi protocol logic runs on Ethereum. Migrating audited, battle-tested contracts to a competing chain is a years-long, high-risk undertaking."
+    },
+    "publicDataAccess": {
+      "status": "weakened",
+      "note": "Ethereum's data is public by design. Competing chains share this trait, so data access is not a differentiating moat."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "The deepest pool of audited smart contract developers, security researchers, and protocol engineers in crypto remains Ethereum-native."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Ethereum bundles settlement, staking yield, DeFi primitives, stablecoins, and NFT infrastructure — a composable stack competitors cannot easily replicate end-to-end."
+    },
+    "proprietaryData": {
+      "status": "weakened",
+      "note": "On-chain data is fully public. Ethereum has no proprietary data advantage over competing L1s."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "Spot ETH ETF approval, SEC commodity classification pathway, and institutional custody frameworks create meaningful regulatory moat vs. unregistered altcoins."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "65%+ developer share, the largest DeFi TVL, and the deepest stablecoin liquidity create compounding Metcalfe-Law network effects."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "DeFi protocols, stablecoin settlements, NFT marketplaces, and DAO governance are deeply embedded in Ethereum's transaction fabric."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "Ethereum is the canonical record for DeFi state, NFT ownership, and DAO governance — the highest-value smart contract history spans 9+ years."
+    },
     "aiResilienceScore": 72,
     "verdict": "Ethereum's developer ecosystem and embedded DeFi infrastructure give it strong resilience, but real competition from faster, cheaper L1s (Solana) and modularity trends (Celestia) introduce more disruption risk than Bitcoin faces. The moat is wide but not impenetrable."
-  }
+  },
+  "lastAnalyzed": "October 2025"
 }

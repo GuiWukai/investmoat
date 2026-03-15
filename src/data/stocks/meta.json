@@ -94,9 +94,21 @@
       "cagrEstimate": "18–22%",
       "scoreDerivation": "Base 80 (18–22% revenue CAGR, dominant market share) + 5 AI advertising moat (Advantage+ re-builds post-ATT) + 3 WhatsApp/new revenue optionality − 3 2026 capex compression risk = 85",
       "drivers": [
-        { "name": "Core Ad Revenue", "metric": "+22% FY2025; Q4 2025 +24% YoY, Family of Apps revenue $58.9B", "trend": "accelerating" },
-        { "name": "WhatsApp & Other Revenue", "metric": "+54% YoY Q4 2025; paid messaging + Meta Verified scaling", "trend": "accelerating" },
-        { "name": "Reality Labs", "metric": "Q4 2025 revenue $955M (−12% YoY); losses >$5B/yr ongoing", "trend": "stable" }
+        {
+          "name": "Core Ad Revenue",
+          "metric": "+22% FY2025; Q4 2025 +24% YoY, Family of Apps revenue $58.9B",
+          "trend": "accelerating"
+        },
+        {
+          "name": "WhatsApp & Other Revenue",
+          "metric": "+54% YoY Q4 2025; paid messaging + Meta Verified scaling",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Reality Labs",
+          "metric": "Q4 2025 revenue $955M (−12% YoY); losses >$5B/yr ongoing",
+          "trend": "stable"
+        }
       ],
       "primaryType": "revenue",
       "keyRisk": "If 2026 capex of $115–135B does not yield measurable AI revenue by H2 2026 — specifically no WhatsApp commerce inflection and no Llama licensing revenue above $1B — FCF compresses to <$30B and the market re-rates from a quality compounder to a capex-heavy infrastructure bet",
@@ -214,5 +226,6 @@
     },
     "aiResilienceScore": 79,
     "verdict": "Meta holds the broadest and most formidable AI moat among consumer platforms. The combination of 3.5B+ daily users providing an unmatched AI training and feedback flywheel, proprietary compute infrastructure (MTIA chips, owned data centers), Llama establishing the open-source AI standard, and Meta AI's persistent memory across all apps creates a compounding AI platform moat that is genuinely difficult to replicate. The upgrade from 73 reflects: (1) Advantage+ AI rebuilding the post-ATT business logic moat, (2) Meta AI cross-app memory creating real bundling lock-in, and (3) infrastructure ownership securing long-term compute cost advantage. Regulatory drag from GDPR and DMA remains a structural cap, but Meta's AI moat is wider in absolute scale than any vertical-specific competitor including Shopify."
-  }
+  },
+  "lastAnalyzed": "March 2026"
 }

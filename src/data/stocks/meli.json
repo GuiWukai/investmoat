@@ -4,13 +4,28 @@
   "name": "MercadoLibre Inc.",
   "titleColor": "#FFE600",
   "headerStats": [
-    { "label": "Ticker", "value": "MELI" },
-    { "label": "Market Cap", "value": "~$80B" },
-    { "label": "Price", "value": "~$1,600" }
+    {
+      "label": "Ticker",
+      "value": "MELI"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$80B"
+    },
+    {
+      "label": "Price",
+      "value": "~$1,600"
+    }
   ],
   "chips": [
-    { "label": "LatAm | E-Commerce + Fintech", "color": "primary" },
-    { "label": "Regional Flywheel", "color": "success" }
+    {
+      "label": "LatAm | E-Commerce + Fintech",
+      "color": "primary"
+    },
+    {
+      "label": "Regional Flywheel",
+      "color": "success"
+    }
   ],
   "recommendation": "Strong Buy",
   "metrics": [
@@ -149,5 +164,6 @@
     },
     "aiResilienceScore": 78,
     "verdict": "MercadoLibre is a net beneficiary of AI — its AI-powered seller assistant is already advising on 20% of GMV, and its proprietary transaction data enables underwriting and ad targeting that AI-powered challengers cannot replicate without decades of transaction history. The primary AI risk is that lower development barriers could enable local fintech competitors, but MELI's two-sided network scale and 25-year compounding of trust in underdeveloped financial markets are not easily disrupted."
-  }
+  },
+  "lastAnalyzed": "November 2025"
 }

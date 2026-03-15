@@ -4,19 +4,52 @@
   "name": "TransDigm Group Inc.",
   "titleColor": "#1a5276",
   "headerStats": [
-    { "label": "Ticker", "value": "TDG" },
-    { "label": "Market Cap", "value": "$67B" },
-    { "label": "Price", "value": "$1,250" }
+    {
+      "label": "Ticker",
+      "value": "TDG"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$67B"
+    },
+    {
+      "label": "Price",
+      "value": "$1,250"
+    }
   ],
   "chips": [
-    { "label": "Aerospace | Defense | MRO", "color": "primary" },
-    { "label": "Accumulate", "color": "success" }
+    {
+      "label": "Aerospace | Defense | MRO",
+      "color": "primary"
+    },
+    {
+      "label": "Accumulate",
+      "color": "success"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
-    { "title": "EBITDA Margin", "value": "57%", "label": "Best-in-Class Profitability", "icon": "TrendingUp", "color": "#1a5276" },
-    { "title": "Sole-Source Mix", "value": "~85%", "label": "Revenues from Sole-Source Parts", "icon": "Shield", "color": "#2e86c1" },
-    { "title": "Aftermarket Revenue", "value": "~55%", "label": "High-Margin MRO Revenue", "icon": "Wrench", "color": "#148f77" }
+    {
+      "title": "EBITDA Margin",
+      "value": "57%",
+      "label": "Best-in-Class Profitability",
+      "icon": "TrendingUp",
+      "color": "#1a5276"
+    },
+    {
+      "title": "Sole-Source Mix",
+      "value": "~85%",
+      "label": "Revenues from Sole-Source Parts",
+      "icon": "Shield",
+      "color": "#2e86c1"
+    },
+    {
+      "title": "Aftermarket Revenue",
+      "value": "~55%",
+      "label": "High-Margin MRO Revenue",
+      "icon": "Wrench",
+      "color": "#148f77"
+    }
   ],
   "moat": {
     "score": 86,
@@ -134,5 +167,6 @@
     },
     "aiResilienceScore": 90,
     "verdict": "TransDigm's moat is almost entirely AI-immune. Regulatory certification cannot be automated — the FAA and DOD will not approve AI-designed substitutes without decades of physical certification testing. The sole-source aftermarket model becomes more durable, not weaker, as aircraft fleets age and alternatives become even less economical to certify."
-  }
+  },
+  "lastAnalyzed": "October 2025"
 }

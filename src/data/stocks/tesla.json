@@ -3,19 +3,52 @@
   "ticker": "TSLA",
   "name": "Tesla Inc.",
   "headerStats": [
-    { "label": "Ticker", "value": "TSLA" },
-    { "label": "Market Cap", "value": "$1.25T" },
-    { "label": "Price", "value": "$390.00" }
+    {
+      "label": "Ticker",
+      "value": "TSLA"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$1.25T"
+    },
+    {
+      "label": "Price",
+      "value": "$390.00"
+    }
   ],
   "chips": [
-    { "label": "Autonomous AI | Robotics", "color": "warning" },
-    { "label": "Energy Storage", "color": "primary" }
+    {
+      "label": "Autonomous AI | Robotics",
+      "color": "warning"
+    },
+    {
+      "label": "Energy Storage",
+      "color": "primary"
+    }
   ],
   "recommendation": "Hold",
   "metrics": [
-    { "title": "Vehicle Deliveries", "value": "~1.79M", "label": "FY2024 — Down ~1% YoY", "icon": "Car", "color": "#cc0000" },
-    { "title": "Operating Margin", "value": "5.8%", "label": "vs 10.8% in FY2023 — Compressed", "icon": "TrendingUp", "color": "#f5a524" },
-    { "title": "FSD Miles", "value": "3B+", "label": "Real-World AI Training Data", "icon": "Cpu", "color": "#3b82f6" }
+    {
+      "title": "Vehicle Deliveries",
+      "value": "~1.79M",
+      "label": "FY2024 — Down ~1% YoY",
+      "icon": "Car",
+      "color": "#cc0000"
+    },
+    {
+      "title": "Operating Margin",
+      "value": "5.8%",
+      "label": "vs 10.8% in FY2023 — Compressed",
+      "icon": "TrendingUp",
+      "color": "#f5a524"
+    },
+    {
+      "title": "FSD Miles",
+      "value": "3B+",
+      "label": "Real-World AI Training Data",
+      "icon": "Cpu",
+      "color": "#3b82f6"
+    }
   ],
   "moat": {
     "score": 74,
@@ -23,9 +56,18 @@
     "analysisTitle": "The Autonomous Data Flywheel",
     "analysisSummary": "Tesla's moat is evolving from **manufacturing cost** to **real-world AI data**:",
     "analysisPoints": [
-      { "title": "FSD Data Flywheel", "text": "3B+ real-world FSD miles logged across millions of active vehicles give Tesla the largest proprietary autonomous driving dataset on earth. Every mile widens the gap vs. competitors who rely on synthetic simulation data." },
-      { "title": "Optimus Robotics Platform", "text": "Tesla committed $20B toward autonomous and humanoid robots in 2026. If Optimus achieves commercial-scale production (target: 1M+ units by 2027), it creates an entirely new revenue stream in a TAM that dwarfs automotive." },
-      { "title": "Vertical Integration", "text": "From 4680 battery cells to Dojo supercomputer to Giga casting — Tesla's cost-per-vehicle is structurally below legacy OEMs. While BYD has closed the gap in China, no Western OEM can match Tesla's integrated manufacturing stack." }
+      {
+        "title": "FSD Data Flywheel",
+        "text": "3B+ real-world FSD miles logged across millions of active vehicles give Tesla the largest proprietary autonomous driving dataset on earth. Every mile widens the gap vs. competitors who rely on synthetic simulation data."
+      },
+      {
+        "title": "Optimus Robotics Platform",
+        "text": "Tesla committed $20B toward autonomous and humanoid robots in 2026. If Optimus achieves commercial-scale production (target: 1M+ units by 2027), it creates an entirely new revenue stream in a TAM that dwarfs automotive."
+      },
+      {
+        "title": "Vertical Integration",
+        "text": "From 4680 battery cells to Dojo supercomputer to Giga casting — Tesla's cost-per-vehicle is structurally below legacy OEMs. While BYD has closed the gap in China, no Western OEM can match Tesla's integrated manufacturing stack."
+      }
     ]
   },
   "growth": {
@@ -86,17 +128,48 @@
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "weakened", "note": "EV touchscreen interfaces are being replicated by BYD, Rivian, and legacy OEMs — no longer a differentiating moat." },
-    "businessLogic": { "status": "destroyed", "note": "Not applicable as a primary competitive moat in automotive manufacturing." },
-    "publicDataAccess": { "status": "destroyed", "note": "Not applicable to Tesla's competitive advantage framework." },
-    "talentScarcity": { "status": "intact", "note": "Battery chemistry expertise, Gigafactory manufacturing engineers, FSD AI/ML researchers, and Optimus robotics talent remain genuinely scarce and concentrated at Tesla." },
-    "bundling": { "status": "strong", "note": "EV + FSD Software + Energy Storage + Supercharging + Insurance + Optimus + Service = a vertical integration bundle no OEM has replicated or can replicate without decades of investment." },
-    "proprietaryData": { "status": "strong", "note": "3B+ real-world FSD driving miles, energy grid optimization data from Megapack deployments, and Optimus telemetry constitute the world's most valuable AI training dataset for physical-world robotics." },
-    "regulatoryLockIn": { "status": "intact", "note": "Supercharger NACS standard adopted as the North American default, Megapack grid storage contracts with utilities, and federal infrastructure relationships create durable regulatory entrenchment." },
-    "networkEffects": { "status": "intact", "note": "Every new Tesla on the road contributes FSD training data for all other Teslas — a compounding fleet intelligence network effect. Supercharger density improves with each new vehicle sold." },
-    "transactionEmbedding": { "status": "strong", "note": "OTA updates, FSD subscriptions, Powerwall energy management, insurance, and Robotaxi platform are embedded in the daily life and infrastructure of Tesla owners and utility operators." },
-    "systemOfRecord": { "status": "intact", "note": "Tesla remains the definitive reference standard for consumer EVs, grid-scale battery storage, and autonomous driving technology benchmarks." },
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "EV touchscreen interfaces are being replicated by BYD, Rivian, and legacy OEMs — no longer a differentiating moat."
+    },
+    "businessLogic": {
+      "status": "destroyed",
+      "note": "Not applicable as a primary competitive moat in automotive manufacturing."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Not applicable to Tesla's competitive advantage framework."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Battery chemistry expertise, Gigafactory manufacturing engineers, FSD AI/ML researchers, and Optimus robotics talent remain genuinely scarce and concentrated at Tesla."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "EV + FSD Software + Energy Storage + Supercharging + Insurance + Optimus + Service = a vertical integration bundle no OEM has replicated or can replicate without decades of investment."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "3B+ real-world FSD driving miles, energy grid optimization data from Megapack deployments, and Optimus telemetry constitute the world's most valuable AI training dataset for physical-world robotics."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "Supercharger NACS standard adopted as the North American default, Megapack grid storage contracts with utilities, and federal infrastructure relationships create durable regulatory entrenchment."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "Every new Tesla on the road contributes FSD training data for all other Teslas — a compounding fleet intelligence network effect. Supercharger density improves with each new vehicle sold."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "OTA updates, FSD subscriptions, Powerwall energy management, insurance, and Robotaxi platform are embedded in the daily life and infrastructure of Tesla owners and utility operators."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "Tesla remains the definitive reference standard for consumer EVs, grid-scale battery storage, and autonomous driving technology benchmarks."
+    },
     "aiResilienceScore": 78,
     "verdict": "Tesla's pivot from auto OEM to autonomous AI platform is the defining investment question of the decade. The FSD data flywheel and Optimus platform are genuinely AI-resilient moats — but the transition requires flawless execution while auto margins are under pressure. The bull case is transformative; the bear case is a very expensive car company."
-  }
+  },
+  "lastAnalyzed": "October 2025"
 }

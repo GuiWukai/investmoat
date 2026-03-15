@@ -1,0 +1,235 @@
+{
+  "slug": "now",
+  "ticker": "NOW",
+  "name": "ServiceNow, Inc.",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "NOW"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$120B"
+    },
+    {
+      "label": "Price",
+      "value": "~$115"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Enterprise SaaS | AI Workflow",
+      "color": "primary"
+    },
+    {
+      "label": "Wide Moat",
+      "color": "success"
+    },
+    {
+      "label": "AI Beneficiary",
+      "color": "secondary"
+    }
+  ],
+  "recommendation": "Strong Buy",
+  "metrics": [
+    {
+      "title": "Now Assist ACV",
+      "value": "$600M+",
+      "label": "Q4 2025, targeting $1B+ in 2026",
+      "icon": "Zap",
+      "color": "#0cceaf"
+    },
+    {
+      "title": "FCF Margin",
+      "value": "35%",
+      "label": "FY2025 Full-Year Free Cash Flow",
+      "icon": "TrendingUp",
+      "color": "#7c3aed"
+    },
+    {
+      "title": "Total RPO",
+      "value": "$28.2B",
+      "label": "+26.5% YoY Contracted Backlog",
+      "icon": "Lock",
+      "color": "#2563eb"
+    }
+  ],
+  "moat": {
+    "score": 88,
+    "description": "ServiceNow owns the workflow layer of enterprise operations — the system through which every IT incident, HR request, and business approval is routed, tracked, and resolved at 8,800+ enterprises worldwide, with a 98% renewal rate reflecting operational lock-in that no competitor has overcome in 20 years.",
+    "analysisTitle": "The Enterprise Workflow OS",
+    "analysisSummary": "ServiceNow's moat is built on **Deep Workflow Embedding and AI-Era Positioning**:",
+    "analysisPoints": [
+      {
+        "title": "The System of Record No One Can Rip Out",
+        "text": "ServiceNow is the authoritative system of record for IT assets, incidents, changes, service catalog requests, HR workflows, and compliance events at most of the Fortune 500. All audit trails, SLA histories, and CMDB records live inside ServiceNow. Replacing it requires rebuilding every workflow automation, re-integrating with every connected system, and re-certifying every regulatory control — a multi-year, nine-figure IT programme with high failure risk. The 98% renewal rate across 8,800+ customers is not loyalty; it is operational immobility."
+      },
+      {
+        "title": "FedRAMP High + AI: The Government Moat Nobody Talks About",
+        "text": "ServiceNow holds one of the few FedRAMP High Authorized cloud certifications in enterprise software — a multi-year accreditation process that competitors cannot shortcut. Its US federal business grew 30%+ in Q3 2025 and was named a Forrester Wave Leader for Industry Cloud for Public Sector (Q1 2026). The Moveworks acquisition (FedRAMP Moderate) adds AI conversational search to this regulated moat. Any competitor displacing ServiceNow in government must first replicate 3+ years of FedRAMP accreditation, CMMC compliance, and federal procurement relationship-building."
+      },
+      {
+        "title": "Proprietary Workflow Data Flywheel",
+        "text": "ServiceNow processes workflow execution data across 8,800 enterprises — IT incident patterns, resolution timelines, approval chain structures, and employee productivity metrics. This data trains Now Assist AI models in ways no startup can replicate without first acquiring an equivalent enterprise installed base. The more workflows run on the platform, the smarter the AI recommendations become, creating a compounding data advantage that widens with scale rather than equalizing."
+      },
+      {
+        "title": "Autonomous Workforce: AI Deepens the Moat",
+        "text": "ServiceNow's March 2026 Autonomous Workforce launch — teams of AI specialists that resolve >90% of IT requests without human intervention — transforms the platform from workflow software into an AI operating system. This is the opposite of AI disruption: enterprises that want to deploy AI agents at scale need ServiceNow's workflow infrastructure, compliance controls, and system integrations to do so safely and auditably. AI makes ServiceNow the required orchestration layer, not a legacy incumbency to replace."
+      }
+    ]
+  },
+  "growth": {
+    "score": 87,
+    "description": "19–20% subscription revenue growth with $28.2B RPO backlog providing 2+ years of contracted visibility. Now Assist AI agents are scaling rapidly toward $1B+ ACV in 2026 and Autonomous Workforce opens a new enterprise AI orchestration category. FY2026 FCF margin is guided to 36% — operating leverage is real and compounding.",
+    "additionalNote": {
+      "title": "Key Growth Catalysts",
+      "points": [
+        "Now Assist surpassed $600M ACV in Q4 2025 — targeting $1B+ in 2026 with 1,700+ customers live and AI agent consumption growing 55x since May 2025",
+        "Autonomous Workforce (GA Q2 2026) resolves >90% of IT requests autonomously — creating a consumption-based revenue layer on top of subscriptions",
+        "Moveworks acquisition adds ~1 ppt to FY2026 revenue and extends AI conversational search to ~200M enterprise employees",
+        "US federal government business growing 30%+ YoY; Now Assist AI products are FedRAMP-authorized and actively deployed across agencies",
+        "Land-and-expand engine accelerating: customers with $5M+ ACV reached 603 (+20% YoY), with average ACV per $5M+ customer growing to $14.5M"
+      ]
+    },
+    "growthAnalysis": {
+      "cagrEstimate": "18–20%",
+      "scoreDerivation": "Base 80 (15–30% CAGR) + 5 recurring (98% renewal, $28.2B RPO backlog) + 5 AI TAM expansion (Now Assist $1B+ ACV, Autonomous Workforce) − 3 slight deceleration (21% → 19.5–20% guide) = 87",
+      "drivers": [
+        {
+          "name": "Now Assist AI",
+          "metric": "$600M+ ACV Q4 2025, 55× consumption growth since May 2025",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Core Subscription",
+          "metric": "+21% YoY Q4 2025, cRPO +25% YoY to $12.85B",
+          "trend": "stable"
+        },
+        {
+          "name": "Federal & Public Sector",
+          "metric": "+30% YoY Q3 2025, FedRAMP High + Moveworks FedRAMP Moderate",
+          "trend": "accelerating"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If Microsoft Copilot Studio achieves >20% win rate in new enterprise ITSM evaluations by end of 2026, ServiceNow's new-logo growth decelerates below 15% and Now Assist ACV stalls under $800M",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 77,
+    "description": "At ~$115 post-split — down ~52% from the all-time high of $239 — ServiceNow trades 26% below the base case ($155), pricing in AI disruption risk that the 98% renewal rate and $28.2B contracted backlog do not support. The 5-for-1 stock split (December 2025) and broader SaaSpocalypse rotation have de-rated the stock to near its lowest forward P/E in five years, creating a historically rare entry for a business with this quality of revenue visibility.",
+    "valuationNote": {
+      "text": "ServiceNow's $28.2B total RPO (~2.1 years of contracted revenue) provides exceptional earnings visibility that the current multiple underweights. With 35% FCF margins expanding to a guided 36% in FY2026, the stock trades at ~26× P/FCF — a historically attractive entry for a business with near-zero customer churn and an AI monetization layer still in early innings.",
+      "fairValue": "$155"
+    },
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~65×",
+          "note": "SBC-heavy; GAAP EPS ~$1.75 TTM"
+        },
+        {
+          "label": "Forward P/E (NTM, non-GAAP)",
+          "value": "~29×",
+          "note": "consensus non-GAAP EPS ~$4.00"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.4×",
+          "note": "fwd P/E ÷ 20% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~8×",
+          "note": "$15.5B FY2026 revenue guide"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~26×",
+          "note": "$4.6B FY2025 FCF (TTM)"
+        }
+      ],
+      "summary": "At ~29× forward non-GAAP P/E, ServiceNow trades at a modest premium to the enterprise SaaS median (~25×) that is more than justified by its superior growth profile (20% CAGR vs. peers at 8–15%), 98% renewal rate, and AI monetization upside not yet in consensus estimates. The PEG of ~1.4× places ServiceNow in 'fairly priced for growth' territory — a material de-rating from its historical 3–4× PEG. The wide gap between the 65× trailing GAAP P/E and 29× forward non-GAAP P/E reflects heavy stock-based compensation, not earnings deceleration; analysts should use non-GAAP metrics for like-for-like comparisons."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$70",
+      "description": "AI disrupts workflow SaaS faster than ServiceNow can monetize it; revenue growth decelerates below 12% and the multiple compresses to 18–20×.",
+      "points": [
+        "AI-native competitors (Microsoft Copilot Studio, Salesforce Agentforce) replicate core ITSM workflows at lower cost; ServiceNow new-logo win rates fall below 50% by 2027",
+        "Now Assist stalls below $750M ACV as enterprises find AI agent deployment more complex than expected, causing deal downgrades and delayed expansion",
+        "Macro recession triggers large enterprise IT budget freezes; multi-year contracts face renegotiation pressure and NRR falls below 105% for the first time",
+        "Multiple compresses to 18–20× forward non-GAAP earnings as the SaaSpocalypse narrative proves partially correct"
+      ]
+    },
+    "base": {
+      "priceTarget": "$155",
+      "description": "Growth sustains at 19–20% as Now Assist scales to $2B+ ACV and Autonomous Workforce adds a consumption layer; multiple re-rates to ~32× as the AI-threat narrative fades.",
+      "points": [
+        "Now Assist scales from $600M to $2B+ ACV by end of 2027 as 1,700+ live customers expand AI modules and Autonomous Workforce reaches 200+ enterprise deployments",
+        "cRPO sustains 20–22% growth through Q4 2026, confirming the trajectory and enabling a multiple re-rate from 29× to 32–34× forward non-GAAP EPS",
+        "Moveworks integration creates the 'AI front door' for enterprise employees, accelerating expansion deals within the existing account base",
+        "FCF margin reaches 36–37%, validating operating leverage and supporting a Dividend or buyback programme initiation"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$235",
+      "description": "AI agents prove transformative for enterprise operations; ServiceNow becomes the required orchestration layer for enterprise AI, re-accelerating growth to 25%+ and expanding the multiple to 38–42×.",
+      "points": [
+        "Autonomous Workforce is adopted by 1,000+ enterprises by end of 2027; Now Assist ACV reaches $4B+, creating a consumption revenue layer that drives net new ACV well above consensus",
+        "ServiceNow wins large enterprise AI orchestration mandates vs. AWS, Microsoft, and Salesforce, establishing itself as the AI backbone for government, healthcare, and financial services",
+        "International expansion (APAC and Middle East sovereign AI cloud) adds 5+ ppts to revenue growth, pushing 2027 revenue toward $20B+",
+        "Multiple expands to 38–42× forward non-GAAP EPS as the market re-rates the platform from 'workflow SaaS' to 'enterprise AI infrastructure' — mirroring how Azure was re-rated in 2020–2021"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "ServiceNow's Flow Designer, Scripting IDE, and low-code development environment require substantial expertise to master — enterprise admins and developers invest years building institutional knowledge. AI-assisted configuration (natural language workflow building) partially abstracts the interface, but configuring Autonomous Workforce and AI agents requires deeper platform expertise, not less. Net: AI is neutral to slightly weakening on pure UI complexity, but increases demand for senior ServiceNow architects."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "ServiceNow stores the accumulated business logic of enterprise operations — approval chains, escalation paths, SLA definitions, CMDB relationships, and custom workflow scripts specific to each organization. This is 5–15 years of operational DNA encoded in flows, scripts, and table configurations that is nearly impossible to fully document or migrate. No AI can reconstruct this logic without first understanding each organization's unique operational context and history."
+    },
+    "publicDataAccess": {
+      "status": "weakened",
+      "note": "ServiceNow collects workflow benchmark data and IT performance metrics across 8,800+ enterprises, used to train Now Assist models. However, this is not a primary standalone moat — AI is making generic IT benchmarking data increasingly accessible, and larger competitors could build comparable datasets. It is a secondary flywheel advantage rather than a structural barrier."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Certified ServiceNow developers and architects command $130–170K+ salaries and remain in short supply relative to enterprise demand. AI is automating some routine configuration tasks via natural language, gradually reducing the scarcity premium for basic administration while simultaneously increasing demand for senior architects who can design complex AI-orchestrated workflows and Autonomous Workforce configurations."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "ServiceNow sells 25+ enterprise products (IT, HR, Finance, Legal, Security Operations, Customer Service, Creator, and now AI agents) on a single data model and workflow engine. Multi-product adoption is accelerating: 5+ Now Assist product deals grew 10× YoY in Q4 2025. The cross-workflow integration value — an IT incident auto-triggering an HR notification and finance approval — cannot be replicated by point solutions, and AI agents make this cross-domain orchestration even more valuable."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "ServiceNow processes workflow execution data across 8,800 enterprises — IT incident patterns, resolution timelines, approval chain structures, and employee productivity metrics. This data trains Now Assist AI models through a compounding flywheel: more workflows → better AI recommendations → more Now Assist adoption → more workflow data. No competitor can replicate this proprietary training corpus without first acquiring an equivalent enterprise installed base at comparable scale."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "ServiceNow holds FedRAMP High Authorization — one of the most stringent cloud security certifications available — used by US federal agencies whose business grew 30%+ YoY in Q3 2025. HIPAA, SOC 2, PCI DSS, and ISO 27001 certifications are contractually required by healthcare and financial services customers. Re-certifying a competing platform takes 18–36 months minimum. Named Forrester Wave Leader for Industry Cloud for Public Sector (Q1 2026). The Moveworks acquisition adds FedRAMP Moderate coverage for AI search."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "ServiceNow benefits from meaningful indirect network effects: 2,000+ certified implementation partners (Deloitte, Accenture, KPMG) make adoption easier; 8,800+ customers share workflow templates via the Now Community; and the AI data flywheel strengthens as the installed base grows. Not classic direct network effects, but the growing ecosystem creates meaningful adoption inertia that scales with the customer base."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Every IT incident ticket, HR service request, procurement approval, change management event, and compliance attestation flows through ServiceNow at 8,800+ enterprises. ServiceNow IS the transaction layer for enterprise operational workflows — not adjacent to it. With Autonomous Workforce now resolving >90% of IT requests without human intervention, the embedding depth increases further as AI agents become dependent on ServiceNow's orchestration infrastructure, workflow history, and system integrations."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "ServiceNow is the authoritative system of record for IT assets (CMDB), incidents, changes, the service catalog, HR service requests, and compliance events at most Fortune 500 companies. All audit trails, SLA histories, regulatory records, and workflow archives reside in ServiceNow. For regulated industries — banking, healthcare, government — this record-keeping is legally mandated and represents data that cannot be migrated without extraordinary operational and compliance risk. Migration from ServiceNow is a multi-year programme, not a procurement decision."
+    },
+    "aiResilienceScore": 88,
+    "verdict": "ServiceNow is one of the clearest AI beneficiaries in enterprise software — the proliferation of AI agents increases demand for the workflow orchestration infrastructure ServiceNow uniquely provides, with compliance controls, audit trails, and system integrations that enterprises require to deploy AI safely at scale. The four strongest AI-resilient moats (system-of-record, transaction embedding, regulatory lock-in, proprietary data flywheel) are all actively strengthening as AI adoption expands. The primary AI risk is interface commoditization — if LLMs allow rapid configuration of competing workflow platforms, the learned interface and talent scarcity moats weaken further — but this is structurally offset by the depth of existing workflow logic, compliance certifications, and proprietary training data that competitors cannot shortcut. ServiceNow enters the AI era not as a legacy incumbent under threat, but as the enterprise operating system through which AI must be deployed."
+  },
+  "lastAnalyzed": "March 2026"
+}

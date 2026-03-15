@@ -4,19 +4,52 @@
   "name": "Solana",
   "titleColor": "#9945ff",
   "headerStats": [
-    { "label": "Ticker", "value": "SOL" },
-    { "label": "Market Cap", "value": "$75B" },
-    { "label": "Active Validators", "value": "~1,700" }
+    {
+      "label": "Ticker",
+      "value": "SOL"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$75B"
+    },
+    {
+      "label": "Active Validators",
+      "value": "~1,700"
+    }
   ],
   "chips": [
-    { "label": "High-Performance L1 | Smart Contracts", "color": "primary" },
-    { "label": "Ethereum Challenger", "color": "warning" }
+    {
+      "label": "High-Performance L1 | Smart Contracts",
+      "color": "primary"
+    },
+    {
+      "label": "Ethereum Challenger",
+      "color": "warning"
+    }
   ],
   "recommendation": "Speculative Buy",
   "metrics": [
-    { "title": "TPS (Peak)", "value": "65,000+", "label": "Theoretical Max Throughput", "icon": "Shield", "color": "#9945ff" },
-    { "title": "DeFi TVL", "value": "$9B+", "label": "On-Chain DeFi Activity", "icon": "Lock", "color": "#10b981" },
-    { "title": "Daily Transactions", "value": "~50M", "label": "Avg. Daily Tx Volume", "icon": "Globe", "color": "#f7931a" }
+    {
+      "title": "TPS (Peak)",
+      "value": "65,000+",
+      "label": "Theoretical Max Throughput",
+      "icon": "Shield",
+      "color": "#9945ff"
+    },
+    {
+      "title": "DeFi TVL",
+      "value": "$9B+",
+      "label": "On-Chain DeFi Activity",
+      "icon": "Lock",
+      "color": "#10b981"
+    },
+    {
+      "title": "Daily Transactions",
+      "value": "~50M",
+      "label": "Avg. Daily Tx Volume",
+      "icon": "Globe",
+      "color": "#f7931a"
+    }
   ],
   "moat": {
     "score": 58,
@@ -24,9 +57,18 @@
     "analysisTitle": "The Speed-as-Moat Thesis",
     "analysisSummary": "Solana's moat rests on **Performance and Developer Momentum**, not ecosystem depth:",
     "analysisPoints": [
-      { "title": "Throughput Advantage", "text": "Solana processes 50,000+ TPS at sub-cent fees today — no other general-purpose L1 matches this without rollup complexity. This makes it the default chain for high-frequency use cases like trading, payments, and gaming." },
-      { "title": "Consumer Crypto Mindshare", "text": "Solana captured the retail and meme-coin cycle (2023–2025), building the strongest consumer crypto brand outside Bitcoin and Ethereum. Phantom Wallet, Tensor, and Jupiter became category-defining products." },
-      { "title": "Centralization Risk", "text": "~1,700 validators vs. Ethereum's 1M+ creates meaningful counter-party concentration. The Firedancer client by Jump Crypto improves resilience, but Solana's architecture requires more trust in the validator set than competing networks." }
+      {
+        "title": "Throughput Advantage",
+        "text": "Solana processes 50,000+ TPS at sub-cent fees today — no other general-purpose L1 matches this without rollup complexity. This makes it the default chain for high-frequency use cases like trading, payments, and gaming."
+      },
+      {
+        "title": "Consumer Crypto Mindshare",
+        "text": "Solana captured the retail and meme-coin cycle (2023–2025), building the strongest consumer crypto brand outside Bitcoin and Ethereum. Phantom Wallet, Tensor, and Jupiter became category-defining products."
+      },
+      {
+        "title": "Centralization Risk",
+        "text": "~1,700 validators vs. Ethereum's 1M+ creates meaningful counter-party concentration. The Firedancer client by Jump Crypto improves resilience, but Solana's architecture requires more trust in the validator set than competing networks."
+      }
     ]
   },
   "growth": {
@@ -67,17 +109,48 @@
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "weakened", "note": "Rust-based smart contracts have a steeper learning curve than Solidity, limiting developer portability but also slowing mass adoption relative to Ethereum's EVM ecosystem." },
-    "businessLogic": { "status": "weakened", "note": "The Solana ecosystem is younger and has less locked-in protocol logic than Ethereum. Most high-value DeFi protocols still deploy on Ethereum first." },
-    "publicDataAccess": { "status": "destroyed", "note": "N/A — all on-chain data is public by design; not a competitive moat vs. any other L1 blockchain." },
-    "talentScarcity": { "status": "weakened", "note": "Growing developer community, but significantly smaller than Ethereum's. Rust expertise is scarcer than Solidity, creating both a barrier and a hiring constraint." },
-    "bundling": { "status": "weakened", "note": "Solana bundles execution and settlement on one chain — simpler than Ethereum's L2 ecosystem, but the lack of modularity limits customization for institutional deployments." },
-    "proprietaryData": { "status": "destroyed", "note": "N/A — fully public blockchain; no proprietary data advantage exists or can exist by design." },
-    "regulatoryLockIn": { "status": "weakened", "note": "Spot ETF filings are pending but not yet approved. SOL was labeled a security in SEC lawsuits (later dropped), creating lingering regulatory uncertainty vs. ETH and BTC." },
-    "networkEffects": { "status": "strong", "note": "Solana has the strongest consumer crypto network effects outside Ethereum — Phantom is the #1 mobile crypto wallet, and Jupiter dominates decentralized exchange aggregation." },
-    "transactionEmbedding": { "status": "weakened", "note": "Growing DeFi and payments embedding (Visa, PayPal pilots), but most high-value financial activity still routes through Ethereum. Solana leads in consumer volume, not institutional value." },
-    "systemOfRecord": { "status": "weakened", "note": "A relatively young chain (launched 2020) with a history of outages. Trust as a permanent system of record is still being established vs. Ethereum's 9-year track record." },
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "Rust-based smart contracts have a steeper learning curve than Solidity, limiting developer portability but also slowing mass adoption relative to Ethereum's EVM ecosystem."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "The Solana ecosystem is younger and has less locked-in protocol logic than Ethereum. Most high-value DeFi protocols still deploy on Ethereum first."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — all on-chain data is public by design; not a competitive moat vs. any other L1 blockchain."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Growing developer community, but significantly smaller than Ethereum's. Rust expertise is scarcer than Solidity, creating both a barrier and a hiring constraint."
+    },
+    "bundling": {
+      "status": "weakened",
+      "note": "Solana bundles execution and settlement on one chain — simpler than Ethereum's L2 ecosystem, but the lack of modularity limits customization for institutional deployments."
+    },
+    "proprietaryData": {
+      "status": "destroyed",
+      "note": "N/A — fully public blockchain; no proprietary data advantage exists or can exist by design."
+    },
+    "regulatoryLockIn": {
+      "status": "weakened",
+      "note": "Spot ETF filings are pending but not yet approved. SOL was labeled a security in SEC lawsuits (later dropped), creating lingering regulatory uncertainty vs. ETH and BTC."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "Solana has the strongest consumer crypto network effects outside Ethereum — Phantom is the #1 mobile crypto wallet, and Jupiter dominates decentralized exchange aggregation."
+    },
+    "transactionEmbedding": {
+      "status": "weakened",
+      "note": "Growing DeFi and payments embedding (Visa, PayPal pilots), but most high-value financial activity still routes through Ethereum. Solana leads in consumer volume, not institutional value."
+    },
+    "systemOfRecord": {
+      "status": "weakened",
+      "note": "A relatively young chain (launched 2020) with a history of outages. Trust as a permanent system of record is still being established vs. Ethereum's 9-year track record."
+    },
     "aiResilienceScore": 58,
     "verdict": "Solana's performance moat is real but fragile — it depends on continued technological execution (Firedancer) and avoiding reliability incidents. AI can accelerate competing chains' development, narrowing Solana's speed advantage over time. The ecosystem network effect is genuine but still ~3–5 years behind Ethereum's depth."
-  }
+  },
+  "lastAnalyzed": "October 2025"
 }

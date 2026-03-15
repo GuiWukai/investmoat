@@ -4,19 +4,52 @@
   "name": "Micron Technology",
   "titleColor": "#0099cc",
   "headerStats": [
-    { "label": "Ticker", "value": "MU" },
-    { "label": "Market Cap", "value": "~$450B" },
-    { "label": "Current Price", "value": "~$400" }
+    {
+      "label": "Ticker",
+      "value": "MU"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$450B"
+    },
+    {
+      "label": "Current Price",
+      "value": "~$400"
+    }
   ],
   "chips": [
-    { "label": "Semiconductors | DRAM & NAND Memory", "color": "primary" },
-    { "label": "HBM4 AI Memory", "color": "warning" }
+    {
+      "label": "Semiconductors | DRAM & NAND Memory",
+      "color": "primary"
+    },
+    {
+      "label": "HBM4 AI Memory",
+      "color": "warning"
+    }
   ],
   "recommendation": "Hold",
   "metrics": [
-    { "title": "Q1 FY26 Revenue", "value": "$13.6B", "label": "Record, +57% YoY", "icon": "Cpu", "color": "#0099cc" },
-    { "title": "Gross Margin", "value": "~68%", "label": "Q2 FY26 Guided Target", "icon": "TrendingUp", "color": "#3b82f6" },
-    { "title": "HBM Pipeline", "value": "CY2026 Sold Out", "label": "$100B TAM by 2028", "icon": "Zap", "color": "#10b981" }
+    {
+      "title": "Q1 FY26 Revenue",
+      "value": "$13.6B",
+      "label": "Record, +57% YoY",
+      "icon": "Cpu",
+      "color": "#0099cc"
+    },
+    {
+      "title": "Gross Margin",
+      "value": "~68%",
+      "label": "Q2 FY26 Guided Target",
+      "icon": "TrendingUp",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "HBM Pipeline",
+      "value": "CY2026 Sold Out",
+      "label": "$100B TAM by 2028",
+      "icon": "Zap",
+      "color": "#10b981"
+    }
   ],
   "moat": {
     "score": 62,
@@ -24,9 +57,18 @@
     "analysisTitle": "Oligopoly with Thin Walls",
     "analysisSummary": "Micron's competitive position rests on **Oligopoly Structure, Capital Barriers, and HBM4 Differentiation** — but these are weaker than they appear:",
     "analysisPoints": [
-      { "title": "Three-Player Oligopoly", "text": "With Samsung, SK Hynix, and Micron controlling ~95% of DRAM supply, the market is structurally oligopolistic. New entrants face $30B+ capex requirements and decade-long learning curves that effectively preclude competition. Micron is the only US-based survivor of what was once a much larger industry." },
-      { "title": "HBM4 Differentiation (Strengthening)", "text": "Micron's HBM4 — featuring pin speeds above 11 Gb/s with in-house CMOS and advanced metallization on the base logic die — is on track to ramp with high yields in Q2 CY2026. Micron has contracted its entire CY2026 HBM supply, including HBM4, across hyperscaler customers. HBM TAM is projected to grow from ~$35B in 2025 to ~$100B by 2028 (40% CAGR) — a milestone now arriving two years earlier than prior projections." },
-      { "title": "Why the Moat is Thin", "text": "Outside HBM, DRAM and NAND remain commodity products sold at spot market prices. When supply outpaces demand (as in 2022–23), margins collapse rapidly — Micron posted $5.8B in net losses. Pricing power depends on the industry's collective capital discipline, not Micron's own competitive advantage. The $20B FY2026 capex commitment also creates meaningful execution risk if demand softens." }
+      {
+        "title": "Three-Player Oligopoly",
+        "text": "With Samsung, SK Hynix, and Micron controlling ~95% of DRAM supply, the market is structurally oligopolistic. New entrants face $30B+ capex requirements and decade-long learning curves that effectively preclude competition. Micron is the only US-based survivor of what was once a much larger industry."
+      },
+      {
+        "title": "HBM4 Differentiation (Strengthening)",
+        "text": "Micron's HBM4 — featuring pin speeds above 11 Gb/s with in-house CMOS and advanced metallization on the base logic die — is on track to ramp with high yields in Q2 CY2026. Micron has contracted its entire CY2026 HBM supply, including HBM4, across hyperscaler customers. HBM TAM is projected to grow from ~$35B in 2025 to ~$100B by 2028 (40% CAGR) — a milestone now arriving two years earlier than prior projections."
+      },
+      {
+        "title": "Why the Moat is Thin",
+        "text": "Outside HBM, DRAM and NAND remain commodity products sold at spot market prices. When supply outpaces demand (as in 2022–23), margins collapse rapidly — Micron posted $5.8B in net losses. Pricing power depends on the industry's collective capital discipline, not Micron's own competitive advantage. The $20B FY2026 capex commitment also creates meaningful execution risk if demand softens."
+      }
     ]
   },
   "growth": {
@@ -46,9 +88,21 @@
       "cagrEstimate": "25–35%",
       "scoreDerivation": "Base 90 (30%+ blended CAGR from HBM4 ramp + AI data center DRAM demand) + 5 TAM expansion (HBM TAM $35B→$100B by 2028 at 40% CAGR) − 8 cyclical risk (commodity DRAM/NAND exposure; $20B capex creates overcapacity risk if AI capex normalizes) = 87",
       "drivers": [
-        { "name": "HBM (High Bandwidth Memory)", "metric": "CY2026 supply fully contracted; TAM $35B→$100B by 2028", "trend": "accelerating" },
-        { "name": "Cloud / Data Center DRAM", "metric": "+100% YoY in Q1 FY2026; Cloud Memory segment $5.3B", "trend": "accelerating" },
-        { "name": "Mobile & Client", "metric": "$4.3B in Q1 FY2026, +63% YoY", "trend": "stable" }
+        {
+          "name": "HBM (High Bandwidth Memory)",
+          "metric": "CY2026 supply fully contracted; TAM $35B→$100B by 2028",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Cloud / Data Center DRAM",
+          "metric": "+100% YoY in Q1 FY2026; Cloud Memory segment $5.3B",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Mobile & Client",
+          "metric": "$4.3B in Q1 FY2026, +63% YoY",
+          "trend": "stable"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If AI hyperscaler capex enters a pause cycle by end of 2026, Micron's $20B FY2026 capex commitment creates overcapacity risk and gross margins compress below 40%, reversing the current supercycle premium and triggering a 2022-style net-loss cycle",
@@ -65,11 +119,31 @@
     "peAnalysis": {
       "asOf": "March 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~33×", "note": "~$12 TTM EPS (Q2 FY25–Q1 FY26)" },
-        { "label": "Forward P/E (NTM)", "value": "~13×", "note": "consensus FY2026 EPS ~$32" },
-        { "label": "PEG Ratio", "value": "~0.5×", "note": "fwd P/E ÷ ~25% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~6.7×", "note": "~$67B NTM revenue est." },
-        { "label": "Price / FCF", "value": "~29×", "note": "~$15.6B FCF TTM (Q1 FY26 annualized)" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~33×",
+          "note": "~$12 TTM EPS (Q2 FY25–Q1 FY26)"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~13×",
+          "note": "consensus FY2026 EPS ~$32"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~0.5×",
+          "note": "fwd P/E ÷ ~25% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~6.7×",
+          "note": "~$67B NTM revenue est."
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~29×",
+          "note": "~$15.6B FCF TTM (Q1 FY26 annualized)"
+        }
       ],
       "summary": "The forward P/E of ~13× is deeply cheap vs. semiconductor peers at 25–35×, and a PEG of 0.5 implies growth at a significant discount to its rate. However, the gap between trailing P/E (~33×) and forward P/E (~13×) signals a one-year earnings ramp of +165% — extraordinary but sensitive to cycle continuation. Any slowdown in AI capex or HBM demand could compress FY2027 earnings to $20–25, which at 10× would imply $200–250, so valuation upside requires cycle durability."
     }
@@ -107,17 +181,48 @@
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "destroyed", "note": "N/A — Micron is a B2B semiconductor manufacturer with no consumer interface lock-in." },
-    "businessLogic": { "status": "destroyed", "note": "N/A — memory chips have no embedded business-logic moat." },
-    "publicDataAccess": { "status": "destroyed", "note": "N/A — Micron does not derive competitive advantage from public data access." },
-    "talentScarcity": { "status": "intact", "note": "Leading-edge DRAM and HBM process engineers (sub-1β node specialists, HBM4 base-die architects, advanced metallization specialists) are among the scarcest technical talent globally. Micron's Boise R&D center is a decade-deep talent cluster that competitors cannot quickly replicate. AI strengthens this moat — designing HBM4 base logic dies in-house requires irreplaceable human expertise." },
-    "bundling": { "status": "weakened", "note": "Micron sells DRAM, NAND, and HBM as distinct products with limited bundling; some system-level memory solutions exist but don't create meaningful lock-in vs. Samsung or SK Hynix." },
-    "proprietaryData": { "status": "intact", "note": "Proprietary DRAM cell designs (1-gamma node), HBM4 base-die CMOS architecture, advanced metallization processes, and yield-learning data from high-volume HBM production represent genuine IP. In-house logic die design (vs. competitors outsourcing) is a defensible advantage AI cannot easily replicate." },
-    "regulatoryLockIn": { "status": "intact", "note": "CHIPS Act $6.4B in total grants for Idaho and New York fabs makes Micron a designated US national security asset. The US government has an explicit interest in Micron's success as the only US-based DRAM manufacturer — and export controls on Samsung/SK Hynix to China further entrench Micron's strategic position." },
-    "networkEffects": { "status": "destroyed", "note": "N/A — no network effects exist in commodity memory; customers buy on price, availability, and quality specifications, not ecosystem lock-in." },
-    "transactionEmbedding": { "status": "weakened", "note": "HBM qualification is specific per GPU generation — once NVIDIA and hyperscalers certify Micron's HBM4, there is meaningful switching cost within a product generation. The CY2026 HBM supply being fully contracted with named customers provides near-term revenue visibility. However, Samsung and SK Hynix remain qualified alternatives, limiting the depth of embedding." },
-    "systemOfRecord": { "status": "destroyed", "note": "N/A — memory is a commodity input; Micron is not a system of record for any business function; customers source from all three suppliers simultaneously." },
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — Micron is a B2B semiconductor manufacturer with no consumer interface lock-in."
+    },
+    "businessLogic": {
+      "status": "destroyed",
+      "note": "N/A — memory chips have no embedded business-logic moat."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — Micron does not derive competitive advantage from public data access."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Leading-edge DRAM and HBM process engineers (sub-1β node specialists, HBM4 base-die architects, advanced metallization specialists) are among the scarcest technical talent globally. Micron's Boise R&D center is a decade-deep talent cluster that competitors cannot quickly replicate. AI strengthens this moat — designing HBM4 base logic dies in-house requires irreplaceable human expertise."
+    },
+    "bundling": {
+      "status": "weakened",
+      "note": "Micron sells DRAM, NAND, and HBM as distinct products with limited bundling; some system-level memory solutions exist but don't create meaningful lock-in vs. Samsung or SK Hynix."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Proprietary DRAM cell designs (1-gamma node), HBM4 base-die CMOS architecture, advanced metallization processes, and yield-learning data from high-volume HBM production represent genuine IP. In-house logic die design (vs. competitors outsourcing) is a defensible advantage AI cannot easily replicate."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "CHIPS Act $6.4B in total grants for Idaho and New York fabs makes Micron a designated US national security asset. The US government has an explicit interest in Micron's success as the only US-based DRAM manufacturer — and export controls on Samsung/SK Hynix to China further entrench Micron's strategic position."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "N/A — no network effects exist in commodity memory; customers buy on price, availability, and quality specifications, not ecosystem lock-in."
+    },
+    "transactionEmbedding": {
+      "status": "weakened",
+      "note": "HBM qualification is specific per GPU generation — once NVIDIA and hyperscalers certify Micron's HBM4, there is meaningful switching cost within a product generation. The CY2026 HBM supply being fully contracted with named customers provides near-term revenue visibility. However, Samsung and SK Hynix remain qualified alternatives, limiting the depth of embedding."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — memory is a commodity input; Micron is not a system of record for any business function; customers source from all three suppliers simultaneously."
+    },
     "aiResilienceScore": 62,
     "verdict": "Micron is a net beneficiary of AI in the near term — the HBM4 supercycle is directly driven by AI infrastructure build-out, and talentScarcity and proprietaryData moats are strengthened by AI's demands on specialized chip design. However, the oligopoly structure and commodity memory exposure mean the AI tailwind is cyclical rather than structural: Micron does not own a software layer, a data flywheel, or a network effect that compounds independently of the hardware cycle. The moat is durable only as long as the HBM margin premium holds."
-  }
+  },
+  "lastAnalyzed": "March 2026"
 }

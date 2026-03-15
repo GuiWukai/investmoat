@@ -2,85 +2,226 @@
   "slug": "google",
   "ticker": "GOOGL",
   "name": "Alphabet Inc.",
+  "lastAnalyzed": "March 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "GOOGL" },
-    { "label": "Market Cap", "value": "$2.1T" },
-    { "label": "Price", "value": "$172.00" }
+    {
+      "label": "Ticker",
+      "value": "GOOGL"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$3.66T"
+    },
+    {
+      "label": "Price",
+      "value": "$305.00"
+    }
   ],
   "chips": [
-    { "label": "Search | Cloud | AI", "color": "primary" },
-    { "label": "Wide Moat", "color": "success" }
+    {
+      "label": "Search | Cloud | AI",
+      "color": "primary"
+    },
+    {
+      "label": "Wide Moat",
+      "color": "success"
+    }
   ],
-  "recommendation": "Accumulate",
+  "recommendation": "Strong Buy",
   "metrics": [
-    { "title": "Search Revenue", "value": "$49B", "label": "Q4 2024 (YoY +12%)", "icon": "Globe", "color": "#4285F4" },
-    { "title": "Google Cloud", "value": "$12B", "label": "Q4 2024 (YoY +30%)", "icon": "Cloud", "color": "#34A853" },
-    { "title": "Operating Margin", "value": "32%", "label": "Industry-leading efficiency", "icon": "BarChart3", "color": "#FBBC05" }
+    {
+      "title": "Search Revenue",
+      "value": "$63B",
+      "label": "Q4 2025 (YoY +17%)",
+      "icon": "Globe",
+      "color": "#4285F4"
+    },
+    {
+      "title": "Google Cloud",
+      "value": "$17.7B",
+      "label": "Q4 2025 (YoY +48%, margin 30%)",
+      "icon": "Cloud",
+      "color": "#34A853"
+    },
+    {
+      "title": "Cloud Backlog",
+      "value": "$240B",
+      "label": "2× YoY — multi-year revenue visibility",
+      "icon": "Lock",
+      "color": "#FBBC05"
+    }
   ],
   "moat": {
     "score": 88,
-    "description": "Search monopoly, Android OS, YouTube dominance, and Maps form an unassailable data flywheel.",
+    "description": "Search monopoly with AI Overviews monetizing at comparable CPCs, Google Cloud accelerating to $70B+ ARR with a $240B backlog, and Android/YouTube data flywheels form a durable multi-moat position. DOJ ruling (Sept 2025) banned exclusive default deals but preserved Android and Chrome — a near-best-case regulatory outcome.",
     "analysisTitle": "The Information Moat",
     "analysisSummary": "Google's moat rests on **Data Supremacy and Ecosystem Lock-In**:",
     "analysisPoints": [
-      { "title": "Search Monopoly", "text": "With ~90% global search market share, Google captures intent-based ad spend that no rival has been able to dislodge. AI Overviews extend this advantage into the AI era rather than displacing it." },
-      { "title": "The Android Ecosystem", "text": "Android runs on over 3 billion active devices, giving Google default access to mobile search, Maps, Gmail, and Play Store — an on-ramp for the entire Google ad stack that is nearly impossible for competitors to replicate." },
-      { "title": "YouTube & Video Ad Dominance", "text": "YouTube's 2.7B+ monthly active users and its creator monetization flywheel make it the world's second-largest search engine and the dominant platform for video advertising." }
+      {
+        "title": "Search Monopoly — Surviving the AI Transition",
+        "text": "With ~90% global search market share, Google captures intent-based ad spend that AI has thus far extended rather than eroded. AI Overviews now reach 1.5B+ monthly users and monetize at levels broadly comparable to traditional search. AI Mode (75M+ DAUs) drives queries 3× longer than traditional search, and AI Max for Search is the fastest-growing ad product in Google history. Search revenue accelerated from +10% (Q1 2025) to +17% (Q4 2025) — the opposite of the AI disruption narrative."
+      },
+      {
+        "title": "Google Cloud — Breakout Acceleration",
+        "text": "Google Cloud exited 2025 at a $70B+ annualised run rate, growing +48% YoY in Q4 2025 with a $240B contracted backlog (doubled YoY). Operating margin expanded from 17.5% to 30.1% in a single year. In Q4 2025, Google Cloud outperformed Microsoft Azure for the first time — a structural milestone. With over half of Alphabet's 2026 ML compute allocated to Cloud and billion-dollar deals exceeding the prior three years combined, the competitive trajectory points toward closing the gap with AWS."
+      },
+      {
+        "title": "YouTube & the Data Flywheel",
+        "text": "YouTube crossed $60B in annual revenue (ads + subscriptions) in 2025, with 325M+ paid subscribers across Google consumer services. The creator monetization flywheel — the world's second-largest search engine by query volume — generates behavioural data at a scale no competitor can replicate. Combined with Maps, Gmail, and Android's 3B+ active devices, Alphabet's data flywheel compounds with every user interaction, training superior ad targeting and AI models simultaneously."
+      }
     ]
   },
   "growth": {
-    "score": 82,
-    "description": "Google Cloud re-accelerating at 30%+, Search resilient, AI Overviews expanding monetizable query volume."
+    "score": 84,
+    "description": "Google Cloud re-accelerated to +48% YoY in Q4 2025 with a $240B backlog, Search accelerated to +17% as AI Overviews monetize well, and FY2025 total revenue hit $402.8B (+15%). Blended 3-5 year CAGR of 14-18% is driven by Cloud becoming a structural #2 behind AWS and AI products expanding monetizable query volume.",
+    "additionalNote": {
+      "title": "Key Growth Catalysts",
+      "points": [
+        "Google Cloud +48% YoY in Q4 2025, $240B backlog (2× YoY), $70B+ ARR run rate — outperformed Azure for the first time",
+        "AI Overviews at 1.5B+ monthly users monetizing at search-comparable CPCs; Search revenue accelerated every quarter in 2025 (+10% → +12% → +15% → +17%)",
+        "AI Max for Search is Google's fastest-growing ad product; advertisers used Gemini to create 70M+ creative assets in Q4 2025 alone",
+        "Gemini 2.5 Pro leads reasoning benchmarks (WebDev Arena ELO 1420); 750M Gemini app MAUs creating new consumer AI monetization surface",
+        "Waymo received $16B investment round (Feb 2026) — autonomous ride-hailing scaling in SF, LA, Phoenix, and Austin"
+      ]
+    },
+    "growthAnalysis": {
+      "cagrEstimate": "14-18%",
+      "scoreDerivation": "Base 80 (15-30% CAGR, blended ~14-18%) + 3 Cloud re-acceleration ($240B backlog, 48% Q4 growth, margin expansion to 30%) + 3 AI Overviews TAM expansion (Search CPC growth not erosion, AI Max fastest-growing product) − 2 FCF pressure ($175-185B CapEx in 2026 vs. $73B FCF in 2025) = 84",
+      "drivers": [
+        {
+          "name": "Google Cloud",
+          "metric": "+48% YoY Q4 2025, $70B+ ARR, $240B backlog",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Search & AI Overviews",
+          "metric": "+17% YoY Q4 2025, 1.5B MAUs, AI Mode 75M DAUs",
+          "trend": "accelerating"
+        },
+        {
+          "name": "YouTube",
+          "metric": "+9% YoY Q4 2025, $60B+ annual revenue, 325M+ paid subscribers",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If the DOJ appeal (filed Feb 2026) wins harsher remedies that force data-sharing with Bing/DuckDuckGo at scale by end of 2027, Google's search quality advantage erodes and CPC premium compresses — causing Search revenue growth to decelerate below 10% and re-rating the multiple toward 18-20× forward earnings",
+      "marginTrend": "stable"
+    }
   },
   "valuation": {
-    "score": 72,
-    "description": "Trading at ~20x forward P/E — cheapest of the Magnificent 7, with buybacks reducing share count ~5% annually.",
+    "score": 73,
+    "description": "At ~$305, GOOGL trades at ~24× NTM earnings — a modest premium to the S&P 500 (~21×) that is well-supported by 14-18% revenue CAGR, Cloud acceleration to $70B+ ARR, and AI Overviews monetization proving out. The stock has re-rated from $172 to $305 (+77%) on the back of Cloud's breakout. Current price sits 13% below our base case of $350 (analyst consensus $351) and 42% below our bull case, offering a reasonable risk/reward for a business with durable structural moats.",
     "valuationNote": {
-      "text": "At ~20x forward earnings with 15%+ EPS growth, Google offers the best risk/reward in mega-cap tech. Our fair value estimate is",
-      "fairValue": "$195"
+      "text": "With $73.3B in FY2025 FCF, a $240B Cloud backlog, and AI monetization in early innings, Alphabet's intrinsic value continues to compound. Near-term FCF will be pressured by $175-185B CapEx in 2026, but the investments are demand-constrained (Sundar Pichai: 'supply, not demand, is the limiting factor'). Our 12-24 month base case fair value is",
+      "fairValue": "$350"
+    },
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~28×",
+          "note": "TTM EPS $10.81"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~24×",
+          "note": "consensus NTM EPS ~$12.70"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.7×",
+          "note": "fwd P/E ÷ 14% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~8.3×",
+          "note": "~$440B NTM revenue est."
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~51×",
+          "note": "$73.3B FCF (FY2025)"
+        }
+      ],
+      "summary": "At ~24× forward NTM earnings, GOOGL trades at a modest premium to the S&P 500 (~21×) but below the mega-cap tech median (~26-28×), reflecting the market's lingering caution around DOJ risk and CapEx intensity — not fundamentals. The PEG of ~1.7× is in premium territory but justified by Cloud's breakout (48% YoY) and AI Overviews monetization proof. The P/FCF of ~51× will compress in 2026 as $175-185B CapEx weighs on near-term free cash flow, but this represents investment-cycle optionality rather than structural margin compression."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$130",
-      "description": "AI disrupts core search; regulatory break-up risk materializes.",
+      "priceTarget": "$215",
+      "description": "DOJ appeal wins harsher remedies eroding search distribution; AI disrupts CPCs faster than AI Max offsets; CapEx cycle proves premature.",
       "points": [
-        "AI chatbots erode Search query volume by 15%+",
-        "DOJ forces divestiture of Chrome or Android",
-        "YouTube ad market share lost to TikTok and streaming"
+        "DOJ appeal (Feb 2026) succeeds in mandating search data-sharing with rivals, eroding Google's quality advantage and compressing Search CPCs by 15%+ by end of 2027",
+        "AI Mode cannibalises traditional search ad slots faster than AI Max compensates, causing Search revenue growth to stall below 8% in 2026",
+        "$175-185B CapEx in 2026 produces returns below consensus expectations; Cloud growth decelerates to sub-25% as hyperscaler competition intensifies",
+        "Multiple compresses to 18-20× forward earnings as FCF yield deteriorates and the regulatory narrative dominates sentiment"
       ]
     },
     "base": {
-      "priceTarget": "$195",
-      "description": "Search stable, Cloud at 28%+ growth, AI Overviews monetize well.",
+      "priceTarget": "$350",
+      "description": "Cloud sustains 35%+ growth toward $100B ARR, Search holds 15%+ growth, AI Overviews and AI Max ramp monetization — multiple re-rates to 25-26× as FCF recovers in 2027.",
       "points": [
-        "Google Cloud exits 2025 at $60B+ ARR run rate",
-        "AI Overviews increase Search CPCs rather than cannibalize them",
-        "Waymo commercialization adds optionality upside"
+        "Google Cloud exits 2026 at $90B+ ARR, sustaining 35%+ growth with the $240B backlog providing contracted revenue visibility through 2028",
+        "Search revenue holds 13-15% growth in 2026 as AI Max for Search scales to millions of advertisers and AI Overviews expand to new query categories",
+        "DOJ appeal resolved without structural divestiture; Gemini app monetization (750M MAUs) adds a new consumer AI revenue layer by end of 2026",
+        "FCF recovers toward $90B+ in 2027 as CapEx cycle moderates; multiple re-rates from 24× to 26× as earnings power becomes clearer"
       ]
     },
     "bull": {
-      "priceTarget": "$250",
-      "description": "Gemini becomes the enterprise AI standard; Cloud accelerates to 35%+.",
+      "priceTarget": "$450",
+      "description": "Google Cloud becomes clear #2 behind AWS, AI Overviews expand total search monetization beyond consensus, and Waymo/Gemini create new large revenue streams.",
       "points": [
-        "Gemini Ultra wins Fortune 500 AI deployments vs. GPT-4",
-        "Google Cloud re-accelerates to 35%+ and narrows AWS gap",
-        "YouTube Shorts monetization reaches parity with TikTok"
+        "Google Cloud sustains 40%+ growth through 2027, exits at $130B+ ARR and narrows the gap with AWS to within 10 percentage points of revenue share",
+        "Gemini 3.x wins large enterprise AI deployments over GPT-4 and Claude; Vertex AI becomes the preferred foundation model platform for regulated industries",
+        "AI Mode and AI Max expand Google's monetizable query universe by 30%+, pushing Search revenue growth to 20%+ and re-rating the stock toward 30× forward earnings",
+        "Waymo reaches cash flow breakeven in 2027 on the back of the $16B investment and commercial expansion — adding meaningful autonomous vehicle optionality to the sum-of-parts valuation"
       ]
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "strong", "note": "Google.com, Maps, and Gmail are the most habitual interfaces on the internet. 90%+ of users never leave Google's search UI regardless of AI alternatives." },
-    "businessLogic": { "status": "weakened", "note": "AI agents could bypass traditional search for transactional queries, but Google's Gemini integration keeps them in the loop for most workflows." },
-    "publicDataAccess": { "status": "strong", "note": "Google's web crawl, real-time indexing, and Knowledge Graph represent decades of indexing that no newcomer can replicate at scale or recency." },
-    "talentScarcity": { "status": "strong", "note": "Google DeepMind is one of the world's foremost AI research organizations. Gemini, AlphaFold, and other breakthroughs reflect an extraordinary concentration of ML talent." },
-    "bundling": { "status": "strong", "note": "Google Workspace (Docs, Sheets, Meet, Drive) + Android + Chrome creates an ecosystem that serves both consumers and enterprises with deep cross-product integration." },
-    "proprietaryData": { "status": "strong", "note": "Google's data assets — Search intent, Maps traffic, YouTube watch history, Gmail metadata — form the world's largest behavioral dataset, powering superior ad targeting and AI training." },
-    "regulatoryLockIn": { "status": "weakened", "note": "Ongoing DOJ antitrust cases targeting default search agreements and ad tech market practices represent the most significant structural risk to the moat." },
-    "networkEffects": { "status": "strong", "note": "YouTube's creator-viewer flywheel, Google Maps' user-contributed data, and Android's developer ecosystem all compound with scale in ways competitors cannot match." },
-    "transactionEmbedding": { "status": "strong", "note": "Google Pay, Google Shopping, and hotel/flight search embed Google directly into the transaction layer of commerce, capturing high-intent consumer spend." },
-    "systemOfRecord": { "status": "intact", "note": "Google Workspace is the system of record for email, calendar, and documents for hundreds of millions of businesses, with migration costs comparable to Microsoft 365." },
+    "learnedInterfaces": {
+      "status": "strong",
+      "note": "Google.com, Maps, Gmail, and now AI Mode have become the most habitual digital interfaces in the world. AI Overviews (1.5B MAUs) and AI Mode (75M DAUs) deepen the interface rather than commoditise it — users interacting with AI Mode ask 3× longer queries, creating a more valuable engagement surface, not a weaker one."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "AI agents could increasingly bypass traditional Search for transactional queries by going directly to source APIs. Google's Gemini integration and AI Mode keep it in the orchestration loop for most workflows, but the long-term risk of agentic AI reducing browser-based search query volume is real and not fully priced into consensus estimates."
+    },
+    "publicDataAccess": {
+      "status": "strong",
+      "note": "Google's web crawl covers 130T+ URLs with real-time indexing, the Knowledge Graph links 500B+ facts, and Google Maps contributes unique geospatial data updated by 1B+ contributors. No AI scraping technology can replicate the recency, breadth, and structured linkage of this index — it remains the foundation of Google's search quality advantage."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "Google DeepMind is the world's leading applied AI research organisation. Gemini 2.5 Pro leads the WebDev Arena reasoning leaderboard (ELO 1420), AlphaFold revolutionised protein science, and Veo 3 is the benchmark for AI video generation. The concentration of ML talent at DeepMind is not replicable by simply paying higher salaries — it compounds through shared research infrastructure, data access, and institutional knowledge."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Google Workspace (3B+ users), Android (3B+ devices), Chrome (65%+ browser share), and YouTube (2.7B MAUs) create an ecosystem where each product reinforces the others. Gemini integration across Workspace, Android, and Chrome is extending bundling into the AI era — adding AI Pro/Ultra subscription tiers that monetise the existing ecosystem install base without requiring new customer acquisition."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Google's data assets — Search intent across 8.5B+ daily queries, Maps traffic patterns, YouTube watch history (1B+ hours/day), Gmail metadata, and Android sensor data — form the world's largest behavioural dataset. This data trains superior ad targeting models, AI Overviews relevance algorithms, and Gemini foundation models in ways that competitors training on public internet data alone cannot replicate."
+    },
+    "regulatoryLockIn": {
+      "status": "weakened",
+      "note": "The September 2025 DOJ remedies ruling banned all exclusive default search agreements — Google's primary distribution mechanism, worth ~$20B/year in payments to Apple and others. While the ruling rejected divestiture of Chrome and Android (a near-best-case outcome), losing the ability to pay for defaults structurally weakens Google's distribution moat over time. The DOJ and 35 states filed an appeal in February 2026 seeking harsher remedies; a parallel ad-tech case with divestiture risk for the advertising business remains in remedies phase."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "YouTube's creator-viewer flywheel (2.7B MAUs, 500+ hours of video uploaded per minute), Google Maps' user-contributed data (1B+ contributors), and Android's developer ecosystem all compound with scale. AI Overviews create a new data flywheel — each user interaction with AI Mode improves the model's query understanding, creating a self-reinforcing quality advantage that scales with usage."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Google Pay, Google Shopping, hotel/flight search, and increasingly AI-powered shopping agents embed Google in the transaction layer of consumer commerce. With AI Mode enabling multi-step purchase research workflows — and Google capturing merchant feed data from millions of retailers — the platform is extending from ad intermediary to end-to-end commerce infrastructure."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "Google Workspace is the system of record for email, calendar, documents, and video conferencing for hundreds of millions of businesses globally. While not as deeply embedded in regulated enterprise workflows as Microsoft 365, the switching costs are comparable — years of email history, calendar integrations, and Docs collaboration workflows create meaningful migration friction. AI-assisted Workspace features (Gemini in Gmail, Docs, Sheets) are incrementally deepening the lock-in."
+    },
     "aiResilienceScore": 88,
-    "verdict": "Alphabet's moat is surprisingly AI-resilient. Its data flywheel, Android distribution, and Gemini integration mean AI is more likely to extend than disrupt its competitive advantages — with regulatory risk being the primary long-term concern."
+    "verdict": "Alphabet is a net AI beneficiary — the Q4 2025 results prove it conclusively. Search revenue accelerated to +17% YoY as AI Overviews and AI Max expanded the monetizable query universe rather than shrinking it; Google Cloud +48% YoY outperformed Azure for the first time on AI infrastructure demand. The four strongest AI-resilient moats (proprietary data flywheel, network effects, transaction embedding, and public data access) are all actively strengthening as AI adoption scales. The primary structural risk is the DOJ-mandated loss of exclusive default search agreements, which will gradually erode distribution advantage over 2026-2027 — but at 90%+ search market share, the distribution moat has substantial buffer before competitive erosion becomes existential."
   }
 }

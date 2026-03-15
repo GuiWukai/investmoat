@@ -3,19 +3,52 @@
   "ticker": "AAPL",
   "name": "Apple Inc.",
   "headerStats": [
-    { "label": "Ticker", "value": "AAPL" },
-    { "label": "Market Cap", "value": "$3.4T" },
-    { "label": "Price", "value": "$228.00" }
+    {
+      "label": "Ticker",
+      "value": "AAPL"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$3.4T"
+    },
+    {
+      "label": "Price",
+      "value": "$228.00"
+    }
   ],
   "chips": [
-    { "label": "Consumer Tech | Services | AI", "color": "primary" },
-    { "label": "Gold Standard", "color": "success" }
+    {
+      "label": "Consumer Tech | Services | AI",
+      "color": "primary"
+    },
+    {
+      "label": "Gold Standard",
+      "color": "success"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
-    { "title": "Services Revenue", "value": "$108B", "label": "Annualized Run Rate", "icon": "Cloud", "color": "#555555" },
-    { "title": "Gross Margin", "value": "46.2%", "label": "Record High (FY2024)", "icon": "TrendingUp", "color": "#34c759" },
-    { "title": "Share Buybacks", "value": "$110B+", "label": "Annual Repurchases", "icon": "Database", "color": "#007aff" }
+    {
+      "title": "Services Revenue",
+      "value": "$108B",
+      "label": "Annualized Run Rate",
+      "icon": "Cloud",
+      "color": "#555555"
+    },
+    {
+      "title": "Gross Margin",
+      "value": "46.2%",
+      "label": "Record High (FY2024)",
+      "icon": "TrendingUp",
+      "color": "#34c759"
+    },
+    {
+      "title": "Share Buybacks",
+      "value": "$110B+",
+      "label": "Annual Repurchases",
+      "icon": "Database",
+      "color": "#007aff"
+    }
   ],
   "moat": {
     "score": 88,
@@ -23,10 +56,22 @@
     "analysisTitle": "The Ecosystem Flywheel",
     "analysisSummary": "Apple's moat is built on **Ecosystem Lock-In and Emotional Brand Loyalty**:",
     "analysisPoints": [
-      { "title": "Switching Cost Fortress", "text": "The combination of iMessage, iCloud photo libraries, AirDrop, AirPods pairing, Apple Watch, and Apple Pay creates a web of friction that makes leaving the Apple ecosystem genuinely painful for consumers — not just inconvenient." },
-      { "title": "App Store as Toll Road", "text": "With 2.2 billion active devices and the most valuable consumer demographic on mobile, the App Store extracts a 15-30% cut of a $100B+ annual app economy. No platform can replicate this captive distribution network for developers." },
-      { "title": "Services Flywheel", "text": "Each new hardware device adds a services subscriber. Each subscriber deepens ecosystem lock-in. Apple One bundles (Music, TV+, Arcade, iCloud, Fitness+, News+) increase switching costs while growing ARPU, creating a compounding services revenue engine now exceeding $100B annually." },
-      { "title": "Brand Premium and Pricing Power", "text": "Apple commands ASPs of $900+ for iPhone in a market where the median Android device sells below $300. This is not a hardware story alone — it is a brand that consumers aspire to, a moat that no amount of spec-sheet competition can erode." }
+      {
+        "title": "Switching Cost Fortress",
+        "text": "The combination of iMessage, iCloud photo libraries, AirDrop, AirPods pairing, Apple Watch, and Apple Pay creates a web of friction that makes leaving the Apple ecosystem genuinely painful for consumers — not just inconvenient."
+      },
+      {
+        "title": "App Store as Toll Road",
+        "text": "With 2.2 billion active devices and the most valuable consumer demographic on mobile, the App Store extracts a 15-30% cut of a $100B+ annual app economy. No platform can replicate this captive distribution network for developers."
+      },
+      {
+        "title": "Services Flywheel",
+        "text": "Each new hardware device adds a services subscriber. Each subscriber deepens ecosystem lock-in. Apple One bundles (Music, TV+, Arcade, iCloud, Fitness+, News+) increase switching costs while growing ARPU, creating a compounding services revenue engine now exceeding $100B annually."
+      },
+      {
+        "title": "Brand Premium and Pricing Power",
+        "text": "Apple commands ASPs of $900+ for iPhone in a market where the median Android device sells below $300. This is not a hardware story alone — it is a brand that consumers aspire to, a moat that no amount of spec-sheet competition can erode."
+      }
     ]
   },
   "growth": {
@@ -70,17 +115,48 @@
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "strong", "note": "iOS, Final Cut, Logic Pro, and the Apple HIG create deep muscle memory. Apple Intelligence further embeds users in system-level AI features exclusive to Apple hardware." },
-    "businessLogic": { "status": "intact", "note": "Apple Business Manager, MDM integrations, and enterprise deployment tools are deeply embedded in corporate IT workflows. Not Apple's primary moat, but more relevant than commonly appreciated." },
-    "publicDataAccess": { "status": "weakened", "note": "Apple is not a data company. Siri historically lagged on web intelligence, and Apple Intelligence is primarily on-device — limiting the data network effects that Google and Meta enjoy." },
-    "talentScarcity": { "status": "strong", "note": "Apple's silicon team (designing M-series and A-series chips) represents one of the most capable and difficult-to-replicate engineering teams in the world. The talent moat is real and growing." },
-    "bundling": { "status": "strong", "note": "Apple One (Music + TV+ + Arcade + iCloud + Fitness+ + News+) is a textbook bundling moat. Each bundle component individually is not best-in-class, but the integrated price and ecosystem convenience makes it compelling and sticky." },
-    "proprietaryData": { "status": "strong", "note": "On-device health data (HealthKit), financial data (Apple Pay), and location/behavior data are held privately as a brand differentiator. Apple's 'privacy as a feature' stance is itself a moat against data-hungry competitors." },
-    "regulatoryLockIn": { "status": "weakened", "note": "Historically a non-factor, but the EU DMA is forcing Apple to allow sideloading and third-party app stores on iOS — a meaningful crack in the App Store monopoly. This is the most significant regulatory threat to Apple's moat." },
-    "networkEffects": { "status": "strong", "note": "iMessage (blue bubble), AirDrop, AirPlay, Handoff, and the Find My network all strengthen with scale. The 2.2B active device installed base is a network that compounds every year." },
-    "transactionEmbedding": { "status": "strong", "note": "Apple Pay is embedded in hundreds of millions of daily commerce transactions. The App Store is the sole distribution channel for $1T+ in annual app commerce. Transaction embedding is deep and growing." },
-    "systemOfRecord": { "status": "strong", "note": "iCloud Photos is the photo library. Contacts, Notes, Reminders, and Calendar are the default PIM stack. Health app is the health record. For hundreds of millions of consumers, Apple is the system of record for their personal data." },
+    "learnedInterfaces": {
+      "status": "strong",
+      "note": "iOS, Final Cut, Logic Pro, and the Apple HIG create deep muscle memory. Apple Intelligence further embeds users in system-level AI features exclusive to Apple hardware."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Apple Business Manager, MDM integrations, and enterprise deployment tools are deeply embedded in corporate IT workflows. Not Apple's primary moat, but more relevant than commonly appreciated."
+    },
+    "publicDataAccess": {
+      "status": "weakened",
+      "note": "Apple is not a data company. Siri historically lagged on web intelligence, and Apple Intelligence is primarily on-device — limiting the data network effects that Google and Meta enjoy."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "Apple's silicon team (designing M-series and A-series chips) represents one of the most capable and difficult-to-replicate engineering teams in the world. The talent moat is real and growing."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Apple One (Music + TV+ + Arcade + iCloud + Fitness+ + News+) is a textbook bundling moat. Each bundle component individually is not best-in-class, but the integrated price and ecosystem convenience makes it compelling and sticky."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "On-device health data (HealthKit), financial data (Apple Pay), and location/behavior data are held privately as a brand differentiator. Apple's 'privacy as a feature' stance is itself a moat against data-hungry competitors."
+    },
+    "regulatoryLockIn": {
+      "status": "weakened",
+      "note": "Historically a non-factor, but the EU DMA is forcing Apple to allow sideloading and third-party app stores on iOS — a meaningful crack in the App Store monopoly. This is the most significant regulatory threat to Apple's moat."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "iMessage (blue bubble), AirDrop, AirPlay, Handoff, and the Find My network all strengthen with scale. The 2.2B active device installed base is a network that compounds every year."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Apple Pay is embedded in hundreds of millions of daily commerce transactions. The App Store is the sole distribution channel for $1T+ in annual app commerce. Transaction embedding is deep and growing."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "iCloud Photos is the photo library. Contacts, Notes, Reminders, and Calendar are the default PIM stack. Health app is the health record. For hundreds of millions of consumers, Apple is the system of record for their personal data."
+    },
     "aiResilienceScore": 83,
     "verdict": "Apple's consumer ecosystem moat is remarkably resilient to AI disruption — in fact, Apple Intelligence deepens the platform advantage. The primary risks are regulatory (DMA/App Store) and competitive (China smartphone market). The on-device AI privacy architecture is a genuine differentiator that leverages Apple's hardware-software integration advantage."
-  }
+  },
+  "lastAnalyzed": "October 2025"
 }

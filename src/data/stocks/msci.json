@@ -4,19 +4,52 @@
   "name": "MSCI Inc.",
   "titleColor": "#c0392b",
   "headerStats": [
-    { "label": "Ticker", "value": "MSCI" },
-    { "label": "Market Cap", "value": "$46B" },
-    { "label": "Price", "value": "$570" }
+    {
+      "label": "Ticker",
+      "value": "MSCI"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$46B"
+    },
+    {
+      "label": "Price",
+      "value": "$570"
+    }
   ],
   "chips": [
-    { "label": "Financial Data | Indexes | Analytics", "color": "success" },
-    { "label": "Accumulate", "color": "success" }
+    {
+      "label": "Financial Data | Indexes | Analytics",
+      "color": "success"
+    },
+    {
+      "label": "Accumulate",
+      "color": "success"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
-    { "title": "AUM Benchmarked", "value": "$15.5T", "label": "To MSCI Equity Indexes", "icon": "BarChart2", "color": "#c0392b" },
-    { "title": "Recurring Revenue", "value": "~95%", "label": "Subscription + AUM-Linked Fees", "icon": "RefreshCw", "color": "#922b21" },
-    { "title": "EBITDA Margin", "value": "~58%", "label": "Capital-Light Index Business", "icon": "TrendingUp", "color": "#76b041" }
+    {
+      "title": "AUM Benchmarked",
+      "value": "$15.5T",
+      "label": "To MSCI Equity Indexes",
+      "icon": "BarChart2",
+      "color": "#c0392b"
+    },
+    {
+      "title": "Recurring Revenue",
+      "value": "~95%",
+      "label": "Subscription + AUM-Linked Fees",
+      "icon": "RefreshCw",
+      "color": "#922b21"
+    },
+    {
+      "title": "EBITDA Margin",
+      "value": "~58%",
+      "label": "Capital-Light Index Business",
+      "icon": "TrendingUp",
+      "color": "#76b041"
+    }
   ],
   "moat": {
     "score": 91,
@@ -134,5 +167,6 @@
     },
     "aiResilienceScore": 92,
     "verdict": "MSCI's moat is almost entirely AI-immune. The index standard network effect, legal lock-in via fund prospectuses, and 50-year data history cannot be replicated by AI — and AI analytics capabilities built on top of MSCI data actually strengthen the bundle moat. This is one of the most durable franchises in financial services."
-  }
+  },
+  "lastAnalyzed": "October 2025"
 }

@@ -4,19 +4,52 @@
   "name": "Taiwan Semiconductor Manufacturing",
   "titleColor": "#0071c5",
   "headerStats": [
-    { "label": "Ticker", "value": "TSM" },
-    { "label": "Market Cap", "value": "~$1.81T" },
-    { "label": "Current Price", "value": "$348.70" }
+    {
+      "label": "Ticker",
+      "value": "TSM"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$1.81T"
+    },
+    {
+      "label": "Current Price",
+      "value": "$348.70"
+    }
   ],
   "chips": [
-    { "label": "Semiconductors | Leading-Edge Foundry", "color": "primary" },
-    { "label": "Irreplaceable Monopoly", "color": "success" }
+    {
+      "label": "Semiconductors | Leading-Edge Foundry",
+      "color": "primary"
+    },
+    {
+      "label": "Irreplaceable Monopoly",
+      "color": "success"
+    }
   ],
   "recommendation": "Strong Buy",
   "metrics": [
-    { "title": "Revenue", "value": "$122B", "label": "~36% YoY Growth (FY2025)", "icon": "TrendingUp", "color": "#0071c5" },
-    { "title": "Gross Margin", "value": "62.3%", "label": "Record Q4 2025, Expanding", "icon": "Zap", "color": "#3b82f6" },
-    { "title": "AI Chip Revenue", "value": "~18%", "label": "Of Wafer Revenue, 54–56% CAGR", "icon": "Cpu", "color": "#10b981" }
+    {
+      "title": "Revenue",
+      "value": "$122B",
+      "label": "~36% YoY Growth (FY2025)",
+      "icon": "TrendingUp",
+      "color": "#0071c5"
+    },
+    {
+      "title": "Gross Margin",
+      "value": "62.3%",
+      "label": "Record Q4 2025, Expanding",
+      "icon": "Zap",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "AI Chip Revenue",
+      "value": "~18%",
+      "label": "Of Wafer Revenue, 54–56% CAGR",
+      "icon": "Cpu",
+      "color": "#10b981"
+    }
   ],
   "moat": {
     "score": 89,
@@ -24,9 +57,18 @@
     "analysisTitle": "The Fabrication Monopoly",
     "analysisSummary": "TSMC's moat rests on three reinforcing pillars: **Process Secrecy, Customer Lock-In, and Scale Economics**:",
     "analysisPoints": [
-      { "title": "Process Technology Secrecy", "text": "TSMC's 3nm (N3E) and 2nm (N2, now in high-volume manufacturing) process nodes represent decades of proprietary yield-learning that no competitor has replicated. Intel Foundry and Samsung are 1–2 generations behind on leading-edge logic, and that gap is widening, not closing. A16 (backside power delivery) and N2P are scheduled for H2 2026, extending the lead further." },
-      { "title": "Customer Redesign Lock-In", "text": "Apple, NVIDIA, AMD, and Qualcomm design their chips specifically for TSMC's PDK (process design kit). Re-taping a chip for a different foundry costs $500M–$1B+ and 2–3 years of engineering time — making switching economically irrational for any customer at leading-edge nodes. AI ASIC customers (Google, Amazon, Microsoft, Meta) are now in the same locked-in position." },
-      { "title": "Yield-Learning Compounding", "text": "At leading-edge nodes, yield (the % of functional chips per wafer) is the decisive competitive variable. TSMC's decades of high-volume production have built an enormous yield-learning advantage that compounds with each new node — a gap competitors cannot close by simply spending more capital. Q4 2025 gross margins hit a record 62.3%, reflecting this pricing power." }
+      {
+        "title": "Process Technology Secrecy",
+        "text": "TSMC's 3nm (N3E) and 2nm (N2, now in high-volume manufacturing) process nodes represent decades of proprietary yield-learning that no competitor has replicated. Intel Foundry and Samsung are 1–2 generations behind on leading-edge logic, and that gap is widening, not closing. A16 (backside power delivery) and N2P are scheduled for H2 2026, extending the lead further."
+      },
+      {
+        "title": "Customer Redesign Lock-In",
+        "text": "Apple, NVIDIA, AMD, and Qualcomm design their chips specifically for TSMC's PDK (process design kit). Re-taping a chip for a different foundry costs $500M–$1B+ and 2–3 years of engineering time — making switching economically irrational for any customer at leading-edge nodes. AI ASIC customers (Google, Amazon, Microsoft, Meta) are now in the same locked-in position."
+      },
+      {
+        "title": "Yield-Learning Compounding",
+        "text": "At leading-edge nodes, yield (the % of functional chips per wafer) is the decisive competitive variable. TSMC's decades of high-volume production have built an enormous yield-learning advantage that compounds with each new node — a gap competitors cannot close by simply spending more capital. Q4 2025 gross margins hit a record 62.3%, reflecting this pricing power."
+      }
     ]
   },
   "growth": {
@@ -45,9 +87,21 @@
       "cagrEstimate": "25–30%",
       "scoreDerivation": "Base 80 (25–30% CAGR) + 5 TAM expansion (AI accelerator at 54–56% CAGR, sovereign AI buildout) + 3 customer visibility (multi-year AI backlog, CoWoS demand 3yr+) − 3 N2/overseas fab dilution (2–4% GM headwind from ramp) = 85",
       "drivers": [
-        { "name": "AI Accelerators / CoWoS", "metric": "~17–19% of wafer revenue FY2025; CoWoS +69% capacity expansion 2026", "trend": "accelerating" },
-        { "name": "N3/N2 Advanced Logic", "metric": "3nm = 28% of Q4 wafer revenue (+5pp QoQ); N2 in HVM since Q4 2025", "trend": "accelerating" },
-        { "name": "Overseas Fabs (AZ/Japan)", "metric": "Arizona Fab 1 in HVM; $165B total US commitment; Japan Fab 1 operational", "trend": "stable" }
+        {
+          "name": "AI Accelerators / CoWoS",
+          "metric": "~17–19% of wafer revenue FY2025; CoWoS +69% capacity expansion 2026",
+          "trend": "accelerating"
+        },
+        {
+          "name": "N3/N2 Advanced Logic",
+          "metric": "3nm = 28% of Q4 wafer revenue (+5pp QoQ); N2 in HVM since Q4 2025",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Overseas Fabs (AZ/Japan)",
+          "metric": "Arizona Fab 1 in HVM; $165B total US commitment; Japan Fab 1 operational",
+          "trend": "stable"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If US tariff enforcement (50% domestic sourcing mandate) forces major AI customers to commit >30% of leading-edge wafers to Intel 18A or Samsung SF2 by end of 2027, TSMC loses AI ASIC anchor business before N2/A16 margins are fully monetised",
@@ -64,11 +118,31 @@
     "peAnalysis": {
       "asOf": "March 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~33.5×", "note": "$10.42 FY2025 EPS (ADS)" },
-        { "label": "Forward P/E (NTM)", "value": "~27×", "note": "consensus EPS est. ~$12.61" },
-        { "label": "PEG Ratio", "value": "~1.1×", "note": "fwd P/E ÷ 25% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~12×", "note": "~$152B NTM revenue est." },
-        { "label": "Price / FCF", "value": "~57×", "note": "$32B FCF (FY2025)" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~33.5×",
+          "note": "$10.42 FY2025 EPS (ADS)"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~27×",
+          "note": "consensus EPS est. ~$12.61"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.1×",
+          "note": "fwd P/E ÷ 25% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~12×",
+          "note": "~$152B NTM revenue est."
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~57×",
+          "note": "$32B FCF (FY2025)"
+        }
       ],
       "summary": "At ~27× forward P/E, TSMC trades at a premium to the semiconductor sector median (~20×) but at a discount to its own growth trajectory. A PEG of ~1.1× — near the 1.0 GARP threshold — signals the stock is fairly to modestly priced for a business guiding 25% revenue CAGR through 2029. The gap between trailing (~33.5×) and forward (~27×) P/E reflects a healthy earnings ramp as N2 scales and AI accelerator mix increases."
     }
@@ -106,17 +180,48 @@
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "destroyed", "note": "Not applicable — TSMC is a B2B manufacturer with no consumer-facing interface dependency." },
-    "businessLogic": { "status": "destroyed", "note": "Not applicable — TSMC's moat is in physical process technology, not embedded software logic." },
-    "publicDataAccess": { "status": "destroyed", "note": "Not applicable — TSMC does not derive competitive advantage from public data access." },
-    "talentScarcity": { "status": "strong", "note": "TSMC employs over 70,000 engineers; leading-edge process engineers (N2/A16 yield engineers, EUV specialists) are among the scarcest technical talent on earth — AI cannot replace the physical intuition developed over decades at the fab floor. Demand for this talent intensifies with N2 and A16 ramps in 2025–2026." },
-    "bundling": { "status": "intact", "note": "TSMC bundles leading-edge logic nodes with advanced packaging (CoWoS-S/L/X, SoIC, InFO) and design services (DRC), creating a one-stop advanced semiconductor manufacturing platform no competitor can match end-to-end. CoWoS has become effectively mandatory for AI accelerator chiplet integration." },
-    "proprietaryData": { "status": "strong", "note": "Decades of proprietary process recipes, yield-learning data from billions of wafers, and customer chip geometry data are trade secrets protected by the most stringent IP regimes in the industry. N2 yield data from Hsinchu and Kaohsiung represents a new compounding layer that competitors cannot access." },
-    "regulatoryLockIn": { "status": "strong", "note": "CHIPS Act ($8.9B direct funding, $165B total US investment commitment), Japanese METI subsidies, and EU Chips Act all directly fund TSMC facilities. The Trump administration's preference for TSMC's Arizona expansion over domestic alternatives creates a regulatory moat no competitor can manufacture around — TSMC is a declared US national security priority." },
-    "networkEffects": { "status": "intact", "note": "Upgraded from weakened: The AI boom has structurally deepened the design ecosystem around TSMC processes. Every major AI hyperscaler (Google TPU v5, Amazon Trainium3, Microsoft Maia2, Meta MTIA2) designs exclusively on TSMC N3/N2. The CoWoS ecosystem (TSMC packaging + SK Hynix/Micron HBM + NVIDIA/AMD logic) creates a 3-way supplier dependency. The entire AI chip startup ecosystem (Tenstorrent, Cerebras, Groq, d-Matrix) uses TSMC PDKs exclusively — this is structural moat deepening driven by AI concentration, not just market share." },
-    "transactionEmbedding": { "status": "strong", "note": "Customers' entire chip design and validation workflows are embedded in TSMC's PDK. Re-taping a leading-edge chip for a competing foundry requires 2–3 years and $500M+ — making every tape-out a multi-year lock-in. AI ASIC customers have even longer design cycles (3+ years), deepening the embedding further." },
-    "systemOfRecord": { "status": "intact", "note": "TSMC is the de facto foundry of record for every leading-edge chip. Apple, NVIDIA, AMD, Qualcomm, MediaTek, and all major AI ASIC designers depend on TSMC for their most advanced products — no alternative system exists at scale. Intel 18A and Samsung SF2 remain 1–2 generations behind TSMC on yield at leading-edge nodes." },
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "Not applicable — TSMC is a B2B manufacturer with no consumer-facing interface dependency."
+    },
+    "businessLogic": {
+      "status": "destroyed",
+      "note": "Not applicable — TSMC's moat is in physical process technology, not embedded software logic."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Not applicable — TSMC does not derive competitive advantage from public data access."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "TSMC employs over 70,000 engineers; leading-edge process engineers (N2/A16 yield engineers, EUV specialists) are among the scarcest technical talent on earth — AI cannot replace the physical intuition developed over decades at the fab floor. Demand for this talent intensifies with N2 and A16 ramps in 2025–2026."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "TSMC bundles leading-edge logic nodes with advanced packaging (CoWoS-S/L/X, SoIC, InFO) and design services (DRC), creating a one-stop advanced semiconductor manufacturing platform no competitor can match end-to-end. CoWoS has become effectively mandatory for AI accelerator chiplet integration."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Decades of proprietary process recipes, yield-learning data from billions of wafers, and customer chip geometry data are trade secrets protected by the most stringent IP regimes in the industry. N2 yield data from Hsinchu and Kaohsiung represents a new compounding layer that competitors cannot access."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "CHIPS Act ($8.9B direct funding, $165B total US investment commitment), Japanese METI subsidies, and EU Chips Act all directly fund TSMC facilities. The Trump administration's preference for TSMC's Arizona expansion over domestic alternatives creates a regulatory moat no competitor can manufacture around — TSMC is a declared US national security priority."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "Upgraded from weakened: The AI boom has structurally deepened the design ecosystem around TSMC processes. Every major AI hyperscaler (Google TPU v5, Amazon Trainium3, Microsoft Maia2, Meta MTIA2) designs exclusively on TSMC N3/N2. The CoWoS ecosystem (TSMC packaging + SK Hynix/Micron HBM + NVIDIA/AMD logic) creates a 3-way supplier dependency. The entire AI chip startup ecosystem (Tenstorrent, Cerebras, Groq, d-Matrix) uses TSMC PDKs exclusively — this is structural moat deepening driven by AI concentration, not just market share."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Customers' entire chip design and validation workflows are embedded in TSMC's PDK. Re-taping a leading-edge chip for a competing foundry requires 2–3 years and $500M+ — making every tape-out a multi-year lock-in. AI ASIC customers have even longer design cycles (3+ years), deepening the embedding further."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "TSMC is the de facto foundry of record for every leading-edge chip. Apple, NVIDIA, AMD, Qualcomm, MediaTek, and all major AI ASIC designers depend on TSMC for their most advanced products — no alternative system exists at scale. Intel 18A and Samsung SF2 remain 1–2 generations behind TSMC on yield at leading-edge nodes."
+    },
     "aiResilienceScore": 89,
     "verdict": "TSMC is a direct and primary beneficiary of the AI era — every frontier AI model requires more TSMC-made chips, and the AI boom has structurally deepened the design ecosystem network effects. The AI-resilient moats (proprietary process data, regulatory lock-in from CHIPS Act and allied government partnerships, customer PDK embedding) are all intact or strengthening. The primary risk is geopolitical, not competitive: Taiwan cross-strait tensions and US tariff policy are the only plausible paths to moat disruption, and TSMC's $165B US investment commitment is actively reducing that structural risk."
-  }
+  },
+  "lastAnalyzed": "March 2026"
 }

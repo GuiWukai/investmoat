@@ -3,19 +3,52 @@
   "ticker": "CRM",
   "name": "Salesforce Inc.",
   "headerStats": [
-    { "label": "Ticker", "value": "CRM" },
-    { "label": "Market Cap", "value": "$292B" },
-    { "label": "Price", "value": "$194.79" }
+    {
+      "label": "Ticker",
+      "value": "CRM"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$292B"
+    },
+    {
+      "label": "Price",
+      "value": "$194.79"
+    }
   ],
   "chips": [
-    { "label": "SaaS | CRM", "color": "primary" },
-    { "label": "Market Leader", "color": "success" }
+    {
+      "label": "SaaS | CRM",
+      "color": "primary"
+    },
+    {
+      "label": "Market Leader",
+      "color": "success"
+    }
   ],
   "recommendation": "Strong Buy",
   "metrics": [
-    { "title": "Revenue Growth", "value": "11.2%", "label": "Sustained Enterprise Demand", "icon": "Cloud", "color": "#00a1e0" },
-    { "title": "Op. Margin", "value": "32.5%", "label": "Non-GAAP Basis", "icon": "BarChart3", "color": "#3b82f6" },
-    { "title": "Customer Count", "value": "150k+", "label": "Global Enterprises", "icon": "Users", "color": "#17c964" }
+    {
+      "title": "Revenue Growth",
+      "value": "11.2%",
+      "label": "Sustained Enterprise Demand",
+      "icon": "Cloud",
+      "color": "#00a1e0"
+    },
+    {
+      "title": "Op. Margin",
+      "value": "32.5%",
+      "label": "Non-GAAP Basis",
+      "icon": "BarChart3",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "Customer Count",
+      "value": "150k+",
+      "label": "Global Enterprises",
+      "icon": "Users",
+      "color": "#17c964"
+    }
   ],
   "moat": {
     "score": 78,
@@ -23,9 +56,18 @@
     "analysisTitle": "The Data Gravity Moat",
     "analysisSummary": "Salesforce's moat is built on **Ecosystem Stickiness**:",
     "analysisPoints": [
-      { "title": "High Switching Costs", "text": "Once an enterprise integrates its entire sales workflow and data into CRM, the cost and risk of migrating to a competitor like Oracle or SAP are prohibitive." },
-      { "title": "Platform Breadth", "text": "With Sales, Service, Marketing, and Slack, Salesforce offers a unified platform that individual point-solutions cannot match." },
-      { "title": "Data Cloud", "text": "The ability to harmonize disparate data streams into a single customer profile creates a new layer of value for AI modeling." }
+      {
+        "title": "High Switching Costs",
+        "text": "Once an enterprise integrates its entire sales workflow and data into CRM, the cost and risk of migrating to a competitor like Oracle or SAP are prohibitive."
+      },
+      {
+        "title": "Platform Breadth",
+        "text": "With Sales, Service, Marketing, and Slack, Salesforce offers a unified platform that individual point-solutions cannot match."
+      },
+      {
+        "title": "Data Cloud",
+        "text": "The ability to harmonize disparate data streams into a single customer profile creates a new layer of value for AI modeling."
+      }
     ]
   },
   "growth": {
@@ -66,17 +108,48 @@
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "weakened", "note": "Traditional CRM dashboards are being replaced by AI-native conversational interfaces and agent-driven workflows." },
-    "businessLogic": { "status": "weakened", "note": "AI agents can now perform many tasks previously requiring complex Salesforce configuration and customization." },
-    "publicDataAccess": { "status": "destroyed", "note": "N/A — public-facing API data access is not a meaningful moat for Salesforce; its advantage is proprietary customer CRM data, not access to public datasets." },
-    "talentScarcity": { "status": "weakened", "note": "Salesforce admins and developers remain in-demand, but AI reduces implementation complexity and talent barriers." },
-    "bundling": { "status": "strong", "note": "Sales Cloud + Service Cloud + Marketing Cloud + Slack + Einstein AI + Agentforce = the most complete enterprise CRM bundle." },
-    "proprietaryData": { "status": "strong", "note": "150k+ enterprise customers' CRM data harmonized in Salesforce Data Cloud — the definitive record of global B2B relationships." },
-    "regulatoryLockIn": { "status": "strong", "note": "Government Cloud (FedRAMP High), HIPAA, GDPR, and industry-specific compliance create deep enterprise switching costs." },
-    "networkEffects": { "status": "strong", "note": "AppExchange marketplace of 7,000+ ISV integrations creates a platform network effect that compounds with each new partner." },
-    "transactionEmbedding": { "status": "strong", "note": "Sales pipeline, service cases, marketing campaigns, and partner portals are embedded in daily business operations globally." },
-    "systemOfRecord": { "status": "strong", "note": "The de facto system of record for customer relationships, service history, and revenue pipeline in enterprise." },
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "Traditional CRM dashboards are being replaced by AI-native conversational interfaces and agent-driven workflows."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "AI agents can now perform many tasks previously requiring complex Salesforce configuration and customization."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — public-facing API data access is not a meaningful moat for Salesforce; its advantage is proprietary customer CRM data, not access to public datasets."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Salesforce admins and developers remain in-demand, but AI reduces implementation complexity and talent barriers."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Sales Cloud + Service Cloud + Marketing Cloud + Slack + Einstein AI + Agentforce = the most complete enterprise CRM bundle."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "150k+ enterprise customers' CRM data harmonized in Salesforce Data Cloud — the definitive record of global B2B relationships."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "Government Cloud (FedRAMP High), HIPAA, GDPR, and industry-specific compliance create deep enterprise switching costs."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "AppExchange marketplace of 7,000+ ISV integrations creates a platform network effect that compounds with each new partner."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Sales pipeline, service cases, marketing campaigns, and partner portals are embedded in daily business operations globally."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "The de facto system of record for customer relationships, service history, and revenue pipeline in enterprise."
+    },
     "aiResilienceScore": 78,
     "verdict": "Salesforce's transition to an AI-first platform (Agentforce) could deepen their data lock-in and system-of-record status, turning AI from a threat into the engine that reinforces their enterprise moat."
-  }
+  },
+  "lastAnalyzed": "November 2025"
 }

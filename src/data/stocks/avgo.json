@@ -3,84 +3,175 @@
   "ticker": "AVGO",
   "name": "Broadcom Inc.",
   "headerStats": [
-    { "label": "Ticker", "value": "AVGO" },
-    { "label": "Market Cap", "value": "$870B" },
-    { "label": "Price", "value": "$185.00" }
+    {
+      "label": "Ticker",
+      "value": "AVGO"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$1.53T"
+    },
+    {
+      "label": "Price",
+      "value": "$322.00"
+    }
   ],
   "chips": [
-    { "label": "Semiconductors | Enterprise Software | AI", "color": "primary" },
-    { "label": "Compounding Machine", "color": "success" }
+    {
+      "label": "Semiconductors | Enterprise Software | AI",
+      "color": "primary"
+    },
+    {
+      "label": "Compounding Machine",
+      "color": "success"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
-    { "title": "AI Revenue", "value": "$12.2B", "label": "FY2024 Custom XPU + Networking", "icon": "Cpu", "color": "#ff6b35" },
-    { "title": "VMware ARR", "value": "$6.5B+", "label": "Annualized Recurring Revenue", "icon": "Database", "color": "#607d8b" },
-    { "title": "Operating Margin", "value": "61%", "label": "Adj. EBITDA Margin FY2024", "icon": "TrendingUp", "color": "#cc0000" }
+    {
+      "title": "AI Revenue",
+      "value": "$8.4B",
+      "label": "Q1 FY2026 (Qtrly), +106% YoY",
+      "icon": "Cpu",
+      "color": "#ff6b35"
+    },
+    {
+      "title": "Infra Software ARR Growth",
+      "value": "+19% YoY",
+      "label": "Q1 FY2026; $6.8B Qtrly Revenue",
+      "icon": "Database",
+      "color": "#607d8b"
+    },
+    {
+      "title": "Adj. EBITDA Margin",
+      "value": "68%",
+      "label": "Q1 FY2026 Record $13.1B EBITDA",
+      "icon": "TrendingUp",
+      "color": "#cc0000"
+    }
   ],
   "moat": {
-    "score": 82,
-    "description": "Dual-moat machine — irreplaceable custom silicon for AI hyperscalers and VMware's stranglehold on enterprise virtualization infrastructure.",
+    "score": 85,
+    "description": "Dual-moat machine — irreplaceable custom silicon for AI hyperscalers and VMware's stranglehold on enterprise virtualization infrastructure. XPU customer count expanded to six with OpenAI confirmed in Q1 FY2026.",
     "analysisTitle": "The Dual-Moat Architecture",
     "analysisSummary": "Broadcom's moat is built on **Proprietary Silicon and Enterprise Infrastructure Lock-In**:",
     "analysisPoints": [
-      { "title": "Custom AI Accelerator Dominance", "text": "Broadcom designs custom AI XPUs (TPUs) for Google, Meta, and ByteDance — hyperscalers that cannot afford to rely solely on NVIDIA. With years of co-development history and deep integration into each customer's ML frameworks, these engagements are nearly impossible to displace, even at the chip level." },
-      { "title": "Ethernet Networking Monopoly for AI", "text": "Broadcom's Tomahawk and Jericho switch chip families dominate the hyperscale data center networking market. As AI clusters require ever-faster intra-cluster networking at lower cost than InfiniBand, Broadcom's Ultra Ethernet ecosystem is positioned to capture the AI networking buildout." },
-      { "title": "VMware: The Enterprise Infrastructure Tax", "text": "VMware's vSphere and vCenter run the virtualization layer for ~70% of the Fortune 500. Following Broadcom's $69B acquisition, aggressive subscription migration and product bundling via VMware Cloud Foundation (VCF) create one of the highest-switching-cost software moats in enterprise IT. Migrating off VMware requires re-architecting every workload." },
-      { "title": "Hock Tan's Capital Allocation Engine", "text": "CEO Hock Tan has executed the most disciplined semiconductor M&A strategy of the past decade — acquiring CA Technologies, Symantec enterprise security, and VMware, then aggressively cutting costs, raising prices, and migrating customers to subscription contracts. The track record of value creation from acquisition is itself a moat." }
+      {
+        "title": "Custom AI Accelerator Dominance",
+        "text": "Broadcom now designs custom AI XPUs for six confirmed hyperscaler customers: Google, Meta, Anthropic, OpenAI, ByteDance (rumored), and Apple (rumored). Anthropic alone has committed $21B in orders (a $10B order plus an $11B follow-on for late 2026). OpenAI is co-developing a custom AI inference engine targeting 1+ gigawatt deployment in 2027. Broadcom has guided to $100B+ in AI chip revenue in FY2027, up from $20B in FY2025."
+      },
+      {
+        "title": "Ethernet Networking Monopoly for AI",
+        "text": "Broadcom's Tomahawk and Jericho switch chip families dominate the hyperscale data center networking market. As AI clusters require ever-faster intra-cluster networking at lower cost than InfiniBand, Broadcom's Ultra Ethernet ecosystem is positioned to capture the AI networking buildout. Broadcom is now selling fully assembled 'Ironwood Racks' (Google's 7th-gen TPU) directly to AI firms including Anthropic."
+      },
+      {
+        "title": "VMware: The Enterprise Infrastructure Tax",
+        "text": "VMware's vSphere and vCenter run the virtualization layer for ~70% of the Fortune 500. VMware Cloud Foundation (VCF) is described by management as the 'permanent abstraction layer' between AI software and physical silicon that 'cannot be disintermediated or replaced.' Q1 FY2026 VMware bookings exceeded $9.2B with 19% ARR growth YoY and software gross margins of 93%."
+      },
+      {
+        "title": "Hock Tan's Capital Allocation Engine",
+        "text": "CEO Hock Tan has executed the most disciplined semiconductor M&A strategy of the past decade — acquiring CA Technologies, Symantec enterprise security, and VMware, then aggressively cutting costs, raising prices, and migrating customers to subscription contracts. In Q1 FY2026, Broadcom returned $10.9B to shareholders ($3.1B dividends + $7.8B buybacks). The board authorized a new $10B buyback through 2026."
+      }
     ]
   },
   "growth": {
-    "score": 88,
-    "description": "AI XPU revenue projected to reach $60-90B TAM by 2027 for Broadcom's three hyperscaler customers alone. VMware subscription migration adds durable software ARR on top of cyclical semiconductor revenue."
+    "score": 92,
+    "description": "AI XPU revenue grew 106% YoY to $8.4B in Q1 FY2026, with Q2 guided to $10.7B (+140% YoY). Six confirmed XPU customers with 9+ gigawatts of committed compute. Management has explicit 'line of sight' to $100B+ in AI chip revenue in FY2027, up from $20B in FY2025. VMware infrastructure software ARR growing 19% YoY with 93% gross margins. Total backlog exceeds $73B for 18-month delivery.",
+    "additionalNote": {
+      "title": "Key Growth Catalysts",
+      "points": [
+        "XPU customer count at six (Google, Meta, Anthropic, OpenAI confirmed; Apple and ByteDance rumored) each deploying at gigawatt scale in 2027",
+        "Anthropic's $21B committed XPU orders — $10B already placed, $11B additional for late 2026",
+        "OpenAI custom inference engine co-development targeting 1+ GW capacity in 2027",
+        "VMware Cloud Foundation (VCF) becoming the dominant private cloud AI platform as generative AI workloads require VCF-level orchestration",
+        "Ironwood Rack solutions (integrated Google TPU racks) representing a new rack-scale revenue stream",
+        "Infrastructure secured through 2028 via multi-year supply agreements supporting sharply rising AI demand"
+      ]
+    }
   },
   "valuation": {
-    "score": 65,
-    "description": "Valuation reflects a premium for AI XPU optionality and VMware integration. Trading between base ($210) and bear ($120) — AI execution risk warrants some caution at current multiples."
+    "score": 62,
+    "description": "At ~$322, Broadcom trades at approximately 26x forward earnings (StockAnalysis NTM consensus post Q1 FY2026 report) with a trailing P/E of ~67x on GAAP earnings (TTM EPS ~$4.91). The stock has pulled back materially from its highs even as AI revenue doubles YoY. EV/EBITDA of ~45x reflects the hyper-growth AI business. PEG ratio of 0.64 suggests the stock is undervalued relative to its growth rate. The shift toward rack-scale solutions may create minor margin compression.",
+    "valuationNote": {
+      "text": "Broadcom's $73B AI order backlog for 18-month delivery and 'line of sight to $100B+ AI chip revenue in FY2027' provide extraordinary forward visibility. Q2 FY2026 guidance of $22B revenue (+47% YoY) and $10.7B AI revenue (+140% YoY) implies continued acceleration. FY2025 FCF was $26.9B; the stock trades at ~57x trailing FCF but that multiple compresses rapidly on FY2027 estimates.",
+      "fairValue": "$380"
+    }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$120",
-      "description": "VMware customer attrition exceeds expectations from aggressive pricing; AI XPU customers reduce custom silicon spend in favor of NVIDIA or in-house designs; semiconductor cycle turns.",
+      "priceTarget": "$160",
+      "description": "VMware customer attrition exceeds expectations from aggressive pricing; AI XPU customers reduce custom silicon spend or bring design in-house; rack-scale margin compression is worse than guided.",
       "points": [
         "VMware customer churn reaches 20%+ as enterprises migrate to KVM/Nutanix/OpenStack alternatives rather than accept Broadcom's pricing",
-        "Google, Meta, or ByteDance reduces custom XPU orders or brings silicon design fully in-house, collapsing AI revenue growth",
+        "Google, Meta, or Anthropic reduces custom XPU orders or brings silicon design fully in-house, collapsing the path to $100B AI revenue",
         "Semiconductor industry downcycle hits networking and broadband segments, exposing revenue concentration risk",
-        "Debt burden from VMware acquisition ($38B raised) constrains capital allocation as interest rates stay elevated"
+        "Rack-scale 'Ironwood' solution margin structure is significantly below chip-only margins, degrading EBITDA below the 68% target"
       ]
     },
     "base": {
-      "priceTarget": "$210",
-      "description": "VMware ARR grows to $10B+ with manageable churn; AI XPU revenue doubles to $25B+ by FY2026 as hyperscalers expand custom silicon fleets.",
+      "priceTarget": "$380",
+      "description": "AI chip revenue reaches $40-50B in FY2026 and $80-100B in FY2027; VMware ARR continues 19% growth; EBITDA margins hold at 68%+.",
       "points": [
-        "VMware Cloud Foundation (VCF) adoption grows among remaining enterprise base, pushing ARR to $10B by FY2026 with 70%+ gross margins",
-        "AI semiconductor revenue (XPUs + Ethernet switching) reaches $25-30B annually as hyperscaler AI capex remains elevated",
-        "Broadcom sustains 50%+ free cash flow margins, funding a growing dividend (current yield ~1.5%) and selective buybacks",
+        "VMware Cloud Foundation (VCF) adoption grows across remaining enterprise base, sustaining 19%+ ARR growth and 93% software gross margins",
+        "AI semiconductor revenue reaches $40-50B+ in FY2026 and $80-100B in FY2027 as six XPU customers scale to gigawatt deployments",
+        "Broadcom sustains 68%+ adjusted EBITDA margins while returning $10B+ per quarter to shareholders",
         "Networking segment benefits from Ultra Ethernet Consortium standardization, cementing Tomahawk as the AI cluster switch of choice"
       ]
     },
     "bull": {
-      "priceTarget": "$320",
-      "description": "Broadcom captures a third or more of hyperscaler AI accelerator spend as custom XPUs prove more efficient than NVIDIA GPUs for inference; VMware becomes the de facto private cloud platform.",
+      "priceTarget": "$550",
+      "description": "Broadcom captures a third or more of hyperscaler AI accelerator spend as custom XPUs prove more efficient than NVIDIA GPUs; AI revenue exceeds $100B in FY2027 as guided; VMware becomes the de facto private cloud AI platform.",
       "points": [
-        "Addressable AI XPU market expands to $90B+ by 2027 with Broadcom serving Google, Meta, ByteDance, and potentially 2-3 new hyperscaler customers",
-        "VMware Cloud Foundation becomes the dominant enterprise private cloud platform, with ARR scaling to $15B+ at 75%+ margins",
-        "Broadcom's custom silicon expertise attracts sovereign AI program partnerships (US DoD, EU AI Act compliance cloud)",
-        "Dividend doubles within 4 years as free cash flow exceeds $30B annually, re-rating the stock as an income-growth compounder"
+        "AI XPU market expands beyond the 6 known customers; sovereign AI programs (US DoD, EU) become significant incremental customers",
+        "VMware Cloud Foundation becomes the dominant enterprise private cloud platform for AI workloads, with ARR scaling to $15B+ at 75%+ margins",
+        "Broadcom's custom silicon expertise and rack-scale integration capability prove impossible for NVIDIA or AMD to match on cost/performance for inference",
+        "Dividend doubles within 3 years as free cash flow exceeds $40B annually"
       ]
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "intact", "note": "VMware vCenter and vSphere have been the interface for enterprise virtualization for 20 years. Infrastructure teams are deeply trained on VMware workflows — retraining is a genuine organizational cost." },
-    "businessLogic": { "status": "strong", "note": "VMware literally runs the compute layer for most enterprise business logic. Custom ASIC designs embed Broadcom silicon into the physical business logic of hyperscaler AI training pipelines. Both are deeply embedded." },
-    "publicDataAccess": { "status": "weakened", "note": "Not a data company. No relevant public data moat — Broadcom's value is in silicon IP and software, not data network effects." },
-    "talentScarcity": { "status": "strong", "note": "Custom ASIC design at hyperscale requires extremely rare talent. The team that designed Google's TPU, for instance, represents years of accumulated knowledge. Broadcom's silicon design expertise is genuinely scarce and takes a decade to replicate." },
-    "bundling": { "status": "strong", "note": "VMware Cloud Foundation bundles compute (vSphere), networking (NSX), storage (vSAN), and management (Aria) into a single platform. Broadcom is aggressively pushing VCF adoption, increasing per-customer revenue while raising switching costs." },
-    "proprietaryData": { "status": "weakened", "note": "Telemetry from VMware environments gives insight into enterprise workload patterns, but Broadcom does not monetize data directly. A secondary advantage at best." },
-    "regulatoryLockIn": { "status": "intact", "note": "VMware holds FIPS 140-2, FedRAMP, and Common Criteria certifications critical for government and regulated industry deployments. Re-certification on a new platform takes 18-36 months — a meaningful lock-in for public sector and financial services customers." },
-    "networkEffects": { "status": "weakened", "note": "VMware has a large ecosystem of 75,000+ certified partners and ISVs that create indirect network effects. Semiconductor business has no network effects — it's purely about design win competition." },
-    "transactionEmbedding": { "status": "intact", "note": "VMware NSX underpins network micro-segmentation for financial transaction processing at major banks. Broadcom's Ethernet switching is embedded in the physical transaction throughput of hyperscaler payment platforms." },
-    "systemOfRecord": { "status": "strong", "note": "VMware vCenter is the system of record for enterprise compute inventory — every VM, every workload, every resource allocation lives in vCenter. This is as sticky as it gets in infrastructure software." },
-    "aiResilienceScore": 78,
-    "verdict": "Broadcom is uniquely positioned as both an AI tailwind beneficiary (custom XPUs, Ethernet switching) and an enterprise software lock-in story (VMware). The primary risk is AI execution concentration — if Google or Meta reduces custom silicon dependence, AI revenue could disappoint. VMware churn from aggressive pricing is the second key risk to monitor."
-  }
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "VMware vCenter and vSphere have been the interface for enterprise virtualization for 20 years. Infrastructure teams are deeply trained on VMware workflows — retraining is a genuine organizational cost."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "VMware literally runs the compute layer for most enterprise business logic. Custom ASIC designs embed Broadcom silicon into the physical business logic of hyperscaler AI training pipelines. Both are deeply embedded."
+    },
+    "publicDataAccess": {
+      "status": "weakened",
+      "note": "Not a data company. No relevant public data moat — Broadcom's value is in silicon IP and software, not data network effects."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "Custom ASIC design at hyperscale requires extremely rare talent. The team that designed Google's TPU, for instance, represents years of accumulated knowledge. Broadcom's silicon design expertise is genuinely scarce and takes a decade to replicate. Having six concurrent XPU co-development programs deepens this advantage further."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "VMware Cloud Foundation bundles compute (vSphere), networking (NSX), storage (vSAN), and management (Aria) into a single platform. Broadcom is aggressively pushing VCF adoption, increasing per-customer revenue while raising switching costs. Management explicitly calls VCF the 'permanent abstraction layer' for AI workloads."
+    },
+    "proprietaryData": {
+      "status": "weakened",
+      "note": "Telemetry from VMware environments gives insight into enterprise workload patterns, but Broadcom does not monetize data directly. A secondary advantage at best."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "VMware holds FIPS 140-2, FedRAMP, and Common Criteria certifications critical for government and regulated industry deployments. Re-certification on a new platform takes 18-36 months — a meaningful lock-in for public sector and financial services customers."
+    },
+    "networkEffects": {
+      "status": "weakened",
+      "note": "VMware has a large ecosystem of 75,000+ certified partners and ISVs that create indirect network effects. Semiconductor business has no network effects — it's purely about design win competition."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "VMware NSX underpins network micro-segmentation for financial transaction processing at major banks. Broadcom's Ethernet switching is embedded in the physical transaction throughput of hyperscaler payment platforms."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "VMware vCenter is the system of record for enterprise compute inventory — every VM, every workload, every resource allocation lives in vCenter. This is as sticky as it gets in infrastructure software."
+    },
+    "aiResilienceScore": 90,
+    "verdict": "Broadcom is uniquely positioned as both a direct AI revenue beneficiary (custom XPUs, Ethernet switching) and an enterprise software lock-in story (VMware). With six XPU customers, $73B in AI backlog, management guiding to $100B+ AI chip revenue in FY2027, and VMware ARR growing 19% YoY at 93% gross margins, execution risk is declining as the AI buildout accelerates. The primary risk is the shift toward rack-scale solutions potentially compressing EBITDA margins modestly from the 68% target."
+  },
+  "lastAnalyzed": "March 2026"
 }

@@ -4,13 +4,28 @@
   "name": "Shopify Inc.",
   "titleColor": "#96bf48",
   "headerStats": [
-    { "label": "Ticker", "value": "SHOP" },
-    { "label": "Market Cap", "value": "$170B" },
-    { "label": "Price", "value": "$130" }
+    {
+      "label": "Ticker",
+      "value": "SHOP"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$170B"
+    },
+    {
+      "label": "Price",
+      "value": "$130"
+    }
   ],
   "chips": [
-    { "label": "E-Commerce | Commerce Platform", "color": "primary" },
-    { "label": "Network Flywheel", "color": "success" }
+    {
+      "label": "E-Commerce | Commerce Platform",
+      "color": "primary"
+    },
+    {
+      "label": "Network Flywheel",
+      "color": "success"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
@@ -72,9 +87,21 @@
       "cagrEstimate": "26–30%",
       "scoreDerivation": "Base 80 (26–30% sustained CAGR, crossed $10B revenue) + 5 B2B/enterprise flywheel (+96% GMV) + 5 agentic commerce positioning (15x AI order growth) − 2 FCF margin pressure (17%, below 20% target) = 88",
       "drivers": [
-        { "name": "Merchant Solutions (Payments + Capital)", "metric": "+35% Q4 2025 YoY; Shopify Payments 68% GMV penetration", "trend": "accelerating" },
-        { "name": "B2B / Enterprise GMV", "metric": "+96% FY2025 YoY; +84% Q4 — still early innings of enterprise displacement", "trend": "accelerating" },
-        { "name": "International Revenue", "metric": "+36% Q4 2025 YoY; ~50% of merchant base now non-NA", "trend": "stable" }
+        {
+          "name": "Merchant Solutions (Payments + Capital)",
+          "metric": "+35% Q4 2025 YoY; Shopify Payments 68% GMV penetration",
+          "trend": "accelerating"
+        },
+        {
+          "name": "B2B / Enterprise GMV",
+          "metric": "+96% FY2025 YoY; +84% Q4 — still early innings of enterprise displacement",
+          "trend": "accelerating"
+        },
+        {
+          "name": "International Revenue",
+          "metric": "+36% Q4 2025 YoY; ~50% of merchant base now non-NA",
+          "trend": "stable"
+        }
       ],
       "primaryType": "both",
       "keyRisk": "If GMV growth decelerates below 20% in two consecutive quarters by end of 2026 — due to Amazon Buy with Prime expansion or macro-driven merchant churn — FCF margin stalls at 15–17% and the market re-rates from 50x+ FCF to 25–30x, implying 40–50% downside from current prices",
@@ -161,5 +188,6 @@
     },
     "aiResilienceScore": 78,
     "verdict": "Shopify is a net beneficiary of AI adoption — its proprietary cross-merchant data, transaction embedding, and agentic commerce positioning make AI a structural tailwind rather than a threat. The primary AI vulnerability is that lower development barriers could enable new commerce platform entrants, but Shopify's 5M+ merchant installed base and ecosystem gravity create compounding advantages that are increasingly difficult for AI-powered challengers to replicate quickly."
-  }
+  },
+  "lastAnalyzed": "February 2026"
 }
