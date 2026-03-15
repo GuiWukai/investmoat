@@ -1,13 +1,17 @@
-// Moat scores are computed dynamically from each stock's tenMoats data in
-// src/data/stocks/*.json using the Ten Moats formula (60% AI-resilient,
-// 40% AI-vulnerable). Growth and valuation scores remain manually curated.
+// All three scores and the bear/base/bull targets are derived from each
+// stock's JSON file — single source of truth, no manual sync required.
+//
+//   m(json)  →  moat score      computed from tenMoats via Ten Moats formula
+//   g(json)  →  growth score    read from json.growth.score
+//   v(json)  →  valuation score read from json.valuation.score
+//   t(json)  →  { bearTarget, baseTarget, bullTarget } from json.scenarios
 //
 // RULES (enforced dynamically below):
 //   • Maximum 20 stocks in the portfolio
 //   • Minimum average score of 75 required for inclusion
 //
-// To add a new stock: import its JSON, add an entry to allCoverageData,
-// and the moat score will be derived automatically.
+// To add a new stock: import its JSON, add an entry to allCoverageData.
+// All scores and targets will be derived automatically.
 
 import { computeMoatScore } from '@/lib/valuationScore';
 
@@ -65,58 +69,71 @@ export const getAverageScore = ([moat, growth, valuation]: number[]) =>
 const MAX_PORTFOLIO  = 20;
 const MIN_AVG_SCORE  = 75;
 
-/** Shorthand: compute moat score from a stock JSON's tenMoats field. */
+/** Compute moat score from a stock JSON's tenMoats field. */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const m = (json: { tenMoats: any }) => computeMoatScore(json.tenMoats);
 
+/** Read growth score from a stock JSON. */
+const g = (json: { growth: { score: number } }) => json.growth.score;
+
+/** Read valuation score from a stock JSON. */
+const v = (json: { valuation: { score: number } }) => json.valuation.score;
+
+/** Read bear/base/bull price targets from a stock JSON. */
+const t = (json: { scenarios: { bear: { priceTarget: string }; base: { priceTarget: string }; bull: { priceTarget: string } } }) => ({
+    bearTarget: json.scenarios.bear.priceTarget,
+    baseTarget: json.scenarios.base.priceTarget,
+    bullTarget: json.scenarios.bull.priceTarget,
+});
+
 // ─── All analyzed stocks (single source of truth) ─────────────────────────────
 // scores = [computedMoatScore, growthScore, valuationScore]
-// Moat score is derived from each stock's tenMoats data — do not edit manually.
+// All three scores and targets derive from the stock's JSON — edit the JSON, not this file.
 const allCoverageData = [
-    { name: "MercadoLibre",      ticker: "MELI", slug: "meli",        scores: [m(meliData),        90, 78], href: "/stocks/meli",        category: "Other",       bearTarget: "$1,000",    baseTarget: "$2,200",    bullTarget: "$3,500"    },
-    { name: "Ferrari",           ticker: "RACE", slug: "race",        scores: [m(raceData),        67, 78], href: "/stocks/race",        category: "Other",       bearTarget: "$280",      baseTarget: "$480",      bullTarget: "$700"      },
-    { name: "Constellation Energy", ticker: "CEG", slug: "ceg",      scores: [m(cegData),         72, 71], href: "/stocks/ceg",         category: "Other",       bearTarget: "$200",      baseTarget: "$420",      bullTarget: "$650"      },
-    { name: "UnitedHealth",      ticker: "UNH",  slug: "unh",         scores: [m(unhData),         75, 78], href: "/stocks/unh",         category: "Healthcare",  bearTarget: "$200",      baseTarget: "$380",      bullTarget: "$600"      },
-    { name: "Moody's",           ticker: "MCO",  slug: "mco",         scores: [m(mcoData),         80, 76], href: "/stocks/mco",         category: "Financials",  bearTarget: "$340",      baseTarget: "$560",      bullTarget: "$750"      },
-    { name: "Microsoft",         ticker: "MSFT", slug: "msft",        scores: [m(msftData),        88, 74], href: "/stocks/msft",        category: "Big Tech",    bearTarget: "$300",      baseTarget: "$450",      bullTarget: "$580"      },
-    { name: "Mastercard",        ticker: "MA",   slug: "mastercard",  scores: [m(mastercardData),  88, 71], href: "/stocks/mastercard",  category: "Financials",  bearTarget: "$400",      baseTarget: "$555",      bullTarget: "$700"      },
-    { name: "ASML",              ticker: "ASML", slug: "asml",        scores: [m(asmlData),        80, 83], href: "/stocks/asml",        category: "Big Tech",    bearTarget: "$900",      baseTarget: "$1,500",    bullTarget: "$2,200"    },
-    { name: "NVIDIA",            ticker: "NVDA", slug: "nvda",        scores: [m(nvdaData),        95, 65], href: "/stocks/nvda",        category: "Big Tech",    bearTarget: "$100",      baseTarget: "$175",      bullTarget: "$280"      },
-    { name: "Amazon",            ticker: "AMZN", slug: "amazon",      scores: [m(amazonData),      88, 69], href: "/stocks/amazon",      category: "Big Tech",    bearTarget: "$145",      baseTarget: "$225",      bullTarget: "$320"      },
-    { name: "S&P Global",        ticker: "SPGI", slug: "spgi",        scores: [m(spgiData),        78, 78], href: "/stocks/spgi",        category: "Financials",  bearTarget: "$400",      baseTarget: "$500",      bullTarget: "$610"      },
-    { name: "Visa",              ticker: "V",    slug: "visa",        scores: [m(visaData),        82, 71], href: "/stocks/visa",        category: "Financials",  bearTarget: "$245",      baseTarget: "$335",      bullTarget: "$420"      },
-    { name: "Google",            ticker: "GOOGL",slug: "google",      scores: [m(googleData),      82, 72], href: "/stocks/google",      category: "Big Tech",    bearTarget: "$130",      baseTarget: "$200",      bullTarget: "$270"      },
-    { name: "TSMC",              ticker: "TSM",  slug: "tsm",         scores: [m(tsmData),         85, 72], href: "/stocks/tsm",         category: "Big Tech",    bearTarget: "$220",      baseTarget: "$400",      bullTarget: "$560"      },
-    { name: "Intuit",            ticker: "INTU", slug: "intuit",      scores: [m(intuitData),      84, 75], href: "/stocks/intuit",      category: "Financials",  bearTarget: "$300",      baseTarget: "$480",      bullTarget: "$650"      },
-    { name: "Shopify",           ticker: "SHOP", slug: "shop",        scores: [m(shopData),        88, 74], href: "/stocks/shop",        category: "Big Tech",    bearTarget: "$80",       baseTarget: "$160",      bullTarget: "$240"      },
-    { name: "Bitcoin",           ticker: "BTC",  slug: "btc",         scores: [m(btcData),         85, 77], href: "/stocks/btc",         category: "Hard Assets", bearTarget: "$45,000",   baseTarget: "$120,000",  bullTarget: "$300,000+" },
-    { name: "Ethereum",          ticker: "ETH",  slug: "ethereum",    scores: [m(ethereumData),    80, 65], href: "/stocks/ethereum",    category: "Hard Assets", bearTarget: "$1,200",    baseTarget: "$5,500",    bullTarget: "$12,000"   },
-    { name: "Solana",            ticker: "SOL",  slug: "solana",      scores: [m(solanaData),      82, 62], href: "/stocks/solana",      category: "Hard Assets", bearTarget: "$55",       baseTarget: "$350",      bullTarget: "$800"      },
-    { name: "Palantir",          ticker: "PLTR", slug: "pltr",        scores: [m(pltrData),        88, 71], href: "/stocks/pltr",        category: "Big Tech",    bearTarget: "$80",       baseTarget: "$155",      bullTarget: "$260"      },
-    { name: "Salesforce",        ticker: "CRM",  slug: "crm",         scores: [m(crmData),         80, 79], href: "/stocks/crm",         category: "Financials",  bearTarget: "$150",      baseTarget: "$250",      bullTarget: "$350"      },
-    { name: "Broadcom",          ticker: "AVGO", slug: "avgo",        scores: [m(avgoData),        92, 72], href: "/stocks/avgo",        category: "Big Tech",    bearTarget: "$160",      baseTarget: "$380",      bullTarget: "$550"      },
-    { name: "CrowdStrike",       ticker: "CRWD", slug: "crowdstrike", scores: [m(crowdstrikeData), 87, 69], href: "/stocks/crowdstrike", category: "Big Tech",    bearTarget: "$260",      baseTarget: "$460",      bullTarget: "$700"      },
-    { name: "Meta",              ticker: "META", slug: "meta",        scores: [m(metaData),        85, 72], href: "/stocks/meta",        category: "Big Tech",    bearTarget: "$460",      baseTarget: "$720",      bullTarget: "$950"      },
-    { name: "Apple",             ticker: "AAPL", slug: "aapl",        scores: [m(aaplData),        72, 68], href: "/stocks/aapl",        category: "Big Tech",    bearTarget: "$155",      baseTarget: "$240",      bullTarget: "$350"      },
-    { name: "Tesla",             ticker: "TSLA", slug: "tesla",       scores: [m(teslaData),       87, 65], href: "/stocks/tesla",       category: "Big Tech",    bearTarget: "$150",      baseTarget: "$400",      bullTarget: "$550"      },
-    { name: "Micron",            ticker: "MU",   slug: "micron",      scores: [m(micronData),      87, 67], href: "/stocks/micron",      category: "Big Tech",    bearTarget: "$200",      baseTarget: "$420",      bullTarget: "$650"      },
-    { name: "FANUC Corporation",  ticker: "FANUY",slug: "fanuc",       scores: [m(fanucData),       72, 76], href: "/stocks/fanuc",       category: "Industrials", bearTarget: "$13",       baseTarget: "$27",       bullTarget: "$42"       },
-    { name: "Intuitive Surgical",ticker: "ISRG", slug: "isrg",        scores: [m(isrgData),        82, 62], href: "/stocks/isrg",        category: "Healthcare",  bearTarget: "$280",      baseTarget: "$520",      bullTarget: "$750"      },
-    { name: "Eli Lilly",          ticker: "LLY",  slug: "lly",         scores: [m(llyData),         90, 75], href: "/stocks/lly",         category: "Healthcare",  bearTarget: "$650",      baseTarget: "$1,200",    bullTarget: "$1,750"    },
-    { name: "Netflix",           ticker: "NFLX", slug: "nflx",        scores: [m(nflxData),        80, 77], href: "/stocks/nflx",        category: "Big Tech",    bearTarget: "$72",       baseTarget: "$125",      bullTarget: "$180"      },
-    { name: "Adobe",             ticker: "ADBE", slug: "adbe",        scores: [m(adbeData),        82, 77], href: "/stocks/adbe",        category: "Financials",  bearTarget: "$200",      baseTarget: "$320",      bullTarget: "$450"      },
-    { name: "AMD",               ticker: "AMD",  slug: "amd",         scores: [m(amdData),         92, 71], href: "/stocks/amd",         category: "Big Tech",    bearTarget: "$110",      baseTarget: "$230",      bullTarget: "$320"      },
-    { name: "K92 Mining",        ticker: "KNT",  slug: "k92",         scores: [m(k92Data),         85, 80], href: "/stocks/k92",         category: "Hard Assets", bearTarget: "$17.00 CAD", baseTarget: "$38.00 CAD", bullTarget: "$65.00 CAD" },
-    { name: "Freeport-McMoRan",  ticker: "FCX",  slug: "fcx",         scores: [m(fcxData),         75, 68], href: "/stocks/fcx",         category: "Hard Assets", bearTarget: "$22",       baseTarget: "$48",       bullTarget: "$80"       },
-    { name: "Gold",              ticker: "XAU",  slug: "gold",        scores: [m(goldData),        50, 68], href: "/stocks/gold",        category: "Hard Assets", bearTarget: "$3,800/oz", baseTarget: "$5,500/oz", bullTarget: "$7,500+/oz"},
-    { name: "Costco",            ticker: "COST", slug: "costco",      scores: [m(costcoData),      70, 75], href: "/stocks/costco",      category: "Financials",  bearTarget: "$750",      baseTarget: "$1,150",    bullTarget: "$1,400"    },
-    { name: "Walt Disney",       ticker: "DIS",  slug: "disney",      scores: [m(disneyData),      60, 79], href: "/stocks/disney",      category: "Other",       bearTarget: "$75",       baseTarget: "$130",      bullTarget: "$165"      },
-    { name: "ServiceNow",        ticker: "NOW",  slug: "now",         scores: [m(nowData),         87, 77], href: "/stocks/now",         category: "Big Tech",    bearTarget: "$70",       baseTarget: "$155",      bullTarget: "$235"      },
-    { name: "Oracle",            ticker: "ORCL", slug: "orcl",        scores: [m(orclData),        88, 76], href: "/stocks/orcl",        category: "Big Tech",    bearTarget: "$110",      baseTarget: "$200",      bullTarget: "$320"      },
-    { name: "TransDigm",         ticker: "TDG",  slug: "tdg",         scores: [m(tdgData),         75, 70], href: "/stocks/tdg",         category: "Industrials", bearTarget: "$850",      baseTarget: "$1,350",    bullTarget: "$1,900"    },
-    { name: "MSCI",              ticker: "MSCI", slug: "msci",        scores: [m(msciData),        75, 71], href: "/stocks/msci",        category: "Financials",  bearTarget: "$420",      baseTarget: "$620",      bullTarget: "$850"      },
-    { name: "SoFi Technologies", ticker: "SOFI", slug: "sofi",        scores: [m(sofiData),        82, 79], href: "/stocks/sofi",        category: "Financials",  bearTarget: "$13",       baseTarget: "$26",       bullTarget: "$45"       },
-    { name: "Strategy Inc.",     ticker: "MSTR", slug: "mstr",        scores: [m(mstrData),        42, 71], href: "/stocks/mstr",        category: "Hard Assets", bearTarget: "$45",       baseTarget: "$160",      bullTarget: "$370"      },
+    { name: "MercadoLibre",      ticker: "MELI",  slug: "meli",        scores: [m(meliData),        g(meliData),        v(meliData)],        href: "/stocks/meli",        category: "Other",       ...t(meliData)        },
+    { name: "Ferrari",           ticker: "RACE",  slug: "race",        scores: [m(raceData),        g(raceData),        v(raceData)],        href: "/stocks/race",        category: "Other",       ...t(raceData)        },
+    { name: "Constellation Energy", ticker: "CEG", slug: "ceg",       scores: [m(cegData),         g(cegData),         v(cegData)],         href: "/stocks/ceg",         category: "Other",       ...t(cegData)         },
+    { name: "UnitedHealth",      ticker: "UNH",   slug: "unh",         scores: [m(unhData),         g(unhData),         v(unhData)],         href: "/stocks/unh",         category: "Healthcare",  ...t(unhData)         },
+    { name: "Moody's",           ticker: "MCO",   slug: "mco",         scores: [m(mcoData),         g(mcoData),         v(mcoData)],         href: "/stocks/mco",         category: "Financials",  ...t(mcoData)         },
+    { name: "Microsoft",         ticker: "MSFT",  slug: "msft",        scores: [m(msftData),        g(msftData),        v(msftData)],        href: "/stocks/msft",        category: "Big Tech",    ...t(msftData)        },
+    { name: "Mastercard",        ticker: "MA",    slug: "mastercard",  scores: [m(mastercardData),  g(mastercardData),  v(mastercardData)],  href: "/stocks/mastercard",  category: "Financials",  ...t(mastercardData)  },
+    { name: "ASML",              ticker: "ASML",  slug: "asml",        scores: [m(asmlData),        g(asmlData),        v(asmlData)],        href: "/stocks/asml",        category: "Big Tech",    ...t(asmlData)        },
+    { name: "NVIDIA",            ticker: "NVDA",  slug: "nvda",        scores: [m(nvdaData),        g(nvdaData),        v(nvdaData)],        href: "/stocks/nvda",        category: "Big Tech",    ...t(nvdaData)        },
+    { name: "Amazon",            ticker: "AMZN",  slug: "amazon",      scores: [m(amazonData),      g(amazonData),      v(amazonData)],      href: "/stocks/amazon",      category: "Big Tech",    ...t(amazonData)      },
+    { name: "S&P Global",        ticker: "SPGI",  slug: "spgi",        scores: [m(spgiData),        g(spgiData),        v(spgiData)],        href: "/stocks/spgi",        category: "Financials",  ...t(spgiData)        },
+    { name: "Visa",              ticker: "V",     slug: "visa",        scores: [m(visaData),        g(visaData),        v(visaData)],        href: "/stocks/visa",        category: "Financials",  ...t(visaData)        },
+    { name: "Google",            ticker: "GOOGL", slug: "google",      scores: [m(googleData),      g(googleData),      v(googleData)],      href: "/stocks/google",      category: "Big Tech",    ...t(googleData)      },
+    { name: "TSMC",              ticker: "TSM",   slug: "tsm",         scores: [m(tsmData),         g(tsmData),         v(tsmData)],         href: "/stocks/tsm",         category: "Big Tech",    ...t(tsmData)         },
+    { name: "Intuit",            ticker: "INTU",  slug: "intuit",      scores: [m(intuitData),      g(intuitData),      v(intuitData)],      href: "/stocks/intuit",      category: "Financials",  ...t(intuitData)      },
+    { name: "Shopify",           ticker: "SHOP",  slug: "shop",        scores: [m(shopData),        g(shopData),        v(shopData)],        href: "/stocks/shop",        category: "Big Tech",    ...t(shopData)        },
+    { name: "Bitcoin",           ticker: "BTC",   slug: "btc",         scores: [m(btcData),         g(btcData),         v(btcData)],         href: "/stocks/btc",         category: "Hard Assets", ...t(btcData)         },
+    { name: "Ethereum",          ticker: "ETH",   slug: "ethereum",    scores: [m(ethereumData),    g(ethereumData),    v(ethereumData)],    href: "/stocks/ethereum",    category: "Hard Assets", ...t(ethereumData)    },
+    { name: "Solana",            ticker: "SOL",   slug: "solana",      scores: [m(solanaData),      g(solanaData),      v(solanaData)],      href: "/stocks/solana",      category: "Hard Assets", ...t(solanaData)      },
+    { name: "Palantir",          ticker: "PLTR",  slug: "pltr",        scores: [m(pltrData),        g(pltrData),        v(pltrData)],        href: "/stocks/pltr",        category: "Big Tech",    ...t(pltrData)        },
+    { name: "Salesforce",        ticker: "CRM",   slug: "crm",         scores: [m(crmData),         g(crmData),         v(crmData)],         href: "/stocks/crm",         category: "Financials",  ...t(crmData)         },
+    { name: "Broadcom",          ticker: "AVGO",  slug: "avgo",        scores: [m(avgoData),        g(avgoData),        v(avgoData)],        href: "/stocks/avgo",        category: "Big Tech",    ...t(avgoData)        },
+    { name: "CrowdStrike",       ticker: "CRWD",  slug: "crowdstrike", scores: [m(crowdstrikeData), g(crowdstrikeData), v(crowdstrikeData)], href: "/stocks/crowdstrike", category: "Big Tech",    ...t(crowdstrikeData) },
+    { name: "Meta",              ticker: "META",  slug: "meta",        scores: [m(metaData),        g(metaData),        v(metaData)],        href: "/stocks/meta",        category: "Big Tech",    ...t(metaData)        },
+    { name: "Apple",             ticker: "AAPL",  slug: "aapl",        scores: [m(aaplData),        g(aaplData),        v(aaplData)],        href: "/stocks/aapl",        category: "Big Tech",    ...t(aaplData)        },
+    { name: "Tesla",             ticker: "TSLA",  slug: "tesla",       scores: [m(teslaData),       g(teslaData),       v(teslaData)],       href: "/stocks/tesla",       category: "Big Tech",    ...t(teslaData)       },
+    { name: "Micron",            ticker: "MU",    slug: "micron",      scores: [m(micronData),      g(micronData),      v(micronData)],      href: "/stocks/micron",      category: "Big Tech",    ...t(micronData)      },
+    { name: "FANUC Corporation", ticker: "FANUY", slug: "fanuc",       scores: [m(fanucData),       g(fanucData),       v(fanucData)],       href: "/stocks/fanuc",       category: "Industrials", ...t(fanucData)       },
+    { name: "Intuitive Surgical",ticker: "ISRG",  slug: "isrg",        scores: [m(isrgData),        g(isrgData),        v(isrgData)],        href: "/stocks/isrg",        category: "Healthcare",  ...t(isrgData)        },
+    { name: "Eli Lilly",         ticker: "LLY",   slug: "lly",         scores: [m(llyData),         g(llyData),         v(llyData)],         href: "/stocks/lly",         category: "Healthcare",  ...t(llyData)         },
+    { name: "Netflix",           ticker: "NFLX",  slug: "nflx",        scores: [m(nflxData),        g(nflxData),        v(nflxData)],        href: "/stocks/nflx",        category: "Big Tech",    ...t(nflxData)        },
+    { name: "Adobe",             ticker: "ADBE",  slug: "adbe",        scores: [m(adbeData),        g(adbeData),        v(adbeData)],        href: "/stocks/adbe",        category: "Financials",  ...t(adbeData)        },
+    { name: "AMD",               ticker: "AMD",   slug: "amd",         scores: [m(amdData),         g(amdData),         v(amdData)],         href: "/stocks/amd",         category: "Big Tech",    ...t(amdData)         },
+    { name: "K92 Mining",        ticker: "KNT",   slug: "k92",         scores: [m(k92Data),         g(k92Data),         v(k92Data)],         href: "/stocks/k92",         category: "Hard Assets", ...t(k92Data)         },
+    { name: "Freeport-McMoRan",  ticker: "FCX",   slug: "fcx",         scores: [m(fcxData),         g(fcxData),         v(fcxData)],         href: "/stocks/fcx",         category: "Hard Assets", ...t(fcxData)         },
+    { name: "Gold",              ticker: "XAU",   slug: "gold",        scores: [m(goldData),        g(goldData),        v(goldData)],        href: "/stocks/gold",        category: "Hard Assets", ...t(goldData)        },
+    { name: "Costco",            ticker: "COST",  slug: "costco",      scores: [m(costcoData),      g(costcoData),      v(costcoData)],      href: "/stocks/costco",      category: "Financials",  ...t(costcoData)      },
+    { name: "Walt Disney",       ticker: "DIS",   slug: "disney",      scores: [m(disneyData),      g(disneyData),      v(disneyData)],      href: "/stocks/disney",      category: "Other",       ...t(disneyData)      },
+    { name: "ServiceNow",        ticker: "NOW",   slug: "now",         scores: [m(nowData),         g(nowData),         v(nowData)],         href: "/stocks/now",         category: "Big Tech",    ...t(nowData)         },
+    { name: "Oracle",            ticker: "ORCL",  slug: "orcl",        scores: [m(orclData),        g(orclData),        v(orclData)],        href: "/stocks/orcl",        category: "Big Tech",    ...t(orclData)        },
+    { name: "TransDigm",         ticker: "TDG",   slug: "tdg",         scores: [m(tdgData),         g(tdgData),         v(tdgData)],         href: "/stocks/tdg",         category: "Industrials", ...t(tdgData)         },
+    { name: "MSCI",              ticker: "MSCI",  slug: "msci",        scores: [m(msciData),        g(msciData),        v(msciData)],        href: "/stocks/msci",        category: "Financials",  ...t(msciData)        },
+    { name: "SoFi Technologies", ticker: "SOFI",  slug: "sofi",        scores: [m(sofiData),        g(sofiData),        v(sofiData)],        href: "/stocks/sofi",        category: "Financials",  ...t(sofiData)        },
+    { name: "Strategy Inc.",     ticker: "MSTR",  slug: "mstr",        scores: [m(mstrData),        g(mstrData),        v(mstrData)],        href: "/stocks/mstr",        category: "Hard Assets", ...t(mstrData)        },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────
