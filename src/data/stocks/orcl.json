@@ -4,8 +4,8 @@
   "name": "Oracle Corporation",
   "headerStats": [
     { "label": "Ticker", "value": "ORCL" },
-    { "label": "Market Cap", "value": "$480B" },
-    { "label": "Price", "value": "$175.00" }
+    { "label": "Market Cap", "value": "$457B" },
+    { "label": "Price", "value": "$159.00" }
   ],
   "chips": [
     { "label": "Enterprise Software", "color": "primary" },
@@ -14,9 +14,9 @@
   ],
   "recommendation": "Accumulate",
   "metrics": [
-    { "title": "Cloud Revenue", "value": "$25B+", "label": "FY2025 Run Rate, Growing 50%+", "icon": "Cloud", "color": "#C74634" },
-    { "title": "Operating Margin", "value": "29%", "label": "Durable Software Profitability", "icon": "TrendingUp", "color": "#f59e0b" },
-    { "title": "Remaining Perf. Obligations", "value": "$97B", "label": "Contracted Future Revenue", "icon": "Lock", "color": "#3b82f6" }
+    { "title": "Cloud Revenue", "value": "$8.9B", "label": "Q3 FY2026 (Qtrly), +44% YoY", "icon": "Cloud", "color": "#C74634" },
+    { "title": "Non-GAAP Op. Margin", "value": "43%", "label": "Q3 FY2026 (32% GAAP)", "icon": "TrendingUp", "color": "#f59e0b" },
+    { "title": "Remaining Perf. Obligations", "value": "$553B", "label": "Q3 FY2026, +325% YoY", "icon": "Lock", "color": "#3b82f6" }
   ],
   "moat": {
     "score": 85,
@@ -30,7 +30,7 @@
       },
       {
         "title": "OCI as the AI Cloud Challenger",
-        "text": "Oracle Cloud Infrastructure (OCI) is growing 50%+ annually and winning hyperscale AI workloads from NVIDIA, Microsoft, and Meta due to superior GPU cluster networking and pricing. The $97B+ remaining performance obligations backlog — including a landmark deal with OpenAI — signals that OCI has become a genuine tier-2 cloud with tier-1 AI infrastructure ambitions."
+        "text": "Oracle Cloud Infrastructure (OCI) grew 84% YoY to $4.9B in Q3 FY2026 and is winning hyperscale AI workloads from OpenAI, xAI, Meta, NVIDIA, and AMD due to superior GPU cluster networking and pricing. The $553B remaining performance obligations backlog — up 325% YoY — signals that OCI has become a genuine tier-2 cloud with tier-1 AI infrastructure ambitions. Oracle has secured 10+ gigawatts of power and data center capacity."
       },
       {
         "title": "Autonomous Database Extends the Moat",
@@ -43,54 +43,55 @@
     ]
   },
   "growth": {
-    "score": 80,
-    "description": "OCI infrastructure growing 50%+ annually, cloud applications (Fusion ERP, NetSuite) compounding at 20%+, and a $97B+ contracted backlog provide exceptional revenue visibility. AI training workload demand is a meaningful new growth vector.",
+    "score": 88,
+    "description": "OCI infrastructure growing 84% annually in Q3 FY2026, total cloud revenue +44% YoY, and a $553B contracted backlog (+325% YoY) provide exceptional revenue visibility extending years into the future. Oracle raised FY2027 guidance to $90B. AI training workload demand is an accelerating growth vector.",
     "additionalNote": {
       "title": "Key Growth Catalysts",
       "points": [
-        "OCI GPU clusters winning large AI training contracts from hyperscalers and frontier AI labs",
+        "OCI GPU clusters winning large AI training contracts from hyperscalers and frontier AI labs (OpenAI, xAI, Meta, NVIDIA, AMD confirmed)",
         "Oracle Fusion Cloud ERP displacing SAP at Global 2000 companies in multi-year migrations",
         "NetSuite growing 20%+ in the mid-market ERP segment with low churn",
         "Cerner powering Oracle Health's expansion into AI-assisted clinical workflows at scale",
-        "Multi-cloud database demand rising as enterprises run Oracle DB on AWS and Azure simultaneously"
+        "Multi-cloud database demand rising as enterprises run Oracle DB on AWS and Azure simultaneously",
+        "Stargate AI infrastructure initiative ($100B+ with OpenAI and SoftBank) creating massive incremental OCI demand"
       ]
     }
   },
   "valuation": {
-    "score": 65,
-    "description": "At $175, Oracle trades at 28x forward earnings — elevated but defensible given the $97B+ contracted backlog and OCI's 50%+ growth. The AI infrastructure tailwind justifies a premium multiple, but the stock prices in continued execution. Best accumulated below $160.",
+    "score": 70,
+    "description": "At ~$159, Oracle trades at approximately 19-22x forward non-GAAP earnings (sources vary; GuruFocus ~19x, StockAnalysis ~22x). The stock is down ~23% YTD and ~54% off its September 2025 highs near $327, creating an attractive re-entry. FCF is currently negative on a trailing basis due to $50B capex commitment, but the $553B RPO provides visibility into a major FCF inflection in FY2029-2030. Best accumulated below $165.",
     "valuationNote": {
-      "text": "Oracle's contracted RPO backlog provides unusual earnings visibility for a company this size. If OCI sustains 40%+ growth through FY2027, current valuation is reasonable. Downside is limited by the database installed base generating $20B+ in high-margin support renewals annually.",
-      "fairValue": "$185"
+      "text": "Oracle's contracted RPO backlog of $553B — up 325% YoY — provides extraordinary earnings visibility. The $50B FY2026 capex cycle is depressing near-term FCF, but Guggenheim and other analysts see a 'free cash flow waterfall' materializing in FY2029-2030. FY2027 revenue guidance raised to $90B implies ~22% CAGR from FY2025's $57.4B.",
+      "fairValue": "$200"
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$120",
-      "description": "OCI loses AI infrastructure share to AWS and Azure, cloud ERP migration stalls, and the legacy support business declines faster than cloud ramps.",
+      "priceTarget": "$110",
+      "description": "OCI loses AI infrastructure share to AWS and Azure, the $553B RPO proves overcommitted, and the $50B capex cycle produces stranded assets rather than revenue.",
       "points": [
-        "AWS Trainium and Azure custom silicon erode OCI's GPU networking advantage",
+        "AWS Trainium and Azure custom silicon erode OCI's GPU networking advantage; RPO contracts include customer-supplied GPU provisions that inflate headline backlog",
         "Oracle Fusion ERP implementations underperform expectations, triggering high-profile churn",
         "Legacy database support revenue declines 5%+ annually as AWS Aurora and PostgreSQL migrations accelerate",
         "Cerner integration costs and healthcare IT complexity drag margins below 25%"
       ]
     },
     "base": {
-      "priceTarget": "$185",
-      "description": "OCI sustains 40%+ growth as a primary AI training cloud, Fusion ERP and NetSuite compound steadily, and database support remains durable.",
+      "priceTarget": "$200",
+      "description": "OCI sustains 50%+ growth as a primary AI training cloud, Fusion ERP and NetSuite compound steadily, and revenue reaches $90B in FY2027 as guided.",
       "points": [
-        "OCI grows to $30B+ in annual revenue by FY2027 driven by GPU cluster deployments",
+        "OCI grows toward $18B annual revenue in FY2026 (guided 77% growth), then $32B and beyond through FY2028-2030",
         "Oracle Fusion Cloud ERP achieves $10B+ in annual revenue with industry-leading NRR",
         "Autonomous Database adoption increases renewal rates and reduces churn in the installed base",
         "Cerner becomes a $10B+ revenue segment as AI clinical applications roll out across 1,000+ hospitals"
       ]
     },
     "bull": {
-      "priceTarget": "$280",
-      "description": "OCI emerges as the dominant AI training cloud, Oracle Health transforms clinical workflows, and Fusion ERP displaces SAP at the enterprise tier.",
+      "priceTarget": "$320",
+      "description": "OCI emerges as the dominant AI training cloud serving Stargate and sovereign AI deployments, Oracle Health transforms clinical workflows, and $553B RPO converts to revenue faster than expected.",
       "points": [
-        "OCI wins 20%+ of the AI training infrastructure market, rivaling AWS and Azure in GPU density",
-        "Landmark multi-year AI cloud contracts with 5+ frontier AI labs and sovereign cloud deployments",
+        "OCI wins 20%+ of the AI training infrastructure market, rivaling AWS and Azure in GPU density; 10+ GW of secured capacity comes online ahead of schedule",
+        "Stargate buildout accelerates OCI revenue well beyond the $90B FY2027 guidance",
         "Oracle Health AI platform becomes standard across US hospital systems, unlocking $20B+ revenue potential",
         "SAP migration wave to Oracle Fusion ERP accelerates post-SAP S/4HANA end-of-life cycle"
       ]
@@ -107,7 +108,7 @@
     "networkEffects": { "status": "weakened", "note": "Oracle's partner certification ecosystem and ISV integrations create indirect network effects — more certified implementation partners make Oracle easier to adopt — but these are not classic two-sided network effects." },
     "transactionEmbedding": { "status": "strong", "note": "Oracle Database processes the financial transactions, clinical records, and operational events of most Global 2000 companies. It is not adjacent to mission-critical transactions — it IS the transaction layer." },
     "systemOfRecord": { "status": "strong", "note": "Oracle is the definitive system of record for enterprise finance, HR, and operations at thousands of the world's largest organizations. No other software vendor occupies this position at comparable scale." },
-    "aiResilienceScore": 82,
-    "verdict": "Oracle is highly AI-resilient. Its deepest moat — database embedding — is structural and physical, not software-replicable. OCI's rise as AI training infrastructure is additive rather than disruptive to the core. The combination of a 40-year database lock-in moat and a fast-growing AI cloud positions Oracle as one of the most durable compounders in enterprise technology."
+    "aiResilienceScore": 87,
+    "verdict": "Oracle is highly AI-resilient and is itself becoming an AI infrastructure hyperscaler. Its deepest moat — database embedding — is structural and physical, not software-replicable. OCI's rise as AI training infrastructure is additive rather than disruptive to the core. The $553B RPO backlog, 84% OCI growth, and Stargate partnership position Oracle as one of the most extraordinary growth-plus-moat combinations in enterprise technology. The near-term FCF drag from $50B capex is the primary risk."
   }
 }
