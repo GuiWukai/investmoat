@@ -4,14 +4,32 @@
   "name": "UnitedHealth Group Inc.",
   "titleColor": "#003087",
   "headerStats": [
-    { "label": "Ticker", "value": "UNH" },
-    { "label": "Market Cap", "value": "~$270B" },
-    { "label": "Price", "value": "~$288" }
+    {
+      "label": "Ticker",
+      "value": "UNH"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$270B"
+    },
+    {
+      "label": "Price",
+      "value": "~$288"
+    }
   ],
   "chips": [
-    { "label": "Healthcare | Managed Care + Data", "color": "primary" },
-    { "label": "Vertical Integration", "color": "success" },
-    { "label": "Near-Term Risk", "color": "warning" }
+    {
+      "label": "Healthcare | Managed Care + Data",
+      "color": "primary"
+    },
+    {
+      "label": "Vertical Integration",
+      "color": "success"
+    },
+    {
+      "label": "Near-Term Risk",
+      "color": "warning"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
@@ -150,5 +168,6 @@
     },
     "aiResilienceScore": 93,
     "verdict": "UnitedHealth is one of the most AI-resilient businesses in existence — its proprietary claims data, regulatory lock-in, and provider network relationships are all strengthened by AI, not threatened by it. Optum is already deploying AI for prior authorization, care gap identification, and fraud detection — AI makes the business better, and the data advantage that enables superior AI models is itself a deepening moat that no new entrant can bridge."
-  }
+  },
+  "lastAnalyzed": "November 2025"
 }

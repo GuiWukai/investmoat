@@ -3,19 +3,52 @@
   "ticker": "MA",
   "name": "Mastercard Inc.",
   "headerStats": [
-    { "label": "Ticker", "value": "MA" },
-    { "label": "Market Cap", "value": "$440B" },
-    { "label": "Price", "value": "$472.50" }
+    {
+      "label": "Ticker",
+      "value": "MA"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$440B"
+    },
+    {
+      "label": "Price",
+      "value": "$472.50"
+    }
   ],
   "chips": [
-    { "label": "Financial Services", "color": "primary" },
-    { "label": "Wide Moat", "color": "success" }
+    {
+      "label": "Financial Services",
+      "color": "primary"
+    },
+    {
+      "label": "Wide Moat",
+      "color": "success"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
-    { "title": "GDV Growth", "value": "12%", "label": "Gross Dollar Volume ($)", "icon": "CreditCard", "color": "#eb001b" },
-    { "title": "Net Margin", "value": "45.8%", "label": "Consistent Profitability", "icon": "ShieldCheck", "color": "#ff5f00" },
-    { "title": "EPS CAGR", "value": "18%", "label": "5-Year Average", "icon": "TrendingUp", "color": "#10b981" }
+    {
+      "title": "GDV Growth",
+      "value": "12%",
+      "label": "Gross Dollar Volume ($)",
+      "icon": "CreditCard",
+      "color": "#eb001b"
+    },
+    {
+      "title": "Net Margin",
+      "value": "45.8%",
+      "label": "Consistent Profitability",
+      "icon": "ShieldCheck",
+      "color": "#ff5f00"
+    },
+    {
+      "title": "EPS CAGR",
+      "value": "18%",
+      "label": "5-Year Average",
+      "icon": "TrendingUp",
+      "color": "#10b981"
+    }
   ],
   "moat": {
     "score": 88,
@@ -23,9 +56,18 @@
     "analysisTitle": "The Services Moat",
     "analysisSummary": "Mastercard is more than a network; it's a **Data & Services Powerhouse**:",
     "analysisPoints": [
-      { "title": "Service Diversification", "text": "MA has been more aggressive in building security, fraud, and data analytics services, which are higher margin and stickier than core processing." },
-      { "title": "Technological Agility", "text": "Strong focus on open banking and digital identity solutions creates new moats in the evolving fintech landscape." },
-      { "title": "Global Presence", "text": "Strong positioning in Europe and emerging markets where digital adoption is accelerating." }
+      {
+        "title": "Service Diversification",
+        "text": "MA has been more aggressive in building security, fraud, and data analytics services, which are higher margin and stickier than core processing."
+      },
+      {
+        "title": "Technological Agility",
+        "text": "Strong focus on open banking and digital identity solutions creates new moats in the evolving fintech landscape."
+      },
+      {
+        "title": "Global Presence",
+        "text": "Strong positioning in Europe and emerging markets where digital adoption is accelerating."
+      }
     ]
   },
   "growth": {
@@ -66,17 +108,48 @@
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "destroyed", "note": "N/A — payment interfaces are a commodity layer; Mastercard's moat is the network, not the interface." },
-    "businessLogic": { "status": "weakened", "note": "AI-powered payment optimization and real-time rails could erode some traditional card routing advantages over time." },
-    "publicDataAccess": { "status": "destroyed", "note": "N/A — not applicable to Mastercard's competitive model; its data advantage is proprietary transaction intelligence, not public data access." },
-    "talentScarcity": { "status": "destroyed", "note": "N/A — not a meaningful source of durable competitive advantage for a payment network; moat is structural, not talent-driven." },
-    "bundling": { "status": "weakened", "note": "Similar to Visa — card product bundles face fintech pressure, though Mastercard's data services add differentiation." },
-    "proprietaryData": { "status": "strong", "note": "SpendingPulse economic dataset and transaction-level insights are genuinely proprietary economic intelligence." },
-    "regulatoryLockIn": { "status": "strong", "note": "Global compliance infrastructure across 210+ countries, central bank relationships, and card association memberships." },
-    "networkEffects": { "status": "strong", "note": "Near-duopoly with Visa: 3.3B Mastercard cards × 100M+ merchants. The network is self-reinforcing at global scale." },
-    "transactionEmbedding": { "status": "strong", "note": "Mastercard processes 120B+ transactions annually — core infrastructure for global commerce that cannot simply be switched off." },
-    "systemOfRecord": { "status": "strong", "note": "Co-records the global payment ledger with Visa; the authoritative source for cross-border transaction settlement." },
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — payment interfaces are a commodity layer; Mastercard's moat is the network, not the interface."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "AI-powered payment optimization and real-time rails could erode some traditional card routing advantages over time."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — not applicable to Mastercard's competitive model; its data advantage is proprietary transaction intelligence, not public data access."
+    },
+    "talentScarcity": {
+      "status": "destroyed",
+      "note": "N/A — not a meaningful source of durable competitive advantage for a payment network; moat is structural, not talent-driven."
+    },
+    "bundling": {
+      "status": "weakened",
+      "note": "Similar to Visa — card product bundles face fintech pressure, though Mastercard's data services add differentiation."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "SpendingPulse economic dataset and transaction-level insights are genuinely proprietary economic intelligence."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "Global compliance infrastructure across 210+ countries, central bank relationships, and card association memberships."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "Near-duopoly with Visa: 3.3B Mastercard cards × 100M+ merchants. The network is self-reinforcing at global scale."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Mastercard processes 120B+ transactions annually — core infrastructure for global commerce that cannot simply be switched off."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "Co-records the global payment ledger with Visa; the authoritative source for cross-border transaction settlement."
+    },
     "aiResilienceScore": 88,
     "verdict": "Mastercard mirrors Visa's AI-resilient moat profile. The payment network duopoly makes them among the safest compounders in an AI-disrupted world — AI enhances fraud detection without threatening the network itself."
-  }
+  },
+  "lastAnalyzed": "February 2026"
 }

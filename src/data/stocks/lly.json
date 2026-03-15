@@ -3,19 +3,52 @@
   "ticker": "LLY",
   "name": "Eli Lilly and Company",
   "headerStats": [
-    { "label": "Ticker", "value": "LLY" },
-    { "label": "Market Cap", "value": "$927B" },
-    { "label": "Price", "value": "$977.12" }
+    {
+      "label": "Ticker",
+      "value": "LLY"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$927B"
+    },
+    {
+      "label": "Price",
+      "value": "$977.12"
+    }
   ],
   "chips": [
-    { "label": "Healthcare | Pharmaceuticals", "color": "primary" },
-    { "label": "GLP-1 Dominant", "color": "success" }
+    {
+      "label": "Healthcare | Pharmaceuticals",
+      "color": "primary"
+    },
+    {
+      "label": "GLP-1 Dominant",
+      "color": "success"
+    }
   ],
   "recommendation": "Strong Buy",
   "metrics": [
-    { "title": "Revenue Growth", "value": "45%", "label": "FY2025 YoY", "icon": "TrendingUp", "color": "#e8294b" },
-    { "title": "GLP-1 Revenue", "value": "$36.5B", "label": "Mounjaro + Zepbound (2025)", "icon": "Activity", "color": "#7c3aed" },
-    { "title": "Operating Margin", "value": "40.4%", "label": "Best-in-class pharma efficiency", "icon": "BarChart2", "color": "#059669" }
+    {
+      "title": "Revenue Growth",
+      "value": "45%",
+      "label": "FY2025 YoY",
+      "icon": "TrendingUp",
+      "color": "#e8294b"
+    },
+    {
+      "title": "GLP-1 Revenue",
+      "value": "$36.5B",
+      "label": "Mounjaro + Zepbound (2025)",
+      "icon": "Activity",
+      "color": "#7c3aed"
+    },
+    {
+      "title": "Operating Margin",
+      "value": "40.4%",
+      "label": "Best-in-class pharma efficiency",
+      "icon": "BarChart2",
+      "color": "#059669"
+    }
   ],
   "moat": {
     "score": 82,
@@ -23,9 +56,18 @@
     "analysisTitle": "The GLP-1 Fortress",
     "analysisSummary": "Eli Lilly's moat is anchored in **scientific superiority and regulatory exclusivity** that cannot be replicated quickly:",
     "analysisPoints": [
-      { "title": "Tirzepatide Efficacy Superiority", "text": "Mounjaro and Zepbound (tirzepatide) consistently outperform competing GLP-1 drugs in head-to-head efficacy data, with superior weight loss outcomes. This clinical evidence edge drives prescriber preference and formulary positioning that competitors must overcome with their own Phase 3 trial data — a multi-year barrier." },
-      { "title": "Patent Wall Into the Late 2030s", "text": "Lilly's CEO has confirmed tirzepatide compound patent protection extends 'into the back half of the 2030s' in major markets, contrasting sharply with Novo Nordisk's semaglutide facing patent expiry in select markets today. This 10+ year runway allows Lilly to compound its GLP-1 franchise revenues without near-term generic erosion." },
-      { "title": "Manufacturing Moat at Scale", "text": "Peptide manufacturing is extraordinarily complex; Lilly has invested billions into new manufacturing capacity globally. The expertise required to manufacture GLP-1 drugs at commercial scale — including sterile fill-finish and cold-chain logistics — represents a structural barrier that takes years for competitors to build." }
+      {
+        "title": "Tirzepatide Efficacy Superiority",
+        "text": "Mounjaro and Zepbound (tirzepatide) consistently outperform competing GLP-1 drugs in head-to-head efficacy data, with superior weight loss outcomes. This clinical evidence edge drives prescriber preference and formulary positioning that competitors must overcome with their own Phase 3 trial data — a multi-year barrier."
+      },
+      {
+        "title": "Patent Wall Into the Late 2030s",
+        "text": "Lilly's CEO has confirmed tirzepatide compound patent protection extends 'into the back half of the 2030s' in major markets, contrasting sharply with Novo Nordisk's semaglutide facing patent expiry in select markets today. This 10+ year runway allows Lilly to compound its GLP-1 franchise revenues without near-term generic erosion."
+      },
+      {
+        "title": "Manufacturing Moat at Scale",
+        "text": "Peptide manufacturing is extraordinarily complex; Lilly has invested billions into new manufacturing capacity globally. The expertise required to manufacture GLP-1 drugs at commercial scale — including sterile fill-finish and cold-chain logistics — represents a structural barrier that takes years for competitors to build."
+      }
     ]
   },
   "growth": {
@@ -66,17 +108,48 @@
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "destroyed", "note": "N/A — physicians prescribe drugs based on clinical evidence and patient outcomes, not UI familiarity; interface learning costs do not apply to pharmaceuticals." },
-    "businessLogic": { "status": "intact", "note": "Lilly's GLP-1 peptide synthesis, formulation IP, and cold-chain manufacturing know-how represent complex proprietary processes that competitors cannot decode from reverse engineering alone." },
-    "publicDataAccess": { "status": "destroyed", "note": "N/A — Lilly's competitive moat does not rely on controlling access to a public data source; not applicable to the pharmaceutical business model." },
-    "talentScarcity": { "status": "strong", "note": "World-class endocrinologists, peptide chemists, and regulatory affairs specialists are scarce globally; Lilly's 140-year reputation and compensation attract the best pharma talent disproportionately." },
-    "bundling": { "status": "destroyed", "note": "N/A — pharmaceutical drugs are not sold in software-style bundles; individual drug approvals and prescriptions are the unit of sale." },
-    "proprietaryData": { "status": "strong", "note": "Lilly holds decades of real-world clinical trial data for tirzepatide across thousands of patients — outcomes data that grows with every prescription and feeds future drug development and label expansions." },
-    "regulatoryLockIn": { "status": "strong", "note": "FDA approvals, EU and global regulatory clearances, GMP manufacturing facility certifications, and payer formulary placements create compounding switching barriers that take years to displace." },
-    "networkEffects": { "status": "intact", "note": "Growing physician experience with tirzepatide creates a prescribing flywheel — more patient success stories build physician confidence and peer recommendations, reinforcing Lilly's market share without additional marketing spend." },
-    "transactionEmbedding": { "status": "intact", "note": "Mounjaro and Zepbound are embedded in major pharmacy benefit formularies, employer health plans, and Medicare Part D — removing them faces enormous patient, physician, and political resistance." },
-    "systemOfRecord": { "status": "destroyed", "note": "N/A — Lilly is a drug manufacturer, not a system-of-record platform; this moat type does not apply to the pharmaceutical industry." },
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — physicians prescribe drugs based on clinical evidence and patient outcomes, not UI familiarity; interface learning costs do not apply to pharmaceuticals."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Lilly's GLP-1 peptide synthesis, formulation IP, and cold-chain manufacturing know-how represent complex proprietary processes that competitors cannot decode from reverse engineering alone."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — Lilly's competitive moat does not rely on controlling access to a public data source; not applicable to the pharmaceutical business model."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "World-class endocrinologists, peptide chemists, and regulatory affairs specialists are scarce globally; Lilly's 140-year reputation and compensation attract the best pharma talent disproportionately."
+    },
+    "bundling": {
+      "status": "destroyed",
+      "note": "N/A — pharmaceutical drugs are not sold in software-style bundles; individual drug approvals and prescriptions are the unit of sale."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Lilly holds decades of real-world clinical trial data for tirzepatide across thousands of patients — outcomes data that grows with every prescription and feeds future drug development and label expansions."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "FDA approvals, EU and global regulatory clearances, GMP manufacturing facility certifications, and payer formulary placements create compounding switching barriers that take years to displace."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "Growing physician experience with tirzepatide creates a prescribing flywheel — more patient success stories build physician confidence and peer recommendations, reinforcing Lilly's market share without additional marketing spend."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Mounjaro and Zepbound are embedded in major pharmacy benefit formularies, employer health plans, and Medicare Part D — removing them faces enormous patient, physician, and political resistance."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — Lilly is a drug manufacturer, not a system-of-record platform; this moat type does not apply to the pharmaceutical industry."
+    },
     "aiResilienceScore": 85,
     "verdict": "Lilly's core moat — patent-protected biologics with regulatory approval — is structurally immune to AI disruption, and AI drug discovery tools actually accelerate Lilly's pipeline advantage by compressing early-stage discovery timelines. The company is a net beneficiary of AI adoption, using it to identify novel targets and optimize clinical trials faster than underfunded competitors."
-  }
+  },
+  "lastAnalyzed": "November 2025"
 }

@@ -3,19 +3,52 @@
   "ticker": "AMD",
   "name": "Advanced Micro Devices",
   "headerStats": [
-    { "label": "Ticker", "value": "AMD" },
-    { "label": "Market Cap", "value": "$280B" },
-    { "label": "Price", "value": "$172.40" }
+    {
+      "label": "Ticker",
+      "value": "AMD"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$280B"
+    },
+    {
+      "label": "Price",
+      "value": "$172.40"
+    }
   ],
   "chips": [
-    { "label": "Semiconductors | AI", "color": "primary" },
-    { "label": "Growth Compounder", "color": "success" }
+    {
+      "label": "Semiconductors | AI",
+      "color": "primary"
+    },
+    {
+      "label": "Growth Compounder",
+      "color": "success"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
-    { "title": "Data Center Rev", "value": "$2.3B", "label": "80% YoY Growth", "icon": "Cpu", "color": "#ed1c24" },
-    { "title": "Instinct Pipeline", "value": "$4.0B+", "label": "MI300 Series Momentum", "icon": "Zap", "color": "#00a4ef" },
-    { "title": "Client Segment", "value": "46%", "label": "Ryzen Market Share (Q4)", "icon": "Layers", "color": "#10b981" }
+    {
+      "title": "Data Center Rev",
+      "value": "$2.3B",
+      "label": "80% YoY Growth",
+      "icon": "Cpu",
+      "color": "#ed1c24"
+    },
+    {
+      "title": "Instinct Pipeline",
+      "value": "$4.0B+",
+      "label": "MI300 Series Momentum",
+      "icon": "Zap",
+      "color": "#00a4ef"
+    },
+    {
+      "title": "Client Segment",
+      "value": "46%",
+      "label": "Ryzen Market Share (Q4)",
+      "icon": "Layers",
+      "color": "#10b981"
+    }
   ],
   "moat": {
     "score": 52,
@@ -23,9 +56,18 @@
     "analysisTitle": "The Chiplet Moat",
     "analysisSummary": "AMD's advantage lies in **Architectural Efficiency**:",
     "analysisPoints": [
-      { "title": "Chiplet Innovation", "text": "AMD led the transition to chiplets, allowing for higher yields and more flexible SKU creation compared to monolithic designs." },
-      { "title": "x86 Market Share Capture", "text": "Continues to erode Intel's dominance in the server (EPYC) and consumer (Ryzen) markets." },
-      { "title": "Open Ecosystem", "text": "ROCm software suite is becoming a viable open-source alternative to Nvidia's proprietary CUDA, attracting hyperscalers looking for vendor flexibility." }
+      {
+        "title": "Chiplet Innovation",
+        "text": "AMD led the transition to chiplets, allowing for higher yields and more flexible SKU creation compared to monolithic designs."
+      },
+      {
+        "title": "x86 Market Share Capture",
+        "text": "Continues to erode Intel's dominance in the server (EPYC) and consumer (Ryzen) markets."
+      },
+      {
+        "title": "Open Ecosystem",
+        "text": "ROCm software suite is becoming a viable open-source alternative to Nvidia's proprietary CUDA, attracting hyperscalers looking for vendor flexibility."
+      }
     ]
   },
   "growth": {
@@ -66,17 +108,48 @@
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "weakened", "note": "GPU programming interfaces are commoditized; ROCm still significantly lags CUDA in developer tooling." },
-    "businessLogic": { "status": "destroyed", "note": "Not applicable as a primary competitive moat for semiconductor design." },
-    "publicDataAccess": { "status": "destroyed", "note": "Not applicable to AMD's competitive position." },
-    "talentScarcity": { "status": "intact", "note": "Chip design engineers remain scarce; Lisa Su's executive team is world-class and hard to replicate." },
-    "bundling": { "status": "weakened", "note": "AMD sells chips, not full-stack AI infrastructure solutions — limited bundling moat vs. NVIDIA's CUDA ecosystem." },
-    "proprietaryData": { "status": "intact", "note": "CDNA architecture IP, ROCm optimization data, and foundry partnership integration data remain proprietary." },
-    "regulatoryLockIn": { "status": "weakened", "note": "Limited government contract footprint compared to NVIDIA; some defense wins but not entrenched." },
-    "networkEffects": { "status": "weakened", "note": "ROCm developer ecosystem is a fraction of CUDA's 4M+ developer community — the critical gap to close." },
-    "transactionEmbedding": { "status": "intact", "note": "Embedded in hyperscaler data centers as a second-source alternative, with growing MI300X adoption at Microsoft." },
-    "systemOfRecord": { "status": "weakened", "note": "Not yet the default standard; AMD operates in NVIDIA's shadow in AI compute despite superior price/performance in some workloads." },
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "GPU programming interfaces are commoditized; ROCm still significantly lags CUDA in developer tooling."
+    },
+    "businessLogic": {
+      "status": "destroyed",
+      "note": "Not applicable as a primary competitive moat for semiconductor design."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Not applicable to AMD's competitive position."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Chip design engineers remain scarce; Lisa Su's executive team is world-class and hard to replicate."
+    },
+    "bundling": {
+      "status": "weakened",
+      "note": "AMD sells chips, not full-stack AI infrastructure solutions — limited bundling moat vs. NVIDIA's CUDA ecosystem."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "CDNA architecture IP, ROCm optimization data, and foundry partnership integration data remain proprietary."
+    },
+    "regulatoryLockIn": {
+      "status": "weakened",
+      "note": "Limited government contract footprint compared to NVIDIA; some defense wins but not entrenched."
+    },
+    "networkEffects": {
+      "status": "weakened",
+      "note": "ROCm developer ecosystem is a fraction of CUDA's 4M+ developer community — the critical gap to close."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Embedded in hyperscaler data centers as a second-source alternative, with growing MI300X adoption at Microsoft."
+    },
+    "systemOfRecord": {
+      "status": "weakened",
+      "note": "Not yet the default standard; AMD operates in NVIDIA's shadow in AI compute despite superior price/performance in some workloads."
+    },
     "aiResilienceScore": 52,
     "verdict": "AMD's moat is weakening in AI-resilient categories vs. NVIDIA. Execution quality is world-class, but CUDA's network effect remains the dominant barrier — AMD's upside is a CUDA challenger, not a CUDA replacer."
-  }
+  },
+  "lastAnalyzed": "November 2025"
 }

@@ -4,21 +4,63 @@
   "name": "Gold",
   "titleColor": "#FFD700",
   "headerStats": [
-    { "label": "Ticker", "value": "XAU" },
-    { "label": "Market Cap", "value": "~$21T" },
-    { "label": "Price", "value": "~$2,900/oz" },
-    { "label": "Annual Mine Supply", "value": "~3,500 tonnes" }
+    {
+      "label": "Ticker",
+      "value": "XAU"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$21T"
+    },
+    {
+      "label": "Price",
+      "value": "~$2,900/oz"
+    },
+    {
+      "label": "Annual Mine Supply",
+      "value": "~3,500 tonnes"
+    }
   ],
   "chips": [
-    { "label": "Commodity | Hard Money", "color": "warning" },
-    { "label": "Inflation Hedge", "color": "success" }
+    {
+      "label": "Commodity | Hard Money",
+      "color": "warning"
+    },
+    {
+      "label": "Inflation Hedge",
+      "color": "success"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
-    { "title": "Spot Price", "value": "~$2,900/oz", "label": "Near All-Time High (Feb 2026)", "icon": "Coins", "color": "#FFD700" },
-    { "title": "Central Bank Buying", "value": "1,045t", "label": "3rd Consecutive Year >1,000t (2024)", "icon": "TrendingUp", "color": "#10b981" },
-    { "title": "Above-Ground Stock", "value": "~212,582t", "label": "Ever Mined; ~54,000t in Reserves", "icon": "Globe", "color": "#3b82f6" },
-    { "title": "Stock-to-Flow", "value": "~62x", "label": "Annual Production vs. Total Supply", "icon": "ShieldCheck", "color": "#8b5cf6" }
+    {
+      "title": "Spot Price",
+      "value": "~$2,900/oz",
+      "label": "Near All-Time High (Feb 2026)",
+      "icon": "Coins",
+      "color": "#FFD700"
+    },
+    {
+      "title": "Central Bank Buying",
+      "value": "1,045t",
+      "label": "3rd Consecutive Year >1,000t (2024)",
+      "icon": "TrendingUp",
+      "color": "#10b981"
+    },
+    {
+      "title": "Above-Ground Stock",
+      "value": "~212,582t",
+      "label": "Ever Mined; ~54,000t in Reserves",
+      "icon": "Globe",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "Stock-to-Flow",
+      "value": "~62x",
+      "label": "Annual Production vs. Total Supply",
+      "icon": "ShieldCheck",
+      "color": "#8b5cf6"
+    }
   ],
   "moat": {
     "score": 67,
@@ -26,10 +68,22 @@
     "analysisTitle": "The Timeless Moat",
     "analysisSummary": "Gold's moat is built on **Scarcity, Trust, and Zero Counterparty Risk**:",
     "analysisPoints": [
-      { "title": "Physical Scarcity", "text": "All the gold ever mined would fit in roughly 3.5 Olympic swimming pools. Annual mine supply grows at ~1.5% — far below the rate of fiat money creation, preserving purchasing power over decades and centuries." },
-      { "title": "No Counterparty Risk", "text": "Unlike bonds, bank deposits, or equities, physical gold carries no issuer default risk. It is nobody's liability — a feature that becomes uniquely valuable during financial crises and sovereign stress events." },
-      { "title": "Universal Recognition", "text": "Gold is the only asset with a continuous 5,000-year track record as money across every major civilisation and empire. This cultural and institutional trust is impossible to replicate overnight." },
-      { "title": "Central Bank Demand", "text": "Global central banks purchased over 1,000 tonnes for the third consecutive year in 2024, driven by de-dollarisation trends and a desire to hold a reserve asset outside the US-dominated financial system." }
+      {
+        "title": "Physical Scarcity",
+        "text": "All the gold ever mined would fit in roughly 3.5 Olympic swimming pools. Annual mine supply grows at ~1.5% — far below the rate of fiat money creation, preserving purchasing power over decades and centuries."
+      },
+      {
+        "title": "No Counterparty Risk",
+        "text": "Unlike bonds, bank deposits, or equities, physical gold carries no issuer default risk. It is nobody's liability — a feature that becomes uniquely valuable during financial crises and sovereign stress events."
+      },
+      {
+        "title": "Universal Recognition",
+        "text": "Gold is the only asset with a continuous 5,000-year track record as money across every major civilisation and empire. This cultural and institutional trust is impossible to replicate overnight."
+      },
+      {
+        "title": "Central Bank Demand",
+        "text": "Global central banks purchased over 1,000 tonnes for the third consecutive year in 2024, driven by de-dollarisation trends and a desire to hold a reserve asset outside the US-dominated financial system."
+      }
     ]
   },
   "growth": {
@@ -70,16 +124,46 @@
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "destroyed", "note": "Not applicable — gold is a physical commodity with no interface or UX consideration." },
-    "businessLogic": { "status": "destroyed", "note": "Not applicable to a millennia-old physical store of value." },
-    "publicDataAccess": { "status": "destroyed", "note": "N/A — gold price is fully public and transparent; no proprietary data access advantage applies to a physical commodity." },
-    "talentScarcity": { "status": "destroyed", "note": "N/A — gold trading and storage requires no uniquely scarce talent; not a meaningful competitive dynamic for a physical store of value." },
-    "bundling": { "status": "destroyed", "note": "N/A — gold cannot be bundled; it is a singular commodity asset that derives value from scarcity and universality." },
-    "proprietaryData": { "status": "weakened", "note": "Gold mining companies hold geological survey data, but spot gold itself has no proprietary data component." },
-    "regulatoryLockIn": { "status": "strong", "note": "Basel III Tier 1 asset status, central bank reserve requirements, and 5,000 years of recognized monetary status." },
-    "networkEffects": { "status": "strong", "note": "Universal recognition across all civilizations, governments, and institutions for 5,000 years — the ultimate global network effect." },
-    "transactionEmbedding": { "status": "weakened", "note": "Gold is not meaningfully embedded in modern digital transactions; it functions as a store of value, not a medium of exchange." },
-    "systemOfRecord": { "status": "strong", "note": "Physical gold has zero counterparty risk — the ultimate 'true bearer' record independent of any issuer, system, or government." },
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "Not applicable — gold is a physical commodity with no interface or UX consideration."
+    },
+    "businessLogic": {
+      "status": "destroyed",
+      "note": "Not applicable to a millennia-old physical store of value."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — gold price is fully public and transparent; no proprietary data access advantage applies to a physical commodity."
+    },
+    "talentScarcity": {
+      "status": "destroyed",
+      "note": "N/A — gold trading and storage requires no uniquely scarce talent; not a meaningful competitive dynamic for a physical store of value."
+    },
+    "bundling": {
+      "status": "destroyed",
+      "note": "N/A — gold cannot be bundled; it is a singular commodity asset that derives value from scarcity and universality."
+    },
+    "proprietaryData": {
+      "status": "weakened",
+      "note": "Gold mining companies hold geological survey data, but spot gold itself has no proprietary data component."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "Basel III Tier 1 asset status, central bank reserve requirements, and 5,000 years of recognized monetary status."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "Universal recognition across all civilizations, governments, and institutions for 5,000 years — the ultimate global network effect."
+    },
+    "transactionEmbedding": {
+      "status": "weakened",
+      "note": "Gold is not meaningfully embedded in modern digital transactions; it functions as a store of value, not a medium of exchange."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "Physical gold has zero counterparty risk — the ultimate 'true bearer' record independent of any issuer, system, or government."
+    },
     "aiResilienceScore": 67,
     "verdict": "Gold's AI resilience comes from regulatory recognition and universal network acceptance earned over millennia. AI cannot disrupt gold, but it also cannot help gold compete with AI-native value stores."
   },
@@ -91,10 +175,20 @@
       "gridHeader": "Why Gold Matters Now",
       "intro": "Gold is re-asserting itself as the foundation of the global monetary order. Several macro forces converge to support continued appreciation in real terms over the next decade.",
       "cards": [
-        { "label": "De-Dollarisation", "text": "BRICS+ nations are settling more bilateral trade in local currencies and gold, reducing USD reserve dominance." },
-        { "label": "Fiscal Deficits", "text": "G7 governments running structural deficits guarantee continued monetary expansion, eroding fiat purchasing power." },
-        { "label": "Geopolitical Risk", "text": "Sanctions on Russia's FX reserves demonstrated that USD assets can be frozen — accelerating diversification into gold globally." }
+        {
+          "label": "De-Dollarisation",
+          "text": "BRICS+ nations are settling more bilateral trade in local currencies and gold, reducing USD reserve dominance."
+        },
+        {
+          "label": "Fiscal Deficits",
+          "text": "G7 governments running structural deficits guarantee continued monetary expansion, eroding fiat purchasing power."
+        },
+        {
+          "label": "Geopolitical Risk",
+          "text": "Sanctions on Russia's FX reserves demonstrated that USD assets can be frozen — accelerating diversification into gold globally."
+        }
       ]
     }
-  ]
+  ],
+  "lastAnalyzed": "October 2025"
 }

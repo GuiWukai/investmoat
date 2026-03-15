@@ -3,20 +3,56 @@
   "ticker": "COST",
   "name": "Costco Wholesale Corporation",
   "headerStats": [
-    { "label": "Ticker", "value": "COST" },
-    { "label": "Market Cap", "value": "$440B" },
-    { "label": "Price", "value": "$995.00" }
+    {
+      "label": "Ticker",
+      "value": "COST"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$440B"
+    },
+    {
+      "label": "Price",
+      "value": "$995.00"
+    }
   ],
   "chips": [
-    { "label": "Consumer Retail", "color": "primary" },
-    { "label": "Wide Moat", "color": "success" },
-    { "label": "Membership Model", "color": "secondary" }
+    {
+      "label": "Consumer Retail",
+      "color": "primary"
+    },
+    {
+      "label": "Wide Moat",
+      "color": "success"
+    },
+    {
+      "label": "Membership Model",
+      "color": "secondary"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
-    { "title": "Revenue", "value": "$269.9B", "label": "FY2025 Net Sales (+8.1% YoY)", "icon": "DollarSign", "color": "#005DAA" },
-    { "title": "Membership Fee Income", "value": "$5.3B", "label": "FY2025 Recurring Revenue (+10.3% YoY)", "icon": "Users", "color": "#E31837" },
-    { "title": "Renewal Rate", "value": "92.3%", "label": "US/Canada Renewal (89.7% worldwide)", "icon": "RefreshCw", "color": "#10b981" }
+    {
+      "title": "Revenue",
+      "value": "$269.9B",
+      "label": "FY2025 Net Sales (+8.1% YoY)",
+      "icon": "DollarSign",
+      "color": "#005DAA"
+    },
+    {
+      "title": "Membership Fee Income",
+      "value": "$5.3B",
+      "label": "FY2025 Recurring Revenue (+10.3% YoY)",
+      "icon": "Users",
+      "color": "#E31837"
+    },
+    {
+      "title": "Renewal Rate",
+      "value": "92.3%",
+      "label": "US/Canada Renewal (89.7% worldwide)",
+      "icon": "RefreshCw",
+      "color": "#10b981"
+    }
   ],
   "moat": {
     "score": 82,
@@ -59,9 +95,21 @@
       "cagrEstimate": "8-10%",
       "scoreDerivation": "Base 67 (8-10% blended CAGR; net sales +9.1% in Q2 FY2026, membership +13.6% YoY) + 5 recurring membership (100% recurring fee income, NRR effectively >100% as members rarely churn) − 2 mature market (limited TAM expansion beyond gradual warehouse opens; large-format retail is a slow-growing global format) = 70",
       "drivers": [
-        { "name": "Net New Warehouses", "metric": "+24 FY2025, targeting +28 FY2026; 924 total; ~$250M revenue/warehouse", "trend": "stable" },
-        { "name": "Membership Fee Income", "metric": "+13.6% Q2 FY2026, 82.1M paid members (+9.5% YoY), 89.7% worldwide renewal", "trend": "accelerating" },
-        { "name": "Digitally Enabled Sales", "metric": "+22.6% comparable Q2 FY2026; app +45%, site +32%, $470M+ per quarter", "trend": "accelerating" }
+        {
+          "name": "Net New Warehouses",
+          "metric": "+24 FY2025, targeting +28 FY2026; 924 total; ~$250M revenue/warehouse",
+          "trend": "stable"
+        },
+        {
+          "name": "Membership Fee Income",
+          "metric": "+13.6% Q2 FY2026, 82.1M paid members (+9.5% YoY), 89.7% worldwide renewal",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Digitally Enabled Sales",
+          "metric": "+22.6% comparable Q2 FY2026; app +45%, site +32%, $470M+ per quarter",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "market share",
       "keyRisk": "If US consumer spending contracts due to tariff-driven inflation by mid-2026, comparable sales growth decelerates below 4% and the premium 50x+ multiple compresses to 33-35x, implying a stock price of $700-800 on FY2026 EPS of ~$21-22",
@@ -78,11 +126,31 @@
     "peAnalysis": {
       "asOf": "March 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~55×", "note": "FY2025 EPS $18.21" },
-        { "label": "Forward P/E (NTM)", "value": "~47×", "note": "consensus FY2026 EPS ~$21" },
-        { "label": "PEG Ratio", "value": "~4.7×", "note": "fwd P/E ÷ ~10% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~1.6×", "note": "~$285B NTM revenue est." },
-        { "label": "Price / FCF", "value": "~35×", "note": "~$12.5B FCF (NTM est.)" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~55×",
+          "note": "FY2025 EPS $18.21"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~47×",
+          "note": "consensus FY2026 EPS ~$21"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~4.7×",
+          "note": "fwd P/E ÷ ~10% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~1.6×",
+          "note": "~$285B NTM revenue est."
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~35×",
+          "note": "~$12.5B FCF (NTM est.)"
+        }
       ],
       "summary": "Costco's forward P/E of ~47× is expensive vs. the S&P 500 (~21×) and consumer staples peers (~25-30×), but has historically commanded this premium due to its unmatched earnings predictability and membership flywheel. The PEG of 4.7 signals the growth-adjusted case is weak — the stock is priced for perfection, not value. The trailing-to-forward P/E gap is modest (+8×), consistent with steady 10-15% EPS growth rather than an earnings ramp."
     }
@@ -120,17 +188,48 @@
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "weakened", "note": "The warehouse shopping format is learnable, but Costco's treasure hunt psychology and layout create habitual visit patterns that members deeply internalize over years." },
-    "businessLogic": { "status": "intact", "note": "The membership-funded, ultra-low-margin retail model is well-understood but extremely difficult to replicate without the decades of trust and scale Costco has built. No major retailer has successfully copied it." },
-    "publicDataAccess": { "status": "destroyed", "note": "N/A — retail purchasing data is not a public data access moat. Costco's data advantage is proprietary, not derived from exclusive access to public datasets." },
-    "talentScarcity": { "status": "destroyed", "note": "N/A — Costco's moat is structural and behavioral, not dependent on scarce talent pools. Its advantages compound through scale and trust, not human capital." },
-    "bundling": { "status": "strong", "note": "A single membership fee unlocks access to fuel, pharmacy, optical, hearing, travel, auto, and financial services — a high-value bundle that compounds switching costs across every area of a member's life." },
-    "proprietaryData": { "status": "strong", "note": "Purchase data across 147.2M+ cardholders (Q2 FY2026) — spanning grocery, fuel, pharmacy, travel, and financial services — provides unmatched granularity into household spending behavior. Personalized product carousels powered by this data generated $470M+ in digital sales in a single quarter. This enables precise inventory curation, supplier negotiation leverage, and predictive demand planning that no competitor can replicate without the same scale and tenure of member relationships." },
-    "regulatoryLockIn": { "status": "destroyed", "note": "N/A — retail is not a heavily regulated industry. No meaningful regulatory moat exists for Costco's core business." },
-    "networkEffects": { "status": "weakened", "note": "Some indirect network effects exist — more members mean better supplier terms, which enable lower prices, which attract more members — but this is not a classic two-sided network." },
-    "transactionEmbedding": { "status": "strong", "note": "The Costco Anywhere Visa (issued by Citi) is the exclusive payment card for all Costco transactions. Auto-renewed memberships charged to this card make Costco the single largest recurring line item for tens of millions of households. The membership renewal loop — card on file, auto-charge, seamless access — creates deep financial embedding that is extraordinarily hard to displace." },
-    "systemOfRecord": { "status": "strong", "note": "For 147.2M+ cardholders, Costco is the primary and default destination for bulk groceries, household staples, fuel, and seasonal goods. This behavioral default compounds over decades: members plan their weekly routines around Costco trips. With app traffic up 45% and site traffic up 32% YoY in Q2 FY2026, the digital layer is reinforcing physical habit, not replacing it. No digital substitute replicates the physical treasure hunt and scale pricing." },
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "The warehouse shopping format is learnable, but Costco's treasure hunt psychology and layout create habitual visit patterns that members deeply internalize over years."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "The membership-funded, ultra-low-margin retail model is well-understood but extremely difficult to replicate without the decades of trust and scale Costco has built. No major retailer has successfully copied it."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — retail purchasing data is not a public data access moat. Costco's data advantage is proprietary, not derived from exclusive access to public datasets."
+    },
+    "talentScarcity": {
+      "status": "destroyed",
+      "note": "N/A — Costco's moat is structural and behavioral, not dependent on scarce talent pools. Its advantages compound through scale and trust, not human capital."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "A single membership fee unlocks access to fuel, pharmacy, optical, hearing, travel, auto, and financial services — a high-value bundle that compounds switching costs across every area of a member's life."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Purchase data across 147.2M+ cardholders (Q2 FY2026) — spanning grocery, fuel, pharmacy, travel, and financial services — provides unmatched granularity into household spending behavior. Personalized product carousels powered by this data generated $470M+ in digital sales in a single quarter. This enables precise inventory curation, supplier negotiation leverage, and predictive demand planning that no competitor can replicate without the same scale and tenure of member relationships."
+    },
+    "regulatoryLockIn": {
+      "status": "destroyed",
+      "note": "N/A — retail is not a heavily regulated industry. No meaningful regulatory moat exists for Costco's core business."
+    },
+    "networkEffects": {
+      "status": "weakened",
+      "note": "Some indirect network effects exist — more members mean better supplier terms, which enable lower prices, which attract more members — but this is not a classic two-sided network."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "The Costco Anywhere Visa (issued by Citi) is the exclusive payment card for all Costco transactions. Auto-renewed memberships charged to this card make Costco the single largest recurring line item for tens of millions of households. The membership renewal loop — card on file, auto-charge, seamless access — creates deep financial embedding that is extraordinarily hard to displace."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "For 147.2M+ cardholders, Costco is the primary and default destination for bulk groceries, household staples, fuel, and seasonal goods. This behavioral default compounds over decades: members plan their weekly routines around Costco trips. With app traffic up 45% and site traffic up 32% YoY in Q2 FY2026, the digital layer is reinforcing physical habit, not replacing it. No digital substitute replicates the physical treasure hunt and scale pricing."
+    },
     "aiResilienceScore": 78,
     "verdict": "Costco is highly resilient to AI disruption. Its moat is rooted in physical logistics, behavioral psychology, and supplier relationships — none of which AI can automate away. The membership flywheel and buying scale are structural advantages that compound over decades, making Costco one of the most durable retail businesses ever created."
-  }
+  },
+  "lastAnalyzed": "March 2026"
 }

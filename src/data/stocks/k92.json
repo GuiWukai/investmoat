@@ -3,21 +3,63 @@
   "ticker": "KNT",
   "name": "K92 Mining Ltd.",
   "headerStats": [
-    { "label": "Ticker", "value": "KNT (TSX)" },
-    { "label": "Market Cap", "value": "~$3.9B (CAD)" },
-    { "label": "Price", "value": "~$27 CAD" },
-    { "label": "Mine", "value": "Kainantu, PNG" }
+    {
+      "label": "Ticker",
+      "value": "KNT (TSX)"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$3.9B (CAD)"
+    },
+    {
+      "label": "Price",
+      "value": "~$27 CAD"
+    },
+    {
+      "label": "Mine",
+      "value": "Kainantu, PNG"
+    }
   ],
   "chips": [
-    { "label": "Materials | Gold Mining", "color": "warning" },
-    { "label": "Speculative Buy", "color": "success" }
+    {
+      "label": "Materials | Gold Mining",
+      "color": "warning"
+    },
+    {
+      "label": "Speculative Buy",
+      "color": "success"
+    }
   ],
   "recommendation": "Speculative Buy",
   "metrics": [
-    { "title": "Gold Grade", "value": "10.2 g/t", "label": "Top 5% Globally (High Grade)", "icon": "Gem", "color": "#f59e0b" },
-    { "title": "All-In Sustaining Cost", "value": "~$1,010/oz", "label": "2025 Actual (By-Product Basis)", "icon": "Pickaxe", "color": "#64748b" },
-    { "title": "2025 Annual Production", "value": "174k oz AuEq", "label": "Record; 2026E: 190k–225k oz", "icon": "Zap", "color": "#10b981" },
-    { "title": "Stage 3 Plant", "value": "Commissioned", "label": "Completed December 2025", "icon": "CheckCircle", "color": "#6366f1" }
+    {
+      "title": "Gold Grade",
+      "value": "10.2 g/t",
+      "label": "Top 5% Globally (High Grade)",
+      "icon": "Gem",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "All-In Sustaining Cost",
+      "value": "~$1,010/oz",
+      "label": "2025 Actual (By-Product Basis)",
+      "icon": "Pickaxe",
+      "color": "#64748b"
+    },
+    {
+      "title": "2025 Annual Production",
+      "value": "174k oz AuEq",
+      "label": "Record; 2026E: 190k–225k oz",
+      "icon": "Zap",
+      "color": "#10b981"
+    },
+    {
+      "title": "Stage 3 Plant",
+      "value": "Commissioned",
+      "label": "Completed December 2025",
+      "icon": "CheckCircle",
+      "color": "#6366f1"
+    }
   ],
   "moat": {
     "score": 52,
@@ -25,10 +67,22 @@
     "analysisTitle": "The Mining Moat (Asset Quality)",
     "analysisSummary": "In mining, the \"moat\" is the **Quality of the Orebody**:",
     "analysisPoints": [
-      { "title": "Exceptional Grades", "text": "K92's Kainantu mine averages ~10.2 g/t gold — top 5% globally. High grades provide a massive margin cushion during gold price downturns and justify the PNG risk premium." },
-      { "title": "Proven Execution", "text": "Stage 3 1.2 Mtpa process plant commissioned in December 2025, hitting daily throughput records within weeks. Record 2025 annual production of 174k oz AuEq came in at the upper end of guidance — the fourth consecutive year of beating targets." },
-      { "title": "Exploration Engine", "text": "The Kora and Judd vein systems remain open in multiple directions. A record $31–35M exploration program is planned for 2026, including two additional drill rigs arriving in Q1. The Blue Lake Porphyry could be a company-defining discovery." },
-      { "title": "Strong Balance Sheet", "text": "Record cash position of $183M (including $124M net cash) entering 2026 provides full funding for Stage 4 without dilutive equity raises." }
+      {
+        "title": "Exceptional Grades",
+        "text": "K92's Kainantu mine averages ~10.2 g/t gold — top 5% globally. High grades provide a massive margin cushion during gold price downturns and justify the PNG risk premium."
+      },
+      {
+        "title": "Proven Execution",
+        "text": "Stage 3 1.2 Mtpa process plant commissioned in December 2025, hitting daily throughput records within weeks. Record 2025 annual production of 174k oz AuEq came in at the upper end of guidance — the fourth consecutive year of beating targets."
+      },
+      {
+        "title": "Exploration Engine",
+        "text": "The Kora and Judd vein systems remain open in multiple directions. A record $31–35M exploration program is planned for 2026, including two additional drill rigs arriving in Q1. The Blue Lake Porphyry could be a company-defining discovery."
+      },
+      {
+        "title": "Strong Balance Sheet",
+        "text": "Record cash position of $183M (including $124M net cash) entering 2026 provides full funding for Stage 4 without dilutive equity raises."
+      }
     ]
   },
   "growth": {
@@ -70,16 +124,46 @@
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "destroyed", "note": "Not applicable to underground gold mining operations in Papua New Guinea." },
-    "businessLogic": { "status": "weakened", "note": "AI is improving mine planning, drill pattern optimization, ore grade prediction, and processing efficiency across the industry." },
-    "publicDataAccess": { "status": "destroyed", "note": "Not applicable to K92's competitive moat in high-grade gold mining." },
-    "talentScarcity": { "status": "intact", "note": "Underground mining engineers, Papua New Guinea operational expertise, and high-grade ore processing specialists remain genuinely scarce." },
-    "bundling": { "status": "destroyed", "note": "N/A — gold mining is a commodity operation; the product is fungible gold, not a bundled software or service offering." },
-    "proprietaryData": { "status": "intact", "note": "Kainantu mine geological survey data, ore body 3D models, and processing optimization data are proprietary operational assets." },
-    "regulatoryLockIn": { "status": "strong", "note": "PNG Special Mining Lease, government royalty agreements, environmental permits, and community agreements are near-impossible barriers to replicate." },
-    "networkEffects": { "status": "destroyed", "note": "N/A — gold mining is a commodity business with no network effects; output is priced by global spot markets regardless of volume." },
-    "transactionEmbedding": { "status": "weakened", "note": "Gold sales are commodity transactions at spot price — K92 is a price-taker, not a price-maker, with limited embedding power." },
-    "systemOfRecord": { "status": "weakened", "note": "K92 is not a system of record in any meaningful strategic sense; value is in the ore body, not information systems." },
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "Not applicable to underground gold mining operations in Papua New Guinea."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "AI is improving mine planning, drill pattern optimization, ore grade prediction, and processing efficiency across the industry."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Not applicable to K92's competitive moat in high-grade gold mining."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Underground mining engineers, Papua New Guinea operational expertise, and high-grade ore processing specialists remain genuinely scarce."
+    },
+    "bundling": {
+      "status": "destroyed",
+      "note": "N/A — gold mining is a commodity operation; the product is fungible gold, not a bundled software or service offering."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Kainantu mine geological survey data, ore body 3D models, and processing optimization data are proprietary operational assets."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "PNG Special Mining Lease, government royalty agreements, environmental permits, and community agreements are near-impossible barriers to replicate."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "N/A — gold mining is a commodity business with no network effects; output is priced by global spot markets regardless of volume."
+    },
+    "transactionEmbedding": {
+      "status": "weakened",
+      "note": "Gold sales are commodity transactions at spot price — K92 is a price-taker, not a price-maker, with limited embedding power."
+    },
+    "systemOfRecord": {
+      "status": "weakened",
+      "note": "K92 is not a system of record in any meaningful strategic sense; value is in the ore body, not information systems."
+    },
     "aiResilienceScore": 52,
     "verdict": "K92's AI resilience is limited — only the PNG regulatory mining license and geological expertise provide durable competitive advantages. AI optimization could narrow cost advantages, but cannot replicate the ore body."
   },
@@ -89,12 +173,25 @@
       "title": "Stage 3 Complete — Stage 4 Now Underway",
       "intro": "The Stage 3 milestone has been achieved. The new 1.2 Mtpa process plant completed commissioning in December 2025, with ~95% of Stage 3 growth capital spent or committed. Attention now turns to Stage 4, which will push run-rate production toward 400,000+ oz AuEq annually. K92 is allocating $75–80M in Stage 4 growth capital in 2026 alone.",
       "stats": [
-        { "label": "2024 Actual", "value": "150k oz AuEq" },
-        { "label": "2025 Actual (Record)", "value": "174k oz AuEq" },
-        { "label": "2026 Guidance", "value": "190–225k oz" },
-        { "label": "Stage 4 Run-Rate", "value": "400k+ oz AuEq" }
+        {
+          "label": "2024 Actual",
+          "value": "150k oz AuEq"
+        },
+        {
+          "label": "2025 Actual (Record)",
+          "value": "174k oz AuEq"
+        },
+        {
+          "label": "2026 Guidance",
+          "value": "190–225k oz"
+        },
+        {
+          "label": "Stage 4 Run-Rate",
+          "value": "400k+ oz AuEq"
+        }
       ],
       "closing": "Production is expected to be weighted to H2 2026, as key enabler projects (pastefill plant, fleet expansion, power upgrade to 15.3 MW, 60-tonne truck river crossings) complete mostly in H1 2026."
     }
-  ]
+  ],
+  "lastAnalyzed": "October 2025"
 }

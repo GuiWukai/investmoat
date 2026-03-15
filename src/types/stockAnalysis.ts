@@ -67,6 +67,8 @@ export interface StockAnalysisData {
   slug: string;
   ticker: string;
   name: string;
+  /** Month and year this analysis was last updated, e.g. "March 2026" */
+  lastAnalyzed?: string;
   /** Optional hex colour applied to the page title */
   titleColor?: string;
   /** Ordered stats shown in the header (Ticker, Market Cap, Price, etc.) */

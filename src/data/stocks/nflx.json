@@ -3,19 +3,52 @@
   "ticker": "NFLX",
   "name": "Netflix Inc.",
   "headerStats": [
-    { "label": "Ticker", "value": "NFLX" },
-    { "label": "Market Cap", "value": "$408B" },
-    { "label": "Price", "value": "$99.00" }
+    {
+      "label": "Ticker",
+      "value": "NFLX"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$408B"
+    },
+    {
+      "label": "Price",
+      "value": "$99.00"
+    }
   ],
   "chips": [
-    { "label": "Tech | Media", "color": "primary" },
-    { "label": "Scaling Leader", "color": "success" }
+    {
+      "label": "Tech | Media",
+      "color": "primary"
+    },
+    {
+      "label": "Scaling Leader",
+      "color": "success"
+    }
   ],
   "recommendation": "Hold",
   "metrics": [
-    { "title": "Paid Members", "value": "325M", "label": "Q4 2025; ARPU +6.3% YoY", "icon": "Users", "color": "#e50914" },
-    { "title": "FCF 2026", "value": "$11B", "label": "Buybacks Resuming + $2.8B WBD Fee", "icon": "TrendingUp", "color": "#10b981" },
-    { "title": "Ad Revenue", "value": "$3B", "label": "2026 Target — Doubling YoY", "icon": "BarChart", "color": "#3b82f6" }
+    {
+      "title": "Paid Members",
+      "value": "325M",
+      "label": "Q4 2025; ARPU +6.3% YoY",
+      "icon": "Users",
+      "color": "#e50914"
+    },
+    {
+      "title": "FCF 2026",
+      "value": "$11B",
+      "label": "Buybacks Resuming + $2.8B WBD Fee",
+      "icon": "TrendingUp",
+      "color": "#10b981"
+    },
+    {
+      "title": "Ad Revenue",
+      "value": "$3B",
+      "label": "2026 Target — Doubling YoY",
+      "icon": "BarChart",
+      "color": "#3b82f6"
+    }
   ],
   "moat": {
     "score": 63,
@@ -23,9 +56,18 @@
     "analysisTitle": "The Scale Moat",
     "analysisSummary": "Netflix's advantage is its **Content Efficiency**:",
     "analysisPoints": [
-      { "title": "Unit Economics of Joy", "text": "With 270M subs, a $100M show costs Netflix $0.37 per subscriber. For a competitor with 50M subs, that same show costs $2.00. This is the ultimate barrier." },
-      { "title": "Data Flywheel", "text": "Their recommendation engine reduces churn and ensures that content spend is targeted at the highest-probability hits." },
-      { "title": "Global Reach", "text": "Unlike US-centric platforms, Netflix is truly global, with local language content driving growth in EMEA, APAC, and LATAM." }
+      {
+        "title": "Unit Economics of Joy",
+        "text": "With 270M subs, a $100M show costs Netflix $0.37 per subscriber. For a competitor with 50M subs, that same show costs $2.00. This is the ultimate barrier."
+      },
+      {
+        "title": "Data Flywheel",
+        "text": "Their recommendation engine reduces churn and ensures that content spend is targeted at the highest-probability hits."
+      },
+      {
+        "title": "Global Reach",
+        "text": "Unlike US-centric platforms, Netflix is truly global, with local language content driving growth in EMEA, APAC, and LATAM."
+      }
     ]
   },
   "growth": {
@@ -35,9 +77,21 @@
       "cagrEstimate": "12–16%",
       "scoreDerivation": "Base 67 (12–16% blended standalone CAGR) + 5 recurring subscription model (high retention, 325M subs) + 5 ad-tier TAM ($1.5B→$3B→$5B+, ~70% margin incremental) + 5 live sports TAM expansion (NFL/NBA/boxing driving engagement and ad-inventory premium) − 2 margin guidance miss (31.5% vs 32.7% consensus) = 80",
       "drivers": [
-        { "name": "Ad-Supported Tier", "metric": "+2.5× YoY to $1.5B in 2025; targeting $3B in 2026 (100% growth); 190M ad-tier MAU", "trend": "accelerating" },
-        { "name": "Subscriber Growth & Pricing", "metric": "+6.3% ARPU YoY in Q4 2025; 325M subs; mid-single-digit net adds guide for 2026", "trend": "stable" },
-        { "name": "Live Sports & Events", "metric": "NFL Sunday Ticket, NBA (starting 2025), WWE Raw, boxing — ad inventory premium + subscriber acquisition", "trend": "accelerating" }
+        {
+          "name": "Ad-Supported Tier",
+          "metric": "+2.5× YoY to $1.5B in 2025; targeting $3B in 2026 (100% growth); 190M ad-tier MAU",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Subscriber Growth & Pricing",
+          "metric": "+6.3% ARPU YoY in Q4 2025; 325M subs; mid-single-digit net adds guide for 2026",
+          "trend": "stable"
+        },
+        {
+          "name": "Live Sports & Events",
+          "metric": "NFL Sunday Ticket, NBA (starting 2025), WWE Raw, boxing — ad inventory premium + subscriber acquisition",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "both",
       "keyRisk": "If ad CPMs disappoint in 2026 and ad revenue lands below $2.5B (vs $3B target) due to YouTube/Amazon CTV dominance, while operating margin misses the 31.5% guide, 2027 EPS estimates decline 10–15% and the stock re-rates toward $75–80",
@@ -50,11 +104,31 @@
     "peAnalysis": {
       "asOf": "March 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~39×", "note": "TTM EPS ~$2.56 (post-split); $11B net income" },
-        { "label": "Forward P/E (NTM)", "value": "~31×", "note": "consensus EPS est. ~$3.16 (post-split)" },
-        { "label": "PEG Ratio", "value": "~1.0×", "note": "fwd P/E ÷ 30% EPS CAGR (margin expansion)" },
-        { "label": "Price / Sales (NTM)", "value": "~8×", "note": "$51.2B NTM revenue (FY2026 guide)" },
-        { "label": "Price / FCF", "value": "~37×", "note": "$11B FCF (FY2026 guide)" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~39×",
+          "note": "TTM EPS ~$2.56 (post-split); $11B net income"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~31×",
+          "note": "consensus EPS est. ~$3.16 (post-split)"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.0×",
+          "note": "fwd P/E ÷ 30% EPS CAGR (margin expansion)"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~8×",
+          "note": "$51.2B NTM revenue (FY2026 guide)"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~37×",
+          "note": "$11B FCF (FY2026 guide)"
+        }
       ],
       "summary": "Netflix's ~31× forward P/E is in line with consumer tech sector median (~30–35×), but the PEG of ~1.0× — driven by ~30% EPS CAGR from operating margin expansion (29.5%→31.5%→35%+ longer term) — puts it in genuine GARP territory rarely seen for a media franchise. P/S of ~8× and P/FCF of ~37× are reasonable for a business with $11B+ FCF and buybacks resuming. The gap from 39× trailing to 31× forward P/E signals a real earnings acceleration underway as ad revenue scales to a higher-margin mix."
     }
@@ -92,17 +166,48 @@
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "weakened", "note": "Streaming UI/UX patterns are easily replicated by Disney+, Max, Apple TV+ — interface is not a differentiator." },
-    "businessLogic": { "status": "weakened", "note": "Content recommendation algorithms are being commoditized by AI across competing streaming platforms." },
-    "publicDataAccess": { "status": "destroyed", "note": "N/A — content metadata and ratings data are widely available through public APIs; not a competitive moat for Netflix." },
-    "talentScarcity": { "status": "weakened", "note": "AI is reducing the talent barrier for content localization, subtitling, VFX, and post-production operations." },
-    "bundling": { "status": "intact", "note": "Content + Platform + Live Sports (NFL, NBA, WWE, boxing) + Gaming = an increasingly differentiated entertainment bundle with 325M subscribers. Post-WBD-deal exit, Netflix remains the standalone streaming leader and is now doubling down on live as a bundling differentiator." },
-    "proprietaryData": { "status": "strong", "note": "Viewing patterns for 270M subscribers = unmatched content performance data for greenlight decisions — a genuine data moat." },
-    "regulatoryLockIn": { "status": "weakened", "note": "No significant regulatory protection; content licensing rules vary by market but provide no durable government moat." },
-    "networkEffects": { "status": "intact", "note": "Shared viewing culture, social viewing moments, and household account habits create community-level dependency." },
-    "transactionEmbedding": { "status": "intact", "note": "Monthly subscription embedded in household entertainment budgets globally with high inertia and low churn." },
-    "systemOfRecord": { "status": "intact", "note": "Netflix is the cultural reference point for quality streaming and original content globally." },
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "Streaming UI/UX patterns are easily replicated by Disney+, Max, Apple TV+ — interface is not a differentiator."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "Content recommendation algorithms are being commoditized by AI across competing streaming platforms."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — content metadata and ratings data are widely available through public APIs; not a competitive moat for Netflix."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "AI is reducing the talent barrier for content localization, subtitling, VFX, and post-production operations."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Content + Platform + Live Sports (NFL, NBA, WWE, boxing) + Gaming = an increasingly differentiated entertainment bundle with 325M subscribers. Post-WBD-deal exit, Netflix remains the standalone streaming leader and is now doubling down on live as a bundling differentiator."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Viewing patterns for 270M subscribers = unmatched content performance data for greenlight decisions — a genuine data moat."
+    },
+    "regulatoryLockIn": {
+      "status": "weakened",
+      "note": "No significant regulatory protection; content licensing rules vary by market but provide no durable government moat."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "Shared viewing culture, social viewing moments, and household account habits create community-level dependency."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Monthly subscription embedded in household entertainment budgets globally with high inertia and low churn."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "Netflix is the cultural reference point for quality streaming and original content globally."
+    },
     "aiResilienceScore": 63,
     "verdict": "Netflix's proprietary viewing data and content investment flywheel give them a genuine data moat, but the absence of regulatory lock-in and the commoditization of interfaces limit their AI resilience score."
-  }
+  },
+  "lastAnalyzed": "March 2026"
 }

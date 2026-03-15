@@ -3,19 +3,52 @@
   "ticker": "PLTR",
   "name": "Palantir Technologies",
   "headerStats": [
-    { "label": "Ticker", "value": "PLTR" },
-    { "label": "Market Cap", "value": "$270B" },
-    { "label": "Current Price", "value": "$120.00" }
+    {
+      "label": "Ticker",
+      "value": "PLTR"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$270B"
+    },
+    {
+      "label": "Current Price",
+      "value": "$120.00"
+    }
   ],
   "chips": [
-    { "label": "AI & Data Analytics | Defense & Enterprise", "color": "primary" },
-    { "label": "Government Contracts", "color": "success" }
+    {
+      "label": "AI & Data Analytics | Defense & Enterprise",
+      "color": "primary"
+    },
+    {
+      "label": "Government Contracts",
+      "color": "success"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
-    { "title": "US Commercial Rev", "value": "$255M", "label": "54% YoY Growth", "icon": "TrendingUp", "color": "#7c3aed" },
-    { "title": "Rule of 40", "value": "83", "label": "Best-in-Class SaaS", "icon": "Zap", "color": "#3b82f6" },
-    { "title": "US Govt Rev", "value": "$320M", "label": "Steady Mission-Critical", "icon": "Shield", "color": "#10b981" }
+    {
+      "title": "US Commercial Rev",
+      "value": "$255M",
+      "label": "54% YoY Growth",
+      "icon": "TrendingUp",
+      "color": "#7c3aed"
+    },
+    {
+      "title": "Rule of 40",
+      "value": "83",
+      "label": "Best-in-Class SaaS",
+      "icon": "Zap",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "US Govt Rev",
+      "value": "$320M",
+      "label": "Steady Mission-Critical",
+      "icon": "Shield",
+      "color": "#10b981"
+    }
   ],
   "moat": {
     "score": 78,
@@ -23,9 +56,18 @@
     "analysisTitle": "The Ontology Moat (AIP)",
     "analysisSummary": "Palantir's moat is built on **Operational Data Depth and AI Integration Complexity**:",
     "analysisPoints": [
-      { "title": "Ontology Platform", "text": "Palantir's Ontology links raw data to real-world business operations. Once deployed, it becomes the operational backbone of an organization — replacing it requires years of re-integration." },
-      { "title": "AIP (Artificial Intelligence Platform)", "text": "AIP Boot Camps turn prospects into customers within days by demonstrating real ROI on their own data. This compressed sales cycle is creating a commercial moat with extraordinary velocity." },
-      { "title": "Government Lock-In", "text": "15+ year relationships with US DoD, CIA, and allied intelligence agencies embed Palantir at the mission-critical layer. Switching costs are measured in years, not months." }
+      {
+        "title": "Ontology Platform",
+        "text": "Palantir's Ontology links raw data to real-world business operations. Once deployed, it becomes the operational backbone of an organization — replacing it requires years of re-integration."
+      },
+      {
+        "title": "AIP (Artificial Intelligence Platform)",
+        "text": "AIP Boot Camps turn prospects into customers within days by demonstrating real ROI on their own data. This compressed sales cycle is creating a commercial moat with extraordinary velocity."
+      },
+      {
+        "title": "Government Lock-In",
+        "text": "15+ year relationships with US DoD, CIA, and allied intelligence agencies embed Palantir at the mission-critical layer. Switching costs are measured in years, not months."
+      }
     ]
   },
   "growth": {
@@ -66,17 +108,48 @@
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "strong", "note": "Palantir's Foundry and AIP interfaces require significant analyst and operator training — creating deep personal switching costs for power users." },
-    "businessLogic": { "status": "strong", "note": "Palantir encodes customer-specific workflows, decision trees, and ontologies directly into the platform — making it nearly impossible to replicate in a competitor tool." },
-    "publicDataAccess": { "status": "weakened", "note": "Palantir does not primarily derive moat from public data; its edge comes from customer's own proprietary operational data." },
-    "talentScarcity": { "status": "intact", "note": "Forward deployed engineers (FDEs) who embed with clients are a scarce talent model that competitors have not successfully replicated at scale." },
-    "bundling": { "status": "intact", "note": "Foundry + AIP + Gotham + Apollo creates an integrated stack that is increasingly difficult to unbundle once adopted enterprise-wide." },
-    "proprietaryData": { "status": "strong", "note": "Years of government AI/ML training pipelines and enterprise operational ontologies represent proprietary data assets unavailable to competitors." },
-    "regulatoryLockIn": { "status": "strong", "note": "FedRAMP, IL4/IL5, and classified environment certifications create significant regulatory moats that take years for competitors to replicate." },
-    "networkEffects": { "status": "weakened", "note": "Limited direct network effects — value is primarily per-customer depth rather than cross-customer scale." },
-    "transactionEmbedding": { "status": "strong", "note": "Palantir's Ontology is embedded at the operational transaction layer — logistics decisions, targeting workflows, and supply chain actions run through the platform daily." },
-    "systemOfRecord": { "status": "strong", "note": "For defense and intelligence clients, Palantir IS the system of record for operational AI — there is no competing alternative at the same security clearance level." },
+    "learnedInterfaces": {
+      "status": "strong",
+      "note": "Palantir's Foundry and AIP interfaces require significant analyst and operator training — creating deep personal switching costs for power users."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "Palantir encodes customer-specific workflows, decision trees, and ontologies directly into the platform — making it nearly impossible to replicate in a competitor tool."
+    },
+    "publicDataAccess": {
+      "status": "weakened",
+      "note": "Palantir does not primarily derive moat from public data; its edge comes from customer's own proprietary operational data."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Forward deployed engineers (FDEs) who embed with clients are a scarce talent model that competitors have not successfully replicated at scale."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Foundry + AIP + Gotham + Apollo creates an integrated stack that is increasingly difficult to unbundle once adopted enterprise-wide."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Years of government AI/ML training pipelines and enterprise operational ontologies represent proprietary data assets unavailable to competitors."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "FedRAMP, IL4/IL5, and classified environment certifications create significant regulatory moats that take years for competitors to replicate."
+    },
+    "networkEffects": {
+      "status": "weakened",
+      "note": "Limited direct network effects — value is primarily per-customer depth rather than cross-customer scale."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Palantir's Ontology is embedded at the operational transaction layer — logistics decisions, targeting workflows, and supply chain actions run through the platform daily."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "For defense and intelligence clients, Palantir IS the system of record for operational AI — there is no competing alternative at the same security clearance level."
+    },
     "aiResilienceScore": 78,
     "verdict": "Palantir's moat is highly AI-resilient because AI is the product, not a threat to it. The Ontology platform deepens in value as more AI models are layered on top, making Palantir the connective tissue of enterprise AI operations."
-  }
+  },
+  "lastAnalyzed": "February 2026"
 }

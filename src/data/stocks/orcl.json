@@ -3,20 +3,56 @@
   "ticker": "ORCL",
   "name": "Oracle Corporation",
   "headerStats": [
-    { "label": "Ticker", "value": "ORCL" },
-    { "label": "Market Cap", "value": "$457B" },
-    { "label": "Price", "value": "$159.00" }
+    {
+      "label": "Ticker",
+      "value": "ORCL"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$457B"
+    },
+    {
+      "label": "Price",
+      "value": "$159.00"
+    }
   ],
   "chips": [
-    { "label": "Enterprise Software", "color": "primary" },
-    { "label": "Wide Moat", "color": "success" },
-    { "label": "Cloud Infrastructure", "color": "secondary" }
+    {
+      "label": "Enterprise Software",
+      "color": "primary"
+    },
+    {
+      "label": "Wide Moat",
+      "color": "success"
+    },
+    {
+      "label": "Cloud Infrastructure",
+      "color": "secondary"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
-    { "title": "Cloud Revenue", "value": "$8.9B", "label": "Q3 FY2026 (Qtrly), +44% YoY", "icon": "Cloud", "color": "#C74634" },
-    { "title": "Non-GAAP Op. Margin", "value": "43%", "label": "Q3 FY2026 (32% GAAP)", "icon": "TrendingUp", "color": "#f59e0b" },
-    { "title": "Remaining Perf. Obligations", "value": "$553B", "label": "Q3 FY2026, +325% YoY", "icon": "Lock", "color": "#3b82f6" }
+    {
+      "title": "Cloud Revenue",
+      "value": "$8.9B",
+      "label": "Q3 FY2026 (Qtrly), +44% YoY",
+      "icon": "Cloud",
+      "color": "#C74634"
+    },
+    {
+      "title": "Non-GAAP Op. Margin",
+      "value": "43%",
+      "label": "Q3 FY2026 (32% GAAP)",
+      "icon": "TrendingUp",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "Remaining Perf. Obligations",
+      "value": "$553B",
+      "label": "Q3 FY2026, +325% YoY",
+      "icon": "Lock",
+      "color": "#3b82f6"
+    }
   ],
   "moat": {
     "score": 85,
@@ -98,17 +134,48 @@
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "intact", "note": "Oracle SQL, PL/SQL, and APEX are deeply learned by hundreds of thousands of enterprise developers. Institutional knowledge baked into development teams is a real switching cost even before touching migration complexity." },
-    "businessLogic": { "status": "strong", "note": "Oracle databases store decades of enterprise business logic in stored procedures, triggers, and custom PL/SQL — logic that is nearly impossible to fully document or migrate without business disruption. This is one of the most powerful switching costs in software." },
-    "publicDataAccess": { "status": "destroyed", "note": "N/A — not a source of competitive advantage for Oracle's core business; its data moat is proprietary customer data stored within Oracle systems." },
-    "talentScarcity": { "status": "intact", "note": "Certified Oracle DBAs and Fusion ERP consultants are scarce and expensive. The partner ecosystem of implementation firms (Deloitte, Accenture, KPMG) certified on Oracle products reinforces adoption inertia." },
-    "bundling": { "status": "strong", "note": "Oracle bundles database, cloud infrastructure, ERP, HCM, SCM, CX, and analytics under a single enterprise license — creating a platform effect that is cheaper to stay within than to unbundle across best-of-breed alternatives." },
-    "proprietaryData": { "status": "intact", "note": "Oracle systems store the most sensitive and mission-critical enterprise data in the world — financials, HR records, supply chain, and clinical data. This data residency creates deep compliance and operational dependency." },
-    "regulatoryLockIn": { "status": "strong", "note": "Cerner (Oracle Health) serves as the EHR system for thousands of US hospitals subject to HIPAA, CMS interoperability, and ONC certification requirements. Government and defense cloud contracts (OCI FedRAMP) add further regulatory entrenchment." },
-    "networkEffects": { "status": "weakened", "note": "Oracle's partner certification ecosystem and ISV integrations create indirect network effects — more certified implementation partners make Oracle easier to adopt — but these are not classic two-sided network effects." },
-    "transactionEmbedding": { "status": "strong", "note": "Oracle Database processes the financial transactions, clinical records, and operational events of most Global 2000 companies. It is not adjacent to mission-critical transactions — it IS the transaction layer." },
-    "systemOfRecord": { "status": "strong", "note": "Oracle is the definitive system of record for enterprise finance, HR, and operations at thousands of the world's largest organizations. No other software vendor occupies this position at comparable scale." },
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Oracle SQL, PL/SQL, and APEX are deeply learned by hundreds of thousands of enterprise developers. Institutional knowledge baked into development teams is a real switching cost even before touching migration complexity."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "Oracle databases store decades of enterprise business logic in stored procedures, triggers, and custom PL/SQL — logic that is nearly impossible to fully document or migrate without business disruption. This is one of the most powerful switching costs in software."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — not a source of competitive advantage for Oracle's core business; its data moat is proprietary customer data stored within Oracle systems."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Certified Oracle DBAs and Fusion ERP consultants are scarce and expensive. The partner ecosystem of implementation firms (Deloitte, Accenture, KPMG) certified on Oracle products reinforces adoption inertia."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Oracle bundles database, cloud infrastructure, ERP, HCM, SCM, CX, and analytics under a single enterprise license — creating a platform effect that is cheaper to stay within than to unbundle across best-of-breed alternatives."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Oracle systems store the most sensitive and mission-critical enterprise data in the world — financials, HR records, supply chain, and clinical data. This data residency creates deep compliance and operational dependency."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "Cerner (Oracle Health) serves as the EHR system for thousands of US hospitals subject to HIPAA, CMS interoperability, and ONC certification requirements. Government and defense cloud contracts (OCI FedRAMP) add further regulatory entrenchment."
+    },
+    "networkEffects": {
+      "status": "weakened",
+      "note": "Oracle's partner certification ecosystem and ISV integrations create indirect network effects — more certified implementation partners make Oracle easier to adopt — but these are not classic two-sided network effects."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Oracle Database processes the financial transactions, clinical records, and operational events of most Global 2000 companies. It is not adjacent to mission-critical transactions — it IS the transaction layer."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "Oracle is the definitive system of record for enterprise finance, HR, and operations at thousands of the world's largest organizations. No other software vendor occupies this position at comparable scale."
+    },
     "aiResilienceScore": 87,
     "verdict": "Oracle is highly AI-resilient and is itself becoming an AI infrastructure hyperscaler. Its deepest moat — database embedding — is structural and physical, not software-replicable. OCI's rise as AI training infrastructure is additive rather than disruptive to the core. The $553B RPO backlog, 84% OCI growth, and Stargate partnership position Oracle as one of the most extraordinary growth-plus-moat combinations in enterprise technology. The near-term FCF drag from $50B capex is the primary risk."
-  }
+  },
+  "lastAnalyzed": "March 2026"
 }

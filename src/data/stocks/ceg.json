@@ -4,13 +4,28 @@
   "name": "Constellation Energy Corp.",
   "titleColor": "#0072CE",
   "headerStats": [
-    { "label": "Ticker", "value": "CEG" },
-    { "label": "Market Cap", "value": "~$116B" },
-    { "label": "Price", "value": "~$364" }
+    {
+      "label": "Ticker",
+      "value": "CEG"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$116B"
+    },
+    {
+      "label": "Price",
+      "value": "~$364"
+    }
   ],
   "chips": [
-    { "label": "Energy | Nuclear Infrastructure", "color": "primary" },
-    { "label": "AI Power Backbone", "color": "success" }
+    {
+      "label": "Energy | Nuclear Infrastructure",
+      "color": "primary"
+    },
+    {
+      "label": "AI Power Backbone",
+      "color": "success"
+    }
   ],
   "recommendation": "Hold",
   "metrics": [
@@ -149,5 +164,6 @@
     },
     "aiResilienceScore": 55,
     "verdict": "Constellation Energy is a beneficiary of AI adoption through its data center PPA contracts, but AI cannot meaningfully strengthen or weaken its core nuclear infrastructure moat — the advantages (NRC licensing, physical plant ownership, operational expertise) are independent of AI. The primary risk is AI efficiency improvements reducing data center power demand growth; the primary upside is AI-driven demand accelerating faster than the grid can add capacity."
-  }
+  },
+  "lastAnalyzed": "October 2025"
 }

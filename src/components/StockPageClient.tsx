@@ -297,6 +297,9 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
                 }
               </span>
             ))}
+            {data.lastAnalyzed && (
+              <span>Analysis: <strong className="text-white/60">{data.lastAnalyzed}</strong></span>
+            )}
           </div>
         </div>
         <div className="animate-fade-up stagger-fill-both stagger-3">

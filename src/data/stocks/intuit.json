@@ -3,19 +3,52 @@
   "ticker": "INTU",
   "name": "Intuit Inc.",
   "headerStats": [
-    { "label": "Ticker", "value": "INTU" },
-    { "label": "Market Cap", "value": "$185B" },
-    { "label": "Price", "value": "$658.10" }
+    {
+      "label": "Ticker",
+      "value": "INTU"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$185B"
+    },
+    {
+      "label": "Price",
+      "value": "$658.10"
+    }
   ],
   "chips": [
-    { "label": "FinTech | SaaS", "color": "primary" },
-    { "label": "Quality Compounder", "color": "success" }
+    {
+      "label": "FinTech | SaaS",
+      "color": "primary"
+    },
+    {
+      "label": "Quality Compounder",
+      "color": "success"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
-    { "title": "Subscriber Growth", "value": "12%", "label": "SBCB Segment Expansion", "icon": "Calculator", "color": "#2ca01c" },
-    { "title": "Op. Margin", "value": "24.5%", "label": "GAAP Basis", "icon": "BarChart", "color": "#3b82f6" },
-    { "title": "Free Cash Flow", "value": "$4.8B", "label": "Strong Cash Conversion", "icon": "DollarSign", "color": "#10b981" }
+    {
+      "title": "Subscriber Growth",
+      "value": "12%",
+      "label": "SBCB Segment Expansion",
+      "icon": "Calculator",
+      "color": "#2ca01c"
+    },
+    {
+      "title": "Op. Margin",
+      "value": "24.5%",
+      "label": "GAAP Basis",
+      "icon": "BarChart",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "Free Cash Flow",
+      "value": "$4.8B",
+      "label": "Strong Cash Conversion",
+      "icon": "DollarSign",
+      "color": "#10b981"
+    }
   ],
   "moat": {
     "score": 80,
@@ -23,9 +56,18 @@
     "analysisTitle": "The Ecosystem Moat",
     "analysisSummary": "Intuit owns the **Financial Workflow** for small businesses and individuals:",
     "analysisPoints": [
-      { "title": "Mission-Critical Software", "text": "QuickBooks is the system of record for millions. Migrating accounting data is a nightmare, creating a \"sticky\" moat." },
-      { "title": "Regulatory Tailwinds", "text": "Tax complexity ensures TurboTax remains a necessity for the consumer segment." },
-      { "title": "Data Advantage", "text": "Intuit sees more SMB transaction data than almost any bank, allowing for superior credit underwriting." }
+      {
+        "title": "Mission-Critical Software",
+        "text": "QuickBooks is the system of record for millions. Migrating accounting data is a nightmare, creating a \"sticky\" moat."
+      },
+      {
+        "title": "Regulatory Tailwinds",
+        "text": "Tax complexity ensures TurboTax remains a necessity for the consumer segment."
+      },
+      {
+        "title": "Data Advantage",
+        "text": "Intuit sees more SMB transaction data than almost any bank, allowing for superior credit underwriting."
+      }
     ]
   },
   "growth": {
@@ -66,17 +108,48 @@
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "weakened", "note": "TurboTax's guided interview format is being challenged by AI tax assistants that offer conversational, agent-driven filing." },
-    "businessLogic": { "status": "weakened", "note": "AI can increasingly replicate tax preparation and small business accounting logic; IRS Direct File is a zero-cost competitor." },
-    "publicDataAccess": { "status": "weakened", "note": "Tax forms and IRS regulations are public — AI can navigate them, reducing Intuit's simplification value proposition." },
-    "talentScarcity": { "status": "weakened", "note": "AI has democratized access to tax and accounting expertise, reducing the barrier that made TurboTax's guided logic so valuable." },
-    "bundling": { "status": "strong", "note": "TurboTax + QuickBooks + Credit Karma + Mailchimp = a unique SMB financial platform covering taxes, accounting, credit, and marketing." },
-    "proprietaryData": { "status": "strong", "note": "Tax return data, financial records, and credit data for 100M+ users = an irreplaceable financial profile dataset." },
-    "regulatoryLockIn": { "status": "strong", "note": "IRS authorized e-file partner status, state tax agency relationships, payroll tax compliance, and financial institution integrations." },
-    "networkEffects": { "status": "strong", "note": "CPA-client ecosystem: accountants recommend TurboTax → clients use it → data improves. QuickBooks SMB network self-reinforces." },
-    "transactionEmbedding": { "status": "strong", "note": "Payroll runs, invoicing, tax filing, expense tracking, and lending all embedded in the daily operations of 7M+ small businesses." },
-    "systemOfRecord": { "status": "strong", "note": "QuickBooks is the system of record for 7M+ small business finances; TurboTax is the tax history record for tens of millions of households." },
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "TurboTax's guided interview format is being challenged by AI tax assistants that offer conversational, agent-driven filing."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "AI can increasingly replicate tax preparation and small business accounting logic; IRS Direct File is a zero-cost competitor."
+    },
+    "publicDataAccess": {
+      "status": "weakened",
+      "note": "Tax forms and IRS regulations are public — AI can navigate them, reducing Intuit's simplification value proposition."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "AI has democratized access to tax and accounting expertise, reducing the barrier that made TurboTax's guided logic so valuable."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "TurboTax + QuickBooks + Credit Karma + Mailchimp = a unique SMB financial platform covering taxes, accounting, credit, and marketing."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Tax return data, financial records, and credit data for 100M+ users = an irreplaceable financial profile dataset."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "IRS authorized e-file partner status, state tax agency relationships, payroll tax compliance, and financial institution integrations."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "CPA-client ecosystem: accountants recommend TurboTax → clients use it → data improves. QuickBooks SMB network self-reinforces."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Payroll runs, invoicing, tax filing, expense tracking, and lending all embedded in the daily operations of 7M+ small businesses."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "QuickBooks is the system of record for 7M+ small business finances; TurboTax is the tax history record for tens of millions of households."
+    },
     "aiResilienceScore": 80,
     "verdict": "Intuit's proprietary tax data and SMB system-of-record position are genuine AI-resilient moats. The IRS Direct File threat is real but limited to simple returns — Intuit's platform breadth compounds its defense."
-  }
+  },
+  "lastAnalyzed": "February 2026"
 }

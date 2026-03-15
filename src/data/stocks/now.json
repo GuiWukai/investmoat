@@ -3,20 +3,56 @@
   "ticker": "NOW",
   "name": "ServiceNow, Inc.",
   "headerStats": [
-    { "label": "Ticker", "value": "NOW" },
-    { "label": "Market Cap", "value": "~$120B" },
-    { "label": "Price", "value": "~$115" }
+    {
+      "label": "Ticker",
+      "value": "NOW"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$120B"
+    },
+    {
+      "label": "Price",
+      "value": "~$115"
+    }
   ],
   "chips": [
-    { "label": "Enterprise SaaS | AI Workflow", "color": "primary" },
-    { "label": "Wide Moat", "color": "success" },
-    { "label": "AI Beneficiary", "color": "secondary" }
+    {
+      "label": "Enterprise SaaS | AI Workflow",
+      "color": "primary"
+    },
+    {
+      "label": "Wide Moat",
+      "color": "success"
+    },
+    {
+      "label": "AI Beneficiary",
+      "color": "secondary"
+    }
   ],
   "recommendation": "Strong Buy",
   "metrics": [
-    { "title": "Now Assist ACV", "value": "$600M+", "label": "Q4 2025, targeting $1B+ in 2026", "icon": "Zap", "color": "#0cceaf" },
-    { "title": "FCF Margin", "value": "35%", "label": "FY2025 Full-Year Free Cash Flow", "icon": "TrendingUp", "color": "#7c3aed" },
-    { "title": "Total RPO", "value": "$28.2B", "label": "+26.5% YoY Contracted Backlog", "icon": "Lock", "color": "#2563eb" }
+    {
+      "title": "Now Assist ACV",
+      "value": "$600M+",
+      "label": "Q4 2025, targeting $1B+ in 2026",
+      "icon": "Zap",
+      "color": "#0cceaf"
+    },
+    {
+      "title": "FCF Margin",
+      "value": "35%",
+      "label": "FY2025 Full-Year Free Cash Flow",
+      "icon": "TrendingUp",
+      "color": "#7c3aed"
+    },
+    {
+      "title": "Total RPO",
+      "value": "$28.2B",
+      "label": "+26.5% YoY Contracted Backlog",
+      "icon": "Lock",
+      "color": "#2563eb"
+    }
   ],
   "moat": {
     "score": 88,
@@ -59,9 +95,21 @@
       "cagrEstimate": "18–20%",
       "scoreDerivation": "Base 80 (15–30% CAGR) + 5 recurring (98% renewal, $28.2B RPO backlog) + 5 AI TAM expansion (Now Assist $1B+ ACV, Autonomous Workforce) − 3 slight deceleration (21% → 19.5–20% guide) = 87",
       "drivers": [
-        { "name": "Now Assist AI", "metric": "$600M+ ACV Q4 2025, 55× consumption growth since May 2025", "trend": "accelerating" },
-        { "name": "Core Subscription", "metric": "+21% YoY Q4 2025, cRPO +25% YoY to $12.85B", "trend": "stable" },
-        { "name": "Federal & Public Sector", "metric": "+30% YoY Q3 2025, FedRAMP High + Moveworks FedRAMP Moderate", "trend": "accelerating" }
+        {
+          "name": "Now Assist AI",
+          "metric": "$600M+ ACV Q4 2025, 55× consumption growth since May 2025",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Core Subscription",
+          "metric": "+21% YoY Q4 2025, cRPO +25% YoY to $12.85B",
+          "trend": "stable"
+        },
+        {
+          "name": "Federal & Public Sector",
+          "metric": "+30% YoY Q3 2025, FedRAMP High + Moveworks FedRAMP Moderate",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "both",
       "keyRisk": "If Microsoft Copilot Studio achieves >20% win rate in new enterprise ITSM evaluations by end of 2026, ServiceNow's new-logo growth decelerates below 15% and Now Assist ACV stalls under $800M",
@@ -78,11 +126,31 @@
     "peAnalysis": {
       "asOf": "March 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~65×", "note": "SBC-heavy; GAAP EPS ~$1.75 TTM" },
-        { "label": "Forward P/E (NTM, non-GAAP)", "value": "~29×", "note": "consensus non-GAAP EPS ~$4.00" },
-        { "label": "PEG Ratio", "value": "~1.4×", "note": "fwd P/E ÷ 20% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~8×", "note": "$15.5B FY2026 revenue guide" },
-        { "label": "Price / FCF", "value": "~26×", "note": "$4.6B FY2025 FCF (TTM)" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~65×",
+          "note": "SBC-heavy; GAAP EPS ~$1.75 TTM"
+        },
+        {
+          "label": "Forward P/E (NTM, non-GAAP)",
+          "value": "~29×",
+          "note": "consensus non-GAAP EPS ~$4.00"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.4×",
+          "note": "fwd P/E ÷ 20% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~8×",
+          "note": "$15.5B FY2026 revenue guide"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~26×",
+          "note": "$4.6B FY2025 FCF (TTM)"
+        }
       ],
       "summary": "At ~29× forward non-GAAP P/E, ServiceNow trades at a modest premium to the enterprise SaaS median (~25×) that is more than justified by its superior growth profile (20% CAGR vs. peers at 8–15%), 98% renewal rate, and AI monetization upside not yet in consensus estimates. The PEG of ~1.4× places ServiceNow in 'fairly priced for growth' territory — a material de-rating from its historical 3–4× PEG. The wide gap between the 65× trailing GAAP P/E and 29× forward non-GAAP P/E reflects heavy stock-based compensation, not earnings deceleration; analysts should use non-GAAP metrics for like-for-like comparisons."
     }
@@ -162,5 +230,6 @@
     },
     "aiResilienceScore": 88,
     "verdict": "ServiceNow is one of the clearest AI beneficiaries in enterprise software — the proliferation of AI agents increases demand for the workflow orchestration infrastructure ServiceNow uniquely provides, with compliance controls, audit trails, and system integrations that enterprises require to deploy AI safely at scale. The four strongest AI-resilient moats (system-of-record, transaction embedding, regulatory lock-in, proprietary data flywheel) are all actively strengthening as AI adoption expands. The primary AI risk is interface commoditization — if LLMs allow rapid configuration of competing workflow platforms, the learned interface and talent scarcity moats weaken further — but this is structurally offset by the depth of existing workflow logic, compliance certifications, and proprietary training data that competitors cannot shortcut. ServiceNow enters the AI era not as a legacy incumbent under threat, but as the enterprise operating system through which AI must be deployed."
-  }
+  },
+  "lastAnalyzed": "March 2026"
 }

@@ -4,19 +4,52 @@
   "name": "Bitcoin",
   "titleColor": "#f7931a",
   "headerStats": [
-    { "label": "Ticker", "value": "BTC" },
-    { "label": "Market Cap", "value": "$1.3T" },
-    { "label": "Circulating Supply", "value": "19.7M / 21M" }
+    {
+      "label": "Ticker",
+      "value": "BTC"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$1.3T"
+    },
+    {
+      "label": "Circulating Supply",
+      "value": "19.7M / 21M"
+    }
   ],
   "chips": [
-    { "label": "Digital Asset | Hard Money", "color": "warning" },
-    { "label": "Digital Gold", "color": "success" }
+    {
+      "label": "Digital Asset | Hard Money",
+      "color": "warning"
+    },
+    {
+      "label": "Digital Gold",
+      "color": "success"
+    }
   ],
   "recommendation": "Strong Buy",
   "metrics": [
-    { "title": "Hash Rate", "value": "650 EH/s", "label": "Network Security Standard", "icon": "Lock", "color": "#f7931a" },
-    { "title": "Exchange Balance", "value": "1.8M BTC", "label": "Multi-year Lows (Illicit Supply)", "icon": "Shield", "color": "#3b82f6" },
-    { "title": "Address Count", "value": "52.4M", "label": "Unique Holders Worldwide", "icon": "Globe", "color": "#10b981" }
+    {
+      "title": "Hash Rate",
+      "value": "650 EH/s",
+      "label": "Network Security Standard",
+      "icon": "Lock",
+      "color": "#f7931a"
+    },
+    {
+      "title": "Exchange Balance",
+      "value": "1.8M BTC",
+      "label": "Multi-year Lows (Illicit Supply)",
+      "icon": "Shield",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "Address Count",
+      "value": "52.4M",
+      "label": "Unique Holders Worldwide",
+      "icon": "Globe",
+      "color": "#10b981"
+    }
   ],
   "moat": {
     "score": 76,
@@ -24,9 +57,18 @@
     "analysisTitle": "The Scarcity Moat",
     "analysisSummary": "Bitcoin's moat is built on **Math and Decentralization**:",
     "analysisPoints": [
-      { "title": "Absolute Scarcity", "text": "Only 21 million will ever exist. Unlike fiat or even gold, the supply curve is perfectly inelastic to demand." },
-      { "title": "Network Effect", "text": "As the first and largest crypto asset, Bitcoin has the most liquidity, securest chain, and widest institutional support." },
-      { "title": "Property Rights", "text": "A global, permissionless system for storing value that is independent of any central bank or government." }
+      {
+        "title": "Absolute Scarcity",
+        "text": "Only 21 million will ever exist. Unlike fiat or even gold, the supply curve is perfectly inelastic to demand."
+      },
+      {
+        "title": "Network Effect",
+        "text": "As the first and largest crypto asset, Bitcoin has the most liquidity, securest chain, and widest institutional support."
+      },
+      {
+        "title": "Property Rights",
+        "text": "A global, permissionless system for storing value that is independent of any central bank or government."
+      }
     ]
   },
   "growth": {
@@ -67,17 +109,48 @@
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "destroyed", "note": "Not applicable — Bitcoin is a decentralized monetary protocol, not a software interface product." },
-    "businessLogic": { "status": "destroyed", "note": "Not applicable — Bitcoin's protocol rules are immutable by design; there is no configurable business logic layer. This is a feature, not a vulnerability." },
-    "publicDataAccess": { "status": "destroyed", "note": "Not applicable — the Bitcoin blockchain is fully public and transparent by design; data access is not a competitive moat for a monetary protocol." },
-    "talentScarcity": { "status": "weakened", "note": "Bitcoin core development talent remains specialized, but the protocol is intentionally simple and resistant to complex change." },
-    "bundling": { "status": "destroyed", "note": "Not applicable — Bitcoin is intentionally single-purpose; bundling products or features would undermine its core simplicity and security guarantees." },
-    "proprietaryData": { "status": "strong", "note": "The Bitcoin blockchain is an immutable, cryptographically secured, tamper-proof record of all value transfers since 2009." },
-    "regulatoryLockIn": { "status": "strong", "note": "SEC ETF approvals, FASB accounting treatment, sovereign wealth fund adoption, and growing legal tender status in multiple nations." },
-    "networkEffects": { "status": "strong", "note": "The largest crypto network with 52.4M+ unique holders and the broadest institutional support — Metcalfe's Law compounding since 2009." },
-    "transactionEmbedding": { "status": "weakened", "note": "Bitcoin is primarily a store of value rather than a daily transaction medium; Layer 2 Lightning is growing but not yet embedded." },
-    "systemOfRecord": { "status": "strong", "note": "The original, most battle-tested, and most secure decentralized system of record — 15 years with zero successful protocol attacks." },
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "Not applicable — Bitcoin is a decentralized monetary protocol, not a software interface product."
+    },
+    "businessLogic": {
+      "status": "destroyed",
+      "note": "Not applicable — Bitcoin's protocol rules are immutable by design; there is no configurable business logic layer. This is a feature, not a vulnerability."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Not applicable — the Bitcoin blockchain is fully public and transparent by design; data access is not a competitive moat for a monetary protocol."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Bitcoin core development talent remains specialized, but the protocol is intentionally simple and resistant to complex change."
+    },
+    "bundling": {
+      "status": "destroyed",
+      "note": "Not applicable — Bitcoin is intentionally single-purpose; bundling products or features would undermine its core simplicity and security guarantees."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "The Bitcoin blockchain is an immutable, cryptographically secured, tamper-proof record of all value transfers since 2009."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "SEC ETF approvals, FASB accounting treatment, sovereign wealth fund adoption, and growing legal tender status in multiple nations."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "The largest crypto network with 52.4M+ unique holders and the broadest institutional support — Metcalfe's Law compounding since 2009."
+    },
+    "transactionEmbedding": {
+      "status": "weakened",
+      "note": "Bitcoin is primarily a store of value rather than a daily transaction medium; Layer 2 Lightning is growing but not yet embedded."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "The original, most battle-tested, and most secure decentralized system of record — 15 years with zero successful protocol attacks."
+    },
     "aiResilienceScore": 76,
     "verdict": "Bitcoin's mathematical scarcity and decentralized consensus make it uniquely immune to AI disruption. No AI can inflate the supply, hack the network, or replicate the 15-year institutional trust-building."
-  }
+  },
+  "lastAnalyzed": "October 2025"
 }

@@ -3,19 +3,52 @@
   "ticker": "AMZN",
   "name": "Amazon.com Inc.",
   "headerStats": [
-    { "label": "Ticker", "value": "AMZN" },
-    { "label": "Market Cap", "value": "$2.29T" },
-    { "label": "Price", "value": "$212.89" }
+    {
+      "label": "Ticker",
+      "value": "AMZN"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$2.29T"
+    },
+    {
+      "label": "Price",
+      "value": "$212.89"
+    }
   ],
   "chips": [
-    { "label": "Consumer Discretionary | Tech", "color": "primary" },
-    { "label": "Accumulate", "color": "primary" }
+    {
+      "label": "Consumer Discretionary | Tech",
+      "color": "primary"
+    },
+    {
+      "label": "Accumulate",
+      "color": "primary"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
-    { "title": "Revenue Growth", "value": "14%", "label": "Q4 YoY vs 11.5% Industry", "icon": "ShoppingCart", "color": "#f59e0b" },
-    { "title": "AWS Margin", "value": "35%", "label": "Q4 2025 — 13-qtr high growth (+24%)", "icon": "Cloud", "color": "#006fee" },
-    { "title": "Operating Cash Flow", "value": "$139.5B", "label": "TTM; FCF compressed by $200B capex cycle", "icon": "DollarSign", "color": "#17c964" }
+    {
+      "title": "Revenue Growth",
+      "value": "14%",
+      "label": "Q4 YoY vs 11.5% Industry",
+      "icon": "ShoppingCart",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "AWS Margin",
+      "value": "35%",
+      "label": "Q4 2025 — 13-qtr high growth (+24%)",
+      "icon": "Cloud",
+      "color": "#006fee"
+    },
+    {
+      "title": "Operating Cash Flow",
+      "value": "$139.5B",
+      "label": "TTM; FCF compressed by $200B capex cycle",
+      "icon": "DollarSign",
+      "color": "#17c964"
+    }
   ],
   "moat": {
     "score": 78,
@@ -23,9 +56,18 @@
     "analysisTitle": "The Economic Moat",
     "analysisSummary": "Amazon possesses a **Wide Economic Moat** driven by three primary pillars:",
     "analysisPoints": [
-      { "title": "Cost Advantage", "text": "Its massive fulfillment infrastructure creates unit costs that no competitor can match, allowing for faster delivery and lower prices." },
-      { "title": "Switching Costs", "text": "The Prime ecosystem locks in consumers. Once a household is integrated into Prime, the convenience makes shopping elsewhere a \"costly\" friction." },
-      { "title": "Network Effect", "text": "The 3rd party marketplace creates a flywheel where more sellers attract more buyers, which attracts more sellers." }
+      {
+        "title": "Cost Advantage",
+        "text": "Its massive fulfillment infrastructure creates unit costs that no competitor can match, allowing for faster delivery and lower prices."
+      },
+      {
+        "title": "Switching Costs",
+        "text": "The Prime ecosystem locks in consumers. Once a household is integrated into Prime, the convenience makes shopping elsewhere a \"costly\" friction."
+      },
+      {
+        "title": "Network Effect",
+        "text": "The 3rd party marketplace creates a flywheel where more sellers attract more buyers, which attracts more sellers."
+      }
     ]
   },
   "growth": {
@@ -44,9 +86,21 @@
       "cagrEstimate": "15–20%",
       "scoreDerivation": "Base 80 (15–30% blended CAGR) + 5 recurring revenue (AWS contracts + Prime) + 5 TAM expansion (AI inference + sovereign cloud) − 2 Q1 2026 guidance width = 88",
       "drivers": [
-        { "name": "AWS Cloud", "metric": "+24% YoY, $244B backlog (+40% YoY)", "trend": "accelerating" },
-        { "name": "Advertising", "metric": "+23% YoY, $21.3B Q4 ($85B+ annualised path)", "trend": "accelerating" },
-        { "name": "International Retail", "metric": "+17% YoY (Q4), margins recovering", "trend": "stable" }
+        {
+          "name": "AWS Cloud",
+          "metric": "+24% YoY, $244B backlog (+40% YoY)",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Advertising",
+          "metric": "+23% YoY, $21.3B Q4 ($85B+ annualised path)",
+          "trend": "accelerating"
+        },
+        {
+          "name": "International Retail",
+          "metric": "+17% YoY (Q4), margins recovering",
+          "trend": "stable"
+        }
       ],
       "primaryType": "both",
       "keyRisk": "If Azure captures >40% of new enterprise AI inference workloads by end of 2026, AWS growth decelerates below 18% and the $200B 2026 capex cycle proves premature, compressing FCF for 3+ years",
@@ -63,11 +117,31 @@
     "peAnalysis": {
       "asOf": "March 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~29.7×", "note": "$7.17 TTM EPS (FY 2025)" },
-        { "label": "Forward P/E (NTM)", "value": "~26.1×", "note": "consensus EPS est. $8.16" },
-        { "label": "PEG Ratio", "value": "~1.44×", "note": "fwd P/E ÷ ~18% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~2.79×", "note": "~$770B NTM revenue est." },
-        { "label": "Price / FCF", "value": "~280×", "note": "$7.7B TTM FCF (capex-distorted)" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~29.7×",
+          "note": "$7.17 TTM EPS (FY 2025)"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~26.1×",
+          "note": "consensus EPS est. $8.16"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.44×",
+          "note": "fwd P/E ÷ ~18% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~2.79×",
+          "note": "~$770B NTM revenue est."
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~280×",
+          "note": "$7.7B TTM FCF (capex-distorted)"
+        }
       ],
       "summary": "At ~26× forward earnings, AMZN trades at a modest 3-turn premium to the megacap peer median (~23×), consistent with its AWS and advertising quality mix. The PEG of 1.44× sits in the 'premium; requires execution' range — investors are paying for the AI infrastructure call option. The compression from 29.7× trailing to 26.1× forward signals a meaningful earnings ramp through 2026, contingent on the capex cycle beginning to monetise."
     }
@@ -102,17 +176,48 @@
     }
   },
   "tenMoats": {
-    "learnedInterfaces": { "status": "weakened", "note": "Alexa voice interface and AWS console are table stakes easily replicated; not a durable differentiator." },
-    "businessLogic": { "status": "weakened", "note": "AI is commoditizing logistics routing and retail recommendation logic that once required years to build." },
-    "publicDataAccess": { "status": "destroyed", "note": "Amazon's public product catalog data is no longer a defensible competitive advantage." },
-    "talentScarcity": { "status": "weakened", "note": "AWS cloud operations require fewer skilled human operators thanks to AI-powered automation." },
-    "bundling": { "status": "strong", "note": "Prime bundle (shipping + video + music + Alexa + Pharmacy + Gaming) is deeply differentiated and drives 200M+ loyalty." },
-    "proprietaryData": { "status": "strong", "note": "Purchase intent data, AWS usage telemetry, and last-mile logistics operational data are genuinely irreplaceable. AWS $244B backlog reflects deep customer commitment." },
-    "regulatoryLockIn": { "status": "strong", "note": "AWS GovCloud, DoD JEDI, HIPAA, FedRAMP, and financial services compliance create enormous switching friction." },
-    "networkEffects": { "status": "strong", "note": "Marketplace two-sided flywheel: more buyers → more sellers → better selection → more buyers. Self-reinforcing." },
-    "transactionEmbedding": { "status": "strong", "note": "1-click purchasing habits, Prime subscription, and AWS embedded in the infrastructure of the global internet." },
-    "systemOfRecord": { "status": "strong", "note": "AWS is the system of record for global cloud infrastructure; $142B annualized run rate and S3 stores more data than any competitor by a wide margin." },
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "Alexa voice interface and AWS console are table stakes easily replicated; not a durable differentiator."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "AI is commoditizing logistics routing and retail recommendation logic that once required years to build."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Amazon's public product catalog data is no longer a defensible competitive advantage."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "AWS cloud operations require fewer skilled human operators thanks to AI-powered automation."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Prime bundle (shipping + video + music + Alexa + Pharmacy + Gaming) is deeply differentiated and drives 200M+ loyalty."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Purchase intent data, AWS usage telemetry, and last-mile logistics operational data are genuinely irreplaceable. AWS $244B backlog reflects deep customer commitment."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "AWS GovCloud, DoD JEDI, HIPAA, FedRAMP, and financial services compliance create enormous switching friction."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "Marketplace two-sided flywheel: more buyers → more sellers → better selection → more buyers. Self-reinforcing."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "1-click purchasing habits, Prime subscription, and AWS embedded in the infrastructure of the global internet."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "AWS is the system of record for global cloud infrastructure; $142B annualized run rate and S3 stores more data than any competitor by a wide margin."
+    },
     "aiResilienceScore": 82,
     "verdict": "Amazon's moats are overwhelmingly AI-resilient: the $244B AWS backlog, Trainium custom silicon, proprietary purchase data, and the marketplace flywheel are core strengths that are strengthening — not weakening — in the AI era."
-  }
+  },
+  "lastAnalyzed": "March 2026"
 }

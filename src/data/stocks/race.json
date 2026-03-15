@@ -4,13 +4,28 @@
   "name": "Ferrari N.V.",
   "titleColor": "#D40000",
   "headerStats": [
-    { "label": "Ticker", "value": "RACE" },
-    { "label": "Market Cap", "value": "~$67B" },
-    { "label": "Price", "value": "~$375" }
+    {
+      "label": "Ticker",
+      "value": "RACE"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$67B"
+    },
+    {
+      "label": "Price",
+      "value": "~$375"
+    }
   ],
   "chips": [
-    { "label": "Luxury Goods | Automotive", "color": "primary" },
-    { "label": "Scarcity Moat", "color": "success" }
+    {
+      "label": "Luxury Goods | Automotive",
+      "color": "primary"
+    },
+    {
+      "label": "Scarcity Moat",
+      "color": "success"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
@@ -149,5 +164,6 @@
     },
     "aiResilienceScore": 78,
     "verdict": "Ferrari's moat is built on physical scarcity, 75-year brand heritage, and collector psychology — dimensions that AI cannot replicate or erode, but also cannot enhance in the way it benefits data-driven businesses. The Ten Moats framework understates Ferrari's competitive position because its advantages (brand, scarcity, pricing power) are traditional luxury moats that predate the digital era and remain immune to AI disruption — AI is simply irrelevant to why a billionaire will wait two years and pay €500,000 for a Ferrari."
-  }
+  },
+  "lastAnalyzed": "October 2025"
 }
