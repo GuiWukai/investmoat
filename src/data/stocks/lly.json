@@ -2,6 +2,7 @@
   "slug": "lly",
   "ticker": "LLY",
   "name": "Eli Lilly and Company",
+  "lastAnalyzed": "March 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -9,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$927B"
+      "value": "~$950B"
     },
     {
       "label": "Price",
-      "value": "$977.12"
+      "value": "$984"
     }
   ],
   "chips": [
@@ -26,84 +27,152 @@
       "color": "success"
     }
   ],
-  "recommendation": "Strong Buy",
+  "recommendation": "Accumulate",
   "metrics": [
     {
-      "title": "Revenue Growth",
-      "value": "45%",
-      "label": "FY2025 YoY",
+      "title": "FY2025 Revenue",
+      "value": "$65.2B",
+      "label": "+45% YoY | 2026 guidance $80–83B (+25%)",
       "icon": "TrendingUp",
       "color": "#e8294b"
     },
     {
-      "title": "GLP-1 Revenue",
-      "value": "$36.5B",
-      "label": "Mounjaro + Zepbound (2025)",
+      "title": "Tirzepatide Revenue",
+      "value": "$24.8B",
+      "label": "Mounjaro + Zepbound FY2025 | $11.6B in Q4 alone",
       "icon": "Activity",
       "color": "#7c3aed"
     },
     {
       "title": "Operating Margin",
       "value": "40.4%",
-      "label": "Best-in-class pharma efficiency",
+      "label": "FY2025 | non-GAAP EPS guided $33.50–$35.00 in 2026",
       "icon": "BarChart2",
       "color": "#059669"
     }
   ],
   "moat": {
     "score": 82,
-    "description": "Dominant GLP-1 franchise with patent protection into the late 2030s, reinforced by a deep clinical pipeline and manufacturing scale advantages.",
+    "description": "Dominant GLP-1 franchise with patent protection into the late 2030s, reinforced by a deep clinical pipeline, a $50B+ committed manufacturing build-out, and Medicare formulary lock-in beginning April 2026.",
     "analysisTitle": "The GLP-1 Fortress",
     "analysisSummary": "Eli Lilly's moat is anchored in **scientific superiority and regulatory exclusivity** that cannot be replicated quickly:",
     "analysisPoints": [
       {
-        "title": "Tirzepatide Efficacy Superiority",
-        "text": "Mounjaro and Zepbound (tirzepatide) consistently outperform competing GLP-1 drugs in head-to-head efficacy data, with superior weight loss outcomes. This clinical evidence edge drives prescriber preference and formulary positioning that competitors must overcome with their own Phase 3 trial data — a multi-year barrier."
+        "title": "Tirzepatide Efficacy Superiority — Now Proven Against Oral Competition",
+        "text": "Mounjaro and Zepbound (tirzepatide) consistently outperform competing GLP-1 drugs on weight-loss efficacy. FDA approved oral semaglutide (Novo Nordisk's Wegovy pill) in December 2025 showing 16.6% mean weight loss — but tirzepatide delivers 20–22% in comparable trials, maintaining a clinically meaningful 4-6 percentage point advantage. Lilly's orforglipron oral GLP-1 pill (FDA decision expected Q2 2026) uses a non-peptide mechanism allowing dosing without food/water restrictions, differentiating it from oral semaglutide. Mounjaro holds >55% new-prescription share in the U.S. diabetes incretin market — a dominant position that oral competitors have not dislodged."
       },
       {
         "title": "Patent Wall Into the Late 2030s",
-        "text": "Lilly's CEO has confirmed tirzepatide compound patent protection extends 'into the back half of the 2030s' in major markets, contrasting sharply with Novo Nordisk's semaglutide facing patent expiry in select markets today. This 10+ year runway allows Lilly to compound its GLP-1 franchise revenues without near-term generic erosion."
+        "text": "Lilly's CEO has confirmed tirzepatide compound patent protection extends 'into the back half of the 2030s' in major markets, contrasting sharply with Novo Nordisk's semaglutide facing patent expiry in select markets today. This 10+ year runway allows Lilly to compound its GLP-1 franchise revenues — estimated to reach $35–40B+ in 2026 alone — without near-term generic erosion. The retatrutide (triple agonist GLP-1/GIP/glucagon) Phase 3 pipeline, showing 24.2% mean body weight loss, would add a new patent cycle beginning in the late 2020s."
       },
       {
-        "title": "Manufacturing Moat at Scale",
-        "text": "Peptide manufacturing is extraordinarily complex; Lilly has invested billions into new manufacturing capacity globally. The expertise required to manufacture GLP-1 drugs at commercial scale — including sterile fill-finish and cold-chain logistics — represents a structural barrier that takes years for competitors to build."
+        "title": "Manufacturing Moat at Scale — $50B+ Committed",
+        "text": "Peptide manufacturing is extraordinarily complex. Lilly has committed over $50B in total U.S. and global manufacturing investments since 2020, including $27B in new U.S. facilities announced in February 2025 — described as 'the largest pharmaceutical expansion investment in U.S. history'. The Lebanon, Indiana site ($9B) will produce API for Mounjaro and Zepbound from late 2026, scaling through 2028. New facilities in Germany ($2.5B), Ireland ($1.8B), Puerto Rico ($1.2B), and China ($3B) extend the supply chain globally. Supply constraints — not demand — limited tirzepatide revenue in 2024-2025; this capex cycle is converting that constraint into a durable competitive advantage competitors cannot replicate without 5-7 years of lead time."
       }
     ]
   },
   "growth": {
-    "score": 90,
-    "description": "Hypergrowth driven by a $200B+ obesity TAM barely penetrated, with oral GLP-1 (orforglipron) and next-gen retatrutide expanding the addressable market further."
+    "score": 85,
+    "description": "FY2025 delivered $65.2B revenue (+45% YoY) with 2026 guided at $80–83B (+25%). Growth moderates from hypergrowth territory but remains exceptional — driven by Medicare obesity drug coverage (starting April 2026), orforglipron launch (Q2 2026), and manufacturing capacity ramping to meet constrained demand. Pricing headwinds of low-to-mid-teens are the primary risk to the growth rate.",
+    "additionalNote": {
+      "title": "Growth Drivers (3-Year Horizon)",
+      "points": [
+        "Tirzepatide franchise scaling: Mounjaro Q4 2025 at $7.4B (+110% YoY), Zepbound Q4 at $4.2B (+122% YoY) — combined $11.6B quarterly run rate implies $40B+ annualised. Medicare obesity coverage starting April 2026 (cap of $50/month for Zepbound) significantly expands the Medicare patient pool that was previously excluded",
+        "Orforglipron oral GLP-1 (FDA decision Q2 2026): a non-peptide pill with no food/water restrictions removes the 'injection hesitancy' barrier and could open ~30-40% of potential GLP-1 patients who decline injections",
+        "Retatrutide (GLP-1/GIP/glucagon triple agonist): Phase 3 ongoing after Phase 2 showed 24.2% mean body weight loss over 48 weeks — if confirmed, retatrutide would be the most effective anti-obesity drug in history and establish Lilly's next-generation franchise",
+        "Manufacturing capacity ramp: Lebanon, Indiana ($9B site) comes online late 2026 and scales through 2028; Germany facility (2027) and Puerto Rico expansion together triple available tirzepatide capacity from 2024 levels"
+      ]
+    },
+    "growthAnalysis": {
+      "cagrEstimate": "18-25%",
+      "scoreDerivation": "Base 80 (15-30% CAGR; 2026 guided +25%, blended 3-5yr ~18-25%) + 5 TAM expansion (Medicare obesity coverage from Apr 2026 + oral GLP-1 unlocking injection-hesitant patients) + 3 manufacturing capacity (Lebanon, Indiana online late 2026; supply was binding constraint; this cycle converts supply into demand-driven growth) − 3 pricing headwinds (low-to-mid-teens price decline guided for 2026 from IRA negotiations, DTC Zepbound pricing, and Medicaid adjustments) = 85",
+      "drivers": [
+        {
+          "name": "Mounjaro (tirzepatide, diabetes)",
+          "metric": "$15.6B FY2025 (+94% YoY) | Q4 $7.4B | >55% new-Rx share",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Zepbound (tirzepatide, obesity)",
+          "metric": "$9.3B FY2025 (+207% YoY) | Q4 $4.2B | Medicare access from Apr 2026",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Orforglipron (oral GLP-1)",
+          "metric": "FDA decision Q2 2026 | non-peptide pill, no food/water restriction | new patient pool",
+          "trend": "accelerating"
+        }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If low-to-mid-teens price declines deepen beyond 15% as IRA rebate negotiations accelerate and Medicaid adjustments exceed guidance, combined with oral Wegovy (FDA-approved Dec 2025, showing 16.6% weight loss) capturing 20%+ of new-to-therapy patients by end of 2026, revenue growth decelerates below 18% and the forward multiple compresses from 29× toward 22×",
+      "marginTrend": "stable"
+    }
   },
   "valuation": {
     "score": 75,
-    "description": "At $977, LLY trades below the $1,200 base case — the stock has pulled back from its 52-week high of $1,134, creating a reasonable entry point for a company with 25%+ revenue growth guided for 2026 and EPS expected to grow 40%+."
+    "description": "At $984, LLY trades at ~30× forward earnings — a significant de-rating from its 43× trailing P/E that reflects the expected EPS ramp from $24.21 (FY2025) to $33.50–$35.00 (2026 guidance), not multiple deterioration. The stock dropped ~18% on Q4 2025 earnings day (February 4, 2026) as investors focused on pricing headwinds and the ~$10.9B CapEx cycle suppressing FCF — but the underlying franchise is intact and the current price sits 22% below the $1,200 base case and 32% below analyst consensus of ~$1,255.",
+    "valuationNote": {
+      "text": "At ~29× forward earnings on 25%+ growth guidance, LLY's PEG of ~1.15× is attractive for a business with 10+ years of patent-protected franchise revenue and a pipeline (retatrutide, orforglipron) that has not yet been ascribed value in the base case. The $10.9B CapEx cycle is demand-driven — supply was the binding constraint on tirzepatide revenue in 2024-2025, and the Lebanon, Indiana site comes online late 2026. Price/FCF appears stretched (~159×) but normalises toward 40–50× as capex moderates in 2027-2028. Our 12-24 month base case fair value is",
+      "fairValue": "$1,200"
+    },
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~41×",
+          "note": "TTM EPS $24.21 (FY2025)"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~29×",
+          "note": "guided midpoint EPS ~$34.25"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.15×",
+          "note": "29× ÷ 25% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~11.7×",
+          "note": "~$81.5B 2026 revenue guide"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~159×",
+          "note": "$5.96B FCF (capex-heavy cycle)"
+        }
+      ],
+      "summary": "At ~29× forward NTM earnings, LLY trades at a premium to the S&P 500 (~21×) and pharma peers (~20-22×), but the PEG of ~1.15× is below 1.5× — meaning the growth rate more than justifies the multiple premium. The sharp compression from 41× trailing to 29× forward is the key signal: this is an earnings ramp story, not a multiple-compression story. Price/FCF of ~159× is elevated but artificially high due to the $10.9B capex cycle; operating cash flow at $16.8B gives a more representative ~57× which is in-line with high-growth pharma peers."
+    }
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$650",
-      "description": "Oral GLP-1 competition intensifies and pricing reform erodes revenue-per-patient, while a major pipeline setback triggers multiple compression.",
+      "description": "Oral GLP-1 competition intensifies, IRA pricing reform cuts deeper than guided, and retatrutide fails in Phase 3 — multiple compresses to 18-20× on decelerating growth.",
       "points": [
-        "Novo Nordisk's oral semaglutide (Rybelsus follow-on) achieves superior efficacy to orforglipron in head-to-head, reversing Lilly's prescriber share gains",
-        "U.S. Medicare/Medicaid Part D GLP-1 coverage price negotiations cut net pricing by 25%+ before 2028, compressing revenue growth below 10%",
-        "Retatrutide Phase 3 trial fails to replicate Phase 2 weight-loss efficacy (~24% body weight loss), eliminating the next-gen growth catalyst"
+        "Oral semaglutide (Wegovy pill) achieves superior real-world adherence over orforglipron and captures 30%+ of new-to-therapy obesity patients within 18 months of its December 2025 approval, materially slowing Lilly's new prescription growth",
+        "IRA rebate negotiations and Medicare price-setting deepen pricing headwinds beyond the guided low-to-mid-teens to 20%+, compressing combined tirzepatide revenue to below $32B in 2026 vs. the $35-40B consensus estimate",
+        "Retatrutide Phase 3 trials fail to replicate Phase 2 weight-loss efficacy (~24% body weight reduction), eliminating the next-gen franchise catalyst and triggering a re-rating from 28-30× to 18-20× forward earnings"
       ]
     },
     "base": {
       "priceTarget": "$1,200",
-      "description": "Steady 25% revenue growth driven by GLP-1 franchise expansion, FDA approval of orforglipron, and initial retatrutide launch by end of 2026.",
+      "description": "25% revenue growth in 2026 delivered on guidance, orforglipron launches successfully, and Medicare obesity coverage expands the addressable market — multiple holds at 30-33× forward earnings.",
       "points": [
-        "FDA approves orforglipron oral GLP-1 pill in H1 2026, opening the $50B+ oral obesity market and expanding from injections-only customers",
-        "Retatrutide Phase 3 data confirms ~20%+ weight loss superiority, securing approval pathway and establishing Lilly's next-gen franchise",
-        "Donanemab (Alzheimer's) reaches $2B+ annual revenue by 2027, beginning portfolio diversification away from GLP-1 concentration"
+        "FDA approves orforglipron in Q2 2026; initial launch uptake demonstrates demand from injection-hesitant patients with 3M+ new prescriptions in the first 6 months, validating the oral GLP-1 market expansion thesis",
+        "Medicare obesity coverage (starting April 2026 at ≤$50/month) drives Zepbound prescriptions into the Medicare population, adding $3-5B in 2026 revenue upside vs. 2025 baseline — coverage was the primary access barrier",
+        "Retatrutide Phase 3 interim data confirms ~20%+ weight loss by mid-2026, securing the FDA filing pathway and establishing Lilly's next-generation franchise, which the market begins ascribing partial value in the multiple"
       ]
     },
     "bull": {
       "priceTarget": "$1,750",
-      "description": "Retatrutide becomes best-in-class weight-loss drug with 25%+ body weight reduction, oral GLP-1 captures mainstream adoption, and Alzheimer's franchise reaches $5B+.",
+      "description": "Retatrutide becomes best-in-class with 24%+ mean weight loss, oral GLP-1 captures mainstream adoption, and the Alzheimer's (donanemab) franchise reaches $3B+ — portfolio diversification reduces GLP-1 concentration risk.",
       "points": [
-        "Retatrutide achieves 25%+ mean body weight loss in Phase 3, approved by FDA in 2027 and generating $15B+ in annual revenue by 2029",
-        "Orforglipron oral pill penetrates 30% of obesity drug market within 3 years of launch, doubling the addressable patient pool vs. injection-only therapies",
-        "Donanemab Alzheimer's franchise and oncology pipeline (e.g., LOXO-305) collectively reach $8B+ revenue by 2028, reducing GLP-1 concentration risk below 50%"
+        "Retatrutide achieves 24%+ mean body weight loss in Phase 3, FDA-approved in 2027 and scaling toward $15B+ annual revenue by 2029 — the most effective weight-loss drug in history, establishing an unassailable 'best-in-class' moat in a $100B+ GLP-1 market",
+        "Orforglipron oral pill penetrates 25-30% of obesity drug market within 3 years, effectively doubling the patient pool vs. injection-only therapy; AstraZeneca and Pfizer oral pipeline candidates fail to match efficacy in Phase 3",
+        "Donanemab Alzheimer's franchise reaches $3B+ revenue by 2027 as the first disease-modifying treatment reaches commercial scale, reducing GLP-1 concentration below 60% of revenue and justifying a premium sum-of-parts multiple toward $1,750"
       ]
     }
   },
@@ -114,7 +183,7 @@
     },
     "businessLogic": {
       "status": "intact",
-      "note": "Lilly's GLP-1 peptide synthesis, formulation IP, and cold-chain manufacturing know-how represent complex proprietary processes that competitors cannot decode from reverse engineering alone."
+      "note": "Lilly's GLP-1 peptide synthesis, formulation IP, and cold-chain manufacturing know-how represent complex proprietary processes that competitors cannot decode from reverse engineering alone. The non-peptide orforglipron mechanism (small molecule, stable at room temperature, no food/water restrictions) represents a further layer of process IP that differs from Novo's peptide-based approach."
     },
     "publicDataAccess": {
       "status": "destroyed",
@@ -122,7 +191,7 @@
     },
     "talentScarcity": {
       "status": "strong",
-      "note": "World-class endocrinologists, peptide chemists, and regulatory affairs specialists are scarce globally; Lilly's 140-year reputation and compensation attract the best pharma talent disproportionately."
+      "note": "World-class endocrinologists, peptide chemists, and regulatory affairs specialists are scarce globally; Lilly's 140-year reputation and compensation attract the best pharma talent disproportionately. The depth of expertise required to run the tirzepatide, retatrutide, and orforglipron clinical programs simultaneously — across diabetes, obesity, MASH, heart failure, sleep apnea, and osteoarthritis indications — represents a scientific capability that is not replicable by writing a bigger cheque."
     },
     "bundling": {
       "status": "destroyed",
@@ -130,26 +199,25 @@
     },
     "proprietaryData": {
       "status": "strong",
-      "note": "Lilly holds decades of real-world clinical trial data for tirzepatide across thousands of patients — outcomes data that grows with every prescription and feeds future drug development and label expansions."
+      "note": "Lilly holds decades of real-world clinical trial data for tirzepatide across thousands of patients — outcomes data spanning diabetes, obesity, MASH, sleep apnea, heart failure, and osteoarthritis. This dataset grows with every prescription and feeds future label expansions (tirzepatide now has 9+ approved or pipeline indications). The scale of this proprietary outcomes database — particularly as real-world evidence accumulates from millions of patients on Mounjaro and Zepbound — is increasingly valuable for pharmacoeconomic analyses that drive formulary placement decisions."
     },
     "regulatoryLockIn": {
       "status": "strong",
-      "note": "FDA approvals, EU and global regulatory clearances, GMP manufacturing facility certifications, and payer formulary placements create compounding switching barriers that take years to displace."
+      "note": "FDA approvals across 9+ tirzepatide indications, EU and global regulatory clearances, GMP manufacturing certifications across 10+ facilities, and payer formulary placements create compounding switching barriers. Medicare Part D coverage of Zepbound beginning April 2026 (at ≤$50/month co-pay) is a critical milestone — formulary embedding in Medicare creates political and contractual resistance to removal that rivals the regulatory lock-in of any other industry. The IRA's Medicare drug price negotiation represents a two-sided dynamic: pricing pressure now, but confirmed formulary access for the full Medicare population."
     },
     "networkEffects": {
       "status": "intact",
-      "note": "Growing physician experience with tirzepatide creates a prescribing flywheel — more patient success stories build physician confidence and peer recommendations, reinforcing Lilly's market share without additional marketing spend."
+      "note": "Growing physician experience with tirzepatide creates a prescribing flywheel — more patient success stories build physician confidence and peer recommendations, reinforcing Lilly's market share without incremental marketing spend. The >55% new-prescription share in the U.S. diabetes incretin market is self-reinforcing: physicians who achieve good outcomes with Mounjaro default to prescribing it again, and positive word-of-mouth from patients (weight loss results are highly visible) drives self-referrals."
     },
     "transactionEmbedding": {
       "status": "intact",
-      "note": "Mounjaro and Zepbound are embedded in major pharmacy benefit formularies, employer health plans, and Medicare Part D — removing them faces enormous patient, physician, and political resistance."
+      "note": "Mounjaro and Zepbound are embedded in major pharmacy benefit formularies, employer health plans, and Medicare Part D. Removing tirzepatide from a formulary faces enormous patient, physician, and political resistance — particularly after April 2026 when Medicare obesity coverage becomes widely available. The employer benefits market is increasingly structuring GLP-1 coverage around Lilly's product specifically given efficacy data."
     },
     "systemOfRecord": {
       "status": "destroyed",
       "note": "N/A — Lilly is a drug manufacturer, not a system-of-record platform; this moat type does not apply to the pharmaceutical industry."
     },
     "aiResilienceScore": 85,
-    "verdict": "Lilly's core moat — patent-protected biologics with regulatory approval — is structurally immune to AI disruption, and AI drug discovery tools actually accelerate Lilly's pipeline advantage by compressing early-stage discovery timelines. The company is a net beneficiary of AI adoption, using it to identify novel targets and optimize clinical trials faster than underfunded competitors."
-  },
-  "lastAnalyzed": "November 2025"
+    "verdict": "Lilly's core moat — patent-protected biologics with regulatory approval and formulary embedding — is structurally immune to AI disruption. AI drug discovery tools (Lilly uses them internally) accelerate Lilly's pipeline advantage by compressing early-stage discovery timelines, helping identify and advance the retatrutide and orforglipron programs faster than underfunded competitors could replicate. The company is a net beneficiary of AI adoption: AI-powered clinical trial design, patient identification, and real-world evidence analysis reduce the cost and timeline of the Phase 3 programs that are the source of Lilly's moat. The primary structural risk is not AI but pharmaceutical pricing policy — IRA Medicare price-setting creates a regulatory ceiling on the tirzepatide franchise revenue that did not exist when tirzepatide was approved."
+  }
 }
