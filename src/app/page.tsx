@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ShieldCheck, TrendingUp, BarChart3, ChevronDown, ArrowRight, Brain, Target, CheckCircle2 } from "lucide-react";
+import { ShieldCheck, TrendingUp, BarChart3, ChevronDown, ArrowRight, Brain, Target, CheckCircle2, Database, Lock, Network, CreditCard, BookMarked, MonitorSmartphone, Code2, Globe, GraduationCap, Layers, Zap } from "lucide-react";
 import { Card, CardBody, Chip, Progress } from "@heroui/react";
 
 // ─── FAQ Accordion ────────────────────────────────────────────────────────────
@@ -296,6 +296,191 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
+            </div>
+          </CardBody>
+        </Card>
+      </section>
+
+      {/* ── The 10 Moat Model ────────────────────────────────────────────── */}
+      <section className="animate-fade-up stagger-fill-both" style={{ animationDelay: '0.35s' }}>
+        <div className="flex items-center gap-4 mb-4">
+          <h2 className="text-2xl md:text-3xl font-extrabold gradient-text">The 10 Moat Model</h2>
+          <div className="h-px flex-1 bg-white/10" />
+        </div>
+        <p className="text-white/50 text-sm leading-relaxed max-w-3xl mb-10">
+          Every business is scored across 10 specific competitive advantages. Not all moats are equal
+          in the AI era — five are <span className="text-primary font-semibold">AI-resilient</span> (weighted 60% more) because AI cannot easily replicate or destroy them,
+          while five are <span className="text-warning font-semibold">AI-vulnerable</span> because intelligent agents can increasingly substitute for them.
+          The final moat score is a weighted average across all 10 dimensions.
+        </p>
+
+        {/* AI-Resilient Moats */}
+        <div className="mb-10">
+          <div className="flex items-center gap-3 mb-5">
+            <div className="flex items-center gap-2 px-3 py-1.5 bg-primary/15 border border-primary/20 rounded-lg">
+              <Zap size={14} className="text-primary" />
+              <span className="text-primary text-xs font-bold uppercase tracking-wider">AI-Resilient Moats</span>
+            </div>
+            <span className="text-white/30 text-xs">× 1.6 weight in scoring</span>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              {
+                icon: <Database size={18} className="text-primary" />,
+                name: "Proprietary Data",
+                tagline: "Private, compounding data flywheels",
+                description:
+                  "Data that accumulates privately over time and cannot be purchased or replicated by competitors. The longer the company operates, the harder it becomes to catch up. Think HealthKit biometrics, Palantir's classified government data, or Visa's transaction graph.",
+                examples: ["Apple HealthKit", "Palantir datasets", "Visa transaction network"],
+              },
+              {
+                icon: <Lock size={18} className="text-primary" />,
+                name: "Regulatory Lock-In",
+                tagline: "Government licences, certifications & mandates",
+                description:
+                  "Advantages granted or protected by law: FDA approvals, financial licences, index inclusion, spectrum rights, or government contracts. These cannot be automated away and create near-permanent barriers because the certification process itself is the moat.",
+                examples: ["Bitcoin spot ETF approval", "Mastercard banking licences", "MSCI / S&P index inclusion"],
+              },
+              {
+                icon: <Network size={18} className="text-primary" />,
+                name: "Network Effects",
+                tagline: "Value compounds with every new participant",
+                description:
+                  "Following Metcalfe's Law, value scales with the square of participants. Every new user makes the network more valuable for all existing users, creating a self-reinforcing growth loop that competitors must overcome at the same scale — an enormous structural disadvantage for any challenger.",
+                examples: ["iMessage / AirDrop ecosystem", "Bitcoin liquidity depth", "Solana developer ecosystem"],
+              },
+              {
+                icon: <CreditCard size={18} className="text-primary" />,
+                name: "Transaction Embedding",
+                tagline: "Sitting inside the payment layer of operations",
+                description:
+                  "The business is embedded directly in the financial or operational flow of every transaction. Removing it requires rebuilding critical infrastructure, not just switching a preference. This creates extreme switching costs tied to real money movement, not just convenience.",
+                examples: ["Visa / Mastercard rails", "Stripe payment infrastructure", "App Store commerce layer"],
+              },
+              {
+                icon: <BookMarked size={18} className="text-primary" />,
+                name: "System of Record",
+                tagline: "The authoritative source of truth for critical decisions",
+                description:
+                  "The company's data store is the canonical reference that all downstream systems defer to. Replacing it requires migrating years of historical data and retraining every workflow built on top of it. Errors are catastrophic — so customers never voluntarily leave.",
+                examples: ["iCloud Photos / Contacts", "Salesforce CRM", "Epic EHR systems"],
+              },
+            ].map(({ icon, name, tagline, description, examples }) => (
+              <Card key={name} className="bg-white/5 border border-primary/10 backdrop-blur-lg">
+                <CardBody className="p-5 flex flex-col gap-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-primary/15 flex items-center justify-center shrink-0">
+                      {icon}
+                    </div>
+                    <div>
+                      <p className="font-bold text-sm text-white">{name}</p>
+                      <p className="text-primary/70 text-[11px]">{tagline}</p>
+                    </div>
+                  </div>
+                  <p className="text-white/45 text-xs leading-relaxed">{description}</p>
+                  <div className="flex flex-wrap gap-1.5 mt-auto pt-1">
+                    {examples.map(ex => (
+                      <span key={ex} className="text-[10px] px-2 py-0.5 bg-primary/10 text-primary/70 rounded-full border border-primary/10">
+                        {ex}
+                      </span>
+                    ))}
+                  </div>
+                </CardBody>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* AI-Vulnerable Moats */}
+        <div>
+          <div className="flex items-center gap-3 mb-5">
+            <div className="flex items-center gap-2 px-3 py-1.5 bg-warning/10 border border-warning/20 rounded-lg">
+              <Brain size={14} className="text-warning" />
+              <span className="text-warning text-xs font-bold uppercase tracking-wider">AI-Vulnerable Moats</span>
+            </div>
+            <span className="text-white/30 text-xs">× 1.0 weight in scoring</span>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              {
+                icon: <MonitorSmartphone size={18} className="text-warning" />,
+                name: "Learned Interfaces",
+                tagline: "Fluency built through years of UI habit",
+                description:
+                  "Users invest time mastering a specific interface — keyboard shortcuts, mental models, workflows — making switching costly even when alternatives are technically superior. AI agents increasingly abstract away the interface layer, letting users command outcomes without learning a specific UI.",
+                examples: ["macOS / iOS UX", "Final Cut Pro", "Adobe Creative Suite"],
+              },
+              {
+                icon: <Code2 size={18} className="text-warning" />,
+                name: "Business Logic",
+                tagline: "Embedded operational workflows",
+                description:
+                  "The software encodes years of accumulated business rules, edge cases, and customisations that employees rely on daily. While this creates significant switching costs today, AI can increasingly model and reproduce business logic, gradually eroding the cost of migration.",
+                examples: ["SAP ERP configurations", "MDM device policies", "Legacy COBOL systems"],
+              },
+              {
+                icon: <Globe size={18} className="text-warning" />,
+                name: "Public Data Access",
+                tagline: "Privileged access to publicly available information",
+                description:
+                  "The company has a head-start aggregating, structuring, or distributing data that is technically public but expensive to compile. AI web-crawlers and large language models rapidly close this gap by training on the same underlying data sources, compressing the advantage over time.",
+                examples: ["Bloomberg terminal data", "Credit bureau aggregation", "Market data vendors"],
+              },
+              {
+                icon: <GraduationCap size={18} className="text-warning" />,
+                name: "Talent Scarcity",
+                tagline: "Rare human expertise as competitive advantage",
+                description:
+                  "The business depends on recruiting and retaining a small pool of specialists — chip designers, quant researchers, elite engineers — whose skills are hard to find and expensive to poach. AI augments and in some domains replaces highly skilled human work, compressing the scarcity premium over time.",
+                examples: ["NVIDIA CUDA team", "TSMC process engineers", "Quantitative hedge funds"],
+              },
+              {
+                icon: <Layers size={18} className="text-warning" />,
+                name: "Bundling",
+                tagline: "Value created by combining complementary products",
+                description:
+                  "Multiple products packaged together create convenience and cross-sell revenue that individual point solutions cannot easily match. AI-driven software commoditises features rapidly, making it easier for focused challengers to replicate any single element of the bundle at a fraction of the price.",
+                examples: ["Apple One subscription", "Microsoft 365 suite", "Google Workspace"],
+              },
+            ].map(({ icon, name, tagline, description, examples }) => (
+              <Card key={name} className="bg-white/5 border border-warning/10 backdrop-blur-lg">
+                <CardBody className="p-5 flex flex-col gap-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-warning/10 flex items-center justify-center shrink-0">
+                      {icon}
+                    </div>
+                    <div>
+                      <p className="font-bold text-sm text-white">{name}</p>
+                      <p className="text-warning/60 text-[11px]">{tagline}</p>
+                    </div>
+                  </div>
+                  <p className="text-white/45 text-xs leading-relaxed">{description}</p>
+                  <div className="flex flex-wrap gap-1.5 mt-auto pt-1">
+                    {examples.map(ex => (
+                      <span key={ex} className="text-[10px] px-2 py-0.5 bg-warning/10 text-warning/60 rounded-full border border-warning/10">
+                        {ex}
+                      </span>
+                    ))}
+                  </div>
+                </CardBody>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Scoring note */}
+        <Card className="bg-white/5 border-none backdrop-blur-lg mt-6">
+          <CardBody className="p-5">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+              <div className="flex items-center gap-2 shrink-0">
+                <ShieldCheck size={16} className="text-white/40" />
+                <span className="text-white/40 text-[10px] font-black uppercase tracking-widest">How moats are assessed</span>
+              </div>
+              <p className="text-white/40 text-xs leading-relaxed">
+                Each moat is rated <span className="text-white/60 font-medium">strong · intact · weakened · destroyed</span> with an
+                AI-resilience score (0–100). Status maps to a raw score; AI-resilient moats multiply by 1.6.
+                All 10 scores are averaged to produce the final <span className="text-primary font-semibold">Moat Score (40% of composite)</span>.
+              </p>
             </div>
           </CardBody>
         </Card>
