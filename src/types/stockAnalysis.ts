@@ -1,6 +1,22 @@
 export type MoatStatus = 'strong' | 'intact' | 'weakened' | 'destroyed';
 export type RecommendationStatus = 'Strong Buy' | 'Accumulate' | 'Hold' | 'Speculative Buy';
 export type ChipColor = 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
+export type ProjectionVerdict = 'Thrive' | 'Grow' | 'Survive' | 'Struggle';
+
+export interface Projection2030 {
+  /** Overall 2030 outlook verdict */
+  verdict: ProjectionVerdict;
+  /** 2–3 sentence narrative on where the company will be in 2030 */
+  summary: string;
+  /** Estimated price target for 2030, e.g. "$800" */
+  priceTarget: string;
+  /** 3 key tailwinds or catalysts driving the 2030 thesis */
+  catalysts: string[];
+  /** 2–3 material risks that could derail the 2030 outlook */
+  risks: string[];
+  /** Analyst confidence in the 2030 projection */
+  confidence: 'High' | 'Medium' | 'Low';
+}
 
 export interface StockMetric {
   title: string;
@@ -134,4 +150,6 @@ export interface StockAnalysisData {
   };
   tenMoats: TenMoatsData;
   extraSections?: ExtraSection[];
+  /** Optional 2030 outlook projection card */
+  projection2030?: Projection2030;
 }

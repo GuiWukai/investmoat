@@ -10,6 +10,7 @@ import {
   ScenarioCard,
   RecommendationBadge,
   TenMoatsCard,
+  Projection2030Card,
 } from '@/components/AnalysisComponents';
 import { LivePriceWidget } from '@/components/LivePriceWidget';
 import { DynamicValuationGauge } from '@/components/DynamicValuationGauge';
@@ -495,6 +496,13 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
           </div>
         </AnalysisSection>
       </div>
+
+      {/* ── 2030 Projection ── */}
+      {data.projection2030 && (
+        <AnalysisSection title="2030 Projection">
+          <Projection2030Card data={data.projection2030} />
+        </AnalysisSection>
+      )}
     </div>
   );
 }

@@ -180,5 +180,21 @@
     "aiResilienceScore": 84,
     "verdict": "Microsoft's AI-vulnerable moats face moderate pressure (interfaces, talent scarcity), but its AI-resilient fortress — system of record, regulatory lock-in, transaction embedding, and the Azure proprietary data flywheel — is actively strengthened by AI. The businessLogic moat is upgraded to strong: Azure AI is the re-platforming destination, not the threatened incumbent."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "March 2026",
+  "projection2030": {
+    "verdict": "Thrive",
+    "summary": "By 2030, Microsoft is positioned to be the world's enterprise AI operating system — Azure AI infrastructure underpinning an estimated 45%+ of global enterprise cloud workloads, Copilot embedded across 300M+ paid commercial seats, and proprietary frontier models reducing OpenAI dependency while sustaining a 35× forward earnings premium. With $200B+ annual FCF, Microsoft enters 2030 as one of the two largest companies on earth by market cap.",
+    "priceTarget": "$750",
+    "catalysts": [
+      "Azure captures 45%+ cloud market share as AI inference workloads scale beyond $500B annually — MSFT earns compute revenue regardless of which AI model wins, as 1,900+ models run on Azure infrastructure",
+      "Copilot monetisation scales to 200–300M paid commercial seats at $30–50/seat/month ARPU by 2029, adding $60–90B incremental annual revenue on top of the M365 price-increase tailwind",
+      "Microsoft's proprietary reasoning models (hedging OpenAI) compete at frontier level by 2027–28, restoring the AI-first premium multiple of 35–40× forward earnings and eliminating single-partner concentration risk"
+    ],
+    "risks": [
+      "Antitrust structural remedies (FTC/DOJ probe) force cloud licensing unbundling, breaking the Azure + M365 + Copilot bundle that drives ARPU expansion and compressing the multiple to 22–24×",
+      "Open-source AI commoditisation (DeepSeek-class models improving annually) erodes Azure AI premium margins below 63% gross margin by 2028, limiting EPS CAGR to 10–12% vs the 15–17% required to justify current valuation",
+      "OpenAI fully migrates to Google Cloud/Oracle by 2027, removing the AI ecosystem premium and triggering a $50B+ capex reassessment that weighs on FCF for 2–3 years"
+    ],
+    "confidence": "High"
+  }
 }
