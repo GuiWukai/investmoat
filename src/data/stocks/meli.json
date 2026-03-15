@@ -3,6 +3,7 @@
   "ticker": "MELI",
   "name": "MercadoLibre Inc.",
   "titleColor": "#FFE600",
+  "lastAnalyzed": "March 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,11 +11,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$80B"
+      "value": "~$87B"
     },
     {
       "label": "Price",
-      "value": "~$1,600"
+      "value": "$1,670"
     }
   ],
   "chips": [
@@ -27,108 +28,163 @@
       "color": "success"
     }
   ],
-  "recommendation": "Strong Buy",
+  "recommendation": "Accumulate",
   "metrics": [
     {
       "title": "FY2025 Revenue",
       "value": "$28.9B",
-      "label": "+39% YoY — 27 consecutive quarters >30% growth",
+      "label": "+39% YoY | 28 consecutive quarters >30% growth",
       "icon": "TrendingUp",
       "color": "#FFE600"
     },
     {
       "title": "Total Payment Volume",
       "value": "$278B",
-      "label": "FY2025 TPV, +41% YoY",
+      "label": "FY2025 TPV +41% YoY | credit portfolio $12.5B (+90%)",
       "icon": "CreditCard",
       "color": "#00a650"
     },
     {
       "title": "Mercado Pago MAUs",
-      "value": "78M",
-      "label": "+27% YoY, ~30% growth for 10 consecutive quarters",
+      "value": "77.9M",
+      "label": "+27% YoY | NPL 4.4% — historic low | NIMAL 23%",
       "icon": "Users",
       "color": "#FFE600"
     }
   ],
   "moat": {
     "score": 78,
-    "description": "MercadoLibre's moat is a self-reinforcing regional flywheel — the dominant e-commerce marketplace attracts the largest seller ecosystem in Latin America, while Mercado Pago's payments, credit, and insurance layer embeds MELI into every commercial and financial transaction in the region.",
+    "description": "MercadoLibre's moat is a self-reinforcing regional flywheel — the dominant e-commerce marketplace attracts the largest seller ecosystem in Latin America, while Mercado Pago's payments, credit, and insurance layer embeds MELI into every commercial and financial transaction in the region. Shopee's rise in Brazil order volume is the first credible test of this flywheel in a decade.",
     "analysisTitle": "The LatAm Commerce + Fintech Flywheel",
     "analysisSummary": "MercadoLibre's moat is built on **interlocking Network Effects, Transaction Embedding, and Proprietary Credit Data** that compound as LatAm e-commerce penetration rises from its current mid-teen levels:",
     "analysisPoints": [
       {
-        "title": "Two-Sided Marketplace Network Effects",
-        "text": "With 83M+ quarterly buyers and millions of active sellers across 18 countries, MercadoLibre has achieved the critical mass that makes its marketplace self-reinforcing: more buyers attract more sellers who compete on price and selection, which attracts more buyers. This flywheel is why Amazon has spent years trying and largely failing to dislodge MELI in Brazil and Mexico — the network advantage requires rebuilding trust, logistics density, and seller relationships that took MELI two decades to accumulate."
+        "title": "Two-Sided Marketplace Network Effects — Under First Credible Test",
+        "text": "With 83M+ quarterly buyers and millions of active sellers across 18 countries, MercadoLibre has achieved the critical mass that makes its marketplace self-reinforcing. However, Shopee (Sea Limited) surpassed MELI in Brazilian order volume in 2025-2026 by deploying aggressive shipping subsidies, near-zero seller commissions, and gamified engagement — JPMorgan cited this as the reason for its March 2026 downgrade to Neutral. MELI's response (lowering free shipping thresholds, investing in logistics density, launching first-party retail) compresses near-term margins but defends market share. The key test: whether MELI's commerce take-rate (~25%) holds as Shopee forces a structural repricing, or whether the fintech flywheel offsets any commerce margin erosion."
       },
       {
         "title": "Mercado Pago: LatAm's Default Financial OS",
-        "text": "Mercado Pago's 78M monthly active users make it one of the largest financial platforms in Latin America — serving a population that is dramatically underbanked relative to North America or Europe. The payments network has expanded beyond MELI's own marketplace: Mercado Pago is accepted by millions of offline merchants, making it the default digital wallet in Brazil, Mexico, and Argentina. This off-platform usage creates a virtuous cycle where consumer Mercado Pago adoption drives merchant adoption, which drives further consumer adoption."
+        "text": "Mercado Pago's 77.9M monthly active users make it one of the largest financial platforms in Latin America — serving a population that is dramatically underbanked relative to North America or Europe. TPV hit $277.8B in FY2025 (+41%), and the platform has expanded far beyond MELI's own marketplace: Mercado Pago is accepted by millions of offline merchants and holds the leading Net Promoter Score in Brazil, Mexico, Argentina, and Chile. This off-platform usage creates a virtuous cycle that Shopee, Temu, and TikTok Shop cannot replicate — they have logistics and price, but not LatAm's financial infrastructure."
       },
       {
         "title": "Proprietary Credit Underwriting Data",
-        "text": "Mercado Crédito's credit portfolio grew 90% YoY to $12.5B — funded by a unique underwriting advantage: MELI observes each borrower's sales velocity, inventory levels, customer ratings, and payment behavior before extending credit. This transaction-derived data is unavailable to banks or fintech challengers, enabling MELI to pre-approve 33.8% of marketplace sellers for inventory financing at checkout. The resulting credit performance is substantially better than traditional lenders in the same markets, creating a sustainable competitive position in LatAm SMB lending."
+        "text": "Mercado Crédito's credit portfolio grew 90% YoY to $12.5B — funded by a unique underwriting advantage: MELI observes each borrower's sales velocity, inventory levels, customer ratings, and payment behavior before extending credit. NPL sits at 4.4% (historic low), and Net Interest Margin After Losses (NIMAL) is 23% — exceptional for the EM lending market. The credit card portfolio ($5.7B, +114% YoY) adds a recurring revenue layer that compounds with the fintech flywheel. This transaction-derived data is unavailable to banks or fintech challengers, enabling MELI to pre-approve 33.8% of marketplace sellers for inventory financing at checkout."
       }
     ]
   },
   "growth": {
     "score": 90,
-    "description": "MercadoLibre is compounding at 39% revenue CAGR with multiple structural tailwinds: LatAm e-commerce penetration in the mid-teens vs. 25%+ in the US, Mercado Pago expanding into offline commerce, a credit portfolio growing 90% YoY, and an advertising business up 67% powered by AI-driven targeting tools.",
+    "description": "FY2025 delivered $28.9B revenue (+39% YoY) — the 28th consecutive quarter above 30% growth. Fintech is emerging as the dominant growth engine: TPV +41%, credit portfolio +90%, fintech revenue +46% FY2025. Management is explicitly investing into margin compression to defend market share against Shopee and expand fintech services — a deliberate Amazon-2012 style reinvestment that suppresses near-term earnings but extends the competitive moat.",
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
-        "E-commerce penetration: LatAm's e-commerce penetration is ~12-15% vs. 25%+ in the US and 30%+ in China — the region has a decade of structural e-commerce growth ahead as infrastructure (internet, smartphones, payment rails) matures",
-        "Mercado Pago off-platform expansion: monthly active users growing ~30% consistently; AUM reached $18.8B (+78% YoY) as Mercado Pago becomes a savings, investment, and insurance platform for underbanked populations",
-        "Credit portfolio scaling: $12.5B loan book growing 90% YoY with superior underwriting (transaction-derived data); Mercado Crédito is the largest fintech lender in LatAm with room to 5-10x from current size",
-        "Advertising flywheel: ad revenue +67% YoY driven by AI-powered bidding; as buyer counts scale, MELI's ad inventory becomes more valuable, creating a margin-accretive revenue stream similar to Amazon Advertising's trajectory"
+        "E-commerce penetration: LatAm's e-commerce penetration is ~12-15% vs. 25%+ in the US and 30%+ in China — the region has a decade of structural e-commerce growth ahead as internet and smartphone penetration matures, even as Shopee competes for order volume",
+        "Mercado Pago fintech expansion: TPV hit $277.8B (+41% FY2025); AUM reached $18.8B (+78% YoY); credit cards growing 114% YoY to $5.7B portfolio; AI resolves 87% of customer service inquiries without human intervention",
+        "Credit portfolio scaling: $12.5B loan book growing 90% YoY with NIMAL of 23% and NPL at 4.4% historic low; Mercado Crédito is the largest fintech lender in LatAm with room to 5-8x from current size",
+        "Advertising flywheel: ad revenue +67% FX-neutral YoY driven by AI-powered bidding and automated campaigns; cross-border trade grew 74% FX-neutral in Q4 2025 after opening China fulfillment center in December 2025"
       ]
+    },
+    "growthAnalysis": {
+      "cagrEstimate": "28-38%",
+      "scoreDerivation": "Base 90 (30%+ CAGR; FY2025 +39%, 28 consecutive quarters above 30%) + 5 TAM expansion (LatAm e-comm penetration ~13% vs 25%+ US; unbanked population 100M+; years of structural runway) + 3 credit flywheel ($12.5B portfolio growing 90% YoY, NIMAL 23%, NPL at historic low — compounding fintech moat) − 3 Shopee competition (surpassed MELI in Brazilian order volume; JPMorgan estimates 15% downside to 2026 EBIT consensus; forces margin investment) − 5 margin compression (operating margin fell from 13.5% Q4 2024 to 10.1% Q4 2025; management signaled willingness to continue investing at expense of near-term margins) = 90",
+      "drivers": [
+        {
+          "name": "Mercado Pago (Fintech)",
+          "metric": "$12.6B FY2025 revenue (+46%) | TPV $278B | credit $12.5B (+90%)",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Commerce (Marketplace)",
+          "metric": "$16.3B FY2025 revenue | GMV $65B | items sold +43% Q4",
+          "trend": "stable"
+        },
+        {
+          "name": "Advertising",
+          "metric": "+67% FX-neutral Q4 2025 | AI-powered bidding | ~20% of GMV seller-advised",
+          "trend": "accelerating"
+        }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If Shopee's willingness to subsidize shipping below cost in Brazil forces MELI to permanently reduce its commerce take rate below 22% (from ~25% currently) by end of 2026, combined with Mercado Crédito NPL rising above 7% in a EM credit tightening cycle, EBIT margins compress below 8% and the market re-rates MELI from a growth multiple toward 15-18× forward earnings",
+      "marginTrend": "compressing"
     }
   },
   "valuation": {
-    "score": 78,
-    "description": "At ~$1,600 — roughly 30% below the 2025 peak — MELI trades at ~3x P/S for a 39% CAGR compounder with dominant LatAm positioning; the pullback reflects short-term margin investment pressure, not fundamental deterioration.",
+    "score": 76,
+    "description": "At $1,670 — roughly 37% below its June 2025 ATH of $2,645 — MELI trades at ~8× Price/FCF (86% below its 10-year median) and ~3× Price/Sales for a 39% CAGR compounder. The Q4 2025 earnings report (Feb 24, 2026) missed consensus EPS by ~3-9% as management deliberately compressed margins to invest in shipping, fintech, and cross-border trade; the post-earnings selloff and JPMorgan downgrade (March 12) created a rare GARP entry point. PEG of ~0.88× signals the growth rate is not priced in.",
     "valuationNote": {
-      "text": "MELI's P/S of ~3x is cheap relative to its growth rate — for comparison, Shopify trades at ~10x P/S on 30% growth. The margin compression in 2025 (from lowering Brazil's free shipping threshold and scaling fulfillment) is a deliberate reinvestment, similar to Amazon's 2010-2015 phase. At the base case of $2,200, MELI trades at ~4.5x forward P/S on projected $40B+ revenue — reasonable for a business with 30%+ sustainable growth and expanding FCF margins.",
+      "text": "MELI's P/FCF of ~8× is historically anomalous for a business growing revenue at 35-40% annually — the 10-year median is ~58×. The margin compression cycle (operating margin 10.1% in Q4 2025 vs. 13.5% a year prior) is management's deliberate choice to invest ahead of demand, directly analogous to Amazon's 2010-2015 margin trough. When EBIT margins return to 15-18% by 2027-2028, FCF will expand significantly and re-rate the multiple. The $87B market cap at 3× current-year P/S represents an unusually cheap entry point for a dominant regional compounder with a decade of e-commerce runway. Our 12-24 month base case fair value is",
       "fairValue": "$2,200"
+    },
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~42×",
+          "note": "TTM EPS $39.40 (FY2025)"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~25-30×",
+          "note": "range: 24.8× (Yahoo) – 30.5× (GuruFocus)"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~0.88×",
+          "note": "below 1.0 — growth underpriced"
+        },
+        {
+          "label": "Price / Sales (TTM)",
+          "value": "~3.0×",
+          "note": "$28.9B FY2025 revenue"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~8×",
+          "note": "86% below 10-yr median of ~58×"
+        }
+      ],
+      "summary": "At ~25-30× forward NTM earnings, MELI trades at a discount to US e-commerce/fintech peers despite a 35-40% revenue CAGR — the PEG of ~0.88× is below 1.0, suggesting the market is not pricing in the growth rate. The P/FCF of ~8× is the most striking anomaly: 86% below MELI's own 10-year median and at decade-low levels, driven by FCF that includes lending income from the $12.5B credit portfolio. The compression from ~42× trailing to ~27× forward P/E signals a sharp EPS ramp expected in 2026 as the margin investment cycle matures — a bullish gap between trailing and forward multiples."
     }
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$1,000",
-      "description": "A severe LatAm macro downturn — Brazilian real and Argentine peso collapse, elevated credit losses in Mercado Crédito — forces a simultaneous revenue slowdown and credit provision cycle that compresses margins and de-rates the multiple.",
+      "description": "Shopee forces structural take-rate concessions in Brazil, a LatAm macro deterioration spikes Mercado Crédito NPL, and the market de-rates MELI from a growth multiple to a cyclical multiple.",
       "points": [
-        "Brazil enters a currency crisis (BRL/USD above 8) as commodity prices fall, triggering a wave of Mercado Crédito defaults among SMB sellers; net credit losses spike above 10% of portfolio, erasing credit segment profitability",
-        "Amazon and Shopee accelerate LatAm investment, pricing below cost on logistics subsidies to capture the Brazil market while MELI is distracted by credit losses and margin pressure",
-        "FCF margin fails to expand beyond 5%, and the market de-rates MELI from a growth premium to a cyclical multiple at 1.5-2x P/S on $35B revenue, implying $50-70B market cap vs. ~$80B current"
+        "Shopee's willingness to sustain shipping subsidies forces MELI to permanently reduce its commerce take rate from ~25% to below 22% in Brazil by end of 2026, compressing commerce segment margins and erasing the take-rate expansion thesis",
+        "A LatAm credit cycle (triggered by BRL/USD above 8, Argentine macro reversal, or US rate spike) pushes Mercado Crédito NPL above 7-8% of portfolio, generating credit losses that exceed fintech revenue growth and requiring a $2B+ reserve build",
+        "FCF margin fails to recover beyond 6%, and the market de-rates MELI from a growth premium to a cyclical multiple at 1.5-2× P/S on $35B revenue, implying a $52-70B market cap vs. ~$87B current"
       ]
     },
     "base": {
       "priceTarget": "$2,200",
-      "description": "LatAm e-commerce penetration rises from 15% to 22% over three years, Mercado Pago becomes the dominant regional financial platform, and EBIT margins expand toward 15-18% as logistics subsidies normalize.",
+      "description": "LatAm e-commerce penetration rises from 15% to 22% over three years, Shopee competition stabilises at a manageable take-rate impact, Mercado Pago becomes the dominant regional financial platform, and EBIT margins recover toward 14-16% by FY2027.",
       "points": [
-        "GMV grows 25-30% annually driven by Brazil and Mexico expansion, with items sold per buyer expanding from 9 toward 12 as purchase frequency rises — mirroring the trajectory of Chinese e-commerce platforms in their growth phase",
-        "Mercado Pago AUM exceeds $40B as the platform captures savings and investment flows from underbanked populations; insurance and investment products create high-margin recurring revenue streams",
-        "EBIT margins expand to 15-18% by FY2027 as fixed costs are diluted and logistics density improves unit economics; FCF surpasses $3B, supporting a 50-55x FCF multiple at $2,200"
+        "GMV grows 25-30% annually driven by Brazil and Mexico expansion; Shopee competition forces MELI to invest in logistics density and free shipping but does not structurally reduce take rates — items sold per buyer expand toward 12 as purchase frequency rises",
+        "Mercado Pago AUM exceeds $35B as the platform captures savings, investment, and insurance flows from the underbanked; credit card portfolio doubles to $12B+ with NPL held below 6%; the fintech segment surpasses commerce in operating profit by FY2027",
+        "EBIT margins recover to 14-16% by FY2027 as margin investment moderates, logistics density improves unit economics, and advertising revenue (growing 60%+ annually) becomes a material high-margin revenue stream; FCF surpasses $5B, supporting a 40-45× FCF multiple at $2,200"
       ]
     },
     "bull": {
       "priceTarget": "$3,500",
-      "description": "MercadoLibre becomes the Amazon + Visa of Latin America as fintech services outgrow e-commerce in profitability, advertising scales to 5%+ of GMV, and credit portfolio reaches $30B+ with improving loss rates.",
+      "description": "MercadoLibre becomes the Amazon + Visa of Latin America as fintech services outgrow e-commerce in profitability, advertising scales to 5%+ of GMV, and Shopee's margin-burning strategy proves unsustainable.",
       "points": [
-        "Mercado Pago becomes the primary bank account for 150M+ LatAm consumers and 5M+ businesses, unlocking payroll, corporate banking, and cross-border payment services that dwarf the current payments business in revenue potential",
-        "AI-powered advertising achieves 6-8% of GMV monetization (vs. Amazon Advertising's ~8%), adding $5B+ in high-margin annual revenue as MELI's buyer base surpasses 120M quarterly actives",
-        "EBIT margins reach 22-25%, generating $6B+ annual FCF and supporting a 55-60x multiple at $3,500 — justified by a dominant, compounding business in a market of 600M+ people with decades of e-commerce runway"
+        "Shopee retreats from LatAm or significantly reduces subsidies by 2027 as Sea Limited's management prioritises profitability globally; MELI's commerce take-rate holds at 24-26% and GMV growth re-accelerates to 35%+ as the logistics investment pays off",
+        "Mercado Pago becomes the primary bank account for 150M+ LatAm consumers and 5M+ businesses, unlocking payroll, corporate banking, and cross-border payment services; AUM surpasses $60B and credit portfolio reaches $25B+ with improving loss rates",
+        "AI-powered advertising achieves 5-6% of GMV monetization (vs. Amazon Advertising's ~8%), adding $4-5B in high-margin annual revenue; EBIT margins reach 20-22%, generating $5-6B annual FCF and supporting a 55-60× multiple at $3,500"
       ]
     }
   },
   "tenMoats": {
     "learnedInterfaces": {
       "status": "intact",
-      "note": "Sellers on Mercado Libre invest significant time learning the seller hub, ad manager, Mercado Envios shipping tools, and catalog management system; switching to Amazon or Shopee means rebuilding seller analytics, reputation scores, and promotional strategies from zero."
+      "note": "Sellers on Mercado Libre invest significant time learning the seller hub, ad manager, Mercado Envios shipping tools, and catalog management system; switching to Shopee or Amazon means rebuilding seller analytics, reputation scores, and promotional strategies from zero — and losing 10+ years of review history and seller ratings that drive organic discovery."
     },
     "businessLogic": {
       "status": "strong",
-      "note": "MELI's platform encodes deeply complex, region-specific business logic: tax collection across 18 jurisdictions (Brazil's nota fiscal, Argentina's AFIP requirements), localized shipping rules, customs clearance for cross-border trade, and currency management across volatile LatAm economies — complexity that competitors must replicate country by country."
+      "note": "MELI's platform encodes deeply complex, region-specific business logic: tax collection across 18 jurisdictions (Brazil's nota fiscal, Argentina's AFIP requirements), localized shipping rules, customs clearance for cross-border trade, and currency management across volatile LatAm economies — complexity that Shopee, Amazon, and Temu must replicate country by country. MELI's new China fulfillment center (opened Dec 2025) adds cross-border trade complexity that further deepens this advantage."
     },
     "publicDataAccess": {
       "status": "weakened",
@@ -136,34 +192,33 @@
     },
     "talentScarcity": {
       "status": "weakened",
-      "note": "MELI employs strong engineering talent in LatAm but its competitive moat doesn't rest on talent scarcity; AI coding tools are democratizing development and the regional talent pool is expanding rapidly."
+      "note": "MELI employs strong engineering talent in LatAm but its competitive moat doesn't rest on talent scarcity; AI coding tools are democratizing development and the regional talent pool is expanding rapidly. MELI's March 2026 layoffs (119 employees replaced by AI capabilities) reflect efficiency gains, not talent defensibility."
     },
     "bundling": {
       "status": "strong",
-      "note": "The MELI bundle — marketplace + Mercado Pago + Mercado Crédito + Mercado Envios + Mercado Ads + insurance — creates a full-stack commerce and financial services offering that no regional competitor can replicate; sellers who adopt the full stack face near-zero incentive to migrate to a platform that offers only a subset of these services."
+      "note": "The MELI bundle — marketplace + Mercado Pago + Mercado Crédito + Mercado Envios + Mercado Ads + insurance + investment accounts — creates a full-stack commerce and financial services offering that no regional competitor can replicate. Shopee, Temu, and TikTok Shop have logistics and price but no fintech layer; Nubank has fintech but no commerce. MELI is the only LatAm platform that has both at scale."
     },
     "proprietaryData": {
       "status": "strong",
-      "note": "MELI's cross-merchant and cross-consumer data spanning 83M quarterly buyers and millions of sellers across 18 countries is unique — particularly the credit underwriting data (sales velocity, payment history, inventory levels) that enables Mercado Crédito to pre-approve borrowers with lower default rates than traditional banks serving the same markets."
+      "note": "MELI's cross-merchant and cross-consumer data spanning 83M quarterly buyers and millions of sellers across 18 countries is unique — particularly the credit underwriting data (sales velocity, payment history, inventory levels) that enables Mercado Crédito to achieve NPL of 4.4% (historic low) and NIMAL of 23% while growing the credit portfolio 90% YoY. Competitors training on public data cannot replicate the predictive power of this 25-year-old behavioral dataset."
     },
     "regulatoryLockIn": {
       "status": "weakened",
-      "note": "Payments licenses, banking charters, and financial regulatory approvals across 18 countries create significant barriers for new entrants, but MELI doesn't benefit from government mandates driving adoption — regulatory moat is real but not decisive."
+      "note": "Payments licenses, banking charters, and financial regulatory approvals across 18 countries create significant barriers for new entrants, but MELI doesn't benefit from government mandates driving adoption — regulatory moat is real but not decisive. The improving Argentina macro (Milei-era reforms) reduces the EM regulatory risk that previously constrained Argentina's contribution; MELI's $3.4B Argentina investment in 2026 is a confidence signal in regulatory stability."
     },
     "networkEffects": {
       "status": "strong",
-      "note": "The two-sided marketplace flywheel (more buyers → more sellers → better prices and selection → more buyers) is MELI's structural advantage; Mercado Pago's acceptance network adds a third layer — as more merchants accept Mercado Pago offline, the wallet becomes more valuable to consumers, driving adoption that then drives more merchant acceptance."
+      "note": "The two-sided marketplace flywheel (more buyers → more sellers → better prices and selection → more buyers) is MELI's structural advantage. Shopee's rise in Brazilian order volume is the first credible stress test — but Shopee competes on price and shipping subsidies, not on network density. MELI's fintech flywheel adds a third dimension Shopee cannot match: as more merchants accept Mercado Pago offline, the wallet becomes more valuable to consumers, driving adoption that then drives more merchant acceptance — a reinforcing loop that extends beyond e-commerce logistics."
     },
     "transactionEmbedding": {
       "status": "strong",
-      "note": "Mercado Pago processes every checkout on the marketplace, Mercado Crédito finances inventory at the point of sale, and Mercado Envios manages fulfillment — every commercial transaction a seller or buyer executes flows through MELI infrastructure, creating deep operational dependence that compounds with scale."
+      "note": "Mercado Pago processes every checkout on the marketplace, Mercado Crédito finances inventory at the point of sale, and Mercado Envios manages fulfillment — every commercial transaction a seller or buyer executes flows through MELI infrastructure. TPV of $278B in FY2025 represents deep operational dependence that compounds with scale and extends into offline commerce (acquiring TPV of $188B in FY2025)."
     },
     "systemOfRecord": {
       "status": "intact",
-      "note": "For millions of LatAm SMB sellers, Mercado Libre is the primary system of record for sales, inventory, and customer data; Mercado Pago is increasingly the financial record for personal and business transactions in markets where traditional banking infrastructure is weak."
+      "note": "For millions of LatAm SMB sellers, Mercado Libre is the primary system of record for sales, inventory, and customer data; Mercado Pago is increasingly the financial record for personal and business transactions in markets where traditional banking infrastructure is weak. AUM of $18.8B (+78% YoY) in Mercado Pago investment accounts signals a growing system-of-record role for consumer savings across the region."
     },
     "aiResilienceScore": 78,
-    "verdict": "MercadoLibre is a net beneficiary of AI — its AI-powered seller assistant is already advising on 20% of GMV, and its proprietary transaction data enables underwriting and ad targeting that AI-powered challengers cannot replicate without decades of transaction history. The primary AI risk is that lower development barriers could enable local fintech competitors, but MELI's two-sided network scale and 25-year compounding of trust in underdeveloped financial markets are not easily disrupted."
-  },
-  "lastAnalyzed": "November 2025"
+    "verdict": "MercadoLibre is a net beneficiary of AI — its AI customer service assistant already resolves 87% of Mercado Pago inquiries without human intervention, its seller AI assistant advises on 20% of GMV, and AI-powered advertising (+67% FX-neutral Q4 2025) is becoming a high-margin revenue layer. The proprietary transaction data enabling Mercado Crédito's superior underwriting becomes more valuable, not less, as AI improves pattern recognition on behavioral credit signals. The primary AI risk is that AI-powered logistics and pricing tools lower Shopee's cost to subsidise Brazilian shipping, extending the competitive pressure on MELI's marketplace take rate — but this is a distribution/pricing threat, not a moat dissolution, since MELI's fintech embedded in the same transactions is not replicable by logistics-only competitors."
+  }
 }
