@@ -59,6 +59,7 @@ import teslaData   from '@/data/stocks/tesla.json';
 import tsmData     from '@/data/stocks/tsm.json';
 import unhData     from '@/data/stocks/unh.json';
 import visaData    from '@/data/stocks/visa.json';
+import bkngData    from '@/data/stocks/bkng.json';
 
 // Weighted composite: Moat 40% · Growth 35% · Valuation 25%
 // scores = [moatScore, growthScore, valuationScore]
@@ -134,6 +135,7 @@ const allCoverageData = [
     { name: "MSCI",              ticker: "MSCI",  slug: "msci",        scores: [m(msciData),        g(msciData),        v(msciData)],        href: "/stocks/msci",        category: "Financials",  ...t(msciData)        },
     { name: "SoFi Technologies", ticker: "SOFI",  slug: "sofi",        scores: [m(sofiData),        g(sofiData),        v(sofiData)],        href: "/stocks/sofi",        category: "Financials",  ...t(sofiData)        },
     { name: "Strategy Inc.",     ticker: "MSTR",  slug: "mstr",        scores: [m(mstrData),        g(mstrData),        v(mstrData)],        href: "/stocks/mstr",        category: "Hard Assets", ...t(mstrData)        },
+    { name: "Booking Holdings", ticker: "BKNG",  slug: "bkng",        scores: [m(bkngData),        g(bkngData),        v(bkngData)],        href: "/stocks/bkng",        category: "Other",       ...t(bkngData)        },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────
