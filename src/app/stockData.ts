@@ -59,6 +59,7 @@ import teslaData   from '@/data/stocks/tesla.json';
 import tsmData     from '@/data/stocks/tsm.json';
 import unhData     from '@/data/stocks/unh.json';
 import visaData    from '@/data/stocks/visa.json';
+import figData     from '@/data/stocks/fig.json';
 
 // Weighted composite: Moat 40% · Growth 35% · Valuation 25%
 // scores = [moatScore, growthScore, valuationScore]
@@ -121,6 +122,7 @@ const allCoverageData = [
     { name: "Intuitive Surgical",ticker: "ISRG",  slug: "isrg",        scores: [m(isrgData),        g(isrgData),        v(isrgData)],        href: "/stocks/isrg",        category: "Healthcare",  ...t(isrgData)        },
     { name: "Eli Lilly",         ticker: "LLY",   slug: "lly",         scores: [m(llyData),         g(llyData),         v(llyData)],         href: "/stocks/lly",         category: "Healthcare",  ...t(llyData)         },
     { name: "Netflix",           ticker: "NFLX",  slug: "nflx",        scores: [m(nflxData),        g(nflxData),        v(nflxData)],        href: "/stocks/nflx",        category: "Big Tech",    ...t(nflxData)        },
+    { name: "Figma",             ticker: "FIG",   slug: "fig",         scores: [m(figData),         g(figData),         v(figData)],         href: "/stocks/fig",         category: "Big Tech",    ...t(figData)         },
     { name: "Adobe",             ticker: "ADBE",  slug: "adbe",        scores: [m(adbeData),        g(adbeData),        v(adbeData)],        href: "/stocks/adbe",        category: "Financials",  ...t(adbeData)        },
     { name: "AMD",               ticker: "AMD",   slug: "amd",         scores: [m(amdData),         g(amdData),         v(amdData)],         href: "/stocks/amd",         category: "Big Tech",    ...t(amdData)         },
     { name: "K92 Mining",        ticker: "KNT",   slug: "k92",         scores: [m(k92Data),         g(k92Data),         v(k92Data)],         href: "/stocks/k92",         category: "Hard Assets", ...t(k92Data)         },

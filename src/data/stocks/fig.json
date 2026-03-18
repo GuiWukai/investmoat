@@ -1,0 +1,155 @@
+{
+  "slug": "fig",
+  "ticker": "FIG",
+  "name": "Figma, Inc.",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "FIG"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$14.3B"
+    },
+    {
+      "label": "Price",
+      "value": "$27.38"
+    }
+  ],
+  "chips": [
+    {
+      "label": "SaaS | Design",
+      "color": "primary"
+    },
+    {
+      "label": "AI Risk",
+      "color": "danger"
+    }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "2025 Revenue",
+      "value": "$1.06B",
+      "label": "+41% YoY Growth",
+      "icon": "TrendingUp",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "Net Dollar Retention",
+      "value": "136%",
+      "label": "Q4 2025 — Customer Stickiness",
+      "icon": "RefreshCw",
+      "color": "#10b981"
+    },
+    {
+      "title": "Gross Margin",
+      "value": "82%",
+      "label": "GAAP — Q4 2025",
+      "icon": "Zap",
+      "color": "#f7b600"
+    }
+  ],
+  "moat": {
+    "score": 73,
+    "description": "Deep collaborative network effects and high switching costs via embedded design systems and team workflows.",
+    "analysisTitle": "The Collaboration Lock-In Moat",
+    "analysisSummary": "Figma's moat is built on **Network Effects and Organisational Switching Costs**:",
+    "analysisPoints": [
+      {
+        "title": "Team Network Effects",
+        "text": "Figma's real-time multiplayer canvas means every designer, PM, and developer on a team is embedded in shared component libraries and design systems. Migrating away doesn't just require one person to switch tools — it requires the entire organisation to migrate its institutional knowledge, design systems, and shared assets simultaneously."
+      },
+      {
+        "title": "System of Record for Design",
+        "text": "At thousands of companies, Figma is the canonical source of truth for product design — brand guidelines, UI components, and interaction specs all live there. Dev Mode creates a direct design-to-developer handoff pipeline, making Figma structurally embedded in the software development lifecycle, not just the design team's workflow."
+      },
+      {
+        "title": "Expanding Product Suite",
+        "text": "With eight products (Design, FigJam, Slides, Sites, Make, Draw, Dev Mode, Buzz), Figma is expanding beyond design into presentation, brainstorming, and front-end publishing. Each added product deepens organisational reliance and raises the total switching cost as teams embed Figma into more workflows."
+      }
+    ]
+  },
+  "growth": {
+    "score": 82,
+    "description": "2025 revenue hit $1.06B at 41% growth with 2026 guidance of ~30% growth; a $33B TAM at 3% penetration and AI product expansion (Figma Make, Sites, Weave) provide multiple durable growth vectors."
+  },
+  "valuation": {
+    "score": 78,
+    "description": "At $27.38, FIG trades between the bear ($20) and base ($35) scenarios at ~8.5x forward revenue — attractive for a 30%-growth SaaS with 136% NRR, though AI disruption fears justify a discount."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$20",
+      "description": "AI design tools (Google Stitch, Canva AI) accelerate commoditisation of core UI design, causing net revenue retention to fall and growth to stall at 10–15%, compressing multiples to 5–6x forward revenue.",
+      "points": [
+        "Google Stitch's AI-native canvas captures meaningful market share among new design teams, slowing Figma's new logo acquisition and enterprise upsells",
+        "Net dollar retention compresses from 136% toward 110% as teams substitute AI-generated UI for Figma-designed components",
+        "Operating losses widen as AI R&D spend escalates while top-line growth decelerates, spooking growth investors"
+      ]
+    },
+    "base": {
+      "priceTarget": "$35",
+      "description": "Figma sustains ~30% revenue growth through 2026–27 by monetising AI tools (Make, Weave, Sites), expanding enterprise contracts, and maintaining strong retention — reaching ~$1.75B revenue with improving operating leverage.",
+      "points": [
+        "Figma Make and Figma Sites drive AI credit consumption, adding meaningful ARPU uplift to existing enterprise accounts",
+        "Net dollar retention holds above 125% as the expanding product suite offsets isolated churn from AI disruption",
+        "Path to $100M+ operating income in 2026 validates the profitability inflection, attracting quality-growth investors"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$55",
+      "description": "Figma becomes the dominant AI-native design platform — AI tools re-accelerate growth to 35%+, enterprise penetration deepens, and the Dev Mode pipeline embeds Figma as an irreplaceable SDLC layer.",
+      "points": [
+        "Figma Make and AI design agents drive re-acceleration to 35%+ revenue growth as non-designers adopt the platform at scale",
+        "Enterprise TAM expansion into developer workflow tooling (Dev Mode, Sites) opens a second growth S-curve beyond core design",
+        "Strategic partnership or acquisition interest from a cloud hyperscaler (Microsoft, Salesforce) provides a valuation floor and potential exit premium"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "strong",
+      "note": "Designers build deep muscle memory around Figma's Auto Layout, component variants, and constraint system — relearning an equivalent workflow in a competing tool carries a multi-month productivity hit."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Figma's component/variant architecture, design tokens, and shared library logic encode complex organisational design systems that are expensive to replicate or migrate elsewhere."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — Figma does not derive competitive advantage from controlling access to public data sources."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "AI tools like Stitch are democratising UI design, lowering the barrier for non-designers to produce professional-quality work and eroding the value of Figma-specific expertise as a hiring differentiator."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Eight bundled products (Design, FigJam, Slides, Sites, Make, Draw, Dev Mode, Buzz) mean customers rarely buy Figma for a single use case — cross-product stickiness raises the effective switching cost meaningfully."
+    },
+    "proprietaryData": {
+      "status": "weakened",
+      "note": "Figma holds vast design data from teams but it is not a moat-grade proprietary asset — Google, Canva, and Adobe are training AI on comparable design corpora without Figma's data advantage."
+    },
+    "regulatoryLockIn": {
+      "status": "destroyed",
+      "note": "N/A — Figma operates in a commercial SaaS market with no meaningful government certification, compliance mandate, or regulatory moat."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "Shared design systems, component libraries, and real-time collaboration make Figma exponentially more valuable as more teammates join — the organisational network effect creates high collective switching costs."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Dev Mode embeds Figma into the developer handoff layer of every product team's daily build cycle, making it a functional dependency in the software development lifecycle, not just a design tool."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "Figma is the canonical system of record for product design assets, brand components, and interaction specs at thousands of companies — replacing it requires migrating the organisation's entire design history."
+    },
+    "aiResilienceScore": 73,
+    "verdict": "Figma's AI moat picture is mixed: network effects and system-of-record status are genuinely durable, but the learned-interface and talent-scarcity moats face direct erosion from AI-native tools like Google Stitch. The bull case depends on whether Figma's own AI products (Make, Sites, Weave) can convert disruption into a growth accelerant rather than a headwind."
+  },
+  "lastAnalyzed": "March 2026"
+}
