@@ -62,7 +62,7 @@
     }
   ],
   "moat": {
-    "score": 52,
+    "score": 60,
     "description": "World-class high-grade orebody; Stage 3 execution proves operational quality. Strong PNG regulatory lock-in and top-5% ore grades provide durable structural advantages, partially offset by commodity pricing and single-mine concentration risk.",
     "analysisTitle": "The Mining Moat (Asset Quality)",
     "analysisSummary": "In mining, the \"moat\" is the **Quality of the Orebody**:",
@@ -157,15 +157,15 @@
       "note": "N/A — gold mining is a commodity business with no network effects; output is priced by global spot markets regardless of volume."
     },
     "transactionEmbedding": {
-      "status": "weakened",
-      "note": "Gold sales are commodity transactions at spot price — K92 is a price-taker, not a price-maker, with limited embedding power."
+      "status": "destroyed",
+      "note": "N/A — K92 sells gold at spot market prices with no offtake agreements; it is a pure price-taker with zero transaction embedding power."
     },
     "systemOfRecord": {
-      "status": "weakened",
-      "note": "K92 is not a system of record in any meaningful strategic sense; value is in the ore body, not information systems."
+      "status": "destroyed",
+      "note": "N/A — K92 is not a system of record for any business function; value is entirely in the ore body and mining license, not information systems."
     },
-    "aiResilienceScore": 52,
-    "verdict": "K92's AI resilience is limited — only the PNG regulatory mining license and geological expertise provide durable competitive advantages. AI optimization could narrow cost advantages, but cannot replicate the ore body."
+    "aiResilienceScore": 60,
+    "verdict": "Only 3 of the 10 moats genuinely apply to K92: regulatory lock-in (strong — PNG Special Mining Lease), proprietary data (intact — geological ore body models), and talent scarcity (intact — underground PNG mining expertise). The remaining 7 moats are N/A for a single-mine commodity producer. AI cannot disrupt K92's ore body or mining license, but AI-driven mine planning improvements are industry-wide and do not create differentiation. Score is peer-calibrated to the commodities group, slightly below FCX (60) to reflect single-mine, single-jurisdiction concentration."
   },
   "extraSections": [
     {
@@ -193,5 +193,5 @@
       "closing": "Production is expected to be weighted to H2 2026, as key enabler projects (pastefill plant, fleet expansion, power upgrade to 15.3 MW, 60-tonne truck river crossings) complete mostly in H1 2026."
     }
   ],
-  "lastAnalyzed": "October 2025"
+  "lastAnalyzed": "March 2026"
 }
