@@ -23,6 +23,8 @@ import asmlData    from '@/data/stocks/asml.json';
 import avgoData    from '@/data/stocks/avgo.json';
 import btcData     from '@/data/stocks/btc.json';
 import cegData     from '@/data/stocks/ceg.json';
+import gevData     from '@/data/stocks/gev.json';
+import ccjData     from '@/data/stocks/ccj.json';
 import costcoData  from '@/data/stocks/costco.json';
 import disneyData  from '@/data/stocks/disney.json';
 import crmData     from '@/data/stocks/crm.json';
@@ -91,6 +93,8 @@ const t = (json: { scenarios: { bear: { priceTarget: string }; base: { priceTarg
 // scores = [computedMoatScore, growthScore, valuationScore]
 // All three scores and targets derive from the stock's JSON — edit the JSON, not this file.
 const allCoverageData = [
+    { name: "GE Vernova",        ticker: "GEV",   slug: "gev",         scores: [m(gevData),         g(gevData),         v(gevData)],         href: "/stocks/gev",         category: "Industrials", ...t(gevData)         },
+    { name: "Cameco",            ticker: "CCJ",   slug: "ccj",         scores: [m(ccjData),         g(ccjData),         v(ccjData)],         href: "/stocks/ccj",         category: "Hard Assets", ...t(ccjData)         },
     { name: "MercadoLibre",      ticker: "MELI",  slug: "meli",        scores: [m(meliData),        g(meliData),        v(meliData)],        href: "/stocks/meli",        category: "Other",       ...t(meliData)        },
     { name: "Ferrari",           ticker: "RACE",  slug: "race",        scores: [m(raceData),        g(raceData),        v(raceData)],        href: "/stocks/race",        category: "Other",       ...t(raceData)        },
     { name: "Constellation Energy", ticker: "CEG", slug: "ceg",       scores: [m(cegData),         g(cegData),         v(cegData)],         href: "/stocks/ceg",         category: "Other",       ...t(cegData)         },
