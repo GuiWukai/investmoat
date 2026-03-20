@@ -56,6 +56,7 @@ import spgiData    from '@/data/stocks/spgi.json';
 import fanucData   from '@/data/stocks/fanuc.json';
 import tdgData     from '@/data/stocks/tdg.json';
 import teslaData   from '@/data/stocks/tesla.json';
+import lmtData     from '@/data/stocks/lmt.json';
 import tsmData     from '@/data/stocks/tsm.json';
 import unhData     from '@/data/stocks/unh.json';
 import visaData    from '@/data/stocks/visa.json';
@@ -131,6 +132,7 @@ const allCoverageData = [
     { name: "ServiceNow",        ticker: "NOW",   slug: "now",         scores: [m(nowData),         g(nowData),         v(nowData)],         href: "/stocks/now",         category: "Big Tech",    ...t(nowData)         },
     { name: "Oracle",            ticker: "ORCL",  slug: "orcl",        scores: [m(orclData),        g(orclData),        v(orclData)],        href: "/stocks/orcl",        category: "Big Tech",    ...t(orclData)        },
     { name: "TransDigm",         ticker: "TDG",   slug: "tdg",         scores: [m(tdgData),         g(tdgData),         v(tdgData)],         href: "/stocks/tdg",         category: "Industrials", ...t(tdgData)         },
+    { name: "Lockheed Martin",   ticker: "LMT",   slug: "lmt",         scores: [m(lmtData),         g(lmtData),         v(lmtData)],         href: "/stocks/lmt",         category: "Industrials", ...t(lmtData)         },
     { name: "MSCI",              ticker: "MSCI",  slug: "msci",        scores: [m(msciData),        g(msciData),        v(msciData)],        href: "/stocks/msci",        category: "Financials",  ...t(msciData)        },
     { name: "SoFi Technologies", ticker: "SOFI",  slug: "sofi",        scores: [m(sofiData),        g(sofiData),        v(sofiData)],        href: "/stocks/sofi",        category: "Financials",  ...t(sofiData)        },
     { name: "Strategy Inc.",     ticker: "MSTR",  slug: "mstr",        scores: [m(mstrData),        g(mstrData),        v(mstrData)],        href: "/stocks/mstr",        category: "Hard Assets", ...t(mstrData)        },
