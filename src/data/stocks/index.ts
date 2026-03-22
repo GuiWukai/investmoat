@@ -37,12 +37,15 @@ import shop from './shop.json';
 import meli from './meli.json';
 import race from './race.json';
 import ceg from './ceg.json';
+import gev from './gev.json';
+import ccj from './ccj.json';
 import unh from './unh.json';
 import mco from './mco.json';
 import sofi from './sofi.json';
 import mstr from './mstr.json';
 import fanuc from './fanuc.json';
 import now from './now.json';
+import fig from './fig.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -82,12 +85,15 @@ const stocksMap: Record<string, StockAnalysisData> = {
   meli: meli as StockAnalysisData,
   race: race as StockAnalysisData,
   ceg: ceg as StockAnalysisData,
+  gev: gev as StockAnalysisData,
+  ccj: ccj as StockAnalysisData,
   unh: unh as StockAnalysisData,
   mco: mco as StockAnalysisData,
   sofi: sofi as StockAnalysisData,
   mstr: mstr as StockAnalysisData,
   fanuc: fanuc as StockAnalysisData,
   now: now as StockAnalysisData,
+  fig: fig as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
