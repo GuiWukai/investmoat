@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$3.4T"
+      "value": "$3.7T"
     },
     {
       "label": "Price",
-      "value": "$228.00"
+      "value": "$250.00"
     }
   ],
   "chips": [
@@ -30,23 +30,23 @@
   "metrics": [
     {
       "title": "Services Revenue",
-      "value": "$108B",
-      "label": "Annualized Run Rate",
+      "value": "$120B+",
+      "label": "Annualized Run Rate — +14% YoY",
       "icon": "Cloud",
       "color": "#555555"
     },
     {
       "title": "Gross Margin",
-      "value": "46.2%",
-      "label": "Record High (FY2024)",
+      "value": "47%+",
+      "label": "Q1 FY2026 Record; Q2 guided 48–49%",
       "icon": "TrendingUp",
       "color": "#34c759"
     },
     {
-      "title": "Share Buybacks",
-      "value": "$110B+",
-      "label": "Annual Repurchases",
-      "icon": "Database",
+      "title": "Active Devices",
+      "value": "2.5B+",
+      "label": "Installed Base — All-Time High",
+      "icon": "Globe",
       "color": "#007aff"
     }
   ],
@@ -62,11 +62,11 @@
       },
       {
         "title": "App Store as Toll Road",
-        "text": "With 2.2 billion active devices and the most valuable consumer demographic on mobile, the App Store extracts a 15-30% cut of a $100B+ annual app economy. No platform can replicate this captive distribution network for developers."
+        "text": "With 2.5 billion active devices and the most valuable consumer demographic on mobile, the App Store extracts a 15-30% cut of a $100B+ annual app economy. No platform can replicate this captive distribution network for developers."
       },
       {
         "title": "Services Flywheel",
-        "text": "Each new hardware device adds a services subscriber. Each subscriber deepens ecosystem lock-in. Apple One bundles (Music, TV+, Arcade, iCloud, Fitness+, News+) increase switching costs while growing ARPU, creating a compounding services revenue engine now exceeding $100B annually."
+        "text": "Each new hardware device adds a services subscriber. Each subscriber deepens ecosystem lock-in. Apple One bundles (Music, TV+, Arcade, iCloud, Fitness+, News+) increase switching costs while growing ARPU, creating a compounding services revenue engine now exceeding $120B annually."
       },
       {
         "title": "Brand Premium and Pricing Power",
@@ -75,42 +75,39 @@
     ]
   },
   "growth": {
-    "score": 72,
-    "description": "Services growing 15-20% annually offset lumpy hardware cycles. Apple Intelligence integration is the next catalyst for an iPhone upgrade supercycle."
+    "score": 76,
+    "description": "iPhone 17 supercycle confirmed at +23% revenue in Q1 FY2026; services hit $30B quarterly (+14% YoY) at record gross margins; Q2 guided 13–16% total revenue growth — upgrade cycle executing ahead of expectations."
   },
   "valuation": {
-    "score": 68,
-    "description": "Trading near the base case ($240) — reflects a premium multiple appropriate for the highest-quality consumer franchise on earth, but leaves limited upside without an AI-driven hardware supercycle materializing."
+    "score": 74,
+    "description": "At $250, trading between bear ($185) and base ($285) — the iPhone 17 supercycle and services momentum justify a reset of targets upward, and the current price offers ~14% upside to base with a strong EPS growth tailwind."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$155",
-      "description": "iPhone unit declines accelerate as Android AI alternatives close the gap; services growth decelerates; regulatory pressure dismantles App Store economics.",
+      "priceTarget": "$185",
+      "description": "iPhone 17 supercycle fades faster than expected; tariffs and rising memory costs compress margins; regulatory pressure on App Store economics materialises in the US.",
       "points": [
-        "iPhone market share erodes 3-5 points in China as Huawei regains strength and domestic AI models power competitive alternatives",
-        "EU Digital Markets Act (DMA) enforcement forces meaningful App Store concessions, reducing take-rate from 30% toward 15-17%",
-        "Apple Intelligence fails to differentiate iOS, delaying the upgrade cycle and keeping units flat-to-down",
-        "Services revenue growth decelerates below 8% as competition intensifies in streaming, cloud storage, and payments"
+        "iPhone units normalise to 215–225M in FY2027 as the upgrade cycle exhausts pent-up demand; China share stabilises but does not compound",
+        "US antitrust action against the App Store, mirroring EU DMA pressure, forces meaningful take-rate reductions toward 15–17%",
+        "Memory cost inflation and tariff headwinds prevent gross margin expansion beyond 47%, disappointing consensus expectations of 49%+"
       ]
     },
     "base": {
-      "priceTarget": "$240",
-      "description": "Steady services compounding at 12-15%, moderate iPhone unit stability, and Apple Intelligence driving a partial upgrade cycle sustain mid-single-digit EPS growth.",
+      "priceTarget": "$285",
+      "description": "iPhone 17 cycle delivers strong FY2026, services compounds at 13–15% annually, buybacks mechanically lift EPS, and Apple Intelligence deepens the platform's AI differentiation.",
       "points": [
-        "iPhone units stabilize at 225-235M per year with Apple Intelligence driving modest upgrade pull-forward in FY2025-26",
-        "Services segment reaches $120B+ annualized revenue, maintaining 70%+ gross margins",
-        "Apple Intelligence integration deepens with on-device LLM capabilities, reinforcing premium iPhone positioning globally",
-        "Buybacks reduce share count by 3-4% annually, mechanically supporting EPS growth even in flat-revenue years"
+        "iPhone units sustain 235–245M in FY2026 as iPhone 17 demand outpaces supply, with Apple Intelligence driving incremental switchers and upgraders",
+        "Services reach $130B+ annualized revenue in FY2026, with advertising, iCloud, and payments as the primary growth pillars",
+        "EPS compounding at 12–15% annually supported by buybacks retiring 3–4% of shares outstanding per year"
       ]
     },
     "bull": {
-      "priceTarget": "$350",
-      "description": "Apple Intelligence triggers the largest iPhone upgrade cycle since the 5G era, services accelerate, and new hardware categories (Vision Pro, health) add a significant revenue stream.",
+      "priceTarget": "$380",
+      "description": "Apple Intelligence becomes the defining consumer AI platform, a second-generation Vision Pro opens spatial computing, and health hardware unlocks a major new revenue stream.",
       "points": [
-        "Apple Intelligence creates a must-have AI experience exclusive to iPhone 16+ hardware, driving 260M+ iPhone units and a 3-year supercycle",
-        "Vision Pro achieves mass-market adoption via a sub-$1,500 second generation device, creating a new $30B+ spatial computing platform",
-        "Health monitoring hardware (blood glucose, blood pressure) opens a $50B+ medical device adjacent market",
-        "Services re-accelerates to 20%+ growth as Apple Pay Later, financial services, and AI subscriptions expand ARPU significantly"
+        "Apple Intelligence drives a multi-year supercycle — 260M+ iPhone units in FY2027 as AI features become a must-have rather than a nice-to-have",
+        "A sub-$1,500 Vision Pro 2 achieves mainstream adoption, establishing a new $30B+ spatial computing revenue stream by FY2028",
+        "Health monitoring hardware (blood glucose sensor, blood pressure cuff) clears FDA approval, opening a $50B+ medical device adjacent market"
       ]
     }
   },
@@ -145,7 +142,7 @@
     },
     "networkEffects": {
       "status": "strong",
-      "note": "iMessage (blue bubble), AirDrop, AirPlay, Handoff, and the Find My network all strengthen with scale. The 2.2B active device installed base is a network that compounds every year."
+      "note": "iMessage (blue bubble), AirDrop, AirPlay, Handoff, and the Find My network all strengthen with scale. The 2.5B active device installed base is a network that compounds every year."
     },
     "transactionEmbedding": {
       "status": "strong",
@@ -158,5 +155,5 @@
     "aiResilienceScore": 83,
     "verdict": "Apple's consumer ecosystem moat is remarkably resilient to AI disruption — in fact, Apple Intelligence deepens the platform advantage. The primary risks are regulatory (DMA/App Store) and competitive (China smartphone market). The on-device AI privacy architecture is a genuine differentiator that leverages Apple's hardware-software integration advantage."
   },
-  "lastAnalyzed": "October 2025"
+  "lastAnalyzed": "March 2026"
 }

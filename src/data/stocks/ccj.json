@@ -1,0 +1,141 @@
+{
+  "slug": "ccj",
+  "ticker": "CCJ",
+  "name": "Cameco Corporation",
+  "titleColor": "#7C3AED",
+  "headerStats": [
+    { "label": "Ticker", "value": "CCJ" },
+    { "label": "Market Cap", "value": "~$49B" },
+    { "label": "Price", "value": "~$108" }
+  ],
+  "chips": [
+    { "label": "Hard Assets | Nuclear Fuel Cycle", "color": "primary" },
+    { "label": "Nuclear Renaissance", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Contracted Uranium",
+      "value": "230M lbs",
+      "label": "39 customers in 16 countries; ~28M lb/yr through 2030",
+      "icon": "Shield",
+      "color": "#7C3AED"
+    },
+    {
+      "title": "Westinghouse EBITDA",
+      "value": "$690M+",
+      "label": "Cameco's 49% share FY2025 — up from $380M prior-year guidance",
+      "icon": "TrendingUp",
+      "color": "#059669"
+    },
+    {
+      "title": "FY2025 Adj. EPS Growth",
+      "value": "+115%",
+      "label": "C$1.44 (adj.) vs C$0.67 in FY2024",
+      "icon": "Zap",
+      "color": "#7C3AED"
+    }
+  ],
+  "moat": {
+    "score": 84,
+    "description": "Cameco's moat rests on the world's two largest high-grade uranium mines (McArthur River and Cigar Lake), a 49% stake in Westinghouse Electric creating the only Western vertically integrated nuclear fuel cycle, and ~230 million pounds of contracted uranium supply locking in 39 utilities globally through 2035.",
+    "analysisTitle": "The Western Nuclear Fuel Monopoly",
+    "analysisSummary": "Cameco has built **the only vertically integrated Western nuclear fuel chain** — from Athabasca Basin ore in the ground to Westinghouse reactor fuel assemblies — at a time when energy security has made Western uranium supply a matter of national policy:",
+    "analysisPoints": [
+      {
+        "title": "Irreplaceable High-Grade Mine Assets",
+        "text": "McArthur River is the world's largest high-grade uranium mine at ~16.5% U3O8 grade — 100x the global average — while Cigar Lake is the world's second-largest producer. Together with Cameco's 469+ million pounds of proven reserves, these assets represent a geological moat that cannot be replicated: the Athabasca Basin's unique geology took billions of years to form, and Cameco holds 660,000+ hectares of exploration rights in the world's highest-grade uranium district. No new uranium discovery of comparable grade has been made in decades. At combined licensed capacity of 30+ million pounds per year (Cameco's share), this represents a permanent, enduring cost and quality advantage over lower-grade producers globally."
+      },
+      {
+        "title": "Westinghouse: Nuclear Services Oligopoly",
+        "text": "Cameco's 49% stake in Westinghouse Electric — acquired in November 2023 — transforms the company from a commodity miner into a nuclear fuel cycle company with recurring service revenue. Westinghouse services approximately 50% of the world's operating nuclear reactors and is the sole or preferred supplier for AP1000 reactor builds in the U.S., Europe, and Asia. The December 2025 partnership with the U.S. Government — targeting $80B+ in AP1000 deployments globally — cements Westinghouse as the nuclear infrastructure arm of U.S. energy policy, with the Dukovany Czech Republic contract alone generating a $350M milestone payment. Westinghouse's EBITDA contribution reached $690M+ in 2025 (Cameco's 49% share), demonstrating the acquisition's transformative economics."
+      },
+      {
+        "title": "Long-Term Contract Structure: Commodity Cycle Insurance",
+        "text": "Cameco's ~230 million pounds of committed uranium supply contracts — spanning 39 utilities in 16 countries and delivering ~28 million pounds per year through 2030 — feature market-linked floor/ceiling pricing that captures upside when uranium appreciates while protecting against downside. This structure is a deliberate competitive advantage: utilities treat uranium supply as a national security input, meaning once a long-term contract is signed with Cameco, they are deeply reluctant to switch suppliers mid-contract. The March 2026 India deal (9 years, 22 million pounds, ~$2.6B) further extends committed revenue to 2035 with a new geopolitical partner explicitly seeking Western supply security."
+      }
+    ]
+  },
+  "growth": {
+    "score": 78,
+    "description": "Adj. EPS +115% in FY2025 from Westinghouse uplift and uranium price recovery to ~$87/lb; FY2026 consensus projects +23-39% further growth as the India contract contributes, uranium prices trend toward $92-120/lb, and Westinghouse's 6-10% EBITDA CAGR compounds on a transformed earnings base."
+  },
+  "valuation": {
+    "score": 74,
+    "description": "At ~$108, CCJ trades at a 17% discount to the base case of $130 — reflecting a pullback from the January 2026 all-time high and cautious 2026 production guidance, while the analyst consensus target of $149 (+38%) and $2.6B India contract signal meaningful unpriced upside."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$70",
+      "description": "Uranium spot collapses back toward $50-55/lb as Kazakh and Russian supply resolves geopolitical constraints, AI data center power growth disappoints, and Westinghouse faces reactor construction delays — ROIC fails to recover above WACC.",
+      "points": [
+        "Kazakhstan and Russia resolve export restrictions, flooding the spot market with 10-15 million additional pounds per year; uranium spot falls to $50-55/lb, breaching Cameco's contract floor mechanisms on newer agreements and compressing realized prices toward production cost",
+        "AI data center electricity demand growth proves slower than projected due to efficiency improvements; nuclear PPAs from hyperscalers are deferred; the nuclear renaissance narrative loses momentum and uranium-related equities de-rate sharply across the sector",
+        "Westinghouse encounters cost overruns on the Dukovany project and AP1000 construction delays in Poland and Bulgaria; 2027-2028 EBITDA contribution falls to $400M (Cameco's share) vs. consensus $750M, and ROIC remains below WACC — impairing the strategic rationale for the $8.2B acquisition"
+      ]
+    },
+    "base": {
+      "priceTarget": "$130",
+      "description": "Uranium long-term prices stabilize at $85-95/lb, Westinghouse delivers 6-10% EBITDA CAGR, the India deal commences delivery in 2027, and Cameco's contract book rolls forward — adj. EPS reaches $1.60-1.80 USD by FY2027.",
+      "points": [
+        "Uranium long-term price holds at $85-95/lb through 2026-2027, with Cameco's 28M lb/year delivery commitment pricing at ~$90/lb realized — uranium segment EBITDA grows 12-15% annually from contract repricing as below-market legacy agreements expire",
+        "Westinghouse secures 3-5 new AP1000 reactor contracts in Europe and Southeast Asia under the $80B U.S. Government partnership framework; Cameco's 49% EBITDA share grows toward $800M+ by FY2027, establishing Westinghouse as the dominant earnings driver",
+        "India uranium deliveries commence in 2027 (22M lbs across 9 years at market-related prices); additional government-to-government contracts follow from Japan, South Korea, and Eastern Europe seeking Western supply security — extending committed revenue to 2040"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$200",
+      "description": "Uranium spot surges past $120/lb as reactor restarts and AI-driven demand outpace supply growth, Westinghouse AP1000 orders accelerate under the $80B U.S. Government mandate, and SMR optionality begins to be priced into the stock.",
+      "points": [
+        "Uranium spot exceeds $120/lb by late 2026 as global reactor capacity additions outpace mine restarts; Cameco's realized price hits $105-115/lb on market-related contracts; uranium segment FCF more than doubles to $1.5B+ CAD — transforming the earnings profile",
+        "Westinghouse receives binding construction contracts for 10+ AP1000 reactors under the U.S. Government program; Cameco's 49% EBITDA share exceeds $1B by FY2027-2028; Westinghouse alone justifies a $15-20/share valuation premium above current levels",
+        "SMR technology matures: Westinghouse eVinci and NuScale-adjacent reactor programs receive first commercial orders; the nuclear fuel cycle extends into SMR markets where Cameco's vertically integrated supply chain is the natural vendor — creating a 15-20 year second growth platform not in current consensus"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — Cameco is a uranium mining and nuclear services company; there is no user-trained interface creating switching costs; this moat category does not apply to its business model."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "Underground uranium mining at 600m+ depths in high-radiation environments requires proprietary water management, ground support engineering, and radiation protection protocols developed over 30+ years at Cigar Lake and McArthur River — operational know-how that cannot be transferred to a greenfield mine without decades of experience and irreplicable geological conditions."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — Cameco does not control access to any unique public data source; this moat category does not apply to a mining and nuclear services business."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Uranium mine engineers, radiation safety specialists, nuclear fuel cycle scientists, and NRC-qualified reactor technicians are scarce disciplines; Westinghouse's 9,000 engineers servicing 50% of the world's reactors represent a talent moat that takes decades to build, though broader competition for nuclear talent from utility operators and SMR developers creates retention pressure."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Cameco's mine-to-fuel-assembly integration (Athabasca Basin mines → Key Lake mill → Port Hope conversion → Westinghouse fuel fabrication) provides an end-to-end nuclear fuel supply offering that utilities increasingly value for energy security — though technically sophisticated buyers can source each component separately, energy security concerns make bundled Western supply the preferred option."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "30+ years of Athabasca Basin geological data, mine performance data (ore grades, water table behavior, freeze support mechanics), and global uranium market intelligence accumulated across 39 customers in 16 countries create a proprietary dataset that informs both exploration strategy and contract pricing — structurally unavailable to any new entrant or smaller Western peer."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "Uranium mining requires CNSC licenses (Canada) that take 10-15 years to obtain for a new mine; Westinghouse holds NRC design certification for the AP1000 (only reactor with this U.S. certification); uranium is a controlled nuclear substance requiring government-to-government export agreements — the regulatory stack across mining, conversion, and reactor services creates durable, multi-decade barriers to entry and customer switching."
+    },
+    "networkEffects": {
+      "status": "weakened",
+      "note": "No meaningful network effects exist in uranium mining or nuclear services; uranium is a commodity and reactor servicing is a bilateral relationship — the value of Cameco's offering does not increase as more utilities use it; the sole network-adjacent dynamic is Westinghouse's installed base knowledge, which improves with each additional reactor serviced."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Multi-year uranium supply contracts (220M+ lbs committed; ~$2.6B India deal through 2035) embed Cameco as the default Western uranium supplier for 39 utilities across 16 countries — utilities view Cameco as a national security supply partner, and the transaction costs of switching suppliers (re-contracting, government approvals, security vetting) make mid-contract switching prohibitive."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — Cameco is not a system of record for any information function; this moat category does not apply to a mining and nuclear services business."
+    },
+    "aiResilienceScore": 84,
+    "verdict": "Cameco is a net beneficiary of AI adoption through the data center nuclear power demand tailwind — AI-driven electricity demand is accelerating utility investment in nuclear capacity, directly expanding demand for Cameco's uranium and Westinghouse's reactor services. The company's core moats (mine geology, regulatory approvals, long-term contract relationships) are physical and regulatory advantages entirely immune to AI-driven disruption."
+  },
+  "lastAnalyzed": "March 2026"
+}

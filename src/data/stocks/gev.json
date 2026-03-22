@@ -1,0 +1,141 @@
+{
+  "slug": "gev",
+  "ticker": "GEV",
+  "name": "GE Vernova Inc.",
+  "titleColor": "#1B4FBA",
+  "headerStats": [
+    { "label": "Ticker", "value": "GEV" },
+    { "label": "Market Cap", "value": "~$230B" },
+    { "label": "Price", "value": "~$880" }
+  ],
+  "chips": [
+    { "label": "Industrials | Power Infrastructure", "color": "primary" },
+    { "label": "AI Power Supercycle", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Order Backlog",
+      "value": "$150B",
+      "label": "Up $31B YoY — ~4× annual revenue",
+      "icon": "BookOpen",
+      "color": "#1B4FBA"
+    },
+    {
+      "title": "Gas Turbine Backlog",
+      "value": "83 GW",
+      "label": "Sold out through 2029; targeting 100 GW by end-2026",
+      "icon": "Zap",
+      "color": "#059669"
+    },
+    {
+      "title": "FY2025 Free Cash Flow",
+      "value": "$3.7B",
+      "label": "+114% YoY; guided $5.0–5.5B in 2026",
+      "icon": "TrendingUp",
+      "color": "#1B4FBA"
+    }
+  ],
+  "moat": {
+    "score": 88,
+    "description": "GE Vernova's moat is built on the world's largest gas turbine installed base (~7,000 units, generating ~25% of global electricity) locked under long-term service agreements, reinforced by irreplaceable manufacturing expertise and a sold-out turbine backlog through 2029.",
+    "analysisTitle": "The Power Infrastructure Oligopoly",
+    "analysisSummary": "GE Vernova has **three reinforcing structural advantages** in a global power infrastructure industry that is simultaneously undersupplied and essential to the AI economy:",
+    "analysisPoints": [
+      {
+        "title": "Installed Base Lock-In via Long-Term Service Agreements",
+        "text": "GE Vernova's ~7,000 installed gas turbines globally — representing approximately 25% of the world's electricity — are all maintained under Long-Term Service Agreements (LTSAs) typically spanning 10-20 years. These contracts are extraordinarily sticky: replacing a gas turbine mid-life requires a full plant redesign costing hundreds of millions, and LTSAs embed GEV engineers into plant operations as the de facto operational authority. Service revenue accounts for approximately 75% of the Power segment's operating profit, making GEV's earnings more akin to recurring software revenue than one-time equipment sales."
+      },
+      {
+        "title": "Irreplaceable Manufacturing Scale & Engineering Know-How",
+        "text": "Building an HA-class gas turbine — GEV's flagship unit operating at >64% efficiency — requires multi-year precision manufacturing using specialized alloys, ceramic thermal barrier coatings, and cooling channel geometries representing 70+ years of proprietary development. No competitor can replicate GEV's Greenville, SC manufacturing campus or its metallurgical expertise within a decade. Gas turbine slots are sold out through 2029, and GEV is expanding manufacturing capacity from 55 to 70-80 units/year — still insufficient to meet demand. This supply constraint enables pricing power: hyperscalers are signing 5-10 year volume agreements at forward-locked prices, embedding GEV revenues through 2035."
+      },
+      {
+        "title": "Integrated 'Generation-to-Grid' Platform for Hyperscalers",
+        "text": "Following the Prolec GE acquisition (closed February 2026, $5.275B), GE Vernova is the only company capable of supplying a hyperscaler with a complete power solution: gas turbines for on-site generation, transformers and switchgear for grid interconnection, and digital software for grid management. This integrated offering cannot be assembled from competitors — Siemens Energy lacks U.S. transformer manufacturing scale, and Mitsubishi Power has minimal U.S. grid equipment presence. AWS's strategic framework agreement for both turbines and turnkey grid substations exemplifies this bundled approach, which commands premium pricing unavailable to single-product competitors."
+      }
+    ]
+  },
+  "growth": {
+    "score": 84,
+    "description": "Revenue guided +17-18% in 2026 to $44–45B, with EBITDA margin expanding to 11-13% and a $24B+ cumulative FCF target over 2026-2028 — driven by AI data center power demand, global grid electrification investment, and Prolec GE margin accretion across a $150B backlog."
+  },
+  "valuation": {
+    "score": 69,
+    "description": "At ~$880, GEV trades just below the base case of $950 — reflecting the extraordinary backlog visibility but pricing in successful Prolec GE integration and continued margin expansion; the Wind segment drag (~$(400M) EBITDA) and premium multiple (48x trailing P/E) leave limited margin for error."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$550",
+      "description": "Manufacturing delays limit turbine deliveries, Wind losses deepen, and hyperscaler demand growth decelerates — EBITDA margins stall at 8-9% and the premium multiple compresses to 25x.",
+      "points": [
+        "Greenville manufacturing expansion falls 12-18 months behind schedule, capping 2026 Power segment deliveries at ~60 turbines vs. 75+ expected — revenue misses guidance by $3-4B and backlog conversion extends into 2028",
+        "Offshore wind stop-work orders spread to additional projects; GEV is forced to absorb $1B+ in offshore contract write-downs while onshore demand fails to offset; Wind EBITDA losses deepen to $(600M)+",
+        "AI model efficiency breakthroughs (inference-optimised architectures requiring 60% less compute) cause hyperscalers to defer long-term turbine volume agreements; 2027-2028 backlog coverage thins and the market de-rates GEV from 48x to 25x normalized earnings"
+      ]
+    },
+    "base": {
+      "priceTarget": "$950",
+      "description": "Backlog converts on schedule, Prolec GE integrates smoothly adding $3B revenue at ~25% margin, and EBITDA margin reaches 12-13% — $5B+ FCF funds buybacks and the market re-rates toward 35x earnings.",
+      "points": [
+        "Power segment delivers 17% organic revenue growth with 70+ turbine deliveries; EBITDA margin hits 16-18%, sustaining the installed base LTSA flywheel and locking in another 3 years of high-margin service revenue",
+        "Electrification segment reaches $13.5–14B revenue including Prolec GE; transformer backlog at 2.5x book-to-bill converts efficiently; 17-19% EBITDA margin establishes the segment as a second profit engine alongside Power",
+        "2-3 new AI hyperscaler turbine volume agreements spanning 2027-2030 are announced, extending backlog coverage and confirming the natural gas bridge-power-for-data-centers thesis"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$1,400",
+      "description": "The $100B SMR MoU converts to binding orders, hyperscaler turbine demand exceeds all forecasts, and EBITDA margins reach 20% a year ahead of plan — GEV re-rates as the defining AI infrastructure pick.",
+      "points": [
+        "The $100B SMR MoU (signed during Japan state visit) converts into 10+ binding nuclear construction contracts in 2026-2027; GEV becomes the U.S. government's nuclear manufacturing partner, adding a 15-20 year revenue platform not in any current consensus estimate",
+        "Gas turbine manufacturing capacity ramps to 90+ units/year by end of 2027; backlog surpasses 120 GW; 2028 revenue guidance raised to $60B+ as hyperscaler demand concentration exceeds all prior forecasts",
+        "Group EBITDA margins reach 20% in 2027 — one year ahead of the 2028 target — driven by operating leverage, Prolec GE synergies, and a rising software/services revenue mix; at 30x FCF of $8B+, the market cap exceeds $240B, implying ~$1,400/share"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — GE Vernova is a power equipment manufacturer; there is no user-trained interface creating switching costs; this moat category does not apply to an industrial equipment business."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "70+ years of proprietary gas turbine combustion design, cooling channel engineering, and lifecycle optimization represent deep operational business logic — the metallurgical expertise and manufacturing processes embedded in HA-class turbine production cannot be replicated by a new entrant within a decade."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — GE Vernova does not control access to any unique public data source; this moat category does not apply to its business model."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "Gas turbine engineers, nuclear engineers, and power systems specialists are among the scarcest engineering disciplines globally; GEV employs the largest concentration of turbine specialists worldwide, and competition from energy transition and nuclear restart programs keeps the talent pool structurally constrained for any would-be competitor."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Post-Prolec GE acquisition, GEV is the only vendor supplying a complete generation-to-grid solution (turbines + transformers + switchgear + digital software) — hyperscalers building captive power infrastructure face far higher complexity sourcing these components separately, creating a bundling premium unavailable to single-product competitors."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Operational data from ~7,000 installed gas turbines generating ~25% of world electricity creates compounding advantages in predictive maintenance, next-generation turbine design optimisation, and LTSA pricing calibration — this dataset took 70+ years to accumulate and is structurally unavailable to any competitor or new entrant."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "Gas turbines require multi-year air permits, grid interconnect approvals, and U.S. export controls on dual-use equipment; nuclear SMR development requires NRC licensing; aeroderivative turbines use FAA-certified aircraft engine cores — combined regulatory requirements across three product lines create durable barriers to entry and long-term customer lock-in."
+    },
+    "networkEffects": {
+      "status": "weakened",
+      "note": "Modest network effects exist through GEV's digital fleet management platform — more turbines provide richer operational data improving algorithms for the entire fleet — but the core products (gas turbines and transformers) do not benefit from Metcalfe's Law dynamics; each additional sale primarily benefits GEV through data rather than making existing customers' assets more valuable."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Long-Term Service Agreements (LTSAs) of 10-20 years embed GEV engineers and parts supply into the daily operational workflow of ~7,000 power plants; hyperscaler volume agreements now extend to 2030-2035, creating bilateral dependencies where replacing GEV mid-contract would require replanning entire captive power infrastructure buildouts."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "GEV's digital APM (Asset Performance Management) software and LTSA management systems increasingly serve as the operational system of record for gas turbine fleets — while not the primary software moat, the digitalization of service relationships creates data lock-in that compounds the physical equipment relationships."
+    },
+    "aiResilienceScore": 90,
+    "verdict": "GE Vernova is a net beneficiary of AI adoption through the data center power demand supercycle — AI is a direct revenue catalyst rather than a disruption risk, with AI-driven electricity demand filling its sold-out turbine backlog through 2029. The company's core moats (installed base LTSAs, manufacturing expertise, regulatory certifications) are AI-independent physical and contractual advantages that no AI model can automate or replicate."
+  },
+  "lastAnalyzed": "March 2026"
+}
