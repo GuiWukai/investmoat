@@ -511,7 +511,7 @@ export default function HomePage() {
               Ready to explore the portfolio?
             </h3>
             <p className="text-white/50 max-w-md text-sm leading-relaxed">
-              View the current 20-stock allocation, explore all 40+ analyzed assets,
+              View the current 25-stock allocation, explore all 40+ analyzed assets,
               or dive into individual company reports with moat scores, scenarios, and live valuations.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
