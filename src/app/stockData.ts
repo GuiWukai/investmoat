@@ -63,6 +63,7 @@ import neeData     from '@/data/stocks/nee.json';
 import tsmData     from '@/data/stocks/tsm.json';
 import unhData     from '@/data/stocks/unh.json';
 import visaData    from '@/data/stocks/visa.json';
+import cashData    from '@/data/stocks/cash.json';
 import figData     from '@/data/stocks/fig.json';
 
 // Weighted composite: Moat 40% · Growth 35% · Valuation 25%
@@ -143,6 +144,7 @@ const allCoverageData = [
     { name: "NextEra Energy",    ticker: "NEE",   slug: "nee",         scores: [m(neeData),         g(neeData),         v(neeData)],         href: "/stocks/nee",         category: "Other",       ...t(neeData)         },
     { name: "MSCI",              ticker: "MSCI",  slug: "msci",        scores: [m(msciData),        g(msciData),        v(msciData)],        href: "/stocks/msci",        category: "Financials",  ...t(msciData)        },
     { name: "SoFi Technologies", ticker: "SOFI",  slug: "sofi",        scores: [m(sofiData),        g(sofiData),        v(sofiData)],        href: "/stocks/sofi",        category: "Financials",  ...t(sofiData)        },
+    { name: "Pathward Financial", ticker: "CASH",  slug: "cash",        scores: [m(cashData),        g(cashData),        v(cashData)],        href: "/stocks/cash",        category: "Financials",  ...t(cashData)        },
     { name: "Strategy Inc.",     ticker: "MSTR",  slug: "mstr",        scores: [m(mstrData),        g(mstrData),        v(mstrData)],        href: "/stocks/mstr",        category: "Hard Assets", ...t(mstrData)        },
 ];
 
