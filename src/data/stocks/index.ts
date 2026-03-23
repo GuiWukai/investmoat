@@ -46,6 +46,8 @@ import mstr from './mstr.json';
 import fanuc from './fanuc.json';
 import now from './now.json';
 import fig from './fig.json';
+import lmt from './lmt.json';
+import nee from './nee.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -94,6 +96,8 @@ const stocksMap: Record<string, StockAnalysisData> = {
   fanuc: fanuc as StockAnalysisData,
   now: now as StockAnalysisData,
   fig: fig as StockAnalysisData,
+  lmt: lmt as StockAnalysisData,
+  nee: nee as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
