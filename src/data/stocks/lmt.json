@@ -1,0 +1,204 @@
+{
+  "slug": "lmt",
+  "ticker": "LMT",
+  "name": "Lockheed Martin Corp.",
+  "lastAnalyzed": "March 2026",
+  "titleColor": "#003087",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "LMT"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$148B"
+    },
+    {
+      "label": "Price",
+      "value": "~$638"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Aerospace | Defense | Government",
+      "color": "primary"
+    },
+    {
+      "label": "Hold",
+      "color": "warning"
+    }
+  ],
+  "recommendation": "Hold",
+  "metrics": [
+    {
+      "title": "Backlog",
+      "value": "$194B",
+      "label": "Record — 17% YoY Growth, 2.5× Annual Revenue",
+      "icon": "Shield",
+      "color": "#003087"
+    },
+    {
+      "title": "FY2025 FCF",
+      "value": "$6.9B",
+      "label": "4.7% FCF Yield — Expanding in 2026",
+      "icon": "DollarSign",
+      "color": "#1e5ba8"
+    },
+    {
+      "title": "ROIC",
+      "value": "23.6%",
+      "label": "Best-in-class for defense primes",
+      "icon": "TrendingUp",
+      "color": "#003087"
+    }
+  ],
+  "moat": {
+    "score": 83,
+    "description": "Lockheed Martin is entrenched in US and allied military infrastructure through sole-source defense contracts, classified program lock-in, and decades of non-replicable defense platform data — the F-35 alone provides 27% of revenue and 30-40 years of sustainment runway.",
+    "analysisTitle": "The Defense Platform Lock-In",
+    "analysisSummary": "Lockheed Martin's moat is built on **Government Program Embeddedness and Regulatory Fortification**:",
+    "analysisPoints": [
+      {
+        "title": "Sole-Source Program Dominance",
+        "text": "Lockheed Martin is the prime contractor for the F-35 Joint Strike Fighter — the most expensive weapons program in history at ~$1.7 trillion lifecycle cost — and the only legal manufacturer of the airframe. The same applies to PAC-3 missiles, HIMARS rocket artillery, and the U-2/SR-71 successor programs at Skunk Works. Once designed into a military platform specification, LMT cannot be replaced without a multi-year, multi-billion-dollar re-engineering process. These are not contracts — they are infrastructure dependencies written into national defense postures."
+      },
+      {
+        "title": "The Sustainment Flywheel",
+        "text": "F-35 sustainment now represents the fastest-growing portion of LMT's Aeronautics segment, shifting the revenue mix toward higher-margin, annuity-like income streams. With 1,000+ F-35s deployed across 20+ nations, LMT's ODIN sustainment platform captures all fleet health data, parts logistics, and mission system upgrades. The more aircraft deployed, the more indispensable — and profitable — the sustainment relationship becomes. This flywheel compounds for the 30-40 year service life of each airframe."
+      },
+      {
+        "title": "Cleared Human Capital and Classified Program Lock-In",
+        "text": "Lockheed's Skunk Works division represents perhaps the most impenetrable non-physical moat in US industry: decades of classified program knowledge locked inside security clearances that cannot be legally disclosed, transferred, or replicated. Over 60,000 employees hold active security clearances, including TS/SCI — a recruiting and operational asset that new entrants (including AI-native defense startups) cannot replicate in years, let alone months. The classified nature of next-generation programs (space-based interceptors, next-gen air dominance) creates compounding lock-in as each new program builds on prior classified work."
+      }
+    ]
+  },
+  "growth": {
+    "score": 62,
+    "description": "LMT is not a high-growth business — it is a high-visibility, compounding-capital-return machine. Blended revenue CAGR of 6-8% masks a bifurcated story: Missiles & Fire Control growing double-digit through 2030 while Aeronautics production is range-bound. The $194B backlog (17% growth, book-to-bill 1.2) provides extraordinary multi-year revenue certainty.",
+    "additionalNote": {
+      "title": "Growth Drivers (3-Year Horizon)",
+      "points": [
+        "Missiles & Fire Control scaling: PAC-3 MSE ramping from 600 to 2,000 units/year under a multi-year framework agreement; HIMARS backlog expanding with NATO commitments; MFC guiding 14% growth in 2026 and double-digit CAGR through end of decade — driven by geopolitical demand that structural defense budgets cannot quickly absorb",
+        "F-35 sustainment acceleration: management guiding double-digit growth in F-35 sustainment revenue in 2026; as the global fleet expands past 1,000 aircraft and ages, the higher-margin ODIN data services and spare parts business becomes the dominant profit driver in Aeronautics",
+        "Next-generation classified programs (Skunk Works): X-59 supersonic flight, space-based interceptor (first flight 2028), and next-gen air dominance programs are in early phases that will monetize in the 2027-2032 window; these could represent $10B+ in new long-cycle revenue that is not in current consensus estimates",
+        "Capital return compounding: $3.7B in buybacks and $3.1B in dividends in FY2024; share count shrinking ~4% per year amplifies per-share metrics even in modest revenue growth environments; 2026 EPS guidance of $29.35-$30.25 represents ~40% jump from 2025's $21.49 as pension charges roll off"
+      ]
+    },
+    "growthAnalysis": {
+      "cagrEstimate": "6–8%",
+      "scoreDerivation": "Base 52 (6–8% CAGR) + 5 high-visibility government contracts (multi-year, very predictable) + 5 TAM expansion (MFC double-digit through 2030, space-based interceptors) = 62",
+      "drivers": [
+        {
+          "name": "Missiles & Fire Control",
+          "metric": "+14% YoY in 2026; PAC-3 MSE scaling 3× to 2,000 units/yr",
+          "trend": "accelerating"
+        },
+        {
+          "name": "F-35 Sustainment (ODIN)",
+          "metric": "Double-digit growth guided; $1B LMT strategic investment in spare parts",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Skunk Works / Space",
+          "metric": "+5–7% YoY; X-59 first flight 2025; space interceptor 2028",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If the US defense budget faces sequestration or continuing resolution in FY2027 that cuts procurement by 10%+, MFC ramp delays and F-35 lot deferrals compress the 2027-2028 revenue bridge before the backlog converts — particularly vulnerable if classified program write-downs recur (LMT lost $1.5B after-tax in 2024 alone)",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 74,
+    "description": "At ~$638, LMT trades between its bear case ($480) and base case ($720) — approximately 11% below fair value with meaningful margin of safety. The deceptively high trailing P/E (29.7×) reflects one-time 2025 pension charges; the forward P/E of ~21× at 2026 EPS of $29.80 is at sector median and below LMT's historical norm.",
+    "valuationNote": {
+      "text": "The trailing-to-forward P/E gap (29.7× → 21×) is one of the clearest earnings ramp signals in the defense sector: 2025 EPS was depressed by $1.5B in after-tax classified program losses that management expects will not recur at the same scale. At the base case of $720, investors receive a 13% total return plus LMT's ~2.1% dividend — with downside well-supported by the $194B backlog.",
+      "fairValue": "$720"
+    },
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~29.7×", "note": "$21.49 TTM EPS (2025)" },
+        { "label": "Forward P/E (NTM)", "value": "~21.3×", "note": "consensus EPS est. ~$29.80 (2026)" },
+        { "label": "PEG Ratio", "value": "~1.15×", "note": "fwd P/E ÷ ~18% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~1.9×", "note": "$78.75B NTM revenue est." },
+        { "label": "Price / FCF", "value": "~21.4×", "note": "$6.9B FCF (TTM 2025)" }
+      ],
+      "summary": "LMT's forward P/E of ~21× sits at the defense sector median and below its own 5-year average of 18.9× — reflecting current premium pricing driven by geopolitical demand and the record backlog, but not a stretched valuation. The PEG of 1.15× is the most attractive in defense (vs. NOC at 3.6×, GD at 2.4×, RTX at 2.9×), indicating genuine GARP characteristics. The large gap between trailing (29.7×) and forward (21.3×) P/E is a bullish signal — 2025 EPS was distorted by $1.5B in after-tax classified program charges that should not recur at the same scale, setting up a strong earnings rebound in 2026."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$480",
+      "description": "Defense budget austerity combines with a repeat of large classified program write-downs, compressing FCF and forcing a multiple de-rating from the current premium.",
+      "points": [
+        "US defense budget faces a continuing resolution or sequestration in FY2027, delaying $5-8B in MFC procurement orders and pushing the PAC-3 MSE ramp from 2,000 to 1,200 units/year — breaking the double-digit MFC growth trajectory",
+        "A second large classified program write-down ($1B+ after-tax) materializes in 2026-2027 at Skunk Works or space programs, triggering a downward EPS revision and eroding investor confidence in LMT's program execution",
+        "Rising interest rates increase the cost of LMT's $22.8B debt and reduce the pension surplus, eliminating the 2026 EPS tailwind and causing multiple compression to ~16× forward earnings — implying ~$480 on $30 EPS"
+      ]
+    },
+    "base": {
+      "priceTarget": "$720",
+      "description": "Backlog converts as guided, pension charges clear, MFC scales to double-digit growth, and 2026 EPS reaches the $29.35-$30.25 guidance range — the market re-rates to ~24× forward earnings.",
+      "points": [
+        "FY2026 revenue achieves the $77.5-$80B guidance midpoint, driven by 14% MFC growth (PAC-3 MSE production ramp) and double-digit F-35 sustainment expansion under ODIN; segment operating profit grows 25%+ YoY as guided",
+        "Pension-related charges do not recur at 2025 scale — EPS reaches ~$29.80 midpoint, representing 39% growth from 2025 and validating the trailing-to-forward P/E normalization thesis",
+        "Book-to-bill remains above 1.0 through 2026 as NATO allies advance multi-year procurement frameworks; backlog grows to $200B+, extending revenue visibility through 2028-2029 and supporting a stable 23-24× forward P/E multiple"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$900",
+      "description": "MFC growth accelerates beyond guidance as NATO commits to 3% GDP defense spending, space-based interceptor contracts are awarded, and NGAD selection goes to LMT — adding $15-20B in new long-cycle backlog.",
+      "points": [
+        "NATO member states formally adopt 3% GDP defense spending targets, directly accelerating PAC-3 MSE and HIMARS orders beyond the 2,000 unit/year framework — MFC growth reaches 20%+ in 2027, pulling blended revenue CAGR to 9-11% and forcing consensus estimate upgrades",
+        "Lockheed wins the Next Generation Air Dominance (NGAD) contract (vs. Boeing) or the space-based interceptor network program, adding $15-20B in new backlog and establishing a next-generation revenue platform for the 2030s",
+        "FCF reaches $9-10B annually by FY2028 as mix shifts toward higher-margin sustainment and services; at 22× FCF, the market cap reaches $200-220B — implying ~$900/share while the dividend compounds at 5-7% per year"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — Lockheed Martin sells to government procurement organizations and program offices, not interface-trained end users; switching costs for end users (pilots, soldiers) do not translate into customer switching decisions at the buyer level. This moat category does not apply to a prime defense contractor."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "The F-35 ALIS/ODIN sustainment platform, fire control algorithms, classified electronic warfare systems, and mission planning software represent decades of proprietary defense-specific logic embedded in military operations. This is not generic SaaS — it is classified, mission-critical software configured per platform over 20+ years. AI cannot replicate classified EW algorithms without access to classified threat data, test results, and adversary signatures that LMT exclusively holds."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — Lockheed Martin does not monetize control over public data sources; this moat category does not apply to a defense systems manufacturer."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "Over 60,000 LMT employees hold active US security clearances, including Top Secret/SCI — a credential that requires multi-year background investigations and cannot be transferred to a competitor. Cleared aerospace engineers, nuclear program specialists, and classified avionics experts are in chronic shortage (the DoD estimates a persistent 30%+ gap in cleared STEM talent). AI can assist in design but cannot replace cleared humans on classified programs — the US government does not allow AI systems to hold security clearances or manage classified program data."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "LMT bundles full-platform solutions: F-35 production + ODIN sustainment software + pilot training simulators + block upgrades + depot-level maintenance. This integrated offering is structurally superior to competitors offering only subsystems — the DoD prefers prime contractors who can own the full lifecycle. AI-native startups (Anduril, Shield AI) compete on specific subsystems, not full-platform integration, reinforcing LMT's bundling advantage at the prime contractor level."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "LMT owns classified and proprietary data assets that no competitor can replicate: 50+ years of F-16/F-22/F-35 flight test and combat effectiveness data; ODIN platform aggregates real-time health data from 1,000+ deployed F-35s globally; classified radar cross-section measurements; weapons effectiveness data from live conflicts (Ukraine, Middle East). These datasets are contractually exclusive, continuously updated, and directly embedded in product performance improvements. AI makes this data more valuable — not less — as LMT uses it to train predictive maintenance models that competitors cannot replicate."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "Defense prime contractor status requires DoD facility security clearances, ITAR compliance, DCAA audit approval, and continuous performance evaluations — barriers new entrants cannot clear in under a decade. The F-35 is a sole-source program: no other company can manufacture the airframe without an Act of Congress. Multi-year procurement contracts (e.g., the $15B Lots 20-21 award) lock in LMT for 3-5 year production cycles. Foreign Military Sales require US government approval, extending LMT's regulatory protection internationally. AI is irrelevant to regulatory lock-in."
+    },
+    "networkEffects": {
+      "status": "weakened",
+      "note": "The F-35 multinational coalition (20+ nations) creates genuine interoperability value — shared upgrades, common spare parts logistics, and combined training exercises justify the platform's cost for smaller air forces. More nations on F-35 makes the platform more valuable for all. However, this is a physical coalition effect, not a software network: it does not compound at the rate of software platforms, and switching from F-35 to Eurofighter or Rafale is a legitimate (if costly) alternative for some nations."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Lockheed is embedded in the operational lifecycle of US and allied military forces in a way that cannot be unwound without multi-year disruptions. F-35 sustainment contracts run 20+ years; PAC-3 battery operators depend on LMT for interceptors that cannot be sourced elsewhere; HIMARS crews depend on LMT-produced rockets. Removing LMT from any of these would require re-engineering defense postures, retraining operators, and re-certifying replacement platforms — effectively impossible mid-deployment cycle."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "ODIN (successor to ALIS) is the authoritative system of record for all F-35 fleet health data, maintenance scheduling, parts supply chain, and software version management across every F-35 operator globally. Migrating away from ODIN would require rebuilding the entire sustainment data infrastructure across 1,000+ aircraft in 20+ nations — a project of such scale and risk that no program office would authorize it. As the F-35 fleet ages, ODIN's value as the institutional memory of the fleet compounds."
+    },
+    "aiResilienceScore": 82,
+    "verdict": "Lockheed Martin is a net beneficiary of AI at the margins — AI strengthens its proprietary data moat (ODIN predictive maintenance, classified threat modeling) and its business logic lock-in (AI-assisted EW systems are harder to replicate than rule-based ones). The most AI-resilient moats are regulatory lock-in and transaction embedding, which are physically and legally impervious to AI disruption. The primary AI risk is at the margins: AI-native startups (Anduril, Shield AI) may capture niche autonomous systems contracts that could have gone to LMT, but they cannot compete for prime contractor roles on major platforms. Overall, LMT's core moat — government program embeddedness backed by regulatory barriers — is among the most AI-durable in any sector."
+  }
+}

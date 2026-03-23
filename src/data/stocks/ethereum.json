@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$290B"
+      "value": "~$252B"
     },
     {
       "label": "Total Staked",
-      "value": "~34M ETH"
+      "value": "~37M ETH"
     }
   ],
   "chips": [
@@ -27,7 +27,7 @@
       "color": "success"
     }
   ],
-  "recommendation": "Buy",
+  "recommendation": "Accumulate",
   "metrics": [
     {
       "title": "Active Validators",
@@ -38,8 +38,8 @@
     },
     {
       "title": "DeFi TVL",
-      "value": "$48B+",
-      "label": "Ethereum + L2 Ecosystem",
+      "value": "$85B+",
+      "label": "Ethereum + L2 Ecosystem (68% of all DeFi)",
       "icon": "Lock",
       "color": "#10b981"
     },
@@ -67,17 +67,41 @@
       },
       {
         "title": "Institutional Infrastructure",
-        "text": "Spot ETH ETFs, regulated staking products, and EIP-1559 burn mechanics have created a credible institutional asset class — distinct from speculative altcoins."
+        "text": "Ethereum achieved CFTC commodity classification in early 2026, BlackRock's staking ETF (ETHA with yield) launched March 12 2026, and total spot ETH ETF AUM has reached $13.3B. EIP-1559 burn mechanics combined with 37M ETH staked (29% of supply) create a structurally deflationary asset in bull markets. Separately, Ethereum now hosts $12.18B in tokenized real-world assets — 65% of the entire RWA market — with JPMorgan and Fidelity tokenizing assets on Ethereum under the GENIUS Act regulatory framework."
       }
     ]
   },
   "growth": {
     "score": 80,
-    "description": "Layer 2 scaling (Arbitrum, Base, Optimism) is expanding Ethereum's addressable market; staking ETFs and institutional DeFi are early innings."
+    "description": "Layer 2 scaling (Arbitrum, Base, Optimism) is expanding Ethereum's addressable market; BlackRock's staking ETF launched March 12 2026 unlocking yield-bearing institutional exposure; and RWA tokenization on Ethereum surged to $12.18B (65% market share, +196% YoY) — establishing Ethereum as the canonical settlement layer for traditional finance's on-chain migration.",
+    "growthAnalysis": {
+      "cagrEstimate": "25–40%",
+      "scoreDerivation": "Base 80 (15–30% ecosystem CAGR; TVL +77% YoY to $85B, ETF AUM $13.3B first year, RWA +196% YoY to $12.18B) + 5 staking ETF new institutional TAM − 5 L2 fee race-to-bottom cannibalization of L1 burn revenue = 80",
+      "drivers": [
+        {
+          "name": "ETF & Institutional Adoption",
+          "metric": "$13.3B ETF AUM; BlackRock ETHA staking ETF launched Mar 2026",
+          "trend": "accelerating"
+        },
+        {
+          "name": "RWA Tokenization",
+          "metric": "$12.18B on Ethereum, 65% market share, +196% YoY",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Staking & Restaking",
+          "metric": "37M ETH staked (29% supply); EigenLayer restaking ecosystem live",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If Ethereum L2 fee revenue keeps compressing and mainnet burn rate falls below 100K ETH/year by end of 2026, ETH supply turns net inflationary and the deflationary store-of-value narrative collapses — causing ETH/BTC ratio to fall below 0.02 and triggering ETF outflows",
+      "marginTrend": "stable"
+    }
   },
   "valuation": {
-    "score": 65,
-    "description": "At ~$2,400, ETH trades well below its 2021 highs with a compressed BTC ratio, reflecting genuine competitive pressure from Solana and modular blockchains. Upside is real but contingent on Layer 2 fee revenue accruing back to ETH."
+    "score": 85,
+    "description": "At ~$2,090 — 57% below the October 2025 high of $4,831 and near the $1,473 cycle low — ETH is deeply discounted relative to the base case ($5,500). The sell-off was driven by macro risk-off (FOMC, recession fears) and Vitalik selling, not by any deterioration in network fundamentals. Upside remains contingent on Layer 2 fee revenue accruing back to L1 and continued ETF inflows materialising."
   },
   "scenarios": {
     "bear": {
@@ -135,7 +159,7 @@
     },
     "regulatoryLockIn": {
       "status": "strong",
-      "note": "Spot ETH ETF approval, SEC commodity classification pathway, and institutional custody frameworks create meaningful regulatory moat vs. unregistered altcoins."
+      "note": "CFTC commodity classification confirmed in early 2026; BlackRock's staking-enabled ETHA ETF launched March 12 2026; $13.3B in regulated spot ETH ETF AUM; JPMorgan and Fidelity tokenizing assets on Ethereum under the US GENIUS Act. This regulatory recognition gap between ETH and competing L1s (still largely unregistered securities) is widening, not narrowing."
     },
     "networkEffects": {
       "status": "strong",
@@ -152,5 +176,5 @@
     "aiResilienceScore": 72,
     "verdict": "Ethereum's developer ecosystem and embedded DeFi infrastructure give it strong resilience, but real competition from faster, cheaper L1s (Solana) and modularity trends (Celestia) introduce more disruption risk than Bitcoin faces. The moat is wide but not impenetrable."
   },
-  "lastAnalyzed": "October 2025"
+  "lastAnalyzed": "March 2026"
 }
