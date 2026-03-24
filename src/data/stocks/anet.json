@@ -4,28 +4,13 @@
   "name": "Arista Networks",
   "lastAnalyzed": "March 2026",
   "headerStats": [
-    {
-      "label": "Ticker",
-      "value": "ANET"
-    },
-    {
-      "label": "Market Cap",
-      "value": "$167B"
-    },
-    {
-      "label": "Current Price",
-      "value": "$131.22"
-    }
+    { "label": "Ticker", "value": "ANET" },
+    { "label": "Market Cap", "value": "$167B" },
+    { "label": "Current Price", "value": "$131.22" }
   ],
   "chips": [
-    {
-      "label": "AI Data Center Networking | Cloud Infrastructure",
-      "color": "primary"
-    },
-    {
-      "label": "EOS Software Moat",
-      "color": "success"
-    }
+    { "label": "AI Data Center Networking | Cloud Infrastructure", "color": "primary" },
+    { "label": "EOS Software Moat", "color": "success" }
   ],
   "recommendation": "Accumulate",
   "metrics": [
@@ -73,7 +58,7 @@
   },
   "growth": {
     "score": 85,
-    "description": "FY2025 delivered $9.01B revenue (+28.6% YoY) with a record $1B+ quarterly net income in Q4. Management guided FY2026 at 25% growth ($11.26B) with Q1 guided at $2.6B, raising the AI networking revenue target to $3.25B for 2026 — a 40%+ growth trajectory within the fastest-growing segment. The 2028 target of $13.6B implies sustained ~19% CAGR, underpinned by the $4.7B deferred revenue backlog and the expanding 100K+ GPU cluster deployment cycle.",
+    "description": "FY2025 delivered $9.01B revenue (+28.6% YoY) with AI networking revenue targeted at $3.25B for 2026 and management guiding 25% full-year growth, underpinned by $4.7B in deferred revenue and an expanding 100K+ GPU cluster deployment cycle.",
     "growthAnalysis": {
       "cagrEstimate": "20–25%",
       "scoreDerivation": "Base 80 (15–30% CAGR; FY2026 guided 25%, 2028 target implies ~19% CAGR) + 5 TAM expansion (TAM expanded from $60B to $105B; AI networking 40%+ CAGR sub-segment) + 3 deferred revenue visibility ($4.7B backlog = 52% annual revenue) − 3 customer concentration (Microsoft + Meta ~35% of revenue; hyperscaler capex sentiment risk) = 85",
@@ -101,35 +86,15 @@
   },
   "valuation": {
     "score": 79,
-    "description": "ANET trades at ~$131, down 20% from its 52-week high of $164.94, and below the analyst consensus target of $177. The pullback reflects broader tech multiple compression rather than any deterioration in fundamentals — 2025 revenue and earnings both beat consensus. At ~38× 2026 forward P/E and ~14.8× NTM P/S, the stock is more reasonably priced than at any point in the past 18 months. The $4.7B deferred revenue base de-risks the near-term revenue path materially.",
+    "description": "ANET trades at ~$131 — down 20% from its 52-week high of $164.94 and below the analyst consensus target of $177 — placing the stock at ~38× 2026 forward P/E, more reasonably valued than at any point in the past 18 months with the $4.7B deferred revenue base de-risking the near-term revenue path.",
     "peAnalysis": {
       "asOf": "March 2026",
       "rows": [
-        {
-          "label": "Trailing P/E (GAAP)",
-          "value": "~48×",
-          "note": "FY2025 GAAP EPS ~$2.74/share"
-        },
-        {
-          "label": "Forward P/E (NTM)",
-          "value": "~38×",
-          "note": "est. 2026 GAAP EPS ~$3.43"
-        },
-        {
-          "label": "PEG Ratio",
-          "value": "~1.7×",
-          "note": "fwd P/E ÷ 23% EPS CAGR"
-        },
-        {
-          "label": "Price / Sales (NTM)",
-          "value": "~15×",
-          "note": "$11.26B NTM revenue (FY2026 guide)"
-        },
-        {
-          "label": "Price / FCF",
-          "value": "~44×",
-          "note": "~$3.8B FCF (FY2025 est.)"
-        }
+        { "label": "Trailing P/E (GAAP)", "value": "~48×", "note": "FY2025 GAAP EPS ~$2.74/share" },
+        { "label": "Forward P/E (NTM)", "value": "~38×", "note": "est. 2026 GAAP EPS ~$3.43" },
+        { "label": "PEG Ratio", "value": "~1.7×", "note": "fwd P/E ÷ 23% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~15×", "note": "$11.26B NTM revenue (FY2026 guide)" },
+        { "label": "Price / FCF", "value": "~44×", "note": "~$3.8B FCF (FY2025 est.)" }
       ],
       "summary": "ANET trades at ~38× forward P/E — above Cisco's 15× but justified by a fundamentally superior growth rate (25% vs Cisco's 3–5%), 47% operating margins, and AI networking market leadership that Cisco does not have. The PEG of ~1.7× is in the 'premium but fair' range for a business growing 25% with visible contracted revenue; the deferred revenue backlog essentially pre-funds two years of growth visibility. The gap between trailing (48×) and forward (38×) P/E reflects the ongoing earnings ramp as AI networking revenue scales; if the $3.25B AI networking target is achieved, this gap widens further in the bulls' favor."
     }

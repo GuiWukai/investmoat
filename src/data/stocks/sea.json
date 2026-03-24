@@ -2,95 +2,143 @@
   "slug": "sea",
   "ticker": "SE",
   "name": "Sea Limited",
-  "lastAnalyzed": "2026-03-24",
+  "lastAnalyzed": "March 2026",
   "headerStats": [
-    {
-      "label": "Revenue (FY2025)",
-      "value": "$22.9B",
-      "subtext": "+36.4% YoY"
-    },
-    {
-      "label": "Shopee GMV",
-      "value": "$127.4B",
-      "subtext": "+26.8% YoY; 2026 guide +25%"
-    },
-    {
-      "label": "Net Income (FY2025)",
-      "value": "$1.6B",
-      "subtext": "+259.7% YoY; adj EBITDA $3.4B"
-    }
+    { "label": "Ticker", "value": "SE" },
+    { "label": "Market Cap", "value": "$47.9B" },
+    { "label": "Price", "value": "$78.85" }
   ],
   "chips": [
-    "Southeast Asia E-Commerce",
-    "SeaMoney Fintech",
-    "Platform Ecosystem",
-    "Emerging Market Growth",
-    "Digital Payments"
+    { "label": "Southeast Asia E-Commerce & Fintech", "color": "primary" },
+    { "label": "Digital Ecosystem", "color": "success" }
   ],
-  "recommendation": {
-    "rating": "Strong Buy",
-    "targetReturn": "84% to base case",
-    "rationale": "Sea Limited operates the most deeply integrated digital ecosystem across Southeast Asia's 680-million-person consumer market — combining the region's dominant e-commerce marketplace (Shopee), a fast-scaling digital financial services platform (SeaMoney), and a gaming entertainment franchise (Garena) in a bundle that no single competitor can replicate. At 2.1× P/S with net income growing 260% and Shopee GMV guiding +25%, the market continues to underprice the compounding of Sea's platform economics in the world's fastest-growing emerging digital economy."
-  },
-  "metrics": {
-    "currentPrice": "$78.85",
-    "marketCap": "$47.94B",
-    "revenue": "$22.9B",
-    "revenueGrowth": "+36.4% YoY",
-    "netIncome": "$1.6B (+259.7% YoY)",
-    "adjEBITDA": "$3.4B (+73.5% YoY)",
-    "shopeeGMV": "$127.4B (+26.8% YoY)",
-    "shopee2026Guide": "GMV +25%",
-    "buyers": "400M",
-    "sellers": "20M",
-    "analystTarget": "$140.71 (+79% upside)",
-    "priceToSales": "~2.1× TTM"
-  },
+  "recommendation": "Strong Buy",
+  "metrics": [
+    {
+      "title": "Revenue",
+      "value": "$22.9B",
+      "label": "+36.4% YoY FY2025; net income $1.6B (+260%)",
+      "icon": "TrendingUp",
+      "color": "#e8281b"
+    },
+    {
+      "title": "Shopee GMV",
+      "value": "$127.4B",
+      "label": "+26.8% YoY; 2026 guide +25%; 400M buyers",
+      "icon": "ShoppingCart",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "Adj EBITDA",
+      "value": "$3.4B",
+      "label": "+73.5% YoY; 20M sellers; 7 SE Asian markets",
+      "icon": "BarChart3",
+      "color": "#10b981"
+    }
+  ],
   "moat": {
     "score": 80,
-    "aiResilienceScore": 78,
+    "description": "Sea Limited operates Southeast Asia's most integrated digital ecosystem — the only company combining the region's dominant e-commerce marketplace (Shopee), a fast-scaling digital financial services platform (SeaMoney), and a gaming entertainment franchise (Garena) in a bundle that no single competitor can replicate.",
     "analysisTitle": "The Southeast Asia Digital Ecosystem Moat",
-    "analysisSummary": "Sea Limited's durable competitive position rests on **Transaction Embedding (SeaMoney payment infrastructure), Network Effects (Shopee marketplace), Proprietary Consumer Data (400M buyers across 7 markets), and Bundled Platform Advantages**:\n\n- **Network Effects (Strong):** Shopee's marketplace creates a multi-sided flywheel: 400M buyers attract 20M sellers who compete on price and selection, creating lower prices that attract more buyers. This flywheel is most powerful in Indonesia (Sea's largest market), where Shopee has over 60% e-commerce market share. SeaMoney creates a separate payment network effect: more merchants accepting ShopeePay → more consumers using SeaMoney → more merchant acceptance. These are reinforcing, not substitutable.\n\n- **Proprietary Data (Strong):** Sea's 400M buyer profiles — with multi-year GMV history, payment behavior, browsing patterns, gaming activity, and credit data from SeaMoney — create an unparalleled behavioral dataset across the 7 most dynamic emerging market economies. This data powers SeaMoney's credit underwriting (allowing lending to unbanked populations that traditional banks cannot risk-score), Shopee's advertising targeting, and product recommendation algorithms that competitors without this history cannot match.\n\n- **Transaction Embedding (Intact):** ShopeePay and SeaMoney are embedded in tens of millions of daily Shopee transactions across Southeast Asia and Brazil. SeaMoney's SPayLater buy-now-pay-later and savings products are deeply woven into the Shopee checkout experience — consumers accumulate credit history, savings balances, and payment habits with Sea's financial infrastructure in ways that are difficult to transfer to competing fintech platforms.\n\n- **Bundling (Strong):** The Shopee + SeaMoney + Garena combination creates a super-app economics that no single competitor replicates. TikTok Shop competes only in commerce; GoPay/GrabPay compete only in fintech; no gaming company has Sea's e-commerce scale. The cross-vertical data sharing (gaming activity informs credit scoring; purchase history drives personalized Shopee ads) creates compounding advantages that are structurally difficult for point-solution competitors to replicate.",
-    "verdict": "Sea's AI exposure is primarily indirect and positive: SeaMoney's credit underwriting and Shopee's demand forecasting/advertising algorithms benefit from machine learning improvements without risk of disruption. The primary AI risk is competitive — TikTok's algorithm-driven commerce model (interest-based shopping rather than search-based) represents a genuinely disruptive business model that has taken market share in Southeast Asia. Sea's response (Shopee Live, shoppertainment, video commerce) is execution-dependent. The fintech business (SeaMoney) is almost entirely AI-resilient as it is embedded in regulatory relationships and financial records that are difficult to displace."
+    "analysisSummary": "Sea Limited's durable competitive position rests on **Transaction Embedding (SeaMoney payment infrastructure), Network Effects (Shopee marketplace), Proprietary Consumer Data (400M buyers across 7 markets), and Bundled Platform Advantages**:",
+    "analysisPoints": [
+      {
+        "title": "Network Effects (Shopee Marketplace)",
+        "text": "Shopee's marketplace creates Southeast Asia's most powerful consumer commerce flywheel: 400M buyers attract 20M sellers who compete on price and selection, creating lower prices that attract more buyers. This flywheel is most powerful in Indonesia (Sea's largest market), where Shopee holds over 60% e-commerce market share — a position that reflects years of compounding network density that TikTok Shop and Lazada cannot quickly replicate."
+      },
+      {
+        "title": "Transaction Embedding (SeaMoney)",
+        "text": "ShopeePay and SeaMoney are embedded in tens of millions of daily Shopee transactions across Southeast Asia and Brazil. SeaMoney's SPayLater buy-now-pay-later and savings products are deeply woven into the Shopee checkout experience — consumers accumulate credit history, savings balances, and payment habits with Sea's financial infrastructure in ways that are structurally difficult to transfer to competing fintech platforms."
+      },
+      {
+        "title": "Bundled Platform Advantages",
+        "text": "The Shopee + SeaMoney + Garena combination creates super-app economics that no single competitor replicates across Southeast Asia. TikTok Shop competes only in social commerce; GoPay/GrabPay compete only in fintech; no gaming company has Sea's e-commerce scale. The cross-vertical data sharing — gaming activity informs credit scoring, purchase history drives personalized Shopee ads — creates compounding advantages that point-solution competitors structurally cannot match."
+      }
+    ]
   },
   "growth": {
     "score": 82,
-    "cagrEstimate": "22–30%",
-    "scoreDerivation": "Base 80 (22–30% CAGR; FY2025 revenue +36.4%; net income +259.7%; adj EBITDA +73.5%) + 5 multi-segment platform compounding (Shopee + SeaMoney synergy: each Shopee purchase deepens SeaMoney engagement; cross-sell creates durable revenue diversification and FCF acceleration) + 2 Southeast Asia digital economy TAM (680M population; e-commerce penetration still <20% in most markets; fintech penetration <30%) − 5 Garena secular decline (gaming revenues declining as key titles age; Free Fire and PUBG Mobile user bases mature without clear successor franchise; gaming is a meaningful drag on blended growth rates) = 82"
+    "description": "Sea Limited is growing revenue 36%+ driven by Shopee GMV compounding at 25%+ and SeaMoney digital financial services expanding across 7 Southeast Asian markets, with net income inflecting sharply (+260% YoY) as platform economics scale.",
+    "growthAnalysis": {
+      "cagrEstimate": "22–30%",
+      "scoreDerivation": "Base 80 (22–30% CAGR; FY2025 revenue +36.4%; net income +259.7%; adj EBITDA +73.5%) + 5 multi-segment platform compounding (Shopee + SeaMoney synergy: each Shopee purchase deepens SeaMoney engagement; cross-sell creates durable revenue diversification and FCF acceleration) + 2 Southeast Asia digital economy TAM (680M population; e-commerce penetration still <20% in most markets; fintech penetration <30%) − 5 Garena secular decline (gaming revenues declining as key titles age; Free Fire and PUBG Mobile user bases mature without clear successor franchise; gaming is a meaningful drag on blended growth rates) = 82",
+      "drivers": [
+        {
+          "name": "Shopee E-Commerce",
+          "metric": "GMV +26.8% YoY to $127.4B; 2026 guide +25%; 400M buyers, 20M sellers",
+          "trend": "stable"
+        },
+        {
+          "name": "SeaMoney Digital Finance",
+          "metric": "+30%+ YoY revenue; SPayLater and savings scaling across 7 markets; 55M+ active users",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Garena Digital Entertainment",
+          "metric": "Declining YoY; Free Fire/PUBG mature — gaming revenue drag on blended growth",
+          "trend": "decelerating"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If TikTok Shop captures 20%+ of Shopee's GMV share in Indonesia and Vietnam by end of 2026, the Shopee growth narrative breaks and the platform network effects are proven weaker than the bull case assumes",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
     "score": 84,
-    "scoreDerivation": "Bear $60 → score 90; Base $145 → score 65; current $78.85 is between bear and base: t = (78.85 − 60) / (145 − 60) = 18.85/85 = 0.222; score = 90 − 0.222 × 25 = 84.5 → 84",
-    "summary": "At $78.85 (~$47.94B market cap), Sea trades at approximately 2.1× TTM P/S — a striking discount for a company growing revenue 36%, with net income up 260% and adj EBITDA growing 73%. For context, MercadoLibre (the LatAm analog) trades at 5–7× P/S on slower growth. The discount reflects emerging market risk premium, Garena's secular decline, and TikTok Shop competitive uncertainty. However, with analyst consensus at $140.71 (+79% upside) and the stock well below its 2024 ATH near $115, the current price offers a significant margin of safety. The 84-point valuation score reflects Sea's positioning well between the bear ($60) and base ($145) scenario — attractive pricing that compensates for execution and macro risk."
+    "description": "At $78.85, Sea trades at just 2.1× TTM P/S — a 46% discount to the $145 base case and 83% below the $140.71 analyst consensus target — pricing in far more risk than the 36% revenue growth and rapidly improving profitability warrant.",
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~30×", "note": "$1.6B net income FY2025" },
+        { "label": "Forward P/E (NTM)", "value": "~22×", "note": "~$2.2B NTM net income est." },
+        { "label": "PEG Ratio", "value": "~0.7×", "note": "fwd P/E ÷ ~30% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~1.7×", "note": "~$28B NTM revenue consensus" },
+        { "label": "Price / FCF", "value": "~14×", "note": "~$3.4B adj EBITDA TTM" }
+      ],
+      "summary": "Sea trades at ~22× forward P/E with a PEG of ~0.7× — one of the cheapest growth-adjusted valuations among large-cap platform businesses globally. At ~1.7× forward P/S on 30%+ revenue growth, Sea is significantly cheaper than MercadoLibre (~5× P/S on slower growth), its closest Latin American analog. The gap between 30× trailing and 22× forward P/E reflects a genuine earnings ramp as Shopee and SeaMoney operating leverage materializes — the 260% net income growth in FY2025 was the inflection point, and forward earnings projections appear conservative given SeaMoney's early-stage scaling."
+    }
   },
   "scenarios": {
     "bear": {
-      "label": "Bear",
-      "priceTarget": "$60",
-      "probability": "20%",
-      "description": "TikTok Shop captures 20%+ of Shopee's GMV in Indonesia and Vietnam as shoppertainment drives faster consumer switching than Shopee's response; Garena active users decline 30%+ as game licenses age without new franchise hits; macro headwinds (USD strength, consumer slowdown across SE Asia) compress GMV growth below 10%; SeaMoney credit losses spike as the credit expansion cycle reverses. Revenue growth decelerates to 10–15% and the market de-rates Sea to 1.5–2× P/S."
+      "priceTarget": "$50",
+      "description": "TikTok Shop captures significant Shopee market share, Garena decline accelerates, and macro headwinds compress GMV growth below 10%.",
+      "points": [
+        "TikTok Shop captures 20%+ of Shopee's GMV in Indonesia and Vietnam as shoppertainment drives faster consumer switching than Shopee's response can offset",
+        "Garena active users decline 30%+ as Free Fire and PUBG Mobile mature without a new franchise game announcement",
+        "Macro headwinds (USD strength, consumer spending slowdown) compress Shopee GMV growth below 10% in 2026",
+        "SeaMoney credit losses spike as the credit expansion cycle reverses, requiring elevated provisioning that pressures profitability"
+      ]
     },
     "base": {
-      "label": "Base",
       "priceTarget": "$145",
-      "probability": "55%",
-      "description": "Shopee GMV grows 25%+ annually as guided, maintaining dominant market share across Indonesia, Vietnam, Thailand, and the Philippines; SeaMoney revenue expands past $1.5B as SPayLater and savings products scale; Garena stabilizes with new licensing agreements partially offsetting Free Fire/PUBG maturity; adj EBITDA margins improve to 15–18% on operating leverage. Consistent with analyst consensus target of $140.71."
+      "description": "Shopee maintains 25%+ GMV growth, SeaMoney scales to $1.5B+ revenue, and operating leverage drives margin expansion to 15–18% adj EBITDA.",
+      "points": [
+        "Shopee GMV grows 25%+ annually as guided, maintaining dominant market share across Indonesia, Vietnam, Thailand, and the Philippines",
+        "SeaMoney revenue expands past $1.5B as SPayLater and digital savings products scale across all 7 markets in the Sea footprint",
+        "Garena stabilizes with new licensing agreements, partially offsetting Free Fire/PUBG maturity and contributing $1B+ in gaming revenue",
+        "Adj EBITDA margins improve to 15–18% as operating leverage on the $22B+ revenue base accelerates — consistent with analyst consensus target of $140.71"
+      ]
     },
     "bull": {
-      "label": "Bull",
       "priceTarget": "$235",
-      "probability": "25%",
-      "description": "Shopee crosses $200B GMV and enters new international markets (Middle East, Eastern Europe) as the proven playbook for mobile-first e-commerce; SeaMoney obtains full digital banking licenses in 3+ countries and becomes the primary banking relationship for 100M+ underbanked consumers; Garena launches a new global gaming franchise via first-party development; Brazil Shopee reaches EBITDA profitability. Revenue exceeds $35B and the market re-rates Sea to 4–5× P/S on sustained profitable growth."
+      "description": "Shopee crosses $200B GMV and enters new international markets, SeaMoney obtains full digital banking licenses, and a new Garena gaming franchise ends the secular decline.",
+      "points": [
+        "Shopee crosses $200B GMV and enters new international markets (Middle East, Eastern Europe), replicating the mobile-first e-commerce playbook in underpenetrated regions",
+        "SeaMoney obtains full digital banking licenses in 3+ countries, becoming the primary banking relationship for 100M+ underbanked consumers across Southeast Asia",
+        "Garena launches a new global gaming franchise via first-party development, ending the structural gaming revenue decline and creating a third compounding growth engine",
+        "Sea's Brazil Shopee operations reach EBITDA profitability, unlocking the world's third-largest e-commerce market as a second international growth leg"
+      ]
     }
   },
   "tenMoats": {
     "learnedInterfaces": {
       "status": "intact",
-      "note": "Shopee's mobile-first UX — with its unique cashback, voucher, and gamified shopping mechanics (Shopee Coins, spin-the-wheel, flash deals) — has become deeply familiar to Southeast Asian consumers. Sellers invest significant effort learning Shopee's Seller Centre: inventory management, logistics routing, Shopee Ads, and live-streaming tools. The migration cost of rebuilding seller reputation scores, product listings, and advertising configurations on TikTok Shop or Lazada is meaningful, particularly for the 1M+ merchants with Shopee's 'Preferred Seller' or 'Shopee Mall' status."
+      "note": "Shopee's mobile-first UX — with its unique cashback, voucher, and gamified shopping mechanics (Shopee Coins, spin-the-wheel, flash deals) — has become deeply familiar to Southeast Asian consumers. Sellers invest significant effort learning Shopee's Seller Centre: inventory management, logistics routing, Shopee Ads, and live-streaming tools. Migration cost of rebuilding seller reputation scores and advertising configurations on TikTok Shop or Lazada is meaningful."
     },
     "businessLogic": {
       "status": "intact",
-      "note": "Sea's cross-platform business logic runs deep: SeaMoney credit limits are calibrated to Shopee purchase history; Garena payment wallets integrate with ShopeePay; Shopee advertising campaigns use SeaMoney transaction data for targeting. This inter-segment data integration creates business logic that is embedded across Sea's platforms and cannot be replicated by single-vertical competitors. Sellers' multi-year pricing strategies, shipping templates, and automated fulfillment rules are tied to Sea's logistics (Shopee Express) and payment (ShopeePay) infrastructure."
+      "note": "Sea's cross-platform business logic runs deep: SeaMoney credit limits are calibrated to Shopee purchase history; Garena payment wallets integrate with ShopeePay; Shopee advertising campaigns use SeaMoney transaction data for targeting. This inter-segment data integration creates business logic embedded across Sea's platforms that single-vertical competitors cannot replicate."
     },
     "publicDataAccess": {
       "status": "weakened",
@@ -98,31 +146,33 @@
     },
     "talentScarcity": {
       "status": "intact",
-      "note": "Operating a multi-vertical consumer platform across 7+ markets (Indonesia, Vietnam, Thailand, Philippines, Malaysia, Singapore, Taiwan) requires rare multi-country expertise: local regulatory navigation, language-specific product localization, logistics network management in developing-market infrastructure, and cross-cultural marketing. Sea's Singapore HQ provides a talent hub that attracts regional talent with global standards — a pool that is genuinely scarcer than the US tech talent market. Key executives with deep SEA e-commerce experience are not easily recruited by US competitors expanding into the region."
+      "note": "Operating a multi-vertical consumer platform across 7+ markets requires rare multi-country expertise: local regulatory navigation, language-specific product localization, logistics network management in developing-market infrastructure, and cross-cultural marketing. Sea's Singapore HQ attracts regional talent with global standards — a pool that is genuinely scarcer than the US tech talent market."
     },
     "bundling": {
       "status": "strong",
-      "note": "Sea's Shopee + SeaMoney + Garena bundle creates a super-app economics that no single competitor replicates across the Southeast Asian market. TikTok Shop competes only in social commerce; GoPay/GrabPay compete only in fintech; no gaming company has Sea's e-commerce or fintech scale. The cross-vertical value creation — using Shopee purchase history to power SeaMoney credit underwriting, using Garena wallet deposits for e-commerce payments, using SeaMoney cash-back to drive Shopee retention — creates compounding multi-product advantages that point-solution competitors structurally cannot match."
+      "note": "Sea's Shopee + SeaMoney + Garena bundle creates super-app economics that no single competitor replicates across Southeast Asia. The cross-vertical value creation — using Shopee purchase history to power SeaMoney credit underwriting, using Garena wallet deposits for e-commerce payments, using SeaMoney cash-back to drive Shopee retention — creates compounding multi-product advantages that point-solution competitors structurally cannot match."
     },
     "proprietaryData": {
       "status": "strong",
-      "note": "Sea's 400M buyer profiles represent the largest behavioral dataset in Southeast Asia: multi-year purchase history, GMV patterns, payment preferences, creditworthiness signals, gaming engagement data, and geographic mobility across 7+ emerging markets. This data corpus is uniquely valuable for: (1) SeaMoney credit underwriting — enabling lending to unbanked populations that traditional banks cannot risk-score; (2) Shopee advertising targeting — merchants pay premium rates for Sea's behavioral segments; (3) demand forecasting — Sea's logistics network uses buyer data to pre-position inventory before peak events like 11.11 and 12.12. No competitor has 15+ years of equivalent scale data across these specific markets."
+      "note": "Sea's 400M buyer profiles represent the largest behavioral dataset in Southeast Asia: multi-year purchase history, GMV patterns, payment preferences, creditworthiness signals, gaming engagement data, and geographic mobility across 7+ emerging markets. This data powers SeaMoney's credit underwriting for the unbanked, Shopee's advertising targeting, and demand forecasting — advantages no competitor with 15+ years of equivalent data can replicate."
     },
     "regulatoryLockIn": {
       "status": "intact",
-      "note": "SeaMoney holds e-wallet, payment institution, and digital lending licenses across Indonesia, Vietnam, Thailand, Philippines, Malaysia, Singapore, and Taiwan — a multi-year licensing achievement that creates regulatory switching costs for users with savings and credit relationships with Sea. Garena holds exclusive gaming distribution licenses in multiple markets that competitors must separately negotiate. In Indonesia (Sea's largest market), Bank Indonesia's payment system regulations create compliance barriers that new entrants must navigate, while Sea has multi-year established relationships. The regulatory moat is meaningful but not as strong as a single-market dominant financial institution."
+      "note": "SeaMoney holds e-wallet, payment institution, and digital lending licenses across Indonesia, Vietnam, Thailand, Philippines, Malaysia, Singapore, and Taiwan — a multi-year licensing achievement creating regulatory switching costs for users with savings and credit relationships with Sea. In Indonesia (Sea's largest market), Bank Indonesia's payment system regulations create compliance barriers that new entrants must separately navigate."
     },
     "networkEffects": {
       "status": "strong",
-      "note": "Shopee's marketplace network effects are Southeast Asia's most powerful consumer commerce flywheel: 400M buyers and 20M sellers create a selection and price competition dynamic that monoculture competitors cannot match. Shopee holds 60%+ GMV share in Indonesia and 50%+ in Vietnam — market positions that reflect years of compounding network density. SeaMoney creates a parallel network: more merchants accepting ShopeePay → more consumers using SeaMoney for daily transactions → more merchant acceptance (cross-subsidy flywheel). These network effects operate independently and compound together: SeaMoney's scale makes Shopee checkout smoother, which drives more Shopee GMV, which deepens SeaMoney payment relationships."
+      "note": "Shopee's marketplace network effects are Southeast Asia's most powerful consumer commerce flywheel: 400M buyers and 20M sellers create selection and price competition that monoculture competitors cannot match. Shopee holds 60%+ GMV share in Indonesia. SeaMoney creates a parallel network: more merchants accepting ShopeePay → more consumers using SeaMoney → more merchant acceptance. These network effects operate independently and compound together."
     },
     "transactionEmbedding": {
       "status": "intact",
-      "note": "ShopeePay processes millions of Shopee transactions daily, and SeaMoney's SPayLater installment product is deeply embedded in Shopee's checkout flow across Indonesia, Thailand, and Vietnam. Consumers build credit history, accumulate ShopeePay cashback rewards, and service installment loans through Sea's financial infrastructure — creating financial record relationships that are structurally difficult to transfer. SeaMoney's savings accounts and digital wallets serve as primary financial accounts for tens of millions of underbanked consumers, creating the daily financial habit of transacting through Sea's infrastructure. The transaction embedding is real but rated 'intact' rather than 'strong' because Shopee checkout also accepts third-party wallets (GoPay, OVO) and is not exclusively locked to ShopeePay."
+      "note": "ShopeePay processes millions of Shopee transactions daily, and SeaMoney's SPayLater installment product is deeply embedded in Shopee's checkout flow across Indonesia, Thailand, and Vietnam. Consumers build credit history, accumulate ShopeePay cashback rewards, and service installment loans through Sea's financial infrastructure — creating financial record relationships that are structurally difficult to transfer. Rated 'intact' rather than 'strong' because Shopee checkout also accepts third-party wallets (GoPay, OVO), limiting exclusivity."
     },
     "systemOfRecord": {
       "status": "intact",
-      "note": "SeaMoney serves as the financial system of record for its users' digital payment history, savings balances, credit repayment records, and insurance policies across Southeast Asia. For millions of consumers — particularly the previously unbanked — Sea's financial products are their first and primary formal financial relationship, making SeaMoney their de facto financial system of record. Shopee's purchase history, seller ratings, and fulfillment records serve as the commercial system of record for Southeast Asia's digital merchant ecosystem. These records accumulate value over time and create migration barriers as users' financial and commercial histories grow."
-    }
+      "note": "SeaMoney serves as the financial system of record for its users' digital payment history, savings balances, credit repayment records, and insurance policies across Southeast Asia. For millions of previously unbanked consumers, Sea's financial products are their first and primary formal financial relationship. Shopee's purchase history, seller ratings, and fulfillment records serve as the commercial system of record for Southeast Asia's digital merchant ecosystem."
+    },
+    "aiResilienceScore": 78,
+    "verdict": "Sea's AI exposure is primarily indirect and positive: SeaMoney's credit underwriting and Shopee's demand forecasting/advertising algorithms benefit from machine learning improvements without risk of disruption. The primary AI risk is competitive — TikTok's algorithm-driven commerce model (interest-based shopping rather than search-based) represents a genuinely disruptive business model that has taken market share in Southeast Asia. Sea's response (Shopee Live, shoppertainment, video commerce) is execution-dependent, but the fintech business (SeaMoney) is almost entirely AI-resilient as it is embedded in regulatory relationships and financial records that are difficult to displace."
   }
 }
