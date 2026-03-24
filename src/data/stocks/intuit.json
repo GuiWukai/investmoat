@@ -52,21 +52,21 @@
   ],
   "moat": {
     "score": 80,
-    "description": "Extreme switching costs; once a SMB has QuickBooks, they almost never leave.",
+    "description": "QuickBooks (58% of revenue) is a near-unassailable system of record; TurboTax (26%) faces real competition but is weighted too small to sink the overall moat.",
     "analysisTitle": "The Ecosystem Moat",
-    "analysisSummary": "Intuit owns the **Financial Workflow** for small businesses and individuals:",
+    "analysisSummary": "Intuit's moat is **revenue-weighted**: QuickBooks dominates at 58% of FY2025's $18.8B, TurboTax is 26%, Credit Karma 12%, ProTax 3%.",
     "analysisPoints": [
       {
-        "title": "Mission-Critical Software",
-        "text": "QuickBooks is the system of record for millions. Migrating accounting data is a nightmare, creating a \"sticky\" moat."
+        "title": "QuickBooks: The Real Fortress (58%)",
+        "text": "7M+ SMBs use QuickBooks as their system of record for payroll, invoicing, taxes, and lending. Years of embedded transaction history make migration nearly impossible — this is the dominant moat driver."
       },
       {
-        "title": "Regulatory Tailwinds",
-        "text": "Tax complexity ensures TurboTax remains a necessity for the consumer segment."
+        "title": "TurboTax: Weakening but Manageable (26%)",
+        "text": "IRS Direct File, free bank filing tools, and AI assistants are structural headwinds. However, TurboTax Live (human-assisted) grew 47% in FY2025 and now represents 41% of Consumer revenue — a successful pivot to a more defensible, higher-ARPU model."
       },
       {
-        "title": "Data Advantage",
-        "text": "Intuit sees more SMB transaction data than almost any bank, allowing for superior credit underwriting."
+        "title": "Data Flywheel Across All Segments",
+        "text": "100M+ users' tax returns, SMB financials, and Credit Karma credit profiles create an irreplaceable dataset that improves underwriting, product personalization, and AI model training across the entire platform."
       }
     ]
   },
