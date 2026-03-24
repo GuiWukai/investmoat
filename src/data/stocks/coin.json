@@ -1,0 +1,178 @@
+{
+  "slug": "coin",
+  "ticker": "COIN",
+  "name": "Coinbase Global",
+  "lastAnalyzed": "March 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "COIN" },
+    { "label": "Market Cap", "value": "$47.6B" },
+    { "label": "Current Price", "value": "$198.66" }
+  ],
+  "chips": [
+    { "label": "Crypto Exchange | Custody | Stablecoin Infrastructure", "color": "primary" },
+    { "label": "ETF Custodian | Regulatory Leader", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Revenue",
+      "value": "$7.2B",
+      "label": "FY2025; Subscription & Services $2.8B (+23% YoY) — durable revenue base",
+      "icon": "TrendingUp",
+      "color": "#1652f0"
+    },
+    {
+      "title": "Crypto Custody",
+      "value": "~12%",
+      "label": "Of all crypto globally — more than next 4 competitors combined; $11.3B cash",
+      "icon": "Shield",
+      "color": "#10b981"
+    },
+    {
+      "title": "USDC Market Cap",
+      "value": "$76.2B",
+      "label": "Avg balance via Coinbase products; 2nd largest stablecoin; structural interest income",
+      "icon": "Zap",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "score": 78,
+    "description": "Coinbase is the only US-regulated crypto exchange listed on a major stock exchange, serving as the custodian for spot Bitcoin and Ethereum ETFs from BlackRock, Fidelity, and nine other issuers — a regulatory trust position that took 12 years and $1B+ in compliance investment to build and cannot be replicated by any new entrant within a decade.",
+    "analysisTitle": "The Regulated Crypto Infrastructure Moat",
+    "analysisSummary": "Coinbase's moat rests on **Regulatory Trust, Transaction Embedding in Institutional Infrastructure, and USDC/Stablecoin Network Effects**:",
+    "analysisPoints": [
+      {
+        "title": "Regulatory Trust — The Institutional Gateway",
+        "text": "Coinbase holds money transmission licenses in every US state, is MiCA-compliant in the EU, has regulatory approval in 100+ countries, and is the designated custodian for 12+ spot Bitcoin ETF products (BlackRock's IBIT, Fidelity's FBTC, Ark Invest's ARKB, and others). This regulatory standing is impossible to replicate without 10+ years of compliance investment — it is the reason institutional investors, sovereign wealth funds, and corporate treasuries use Coinbase Prime rather than a competing exchange. Binance, Bybit, and OKX cannot compete for this institutional segment due to regulatory constraints."
+      },
+      {
+        "title": "ETF Custodianship — Embedded in Financial Infrastructure",
+        "text": "As custodian for $50B+ in spot Bitcoin ETF assets, Coinbase is now embedded in the settlement infrastructure of the traditional financial system for crypto. Every BlackRock Bitcoin ETF redemption flows through Coinbase custody. Every Fidelity ETF creation event requires Coinbase's institutional desk. This transaction embedding in the regulated financial system creates a moat that grows stronger as ETF AUM grows — and spot Bitcoin ETFs absorbed $35B+ in net inflows in their first year."
+      },
+      {
+        "title": "USDC + Base L2 — Next-Generation Infrastructure",
+        "text": "Through its partnership with Circle, Coinbase receives a share of the interest earned on USDC reserves — a $76B stablecoin market cap generating passive interest income as long as USD interest rates remain elevated. More strategically, Coinbase's Base Layer 2 blockchain is becoming a core on-chain infrastructure layer: if Base becomes a primary settlement layer for on-chain finance, Coinbase's long-term revenue model shifts from exchange transaction fees (volatile) to infrastructure fees (predictable) — akin to becoming the SWIFT of crypto."
+      }
+    ]
+  },
+  "growth": {
+    "score": 75,
+    "description": "FY2025 revenue grew 9% to $7.2B despite a challenging Q4 (trading revenue disappointed amid crypto price volatility). Subscription and services revenue — the durable, non-cyclical revenue base — grew 23% to $2.8B. Total trading volume doubled YoY to all-time highs, and crypto market share doubled. FY2026 total revenue could reach $8B+ if crypto markets sustain elevated activity, with subscription/services providing a growing floor. The structural growth driver is institutional crypto adoption (ETF AUM, corporate treasury, sovereign wealth) — a multi-decade trend in its early stages.",
+    "growthAnalysis": {
+      "cagrEstimate": "15–25%",
+      "scoreDerivation": "Base 80 (15–30% blended CAGR; subscription/services +23% durable; total revenue +9% in challenged year) + 5 TAM expansion (spot ETF AUM growing, USDC stablecoin adoption, Base L2 ecosystem) + 3 market share gains (doubled crypto trading market share in 2025) − 13 cyclicality (crypto revenue can fall 60%+ in a bear market; COIN's revenue is highly correlated with BTC/ETH prices; institutional doesn't fully offset retail volatility) = 75",
+      "drivers": [
+        {
+          "name": "Subscription & Services (Non-Cyclical)",
+          "metric": "$2.8B FY2025 (+23% YoY); USDC interest income, custody fees, staking, Coinbase One",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Institutional Crypto (ETF + Prime)",
+          "metric": "All-time high trading volume; 12% of all crypto in custody; ETF custodianship for $50B+",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Base L2 + On-chain Finance",
+          "metric": "Base becomes leading Ethereum L2; infrastructure for on-chain stablecoins, DeFi, NFTs",
+          "trend": "accelerating"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If Bitcoin falls to $40K and crypto market cap contracts 50%+ by end of 2026 — driven by macro tightening or regulatory reversal — Coinbase's transaction revenue collapses from $4B+ toward $1.5B, USDC market cap shrinks as stablecoin demand falls, and total FY2026 revenue misses $8B by $3B+",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 72,
+    "description": "At $198.66, COIN has partially recovered from its 52-week low of $139.36 but remains 55%+ below its 2025 all-time high of $444.65. The market cap of ~$47.6B on $7.2B FY2025 revenue (P/S ~6.6×) is historically cheap for Coinbase — in bull crypto cycles the stock traded at 20-30× P/S. The cheap valuation reflects the market pricing in a bear crypto scenario and the inherent cyclicality. The stock sits between bear ($80) and base ($250) scenarios, offering meaningful upside if crypto markets sustain elevated activity.",
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~38×", "note": "FY2025 GAAP net income $1.26B" },
+        { "label": "Forward P/E (NTM)", "value": "~25×", "note": "est. 2026 GAAP EPS ~$8 (cycle-dependent)" },
+        { "label": "PEG Ratio", "value": "N/A", "note": "Crypto cycle volatility makes PEG misleading" },
+        { "label": "Price / Sales (NTM)", "value": "~5.5×", "note": "$8B+ NTM revenue (bull-cycle scenario)" },
+        { "label": "Price / FCF", "value": "~14×", "note": "$3.38B FCF (Q4 2025 alone)" }
+      ],
+      "summary": "Coinbase's valuation is highly cycle-dependent — at ~6.6× TTM P/S on $7.2B revenue, the stock is cheap relative to the business's institutional maturity, but forward metrics swing widely with crypto prices. The P/FCF of ~14× based on Q4 2025 FCF is extremely attractive, but Q4 was aided by exceptionally high trading volumes that may not persist. The key valuation insight is the subscription/services floor ($2.8B, growing 23%) which is valued at approximately $10–12B at 3.5–4× P/S — implying the market is only paying ~$37B for $4.4B in cyclical transaction revenue, which could be worth $20–50B depending on the crypto cycle."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$80",
+      "description": "Bitcoin falls to $40K, crypto winter sets in, transaction revenue collapses to $1.5B, and the subscription/services floor is tested — USDC market cap shrinks and ETF inflows reverse.",
+      "points": [
+        "Bitcoin falls to $40K following a macro tightening event or regulatory shock in a major jurisdiction — total crypto market cap falls from $3T to below $1.2T, collapsing Coinbase's transaction revenue 60%+ to ~$1.5B",
+        "USDC market cap declines from $76B to below $30B as stablecoin demand falls with crypto market activity — reducing Coinbase's interest income from USDC reserves by ~60%",
+        "Spot Bitcoin ETF AUM declines from $50B+ to below $20B as institutional investors reduce risk allocation to crypto in a bear cycle — ETF custody fees decline proportionally",
+        "Multiple compresses to 3× P/S on $4B depressed revenue: $12B / 240M shares = $50/share — rounded to $80 including subscription/services floor value"
+      ]
+    },
+    "base": {
+      "priceTarget": "$250",
+      "description": "Crypto market remains constructive, Bitcoin sustains $70–90K, subscription/services grows to $3.5B, and institutional adoption continues — re-rating to 8× P/S on $8B+ revenue.",
+      "points": [
+        "FY2026 total revenue reaches $8B+ as transaction revenue sustains elevated activity levels (Bitcoin $70–90K) and subscription/services grows 25% to $3.5B",
+        "Base L2 ecosystem reaches $50B+ in total value locked (TVL), establishing Coinbase as a major on-chain infrastructure provider and generating incremental fee revenue beyond exchange trading",
+        "USDC market cap grows to $100B+ as institutional adoption of stablecoins accelerates and Congress passes stablecoin legislation that legitimises USDC as the compliant stablecoin of choice",
+        "Institutional Prime volumes continue growing as sovereign wealth funds and corporate treasuries expand crypto allocations following spot ETF approval normalisation"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$380",
+      "description": "Crypto super-cycle drives Bitcoin to $150K+, institutional ETF AUM reaches $200B+, and Base L2 emerges as the dominant on-chain financial layer — re-rating toward 15× P/S on $12B+ revenue.",
+      "points": [
+        "Bitcoin reaches $150K in 2026 super-cycle, driving total crypto market cap above $8T — Coinbase's transaction revenue surges to $7B+ and FY2026 total revenue exceeds $12B",
+        "Base L2 achieves $150B+ TVL, becoming the primary settlement layer for on-chain stablecoins, tokenized assets, and DeFi — generating $500M+ in Base-attributable revenue for Coinbase",
+        "USDC market cap reaches $200B as Congress passes stablecoin framework establishing USDC as the regulated dollar stablecoin standard for global institutional flows — generating $4B+ in annual interest income at 5% rates",
+        "Coinbase becomes the first major US bank-equivalent for digital assets — stock re-rates toward 15× P/S on $12B revenue: $180B / 240M shares = $750/share (capped at $380 for 12-month horizon)"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Institutional traders and retail users invest time mastering Coinbase Advanced, Coinbase Prime's OTC desk workflows, and custody management interfaces. The complexity of institutional custody operations (cold storage, multi-sig, insurance requirements) creates meaningful switching friction for large clients."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "Retail crypto trading logic is relatively portable — user preferences and portfolio configuration can be moved to competing exchanges. Institutional custody workflows have more embedded logic but are less complex than enterprise software. AI is accelerating portfolio management tool portability."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — not a meaningful moat dimension for a crypto exchange. Coinbase's data advantages are proprietary (transaction flows, custody data) rather than public data access."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Regulatory compliance specialists (BSA/AML, FinCEN, SEC, CFTC expertise), blockchain security engineers, and institutional custody architects represent genuine talent scarcity. Coinbase's 12-year head start in regulatory compliance has built a talent base that competing exchanges cannot hire away quickly."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Coinbase One (subscription), Coinbase Wallet, Coinbase Advanced (trading), Coinbase Prime (institutional), USDC (stablecoin), and Base (L2) create a multi-product bundle. Users deeply embedded in the USDC/Base ecosystem face meaningful migration friction to competing platforms."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "~12% of all global crypto in custody gives Coinbase unparalleled institutional order flow data. USDC on-chain transaction data provides macro-level insight into stablecoin flows. This dataset is uniquely valuable for market-making, compliance, and product development."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "12 years of regulatory investment (MTLs in all 50 US states + DC, MiCA EU compliance, 100+ country approvals, FedWire access via partnership) creates a regulatory moat that took $1B+ in compliance infrastructure to build. As the designated custodian for 12+ spot ETF products, Coinbase cannot be replaced without multi-year regulatory re-approval for each fund — giving existing custody relationships extreme durability."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "More users → deeper order books → tighter spreads → better prices → more users. USDC network effect: more USDC in circulation → more use cases → more USDC demand. Base L2 network: more apps on Base → more users → more apps — still early but accelerating with $50B+ TVL."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Coinbase is embedded in the settlement infrastructure of 12+ ETF products, processes institutional crypto transactions for major financial institutions, and USDC flows through Coinbase's infrastructure for trillions in on-chain value. This is genuine transaction embedding in the financial system — comparable in structure (though smaller in scale) to Visa's role in the traditional payment system."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "For institutional crypto holders, Coinbase Prime serves as the system of record for custody balances, transaction history, and tax reporting. ETF custodianship means Coinbase is the authoritative record for Bitcoin and Ethereum held in registered investment products — a legal system-of-record function for regulated financial products."
+    },
+    "aiResilienceScore": 77,
+    "verdict": "Coinbase is broadly AI-resilient — its regulatory trust position and institutional custodianship are not threatened by AI capabilities. AI may improve trading algorithms and risk management but does not displace Coinbase's compliance infrastructure advantage. The most significant AI impact is indirect: AI agents conducting autonomous crypto transactions will need regulated, compliant on-ramps to the traditional financial system — and Coinbase is the only entity with the regulatory standing to serve as that gateway for institutional-grade AI treasury operations. The primary risk is regulatory reversal (SEC enforcement), not AI disruption."
+  }
+}

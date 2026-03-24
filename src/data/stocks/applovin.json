@@ -1,0 +1,213 @@
+{
+  "slug": "applovin",
+  "ticker": "APP",
+  "name": "AppLovin",
+  "lastAnalyzed": "March 2026",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "APP"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$149B"
+    },
+    {
+      "label": "Current Price",
+      "value": "$442.39"
+    }
+  ],
+  "chips": [
+    {
+      "label": "AI Ad Tech | Mobile Advertising Platform",
+      "color": "primary"
+    },
+    {
+      "label": "AXON AI Engine",
+      "color": "success"
+    }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Revenue",
+      "value": "$5.48B",
+      "label": "+70% YoY FY2025; Q1 2026 guide $1.75–1.78B (+38% YoY)",
+      "icon": "TrendingUp",
+      "color": "#6366f1"
+    },
+    {
+      "title": "EBITDA Margin",
+      "value": "84%",
+      "label": "Q4 2025 adj. EBITDA margin — pure-play software platform",
+      "icon": "Zap",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "FCF",
+      "value": "$3.95B",
+      "label": "+91% YoY FY2025; FCF conversion >100% of EBITDA",
+      "icon": "TrendingUp",
+      "color": "#10b981"
+    }
+  ],
+  "moat": {
+    "score": 72,
+    "description": "AppLovin's AXON AI engine is trained on in-app behavioral data from thousands of mobile apps mediated through MAX — a proprietary dataset that grew more valuable when Apple's ATT killed third-party tracking and that no competitor can replicate without first building AppLovin's publisher distribution.",
+    "analysisTitle": "The AXON Data Flywheel",
+    "analysisSummary": "AppLovin's moat rests on an **AI data flywheel built on in-app behavioral data and network effects**, not traditional enterprise lock-in:",
+    "analysisPoints": [
+      {
+        "title": "MAX Mediation → Proprietary In-App Data",
+        "text": "AppLovin's MAX ad mediation platform sits between app publishers and ad networks, giving AppLovin first-party visibility into in-app user behavior across thousands of apps. When Apple's ATT framework killed third-party identifier tracking in 2021, AppLovin's behavioral pattern modeling (not tied to personal identifiers) became significantly more valuable than competitor approaches — creating a privacy-era data moat that has strengthened with each passing year as signal loss compounds for rivals."
+      },
+      {
+        "title": "AXON AI Engine — Self-Reinforcing Flywheel",
+        "text": "More ad spend on AXON → more conversion signal → better AXON predictions → better ROAS for advertisers → more ad spend. Since AXON 2.0 launched in Q2 2023, gaming advertiser spend on AppLovin has quadrupled to an estimated $10B annual run rate. AXON 3.0 adds generative AI for real-time creative generation, extending the flywheel into ad production. No competitor has replicated this virtuous cycle despite substantial resources — Meta, Google, and Unity all have more data in absolute terms but lack AppLovin's focus on the in-app behavioral signal."
+      },
+      {
+        "title": "Platform Bundle (MAX + AXON + Adjust)",
+        "text": "The combination of MAX mediation (publisher monetization), AXON demand-side (advertiser ROI), and Adjust (mobile attribution and measurement) into a single platform creates multi-sided lock-in. Publishers depend on MAX for revenue maximization, advertisers on AXON for install efficiency, and measurement partners integrate with Adjust — making the entire ecosystem self-reinforcing and costly to disassemble."
+      }
+    ]
+  },
+  "growth": {
+    "score": 88,
+    "description": "FY2025 delivered $5.48B revenue (+70% YoY) and $3.95B FCF (+91% YoY) with 84% Adj. EBITDA margins — one of the most profitable growth profiles in software history. Q1 2026 is guided at $1.745–1.775B (+38% YoY) with 84% EBITDA margins sustained. 2026 consensus expects $7.9B revenue (+44% YoY) and $14.75 EPS. AXON 3.0 and e-commerce advertising expansion (Axon Ads Manager launching globally mid-2026) represent the next major growth vectors beyond mobile gaming.",
+    "growthAnalysis": {
+      "cagrEstimate": "35–44%",
+      "scoreDerivation": "Base 90 (30%+ CAGR; consensus 44% YoY in 2026 on $7.9B) + 5 TAM expansion (e-commerce advertising, AXON 3.0 self-serve platform launch) − 5 deceleration risk (each AXON iteration shows diminishing marginal returns; growth from 70% to 44% already moderating) − 2 SEC investigation risk (regulatory overhang) = 88",
+      "drivers": [
+        {
+          "name": "Software Platform (AXON Advertising)",
+          "metric": "+66% YoY Q4 2025; adj. EBITDA $1.4B at 84% margin; gaming run rate ~$10B annual ad spend",
+          "trend": "stable"
+        },
+        {
+          "name": "E-Commerce Advertising Expansion",
+          "metric": "Axon Ads Manager launched Oct 2025; global rollout mid-2026; moves beyond gaming into $200B+ e-comm ad TAM",
+          "trend": "accelerating"
+        },
+        {
+          "name": "AXON 3.0 (Generative AI Creative)",
+          "metric": "Generates ads in real-time; reduces advertiser creative production barrier; expands addressable campaigns",
+          "trend": "accelerating"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If Google's Privacy Sandbox and Meta's Advantage+ AI close the behavioral targeting gap by mid-2026 — reducing AXON's ROAS advantage from the current 30–40% premium to below 15% — advertisers begin reallocating e-commerce budgets back to Meta/Google before Axon Ads Manager reaches critical mass",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 75,
+    "description": "APP has pulled back 40% from its December 2025 all-time high of $733, creating a materially better entry point. At $442, the stock trades at ~30× 2026 consensus EPS of $14.75 and ~18.9× forward P/S — meaningfully cheaper than its summer 2025 peak valuations. The $149B market cap on $3.95B TTM FCF gives a P/FCF of ~38×, reasonable for a company growing FCF 91% YoY with 84% EBITDA margins. The stock sits between bear ($290) and base ($540), roughly 18% below fair value on current estimates.",
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~44×",
+          "note": "TTM EPS $10.04 (GAAP profitable)"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~30×",
+          "note": "consensus EPS est. $14.75 (2026)"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~0.7×",
+          "note": "fwd P/E ÷ 44% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~19×",
+          "note": "$7.9B NTM revenue (2026 consensus)"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~38×",
+          "note": "$3.95B FCF (FY2025 TTM)"
+        }
+      ],
+      "summary": "APP trades at ~30× 2026 forward P/E, only modestly above the growth-tech sector median (~30–35×), which is remarkable for a company projecting 44% revenue growth and 84% EBITDA margins. The PEG of ~0.7× signals genuine GARP territory — investors are not currently paying a growth premium relative to the earnings trajectory. The trailing vs forward P/E gap (44× vs 30×) reflects an ongoing earnings ramp as margins expand; if AXON sustains performance and e-commerce expansion validates, this multiple could look very conservative in retrospect."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$290",
+      "description": "AXON improvements plateau as Google/Meta close the behavioral targeting gap, e-commerce expansion stalls, and SEC investigation creates material regulatory headwinds — revenue growth decelerates to 20–25% and margins compress.",
+      "points": [
+        "Google's Privacy Sandbox + Meta Advantage+ AI converge on AXON's ROAS performance by Q3 2026, reducing AppLovin's premium from 35% to below 15% and triggering e-commerce advertiser budget reallocation back to Meta/Google",
+        "Axon Ads Manager global launch underperforms — e-commerce advertiser adoption falls short of 500 clients by end of 2026, removing the TAM expansion narrative before it generates meaningful revenue",
+        "SEC investigation results in a formal enforcement action or material fine, creating regulatory overhang that compresses the multiple to 15× 2026 NTM P/S",
+        "Revenue growth decelerates to 22–25% for FY2026, missing the $7.9B consensus by $800M+, and FCF margins compress to 75–77% as AXON 3.0 R&D spend accelerates"
+      ]
+    },
+    "base": {
+      "priceTarget": "$540",
+      "description": "AppLovin delivers $7.9B 2026 revenue (+44%) with 84% EBITDA margins sustained, AXON 3.0 launches on schedule, and Axon Ads Manager secures initial e-commerce traction — re-rating the stock toward 22× NTM P/S.",
+      "points": [
+        "FY2026 revenue reaches $7.8–7.9B, with the Software Platform growing 40%+ YoY as AXON 2.0 sustains advertiser ROAS advantage and AXON 3.0 adds new creative automation layer",
+        "Axon Ads Manager global rollout by mid-2026 signs 300+ e-commerce advertisers, establishing initial validation of the beyond-gaming TAM expansion thesis",
+        "Adj. EBITDA margins sustain at 82–84%, FCF reaches $4.8–5.0B for FY2026, and buybacks continue to reduce share count by 1–2% annually",
+        "SEC investigation resolves without material enforcement action, removing the regulatory overhang from the investment thesis"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$800",
+      "description": "AXON 3.0 becomes the default ad creation platform for mid-market e-commerce, AppLovin captures 5–8% of the global digital advertising market, and FCF accelerates toward $8B — re-rating toward 20× FCF.",
+      "points": [
+        "Axon Ads Manager reaches 5,000+ e-commerce advertisers by end of 2026, with average spend of $2M+, generating $2B+ in incremental 2026 revenue not in current consensus estimates",
+        "AXON 3.0 generative AI creative achieves 50%+ better ROAS than static creatives, creating a new performance benchmark that forces e-commerce brands to shift 20%+ of Meta/Google budgets to AppLovin",
+        "International expansion into Southeast Asia and Latin America (historically undermonetized mobile markets) adds an incremental growth vector, pushing 2027 revenue toward $14B",
+        "FCF reaches $7–8B in 2027 on $12B+ revenue, making the current $149B market cap look cheap at ~20× FCF on a self-funding, buyback-compounding capital-light business"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Performance marketers optimize AXON campaign bidding and creative parameters over months — institutional knowledge of what creative styles, bid strategies, and audience cohorts work on AXON is non-transferable to other platforms."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "AXON is largely a black-box AI — advertisers don't configure deep business logic into the platform. Campaign structures are relatively simple to port. AI tools are accelerating migration testing, weakening this moat."
+    },
+    "publicDataAccess": {
+      "status": "intact",
+      "note": "MAX mediation gives AppLovin visibility into in-app behavioral patterns across thousands of publisher apps — a first-party data stream that is less replicable than raw impression data but not entirely proprietary."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "The ML engineers who built and iterate on AXON represent a scarce intersection of ad-tech domain knowledge and production-scale AI. Recruiting away from AppLovin is difficult given the equity upside and the unique data environment."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "MAX mediation (publisher yield) + AXON demand (advertiser ROI) + Adjust attribution creates a three-sided bundle that cannot be easily unbundled without losing performance across all three surfaces simultaneously."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "In-app behavioral data from MAX — how users interact with apps, session patterns, purchase propensity signals — is genuinely proprietary. When Apple killed IDFA, this behavioral signal became more differentiated, not less. 536 patents protect key algorithms."
+    },
+    "regulatoryLockIn": {
+      "status": "weakened",
+      "note": "Privacy regulations (Apple ATT, GDPR) accidentally created a moat for AppLovin's privacy-first behavioral approach — but this is not traditional regulatory lock-in. The SEC investigation represents regulatory risk, not a lock-in advantage."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "Classic two-sided marketplace network effects: more publishers on MAX → more inventory → better advertiser outcomes → more advertiser spend → more publisher revenue. The AXON data flywheel adds a third dimension: more conversion signals → better predictions → better ROAS → more ad spend → more signals."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Every in-app ad auction, install event, and attribution event flows through AppLovin's infrastructure. Publishers cannot monetize without the platform; advertisers cannot track without Adjust. Deeply embedded in the mobile transaction layer."
+    },
+    "systemOfRecord": {
+      "status": "weakened",
+      "note": "Adjust serves as a system of record for mobile attribution events, but this is a narrower system of record than financial or legal data. AppLovin's ad server records are not authoritative for external reporting purposes."
+    },
+    "aiResilienceScore": 70,
+    "verdict": "AppLovin is an AI-native business — AXON is its product, not a feature — making it a direct beneficiary of AI capability improvements. AXON 3.0 generative ad creation and AXON 2.0's continued optimization cycles demonstrate that better AI directly translates to better advertiser ROAS and higher platform value. The key AI risk is that the Big Three (Google, Meta, Amazon) use their larger data assets to close the ROAS gap with AXON; AppLovin's proprietary in-app behavioral data is currently the moat, but that moat is narrower than the structural lock-ins of Cloudflare, Axon, or Microsoft. Overall, AppLovin's AI-era positioning is strong within ad-tech but more competitively exposed than platform businesses with regulatory or physical switching costs."
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "slug": "rddt",
+  "ticker": "RDDT",
+  "name": "Reddit",
+  "lastAnalyzed": "2026-03-24",
+  "headerStats": [
+    {
+      "label": "Revenue (FY2025)",
+      "value": "$2.2B",
+      "subtext": "+69% YoY"
+    },
+    {
+      "label": "Daily Active Users",
+      "value": "121M",
+      "subtext": "+19% YoY; WAU 471M"
+    },
+    {
+      "label": "Adj EBITDA Margin",
+      "value": "45%",
+      "subtext": "Q4 2025; 90%+ gross margin"
+    }
+  ],
+  "chips": [
+    "AI Data Licensing",
+    "Community Network Effects",
+    "Human Discourse Data",
+    "Advertising Growth",
+    "International Expansion"
+  ],
+  "recommendation": {
+    "rating": "Accumulate",
+    "targetReturn": "35% to base case",
+    "rationale": "Reddit is the internet's only irreplaceable repository of authentic, long-form human discussion — a dataset that AI companies cannot synthesize and are paying hundreds of millions annually to license. At ~8× forward P/S on 50%+ revenue growth with a $1B buyback underway, Reddit represents a compelling accumulate in a market that hasn't yet fully priced in the structural AI data licensing tailwind."
+  },
+  "metrics": {
+    "currentPrice": "$140.31",
+    "marketCap": "$26.7B",
+    "revenue": "$2.2B",
+    "revenueGrowth": "+69% YoY",
+    "grossMargin": "90%+",
+    "adjEBITDA": "$1B+",
+    "adjEBITDAMargin": "~45% (Q4 2025)",
+    "dau": "121M (+19% YoY)",
+    "wau": "471M",
+    "q1Guide": "$595–605M (+52–54%)",
+    "buyback": "$1B authorized",
+    "aiLicensing": "Google, OpenAI (multi-year)"
+  },
+  "moat": {
+    "score": 65,
+    "aiResilienceScore": 65,
+    "analysisTitle": "The Human Discourse Network Moat",
+    "analysisSummary": "Reddit's competitive position rests on **Network Effects (Community Density), Proprietary Human Discourse Data (AI Training Infrastructure), and the System of Record for Peer Knowledge**:\n\n- **Network Effects (Strong):** Reddit's subreddit structure creates topic-specific community density that took years to build and cannot be replicated. Communities like r/wallstreetbets, r/MachineLearning, r/personalfinance, and r/learnprogramming have achieved critical mass where the depth of discussion quality is self-reinforcing — more high-quality users → better answers → more users seeking those answers. These communities have survived significant platform controversies (2023 API crisis) because the switching cost of migrating an entire community is prohibitive.\n\n- **Proprietary Data (Strong):** Reddit's 18+ year archive of threaded human discussions is irreplaceable as AI training data. The corpus captures authentic reasoning, debate, and domain expertise at a scale no competitor can match. Google and OpenAI are paying structured, multi-year licensing fees to access this data — a revenue stream growing directly with AI model development demand. Synthetic data cannot replicate the authenticity, disagreement patterns, and contextual depth of Reddit's corpus.\n\n- **System of Record (Strong):** Reddit has become the de facto reference archive for peer knowledge. Users routinely append \"site:reddit.com\" to Google searches because Reddit's community answers are trusted as the authoritative peer record. For software recommendations, investment discussions, medical experiences, and technical troubleshooting, Reddit is treated as the informal system of record across millions of topics.\n\nThe key vulnerability is AI answer substitution: if LLMs provide sufficiently good direct answers, the need to visit Reddit for information lookup diminishes — a risk to DAU growth and advertising revenue that must be offset by the data licensing monetization shift.",
+    "verdict": "Reddit is a net beneficiary of AI in one critical dimension — its data licensing business to AI training providers is a structural new revenue stream that grows with AI model proliferation. However, AI chatbots increasingly provide direct answers that reduce Reddit as a destination, threatening DAU growth and advertising RPM. The outcome hinges on whether Reddit successfully transitions its identity from \"destination for answers\" to \"source of AI training infrastructure\" — a shift that requires accelerating API monetization and international advertising expansion before answer-substitution erodes core engagement."
+  },
+  "growth": {
+    "score": 88,
+    "cagrEstimate": "28–38%",
+    "scoreDerivation": "Base 80 (28–38% CAGR; FY2025 +69% YoY; Q4 revenue +70%; Q1 2026 guide +52–54%) + 5 AI data licensing (Google/OpenAI multi-year agreements create a structural recurring revenue line that grows with AI model proliferation — uniquely advantaged among social platforms) + 5 international monetization gap (85% of DAU are international but contribute only ~15% of advertising revenue — RPM catch-up to US levels alone implies multi-year growth tailwind) − 2 growth deceleration risk (FY2025 +69% is decelerating to Q1 2026 +52–54%; further normalization to 30–35% expected in full-year 2026 as base effects compound) = 88"
+  },
+  "valuation": {
+    "score": 78,
+    "scoreDerivation": "Bear $95 → score 90; Base $190 → score 65; current $140.31 is between bear and base: t = (140.31 − 95) / (190 − 95) = 45.31/95 = 0.477; score = 90 − 0.477 × 25 = 78.1 → 78",
+    "summary": "At $140.31 (~$26.7B market cap), Reddit trades at ~12× TTM P/S and ~8× forward P/S on $3.5B FY2026 consensus revenue — reflecting premium pricing for a high-growth platform. The stock is down 40%+ from its ATH near $230, and the $1B share buyback signals management confidence. The 78-point valuation score reflects Reddit's attractive positioning between bear and base scenarios: at ~$95, the stock would be pricing in material growth disappointment; at ~$190, it would reflect a realistic base case of sustained 25–30% growth with AI licensing monetization beginning to scale. Current pricing offers a reasonable margin of safety."
+  },
+  "scenarios": {
+    "bear": {
+      "label": "Bear",
+      "priceTarget": "$95",
+      "probability": "20%",
+      "description": "Advertising recession hits social media spend; AI chatbots substitute Reddit visits and DAU growth stalls below 10% annually; AI data licensing deals prove one-time rather than recurring; gross margin compression from infrastructure costs. Revenue decelerates to 15–20% CAGR and the market re-rates to 5–6× P/S."
+    },
+    "base": {
+      "label": "Base",
+      "priceTarget": "$190",
+      "probability": "55%",
+      "description": "DAU grows to 150M+ as international markets activate; advertising revenue grows 25–30% annually as international RPM converges toward US levels; AI data licensing expands to additional partners generating $150–250M in annual recurring revenue; adj EBITDA margins sustain 35–40%. Revenue reaches $3.5–4B by FY2026 and the stock re-rates to 9–10× P/S."
+    },
+    "bull": {
+      "label": "Bull",
+      "priceTarget": "$290",
+      "probability": "25%",
+      "description": "AI data licensing becomes a $500M+ annual revenue stream as every major AI lab requires Reddit's corpus for model training and fine-tuning; DAU exceeds 200M as international markets unlock; Reddit's community platform becomes the authenticated home for human-AI discussion (comments co-written with AI tools); advertising RPM expands 3–4× in international markets. Revenue reaches $6B+ and the stock re-rates to 12× P/S."
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "Reddit's moderator interface (Mod Queue, Automod, New Reddit mod tools) requires significant learning investment for community moderators — power users build complex automation via Automod scripts and mod log workflows. However, casual users face no meaningful interface lock-in, and Reddit's repeated UI redesigns (New Reddit, Reddit redesign 2024) have disrupted rather than deepened interface familiarity. Moderator investment is a partial but not dominant friction."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "Subreddit-specific Automod configurations, flair systems, and community rules represent community-specific logic built over years. For advertisers, Reddit Ads targeting and campaign logic is largely portable to competing platforms. The lack of enterprise integration (no CRM/ERP connections, no financial workflow embedding) means business logic switching costs are modest."
+    },
+    "publicDataAccess": {
+      "status": "strong",
+      "note": "Reddit's Data API is the most commercially valuable public data access moat in social media: 18+ years of human discussion across every topic, in a searchable, structured format that no competitor can replicate. Google ($60M/year estimated) and OpenAI have signed multi-year licensing agreements specifically for AI training access. This is a structural, compounding moat — as AI model training demand grows and synthetic data proves insufficient for authenticity, Reddit's corpus becomes more valuable, not less."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Reddit's engineering and product talent profile is broadly comparable to other consumer web platforms. Community management, advertising technology, and social platform engineering talent is portable across Meta, X, Pinterest, Snap, and TikTok. No unique research capability or specialized technical talent creates meaningful scarcity."
+    },
+    "bundling": {
+      "status": "weakened",
+      "note": "Reddit's product bundle — Reddit Free, Reddit Premium ($5.99/month), Reddit Ads — is thin. Reddit Premium benefits (ad-free experience, avatar coins) have not driven meaningful subscription attach rates. There is no financial services, commerce, or productivity bundling creating multi-product switching costs. The lack of a DM/messaging layer comparable to Meta Messenger or Twitter/X DMs limits bundle depth."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Reddit possesses the most valuable proprietary human discourse dataset in existence: 18+ years of threaded discussion across 100,000+ communities, capturing authentic reasoning, debate, domain expertise, and collective intelligence at a scale that cannot be synthetically generated. Google, OpenAI, and other AI companies pay hundreds of millions for licensing access because their models require authentic human text that reflects real disagreement, uncertainty, and domain-specific jargon. As AI training data demand grows, Reddit's data moat becomes more valuable, not less — and the company has exclusive control over API pricing and licensing terms."
+    },
+    "regulatoryLockIn": {
+      "status": "destroyed",
+      "note": "Reddit has no meaningful regulatory lock-in. Section 230 protections benefit all social platforms equally. No government procurement cycles, industry-specific compliance requirements, or regulatory certifications differentiate Reddit's market position. The 2023 API pricing controversy demonstrated Reddit's vulnerability to community pushback when attempting to enforce commercial terms, suggesting regulatory leverage is limited."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "Reddit's subreddit structure creates extremely dense, topic-specific network effects: more engaged users per subreddit → higher-quality discussion → better answers → more users seeking those answers. Critically, these network effects are community-specific, not platform-wide — r/personalfinance, r/MachineLearning, r/wallstreetbets, and r/AskDocs have achieved critical mass with years of accumulated Q&A that no competing platform has replicated. The 2023 API crisis (user blackouts, mod protests) demonstrated that despite platform-level controversy, subreddit communities did not migrate — the switching cost of relocating an entire community with its history and moderation infrastructure is prohibitive."
+    },
+    "transactionEmbedding": {
+      "status": "destroyed",
+      "note": "N/A — Reddit is a social media and content platform, not a financial transaction processor. Reddit is not embedded in payment flows, financial settlements, or commercial transaction infrastructure. This moat category does not apply."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "Reddit has become the de facto system of record for peer knowledge across hundreds of specialized domains. Users systematically add 'site:reddit.com' to Google searches because Reddit's community answers are trusted as the authoritative record of real-world experience — software recommendations (r/homelab, r/buildapc), medical experiences (r/ChronicPain, r/diabetes), investment discussions (r/personalfinance, r/investing), and technical troubleshooting. This creates structural return behavior: Reddit is consulted as a reference because its community archives represent years of validated peer consensus, reinforcing daily visit habits in a way that no AI-generated answer currently replaces."
+    }
+  }
+}

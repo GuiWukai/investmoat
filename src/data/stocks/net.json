@@ -1,0 +1,213 @@
+{
+  "slug": "net",
+  "ticker": "NET",
+  "name": "Cloudflare",
+  "lastAnalyzed": "March 2026",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "NET"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$75.8B"
+    },
+    {
+      "label": "Current Price",
+      "value": "$211.20"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Cybersecurity | Edge Network | Zero Trust SASE",
+      "color": "primary"
+    },
+    {
+      "label": "AI Agent Infrastructure",
+      "color": "success"
+    }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Revenue",
+      "value": "$2.17B",
+      "label": "+29.8% YoY FY2025; 2026 guide $2.79B (+28–29%)",
+      "icon": "TrendingUp",
+      "color": "#f6821f"
+    },
+    {
+      "title": "RPO",
+      "value": "$2.50B",
+      "label": "+48% YoY — largest ACV deal ever closed in Q4 2025",
+      "icon": "Zap",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "Net Retention",
+      "value": "120%",
+      "label": "+9pp YoY; 4,298 >$100K customers (+23% YoY)",
+      "icon": "Shield",
+      "color": "#10b981"
+    }
+  ],
+  "moat": {
+    "score": 81,
+    "description": "Cloudflare's global edge network processes 215 billion threats daily, creating a threat-intelligence flywheel that compounds with scale and is unreplicable by any single competitor.",
+    "analysisTitle": "The Connectivity Cloud Moat",
+    "analysisSummary": "Cloudflare's moat rests on three interlocking pillars: **Proprietary Data Flywheel, Network Effects, and Platform Bundling**:",
+    "analysisPoints": [
+      {
+        "title": "Threat Intelligence Flywheel (Proprietary Data)",
+        "text": "With 215 billion cyber threats blocked daily across 332,000+ customers — including 38% of the Fortune 500 — Cloudflare operates the world's largest internet threat sensor network. This telemetry feeds security products in real-time, creating a data moat that grows more valuable with every new customer added to the network."
+      },
+      {
+        "title": "Edge Network Effects & Architecture",
+        "text": "Cloudflare's 300+ city network delivers sub-100ms latency to 95% of the world's connected population. Every server in every city can perform every function simultaneously — DDoS mitigation, SASE, DNS, compute, and AI inference. This architecture is 10+ years in the making and cannot be replicated quickly; the performance it delivers improves for all customers as the network scales."
+      },
+      {
+        "title": "Platform Bundling Depth (SASE + Zero Trust + Workers)",
+        "text": "Cloudflare sells CDN, DDoS protection, Zero Trust access, SASE (Magic WAN, Gateway, DLP), R2 storage, Workers serverless compute, and AI inference from a single unified dashboard. Once enterprises deploy multiple modules — such as the 7-year, $12.7M/year SASE deal closed in Q1 2025 — the configuration, integrations, and workflow dependencies create multi-year switching costs exceeding those of most pure-play cybersecurity vendors."
+      }
+    ]
+  },
+  "growth": {
+    "score": 88,
+    "description": "FY2025 delivered $2.17B revenue (+29.8% YoY) with Q4 accelerating to 34% — the fastest quarterly growth in two years. Management guided FY2026 at $2.785–2.795B (+28–29%), RPO surged 48% YoY to $2.5B, and new ACV in Q4 grew nearly 50% YoY — its fastest pace since 2021. DBNRR at 120% signals strong upsell traction as enterprises consolidate onto the Connectivity Cloud platform.",
+    "growthAnalysis": {
+      "cagrEstimate": "25–29%",
+      "scoreDerivation": "Base 80 (15–30% CAGR, blended 25–29%) + 5 recurring (subscription model, NRR 120%) + 5 TAM expansion (AI agents as new internet users, TAM grows $181B→$231B by 2028) − 2 deceleration risk (Q4 34% → 2026 guide 28–29%, modest step-down) = 88",
+      "drivers": [
+        {
+          "name": "Zero Trust & SASE",
+          "metric": "~35% of Cloudflare One platform; multi-year enterprise contracts including $12.7M/yr 7-yr deal",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Large Customer Expansion",
+          "metric": "4,298 customers >$100K (+23% YoY); contributing 73% of revenue vs 69% prior year",
+          "trend": "accelerating"
+        },
+        {
+          "name": "AI Infrastructure (Workers AI, AI Gateway)",
+          "metric": "New TAM; CEO: 'If agents are the new users of the web, Cloudflare is the platform they run on'",
+          "trend": "accelerating"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If AWS CloudFront + WAF bundling displaces Cloudflare's CDN/DDoS layer at 5%+ of Fortune 500 enterprises by end of 2026 while Zscaler retains Zero Trust market share above 40%, Cloudflare's platform consolidation narrative stalls and RPO growth decelerates below 25%",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 73,
+    "description": "At $211, NET trades at ~27× NTM P/S — a premium that reflects genuine 28–29% revenue growth, 120% NRR, and a $2.5B RPO backlog, but leaves limited margin of safety if growth decelerates. The stock sits between bear ($130) and base ($250) scenarios, roughly 15% below fair value on current guidance. Forward non-GAAP P/E of ~190× is not meaningful in isolation — like CrowdStrike at its current stage, Cloudflare's valuation is driven by revenue growth trajectory and FCF margin expansion (16% in Q4, guiding toward 20%+ in 2026).",
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "N/A",
+          "note": "Net loss; GAAP EPS −$0.29 TTM"
+        },
+        {
+          "label": "Forward P/E (NTM, non-GAAP)",
+          "value": "~190×",
+          "note": "consensus non-GAAP EPS ~$1.11"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "N/A",
+          "note": "P/E not meaningful at this stage"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~27×",
+          "note": "$2.79B NTM revenue (2026 guide)"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~250×",
+          "note": "~$300M FCF (FY2025 est.)"
+        }
+      ],
+      "summary": "NET trades at ~27× NTM P/S, a significant premium to cybersecurity peers (CrowdStrike ~18×, Palo Alto ~13×) but partially justified by Cloudflare's faster revenue growth (28–29% vs 22–23%) and expanding TAM in AI agent infrastructure. Forward non-GAAP P/E of ~190× is not actionable — the more useful lens is the FCF margin trajectory: Q4 2025 reached 16% (from 10% a year ago), and if Cloudflare achieves 20–22% by end of 2026, P/FCF compresses sharply toward 100×, making the valuation progressively more reasonable. The key risk is multiple compression if revenue growth decelerates toward 22–23% before FCF margins reach a self-sustaining level."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$130",
+      "description": "Revenue growth decelerates to 20–22% as hyperscaler bundling erodes CDN/DDoS share and SASE expansion slows, compressing P/S to ~14× on $2.79B 2026 revenue.",
+      "points": [
+        "AWS CloudFront + Security Hub bundling displaces Cloudflare's CDN layer at 5%+ of Fortune 500 enterprises by end of 2026, stalling large-customer ACV growth below 15% YoY",
+        "DBNRR slips to 114–116% for two consecutive quarters as enterprises pause SASE expansion amid macro uncertainty and Zero Trust budget scrutiny",
+        "Gross margin compresses below 73% as edge infrastructure CapEx to support AI inference workloads exceeds revenue contribution from Workers AI through 2026",
+        "Multiple re-rates to ~14× NTM P/S as growth decelerates toward 22% and FCF margin expansion stalls at 14–15%"
+      ]
+    },
+    "base": {
+      "priceTarget": "$250",
+      "description": "Cloudflare delivers FY2026 guidance ($2.79B, +28–29% YoY) with DBNRR stable at 120% and FCF margin expanding toward 20%, sustaining a ~25× NTM P/S multiple as AI agent infrastructure demand materialises.",
+      "points": [
+        "FY2026 revenue lands at $2.79B with large customers growing 20%+ YoY and RPO sustaining 35%+ growth through contracted multi-year SASE deals",
+        "FCF margin expands to 18–20% by Q4 2026 as operating leverage on the 28%+ revenue base compounds and infrastructure cost per request declines",
+        "Workers AI and AI Gateway establish Cloudflare as default edge inference infrastructure for AI agent traffic, contributing $150M+ incremental ARR by year-end 2026",
+        "DBNRR holds at 118–120% as existing enterprise customers expand from CDN-only to full SASE and Zero Trust suites"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$380",
+      "description": "AI agent traffic creates a new internet infrastructure cycle — Cloudflare becomes the default runtime for autonomous agents, re-accelerating revenue toward 35%+ and expanding the addressable market beyond its current $181B TAM estimate.",
+      "points": [
+        "AI agent traffic on Workers exceeds 20% of Cloudflare's total request volume by end of 2026, driving a new consumption-based revenue layer on top of the subscription base and pushing ARR growth toward 40%",
+        "Cloudflare wins 3+ sovereign government cloud contracts in Europe under EU Data Act/NIS-2 compliance, establishing a government revenue stream and locking in decade-long regulatory relationships",
+        "SASE displacement of Zscaler at 3–4 Fortune 100 accounts adds >$100M ACV, validating Cloudflare's ability to compete in the largest enterprise security deals",
+        "FCF margin reaches 25%+ ahead of schedule, triggering a re-rating toward 35× NTM P/S on $3.3B+ 2026–27 blended revenue"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Security engineers trained on Cloudflare's unified dashboard, Workers CLI, and Zero Trust policy engine invest significant institutional knowledge — Teams migrating would need to retrain and rebuild configurations. AI slightly weakens this moat by abstracting infrastructure management."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "Full SASE deployments (Magic WAN + Gateway + DLP + Access + Magic Firewall) are deeply configured per enterprise network topology. The 7-year, $12.7M/yr SASE deal demonstrates that Cloudflare's logic is embedded for a decade, not a quarter."
+    },
+    "publicDataAccess": {
+      "status": "intact",
+      "note": "Cloudflare's 1.1.1.1 resolver processes a significant fraction of global DNS queries, giving it unique internet-wide visibility. AI is slightly weakening this by enabling threat-intel synthesis from other data sources, but the volume advantage remains."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Global BGP peering engineers, DDoS research team, and cryptography experts (TLS 1.3 adoption) represent genuine talent scarcity. AI augments but does not replace this specialisation."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "CDN + DDoS + SASE + Zero Trust + DNS + R2 + Workers + AI Gateway from a single platform. Enterprises expanding from CDN to Zero Trust to Workers create deep multi-product lock-in that AI point-solutions cannot easily replicate — the integration value is emergent."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "215 billion threats blocked daily across 332,000+ customers and 38% of the Fortune 500. This threat intelligence dataset is continuously updated, contractually exclusive, and central to every security product Cloudflare ships — no competitor can acquire equivalent coverage without first building Cloudflare's network scale."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "FedRAMP authorised, compliant with GDPR/CCPA/NIS-2; R2's zero-egress-fee model positions Cloudflare as the natural winner from EU Data Act compliance requirements. Multi-year government and critical infrastructure contracts create durable switching barriers."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "Classic network effects: each new customer adds threat telemetry that improves security for all others. The developer ecosystem on Workers creates a second flywheel — more apps on Workers → more edge compute demand → better performance for all. Both effects compound with scale."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Every HTTP request from a Cloudflare customer transits Cloudflare's network — it is embedded in the critical path of web traffic, not a payment processor but analogous in its infrastructure embeddedness. Switching means re-pointing DNS and reconfiguring security rules across all properties."
+    },
+    "systemOfRecord": {
+      "status": "weakened",
+      "note": "Cloudflare manages DNS zones and SSL certificates that function as systems of record for domain identity, but is not the authoritative source for financial, legal, or HR data. The Workers/Pages deployment layer is sticky but not irreplaceable."
+    },
+    "aiResilienceScore": 82,
+    "verdict": "Cloudflare is a net beneficiary of AI — the shift from human users to AI agents as the primary internet traffic source creates massive demand for Cloudflare's edge network, security layer, and Workers compute runtime. The proprietary threat-intelligence data flywheel and network effects are the two most AI-resilient moats, both of which strengthen as AI-driven attack vectors increase the value of real-time threat data. The primary AI risk is that hyperscalers bundle security capabilities into their managed AI platforms, reducing the independent security and CDN market. Overall, Cloudflare's architecture — where AI inference, security, and networking converge at the same edge node — positions it as critical infrastructure for the agentic internet."
+  }
+}
