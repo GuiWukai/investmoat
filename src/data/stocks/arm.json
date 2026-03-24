@@ -1,0 +1,178 @@
+{
+  "slug": "arm",
+  "ticker": "ARM",
+  "name": "Arm Holdings",
+  "lastAnalyzed": "March 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "ARM" },
+    { "label": "Market Cap", "value": "$132B" },
+    { "label": "Current Price", "value": "$132.35" }
+  ],
+  "chips": [
+    { "label": "Semiconductor IP | CPU Architecture | AI Edge Compute", "color": "primary" },
+    { "label": "99% Mobile CPU Share | v9 Royalty Uplift", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Revenue",
+      "value": "$1.24B",
+      "label": "Q3 FY2026 (+26% YoY); 4th consecutive $1B+ quarter; FY2026E $4.85B",
+      "icon": "TrendingUp",
+      "color": "#0891b2"
+    },
+    {
+      "title": "Royalty Revenue",
+      "value": "$737M",
+      "label": "Q3 FY2026 (+27% YoY); Armv9 now >50% of royalty mix — higher rates",
+      "icon": "Zap",
+      "color": "#7c3aed"
+    },
+    {
+      "title": "Data Center",
+      "value": "2× YoY",
+      "label": "Data center royalty doubled YoY; AWS Graviton, Apple Silicon, Microsoft Cobalt accelerating",
+      "icon": "Shield",
+      "color": "#059669"
+    }
+  ],
+  "moat": {
+    "score": 79,
+    "description": "Arm's 325 billion cumulative chip shipments have created the world's most extensive software ecosystem — every operating system, compiler, and AI framework is optimised for ARM architecture first, creating a self-reinforcing standard that 20 years of competing alternatives have failed to displace.",
+    "analysisTitle": "The Architectural Standard Moat",
+    "analysisSummary": "ARM's competitive position rests on three pillars: **Ecosystem Network Effects, Talent-Based IP Advantage, and the v9 Royalty Ratchet**:",
+    "analysisPoints": [
+      {
+        "title": "Ecosystem Network Effects — The Software Standard",
+        "text": "With 325 billion cumulative chips shipped, ARM architecture has accumulated the largest software ecosystem in computing: iOS/Android/macOS/Windows all run on ARM-optimised binaries; AI frameworks (PyTorch, TensorFlow) prioritise ARM inference optimisation; cloud providers (AWS, Google, Microsoft) offer ARM instances with AWS Graviton, Axion, and Cobalt chips. RISC-V, despite being free and open-source, cannot replicate this ecosystem depth — the opportunity cost of migrating 325 billion device-years of software to a new ISA is insurmountably high."
+      },
+      {
+        "title": "Armv9 — The Structural Royalty Ratchet",
+        "text": "Arm's business model charges a percentage royalty on each chip that uses its architecture. Armv9 commands a materially higher royalty rate than v8 — and now represents over 50% of royalty revenue. Every v9 chip shipped for smartphones, data centers, or edge AI increases ARM's per-device economics without ARM having to acquire new customers. This is a structural royalty ratchet: as the industry upgrades to v9 and eventually v10, ARM's royalty per device grows automatically, making revenue growth partially independent of unit volume growth."
+      },
+      {
+        "title": "Data Center AI Inflection",
+        "text": "Data center royalty revenue more than doubled year-on-year in Q3 FY2026, driven by AWS Graviton4 (8th generation), Apple's M-series chips in Macs and iPad Pro, and Microsoft Azure Cobalt 100. As AI inference workloads require efficient compute, ARM's power-performance leadership over x86 makes ARM-based server chips the economically rational choice. The Total License Agreement (TLA) structure — where hyperscalers pay a large upfront fee for full IP access — is transforming ARM's revenue from lumpy license payments to more predictable, annuity-like streams."
+      }
+    ]
+  },
+  "growth": {
+    "score": 85,
+    "description": "Q3 FY2026 delivered $1.24B revenue (+26% YoY) — the fourth consecutive billion-dollar quarter — with royalty revenue at record $737M (+27% YoY) as Armv9 penetration surpasses 50% of the mix. FY2026 full-year consensus stands at $4.85B. Data center royalties are the fastest-growing segment, having doubled YoY, as hyperscaler ARM chip adoption (AWS, Microsoft, Google) accelerates. An investor day on March 24, 2026 is expected to update long-term targets consistent with $8–10B revenue by FY2028.",
+    "growthAnalysis": {
+      "cagrEstimate": "22–28%",
+      "scoreDerivation": "Base 80 (15–30% CAGR; FY2026E $4.85B, +26% YoY) + 5 royalty ratchet (v9 architecture carries structurally higher royalty rates; as v9 penetrates from 50% to 80%+, per-unit economics improve without new customers) + 3 TAM expansion (data center AI inference becoming Arm's largest segment; TAM from $60B to $105B+) − 3 revenue lumpiness (large TLA license payments create quarterly volatility; FY forecast reliability lower than pure-SaaS) = 85",
+      "drivers": [
+        {
+          "name": "Data Center Royalties (AI Inference)",
+          "metric": "Doubled YoY in Q3 FY2026; AWS Graviton4, Apple M4, Microsoft Cobalt, Google Axion all ARM-based",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Armv9 Architecture Penetration",
+          "metric": ">50% of royalty revenue; v9 carries 2× royalty rate vs v8; penetrating smartphone, IoT, auto",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Total License Agreements (Hyperscalers)",
+          "metric": "TLA with Apple, Google, Microsoft, Amazon converts lumpy license payments to annuity revenue",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If RISC-V achieves >15% data center processor share by end of 2027 — driven by hyperscalers designing custom RISC-V chips (similar to Google's Tensor or Amazon's Inferentia) — ARM's data center royalty growth trajectory slows materially and the $8B+ FY2028 target requires revision",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 71,
+    "description": "ARM trades at ~$132, down 28% from its 52-week high of $183.16, and near the analyst consensus target of $148. At ~27× NTM P/S and ~56× FY2027 forward P/E, ARM is priced as a premium AI infrastructure platform rather than a semiconductor IP licensor — a valuation that requires sustained 25%+ revenue growth and ongoing v9 royalty ratchet execution to justify. The investor day on March 24 could serve as a near-term catalyst if FY2028 revenue targets are raised above $8B.",
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~195×", "note": "GAAP EPS distorted by SBC; not meaningful" },
+        { "label": "Forward P/E (NTM, non-GAAP)", "value": "~56×", "note": "FY2027E non-GAAP EPS ~$2.35" },
+        { "label": "PEG Ratio", "value": "~2.2×", "note": "fwd P/E ÷ 25% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~27×", "note": "$4.85B FY2026E revenue" },
+        { "label": "Price / FCF", "value": "~60×", "note": "~$2.2B FCF (FY2026E est.)" }
+      ],
+      "summary": "ARM trades at ~56× forward non-GAAP P/E and ~27× NTM P/S — among the most premium valuations in semiconductors, reflecting the IP royalty business model's scarcity value rather than current earnings power. The PEG of ~2.2× is in 'expensive but justifiable' territory for the v9 royalty ratchet thesis; the risk is that the data center AI narrative has already been priced in at these levels. Unlike ASML (which has no alternative) or NVIDIA (a capital-light IP model is harder to displace), ARM faces RISC-V competition that could compress the multiple if data center share gains materialize."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$75",
+      "description": "RISC-V gains material data center traction, China licensing revenues face further restrictions, and the royalty ratchet slows — FY2028 targets are revised down and the multiple compresses toward 18× NTM P/S.",
+      "points": [
+        "RISC-V achieves 15% data center processor share by end of 2027 as Google, Alibaba, and Baidu launch custom RISC-V designs — slowing ARM data center royalty growth from doubling annually to below 30%",
+        "US export restrictions expand to prohibit ARM China from licensing Armv9 architecture, reducing Chinese royalty revenue by 25–30% and eliminating the $200M+ SoftBank-linked licensing deal",
+        "Smartphone unit volumes decline 8% in 2026 as macro headwinds and consumer spending weakness hit the largest ARM royalty segment — offsetting v9 mix improvements",
+        "Multiple compresses to 18× NTM P/S on $4.85B FY2026 revenue: $87.3B / 1.0B shares = $87/share"
+      ]
+    },
+    "base": {
+      "priceTarget": "$160",
+      "description": "ARM delivers FY2026 consensus of $4.85B with data center continuing to grow 50%+ and v9 reaching 65% of royalty revenue — the March 24 investor day raises FY2028 targets above $8B and re-rates the stock to 28× NTM P/S.",
+      "points": [
+        "FY2026 revenue reaches $4.8–4.9B as data center royalties grow 60%+ YoY and smartphone royalties benefit from v9 mix shift to 60–65% of royalty revenue",
+        "March 24 investor day sets $8–9B FY2028 revenue target and introduces new licensing categories (automotive, AI edge, satellite) that expand the disclosed TAM above $100B",
+        "AWS, Microsoft, and Google all increase Graviton/Cobalt/Axion ARM chip deployments in their data centers, with ARM-based servers crossing 20% of cloud market share by end of 2026",
+        "v9 penetration reaches 70%+ of royalty revenue by Q4 FY2026, with the structural royalty rate increase sustaining royalty growth above 30% YoY even in moderate shipment growth environments"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$220",
+      "description": "AI inference creates a new compute paradigm where ARM's efficiency advantage makes it the dominant architecture in both edge and cloud AI — re-rating the stock toward 40× NTM P/S as FY2028 revenue trajectory approaches $12B.",
+      "points": [
+        "AI edge inference (smartphones, PCs, cars, IoT) creates a new royalty category for NPU-integrated ARM chips at 3–4× the royalty rate of general-purpose ARM cores — adding $1B+ in incremental royalty revenue by FY2028",
+        "Apple transitions all Mac and iPad lines to M5/M6 ARM chips, NVIDIA develops an ARM-based CPU for AI servers, and ARM Neoverse reaches 35% of cloud server market by end of 2027",
+        "Automotive royalties accelerate as ADAS/autonomous driving requires ARM-based ECUs in 100M+ vehicles annually — a new $2B+ TAM segment at premium royalty rates",
+        "Revenue trajectory toward $12B by FY2028 forces FY2027 consensus upgrades and re-rates the stock toward 40× P/S on $5.5B 2026 revenue"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "SoC architects and chip designers build on ARM's development environments (DS-5, Keil MDK), debug tools, and IP configuration interfaces for years. The familiarity with ARM Cortex-A, -M, and -R series architectures is embedded in engineering teams globally — switching to RISC-V requires retraining and re-tooling significant portions of chip design teams."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Chip designs built on ARM IP — including custom implementations by Apple (Firestorm, Avalanche cores) and Qualcomm (Oryon) — embed years of silicon engineering on ARM's architecture. The Total License Agreement structure means that licensees configure ARM IP into their custom designs, creating deep technical and contractual embeddedness."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — ARM is an IP licensing company, not a data business. Public data access is not a meaningful moat dimension."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "ARM employs 6,000+ engineers who design CPU microarchitectures at the cutting edge of performance-per-watt. This is among the most specialised engineering talent in the world — CPU architects who can design competitive Cortex-A cores are extremely scarce. RISC-V has struggled to match ARM's pace of innovation precisely because ARM's talent concentration is irreplicable."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Total License Agreements bundle CPU (Cortex), GPU (Mali), NPU, interconnect (AMBA), physical IP, and security IP into a single portfolio license. Hyperscalers and chip companies that adopt the full TLA cannot selectively replace ARM's CPU without also replacing the GPU, interconnect, and security IP that their software stacks depend on."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "ARM's decades of silicon performance, power, and area (PPA) data from hundreds of chip implementations represents a design knowledge base that enables ARM to stay at the frontier of performance-per-watt. This proprietary benchmarking and architectural data is not public and cannot be replicated without building hundreds of competing implementations."
+    },
+    "regulatoryLockIn": {
+      "status": "weakened",
+      "note": "Export control regulations and UK national security oversight create some regulatory dimensions, but ARM does not benefit from government mandates or procurement lock-in in the traditional sense. China licensing restrictions are a regulatory RISK rather than a moat — hence weakened rather than intact."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "The ARM software ecosystem is the largest in computing: 325B+ cumulative chips create a base of ARM-compiled software (iOS, Android, macOS, cloud VMs) that makes any new architecture uncompetitive by default. RISC-V has had 20 years and billions in backing but cannot match the software ecosystem — the network effect makes ARM the rational choice for any new chip design that must run existing software."
+    },
+    "transactionEmbedding": {
+      "status": "destroyed",
+      "note": "N/A — ARM is an IP licensing company. Transaction embedding does not apply."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — ARM does not operate a system of record for any business function. Not applicable."
+    },
+    "aiResilienceScore": 80,
+    "verdict": "ARM is a strong net beneficiary of AI — AI inference is the highest-growth compute workload, and ARM's power-efficiency advantage makes ARM-based chips the economically rational choice for inference at every scale from smartphone to data center. The Armv9 architecture's performance improvements for AI workloads (larger matrix math units, improved memory bandwidth) directly increase ARM's royalty rates as customers upgrade. The primary AI risk is that AI training (not inference) favors NVIDIA's CUDA ecosystem, which could push the AI compute center of gravity toward x86/NVIDIA architectures at the training layer — though inference at the edge and hyperscaler inference (AWS Graviton, Microsoft Cobalt) strongly favors ARM."
+  }
+}

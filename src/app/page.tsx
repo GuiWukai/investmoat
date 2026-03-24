@@ -49,12 +49,12 @@ const FAQS = [
     a: "Gold is fully analyzed and scores 62/100 — below the 75-point portfolio minimum. The constraint is its growth score of 50: gold produces no earnings, revenue, or cash flow and cannot compound. Bitcoin fulfills the same hard-money and inflation-hedge thesis with additional network effects, digital divisibility, and a stronger growth trajectory. Gold stays in our coverage universe and earns a portfolio position the moment its composite score clears 75.",
   },
   {
-    q: "Why only 20 positions?",
+    q: "Why only 25 positions?",
     a: "Concentration is a feature, not a flaw. Diversifying into 50+ positions means your 47th-best idea receives the same capital as your best. Studies show 15-25 uncorrelated, high-conviction positions capture most of the risk-reduction benefit of diversification while keeping performance concentrated in quality. Every position in this portfolio competes against all others — a new stock must displace the weakest current holding by scoring higher.",
   },
   {
     q: "How is each stock scored?",
-    a: "Three pillars, each scored 0-100. Moat (40%): evaluated across 10 specific moat types, split into AI-resilient (60% weight) and AI-vulnerable (40% weight). Growth (35%): estimated 3-5 year revenue CAGR with named adjustments for net revenue retention, TAM expansion, and cyclicality. Valuation (25%): current price vs. bear/base/bull scenario targets on a piecewise scale. Composite = Moat×40% + Growth×35% + Valuation×25%. Stocks scoring ≥75 are portfolio-eligible; the top 20 are included.",
+    a: "Three pillars, each scored 0-100. Moat (40%): evaluated across 10 specific moat types, split into AI-resilient (60% weight) and AI-vulnerable (40% weight). Growth (35%): estimated 3-5 year revenue CAGR with named adjustments for net revenue retention, TAM expansion, and cyclicality. Valuation (25%): current price vs. bear/base/bull scenario targets on a piecewise scale. Composite = Moat×40% + Growth×35% + Valuation×25%. Stocks scoring ≥75 are portfolio-eligible; the top 25 are included.",
   },
   {
     q: "What makes a moat 'AI-resilient'?",
@@ -81,7 +81,7 @@ export default function HomePage() {
             Invest in Moats,<br />Not Markets
           </h1>
           <p className="text-white/60 text-base md:text-xl max-w-2xl leading-relaxed mb-8">
-            A high-conviction portfolio of 20 businesses with durable competitive advantages,
+            A high-conviction portfolio of 25 businesses with durable competitive advantages,
             scored systematically across moat strength, growth trajectory, and live valuation.
             Built to compound wealth in the AI era — not just track it.
           </p>
@@ -107,8 +107,8 @@ export default function HomePage() {
           style={{ animationDelay: '0.15s' }}
         >
           {[
-            { value: "20", label: "Portfolio Holdings" },
-            { value: "40+", label: "Stocks Analyzed" },
+            { value: "25", label: "Portfolio Holdings" },
+            { value: "60+", label: "Stocks Analyzed" },
             { value: "≥ 75", label: "Score Required" },
             { value: "10%", label: "Max Position Weight" },
           ].map(({ value, label }) => (
@@ -171,7 +171,7 @@ export default function HomePage() {
                 <h3 className="text-lg font-bold mb-2">Concentration Beats Diversification</h3>
                 <p className="text-white/50 text-sm leading-relaxed">
                   Owning 500 companies means funding mediocrity at scale.
-                  20 high-conviction positions, each earning its place by scoring ≥75/100,
+                  25 high-conviction positions, each earning its place by scoring ≥75/100,
                   concentrate capital where it compounds fastest.
                 </p>
               </div>
@@ -511,7 +511,7 @@ export default function HomePage() {
               Ready to explore the portfolio?
             </h3>
             <p className="text-white/50 max-w-md text-sm leading-relaxed">
-              View the current 20-stock allocation, explore all 40+ analyzed assets,
+              View the current 25-stock allocation, explore all 60+ analyzed assets,
               or dive into individual company reports with moat scores, scenarios, and live valuations.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">

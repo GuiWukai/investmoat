@@ -334,8 +334,8 @@ After setting scenarios, assess valuation multiples:
 
 **Portfolio inclusion rules (from `src/app/stockData.ts`):**
 - Minimum average score: 75
-- Maximum portfolio size: 20 stocks
-- Stocks below 75 average or outside the top 20 by score are excluded
+- Maximum portfolio size: 25 stocks
+- Stocks below 75 average or outside the top 25 by score are excluded
 
 ---
 

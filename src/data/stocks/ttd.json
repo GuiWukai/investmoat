@@ -1,0 +1,178 @@
+{
+  "slug": "ttd",
+  "ticker": "TTD",
+  "name": "The Trade Desk",
+  "lastAnalyzed": "March 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "TTD" },
+    { "label": "Market Cap", "value": "$11.2B" },
+    { "label": "Current Price", "value": "$23.55" }
+  ],
+  "chips": [
+    { "label": "Programmatic Advertising | DSP | Open Internet", "color": "primary" },
+    { "label": "Kokai AI Platform", "color": "warning" }
+  ],
+  "recommendation": "Hold",
+  "metrics": [
+    {
+      "title": "Revenue",
+      "value": "$2.896B",
+      "label": "+18% YoY FY2025; Q1 2026 guide $678M+ (+10% YoY — decelerating)",
+      "icon": "TrendingUp",
+      "color": "#2563eb"
+    },
+    {
+      "title": "Gross Margin",
+      "value": "78.6%",
+      "label": "FY2025 TTM; adj. EBITDA $705M; FCF yield ~12% at current price",
+      "icon": "Zap",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "Forward P/E",
+      "value": "~11.6×",
+      "label": "2026E EPS $2.07 — stock pricing near-zero growth expectations",
+      "icon": "TrendingUp",
+      "color": "#ef4444"
+    }
+  ],
+  "moat": {
+    "score": 57,
+    "description": "The Trade Desk controls the demand side of the open internet programmatic stack with genuine network effects between advertisers and publishers, but its moat is contested by Amazon DSP and Google DV360, which hold larger first-party data advantages and integrated media environments.",
+    "analysisTitle": "The Open Internet DSP Flywheel",
+    "analysisSummary": "TTD's competitive position rests on **Scale, Independence from Walled Gardens, and UID2 Identity Infrastructure**:",
+    "analysisPoints": [
+      {
+        "title": "Scale & Open Internet Independence",
+        "text": "The Trade Desk is the largest independent DSP in the world, a position that carries weight for advertisers who want to buy inventory across the open internet (outside Google and Meta's walled gardens) without using the sellers' own buying tool. Advertiser clients who want programmatic access to CTV, audio, display, and digital OOH without algorithmic conflict of interest have very few credible alternatives at TTD's scale."
+      },
+      {
+        "title": "UID2 — Open Identity Infrastructure",
+        "text": "Unified ID 2.0 (UID2) is an open-source, email-based identity framework that TTD developed as a privacy-compliant alternative to third-party cookies. Over 1,000 publishers and platforms have adopted UID2, giving TTD's buyers better audience matching on cookieless inventory. UID2's open-source nature limits TTD's proprietary advantage but secures TTD's relevance in the post-cookie world while making competitors dependent on infrastructure TTD built."
+      },
+      {
+        "title": "Kokai AI Platform",
+        "text": "Kokai is TTD's AI-powered interface that connects advertisers with the full complexity of programmatic data via natural language and AI-driven optimization. By abstracting campaign management complexity, Kokai reduces the learning curve barrier that historically created switching costs. This is both a strength (lowers advertiser adoption friction) and a moat risk (reduces interface lock-in as AI makes platforms more interchangeable)."
+      }
+    ]
+  },
+  "growth": {
+    "score": 63,
+    "description": "FY2025 delivered $2.896B revenue (+18% YoY) but the trajectory is decelerating meaningfully: Q4 2025 grew only 14% YoY and Q1 2026 guidance is 10% YoY ($678M+). The Q1 2026 adj. EBITDA margin guidance of 28.8% compares unfavorably to 33.8% in Q1 2025 — simultaneous growth deceleration and margin compression. CEO Jeff Green has made $148M of personal stock purchases in March 2026, and an OpenAI partnership announcement triggered a short-lived 21% surge, suggesting catalysts exist but the fundamental trajectory is challenged.",
+    "growthAnalysis": {
+      "cagrEstimate": "10–15%",
+      "scoreDerivation": "Base 67 (8–15% CAGR; FY2026 consensus $3.28B = +13% YoY) + 3 TAM expansion (CTV/retail media/audio growing share of total ad spend; UID2 expansion) − 5 margin compression (Q1 2026 EBITDA margin 28.8% vs 33.8% prior year — simultaneous revenue deceleration and cost increase) − 2 competitive pressure (Publicis Groupe client advisory against TTD in 2026) = 63",
+      "drivers": [
+        {
+          "name": "CTV (Connected Television)",
+          "metric": "CTV growing as % of programmatic ad spend; Disney+, Peacock, Netflix adding ad tiers; TTD key buyer",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Retail Media Networks",
+          "metric": "Walmart, Target, Kroger DSP integrations; growing share of TTD's mid-market advertiser mix",
+          "trend": "stable"
+        },
+        {
+          "name": "Kokai AI Adoption",
+          "metric": "AI-driven campaign optimization replacing manual trading; potential to improve advertiser ROI by 15–20%",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "market share",
+      "keyRisk": "If Publicis Groupe's advisory against TTD spreads to two additional holding companies (WPP, IPG) by mid-2026 — representing ~40% of global ad agency spending — TTD's FY2026 revenue guide of $3.28B becomes unachievable and the stock faces a consensus reset toward $2.8–2.9B with further multiple compression",
+      "marginTrend": "compressing"
+    }
+  },
+  "valuation": {
+    "score": 83,
+    "description": "TTD trades at one of its lowest valuations since going public. At ~11.6× forward P/E on $2.07 FY2026 EPS guidance and 3.4× NTM P/S, the market is pricing near-zero growth expectations for a company with 78% gross margins, $700M+ EBITDA, and $11B market cap on $2.9B revenue. The CEO's $148M personal purchase in March 2026 and analyst consensus Buy ratings with an average target of $46.66 suggest the fundamental business is intact even as the stock prices in a worst-case scenario. The cheap valuation alone does not make this a strong buy — a moat repair catalyst is needed.",
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~26.5×", "note": "TTM EPS $0.90" },
+        { "label": "Forward P/E (NTM)", "value": "~11.6×", "note": "FY2026E EPS $2.07" },
+        { "label": "PEG Ratio", "value": "~0.9×", "note": "fwd P/E ÷ 13% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~3.4×", "note": "$3.28B NTM revenue (FY2026 guide)" },
+        { "label": "Price / FCF", "value": "~14×", "note": "EV/FCF ~14×; $700M+ TTM EBITDA" }
+      ],
+      "summary": "TTD is trading at one of the cheapest valuations among ad-tech peers with 78%+ gross margins — 11.6× forward P/E and 3.4× P/S price in near-zero growth that seems overly pessimistic given the company is still guiding 10%+ revenue growth and generating $700M+ EBITDA. The PEG of ~0.9× technically signals GARP territory, but the moat quality concern (displacement risk from Amazon DSP/Google DV360 and the Publicis advisory) means the low multiple is partly justified. The trailing vs forward P/E gap (26.5× vs 11.6×) reflects an EPS ramp expected as margins recover — if EBITDA margins return to 33–35% in H2 2026, EPS could exceed $2.50 and the multiple looks very cheap."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$17",
+      "description": "Publicis advisory spreads to additional agency holding companies, CTV growth stalls, and margin compression extends to full-year 2026 — revenue misses guidance and the multiple stays depressed at 3× P/S.",
+      "points": [
+        "Publicis advisory against TTD spreads to WPP and IPG by Q2 2026, removing ~35% of global agency ad spend from TTD's buy-side demand and creating a revenue shortfall of $400M+ vs FY2026 guidance",
+        "Amazon DSP's first-party retail data advantage over UID2 grows as Amazon expands its clean room partnerships — TTD loses 3–5 major CPG advertisers who consolidate budget onto Amazon's stack",
+        "Q1 2026 adj. EBITDA margin compression from 33.8% to 28.8% extends through H1 2026 as management invests in platform rebuilding, disappointing investors expecting margin recovery",
+        "Stock stays at 2.5–3× NTM P/S on revised $2.8B revenue estimate: $2.8B × 3× = $8.4B / 476M shares = $17.6/share"
+      ]
+    },
+    "base": {
+      "priceTarget": "$40",
+      "description": "TTD delivers FY2026 guidance of $3.28B (+13%), EBITDA margins recover toward 32–33% in H2 2026, and Kokai drives measurable ROAS improvements that stabilize the advertiser base — re-rating the stock toward 5× NTM P/S.",
+      "points": [
+        "FY2026 revenue reaches $3.25–3.30B as CTV growth accelerates and agency holding companies rescind or soften any anti-TTD advisories following Q2 Kokai performance improvements",
+        "EBITDA margins recover from 28.8% (Q1) toward 33% by Q3 2026 as platform investments wind down — demonstrating the earnings power of the 78% gross margin business model at scale",
+        "OpenAI partnership (announced March 2026) creates a differentiated AI-enhanced audience targeting capability that provides measurable ROAS lift over competing DSPs, winning back agency budgets",
+        "Multiple re-rates from 3.4× to 5–6× NTM P/S as revenue trajectory stabilises: $3.28B × 5× = $16.4B / 476M = $34.5/share — rounded to $40 with multiple expansion"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$65",
+      "description": "Kokai AI + OpenAI partnership create a step-change in advertiser ROAS on the open internet, CTV accelerates to 30%+ of TTD's revenue, and margin recovery exceeds expectations — re-rating toward 8× NTM P/S.",
+      "points": [
+        "OpenAI partnership enables TTD to serve AI-generated, dynamically optimized ad creatives at scale — creating a platform capability that neither Amazon DSP nor Google DV360 can match on open-internet inventory",
+        "CTV ad spend on TTD grows 40%+ YoY in 2026 as Disney, Comcast, and Warner Bros Discovery expand programmatic inventory availability — CTV reaches 30% of TTD revenue and becomes the primary growth engine",
+        "Kokai AI drives 25%+ ROAS improvement that convinces 3–4 major agency holding companies to reverse any anti-TTD positioning, restoring full holding-company demand and pushing revenue toward $4B in 2026",
+        "Adj. EBITDA margins recover to 40%+ by Q4 2026 as Kokai's AI efficiency offsets manual platform investment costs — validating the 78% gross margin leverage story"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Programmatic traders invest significant time learning TTD's platform for audience targeting, bid optimization, and reporting. Kokai AI reduces this learning curve somewhat, but institutional media-buying workflows built on TTD represent multi-year configuration investments."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Advertiser audience segments, brand safety block lists, frequency capping rules, and cross-channel attribution models are configured per-account on TTD over months. Porting this logic to Amazon DSP or DV360 requires rebuilding campaign architecture."
+    },
+    "publicDataAccess": {
+      "status": "intact",
+      "note": "TTD's data marketplace provides access to third-party data segments from 100+ data providers. UID2's open-source identity framework gives TTD addressability on cookieless inventory that many competitors lack, creating a modest data access advantage."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Programmatic trading skills are increasingly portable across DSP platforms. Kokai's AI abstraction layer further reduces the specialization premium for TTD-specific expertise. Talent scarcity is not a meaningful moat for TTD."
+    },
+    "bundling": {
+      "status": "weakened",
+      "note": "TTD is primarily a single-product DSP without the multi-layer bundling of Google (search+display+video+YouTube) or Amazon (DSP+search+streaming). Some bundling through Solimar/Kokai with data and measurement, but limited."
+    },
+    "proprietaryData": {
+      "status": "weakened",
+      "note": "UID2 is open-source, limiting TTD's proprietary data advantage. TTD accesses third-party data through marketplace agreements rather than owning first-party data at scale. This is a meaningful competitive disadvantage vs Amazon's purchase data and Google's search intent."
+    },
+    "regulatoryLockIn": {
+      "status": "weakened",
+      "note": "Privacy regulations (GDPR, CCPA) created headwinds for cookie-based targeting that TTD navigated well with UID2. However, TTD does not benefit from meaningful regulatory lock-in in the traditional sense — no government mandates, certifications, or multi-year procurement cycles."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "More buyers on TTD → better auction dynamics for publishers → more publisher supply → better reach for buyers. UID2 adoption by 1,000+ publishers creates a secondary network effect. These effects exist but are weaker than walled-garden alternatives with first-party data."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "TTD processes billions of ad auction transactions daily, sitting in the critical path of open-internet programmatic advertising. Switching means rebuilding all trading infrastructure, campaign history, and attribution baselines — non-trivial but lower than enterprise software switching costs."
+    },
+    "systemOfRecord": {
+      "status": "weakened",
+      "note": "TTD's reporting and attribution data does not function as a legal or financial system of record. Campaign performance data can be exported and recreated on alternative platforms. This is a notable moat weakness relative to FICO, Axon, or MSCI."
+    },
+    "aiResilienceScore": 58,
+    "verdict": "TTD is approximately neutral on AI — Kokai AI enhances platform usability and advertiser ROAS, positioning TTD as a beneficiary of AI-driven ad optimization. However, AI also strengthens competitors: Google's Gemini-powered Performance Max and Meta's Advantage+ are AI-native systems with more first-party data, making the competitive pressure from walled gardens stronger, not weaker. TTD's primary moat risk in the AI era is that AI commoditises DSP interfaces (reducing learned-interface lock-in) while simultaneously enabling Amazon and Google to offer superior performance through larger proprietary datasets. The open-internet independent position remains relevant, but the margin of advantage over competitors is narrowing."
+  }
+}

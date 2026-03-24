@@ -48,6 +48,17 @@ import now from './now.json';
 import fig from './fig.json';
 import lmt from './lmt.json';
 import nee from './nee.json';
+import anet from './anet.json';
+import applovin from './applovin.json';
+import arm from './arm.json';
+import axon from './axon.json';
+import coin from './coin.json';
+import fico from './fico.json';
+import net from './net.json';
+import panw from './panw.json';
+import rddt from './rddt.json';
+import sea from './sea.json';
+import ttd from './ttd.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -98,6 +109,17 @@ const stocksMap: Record<string, StockAnalysisData> = {
   fig: fig as StockAnalysisData,
   lmt: lmt as StockAnalysisData,
   nee: nee as StockAnalysisData,
+  anet: anet as StockAnalysisData,
+  applovin: applovin as StockAnalysisData,
+  arm: arm as StockAnalysisData,
+  axon: axon as StockAnalysisData,
+  coin: coin as StockAnalysisData,
+  fico: fico as StockAnalysisData,
+  net: net as StockAnalysisData,
+  panw: panw as StockAnalysisData,
+  rddt: rddt as StockAnalysisData,
+  sea: sea as StockAnalysisData,
+  ttd: ttd as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {

@@ -7,7 +7,7 @@
 //   t(json)  →  { bearTarget, baseTarget, bullTarget } from json.scenarios
 //
 // RULES (enforced dynamically below):
-//   • Maximum 20 stocks in the portfolio
+//   • Maximum 25 stocks in the portfolio
 //   • Minimum average score of 75 required for inclusion
 //
 // To add a new stock: import its JSON, add an entry to allCoverageData.
@@ -64,6 +64,17 @@ import tsmData     from '@/data/stocks/tsm.json';
 import unhData     from '@/data/stocks/unh.json';
 import visaData    from '@/data/stocks/visa.json';
 import figData     from '@/data/stocks/fig.json';
+import anetData    from '@/data/stocks/anet.json';
+import appData     from '@/data/stocks/applovin.json';
+import ficoData    from '@/data/stocks/fico.json';
+import panwData    from '@/data/stocks/panw.json';
+import ttdData     from '@/data/stocks/ttd.json';
+import armData     from '@/data/stocks/arm.json';
+import axonData    from '@/data/stocks/axon.json';
+import coinData    from '@/data/stocks/coin.json';
+import netData     from '@/data/stocks/net.json';
+import rddtData    from '@/data/stocks/rddt.json';
+import seaData     from '@/data/stocks/sea.json';
 
 // Weighted composite: Moat 40% · Growth 35% · Valuation 25%
 // scores = [moatScore, growthScore, valuationScore]
@@ -71,7 +82,7 @@ import figData     from '@/data/stocks/fig.json';
 export const getAverageScore = ([moat, growth, valuation]: number[]) =>
     moat * 0.40 + growth * 0.35 + valuation * 0.25;
 
-const MAX_PORTFOLIO  = 20;
+const MAX_PORTFOLIO  = 25;
 const MIN_AVG_SCORE  = 75;
 
 /** Compute moat score from a stock JSON's tenMoats field. */
@@ -144,6 +155,17 @@ const allCoverageData = [
     { name: "MSCI",              ticker: "MSCI",  slug: "msci",        scores: [m(msciData),        g(msciData),        v(msciData)],        href: "/stocks/msci",        category: "Financials",  ...t(msciData)        },
     { name: "SoFi Technologies", ticker: "SOFI",  slug: "sofi",        scores: [m(sofiData),        g(sofiData),        v(sofiData)],        href: "/stocks/sofi",        category: "Financials",  ...t(sofiData)        },
     { name: "Strategy Inc.",     ticker: "MSTR",  slug: "mstr",        scores: [m(mstrData),        g(mstrData),        v(mstrData)],        href: "/stocks/mstr",        category: "Hard Assets", ...t(mstrData)        },
+    { name: "Cloudflare",        ticker: "NET",   slug: "net",         scores: [m(netData),         g(netData),         v(netData)],         href: "/stocks/net",         category: "Big Tech",    ...t(netData)         },
+    { name: "Axon Enterprise",   ticker: "AXON",  slug: "axon",        scores: [m(axonData),        g(axonData),        v(axonData)],        href: "/stocks/axon",        category: "Industrials", ...t(axonData)        },
+    { name: "AppLovin",          ticker: "APP",   slug: "applovin",    scores: [m(appData),         g(appData),         v(appData)],         href: "/stocks/applovin",    category: "Big Tech",    ...t(appData)         },
+    { name: "Arista Networks",   ticker: "ANET",  slug: "anet",        scores: [m(anetData),        g(anetData),        v(anetData)],        href: "/stocks/anet",        category: "Big Tech",    ...t(anetData)        },
+    { name: "Fair Isaac",        ticker: "FICO",  slug: "fico",        scores: [m(ficoData),        g(ficoData),        v(ficoData)],        href: "/stocks/fico",        category: "Financials",  ...t(ficoData)        },
+    { name: "The Trade Desk",    ticker: "TTD",   slug: "ttd",         scores: [m(ttdData),         g(ttdData),         v(ttdData)],         href: "/stocks/ttd",         category: "Big Tech",    ...t(ttdData)         },
+    { name: "Palo Alto Networks",ticker: "PANW",  slug: "panw",        scores: [m(panwData),        g(panwData),        v(panwData)],        href: "/stocks/panw",        category: "Big Tech",    ...t(panwData)        },
+    { name: "Arm Holdings",      ticker: "ARM",   slug: "arm",         scores: [m(armData),         g(armData),         v(armData)],         href: "/stocks/arm",         category: "Big Tech",    ...t(armData)         },
+    { name: "Coinbase Global",   ticker: "COIN",  slug: "coin",        scores: [m(coinData),        g(coinData),        v(coinData)],        href: "/stocks/coin",        category: "Financials",  ...t(coinData)        },
+    { name: "Reddit",            ticker: "RDDT",  slug: "rddt",        scores: [m(rddtData),        g(rddtData),        v(rddtData)],        href: "/stocks/rddt",        category: "Big Tech",    ...t(rddtData)        },
+    { name: "Sea Limited",       ticker: "SE",    slug: "sea",         scores: [m(seaData),         g(seaData),         v(seaData)],         href: "/stocks/sea",         category: "Other",       ...t(seaData)         },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────

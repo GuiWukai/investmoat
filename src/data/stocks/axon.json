@@ -1,0 +1,213 @@
+{
+  "slug": "axon",
+  "ticker": "AXON",
+  "name": "Axon Enterprise",
+  "lastAnalyzed": "March 2026",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "AXON"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$39.9B"
+    },
+    {
+      "label": "Current Price",
+      "value": "$496.27"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Public Safety | Law Enforcement Tech | AI SaaS",
+      "color": "primary"
+    },
+    {
+      "label": "Near-Monopoly Operating System",
+      "color": "success"
+    }
+  ],
+  "recommendation": "Strong Buy",
+  "metrics": [
+    {
+      "title": "Revenue",
+      "value": "$2.78B",
+      "label": "+33% YoY FY2025; Q4 +39% YoY; 2026 guide +27–30%",
+      "icon": "TrendingUp",
+      "color": "#e8281b"
+    },
+    {
+      "title": "Bookings Backlog",
+      "value": "$14.4B",
+      "label": "Future contracted revenue — multi-year visibility to $6B 2028 target",
+      "icon": "Zap",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "ARR",
+      "value": "$1.3B",
+      "label": "+35% YoY; software gross margin >80%",
+      "icon": "Shield",
+      "color": "#10b981"
+    }
+  ],
+  "moat": {
+    "score": 90,
+    "description": "Axon controls ~85% of major U.S. law enforcement body camera contracts, owns the only evidence management platform (Evidence.com) legally accepted in court at scale, and has $14.4B in contracted backlog — the strongest regulatory and system-of-record moat in public safety technology.",
+    "analysisTitle": "The Public Safety Operating System Moat",
+    "analysisSummary": "Axon's moat is built on three interlocking and self-reinforcing pillars: **Regulatory Lock-in, System of Record, and Proprietary Training Data**:",
+    "analysisPoints": [
+      {
+        "title": "Evidence.com — The Legal System of Record",
+        "text": "Evidence.com is the chain-of-custody platform for digital evidence submitted to courts across thousands of U.S. jurisdictions. Law enforcement agencies cannot switch evidence management providers mid-contract without potentially invalidating evidence admissibility — a legal risk that creates the highest-stakes switching costs in any software vertical. Multi-year contracts of 7–10 years, combined with $14.4B in contracted future bookings, mean that Axon's revenue runway is visible through most of the current decade."
+      },
+      {
+        "title": "Draft One — AI Moat Built on Irreplaceable Data",
+        "text": "Draft One uses generative AI trained on body-camera footage and police report data that Axon uniquely possesses. With ~85% market share in major U.S. cities, Axon holds a training data advantage that no competitor can replicate — you cannot build a police report AI without access to police body camera footage at scale. By Q1 2026, Draft One had processed 100,000+ incident reports, saving officers 67% of paperwork time and creating a powerful new upsell driver within existing accounts."
+      },
+      {
+        "title": "Bundled Platform — From TASER to Drone to 911",
+        "text": "Axon has extended its platform from TASER + Body Camera + Cloud Evidence to now include Drone First Responder, AI dispatch (Axon 911 via Prepared/Carbyne acquisitions), Draft One AI reports, and commercial body cameras (Axon Body Mini). Agencies that adopt the full Officer Safety Plan (OSP) bundle are locked in for a decade across hardware, software, and AI layers simultaneously — a bundle that point-solution competitors building only one component of the stack cannot compete against."
+      }
+    ]
+  },
+  "growth": {
+    "score": 91,
+    "description": "FY2025 delivered $2.78B revenue (+33% YoY) with Q4 accelerating to 39% and Non-GAAP EPS of $2.15 crushing the $1.60 estimate by 34%. Record 2025 bookings grew ~46% YoY, ARR hit $1.3B (+35% YoY), and management established a 2028 target of $6B revenue (implying ~30%+ CAGR from 2025). Software revenue grew 40% in Q4 at 80%+ gross margins, and Draft One adoption is expanding the software attach rate within every existing hardware account.",
+    "growthAnalysis": {
+      "cagrEstimate": "28–32%",
+      "scoreDerivation": "Base 90 (30%+ CAGR, blended 28–32% through 2028 guided target) + 5 recurring (ARR $1.3B, 80%+ software gross margins, 7–10yr OSP contracts) + 3 TAM expansion (commercial Axon Body Mini, Axon 911 dispatch, international expansion) − 7 federal budget risk (15% DOJ grant cut proposal, DOGE spending reviews affecting agency purchase timelines) = 91",
+      "drivers": [
+        {
+          "name": "Software & Services (ARR)",
+          "metric": "+40% YoY to $343M Q4; ARR $1.3B (+35%); software gross margin >80%",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Draft One AI Upsell",
+          "metric": "100,000+ reports processed; saves 67% officer paperwork time; primary new ACV driver",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Platform Expansion (Axon 911 + Commercial)",
+          "metric": "Prepared/Carbyne acquisitions enter $6B+ dispatch market; Axon Body Mini targets retail/healthcare",
+          "trend": "accelerating"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If U.S. federal DOJ grant funding is cut 15%+ under DOGE-driven budget reviews and 20%+ of agencies delay new OSP contract signings into 2027, bookings growth decelerates below 25% and the $6B 2028 target requires aggressive commercial market penetration not yet validated at scale",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 71,
+    "description": "AXON has pulled back 43% from its August 2025 all-time high of $885, currently at ~$496 with a $39.9B market cap. At ~11× NTM P/S on $3.57B 2026 guidance and ~57× forward non-GAAP P/E, valuation is rich but more reasonable than the summer 2025 peak (~22× P/S). The $14.4B contracted backlog — 4× annual revenue — de-risks the growth path materially. The stock sits between the bear ($360) and base ($540) scenarios, offering ~9% upside to fair value with significant optionality from commercial market expansion.",
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~141×",
+          "note": "GAAP near-breakeven; one-time items distort"
+        },
+        {
+          "label": "Forward P/E (NTM, non-GAAP)",
+          "value": "~57×",
+          "note": "consensus non-GAAP EPS ~$8.75"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.9×",
+          "note": "fwd P/E ÷ 30% non-GAAP EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~11×",
+          "note": "$3.57B NTM revenue (2026 guide midpoint)"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~45×",
+          "note": "~$880M FCF (FY2025 adj. EBITDA ~25.5%)"
+        }
+      ],
+      "summary": "AXON trades at ~57× forward non-GAAP P/E — expensive relative to the tech sector median (~30–35×) but justifiable given 30%+ CAGR to 2028 with $14.4B contracted visibility and software gross margins exceeding 80%. The PEG of ~1.9× is elevated but below the 2.0× threshold for 'expensive' given the locked-in nature of the revenue backlog. Critically, the 43% drawdown from all-time highs has compressed the P/S from ~22× to ~11×, creating a meaningfully better entry point than existed at any point in 2025."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$360",
+      "description": "Federal DOJ grant cuts materially slow new contract signings, antitrust scrutiny stalls Axon 911 expansion, and Draft One faces regulatory backlash — 2026 revenue misses the low end of guidance, re-rating the multiple to 8× NTM revenue.",
+      "points": [
+        "DOJ federal grant cuts of 15%+ cause 25%+ of agencies to defer new OSP contract renewals into 2027–28, causing bookings growth to decelerate below 20% and consensus 2026 revenue estimates to come down by $300M+",
+        "FTC or DOJ antitrust action targets Axon's acquisition of Prepared and Carbyne, blocking Axon 911 market entry and removing the emergency dispatch TAM expansion story",
+        "A high-profile wrongful arrest linked to a Draft One AI-generated report triggers congressional hearings, a federal moratorium on AI-generated police reports, and a sharp slowdown in software ARR growth to below 20%",
+        "Multiple compresses to ~8× NTM P/S as growth expectations reset and regulatory risk discount widens"
+      ]
+    },
+    "base": {
+      "priceTarget": "$540",
+      "description": "Axon delivers 2026 guidance of 27–30% revenue growth, ARR crosses $1.7B, Draft One reaches 500,000 cumulative reports, and the $14.4B backlog provides revenue floor — multiple sustains at ~11× NTM P/S.",
+      "points": [
+        "FY2026 revenue lands at $3.55–3.60B, mid-range of guidance, with large agency renewals and Draft One upsells driving ARR to $1.65–1.70B by Q4 2026",
+        "Software gross margins expand to 82–83% and overall adjusted EBITDA margin improves from 25.5% toward 27%, demonstrating operating leverage on the platform",
+        "Axon Body Mini ships mid-2026 and signs initial commercial contracts with 3–5 major retailers/healthcare systems, establishing a proof-of-concept for TAM expansion beyond law enforcement",
+        "International revenue accelerates to 25%+ of total as EU/UK law enforcement agencies begin multi-year Evidence.com transitions"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$800",
+      "description": "Draft One becomes a mandatory element of every OSP contract, commercial markets validate at scale, and Axon 911 secures 200+ dispatch center contracts — revenue trajectory re-rates toward the $6B 2028 target ahead of schedule.",
+      "points": [
+        "Draft One penetrates 80%+ of the installed base by end of 2026, doubling software ARR attach rates and pushing total ARR toward $2B — creating a step-change in recurring revenue mix",
+        "Axon Body Mini secures 5+ Fortune 500 retail and healthcare accounts totalling >$200M new ACV, validating the commercial TAM and adding a third revenue pillar beyond law enforcement",
+        "Axon 911 wins 300+ emergency dispatch contracts by end of 2026, creating the only end-to-end public safety platform from 911 call through court submission and re-rating the addressable market to $10B+",
+        "Revenue trajectory toward $5.5B in 2027 forces consensus upgrades, compressing apparent multiple back to 15× NTM revenue and driving re-rating toward all-time highs"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "strong",
+      "note": "Officers spend years learning TASER operation, body camera workflows, and Evidence.com evidence tagging — institutional workflow knowledge compounds switching costs. AI (Draft One) deepens interface dependency rather than abstracting it away."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "Evidence chain-of-custody rules, court submission workflows, prosecutor integrations, and Draft One AI reports are all configured per agency. Multi-year OSP contracts (7–10 years) mean the business logic is embedded for a decade, not a quarter."
+    },
+    "publicDataAccess": {
+      "status": "intact",
+      "note": "Axon accesses public safety data streams (dispatch records, incident reports, 911 logs) through its platform integrations — a meaningful advantage but not the primary moat source."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Law enforcement technology combined with AI/ML for police report writing requires rare domain expertise. Draft One's training data advantage means talent at competitor AI firms cannot overcome the data moat regardless of headcount."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "TASER + Body Camera + Evidence.com + Draft One + Drone + Axon 911 in a single Officer Safety Plan bundle. Agencies adopting the full suite cannot selectively replace one component — the legal evidence chain would break. The bundle is the moat."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Body camera footage from ~85% of major U.S. law enforcement agencies is the exclusive training set for Draft One. No competitor can replicate this data advantage — it is contractually controlled by Axon, continuously generated, and legally protected from external access."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "Evidence.com is accepted in courts across thousands of U.S. jurisdictions for digital evidence submission. Switching mid-contract risks evidence admissibility challenges — a regulatory moat with near-zero precedent in software. CJIS compliance, FIPS encryption, and FedRAMP create additional government lock-in layers."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "Indirect network effects: more agencies on Evidence.com → more prosecutors and public defenders building workflows around it → harder for agencies to switch without disrupting the entire judicial ecosystem. Draft One improves as more reports are generated, benefiting all users."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Axon sits in the critical workflow path of every incident: 911 call → dispatch → response → evidence capture → report → court submission. Not a financial transaction layer but deeply embedded in the operational chain that cannot be paused or switched mid-incident."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "Evidence.com is the authoritative legal system of record for digital evidence in U.S. law enforcement. Courts accept it. Prosecutors build discovery workflows around it. Public defenders access evidence through it. Migrating away requires legal re-certification of every evidence submission protocol — the most durable system-of-record moat in any non-financial software vertical."
+    },
+    "aiResilienceScore": 88,
+    "verdict": "Axon is a strong net beneficiary of AI — Draft One makes the platform more valuable per officer, deepens the software ARR attach rate, and creates a data flywheel built on body camera footage that competitors cannot access. The key AI-resilient moats are proprietary data (body camera training exclusivity), regulatory lock-in (Evidence.com court admissibility), and system of record (legal evidence chain of custody) — all three are strengthened, not threatened, by the AI era. The primary AI risk is commoditisation of police report-writing tools if body camera data becomes more accessible, though Axon's contractual data exclusivity makes this scenario unlikely within a 5-year horizon."
+  }
+}
