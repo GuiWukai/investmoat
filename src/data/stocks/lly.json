@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$927B"
+      "value": "~$885B"
     },
     {
       "label": "Price",
-      "value": "$977.12"
+      "value": "~$937"
     }
   ],
   "chips": [
@@ -29,24 +29,24 @@
   "recommendation": "Strong Buy",
   "metrics": [
     {
-      "title": "Revenue Growth",
-      "value": "45%",
-      "label": "FY2025 YoY",
+      "title": "FY2026 Guidance",
+      "value": "$80–83B",
+      "label": "~45% YoY growth — Mounjaro +110% YoY in Q4 2025",
       "icon": "TrendingUp",
       "color": "#e8294b"
     },
     {
-      "title": "GLP-1 Revenue",
-      "value": "$36.5B",
-      "label": "Mounjaro + Zepbound (2025)",
-      "icon": "Activity",
+      "title": "Orforglipron FDA",
+      "value": "Apr 10",
+      "label": "Oral GLP-1 approval deadline — potentially March 28",
+      "icon": "Award",
       "color": "#7c3aed"
     },
     {
-      "title": "Operating Margin",
-      "value": "40.4%",
-      "label": "Best-in-class pharma efficiency",
-      "icon": "BarChart2",
+      "title": "Retatrutide Ph.2",
+      "value": "28.7%",
+      "label": "Mean body weight loss at high dose — best-in-class pipeline",
+      "icon": "Zap",
       "color": "#059669"
     }
   ],
@@ -72,29 +72,52 @@
   },
   "growth": {
     "score": 90,
-    "description": "Hypergrowth driven by a $200B+ obesity TAM barely penetrated, with oral GLP-1 (orforglipron) and next-gen retatrutide expanding the addressable market further."
+    "description": "Q4 2025: $19.29B revenue (+42.6% YoY, beat) — Mounjaro $7.41B (+110%), Zepbound $4.26B (+123%). FY2026 guidance of $80–83B implies ~45% revenue growth on a $55B base. Orforglipron oral GLP-1 FDA decision by April 10 (potentially March 28), and retatrutide Phase 2 achieved 28.7% mean weight loss at high dose. The Hims & Hers / Novo Nordisk distribution deal (official launch today) intensifies oral competition in the telehealth channel but does not change tirzepatide's clinical superiority or LLY's patent wall into the late 2030s.",
+    "growthAnalysis": {
+      "cagrEstimate": "35–45%",
+      "scoreDerivation": "Base 90 (30%+ CAGR) + 5 oral GLP-1 TAM expansion (orforglipron FDA imminent, opens injection-resistant patients) + 5 retatrutide next-gen catalyst (28.7% Phase 2 weight loss) − 5 oral competition headwind (Novo Wegovy pill via Hims, Structure Therapeutics aleniglipron Phase 2 data) − 5 pricing risk (Medicare Part D negotiation risk) = 90",
+      "drivers": [
+        { "name": "Mounjaro (diabetes)", "metric": "$7.41B Q4 2025 (+110% YoY), FY2025 est. ~$22B", "trend": "accelerating" },
+        { "name": "Zepbound (obesity)", "metric": "$4.26B Q4 2025 (+123% YoY), launched Jan 2024 — still ramping", "trend": "accelerating" },
+        { "name": "Orforglipron + Retatrutide", "metric": "FDA decision Apr 10; retatrutide 28.7% Phase 2 weight loss, Phase 3 ongoing", "trend": "accelerating" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If Hims & Hers / Novo distribution partnership shifts 15%+ of new GLP-1 prescriptions to oral semaglutide before orforglipron approval, AND Structure Therapeutics' aleniglipron Phase 3 data outperforms orforglipron in 2027, LLY's oral market share erodes below 30% and consensus EPS estimates for 2028 decline 15%+",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
-    "score": 75,
-    "description": "At $977, LLY trades below the $1,200 base case — the stock has pulled back from its 52-week high of $1,134, creating a reasonable entry point for a company with 25%+ revenue growth guided for 2026 and EPS expected to grow 40%+."
+    "score": 77,
+    "description": "At ~$937 — down 13% YTD and 17% from the 52-week high of $1,132 — LLY trades at a widening discount to the $1,200 base case. The pullback reflects oral competition fears (Hims/Novo deal) and orforglipron FDA uncertainty, not fundamental impairment of a company guiding $80–83B revenue for 2026 (~45% growth). Analyst consensus sits at $1,217.",
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~49×", "note": "TTM EPS ~$19 (FY2025 est.)" },
+        { "label": "Forward P/E (NTM)", "value": "~33×", "note": "consensus FY2026 EPS ~$28" },
+        { "label": "PEG Ratio", "value": "~0.7×", "note": "fwd P/E ÷ ~45% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~11×", "note": "$80–83B FY2026 guidance" },
+        { "label": "Price / FCF", "value": "~35×", "note": "~$25B FCF (NTM est.)" }
+      ],
+      "summary": "At 33× forward P/E with a PEG of 0.7×, LLY is significantly cheaper than its pharma peer average (~45×) and even cheaper than the broad healthcare sector (~28× on much lower growth). A PEG under 1.0 on 45% EPS growth is rare in large-cap pharma and typically signals a mispriced growth story — the oral competition fears driving the 13% YTD decline are creating an attractive entry. The wide gap between the 49× trailing and 33× forward P/E reflects accelerating EPS, not compression."
+    }
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$650",
-      "description": "Oral GLP-1 competition intensifies and pricing reform erodes revenue-per-patient, while a major pipeline setback triggers multiple compression.",
+      "description": "Oral GLP-1 competition accelerates via the Hims/Novo telehealth channel while pricing reform erodes net revenue, and a pipeline setback triggers multiple compression.",
       "points": [
-        "Novo Nordisk's oral semaglutide (Rybelsus follow-on) achieves superior efficacy to orforglipron in head-to-head, reversing Lilly's prescriber share gains",
-        "U.S. Medicare/Medicaid Part D GLP-1 coverage price negotiations cut net pricing by 25%+ before 2028, compressing revenue growth below 10%",
-        "Retatrutide Phase 3 trial fails to replicate Phase 2 weight-loss efficacy (~24% body weight loss), eliminating the next-gen growth catalyst"
+        "Hims & Hers / Novo Nordisk distribution partnership captures 20%+ of new GLP-1 telehealth prescriptions for oral Wegovy before orforglipron launches; Structure Therapeutics' aleniglipron Phase 3 outperforms orforglipron, fragmenting LLY's oral market share below 25%",
+        "U.S. Medicare/Medicaid Part D GLP-1 coverage price negotiations cut net pricing by 25%+ before 2028, compressing revenue growth below 15% and pushing FY2027 revenue to ~$90B vs. consensus $110B+",
+        "Retatrutide Phase 3 trial fails to replicate the 28.7% Phase 2 weight-loss result — settling at ~20% mean loss — eliminating the 'best-in-class next-gen' premium and leaving LLY without a differentiated asset beyond Zepbound"
       ]
     },
     "base": {
       "priceTarget": "$1,200",
-      "description": "Steady 25% revenue growth driven by GLP-1 franchise expansion, FDA approval of orforglipron, and initial retatrutide launch by end of 2026.",
+      "description": "FDA approves orforglipron by April 10, LLY negotiates comparable telehealth distribution to offset the Hims/Novo deal, and retatrutide Phase 3 confirms superiority — restoring the premium multiple.",
       "points": [
-        "FDA approves orforglipron oral GLP-1 pill in H1 2026, opening the $50B+ oral obesity market and expanding from injections-only customers",
-        "Retatrutide Phase 3 data confirms ~20%+ weight loss superiority, securing approval pathway and establishing Lilly's next-gen franchise",
-        "Donanemab (Alzheimer's) reaches $2B+ annual revenue by 2027, beginning portfolio diversification away from GLP-1 concentration"
+        "FDA approves orforglipron oral GLP-1 pill by April 10, 2026; LLY negotiates telehealth channel deals with Hims or rival platforms within 60 days, capturing 30%+ of the oral GLP-1 prescribing market",
+        "Retatrutide Phase 3 confirms 22%+ mean body weight loss (vs. Wegovy ~15%), FDA approval by late 2026 — establishing Lilly as the only company with best-in-class oral and injectable next-gen GLP-1s",
+        "Donanemab (Alzheimer's) reaches $2B+ annual revenue by 2027, and FY2026 revenue closes at the high end of the $80–83B guidance range, with EPS of $28–30"
       ]
     },
     "bull": {
@@ -151,5 +174,5 @@
     "aiResilienceScore": 85,
     "verdict": "Lilly's core moat — patent-protected biologics with regulatory approval — is structurally immune to AI disruption, and AI drug discovery tools actually accelerate Lilly's pipeline advantage by compressing early-stage discovery timelines. The company is a net beneficiary of AI adoption, using it to identify novel targets and optimize clinical trials faster than underfunded competitors."
   },
-  "lastAnalyzed": "November 2025"
+  "lastAnalyzed": "March 2026"
 }
