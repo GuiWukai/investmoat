@@ -1,0 +1,164 @@
+{
+  "slug": "ice",
+  "ticker": "ICE",
+  "name": "Intercontinental Exchange, Inc.",
+  "lastAnalyzed": "March 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "ICE" },
+    { "label": "Market Cap", "value": "~$90B" },
+    { "label": "Price", "value": "~$157" }
+  ],
+  "chips": [
+    { "label": "Financial Infrastructure | Exchange & Data", "color": "primary" },
+    { "label": "Natural Monopoly", "color": "success" },
+    { "label": "Wide Moat", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "2025 Revenue",
+      "value": "$9.93B",
+      "label": "20th consecutive year of record annual revenue",
+      "icon": "TrendingUp",
+      "color": "#003087"
+    },
+    {
+      "title": "Adj. EPS Growth",
+      "value": "+14%",
+      "label": "$6.95 FY2025 — Black Knight synergies accelerating",
+      "icon": "DollarSign",
+      "color": "#2563eb"
+    },
+    {
+      "title": "Jan 2026 Contracts",
+      "value": "245.8M",
+      "label": "Strongest trading month in ICE's history",
+      "icon": "BarChart",
+      "color": "#0cceaf"
+    }
+  ],
+  "moat": {
+    "score": 89,
+    "description": "ICE owns the global pricing benchmarks for energy derivatives (Brent crude, natural gas), the electronic system of record for U.S. mortgage ownership (MERS), and the authoritative pricing data for the $130T global bond market — three natural monopolies in financial infrastructure that cannot be replicated.",
+    "analysisTitle": "The Financial Infrastructure Monopoly",
+    "analysisSummary": "Intercontinental Exchange has quietly assembled **three interlocking natural monopolies** in the financial system:",
+    "analysisPoints": [
+      {
+        "title": "The Global Energy Benchmark: Brent Crude and Natural Gas",
+        "text": "ICE's futures markets are the global reference price for oil (Brent crude), European natural gas, and U.S. power. These are not simply popular trading venues — they ARE the benchmark. Every physical oil contract, bank hedging program, and sovereign energy fund references ICE's Brent price. The network effect is self-reinforcing: Brent is the benchmark because all the liquidity is there, and all the liquidity is there because it's the benchmark. No competitor has unseated an established derivatives benchmark in 40 years."
+      },
+      {
+        "title": "MERS: The Electronic Registry for 70M U.S. Mortgages",
+        "text": "The Mortgage Electronic Registration Systems (MERS), acquired through Black Knight, is the electronic registry that tracks ownership and servicing rights for ~70 million U.S. mortgages. MERS is required by Fannie Mae and Freddie Mac for any mortgage sold into the secondary market — it is embedded in federal housing finance law, not just industry practice. Any U.S. mortgage that participates in the secondary market must register in MERS, making it a government-mandated utility that handles trillions in annual mortgage transactions. No private competitor can create an alternative without legislative change."
+      },
+      {
+        "title": "The Bond Pricing Monopoly: ICE Data Services",
+        "text": "ICE Data Services prices approximately 2.5 million securities daily, including millions of OTC bonds that have no liquid market and require model-based pricing. Banks, asset managers, and insurance companies use ICE's evaluated pricing for balance sheet valuation and regulatory reporting. This is not optional: under mark-to-market accounting rules, firms must use independent, verifiable pricing data. ICE's database of historical bond prices, credit spreads, and real estate analytics cannot be replicated by a startup — it is the product of decades of market participation and proprietary data acquisition."
+      }
+    ]
+  },
+  "growth": {
+    "score": 72,
+    "description": "ICE's 3-year revenue CAGR of 8–10% (EPS CAGR of 12–15%) is driven by fixed income data growth (high-single-digit), exchange recurring revenue (mid-single-digit), and a mortgage technology recovery as rates decline — offset by near-term mortgage origination headwinds while 30-year rates remain above 6.5%.",
+    "growthAnalysis": {
+      "cagrEstimate": "8–10%",
+      "scoreDerivation": "Base 67 (8–15% EPS CAGR) + 5 recurring subscription base (>70% recurring) + 3 fixed income data TAM expansion (AI-ready analytics demand) − 3 mortgage headwind (high rates suppressing origination volumes) = 72",
+      "drivers": [
+        { "name": "Fixed Income & Data Services", "metric": "+high-single-digit guided for 2026, AI data demand accelerating", "trend": "accelerating" },
+        { "name": "Exchange Recurring Revenue", "metric": "+mid-single-digit guided 2026; Jan 2026 record 245.8M contracts", "trend": "stable" },
+        { "name": "Mortgage Technology", "metric": "+low-to-mid-single-digit; $230M Black Knight synergies fully realized 2025", "trend": "stable" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If 30-year mortgage rates remain above 7% through end of 2026, Black Knight origination platform volumes stay 40–50% below peak, and ICE Mortgage technology revenue growth falls below 3% — failing to generate adequate return on the $13.1B Black Knight investment",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 78,
+    "description": "At ~$157 — roughly 24% below the analyst consensus base case of $195 — ICE trades at ~20× forward P/E on 2026 EPS of $7.71, with a PEG of ~1.4× on a 14% EPS CAGR. For a company with 20 consecutive years of record revenue and three natural monopoly positions, this represents a reasonable entry with material upside to the base case.",
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        { "label": "Trailing P/E (adjusted)", "value": "~23×", "note": "adj. EPS $6.95 FY2025" },
+        { "label": "Forward P/E (NTM)", "value": "~20×", "note": "consensus 2026 EPS est. $7.71" },
+        { "label": "PEG Ratio", "value": "~1.4×", "note": "fwd P/E ÷ ~14% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~8.7×", "note": "~$10.4B NTM revenue" },
+        { "label": "Price / FCF", "value": "~32×", "note": "~$2.8B FCF (NTM est.)" }
+      ],
+      "summary": "At 20× forward P/E, ICE trades at a modest discount to the financial data peer group (MCO ~25×, MSCI ~27×, SPGI ~24×) despite comparable moat quality — reflecting the Black Knight integration overhang and mortgage market headwinds rather than structural impairment. A PEG of 1.4× is fairly priced for growth, with material upside if mortgage origination volumes recover as rates decline in 2026–2027. ICE's forward P/E is at a 5-year low, making this a historically attractive entry into one of the most durable financial infrastructure franchises in existence."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$120",
+      "description": "Mortgage rates remain above 7% through 2027, Black Knight synergy realization stalls, and fixed income data revenue growth disappoints — causing a multiple compression to ~15× forward P/E.",
+      "points": [
+        "Mortgage origination volumes stay 40–50% below 2022 peak as 30-year rates remain above 7%, delaying ICE Mortgage's path to target profitability and forcing write-downs of Black Knight goodwill",
+        "Fixed income data services revenue grows below 4% as passive investing saturation limits new subscribers and enterprise budget pressure suppresses price increase acceptance",
+        "Energy derivatives volumes normalize from record 2025–2026 levels as geopolitical tensions ease; exchange recurring revenue decelerates to 2–3%, compressing the growth multiple"
+      ]
+    },
+    "base": {
+      "priceTarget": "$195",
+      "description": "Revenue achieves guidance (mid-to-high-single-digit across segments), EPS grows 12–14% to $8+, and mortgage market shows early recovery — supporting a re-rating to ~24× forward P/E.",
+      "points": [
+        "Mortgage rates decline toward 6% by end of 2026, triggering a 20–30% increase in origination volumes and accelerating Black Knight/Encompass platform adoption toward $2B+ annual revenue",
+        "Fixed income data services achieve high-single-digit growth as AI-ready bond analytics win new institutional mandates; ICE's OTC pricing data becomes a required input for AI portfolio management platforms",
+        "Exchange recurring revenues grow mid-single-digit with continued energy volatility; $230M Black Knight synergies fully realized with incremental cross-sell revenue from mortgage-exchange data bundle"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$250",
+      "description": "Mortgage market fully recovers, AI-native data products add a new high-margin revenue stream, and record exchange volumes sustain — re-rating ICE to a premium multiple consistent with its monopoly quality.",
+      "points": [
+        "Mortgage origination recovers to $3T+ by 2027 (2021 levels) as rates decline to 5.5%, unlocking the full value of the $13.1B Black Knight investment with mortgage tech revenue growing 25%+ annually",
+        "ICE launches AI-native fixed income analytics and real estate data platforms leveraging MERS + bond pricing datasets, winning 50+ asset manager mandates and adding $500M+ in high-margin recurring revenue",
+        "Carbon and voluntary emissions futures grow to a $2B+ annual revenue segment by 2028 as EU carbon prices recover and corporate net-zero commitments drive institutional hedging demand"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "Trading terminals and financial data platforms require learned expertise, but standardized APIs and AI-assisted data retrieval are increasingly abstracting interface complexity — ICE's data products can be accessed programmatically, reducing the learned interface premium for pure data access."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "ICE's clearing house risk models, exchange rulebooks, derivatives contract specifications, and Black Knight's Encompass LOS (with thousands of lender-specific workflow configurations) encode decades of proprietary operational and regulatory logic that competitors cannot rapidly replicate regardless of technology budget."
+    },
+    "publicDataAccess": {
+      "status": "intact",
+      "note": "ICE aggregates CFTC trade reporting, TRACE bond data, and public real estate records into proprietary normalized analytics products — the aggregation, normalization, and historical depth creates value beyond the raw public data, but this moat is secondary to ICE's proprietary data assets."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Matching engine engineers, derivatives structuring experts, and mortgage technology architects with regulatory compliance expertise are genuinely scarce; AI is augmenting quantitative work but regulatory compliance and exchange microstructure expertise remain talent-constrained domains."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "ICE bundles exchange access + clearing + data services + analytics + mortgage technology; the integration between energy exchange data and ICE Data Services, and between Encompass LOS + MERS + closing data, creates cross-sell value that standalone competitors cannot easily replicate."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "ICE owns evaluated pricing for ~2.5M securities daily (including illiquid OTC bonds with no public market price), electronic records for ~70M U.S. mortgages in MERS, and decades of historical energy derivatives data — these datasets are the authoritative source for bank regulatory reporting and cannot be recreated."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "MERS is embedded in federal mortgage law (FNMA/FHLMC requirement for secondary market mortgage registration); ICE's exchanges hold CFTC-designated contract market status; clearing houses require CFTC/SEC approval to operate — these are government-granted positions that cannot be replicated without multi-year regulatory processes."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "ICE's Brent crude and natural gas futures markets are the global energy price benchmarks due to classic exchange liquidity network effects — more participants create tighter spreads, attracting more participants; this self-reinforcing dynamic has sustained ICE's pricing benchmark status for 20+ years with zero successful competitive displacement."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Every oil trade referencing Brent pricing, every U.S. mortgage registered in MERS, and most institutional fixed income portfolio valuations route through ICE infrastructure — these are not optional layers but structural requirements embedded in the transaction lifecycle of energy, real estate, and bond markets globally."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "MERS is the system of record for U.S. mortgage ownership and servicing rights (~$13T in outstanding mortgages); ICE Data Services provides the authoritative pricing data that banks use for balance sheet accounting and regulatory reporting; ICE's clearing houses are the system of record for derivatives open interest representing trillions in notional value."
+    },
+    "aiResilienceScore": 89,
+    "verdict": "ICE is a net AI beneficiary — its proprietary bond pricing data, MERS mortgage registry, and energy derivatives datasets are exactly the structured, authoritative financial data that AI models require as inputs for portfolio management, risk assessment, and regulatory compliance. The four strongest AI-resilient moats (proprietary data, regulatory lock-in, network effects, system of record) are all structurally deepening as AI adoption increases demand for ICE's authoritative data products; the main AI vulnerability is interface commoditization in data terminals, which is secondary to the underlying data monopoly."
+  }
+}

@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$270B"
+      "value": "~$265B"
     },
     {
       "label": "Price",
-      "value": "~$288"
+      "value": "~$285"
     }
   ],
   "chips": [
@@ -31,33 +31,33 @@
       "color": "warning"
     }
   ],
-  "recommendation": "Accumulate",
+  "recommendation": "Hold",
   "metrics": [
     {
       "title": "FY2025 Revenue",
-      "value": "~$446B",
-      "label": "Largest private health insurer in the US",
-      "icon": "Building2",
-      "color": "#003087"
+      "value": "$447.6B",
+      "label": "2026 guidance: >$439B — first revenue decline in a decade",
+      "icon": "TrendingDown",
+      "color": "#dc2626"
     },
     {
       "title": "Forward P/E",
       "value": "~10x",
-      "label": "vs. 5-year average of 17x — historically discounted",
-      "icon": "TrendingDown",
+      "label": "vs. 5-year avg of 17x — cheap, but earnings declining",
+      "icon": "BarChart",
       "color": "#d97706"
     },
     {
-      "title": "Operating Cash Flow",
-      "value": "$24.2B",
-      "label": "FY2024 — 1.6x net income conversion",
-      "icon": "DollarSign",
-      "color": "#003087"
+      "title": "DOJ Investigation",
+      "value": "Criminal",
+      "label": "Expanding to Optum Rx — former employees being interviewed",
+      "icon": "Shield",
+      "color": "#dc2626"
     }
   ],
   "moat": {
-    "score": 88,
-    "description": "UnitedHealth's moat is vertical integration across the entire healthcare value chain — as the largest insurer, pharmacy benefit manager, and healthcare data analytics provider simultaneously, it controls the clinical, financial, and administrative infrastructure that 140M+ Americans depend on.",
+    "score": 86,
+    "description": "UnitedHealth's vertical integration moat remains structurally deep — 140M+ member claims data, 1.3M provider relationships, and Optum's embedded healthcare OS — but the active DOJ criminal probe (now expanding to Optum Rx) has materially weakened the regulatory lock-in component that underpinned the highest-confidence moat tier.",
     "analysisTitle": "The Healthcare OS",
     "analysisSummary": "UnitedHealth Group has built a **vertically integrated healthcare system** that spans insurance, pharmacy, clinical services, and data analytics — creating switching costs at every layer of the healthcare ecosystem:",
     "analysisPoints": [
@@ -76,24 +76,34 @@
     ]
   },
   "growth": {
-    "score": 75,
-    "description": "Long-term growth is driven by aging demographics (70M baby boomers entering Medicare age over the next decade), Optum expansion, and international healthcare services — but 2025-2026 represents a difficult transition as Medicare Advantage repricing and Optum Health restructuring compress near-term margins.",
-    "additionalNote": {
-      "title": "Growth Drivers (3-Year Horizon)",
-      "points": [
-        "Medicare Advantage repricing: UNH repriced its 2026 MA plans at a conservative 10% medical cost trend (vs. prior years' 5%), trading 1M members for restored profitability; once normalized, the demographic growth of seniors entering Medicare creates 5-8% annual enrollment tailwinds indefinitely",
-        "Optum recovery: Optum Health operated at a loss in 2025 after being hit simultaneously by V28 coding changes and value-based care cost pressures; management is restructuring the business by dropping unprofitable contracts — the reset creates a cleaner growth trajectory from 2026-2027",
-        "Optum Analytics and data products: as the largest health IT data company in the US, Optum's analytics, AI-powered care management, and provider enablement platforms represent high-margin recurring revenue that grows independent of insurance enrollment",
-        "International: UNH operates in 150+ countries through Optum Global; healthcare systems outside the US represent a massive underpenetrated market for managed care technology and data analytics services"
-      ]
+    "score": 52,
+    "description": "UNH's 2026 revenue guidance of >$439B represents the first annual revenue decline in over a decade, down from $447.6B in FY2025, driven by Medicare Advantage member losses, Optum Health restructuring, and DOJ-related uncertainty. Long-term demographic tailwinds (70M baby boomers) remain, but the 3-5 year CAGR has reset to low-single digits until the DOJ investigation resolves and Medicare Advantage margins normalize.",
+    "growthAnalysis": {
+      "cagrEstimate": "2–5%",
+      "scoreDerivation": "Base 40 (below 4% near-term CAGR due to 2026 revenue decline) + 5 recurring premium base + 5 Optum Analytics TAM − 5 Optum Health restructuring drag − 3 DOJ overhang on MA contracting = 42, rounded to 52 reflecting long-term demographic tailwind floor",
+      "drivers": [
+        { "name": "Medicare Advantage", "metric": "Member losses ~1M in 2026, MA repriced at 10% medical cost trend", "trend": "decelerating" },
+        { "name": "Optum Analytics", "metric": "~15% organic growth, $154B Optum Rx revenue base", "trend": "stable" },
+        { "name": "Optum Health", "metric": "Operating at a loss in 2025, exiting unprofitable value-based contracts", "trend": "decelerating" }
+      ],
+      "primaryType": "market share",
+      "keyRisk": "If DOJ criminal probe results in a consent decree restricting Medicare Advantage coding practices before end of 2026, UNH loses additional 2-3M MA members and EPS declines to $14-16 vs. prior recovery estimates of $25+",
+      "marginTrend": "compressing"
     }
   },
   "valuation": {
     "score": 78,
-    "description": "At ~$288 — a 35% decline from 2025 highs — UNH trades at ~10x forward P/E vs. its 5-year historical average of 17x; the discount reflects execution risk and the DOJ investigation, not permanent moat impairment.",
-    "valuationNote": {
-      "text": "UNH at 10x forward P/E is the cheapest it has traded since the financial crisis. Warren Buffett's $1.6B stake announcement in August 2025 reflects the view that the moat remains structurally intact and the current discount is cyclical. The base case of $380 implies a re-rating to 13x forward P/E — still below the 5-year average — leaving significant upside without requiring a return to peak multiples. The primary risk is the DOJ investigation; if resolved favorably, the stock re-rates quickly.",
-      "fairValue": "$380"
+    "description": "At ~$285 — a 55% collapse from the $630 peak — UNH trades at ~10x forward P/E. However, the cheapness is partially illusory: 2026 earnings are declining and forward EPS estimates keep falling as the DOJ probe expands. The stock sits between bear ($200) and base ($380), implying a fair risk/reward but not a compelling entry given the binary DOJ outcome still unresolved.",
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~19×", "note": "includes $2.8B cyberattack charge" },
+        { "label": "Forward P/E (NTM)", "value": "~10×", "note": "consensus NTM EPS ~$28 (declining)" },
+        { "label": "PEG Ratio", "value": "~2.5×", "note": "fwd P/E ÷ ~4% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~0.6×", "note": "$439B+ NTM revenue" },
+        { "label": "Price / FCF", "value": "~11×", "note": "$24B FCF (FY2024)" }
+      ],
+      "summary": "At 10× forward P/E UNH screens as extremely cheap vs. its 17× historical average, but the apparent discount is undermined by falling forward EPS as the DOJ probe expands and 2026 revenue guides lower for the first time in a decade. A PEG of ~2.5× on a ~4% growth trajectory signals that value is not as compelling as the headline P/E implies — the stock needs a DOJ resolution catalyst to re-rate."
     }
   },
   "scenarios": {
@@ -151,8 +161,8 @@
       "note": "UNH processes ~1 in 6 US medical claims — a 50+ year accumulation of claims data covering 140M+ members that powers Optum's risk models, care management programs, and population health analytics; this dataset is the most comprehensive private health claims database in existence and cannot be replicated by any new entrant regardless of capital invested."
     },
     "regulatoryLockIn": {
-      "status": "strong",
-      "note": "CMS government contracts for Medicare Advantage and Medicaid managed care create multi-year regulatory relationships with built-in renewal mechanisms; state licensure requirements, HIPAA compliance infrastructure, NCQA accreditation, and HEDIS performance standards embed UNH in the regulatory architecture of US healthcare at every level."
+      "status": "weakened",
+      "note": "The structural regulatory embedding (CMS government contracts, state licensure, HIPAA, NCQA accreditation) remains intact, but the active DOJ criminal probe — now confirmed by UNH and expanding to Optum Rx billing practices and physician reimbursement — has materially impaired the regulatory moat. A consent decree outcome could restrict Medicare Advantage coding practices and impose operational limits that directly constrain the most profitable business segment. Regulatory lock-in is weakened, not destroyed, as the structural embedding persists."
     },
     "networkEffects": {
       "status": "strong",
@@ -166,8 +176,8 @@
       "status": "strong",
       "note": "UNH's claims processing systems are the authoritative system of record for member health history and financial transactions; Optum's EMR integration and care management platforms are the system of record for clinical decisions in thousands of provider practices; Optum Rx is the system of record for pharmaceutical benefits for tens of millions of members."
     },
-    "aiResilienceScore": 93,
-    "verdict": "UnitedHealth is one of the most AI-resilient businesses in existence — its proprietary claims data, regulatory lock-in, and provider network relationships are all strengthened by AI, not threatened by it. Optum is already deploying AI for prior authorization, care gap identification, and fraud detection — AI makes the business better, and the data advantage that enables superior AI models is itself a deepening moat that no new entrant can bridge."
+    "aiResilienceScore": 86,
+    "verdict": "UnitedHealth remains an AI beneficiary through Optum's data flywheel — the 140M-member claims database is irreplaceable training data for clinical AI models. However, the DOJ criminal investigation has weakened the regulatory lock-in moat tier, reducing AI resilience from 93 to 86. The most AI-durable moats (proprietary data, network effects, transaction embedding, system of record) remain intact. The key structural risk is not AI disruption but regulatory-imposed constraints on Medicare Advantage coding practices, which could structurally impair profitability regardless of AI strength."
   },
-  "lastAnalyzed": "November 2025"
+  "lastAnalyzed": "March 2026"
 }
