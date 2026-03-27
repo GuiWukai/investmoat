@@ -78,11 +78,20 @@ export async function GET(
   }
 
   try {
-    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?interval=1d&range=1mo`;
-    const res = await fetch(url, {
-      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; investmoat/1.0)' },
-      next: { revalidate: 3600 }, // cache for 1 hour
-    });
+    // Round to start-of-day UTC so the historical URL is stable for 24 h (cache-friendly)
+    const todayMidnightSec = Math.floor(Date.now() / 86400000) * 86400;
+    const period1 = todayMidnightSec - 33 * 86400; // ~33 days ago for buffer
+
+    const [res, histRes] = await Promise.all([
+      fetch(
+        `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?interval=1d&range=1d`,
+        { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; investmoat/1.0)' }, next: { revalidate: 3600 } },
+      ),
+      fetch(
+        `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?interval=1d&period1=${period1}&period2=${todayMidnightSec + 86400}`,
+        { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; investmoat/1.0)' }, next: { revalidate: 86400 } },
+      ),
+    ]);
 
     if (!res.ok) {
       return NextResponse.json({ error: 'Upstream fetch failed' }, { status: 502 });
@@ -105,25 +114,20 @@ export async function GET(
       ? new Date(meta.regularMarketTime * 1000).toISOString()
       : null;
 
-    // Monthly change: compare current price to the first closing price in the 1mo window
-    const result = json?.chart?.result?.[0];
-    const rawCloses: (number | null)[] =
-      result?.indicators?.quote?.[0]?.close ??
-      result?.indicators?.adjclose?.[0]?.adjclose ??
-      [];
-    const validCloses = rawCloses.filter((c): c is number => c != null && c > 0);
-    const firstClose: number | null = validCloses[0] ?? null;
-    if (!firstClose) {
-      console.error(`[stock-price] no closes for ${symbol}`, {
-        hasIndicators: !!result?.indicators,
-        quoteCols: Object.keys(result?.indicators?.quote?.[0] ?? {}),
-        rawLength: rawCloses.length,
-      });
+    // Monthly change: first valid close in the historical window vs current price
+    let monthChangePercent: number | null = null;
+    if (histRes.ok) {
+      const histJson = await histRes.json();
+      const histResult = histJson?.chart?.result?.[0];
+      const closes: (number | null)[] =
+        histResult?.indicators?.quote?.[0]?.close ??
+        histResult?.indicators?.adjclose?.[0]?.adjclose ??
+        [];
+      const firstClose = closes.find((c): c is number => c != null && c > 0) ?? null;
+      if (price != null && firstClose != null) {
+        monthChangePercent = ((price - firstClose) / firstClose) * 100;
+      }
     }
-    const monthChangePercent: number | null =
-      price != null && firstClose != null && firstClose > 0
-        ? ((price - firstClose) / firstClose) * 100
-        : null;
 
     return NextResponse.json(
       { symbol, price, previousClose, change, changePercent, monthChangePercent, currency, timestamp },
