@@ -13,6 +13,7 @@ const navLinks = [
 
 type StockResult = { name: string; ticker: string; href: string };
 
+/** Sidebar search (desktop) — inline input with dropdown */
 function NavSearch({ onNavigate }: { onNavigate?: () => void }) {
   const [query, setQuery] = useState('');
   const [open, setOpen] = useState(false);
@@ -31,7 +32,6 @@ function NavSearch({ onNavigate }: { onNavigate?: () => void }) {
         .slice(0, 6)
     : [];
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     function handleClick(e: MouseEvent) {
       if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
@@ -107,13 +107,96 @@ function NavSearch({ onNavigate }: { onNavigate?: () => void }) {
   );
 }
 
+/** Mobile full-screen search popup */
+function MobileSearchPopup({ onClose }: { onClose: () => void }) {
+  const [query, setQuery] = useState('');
+  const router = useRouter();
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
+
+  const trimmed = query.trim().toLowerCase();
+  const results: StockResult[] = trimmed
+    ? allCoverageData
+        .filter(
+          (s) =>
+            s.name.toLowerCase().includes(trimmed) ||
+            s.ticker.toLowerCase().includes(trimmed)
+        )
+        .slice(0, 8)
+    : [];
+
+  function handleSelect(href: string) {
+    onClose();
+    router.push(href);
+  }
+
+  function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+    if (e.key === 'Escape') onClose();
+    if (e.key === 'Enter' && results.length > 0) handleSelect(results[0].href);
+  }
+
+  return (
+    <div
+      className="lg:hidden fixed inset-0 z-[200] flex flex-col"
+      style={{ background: 'rgba(5, 7, 10, 0.97)' }}
+    >
+      {/* Search input row */}
+      <div className="flex items-center gap-3 px-4 h-16 border-b border-white/5">
+        <Search className="w-4 h-4 text-white/40 flex-shrink-0" />
+        <input
+          ref={inputRef}
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          onKeyDown={handleKeyDown}
+          placeholder="Search stocks…"
+          className="flex-1 bg-transparent text-white placeholder:text-white/30 text-base focus:outline-none"
+        />
+        <button
+          onClick={onClose}
+          className="p-2 rounded-lg hover:bg-white/5 transition-colors text-white/50 hover:text-white"
+          aria-label="Close search"
+        >
+          <X className="w-5 h-5" />
+        </button>
+      </div>
+
+      {/* Results */}
+      <div className="flex-1 overflow-y-auto">
+        {trimmed ? (
+          results.length > 0 ? (
+            results.map((s) => (
+              <button
+                key={s.href}
+                onClick={() => handleSelect(s.href)}
+                className="w-full flex items-center justify-between px-5 py-4 border-b border-white/5 text-left hover:bg-white/5 transition-colors group"
+              >
+                <span className="text-base text-white/80 group-hover:text-white transition-colors">{s.name}</span>
+                <span className="text-sm font-bold text-white/30 group-hover:text-white/50 transition-colors ml-3">{s.ticker}</span>
+              </button>
+            ))
+          ) : (
+            <div className="px-5 py-6 text-sm text-white/30">No stocks found</div>
+          )
+        ) : (
+          <div className="px-5 py-6 text-sm text-white/30">Type to search stocks by name or ticker…</div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 export function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isSearchOpen, setIsSearchOpen] = React.useState(false);
 
   return (
     <>
       {/* Mobile Top Bar */}
-      <div className="lg:hidden sticky top-0 z-50 flex items-center justify-start px-4 h-16 bg-background/70 backdrop-blur-lg border-b border-white/5">
+      <div className="lg:hidden sticky top-0 z-50 flex items-center px-4 h-16 bg-background/70 backdrop-blur-lg border-b border-white/5">
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
@@ -131,7 +214,20 @@ export function NavBar() {
           <span className="primary-gradient w-8 h-8 rounded-lg flex items-center justify-center font-bold text-white">M</span>
           <span className="font-bold text-white">InvestMoat</span>
         </Link>
+        {/* Search icon — right side of mobile top bar */}
+        <button
+          onClick={() => { setIsMenuOpen(false); setIsSearchOpen(true); }}
+          aria-label="Open search"
+          className="ml-auto p-2 rounded-lg hover:bg-white/5 transition-colors text-white/60 hover:text-white"
+        >
+          <Search className="w-5 h-5" />
+        </button>
       </div>
+
+      {/* Mobile search popup */}
+      {isSearchOpen && (
+        <MobileSearchPopup onClose={() => setIsSearchOpen(false)} />
+      )}
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
@@ -147,9 +243,6 @@ export function NavBar() {
                 {item.name}
               </Link>
             ))}
-            <div className="mt-3">
-              <NavSearch onNavigate={() => setIsMenuOpen(false)} />
-            </div>
           </div>
         </div>
       )}
