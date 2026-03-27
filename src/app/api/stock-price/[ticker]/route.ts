@@ -106,8 +106,20 @@ export async function GET(
       : null;
 
     // Monthly change: compare current price to the first closing price in the 1mo window
-    const closes: number[] | undefined = json?.chart?.result?.[0]?.indicators?.quote?.[0]?.close;
-    const firstClose: number | null = closes?.find((c): c is number => c != null) ?? null;
+    const result = json?.chart?.result?.[0];
+    const rawCloses: (number | null)[] =
+      result?.indicators?.quote?.[0]?.close ??
+      result?.indicators?.adjclose?.[0]?.adjclose ??
+      [];
+    const validCloses = rawCloses.filter((c): c is number => c != null && c > 0);
+    const firstClose: number | null = validCloses[0] ?? null;
+    if (!firstClose) {
+      console.error(`[stock-price] no closes for ${symbol}`, {
+        hasIndicators: !!result?.indicators,
+        quoteCols: Object.keys(result?.indicators?.quote?.[0] ?? {}),
+        rawLength: rawCloses.length,
+      });
+    }
     const monthChangePercent: number | null =
       price != null && firstClose != null && firstClose > 0
         ? ((price - firstClose) / firstClose) * 100
