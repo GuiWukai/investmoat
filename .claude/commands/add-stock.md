@@ -219,9 +219,37 @@ Create `src/data/stocks/{slug}.json` using the schema below. Replace all placeho
     "systemOfRecord": { "status": "intact", "note": "{Explanation}" },
     "aiResilienceScore": 0,
     "verdict": "{2-sentence AI moat verdict}"
+  },
+  "projection2030": {
+    "verdict": "{Thrive | Grow | Survive | Struggle}",
+    "summary": "{2–3 sentences on where this company will be in 2030 — name the revenue scale, market position, or structural change}",
+    "priceTarget": "$0",
+    "catalysts": [
+      "{Named catalyst 1 — specific product/market/dynamic, not a category}",
+      "{Named catalyst 2}",
+      "{Named catalyst 3}"
+    ],
+    "risks": [
+      "{Falsifiable risk 1 with a plausible path to materialisation}",
+      "{Falsifiable risk 2}",
+      "{Falsifiable risk 3, if applicable}"
+    ],
+    "confidence": "{High | Medium | Low}"
   }
 }
 ```
+
+**Projection2030 verdict guide:**
+- `"Thrive"` — market dominance grows; AI tailwind, expanding moat, 15%+ CAGR sustained to 2030
+- `"Grow"` — solid compounder; moat intact, 8–15% CAGR, no structural threats materialising
+- `"Survive"` — resilient but facing headwinds; growth moderates or margin pressure limits upside
+- `"Struggle"` — structural risk; moat weakening, AI disruption meaningful, or secular decline
+
+**`priceTarget`**: Anchor to a realistic earnings multiple (e.g., 25× 2030 EPS). For crypto/gold/commodities use a price range midpoint.
+
+**`confidence`**: `"High"` only for moat score ≥ 80 with a clear secular tailwind. `"Medium"` if 1–2 swing factors could change the verdict. `"Low"` for pre-profit companies, commodities, or regulatory wildcards.
+
+---
 
 **Chip color guide:**
 - `"primary"` (blue) — sector/industry label

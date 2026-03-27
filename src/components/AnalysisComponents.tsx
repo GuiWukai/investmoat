@@ -1,9 +1,10 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import { TrendingUp, PlusCircle, Minus, Zap, ShieldCheck, ShieldX, RefreshCw } from "lucide-react";
+import { TrendingUp, PlusCircle, Minus, Zap, ShieldCheck, ShieldX, RefreshCw, Rocket, AlertTriangle, CheckCircle2 } from "lucide-react";
 import { Card, CardBody, CardHeader, Chip, Progress, CircularProgress, Divider, Spinner } from "@heroui/react";
 import type { TenMoatsAssessment, MoatStatus } from "@/app/tenMoatsData";
+import type { Projection2030, ProjectionVerdict } from "@/types/stockAnalysis";
 
 /** Animates a number from 0 to `target` over `duration` ms using easeOut. */
 function useCountUp(target: number, duration = 900): number {
@@ -405,6 +406,95 @@ export function TenMoatsCard({ data }: { data: TenMoatsAssessment }) {
         </Card>
       </div>
     </div>
+  );
+}
+
+const projectionConfig: Record<ProjectionVerdict, { hex: string; dimHex: string; borderHex: string; label: string }> = {
+  Thrive:  { hex: '#17c964', dimHex: 'rgba(23,201,100,0.08)',  borderHex: 'rgba(23,201,100,0.30)',  label: 'Dominant Leader'   },
+  Grow:    { hex: '#006fee', dimHex: 'rgba(0,111,238,0.08)',   borderHex: 'rgba(0,111,238,0.30)',   label: 'Steady Compounder' },
+  Survive: { hex: '#f5a524', dimHex: 'rgba(245,165,36,0.08)',  borderHex: 'rgba(245,165,36,0.30)',  label: 'Hold Position'     },
+  Struggle:{ hex: '#f31260', dimHex: 'rgba(243,18,96,0.08)',   borderHex: 'rgba(243,18,96,0.30)',   label: 'At Risk'           },
+};
+
+const confidenceConfig: Record<'High' | 'Medium' | 'Low', { color: 'success' | 'warning' | 'danger'; label: string }> = {
+  High:   { color: 'success', label: 'High Confidence' },
+  Medium: { color: 'warning', label: 'Medium Confidence' },
+  Low:    { color: 'danger',  label: 'Low Confidence' },
+};
+
+export function Projection2030Card({ data }: { data: Projection2030 }) {
+  const cfg = projectionConfig[data.verdict];
+  const confCfg = confidenceConfig[data.confidence];
+
+  return (
+    <Card
+      className="w-full bg-white/5 border-none backdrop-blur-md overflow-hidden animate-fade-in-scale stagger-fill-both"
+      style={{ borderTop: `3px solid ${cfg.hex}` }}
+    >
+      <CardBody className="p-0">
+        {/* Header bar */}
+        <div className="flex items-center justify-between px-4 md:px-6 py-4" style={{ background: cfg.dimHex }}>
+          <div className="flex items-center gap-3">
+            <div className="p-2 rounded-lg" style={{ background: cfg.dimHex, border: `1px solid ${cfg.borderHex}` }}>
+              <Rocket size={16} style={{ color: cfg.hex }} />
+            </div>
+            <div>
+              <p className="text-[10px] font-black uppercase tracking-widest text-white/40">2030 Outlook</p>
+              <p className="text-lg font-black leading-none" style={{ color: cfg.hex }}>{data.verdict}</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <Chip size="sm" color={confCfg.color} variant="flat" classNames={{ content: "font-bold text-[11px]" }}>
+              {confCfg.label}
+            </Chip>
+            <div className="text-right">
+              <p className="text-[10px] text-white/40 font-semibold uppercase tracking-wider">Target</p>
+              <p className="text-xl font-black text-white">{data.priceTarget}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Summary */}
+        <div className="px-4 md:px-6 py-4 border-b border-white/5">
+          <p className="text-sm text-white/70 leading-relaxed">{data.summary}</p>
+        </div>
+
+        {/* Catalysts + Risks grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 divide-y sm:divide-y-0 sm:divide-x divide-white/5">
+          {/* Catalysts */}
+          <div className="px-4 md:px-6 py-4">
+            <div className="flex items-center gap-2 mb-3">
+              <CheckCircle2 size={13} color="#17c964" />
+              <p className="text-[10px] font-black uppercase tracking-widest text-white/40">Catalysts to 2030</p>
+            </div>
+            <ul className="space-y-2">
+              {data.catalysts.map((c, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-success mt-1.5 shrink-0" />
+                  <span className="text-xs text-white/60 leading-relaxed">{c}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Risks */}
+          <div className="px-4 md:px-6 py-4">
+            <div className="flex items-center gap-2 mb-3">
+              <AlertTriangle size={13} color="#f5a524" />
+              <p className="text-[10px] font-black uppercase tracking-widest text-white/40">Risks to Watch</p>
+            </div>
+            <ul className="space-y-2">
+              {data.risks.map((r, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-warning mt-1.5 shrink-0" />
+                  <span className="text-xs text-white/60 leading-relaxed">{r}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </CardBody>
+    </Card>
   );
 }
 

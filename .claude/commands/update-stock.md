@@ -114,7 +114,25 @@ Review each moat status if any of the following have occurred since the last upd
 
 Update `aiResilienceScore` and `verdict` if 2+ moat statuses have changed.
 
-### 8. Recommendation
+### 8. 2030 Projection
+
+**Add `projection2030` if it is missing** from the existing JSON — all analyses should include it.
+
+**Review and update `projection2030` if:**
+- The moat score has shifted by ±5 or more since the projection was written
+- A material structural change has altered the 2030 growth trajectory (e.g., lost a key platform, launched a dominant new product)
+- The `priceTarget` anchor (EPS multiple × 2030 EPS estimate) has changed by >20% due to revised earnings expectations
+- More than 12 months have passed since the projection was last reviewed
+
+**Update rules:**
+- `verdict`: Move one level at most per update unless a catastrophic/transformative event occurred
+- `priceTarget`: Re-anchor to updated 2030 EPS estimate at the same or revised multiple
+- `catalysts`: Replace any that have fully played out (or fully failed to materialise) with forward-looking ones
+- `risks`: Replace resolved risks with new, specific risks that have emerged
+- `confidence`: May shift if key uncertainties have resolved or new ones have appeared
+- Do **not** rewrite the full projection unless the thesis has fundamentally changed
+
+### 9. Recommendation
 
 Recalculate the composite score after all updates:
 
@@ -131,11 +149,11 @@ Update `recommendation` based on:
 | 60–67 | Speculative Buy |
 | Below 60 | Avoid |
 
-### 9. Analysis Date
+### 10. Analysis Date
 
 **Always** update `lastAnalyzed` to the current month and year (e.g., `"March 2026"`) at the end of every update run, regardless of whether any other fields changed. This field records when a human-reviewed analysis was last performed.
 
-### 10. stockData.ts Entry
+### 11. stockData.ts Entry
 
 Update the entry in `src/app/stockData.ts` if:
 - Any of the three scores have changed

@@ -320,7 +320,54 @@ After setting scenarios, assess valuation multiples:
 
 ---
 
-## Step 7 — Composite Score and Recommendation
+## Step 7 — 2030 Projection
+
+Produce a forward-looking `projection2030` block that answers: *Where will this company be in 2030, and will it thrive?*
+
+### Verdict (pick one)
+| Verdict | Criteria |
+|---|---|
+| `Thrive` | Market dominance grows — AI tailwind, expanding moat, secular TAM, 15%+ CAGR sustained through 2030 |
+| `Grow` | Solid compounder — moat intact, 8–15% CAGR, no structural threats materialising |
+| `Survive` | Resilient but facing headwinds — moat holding, but growth moderates or margin pressure limits upside |
+| `Struggle` | Structural risk — moat weakening, AI disruption meaningful, or secular decline in core business |
+
+### Required fields
+
+**`summary`** (2–3 sentences): Where specifically will this company be in 2030? Name the revenue scale, dominant market position, or structural change. Avoid vague corporate language.
+
+**`priceTarget`**: A single 2030 price estimate (e.g. `"$800"`). Anchor it to a realistic earnings multiple (e.g., 25× 2030 EPS) and explain the derivation in your report. For crypto/gold/commodities, use a price range midpoint.
+
+**`catalysts`** (exactly 3): Specific, named tailwinds that compound through 2030. Each should name a product, market, or regulatory dynamic — not a category. Wrong: *"AI growth"*. Right: *"Azure AI inference revenue reaching $120B+ by 2029 as global enterprise AI capex exceeds $500B annually"*.
+
+**`risks`** (2–3): Specific, named threats with plausible paths to materialisation by 2030. Must be falsifiable.
+
+**`confidence`**: `"High"` if the moat is strong, the business model is durable, and the path to 2030 has few critical forks. `"Medium"` if 1–2 swing factors could meaningfully change the verdict. `"Low"` if the outcome is highly path-dependent (e.g., pre-profit companies, commodities, regulatory wildcards).
+
+### JSON output
+
+```json
+"projection2030": {
+  "verdict": "Thrive",
+  "summary": "By 2030, Microsoft is positioned to be the world's enterprise AI operating system — Azure AI infrastructure underpinning 60%+ of global enterprise workloads, Copilot embedded across 500M+ paid seats, and proprietary AI models compounding the data flywheel independently of OpenAI.",
+  "priceTarget": "$750",
+  "catalysts": [
+    "Azure captures 45%+ cloud market share as AI inference workloads scale to $500B+ annually — MSFT earns compute revenue regardless of which AI model wins",
+    "Copilot monetisation reaches 200M+ paid commercial seats at $30–50/seat/month ARPU, contributing $70B+ incremental annual revenue by 2029",
+    "Microsoft's proprietary reasoning models reduce OpenAI dependency while maintaining AI-first pricing premium of 35–40× forward earnings"
+  ],
+  "risks": [
+    "Antitrust structural remedies force cloud licensing unbundling, breaking the Azure + M365 + Copilot bundle that drives ARPU expansion",
+    "Open-source AI commoditisation erodes Azure AI premium margins below 65% gross margin by 2027, compressing the P/E multiple to 20–22×",
+    "OpenAI migrates exclusively to Google Cloud/Oracle, removing the AI ecosystem premium and forcing a $100B+ capex write-down"
+  ],
+  "confidence": "High"
+}
+```
+
+---
+
+## Step 8 — Composite Score and Recommendation
 
 **Composite score = (moatScore + growthScore + valuationScore) / 3**
 
@@ -424,6 +471,23 @@ Produce a structured report with these sections:
 
 ### Conclusion
 [2–3 sentence summary of the investment case and what specific events would change the thesis up or down]
+
+### 2030 Projection
+**Verdict:** [Thrive | Grow | Survive | Struggle] — [one-word sub-label]
+**2030 Price Target:** $X
+**Confidence:** High / Medium / Low
+
+[2–3 sentence narrative on where the company is positioned by 2030]
+
+**Catalysts:**
+1. [Named catalyst 1 — specific product/market/dynamic]
+2. [Named catalyst 2]
+3. [Named catalyst 3]
+
+**Risks to the 2030 thesis:**
+1. [Falsifiable risk 1]
+2. [Falsifiable risk 2]
+3. [Falsifiable risk 3, if applicable]
 ```
 
 ---
@@ -492,3 +556,4 @@ When generating the stock JSON, include `peAnalysis` inside the `valuation` obje
 - **Score alignment**: moat.score and aiResilienceScore must be within 5 points unless you document the structural reason
 - **Peer calibration**: Always state which peer-group stocks you compared against before finalising the moat score
 - **Analysis date**: Always set `lastAnalyzed` to the current month and year (e.g., `"March 2026"`) in the JSON output. Never omit this field.
+- **2030 projection**: Always include `projection2030` in the JSON output. Anchor `priceTarget` to a specific earnings multiple. Use `"High"` confidence only for businesses with a moat score ≥ 80 and a clear secular tailwind.
