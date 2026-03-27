@@ -78,20 +78,11 @@ export async function GET(
   }
 
   try {
-    // Round to start-of-day UTC so the historical URL is stable for 24 h (cache-friendly)
-    const todayMidnightSec = Math.floor(Date.now() / 86400000) * 86400;
-    const period1 = todayMidnightSec - 33 * 86400; // ~33 days ago for buffer
-
-    const [res, histRes] = await Promise.all([
-      fetch(
-        `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?interval=1d&range=1d`,
-        { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; investmoat/1.0)' }, next: { revalidate: 3600 } },
-      ),
-      fetch(
-        `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?interval=1d&period1=${period1}&period2=${todayMidnightSec + 86400}`,
-        { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; investmoat/1.0)' }, next: { revalidate: 86400 } },
-      ),
-    ]);
+    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?interval=1d&range=1d`;
+    const res = await fetch(url, {
+      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; investmoat/1.0)' },
+      next: { revalidate: 3600 },
+    });
 
     if (!res.ok) {
       return NextResponse.json({ error: 'Upstream fetch failed' }, { status: 502 });
@@ -114,23 +105,8 @@ export async function GET(
       ? new Date(meta.regularMarketTime * 1000).toISOString()
       : null;
 
-    // Monthly change: first valid close in the historical window vs current price
-    let monthChangePercent: number | null = null;
-    if (histRes.ok) {
-      const histJson = await histRes.json();
-      const histResult = histJson?.chart?.result?.[0];
-      const closes: (number | null)[] =
-        histResult?.indicators?.quote?.[0]?.close ??
-        histResult?.indicators?.adjclose?.[0]?.adjclose ??
-        [];
-      const firstClose = closes.find((c): c is number => c != null && c > 0) ?? null;
-      if (price != null && firstClose != null) {
-        monthChangePercent = ((price - firstClose) / firstClose) * 100;
-      }
-    }
-
     return NextResponse.json(
-      { symbol, price, previousClose, change, changePercent, monthChangePercent, currency, timestamp },
+      { symbol, price, previousClose, change, changePercent, currency, timestamp },
       { headers: { 'Cache-Control': 'public, max-age=3600, s-maxage=3600, stale-while-revalidate=600' } },
     );
   } catch {

@@ -136,7 +136,6 @@ export default function PortfolioPage() {
   // Fetch all stock prices in parallel to enable dynamic portfolio selection
   const [allPrices, setAllPrices] = useState<Record<string, number | null>>({});
   const [allChangePercents, setAllChangePercents] = useState<Record<string, number | null>>({});
-  const [allMonthChangePercents, setAllMonthChangePercents] = useState<Record<string, number | null>>({});
   const [allPricesLoaded, setAllPricesLoaded] = useState(false);
 
   useEffect(() => {
@@ -145,14 +144,13 @@ export default function PortfolioPage() {
       allCoverageData.map(s =>
         fetch(`/api/stock-price/${s.slug}`)
           .then(r => r.ok ? r.json() : null)
-          .then(d => [s.ticker, d?.price ?? null, d?.changePercent ?? null, d?.monthChangePercent ?? null] as const)
-          .catch(() => [s.ticker, null, null, null] as const)
+          .then(d => [s.ticker, d?.price ?? null, d?.changePercent ?? null] as const)
+          .catch(() => [s.ticker, null, null] as const)
       )
     ).then(entries => {
       if (cancelled) return;
       setAllPrices(Object.fromEntries(entries.map(([t, p]) => [t, p])));
       setAllChangePercents(Object.fromEntries(entries.map(([t, , c]) => [t, c])));
-      setAllMonthChangePercents(Object.fromEntries(entries.map(([t, , , m]) => [t, m])));
       setAllPricesLoaded(true);
     });
     return () => { cancelled = true; };
@@ -191,7 +189,7 @@ export default function PortfolioPage() {
   portfolio.forEach(p => { liveScores[p.ticker] = Math.round(p.composite); });
 
   const [hoveredPie, setHoveredPie] = useState<string | null>(null);
-  const [scoreColumn, setScoreColumn] = useState<'score' | 'change' | 'month'>('score');
+  const [scoreColumn, setScoreColumn] = useState<'score' | 'change'>('score');
   const scoresLoading = !allPricesLoaded;
 
   // Compute weights with amplified spread — subtract a baseline so score
@@ -440,7 +438,7 @@ export default function PortfolioPage() {
           <h2 className="text-2xl font-bold">Allocation Breakdown</h2>
           <div className="h-px flex-1 bg-white/10" />
           <div className="flex items-center gap-1 bg-white/5 rounded-lg p-1 shrink-0">
-            {([['score', 'Score'], ['change', '1D %'], ['month', '30D %']] as const).map(([val, label]) => (
+            {([['score', 'Score'], ['change', '1D %']] as const).map(([val, label]) => (
               <button
                 key={val}
                 onClick={() => setScoreColumn(val)}
@@ -476,38 +474,6 @@ export default function PortfolioPage() {
                 >
                   {stock.category}
                 </Chip>
-              </div>
-
-              <div className="hidden md:flex shrink-0 w-28 flex-col items-end gap-0.5">
-                {!allPricesLoaded
-                  ? <Spinner size="sm" color="default" />
-                  : (() => {
-                      const cp = allChangePercents[stock.ticker];
-                      const mp = allMonthChangePercents[stock.ticker];
-                      const fmt = (val: number | null | undefined, label: string) => {
-                        if (val == null) return (
-                          <div className="flex items-center gap-1">
-                            <span className="text-[9px] text-white/20 uppercase">{label}</span>
-                            <span className="text-xs text-white/30">—</span>
-                          </div>
-                        );
-                        const pos = val >= 0;
-                        return (
-                          <div className={`flex items-center gap-1 ${pos ? "text-success" : "text-danger"}`}>
-                            <span className="text-[9px] text-white/30 uppercase">{label}</span>
-                            {pos ? <TrendingUp size={10} className="shrink-0" /> : <TrendingDown size={10} className="shrink-0" />}
-                            <span className="text-xs font-bold tabular-nums">{pos ? "+" : ""}{val.toFixed(2)}%</span>
-                          </div>
-                        );
-                      };
-                      return (
-                        <>
-                          {fmt(cp, "1d")}
-                          {fmt(mp, "1m")}
-                        </>
-                      );
-                    })()
-                }
               </div>
 
               <div className="flex-1 flex items-center gap-3">
@@ -576,17 +542,17 @@ export default function PortfolioPage() {
                 </DynamicScore>
               ) : (
                 <div className="text-right mr-2 shrink-0 w-12">
-                  <div className="text-[10px] text-white/30 uppercase font-bold">{scoreColumn === 'month' ? '30D' : '1D'}</div>
+                  <div className="text-[10px] text-white/30 uppercase font-bold">1D</div>
                   {!allPricesLoaded
                     ? <Spinner size="sm" color="default" className="mt-0.5" />
                     : (() => {
-                        const val = scoreColumn === 'month' ? allMonthChangePercents[stock.ticker] : allChangePercents[stock.ticker];
-                        if (val == null) return <span className="text-xs text-white/30">—</span>;
-                        const pos = val >= 0;
+                        const cp = allChangePercents[stock.ticker];
+                        if (cp == null) return <span className="text-xs text-white/30">—</span>;
+                        const pos = cp >= 0;
                         return (
                           <div className={`flex items-center justify-end gap-0.5 ${pos ? "text-success" : "text-danger"}`}>
                             {pos ? <TrendingUp size={10} /> : <TrendingDown size={10} />}
-                            <span className="text-xs font-bold tabular-nums">{pos ? "+" : ""}{val.toFixed(2)}%</span>
+                            <span className="text-xs font-bold tabular-nums">{pos ? "+" : ""}{cp.toFixed(2)}%</span>
                           </div>
                         );
                       })()
