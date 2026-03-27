@@ -111,7 +111,7 @@
   },
   "valuation": {
     "score": 73,
-    "description": "At ~$305, GOOGL trades at ~24× NTM earnings — a modest premium to the S&P 500 (~21×) that is well-supported by 14-18% revenue CAGR, Cloud acceleration to $70B+ ARR, and AI Overviews monetization proving out. The stock has re-rated from $172 to $305 (+77%) on the back of Cloud's breakout. Current price sits 13% below our base case of $350 (analyst consensus $351) and 42% below our bull case, offering a reasonable risk/reward for a business with durable structural moats.",
+    "description": "At ~$305, GOOGL trades at ~24× NTM earnings — a modest premium to the S&P 500 (~21×) that is well-supported by 14-18% revenue CAGR, Cloud acceleration to $70B+ ARR, and AI Overviews monetization proving out. The stock has re-rated from $172 to $305 (+77%) on the back of Cloud's breakout. Current price sits 13% below our base case of $350 (analyst consensus $351) and 42% below our bull case, offering a reasonable risk/reward for a business with durable structural moats. Notably, Alphabet holds two off-balance-sheet positions not reflected in any current consensus model: a ~7% stake in SpaceX (~$56–90B at current ~$350B private valuation) and a minority position in Anthropic. A SpaceX IPO — which is increasingly anticipated — would crystallise a material balance-sheet windfall and is not in the $350 base case.",
     "valuationNote": {
       "text": "With $73.3B in FY2025 FCF, a $240B Cloud backlog, and AI monetization in early innings, Alphabet's intrinsic value continues to compound. Near-term FCF will be pressured by $175-185B CapEx in 2026, but the investments are demand-constrained (Sundar Pichai: 'supply, not demand, is the limiting factor'). Our 12-24 month base case fair value is",
       "fairValue": "$350"
@@ -171,12 +171,13 @@
     },
     "bull": {
       "priceTarget": "$450",
-      "description": "Google Cloud becomes clear #2 behind AWS, AI Overviews expand total search monetization beyond consensus, and Waymo/Gemini create new large revenue streams.",
+      "description": "Google Cloud becomes clear #2 behind AWS, AI Overviews expand total search monetization beyond consensus, and Waymo/Gemini create new large revenue streams. A SpaceX IPO at the current ~$350B private valuation crystallises a multi-billion dollar balance-sheet windfall not in any current model.",
       "points": [
         "Google Cloud sustains 40%+ growth through 2027, exits at $130B+ ARR and narrows the gap with AWS to within 10 percentage points of revenue share",
         "Gemini 3.x wins large enterprise AI deployments over GPT-4 and Claude; Vertex AI becomes the preferred foundation model platform for regulated industries",
         "AI Mode and AI Max expand Google's monetizable query universe by 30%+, pushing Search revenue growth to 20%+ and re-rating the stock toward 30× forward earnings",
-        "Waymo reaches cash flow breakeven in 2027 on the back of the $16B investment and commercial expansion — adding meaningful autonomous vehicle optionality to the sum-of-parts valuation"
+        "Waymo reaches cash flow breakeven in 2027 on the back of the $16B investment and commercial expansion — adding meaningful autonomous vehicle optionality to the sum-of-parts valuation",
+        "SpaceX IPO at $800B–$1.5T valuation crystallises Alphabet's ~7% stake ($56B–$105B) as a cash or distributable asset — a hidden balance-sheet windfall not reflected in any current consensus model or analyst price target"
       ]
     }
   },
