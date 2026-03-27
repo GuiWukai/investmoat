@@ -78,7 +78,7 @@ export async function GET(
   }
 
   try {
-    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?interval=1d&range=1d`;
+    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?interval=1d&range=1mo`;
     const res = await fetch(url, {
       headers: { 'User-Agent': 'Mozilla/5.0 (compatible; investmoat/1.0)' },
       next: { revalidate: 3600 }, // cache for 1 hour
@@ -105,8 +105,16 @@ export async function GET(
       ? new Date(meta.regularMarketTime * 1000).toISOString()
       : null;
 
+    // Monthly change: compare current price to the first closing price in the 1mo window
+    const closes: number[] | undefined = json?.chart?.result?.[0]?.indicators?.quote?.[0]?.close;
+    const firstClose: number | null = closes?.find((c): c is number => c != null) ?? null;
+    const monthChangePercent: number | null =
+      price != null && firstClose != null && firstClose > 0
+        ? ((price - firstClose) / firstClose) * 100
+        : null;
+
     return NextResponse.json(
-      { symbol, price, previousClose, change, changePercent, currency, timestamp },
+      { symbol, price, previousClose, change, changePercent, monthChangePercent, currency, timestamp },
       { headers: { 'Cache-Control': 'public, max-age=3600, s-maxage=3600, stale-while-revalidate=600' } },
     );
   } catch {

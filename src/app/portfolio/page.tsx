@@ -136,6 +136,7 @@ export default function PortfolioPage() {
   // Fetch all stock prices in parallel to enable dynamic portfolio selection
   const [allPrices, setAllPrices] = useState<Record<string, number | null>>({});
   const [allChangePercents, setAllChangePercents] = useState<Record<string, number | null>>({});
+  const [allMonthChangePercents, setAllMonthChangePercents] = useState<Record<string, number | null>>({});
   const [allPricesLoaded, setAllPricesLoaded] = useState(false);
 
   useEffect(() => {
@@ -144,13 +145,14 @@ export default function PortfolioPage() {
       allCoverageData.map(s =>
         fetch(`/api/stock-price/${s.slug}`)
           .then(r => r.ok ? r.json() : null)
-          .then(d => [s.ticker, d?.price ?? null, d?.changePercent ?? null] as const)
-          .catch(() => [s.ticker, null, null] as const)
+          .then(d => [s.ticker, d?.price ?? null, d?.changePercent ?? null, d?.monthChangePercent ?? null] as const)
+          .catch(() => [s.ticker, null, null, null] as const)
       )
     ).then(entries => {
       if (cancelled) return;
       setAllPrices(Object.fromEntries(entries.map(([t, p]) => [t, p])));
       setAllChangePercents(Object.fromEntries(entries.map(([t, , c]) => [t, c])));
+      setAllMonthChangePercents(Object.fromEntries(entries.map(([t, , , m]) => [t, m])));
       setAllPricesLoaded(true);
     });
     return () => { cancelled = true; };
@@ -465,23 +467,33 @@ export default function PortfolioPage() {
                 </Chip>
               </div>
 
-              <div className="shrink-0 w-16 text-right">
+              <div className="shrink-0 w-28 flex flex-col items-end gap-0.5">
                 {!allPricesLoaded
                   ? <Spinner size="sm" color="default" />
                   : (() => {
                       const cp = allChangePercents[stock.ticker];
-                      if (cp == null) return <span className="text-xs text-white/30">—</span>;
-                      const pos = cp >= 0;
+                      const mp = allMonthChangePercents[stock.ticker];
+                      const fmt = (val: number | null | undefined, label: string) => {
+                        if (val == null) return (
+                          <div className="flex items-center gap-1">
+                            <span className="text-[9px] text-white/20 uppercase">{label}</span>
+                            <span className="text-xs text-white/30">—</span>
+                          </div>
+                        );
+                        const pos = val >= 0;
+                        return (
+                          <div className={`flex items-center gap-1 ${pos ? "text-success" : "text-danger"}`}>
+                            <span className="text-[9px] text-white/30 uppercase">{label}</span>
+                            {pos ? <TrendingUp size={10} className="shrink-0" /> : <TrendingDown size={10} className="shrink-0" />}
+                            <span className="text-xs font-bold tabular-nums">{pos ? "+" : ""}{val.toFixed(2)}%</span>
+                          </div>
+                        );
+                      };
                       return (
-                        <div className={`flex items-center justify-end gap-0.5 ${pos ? "text-success" : "text-danger"}`}>
-                          {pos
-                            ? <TrendingUp size={11} className="shrink-0" />
-                            : <TrendingDown size={11} className="shrink-0" />
-                          }
-                          <span className="text-xs font-bold tabular-nums">
-                            {pos ? "+" : ""}{cp.toFixed(2)}%
-                          </span>
-                        </div>
+                        <>
+                          {fmt(cp, "1d")}
+                          {fmt(mp, "1m")}
+                        </>
                       );
                     })()
                 }
