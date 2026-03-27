@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$2.2T"
+      "value": "$4.23T"
     },
     {
       "label": "Current Price",
-      "value": "$885.20"
+      "value": "~$172"
     }
   ],
   "chips": [
@@ -29,24 +29,24 @@
   "recommendation": "Strong Buy",
   "metrics": [
     {
-      "title": "Data Center Rev",
-      "value": "$18.4B",
-      "label": "409% YoY Growth",
+      "title": "Q4 FY2026 Revenue",
+      "value": "$68.1B",
+      "label": "+73% YoY — Data Center $62.3B (quarterly record)",
       "icon": "Cpu",
       "color": "#76b900"
     },
     {
-      "title": "Gross Margin",
-      "value": "76.7%",
-      "label": "Software-like Profitability",
+      "title": "AI Chip Order Book",
+      "value": "$1T+",
+      "label": "Blackwell + Rubin through 2027 — raised at GTC March 2026",
       "icon": "Zap",
       "color": "#3b82f6"
     },
     {
-      "title": "H100 Demand",
-      "value": "Infinite",
-      "label": "Supply Constraint Era",
-      "icon": "Share2",
+      "title": "Forward P/E",
+      "value": "~23×",
+      "label": "vs. 36× TTM — accelerating EPS ramp, PEG ~0.6×",
+      "icon": "TrendingUp",
       "color": "#10b981"
     }
   ],
@@ -72,11 +72,34 @@
   },
   "growth": {
     "score": 95,
-    "description": "Generative AI spend is still in the 'Build-out' phase globally."
+    "description": "Q4 FY2026 revenue hit $68.1B (+73% YoY) on data center demand of $62.3B — growth is decelerating in percentage terms but accelerating in absolute dollars. Jensen Huang raised the Blackwell + Rubin AI chip order outlook to $1T+ through 2027 at GTC March 2026, and Bloomberg Intelligence projects AI server spending +45% in 2026 to $312B. NVIDIA's transition from supply-constrained H100 to Blackwell architecture is complete, with Rubin (successor) already in development.",
+    "growthAnalysis": {
+      "cagrEstimate": "35–50%",
+      "scoreDerivation": "Base 90 (30%+ CAGR on $68B quarterly base) + 5 TAM expansion (sovereign AI, Rubin architecture) + 5 platform stickiness (CUDA ecosystem NRR equivalent) − 5 export control risk (China restrictions ongoing) = 95",
+      "drivers": [
+        { "name": "Data Center (AI Training)", "metric": "$62.3B Q4 FY2026 (+73% YoY), $1T+ cumulative order book", "trend": "accelerating" },
+        { "name": "AI Inference & Edge", "metric": "NIM microservices, Jetson platform growing; enterprise AI inference TAM $200B+ by 2027", "trend": "accelerating" },
+        { "name": "Gaming (GeForce)", "metric": "$3.7B Q4 FY2026 (+47% YoY), Blackwell gaming cards driving upgrade cycle", "trend": "stable" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If U.S. export controls expand to Blackwell architecture (H200/B200 equivalents) before end of 2026, NVIDIA loses $15-20B in annual revenue from non-China allied nations and hyperscalers redirect orders to AMD or in-house ASICs",
+      "marginTrend": "stable"
+    }
   },
   "valuation": {
-    "score": 65,
-    "description": "Post 10-for-1 split: trading at fair value (~$177). Blackwell demand is strong but priced for continued execution — every quarter must beat."
+    "score": 66,
+    "description": "At ~$172 — essentially at the base target of $175 — NVDA trades at ~23× forward P/E on NTM EPS of ~$7.50, a PEG of ~0.6× against a 40%+ EPS CAGR. The 52-week range ($86–$212) shows the stock has already visited bear territory once. With $1T+ in committed orders and 73% YoY revenue growth on a $68B quarterly base, the current multiple is historically cheap for this growth profile. Every quarter must continue to beat expectations to maintain the premium.",
+    "peAnalysis": {
+      "asOf": "March 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~36×", "note": "TTM EPS ~$4.73 (ramping)" },
+        { "label": "Forward P/E (NTM)", "value": "~23×", "note": "consensus NTM EPS ~$7.50" },
+        { "label": "PEG Ratio", "value": "~0.6×", "note": "fwd P/E ÷ ~40% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~15×", "note": "~$280B NTM revenue" },
+        { "label": "Price / FCF", "value": "~28×", "note": "~$150B FCF (NTM est.)" }
+      ],
+      "summary": "At 23× forward P/E with a PEG of 0.6×, NVDA is the cheapest it has been relative to its growth rate since the Blackwell cycle began — well below the sector median of 30–35× for high-growth semiconductors. The 36× trailing P/E overstates the cost; forward EPS nearly doubles as the quarterly ramp accelerates from $1.62 to an estimated $1.76+ per quarter. The stock is fairly valued at base but offers meaningful upside if the Rubin architecture and sovereign AI buildout exceed the $1T order book estimate."
+    }
   },
   "scenarios": {
     "bear": {
@@ -90,20 +113,20 @@
     },
     "base": {
       "priceTarget": "$175",
-      "description": "Blackwell cycle sustains data center demand; AI Enterprise software revenue begins to scale meaningfully toward $3B+ ARR.",
+      "description": "Rubin architecture ramp sustains $60-80B quarterly revenue through 2027; the $1T committed order book de-risks near-term demand; NVIDIA Enterprise software reaches $5B+ ARR.",
       "points": [
-        "Data center growth stays above 50% throughout 2025",
-        "Software subscriptions (AI Enterprise) reach $1B+ ARR",
-        "High margins are maintained through product mix shift"
+        "Data center revenue maintains $60B+ quarterly run rate through Blackwell-to-Rubin transition in 2026-2027",
+        "NIM microservices and AI Enterprise software scale toward $5B ARR, improving gross margin mix",
+        "Export control environment stabilizes — no additional Blackwell restrictions beyond current China curbs"
       ]
     },
     "bull": {
-      "priceTarget": "$280",
-      "description": "Vera Rubin architecture dominance, sovereign AI buildout creates an incremental $60B+ market, and software revenue inflects.",
+      "priceTarget": "$300",
+      "description": "Rubin architecture exceeds the $1T committed order estimate; sovereign AI buildout accelerates as 40+ nations build domestic AI infrastructure; software revenue inflects above $10B ARR.",
       "points": [
-        "Nations building domestic AI capacity creates a new $50B market",
-        "Omniverse becomes the backbone for industrial robotics",
-        "Dividend hike and massive share buyback program"
+        "Sovereign AI infrastructure spending doubles to $100B+ as major nations accelerate domestic GPU deployments",
+        "NIM/Omniverse becomes the industry standard for industrial AI, adding $10B+ in high-margin software revenue",
+        "Rubin chip yields exceed expectations, enabling 2× supply at similar ASPs and driving 80%+ data center revenue growth in FY2028"
       ]
     }
   },
@@ -151,5 +174,5 @@
     "aiResilienceScore": 85,
     "verdict": "NVIDIA's moat is almost entirely AI-resilient. The CUDA network effect and proprietary compute standard deepen as AI infrastructure spending grows — making NVIDIA the infrastructure of the AI economy."
   },
-  "lastAnalyzed": "February 2026"
+  "lastAnalyzed": "March 2026"
 }

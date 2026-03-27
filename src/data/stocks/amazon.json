@@ -51,10 +51,10 @@
     }
   ],
   "moat": {
-    "score": 81,
-    "description": "Dominant scale, switching costs (Prime), and cost advantage (Logistics). AWS backlog hits $244B, up 40% YoY.",
+    "score": 83,
+    "description": "Dominant scale, switching costs (Prime), and cost advantage (Logistics). AWS backlog hits $244B, up 40% YoY. Amazon is Anthropic's primary training cloud partner — AWS runs Project Rainier (the world's largest AI training cluster) on Trainium2, deepening AWS's AI infrastructure moat beyond pure cloud compute.",
     "analysisTitle": "The Economic Moat",
-    "analysisSummary": "Amazon possesses a **Wide Economic Moat** driven by three primary pillars:",
+    "analysisSummary": "Amazon possesses a **Wide Economic Moat** driven by four primary pillars:",
     "analysisPoints": [
       {
         "title": "Cost Advantage",
@@ -67,6 +67,10 @@
       {
         "title": "Network Effect",
         "text": "The 3rd party marketplace creates a flywheel where more sellers attract more buyers, which attracts more sellers."
+      },
+      {
+        "title": "AWS as the Primary AI Training Cloud",
+        "text": "Amazon's $8B investment in Anthropic secured AWS as the exclusive primary cloud for training and deploying Claude models — including Project Rainier, the world's largest AI training cluster built on Amazon's proprietary Trainium2 chips. This is not a passive financial stake: Anthropic's models run on AWS Bedrock (the fastest-growing AWS service by usage), Claude powers Alexa's AI transformation, and every Claude API call routes through AWS infrastructure. As Anthropic's valuation approaches $200B+, Amazon holds a strategic asset that simultaneously deepens the AWS AI infrastructure moat (Trainium2 workloads), expands the AWS customer base (Anthropic customers are AWS customers), and positions Alexa as a frontier AI assistant. No competing cloud has locked in an equivalent frontier model lab at this depth of infrastructure integration."
       }
     ]
   },
@@ -198,7 +202,7 @@
     },
     "proprietaryData": {
       "status": "strong",
-      "note": "Purchase intent data, AWS usage telemetry, and last-mile logistics operational data are genuinely irreplaceable. AWS $244B backlog reflects deep customer commitment."
+      "note": "Purchase intent data, AWS usage telemetry, and last-mile logistics operational data are genuinely irreplaceable. AWS $244B backlog reflects deep customer commitment. The Anthropic partnership adds a new proprietary data dimension: Project Rainier generates terabytes of AI training workload telemetry on Trainium2 chips that no competitor can observe — informing next-generation silicon design and AI infrastructure optimization in ways that compound AWS's custom silicon advantage over time."
     },
     "regulatoryLockIn": {
       "status": "strong",
