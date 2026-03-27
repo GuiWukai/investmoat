@@ -467,7 +467,7 @@ export default function PortfolioPage() {
                 </Chip>
               </div>
 
-              <div className="shrink-0 w-28 flex flex-col items-end gap-0.5">
+              <div className="hidden md:flex shrink-0 w-28 flex-col items-end gap-0.5">
                 {!allPricesLoaded
                   ? <Spinner size="sm" color="default" />
                   : (() => {
