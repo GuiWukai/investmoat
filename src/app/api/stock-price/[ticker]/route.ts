@@ -81,7 +81,7 @@ export async function GET(
     const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?interval=1d&range=1d`;
     const res = await fetch(url, {
       headers: { 'User-Agent': 'Mozilla/5.0 (compatible; investmoat/1.0)' },
-      next: { revalidate: 3600 }, // cache for 1 hour
+      next: { revalidate: 3600 },
     });
 
     if (!res.ok) {

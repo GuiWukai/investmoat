@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
-import { PieChart, ShieldCheck, ChevronRight, TrendingUp } from "lucide-react";
+import { PieChart, ShieldCheck, ChevronRight, TrendingUp, TrendingDown } from "lucide-react";
 import { Card, CardBody, CardHeader, Progress, Chip, Spinner } from "@heroui/react";
 import { allCoverageData, getAverageScore } from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
@@ -135,6 +135,7 @@ export default function PortfolioPage() {
 
   // Fetch all stock prices in parallel to enable dynamic portfolio selection
   const [allPrices, setAllPrices] = useState<Record<string, number | null>>({});
+  const [allChangePercents, setAllChangePercents] = useState<Record<string, number | null>>({});
   const [allPricesLoaded, setAllPricesLoaded] = useState(false);
 
   useEffect(() => {
@@ -143,12 +144,13 @@ export default function PortfolioPage() {
       allCoverageData.map(s =>
         fetch(`/api/stock-price/${s.slug}`)
           .then(r => r.ok ? r.json() : null)
-          .then(d => [s.ticker, d?.price ?? null] as const)
-          .catch(() => [s.ticker, null] as const)
+          .then(d => [s.ticker, d?.price ?? null, d?.changePercent ?? null] as const)
+          .catch(() => [s.ticker, null, null] as const)
       )
     ).then(entries => {
       if (cancelled) return;
-      setAllPrices(Object.fromEntries(entries));
+      setAllPrices(Object.fromEntries(entries.map(([t, p]) => [t, p])));
+      setAllChangePercents(Object.fromEntries(entries.map(([t, , c]) => [t, c])));
       setAllPricesLoaded(true);
     });
     return () => { cancelled = true; };
@@ -187,6 +189,7 @@ export default function PortfolioPage() {
   portfolio.forEach(p => { liveScores[p.ticker] = Math.round(p.composite); });
 
   const [hoveredPie, setHoveredPie] = useState<string | null>(null);
+  const [scoreColumn, setScoreColumn] = useState<'score' | 'change'>('score');
   const scoresLoading = !allPricesLoaded;
 
   // Compute weights with amplified spread — subtract a baseline so score
@@ -434,7 +437,17 @@ export default function PortfolioPage() {
         <div className="flex items-center gap-4 mb-6">
           <h2 className="text-2xl font-bold">Allocation Breakdown</h2>
           <div className="h-px flex-1 bg-white/10" />
-          <span className="text-xs text-white/30 font-medium">Click to view analysis</span>
+          <div className="flex items-center gap-1 bg-white/5 rounded-lg p-1 shrink-0">
+            {([['score', 'Score'], ['change', '1D %']] as const).map(([val, label]) => (
+              <button
+                key={val}
+                onClick={() => setScoreColumn(val)}
+                className={`text-[11px] font-bold px-2.5 py-1 rounded-md transition-colors ${scoreColumn === val ? 'bg-white/15 text-white' : 'text-white/30 hover:text-white/60'}`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="rounded-2xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-lg divide-y divide-white/5">
@@ -507,25 +520,45 @@ export default function PortfolioPage() {
                 }
               </div>
 
-              <DynamicScore
-                slug={stock.stock.slug}
-                moat={stock.stock.scores[0]}
-                growth={stock.stock.scores[1]}
-                fallbackVal={stock.stock.scores[2]}
-                bearTarget={stock.stock.bearTarget}
-                baseTarget={stock.stock.baseTarget}
-                bullTarget={stock.stock.bullTarget}
-              >
-                {(avg, loading) => (
-                  <div className="text-right mr-2 shrink-0 w-12">
-                    <div className="text-[10px] text-white/30 uppercase font-bold">Score</div>
-                    {loading
-                      ? <Spinner size="sm" color="default" className="mt-0.5" />
-                      : <div className={`text-sm font-black text-${getScoreColor(avg)}`}>{avg}</div>
-                    }
-                  </div>
-                )}
-              </DynamicScore>
+              {scoreColumn === 'score' ? (
+                <DynamicScore
+                  slug={stock.stock.slug}
+                  moat={stock.stock.scores[0]}
+                  growth={stock.stock.scores[1]}
+                  fallbackVal={stock.stock.scores[2]}
+                  bearTarget={stock.stock.bearTarget}
+                  baseTarget={stock.stock.baseTarget}
+                  bullTarget={stock.stock.bullTarget}
+                >
+                  {(avg, loading) => (
+                    <div className="text-right mr-2 shrink-0 w-12">
+                      <div className="text-[10px] text-white/30 uppercase font-bold">Score</div>
+                      {loading
+                        ? <Spinner size="sm" color="default" className="mt-0.5" />
+                        : <div className={`text-sm font-black text-${getScoreColor(avg)}`}>{avg}</div>
+                      }
+                    </div>
+                  )}
+                </DynamicScore>
+              ) : (
+                <div className="text-right mr-2 shrink-0 w-12">
+                  <div className="text-[10px] text-white/30 uppercase font-bold">1D</div>
+                  {!allPricesLoaded
+                    ? <Spinner size="sm" color="default" className="mt-0.5" />
+                    : (() => {
+                        const cp = allChangePercents[stock.ticker];
+                        if (cp == null) return <span className="text-xs text-white/30">—</span>;
+                        const pos = cp >= 0;
+                        return (
+                          <div className={`flex items-center justify-end gap-0.5 ${pos ? "text-success" : "text-danger"}`}>
+                            {pos ? <TrendingUp size={10} /> : <TrendingDown size={10} />}
+                            <span className="text-xs font-bold tabular-nums">{pos ? "+" : ""}{cp.toFixed(2)}%</span>
+                          </div>
+                        );
+                      })()
+                  }
+                </div>
+              )}
 
               <div className="tabular-nums w-10 text-right">
                 {scoresLoading
