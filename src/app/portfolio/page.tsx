@@ -191,6 +191,7 @@ export default function PortfolioPage() {
   portfolio.forEach(p => { liveScores[p.ticker] = Math.round(p.composite); });
 
   const [hoveredPie, setHoveredPie] = useState<string | null>(null);
+  const [scoreColumn, setScoreColumn] = useState<'score' | 'change'>('score');
   const scoresLoading = !allPricesLoaded;
 
   // Compute weights with amplified spread — subtract a baseline so score
@@ -438,6 +439,20 @@ export default function PortfolioPage() {
         <div className="flex items-center gap-4 mb-6">
           <h2 className="text-2xl font-bold">Allocation Breakdown</h2>
           <div className="h-px flex-1 bg-white/10" />
+          <div className="flex items-center gap-1 bg-white/5 rounded-lg p-1 shrink-0">
+            <button
+              onClick={() => setScoreColumn('score')}
+              className={`text-[11px] font-bold px-2.5 py-1 rounded-md transition-colors ${scoreColumn === 'score' ? 'bg-white/15 text-white' : 'text-white/30 hover:text-white/60'}`}
+            >
+              Score
+            </button>
+            <button
+              onClick={() => setScoreColumn('change')}
+              className={`text-[11px] font-bold px-2.5 py-1 rounded-md transition-colors ${scoreColumn === 'change' ? 'bg-white/15 text-white' : 'text-white/30 hover:text-white/60'}`}
+            >
+              1D %
+            </button>
+          </div>
           <span className="text-xs text-white/30 font-medium">Click to view analysis</span>
         </div>
 
@@ -543,25 +558,45 @@ export default function PortfolioPage() {
                 }
               </div>
 
-              <DynamicScore
-                slug={stock.stock.slug}
-                moat={stock.stock.scores[0]}
-                growth={stock.stock.scores[1]}
-                fallbackVal={stock.stock.scores[2]}
-                bearTarget={stock.stock.bearTarget}
-                baseTarget={stock.stock.baseTarget}
-                bullTarget={stock.stock.bullTarget}
-              >
-                {(avg, loading) => (
-                  <div className="text-right mr-2 shrink-0 w-12">
-                    <div className="text-[10px] text-white/30 uppercase font-bold">Score</div>
-                    {loading
-                      ? <Spinner size="sm" color="default" className="mt-0.5" />
-                      : <div className={`text-sm font-black text-${getScoreColor(avg)}`}>{avg}</div>
-                    }
-                  </div>
-                )}
-              </DynamicScore>
+              {scoreColumn === 'score' ? (
+                <DynamicScore
+                  slug={stock.stock.slug}
+                  moat={stock.stock.scores[0]}
+                  growth={stock.stock.scores[1]}
+                  fallbackVal={stock.stock.scores[2]}
+                  bearTarget={stock.stock.bearTarget}
+                  baseTarget={stock.stock.baseTarget}
+                  bullTarget={stock.stock.bullTarget}
+                >
+                  {(avg, loading) => (
+                    <div className="text-right mr-2 shrink-0 w-12">
+                      <div className="text-[10px] text-white/30 uppercase font-bold">Score</div>
+                      {loading
+                        ? <Spinner size="sm" color="default" className="mt-0.5" />
+                        : <div className={`text-sm font-black text-${getScoreColor(avg)}`}>{avg}</div>
+                      }
+                    </div>
+                  )}
+                </DynamicScore>
+              ) : (
+                <div className="text-right mr-2 shrink-0 w-12">
+                  <div className="text-[10px] text-white/30 uppercase font-bold">1D</div>
+                  {!allPricesLoaded
+                    ? <Spinner size="sm" color="default" className="mt-0.5" />
+                    : (() => {
+                        const cp = allChangePercents[stock.ticker];
+                        if (cp == null) return <span className="text-xs text-white/30">—</span>;
+                        const pos = cp >= 0;
+                        return (
+                          <div className={`flex items-center justify-end gap-0.5 ${pos ? "text-success" : "text-danger"}`}>
+                            {pos ? <TrendingUp size={10} /> : <TrendingDown size={10} />}
+                            <span className="text-xs font-bold tabular-nums">{pos ? "+" : ""}{cp.toFixed(2)}%</span>
+                          </div>
+                        );
+                      })()
+                  }
+                </div>
+              )}
 
               <div className="tabular-nums w-10 text-right">
                 {scoresLoading
