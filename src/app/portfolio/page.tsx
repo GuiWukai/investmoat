@@ -453,7 +453,6 @@ export default function PortfolioPage() {
               1D %
             </button>
           </div>
-          <span className="text-xs text-white/30 font-medium">Click to view analysis</span>
         </div>
 
         <div className="rounded-2xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-lg divide-y divide-white/5">
