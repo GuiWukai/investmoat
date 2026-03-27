@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
-import { PieChart, ShieldCheck, ChevronRight, TrendingUp } from "lucide-react";
+import { PieChart, ShieldCheck, ChevronRight, TrendingUp, TrendingDown } from "lucide-react";
 import { Card, CardBody, CardHeader, Progress, Chip, Spinner } from "@heroui/react";
 import { allCoverageData, getAverageScore } from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
@@ -135,6 +135,7 @@ export default function PortfolioPage() {
 
   // Fetch all stock prices in parallel to enable dynamic portfolio selection
   const [allPrices, setAllPrices] = useState<Record<string, number | null>>({});
+  const [allChangePercents, setAllChangePercents] = useState<Record<string, number | null>>({});
   const [allPricesLoaded, setAllPricesLoaded] = useState(false);
 
   useEffect(() => {
@@ -143,12 +144,13 @@ export default function PortfolioPage() {
       allCoverageData.map(s =>
         fetch(`/api/stock-price/${s.slug}`)
           .then(r => r.ok ? r.json() : null)
-          .then(d => [s.ticker, d?.price ?? null] as const)
-          .catch(() => [s.ticker, null] as const)
+          .then(d => [s.ticker, d?.price ?? null, d?.changePercent ?? null] as const)
+          .catch(() => [s.ticker, null, null] as const)
       )
     ).then(entries => {
       if (cancelled) return;
-      setAllPrices(Object.fromEntries(entries));
+      setAllPrices(Object.fromEntries(entries.map(([t, p]) => [t, p])));
+      setAllChangePercents(Object.fromEntries(entries.map(([t, , c]) => [t, c])));
       setAllPricesLoaded(true);
     });
     return () => { cancelled = true; };
@@ -461,6 +463,28 @@ export default function PortfolioPage() {
                 >
                   {stock.category}
                 </Chip>
+              </div>
+
+              <div className="shrink-0 w-16 text-right">
+                {!allPricesLoaded
+                  ? <Spinner size="sm" color="default" />
+                  : (() => {
+                      const cp = allChangePercents[stock.ticker];
+                      if (cp == null) return <span className="text-xs text-white/30">—</span>;
+                      const pos = cp >= 0;
+                      return (
+                        <div className={`flex items-center justify-end gap-0.5 ${pos ? "text-success" : "text-danger"}`}>
+                          {pos
+                            ? <TrendingUp size={11} className="shrink-0" />
+                            : <TrendingDown size={11} className="shrink-0" />
+                          }
+                          <span className="text-xs font-bold tabular-nums">
+                            {pos ? "+" : ""}{cp.toFixed(2)}%
+                          </span>
+                        </div>
+                      );
+                    })()
+                }
               </div>
 
               <div className="flex-1 flex items-center gap-3">
