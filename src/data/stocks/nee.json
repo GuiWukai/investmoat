@@ -119,11 +119,31 @@
     "peAnalysis": {
       "asOf": "March 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~27.5×", "note": "$3.30 TTM GAAP EPS (2025)" },
-        { "label": "Forward P/E (NTM)", "value": "~23×", "note": "consensus adj. EPS est. ~$3.97 (2026)" },
-        { "label": "PEG Ratio", "value": "~3.2×", "note": "fwd P/E ÷ ~8% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~7×", "note": "~$27.4B NTM revenue" },
-        { "label": "Price / FCF", "value": "N/A", "note": "Negative FCF; $25B+ annual capex" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~27.5×",
+          "note": "$3.30 TTM GAAP EPS (2025)"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~23×",
+          "note": "consensus adj. EPS est. ~$3.97 (2026)"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~3.2×",
+          "note": "fwd P/E ÷ ~8% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~7×",
+          "note": "~$27.4B NTM revenue"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "N/A",
+          "note": "Negative FCF; $25B+ annual capex"
+        }
       ],
       "summary": "NEE's forward P/E of ~23× is 54% above the utility sector median (~15×), a premium that reflects its superior growth profile but leaves little room for error. The PEG of ~3.2× is expensive in absolute terms — growth of 8% does not traditionally justify a 23× multiple — but regulated utilities are structurally valued on yield and rate base rather than PEG, making direct comparison misleading. The gap between trailing GAAP P/E (27.5×) and forward adjusted P/E (23×) is narrow, suggesting no significant earnings ramp but stable, predictable compounding; investors are essentially paying a quality premium for one of the most durable earnings growth machines in US utilities."
     }
@@ -198,7 +218,6 @@
       "status": "destroyed",
       "note": "N/A — NextEra Energy is not a system of record for any information or data management function; this moat category does not apply to a power generator or regulated utility."
     },
-    "aiResilienceScore": 69,
     "verdict": "NextEra Energy is a modest net beneficiary of AI through the data center power demand tailwind — 43% of projected US power demand growth through 2030 is now linked to data centers, directly expanding NEE's addressable market. The most AI-resilient moats are regulatory lock-in (the FPL franchise is legally impervious to technology disruption) and transaction embedding (25-year PPAs cannot be disrupted by AI). The primary AI risk is grid management commoditization: AI-based grid optimization tools are making NEE's operational data advantage easier for smaller competitors to approach, gradually eroding the talent and business logic moats. Overall, NEE's physical infrastructure and regulatory position make it highly durable in the AI era — though the moat is driven by regulatory protection and capital intensity rather than AI-native advantages."
   }
 }

@@ -77,9 +77,21 @@
       "cagrEstimate": "35–50%",
       "scoreDerivation": "Base 90 (30%+ CAGR on $68B quarterly base) + 5 TAM expansion (sovereign AI, Rubin architecture) + 5 platform stickiness (CUDA ecosystem NRR equivalent) − 5 export control risk (China restrictions ongoing) = 95",
       "drivers": [
-        { "name": "Data Center (AI Training)", "metric": "$62.3B Q4 FY2026 (+73% YoY), $1T+ cumulative order book", "trend": "accelerating" },
-        { "name": "AI Inference & Edge", "metric": "NIM microservices, Jetson platform growing; enterprise AI inference TAM $200B+ by 2027", "trend": "accelerating" },
-        { "name": "Gaming (GeForce)", "metric": "$3.7B Q4 FY2026 (+47% YoY), Blackwell gaming cards driving upgrade cycle", "trend": "stable" }
+        {
+          "name": "Data Center (AI Training)",
+          "metric": "$62.3B Q4 FY2026 (+73% YoY), $1T+ cumulative order book",
+          "trend": "accelerating"
+        },
+        {
+          "name": "AI Inference & Edge",
+          "metric": "NIM microservices, Jetson platform growing; enterprise AI inference TAM $200B+ by 2027",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Gaming (GeForce)",
+          "metric": "$3.7B Q4 FY2026 (+47% YoY), Blackwell gaming cards driving upgrade cycle",
+          "trend": "stable"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If U.S. export controls expand to Blackwell architecture (H200/B200 equivalents) before end of 2026, NVIDIA loses $15-20B in annual revenue from non-China allied nations and hyperscalers redirect orders to AMD or in-house ASICs",
@@ -92,11 +104,31 @@
     "peAnalysis": {
       "asOf": "March 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~36×", "note": "TTM EPS ~$4.73 (ramping)" },
-        { "label": "Forward P/E (NTM)", "value": "~23×", "note": "consensus NTM EPS ~$7.50" },
-        { "label": "PEG Ratio", "value": "~0.6×", "note": "fwd P/E ÷ ~40% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~15×", "note": "~$280B NTM revenue" },
-        { "label": "Price / FCF", "value": "~28×", "note": "~$150B FCF (NTM est.)" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~36×",
+          "note": "TTM EPS ~$4.73 (ramping)"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~23×",
+          "note": "consensus NTM EPS ~$7.50"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~0.6×",
+          "note": "fwd P/E ÷ ~40% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~15×",
+          "note": "~$280B NTM revenue"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~28×",
+          "note": "~$150B FCF (NTM est.)"
+        }
       ],
       "summary": "At 23× forward P/E with a PEG of 0.6×, NVDA is the cheapest it has been relative to its growth rate since the Blackwell cycle began — well below the sector median of 30–35× for high-growth semiconductors. The 36× trailing P/E overstates the cost; forward EPS nearly doubles as the quarterly ramp accelerates from $1.62 to an estimated $1.76+ per quarter. The stock is fairly valued at base but offers meaningful upside if the Rubin architecture and sovereign AI buildout exceed the $1T order book estimate."
     }
@@ -171,7 +203,6 @@
       "status": "intact",
       "note": "CUDA is the de facto standard platform for AI compute — the PyTorch/TF ecosystem is CUDA-first by default."
     },
-    "aiResilienceScore": 85,
     "verdict": "NVIDIA's moat is almost entirely AI-resilient. The CUDA network effect and proprietary compute standard deepen as AI infrastructure spending grows — making NVIDIA the infrastructure of the AI economy."
   },
   "lastAnalyzed": "March 2026"

@@ -82,9 +82,21 @@
       "cagrEstimate": "2–5%",
       "scoreDerivation": "Base 40 (below 4% near-term CAGR due to 2026 revenue decline) + 5 recurring premium base + 5 Optum Analytics TAM − 5 Optum Health restructuring drag − 3 DOJ overhang on MA contracting = 42, rounded to 52 reflecting long-term demographic tailwind floor",
       "drivers": [
-        { "name": "Medicare Advantage", "metric": "Member losses ~1M in 2026, MA repriced at 10% medical cost trend", "trend": "decelerating" },
-        { "name": "Optum Analytics", "metric": "~15% organic growth, $154B Optum Rx revenue base", "trend": "stable" },
-        { "name": "Optum Health", "metric": "Operating at a loss in 2025, exiting unprofitable value-based contracts", "trend": "decelerating" }
+        {
+          "name": "Medicare Advantage",
+          "metric": "Member losses ~1M in 2026, MA repriced at 10% medical cost trend",
+          "trend": "decelerating"
+        },
+        {
+          "name": "Optum Analytics",
+          "metric": "~15% organic growth, $154B Optum Rx revenue base",
+          "trend": "stable"
+        },
+        {
+          "name": "Optum Health",
+          "metric": "Operating at a loss in 2025, exiting unprofitable value-based contracts",
+          "trend": "decelerating"
+        }
       ],
       "primaryType": "market share",
       "keyRisk": "If DOJ criminal probe results in a consent decree restricting Medicare Advantage coding practices before end of 2026, UNH loses additional 2-3M MA members and EPS declines to $14-16 vs. prior recovery estimates of $25+",
@@ -97,11 +109,31 @@
     "peAnalysis": {
       "asOf": "March 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~19×", "note": "includes $2.8B cyberattack charge" },
-        { "label": "Forward P/E (NTM)", "value": "~10×", "note": "consensus NTM EPS ~$28 (declining)" },
-        { "label": "PEG Ratio", "value": "~2.5×", "note": "fwd P/E ÷ ~4% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~0.6×", "note": "$439B+ NTM revenue" },
-        { "label": "Price / FCF", "value": "~11×", "note": "$24B FCF (FY2024)" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~19×",
+          "note": "includes $2.8B cyberattack charge"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~10×",
+          "note": "consensus NTM EPS ~$28 (declining)"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~2.5×",
+          "note": "fwd P/E ÷ ~4% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~0.6×",
+          "note": "$439B+ NTM revenue"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~11×",
+          "note": "$24B FCF (FY2024)"
+        }
       ],
       "summary": "At 10× forward P/E UNH screens as extremely cheap vs. its 17× historical average, but the apparent discount is undermined by falling forward EPS as the DOJ probe expands and 2026 revenue guides lower for the first time in a decade. A PEG of ~2.5× on a ~4% growth trajectory signals that value is not as compelling as the headline P/E implies — the stock needs a DOJ resolution catalyst to re-rate."
     }
@@ -176,7 +208,6 @@
       "status": "strong",
       "note": "UNH's claims processing systems are the authoritative system of record for member health history and financial transactions; Optum's EMR integration and care management platforms are the system of record for clinical decisions in thousands of provider practices; Optum Rx is the system of record for pharmaceutical benefits for tens of millions of members."
     },
-    "aiResilienceScore": 86,
     "verdict": "UnitedHealth remains an AI beneficiary through Optum's data flywheel — the 140M-member claims database is irreplaceable training data for clinical AI models. However, the DOJ criminal investigation has weakened the regulatory lock-in moat tier, reducing AI resilience from 93 to 86. The most AI-durable moats (proprietary data, network effects, transaction embedding, system of record) remain intact. The key structural risk is not AI disruption but regulatory-imposed constraints on Medicare Advantage coding practices, which could structurally impair profitability regardless of AI strength."
   },
   "lastAnalyzed": "March 2026"

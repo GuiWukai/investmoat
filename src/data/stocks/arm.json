@@ -4,13 +4,28 @@
   "name": "Arm Holdings",
   "lastAnalyzed": "March 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "ARM" },
-    { "label": "Market Cap", "value": "$132B" },
-    { "label": "Current Price", "value": "$132.35" }
+    {
+      "label": "Ticker",
+      "value": "ARM"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$132B"
+    },
+    {
+      "label": "Current Price",
+      "value": "$132.35"
+    }
   ],
   "chips": [
-    { "label": "Semiconductor IP | CPU Architecture | AI Edge Compute", "color": "primary" },
-    { "label": "99% Mobile CPU Share | v9 Royalty Uplift", "color": "success" }
+    {
+      "label": "Semiconductor IP | CPU Architecture | AI Edge Compute",
+      "color": "primary"
+    },
+    {
+      "label": "99% Mobile CPU Share | v9 Royalty Uplift",
+      "color": "success"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
@@ -90,11 +105,31 @@
     "peAnalysis": {
       "asOf": "March 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~195×", "note": "GAAP EPS distorted by SBC; not meaningful" },
-        { "label": "Forward P/E (NTM, non-GAAP)", "value": "~56×", "note": "FY2027E non-GAAP EPS ~$2.35" },
-        { "label": "PEG Ratio", "value": "~2.2×", "note": "fwd P/E ÷ 25% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~27×", "note": "$4.85B FY2026E revenue" },
-        { "label": "Price / FCF", "value": "~60×", "note": "~$2.2B FCF (FY2026E est.)" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~195×",
+          "note": "GAAP EPS distorted by SBC; not meaningful"
+        },
+        {
+          "label": "Forward P/E (NTM, non-GAAP)",
+          "value": "~56×",
+          "note": "FY2027E non-GAAP EPS ~$2.35"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~2.2×",
+          "note": "fwd P/E ÷ 25% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~27×",
+          "note": "$4.85B FY2026E revenue"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~60×",
+          "note": "~$2.2B FCF (FY2026E est.)"
+        }
       ],
       "summary": "ARM trades at ~56× forward non-GAAP P/E and ~27× NTM P/S — among the most premium valuations in semiconductors, reflecting the IP royalty business model's scarcity value rather than current earnings power. The PEG of ~2.2× is in 'expensive but justifiable' territory for the v9 royalty ratchet thesis; the risk is that the data center AI narrative has already been priced in at these levels. Unlike ASML (which has no alternative) or NVIDIA (a capital-light IP model is harder to displace), ARM faces RISC-V competition that could compress the multiple if data center share gains materialize."
     }
@@ -172,7 +207,6 @@
       "status": "destroyed",
       "note": "N/A — ARM does not operate a system of record for any business function. Not applicable."
     },
-    "aiResilienceScore": 80,
     "verdict": "ARM is a strong net beneficiary of AI — AI inference is the highest-growth compute workload, and ARM's power-efficiency advantage makes ARM-based chips the economically rational choice for inference at every scale from smartphone to data center. The Armv9 architecture's performance improvements for AI workloads (larger matrix math units, improved memory bandwidth) directly increase ARM's royalty rates as customers upgrade. The primary AI risk is that AI training (not inference) favors NVIDIA's CUDA ecosystem, which could push the AI compute center of gravity toward x86/NVIDIA architectures at the training layer — though inference at the edge and hyperscaler inference (AWS Graviton, Microsoft Cobalt) strongly favors ARM."
   }
 }

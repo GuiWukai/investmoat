@@ -37,7 +37,6 @@ export interface TenMoatsData {
   networkEffects: MoatAssessmentData;
   transactionEmbedding: MoatAssessmentData;
   systemOfRecord: MoatAssessmentData;
-  aiResilienceScore: number;
   verdict: string;
 }
 

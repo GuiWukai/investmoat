@@ -4,13 +4,28 @@
   "name": "Fair Isaac Corporation",
   "lastAnalyzed": "March 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "FICO" },
-    { "label": "Market Cap", "value": "~$23.6B" },
-    { "label": "Current Price", "value": "~$1,043" }
+    {
+      "label": "Ticker",
+      "value": "FICO"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$23.6B"
+    },
+    {
+      "label": "Current Price",
+      "value": "~$1,043"
+    }
   ],
   "chips": [
-    { "label": "Credit Scoring | Decision Management | Fintech", "color": "primary" },
-    { "label": "Dominant but Contested Credit Standard", "color": "warning" }
+    {
+      "label": "Credit Scoring | Decision Management | Fintech",
+      "color": "primary"
+    },
+    {
+      "label": "Dominant but Contested Credit Standard",
+      "color": "warning"
+    }
   ],
   "recommendation": "Strong Buy",
   "metrics": [
@@ -90,11 +105,31 @@
     "peAnalysis": {
       "asOf": "March 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~39×", "note": "FY2025 GAAP EPS $26.60" },
-        { "label": "Forward P/E (NTM)", "value": "~31×", "note": "FY2026 guided GAAP EPS $33.47" },
-        { "label": "PEG Ratio", "value": "~1.7×", "note": "fwd P/E ÷ 18% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~10×", "note": "$2.35B FY2026 guided revenue" },
-        { "label": "Price / FCF", "value": "~32×", "note": "~$739M FCF (FY2025 actual)" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~39×",
+          "note": "FY2025 GAAP EPS $26.60"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~31×",
+          "note": "FY2026 guided GAAP EPS $33.47"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.7×",
+          "note": "fwd P/E ÷ 18% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~10×",
+          "note": "$2.35B FY2026 guided revenue"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~32×",
+          "note": "~$739M FCF (FY2025 actual)"
+        }
       ],
       "summary": "FICO's forward GAAP P/E of ~31× is at a meaningful discount to financial data peers (MSCI ~40×, Moody's ~35×, S&P Global ~33×) despite FICO having the highest gross margins (82%) and strongest absolute pricing power in the group — the discount is entirely a regulatory-risk premium, not fundamental deterioration. The PEG of ~1.7× reflects a modest premium to GARP criteria but is justified by the near-zero capex model; any re-rating to 38–40× at current EPS implies ~$1,270–$1,340 with no earnings growth. The ~26% gap between trailing P/E (~39×) and forward P/E (~31×) signals a meaningful earnings acceleration from FY2025 to FY2026 guidance — a ramp that becomes powerful if regulatory investigations produce no binding restrictions."
     }
@@ -172,7 +207,6 @@
       "status": "strong",
       "note": "The FICO Score is the definitive numerical representation of consumer creditworthiness in the U.S. legal and financial system. Courts reference FICO scores in bankruptcy proceedings. Regulators reference them in fair lending analyses. Marketing materials, loan disclosures, and consumer communications industry-wide are built around FICO score tiers (620, 680, 740, 760). Even with VantageScore 4.0's GSE approval, replacing the system-of-record function requires coordinated institutional transition far beyond the mortgage underwriting layer alone — a decades-long process."
     },
-    "aiResilienceScore": 85,
     "verdict": "FICO is a net AI beneficiary in its Platform segment — AI-driven credit decisioning, fraud detection, and alternative data integration (UltraFICO/Plaid) all compound Platform ARR growth — but the Scores segment faces a secular competitive threat from VantageScore that is regulatory and pricing-driven, not technological. The strongest AI-resilient moats — proprietary 70-year dataset (grows more valuable as AI models require rich longitudinal training data), transaction embedding (real-time AI decisioning increases per-pull volume), and system-of-record status (regulatory and legal frameworks do not update at AI speed) — all hold firmly. The primary risk is the FHFA's lender-choice framework combined with bureau-subsidised VantageScore pricing creating the first credible long-term pathway for pricing power erosion. FICO's AI-era durability is strong for the Platform and defensible for Scores, but the 30-year regulatory monopoly has structurally ended — moat durability now depends on institutional inertia and Platform compounding rather than mandate exclusivity."
   }
 }

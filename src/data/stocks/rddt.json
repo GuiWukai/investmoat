@@ -18,11 +18,26 @@
     }
   ],
   "chips": [
-    { "label": "AI Data Licensing", "color": "primary" },
-    { "label": "Community Network Effects", "color": "success" },
-    { "label": "Human Discourse Data", "color": "secondary" },
-    { "label": "Advertising Growth", "color": "warning" },
-    { "label": "International Expansion", "color": "primary" }
+    {
+      "label": "AI Data Licensing",
+      "color": "primary"
+    },
+    {
+      "label": "Community Network Effects",
+      "color": "success"
+    },
+    {
+      "label": "Human Discourse Data",
+      "color": "secondary"
+    },
+    {
+      "label": "Advertising Growth",
+      "color": "warning"
+    },
+    {
+      "label": "International Expansion",
+      "color": "primary"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
@@ -204,7 +219,6 @@
       "status": "strong",
       "note": "Reddit has become the de facto system of record for peer knowledge across hundreds of specialized domains. Users systematically add 'site:reddit.com' to Google searches because Reddit's community answers are trusted as the authoritative record of real-world experience — software recommendations (r/homelab, r/buildapc), medical experiences (r/ChronicPain, r/diabetes), investment discussions (r/personalfinance, r/investing), and technical troubleshooting. This creates structural return behavior: Reddit is consulted as a reference because its community archives represent years of validated peer consensus, reinforcing daily visit habits in a way that no AI-generated answer currently replaces."
     },
-    "aiResilienceScore": 65,
     "verdict": "Reddit is a net beneficiary of AI in one critical dimension — its data licensing business to AI training providers is a structural new revenue stream that grows with AI model proliferation. However, AI chatbots increasingly provide direct answers that reduce Reddit as a destination, threatening DAU growth and advertising RPM. The outcome hinges on whether Reddit successfully transitions its identity from 'destination for answers' to 'source of AI training infrastructure' — a shift that requires accelerating API monetization and international advertising expansion before answer-substitution erodes core engagement."
   }
 }

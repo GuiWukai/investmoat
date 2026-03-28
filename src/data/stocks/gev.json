@@ -4,13 +4,28 @@
   "name": "GE Vernova Inc.",
   "titleColor": "#1B4FBA",
   "headerStats": [
-    { "label": "Ticker", "value": "GEV" },
-    { "label": "Market Cap", "value": "~$230B" },
-    { "label": "Price", "value": "~$880" }
+    {
+      "label": "Ticker",
+      "value": "GEV"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$230B"
+    },
+    {
+      "label": "Price",
+      "value": "~$880"
+    }
   ],
   "chips": [
-    { "label": "Industrials | Power Infrastructure", "color": "primary" },
-    { "label": "AI Power Supercycle", "color": "success" }
+    {
+      "label": "Industrials | Power Infrastructure",
+      "color": "primary"
+    },
+    {
+      "label": "AI Power Supercycle",
+      "color": "success"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
@@ -134,7 +149,6 @@
       "status": "intact",
       "note": "GEV's digital APM (Asset Performance Management) software and LTSA management systems increasingly serve as the operational system of record for gas turbine fleets — while not the primary software moat, the digitalization of service relationships creates data lock-in that compounds the physical equipment relationships."
     },
-    "aiResilienceScore": 90,
     "verdict": "GE Vernova is a net beneficiary of AI adoption through the data center power demand supercycle — AI is a direct revenue catalyst rather than a disruption risk, with AI-driven electricity demand filling its sold-out turbine backlog through 2029. The company's core moats (installed base LTSAs, manufacturing expertise, regulatory certifications) are AI-independent physical and contractual advantages that no AI model can automate or replicate."
   },
   "lastAnalyzed": "March 2026"

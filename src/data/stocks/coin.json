@@ -4,13 +4,28 @@
   "name": "Coinbase Global",
   "lastAnalyzed": "March 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "COIN" },
-    { "label": "Market Cap", "value": "$47.6B" },
-    { "label": "Current Price", "value": "$198.66" }
+    {
+      "label": "Ticker",
+      "value": "COIN"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$47.6B"
+    },
+    {
+      "label": "Current Price",
+      "value": "$198.66"
+    }
   ],
   "chips": [
-    { "label": "Crypto Exchange | Custody | Stablecoin Infrastructure", "color": "primary" },
-    { "label": "ETF Custodian | Regulatory Leader", "color": "success" }
+    {
+      "label": "Crypto Exchange | Custody | Stablecoin Infrastructure",
+      "color": "primary"
+    },
+    {
+      "label": "ETF Custodian | Regulatory Leader",
+      "color": "success"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
@@ -90,11 +105,31 @@
     "peAnalysis": {
       "asOf": "March 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~38×", "note": "FY2025 GAAP net income $1.26B" },
-        { "label": "Forward P/E (NTM)", "value": "~25×", "note": "est. 2026 GAAP EPS ~$8 (cycle-dependent)" },
-        { "label": "PEG Ratio", "value": "N/A", "note": "Crypto cycle volatility makes PEG misleading" },
-        { "label": "Price / Sales (NTM)", "value": "~5.5×", "note": "$8B+ NTM revenue (bull-cycle scenario)" },
-        { "label": "Price / FCF", "value": "~14×", "note": "$3.38B FCF (Q4 2025 alone)" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~38×",
+          "note": "FY2025 GAAP net income $1.26B"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~25×",
+          "note": "est. 2026 GAAP EPS ~$8 (cycle-dependent)"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "N/A",
+          "note": "Crypto cycle volatility makes PEG misleading"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~5.5×",
+          "note": "$8B+ NTM revenue (bull-cycle scenario)"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~14×",
+          "note": "$3.38B FCF (Q4 2025 alone)"
+        }
       ],
       "summary": "Coinbase's valuation is highly cycle-dependent — at ~6.6× TTM P/S on $7.2B revenue, the stock is cheap relative to the business's institutional maturity, but forward metrics swing widely with crypto prices. The P/FCF of ~14× based on Q4 2025 FCF is extremely attractive, but Q4 was aided by exceptionally high trading volumes that may not persist. The key valuation insight is the subscription/services floor ($2.8B, growing 23%) which is valued at approximately $10–12B at 3.5–4× P/S — implying the market is only paying ~$37B for $4.4B in cyclical transaction revenue, which could be worth $20–50B depending on the crypto cycle."
     }
@@ -172,7 +207,6 @@
       "status": "intact",
       "note": "For institutional crypto holders, Coinbase Prime serves as the system of record for custody balances, transaction history, and tax reporting. ETF custodianship means Coinbase is the authoritative record for Bitcoin and Ethereum held in registered investment products — a legal system-of-record function for regulated financial products."
     },
-    "aiResilienceScore": 77,
     "verdict": "Coinbase is broadly AI-resilient — its regulatory trust position and institutional custodianship are not threatened by AI capabilities. AI may improve trading algorithms and risk management but does not displace Coinbase's compliance infrastructure advantage. The most significant AI impact is indirect: AI agents conducting autonomous crypto transactions will need regulated, compliant on-ramps to the traditional financial system — and Coinbase is the only entity with the regulatory standing to serve as that gateway for institutional-grade AI treasury operations. The primary risk is regulatory reversal (SEC enforcement), not AI disruption."
   }
 }

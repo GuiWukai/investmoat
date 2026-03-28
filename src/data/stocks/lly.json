@@ -77,9 +77,21 @@
       "cagrEstimate": "35–45%",
       "scoreDerivation": "Base 90 (30%+ CAGR) + 5 oral GLP-1 TAM expansion (orforglipron FDA imminent, opens injection-resistant patients) + 5 retatrutide next-gen catalyst (28.7% Phase 2 weight loss) − 5 oral competition headwind (Novo Wegovy pill via Hims, Structure Therapeutics aleniglipron Phase 2 data) − 5 pricing risk (Medicare Part D negotiation risk) = 90",
       "drivers": [
-        { "name": "Mounjaro (diabetes)", "metric": "$7.41B Q4 2025 (+110% YoY), FY2025 est. ~$22B", "trend": "accelerating" },
-        { "name": "Zepbound (obesity)", "metric": "$4.26B Q4 2025 (+123% YoY), launched Jan 2024 — still ramping", "trend": "accelerating" },
-        { "name": "Orforglipron + Retatrutide", "metric": "FDA decision Apr 10; retatrutide 28.7% Phase 2 weight loss, Phase 3 ongoing", "trend": "accelerating" }
+        {
+          "name": "Mounjaro (diabetes)",
+          "metric": "$7.41B Q4 2025 (+110% YoY), FY2025 est. ~$22B",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Zepbound (obesity)",
+          "metric": "$4.26B Q4 2025 (+123% YoY), launched Jan 2024 — still ramping",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Orforglipron + Retatrutide",
+          "metric": "FDA decision Apr 10; retatrutide 28.7% Phase 2 weight loss, Phase 3 ongoing",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If Hims & Hers / Novo distribution partnership shifts 15%+ of new GLP-1 prescriptions to oral semaglutide before orforglipron approval, AND Structure Therapeutics' aleniglipron Phase 3 data outperforms orforglipron in 2027, LLY's oral market share erodes below 30% and consensus EPS estimates for 2028 decline 15%+",
@@ -92,11 +104,31 @@
     "peAnalysis": {
       "asOf": "March 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~49×", "note": "TTM EPS ~$19 (FY2025 est.)" },
-        { "label": "Forward P/E (NTM)", "value": "~33×", "note": "consensus FY2026 EPS ~$28" },
-        { "label": "PEG Ratio", "value": "~0.7×", "note": "fwd P/E ÷ ~45% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~11×", "note": "$80–83B FY2026 guidance" },
-        { "label": "Price / FCF", "value": "~35×", "note": "~$25B FCF (NTM est.)" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~49×",
+          "note": "TTM EPS ~$19 (FY2025 est.)"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~33×",
+          "note": "consensus FY2026 EPS ~$28"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~0.7×",
+          "note": "fwd P/E ÷ ~45% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~11×",
+          "note": "$80–83B FY2026 guidance"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~35×",
+          "note": "~$25B FCF (NTM est.)"
+        }
       ],
       "summary": "At 33× forward P/E with a PEG of 0.7×, LLY is significantly cheaper than its pharma peer average (~45×) and even cheaper than the broad healthcare sector (~28× on much lower growth). A PEG under 1.0 on 45% EPS growth is rare in large-cap pharma and typically signals a mispriced growth story — the oral competition fears driving the 13% YTD decline are creating an attractive entry. The wide gap between the 49× trailing and 33× forward P/E reflects accelerating EPS, not compression."
     }
@@ -171,7 +203,6 @@
       "status": "destroyed",
       "note": "N/A — Lilly is a drug manufacturer, not a system-of-record platform; this moat type does not apply to the pharmaceutical industry."
     },
-    "aiResilienceScore": 85,
     "verdict": "Lilly's core moat — patent-protected biologics with regulatory approval — is structurally immune to AI disruption, and AI drug discovery tools actually accelerate Lilly's pipeline advantage by compressing early-stage discovery timelines. The company is a net beneficiary of AI adoption, using it to identify novel targets and optimize clinical trials faster than underfunded competitors."
   },
   "lastAnalyzed": "March 2026"
