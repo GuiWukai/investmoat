@@ -1,10 +1,14 @@
 import type { TenMoatsData } from '@/types/stockAnalysis';
 
-const MOAT_POINTS: Record<string, number> = { strong: 100, intact: 75, weakened: 40 };
+// Status → point scale. Gaps are equal (25 pts each) so a single status
+// step up/down has the same impact regardless of where on the scale it occurs.
+// A floor of 10 for genuinely-destroyed moats avoids a total zero contribution
+// while still pulling the group average down meaningfully.
+const MOAT_POINTS: Record<string, number> = { strong: 100, intact: 75, weakened: 50, destroyed: 10 };
 
 /** Returns null for N/A moats (excluded from group average), number otherwise. */
 function moatPoints(m: { status: string; note: string }): number | null {
-  if (m.status === 'destroyed') return (m.note.startsWith('N/A') || m.note.startsWith('Not applicable')) ? null : 0;
+  if (m.status === 'destroyed' && (m.note.startsWith('N/A') || m.note.startsWith('Not applicable'))) return null;
   return MOAT_POINTS[m.status] ?? 0;
 }
 
@@ -46,9 +50,10 @@ const VULNERABLE_TOTAL = Object.values(VULNERABLE_WEIGHTS).reduce((a, b) => a + 
  */
 function weightedGroupScore(
   moats: Array<[{ status: string; note: string }, number]>
-): { score: number; applicableWeight: number; totalWeight: number } {
+): { score: number; applicableWeight: number; applicableCount: number; totalWeight: number } {
   let weightedSum = 0;
   let applicableWeight = 0;
+  let applicableCount = 0;
   let totalWeight = 0;
   for (const [assessment, weight] of moats) {
     totalWeight += weight;
@@ -56,12 +61,28 @@ function weightedGroupScore(
     if (pts === null) continue;
     weightedSum += pts * weight;
     applicableWeight += weight;
+    applicableCount++;
   }
   return {
     score: applicableWeight > 0 ? weightedSum / applicableWeight : 0,
     applicableWeight,
+    applicableCount,
     totalWeight,
   };
+}
+
+/**
+ * Breadth bonus: +1 pt per applicable moat beyond 5, capped at +4.
+ * A company defended by 8 moats is more resilient than one with 2 equally-
+ * rated moats, even if their weighted averages are identical.
+ *   ≤5 applicable → +0
+ *    6 applicable → +1
+ *    7 applicable → +2
+ *    8 applicable → +3
+ *   9–10 applicable → +4
+ */
+function breadthBonus(applicableCount: number): number {
+  return Math.min(4, Math.max(0, applicableCount - 5));
 }
 
 /**
@@ -76,10 +97,13 @@ function weightedGroupScore(
  * are excluded; their base weight is dropped so it redistributes naturally to
  * whichever moats remain applicable within each group.
  *
+ * A breadth bonus of +1 to +4 is added for each applicable moat beyond 5,
+ * rewarding companies with diversified moat portfolios.
+ *
  * Examples:
- *   all 10 apply       → 60% resilient / 40% vulnerable
- *   4 N/A vulnerable   → 60/(60+vApplicable) resilient / rest vulnerable
- *   all vulnerable N/A → 100% resilient / 0% vulnerable
+ *   all 10 apply       → 60% resilient / 40% vulnerable + 4 breadth pts
+ *   4 N/A vulnerable   → 60/(60+vApplicable) resilient / rest vulnerable + 1 pt
+ *   all vulnerable N/A → 100% resilient / 0% vulnerable + 0 pts
  */
 export function computeMoatScore(tenMoats: TenMoatsData): number {
   const resilient = weightedGroupScore([
@@ -101,7 +125,9 @@ export function computeMoatScore(tenMoats: TenMoatsData): number {
   const vW = 40 * (vulnerable.applicableWeight / VULNERABLE_TOTAL);
   const total = rW + vW;
   if (total === 0) return 0;
-  return Math.round(resilient.score * rW / total + vulnerable.score * vW / total);
+  const base = resilient.score * rW / total + vulnerable.score * vW / total;
+  const applicableCount = resilient.applicableCount + vulnerable.applicableCount;
+  return Math.min(100, Math.round(base + breadthBonus(applicableCount)));
 }
 
 /**
