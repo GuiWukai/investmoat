@@ -4,14 +4,32 @@
   "name": "Intercontinental Exchange, Inc.",
   "lastAnalyzed": "March 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "ICE" },
-    { "label": "Market Cap", "value": "~$90B" },
-    { "label": "Price", "value": "~$157" }
+    {
+      "label": "Ticker",
+      "value": "ICE"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$90B"
+    },
+    {
+      "label": "Price",
+      "value": "~$157"
+    }
   ],
   "chips": [
-    { "label": "Financial Infrastructure | Exchange & Data", "color": "primary" },
-    { "label": "Natural Monopoly", "color": "success" },
-    { "label": "Wide Moat", "color": "success" }
+    {
+      "label": "Financial Infrastructure | Exchange & Data",
+      "color": "primary"
+    },
+    {
+      "label": "Natural Monopoly",
+      "color": "success"
+    },
+    {
+      "label": "Wide Moat",
+      "color": "success"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
@@ -64,9 +82,21 @@
       "cagrEstimate": "8–10%",
       "scoreDerivation": "Base 67 (8–15% EPS CAGR) + 5 recurring subscription base (>70% recurring) + 3 fixed income data TAM expansion (AI-ready analytics demand) − 3 mortgage headwind (high rates suppressing origination volumes) = 72",
       "drivers": [
-        { "name": "Fixed Income & Data Services", "metric": "+high-single-digit guided for 2026, AI data demand accelerating", "trend": "accelerating" },
-        { "name": "Exchange Recurring Revenue", "metric": "+mid-single-digit guided 2026; Jan 2026 record 245.8M contracts", "trend": "stable" },
-        { "name": "Mortgage Technology", "metric": "+low-to-mid-single-digit; $230M Black Knight synergies fully realized 2025", "trend": "stable" }
+        {
+          "name": "Fixed Income & Data Services",
+          "metric": "+high-single-digit guided for 2026, AI data demand accelerating",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Exchange Recurring Revenue",
+          "metric": "+mid-single-digit guided 2026; Jan 2026 record 245.8M contracts",
+          "trend": "stable"
+        },
+        {
+          "name": "Mortgage Technology",
+          "metric": "+low-to-mid-single-digit; $230M Black Knight synergies fully realized 2025",
+          "trend": "stable"
+        }
       ],
       "primaryType": "both",
       "keyRisk": "If 30-year mortgage rates remain above 7% through end of 2026, Black Knight origination platform volumes stay 40–50% below peak, and ICE Mortgage technology revenue growth falls below 3% — failing to generate adequate return on the $13.1B Black Knight investment",
@@ -79,11 +109,31 @@
     "peAnalysis": {
       "asOf": "March 2026",
       "rows": [
-        { "label": "Trailing P/E (adjusted)", "value": "~23×", "note": "adj. EPS $6.95 FY2025" },
-        { "label": "Forward P/E (NTM)", "value": "~20×", "note": "consensus 2026 EPS est. $7.71" },
-        { "label": "PEG Ratio", "value": "~1.4×", "note": "fwd P/E ÷ ~14% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~8.7×", "note": "~$10.4B NTM revenue" },
-        { "label": "Price / FCF", "value": "~32×", "note": "~$2.8B FCF (NTM est.)" }
+        {
+          "label": "Trailing P/E (adjusted)",
+          "value": "~23×",
+          "note": "adj. EPS $6.95 FY2025"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~20×",
+          "note": "consensus 2026 EPS est. $7.71"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.4×",
+          "note": "fwd P/E ÷ ~14% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~8.7×",
+          "note": "~$10.4B NTM revenue"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~32×",
+          "note": "~$2.8B FCF (NTM est.)"
+        }
       ],
       "summary": "At 20× forward P/E, ICE trades at a modest discount to the financial data peer group (MCO ~25×, MSCI ~27×, SPGI ~24×) despite comparable moat quality — reflecting the Black Knight integration overhang and mortgage market headwinds rather than structural impairment. A PEG of 1.4× is fairly priced for growth, with material upside if mortgage origination volumes recover as rates decline in 2026–2027. ICE's forward P/E is at a 5-year low, making this a historically attractive entry into one of the most durable financial infrastructure franchises in existence."
     }
@@ -158,7 +208,6 @@
       "status": "strong",
       "note": "MERS is the system of record for U.S. mortgage ownership and servicing rights (~$13T in outstanding mortgages); ICE Data Services provides the authoritative pricing data that banks use for balance sheet accounting and regulatory reporting; ICE's clearing houses are the system of record for derivatives open interest representing trillions in notional value."
     },
-    "aiResilienceScore": 89,
     "verdict": "ICE is a net AI beneficiary — its proprietary bond pricing data, MERS mortgage registry, and energy derivatives datasets are exactly the structured, authoritative financial data that AI models require as inputs for portfolio management, risk assessment, and regulatory compliance. The four strongest AI-resilient moats (proprietary data, regulatory lock-in, network effects, system of record) are all structurally deepening as AI adoption increases demand for ICE's authoritative data products; the main AI vulnerability is interface commoditization in data terminals, which is secondary to the underlying data monopoly."
   }
 }

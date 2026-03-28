@@ -207,7 +207,6 @@
       "status": "weakened",
       "note": "Cloudflare manages DNS zones and SSL certificates that function as systems of record for domain identity, but is not the authoritative source for financial, legal, or HR data. The Workers/Pages deployment layer is sticky but not irreplaceable."
     },
-    "aiResilienceScore": 82,
     "verdict": "Cloudflare is a net beneficiary of AI — the shift from human users to AI agents as the primary internet traffic source creates massive demand for Cloudflare's edge network, security layer, and Workers compute runtime. The proprietary threat-intelligence data flywheel and network effects are the two most AI-resilient moats, both of which strengthen as AI-driven attack vectors increase the value of real-time threat data. The primary AI risk is that hyperscalers bundle security capabilities into their managed AI platforms, reducing the independent security and CDN market. Overall, Cloudflare's architecture — where AI inference, security, and networking converge at the same edge node — positions it as critical infrastructure for the agentic internet."
   }
 }

@@ -4,13 +4,28 @@
   "name": "Palo Alto Networks",
   "lastAnalyzed": "March 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "PANW" },
-    { "label": "Market Cap", "value": "$130B" },
-    { "label": "Current Price", "value": "$169.19" }
+    {
+      "label": "Ticker",
+      "value": "PANW"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$130B"
+    },
+    {
+      "label": "Current Price",
+      "value": "$169.19"
+    }
   ],
   "chips": [
-    { "label": "Cybersecurity | Next-Gen Firewall | SASE | AI SecOps", "color": "primary" },
-    { "label": "Platformization Leader", "color": "success" }
+    {
+      "label": "Cybersecurity | Next-Gen Firewall | SASE | AI SecOps",
+      "color": "primary"
+    },
+    {
+      "label": "Platformization Leader",
+      "color": "success"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
@@ -90,11 +105,31 @@
     "peAnalysis": {
       "asOf": "March 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~156×", "note": "GAAP net income ~$1.7B TTM (SBC distorts)" },
-        { "label": "Forward P/E (NTM, non-GAAP)", "value": "~46×", "note": "FY2026E non-GAAP EPS $3.67" },
-        { "label": "PEG Ratio", "value": "~2.3×", "note": "fwd P/E ÷ 20% non-GAAP EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~11.8×", "note": "~$11B NTM revenue (FY2026E)" },
-        { "label": "Price / FCF", "value": "~30×", "note": "~$4.3B FCF (FY2026E)" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~156×",
+          "note": "GAAP net income ~$1.7B TTM (SBC distorts)"
+        },
+        {
+          "label": "Forward P/E (NTM, non-GAAP)",
+          "value": "~46×",
+          "note": "FY2026E non-GAAP EPS $3.67"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~2.3×",
+          "note": "fwd P/E ÷ 20% non-GAAP EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~11.8×",
+          "note": "~$11B NTM revenue (FY2026E)"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~30×",
+          "note": "~$4.3B FCF (FY2026E)"
+        }
       ],
       "summary": "PANW trades at ~46× forward non-GAAP P/E, a premium to the cybersecurity sector median (~35×) but below CrowdStrike (~72×), reflecting PANW's more mature revenue base and the near-term EPS headwind from CyberArk integration. The PEG of ~2.3× signals premium territory — growth needs to sustain 20%+ for the valuation to be justified. The $16B RPO makes this a very low-risk revenue story; the uncertainty is entirely on the margin side as integration costs are digested over the next 2–3 quarters."
     }
@@ -172,7 +207,6 @@
       "status": "intact",
       "note": "Cortex XSIAM serves as the security system of record for incident investigations, threat hunting queries, and compliance reporting. For regulated industries with audit trail requirements, XSIAM's event history cannot simply be deleted and rebuilt — it is the forensic record that regulators require."
     },
-    "aiResilienceScore": 86,
     "verdict": "PANW is a strong net beneficiary of AI — the explosion of AI-generated attacks (phishing, autonomous malware, credential stuffing at scale) dramatically increases demand for AI-powered security, exactly what Cortex XSIAM and Prisma AI are designed to address. Unit 42's threat intelligence data moat grows more valuable as AI-driven threats become more sophisticated — the more PANW sees, the better it detects. The primary AI risk is that Microsoft's AI-native security integrations (Copilot for Security, integrated with M365) win mid-market customers who prefer a single-vendor AI stack over specialized security platforms."
   }
 }

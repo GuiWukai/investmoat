@@ -4,13 +4,28 @@
   "name": "Sea Limited",
   "lastAnalyzed": "March 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "SE" },
-    { "label": "Market Cap", "value": "$47.9B" },
-    { "label": "Price", "value": "$78.85" }
+    {
+      "label": "Ticker",
+      "value": "SE"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$47.9B"
+    },
+    {
+      "label": "Price",
+      "value": "$78.85"
+    }
   ],
   "chips": [
-    { "label": "Southeast Asia E-Commerce & Fintech", "color": "primary" },
-    { "label": "Digital Ecosystem", "color": "success" }
+    {
+      "label": "Southeast Asia E-Commerce & Fintech",
+      "color": "primary"
+    },
+    {
+      "label": "Digital Ecosystem",
+      "color": "success"
+    }
   ],
   "recommendation": "Strong Buy",
   "metrics": [
@@ -90,11 +105,31 @@
     "peAnalysis": {
       "asOf": "March 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~30×", "note": "$1.6B net income FY2025" },
-        { "label": "Forward P/E (NTM)", "value": "~22×", "note": "~$2.2B NTM net income est." },
-        { "label": "PEG Ratio", "value": "~0.7×", "note": "fwd P/E ÷ ~30% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~1.7×", "note": "~$28B NTM revenue consensus" },
-        { "label": "Price / FCF", "value": "~14×", "note": "~$3.4B adj EBITDA TTM" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~30×",
+          "note": "$1.6B net income FY2025"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~22×",
+          "note": "~$2.2B NTM net income est."
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~0.7×",
+          "note": "fwd P/E ÷ ~30% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~1.7×",
+          "note": "~$28B NTM revenue consensus"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~14×",
+          "note": "~$3.4B adj EBITDA TTM"
+        }
       ],
       "summary": "Sea trades at ~22× forward P/E with a PEG of ~0.7× — one of the cheapest growth-adjusted valuations among large-cap platform businesses globally. At ~1.7× forward P/S on 30%+ revenue growth, Sea is significantly cheaper than MercadoLibre (~5× P/S on slower growth), its closest Latin American analog. The gap between 30× trailing and 22× forward P/E reflects a genuine earnings ramp as Shopee and SeaMoney operating leverage materializes — the 260% net income growth in FY2025 was the inflection point, and forward earnings projections appear conservative given SeaMoney's early-stage scaling."
     }
@@ -172,7 +207,6 @@
       "status": "intact",
       "note": "SeaMoney serves as the financial system of record for its users' digital payment history, savings balances, credit repayment records, and insurance policies across Southeast Asia. For millions of previously unbanked consumers, Sea's financial products are their first and primary formal financial relationship. Shopee's purchase history, seller ratings, and fulfillment records serve as the commercial system of record for Southeast Asia's digital merchant ecosystem."
     },
-    "aiResilienceScore": 78,
     "verdict": "Sea's AI exposure is primarily indirect and positive: SeaMoney's credit underwriting and Shopee's demand forecasting/advertising algorithms benefit from machine learning improvements without risk of disruption. The primary AI risk is competitive — TikTok's algorithm-driven commerce model (interest-based shopping rather than search-based) represents a genuinely disruptive business model that has taken market share in Southeast Asia. Sea's response (Shopee Live, shoppertainment, video commerce) is execution-dependent, but the fintech business (SeaMoney) is almost entirely AI-resilient as it is embedded in regulatory relationships and financial records that are difficult to displace."
   }
 }

@@ -4,13 +4,28 @@
   "name": "Cameco Corporation",
   "titleColor": "#7C3AED",
   "headerStats": [
-    { "label": "Ticker", "value": "CCJ" },
-    { "label": "Market Cap", "value": "~$49B" },
-    { "label": "Price", "value": "~$108" }
+    {
+      "label": "Ticker",
+      "value": "CCJ"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$49B"
+    },
+    {
+      "label": "Price",
+      "value": "~$108"
+    }
   ],
   "chips": [
-    { "label": "Hard Assets | Nuclear Fuel Cycle", "color": "primary" },
-    { "label": "Nuclear Renaissance", "color": "success" }
+    {
+      "label": "Hard Assets | Nuclear Fuel Cycle",
+      "color": "primary"
+    },
+    {
+      "label": "Nuclear Renaissance",
+      "color": "success"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
@@ -134,7 +149,6 @@
       "status": "destroyed",
       "note": "N/A — Cameco is not a system of record for any information function; this moat category does not apply to a mining and nuclear services business."
     },
-    "aiResilienceScore": 84,
     "verdict": "Cameco is a net beneficiary of AI adoption through the data center nuclear power demand tailwind — AI-driven electricity demand is accelerating utility investment in nuclear capacity, directly expanding demand for Cameco's uranium and Westinghouse's reactor services. The company's core moats (mine geology, regulatory approvals, long-term contract relationships) are physical and regulatory advantages entirely immune to AI-driven disruption."
   },
   "lastAnalyzed": "March 2026"

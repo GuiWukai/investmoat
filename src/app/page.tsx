@@ -54,7 +54,7 @@ const FAQS = [
   },
   {
     q: "How is each stock scored?",
-    a: "Three pillars, each scored 0-100. Moat (40%): evaluated across 10 specific moat types, split into AI-resilient (60% weight) and AI-vulnerable (40% weight). Growth (35%): estimated 3-5 year revenue CAGR with named adjustments for net revenue retention, TAM expansion, and cyclicality. Valuation (25%): current price vs. bear/base/bull scenario targets on a piecewise scale. Composite = Moat×40% + Growth×35% + Valuation×25%. Stocks scoring ≥75 are portfolio-eligible; the top 25 are included.",
+    a: "Three pillars, each scored 0-100. Moat (40%): fully computed from 10 individually-weighted moat types — each rated strong/intact/weakened/destroyed mapping to 100/75/50/10 points. Resilient moats (networkEffects w=15, proprietaryData w=15, systemOfRecord w=12, regulatoryLockIn w=10, transactionEmbedding w=8) total 60% of the moat score; vulnerable moats (businessLogic w=14, bundling w=10, learnedInterfaces w=8, talentScarcity w=5, publicDataAccess w=3) total 40%. A breadth bonus of +1 to +4 rewards moat diversification. Growth (35%): estimated 3-5 year revenue CAGR with named adjustments for margin trend, TAM expansion, and driver acceleration. Valuation (25%): live price vs. bear/base/bull scenario targets on a piecewise scale. Composite = Moat×40% + Growth×35% + Valuation×25%. Stocks scoring ≥75 are portfolio-eligible; the top 25 are included.",
   },
   {
     q: "What makes a moat 'AI-resilient'?",
@@ -200,12 +200,21 @@ export default function HomePage() {
               </div>
               <Progress value={40} color="primary" size="sm" aria-label="Moat weight 40%" />
               <div className="space-y-2 text-sm text-white/50">
-                <p>Scored across 10 moat types. AI-resilient moats receive 60% more weight:</p>
+                <p>Computed from 10 individually-weighted moat types. Resilient moats total 60%, vulnerable 40%. Breadth bonus up to +4 pts.</p>
                 <div className="space-y-1.5 mt-2">
-                  {["Proprietary Data", "Regulatory Lock-in", "Network Effects", "Transaction Embedding", "System of Record"].map(m => (
-                    <div key={m} className="flex items-center gap-2">
-                      <CheckCircle2 size={12} className="text-primary shrink-0" />
-                      <span className="text-xs">{m}</span>
+                  {[
+                    { label: "Network Effects", w: 15 },
+                    { label: "Proprietary Data", w: 15 },
+                    { label: "System of Record", w: 12 },
+                    { label: "Regulatory Lock-in", w: 10 },
+                    { label: "Transaction Embedding", w: 8 },
+                  ].map(({ label, w }) => (
+                    <div key={label} className="flex items-center justify-between gap-2">
+                      <div className="flex items-center gap-2">
+                        <CheckCircle2 size={12} className="text-primary shrink-0" />
+                        <span className="text-xs">{label}</span>
+                      </div>
+                      <span className="text-[10px] text-primary/50 font-mono shrink-0">w={w}</span>
                     </div>
                   ))}
                 </div>
@@ -309,9 +318,10 @@ export default function HomePage() {
         </div>
         <p className="text-white/50 text-sm leading-relaxed max-w-3xl mb-10">
           Every business is scored across 10 specific competitive advantages. Not all moats are equal
-          in the AI era — five are <span className="text-primary font-semibold">AI-resilient</span> (weighted 60% more) because AI cannot easily replicate or destroy them,
-          while five are <span className="text-warning font-semibold">AI-vulnerable</span> because intelligent agents can increasingly substitute for them.
-          The final moat score is a weighted average across all 10 dimensions.
+          in the AI era — five are <span className="text-primary font-semibold">AI-resilient</span> (60% of the score, individually weighted by durability) because AI cannot easily replicate or destroy them,
+          while five are <span className="text-warning font-semibold">AI-vulnerable</span> (40%, individually weighted by disruption risk) because intelligent agents can increasingly substitute for them.
+          Each moat is rated <span className="text-white/70 font-medium">strong (100) · intact (75) · weakened (50) · destroyed (10)</span>, and
+          a breadth bonus of +1 to +4 rewards businesses defended by more applicable moats.
         </p>
 
         {/* AI-Resilient Moats */}
@@ -321,61 +331,69 @@ export default function HomePage() {
               <Zap size={14} className="text-primary" />
               <span className="text-primary text-xs font-bold uppercase tracking-wider">AI-Resilient Moats</span>
             </div>
-            <span className="text-white/30 text-xs">× 1.6 weight in scoring</span>
+            <span className="text-white/30 text-xs">60% of moat score · weights: 15 / 15 / 12 / 10 / 8</span>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               {
-                icon: <Database size={18} className="text-primary" />,
-                name: "Proprietary Data",
-                tagline: "Private, compounding data flywheels",
-                description:
-                  "Data that accumulates privately over time and cannot be purchased or replicated by competitors. The longer the company operates, the harder it becomes to catch up. Think HealthKit biometrics, Palantir's classified government data, or Visa's transaction graph.",
-                examples: ["Apple HealthKit", "Palantir datasets", "Visa transaction network"],
-              },
-              {
-                icon: <Lock size={18} className="text-primary" />,
-                name: "Regulatory Lock-In",
-                tagline: "Government licences, certifications & mandates",
-                description:
-                  "Advantages granted or protected by law: FDA approvals, financial licences, index inclusion, spectrum rights, or government contracts. These cannot be automated away and create near-permanent barriers because the certification process itself is the moat.",
-                examples: ["Bitcoin spot ETF approval", "Mastercard banking licences", "MSCI / S&P index inclusion"],
-              },
-              {
                 icon: <Network size={18} className="text-primary" />,
                 name: "Network Effects",
+                weight: 15,
                 tagline: "Value compounds with every new participant",
                 description:
                   "Following Metcalfe's Law, value scales with the square of participants. Every new user makes the network more valuable for all existing users, creating a self-reinforcing growth loop that competitors must overcome at the same scale — an enormous structural disadvantage for any challenger.",
                 examples: ["iMessage / AirDrop ecosystem", "Bitcoin liquidity depth", "Solana developer ecosystem"],
               },
               {
-                icon: <CreditCard size={18} className="text-primary" />,
-                name: "Transaction Embedding",
-                tagline: "Sitting inside the payment layer of operations",
+                icon: <Database size={18} className="text-primary" />,
+                name: "Proprietary Data",
+                weight: 15,
+                tagline: "Private, compounding data flywheels",
                 description:
-                  "The business is embedded directly in the financial or operational flow of every transaction. Removing it requires rebuilding critical infrastructure, not just switching a preference. This creates extreme switching costs tied to real money movement, not just convenience.",
-                examples: ["Visa / Mastercard rails", "Stripe payment infrastructure", "App Store commerce layer"],
+                  "Data that accumulates privately over time and cannot be purchased or replicated by competitors. The longer the company operates, the harder it becomes to catch up. Think HealthKit biometrics, Palantir's classified government data, or Visa's transaction graph.",
+                examples: ["Apple HealthKit", "Palantir datasets", "Visa transaction network"],
               },
               {
                 icon: <BookMarked size={18} className="text-primary" />,
                 name: "System of Record",
+                weight: 12,
                 tagline: "The authoritative source of truth for critical decisions",
                 description:
                   "The company's data store is the canonical reference that all downstream systems defer to. Replacing it requires migrating years of historical data and retraining every workflow built on top of it. Errors are catastrophic — so customers never voluntarily leave.",
                 examples: ["iCloud Photos / Contacts", "Salesforce CRM", "Epic EHR systems"],
               },
-            ].map(({ icon, name, tagline, description, examples }) => (
+              {
+                icon: <Lock size={18} className="text-primary" />,
+                name: "Regulatory Lock-In",
+                weight: 10,
+                tagline: "Government licences, certifications & mandates",
+                description:
+                  "Advantages granted or protected by law: FDA approvals, financial licences, index inclusion, spectrum rights, or government contracts. These cannot be automated away and create near-permanent barriers because the certification process itself is the moat.",
+                examples: ["Bitcoin spot ETF approval", "Mastercard banking licences", "MSCI / S&P index inclusion"],
+              },
+              {
+                icon: <CreditCard size={18} className="text-primary" />,
+                name: "Transaction Embedding",
+                weight: 8,
+                tagline: "Sitting inside the payment layer of operations",
+                description:
+                  "The business is embedded directly in the financial or operational flow of every transaction. Removing it requires rebuilding critical infrastructure, not just switching a preference. This creates extreme switching costs tied to real money movement, not just convenience.",
+                examples: ["Visa / Mastercard rails", "Stripe payment infrastructure", "App Store commerce layer"],
+              },
+            ].map(({ icon, name, weight, tagline, description, examples }) => (
               <Card key={name} className="bg-white/5 border border-primary/10 backdrop-blur-lg">
                 <CardBody className="p-5 flex flex-col gap-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-primary/15 flex items-center justify-center shrink-0">
-                      {icon}
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="w-8 h-8 rounded-lg bg-primary/15 flex items-center justify-center shrink-0">
+                        {icon}
+                      </div>
+                      <div className="min-w-0">
+                        <p className="font-bold text-sm text-white">{name}</p>
+                        <p className="text-primary/70 text-[11px]">{tagline}</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="font-bold text-sm text-white">{name}</p>
-                      <p className="text-primary/70 text-[11px]">{tagline}</p>
-                    </div>
+                    <span className="text-[10px] font-mono text-primary/50 bg-primary/10 px-1.5 py-0.5 rounded shrink-0">w={weight}</span>
                   </div>
                   <p className="text-white/45 text-xs leading-relaxed">{description}</p>
                   <div className="flex flex-wrap gap-1.5 mt-auto pt-1">
@@ -398,61 +416,69 @@ export default function HomePage() {
               <Brain size={14} className="text-warning" />
               <span className="text-warning text-xs font-bold uppercase tracking-wider">AI-Vulnerable Moats</span>
             </div>
-            <span className="text-white/30 text-xs">× 1.0 weight in scoring</span>
+            <span className="text-white/30 text-xs">40% of moat score · weights: 14 / 10 / 8 / 5 / 3</span>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               {
-                icon: <MonitorSmartphone size={18} className="text-warning" />,
-                name: "Learned Interfaces",
-                tagline: "Fluency built through years of UI habit",
-                description:
-                  "Users invest time mastering a specific interface — keyboard shortcuts, mental models, workflows — making switching costly even when alternatives are technically superior. AI agents increasingly abstract away the interface layer, letting users command outcomes without learning a specific UI.",
-                examples: ["macOS / iOS UX", "Final Cut Pro", "Adobe Creative Suite"],
-              },
-              {
                 icon: <Code2 size={18} className="text-warning" />,
                 name: "Business Logic",
+                weight: 14,
                 tagline: "Embedded operational workflows",
                 description:
                   "The software encodes years of accumulated business rules, edge cases, and customisations that employees rely on daily. While this creates significant switching costs today, AI can increasingly model and reproduce business logic, gradually eroding the cost of migration.",
                 examples: ["SAP ERP configurations", "MDM device policies", "Legacy COBOL systems"],
               },
               {
-                icon: <Globe size={18} className="text-warning" />,
-                name: "Public Data Access",
-                tagline: "Privileged access to publicly available information",
+                icon: <Layers size={18} className="text-warning" />,
+                name: "Bundling",
+                weight: 10,
+                tagline: "Value created by combining complementary products",
                 description:
-                  "The company has a head-start aggregating, structuring, or distributing data that is technically public but expensive to compile. AI web-crawlers and large language models rapidly close this gap by training on the same underlying data sources, compressing the advantage over time.",
-                examples: ["Bloomberg terminal data", "Credit bureau aggregation", "Market data vendors"],
+                  "Multiple products packaged together create convenience and cross-sell revenue that individual point solutions cannot easily match. AI-driven software commoditises features rapidly, making it easier for focused challengers to replicate any single element of the bundle at a fraction of the price.",
+                examples: ["Apple One subscription", "Microsoft 365 suite", "Google Workspace"],
+              },
+              {
+                icon: <MonitorSmartphone size={18} className="text-warning" />,
+                name: "Learned Interfaces",
+                weight: 8,
+                tagline: "Fluency built through years of UI habit",
+                description:
+                  "Users invest time mastering a specific interface — keyboard shortcuts, mental models, workflows — making switching costly even when alternatives are technically superior. AI agents increasingly abstract away the interface layer, letting users command outcomes without learning a specific UI.",
+                examples: ["macOS / iOS UX", "Final Cut Pro", "Adobe Creative Suite"],
               },
               {
                 icon: <GraduationCap size={18} className="text-warning" />,
                 name: "Talent Scarcity",
+                weight: 5,
                 tagline: "Rare human expertise as competitive advantage",
                 description:
                   "The business depends on recruiting and retaining a small pool of specialists — chip designers, quant researchers, elite engineers — whose skills are hard to find and expensive to poach. AI augments and in some domains replaces highly skilled human work, compressing the scarcity premium over time.",
                 examples: ["NVIDIA CUDA team", "TSMC process engineers", "Quantitative hedge funds"],
               },
               {
-                icon: <Layers size={18} className="text-warning" />,
-                name: "Bundling",
-                tagline: "Value created by combining complementary products",
+                icon: <Globe size={18} className="text-warning" />,
+                name: "Public Data Access",
+                weight: 3,
+                tagline: "Privileged access to publicly available information",
                 description:
-                  "Multiple products packaged together create convenience and cross-sell revenue that individual point solutions cannot easily match. AI-driven software commoditises features rapidly, making it easier for focused challengers to replicate any single element of the bundle at a fraction of the price.",
-                examples: ["Apple One subscription", "Microsoft 365 suite", "Google Workspace"],
+                  "The company has a head-start aggregating, structuring, or distributing data that is technically public but expensive to compile. AI web-crawlers and large language models rapidly close this gap by training on the same underlying data sources, compressing the advantage over time.",
+                examples: ["Bloomberg terminal data", "Credit bureau aggregation", "Market data vendors"],
               },
-            ].map(({ icon, name, tagline, description, examples }) => (
+            ].map(({ icon, name, weight, tagline, description, examples }) => (
               <Card key={name} className="bg-white/5 border border-warning/10 backdrop-blur-lg">
                 <CardBody className="p-5 flex flex-col gap-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-warning/10 flex items-center justify-center shrink-0">
-                      {icon}
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="w-8 h-8 rounded-lg bg-warning/10 flex items-center justify-center shrink-0">
+                        {icon}
+                      </div>
+                      <div className="min-w-0">
+                        <p className="font-bold text-sm text-white">{name}</p>
+                        <p className="text-warning/60 text-[11px]">{tagline}</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="font-bold text-sm text-white">{name}</p>
-                      <p className="text-warning/60 text-[11px]">{tagline}</p>
-                    </div>
+                    <span className="text-[10px] font-mono text-warning/50 bg-warning/10 px-1.5 py-0.5 rounded shrink-0">w={weight}</span>
                   </div>
                   <p className="text-white/45 text-xs leading-relaxed">{description}</p>
                   <div className="flex flex-wrap gap-1.5 mt-auto pt-1">
@@ -477,9 +503,10 @@ export default function HomePage() {
                 <span className="text-white/40 text-[10px] font-black uppercase tracking-widest">How moats are assessed</span>
               </div>
               <p className="text-white/40 text-xs leading-relaxed">
-                Each moat is rated <span className="text-white/60 font-medium">strong · intact · weakened · destroyed</span> with an
-                AI-resilience score (0–100). Status maps to a raw score; AI-resilient moats multiply by 1.6.
-                All 10 scores are averaged to produce the final <span className="text-primary font-semibold">Moat Score (40% of composite)</span>.
+                Each moat is rated <span className="text-white/60 font-medium">strong (100) · intact (75) · weakened (50) · destroyed (10)</span>.
+                Scores are weighted by moat type — resilient group totals 60, vulnerable 40 — with N/A moats excluded and weight redistributed within the group.
+                A <span className="text-white/60 font-medium">breadth bonus of +1 to +4</span> rewards businesses with more applicable moats.
+                The result is the fully-computed <span className="text-primary font-semibold">Moat Score (40% of composite)</span>.
               </p>
             </div>
           </CardBody>

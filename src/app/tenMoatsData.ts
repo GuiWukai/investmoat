@@ -22,6 +22,5 @@ export interface TenMoatsAssessment {
   transactionEmbedding: MoatAssessment;
   systemOfRecord: MoatAssessment;
   // Summary
-  aiResilienceScore: number;
   verdict: string;
 }

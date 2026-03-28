@@ -119,11 +119,31 @@
     "peAnalysis": {
       "asOf": "March 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~29.7×", "note": "$21.49 TTM EPS (2025)" },
-        { "label": "Forward P/E (NTM)", "value": "~21.3×", "note": "consensus EPS est. ~$29.80 (2026)" },
-        { "label": "PEG Ratio", "value": "~1.15×", "note": "fwd P/E ÷ ~18% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~1.9×", "note": "$78.75B NTM revenue est." },
-        { "label": "Price / FCF", "value": "~21.4×", "note": "$6.9B FCF (TTM 2025)" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~29.7×",
+          "note": "$21.49 TTM EPS (2025)"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~21.3×",
+          "note": "consensus EPS est. ~$29.80 (2026)"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.15×",
+          "note": "fwd P/E ÷ ~18% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~1.9×",
+          "note": "$78.75B NTM revenue est."
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~21.4×",
+          "note": "$6.9B FCF (TTM 2025)"
+        }
       ],
       "summary": "LMT's forward P/E of ~21× sits at the defense sector median and below its own 5-year average of 18.9× — reflecting current premium pricing driven by geopolitical demand and the record backlog, but not a stretched valuation. The PEG of 1.15× is the most attractive in defense (vs. NOC at 3.6×, GD at 2.4×, RTX at 2.9×), indicating genuine GARP characteristics. The large gap between trailing (29.7×) and forward (21.3×) P/E is a bullish signal — 2025 EPS was distorted by $1.5B in after-tax classified program charges that should not recur at the same scale, setting up a strong earnings rebound in 2026."
     }
@@ -198,7 +218,6 @@
       "status": "intact",
       "note": "ODIN (successor to ALIS) is the authoritative system of record for all F-35 fleet health data, maintenance scheduling, parts supply chain, and software version management across every F-35 operator globally. Migrating away from ODIN would require rebuilding the entire sustainment data infrastructure across 1,000+ aircraft in 20+ nations — a project of such scale and risk that no program office would authorize it. As the F-35 fleet ages, ODIN's value as the institutional memory of the fleet compounds."
     },
-    "aiResilienceScore": 82,
     "verdict": "Lockheed Martin is a net beneficiary of AI at the margins — AI strengthens its proprietary data moat (ODIN predictive maintenance, classified threat modeling) and its business logic lock-in (AI-assisted EW systems are harder to replicate than rule-based ones). The most AI-resilient moats are regulatory lock-in and transaction embedding, which are physically and legally impervious to AI disruption. The primary AI risk is at the margins: AI-native startups (Anduril, Shield AI) may capture niche autonomous systems contracts that could have gone to LMT, but they cannot compete for prime contractor roles on major platforms. Overall, LMT's core moat — government program embeddedness backed by regulatory barriers — is among the most AI-durable in any sector."
   }
 }

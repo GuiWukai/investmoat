@@ -4,13 +4,28 @@
   "name": "The Trade Desk",
   "lastAnalyzed": "March 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "TTD" },
-    { "label": "Market Cap", "value": "$11.2B" },
-    { "label": "Current Price", "value": "$23.55" }
+    {
+      "label": "Ticker",
+      "value": "TTD"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$11.2B"
+    },
+    {
+      "label": "Current Price",
+      "value": "$23.55"
+    }
   ],
   "chips": [
-    { "label": "Programmatic Advertising | DSP | Open Internet", "color": "primary" },
-    { "label": "Kokai AI Platform", "color": "warning" }
+    {
+      "label": "Programmatic Advertising | DSP | Open Internet",
+      "color": "primary"
+    },
+    {
+      "label": "Kokai AI Platform",
+      "color": "warning"
+    }
   ],
   "recommendation": "Hold",
   "metrics": [
@@ -90,11 +105,31 @@
     "peAnalysis": {
       "asOf": "March 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~26.5×", "note": "TTM EPS $0.90" },
-        { "label": "Forward P/E (NTM)", "value": "~11.6×", "note": "FY2026E EPS $2.07" },
-        { "label": "PEG Ratio", "value": "~0.9×", "note": "fwd P/E ÷ 13% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~3.4×", "note": "$3.28B NTM revenue (FY2026 guide)" },
-        { "label": "Price / FCF", "value": "~14×", "note": "EV/FCF ~14×; $700M+ TTM EBITDA" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~26.5×",
+          "note": "TTM EPS $0.90"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~11.6×",
+          "note": "FY2026E EPS $2.07"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~0.9×",
+          "note": "fwd P/E ÷ 13% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~3.4×",
+          "note": "$3.28B NTM revenue (FY2026 guide)"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~14×",
+          "note": "EV/FCF ~14×; $700M+ TTM EBITDA"
+        }
       ],
       "summary": "TTD is trading at one of the cheapest valuations among ad-tech peers with 78%+ gross margins — 11.6× forward P/E and 3.4× P/S price in near-zero growth that seems overly pessimistic given the company is still guiding 10%+ revenue growth and generating $700M+ EBITDA. The PEG of ~0.9× technically signals GARP territory, but the moat quality concern (displacement risk from Amazon DSP/Google DV360 and the Publicis advisory) means the low multiple is partly justified. The trailing vs forward P/E gap (26.5× vs 11.6×) reflects an EPS ramp expected as margins recover — if EBITDA margins return to 33–35% in H2 2026, EPS could exceed $2.50 and the multiple looks very cheap."
     }
@@ -172,7 +207,6 @@
       "status": "weakened",
       "note": "TTD's reporting and attribution data does not function as a legal or financial system of record. Campaign performance data can be exported and recreated on alternative platforms. This is a notable moat weakness relative to FICO, Axon, or MSCI."
     },
-    "aiResilienceScore": 58,
     "verdict": "TTD is approximately neutral on AI — Kokai AI enhances platform usability and advertiser ROAS, positioning TTD as a beneficiary of AI-driven ad optimization. However, AI also strengthens competitors: Google's Gemini-powered Performance Max and Meta's Advantage+ are AI-native systems with more first-party data, making the competitive pressure from walled gardens stronger, not weaker. TTD's primary moat risk in the AI era is that AI commoditises DSP interfaces (reducing learned-interface lock-in) while simultaneously enabling Amazon and Google to offer superior performance through larger proprietary datasets. The open-internet independent position remains relevant, but the margin of advantage over competitors is narrowing."
   }
 }

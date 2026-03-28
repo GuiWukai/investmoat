@@ -148,7 +148,6 @@
       "status": "intact",
       "note": "NC programs, tool offset databases, machine parameters, and alarm histories are stored in FANUC proprietary formats and reside on FANUC CNCs. These data assets represent years of machining know-how in a format that does not export cleanly to competitor platforms, creating institutional inertia on top of the skills-based switching cost."
     },
-    "aiResilienceScore": 84,
     "verdict": "FANUC is highly resilient to AI disruption — physical motion-control hardware and embedded servo algorithms represent physics-layer expertise that software AI cannot commoditise, and the rise of AI-driven factory automation is a direct demand accelerant for FANUC's robots and CNCs. The single genuine AI risk is that a software-defined motion-control startup could train general-purpose servo control on open hardware at far lower cost, but FANUC's certification ecosystem and data moat make this a 10+ year displacement scenario at best."
   },
   "lastAnalyzed": "October 2025"

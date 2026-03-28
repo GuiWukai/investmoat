@@ -4,13 +4,28 @@
   "name": "Arista Networks",
   "lastAnalyzed": "March 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "ANET" },
-    { "label": "Market Cap", "value": "$167B" },
-    { "label": "Current Price", "value": "$131.22" }
+    {
+      "label": "Ticker",
+      "value": "ANET"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$167B"
+    },
+    {
+      "label": "Current Price",
+      "value": "$131.22"
+    }
   ],
   "chips": [
-    { "label": "AI Data Center Networking | Cloud Infrastructure", "color": "primary" },
-    { "label": "EOS Software Moat", "color": "success" }
+    {
+      "label": "AI Data Center Networking | Cloud Infrastructure",
+      "color": "primary"
+    },
+    {
+      "label": "EOS Software Moat",
+      "color": "success"
+    }
   ],
   "recommendation": "Accumulate",
   "metrics": [
@@ -90,11 +105,31 @@
     "peAnalysis": {
       "asOf": "March 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~48×", "note": "FY2025 GAAP EPS ~$2.74/share" },
-        { "label": "Forward P/E (NTM)", "value": "~38×", "note": "est. 2026 GAAP EPS ~$3.43" },
-        { "label": "PEG Ratio", "value": "~1.7×", "note": "fwd P/E ÷ 23% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~15×", "note": "$11.26B NTM revenue (FY2026 guide)" },
-        { "label": "Price / FCF", "value": "~44×", "note": "~$3.8B FCF (FY2025 est.)" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~48×",
+          "note": "FY2025 GAAP EPS ~$2.74/share"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~38×",
+          "note": "est. 2026 GAAP EPS ~$3.43"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.7×",
+          "note": "fwd P/E ÷ 23% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~15×",
+          "note": "$11.26B NTM revenue (FY2026 guide)"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~44×",
+          "note": "~$3.8B FCF (FY2025 est.)"
+        }
       ],
       "summary": "ANET trades at ~38× forward P/E — above Cisco's 15× but justified by a fundamentally superior growth rate (25% vs Cisco's 3–5%), 47% operating margins, and AI networking market leadership that Cisco does not have. The PEG of ~1.7× is in the 'premium but fair' range for a business growing 25% with visible contracted revenue; the deferred revenue backlog essentially pre-funds two years of growth visibility. The gap between trailing (48×) and forward (38×) P/E reflects the ongoing earnings ramp as AI networking revenue scales; if the $3.25B AI networking target is achieved, this gap widens further in the bulls' favor."
     }
@@ -172,7 +207,6 @@
       "status": "intact",
       "note": "CloudVision is the authoritative system of record for network state, device configuration, and network analytics across the enterprise. Compliance reporting, audit trails, and change management for networks all flow through CloudVision — migration would require rebuilding the entire network operations workflow."
     },
-    "aiResilienceScore": 78,
     "verdict": "Arista is a strong net beneficiary of AI — AI data centers require orders of magnitude more high-speed networking than traditional cloud infrastructure, and Arista's Etherlink platform and Ultra Ethernet Consortium leadership position it as the default Ethernet alternative to NVIDIA's InfiniBand for 100K+ GPU clusters. EOS becomes more valuable as AI workloads require more sophisticated network automation. The primary AI risk is NVIDIA successfully bundling proprietary InfiniBand for the largest AI clusters before Ethernet standardization completes — but the UEC's backing from AMD, Intel, Microsoft, Meta, and Google makes this scenario difficult for NVIDIA to execute unilaterally."
   }
 }
