@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$1.3T"
+      "value": "~$1.34T"
     },
     {
       "label": "Circulating Supply",
-      "value": "19.7M / 21M"
+      "value": "19.86M / 21M"
     }
   ],
   "chips": [
@@ -31,22 +31,22 @@
   "metrics": [
     {
       "title": "Hash Rate",
-      "value": "650 EH/s",
-      "label": "Network Security Standard",
+      "value": "813 EH/s",
+      "label": "Near All-Time High Network Security",
       "icon": "Lock",
       "color": "#f7931a"
     },
     {
-      "title": "Exchange Balance",
-      "value": "1.8M BTC",
-      "label": "Multi-year Lows (Illicit Supply)",
+      "title": "Spot ETF AUM",
+      "value": "$95.9B",
+      "label": "US Spot Bitcoin ETFs — $42B+ Cumulative Inflows",
       "icon": "Shield",
       "color": "#3b82f6"
     },
     {
-      "title": "Address Count",
-      "value": "52.4M",
-      "label": "Unique Holders Worldwide",
+      "title": "Exchange Reserves",
+      "value": "7-Year Lows",
+      "label": "BTC Leaving Exchanges — Whale Accumulation Signal",
       "icon": "Globe",
       "color": "#10b981"
     }
@@ -73,38 +73,38 @@
   },
   "growth": {
     "score": 85,
-    "description": "Institutional adoption via ETFs and sovereign treasury integration."
+    "description": "Institutional adoption via spot ETFs ($95.9B AUM, $42B+ cumulative inflows) and sovereign treasury integration (US Strategic Bitcoin Reserve formalized). Bitcoin hit a new all-time high of $126,080 in January 2026 — validating the post-halving cycle thesis — before pulling back to $66,194 on geopolitical risk-off. Cycle peak window (April–October 2026) remains ahead."
   },
   "valuation": {
-    "score": 77,
-    "description": "At ~$85,000, trading between bear ($45,000) and base ($120,000) — current price reflects post-halving momentum and ETF inflow narrative; meaningful upside to base on continued institutional adoption."
+    "score": 83,
+    "description": "At ~$66,194 — down 47% from the January 2026 all-time high of $126,080 — BTC is in a post-ATH consolidation with geopolitical risk (Middle East) and ETF outflow weeks driving the pullback. Spot ETF AUM remains $95.9B with $42B+ cumulative inflows. Historically, cycle peaks arrive 12–18 months post-halving (April–October 2026 window). Trading between bear ($50,000) and base ($160,000)."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$45,000",
-      "description": "Macro risk-off event combined with regulatory shock triggers a sharp ETF outflow cycle and leveraged position unwind.",
+      "priceTarget": "$50,000",
+      "description": "Extended geopolitical crisis combined with US recession triggers sustained ETF outflows and a full post-halving cycle drawdown to prior ATH support.",
       "points": [
-        "US recession forces institutional portfolio de-risking, ETF outflows accelerate",
-        "Major G20 jurisdiction enacts restrictive self-custody or exchange legislation",
-        "Post-halving miner capitulation event drives forced selling pressure"
+        "Middle East escalation causes sustained risk-off across all asset classes; BTC ETF weekly outflows exceed $500M for 6+ consecutive weeks",
+        "US Strategic Bitcoin Reserve execution is delayed by Congressional opposition, removing a key sovereign demand catalyst",
+        "On-chain activity continues declining (active addresses at multi-year lows) as retail exits; miner capitulation accelerates at sub-$55,000"
       ]
     },
     "base": {
-      "priceTarget": "$120,000",
-      "description": "Continued institutional ETF accumulation and corporate treasury adoption drives a measured re-rating toward gold parity.",
+      "priceTarget": "$160,000",
+      "description": "Post-halving cycle peak arrives in mid-2026 as ETF inflows re-accelerate and the US Strategic Bitcoin Reserve formalizes, driving BTC to a new ATH above the January 2026 high.",
       "points": [
-        "Institutional weighting in traditional portfolios increases to 1-2% as more endowments adopt BTC",
-        "US Strategic Bitcoin Reserve formalized, removing sovereign selling overhang",
-        "Post-halving supply shock compounds with ETF demand, maintaining structural bid"
+        "Spot ETF AUM surpasses $200B as the halving-driven supply squeeze combines with steady institutional inflows from pension funds and endowments adding 1–2% BTC allocations",
+        "US Strategic Bitcoin Reserve begins active accumulation — confirmed purchases removing supply overhang and signaling sovereign legitimacy that triggers BRICS+ central bank interest",
+        "Morgan Stanley's low-fee spot BTC ETF launches, unlocking Morgan Stanley's $3.5T wealth management client base and accelerating retail re-entry"
       ]
     },
     "bull": {
-      "priceTarget": "$300,000+",
-      "description": "Sovereign nation adoption and global currency instability trigger a generational flight to decentralized hard assets.",
+      "priceTarget": "$350,000+",
+      "description": "Sovereign wealth fund adoption and a G7 currency crisis trigger a generational flight to Bitcoin as the world's reserve-quality decentralized hard asset.",
       "points": [
-        "Multiple G20 central banks begin formally adding BTC to foreign exchange reserves",
-        "G7 fiscal crisis triggers currency volatility, accelerating BTC safe-haven flows",
-        "MicroStrategy-model corporate treasury adoption reaches 500+ companies globally"
+        "Multiple G20 sovereign wealth funds formally add BTC to reserve portfolios — following the US Strategic Reserve precedent — creating a nation-state accumulation cycle with no precedent in financial history",
+        "US dollar loses reserve currency status at the margin as BRICS+ gold/BTC settlement framework captures 25%+ of global trade volume, triggering USD diversification at scale",
+        "Corporate treasury adoption surpasses 1,000 companies globally following Strategy Inc.'s playbook; combined corporate holdings exceed 3% of circulating supply"
       ]
     }
   },
@@ -151,5 +151,5 @@
     },
     "verdict": "Bitcoin's mathematical scarcity and decentralized consensus make it uniquely immune to AI disruption. No AI can inflate the supply, hack the network, or replicate the 15-year institutional trust-building."
   },
-  "lastAnalyzed": "October 2025"
+  "lastAnalyzed": "March 2026"
 }

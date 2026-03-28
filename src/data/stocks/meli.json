@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$80B"
+      "value": "~$83B"
     },
     {
       "label": "Price",
-      "value": "~$1,600"
+      "value": "~$1,631"
     }
   ],
   "chips": [
@@ -27,26 +27,26 @@
       "color": "success"
     }
   ],
-  "recommendation": "Strong Buy",
+  "recommendation": "Accumulate",
   "metrics": [
     {
-      "title": "FY2025 Revenue",
-      "value": "$28.9B",
-      "label": "+39% YoY — 27 consecutive quarters >30% growth",
+      "title": "Q4 2025 Revenue",
+      "value": "$8.76B",
+      "label": "+45% YoY — FY2025 Total $28.9B (+39%)",
       "icon": "TrendingUp",
       "color": "#FFE600"
     },
     {
-      "title": "Total Payment Volume",
-      "value": "$278B",
-      "label": "FY2025 TPV, +41% YoY",
+      "title": "Q4 TPV",
+      "value": "$83.7B",
+      "label": "+42% YoY — Acquiring TPV +50% in Mexico",
       "icon": "CreditCard",
       "color": "#00a650"
     },
     {
-      "title": "Mercado Pago MAUs",
-      "value": "78M",
-      "label": "+27% YoY, ~30% growth for 10 consecutive quarters",
+      "title": "Credit Portfolio",
+      "value": "$12.5B",
+      "label": "+90% YoY — Mercado Pago MAUs 78M (+28%)",
       "icon": "Users",
       "color": "#FFE600"
     }
@@ -73,7 +73,7 @@
   },
   "growth": {
     "score": 90,
-    "description": "MercadoLibre is compounding at 39% revenue CAGR with multiple structural tailwinds: LatAm e-commerce penetration in the mid-teens vs. 25%+ in the US, Mercado Pago expanding into offline commerce, a credit portfolio growing 90% YoY, and an advertising business up 67% powered by AI-driven targeting tools.",
+    "description": "Q4 2025 revenue hit $8.76B (+45% YoY), beating estimates by 10%. FY2025 total was $28.9B (+39%). EPS missed on deliberate margin investment (lowering Brazil free shipping threshold), not fundamental deterioration — the same playbook Amazon used 2010–2015. Credit portfolio reached $12.5B (+90%), advertising +67%, Mercado Pago MAUs 78M (+28%). New CEO Ariel Szarfsztejn enters 2026 with all business units growing at scale.",
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
@@ -85,8 +85,8 @@
     }
   },
   "valuation": {
-    "score": 78,
-    "description": "At ~$1,600 — roughly 30% below the 2025 peak — MELI trades at ~3x P/S for a 39% CAGR compounder with dominant LatAm positioning; the pullback reflects short-term margin investment pressure, not fundamental deterioration.",
+    "score": 77,
+    "description": "At ~$1,631, trading 26% below the base case ($2,200) — a compelling entry for a 39%+ CAGR compounder. The EPS miss in Q4 on deliberate margin investment (Brazil logistics) drew selling that creates opportunity. 23 analyst buy/strong-buy ratings; consensus target $2,733 (+64% upside). Trades between bear ($1,000) and base ($2,200).",
     "valuationNote": {
       "text": "MELI's P/S of ~3x is cheap relative to its growth rate — for comparison, Shopify trades at ~10x P/S on 30% growth. The margin compression in 2025 (from lowering Brazil's free shipping threshold and scaling fulfillment) is a deliberate reinvestment, similar to Amazon's 2010-2015 phase. At the base case of $2,200, MELI trades at ~4.5x forward P/S on projected $40B+ revenue — reasonable for a business with 30%+ sustainable growth and expanding FCF margins.",
       "fairValue": "$2,200"
@@ -164,5 +164,5 @@
     },
     "verdict": "MercadoLibre is a net beneficiary of AI — its AI-powered seller assistant is already advising on 20% of GMV, and its proprietary transaction data enables underwriting and ad targeting that AI-powered challengers cannot replicate without decades of transaction history. The primary AI risk is that lower development barriers could enable local fintech competitors, but MELI's two-sided network scale and 25-year compounding of trust in underdeveloped financial markets are not easily disrupted."
   },
-  "lastAnalyzed": "November 2025"
+  "lastAnalyzed": "March 2026"
 }

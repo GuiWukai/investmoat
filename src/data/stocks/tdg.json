@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$67B"
+      "value": "~$72B"
     },
     {
       "label": "Price",
-      "value": "$1,250"
+      "value": "~$1,350"
     }
   ],
   "chips": [
@@ -31,8 +31,8 @@
   "metrics": [
     {
       "title": "EBITDA Margin",
-      "value": "57%",
-      "label": "Best-in-Class Profitability",
+      "value": "52.4%",
+      "label": "Q1 FY2026 — Revenue $2.285B (+14% YoY)",
       "icon": "TrendingUp",
       "color": "#1a5276"
     },
@@ -44,9 +44,9 @@
       "color": "#2e86c1"
     },
     {
-      "title": "Aftermarket Revenue",
-      "value": "~55%",
-      "label": "High-Margin MRO Revenue",
+      "title": "FY2026 Guidance",
+      "value": "$9.94B",
+      "label": "Revenue — EBITDA $5.21B | Adj EPS $38.38",
       "icon": "Wrench",
       "color": "#148f77"
     }
@@ -72,8 +72,8 @@
     ]
   },
   "growth": {
-    "score": 75,
-    "description": "Commercial air travel recovery, NATO defense spending increases, and a repeatable M&A engine drive durable 10–15% revenue CAGR. The primary risk is the company's intentional high-leverage balance sheet (~7× net debt/EBITDA), which limits flexibility in a sustained high-rate environment.",
+    "score": 78,
+    "description": "Q1 FY2026 revenue grew 14% YoY to $2.285B with adj EPS of $8.23 — beating consensus across the board. TransDigm deployed $3.16B in acquisitions in FY2025: Stellant Systems ($960M, electro-mechanical actuation), Jet Parts Engineering (~$1.1B), and Victor Sierra Aviation (~$1.1B) — all high-sole-source-content businesses that expand the aftermarket compounding engine. FY2026 guidance: $9.94B revenue, $5.21B adj EBITDA, $38.38 adj EPS. Net debt/EBITDA at 5.7× is tracking toward the target range.",
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
@@ -85,10 +85,10 @@
     }
   },
   "valuation": {
-    "score": 70,
-    "description": "At ~$1,250, TransDigm trades near the midpoint between bear ($850) and base ($1,350) — a reasonable entry for a business with near-monopoly economics. The high debt load (~$20B net debt) justifies a modest discount vs. comparable industrial compounders with cleaner balance sheets.",
+    "score": 65,
+    "description": "At ~$1,350, TransDigm is trading right at the base case — fair value, not a discount. The stock has been re-rated upward on Q1 FY2026 beats and the acquisition pipeline, but the asymmetry vs. the $1,900 bull case requires execution across 2-3 years. High leverage (5.7× net debt/EBITDA) remains a valuation anchor.",
     "valuationNote": {
-      "text": "TransDigm intentionally operates with 6–8× net debt/EBITDA, returning capital via special dividends rather than buybacks. Adjust fair value down 10–15% for leverage risk in a sustained high-rate environment.",
+      "text": "TransDigm intentionally operates with 6–8× net debt/EBITDA, returning capital via special dividends rather than buybacks. At $1,350 = base case fair value, the risk/reward is balanced: 29% downside to bear ($850) vs. 41% upside to bull ($1,900).",
       "fairValue": "$1,350"
     }
   },
@@ -104,23 +104,23 @@
       ]
     },
     "base": {
-      "priceTarget": "$1,350",
-      "description": "Steady commercial air traffic growth, continued 5–8% price escalation, and 2–3 annual acquisitions drive 12–15% EBITDA growth.",
+      "priceTarget": "$1,600",
+      "description": "Steady 12–14% annual EPS growth from M&A compounding, 5–8% price escalation, and NATO defense ramp drives steady re-rating.",
       "points": [
-        "Commercial segment grows 10–12% annually as global air traffic reaches and exceeds 2019 levels",
-        "Defense segment grows 8–10% annually on NATO spending commitments",
-        "Two to three acquisitions per year add $400–600M in acquired EBITDA over three years",
-        "Multiple holds at ~14–15× EBITDA as leverage gradually decreases toward 6× net debt/EBITDA"
+        "FY2026 guidance achieved: $9.94B revenue, $5.21B adj EBITDA — with Stellant, Jet Parts Engineering, and Victor Sierra contributing full-year acquired revenue",
+        "Defense segment grows 10–12% annually as NATO members execute 2–3% GDP spending commitments and electro-mechanical actuation demand accelerates",
+        "Two acquisitions per year add $300–500M in acquired EBITDA; net debt/EBITDA tracks toward 5× as FCF generation exceeds $3B annually",
+        "Adj EPS approaches $45-50 by FY2028 at current multiples, supporting a gradual re-rating toward $1,600"
       ]
     },
     "bull": {
-      "priceTarget": "$1,900",
-      "description": "Accelerated defense spending, a transformational $4–6B acquisition, and a commercial aviation super-cycle drive EPS well above consensus.",
+      "priceTarget": "$2,100",
+      "description": "Accelerated defense spending, a transformational $5–7B acquisition, and a commercial aviation super-cycle drive EPS well above consensus.",
       "points": [
-        "NATO 3%+ GDP commitments accelerate defense budget growth, driving 15%+ growth in TransDigm's defense segment",
-        "A transformational acquisition ($4–6B) of a business with 90%+ sole-source aftermarket content",
-        "New narrow-body aircraft programs lock in TDG parts for the 2040s and beyond",
-        "Special dividend of $50–70/share funded by record free cash flow generation"
+        "NATO 3%+ GDP commitments accelerate defense budget growth; Stellant's electro-mechanical actuation systems win on multiple next-generation defense programs",
+        "A transformational acquisition ($5–7B) of a business with 90%+ sole-source aftermarket content expands the platform into adjacent aerospace verticals",
+        "New narrow-body aircraft programs (Boeing 737 MAX successor, Airbus A220 derivatives) lock in TDG parts for the 2040s and beyond",
+        "Special dividend of $70–100/share funded by record free cash flow generation as leverage reaches 4× net debt/EBITDA"
       ]
     }
   },
@@ -167,5 +167,5 @@
     },
     "verdict": "TransDigm's moat is almost entirely AI-immune. Regulatory certification cannot be automated — the FAA and DOD will not approve AI-designed substitutes without decades of physical certification testing. The sole-source aftermarket model becomes more durable, not weaker, as aircraft fleets age and alternatives become even less economical to certify."
   },
-  "lastAnalyzed": "October 2025"
+  "lastAnalyzed": "March 2026"
 }

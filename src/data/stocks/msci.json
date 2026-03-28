@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$46B"
+      "value": "~$43B"
     },
     {
       "label": "Price",
-      "value": "$570"
+      "value": "$528"
     }
   ],
   "chips": [
@@ -31,8 +31,8 @@
   "metrics": [
     {
       "title": "AUM Benchmarked",
-      "value": "$15.5T",
-      "label": "To MSCI Equity Indexes",
+      "value": "$18.3T",
+      "label": "To MSCI Equity Indexes — Up from $15.5T",
       "icon": "BarChart2",
       "color": "#c0392b"
     },
@@ -45,8 +45,8 @@
     },
     {
       "title": "EBITDA Margin",
-      "value": "~58%",
-      "label": "Capital-Light Index Business",
+      "value": "62.2%",
+      "label": "Q4 2025 — 11th Straight Year of Double-Digit EPS Growth",
       "icon": "TrendingUp",
       "color": "#76b041"
     }
@@ -72,8 +72,8 @@
     ]
   },
   "growth": {
-    "score": 75,
-    "description": "Passive investing growth, private assets expansion, and AI-enhanced analytics drive a durable 10–13% revenue CAGR. The AUM-linked fee structure means equity market appreciation generates revenue without incremental selling effort. The primary growth risk is regulatory ESG headwinds in the US and passive investing saturation.",
+    "score": 77,
+    "description": "FY2025 revenue grew 9.75% to $3.13B with Q4 2025 index segment organic growth of 14%. AUM benchmarked to MSCI indexes reached $18.3T (up from $15.5T) — driven by record ETF inflows. MSCI achieved its 11th consecutive year of double-digit adjusted EPS growth. BlackRock ETF agreement extended through 2035 — locking in the world's largest passive fund manager as an anchor client for the next decade.",
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
@@ -85,8 +85,8 @@
     }
   },
   "valuation": {
-    "score": 71,
-    "description": "At ~$570, MSCI trades between bear ($420) and base ($620) — reasonable entry for one of the most durable financial data franchises in the world. The stock de-rated in 2022–2023 on ESG headwinds and rate sensitivity (high-multiple growth stock), providing a better entry than recent history.",
+    "score": 77,
+    "description": "At ~$528, trading 25% below the base case ($620) — an attractive entry for a franchise with $18.3T in benchmarked AUM. 52-week range $487–$626 places the stock toward the lower end. 15 analysts rate Buy with average target $678 (+28% upside). The BlackRock deal extension through 2035 eliminates a key contract risk.",
     "valuationNote": {
       "text": "MSCI trades at ~35–38× forward earnings — premium relative to market but justified by 95%+ recurring revenue, 58% EBITDA margins, and near-zero capital requirements. The AUM-linked fee structure means EPS grows even without new customer acquisition in rising equity markets.",
       "fairValue": "$620"
@@ -167,5 +167,5 @@
     },
     "verdict": "MSCI's moat is almost entirely AI-immune. The index standard network effect, legal lock-in via fund prospectuses, and 50-year data history cannot be replicated by AI — and AI analytics capabilities built on top of MSCI data actually strengthen the bundle moat. This is one of the most durable franchises in financial services."
   },
-  "lastAnalyzed": "October 2025"
+  "lastAnalyzed": "March 2026"
 }

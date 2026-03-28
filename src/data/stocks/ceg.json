@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$116B"
+      "value": "~$103B"
     },
     {
       "label": "Price",
-      "value": "~$364"
+      "value": "~$323"
     }
   ],
   "chips": [
@@ -27,26 +27,26 @@
       "color": "success"
     }
   ],
-  "recommendation": "Hold",
+  "recommendation": "Accumulate",
   "metrics": [
     {
-      "title": "Nuclear Fleet Capacity",
-      "value": "22 GW",
-      "label": "23% of all US nuclear power generation",
+      "title": "Total Fleet Capacity",
+      "value": "55 GW",
+      "label": "32.4 GW Nuclear + 26 GW Gas/Geo (Post-Calpine)",
       "icon": "Zap",
       "color": "#0072CE"
     },
     {
-      "title": "Fleet Capacity Factor",
-      "value": "96.8%",
-      "label": "Q3 2025 — ~4% above industry average",
+      "title": "2026 Adj. EPS Guidance",
+      "value": "$11.37",
+      "label": "+21% YoY — Calpine Accretive from Day One",
       "icon": "TrendingUp",
       "color": "#00a650"
     },
     {
-      "title": "FY2024 Free Cash Flow",
-      "value": "$4B+",
-      "label": "From $24B revenue, expanding under AI contracts",
+      "title": "FY2025 Revenue",
+      "value": "$25.5B",
+      "label": "+8.3% YoY — EBITDA Margin Expanding to 21.4% in 2026",
       "icon": "DollarSign",
       "color": "#0072CE"
     }
@@ -72,8 +72,8 @@
     ]
   },
   "growth": {
-    "score": 72,
-    "description": "Constellation's revenue growth is modest (8% YoY) but EPS is compounding double-digits as old below-market contracts expire and are replaced by premium AI PPAs — the real growth story is margin expansion from contract repricing, not volume growth.",
+    "score": 75,
+    "description": "Calpine acquisition closed January 7, 2026 ($26.6B total) — the largest US power deal since TXU in 2007 — creating the nation's largest electricity producer with 55 GW of combined nuclear, natural gas, and geothermal capacity. 2026 adj. EPS guidance of $11.37 (+21% YoY) and EBITDA margin expansion to 21.4% reflect accelerating contract repricing. Dividend raised 10% with another 10% increase pledged for 2026.",
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
@@ -85,8 +85,8 @@
     }
   },
   "valuation": {
-    "score": 71,
-    "description": "At ~$364, CEG trades at a premium to traditional utilities (~42x P/E) but this reflects contract revenue visibility that no utility peer possesses — the 20-year hyperscaler PPAs and nuclear PTC floor justify a higher-than-average multiple for the sector.",
+    "score": 77,
+    "description": "At ~$323 — down 11% from October 2025 levels despite Calpine closing and EPS guidance upgrade — CEG looks attractively priced. 18 analysts rate it with 10 Buys and a mean target of $393.93 (+22% upside). The Calpine dilution from new shares issued explains part of the market cap decline. Trades between bear ($200) and base ($420).",
     "valuationNote": {
       "text": "Comparing CEG to traditional utilities on P/E or EV/EBITDA understates its quality — the appropriate peer group is contracted infrastructure (data center REITs, toll roads) where 20-year fixed-price contracts trade at 30-50x earnings. CEG's FCF yield of ~3.5% ($4B FCF / $116B market cap) is below historical averages for utilities, reflecting the AI contract premium. At the base case of $420, investors receive a 15% upside plus a growing dividend.",
       "fairValue": "$420"
@@ -164,5 +164,5 @@
     },
     "verdict": "Constellation Energy is a beneficiary of AI adoption through its data center PPA contracts, but AI cannot meaningfully strengthen or weaken its core nuclear infrastructure moat — the advantages (NRC licensing, physical plant ownership, operational expertise) are independent of AI. The primary risk is AI efficiency improvements reducing data center power demand growth; the primary upside is AI-driven demand accelerating faster than the grid can add capacity."
   },
-  "lastAnalyzed": "October 2025"
+  "lastAnalyzed": "March 2026"
 }
