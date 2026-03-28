@@ -8,52 +8,100 @@ function moatPoints(m: { status: string; note: string }): number | null {
   return MOAT_POINTS[m.status] ?? 0;
 }
 
-function groupStats(moats: Array<{ status: string; note: string }>): { avg: number; count: number } {
-  const pts = moats.map(moatPoints).filter((p): p is number => p !== null);
+/**
+ * Individual base weights for resilient moats (sum = 60).
+ * networkEffects and proprietaryData are historically the most durable moats;
+ * regulatoryLockIn and transactionEmbedding carry less weight as they are
+ * more susceptible to external (policy/platform) disruption.
+ */
+const RESILIENT_WEIGHTS = {
+  networkEffects:       15,
+  proprietaryData:      15,
+  systemOfRecord:       12,
+  regulatoryLockIn:     10,
+  transactionEmbedding:  8,
+} as const;
+
+/**
+ * Individual base weights for vulnerable moats (sum = 40).
+ * businessLogic represents the deepest process expertise and is most at risk
+ * from AI; publicDataAccess is nearly commoditised so carries minimal weight.
+ */
+const VULNERABLE_WEIGHTS = {
+  businessLogic:    14,
+  bundling:         10,
+  learnedInterfaces: 8,
+  talentScarcity:    5,
+  publicDataAccess:  3,
+} as const;
+
+const RESILIENT_TOTAL = Object.values(RESILIENT_WEIGHTS).reduce((a, b) => a + b, 0); // 60
+const VULNERABLE_TOTAL = Object.values(VULNERABLE_WEIGHTS).reduce((a, b) => a + b, 0); // 40
+
+/**
+ * Computes a weighted score for one moat group.
+ * N/A moats are excluded; their weight redistributes proportionally across
+ * remaining applicable moats (preserving the within-group relative ranking).
+ * Returns the group's weighted-average score and the sum of applicable weights.
+ */
+function weightedGroupScore(
+  moats: Array<[{ status: string; note: string }, number]>
+): { score: number; applicableWeight: number; totalWeight: number } {
+  let weightedSum = 0;
+  let applicableWeight = 0;
+  let totalWeight = 0;
+  for (const [assessment, weight] of moats) {
+    totalWeight += weight;
+    const pts = moatPoints(assessment);
+    if (pts === null) continue;
+    weightedSum += pts * weight;
+    applicableWeight += weight;
+  }
   return {
-    avg: pts.length ? pts.reduce((a, b) => a + b, 0) / pts.length : 0,
-    count: pts.length,
+    score: applicableWeight > 0 ? weightedSum / applicableWeight : 0,
+    applicableWeight,
+    totalWeight,
   };
 }
 
 /**
  * Compute a 0–100 moat score from the ten moats assessment.
  *
- * AI-resilient moats (proprietaryData, regulatoryLockIn, networkEffects,
- * transactionEmbedding, systemOfRecord) carry a base weight of 12 each (60÷5).
- * AI-vulnerable moats (learnedInterfaces, businessLogic, publicDataAccess,
- * talentScarcity, bundling) carry a base weight of 8 each (40÷5).
+ * AI-resilient moats (networkEffects, proprietaryData, systemOfRecord,
+ * regulatoryLockIn, transactionEmbedding) carry differentiated base weights
+ * summing to 60. AI-vulnerable moats (businessLogic, bundling, learnedInterfaces,
+ * talentScarcity, publicDataAccess) carry differentiated base weights summing to 40.
  *
- * When all 10 moats apply the effective split is exactly 60/40. N/A moats
- * (destroyed with note starting "N/A") are excluded; their base weight is
- * dropped so it shifts naturally to whichever moats remain applicable.
+ * When all 10 moats apply the effective group split is exactly 60/40. N/A moats
+ * are excluded; their base weight is dropped so it redistributes naturally to
+ * whichever moats remain applicable within each group.
  *
  * Examples:
- *   5R + 5V (all apply)  → 60% / 40%
- *   5R + 1V (4 N/A vul.) → 60/(60+8) ≈ 88% / 12%
- *   5R + 0V (all N/A)    → 100% / 0%
+ *   all 10 apply       → 60% resilient / 40% vulnerable
+ *   4 N/A vulnerable   → 60/(60+vApplicable) resilient / rest vulnerable
+ *   all vulnerable N/A → 100% resilient / 0% vulnerable
  */
 export function computeMoatScore(tenMoats: TenMoatsData): number {
-  const resilient = groupStats([
-    tenMoats.proprietaryData,
-    tenMoats.regulatoryLockIn,
-    tenMoats.networkEffects,
-    tenMoats.transactionEmbedding,
-    tenMoats.systemOfRecord,
+  const resilient = weightedGroupScore([
+    [tenMoats.networkEffects,        RESILIENT_WEIGHTS.networkEffects],
+    [tenMoats.proprietaryData,       RESILIENT_WEIGHTS.proprietaryData],
+    [tenMoats.systemOfRecord,        RESILIENT_WEIGHTS.systemOfRecord],
+    [tenMoats.regulatoryLockIn,      RESILIENT_WEIGHTS.regulatoryLockIn],
+    [tenMoats.transactionEmbedding,  RESILIENT_WEIGHTS.transactionEmbedding],
   ]);
-  const vulnerable = groupStats([
-    tenMoats.learnedInterfaces,
-    tenMoats.businessLogic,
-    tenMoats.publicDataAccess,
-    tenMoats.talentScarcity,
-    tenMoats.bundling,
+  const vulnerable = weightedGroupScore([
+    [tenMoats.businessLogic,     VULNERABLE_WEIGHTS.businessLogic],
+    [tenMoats.bundling,          VULNERABLE_WEIGHTS.bundling],
+    [tenMoats.learnedInterfaces, VULNERABLE_WEIGHTS.learnedInterfaces],
+    [tenMoats.talentScarcity,    VULNERABLE_WEIGHTS.talentScarcity],
+    [tenMoats.publicDataAccess,  VULNERABLE_WEIGHTS.publicDataAccess],
   ]);
-  // Each resilient moat has base weight 12 (=60/5); each vulnerable moat 8 (=40/5).
-  const rW = resilient.count * 12;
-  const vW = vulnerable.count * 8;
+  // Scale each group's contribution by the fraction of its base weight that applies.
+  const rW = 60 * (resilient.applicableWeight / RESILIENT_TOTAL);
+  const vW = 40 * (vulnerable.applicableWeight / VULNERABLE_TOTAL);
   const total = rW + vW;
   if (total === 0) return 0;
-  return Math.round(resilient.avg * rW / total + vulnerable.avg * vW / total);
+  return Math.round(resilient.score * rW / total + vulnerable.score * vW / total);
 }
 
 /**
