@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$83B"
+      "value": "~$91B"
     },
     {
       "label": "Price",
-      "value": "~$467"
+      "value": "~$495"
     }
   ],
   "chips": [
@@ -27,32 +27,31 @@
       "color": "success"
     }
   ],
-  "recommendation": "Strong Buy",
+  "recommendation": "Accumulate",
   "metrics": [
     {
       "title": "MIS Operating Margin",
-      "value": "65%",
-      "label": "Q3 2025 Adjusted — among the highest in financial services",
+      "value": "63.6%",
+      "label": "FY2025 Full Year — +350bps YoY Expansion",
       "icon": "TrendingUp",
       "color": "#23539A"
     },
     {
       "title": "FY2025 Revenue",
       "value": "$7.72B",
-      "label": "+8.9% YoY, +14.2% 2-year CAGR",
+      "label": "+9% YoY — Adj EPS $14.94 (+20%)",
       "icon": "BarChart2",
       "color": "#23539A"
     },
     {
-      "title": "5-Year Avg. Return on Equity",
-      "value": "63%",
-      "label": "Exceptional capital efficiency from regulatory moat",
+      "title": "MA ARR",
+      "value": "$3.5B",
+      "label": "+8% YoY — 96% Recurring Revenue",
       "icon": "Award",
       "color": "#23539A"
     }
   ],
   "moat": {
-    "score": 90,
     "description": "Moody's moat is one of the strongest in financial services — NRSRO regulatory designation mandated by the SEC means institutional investors are legally required to reference Moody's ratings, creating a government-sanctioned duopoly that has persisted for 100+ years and shows no sign of weakening.",
     "analysisTitle": "The Government-Mandated Duopoly",
     "analysisSummary": "Moody's competitive position is built on **regulatory mandation, 100-year trust compounding, and proprietary data assets** that make it effectively impervious to competitive attack:",
@@ -73,7 +72,7 @@
   },
   "growth": {
     "score": 80,
-    "description": "Moody's grows at 8-14% revenue CAGR through the debt issuance cycle, with Moody's Analytics providing 96% recurring subscription revenue that smooths the transactional volatility of the ratings business — EPS compounds at 15-20% as margins approach 50%.",
+    "description": "FY2025 delivered record results: revenue +9% to $7.72B, adj EPS +20% to $14.94, MIS margin +350bps to 63.6%, and a record $6.6T in debt rated — the busiest Q4 issuance quarter in Moody's history. Private credit revenue surged 60% YoY as Moody's served as sole rating agency on Blackstone's $1.5B private credit CLO. 2026 guidance: revenue growth high single-digit, adj EPS $16.40–$17.00 (+12%), with 50–53% adjusted operating margin.",
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
@@ -85,8 +84,8 @@
     }
   },
   "valuation": {
-    "score": 76,
-    "description": "At ~$467, MCO trades at ~28x adjusted forward P/E — reasonable for a regulatory duopolist with 65% operating margins; the 12-month analyst consensus of $550 implies ~18% upside, and the debt refinancing wave tailwind is visible in current results.",
+    "score": 73,
+    "description": "At ~$495, MCO trades at ~30x forward P/E on 2026E EPS of $16.40–$17.00 — reasonable for a regulatory duopolist with 63%+ MIS margins. The base case of $560 represents ~13% upside, supported by the debt refinancing cycle and private credit expansion. Trades between bear ($340) and base ($560).",
     "valuationNote": {
       "text": "Moody's is a cash-compounding machine: $2.5B annual FCF on a $83B market cap implies a 3% FCF yield — modest, but appropriate for a business with perpetual pricing power and a government-protected revenue stream. The $4B share buyback authorization (through open-ended timeline) reduces share count by ~2-3% annually. At the base case of $560, investors receive a 20% return plus dividends from a business that Berkshire Hathaway identifies as a permanent holding.",
       "fairValue": "$560"
@@ -164,5 +163,5 @@
     },
     "verdict": "Moody's is among the most AI-resilient businesses in existence — its regulatory mandation, 100-year proprietary data, and legally embedded ratings are structurally immune to AI disruption, while AI actively strengthens its analytics division. The primary AI opportunity is conversational credit intelligence that commands premium subscription pricing; the risk of AI commoditizing credit analysis is minimal because the credibility of a Moody's rating derives from regulatory recognition and historical track record, not the underlying analytical process."
   },
-  "lastAnalyzed": "November 2025"
+  "lastAnalyzed": "March 2026"
 }

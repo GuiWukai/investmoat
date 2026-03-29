@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$58B"
+      "value": "~$85B"
     },
     {
       "label": "Current Price",
-      "value": "~$40"
+      "value": "~$59"
     },
     {
       "label": "Primary Metal",
@@ -30,32 +30,31 @@
       "color": "success"
     }
   ],
-  "recommendation": "Accumulate",
+  "recommendation": "Speculative Buy",
   "metrics": [
     {
       "title": "Copper Production",
-      "value": "~4.3B lbs",
-      "label": "2024 Actual (Annual)",
+      "value": "3.4B lbs",
+      "label": "FY2025 Actual — Grasberg Force Majeure Impact",
       "icon": "TrendingUp",
       "color": "#b45309"
     },
     {
-      "title": "Grasberg Mine",
-      "value": "#1",
-      "label": "World's Largest Gold/Copper Mine",
+      "title": "Copper Price",
+      "value": "$5.33/lb",
+      "label": "Q4 2025 Average — +28% YoY",
       "icon": "Gem",
       "color": "#f59e0b"
     },
     {
-      "title": "Reserve Life",
-      "value": "30+ yrs",
-      "label": "Long-Duration Asset Base",
+      "title": "Grasberg Restart",
+      "value": "Q2 2026",
+      "label": "Phased Restart — 85% Capacity by H2 2026",
       "icon": "Shield",
       "color": "#10b981"
     }
   ],
   "moat": {
-    "score": 60,
     "description": "World-class long-life copper reserves headlined by the Grasberg complex, with scale advantages and multi-decade permitting that new entrants cannot replicate — offset by commodity price exposure and Indonesia sovereign risk.",
     "analysisTitle": "The Reserve Quality Moat",
     "analysisSummary": "In large-scale mining, the moat is **Reserve Size, Grade, and Jurisdictional Control**:",
@@ -75,42 +74,39 @@
     ]
   },
   "growth": {
-    "score": 75,
-    "description": "Grasberg underground ramp-up drives organic volume growth through 2027; copper demand acceleration from EVs, grid buildout, and AI data centers provides a structural tailwind that underpins above-consensus long-term copper pricing."
+    "score": 72,
+    "description": "FY2025 copper production was 3.4B lbs (below prior guidance) after a September 2025 mudslide at Grasberg triggered force majeure. Phased restart begins Q2 2026, with ~85% of district production expected to recover by H2 2026. Record copper prices ($5.33/lb average in Q4 2025) partially offset the production shortfall. 2026E production of 3.7B lbs assumes successful Grasberg restart; any delays present material downside risk to earnings."
   },
   "valuation": {
-    "score": 68,
-    "description": "At ~$40, FCX trades at roughly 12–14x normalized earnings assuming $4.50/lb copper — fair value for a world-class producer with optionality to a copper supercycle. Material upside if copper re-rates to $5.50–6.00/lb on supply deficits."
+    "score": 65,
+    "description": "At ~$59, FCX has re-rated significantly on higher copper prices but Grasberg restart execution risk justifies a discount. 16 analysts rate it Strong Buy with average target $56.93 (slightly below current). Trading near the updated base case of $60 — valuation is fair, not cheap, with Grasberg as the swing factor."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$22",
-      "description": "Copper collapses below $3.50/lb on a global growth slowdown, Indonesia tightens PT-FI terms, and Grasberg underground faces production setbacks.",
+      "priceTarget": "$35",
+      "description": "Grasberg restart faces further geological setbacks, copper prices fall on China slowdown, and the market applies a deep discount for execution risk.",
       "points": [
-        "Copper prices fall below $3.50/lb as China construction activity weakens and EV adoption stalls",
-        "Indonesia renegotiates PT Freeport Indonesia contract terms, increasing royalties and reducing FCX cash flows",
-        "Grasberg underground block cave encounters geotechnical challenges, delaying the production ramp",
-        "Multiple compression toward trough-cycle 6–7x EBITDA as commodity sentiment deteriorates"
+        "Grasberg phased restart encounters additional mudslide events or geomechanical instability, delaying full recovery to 2027+ and impairing the 2027–2029 production guidance of 1.6B lbs/year",
+        "Copper falls to $3.50/lb as China property sector weakness deepens and EV demand growth stalls below expectations, compressing FCX EBITDA by 40%+",
+        "Indonesia renegotiates PT Freeport Indonesia contract terms or imposes additional export duties, increasing effective royalty rates and reducing net cash flow by $500M+ annually"
       ]
     },
     "base": {
-      "priceTarget": "$48",
-      "description": "Copper holds in the $4.25–5.00/lb range, Grasberg delivers on its underground ramp schedule, and FCX generates strong free cash flow to fund buybacks and dividends.",
+      "priceTarget": "$60",
+      "description": "Grasberg restarts on schedule in Q2 2026, copper holds in the $4.75–5.25/lb range, and FCX generates normalized earnings as the Grasberg discount evaporates.",
       "points": [
-        "Copper averages $4.50/lb driven by data center buildout and grid electrification demand",
-        "Grasberg underground ramp-up hits 200k+ tonnes per day, boosting copper equivalent output",
-        "FCX returns $2–3B annually to shareholders via dividends and buybacks",
-        "Americas mines sustain production at Morenci and Cerro Verde with stable operating costs"
+        "Grasberg phased restart achieves 85% of district production capacity by H2 2026 as planned — restoring 2026 copper output to 3.7B lbs and validating the mine's long-term production trajectory",
+        "Copper averages $4.75/lb driven by AI data center buildout, grid electrification demand, and chronic underinvestment in new supply, maintaining FCX EBITDA above $6B",
+        "FCX resumes share buybacks as free cash flow recovers to $3B+ annually; net debt of $2.3B is paid down to near-zero by end of 2026"
       ]
     },
     "bull": {
-      "priceTarget": "$80",
-      "description": "A structural copper supply deficit driven by chronic underinvestment and surging electrification demand pushes copper to $6+ per pound, delivering record FCX earnings and cash flow.",
+      "priceTarget": "$95",
+      "description": "A copper supercycle materializes as supply deficits exceed consensus estimates and Grasberg ramps ahead of schedule, driving FCX to record earnings.",
       "points": [
-        "Copper surges to $6.00+ per pound as grid buildout, EV penetration, and AI data centers exhaust available supply",
-        "Grasberg underground achieves full production capacity of 240k+ tonnes per day on schedule",
-        "FCX initiates a major capital return program as free cash flow exceeds $8B annually",
-        "Re-rating to mid-cycle multiple of 14–16x EBITDA as copper is recognized as a critical infrastructure commodity"
+        "Copper surges to $6.00+ per pound as electrification demand from EVs, AI data centers, and grid modernization creates a structural deficit that takes 5–7 years of new mine development to resolve",
+        "Grasberg full production recovery ahead of schedule in H1 2026 — restoring 240k+ tonnes/day and setting up a high-production 2027–2029 period with 1.6B lbs/year average copper output",
+        "FCX announces a transformational capital return program ($5B+ buybacks and special dividends) as free cash flow exceeds $8–10B annually at copper above $6.00/lb"
       ]
     }
   },
@@ -157,5 +153,5 @@
     },
     "verdict": "FCX's AI resilience is limited in the traditional sense — copper mining is a physical commodity business immune to AI disruption of its core product. However, FCX is paradoxically a direct beneficiary of the AI infrastructure build-out, as data centers require massive copper volumes for power and connectivity. AI is a demand driver, not a competitive threat."
   },
-  "lastAnalyzed": "October 2025"
+  "lastAnalyzed": "March 2026"
 }

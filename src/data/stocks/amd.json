@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$280B"
+      "value": "$329B"
     },
     {
       "label": "Price",
-      "value": "$172.40"
+      "value": "$204.00"
     }
   ],
   "chips": [
@@ -30,15 +30,15 @@
   "metrics": [
     {
       "title": "Data Center Rev",
-      "value": "$2.3B",
-      "label": "80% YoY Growth",
+      "value": "$5.4B",
+      "label": "39% YoY Growth (Q4 2025)",
       "icon": "Cpu",
       "color": "#ed1c24"
     },
     {
       "title": "Instinct Pipeline",
-      "value": "$4.0B+",
-      "label": "MI300 Series Momentum",
+      "value": "MI450 + Helios",
+      "label": "2H 2026 Volume Ramp",
       "icon": "Zap",
       "color": "#00a4ef"
     },
@@ -51,7 +51,6 @@
     }
   ],
   "moat": {
-    "score": 52,
     "description": "Strong positioning as the primary x86 alternative and growing software (ROCm) ecosystem.",
     "analysisTitle": "The Chiplet Moat",
     "analysisSummary": "AMD's advantage lies in **Architectural Efficiency**:",
@@ -72,11 +71,11 @@
   },
   "growth": {
     "score": 92,
-    "description": "Catching up rapidly in the AI accelerator market with chiplet architectures."
+    "description": "Q4 2025 revenue hit a record $10.3B (+34% YoY); Data Center at $5.4B (+39%). MI450 and Helios rack-scale systems ramp in 2H 2026; OpenAI selected AMD to build 6 GW of AI compute capacity."
   },
   "valuation": {
-    "score": 71,
-    "description": "Trading between bear ($110) and base ($230) — multiple contraction from peak reflects NVIDIA's widening software moat; current price offers a reasonable entry for the AI second-source thesis."
+    "score": 70,
+    "description": "At ~$204, trading between bear ($110) and base ($230) — well into the recovery from early-2026 lows. Strong Q4 beat and 2H 2026 MI450 catalyst support the base case; export control headwinds on China revenue remain a near-term overhang."
   },
   "scenarios": {
     "bear": {
@@ -150,5 +149,5 @@
     },
     "verdict": "AMD's moat is weakening in AI-resilient categories vs. NVIDIA. Execution quality is world-class, but CUDA's network effect remains the dominant barrier — AMD's upside is a CUDA challenger, not a CUDA replacer."
   },
-  "lastAnalyzed": "November 2025"
+  "lastAnalyzed": "March 2026"
 }

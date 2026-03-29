@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "$75B"
+      "value": "~$52B"
     },
     {
       "label": "Active Validators",
@@ -27,33 +27,32 @@
       "color": "warning"
     }
   ],
-  "recommendation": "Speculative Buy",
+  "recommendation": "Accumulate",
   "metrics": [
     {
-      "title": "TPS (Peak)",
-      "value": "65,000+",
-      "label": "Theoretical Max Throughput",
+      "title": "TPS (Firedancer)",
+      "value": "1M+",
+      "label": "Firedancer Live on Mainnet — Alpenglow: 150ms Finality",
       "icon": "Shield",
       "color": "#9945ff"
     },
     {
       "title": "DeFi TVL",
-      "value": "$9B+",
-      "label": "On-Chain DeFi Activity",
+      "value": "~$8B",
+      "label": "On-Chain DeFi Activity — Jupiter, Raydium, Marinade",
       "icon": "Lock",
       "color": "#10b981"
     },
     {
-      "title": "Daily Transactions",
-      "value": "~50M",
-      "label": "Avg. Daily Tx Volume",
+      "title": "Spot ETFs",
+      "value": "6 Approved",
+      "label": "$800M AUM — SEC/CFTC Digital Commodity Classification",
       "icon": "Globe",
       "color": "#f7931a"
     }
   ],
   "moat": {
-    "score": 58,
-    "description": "Best-in-class throughput and UX attract users and developers, but centralization trade-offs and a history of outages limit long-term defensibility.",
+    "description": "Firedancer live on mainnet and the Alpenglow consensus upgrade eliminate historical outage risk, strengthening the performance moat. SEC/CFTC digital commodity classification and 6 approved spot ETFs expand institutional legitimacy — but ecosystem depth vs. Ethereum and validator centralization remain genuine constraints.",
     "analysisTitle": "The Speed-as-Moat Thesis",
     "analysisSummary": "Solana's moat rests on **Performance and Developer Momentum**, not ecosystem depth:",
     "analysisPoints": [
@@ -66,45 +65,45 @@
         "text": "Solana captured the retail and meme-coin cycle (2023–2025), building the strongest consumer crypto brand outside Bitcoin and Ethereum. Phantom Wallet, Tensor, and Jupiter became category-defining products."
       },
       {
-        "title": "Centralization Risk",
-        "text": "~1,700 validators vs. Ethereum's 1M+ creates meaningful counter-party concentration. The Firedancer client by Jump Crypto improves resilience, but Solana's architecture requires more trust in the validator set than competing networks."
+        "title": "Infrastructure Upgrades Resolve Key Risk",
+        "text": "Firedancer (Jump Crypto's independent validator client) is now live on mainnet, dramatically improving resilience by eliminating single-client dependency. The Alpenglow consensus upgrade achieves 150ms finality — faster than Visa's settlement. These upgrades directly address the historical outage risk that was Solana's primary reputational liability."
       }
     ]
   },
   "growth": {
-    "score": 82,
-    "description": "Solana is the fastest-growing developer ecosystem in crypto after Ethereum, with Firedancer upgrade, spot ETF filings, and institutional DeFi (PayPal, Visa pilots) providing real near-term catalysts."
+    "score": 78,
+    "description": "Firedancer is live on mainnet (1M+ TPS capable), 6 spot SOL ETFs are approved with $800M AUM, and the SEC/CFTC jointly classified SOL as a digital commodity on March 17, 2026 — removing the securities overhang. Goldman Sachs holds $108M in SOL ETFs and Walmart OnePay integration is expanding retail adoption. FTX estate liquidation (~$3.5B in SOL sold 2024-2025) has largely cleared as a headwind."
   },
   "valuation": {
-    "score": 62,
-    "description": "At ~$150, SOL is pricing in sustained ecosystem growth and ETF optionality, but remains highly sensitive to risk-off cycles and any network reliability incidents. Reward is real; so is the binary risk."
+    "score": 83,
+    "description": "At ~$92, SOL has corrected 60%+ from its all-time highs and sits well below the base case of $200 — a compelling entry relative to the fundamental improvements from Firedancer, spot ETF approval, and digital commodity classification. The downside to the bear case ($50) is ~46% vs. upside to base of ~117%."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$55",
-      "description": "A major network outage or macro risk-off triggers institutional confidence collapse and developer migration back to Ethereum L2s.",
+      "priceTarget": "$50",
+      "description": "Crypto risk-off cycle deepens, Ethereum L2s achieve cost parity, and institutional ETF inflows disappoint — SOL re-rates toward technical support.",
       "points": [
-        "Another multi-hour network outage during a high-volatility period creates headline risk and institutional exit",
-        "Spot SOL ETF applications rejected, removing a key institutional demand catalyst",
-        "Ethereum's Layer 2 ecosystem (Base, Arbitrum) achieves sub-cent fees, neutralizing Solana's cost advantage"
+        "Broader crypto bear market driven by macro risk-off (rate hikes, dollar strength) drags SOL below $50 despite strong fundamentals",
+        "Ethereum L2 ecosystem (Base, Arbitrum, Linea) achieves sub-cent fees at scale, neutralizing Solana's primary cost and speed differentiation",
+        "Spot SOL ETF inflows disappoint vs. Bitcoin/Ethereum precedent as institutional allocators treat SOL as a speculative L1 rather than a core holding"
       ]
     },
     "base": {
-      "priceTarget": "$350",
-      "description": "Firedancer client ships, Solana ETF launches, and DeFi TVL continues compounding as the dominant consumer crypto chain.",
+      "priceTarget": "$200",
+      "description": "Firedancer drives sustained ecosystem growth, ETF inflows compound, and Solana cements its position as the dominant consumer and payments blockchain.",
       "points": [
-        "Firedancer validator client goes live, eliminating historical outage risk and enabling true 100K+ TPS",
-        "Spot SOL ETF approved with staking yield included, unlocking institutional inflows",
-        "Solana Mobile and consumer crypto applications drive the next wave of non-speculative user adoption"
+        "Spot SOL ETF AUM grows to $5B+ over 12 months as institutional allocators add SOL alongside BTC and ETH in crypto portfolios",
+        "Walmart OnePay and additional fintech integrations create tens of millions of non-speculative Solana users, validating the payments thesis",
+        "DeFi TVL surpasses $15B as Firedancer reliability attracts institutional DeFi protocols previously reluctant due to outage risk"
       ]
     },
     "bull": {
-      "priceTarget": "$800",
-      "description": "Solana displaces Ethereum as the dominant smart contract platform in consumer and payments use cases.",
+      "priceTarget": "$500",
+      "description": "Solana becomes the settlement layer for global consumer payments and tokenized assets, achieving Ethereum-scale ecosystem depth.",
       "points": [
-        "PayPal, Stripe, or a major fintech deeply integrates Solana for payment rails, creating hundreds of millions of end users",
-        "Firedancer enables genuine enterprise-grade reliability, attracting Fortune 500 tokenization programs",
-        "Solana captures 30%+ of total crypto DeFi TVL, triggering a fundamental re-rating of SOL as productive collateral"
+        "A major global payments network (Stripe, PayPal, or Visa) selects Solana as its public blockchain settlement layer, onboarding hundreds of millions of users",
+        "Alpenglow's 150ms finality enables real-time global settlement for capital markets — Solana captures tokenized Treasury and RWA settlement from permissioned chains",
+        "SOL achieves 25%+ of total crypto market cap as institutional recognition catches up with the technical capabilities demonstrated by Firedancer"
       ]
     }
   },
@@ -134,8 +133,8 @@
       "note": "N/A — fully public blockchain; no proprietary data advantage exists or can exist by design."
     },
     "regulatoryLockIn": {
-      "status": "weakened",
-      "note": "Spot ETF filings are pending but not yet approved. SOL was labeled a security in SEC lawsuits (later dropped), creating lingering regulatory uncertainty vs. ETH and BTC."
+      "status": "intact",
+      "note": "The SEC and CFTC jointly classified SOL as a digital commodity on March 17, 2026 — definitively resolving the securities question that had weighed on institutional adoption since 2023. Six spot SOL ETFs are now approved and trading. Goldman Sachs holds $108M in SOL ETFs. This regulatory clarity gives institutional allocators the compliance framework to hold SOL, creating durable demand."
     },
     "networkEffects": {
       "status": "strong",
@@ -149,7 +148,7 @@
       "status": "weakened",
       "note": "A relatively young chain (launched 2020) with a history of outages. Trust as a permanent system of record is still being established vs. Ethereum's 9-year track record."
     },
-    "verdict": "Solana's performance moat is real but fragile — it depends on continued technological execution (Firedancer) and avoiding reliability incidents. AI can accelerate competing chains' development, narrowing Solana's speed advantage over time. The ecosystem network effect is genuine but still ~3–5 years behind Ethereum's depth."
+    "verdict": "Solana's moat has materially strengthened in 2025-2026: Firedancer live on mainnet eliminates the outage risk that was the primary bear thesis, Alpenglow achieves 150ms finality, and SEC/CFTC digital commodity classification unlocks institutional adoption. The moat gap vs. Ethereum has narrowed in consumer and payments use cases. Core risks remain: validator centralization (~1,700 vs. Ethereum's 1M+), ecosystem depth still 3-5 years behind Ethereum, and performance advantages will compress as competing chains improve."
   },
-  "lastAnalyzed": "October 2025"
+  "lastAnalyzed": "March 2026"
 }

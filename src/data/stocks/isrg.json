@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$195B"
+      "value": "$184B"
     },
     {
       "label": "Price",
-      "value": "$530.00"
+      "value": "$526.00"
     }
   ],
   "chips": [
@@ -30,28 +30,27 @@
   "metrics": [
     {
       "title": "Installed Base",
-      "value": "9,900+",
-      "label": "da Vinci Systems Worldwide",
+      "value": "~11,000+",
+      "label": "da Vinci Systems Worldwide (1,721 Placed FY2025)",
       "icon": "Cpu",
       "color": "#009688"
     },
     {
       "title": "Revenue",
-      "value": "$8.4B",
-      "label": "FY2024 — 17% YoY Growth",
+      "value": "$10.1B",
+      "label": "FY2025 — +21% YoY Growth",
       "icon": "TrendingUp",
       "color": "#00796b"
     },
     {
-      "title": "Recurring Mix",
-      "value": "83%",
-      "label": "Instruments, Accessories & Services",
+      "title": "da Vinci 5",
+      "value": "870",
+      "label": "dV5 Placements in FY2025 (303 in Q4)",
       "icon": "Database",
       "color": "#4db6ac"
     }
   ],
   "moat": {
-    "score": 88,
     "description": "The most durable razor-and-blades moat in medical devices — once a hospital installs da Vinci and trains its surgeons, switching is a career-level commitment measured in years, not months.",
     "analysisTitle": "The Surgical Flywheel",
     "analysisSummary": "Intuitive Surgical's moat is built on **Installed Base Lock-In and Surgeon Muscle Memory**:",
@@ -76,11 +75,11 @@
   },
   "growth": {
     "score": 82,
-    "description": "Procedure volume growing 17%+ annually driven by international expansion (China, Europe), new indications (colorectal, thoracic), and the Ion lung biopsy platform. da Vinci 5 upgrade cycle adds a capital sales tailwind through 2026."
+    "description": "FY2025 revenue hit $10.1B (+21% YoY) as combined da Vinci and Ion procedures grew 18% in Q4. Intuitive placed 1,721 da Vinci systems in 2025 (870 dV5), with dV5 now the dominant new placement. 2026 guidance of 13–15% procedure growth was viewed as conservative by analysts (UBS has $740 target). Margin headwinds from dV5 product mix are temporary; Ion procedures grew 44% in Q4, establishing a second growth platform."
   },
   "valuation": {
-    "score": 62,
-    "description": "Consistently expensive at 60-70x earnings — the market prices in Intuitive's durability and pricing power correctly. Only attractive on material pullbacks. Bear ($280) reflects multiple compression; base ($520) reflects fair value for a compounder of this quality."
+    "score": 64,
+    "description": "At ~$526, trading fractionally above the base case ($520) at ~59x trailing adjusted EPS of $8.93 — in line with the five-year average of 60x. The stock dipped post-earnings on 2026 guidance below expectations, creating a minor pullback opportunity. Bear ($280) reflects multiple compression on competitive disruption; base ($520) is fair value at normalized multiples."
   },
   "scenarios": {
     "bear": {
@@ -157,5 +156,5 @@
     },
     "verdict": "AI is a net tailwind for Intuitive Surgical. Unlike software companies where AI threatens to commoditize the product, AI strengthens Intuitive's moat by adding guided surgery intelligence on top of the installed base — creating a new monetization layer without displacing the physical lock-in. The primary competitive risk is not AI but well-funded platform challengers (Medtronic, J&J) in the next 5-10 years."
   },
-  "lastAnalyzed": "November 2025"
+  "lastAnalyzed": "March 2026"
 }

@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$42B"
+      "value": "~$37B"
     },
     {
       "label": "Price",
-      "value": "$21.00"
+      "value": "~$19.50"
     }
   ],
   "chips": [
@@ -37,8 +37,8 @@
     },
     {
       "title": "Revenue",
-      "value": "$4.8B",
-      "label": "FY2024 — Recovery from ¥916B FY2023 Peak",
+      "value": "~$5.6B",
+      "label": "FY2025 Guided ¥840B — Q3 FY25 +20% YoY",
       "icon": "TrendingUp",
       "color": "#f97316"
     },
@@ -51,7 +51,6 @@
     }
   ],
   "moat": {
-    "score": 83,
     "description": "FANUC's dual monopoly in CNC controllers and industrial robots is enforced by decades of embedded operator expertise, irreplaceable proprietary motion-control data, and machine certifications baked into every major automaker and aerospace OEM's production process.",
     "analysisTitle": "The Yellow Robot Fortress",
     "analysisSummary": "FANUC's moat rests on **four decades of motion-control expertise no competitor can accelerate through**:",
@@ -71,12 +70,12 @@
     ]
   },
   "growth": {
-    "score": 72,
-    "description": "CNC and robot demand is recovering from a deep post-pandemic destocking cycle driven by China weakness and EV-related auto capex hesitation; secular tailwinds from factory reshoring, semiconductor fab buildouts, EV battery gigafactory automation, and FANUC's emergent humanoid robot motion-control opportunity support 10–15% revenue CAGR through FY2028."
+    "score": 75,
+    "description": "Q3 FY2025 (Dec quarter) sales grew +20% YoY and operating profit +10%, prompting FANUC to raise FY2025 guidance by 3% to ¥840B (~$5.6B). The recovery from the post-pandemic destocking trough is confirmed. FANUC reached an all-time high of ¥7,175 on February 26, 2026, before pulling back with broader markets to ¥5,651. Semiconductor fab buildouts (TSMC Arizona, Samsung Texas) and EV battery automation continue driving CNC demand. Humanoid robot motion-control optionality remains a medium-term upside catalyst."
   },
   "valuation": {
-    "score": 76,
-    "description": "At $21 (FANUY ADR), FANUC trades roughly 23% below the base-case target of $27 — an attractive entry given the cyclical trough is likely behind us, the balance sheet carries $8B+ net cash, and the stock has historically re-rated sharply once CNC order intake inflects."
+    "score": 78,
+    "description": "At ~$19.50 (FANUY ADR, ¥5,651 on TSE), FANUC is 28% below the base-case target of $27 — pulled back from its February 2026 all-time high of ~$32. With Q3 FY25 confirming the recovery (+20% YoY) and FY25 guidance raised, the current level represents a reset opportunity in a category-monopoly business with $8B+ net cash and zero meaningful debt."
   },
   "scenarios": {
     "bear": {
@@ -150,5 +149,5 @@
     },
     "verdict": "FANUC is highly resilient to AI disruption — physical motion-control hardware and embedded servo algorithms represent physics-layer expertise that software AI cannot commoditise, and the rise of AI-driven factory automation is a direct demand accelerant for FANUC's robots and CNCs. The single genuine AI risk is that a software-defined motion-control startup could train general-purpose servo control on open hardware at far lower cost, but FANUC's certification ecosystem and data moat make this a 10+ year displacement scenario at best."
   },
-  "lastAnalyzed": "October 2025"
+  "lastAnalyzed": "March 2026"
 }
