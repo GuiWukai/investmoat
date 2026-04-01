@@ -46,15 +46,15 @@ const FAQS = [
   },
   {
     q: "Why no gold?",
-    a: "Gold is fully analyzed and scores 62/100 — below the 75-point portfolio minimum. The constraint is its growth score of 50: gold produces no earnings, revenue, or cash flow and cannot compound. Bitcoin fulfills the same hard-money and inflation-hedge thesis with additional network effects, digital divisibility, and a stronger growth trajectory. Gold stays in our coverage universe and earns a portfolio position the moment its composite score clears 75.",
+    a: "Gold is fully analyzed and scores 62/100 — below the 80-point portfolio minimum. The constraint is its growth score of 50: gold produces no earnings, revenue, or cash flow and cannot compound. Bitcoin fulfills the same hard-money and inflation-hedge thesis with additional network effects, digital divisibility, and a stronger growth trajectory. Gold stays in our coverage universe and earns a portfolio position the moment its composite score clears 80.",
   },
   {
-    q: "Why only 25 positions?",
+    q: "Why only 20 positions?",
     a: "Concentration is a feature, not a flaw. Diversifying into 50+ positions means your 47th-best idea receives the same capital as your best. Studies show 15-25 uncorrelated, high-conviction positions capture most of the risk-reduction benefit of diversification while keeping performance concentrated in quality. Every position in this portfolio competes against all others — a new stock must displace the weakest current holding by scoring higher.",
   },
   {
     q: "How is each stock scored?",
-    a: "Three pillars, each scored 0-100. Moat (40%): fully computed from 10 individually-weighted moat types — each rated strong/intact/weakened/destroyed mapping to 100/75/50/10 points. Resilient moats (networkEffects w=15, proprietaryData w=15, systemOfRecord w=12, regulatoryLockIn w=10, transactionEmbedding w=8) total 60% of the moat score; vulnerable moats (businessLogic w=14, bundling w=10, learnedInterfaces w=8, talentScarcity w=5, publicDataAccess w=3) total 40%. A breadth bonus of +1 to +4 rewards moat diversification. Growth (35%): estimated 3-5 year revenue CAGR with named adjustments for margin trend, TAM expansion, and driver acceleration. Valuation (25%): live price vs. bear/base/bull scenario targets on a piecewise scale. Composite = Moat×40% + Growth×35% + Valuation×25%. Stocks scoring ≥75 are portfolio-eligible; the top 25 are included.",
+    a: "Three pillars, each scored 0-100. Moat (40%): fully computed from 10 individually-weighted moat types — each rated strong/intact/weakened/destroyed mapping to 100/75/50/10 points. Resilient moats (networkEffects w=15, proprietaryData w=15, systemOfRecord w=12, regulatoryLockIn w=10, transactionEmbedding w=8) total 60% of the moat score; vulnerable moats (businessLogic w=14, bundling w=10, learnedInterfaces w=8, talentScarcity w=5, publicDataAccess w=3) total 40%. A breadth bonus of +1 to +4 rewards moat diversification. Growth (35%): estimated 3-5 year revenue CAGR with named adjustments for margin trend, TAM expansion, and driver acceleration. Valuation (25%): live price vs. bear/base/bull scenario targets on a piecewise scale. Composite = Moat×40% + Growth×35% + Valuation×25%. Stocks scoring ≥80 are portfolio-eligible; the top 20 are included.",
   },
   {
     q: "What makes a moat 'AI-resilient'?",
@@ -81,7 +81,7 @@ export default function HomePage() {
             Invest in Moats,<br />Not Markets
           </h1>
           <p className="text-white/60 text-base md:text-xl max-w-2xl leading-relaxed mb-8">
-            A high-conviction portfolio of 25 businesses with durable competitive advantages,
+            A high-conviction portfolio of 20 businesses with durable competitive advantages,
             scored systematically across moat strength, growth trajectory, and live valuation.
             Built to compound wealth in the AI era — not just track it.
           </p>
@@ -107,9 +107,9 @@ export default function HomePage() {
           style={{ animationDelay: '0.15s' }}
         >
           {[
-            { value: "25", label: "Portfolio Holdings" },
+            { value: "20", label: "Portfolio Holdings" },
             { value: "60+", label: "Stocks Analyzed" },
-            { value: "≥ 75", label: "Score Required" },
+            { value: "≥ 80", label: "Score Required" },
             { value: "10%", label: "Max Position Weight" },
           ].map(({ value, label }) => (
             <Card key={label} className="bg-white/5 border-none backdrop-blur-lg">
@@ -171,7 +171,7 @@ export default function HomePage() {
                 <h3 className="text-lg font-bold mb-2">Concentration Beats Diversification</h3>
                 <p className="text-white/50 text-sm leading-relaxed">
                   Owning 500 companies means funding mediocrity at scale.
-                  25 high-conviction positions, each earning its place by scoring ≥75/100,
+                  20 high-conviction positions, each earning its place by scoring ≥80/100,
                   concentrate capital where it compounds fastest.
                 </p>
               </div>
@@ -295,7 +295,7 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-4">
                 {[
                   { range: "≥ 82", label: "Strong Buy", color: "success" as const },
-                  { range: "75 – 81", label: "Accumulate", color: "primary" as const },
+                  { range: "80 – 81", label: "Accumulate", color: "primary" as const },
                   { range: "68 – 74", label: "Hold", color: "warning" as const },
                   { range: "< 68", label: "Excluded from portfolio", color: "danger" as const },
                 ].map(({ range, label, color }) => (
@@ -538,7 +538,7 @@ export default function HomePage() {
               Ready to explore the portfolio?
             </h3>
             <p className="text-white/50 max-w-md text-sm leading-relaxed">
-              View the current 25-stock allocation, explore all 60+ analyzed assets,
+              View the current 20-stock allocation, explore all 60+ analyzed assets,
               or dive into individual company reports with moat scores, scenarios, and live valuations.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
