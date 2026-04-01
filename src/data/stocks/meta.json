@@ -220,8 +220,8 @@
       "note": "WhatsApp Business serves 200M+ businesses globally; WhatsApp Pay is active in India and Brazil with expanding markets. Meta Pay and Marketplace create deeply embedded commerce infrastructure that is increasingly difficult to displace."
     },
     "systemOfRecord": {
-      "status": "strong",
-      "note": "Facebook remains the global social identity and event management layer. Meta AI's persistent memory features across all apps are creating a new personal AI system-of-record, while WhatsApp serves as the primary communication record for billions in emerging markets."
+      "status": "intact",
+      "note": "WhatsApp serves as the primary communication record for billions in emerging markets and Meta AI's persistent memory is creating a nascent personal AI system-of-record, but consumer social/messaging does not carry the compliance and audit-trail migration penalties that earn 'strong' in enterprise contexts. There is no regulatory acceptance at risk, no legal chain-of-custody requirement — switching friction is real but driven primarily by network effects (already captured separately) rather than irreversible record-keeping lock-in."
     },
     "verdict": "Meta holds the broadest and most formidable AI moat among consumer platforms. The combination of 3.5B+ daily users providing an unmatched AI training and feedback flywheel, proprietary compute infrastructure (MTIA chips, owned data centers), Llama establishing the open-source AI standard, and Meta AI's persistent memory across all apps creates a compounding AI platform moat that is genuinely difficult to replicate. The upgrade from 73 reflects: (1) Advantage+ AI rebuilding the post-ATT business logic moat, (2) Meta AI cross-app memory creating real bundling lock-in, and (3) infrastructure ownership securing long-term compute cost advantage. Regulatory drag from GDPR and DMA remains a structural cap, but Meta's AI moat is wider in absolute scale than any vertical-specific competitor including Shopify."
   },
