@@ -184,8 +184,8 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "weakened",
-      "note": "Social media UI patterns are easily copied — TikTok proved that consumer interfaces are not a durable moat."
+      "status": "intact",
+      "note": "Legacy social media UI patterns are easily copied (TikTok proved this), but Meta AI's persistent memory accumulating user preferences, conversations, and context across Facebook/Instagram/WhatsApp/Threads creates a new layer of interface lock-in. The more a user interacts with Meta AI, the more personalized it becomes — switching platforms means losing that accumulated memory, which is a meaningfully different and growing switching cost compared to the pre-AI era."
     },
     "businessLogic": {
       "status": "intact",
@@ -200,8 +200,8 @@
       "note": "N/A — Meta's moat is network effects and proprietary social data, not scarce talent. AI tools have further reduced talent barriers for advertisers and content creators using the platform."
     },
     "bundling": {
-      "status": "intact",
-      "note": "Meta AI with persistent memory across FB/IG/WA/Threads creates a new cross-app bundle lock-in that didn't exist pre-2024. Users accumulating Meta AI memory, preferences, and interaction history across the entire family of apps face meaningful switching costs — the AI layer is the new bundling glue that makes the multi-app family stickier than the pre-AI era."
+      "status": "strong",
+      "note": "Meta AI with persistent memory across FB/IG/WA/Threads creates a strong cross-app bundle lock-in that didn't exist pre-2024. Users accumulating Meta AI memory, preferences, and interaction history across the entire family of apps face meaningful switching costs — the AI layer is the new bundling glue that makes the multi-app family stickier than the pre-AI era. With four billion-scale apps sharing a single AI memory layer, this bundling depth exceeds most enterprise SaaS multi-product integration."
     },
     "proprietaryData": {
       "status": "strong",
