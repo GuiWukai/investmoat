@@ -7,6 +7,7 @@
 //   t(json)  →  { bearTarget, baseTarget, bullTarget } from json.scenarios
 //
 // RULES (enforced dynamically below):
+//   • Maximum 20 stocks in the portfolio
 //   • Minimum average score of 80 required for inclusion
 //
 // To add a new stock: import its JSON, add an entry to allCoverageData.
@@ -82,6 +83,7 @@ import seaData     from '@/data/stocks/sea.json';
 export const getAverageScore = ([moat, growth, valuation]: number[]) =>
     moat * 0.40 + growth * 0.35 + valuation * 0.25;
 
+const MAX_PORTFOLIO  = 20;
 const MIN_AVG_SCORE  = 80;
 
 /** Compute moat score from a stock JSON's tenMoats field. */
@@ -171,10 +173,11 @@ const allCoverageData = [
 // ─── All coverage (exported for the stocks list page) ────────────────────────
 export { allCoverageData };
 
-// ─── Portfolio: all stocks with avg >= MIN_AVG_SCORE ─────────────────────────
+// ─── Portfolio: top MAX_PORTFOLIO stocks with avg >= MIN_AVG_SCORE ────────────
 export const stockData = [...allCoverageData]
     .sort((a, b) => getAverageScore(b.scores) - getAverageScore(a.scores))
-    .filter(s => getAverageScore(s.scores) >= MIN_AVG_SCORE);
+    .filter(s => getAverageScore(s.scores) >= MIN_AVG_SCORE)
+    .slice(0, MAX_PORTFOLIO);
 
 // ─── Excluded: all analyzed stocks not in the portfolio ───────────────────────
 const portfolioTickers = new Set(stockData.map(s => s.ticker));

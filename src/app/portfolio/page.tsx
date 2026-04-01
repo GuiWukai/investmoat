@@ -65,6 +65,7 @@ function DynamicScore({
 
 // ─── Portfolio threshold ──────────────────────────────────────────────────────
 const PORTFOLIO_THRESHOLD = 80;
+const MAX_PORTFOLIO = 20;
 
 // ─── Per-ticker metadata (display color, category, exclusion reason) ──────────
 const stockMeta: Record<string, { color: string; category: string; exclusionReason?: string }> = {
@@ -155,7 +156,7 @@ export default function PortfolioPage() {
     return () => { cancelled = true; };
   }, []);
 
-  // Dynamic portfolio — all stocks with live composite >= PORTFOLIO_THRESHOLD
+  // Dynamic portfolio — top MAX_PORTFOLIO stocks with live composite >= PORTFOLIO_THRESHOLD
   const portfolio = useMemo(() => {
     return [...allCoverageData]
       .map(s => {
@@ -170,6 +171,7 @@ export default function PortfolioPage() {
       })
       .sort((a, b) => b.composite - a.composite)
       .filter(({ composite }) => composite >= PORTFOLIO_THRESHOLD)
+      .slice(0, MAX_PORTFOLIO)
       .map(({ s, composite }) => ({
         ticker:    s.ticker,
         name:      s.name,
