@@ -24,14 +24,6 @@ const CATEGORIES = [
   { label: "Healthcare",           key: "Healthcare"   },
 ];
 
-function ScorePill({ label, value, color }: { label: string; value: number; color: string }) {
-  return (
-    <div className="flex flex-col items-center min-w-[44px]">
-      <span className="text-[9px] text-white/30 uppercase font-bold tracking-wider mb-0.5">{label}</span>
-      <span className={`text-sm font-black text-${color}`}>{value}</span>
-    </div>
-  );
-}
 
 function DynamicOverall({
   slug, moat, growth, fallbackVal, bearTarget, baseTarget, bullTarget,
@@ -73,19 +65,13 @@ function DynamicOverall({
   );
 }
 
-function scoreColor(s: number) {
-  if (s >= 90) return "success";
-  if (s >= 80) return "primary";
-  if (s >= 70) return "warning";
-  return "danger";
-}
 
 function StockRow({ stock, delay }: { stock: typeof allCoverageData[0]; delay?: number }) {
   const router = useRouter();
   return (
     <button
       onClick={() => router.push(stock.href)}
-      className="w-full flex items-center gap-4 px-5 py-4 hover:bg-white/[0.06] transition-colors group text-left animate-slide-in-left stagger-fill-both"
+      className="w-full flex items-center gap-4 px-5 py-4 bg-[#05070a] hover:bg-white/[0.06] transition-colors group text-left animate-slide-in-left stagger-fill-both"
       style={delay !== undefined ? { animationDelay: `${delay}s` } : undefined}
     >
       <div
@@ -98,29 +84,17 @@ function StockRow({ stock, delay }: { stock: typeof allCoverageData[0]; delay?: 
         <div className="text-[10px] text-white/30 tracking-widest font-black uppercase">{stock.ticker}</div>
       </div>
 
-      {/* Sub-scores */}
-      <div className="hidden sm:flex items-center gap-5 flex-1">
-        <ScorePill label="Moat"   value={stock.scores[0]} color={scoreColor(stock.scores[0])} />
-        <div className="w-px h-6 bg-white/10" />
-        <ScorePill label="Growth" value={stock.scores[1]} color={scoreColor(stock.scores[1])} />
-        <div className="w-px h-6 bg-white/10" />
-        <ScorePill label="Value"  value={stock.scores[2]} color={scoreColor(stock.scores[2])} />
-      </div>
-
-      {/* Dynamic overall */}
+      {/* Composite score */}
       <div className="ml-auto flex items-center gap-4 shrink-0">
-        <div className="text-right hidden xs:block">
-          <div className="text-[10px] text-white/30 uppercase font-bold mb-1">Overall</div>
-          <DynamicOverall
-            slug={stock.slug}
-            moat={stock.scores[0]}
-            growth={stock.scores[1]}
-            fallbackVal={stock.scores[2]}
-            bearTarget={stock.bearTarget}
-            baseTarget={stock.baseTarget}
-            bullTarget={stock.bullTarget}
-          />
-        </div>
+        <DynamicOverall
+          slug={stock.slug}
+          moat={stock.scores[0]}
+          growth={stock.scores[1]}
+          fallbackVal={stock.scores[2]}
+          bearTarget={stock.bearTarget}
+          baseTarget={stock.baseTarget}
+          bullTarget={stock.bullTarget}
+        />
         <ChevronRight
           size={16}
           className="text-white/20 group-hover:text-white/60 transition-colors"
@@ -136,11 +110,9 @@ export default function StocksPage() {
 
   const trimmed = query.trim().toLowerCase();
   const filteredStocks = trimmed
-    ? allCoverageData.filter(
-        s =>
-          s.name.toLowerCase().includes(trimmed) ||
-          s.ticker.toLowerCase().includes(trimmed)
-      )
+    ? allCoverageData
+        .filter(s => s.name.toLowerCase().includes(trimmed) || s.ticker.toLowerCase().includes(trimmed))
+        .sort((a, b) => getAverageScore(b.scores) - getAverageScore(a.scores))
     : null;
 
   return (
@@ -191,7 +163,7 @@ export default function StocksPage() {
               <p className="text-white/40 text-sm">No stocks match &ldquo;{query.trim()}&rdquo;</p>
             </div>
           ) : (
-            <div className="rounded-2xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-lg divide-y divide-white/5">
+            <div className="rounded-2xl overflow-hidden border border-white/5 bg-white/[0.08] backdrop-blur-lg grid grid-cols-1 lg:grid-cols-2 gap-px">
               {filteredStocks.map((stock, idx) => (
                 <StockRow key={stock.ticker} stock={stock} delay={0.05 + idx * 0.04} />
               ))}
@@ -201,7 +173,9 @@ export default function StocksPage() {
       ) : (
         /* Normal category sections */
         CATEGORIES.map((cat, catIdx) => {
-          const stocks = allCoverageData.filter(s => s.category === cat.key);
+          const stocks = allCoverageData
+            .filter(s => s.category === cat.key)
+            .sort((a, b) => getAverageScore(b.scores) - getAverageScore(a.scores));
           return (
             <section key={cat.key} className="animate-fade-up stagger-fill-both" style={{ animationDelay: `${0.15 + catIdx * 0.1}s` }}>
               <div className="flex items-center gap-4 mb-5">
@@ -211,7 +185,7 @@ export default function StocksPage() {
                 <span className="text-xs text-white/20 font-medium">{stocks.length} stocks</span>
               </div>
 
-              <div className="rounded-2xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-lg divide-y divide-white/5">
+              <div className="rounded-2xl overflow-hidden border border-white/5 bg-white/[0.08] backdrop-blur-lg grid grid-cols-1 lg:grid-cols-2 gap-px">
                 {stocks.map((stock, idx) => (
                   <StockRow key={stock.ticker} stock={stock} delay={0.2 + catIdx * 0.1 + idx * 0.05} />
                 ))}
