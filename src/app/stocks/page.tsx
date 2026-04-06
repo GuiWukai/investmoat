@@ -85,7 +85,7 @@ function StockRow({ stock, delay }: { stock: typeof allCoverageData[0]; delay?: 
   return (
     <button
       onClick={() => router.push(stock.href)}
-      className="w-full flex items-center gap-4 px-5 py-4 hover:bg-white/[0.06] transition-colors group text-left animate-slide-in-left stagger-fill-both"
+      className="w-full flex items-center gap-4 px-5 py-4 bg-[#05070a] hover:bg-white/[0.06] transition-colors group text-left animate-slide-in-left stagger-fill-both"
       style={delay !== undefined ? { animationDelay: `${delay}s` } : undefined}
     >
       <div
@@ -191,7 +191,7 @@ export default function StocksPage() {
               <p className="text-white/40 text-sm">No stocks match &ldquo;{query.trim()}&rdquo;</p>
             </div>
           ) : (
-            <div className="rounded-2xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-lg divide-y divide-white/5">
+            <div className="rounded-2xl overflow-hidden border border-white/5 bg-white/[0.08] backdrop-blur-lg grid grid-cols-1 lg:grid-cols-2 gap-px">
               {filteredStocks.map((stock, idx) => (
                 <StockRow key={stock.ticker} stock={stock} delay={0.05 + idx * 0.04} />
               ))}
@@ -211,7 +211,7 @@ export default function StocksPage() {
                 <span className="text-xs text-white/20 font-medium">{stocks.length} stocks</span>
               </div>
 
-              <div className="rounded-2xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-lg divide-y divide-white/5">
+              <div className="rounded-2xl overflow-hidden border border-white/5 bg-white/[0.08] backdrop-blur-lg grid grid-cols-1 lg:grid-cols-2 gap-px">
                 {stocks.map((stock, idx) => (
                   <StockRow key={stock.ticker} stock={stock} delay={0.2 + catIdx * 0.1 + idx * 0.05} />
                 ))}
