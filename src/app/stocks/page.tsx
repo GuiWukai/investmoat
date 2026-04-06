@@ -24,14 +24,6 @@ const CATEGORIES = [
   { label: "Healthcare",           key: "Healthcare"   },
 ];
 
-function ScorePill({ label, value, color }: { label: string; value: number; color: string }) {
-  return (
-    <div className="flex flex-col items-center min-w-[44px]">
-      <span className="text-[9px] text-white/30 uppercase font-bold tracking-wider mb-0.5">{label}</span>
-      <span className={`text-sm font-black text-${color}`}>{value}</span>
-    </div>
-  );
-}
 
 function DynamicOverall({
   slug, moat, growth, fallbackVal, bearTarget, baseTarget, bullTarget,
@@ -73,12 +65,6 @@ function DynamicOverall({
   );
 }
 
-function scoreColor(s: number) {
-  if (s >= 90) return "success";
-  if (s >= 80) return "primary";
-  if (s >= 70) return "warning";
-  return "danger";
-}
 
 function StockRow({ stock, delay }: { stock: typeof allCoverageData[0]; delay?: number }) {
   const router = useRouter();
@@ -98,29 +84,17 @@ function StockRow({ stock, delay }: { stock: typeof allCoverageData[0]; delay?: 
         <div className="text-[10px] text-white/30 tracking-widest font-black uppercase">{stock.ticker}</div>
       </div>
 
-      {/* Sub-scores + composite */}
-      <div className="hidden sm:flex items-center gap-5 flex-1">
-        <ScorePill label="Moat"   value={stock.scores[0]} color={scoreColor(stock.scores[0])} />
-        <div className="w-px h-6 bg-white/10" />
-        <ScorePill label="Growth" value={stock.scores[1]} color={scoreColor(stock.scores[1])} />
-        <div className="w-px h-6 bg-white/10" />
-        <ScorePill label="Value"  value={stock.scores[2]} color={scoreColor(stock.scores[2])} />
-        <div className="w-px h-6 bg-white/10" />
-        <div className="flex flex-col items-center min-w-[44px]">
-          <span className="text-[9px] text-white/30 uppercase font-bold tracking-wider mb-0.5">Score</span>
-          <DynamicOverall
-            slug={stock.slug}
-            moat={stock.scores[0]}
-            growth={stock.scores[1]}
-            fallbackVal={stock.scores[2]}
-            bearTarget={stock.bearTarget}
-            baseTarget={stock.baseTarget}
-            bullTarget={stock.bullTarget}
-          />
-        </div>
-      </div>
-
-      <div className="ml-auto flex items-center shrink-0">
+      {/* Composite score */}
+      <div className="ml-auto flex items-center gap-4 shrink-0">
+        <DynamicOverall
+          slug={stock.slug}
+          moat={stock.scores[0]}
+          growth={stock.scores[1]}
+          fallbackVal={stock.scores[2]}
+          bearTarget={stock.bearTarget}
+          baseTarget={stock.baseTarget}
+          bullTarget={stock.bullTarget}
+        />
         <ChevronRight
           size={16}
           className="text-white/20 group-hover:text-white/60 transition-colors"
