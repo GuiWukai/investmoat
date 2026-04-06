@@ -98,19 +98,16 @@ function StockRow({ stock, delay }: { stock: typeof allCoverageData[0]; delay?: 
         <div className="text-[10px] text-white/30 tracking-widest font-black uppercase">{stock.ticker}</div>
       </div>
 
-      {/* Sub-scores */}
+      {/* Sub-scores + composite */}
       <div className="hidden sm:flex items-center gap-5 flex-1">
         <ScorePill label="Moat"   value={stock.scores[0]} color={scoreColor(stock.scores[0])} />
         <div className="w-px h-6 bg-white/10" />
         <ScorePill label="Growth" value={stock.scores[1]} color={scoreColor(stock.scores[1])} />
         <div className="w-px h-6 bg-white/10" />
         <ScorePill label="Value"  value={stock.scores[2]} color={scoreColor(stock.scores[2])} />
-      </div>
-
-      {/* Dynamic overall */}
-      <div className="ml-auto flex items-center gap-4 shrink-0">
-        <div className="text-right hidden xs:block">
-          <div className="text-[10px] text-white/30 uppercase font-bold mb-1">Overall</div>
+        <div className="w-px h-6 bg-white/10" />
+        <div className="flex flex-col items-center min-w-[44px]">
+          <span className="text-[9px] text-white/30 uppercase font-bold tracking-wider mb-0.5">Score</span>
           <DynamicOverall
             slug={stock.slug}
             moat={stock.scores[0]}
@@ -121,6 +118,9 @@ function StockRow({ stock, delay }: { stock: typeof allCoverageData[0]; delay?: 
             bullTarget={stock.bullTarget}
           />
         </div>
+      </div>
+
+      <div className="ml-auto flex items-center shrink-0">
         <ChevronRight
           size={16}
           className="text-white/20 group-hover:text-white/60 transition-colors"
@@ -136,11 +136,9 @@ export default function StocksPage() {
 
   const trimmed = query.trim().toLowerCase();
   const filteredStocks = trimmed
-    ? allCoverageData.filter(
-        s =>
-          s.name.toLowerCase().includes(trimmed) ||
-          s.ticker.toLowerCase().includes(trimmed)
-      )
+    ? allCoverageData
+        .filter(s => s.name.toLowerCase().includes(trimmed) || s.ticker.toLowerCase().includes(trimmed))
+        .sort((a, b) => getAverageScore(b.scores) - getAverageScore(a.scores))
     : null;
 
   return (
@@ -201,7 +199,9 @@ export default function StocksPage() {
       ) : (
         /* Normal category sections */
         CATEGORIES.map((cat, catIdx) => {
-          const stocks = allCoverageData.filter(s => s.category === cat.key);
+          const stocks = allCoverageData
+            .filter(s => s.category === cat.key)
+            .sort((a, b) => getAverageScore(b.scores) - getAverageScore(a.scores));
           return (
             <section key={cat.key} className="animate-fade-up stagger-fill-both" style={{ animationDelay: `${0.15 + catIdx * 0.1}s` }}>
               <div className="flex items-center gap-4 mb-5">
