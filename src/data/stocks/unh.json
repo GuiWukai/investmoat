@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$265B"
+      "value": "~$256B"
     },
     {
       "label": "Price",
-      "value": "~$285"
+      "value": "~$281"
     }
   ],
   "chips": [
@@ -76,7 +76,7 @@
   },
   "growth": {
     "score": 52,
-    "description": "UNH's 2026 revenue guidance of >$439B represents the first annual revenue decline in over a decade, down from $447.6B in FY2025, driven by Medicare Advantage member losses, Optum Health restructuring, and DOJ-related uncertainty. Long-term demographic tailwinds (70M baby boomers) remain, but the 3-5 year CAGR has reset to low-single digits until the DOJ investigation resolves and Medicare Advantage margins normalize.",
+    "description": "UNH's 2026 revenue guidance of >$439B represents the first annual revenue decline in over a decade, down from $447.6B in FY2025, driven by Medicare Advantage member losses, Optum Health restructuring, and DOJ-related uncertainty. For Q1 2026 (reporting April 21), consensus expects adjusted EPS of $6.69 — down 8% YoY — on ~$109.6B revenue, roughly flat with Q1 2025. The 2026 MCR guidance of 88.8% ± 50bps (vs 89.1% actual in 2025) represents a modest improvement target, but still materially above the pre-crisis 85.5% level. Long-term demographic tailwinds (70M baby boomers) remain, but the 3-5 year CAGR has reset to low-single digits until the DOJ investigation resolves and Medicare Advantage margins normalize.",
     "growthAnalysis": {
       "cagrEstimate": "2–5%",
       "scoreDerivation": "Base 40 (below 4% near-term CAGR due to 2026 revenue decline) + 5 recurring premium base + 5 Optum Analytics TAM − 5 Optum Health restructuring drag − 3 DOJ overhang on MA contracting = 42, rounded to 52 reflecting long-term demographic tailwind floor",
@@ -104,9 +104,9 @@
   },
   "valuation": {
     "score": 78,
-    "description": "At ~$285 — a 55% collapse from the $630 peak — UNH trades at ~10x forward P/E. However, the cheapness is partially illusory: 2026 earnings are declining and forward EPS estimates keep falling as the DOJ probe expands. The stock sits between bear ($200) and base ($380), implying a fair risk/reward but not a compelling entry given the binary DOJ outcome still unresolved.",
+    "description": "At ~$281 — a 55% collapse from the $630 peak — UNH trades at ~10x forward P/E on consensus NTM EPS of ~$26-28. The apparent cheapness remains partially illusory: Q1 2026 consensus EPS of $6.69 is down 8% YoY and full-year earnings are still declining as the DOJ probe expands. The stock sits between bear ($200) and base ($380) — valuation score is unchanged. The Q1 earnings report on April 21, 2026 is the next binary catalyst: MCR at or below the 88.8% 2026 guidance target would validate margin recovery; a miss would accelerate estimate cuts.",
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "April 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
@@ -151,7 +151,7 @@
       "priceTarget": "$380",
       "description": "Medical cost ratio normalizes toward historical levels by mid-2026, Optum Health restructuring restores profitability, and the DOJ investigation concludes without existential penalties — UNH re-rates from distress to fair value.",
       "points": [
-        "2026 Medicare Advantage repricing at conservative 10% medical cost trend succeeds: UNH trades 1M members for a Medical Care Ratio returning to the 84-85% range by Q3 2026, signaling margin normalization to the market",
+        "Q1 2026 (April 21) MCR prints at or below 88.8% guidance target, confirming that the 2025 cost trend was cyclical not structural; full-year MCR normalizes toward 87-88% by Q3 2026 as repriced MA contracts take hold, signaling margin recovery to the market",
         "Optum Health returns to profitability in H2 2026 as unprofitable value-based contracts are exited and renegotiated; Optum Rx and Optum Analytics continue growing at 12-15% annually, restoring overall Optum operating earnings above $14B",
         "DOJ investigation concludes with a civil settlement below $2B — material but not existential — and UNH stock re-rates from ~10x to 13-14x forward P/E at $380"
       ]
@@ -209,5 +209,5 @@
     },
     "verdict": "UnitedHealth remains an AI beneficiary through Optum's data flywheel — the 140M-member claims database is irreplaceable training data for clinical AI models. However, the DOJ criminal investigation has weakened the regulatory lock-in moat tier, reducing AI resilience from 93 to 86. The most AI-durable moats (proprietary data, network effects, transaction embedding, system of record) remain intact. The key structural risk is not AI disruption but regulatory-imposed constraints on Medicare Advantage coding practices, which could structurally impair profitability regardless of AI strength."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "April 2026"
 }
