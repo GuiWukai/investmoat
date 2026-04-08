@@ -9,7 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "$2.38T"
+      "value": "$2.25T"
     },
     {
       "label": "Price",
@@ -79,10 +79,10 @@
     "additionalNote": {
       "title": "Financial Outlook",
       "points": [
-        "AWS growth re-accelerated to 24% in Q4 2025, highest rate in 13 quarters; $244B backlog up 40% YoY.",
-        "Advertising revenue reached $21.3B (+22% YoY), cementing Amazon as a top-3 digital ad platform.",
-        "Trainium2/3 custom AI chips now at $10B+ run rate with triple-digit YoY growth; Trainium4 targeting 2027.",
-        "International retail margins recovering: North America segment margin expanded to 9.0% in Q4."
+        "AWS growth re-accelerated to 24% in Q4 2025, highest rate in 13 quarters; $244B backlog up 40% YoY. Q1 2026 due April 29.",
+        "Advertising revenue reached $21.3B (+22% YoY), cementing Amazon as a top-3 digital ad platform; Q1 2026 est. ~$17.1B (+23% YoY).",
+        "Anthropic run-rate revenue surpassed $30B in early 2026 (up from ~$9B at end of 2025); all Anthropic workloads route through AWS Bedrock, making it the fastest-growing AWS revenue driver.",
+        "Supreme Court ruled 6-3 (Feb 2026) against Trump's tariff authority under IEEPA — materially reduces worst-case tariff scenario for Amazon marketplace. Amazon imposed 3.5% FBA fuel surcharge (effective Apr 17) as a partial offset to logistics cost inflation."
       ]
     },
     "growthAnalysis": {
@@ -111,14 +111,14 @@
     }
   },
   "valuation": {
-    "score": 78,
-    "description": "Stock at ~$213 sits ~18% below our updated base fair value of $260, offering a more meaningful margin of safety than last assessed. The confirmed $200B 2026 capex plan will drive negative FCF for the year — a structural pressure investors must tolerate — but the $244B AWS backlog (+40% YoY), advertising scaling toward $90B+ annualised, and Bedrock enterprise momentum (60% Q/Q spend growth) underpin the recovery case. The $2.5B FTC Prime settlement (Jan 2026) is a one-time charge with no structural impact on Prime economics. Q1 2026 guidance carries an unusually wide operating income range reflecting early-year capex ramp uncertainty and tariff exposure; the April earnings report is the next major catalyst.",
+    "score": 79,
+    "description": "Stock at ~$214 sits ~21% below our updated base fair value of $270, offering an improved margin of safety. The Supreme Court's 6-3 ruling (Feb 2026) against Trump's tariff authority under IEEPA materially reduces the sharpest bear scenario — but Amazon's own 3.5% FBA fuel surcharge (effective April 17) and $0.08/unit rate increases create a managed headwind. Anthropic's run-rate revenue surpassing $30B (up from ~$9B at end of 2025) is a significant upside catalyst not fully reflected in consensus; every dollar of Anthropic revenue routes through AWS Bedrock infrastructure. Q1 2026 earnings are due April 29 — the key read on whether AWS holds above 20% growth and whether the operating income guidance midpoint ($19B vs. $22.2B consensus) proves overly conservative.",
     "valuationNote": {
       "text": "Using a 10-year DCF with a 9% WACC and a 3.5% terminal growth rate, our fair value estimate for AMZN is",
-      "fairValue": "$260/share"
+      "fairValue": "$270/share"
     },
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "April 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
@@ -152,27 +152,27 @@
   "scenarios": {
     "bear": {
       "priceTarget": "$170",
-      "description": "Tariff headwinds of $5–10B in operating profit hit marketplace economics hard, the $200B capex cycle drives FCF negative in 2026, and AWS decelerates to low-teens growth as Azure and GCP win disproportionate AI inference workloads.",
+      "description": "Despite the Supreme Court's Feb 2026 tariff ruling, seller cost pass-through (3.5% FBA fuel surcharge + FBA rate hikes) weighs on GMV, the $200B capex cycle extends FCF compression, and AWS decelerates to low-teens growth as Azure and GCP win disproportionate enterprise AI workloads.",
       "points": [
-        "Tariff-driven cost inflation ($5–10B operating profit impact) materialises as Chinese sellers — 50%+ of marketplace — raise prices 20–50% or exit U.S. listings, disrupting the marketplace flywheel",
-        "AWS decelerates to low-teens % as Azure (+31% last quarter) and Google Cloud (+48%) win disproportionate enterprise AI inference workloads; AWS market share erodes below 28%",
-        "$200B capex drives negative FCF for 2026; consumer confidence at multi-decade lows amplifies e-commerce weakness, compressing the multiple to 20–22× forward earnings"
+        "FBA fuel surcharge (3.5%, effective Apr 17) and rate increases squeeze third-party sellers already absorbing higher input costs; Chinese sellers — 50%+ of marketplace — reduce listings, disrupting the marketplace flywheel",
+        "AWS decelerates to low-teens % as Azure (+39% YoY) and Google Cloud (+36% YoY) continue gaining enterprise AI inference share; AWS market share erodes below 28%",
+        "$200B capex drives FCF near-zero for 2026–2027; consumer confidence deteriorates amid macro headwinds, compressing the multiple to 20–22× forward earnings"
       ]
     },
     "base": {
-      "priceTarget": "$260",
-      "description": "The $200B capex cycle begins monetising by late 2026 — AWS sustains 20%+ growth anchored by the $244B backlog, advertising scales past $90B annualised, and FCF rebounds above $50B by 2027 as infrastructure investment matures and tariff headwinds are absorbed.",
+      "priceTarget": "$270",
+      "description": "The $200B capex cycle begins monetising by late 2026 — AWS sustains 20%+ growth anchored by the $244B backlog, Anthropic's $30B+ run-rate revenue accelerates Bedrock adoption, advertising scales past $90B annualised, and FCF rebounds above $50B by 2027.",
       "points": [
-        "AWS maintains 20–25% growth with the $244B backlog (+40% YoY) providing 12+ months of demand visibility; 35%+ margins hold as Bedrock enterprise customers (60% Q/Q spend growth) ramp workloads",
+        "AWS maintains 20–25% growth with the $244B backlog (+40% YoY) providing 12+ months of demand visibility; 35%+ margins hold as Bedrock enterprise customers (60% Q/Q spend growth) ramp workloads, amplified by Anthropic's $30B+ annualised revenue all routing through AWS infrastructure",
         "Advertising sustains 20%+ growth as Amazon's intent-based targeting delivers highest-ROI per dollar for third-party sellers, reaching $90B+ annualised run rate by end of 2026",
-        "FCF rebounds above $50B by 2027 as the capex cycle matures; the $2.5B FTC Prime settlement is absorbed as a one-time charge with no structural impairment to the Prime flywheel"
+        "FCF rebounds above $50B by 2027 as the capex cycle matures; seller cost headwinds (fuel surcharge, FBA rate hikes) are absorbed as marketplace GMV recovers in H2 2026"
       ]
     },
     "bull": {
       "priceTarget": "$330",
-      "description": "AWS re-accelerates above 30% as sovereign AI and enterprise inference workloads concentrate on the platform, Trainium chips establish a durable silicon moat, and the capex cycle delivers transformational FCF by 2028.",
+      "description": "AWS re-accelerates above 30% as sovereign AI, enterprise inference, and Anthropic's explosive growth (Mythos model, Project Glasswing) concentrate workloads on the platform, Trainium chips establish a durable silicon moat, and the capex cycle delivers transformational FCF by 2028.",
       "points": [
-        "AWS growth re-accelerates above 30% as sovereign AI demand + Bedrock enterprise adoption (60% Q/Q customer spend growth) drives the $244B backlog to $350B+ by end of 2026",
+        "AWS growth re-accelerates above 30% as sovereign AI demand + Bedrock enterprise adoption + Anthropic Mythos/Glasswing workloads drive the $244B backlog to $350B+ by end of 2026; Anthropic's $30B+ run rate scales to $60B+, making it the single largest AWS revenue driver",
         "Trainium3/4 chips achieve cost-performance parity with Nvidia H100/B200 for inference at scale — AWS silicon (Graviton + Trainium) at $10B+ annualised run rate growing triple digits — creating a 2–3 year lead-time moat",
         "FCF surpasses $80B by 2027–2028 as capex transitions to depreciation tailwinds; a capital return programme (buybacks) is announced, triggering a re-rating toward 35× forward earnings"
       ]
@@ -221,5 +221,5 @@
     },
     "verdict": "Amazon's moats are overwhelmingly AI-resilient: the $244B AWS backlog, Trainium custom silicon, proprietary purchase data, and the marketplace flywheel are core strengths that are strengthening — not weakening — in the AI era."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "April 2026"
 }
