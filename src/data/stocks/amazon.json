@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$2.29T"
+      "value": "$2.38T"
     },
     {
       "label": "Price",
-      "value": "$212.89"
+      "value": "$213.77"
     }
   ],
   "chips": [
@@ -38,20 +38,20 @@
     {
       "title": "AWS Margin",
       "value": "35%",
-      "label": "Q4 2025 — 13-qtr high growth (+24%)",
+      "label": "Q4 2025 — +24% YoY; Q1 2026 due Apr 29",
       "icon": "Cloud",
       "color": "#006fee"
     },
     {
       "title": "Operating Cash Flow",
       "value": "$139.5B",
-      "label": "TTM; FCF compressed by $200B capex cycle",
+      "label": "TTM; FCF compressed by $200B 2026 capex",
       "icon": "DollarSign",
       "color": "#17c964"
     }
   ],
   "moat": {
-    "description": "Dominant scale, switching costs (Prime), and cost advantage (Logistics). AWS backlog hits $244B, up 40% YoY. Amazon is Anthropic's primary training cloud partner — AWS runs Project Rainier (the world's largest AI training cluster) on Trainium2, deepening AWS's AI infrastructure moat beyond pure cloud compute.",
+    "description": "Dominant scale, switching costs (Prime), and cost advantage (Logistics). AWS backlog hits $244B, up 40% YoY. Amazon is Anthropic's primary training cloud partner — AWS runs Project Rainier (the world's largest AI training cluster) on Trainium2, deepening AWS's AI infrastructure moat. Anthropic Mythos (frontier model, April 2026) and Project Glasswing (AI cybersecurity with Amazon, Apple, Nvidia) were launched on AWS, cementing Anthropic's commercial momentum ($30B+ run-rate revenue) as a direct AWS growth driver. Competitive pressure from Azure (+39% YoY) and GCP (+36% YoY) growing faster than AWS on AI workloads is a monitored risk.",
     "analysisTitle": "The Economic Moat",
     "analysisSummary": "Amazon possesses a **Wide Economic Moat** driven by four primary pillars:",
     "analysisPoints": [
@@ -74,8 +74,8 @@
     ]
   },
   "growth": {
-    "score": 88,
-    "description": "AWS re-accelerated to 24% in Q4 2025 — fastest growth in 13 quarters — with a $244B backlog (+40% YoY) underpinning durable AI-driven demand. Advertising grew 23% to $21.3B in Q4. Q1 2026 guidance (revenue $173.5–$178.5B) carries an unusually wide operating income range reflecting the accelerated $200B capex ramp and early tariff exposure; April earnings will be the first real read on capex monetisation pace.",
+    "score": 87,
+    "description": "AWS re-accelerated to 24% in Q4 2025 — fastest growth in 13 quarters — with a $244B backlog (+40% YoY) underpinning durable AI-driven demand. Advertising grew 23% to $21.3B in Q4. Q1 2026 guidance (revenue $173.5–$178.5B, consensus $177.1B; EPS est. $1.64) is due April 29; the key watch is whether AWS sustains 20%+ growth, as Azure (+39%) and GCP (+36%) are growing materially faster. Anthropic Mythos launch (April 2026) and its $30B+ annualised revenue run rate are accelerating Bedrock demand. Tariff headwinds — 145% on Chinese goods, de minimis fully eliminated — are a real but manageable operating income drag.",
     "additionalNote": {
       "title": "Financial Outlook",
       "points": [
@@ -87,12 +87,12 @@
     },
     "growthAnalysis": {
       "cagrEstimate": "15–20%",
-      "scoreDerivation": "Base 80 (15–30% blended CAGR) + 5 recurring revenue (AWS contracts + Prime) + 5 TAM expansion (AI inference + sovereign cloud) − 2 Q1 2026 guidance width = 88",
+      "scoreDerivation": "Base 80 (15–30% blended CAGR) + 5 recurring revenue (AWS contracts + Prime) + 5 TAM expansion (AI inference + sovereign cloud) − 2 Q1 2026 guidance width − 2 Azure/GCP competitive acceleration (39%/36% vs AWS 24%) + 1 Anthropic Mythos launch driving Bedrock demand = 87",
       "drivers": [
         {
           "name": "AWS Cloud",
-          "metric": "+24% YoY, $244B backlog (+40% YoY)",
-          "trend": "accelerating"
+          "metric": "+24% YoY (Q4 2025), $244B backlog (+40% YoY); Q1 2026 due Apr 29",
+          "trend": "stable"
         },
         {
           "name": "Advertising",
@@ -106,7 +106,7 @@
         }
       ],
       "primaryType": "both",
-      "keyRisk": "If Azure captures >40% of new enterprise AI inference workloads by end of 2026, AWS growth decelerates below 18% and the $200B 2026 capex cycle proves premature, compressing FCF for 3+ years",
+      "keyRisk": "Azure (+39% YoY) and GCP (+36% YoY) are already growing materially faster than AWS (~24%); if this gap widens and Azure captures the majority of new enterprise AI inference workloads through 2026, AWS growth decelerates below 18%, the $200B 2026 capex cycle proves premature, and FCF compression extends to 2028+",
       "marginTrend": "expanding"
     }
   },
