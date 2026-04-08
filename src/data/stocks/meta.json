@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$1.62T"
+      "value": "$1.46T"
     },
     {
       "label": "Current Price",
-      "value": "$648"
+      "value": "$575"
     }
   ],
   "chips": [
@@ -22,11 +22,11 @@
       "color": "primary"
     },
     {
-      "label": "Quality Yield",
+      "label": "Strong Buy",
       "color": "success"
     }
   ],
-  "recommendation": "Accumulate",
+  "recommendation": "Strong Buy",
   "metrics": [
     {
       "title": "Daily Active People",
@@ -51,7 +51,7 @@
     }
   ],
   "moat": {
-    "description": "Unrivaled social graph network effect, irreplaceable proprietary data, and a rapidly growing AI platform across 3B+ users.",
+    "description": "Unrivaled social graph network effect, irreplaceable proprietary data, and a rapidly growing AI platform across 3B+ users. On April 8, 2026, Meta debuted **Muse Spark** — its first frontier model from Meta Superintelligence Labs (led by Alexandr Wang, formerly Scale AI CEO), deployed natively across Facebook, Instagram, WhatsApp, Threads, and Ray-Ban glasses. Muse Spark's 'contemplating mode' (parallel multi-agent reasoning) leads benchmarks on health reasoning (HealthBench Hard: 42.8 vs GPT-5.4's 40.1) and multimodal figure understanding (CharXiv: 86.4 vs GPT-5.4's 82.8), cementing Meta's position as a full frontier AI competitor — not just an AI-enhanced advertiser.",
     "analysisTitle": "The Advertising Moat",
     "analysisSummary": "Meta's moat is built on **Attention, Data, and AI Platform**:",
     "analysisPoints": [
@@ -78,25 +78,25 @@
     ]
   },
   "growth": {
-    "score": 85,
-    "description": "FY2025 revenue reached $201B (+22% YoY); Q4 2025 accelerated to +24% YoY ($59.9B). AI-driven ad optimisation (Advantage+), Reels monetisation, and WhatsApp Business all contributed. Q1 2026 guided $53.5–56.5B (+14–21% YoY), with the 2026 capex ramp ($115–135B) a key watch for FCF trajectory.",
+    "score": 86,
+    "description": "FY2025 revenue reached $201B (+22% YoY); Q4 2025 accelerated to +24% YoY ($59.9B). AI-driven ad optimisation (Advantage+), Reels monetisation, and WhatsApp Business all contributed. Q1 2026 guided $53.5–56.5B (beat consensus $51.4B; +17% YoY midpoint), with earnings due April 29. Muse Spark (April 8, 2026) is the key new TAM catalyst: a frontier AI model deployed across 3B+ daily users creates a new engagement compounding layer that directly expands ad inventory. Ray-Ban smart glasses (next-gen Scriber/Blazer) launch April 14 at $499 — 7M+ units sold in 2025 tripled from prior year.",
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
         "Ad platform AI: Advantage+ and AI-optimised ad delivery drove 18% impression growth and 6% CPM expansion in Q4 2025 — AI is the engine behind sustained double-digit ad revenue compounding",
-        "WhatsApp monetisation: WhatsApp paid messaging and Meta Verified drove 54% YoY growth in 'Other Revenue' in Q4 2025; this remains an underpenetrated $10B+ opportunity across 2B+ WhatsApp users",
-        "Meta AI platform: 800M+ monthly Meta AI users in early 2026; Llama is establishing the open-source AI standard with enterprise adoption, creating a new developer platform revenue layer",
-        "Reels + Threads: Reels ad load has reached near-parity with Feed; Threads growing toward a $1B+ revenue contributor as engagement scales to 300M+ daily users"
+        "Muse Spark (April 8, 2026): Meta's first frontier model from Superintelligence Labs, deployed across all surfaces — leads HealthBench Hard (42.8) and CharXiv reasoning (86.4) vs GPT-5.4 and Gemini 3.1 Pro; persistent memory across apps creates a new engagement and switching-cost layer",
+        "Ray-Ban smart glasses: Next-gen Scriber/Blazer launch April 14 at $499 (including prescription); 7M+ pairs sold in 2025 (tripled YoY); wearables are emerging as Meta's third platform after mobile apps",
+        "WhatsApp monetisation: WhatsApp paid messaging and Meta Verified drove 54% YoY growth in 'Other Revenue' in Q4 2025; this remains an underpenetrated $10B+ opportunity across 2B+ WhatsApp users"
       ]
     },
     "growthAnalysis": {
       "cagrEstimate": "18–22%",
-      "scoreDerivation": "Base 80 (18–22% revenue CAGR, dominant market share) + 5 AI advertising moat (Advantage+ re-builds post-ATT) + 3 WhatsApp/new revenue optionality − 3 2026 capex compression risk = 85",
+      "scoreDerivation": "Base 80 (18–22% revenue CAGR, dominant market share) + 5 AI advertising moat (Advantage+ re-builds post-ATT) + 3 WhatsApp/new revenue optionality − 3 2026 capex compression risk + 1 Muse Spark frontier AI deployment (new engagement TAM across 3B+ users) = 86",
       "drivers": [
         {
           "name": "Core Ad Revenue",
-          "metric": "+22% FY2025; Q4 2025 +24% YoY, Family of Apps revenue $58.9B",
-          "trend": "accelerating"
+          "metric": "+22% FY2025; Q4 2025 +24% YoY ($58.9B); Q1 2026 guided $53.5–56.5B (+17% YoY mid)",
+          "trend": "stable"
         },
         {
           "name": "WhatsApp & Other Revenue",
@@ -110,82 +110,82 @@
         }
       ],
       "primaryType": "revenue",
-      "keyRisk": "If 2026 capex of $115–135B does not yield measurable AI revenue by H2 2026 — specifically no WhatsApp commerce inflection and no Llama licensing revenue above $1B — FCF compresses to <$30B and the market re-rates from a quality compounder to a capex-heavy infrastructure bet",
+      "keyRisk": "If 2026 capex of $115–135B does not yield measurable AI revenue by H2 2026 — specifically Muse Spark fails to drive engagement/ad revenue uplift, no WhatsApp commerce inflection, and FCF compresses below $30B — the market re-rates from a quality compounder to a capex-heavy infrastructure bet; Ray-Ban privacy lawsuit (California, March 2026) adds regulatory overhang",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 72,
-    "description": "At ~$648, META sits between the bear ($460) and base ($720) targets — roughly 90% of base fair value. After Q4 2025 beat (revenue +24%, EPS $8.88 vs $8.19E), the stock rallied to $738 before retracing. The $115–135B 2026 capex guidance adds near-term FCF uncertainty but does not impair the core advertising earnings power.",
+    "score": 80,
+    "description": "At ~$575, META trades at a 24% discount to our updated base fair value of $760 and is down ~27% from its Aug 2025 ATH of $788 — the most attractive valuation since 2024. Muse Spark's April 8 launch is not yet in consensus estimates; it represents an unpriced option on frontier AI engagement monetisation across 3B+ daily users. Q1 2026 guidance ($53.5–56.5B) beat the Street ($51.4B), and Q1 earnings on April 29 are the next catalyst. The $115–135B 2026 capex ramp compresses near-term FCF but the core advertising earnings engine (~41% operating margin in Q4) remains structurally intact.",
     "valuationNote": {
       "text": "Using a 10-year DCF with a 9% WACC, 20% near-term EPS growth decelerating to 3.5% terminal growth, and adjusting for Reality Labs losses and capex normalisation, our fair value estimate for META is",
-      "fairValue": "$720/share"
+      "fairValue": "$760/share"
     },
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "April 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~22×",
+          "value": "~20×",
           "note": "TTM EPS $29.23 (FY2025)"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~22×",
+          "value": "~19×",
           "note": "consensus ~$30 EPS 2026E"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.2×",
+          "value": "~1.1×",
           "note": "fwd P/E ÷ ~18% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~7.3×",
+          "value": "~6.6×",
           "note": "~$222B NTM revenue est."
         },
         {
           "label": "Price / Free Cash Flow",
-          "value": "~31×",
+          "value": "~28×",
           "note": "~$52B FY2025 FCF; 2026 capex ramp may compress"
         }
       ],
-      "summary": "META's ~22× forward P/E is in line with its trailing P/E — reflecting strong FY2025 EPS growth of ~37% YoY ($29.23 TTM). At this multiple, Meta trades at a modest discount to the S&P 500 despite superior FCF margins (~26%) and dominant ad-platform pricing power. The 1.2× PEG is reasonable for a business compounding EPS at 18–20%. The key 2026 variable is whether the $115–135B capex cycle compresses near-term FCF without a corresponding acceleration in AI-driven revenue."
+      "summary": "At ~19× forward earnings with a PEG of 1.1×, META is the cheapest it has been relative to growth in two years. The multiple compression from 22× (March 2026) to 19× reflects macro/capex concerns, not fundamental deterioration — Q4 2025 delivered 41% operating margins and $8.88 EPS. Muse Spark's deployment across 3B+ users is not reflected in any consensus model. At this price, investors pay less than the S&P 500 average multiple for a business with 18–22% revenue CAGR, dominant ad-platform pricing power, and a now-credible frontier AI position."
     }
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$460",
-      "description": "EU antitrust breakup or severe ad-market downturn amid global recession and regulatory overreach.",
+      "description": "The $115–135B 2026 capex cycle delivers no measurable AI revenue uplift, a macro-driven ad recession compresses CPMs, and Ray-Ban privacy litigation triggers EU regulatory action that limits biometric data collection.",
       "points": [
-        "EU privacy laws severely impact targeting precision",
-        "Reality Labs losses exceed $20B annually",
-        "Ad-market recession hits digital spend"
+        "Muse Spark fails to drive engagement uplift; capex ROI debate intensifies as FCF compresses below $30B in 2026; market re-rates to 15–17× forward earnings",
+        "Ad-market recession (macro slowdown, tariff impact on SMB ad budgets) drives CPM deflation, ending the Advantage+ monetisation tailwind",
+        "Ray-Ban privacy litigation (California, March 2026) and UK investigation lead to EU biometric data restrictions, delaying the wearables platform and increasing compliance costs"
       ]
     },
     "base": {
-      "priceTarget": "$720",
-      "description": "Llama 4 becomes a leading open model, ad revenue grows 12-15% annually, and WhatsApp business messaging scales to a $5B+ revenue line.",
+      "priceTarget": "$760",
+      "description": "Muse Spark drives measurable engagement uplift and ad inventory expansion, ad revenue compounds at 15–18% annually, WhatsApp business messaging scales to $5B+ revenue, and Ray-Ban glasses establish wearables as Meta's third platform.",
       "points": [
-        "Ad revenue grows 12-15% annually",
-        "Reels monetization achieves parity with Feed",
-        "Share buybacks continue at $50B+ clip"
+        "Muse Spark increases daily session time across Meta apps by 10–15% by year-end 2026, expanding ad inventory; persistent memory locks in users at scale",
+        "Core ad revenue grows 15–18% annually; Advantage+ and AI-driven formats deliver higher CPMs for SMBs; Q1 2026 earnings (Apr 29) confirm beat vs guidance",
+        "Ray-Ban Scriber/Blazer (April 14 launch, $499) sells 10M+ pairs in 2026; WhatsApp paid messaging reaches $5B+ revenue; buybacks continue at $50B+ pace"
       ]
     },
     "bull": {
       "priceTarget": "$950",
-      "description": "Llama becomes the enterprise AI standard, WhatsApp commerce inflects to $15B+ revenue, and AR glasses achieve mass-market adoption.",
+      "description": "Muse Spark becomes the default AI assistant for billions, WhatsApp commerce inflects to $15B+ revenue, and Ray-Ban glasses establish the wearable AI platform standard — Meta emerges as a full-stack AI company alongside OpenAI, Google, and Anthropic.",
       "points": [
-        "WhatsApp business messaging becomes a $10B high-margin pillar",
-        "Generative AI ad-creation tools lower barriers for small biz",
-        "Reality Labs reaches an 'iPhone moment' with AR glasses"
+        "Muse Spark (Superintelligence Labs) scales to 2B+ monthly active users by end of 2026, generating direct AI revenue and driving ad impression growth above 25% YoY",
+        "WhatsApp commerce and business messaging inflect to $15B+ by 2027; Meta's AI ad tools become the default for 10M+ SMBs globally, sustaining 20%+ CPM expansion",
+        "Ray-Ban wearables reach 20M+ units annually; AR display glasses launch in 2027; Reality Labs approaches breakeven as hardware revenue offsets VR losses"
       ]
     }
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "intact",
-      "note": "Legacy social media UI patterns are easily copied (TikTok proved this), but Meta AI's persistent memory accumulating user preferences, conversations, and context across Facebook/Instagram/WhatsApp/Threads creates a new layer of interface lock-in. The more a user interacts with Meta AI, the more personalized it becomes — switching platforms means losing that accumulated memory, which is a meaningfully different and growing switching cost compared to the pre-AI era."
+      "status": "strong",
+      "note": "Muse Spark (April 8, 2026) — Meta's first frontier AI model from Superintelligence Labs, deployed natively across all Meta surfaces — creates a genuinely strong learned interface moat. Unlike the prior Llama-based Meta AI, Muse Spark is competitive with GPT-5.4 and Gemini 3.1 Pro on key benchmarks (HealthBench Hard: 42.8 vs GPT-5.4's 40.1; CharXiv: 86.4 vs 82.8). Its 'contemplating mode' and persistent memory architecture means every interaction deepens a user's unique AI context that cannot be migrated — switching to any competing assistant means losing the accumulated memory of conversations, preferences, and context built across Facebook, Instagram, WhatsApp, Threads, and Ray-Ban glasses. This is a qualitative upgrade from 'convenient' to 'genuinely valuable and non-portable'."
     },
     "businessLogic": {
       "status": "intact",
@@ -223,7 +223,7 @@
       "status": "intact",
       "note": "WhatsApp serves as the primary communication record for billions in emerging markets and Meta AI's persistent memory is creating a nascent personal AI system-of-record, but consumer social/messaging does not carry the compliance and audit-trail migration penalties that earn 'strong' in enterprise contexts. There is no regulatory acceptance at risk, no legal chain-of-custody requirement — switching friction is real but driven primarily by network effects (already captured separately) rather than irreversible record-keeping lock-in."
     },
-    "verdict": "Meta holds the broadest and most formidable AI moat among consumer platforms. The combination of 3.5B+ daily users providing an unmatched AI training and feedback flywheel, proprietary compute infrastructure (MTIA chips, owned data centers), Llama establishing the open-source AI standard, and Meta AI's persistent memory across all apps creates a compounding AI platform moat that is genuinely difficult to replicate. The upgrade from 73 reflects: (1) Advantage+ AI rebuilding the post-ATT business logic moat, (2) Meta AI cross-app memory creating real bundling lock-in, and (3) infrastructure ownership securing long-term compute cost advantage. Regulatory drag from GDPR and DMA remains a structural cap, but Meta's AI moat is wider in absolute scale than any vertical-specific competitor including Shopify."
+    "verdict": "Meta's AI moat took a step-change on April 8, 2026 with the Muse Spark launch. Meta Superintelligence Labs — built around Alexandr Wang — has produced a genuine frontier model competitive with GPT-5.4 and Gemini 3.1 Pro, deployed immediately to 3B+ daily users. This upgrades learnedInterfaces from intact to strong: persistent Muse Spark memory across all Meta apps creates a new switching-cost layer that did not exist at any meaningful scale with Llama. Combined with the unrivaled social graph (networkEffects: strong), irreplaceable behavioral dataset (proprietaryData: strong), WhatsApp commerce infrastructure (transactionEmbedding: strong), and AWS/Azure-independent compute ownership (MTIA chips, owned data centers), Meta now holds 6 strong moats out of 10 applicable — the highest in its history. Regulatory drag from GDPR, DMA, and the Ray-Ban privacy litigation remains a structural cap on the regulatoryLockIn moat."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "April 2026"
 }
