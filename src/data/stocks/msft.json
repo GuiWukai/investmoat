@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$3.0T"
+      "value": "~$2.8T"
     },
     {
       "label": "Price",
-      "value": "~$408"
+      "value": "~$374"
     }
   ],
   "chips": [
@@ -26,12 +26,12 @@
       "color": "success"
     }
   ],
-  "recommendation": "Accumulate",
+  "recommendation": "Strong Buy",
   "metrics": [
     {
       "title": "Azure Growth",
       "value": "39%",
-      "label": "38% CC / 39% USD (Q2 FY26)",
+      "label": "39% USD Q2 FY26; Q3 guide 37–38% CC",
       "icon": "Cloud",
       "color": "#00a4ef"
     },
@@ -65,45 +65,59 @@
       },
       {
         "title": "AI Supermarket Strategy",
-        "text": "Microsoft AI chief Mustafa Suleyman confirmed in February 2026 that Microsoft is developing its own frontier-grade models with gigawatt-scale compute, reducing dependency on OpenAI. OpenAI is simultaneously gaining flexibility to run workloads elsewhere (Stargate). Paradoxically, this evolution strengthens Microsoft's position: as the cloud host for 1,900+ models from OpenAI, xAI, Meta, Mistral, and DeepSeek, Microsoft captures compute revenue regardless of which frontier AI provider wins — and is no longer a single-partner hostage."
+        "text": "In April 2026, Microsoft launched three in-house foundational AI models — MAI-Transcribe-1, MAI-Voice-1, and MAI-Image-2 — with MAI-Transcribe-1 claiming the lowest word error rate on the FLEURS benchmark (3.8% avg across 25 languages), beating OpenAI's Whisper-large-v3. This validates Mustafa Suleyman's February 2026 commitment to gigawatt-scale internal model development. Microsoft now operates as the cloud host for 1,900+ models (OpenAI, xAI, Meta, Mistral, DeepSeek, and now its own MAI family), capturing compute revenue regardless of which frontier provider wins — and is no longer a single-partner hostage. The OpenAI partnership remains contractually intact through at least 2032."
       }
     ]
   },
   "growth": {
     "score": 88,
-    "description": "Azure demand backlog of $625B (ex-OpenAI: +28% YoY) and Copilot's 160% YoY seat growth underpin a durable 15–17% revenue CAGR, supply-constrained not demand-constrained. Cloud gross margins are compressing (69% → ~65%) as GPU infrastructure costs weigh, but M365 price increases (July 2026, +5–33% by SKU) on 450M commercial seats provide an offsetting ARPU catalyst. GitHub Copilot (4.7M subscribers, +75% YoY) faces a new competitor in OpenAI's Windsurf acquisition."
+    "description": "Q2 FY26 revenue of $81.3B (+17% YoY) beat consensus; Azure grew 39% in Q2 with Q3 guided at 37–38% CC — a modest deceleration reflecting persistent capacity constraints, not demand weakness. The $625B commercial RPO (ex-OpenAI: +28% YoY) confirms durable enterprise commitment. M365 Copilot seats grew to 15M (+160% YoY), with Microsoft restricting free Copilot in Office apps for organisations >2,000 seats from April 15, 2026 — a direct monetisation lever for the 450M commercial base. Microsoft's in-house MAI model launches (April 2026) reduce OpenAI dependency and signal a long-term vertical integration of the AI stack. Cloud gross margins are compressing (69% → ~65%) as GPU capex scales, but overall operating margin remains 47.1% and expanding.",
+    "growthAnalysis": {
+      "cagrEstimate": "15–17%",
+      "scoreDerivation": "Base 80 (15–30% CAGR) + 5 recurring subscription (M365 NRR >110%, 450M seats) + 5 TAM expansion (enterprise AI inference, Copilot ARPU ramp) − 2 Azure guidance width (Q3 guide 37–38% vs Q2 achieved 39%) = 88",
+      "drivers": [
+        { "name": "Intelligent Cloud / Azure", "metric": "+29% YoY segment, $32.9B Q2 FY26; Azure +39% USD", "trend": "stable" },
+        { "name": "M365 Copilot Monetisation", "metric": "15M paid seats +160% YoY; July 2026 M365 price hike +5–33% by SKU", "trend": "accelerating" },
+        { "name": "Productivity & Business Processes", "metric": "+16% YoY, $34.1B Q2 FY26; 450M commercial seats", "trend": "stable" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If Azure growth decelerates below 32% in FY2027 due to capacity constraints persisting beyond H1 FY27 and Google Cloud Vertex AI captures >15% of new enterprise AI inference workloads by end of 2026, the AI infrastructure premium compresses and the base case of $450 collapses",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
-    "score": 72,
-    "description": "At ~$408 — down ~15% from its all-time high of $555 — MSFT sits 9% below the base case ($450), offering a meaningful margin of safety on a business delivering 47% operating margins and $81B quarterly revenue. Antitrust risk (Japan FTC raid, OpenAI class action) and a decelerating Azure growth guide (37–38% for Q3) have weighed on the multiple, creating a patient accumulation entry point rather than a structural re-rating.",
+    "score": 78,
+    "description": "At ~$374 — down ~8% from the prior analysis and ~33% from the all-time high of $555 — MSFT sits 17% below the base case ($450), offering the widest margin of safety since Q3 2024. Broad tech multiple compression in early April 2026, combined with the Azure Q3 deceleration guide (37–38%) and ongoing antitrust overhang, have pushed the forward P/E down to ~22× — materially closer to the growth-tech median. At this price, the risk/reward tilts firmly toward accumulation.",
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "April 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~32×"
+          "value": "~30×",
+          "note": "TTM GAAP EPS ~$12.50"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~27×",
-          "note": "consensus ~$15.50 EPS FY2027E"
+          "value": "~22×",
+          "note": "consensus NTM EPS ~$17"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.7×",
+          "value": "~1.4×",
           "note": "fwd P/E ÷ 16% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~11×"
+          "value": "~9×",
+          "note": "~$323B NTM revenue est."
         },
         {
           "label": "Price / Free Cash Flow",
-          "value": "~30×",
-          "note": "$80B+ FCF expected FY2027"
+          "value": "~33×",
+          "note": "~$85B NTM FCF est."
         }
       ],
-      "summary": "MSFT's 27× forward P/E reflects the premium the market assigns to Azure's $200B+ revenue trajectory and Copilot monetisation, though at a 1.7× PEG the multiple requires sustained 15–17% EPS growth to justify. The 47% operating margin provides substantial downside protection — even in a bear scenario where AI capex disappoints, MSFT's SaaS installed base generates durable FCF."
+      "summary": "At ~22× forward earnings — down from 27× in January 2026 — MSFT now trades at the lower end of the growth-tech peer range (typically 25–30×), representing the most compressed multiple in over two years. The 1.4× PEG against a ~16% EPS CAGR puts Microsoft squarely in GARP territory. The narrowing gap between trailing (~30×) and forward (~22×) P/E signals a meaningful earnings acceleration as Azure supply constraints ease and Copilot ARPU expands into FY2027."
     }
   },
   "scenarios": {
@@ -142,7 +156,7 @@
     },
     "businessLogic": {
       "status": "strong",
-      "note": "Azure AI Platform is now the enterprise AI OS — the destination enterprises migrate to, not from. Microsoft is the provider of business logic re-platforming. Emerging risk: OpenAI's ~$3B acquisition of coding IDE Windsurf creates a direct GitHub Copilot competitor backed by ChatGPT's user base, though Azure remains the underlying compute beneficiary regardless of which Copilot wins."
+      "note": "Azure AI Platform is now the enterprise AI OS — the destination enterprises migrate to, not from. Microsoft is the provider of business logic re-platforming. In April 2026 Microsoft launched three in-house foundational models (MAI-Transcribe-1, MAI-Voice-1, MAI-Image-2), deepening its independence from OpenAI while reinforcing Azure as the preferred AI development platform. Ongoing risk: OpenAI's ~$3B acquisition of coding IDE Windsurf creates a direct GitHub Copilot competitor, though Azure captures the compute regardless of which Copilot wins."
     },
     "publicDataAccess": {
       "status": "destroyed",
@@ -162,7 +176,7 @@
     },
     "regulatoryLockIn": {
       "status": "strong",
-      "note": "JEDI/DoD contracts, FedRAMP High, HIPAA, and government cloud compliance create irreplaceable switching costs. Significant new headwinds: the FTC launched what may be the broadest antitrust probe since the 1990s DOJ Microsoft case — examining cloud licensing and AI bundling — with the FTC and DOJ jointly probing Microsoft, OpenAI, and Nvidia. Japan FTC also raided Microsoft Japan. A San Francisco consumer class action challenges the OpenAI compute exclusivity arrangement. None of these change customer lock-in but create structural remedy risk and regulatory overhang through FY2027."
+      "note": "JEDI/DoD contracts, FedRAMP High, HIPAA, and government cloud compliance create irreplaceable switching costs. Regulatory overhang persists: the FTC/DOJ joint probe into cloud licensing and AI bundling continues under the Trump administration; Japan FTC raided Microsoft Japan in early 2026. Partial relief: the UK's digital markets regulator narrowed its cloud competition inquiry effective April 1, 2026, removing one vector of structural remedy risk. Net assessment: lock-in from government cloud certifications is undiminished; antitrust risk is a multiple overhang, not a moat threat."
     },
     "networkEffects": {
       "status": "strong",
@@ -178,5 +192,5 @@
     },
     "verdict": "Microsoft's AI-vulnerable moats face moderate pressure (interfaces, talent scarcity), but its AI-resilient fortress — system of record, regulatory lock-in, transaction embedding, and the Azure proprietary data flywheel — is actively strengthened by AI. The businessLogic moat is upgraded to strong: Azure AI is the re-platforming destination, not the threatened incumbent."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "April 2026"
 }
