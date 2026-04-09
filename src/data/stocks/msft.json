@@ -155,8 +155,8 @@
       "note": "Copilot abstracts traditional Office UI but enterprise muscle-memory, deep training investments, and workflow integration remain entrenched. AI cuts both ways."
     },
     "businessLogic": {
-      "status": "strong",
-      "note": "Azure AI Platform is now the enterprise AI OS — the destination enterprises migrate to, not from. Microsoft is the provider of business logic re-platforming. In April 2026 Microsoft launched three in-house foundational models (MAI-Transcribe-1, MAI-Voice-1, MAI-Image-2), deepening its independence from OpenAI while reinforcing Azure as the preferred AI development platform. Ongoing risk: OpenAI's ~$3B acquisition of coding IDE Windsurf creates a direct GitHub Copilot competitor, though Azure captures the compute regardless of which Copilot wins."
+      "status": "intact",
+      "note": "Azure AI Platform positions Microsoft as the enterprise AI re-platforming destination, and the April 2026 launch of in-house models (MAI-Transcribe-1, MAI-Voice-1, MAI-Image-2) deepens Azure's independence from OpenAI. However, Claude managed agents (Anthropic's /v1/agents platform) are a credible competing enterprise AI automation layer — enterprises can build Claude-native agent workflows that call Microsoft Graph APIs directly, bypassing Copilot's higher-margin service layer. This competitive pressure from external managed agent platforms downgrades this moat from strong to intact. Ongoing risk: OpenAI's ~$3B acquisition of Windsurf creates a direct GitHub Copilot competitor, though Azure captures the compute regardless of which AI layer wins."
     },
     "publicDataAccess": {
       "status": "destroyed",
@@ -190,7 +190,7 @@
       "status": "strong",
       "note": "Active Directory controls identity, SharePoint holds documents, Dynamics owns CRM, Teams owns communications. The enterprise OS. Migration remains a multi-year IT programme."
     },
-    "verdict": "Microsoft's AI-vulnerable moats face moderate pressure (interfaces, talent scarcity), but its AI-resilient fortress — system of record, regulatory lock-in, transaction embedding, and the Azure proprietary data flywheel — is actively strengthened by AI. The businessLogic moat is upgraded to strong: Azure AI is the re-platforming destination, not the threatened incumbent."
+    "verdict": "Microsoft's AI-vulnerable moats face moderate pressure (interfaces, talent scarcity), but its AI-resilient fortress — system of record, regulatory lock-in, transaction embedding, and the Azure proprietary data flywheel — is actively strengthened by AI. The businessLogic moat is rated intact: Azure AI remains a major enterprise re-platforming destination, but Claude managed agents and external agentic platforms create genuine competition for the enterprise automation layer that Copilot targets."
   },
   "lastAnalyzed": "April 2026"
 }
