@@ -76,6 +76,7 @@ import coinData    from '@/data/stocks/coin.json';
 import netData     from '@/data/stocks/net.json';
 import rddtData    from '@/data/stocks/rddt.json';
 import seaData     from '@/data/stocks/sea.json';
+import bkngData    from '@/data/stocks/bkng.json';
 
 // Weighted composite: Moat 40% · Growth 35% · Valuation 25%
 // scores = [moatScore, growthScore, valuationScore]
@@ -168,6 +169,7 @@ const allCoverageData = [
     { name: "Coinbase Global",   ticker: "COIN",  slug: "coin",        scores: [m(coinData),        g(coinData),        v(coinData)],        href: "/stocks/coin",        category: "Financials",  ...t(coinData)        },
     { name: "Reddit",            ticker: "RDDT",  slug: "rddt",        scores: [m(rddtData),        g(rddtData),        v(rddtData)],        href: "/stocks/rddt",        category: "Big Tech",    ...t(rddtData)        },
     { name: "Sea Limited",       ticker: "SE",    slug: "sea",         scores: [m(seaData),         g(seaData),         v(seaData)],         href: "/stocks/sea",         category: "Other",       ...t(seaData)         },
+    { name: "Booking Holdings", ticker: "BKNG",  slug: "bkng",        scores: [m(bkngData),        g(bkngData),        v(bkngData)],        href: "/stocks/bkng",        category: "Other",       ...t(bkngData)        },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────
