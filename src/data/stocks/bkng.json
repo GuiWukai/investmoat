@@ -1,0 +1,195 @@
+{
+  "slug": "bkng",
+  "ticker": "BKNG",
+  "name": "Booking Holdings Inc.",
+  "headerStats": [
+    { "label": "Ticker", "value": "BKNG" },
+    { "label": "Market Cap", "value": "$140B" },
+    { "label": "Price", "value": "$181.00" }
+  ],
+  "chips": [
+    { "label": "Travel | OTA | Marketplace", "color": "primary" },
+    { "label": "Network Flywheel", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Free Cash Flow",
+      "value": "$9.1B",
+      "label": "FY2025 — 6.4% FCF yield on mkt cap",
+      "icon": "TrendingUp",
+      "color": "#10b981"
+    },
+    {
+      "title": "FCF / Share Buybacks",
+      "value": "$6.4B",
+      "label": "2025 repurchases; $29.9B over 4 years",
+      "icon": "RefreshCw",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "Operating Margin",
+      "value": "32.8%",
+      "label": "FY2025; up from 27.3% in FY2023",
+      "icon": "BarChart",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "score": 76,
+    "description": "Booking Holdings holds a durable two-sided marketplace moat — 28M+ listed properties create the deepest accommodation supply on earth, and 160M+ Genius loyalty members generate the demand that keeps suppliers captive.",
+    "analysisTitle": "The Supply-Demand Flywheel",
+    "analysisSummary": "Booking's moat is built on a self-reinforcing **supply-density and loyalty flywheel**:",
+    "analysisPoints": [
+      {
+        "title": "Unmatched Supply Network",
+        "text": "Booking.com lists over 28 million accommodation options — hotels, apartments, villas, and unique stays — far surpassing Expedia Group's ~3M and Airbnb's ~8M active listings. This depth means travellers will almost always find inventory on Booking.com that they cannot find elsewhere, particularly in secondary and tertiary destinations across Europe, Asia, and the Middle East. New supply aggregators face years of onboarding friction to replicate this density."
+      },
+      {
+        "title": "Genius Loyalty Lock-In",
+        "text": "The Genius programme has grown to over 160 million enrolled members (as of late 2024/early 2025), offering tiered discounts and perks that increase with booking frequency. Because Genius rewards are exclusive to Booking.com and improve incrementally, habitual travellers face real switching costs — their accumulated tier status is stranded if they shift to Expedia or direct hotel booking. This loyalty loop also channels demand back through the platform rather than to hotel websites."
+      },
+      {
+        "title": "Merchant Model Expansion and Payment Infrastructure",
+        "text": "Booking has been systematically shifting from a pure agency model (where the hotel collects payment) to a merchant model (where Booking collects upfront, then remits to the property). By 2024, merchant transactions represented roughly half of gross bookings, embedding Booking into the payment stack and creating operational switching costs for properties. This also improves working capital dynamics and enables Booking to bundle cross-sell products — flights, car rentals, and attractions — increasing session value."
+      }
+    ]
+  },
+  "growth": {
+    "score": 67,
+    "description": "Revenue compounded at ~16% over 2022-2025 as travel fully recovered post-COVID, but growth has normalised to 11-13% in 2024-2025; analyst consensus projects ~11% in 2026 ($30B) and ~8% in 2027, with margin expansion and aggressive buybacks driving EPS faster than revenue.",
+    "growthAnalysis": {
+      "cagrEstimate": "8-12%",
+      "scoreDerivation": "Base 62 (8-12% blended CAGR on maturing travel recovery) + 5 FCF compounding via buybacks (share count shrinking ~5% annually) + 3 attractions/experiences TAM ($1.5T untapped non-accommodation spend) + 2 Genius loyalty deepening monetisation − 5 revenue growth decelerating post-COVID tailwind exhaustion = 67",
+      "drivers": [
+        {
+          "name": "Room Night Volume Growth",
+          "metric": "~1.16B room nights in FY2024 (+8% YoY); FY2025 est. ~1.27B; modest pricing gains via merchant model",
+          "trend": "stable"
+        },
+        {
+          "name": "Attractions & Experiences",
+          "metric": "5M+ attractions/tours available on Booking.com; higher-margin non-accommodation TAM in early innings",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Margin Expansion + Buybacks",
+          "metric": "Op margin 27% (2023) → 33% (2025); FCF/share compounding ~10%+ via ~$6B annual buybacks",
+          "trend": "accelerating"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "Global recession or macro shock compressing leisure travel demand; AI-powered direct booking tools eroding OTA take rates; further deceleration in European market (Booking's largest region) as growth matures",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 73,
+    "description": "At $181, BKNG trades at ~17× forward P/E and ~16× FCF — a discount to its 5-year average multiple and well below its $220 base case; the 6.4% FCF yield with ongoing buybacks makes current prices compelling for a quality compounder.",
+    "peAnalysis": {
+      "asOf": "April 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~27×",
+          "note": "TTM EPS ~$6.62 (FY2025); net income declined YoY on higher taxes/interest"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~17×",
+          "note": "Consensus FY2026 EPS ~$10.00 (significant acceleration on normalised taxes)"
+        },
+        {
+          "label": "P/FCF",
+          "value": "~15×",
+          "note": "$9.1B FCF (FY2025) vs $140B market cap"
+        },
+        {
+          "label": "EV/EBITDA",
+          "value": "~14×",
+          "note": "Net debt minimal (~$2B); EBITDA ~$10B estimated FY2025"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~4.7×",
+          "note": "$30B NTM revenue (FY2026 consensus)"
+        }
+      ],
+      "summary": "BKNG is trading at a meaningful discount to its historical 22-25× forward P/E range, compressed by macro uncertainty around travel demand and AI disruption narrative. The 17× forward P/E — combined with 6.4% FCF yield and $6B+ annual buybacks reducing share count ~5%/year — makes this a GARP-priced compounder at current levels. The gap between the trailing 27× P/E and the forward 17× P/E reflects a real EPS acceleration as one-time tax items normalise."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$120",
+      "description": "Global recession or macro shock halves room-night growth; AI-powered booking agents materially erode OTA take rates; take rate compresses 100-150bps as Google and ChatGPT-style assistants direct users to direct booking.",
+      "points": [
+        "European travel demand contracts 10-15% in a recession, compressing FY2026 room nights to flat or negative growth — Booking's largest market generating ~60% of gross bookings",
+        "AI-powered travel agents (Google Travel AI, ChatGPT plugins, Perplexity) capture 5-10% of OTA share by routing bookings direct, compressing aggregate take rates below 14%",
+        "Multiple re-rates to 14× forward P/E as growth concern dominates; $120 implies ~$8.50 forward EPS on 14% earnings miss"
+      ]
+    },
+    "base": {
+      "priceTarget": "$220",
+      "description": "Travel demand holds at 8-10% room-night growth; merchant model expansion preserves take rates; Genius loyalty deepens; FCF compounds to $10B+ with buybacks reducing share count ~5% annually.",
+      "points": [
+        "FY2026 room nights grow 8-10% to ~1.37B driven by international travel recovery and attractions cross-sell; revenue reaches $30B on stable ~14.5% take rate",
+        "FCF reaches $10.5B+ in FY2026, with $6-7B returned via buybacks — share count down to ~770M, driving EPS toward $10+",
+        "Multiple normalises to 22× forward P/E as AI disruption fears moderate and Booking's supply moat proves durable; $220 implies $10 NTM EPS at 22× P/E"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$320",
+      "description": "Booking proves to be an AI beneficiary — its AI trip-planner captures OTA share from weaker competitors, attractions/experiences becomes a significant revenue line, and Genius deepens monetisation across 200M+ members.",
+      "points": [
+        "Booking's AI trip-planner (launched 2024) captures incremental share from Expedia/Hotels.com; Genius 200M+ members drive loyalty-led repeat bookings with 20%+ premium conversion rates vs generic searches",
+        "Attractions & experiences scales to $2B+ annual GBV by 2028, adding 50-100bps to blended take rate as higher-margin non-accommodation segments grow",
+        "Multiple re-rates to 24-26× forward P/E as investors recognise AI-era durability; $320 implies $12-13 EPS by 2027-2028 on accelerating FCF compounding"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Travellers who habitually search, filter, and book via Booking.com develop workflow familiarity (saved preferences, payment details, review history) that creates mild but real switching friction."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "Search ranking, pricing, and availability logic are valuable but increasingly replicable by AI-enabled competitors; the interface itself is not a strong moat."
+    },
+    "publicDataAccess": {
+      "status": "weakened",
+      "note": "Hotel inventory data and pricing is technically accessible to competitors via direct supplier integrations; Booking's edge is aggregation scale, not exclusive data access."
+    },
+    "talentScarcity": {
+      "status": "destroyed",
+      "note": "N/A — OTA engineering talent is not a structural moat; Booking competes for the same engineering talent pool as Google, Expedia, and Airbnb."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Accommodation + flights + car + attractions + insurance = a growing travel 'super-app' bundle that increases session value and reduces cross-competitor leakage per trip."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Billions of booking transactions, pricing trends, traveller preferences, and review data across 28M+ properties creates a proprietary pricing and demand dataset that no new entrant can replicate."
+    },
+    "regulatoryLockIn": {
+      "status": "weakened",
+      "note": "EU Digital Markets Act (DMA) has targeted Booking.com's parity clauses and ranking algorithms, reducing some regulatory-derived advantages in Europe — Booking's largest market."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "More properties attract more travellers, whose reviews attract more travellers, whose demand attracts more properties — a classic two-sided marketplace compounding network effect operating at 28M+ listing scale."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "The merchant model expansion means Booking now sits in the payment layer of ~50% of all bookings, creating operational dependency for properties and traveller payment inertia."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "For independent hotels and smaller accommodation operators globally, Booking.com is the de facto distribution and reservation management system — switching requires migrating to an alternative with lower traffic."
+    },
+    "aiResilienceScore": 68,
+    "verdict": "Booking's two-sided network effect and proprietary transaction data make it structurally more defensible than a traditional software OTA — supply depth at 28M+ listings is the key barrier AI cannot easily circumvent. However, the business faces genuine AI-era disintermediation risk if conversational booking agents (Google Travel AI, ChatGPT plugins) route consumers directly to hotel websites, bypassing the OTA layer entirely and eroding the ~14.5% take rate that funds Booking's economics."
+  },
+  "lastAnalyzed": "April 2026"
+}
