@@ -309,6 +309,118 @@ const moatStatusConfig: Record<MoatStatus, { label: string; color: string; bgCol
   destroyed: { label: 'N/A',       color: '#71717a', bgColor: 'rgba(113,113,122,0.08)', dot: '#71717a' },
 };
 
+const STATUS_SCORE: Record<MoatStatus, number> = {
+  strong: 100, intact: 75, weakened: 40, destroyed: 0,
+};
+
+function MoatRadarChart({ data }: { data: TenMoatsAssessment }) {
+  const moatDefs: Array<{ label: string; key: keyof TenMoatsAssessment; resilient: boolean }> = [
+    { label: 'Prop. Data',    key: 'proprietaryData',     resilient: true  },
+    { label: 'Reg. Lock-In', key: 'regulatoryLockIn',    resilient: true  },
+    { label: 'Network Eff.', key: 'networkEffects',       resilient: true  },
+    { label: 'Trans. Embed.',key: 'transactionEmbedding', resilient: true  },
+    { label: 'Sys. Record',  key: 'systemOfRecord',       resilient: true  },
+    { label: 'Learned Int.', key: 'learnedInterfaces',    resilient: false },
+    { label: 'Biz Logic',    key: 'businessLogic',        resilient: false },
+    { label: 'Public Data',  key: 'publicDataAccess',     resilient: false },
+    { label: 'Talent',       key: 'talentScarcity',       resilient: false },
+    { label: 'Bundling',     key: 'bundling',             resilient: false },
+  ];
+
+  const W = 340, H = 340, cx = 170, cy = 170, R = 100, labelR = 135;
+  const n = moatDefs.length;
+  const angle = (i: number) => (2 * Math.PI * i) / n - Math.PI / 2;
+  const pt = (i: number, r: number) => ({
+    x: cx + r * Math.cos(angle(i)),
+    y: cy + r * Math.sin(angle(i)),
+  });
+
+  const moatValues = moatDefs.map(m => {
+    const item = data[m.key] as { status: MoatStatus; note: string };
+    const status = item.status;
+    return { status, value: STATUS_SCORE[status] };
+  });
+
+  const polyPts = moatValues.map((mv, i) => {
+    const p = pt(i, (mv.value / 100) * R);
+    return `${p.x},${p.y}`;
+  }).join(' ');
+
+  const textAnchor = (x: number): 'start' | 'end' | 'middle' =>
+    x > cx + 15 ? 'start' : x < cx - 15 ? 'end' : 'middle';
+
+  return (
+    <Card className="bg-white/5 border-none backdrop-blur-md">
+      <CardBody className="p-4 md:p-6">
+        <p className="text-xs uppercase tracking-widest text-white/40 font-bold mb-4">Moat Radar</p>
+        <svg viewBox={`0 0 ${W} ${H}`} className="w-full max-w-[300px] mx-auto" aria-hidden="true">
+          {/* Grid rings */}
+          {[25, 50, 75, 100].map(ring => {
+            const pts = Array.from({ length: n }, (_, i) => {
+              const p = pt(i, (ring / 100) * R);
+              return `${p.x},${p.y}`;
+            }).join(' ');
+            return <polygon key={ring} points={pts} fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth="1" />;
+          })}
+          {/* Ring value labels */}
+          {[25, 50, 75].map(ring => (
+            <text key={ring} x={cx + 2} y={cy - (ring / 100) * R - 2} fontSize="6" fill="rgba(255,255,255,0.18)" textAnchor="start">{ring}</text>
+          ))}
+          {/* Axis lines */}
+          {moatDefs.map((_, i) => {
+            const outer = pt(i, R);
+            return <line key={i} x1={cx} y1={cy} x2={outer.x} y2={outer.y} stroke="rgba(255,255,255,0.08)" strokeWidth="1" />;
+          })}
+          {/* Data polygon */}
+          <polygon points={polyPts} fill="rgba(0,111,238,0.15)" stroke="#006fee" strokeWidth="1.5" strokeLinejoin="round" />
+          {/* Data dots colored by status */}
+          {moatValues.map((mv, i) => {
+            const p = pt(i, (mv.value / 100) * R);
+            return <circle key={i} cx={p.x} cy={p.y} r={3.5} fill={moatStatusConfig[mv.status].dot} />;
+          })}
+          {/* Axis labels */}
+          {moatDefs.map((m, i) => {
+            const lp = pt(i, labelR);
+            return (
+              <text
+                key={i}
+                x={lp.x}
+                y={lp.y}
+                fontSize="7.5"
+                fontWeight="600"
+                fill={m.resilient ? 'rgba(23,201,100,0.8)' : 'rgba(243,18,96,0.8)'}
+                textAnchor={textAnchor(lp.x)}
+                dominantBaseline="middle"
+              >
+                {m.label}
+              </text>
+            );
+          })}
+        </svg>
+        {/* Legend */}
+        <div className="flex justify-center gap-6 mt-2">
+          <div className="flex items-center gap-1.5">
+            <div className="w-2 h-2 rounded-full" style={{ background: '#17c964' }} />
+            <span className="text-[10px] text-white/40">AI-Resilient</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <div className="w-2 h-2 rounded-full" style={{ background: '#f31260' }} />
+            <span className="text-[10px] text-white/40">AI-Vulnerable</span>
+          </div>
+          <div className="flex items-center gap-2">
+            {(['strong', 'intact', 'weakened', 'destroyed'] as MoatStatus[]).map(s => (
+              <div key={s} className="flex items-center gap-1">
+                <div className="w-2 h-2 rounded-full" style={{ background: moatStatusConfig[s].dot }} />
+                <span className="text-[9px] text-white/30">{moatStatusConfig[s].label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </CardBody>
+    </Card>
+  );
+}
+
 function MoatRow({ label, status, note }: { label: string; status: MoatStatus; note: string }) {
   const cfg = moatStatusConfig[status];
   return (
@@ -365,6 +477,9 @@ export function TenMoatsCard({ data }: { data: TenMoatsAssessment }) {
           <p className="text-sm text-white/70 leading-relaxed">{data.verdict}</p>
         </CardBody>
       </Card>
+
+      {/* Radar Chart */}
+      <MoatRadarChart data={data} />
 
       {/* Moat Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
