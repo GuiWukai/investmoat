@@ -64,8 +64,8 @@ function DynamicScore({
 }
 
 // ─── Portfolio threshold ──────────────────────────────────────────────────────
-const PORTFOLIO_THRESHOLD = 75;
-const MAX_PORTFOLIO = 25;
+const PORTFOLIO_THRESHOLD = 80;
+const MAX_PORTFOLIO = 20;
 
 // ─── Per-ticker metadata (display color, category, exclusion reason) ──────────
 const stockMeta: Record<string, { color: string; category: string; exclusionReason?: string }> = {
