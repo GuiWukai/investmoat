@@ -199,12 +199,12 @@
       "note": "Classic network effects: each new customer adds threat telemetry that improves security for all others. The developer ecosystem on Workers creates a second flywheel — more apps on Workers → more edge compute demand → better performance for all. Both effects compound with scale."
     },
     "transactionEmbedding": {
-      "status": "intact",
-      "note": "Every HTTP request from a Cloudflare customer transits Cloudflare's network — it is embedded in the critical path of web traffic, not a payment processor but analogous in its infrastructure embeddedness. Switching means re-pointing DNS and reconfiguring security rules across all properties."
+      "status": "strong",
+      "note": "Every HTTP request from a Cloudflare customer transits Cloudflare's network — embedded in the critical path of web traffic. Claude managed agents and agentic AI workloads deepen this embedding significantly: Cloudflare AI Gateway is the canonical rate-limiting, caching, and observability layer for managed agent API calls, meaning enterprises configure their entire agent infrastructure pipeline through Cloudflare. The shift from human HTTP traffic to AI agent HTTP traffic structurally upgrades Cloudflare's transaction embedding from infrastructure-level to agent-orchestration-level — every agent tool call is a Cloudflare-embedded transaction."
     },
     "systemOfRecord": {
-      "status": "weakened",
-      "note": "Cloudflare manages DNS zones and SSL certificates that function as systems of record for domain identity, but is not the authoritative source for financial, legal, or HR data. The Workers/Pages deployment layer is sticky but not irreplaceable."
+      "status": "intact",
+      "note": "Cloudflare manages DNS zones and SSL certificates as systems of record for domain identity. With AI Gateway, Cloudflare is emerging as the canonical configuration and observability layer for managed agent deployments — enterprises store rate limits, LLM provider routing, caching rules, and agent call logs in Cloudflare's platform. While not a system of record for financial or HR data, the growing role as the authoritative configuration layer for enterprise AI agent infrastructure upgrades this from weakened to intact."
     },
     "verdict": "Cloudflare is a net beneficiary of AI — the shift from human users to AI agents as the primary internet traffic source creates massive demand for Cloudflare's edge network, security layer, and Workers compute runtime. The proprietary threat-intelligence data flywheel and network effects are the two most AI-resilient moats, both of which strengthen as AI-driven attack vectors increase the value of real-time threat data. The primary AI risk is that hyperscalers bundle security capabilities into their managed AI platforms, reducing the independent security and CDN market. Overall, Cloudflare's architecture — where AI inference, security, and networking converge at the same edge node — positions it as critical infrastructure for the agentic internet."
   }
