@@ -76,7 +76,8 @@ export interface StockAnalysisData {
   recommendation: RecommendationStatus;
   metrics: StockMetric[];
   moat: {
-    score: number;
+    /** Computed dynamically from tenMoats via computeMoatScore(); optional in JSON. */
+    score?: number;
     description: string;
     analysisTitle: string;
     analysisSummary: string;

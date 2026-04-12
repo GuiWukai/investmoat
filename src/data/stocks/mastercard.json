@@ -13,7 +13,7 @@
     },
     {
       "label": "Price",
-      "value": "$472.50"
+      "value": "$498.66"
     }
   ],
   "chips": [
@@ -31,13 +31,13 @@
     {
       "title": "GDV Growth",
       "value": "12%",
-      "label": "Gross Dollar Volume ($)",
+      "label": "Gross Dollar Volume (Q4 2025)",
       "icon": "CreditCard",
       "color": "#eb001b"
     },
     {
       "title": "Net Margin",
-      "value": "45.8%",
+      "value": "46.1%",
       "label": "Consistent Profitability",
       "icon": "ShieldCheck",
       "color": "#ff5f00"
@@ -45,44 +45,67 @@
     {
       "title": "EPS CAGR",
       "value": "18%",
-      "label": "5-Year Average",
+      "label": "5-Year Historical Average",
       "icon": "TrendingUp",
       "color": "#10b981"
     }
   ],
   "moat": {
-    "description": "Critical global infrastructure with deep brand trust and technological advantage.",
+    "description": "Critical global infrastructure with deep brand trust, proprietary AI models, and expanding on-chain payment rails.",
     "analysisTitle": "The Services Moat",
     "analysisSummary": "Mastercard is more than a network; it's a **Data & Services Powerhouse**:",
     "analysisPoints": [
       {
-        "title": "Service Diversification",
-        "text": "MA has been more aggressive in building security, fraud, and data analytics services, which are higher margin and stickier than core processing."
+        "title": "AI-Powered Data Advantage",
+        "text": "Mastercard's Large Tabular Model (LTM), trained on billions of anonymised transactions, creates a proprietary AI moat that deepens SpendingPulse and fraud intelligence — data competitors cannot replicate."
       },
       {
-        "title": "Technological Agility",
-        "text": "Strong focus on open banking and digital identity solutions creates new moats in the evolving fintech landscape."
+        "title": "On-Chain Payment Expansion",
+        "text": "The $1.8B BVNK acquisition (March 2026) extends Mastercard's transaction embedding to stablecoin settlement and blockchain rails, positioning it at the intersection of traditional finance and on-chain payments."
       },
       {
-        "title": "Global Presence",
-        "text": "Strong positioning in Europe and emerging markets where digital adoption is accelerating."
+        "title": "Emerging Markets & Agentic Commerce",
+        "text": "Partnership with Ericsson for digital wallets in Middle East and Africa, plus leadership in authenticated agentic transactions across ASEAN, capture the next billion users and the AI-agent commerce wave."
       }
     ]
   },
   "growth": {
-    "score": 88,
-    "description": "Faster growth than Visa in service revenue and data analytics."
+    "score": 82,
+    "description": "Q4 2025 net revenue grew 18% YoY to $8.81B with adjusted EPS up 25%; 2026 guidance of high-end-of-low-double-digits (currency-neutral) reflects tougher comparisons, while BVNK, agentic commerce, and value-added services provide incremental TAM beyond the core network.",
+    "growthAnalysis": {
+      "cagrEstimate": "12–15%",
+      "scoreDerivation": "Base 67 (12–15% net revenue CAGR) + 8 recurring (card network fees; >75% of revenue is recurring processing and assessment fees) + 7 TAM expansion (BVNK $1.8B stablecoin acquisition, agentic commerce rollout, B2B emerging market digitisation) = 82",
+      "drivers": [
+        { "name": "Cross-Border Volume", "metric": "~20% YoY Q4 2025, highest-margin revenue stream", "trend": "stable" },
+        { "name": "Value-Added Services", "metric": "~25% YoY, cybersecurity/fraud/analytics expanding margin mix", "trend": "accelerating" },
+        { "name": "GDV Core Growth", "metric": "+12% YoY Q4 2025, consumer and commercial card spend", "trend": "stable" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If Federal Judge Brian Cogan approves the Visa/Mastercard merchant settlement in 2026 with broad surcharging rights and appeals succeed in invalidating honor-all-cards provisions, acceptance economics deteriorate and account-to-account payment rails capture 5%+ of card volume by 2028",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
-    "score": 71,
-    "description": "Trading between bear ($400) and base ($555) — premium justified by superior data services growth mix; consistent 15-18% EPS compounder at a reasonable price for long-term compounding."
+    "score": 74,
+    "description": "Trading 10% below the base case ($555) at $498.66 — attractively priced for a durable compounder; the ~26× forward P/E is well below the 10-year median of 37.8×, offering a margin of safety against the modest revenue deceleration implied by 2026 guidance.",
+    "peAnalysis": {
+      "asOf": "April 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "30.5×", "note": "~$16.37 TTM EPS" },
+        { "label": "Forward P/E (NTM)", "value": "~26×", "note": "consensus EPS est. ~$19.03" },
+        { "label": "PEG Ratio", "value": "~1.5×", "note": "fwd P/E ÷ ~17% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~14×", "note": "~$31.9B NTM revenue" },
+        { "label": "Price / FCF", "value": "~26.8×", "note": "$16.4B FCF (TTM)" }
+      ],
+      "summary": "At ~26× forward P/E, Mastercard trades at a meaningful discount to its 10-year median of ~37.8×, implying the market is pricing in growth moderation. The PEG of ~1.5× sits in the fairly-priced-for-growth range, with Q4 2025 adjusted EPS growing 25% YoY providing upside optionality to consensus. The trailing-to-forward P/E compression from 30.5× to ~26× signals an earnings acceleration ramp in 2026 that supports the base case."
+    }
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$400",
       "description": "Multiple contraction from macro slowdown, regulatory interchange headwinds, and slower-than-expected commercial payments growth.",
       "points": [
-        "P/E compresses to 25x as growth fears reduce premium vs. Visa",
+        "P/E compresses to 25× as growth fears reduce premium vs. Visa",
         "EU interchange fee regulation extends to new payment categories, compressing take rates",
         "Cross-border travel volume recovery stalls in key high-yield corridors"
       ]
@@ -91,16 +114,16 @@
       "priceTarget": "$555",
       "description": "Double-digit top and bottom line growth continues, driven by data services and emerging market digitization.",
       "points": [
-        "Cross-border volume grows 12-15% as global travel normalizes post-tariff uncertainty",
+        "Cross-border volume grows 12–15% as global travel normalizes post-tariff uncertainty",
         "Cybersecurity and data analytics services grow 25%+, expanding margins beyond core network",
-        "Share buybacks retire 3-4% of float annually, compounding EPS growth"
+        "Share buybacks retire 3–4% of float annually, compounding EPS growth"
       ]
     },
     "bull": {
       "priceTarget": "$700",
-      "description": "Mastercard's data services and B2B infrastructure become the dominant layer for global commercial payments.",
+      "description": "Mastercard's data services and B2B infrastructure become the dominant layer for global commercial and on-chain payments.",
       "points": [
-        "Commercial B2B payment volume exceeds $2.5T as enterprise digitization accelerates",
+        "BVNK stablecoin infrastructure captures meaningful share of on-chain settlement volume by 2027",
         "Multi-rail strategy captures significant share of real-time account-to-account payments",
         "AI-powered fraud and analytics services double as a percentage of total revenue"
       ]
@@ -129,7 +152,7 @@
     },
     "proprietaryData": {
       "status": "strong",
-      "note": "SpendingPulse economic dataset and transaction-level insights are genuinely proprietary economic intelligence."
+      "note": "SpendingPulse and transaction-level intelligence compounded by the Large Tabular Model (LTM) trained on billions of anonymised transactions — AI is actively strengthening this moat, not threatening it."
     },
     "regulatoryLockIn": {
       "status": "strong",
@@ -141,13 +164,14 @@
     },
     "transactionEmbedding": {
       "status": "strong",
-      "note": "Mastercard processes 120B+ transactions annually — core infrastructure for global commerce that cannot simply be switched off."
+      "note": "Mastercard processes 120B+ transactions annually and is extending to on-chain payments via the $1.8B BVNK acquisition (March 2026), embedding MA at the intersection of traditional card rails and stablecoin settlement."
     },
     "systemOfRecord": {
       "status": "strong",
       "note": "Co-records the global payment ledger with Visa; the authoritative source for cross-border transaction settlement."
     },
-    "verdict": "Mastercard mirrors Visa's AI-resilient moat profile. The payment network duopoly makes them among the safest compounders in an AI-disrupted world — AI enhances fraud detection without threatening the network itself."
+    "aiResilienceScore": 87,
+    "verdict": "Mastercard is a net beneficiary of the AI era. Its Large Tabular Model (LTM) trained on billions of transactions actively strengthens the proprietary data moat, while the $1.8B BVNK acquisition extends transaction embedding to stablecoin rails before competitors can establish a foothold. The payment network duopoly means AI enhances fraud detection and agentic commerce capability without threatening the structural network itself. businessLogic and bundling remain modestly weakened by fintech/AI pressure, but these carry low weight against five strong AI-resilient moats."
   },
-  "lastAnalyzed": "February 2026"
+  "lastAnalyzed": "April 2026"
 }
