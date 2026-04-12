@@ -2,6 +2,7 @@
   "slug": "intuit",
   "ticker": "INTU",
   "name": "Intuit Inc.",
+  "lastAnalyzed": "April 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -9,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$185B"
+      "value": "~$100B"
     },
     {
       "label": "Price",
-      "value": "$658.10"
+      "value": "~$351"
     }
   ],
   "chips": [
@@ -26,128 +27,187 @@
       "color": "success"
     }
   ],
-  "recommendation": "Accumulate",
+  "recommendation": "Strong Buy",
   "metrics": [
     {
-      "title": "Subscriber Growth",
-      "value": "12%",
-      "label": "SBCB Segment Expansion",
-      "icon": "Calculator",
+      "title": "GBSG Revenue",
+      "value": "+18%",
+      "label": "Q2 FY26 YoY (+21% ex-Mailchimp)",
+      "icon": "TrendingUp",
       "color": "#2ca01c"
     },
     {
-      "title": "Op. Margin",
-      "value": "24.5%",
-      "label": "GAAP Basis",
+      "title": "Non-GAAP EPS",
+      "value": "$23+",
+      "label": "FY2026 Guided (+15% YoY)",
       "icon": "BarChart",
       "color": "#3b82f6"
     },
     {
       "title": "Free Cash Flow",
-      "value": "$4.8B",
-      "label": "Strong Cash Conversion",
+      "value": "$6.1B",
+      "label": "FY2025 Full Year (+30% YoY)",
       "icon": "DollarSign",
       "color": "#10b981"
     }
   ],
   "moat": {
-    "description": "QuickBooks (58% of revenue) is a near-unassailable system of record; TurboTax (26%) faces real competition but is weighted too small to sink the overall moat.",
+    "description": "QuickBooks (58% of revenue) is the system of record for 7M+ SMBs — though AI-native platforms have begun siphoning off tech-forward customers. TurboTax's primary regulatory headwind (IRS Direct File) was cancelled for 2026, partially reversing the bear case.",
     "analysisTitle": "The Ecosystem Moat",
-    "analysisSummary": "Intuit's moat is **revenue-weighted**: QuickBooks dominates at 58% of FY2025's $18.8B, TurboTax is 26%, Credit Karma 12%, ProTax 3%.",
+    "analysisSummary": "Intuit's moat is **revenue-weighted**: QuickBooks (GBSG) dominates at ~58% of FY2026's guided ~$21B, TurboTax ~26%, Credit Karma ~12%, ProTax ~3%. IRS Direct File cancellation for 2026 eliminates the primary near-term TurboTax regulatory headwind.",
     "analysisPoints": [
       {
         "title": "QuickBooks: The Real Fortress (58%)",
-        "text": "7M+ SMBs use QuickBooks as their system of record for payroll, invoicing, taxes, and lending. Years of embedded transaction history make migration nearly impossible — this is the dominant moat driver."
+        "text": "7M+ SMBs use QuickBooks as their system of record for payroll, invoicing, taxes, and lending. Years of embedded transaction history make migration nearly impossible — this is the dominant moat driver. AI-native competitors (Puzzle, Digits, Campfire) are siphoning off tech-forward SMBs but have not yet demonstrated the ability to displace QuickBooks at scale across the installed base."
       },
       {
-        "title": "TurboTax: Weakening but Manageable (26%)",
-        "text": "IRS Direct File, free bank filing tools, and AI assistants are structural headwinds. However, TurboTax Live (human-assisted) grew 47% in FY2025 and now represents 41% of Consumer revenue — a successful pivot to a more defensible, higher-ARPU model."
+        "title": "TurboTax: IRS Direct File Cancelled (26%)",
+        "text": "The Trump administration cancelled the IRS Direct File programme for the 2026 filing season, removing the primary near-term headwind to TurboTax's addressable market. TurboTax Live (human-assisted filing) grew 47% in FY2025 and now represents 41% of Consumer revenue — a successful pivot to a more defensible, higher-ARPU model that AI point-solutions cannot easily replicate."
       },
       {
         "title": "Data Flywheel Across All Segments",
-        "text": "100M+ users' tax returns, SMB financials, and Credit Karma credit profiles create an irreplaceable dataset that improves underwriting, product personalization, and AI model training across the entire platform."
+        "text": "100M+ users' tax returns, SMB financials, and Credit Karma credit profiles create an irreplaceable dataset that improves underwriting, product personalisation, and AI model training across the platform. Intuit Assist (AI copilot) is being monetised across QuickBooks and TurboTax — this data flywheel is the most durable long-term defence against AI-native entrants who lack the historical financial depth."
       }
     ]
   },
   "growth": {
-    "score": 84,
-    "description": "Credit Karma integration and AI-assisted tax filing driving ARPU."
+    "score": 81,
+    "description": "Q2 FY2026 revenue grew 17% YoY to $4.7B, with Global Business Solutions (QuickBooks) up 18% (+21% ex-Mailchimp) and Non-GAAP EPS of $4.15 (+25% YoY). Full-year FY2026 guidance reiterated at $20.997–21.186B (+12–13%). IRS Direct File cancellation removes the primary TurboTax headwind entering FY2027, while AI-native competitors (Puzzle, Digits, Campfire) and Anthropic Managed Agents represent new headwinds to QuickBooks SMB growth. Margins guided to continue expanding.",
+    "growthAnalysis": {
+      "cagrEstimate": "12–15%",
+      "scoreDerivation": "Base 67 (8–15% CAGR, FY2026 guided 12–13%) + 5 recurring subscription (QuickBooks ARPU NRR >110%, 7M+ sticky SMBs) + 5 TAM expansion (Intuit Assist AI monetisation, mid-market Enterprise Suite, international) + 4 IRS Direct File cancelled (near-term TurboTax volume re-acceleration in FY2027) = 81",
+      "drivers": [
+        {
+          "name": "Global Business Solutions (QuickBooks)",
+          "metric": "+18% YoY Q2 FY26; +21% ex-Mailchimp; QBO Advanced +40% YoY",
+          "trend": "stable"
+        },
+        {
+          "name": "Consumer Tax (TurboTax Live)",
+          "metric": "TurboTax Live +47% in FY2025; 41% of Consumer revenue; IRS Direct File cancelled",
+          "trend": "stable"
+        },
+        {
+          "name": "Credit Karma",
+          "metric": "+12% expected FY2026; rate normalisation tailwind; $2.5B+ annual revenue run-rate",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If AI-native SMB platforms (Puzzle, Digits, Campfire) achieve >5% of the US tech SMB market by end of 2027, QuickBooks mid-market expansion stalls and ARPU growth falls below 5% — making the 12–13% FY2026 revenue guidance the ceiling rather than a floor",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
-    "score": 75,
-    "description": "Trading between bear ($300) and base ($480) — compressed multiple reflects IRS Direct File overhang and tariff-driven SMB uncertainty; priced attractively for a business with 7M+ switching-cost moats."
+    "score": 83,
+    "description": "At ~$351, trading 32% below the base case ($520) and just 21% above the bear ($290). The forward non-GAAP P/E of ~14.8× and PEG of ~1.0× represent the lowest valuation since 2020 — the market appears to be pricing in near-permanent AI disruption of both TurboTax and QuickBooks, a scenario that materially overstates execution risk given the IRS Direct File cancellation and 7M+ SMB switching costs.",
+    "peAnalysis": {
+      "asOf": "April 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~27×",
+          "note": "TTM GAAP EPS ~$13"
+        },
+        {
+          "label": "Forward P/E (NTM, non-GAAP)",
+          "value": "~14.8×",
+          "note": "consensus NTM EPS ~$23.65"
+        },
+        {
+          "label": "Forward P/E (NTM, GAAP)",
+          "value": "~23×",
+          "note": "GAAP NTM EPS est. ~$15"
+        },
+        {
+          "label": "PEG Ratio (non-GAAP)",
+          "value": "~1.0×",
+          "note": "fwd P/E ÷ 15% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~4.7×",
+          "note": "$21.1B NTM revenue est."
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~16×",
+          "note": "$6.1B FCF (FY2025)"
+        }
+      ],
+      "summary": "At ~23× forward GAAP P/E — near the lowest multiple since 2020 — Intuit now trades at or below the S&P 500 software median despite a demonstrably superior moat profile. The non-GAAP PEG of ~1.0× signals genuine GARP territory, implying the market has over-discounted AI disruption risk relative to the underlying earnings power. The trailing-to-forward P/E compression (27× to 23×) reflects an accelerating earnings trajectory that should widen further as IRS Direct File removal boosts FY2027 TurboTax volumes and QuickBooks pricing power compounds."
+    }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$300",
-      "description": "IRS Direct File gains significant traction, SMB churn rises in a prolonged macro slowdown, and AI alternatives erode TurboTax's value proposition.",
+      "priceTarget": "$290",
+      "description": "AI-native SMB platforms gain critical traction, QuickBooks churn accelerates beyond management's ability to offset with pricing, and the multiple stays permanently compressed.",
       "points": [
-        "TurboTax unit count declines 10-15% as IRS free-filing expands to all states",
-        "SMB failures in tariff-sensitive sectors accelerate QuickBooks churn",
-        "Credit Karma revenue stalls as consumer credit conditions remain tight"
+        "AI-native platforms (Puzzle, Digits, Campfire) capture >10% of US tech SMBs by end of 2027, materially accelerating QuickBooks churn in the highest-ARPU growth segment",
+        "SMB failures in tariff-affected sectors add 2–3 pp of quarterly churn above historical norms across the 7M+ installed base",
+        "Credit Karma revenue recovery stalls as consumer lending conditions remain tight; segment drags total growth below 10% and the GAAP P/E stays at 14–15× on stagnant EPS"
       ]
     },
     "base": {
-      "priceTarget": "$480",
-      "description": "QuickBooks pricing power and Intuit Assist AI monetization offset TurboTax headwinds, with steady 10-12% platform revenue growth.",
+      "priceTarget": "$520",
+      "description": "Company executes on FY2026 guidance, Intuit Assist monetises at scale, TurboTax volumes recover with IRS Direct File gone, and the multiple re-rates modestly as AI disruption fears prove overdone.",
       "points": [
-        "Mid-market QuickBooks expansion drives ARPU above $2,000/customer",
-        "Intuit Assist AI copilot achieves meaningful paid penetration in SMB segment",
-        "Operating margins expand 100-200 bps as AI reduces support cost structure"
+        "FY2026 revenue lands at guidance midpoint (~$21.1B, +13% YoY); FY2027 re-accelerates to 14–15% as TurboTax volumes recover with IRS Direct File permanently eliminated",
+        "Intuit Assist AI copilot achieves meaningful paid penetration, driving QuickBooks ARPU above $2,000 per customer as mid-market Enterprise Suite gains traction",
+        "Non-GAAP P/E re-rates from 14.8× to ~19–20× as AI disruption narrative moderates; FY2027 non-GAAP EPS of ~$26 × 20× ≈ $520"
       ]
     },
     "bull": {
-      "priceTarget": "$650",
-      "description": "QuickBooks becomes the financial operating system for 15M+ SMBs globally, with B2B payments and lending creating a financial super-app.",
+      "priceTarget": "$750",
+      "description": "Intuit Assist becomes the AI financial operating system for SMBs globally, TurboTax market share expands as Direct File is permanently eliminated, and the multiple re-rates toward historical norms.",
       "points": [
-        "International QuickBooks expansion reaches critical mass in UK, Canada, and ANZ",
-        "B2B payments volume through QuickBooks doubles, adding a high-margin revenue layer",
-        "Credit Karma's lending platform inflects as rate cycle normalizes"
+        "International QuickBooks expansion reaches critical mass in UK, Canada, and ANZ; total addressable SMB market effectively doubles and international mix reaches 20%+ of GBSG",
+        "Intuit Assist monetisation exceeds expectations — AI-assisted premium tasks priced above base subscription; non-GAAP EPS exceeds $28–30 by FY2027–28",
+        "Multiple re-rates to 26–28× non-GAAP earnings as AI-native threat proves manageable and IRS Direct File remains cancelled; $28 × 27× ≈ $756"
       ]
     }
   },
   "tenMoats": {
     "learnedInterfaces": {
       "status": "weakened",
-      "note": "TurboTax's guided interview format is being challenged by AI tax assistants that offer conversational, agent-driven filing."
+      "note": "TurboTax's guided interview format is being challenged by AI tax assistants that offer conversational, agent-driven filing. QuickBooks' UI is increasingly abstracted by agentic automation layers."
     },
     "businessLogic": {
       "status": "weakened",
-      "note": "AI can increasingly replicate tax preparation and small business accounting logic; IRS Direct File is a zero-cost competitor."
+      "note": "AI-native competitors (Puzzle, Digits, Campfire) and Anthropic's Managed Agents (April 2026) directly target QuickBooks bookkeeping workflows — claiming to automate up to 98% of bookkeeping tasks. IRS Direct File cancellation removes one AI-assisted government competitor from TurboTax's market, but the broader agentic AI threat to accounting and tax logic persists."
     },
     "publicDataAccess": {
       "status": "weakened",
-      "note": "Tax forms and IRS regulations are public — AI can navigate them, reducing Intuit's simplification value proposition."
+      "note": "Tax forms and IRS regulations are public — AI can navigate them, reducing Intuit's simplification value proposition for straightforward returns."
     },
     "talentScarcity": {
       "status": "weakened",
-      "note": "AI has democratized access to tax and accounting expertise, reducing the barrier that made TurboTax's guided logic so valuable."
+      "note": "AI has democratised access to tax and accounting expertise, reducing the barrier that made TurboTax's guided logic and QuickBooks' support structure so valuable."
     },
     "bundling": {
       "status": "strong",
-      "note": "TurboTax + QuickBooks + Credit Karma + Mailchimp = a unique SMB financial platform covering taxes, accounting, credit, and marketing."
+      "note": "TurboTax + QuickBooks + Credit Karma + Mailchimp = a unique SMB financial platform covering taxes, accounting, credit, and marketing. No AI point-solution replicates this breadth of financial data and workflow integration."
     },
     "proprietaryData": {
       "status": "strong",
-      "note": "Tax return data, financial records, and credit data for 100M+ users = an irreplaceable financial profile dataset."
+      "note": "Tax return data, financial records, and credit data for 100M+ users = an irreplaceable financial profile dataset powering Intuit Assist AI. Competitors building AI-native products lack the historical financial depth to train equivalent models."
     },
     "regulatoryLockIn": {
       "status": "strong",
-      "note": "IRS authorized e-file partner status, state tax agency relationships, payroll tax compliance, and financial institution integrations."
+      "note": "IRS authorised e-file partner status, state tax agency relationships, payroll tax compliance, and financial institution integrations. IRS Direct File programme cancelled by the Trump administration for the 2026 filing season — eliminates the primary near-term regulatory headwind to TurboTax's addressable market."
     },
     "networkEffects": {
       "status": "strong",
-      "note": "CPA-client ecosystem: accountants recommend TurboTax → clients use it → data improves. QuickBooks SMB network self-reinforces."
+      "note": "CPA-client ecosystem: accountants recommend TurboTax → clients use it → data improves. QuickBooks SMB network self-reinforces as more suppliers and customers transact within the ecosystem."
     },
     "transactionEmbedding": {
       "status": "strong",
-      "note": "Payroll runs, invoicing, tax filing, expense tracking, and lending all embedded in the daily operations of 7M+ small businesses."
+      "note": "Payroll runs, invoicing, tax filing, expense tracking, and lending all embedded in the daily operations of 7M+ small businesses. Removing QuickBooks requires re-engineering core financial workflows — a multi-month migration with material business risk."
     },
     "systemOfRecord": {
-      "status": "strong",
-      "note": "QuickBooks is the system of record for 7M+ small business finances; TurboTax is the tax history record for tens of millions of households."
+      "status": "intact",
+      "note": "QuickBooks remains the system of record for 7M+ SMBs, but AI-native platforms (Puzzle, Digits, Campfire) are siphoning off tech-forward customers who find manual categorisation outdated. Downgraded from strong to intact as the displacement threat has materialised in specific high-growth customer segments, though the 7M+ installed base remains deeply embedded."
     },
-    "verdict": "Intuit's proprietary tax data and SMB system-of-record position are genuine AI-resilient moats. The IRS Direct File threat is real but limited to simple returns — Intuit's platform breadth compounds its defense."
-  },
-  "lastAnalyzed": "February 2026"
+    "verdict": "Intuit is a mixed AI story: proprietary tax and financial data, transaction embedding, and network effects are genuinely AI-resilient moats, while the system-of-record position has been downgraded to intact as AI-native SMB platforms (Puzzle, Digits, Campfire) demonstrate real-world traction with tech-forward customers. The IRS Direct File cancellation removes the primary near-term TurboTax headwind and is a meaningful structural positive. The platform's 100M+ user financial data flywheel — spanning tax returns, SMB financials, and Credit Karma credit profiles — remains the most durable long-term defence against AI-native disruption."
+  }
 }
