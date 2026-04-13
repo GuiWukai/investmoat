@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$1.34T"
+      "value": "~$1.47T"
     },
     {
       "label": "Circulating Supply",
@@ -38,8 +38,8 @@
     },
     {
       "title": "Spot ETF AUM",
-      "value": "$95.9B",
-      "label": "US Spot Bitcoin ETFs — $42B+ Cumulative Inflows",
+      "value": "$150B+",
+      "label": "US Spot Bitcoin ETFs — $53B+ Cumulative Inflows",
       "icon": "Shield",
       "color": "#3b82f6"
     },
@@ -72,11 +72,35 @@
   },
   "growth": {
     "score": 85,
-    "description": "Institutional adoption via spot ETFs ($95.9B AUM, $42B+ cumulative inflows) and sovereign treasury integration (US Strategic Bitcoin Reserve formalized). Bitcoin hit a new all-time high of $126,080 in January 2026 — validating the post-halving cycle thesis — before pulling back to $66,194 on geopolitical risk-off. Cycle peak window (April–October 2026) remains ahead."
+    "description": "Institutional adoption via spot ETFs ($150B+ AUM, $53B+ cumulative inflows, $18.7B Q1 2026 net inflows) and sovereign treasury integration (US Strategic Bitcoin Reserve confirmed with on-chain government transfers). Bitcoin hit an all-time high of $126,080 in October 2025 — validating the post-halving cycle thesis — before pulling back to $73,248 on geopolitical and macro risk-off. BlackRock's IBIT dominates with 45%+ of spot BTC ETF AUM. The cycle peak window (mid-2026) remains ahead, and BTC ETFs resumed first monthly inflows since October as of April 2026.",
+    "growthAnalysis": {
+      "cagrEstimate": "30–60%",
+      "scoreDerivation": "Base 90 (30%+ institutional adoption CAGR; ETF AUM $0 → $150B in 15 months, corporate treasury adoption accelerating) + 5 sovereign/SWF new TAM (US Strategic Reserve sets precedent for BRICS+ and G20 nations) − 5 cycle timing risk (macro headwinds, geopolitical uncertainty delaying retail re-entry) − 5 retail disengagement (active addresses at multi-year lows, on-chain activity muted) = 85",
+      "drivers": [
+        {
+          "name": "Spot ETF / Institutional Adoption",
+          "metric": "$150B+ AUM; $18.7B Q1 2026 net inflows; BlackRock IBIT 45%+ share",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Sovereign Treasury / Strategic Reserve",
+          "metric": "US Strategic Bitcoin Reserve active; government BTC transfers to Coinbase April 2026",
+          "trend": "stable"
+        },
+        {
+          "name": "Corporate Treasury Adoption",
+          "metric": "Strategy Inc. playbook adopted by 1,000+ companies globally",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If US Congressional opposition delays Strategic Bitcoin Reserve active accumulation beyond Q3 2026, the sovereign demand catalyst evaporates and ETF inflows slow below $500M/month — removing the primary price support at $65,000–$70,000 and invalidating the base case cycle peak",
+      "marginTrend": "stable"
+    }
   },
   "valuation": {
-    "score": 83,
-    "description": "At ~$66,194 — down 47% from the January 2026 all-time high of $126,080 — BTC is in a post-ATH consolidation with geopolitical risk (Middle East) and ETF outflow weeks driving the pullback. Spot ETF AUM remains $95.9B with $42B+ cumulative inflows. Historically, cycle peaks arrive 12–18 months post-halving (April–October 2026 window). Trading between bear ($50,000) and base ($160,000)."
+    "score": 85,
+    "description": "At ~$73,248 — down 42% from the October 2025 all-time high of $126,080 — BTC has recovered from cycle lows as spot ETF inflows resumed in April 2026 (first monthly inflows since October). Spot ETF AUM now $150B+ with $53B+ cumulative inflows. Trading 54% below the base case ($160,000); valuation score reflects deep discount to scenarios with strong institutional support providing a floor. Cycle peak window (mid-2026) remains ahead."
   },
   "scenarios": {
     "bear": {
@@ -90,7 +114,7 @@
     },
     "base": {
       "priceTarget": "$160,000",
-      "description": "Post-halving cycle peak arrives in mid-2026 as ETF inflows re-accelerate and the US Strategic Bitcoin Reserve formalizes, driving BTC to a new ATH above the January 2026 high.",
+      "description": "Post-halving cycle peak arrives in mid-2026 as ETF inflows re-accelerate and the US Strategic Bitcoin Reserve formalizes, driving BTC to a new ATH above the October 2025 high.",
       "points": [
         "Spot ETF AUM surpasses $200B as the halving-driven supply squeeze combines with steady institutional inflows from pension funds and endowments adding 1–2% BTC allocations",
         "US Strategic Bitcoin Reserve begins active accumulation — confirmed purchases removing supply overhang and signaling sovereign legitimacy that triggers BRICS+ central bank interest",
@@ -150,5 +174,5 @@
     },
     "verdict": "Bitcoin's mathematical scarcity and decentralized consensus make it uniquely immune to AI disruption. No AI can inflate the supply, hack the network, or replicate the 15-year institutional trust-building."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "April 2026"
 }
