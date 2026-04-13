@@ -2,7 +2,7 @@
   "slug": "net",
   "ticker": "NET",
   "name": "Cloudflare",
-  "lastAnalyzed": "March 2026",
+  "lastAnalyzed": "April 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$75.8B"
+      "value": "$68.6B"
     },
     {
       "label": "Current Price",
-      "value": "$211.20"
+      "value": "$182"
     }
   ],
   "chips": [
@@ -27,7 +27,7 @@
       "color": "success"
     }
   ],
-  "recommendation": "Accumulate",
+  "recommendation": "Strong Buy",
   "metrics": [
     {
       "title": "Revenue",
@@ -88,21 +88,21 @@
           "trend": "accelerating"
         },
         {
-          "name": "AI Infrastructure (Workers AI, AI Gateway)",
-          "metric": "New TAM; CEO: 'If agents are the new users of the web, Cloudflare is the platform they run on'",
+          "name": "AI Agent Infrastructure (Workers AI, AI Gateway, Agent Cloud)",
+          "metric": "Agent Cloud expansion announced April 2026; moves AI agents from dev laptops to production-grade Cloudflare edge",
           "trend": "accelerating"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "If AWS CloudFront + WAF bundling displaces Cloudflare's CDN/DDoS layer at 5%+ of Fortune 500 enterprises by end of 2026 while Zscaler retains Zero Trust market share above 40%, Cloudflare's platform consolidation narrative stalls and RPO growth decelerates below 25%",
+      "keyRisk": "If hyperscaler-managed AI agent platforms (AWS Bedrock Agents, Anthropic Managed Agents on AWS/Azure) capture >20% of enterprise agent infrastructure deployments by end of 2026 — running natively on AWS Lambda or Azure Functions rather than Cloudflare Workers — the AI-agent TAM expansion thesis fails to materialise, leaving Cloudflare dependent on the more contested CDN/SASE market where Palo Alto and Zscaler are accelerating bundled offers and RPO growth decelerates below 25%",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 73,
-    "description": "At $211, NET trades at ~27× NTM P/S — a premium that reflects genuine 28–29% revenue growth, 120% NRR, and a $2.5B RPO backlog, but leaves limited margin of safety if growth decelerates. The stock sits between bear ($130) and base ($250) scenarios, roughly 15% below fair value on current guidance. Forward non-GAAP P/E of ~190× is not meaningful in isolation — like CrowdStrike at its current stage, Cloudflare's valuation is driven by revenue growth trajectory and FCF margin expansion (16% in Q4, guiding toward 20%+ in 2026).",
+    "score": 79,
+    "description": "At $182, NET has re-rated ~14% below the March 2026 analysis price on broader market risk-off and AI competitive concerns, now sitting ~27% below the base ($250) scenario. This creates a more attractive entry point: ~25× NTM P/S vs ~27× a month ago, with underlying fundamentals unchanged — FY2026 guidance of $2.79B (+28–29%) intact, $2.5B RPO backlog, and 120% NRR. Forward non-GAAP P/E of ~163× (down from ~190×) compresses sharply toward 100× if FCF margins reach 20%+ by end of 2026 as guided.",
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "April 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
@@ -111,8 +111,8 @@
         },
         {
           "label": "Forward P/E (NTM, non-GAAP)",
-          "value": "~190×",
-          "note": "consensus non-GAAP EPS ~$1.11"
+          "value": "~163×",
+          "note": "consensus non-GAAP EPS ~$1.115"
         },
         {
           "label": "PEG Ratio",
@@ -121,16 +121,16 @@
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~27×",
+          "value": "~25×",
           "note": "$2.79B NTM revenue (2026 guide)"
         },
         {
           "label": "Price / FCF",
-          "value": "~250×",
+          "value": "~230×",
           "note": "~$300M FCF (FY2025 est.)"
         }
       ],
-      "summary": "NET trades at ~27× NTM P/S, a significant premium to cybersecurity peers (CrowdStrike ~18×, Palo Alto ~13×) but partially justified by Cloudflare's faster revenue growth (28–29% vs 22–23%) and expanding TAM in AI agent infrastructure. Forward non-GAAP P/E of ~190× is not actionable — the more useful lens is the FCF margin trajectory: Q4 2025 reached 16% (from 10% a year ago), and if Cloudflare achieves 20–22% by end of 2026, P/FCF compresses sharply toward 100×, making the valuation progressively more reasonable. The key risk is multiple compression if revenue growth decelerates toward 22–23% before FCF margins reach a self-sustaining level."
+      "summary": "NET trades at ~25× NTM P/S, down from ~27× at the March 2026 analysis — a meaningful compression while fundamentals remain intact. This is still a premium to cybersecurity peers (CrowdStrike ~16×, Palo Alto ~11×) but Cloudflare's faster revenue growth (28–29% vs 22–23%) and AI agent infrastructure optionality partially justify the gap. Forward non-GAAP P/E of ~163× (vs ~190× last month) is not actionable in isolation; the useful signal is FCF margin trajectory — Q4 2025 reached 16% and management guides 20%+ for 2026, which would compress P/FCF from ~230× toward ~120×, making the valuation materially more reasonable at current prices."
     }
   },
   "scenarios": {
