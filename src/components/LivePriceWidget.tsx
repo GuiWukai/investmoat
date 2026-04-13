@@ -11,6 +11,7 @@ interface LivePriceData {
   changePercent: number | null;
   currency: string;
   timestamp: string | null;
+  isMarketOpen?: boolean;
 }
 
 interface LivePriceWidgetProps {
@@ -90,10 +91,19 @@ export function LivePriceWidget({ slug, fairValue }: LivePriceWidgetProps) {
       <CardBody className="p-4 md:p-6">
         {/* Header row */}
         <div className="flex items-center gap-2 mb-3">
-          <div className="w-1.5 h-1.5 rounded-full bg-success animate-pulse" />
+          <div
+            className={`w-1.5 h-1.5 rounded-full ${
+              data.isMarketOpen !== false ? 'bg-success animate-pulse' : 'bg-white/30'
+            }`}
+          />
           <span className="text-[10px] uppercase tracking-widest text-white/40 font-bold">
-            Live Market Price
+            {data.isMarketOpen !== false ? 'Live Market Price' : 'Market Price'}
           </span>
+          {data.isMarketOpen === false && (
+            <span className="text-[9px] uppercase font-bold tracking-widest px-1.5 py-0.5 rounded bg-white/10 text-white/40">
+              Closed
+            </span>
+          )}
           {timeStr && (
             <span className="text-[10px] text-white/25 ml-auto">as of {timeStr}</span>
           )}
