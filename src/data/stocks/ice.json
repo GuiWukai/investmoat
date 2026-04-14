@@ -2,7 +2,7 @@
   "slug": "ice",
   "ticker": "ICE",
   "name": "Intercontinental Exchange, Inc.",
-  "lastAnalyzed": "March 2026",
+  "lastAnalyzed": "April 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$90B"
+      "value": "~$93B"
     },
     {
       "label": "Price",
-      "value": "~$157"
+      "value": "~$164"
     }
   ],
   "chips": [
@@ -48,9 +48,9 @@
       "color": "#2563eb"
     },
     {
-      "title": "Jan 2026 Contracts",
-      "value": "245.8M",
-      "label": "Strongest trading month in ICE's history",
+      "title": "Mar 2026 Contracts",
+      "value": "428.9M",
+      "label": "New all-time record — 75% above Jan 2026; ADV +88% YoY",
       "icon": "BarChart",
       "color": "#0cceaf"
     }
@@ -76,25 +76,25 @@
   },
   "growth": {
     "score": 72,
-    "description": "ICE's 3-year revenue CAGR of 8–10% (EPS CAGR of 12–15%) is driven by fixed income data growth (high-single-digit), exchange recurring revenue (mid-single-digit), and a mortgage technology recovery as rates decline — offset by near-term mortgage origination headwinds while 30-year rates remain above 6.5%.",
+    "description": "ICE's 3-year revenue CAGR of 8–10% (EPS CAGR of 12–15%) is driven by fixed income data growth (mid-to-high-single-digit), exchange recurring revenue (mid-single-digit), and an emerging mortgage recovery — Q4 2025 was ICE Mortgage's strongest quarter since 2022, with Black Knight synergies nearly doubling to ~$100M and servicing software generating $848M in FY2025 revenue.",
     "growthAnalysis": {
       "cagrEstimate": "8–10%",
       "scoreDerivation": "Base 67 (8–15% EPS CAGR) + 5 recurring subscription base (>70% recurring) + 3 fixed income data TAM expansion (AI-ready analytics demand) − 3 mortgage headwind (high rates suppressing origination volumes) = 72",
       "drivers": [
         {
           "name": "Fixed Income & Data Services",
-          "metric": "+high-single-digit guided for 2026, AI data demand accelerating",
+          "metric": "+mid-to-high-single-digit guided 2026; ICE Bonds corporate notional +10%, muni +27% in 2025; CDS clearing up from $22T to $28T notional",
           "trend": "accelerating"
         },
         {
           "name": "Exchange Recurring Revenue",
-          "metric": "+mid-single-digit guided 2026; Jan 2026 record 245.8M contracts",
-          "trend": "stable"
+          "metric": "+mid-single-digit guided 2026; Q1 2026 record quarter with March ADV +88% YoY at 428.9M contracts",
+          "trend": "accelerating"
         },
         {
           "name": "Mortgage Technology",
-          "metric": "+low-to-mid-single-digit; $230M Black Knight synergies fully realized 2025",
-          "trend": "stable"
+          "metric": "+low-to-mid-single-digit guided 2026; Q4 2025 strongest since 2022; $2.1B FY2025 revenue; synergies ~$100M (+80% YoY)",
+          "trend": "accelerating"
         }
       ],
       "primaryType": "both",
@@ -103,38 +103,38 @@
     }
   },
   "valuation": {
-    "score": 78,
-    "description": "At ~$157 — roughly 24% below the analyst consensus base case of $195 — ICE trades at ~20× forward P/E on 2026 EPS of $7.71, with a PEG of ~1.4× on a 14% EPS CAGR. For a company with 20 consecutive years of record revenue and three natural monopoly positions, this represents a reasonable entry with material upside to the base case.",
+    "score": 75,
+    "description": "At ~$164 — roughly 16% below the analyst consensus base case of $195 — ICE trades at ~21× forward P/E on 2026 EPS of $7.71, with a PEG of ~1.5× on a 14% EPS CAGR. With record Q1 2026 exchange volumes and mortgage technology showing its strongest quarterly performance since 2022, the discount to fair value represents an improving margin of safety as key catalysts begin to materialise.",
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "April 2026",
       "rows": [
         {
           "label": "Trailing P/E (adjusted)",
-          "value": "~23×",
+          "value": "~24×",
           "note": "adj. EPS $6.95 FY2025"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~20×",
+          "value": "~21×",
           "note": "consensus 2026 EPS est. $7.71"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.4×",
+          "value": "~1.5×",
           "note": "fwd P/E ÷ ~14% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~8.7×",
+          "value": "~8.9×",
           "note": "~$10.4B NTM revenue"
         },
         {
           "label": "Price / FCF",
-          "value": "~32×",
+          "value": "~33×",
           "note": "~$2.8B FCF (NTM est.)"
         }
       ],
-      "summary": "At 20× forward P/E, ICE trades at a modest discount to the financial data peer group (MCO ~25×, MSCI ~27×, SPGI ~24×) despite comparable moat quality — reflecting the Black Knight integration overhang and mortgage market headwinds rather than structural impairment. A PEG of 1.4× is fairly priced for growth, with material upside if mortgage origination volumes recover as rates decline in 2026–2027. ICE's forward P/E is at a 5-year low, making this a historically attractive entry into one of the most durable financial infrastructure franchises in existence."
+      "summary": "At 21× forward P/E, ICE trades at a modest discount to the financial data peer group (MCO ~25×, MSCI ~27×, SPGI ~24×) despite comparable moat quality, with the gap narrowing as the Black Knight mortgage recovery accelerates. A PEG of 1.5× is fairly priced for a 14% EPS CAGR, with material re-rating potential if Q1 2026's record exchange volumes translate to earnings beats and mortgage origination volumes recover further in H2 2026. The trailing-to-forward P/E compression from ~24× to ~21× signals an earnings ramp, a bullish indicator for the growth trajectory."
     }
   },
   "scenarios": {
