@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$170B"
+      "value": "$144B"
     },
     {
       "label": "Price",
-      "value": "$130"
+      "value": "$111"
     }
   ],
   "chips": [
@@ -27,7 +27,7 @@
       "color": "success"
     }
   ],
-  "recommendation": "Accumulate",
+  "recommendation": "Strong Buy",
   "metrics": [
     {
       "title": "Gross Merchandise Volume",
@@ -72,7 +72,7 @@
   },
   "growth": {
     "score": 88,
-    "description": "FY2025 revenue reached $11.56B (+30.1% YoY), first year crossing $10B; Q4 2025 hit $3.67B (+30.6% YoY). B2B GMV surged 96% FY2025, Shopify Payments expanded to 68% of Q4 GMV, and AI-driven order volumes (up 15x since Jan 2025) position Shopify as the default commerce layer for AI-assisted shopping. Q1 2026 guided low-30s% revenue growth.",
+    "description": "FY2025 revenue reached $11.56B (+30.1% YoY), first year crossing $10B; Q4 2025 hit $3.67B (+30.6% YoY). B2B GMV surged 96% FY2025, Shopify Payments expanded to 68% of Q4 GMV, and AI-driven order volumes (up 15x since Jan 2025) position Shopify as the default commerce layer for AI-assisted shopping. Q1 2026 guided low-30s% revenue growth, with management framing 2026 as an 'acceleration year' anchored by agentic commerce (Universal Commerce Protocol with Google, TikTok Shop native integration, Sidekick GA) and continued B2B enterprise displacement. FCF margin for Q1 2026 guided at low-to-mid teens — normal seasonal timing ahead of the stronger back half.",
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
@@ -108,11 +108,22 @@
     }
   },
   "valuation": {
-    "score": 74,
-    "description": "At ~$130, SHOP trades $30 below the $160 base case — a reasonable entry for a high-quality compounder. After Q4 2025 beat ($3.67B revenue, 19% Q4 FCF margin), FY2025 FCF reached $2B+ (17% margin). The stock pulled back from a $182 52-week high, offering better value than mid-2025. FCF multiple remains elevated but is de-risked as FCF doubles toward $3.5B+ by FY2027.",
+    "score": 80,
+    "description": "At ~$111, SHOP trades $49 below the $160 base case — one of the best risk/reward entry points since early 2024. FY2025 FCF was $2.007B (17% margin; 19% in Q4); Q1 2026 FCF is guided at low-to-mid teens due to seasonal expense timing. A new $2B share repurchase program signals shareholder return discipline at scale. FCF is on track toward $3.5B+ by FY2027 as operating leverage from Merchant Solutions and B2B enterprise gains compounds.",
     "valuationNote": {
-      "text": "Shopify's valuation is best understood through FCF multiple: $2B FCF in FY2025 at a $170B market cap implies ~85x FCF — demanding but defensible if margins expand to 25–30% as management guides. At the base case FCF of ~$3.5B (FY2027E), that's ~49x FCF, reasonable for a 25–30% compounder with increasing operating leverage. The primary bear case risk is multiple compression if FCF growth disappoints.",
+      "text": "Shopify's valuation is best understood through FCF multiple: $2B FCF in FY2025 at a $144B market cap implies ~72x FCF — still elevated but meaningfully de-risked vs the $170B+ market cap seen mid-2025. At the base case FCF of ~$3.5B (FY2027E), that's ~41x FCF — reasonable for a 25–30% compounder with compounding operating leverage. The primary bear case risk remains multiple compression if FCF margin expansion stalls or macro deterioration accelerates merchant churn.",
       "fairValue": "$160"
+    },
+    "peAnalysis": {
+      "asOf": "April 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~130×", "note": "~$0.85 TTM EPS" },
+        { "label": "Forward P/E (NTM)", "value": "~65×", "note": "consensus EPS est. ~$1.70" },
+        { "label": "PEG Ratio", "value": "~2.4×", "note": "fwd P/E ÷ 27% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~9.6×", "note": "~$15B NTM revenue est." },
+        { "label": "Price / FCF", "value": "~72×", "note": "$2.0B FCF (TTM)" }
+      ],
+      "summary": "At ~65× forward earnings, SHOP trades at a meaningful premium to the software sector median (~28–35×), but the PEG of ~2.4× reflects the market's willingness to pay for consistent 30%+ revenue growth and expanding FCF. The wide gap between trailing P/E (~130×) and forward P/E (~65×) signals a rapid earnings ramp ahead — as Shopify's operating leverage compounds toward management's 30%+ long-term FCF margin target, this convergence is the central re-rating catalyst."
     }
   },
   "scenarios": {
@@ -187,5 +198,5 @@
     },
     "verdict": "Shopify is a net beneficiary of AI adoption — its proprietary cross-merchant data, transaction embedding, and agentic commerce positioning make AI a structural tailwind rather than a threat. The primary AI vulnerability is that lower development barriers could enable new commerce platform entrants, but Shopify's 5M+ merchant installed base and ecosystem gravity create compounding advantages that are increasingly difficult for AI-powered challengers to replicate quickly."
   },
-  "lastAnalyzed": "February 2026"
+  "lastAnalyzed": "April 2026"
 }
