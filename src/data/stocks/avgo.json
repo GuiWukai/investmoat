@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$1.48T"
+      "value": "$1.81T"
     },
     {
       "label": "Price",
-      "value": "$311.90"
+      "value": "$381"
     }
   ],
   "chips": [
@@ -51,13 +51,13 @@
     }
   ],
   "moat": {
-    "description": "Dual-moat machine — irreplaceable custom silicon for AI hyperscalers and VMware's stranglehold on enterprise virtualization infrastructure. XPU customer count expanded to six with OpenAI confirmed in Q1 FY2026.",
+    "description": "Dual-moat machine — irreplaceable custom silicon for AI hyperscalers and VMware's stranglehold on enterprise virtualization infrastructure. Meta extended its XPU partnership through 2029 (multi-GW MTIA, April 14 2026); Google formalized through 2031 covering TPUs, networking, and rack components; Anthropic tripling compute to 3GW+ by year-end.",
     "analysisTitle": "The Dual-Moat Architecture",
     "analysisSummary": "Broadcom's moat is built on **Proprietary Silicon and Enterprise Infrastructure Lock-In**:",
     "analysisPoints": [
       {
         "title": "Custom AI Accelerator Dominance",
-        "text": "Broadcom now designs custom AI XPUs for six confirmed hyperscaler customers: Google, Meta, Anthropic, OpenAI, ByteDance (rumored), and Apple (rumored). Anthropic alone has committed $21B in orders (a $10B order plus an $11B follow-on for late 2026). OpenAI is co-developing a custom AI inference engine targeting 1+ gigawatt deployment in 2027. Broadcom has guided to $100B+ in AI chip revenue in FY2027, up from $20B in FY2025."
+        "text": "Broadcom designs custom AI XPUs for six confirmed hyperscaler customers. Meta extended its partnership through 2029 (April 14, 2026) for multi-GW MTIA deployments covering XPU custom silicon, high-radix Ethernet switches, optical connectivity, PCIe switches, and SerDes — the most comprehensive rack-level supply agreement to date. Google formalized its relationship through 2031, covering future TPU generations, AI networking, and rack-scale components. Anthropic is tripling compute to 3GW+ before year-end 2026. OpenAI co-develops a custom AI inference engine targeting 10GW capacity. Full-year FY2026 AI revenue is tracking toward $46B (+134% YoY), and management has guided to $100B+ in FY2027."
       },
       {
         "title": "Ethernet Networking Monopoly for AI",
@@ -75,12 +75,12 @@
   },
   "growth": {
     "score": 92,
-    "description": "AI XPU revenue grew 106% YoY to $8.4B in Q1 FY2026, with Q2 guided to $10.7B (+140% YoY). Six confirmed XPU customers with 9+ gigawatts of committed compute. Management has explicit 'line of sight' to $100B+ in AI chip revenue in FY2027, up from $20B in FY2025. VMware infrastructure software ARR growing 19% YoY with 93% gross margins. Total backlog exceeds $73B for 18-month delivery.",
+    "description": "AI XPU revenue grew 106% YoY to $8.4B in Q1 FY2026, with Q2 guided to $10.7B (+140% YoY); full-year FY2026 AI revenue tracking ~$46B (+134% YoY). Meta partnership extended through 2029 (multi-GW MTIA, April 14 2026); Google agreement through 2031; Anthropic tripling compute to 3GW+ by year-end. Management has explicit 'line of sight' to $100B+ in AI chip revenue in FY2027, up from $20B in FY2025. VMware infrastructure software ARR growing 19% YoY with 93% gross margins. Total backlog exceeds $73B for 18-month delivery.",
     "growthAnalysis": {
       "cagrEstimate": "30–50%",
-      "scoreDerivation": "Base 90 (30%+ CAGR: AI XPU revenue doubling YoY, management guides $100B+ AI chips in FY2027 from $20B in FY2025) + 5 recurring (VMware ARR +19% YoY on $27B+ annualised base, 93% gross margins) + 5 TAM expansion (AI XPU TAM growing toward $200B+ by 2027; 6 hyperscaler co-development programs) − 8 customer concentration (single client ~42% of Q1 FY2026 revenue) = 92",
+      "scoreDerivation": "Base 90 (30%+ CAGR: AI XPU revenue +134% YoY to ~$46B FY2026; management guides $100B+ AI chips in FY2027 from $20B in FY2025) + 5 recurring (VMware ARR +19% YoY on $27B+ annualised base, 93% gross margins) + 5 TAM expansion (AI XPU TAM growing toward $200B+ by 2027; 6 hyperscaler co-development programs incl. Meta through 2029, Google through 2031) − 8 customer concentration (single client ~42% of Q1 FY2026 revenue) = 92",
       "drivers": [
-        { "name": "AI Custom Silicon (XPU)", "metric": "+106% YoY to $8.4B in Q1 FY2026; Q2 guided $10.7B (+~140% YoY)", "trend": "accelerating" },
+        { "name": "AI Custom Silicon (XPU)", "metric": "+106% YoY to $8.4B in Q1 FY2026; Q2 guided $10.7B (+~140% YoY); FY2026 full-year tracking ~$46B (+134% YoY)", "trend": "accelerating" },
         { "name": "Infrastructure Software (VMware/VCF)", "metric": "+1% revenue YoY, +19% ARR YoY; $9.2B TCV booked in Q1", "trend": "stable" },
         { "name": "AI Networking (Tomahawk/Jericho)", "metric": "Included in $12.5B semiconductor revenue (+52% YoY Q1); Tomahawk 6 launched at 102.4 Tbps", "trend": "accelerating" }
       ],
@@ -91,9 +91,11 @@
     "additionalNote": {
       "title": "Key Growth Catalysts",
       "points": [
-        "XPU customer count at six (Google, Meta, Anthropic, OpenAI confirmed; Apple and ByteDance rumored) each deploying at gigawatt scale in 2027",
-        "Anthropic's $21B committed XPU orders — $10B already placed, $11B additional for late 2026",
-        "OpenAI custom inference engine co-development targeting 1+ GW capacity in 2027",
+        "XPU customer count at six (Google, Meta, Anthropic, OpenAI confirmed; Apple and ByteDance rumored) each deploying at multi-GW scale in 2026–2027",
+        "Meta extended partnership through 2029 (April 14, 2026): multi-GW MTIA custom silicon, Ethernet switches, optical connectivity, and SerDes — most comprehensive rack-level supply agreement to date",
+        "Google agreement formalized through 2031 covering future TPU generations, AI networking, and rack-scale components",
+        "Anthropic tripling compute commitment to 3GW+ before year-end 2026; Anthropic's $21B in committed XPU orders ($10B placed, $11B additional for late 2026)",
+        "OpenAI custom inference engine co-development targeting 10GW capacity in 2026–2027",
         "VMware Cloud Foundation (VCF) becoming the dominant private cloud AI platform as generative AI workloads require VCF-level orchestration",
         "Ironwood Rack solutions (integrated Google TPU racks) representing a new rack-scale revenue stream",
         "Infrastructure secured through 2028 via multi-year supply agreements supporting sharply rising AI demand"
@@ -101,53 +103,53 @@
     }
   },
   "valuation": {
-    "score": 73,
-    "description": "At ~$312, Broadcom trades approximately 18% below the $380 base case — an attractive entry point as AI revenue accelerates. The forward P/E of ~27× (non-GAAP NTM) sits just above the AI semiconductor peer group despite AI revenue growing 106% YoY. The PEG of 0.57 signals deep undervaluation relative to earnings growth; Q2 FY2026 guidance of $22B revenue (+47% YoY) and $10.7B AI revenue (+140% YoY) implies a major earnings ramp into FY2027's guided $100B+ AI chip revenue.",
+    "score": 74,
+    "description": "At ~$381, Broadcom trades approximately 22% below the refreshed $490 base case — still an attractive entry point as AI revenue accelerates toward $46B in FY2026 (+134% YoY). The forward P/E of ~33× (non-GAAP NTM) sits above the AI semiconductor peer group but the PEG of 0.70 signals growth-at-a-reasonable-price territory; Q2 FY2026 guidance of $22B revenue (+47% YoY) and $10.7B AI revenue (+140% YoY) implies a major earnings ramp into FY2027's guided $100B+ AI chip revenue.",
     "peAnalysis": {
       "asOf": "April 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~60×", "note": "TTM GAAP EPS ~$5.17" },
-        { "label": "Forward P/E (NTM)", "value": "~27×", "note": "non-GAAP NTM EPS est. ~$11.60" },
-        { "label": "PEG Ratio", "value": "~0.57×", "note": "fwd P/E ÷ ~47% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~17×", "note": "~$86B NTM revenue est." },
-        { "label": "Price / FCF", "value": "~51×", "note": "~$29B FCF (TTM est.)" }
+        { "label": "Trailing P/E (GAAP)", "value": "~74×", "note": "TTM GAAP EPS ~$5.17" },
+        { "label": "Forward P/E (NTM)", "value": "~33×", "note": "non-GAAP NTM EPS est. ~$11.60" },
+        { "label": "PEG Ratio", "value": "~0.70×", "note": "fwd P/E ÷ ~47% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~21×", "note": "~$87B NTM revenue est." },
+        { "label": "Price / FCF", "value": "~62×", "note": "~$29B FCF (TTM est.)" }
       ],
-      "summary": "At ~27× forward P/E (non-GAAP), Broadcom trades roughly in line with the AI semiconductor peer group (~24–25×) and just below the broader semis median (~29×), despite AI revenue doubling YoY — materially underpricing the coming earnings acceleration. The PEG of 0.57 signals growth-at-a-reasonable-price territory: the market appears to discount Broadcom's 'line of sight to $100B+ AI chip revenue in FY2027.' The wide trailing-to-forward P/E gap (60× to 27×) is a signal, not a red flag — it reflects a step-change in earnings from doubling AI revenue as VMware acquisition amortization burden gradually declines."
+      "summary": "At ~33× forward P/E (non-GAAP), Broadcom trades above the AI semiconductor peer group (~24–25×), reflecting the market's growing confidence in the $46B FY2026 AI revenue trajectory and the $100B+ FY2027 path. The PEG of 0.70 remains firmly in GARP territory — growth is still outpacing the multiple. The wide trailing-to-forward P/E gap (74× to 33×) is a signal, not a red flag: it reflects a step-change in non-GAAP earnings as VMware amortization gradually rolls off and AI chip revenue compounds at 130%+ annually. FCF multiple compresses rapidly toward 25–30× on FY2027 estimates."
     },
     "valuationNote": {
-      "text": "Broadcom's $73B AI order backlog for 18-month delivery and 'line of sight to $100B+ AI chip revenue in FY2027' provide extraordinary forward visibility. Q2 FY2026 guidance of $22B revenue (+47% YoY) and $10.7B AI revenue (+140% YoY) implies continued acceleration. Q1 FY2026 FCF was $8.0B (41% of revenue); TTM FCF is ~$29B; the stock trades at ~51× TTM FCF but that multiple compresses rapidly on FY2027 estimates.",
-      "fairValue": "$380"
+      "text": "Multi-year customer commitments — Meta through 2029, Google through 2031, Anthropic tripling to 3GW+ by year-end — alongside the $73B AI order backlog provide extraordinary forward visibility. Full-year FY2026 AI revenue is tracking toward $46B (+134% YoY); Q2 FY2026 guidance of $22B revenue (+47% YoY) and $10.7B AI revenue implies continued acceleration. Q1 FY2026 FCF was $8.0B (41% of revenue); TTM FCF is ~$29B; the stock trades at ~62× TTM FCF but that multiple compresses rapidly toward 25–30× on FY2027 estimates if $100B+ AI chip revenue is achieved.",
+      "fairValue": "$490"
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$160",
-      "description": "VMware customer attrition exceeds expectations from aggressive pricing; AI XPU customers reduce custom silicon spend or bring design in-house; rack-scale margin compression is worse than guided.",
+      "priceTarget": "$200",
+      "description": "EU antitrust ruling forces VMware pricing rollback; hyperscaler XPU customers accelerate in-house ASIC programs; AI semiconductor demand disappoints expectations.",
       "points": [
-        "VMware customer churn reaches 20%+ as enterprises migrate to KVM/Nutanix/OpenStack alternatives rather than accept Broadcom's pricing",
-        "Google, Meta, or Anthropic reduces custom XPU orders or brings silicon design fully in-house, collapsing the path to $100B AI revenue",
-        "Semiconductor industry downcycle hits networking and broadband segments, exposing revenue concentration risk",
-        "Rack-scale 'Ironwood' solution margin structure is significantly below chip-only margins, degrading EBITDA below the 68% target"
+        "EU Commission issues adverse ruling on CISPE complaint, ordering VMware pricing rollback and partner program reinstatement, cutting software ARR growth below 5%",
+        "Google, Meta, or Anthropic materially reduces custom XPU orders or accelerates fully in-house ASIC design, collapsing the path to $100B AI chip revenue in FY2027",
+        "Semiconductor industry downcycle hits networking and broadband segments while AI chip ramp slows from supply or execution challenges",
+        "GAAP amortization burden from VMware acquisition weighs on reported earnings longer than expected, compressing the stock's re-rating"
       ]
     },
     "base": {
-      "priceTarget": "$380",
-      "description": "AI chip revenue reaches $40-50B in FY2026 and $80-100B in FY2027; VMware ARR continues 19% growth; EBITDA margins hold at 68%+.",
+      "priceTarget": "$490",
+      "description": "AI chip revenue reaches ~$46B in FY2026 and $100B+ in FY2027; VMware ARR sustains 19% growth; 27× forward non-GAAP P/E on FY2027 EPS of ~$18.",
       "points": [
-        "VMware Cloud Foundation (VCF) adoption grows across remaining enterprise base, sustaining 19%+ ARR growth and 93% software gross margins",
-        "AI semiconductor revenue reaches $40-50B+ in FY2026 and $80-100B in FY2027 as six XPU customers scale to gigawatt deployments",
+        "VMware Cloud Foundation (VCF) adoption grows across enterprise base, sustaining 19%+ ARR growth at 93% software gross margins",
+        "AI semiconductor revenue reaches ~$46B+ in FY2026 and $100B+ in FY2027 as six XPU customers (Meta through 2029, Google through 2031) scale to multi-GW deployments",
         "Broadcom sustains 68%+ adjusted EBITDA margins while returning $10B+ per quarter to shareholders",
         "Networking segment benefits from Ultra Ethernet Consortium standardization, cementing Tomahawk as the AI cluster switch of choice"
       ]
     },
     "bull": {
-      "priceTarget": "$550",
-      "description": "Broadcom captures a third or more of hyperscaler AI accelerator spend as custom XPUs prove more efficient than NVIDIA GPUs; AI revenue exceeds $100B in FY2027 as guided; VMware becomes the de facto private cloud AI platform.",
+      "priceTarget": "$650",
+      "description": "AI revenue exceeds $100B in FY2027 ahead of schedule; sovereign AI programs and new enterprise verticals become XPU customers; VMware becomes the de facto private cloud AI platform.",
       "points": [
-        "AI XPU market expands beyond the 6 known customers; sovereign AI programs (US DoD, EU) become significant incremental customers",
+        "AI XPU market expands beyond the 6 known customers; sovereign AI programs (US DoD, EU agencies) and enterprise verticals become incremental XPU customers",
         "VMware Cloud Foundation becomes the dominant enterprise private cloud platform for AI workloads, with ARR scaling to $15B+ at 75%+ margins",
-        "Broadcom's custom silicon expertise and rack-scale integration capability prove impossible for NVIDIA or AMD to match on cost/performance for inference",
-        "Dividend doubles within 3 years as free cash flow exceeds $40B annually"
+        "Broadcom's custom silicon expertise and rack-scale integration prove cost/performance superior to NVIDIA GPUs for inference at scale, capturing >30% of hyperscaler AI accelerator spend",
+        "Dividend doubles within 3 years as free cash flow exceeds $40B annually, triggering multiple expansion"
       ]
     }
   },
@@ -192,7 +194,7 @@
       "status": "strong",
       "note": "VMware vCenter is the system of record for enterprise compute inventory — every VM, every workload, every resource allocation lives in vCenter. This is as sticky as it gets in infrastructure software."
     },
-    "verdict": "Broadcom is a net AI beneficiary with two compounding engines: custom XPU co-development for six hyperscaler customers (AI revenue +106% YoY in Q1 FY2026, Q2 guided +140%) and VMware's stranglehold on enterprise virtualization (ARR +19% YoY at 93% gross margins). The strongest AI-resilient moats are systemOfRecord (vCenter as compute-inventory authority), businessLogic (custom silicon embedded in hyperscaler training pipelines), and talentScarcity (scarce custom ASIC design teams). Two emerging risks require monitoring: a CISPE antitrust complaint filed with the EU Commission in March 2026 over VMware pricing practices, and customer concentration (one client ~42% of Q1 FY2026 revenue) which limits pricing leverage. Neither event changes moat status today, but both require a reassessment if the EU rules adversely or the concentration worsens."
+    "verdict": "Broadcom is a net AI beneficiary with two compounding engines: custom XPU co-development for six hyperscaler customers (AI revenue +106% YoY in Q1 FY2026; full-year FY2026 tracking ~$46B, +134% YoY) and VMware's stranglehold on enterprise virtualization (ARR +19% YoY at 93% gross margins). The strongest AI-resilient moats are systemOfRecord (vCenter as compute-inventory authority), businessLogic (custom silicon embedded in hyperscaler training pipelines), and talentScarcity (scarce custom ASIC design teams). The Meta partnership extension through 2029 and Google agreement through 2031 meaningfully reduce medium-term customer concentration risk. Two risks require monitoring: the CISPE antitrust complaint with the EU Commission (filed March 2026, still pending — no ruling issued) over VMware pricing practices, and customer concentration (one client ~42% of Q1 FY2026 revenue); neither changes moat status today but both require reassessment if the EU rules adversely or concentration worsens."
   },
   "lastAnalyzed": "April 2026"
 }
