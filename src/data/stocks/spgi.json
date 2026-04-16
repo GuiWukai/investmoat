@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$142B"
+      "value": "$124B"
     },
     {
       "label": "Price",
-      "value": "$448.20"
+      "value": "$390.00"
     }
   ],
   "chips": [
@@ -26,19 +26,19 @@
       "color": "success"
     }
   ],
-  "recommendation": "Hold",
+  "recommendation": "Strong Buy",
   "metrics": [
     {
       "title": "Ratings Revenue",
-      "value": "$3.4B",
-      "label": "Recurring Market Lead",
+      "value": "$3.6B",
+      "label": "FY2025 — Refinancing Wave Boost",
       "icon": "Landmark",
       "color": "#cf102d"
     },
     {
       "title": "EBITDA Margin",
-      "value": "48.5%",
-      "label": "Scalable Capital Markets",
+      "value": "49.2%",
+      "label": "FY2025 — Scalable Capital Markets",
       "icon": "TrendingUp",
       "color": "#3b82f6"
     },
@@ -71,38 +71,51 @@
   },
   "growth": {
     "score": 78,
-    "description": "Index licensing (S&P 500) and ESG data integration."
+    "description": "FY2025 revenue grew ~9% YoY driven by a strong refinancing wave lifting Ratings, continued ETF AUM expansion fuelling Index licensing, and steady Market Intelligence subscription growth. FY2026 guidance of 7–9% reflects some caution around tariff-driven debt issuance freezes, partially offset by a $10T+ corporate refinancing wall providing a durable multi-year ratings tailwind. Private credit ratings are emerging as a new, incremental revenue stream as the $1.5T+ market matures.",
+    "growthAnalysis": {
+      "cagrEstimate": "7–10%",
+      "scoreDerivation": "Base: 75 (stable financial data oligopoly with secular tailwinds) +5 (refinancing wall + ETF AUM expansion; private credit ratings emerging as incremental TAM) -2 (tariff uncertainty suppressing near-term issuance volumes; ESG data political headwinds in US) = 78",
+      "drivers": [
+        { "name": "Ratings Revenue", "metric": "~$3.6B FY2025, +8% YoY — refinancing wall tailwind", "trend": "stable" },
+        { "name": "Index Licensing", "metric": "~$1.8B FY2025, +14% YoY — ETF AUM expansion", "trend": "accelerating" },
+        { "name": "Market Intelligence", "metric": "~$4.5B FY2025, +6% YoY — subscription renewal base", "trend": "stable" },
+        { "name": "Private Credit Ratings", "metric": "Early stage; $1.5T+ addressable market maturing", "trend": "accelerating" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "Tariff-driven economic slowdown freezes corporate debt issuance for 6–12 months, simultaneously reducing Ratings revenue and Market Intelligence terminal renewal rates below 95%",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
-    "score": 78,
-    "description": "Trading between bear ($400) and base ($500) — tariff and rate uncertainty compresses near-term issuance volumes; the refinancing wall and private credit expansion represent durable multi-year tailwinds."
+    "score": 88,
+    "description": "At ~$390 — just above the bear case ($380) — SPGI is at its most attractive entry in several years. Tariff-driven issuance uncertainty has pushed the stock to near-bear pricing despite fundamentals remaining intact. The refinancing wall, index licensing growth, and private credit expansion are multi-year tailwinds that the market is temporarily discounting. Forward P/E near 22× is a material discount to the 5-year average of ~30×."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$400",
-      "description": "Tariff-driven uncertainty freezes debt capital markets activity, ESG backlash reduces data segment revenue, and multiple compresses.",
+      "priceTarget": "$380",
+      "description": "Tariff-driven economic slowdown severely curtails debt issuance for 12+ months, ESG backlash spreads internationally, and multiple compresses toward 18× earnings.",
       "points": [
-        "Tariff and geopolitical uncertainty freezes new corporate bond issuance for 6-12 months",
-        "ESG/sustainability data revenue faces continued political and institutional backlash in US market",
-        "Financial sector consolidation reduces Market Intelligence terminal and data subscription counts"
+        "Tariff escalation triggers a corporate debt issuance freeze lasting 12+ months, cutting Ratings revenue 15–20%",
+        "ESG/sustainability data backlash spreads from US to European institutional clients, reducing data segment growth",
+        "Financial sector consolidation and AI-powered alternatives reduce Market Intelligence terminal renewal rates below 93%"
       ]
     },
     "base": {
-      "priceTarget": "$500",
-      "description": "The refinancing wall drives sustained ratings demand through 2026-2027, with index licensing and private markets expanding the revenue mix.",
+      "priceTarget": "$480",
+      "description": "The $10T+ refinancing wall drives sustained ratings demand through 2027, index licensing compounds on ETF AUM growth, and private credit ratings emerge as a new revenue stream.",
       "points": [
-        "Refinancing wall of $10T+ in corporate debt drives steady ratings demand through 2027",
-        "Index licensing grows 12-15% annually as ETF AUM expansion continues globally",
-        "Private credit ratings become a standard requirement as the $1.5T+ market matures"
+        "Corporate refinancing wall sustains 7–9% ratings revenue growth through 2027 despite near-term issuance volatility",
+        "Index licensing grows 12–15% annually as global ETF AUM continues compounding; S&P 500 remains the most licensed benchmark",
+        "Private credit ratings adopted as standard by major direct lenders, adding $200–300M incremental annual revenue by 2027"
       ]
     },
     "bull": {
-      "priceTarget": "$610",
-      "description": "Private market data becomes a category-defining business, and AI-powered market intelligence creates a new high-growth revenue stream.",
+      "priceTarget": "$590",
+      "description": "Private market data becomes a category-defining $1B+ business and AI-powered market intelligence commands premium pricing, driving a significant earnings re-rating.",
       "points": [
-        "Private credit and private equity data analytics become a $1B+ revenue segment",
-        "AI-powered Market Intelligence platform commands significant pricing power premium",
-        "Dividend growth re-accelerates to 15%+ as FCF generation exceeds $5B annually"
+        "Private credit and private equity data analytics compound to $1B+ revenue, valued at a premium SaaS multiple",
+        "AI-enhanced Market Intelligence platform enables meaningful price increases across the enterprise subscriber base",
+        "FCF generation exceeds $5B annually, supporting 15%+ dividend growth and continued buybacks that accelerate EPS compounding"
       ]
     }
   },
@@ -149,5 +162,5 @@
     },
     "verdict": "S&P Global's regulatory moat (NRSRO status) and role as the definitive system of record for credit risk makes them uniquely AI-resilient. AI disrupts analysis, not the legal requirement to use S&P ratings."
   },
-  "lastAnalyzed": "February 2026"
+  "lastAnalyzed": "April 2026"
 }

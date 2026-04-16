@@ -1,0 +1,161 @@
+{
+  "slug": "ddog",
+  "ticker": "DDOG",
+  "name": "Datadog Inc.",
+  "headerStats": [
+    { "label": "Ticker", "value": "DDOG" },
+    { "label": "Market Cap", "value": "~$39B" },
+    { "label": "Price", "value": "$118.00" }
+  ],
+  "chips": [
+    { "label": "Cloud | Observability & Security", "color": "primary" },
+    { "label": "Platform Compounder", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Net Revenue Retention",
+      "value": "120%+",
+      "label": "FY2025 — Usage Expansion Compounds Without New Customers",
+      "icon": "TrendingUp",
+      "color": "#7c3aed"
+    },
+    {
+      "title": "Platform Products",
+      "value": "30+",
+      "label": "Infra, APM, Logs, Security, AI Observability — One Agent",
+      "icon": "Database",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "Gross Margin",
+      "value": "82.5%",
+      "label": "FY2025 — Durable Software Platform Economics",
+      "icon": "Zap",
+      "color": "#17c964"
+    }
+  ],
+  "moat": {
+    "description": "Datadog is the unified observability layer for cloud-native infrastructure — the engineering team's permanent system of truth for every production service, AI pipeline, and security posture.",
+    "analysisTitle": "The Observability Nervous System",
+    "analysisSummary": "Datadog's moat is built on **deep platform lock-in, usage-based revenue expansion, and AI workload tailwinds**:",
+    "analysisPoints": [
+      {
+        "title": "Correlated Observability: The Hard-to-Replace Core",
+        "text": "Datadog's core differentiation is not monitoring metrics in isolation — it is the proprietary cross-signal correlation engine that links infrastructure metrics, APM distributed traces, logs, and security events into a unified picture. Reproducing this correlation layer requires years of data ingestion, labelling, and model training. Customers who have built alerting, dashboards, and incident workflows on DDOG's correlated data cannot migrate to a single-product alternative without rebuilding their entire observability stack from scratch."
+      },
+      {
+        "title": "30-Product Platform: The Usage Expansion Engine",
+        "text": "Datadog began as an infrastructure monitoring tool and has expanded to 30+ products including APM, log management, synthetic testing, real user monitoring, cloud security posture management (CSPM), application security, and LLM observability. The average customer using 4+ Datadog products has 95%+ retention and NRR above 130% — they are growing their spend naturally as cloud infrastructure scales. Each new product added to the platform reduces the probability of churn and increases the switching cost of a full platform migration."
+      },
+      {
+        "title": "AI Observability: A Net-New Demand Layer",
+        "text": "As AI inference and training workloads proliferate across cloud infrastructure, they generate new categories of observability data: GPU utilisation metrics, inference latency traces, model drift signals, LLM token costs, and prompt/response logs. Datadog's LLM Observability product is purpose-built to ingest and correlate this data with the existing infrastructure layer. Every GPU cluster deployed by a hyperscaler or enterprise is a new Datadog billing unit — making Datadog a direct beneficiary of the AI infrastructure buildout rather than a casualty of it."
+      }
+    ]
+  },
+  "growth": {
+    "score": 85,
+    "description": "FY2025 revenue of ~$3.3B grew ~24% YoY, with AI-driven workloads emerging as a material incremental growth driver in H2 2025. Net Revenue Retention of 120%+ means the existing customer base compounds revenue automatically as cloud infrastructure scales. AI observability (LLM monitoring, GPU cluster management) is creating a net-new demand layer on top of the existing platform that should sustain growth at 20–25% for the next 3–4 years.",
+    "growthAnalysis": {
+      "cagrEstimate": "20–26%",
+      "scoreDerivation": "Base: 80 (cloud-native observability leader with 120%+ NRR; secular cloud infrastructure growth ensures multi-year compounding) +7 (AI workload monitoring creates net-new demand: every GPU deployed generates observability data that Datadog bills on; LLM Observability product adds incremental TAM) -2 (hyperscaler native monitoring tools — AWS CloudWatch, Azure Monitor — create a pricing ceiling and free-tier competitive pressure at the low end) = 85",
+      "drivers": [
+        { "name": "AI & GPU Workload Monitoring", "metric": "LLM Observability GA; AI-native workloads now ~8% of new ARR and accelerating", "trend": "accelerating" },
+        { "name": "Platform Expansion (30+ Products)", "metric": "Average 4+ products per large customer; security (CSPM, AppSec) growing 40%+ YoY", "trend": "accelerating" },
+        { "name": "NRR-Driven Base Expansion", "metric": "120%+ NRR: existing customers growing Datadog spend as cloud infra scales", "trend": "stable" },
+        { "name": "International Revenue", "metric": "~30% of total revenue; EMEA and APAC growing faster than North America", "trend": "accelerating" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "AWS CloudWatch and Azure Monitor expand native multi-cloud observability capabilities and offer deep discounts to capture cloud-native workloads from Datadog at the infrastructure layer, compressing net new ARR growth below 15% within two years",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 76,
+    "description": "At ~$118 — comfortably between bear ($70) and base ($155) — Datadog is attractively priced for a cloud-native platform with 120%+ NRR and an emerging AI observability tailwind. At ~9.5x forward revenue and 45x forward non-GAAP earnings, the multiple has de-rated significantly from the 2021 peak of 60x+ revenue, creating an opportunity to accumulate a best-in-class observability platform at a reasonable price.",
+    "peAnalysis": {
+      "asOf": "April 2026",
+      "rows": [
+        { "label": "Forward P/S (FY2026E)", "value": "~9.5x" },
+        { "label": "Forward P/E (non-GAAP)", "value": "~45x" },
+        { "label": "EV / Revenue", "value": "~9x" },
+        { "label": "FCF Margin", "value": "~22%" }
+      ],
+      "summary": "At 9.5x forward revenue and 45x non-GAAP earnings, Datadog trades at a significant discount to its 2021 peak (60x+ revenue) while the underlying business is fundamentally stronger — 30+ products vs 10, materially higher margins, and AI tailwinds that didn't exist in 2021. For a platform growing 20–24% with 82%+ gross margins and expanding FCF, this represents reasonable value for long-term holders."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$70",
+      "description": "Cloud spend optimization persists, hyperscaler native monitoring erodes Datadog's market position at the low end, and growth decelerates to 12–15%, triggering multiple compression toward 25× non-GAAP earnings.",
+      "points": [
+        "Enterprise cloud cost optimization intensifies: customers downgrade to cheaper Datadog tiers or migrate to AWS CloudWatch/Azure Monitor for basic infra monitoring, reducing NRR below 110% for 2+ consecutive quarters",
+        "AI workload monitoring fails to monetise at scale: LLM Observability adoption is slower than expected as AI teams build bespoke monitoring solutions, removing the primary near-term growth catalyst",
+        "Growth decelerates to 12–14% YoY as the hyperscaler native monitoring tools improve to 80%+ feature parity for cloud-native workloads, compressing multiple to 25× non-GAAP EPS"
+      ]
+    },
+    "base": {
+      "priceTarget": "$155",
+      "description": "Datadog sustains 20–24% revenue growth driven by AI workload monitoring adoption, platform upsell into security, and geographic expansion, with non-GAAP margins expanding toward 28%.",
+      "points": [
+        "LLM Observability and GPU monitoring become standard in enterprise AI deployments, with AI-native workloads growing to 15%+ of total new ARR by end of 2026",
+        "Security products (CSPM, CWPP, Application Security) grow 40%+ YoY and reach $600M+ ARR, validating the platform expansion beyond observability",
+        "Non-GAAP operating margin expands to 26–28% as revenue scale outpaces headcount growth, driving FCF toward $900M–$1B annually"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$250",
+      "description": "AI observability becomes a category-defining $1B+ revenue line, platform NRR re-accelerates to 130%+, and Datadog is re-rated as the definitive AI infrastructure intelligence layer.",
+      "points": [
+        "AI workload monitoring becomes a $1B+ revenue line within 24 months as every enterprise AI infrastructure deployment standardises on Datadog for GPU, LLM, and model performance observability",
+        "Platform NRR re-accelerates to 130%+ as security, AI observability, and cost management products each become material revenue contributors, driving cohort expansion above prior peaks",
+        "Datadog's unified data model — the only platform correlating AI inference traces, GPU metrics, application performance, and security events — commands a durable premium multiple of 55–65× non-GAAP EPS"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Engineering teams invest months learning Datadog's query language, dashboard templates, and alerting framework; migration requires rebuilding all custom dashboards, monitors, and SLO configurations — a 3–6 month project for large organisations."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "The cross-signal correlation engine that links infrastructure metrics, APM traces, logs, and security events into a unified timeline is deeply proprietary — competitors offer individual signal types but cannot replicate the correlated, contextual incident view that Datadog provides out of the box."
+    },
+    "publicDataAccess": {
+      "status": "weakened",
+      "note": "Kubernetes, cloud provider, and standard application metrics are accessible via open-source alternatives (Prometheus, Grafana, OpenTelemetry); Datadog's value-add is the correlation and context layer, not raw data collection — making this moat partially commoditised at the data-collection layer."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Site reliability and observability engineers are more available than EDA or plasma physics specialists, and AI-powered tools (Copilot for alerting, AutoML for anomaly detection) are reducing the manual expertise required for basic observability — gradually eroding the talent-scarcity moat."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "With 30+ products spanning infra monitoring, APM, logs, synthetics, RUM, security (CSPM, CWPP, AppSec), and AI observability, Datadog's platform bundle is deeply co-integrated — dashboards, alerts, and incident workflows cross-reference data from all products, making selective unbundling lose the core correlation value."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Datadog's anonymised, cross-customer aggregate benchmarking (service performance percentiles, error rate norms, infrastructure sizing recommendations) provides unique pattern recognition that single-customer or open-source deployments cannot replicate; this data advantage compounds as the platform scales."
+    },
+    "regulatoryLockIn": {
+      "status": "weakened",
+      "note": "Datadog holds SOC 2 Type II, FedRAMP Moderate, and HIPAA certifications, but these are achievable by all major observability competitors; regulatory lock-in is not a primary moat driver for the commercial enterprise segment."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "Datadog's 700+ integrations with cloud providers, databases, frameworks, and developer tools create a compounding ecosystem gravity — each new integration makes the platform more valuable and raises the switching cost of adopting a competing tool with fewer certified integrations."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Datadog agents are embedded into every containerised production workload, every CI/CD pipeline, and every incident response workflow — removing Datadog from production means operating blind during outages, making it functionally non-negotiable for any organisation with >$1M in cloud infrastructure."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "For engineering teams, Datadog is increasingly the authoritative system of record for service health, deployment tracking, and SLO compliance — but this position is contested by PagerDuty (incident management), ServiceNow (ITSM), and Grafana (open-source dashboards) in different parts of the workflow."
+    },
+    "verdict": "Datadog is a strong net beneficiary of AI — every GPU deployed generates observability data that Datadog ingests and bills on, and the AI infrastructure buildout is directly expanding Datadog's TAM rather than threatening it. The correlated observability engine and 30-product platform bundle represent a genuinely durable moat; the primary risk is hyperscaler native monitoring tools commoditising the simpler infrastructure monitoring layer while Datadog defends its position at the higher-value correlation and security layers."
+  },
+  "lastAnalyzed": "April 2026"
+}

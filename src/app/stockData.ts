@@ -71,6 +71,9 @@ import panwData    from '@/data/stocks/panw.json';
 import ttdData     from '@/data/stocks/ttd.json';
 import armData     from '@/data/stocks/arm.json';
 import iceData     from '@/data/stocks/ice.json';
+import cdnsData    from '@/data/stocks/cdns.json';
+import snpsData    from '@/data/stocks/snps.json';
+import ddogData    from '@/data/stocks/ddog.json';
 import axonData    from '@/data/stocks/axon.json';
 import coinData    from '@/data/stocks/coin.json';
 import netData     from '@/data/stocks/net.json';
@@ -117,6 +120,9 @@ const allCoverageData = [
     { name: "Intercontinental Exchange", ticker: "ICE", slug: "ice",  scores: [m(iceData),         g(iceData),         v(iceData)],         href: "/stocks/ice",         category: "Financials",  ...t(iceData)         },
     { name: "Microsoft",         ticker: "MSFT",  slug: "msft",        scores: [m(msftData),        g(msftData),        v(msftData)],        href: "/stocks/msft",        category: "Big Tech",    ...t(msftData)        },
     { name: "Mastercard",        ticker: "MA",    slug: "mastercard",  scores: [m(mastercardData),  g(mastercardData),  v(mastercardData)],  href: "/stocks/mastercard",  category: "Financials",  ...t(mastercardData)  },
+    { name: "Cadence Design Systems", ticker: "CDNS", slug: "cdns",    scores: [m(cdnsData),        g(cdnsData),        v(cdnsData)],        href: "/stocks/cdns",        category: "Big Tech",    ...t(cdnsData)        },
+    { name: "Synopsys",              ticker: "SNPS", slug: "snps",    scores: [m(snpsData),        g(snpsData),        v(snpsData)],        href: "/stocks/snps",        category: "Big Tech",    ...t(snpsData)        },
+    { name: "Datadog",              ticker: "DDOG", slug: "ddog",    scores: [m(ddogData),        g(ddogData),        v(ddogData)],        href: "/stocks/ddog",        category: "Big Tech",    ...t(ddogData)        },
     { name: "ASML",              ticker: "ASML",  slug: "asml",        scores: [m(asmlData),        g(asmlData),        v(asmlData)],        href: "/stocks/asml",        category: "Big Tech",    ...t(asmlData)        },
     { name: "NVIDIA",            ticker: "NVDA",  slug: "nvda",        scores: [m(nvdaData),        g(nvdaData),        v(nvdaData)],        href: "/stocks/nvda",        category: "Big Tech",    ...t(nvdaData)        },
     { name: "Amazon",            ticker: "AMZN",  slug: "amazon",      scores: [m(amazonData),      g(amazonData),      v(amazonData)],      href: "/stocks/amazon",      category: "Big Tech",    ...t(amazonData)      },

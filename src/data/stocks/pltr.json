@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$270B"
+      "value": "$207B"
     },
     {
       "label": "Current Price",
-      "value": "$120.00"
+      "value": "$92.00"
     }
   ],
   "chips": [
@@ -26,7 +26,7 @@
       "color": "success"
     }
   ],
-  "recommendation": "Accumulate",
+  "recommendation": "Strong Buy",
   "metrics": [
     {
       "title": "US Commercial Rev",
@@ -71,11 +71,24 @@
   },
   "growth": {
     "score": 88,
-    "description": "US commercial segment growing at 50%+ YoY; AIP creating an entirely new demand curve for enterprise AI."
+    "description": "Q4 2025 US commercial revenue reached $255M (+54% YoY), sustaining the hyper-growth trajectory driven by AIP Boot Camp pipeline conversion. US Government at $320M is steady with incremental DOGE-related AI-for-efficiency contracts partially offsetting broader federal budget uncertainty. Total company revenue tracking toward ~$3.1B annualised, with FY2026 guidance implying 30%+ growth as AIP commercial momentum continues to broaden.",
+    "growthAnalysis": {
+      "cagrEstimate": "30–38%",
+      "scoreDerivation": "Base: 80 (durable government platform with structural growth) +10 (AIP Boot Camp creating a compressed, high-velocity commercial sales cycle unprecedented in enterprise software) -2 (DOGE-related federal budget uncertainty; government renewal risk modest but real) = 88",
+      "drivers": [
+        { "name": "US Commercial Revenue", "metric": "$255M Q4 2025, +54% YoY", "trend": "accelerating" },
+        { "name": "US Government Revenue", "metric": "$320M Q4 2025, +20% YoY", "trend": "stable" },
+        { "name": "AIP Boot Camp Pipeline", "metric": "Hundreds of enterprise prospects converted quarterly", "trend": "accelerating" },
+        { "name": "International Commercial", "metric": "~$200M quarterly, returning to growth", "trend": "stable" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "US commercial growth decelerates below 30% YoY within two quarters as AIP boot camp pipeline saturates and Microsoft Fabric / Databricks close the ontology gap at materially lower cost",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
-    "score": 71,
-    "description": "Trading between bear ($80) and base ($155) — elevated multiple (~70x forward sales) demands continued hyper-growth execution; current price reflects AIP commercial momentum but leaves limited margin of safety."
+    "score": 86,
+    "description": "At ~$92 — just above the bear case ($80) — PLTR is at its most attractive entry point since the early 2025 correction. The broad market sell-off has compressed the multiple to ~54x forward sales, still elevated but a material discount to the ~70x seen in February. At this level the stock prices in very little of the AIP commercial upside, making the risk/reward asymmetric for patient investors."
   },
   "scenarios": {
     "bear": {
@@ -149,5 +162,5 @@
     },
     "verdict": "Palantir's moat is highly AI-resilient because AI is the product, not a threat to it. The Ontology platform deepens in value as more AI models are layered on top, making Palantir the connective tissue of enterprise AI operations."
   },
-  "lastAnalyzed": "February 2026"
+  "lastAnalyzed": "April 2026"
 }

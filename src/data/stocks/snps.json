@@ -1,0 +1,161 @@
+{
+  "slug": "snps",
+  "ticker": "SNPS",
+  "name": "Synopsys Inc.",
+  "headerStats": [
+    { "label": "Ticker", "value": "SNPS" },
+    { "label": "Market Cap", "value": "~$75B" },
+    { "label": "Price", "value": "$400.00" }
+  ],
+  "chips": [
+    { "label": "Semiconductors | EDA & IP", "color": "primary" },
+    { "label": "Duopoly Moat", "color": "success" }
+  ],
+  "recommendation": "Strong Buy",
+  "metrics": [
+    {
+      "title": "EDA Market Share",
+      "value": "~40%",
+      "label": "Digital EDA Leader — Duopoly with Cadence",
+      "icon": "Cpu",
+      "color": "#6366f1"
+    },
+    {
+      "title": "DesignWare IP Revenue",
+      "value": "~$1.8B",
+      "label": "FY2025 — World's #1 Independent IP Catalog, +15% YoY",
+      "icon": "Database",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "Gross Margin",
+      "value": "~80%",
+      "label": "FY2025 Combined (EDA + IP + Ansys)",
+      "icon": "Zap",
+      "color": "#17c964"
+    }
+  ],
+  "moat": {
+    "description": "Synopsys holds the dominant position in digital EDA while owning the world's largest independent semiconductor IP catalog — and the Ansys acquisition extends the platform from chip design to full system simulation.",
+    "analysisTitle": "The Silicon-to-System Platform",
+    "analysisSummary": "Synopsys's moat is built on **three compounding structural advantages spanning chip design, IP reuse, and system simulation**:",
+    "analysisPoints": [
+      {
+        "title": "Digital EDA Dominance: The Industry's Most Critical Tools",
+        "text": "Synopsys DC Compiler (synthesis), IC Compiler 2 (place-and-route), and PrimeTime (timing sign-off) are the industry-standard tools for digital chip design. Every major logic chip — from Apple A-series to NVIDIA Blackwell — goes through SNPS signoff before tape-out. IC Compiler 2 is certified across all major process nodes at TSMC, Samsung, and Intel Foundry. Switching out PrimeTime for timing sign-off would require 18+ months of re-qualification and would invalidate foundry process design kit (PDK) support."
+      },
+      {
+        "title": "DesignWare IP: The World's Largest Independent IP Catalog",
+        "text": "Synopsys's DesignWare IP library is the deepest independent semiconductor IP catalog globally, covering PCIe, USB, DDR, HDMI, Ethernet, MIPI, and embedded processors (ARC). Every major chip company reuses DesignWare IP blocks — licensing them once and re-using across dozens of chip programs. This creates a compounding relationship: the more SNPS IP is designed into chips, the harder it is to switch to an alternative IP vendor (design re-validation at the foundry level costs $5–20M per IP block per node). With hyperscalers designing new custom chips every 2 years, DesignWare IP renewal and expansion is a structurally growing business growing at 15%+ CAGR."
+      },
+      {
+        "title": "Ansys Acquisition: Silicon-to-System Platform",
+        "text": "The 2025 acquisition of Ansys (with the software integrity group divested to satisfy EU regulatory conditions) created the first comprehensive Silicon-to-System design platform. Ansys brings structural mechanics, fluid dynamics, electromagnetic, and thermal simulation that are critical for AI server rack design, automotive safety systems, and aerospace. This extends Synopsys's addressable market from ~$10B (EDA + IP) to ~$20B+ (EDA + IP + system simulation) and creates cross-sell opportunities: every AI chip designer also needs to simulate the thermal and power characteristics of the full system the chip will run in."
+      }
+    ]
+  },
+  "growth": {
+    "score": 82,
+    "description": "Synopsys standalone FY2025 revenue of ~$6.7B grew ~10% YoY (impacted by China export controls on EDA tools, partially offset by 15%+ IP segment growth). Post-Ansys combined revenue reaches ~$8.5B pro-forma, with Ansys adding ~$2.3B in system simulation revenue at improving margins. FY2026 consensus growth of 12–16% reflects Ansys synergy realisation, continued DesignWare IP expansion with hyperscaler custom silicon programs, and AI chip complexity driving higher per-design EDA spend.",
+    "growthAnalysis": {
+      "cagrEstimate": "10–16%",
+      "scoreDerivation": "Base: 75 (secular EDA compounder with identical structural tailwinds to Cadence) +9 (DesignWare IP growing 15%+ as hyperscaler custom silicon adoption accelerates; Ansys acquisition extends TAM to ~$20B system simulation market with meaningful cross-sell) -2 (China export controls eliminate ~$400–500M of EDA tool revenue; recovery timeline uncertain) = 82",
+      "drivers": [
+        { "name": "DesignWare Semiconductor IP", "metric": "~$1.8B FY2025, +15% YoY — fastest growing segment; hyperscaler chip programs driving IP reuse expansion", "trend": "accelerating" },
+        { "name": "Digital EDA (PrimeTime/IC Compiler 2)", "metric": "~$3.5B FY2025; 2nm/1.4nm complexity expanding EDA spend per chip 2–3× vs prior node", "trend": "stable" },
+        { "name": "Ansys System Simulation (post-acquisition)", "metric": "~$2.3B annual revenue; cross-sell into SNPS chip design customer base beginning", "trend": "accelerating" },
+        { "name": "China EDA Revenue (headwind)", "metric": "~$400–500M at risk from export controls; partial legacy tool exemptions remaining", "trend": "decelerating" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "Ansys integration takes longer than expected, creating $500M+ of revenue synergy delays in FY2026–2027, while China export controls simultaneously expand to cover remaining Synopsys tool categories, compressing combined revenue growth below 8% and triggering P/E multiple contraction toward 22×",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 78,
+    "description": "At ~$400 — trading between bear ($300) and base ($500) — Synopsys is attractively priced for a company with near-irreplaceable EDA dominance, the world's largest independent IP catalog, and a transformative system simulation platform. Post-Ansys dilution has compressed near-term non-GAAP EPS to ~$15–16, putting the forward P/E at ~26× — near a trough multiple for a business with 80%+ gross margins and structural gatekeeper status.",
+    "peAnalysis": {
+      "asOf": "April 2026",
+      "rows": [
+        { "label": "Trailing P/E", "value": "~30x" },
+        { "label": "Forward P/E (FY2026E)", "value": "~26x" },
+        { "label": "Price / Sales", "value": "~9x" },
+        { "label": "Price / FCF", "value": "~28x" }
+      ],
+      "summary": "At 26× forward earnings, Synopsys trades near the lowest multiple in a decade — reflecting near-term Ansys integration uncertainty and China export control headwinds that the market is pricing as structural rather than transient. As Ansys synergies materialise and EPS compounds back toward $18–20 by FY2028, the re-rating opportunity is significant. Historically SNPS traded at 45–60× earnings at peak enthusiasm."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$300",
+      "description": "Ansys integration disappoints materially, China export controls expand to remaining tool categories, and multiple compresses toward 22× near-trough earnings as combined growth falls below 8%.",
+      "points": [
+        "Ansys cross-sell into chip design customers takes 3+ years instead of 12–18 months, contributing less than $150M incremental synergy revenue in FY2026, well below the $400M+ guided",
+        "U.S. export controls expand to cover all remaining Synopsys EDA tool categories cleared for China, removing $500M+ of annual revenue with no near-term pathway to recovery",
+        "Cadence gains share in digital EDA by leveraging AI-optimised design flows, pressuring Synopsys pricing on IC Compiler and DC Compiler renewal cycles"
+      ]
+    },
+    "base": {
+      "priceTarget": "$500",
+      "description": "Ansys synergies begin materialising in H2 2026, DesignWare IP sustains 15%+ growth from hyperscaler custom silicon demand, and the combined platform re-rates toward 33× FY2027E earnings.",
+      "points": [
+        "DesignWare IP grows 15%+ YoY as hyperscaler custom silicon programs (Google, Amazon, Apple, Microsoft) deepen IP reuse commitments across successive chip generations",
+        "Ansys thermal and power simulation cross-sells into SNPS's top 50 chip design accounts, adding $300–400M incremental revenue within 18 months of acquisition closing",
+        "Combined non-GAAP EPS reaches ~$18/share by FY2027, supporting a re-rating to 33× as integration risk dissipates"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$750",
+      "description": "Synopsys becomes the definitive Silicon-to-System platform for AI hardware design, with Ansys synergies exceeding expectations and DesignWare IP compounding at 20%+ as custom silicon proliferates.",
+      "points": [
+        "Ansys system simulation becomes a mandatory workflow for AI server rack and HPC system design, with Synopsys locking in all major hyperscalers in joint chip-system design contracts at premium pricing",
+        "DesignWare IP accelerates to 20%+ CAGR as the number of unique chip designs globally doubles between 2025 and 2028, driven by custom silicon proliferation",
+        "Combined platform commands 45× earnings multiple as the market recognises Synopsys as the only end-to-end chip-to-system design platform — a category of one"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "strong",
+      "note": "DC Compiler (synthesis), IC Compiler 2 (P&R), PrimeTime (timing sign-off), and VCS (simulation) require years of specialised training — physical design engineers are deeply platform-specific, and chip teams cannot afford the productivity disruption of retraining mid-programme."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "Synopsys's timing closure algorithms, physical verification rules (IC Validator), and power analysis tools (PrimePower) encode 35+ years of accumulated physics and process expertise that no general-purpose AI model can replicate or abstract."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Not applicable — Synopsys does not derive competitive advantage from any unique public dataset; its edge is in proprietary process node models, timing libraries, and customer design data accumulated through decades of design engagements."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "Physical design engineers specialising in timing closure, place-and-route, and formal verification are among the scarcest practitioners in technology; Synopsys's 35-year institutional depth in these disciplines is a structural barrier no AI tool has yet replaced."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "The Synopsys bundle — EDA tools (DC Compiler + IC Compiler + PrimeTime) + DesignWare IP + Ansys system simulation — creates the industry's most integrated chip-to-system design workflow; individual components are co-optimised and certified together, making selective unbundling counterproductive."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "35+ years of process design kit (PDK) development data, timing library characterisation, and silicon validation records from TSMC, Samsung, and Intel Foundry are exclusive to Synopsys tools and compound in value with each new technology node and process variant."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "U.S. ITAR/EAR export control status requires U.S.-origin EDA tools for defence and intelligence chip programs; Synopsys's FedRAMP-authorised tools and classified design capabilities create meaningful regulatory lock-in for government semiconductor programmes."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "The global ecosystem of foundry process qualification teams, IP providers, and design service companies builds around Synopsys EDA flows and DesignWare IP; the Ansys acquisition adds a new engineering simulation ecosystem reinforcing the platform's gravity."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Synopsys tools are embedded at every transactional stage of the chip design lifecycle — from RTL synthesis through P&R, timing sign-off, physical verification, and final tape-out — and removing them mid-project would invalidate months of design work and risk billions in tape-out costs."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "PrimeTime is the definitive system of record for chip timing sign-off globally — foundries issue sign-off waivers conditional on PrimeTime clearance; no competing tool carries equivalent foundry-certified legal weight for advanced node tape-out."
+    },
+    "verdict": "Synopsys is a net beneficiary of AI at every level — AI drives more custom chip designs (more EDA demand), AI chips require more complex IP blocks (more DesignWare revenue), and AI systems require thermal/power simulation (more Ansys demand). The Ansys acquisition has extended a near-impregnable software moat into a second structural domain, making Synopsys the only end-to-end Silicon-to-System design platform."
+  },
+  "lastAnalyzed": "April 2026"
+}
