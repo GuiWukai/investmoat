@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$83B"
+      "value": "~$93B"
     },
     {
       "label": "Price",
-      "value": "~$1,631"
+      "value": "~$1,854"
     }
   ],
   "chips": [
@@ -27,7 +27,7 @@
       "color": "success"
     }
   ],
-  "recommendation": "Accumulate",
+  "recommendation": "Strong Buy",
   "metrics": [
     {
       "title": "Q4 2025 Revenue",
@@ -81,14 +81,37 @@
         "Credit portfolio scaling: $12.5B loan book growing 90% YoY with superior underwriting (transaction-derived data); Mercado Crédito is the largest fintech lender in LatAm with room to 5-10x from current size",
         "Advertising flywheel: ad revenue +67% YoY driven by AI-powered bidding; as buyer counts scale, MELI's ad inventory becomes more valuable, creating a margin-accretive revenue stream similar to Amazon Advertising's trajectory"
       ]
+    },
+    "growthAnalysis": {
+      "cagrEstimate": "22–28%",
+      "scoreDerivation": "Base 80 (22–28% blended CAGR; FY2025 +39% from a lower base, FY2026E ~28–30%) + 5 LatAm TAM expansion (12–15% e-commerce penetration vs US 25–30%, decade of structural runway) + 5 Mercado Pago recurring financial OS (78M MAUs, $18.8B AUM +78% YoY, insurance + savings creating sticky engagement) + 5 operating leverage runway (deliberate margin reinvestment, Amazon 2010–2015 analog; EBIT expected to re-expand as logistics density improves) − 5 margin compression (Q4 EBIT margin 10.1% vs 13.5% a year earlier; FY2025 EBIT 11.1% vs 14.4% FY2024) = 90",
+      "drivers": [
+        { "name": "E-Commerce (Marketplace + Envios)", "metric": "+37% GMV YoY Q4 ($19.9B); Brazil +35%, Mexico +35%", "trend": "stable" },
+        { "name": "Mercado Pago (Fintech + Credit)", "metric": "+42% TPV YoY ($83.7B); credit portfolio $12.5B (+90%)", "trend": "accelerating" },
+        { "name": "Advertising", "metric": "+67% YoY; AI-powered bidding; ~2–3% of GMV monetisation rate", "trend": "accelerating" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If Mercado Crédito NPL ratios breach 6% in Brazil or 8% in Mexico by end of 2026 as less-seasoned credit-card cohorts season, MELI must tighten underwriting, slowing credit portfolio growth from 90%+ to below 20% and compressing fintech margins that underpin the stock's premium multiple",
+      "marginTrend": "compressing"
     }
   },
   "valuation": {
-    "score": 77,
-    "description": "At ~$1,631, trading 26% below the base case ($2,200) — a compelling entry for a 39%+ CAGR compounder. The EPS miss in Q4 on deliberate margin investment (Brazil logistics) drew selling that creates opportunity. 23 analyst buy/strong-buy ratings; consensus target $2,733 (+64% upside). Trades between bear ($1,000) and base ($2,200).",
+    "score": 72,
+    "description": "At ~$1,854, trading 16% below the base case ($2,200) — a reasonable entry for a business delivering 39% FY2025 revenue growth with a compounding fintech flywheel. The stock has recovered from its 52-week low of $1,593 as Q4 2025 confirmed the revenue trajectory; margin pressure from Brazil logistics investment persists but is intentional. 17 analyst Strong Buy ratings with consensus target $2,725 (+47% upside). Trades between bear ($1,000) and base ($2,200).",
     "valuationNote": {
-      "text": "MELI's P/S of ~3x is cheap relative to its growth rate — for comparison, Shopify trades at ~10x P/S on 30% growth. The margin compression in 2025 (from lowering Brazil's free shipping threshold and scaling fulfillment) is a deliberate reinvestment, similar to Amazon's 2010-2015 phase. At the base case of $2,200, MELI trades at ~4.5x forward P/S on projected $40B+ revenue — reasonable for a business with 30%+ sustainable growth and expanding FCF margins.",
+      "text": "MELI's NTM P/S of ~2.5× is cheap relative to its growth rate — for comparison, Shopify trades at ~10× P/S on similar growth. The margin compression in 2025 (from lowering Brazil's free shipping threshold and scaling fulfillment) is a deliberate reinvestment, similar to Amazon's 2010-2015 phase. At the base case of $2,200, MELI trades at ~4.5× forward P/S on projected $40B+ revenue — reasonable for a business with 28–30% FY2026E growth and a compounding financial services layer.",
       "fairValue": "$2,200"
+    },
+    "peAnalysis": {
+      "asOf": "April 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~44×", "note": "~$40 TTM EPS (FY2025 net income $2.0B)" },
+        { "label": "Forward P/E (NTM)", "value": "~30×", "note": "consensus NTM EPS ~$62" },
+        { "label": "PEG Ratio", "value": "~0.93×", "note": "fwd P/E ÷ ~32% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~2.5×", "note": "~$37B NTM revenue est." },
+        { "label": "Price / FCF", "value": "complex", "note": "credit portfolio growth distorts TTM FCF" }
+      ],
+      "summary": "At ~30× forward P/E, MELI trades in-line with consumer internet peers (25–35× range) but at a fraction of Shopify's ~65× — justified by the embedded fintech flywheel and LatAm growth runway at a more attractive multiple. A PEG of ~0.93× firmly signals growth-at-a-reasonable-price, and the 44× trailing vs 30× forward gap reflects the market's expectation that Brazil/Mexico margin investments will yield operating leverage from 2026 onward — the same convergence trade that rewarded Amazon investors in 2015–2016."
     }
   },
   "scenarios": {
@@ -163,5 +186,5 @@
     },
     "verdict": "MercadoLibre is a net beneficiary of AI — its AI-powered seller assistant is already advising on 20% of GMV, and its proprietary transaction data enables underwriting and ad targeting that AI-powered challengers cannot replicate without decades of transaction history. The primary AI risk is that lower development barriers could enable local fintech competitors, but MELI's two-sided network scale and 25-year compounding of trust in underdeveloped financial markets are not easily disrupted."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "April 2026"
 }
