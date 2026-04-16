@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$105B"
+      "value": "~$92B"
     },
     {
       "label": "Price",
-      "value": "~$101"
+      "value": "~$88"
     }
   ],
   "chips": [
@@ -41,8 +41,8 @@
     },
     {
       "title": "FCF Margin",
-      "value": "35%",
-      "label": "FY2025 Full-Year Free Cash Flow",
+      "value": "34%",
+      "label": "FY2025 FCF $4.6B — 36% guided FY2026",
       "icon": "TrendingUp",
       "color": "#7c3aed"
     },
@@ -116,10 +116,10 @@
     }
   },
   "valuation": {
-    "score": 80,
-    "description": "At ~$101 — down ~52% from the 52-week high and ~35% below the base case ($155) — ServiceNow remains in deep value territory. The broader 'SaaSpocalypse' has compressed B2B software valuations ~25–30% YTD in 2026, with ServiceNow falling 30%+ as the market reprices agentic AI risk despite fundamentals that remain strong: 20% subscription revenue growth, $28.2B contracted backlog, and $5B in share buyback authorization. This is pricing in AI disruption that the 98% renewal rate and Now Assist's $1B ACV milestone actively contradict.",
+    "score": 85,
+    "description": "At ~$88 — down ~58% from the 52-week high of $211 and ~43% below the base case ($155) — ServiceNow is pricing in AI disruption that the 98% renewal rate and Now Assist's $1B ACV milestone actively contradict. The stock is trading near its 52-week low ($81), despite 20% subscription revenue growth, $28.2B contracted backlog, $4.6B in FY2025 FCF, and Q1 2026 earnings due April 22 with cRPO guided at +20% constant currency — a level that confirms rather than threatens the growth trajectory. At ~21× forward non-GAAP P/E and ~20× FCF, the implied multiple is among the lowest in ServiceNow's history as a public company.",
     "valuationNote": {
-      "text": "At $101 vs. a base case of $155, NOW trades at a 35% discount to fair value. The $28.2B total RPO provides ~2.1 years of contracted revenue visibility, making the bear case ($70) unlikely without a catastrophic macro or AI disruption event. With FCF margins expanding to a guided 36% in FY2026, the stock trades at ~23× P/FCF — one of the most attractive FCF yields in enterprise SaaS.",
+      "text": "At $88 vs. a base case of $155, NOW trades at a 43% discount to fair value — an unusually wide margin of safety for a company with $4.6B in FY2025 FCF and $28.2B in contracted backlog providing ~2 years of revenue visibility. The bear case ($70) requires a simultaneous AI disruption and macro recession scenario; at 20× FCF and 21× forward non-GAAP P/E, this is the cheapest ServiceNow has traded on a fundamental basis since the 2020 pandemic trough. Q1 2026 earnings on April 22 represent a near-term re-rating catalyst.",
       "fairValue": "$155"
     },
     "peAnalysis": {
@@ -127,31 +127,31 @@
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~59×",
+          "value": "~50×",
           "note": "SBC-heavy; GAAP EPS ~$1.75 TTM"
         },
         {
           "label": "Forward P/E (NTM, non-GAAP)",
-          "value": "~25×",
-          "note": "consensus non-GAAP EPS ~$4.00"
+          "value": "~21×",
+          "note": "consensus non-GAAP EPS ~$4.21"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.25×",
+          "value": "~1.05×",
           "note": "fwd P/E ÷ 20% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~6.8×",
-          "note": "$15.5B FY2026 revenue guide"
+          "value": "~5.9×",
+          "note": "$15.55B FY2026 revenue guide"
         },
         {
           "label": "Price / FCF",
-          "value": "~23×",
+          "value": "~20×",
           "note": "$4.6B FY2025 FCF (TTM)"
         }
       ],
-      "summary": "At ~25× forward non-GAAP P/E — among the lowest multiples NOW has traded at in five years — ServiceNow is priced in line with the enterprise SaaS median despite superior growth (20% vs. 8–15% peers), near-zero churn, and an AI monetization layer that peers lack entirely. A PEG of 1.25× is historically cheap for this quality of compounding, especially with Now Assist having just crossed $1B ACV in 18 months. The SaaSpocalypse de-rating is an opportunity, not a structural impairment: the $5B buyback authorization signals management's conviction at current prices."
+      "summary": "At ~21× forward non-GAAP P/E, ServiceNow now trades at a meaningful discount to the enterprise SaaS median despite growing at 20% with 98% renewal rates — the implied multiple is the lowest in five years for this platform. A PEG of 1.05× is GARP territory for a company with $28.2B contracted backlog and a proven AI monetization layer in Now Assist ($1B ACV in 18 months). The compression from 59× to 50× trailing GAAP P/E reflects improving profitability, and the 20× P/FCF is cheaper than many mature slow-growth industrials — the de-rating has created a structural entry point rather than a fundamental impairment."
     }
   },
   "scenarios": {
