@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$4.23T"
+      "value": "~$4.83T"
     },
     {
       "label": "Current Price",
-      "value": "~$172"
+      "value": "~$199"
     }
   ],
   "chips": [
@@ -31,21 +31,21 @@
     {
       "title": "Q4 FY2026 Revenue",
       "value": "$68.1B",
-      "label": "+73% YoY — Data Center $62.3B (quarterly record)",
+      "label": "+73% YoY — Q1 FY2027 guided at $78B (+77% YoY); Data Center $62.3B quarterly record",
       "icon": "Cpu",
       "color": "#76b900"
     },
     {
       "title": "AI Chip Order Book",
       "value": "$1T+",
-      "label": "Blackwell + Rubin through 2027 — raised at GTC March 2026",
+      "label": "Blackwell + Rubin through 2027 — China H200 approvals cleared April 2026",
       "icon": "Zap",
       "color": "#3b82f6"
     },
     {
       "title": "Forward P/E",
-      "value": "~23×",
-      "label": "vs. 36× TTM — accelerating EPS ramp, PEG ~0.6×",
+      "value": "~24×",
+      "label": "vs. 40× TTM — accelerating EPS ramp, PEG ~0.6×",
       "icon": "TrendingUp",
       "color": "#10b981"
     }
@@ -71,14 +71,14 @@
   },
   "growth": {
     "score": 95,
-    "description": "Q4 FY2026 revenue hit $68.1B (+73% YoY) on data center demand of $62.3B — growth is decelerating in percentage terms but accelerating in absolute dollars. Jensen Huang raised the Blackwell + Rubin AI chip order outlook to $1T+ through 2027 at GTC March 2026, and Bloomberg Intelligence projects AI server spending +45% in 2026 to $312B. NVIDIA's transition from supply-constrained H100 to Blackwell architecture is complete, with Rubin (successor) already in development.",
+    "description": "Q4 FY2026 revenue hit $68.1B (+73% YoY) on data center demand of $62.3B. Management guided Q1 FY2027 to $78B (+77% YoY vs. Q1 FY2026's $44.1B), with GAAP gross margins recovering to ~74.9% after the $4.5B H20 charge in Q1 FY2026. The China H200 export ban reversal in late 2025 — culminating in 400K+ unit approvals for ByteDance, Alibaba, and Tencent in April 2026 — restores a revenue stream previously written off. FY2027 consensus stands at $367.7B (+70% YoY). Vera Rubin first samples shipped to hyperscalers; volume production on track for H2 2026.",
     "growthAnalysis": {
       "cagrEstimate": "35–50%",
       "scoreDerivation": "Base 90 (30%+ CAGR on $68B quarterly base) + 5 TAM expansion (sovereign AI, Rubin architecture) + 5 platform stickiness (CUDA ecosystem NRR equivalent) − 5 export control risk (China restrictions ongoing) = 95",
       "drivers": [
         {
-          "name": "Data Center (AI Training)",
-          "metric": "$62.3B Q4 FY2026 (+73% YoY), $1T+ cumulative order book",
+          "name": "Data Center (AI Training & Inference)",
+          "metric": "$62.3B Q4 FY2026 (+73% YoY); Q1 FY2027 guided at $78B total (+77% YoY); $1T+ order book",
           "trend": "accelerating"
         },
         {
@@ -93,25 +93,25 @@
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If U.S. export controls expand to Blackwell architecture (H200/B200 equivalents) before end of 2026, NVIDIA loses $15-20B in annual revenue from non-China allied nations and hyperscalers redirect orders to AMD or in-house ASICs",
+      "keyRisk": "If AMD ROCm reaches 15%+ developer share by end of 2026 — aided by hardware-agnostic tools like OpenAI Triton — CUDA switching costs erode and hyperscalers accelerate in-house ASIC programs (Google TPU v6, Amazon Trainium3), threatening the 90%+ AI training market share position",
       "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 66,
-    "description": "At ~$172 — essentially at the base target of $175 — NVDA trades at ~23× forward P/E on NTM EPS of ~$7.50, a PEG of ~0.6× against a 40%+ EPS CAGR. The 52-week range ($86–$212) shows the stock has already visited bear territory once. With $1T+ in committed orders and 73% YoY revenue growth on a $68B quarterly base, the current multiple is historically cheap for this growth profile. Every quarter must continue to beat expectations to maintain the premium.",
+    "score": 71,
+    "description": "At ~$199 — below the updated base target of $230 — NVDA trades at ~24× forward P/E on NTM EPS of ~$8.25, a PEG of ~0.6× against a ~40% EPS CAGR. The China H200 re-opening and $78B Q1 FY2027 guidance have pushed FY2027 consensus to $367.7B (+70% YoY), providing a floor to the bear case. The stock is modestly undervalued relative to 12–24 month fair value, with the Vera Rubin production ramp in H2 2026 as the next re-rating catalyst.",
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "April 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~36×",
-          "note": "TTM EPS ~$4.73 (ramping)"
+          "value": "~40×",
+          "note": "TTM EPS ~$4.97 (FY2026 ramp)"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~23×",
-          "note": "consensus NTM EPS ~$7.50"
+          "value": "~24×",
+          "note": "consensus NTM EPS ~$8.25"
         },
         {
           "label": "PEG Ratio",
@@ -120,44 +120,44 @@
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~15×",
-          "note": "~$280B NTM revenue"
+          "value": "~14×",
+          "note": "~$340B NTM revenue est."
         },
         {
           "label": "Price / FCF",
-          "value": "~28×",
-          "note": "~$150B FCF (NTM est.)"
+          "value": "~50×",
+          "note": "$96.7B FCF (TTM)"
         }
       ],
-      "summary": "At 23× forward P/E with a PEG of 0.6×, NVDA is the cheapest it has been relative to its growth rate since the Blackwell cycle began — well below the sector median of 30–35× for high-growth semiconductors. The 36× trailing P/E overstates the cost; forward EPS nearly doubles as the quarterly ramp accelerates from $1.62 to an estimated $1.76+ per quarter. The stock is fairly valued at base but offers meaningful upside if the Rubin architecture and sovereign AI buildout exceed the $1T order book estimate."
+      "summary": "At 24× forward P/E with a PEG of 0.6×, NVDA remains cheap relative to its ~40% EPS CAGR — well below the 30–35× sector median for high-growth semiconductors. The 40× trailing P/E reflects FY2026's ramping year; the 16-point compression to 24× forward signals a rapid EPS acceleration as Q1 FY2027 ($78B guided) compounds the base. TTM Price/FCF of ~50× is elevated in absolute terms but reasonable for a business generating 94%+ ROIC with $1T+ in committed demand."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$100",
-      "description": "Hyperscaler capex cycle peaks as in-house ASICs (Google TPU, Amazon Trainium) displace merchant silicon and export controls bite.",
+      "priceTarget": "$110",
+      "description": "Export controls re-escalate targeting Blackwell-class chips; hyperscaler in-house ASICs capture 20%+ of AI training workloads; CUDA developer lock-in erodes faster than expected.",
       "points": [
-        "Major cloud providers reduce H100 orders by 30%+",
-        "Competition from AMD MI300 series gains 15% share",
-        "China export restrictions bite harder than expected"
+        "U.S. imposes new export restrictions on Blackwell/Rubin-class chips to allied nations, removing $15B+ in annual revenue",
+        "Google TPU v6 and Amazon Trainium3 capture 20%+ of hyperscaler AI training by end of 2026, pressuring NVIDIA market share below 75%",
+        "Hardware-agnostic tooling (OpenAI Triton, JAX) achieves broad adoption, weakening CUDA switching costs and forcing ASP compression"
       ]
     },
     "base": {
-      "priceTarget": "$175",
-      "description": "Rubin architecture ramp sustains $60-80B quarterly revenue through 2027; the $1T committed order book de-risks near-term demand; NVIDIA Enterprise software reaches $5B+ ARR.",
+      "priceTarget": "$230",
+      "description": "FY2027 on track at ~$367B; Vera Rubin ramps into H2 2026 on schedule; China H200 contributes $15-20B incremental revenue; NVIDIA Enterprise software reaches $5B+ ARR.",
       "points": [
-        "Data center revenue maintains $60B+ quarterly run rate through Blackwell-to-Rubin transition in 2026-2027",
-        "NIM microservices and AI Enterprise software scale toward $5B ARR, improving gross margin mix",
-        "Export control environment stabilizes — no additional Blackwell restrictions beyond current China curbs"
+        "Q1 FY2027 revenue lands at $78B ±2% as guided, confirming data center demand durability through Blackwell-to-Rubin transition",
+        "China H200 shipments (400K+ units cleared in April 2026) contribute $15-20B incremental FY2027 revenue, lifting total to $360B+",
+        "Vera Rubin NVL72 volume production commences H2 2026 at major hyperscalers, extending the $1T order book into FY2028"
       ]
     },
     "bull": {
-      "priceTarget": "$300",
-      "description": "Rubin architecture exceeds the $1T committed order estimate; sovereign AI buildout accelerates as 40+ nations build domestic AI infrastructure; software revenue inflects above $10B ARR.",
+      "priceTarget": "$380",
+      "description": "Vera Rubin cycle exceeds $1T order estimate; sovereign AI buildout accelerates to $150B+ globally; China becomes 15%+ of revenue; software inflects above $10B ARR.",
       "points": [
-        "Sovereign AI infrastructure spending doubles to $100B+ as major nations accelerate domestic GPU deployments",
-        "NIM/Omniverse becomes the industry standard for industrial AI, adding $10B+ in high-margin software revenue",
-        "Rubin chip yields exceed expectations, enabling 2× supply at similar ASPs and driving 80%+ data center revenue growth in FY2028"
+        "Sovereign AI infrastructure spending accelerates to $150B+ as 50+ nations deploy domestic GPU capacity, adding a recurring government revenue layer",
+        "Vera Rubin yields exceed roadmap targets, enabling 3× performance-per-dollar vs. Blackwell and driving ASP expansion to $75K+ per rack unit",
+        "NIM microservices and NVIDIA AI Enterprise scale to $10B+ ARR, re-rating the stock toward software multiples on a higher-margin revenue mix"
       ]
     }
   },
@@ -188,7 +188,7 @@
     },
     "regulatoryLockIn": {
       "status": "weakened",
-      "note": "Export controls on A100/H100 to China constrain revenue and create policy risk, cutting both ways."
+      "note": "Export control whipsaw persists: H20 ban (April 2025) caused a $4.5B charge, reversed July 2025; H200 approved December 2025; 400K+ units cleared for China in April 2026. Policy risk remains structurally elevated despite the near-term reopening."
     },
     "networkEffects": {
       "status": "strong",
@@ -204,5 +204,5 @@
     },
     "verdict": "NVIDIA's moat is almost entirely AI-resilient. The CUDA network effect and proprietary compute standard deepen as AI infrastructure spending grows — making NVIDIA the infrastructure of the AI economy."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "April 2026"
 }
