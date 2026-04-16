@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$409B"
+      "value": "~$334B"
     },
     {
       "label": "Price",
-      "value": "$1,067"
+      "value": "$870"
     }
   ],
   "chips": [
@@ -37,15 +37,15 @@
     },
     {
       "title": "Gross Margin",
-      "value": "52.8%",
-      "label": "Full-Year 2025 (targeting 56–60% by 2030)",
+      "value": "53.0%",
+      "label": "FY2025 (targeting 56–60% by 2030)",
       "icon": "Zap",
       "color": "#17c964"
     },
     {
-      "title": "Q4 Bookings",
-      "value": "€13.2B",
-      "label": "Record — 2× Analyst Expectations",
+      "title": "FY2026 Revenue Guidance",
+      "value": "€34–39B",
+      "label": "Non-China AI Capex Absorbs China Decline",
       "icon": "Cpu",
       "color": "#3b82f6"
     }
@@ -71,38 +71,51 @@
   },
   "growth": {
     "score": 80,
-    "description": "Full-year 2025 revenue of €32.7B beat guidance; 2026 guided €34–39B as non-China AI capex absorbs China decline. EPS CAGR 2025–2027 estimated at 22% as High-NA mix and margin expansion drive earnings faster than revenue. Company 2030 target of €44–60B implies 10–13% revenue CAGR."
+    "description": "FY2025 revenue of €32.7B confirmed, beating initial guidance. FY2026 guided €34–39B as AI-driven capex from TSMC, Samsung, and SK Hynix absorbs the China revenue decline from expanded export controls. High-NA EUV shipments ramping into 2026 drive EPS growth faster than revenue via ASP and margin expansion. Company 2030 target of €44–60B implies a 10–13% revenue CAGR with meaningful operating leverage.",
+    "growthAnalysis": {
+      "cagrEstimate": "10–14%",
+      "scoreDerivation": "Base: 75 (secular semiconductor capex compounder with EUV monopoly) +6 (AI infrastructure spend accelerating EUV adoption cycle; High-NA EUV adds premium ASP tier) -1 (China export controls create a structural revenue headwind ~10–15% of prior mix) = 80",
+      "drivers": [
+        { "name": "EUV Unit Shipments", "metric": "~60+ EUV systems FY2025, growing in 2026", "trend": "accelerating" },
+        { "name": "High-NA EUV Mix", "metric": "First commercial units shipping; ASP ~$380M vs. ~$185M EUV", "trend": "accelerating" },
+        { "name": "Service Revenue", "metric": "~€6B+ recurring, ~18% of total revenue, 20-year contract base", "trend": "stable" },
+        { "name": "Non-China Capex", "metric": "Taiwan +175% YoY, South Korea +46%, Japan +50% in 2025", "trend": "accelerating" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "US/Dutch export controls expand to cover remaining DUV immersion tools currently still legal, eliminating remaining China revenue (~10% of total) simultaneously with a hyperscaler AI capex pause in 2026–2027",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
-    "score": 83,
-    "description": "At $1,067 — down ~26% from levels near the base target — ASML sits comfortably between bear ($900) and base ($1,500), the most attractive entry in two years. Analyst consensus targets range from €1,200 to €1,500 (~$1,250–$1,565 USD). A 45× forward P/E is justified by 94/100 moat durability and 52.8% gross margins expanding toward 56–60% by 2030."
+    "score": 89,
+    "description": "At ~$870 — now near and briefly below the bear case ($850) — ASML is at one of the most attractive entry points since the 2022 semiconductor correction. The broad market correction (tariff uncertainty, macro slowdown fears) has created a price that implies the bear scenario is almost fully priced in, despite FY2026 guidance remaining intact. Forward P/E near 25× is a meaningful discount to the 5-year average of ~40×."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$900",
-      "description": "Full DUV/EUV export restrictions to China combined with a broad AI capex pause causes a semiconductor cycle downturn and multiple compression to ~35×.",
+      "priceTarget": "$850",
+      "description": "Expanded DUV/EUV export restrictions to China coincide with a broad AI capex slowdown, causing a semiconductor cycle downturn and multiple compression toward 20–22×.",
       "points": [
-        "Expansion of Dutch/U.S. export controls to cover additional DUV immersion tools currently still legal erases remaining China revenue",
-        "AI infrastructure spend pauses in 2026–2027 as hyperscalers digest overbuilt capacity, cutting TSMC and memory capex simultaneously",
-        "High-NA EUV margin dilution persists longer than expected, compressing gross margin toward 50% and triggering EPS estimate cuts"
+        "US/Dutch export controls extend to remaining DUV immersion tools, eliminating the last ~10% of China revenue in a single regulatory action",
+        "AI infrastructure spending stalls in 2026–2027 as hyperscalers digest overbuilt capacity, trimming TSMC and memory capex plans simultaneously",
+        "High-NA EUV margin dilution persists longer than expected, compressing gross margin toward 50% and triggering EPS estimate reductions across the Street"
       ]
     },
     "base": {
-      "priceTarget": "$1,500",
-      "description": "High-NA EUV rollout continues on schedule, non-China capex absorbs China decline, €36–38B 2026 revenue achieved, and margin expansion toward 55%+ re-rates earnings.",
+      "priceTarget": "$1,450",
+      "description": "High-NA EUV rollout continues on schedule, non-China capex absorbs China decline, FY2026 revenue of €36–38B is achieved, and margin expansion toward 55%+ re-rates the stock.",
       "points": [
-        "Non-China revenue (Taiwan +175% YoY, South Korea +46%, Japan +50%) fully absorbs China decline; 2026 revenue lands in €36–37B range",
-        "High-NA EUV scales to 20+ annual shipments, driving mix shift toward higher-ASP tools and progressive margin improvement",
+        "Non-China revenue (Taiwan, South Korea, Japan, US CHIPS Act fabs) fully offsets China decline; FY2026 revenue lands in the €36–37B range",
+        "High-NA EUV scales to 20+ annual shipments, driving mix shift toward higher-ASP tools and progressive gross margin improvement toward 55%",
         "AI-driven HBM and advanced logic demand sustains TSMC/SK Hynix capex growth through 2027, extending the EUV order cycle"
       ]
     },
     "bull": {
-      "priceTarget": "$2,200",
-      "description": "AI-driven data centre demand sustains 35%+ EUV growth through 2028, ASML reaches €50B+ revenue ahead of 2030 guidance, and margin expansion to 56%+ drives a significant earnings re-rating.",
+      "priceTarget": "$2,100",
+      "description": "AI-driven data centre demand accelerates EUV adoption through 2028, ASML reaches €50B+ revenue ahead of 2030 guidance, and High-NA ramp drives a significant earnings re-rating.",
       "points": [
-        "Sovereign foundry programmes (US CHIPS Act, EU Chips Act, Japan/Middle East domestic fabs) accelerate, adding a new demand cohort beyond TSMC/Samsung/Intel",
-        "High-NA EUV reaches 30+ shipments annually by 2027 at improving margins; gross margin hits 56%+ ahead of 2030 target",
-        "AI accelerator demand for 1.4nm and 1nm nodes materialises faster than consensus, doubling ASML's addressable EUV shipment opportunity"
+        "Sovereign foundry programmes (US CHIPS Act, EU Chips Act, Japan, Middle East domestic fabs) add a new demand cohort; ASML reaches €50B revenue by 2028",
+        "High-NA EUV reaches 30+ shipments annually by 2027 at improving margins; gross margin hits 56%+ ahead of 2030 target, compressing P/E multiples to historical discount",
+        "AI accelerator demand for 1.4nm and 1nm nodes materialises faster than consensus, doubling ASML's addressable EUV shipment window"
       ]
     }
   },
@@ -149,5 +162,5 @@
     },
     "verdict": "ASML is the most AI-resilient business in the portfolio. Physical hardware monopolies, regulatory protection, and manufacturing expertise rooted in physics cannot be disrupted by software AI — and the AI infrastructure boom is actively accelerating demand for ASML's machines. High-NA EUV cements this monopoly for the next decade."
   },
-  "lastAnalyzed": "February 2026"
+  "lastAnalyzed": "April 2026"
 }

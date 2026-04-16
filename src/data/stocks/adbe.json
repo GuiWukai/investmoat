@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$215B"
+      "value": "$172B"
     },
     {
       "label": "Price",
-      "value": "$482.50"
+      "value": "$385.00"
     }
   ],
   "chips": [
@@ -26,25 +26,25 @@
       "color": "success"
     }
   ],
-  "recommendation": "Accumulate",
+  "recommendation": "Hold",
   "metrics": [
     {
       "title": "Digital Media ARR",
-      "value": "$15.7B",
+      "value": "$16.5B",
       "label": "Recurring Powerhouse",
       "icon": "PenTool",
       "color": "#ff0000"
     },
     {
       "title": "Gross Margin",
-      "value": "87.8%",
+      "value": "88.1%",
       "label": "Software Dominance",
       "icon": "Zap",
       "color": "#f7b600"
     },
     {
       "title": "Creative Cloud Users",
-      "value": "30M+",
+      "value": "33M+",
       "label": "Market Standard",
       "icon": "Image",
       "color": "#3b82f6"
@@ -70,39 +70,62 @@
     ]
   },
   "growth": {
-    "score": 82,
-    "description": "Generative AI (Firefly) integration driving higher tiers and retention."
+    "score": 77,
+    "description": "Q1 FY2026 revenue grew ~10% YoY to ~$5.8B; Digital Media ARR reached $16.5B (+5% YoY). Firefly credit consumption is lifting ARPU modestly but monetisation is tracking below initial expectations. Document Cloud and Experience Cloud remain steady double-digit growers. Revenue growth has decelerated from the 2023 peak of ~18%, stabilising at 10–12% as the generative AI transition plays out.",
+    "growthAnalysis": {
+      "cagrEstimate": "10–13%",
+      "scoreDerivation": "Base: 75 (recurring digital media ARR compounder) +4 (Firefly credit monetisation beginning to lift ARPU) -2 (revenue deceleration from 2023 peak; Firefly adoption slower than initial guidance) = 77",
+      "drivers": [
+        { "name": "Digital Media ARR", "metric": "~$16.5B, +5% YoY", "trend": "stable" },
+        { "name": "Firefly AI Credits", "metric": "Incremental ARPU lift ~6–8%, early stage", "trend": "accelerating" },
+        { "name": "Document Cloud", "metric": "~$8B run rate, +9% YoY", "trend": "stable" },
+        { "name": "Experience Cloud", "metric": "~$4.4B run rate, +10% YoY", "trend": "stable" }
+      ],
+      "primaryType": "ARPU expansion",
+      "keyRisk": "AI-native creative tools (Canva AI, Figma AI) capture low-end and mid-market Creative Cloud subscribers, decelerating net new ARR to below 3% within four quarters",
+      "marginTrend": "stable"
+    }
   },
   "valuation": {
-    "score": 77,
-    "description": "Trading between bear ($200) and base ($320) — market pricing in significant AI disruption risk, creating a discount for patient investors who believe in Firefly's commercial differentiation."
+    "score": 70,
+    "description": "At ~$385, Adobe trades ~7% below the base case ($415) — near fair value once the market correction and AI competitive fears are priced in. A modest discount for investors who believe Firefly monetisation continues to ramp. Not a screaming bargain given decelerating growth.",
+    "peAnalysis": {
+      "asOf": "April 2026",
+      "rows": [
+        { "label": "Trailing P/E", "value": "~22x" },
+        { "label": "Forward P/E", "value": "~19x" },
+        { "label": "Price / Sales", "value": "~7.5x" },
+        { "label": "Price / FCF", "value": "~21x" }
+      ],
+      "summary": "At ~$385, Adobe trades at ~19x forward earnings — a meaningful discount to its 5-year average of ~35x P/E, reflecting the AI disruption premium that has been stripped out of the multiple. Fair value if Firefly delivers incremental ARPU; cheap if revenue re-accelerates above 13%."
+    }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$200",
-      "description": "AI disruption accelerates — Canva AI, Figma, and native OS creative tools erode Creative Cloud's pricing power and net revenue retention.",
+      "priceTarget": "$250",
+      "description": "AI-native competition structurally erodes Creative Cloud — Canva AI, Figma AI, and OS-level creative tools commoditise core use cases, triggering sustained churn and multiple compression.",
       "points": [
-        "New ARR growth slows to single digits as AI alternatives capture low-end market",
-        "Pricing pressure forces Creative Cloud plan downgrades en masse",
-        "Firefly credit monetization fails to offset churn from AI-native competitors"
+        "Net new Digital Media ARR decelerates below 3% as AI alternatives capture low-end and mid-market subscribers",
+        "Creative Cloud ARPU contracts as users downgrade to cheaper AI-included tiers",
+        "Firefly credit monetisation fails to offset subscriber churn; multiple compresses to ~12x earnings"
       ]
     },
     "base": {
-      "priceTarget": "$320",
-      "description": "Firefly's commercially-safe AI training data differentiates Adobe in enterprise, sustaining mid-single-digit ARR growth.",
+      "priceTarget": "$415",
+      "description": "Firefly's commercially-licensed AI training data continues differentiating Adobe in enterprise, sustaining 10–12% revenue growth and stable non-GAAP margins above 42%.",
       "points": [
-        "Firefly adoption increases Creative Cloud ARPU by 8-12% via credit consumption",
-        "Document Cloud (Acrobat/Sign) continues compounding at high single digits",
-        "Operating margins remain above 42% (non-GAAP) as headcount efficiency improves"
+        "Firefly credit consumption lifts Creative Cloud ARPU by 8–10% over the next four quarters",
+        "Document Cloud (Acrobat/Sign) compounds at high single digits driven by e-signature and PDF workflow expansion",
+        "Non-GAAP operating margins hold above 42% as AI-driven headcount efficiency offsets R&D investment"
       ]
     },
     "bull": {
-      "priceTarget": "$450",
-      "description": "Adobe becomes the trusted AI creative platform for enterprise compliance, with Firefly embedded in marketing workflows globally.",
+      "priceTarget": "$600",
+      "description": "Firefly becomes the trusted enterprise AI creative platform, driving revenue re-acceleration to 15%+ and multiple expansion as AI monetisation exceeds consensus expectations.",
       "points": [
-        "AI credit consumption drives 20%+ revenue re-acceleration beyond consensus",
-        "Document Cloud becomes a leading digital signature and workflow automation platform",
-        "Strategic enterprise AI partnerships lock in Fortune 500 creative workflows"
+        "AI credit consumption drives 15–18% revenue re-acceleration, well above consensus ~11% estimates",
+        "Adobe GenStudio and Experience Cloud become the end-to-end AI marketing stack for Fortune 500 brands",
+        "Strategic enterprise AI partnerships deepen switching costs, restoring P/E multiple toward 28–30x"
       ]
     }
   },
@@ -149,5 +172,5 @@
     },
     "verdict": "Adobe faces the most direct AI threat to AI-vulnerable moats in the portfolio. Its survival thesis rests on Firefly's proprietary training data and the PDF/document system-of-record — both genuinely durable."
   },
-  "lastAnalyzed": "February 2026"
+  "lastAnalyzed": "April 2026"
 }

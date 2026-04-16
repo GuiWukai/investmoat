@@ -1,0 +1,161 @@
+{
+  "slug": "cdns",
+  "ticker": "CDNS",
+  "name": "Cadence Design Systems",
+  "headerStats": [
+    { "label": "Ticker", "value": "CDNS" },
+    { "label": "Market Cap", "value": "~$57B" },
+    { "label": "Price", "value": "$210.00" }
+  ],
+  "chips": [
+    { "label": "Semiconductors | EDA Software", "color": "primary" },
+    { "label": "Duopoly Moat", "color": "success" }
+  ],
+  "recommendation": "Strong Buy",
+  "metrics": [
+    {
+      "title": "EDA Market Share",
+      "value": "~40%",
+      "label": "Duopoly with Synopsys — Gatekeeper to Global Chip Design",
+      "icon": "Cpu",
+      "color": "#6366f1"
+    },
+    {
+      "title": "Gross Margin",
+      "value": "87.5%",
+      "label": "FY2025 — Near-Pure Software Economics",
+      "icon": "Zap",
+      "color": "#17c964"
+    },
+    {
+      "title": "Recurring Revenue",
+      "value": "90%+",
+      "label": "Time-Based Licenses — Predictable and Sticky",
+      "icon": "Shield",
+      "color": "#3b82f6"
+    }
+  ],
+  "moat": {
+    "description": "Cadence co-owns the global EDA duopoly with Synopsys — every advanced semiconductor designed anywhere in the world must run through their software.",
+    "analysisTitle": "The Chip Design Gatekeeper",
+    "analysisSummary": "Cadence's moat is built on **decades of workflow lock-in and the irreplaceable physics of chip design**:",
+    "analysisPoints": [
+      {
+        "title": "EDA Duopoly: The Unavoidable Toll Gate",
+        "text": "Cadence and Synopsys together control ~80% of global EDA software revenue. Every semiconductor — from Apple Silicon to NVIDIA's Blackwell to automotive ASICs — is designed using one of these two platforms. There is no credible third alternative for advanced node design below 7nm, and building one would require 20+ years and billions in R&D to approach parity. Siemens EDA (formerly Mentor) holds a distant third position with less than 15% share."
+      },
+      {
+        "title": "Tool Flow Lock-In: Years of Embedded Workflows",
+        "text": "Switching EDA vendors mid-design is functionally impossible — all design data (schematics, netlists, layout, timing libraries, process design kits) are stored in vendor-proprietary formats. A chip team standardized on Cadence Virtuoso (analog) or Innovus/Genus (digital) would need 12–24 months of retraining and flow rebuilding just to begin migration. The switching cost is measured in years of productivity loss and billions in tape-out risk — no CFO approves it."
+      },
+      {
+        "title": "AI as Accelerant: Cadence.AI Deepens the Moat",
+        "text": "Cadence's AI tools — Cerebrus (digital chip optimization), Verisium (verification automation), and JedAI (system design analysis) — use AI to make Cadence tools more productive, creating a new premium pricing tier. Hyperscaler custom silicon programs (Google TPU, Amazon Trainium, Apple Silicon, Microsoft Maia) are massive net-new EDA demand: each chip designed requires a full suite of Cadence or Synopsys licenses. AI chip complexity at 2nm/1.4nm is expanding EDA spend per design 2–3× vs prior node generations."
+      }
+    ]
+  },
+  "growth": {
+    "score": 78,
+    "description": "FY2025 revenue of ~$4.4B reflects a temporary headwind from U.S. export controls restricting advanced EDA tool sales to China (historically ~16% of revenue). Underlying non-China revenue grew ~14% YoY driven by hyperscaler custom silicon and AI chip complexity. FY2026 revenue is expected to recover toward $4.8–5.0B as the China headwind annualises and Cadence.AI adoption drives ARPU expansion across the subscription base.",
+    "growthAnalysis": {
+      "cagrEstimate": "8–13%",
+      "scoreDerivation": "Base: 75 (secular EDA compounder — semiconductor complexity grows perpetually, ensuring EDA spend growth across all geographies) +5 (hyperscaler custom silicon boom: Google, Amazon, Apple, Meta, Microsoft designing custom AI chips = net-new EDA demand at premium node tiers) -2 (China export controls eliminate ~$400–600M of annual revenue with uncertain recovery timeline beyond 2027) = 78",
+      "drivers": [
+        { "name": "Hyperscaler Custom Silicon", "metric": "Google, Amazon, Apple, MSFT, Meta designing custom AI chips — each requires full EDA suite at premium pricing", "trend": "accelerating" },
+        { "name": "AI Chip Complexity (node shrink)", "metric": "2nm/1.4nm design complexity expanding EDA spend per chip 2–3× vs 7nm generation", "trend": "accelerating" },
+        { "name": "Cadence.AI Premium Tools", "metric": "Cerebrus/Verisium command 20–40% price premium vs legacy tiers; broad adoption at leading-edge fabs beginning", "trend": "accelerating" },
+        { "name": "China Revenue (headwind)", "metric": "~$400–600M at risk from export controls; legacy tool sales partially permitted", "trend": "decelerating" }
+      ],
+      "primaryType": "ARPU expansion",
+      "keyRisk": "U.S. export controls expand to cover remaining Cadence tool categories currently unaffected, eliminating the last ~$300M of China revenue while non-China growth disappoints below 10%, compressing FY2026 revenue below $4.0B and EPS toward $4.00",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 75,
+    "description": "At ~$210 — trading between bear ($145) and base ($250) — Cadence is attractively priced for a business with a near-impregnable moat. The China export control discount represents a temporary headwind being priced as a permanent impairment; the market is underpricing the secular AI chip design tailwind. At ~40x FY2026 forward earnings, the multiple reflects quality but not exuberance given 87%+ gross margins and 90%+ recurring revenue.",
+    "peAnalysis": {
+      "asOf": "April 2026",
+      "rows": [
+        { "label": "Trailing P/E", "value": "~48x" },
+        { "label": "Forward P/E (FY2026E)", "value": "~40x" },
+        { "label": "Price / Sales", "value": "~13x" },
+        { "label": "Price / FCF", "value": "~38x" }
+      ],
+      "summary": "Cadence trades at 40x forward earnings — elevated vs the S&P 500 but fair for a software duopoly with 87%+ gross margins, 90%+ recurring revenue, and structural gatekeeper status in the global semiconductor supply chain. Historically CDNS has traded at 50–60x forward earnings at peak enthusiasm; the current multiple implies the China headwind is permanent, which is unlikely."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$145",
+      "description": "China export controls become permanent and expand to cover remaining tool categories, eliminating ~$600M of revenue while non-China growth disappoints below 8%, triggering multiple compression toward 28× earnings.",
+      "points": [
+        "Export controls expand to cover all advanced EDA tools sold to China, removing $600M+ of annual revenue with no near-term replacement and no China workaround path",
+        "Hyperscaler custom silicon programs slow as AI investment cycles pause in 2027, reducing incremental EDA demand below consensus growth estimates",
+        "Synopsys accelerates AI-native EDA tool development, gaining share in digital design flows and triggering pricing pressure on Cadence's digital segment"
+      ]
+    },
+    "base": {
+      "priceTarget": "$250",
+      "description": "China headwind annualises by mid-2026, non-China revenue grows 12–14% YoY driven by AI chip complexity, and Cadence.AI tools drive incremental ARPU expansion across the premium subscription tier.",
+      "points": [
+        "Non-China revenue grows 12–14% YoY as hyperscaler custom silicon programs deepen EDA commitments at 2nm/1.4nm nodes",
+        "Cadence.AI tools (Cerebrus, Verisium) achieve broad adoption at leading-edge fabs, commanding 25–35% price premium vs legacy tool licensing tiers",
+        "Verification hardware (Palladium Z2, Protium X2) revenue grows 15%+ as AI chip tape-out volumes at TSMC and Samsung increase"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$380",
+      "description": "AI chip complexity drives EDA spend 2–3× per design vs prior node generations, Cadence.AI commands significant premium pricing industry-wide, and China revenue partially recovers via licensed workarounds.",
+      "points": [
+        "2nm/1.4nm design complexity pushes EDA spend per chip to 2–3× prior generation levels, expanding the EDA TAM to $20B+ and driving CDNS revenue above $6B by 2027",
+        "Cadence.AI suite becomes the standard for leading-edge design globally, with 40%+ price premiums elevating non-GAAP operating margins above 40%",
+        "Partial China revenue recovery through allowable legacy tool sales and permitted licensing categories restores $200–300M of annual revenue"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "strong",
+      "note": "Virtuoso (analog), Innovus (digital P&R), Genus (synthesis), and Spectre (simulation) require 2+ years of specialised training to master — EDA engineers are platform-specific, and chip teams cannot afford the productivity loss of retraining."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "Cadence's place-and-route, timing closure, and circuit simulation algorithms encode 35+ years of applied physics and manufacturing process expertise that cannot be replicated or abstracted by any general-purpose AI model."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Not applicable — Cadence does not derive competitive advantage from access to any unique public dataset; its edge comes from proprietary process node models and customer design data accumulated over decades."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "EDA engineers specialising in circuit simulation, physical design, timing closure, and formal verification are among the rarest practitioners in technology; Cadence's 35-year density of this talent is a structural barrier to entry."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "The full Cadence design flow (Virtuoso + Innovus + Genus + Spectre + Palladium + Joules) is deeply co-optimised; chip teams buy the full suite because individual tools are calibrated to each other's data formats, making selective unbundling counterproductive."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "35+ years of process node characterisation data (PDKs), timing libraries, and design rule files from TSMC, Samsung, and Intel Foundry are exclusive to Cadence tools and compound in value with each new technology generation."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "U.S. ITAR/EAR export control status creates regulatory moat for government/defence chip programs legally required to use U.S.-origin EDA tools; not the primary moat but a meaningful supplementary lock-in for classified programmes."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "The global ecosystem of PDK developers, semiconductor IP providers, and foundry process qualification teams builds around Cadence flows; not yet 'strong' as effects are ecosystem-driven rather than self-reinforcing at Metcalfe scale."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Cadence tools are embedded at every step of the chip design transaction lifecycle — schematic, simulation, synthesis, P&R, signoff, tape-out — and removing them mid-design would invalidate months of work and billions in tape-out investment."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "Cadence IS the system of record for chip design: all schematic files, netlists, layout databases (GDSII/OASIS), timing constraints, and simulation results are stored in Cadence-proprietary formats that define the design's legal and engineering state."
+    },
+    "verdict": "Cadence is one of the most AI-resilient businesses in technology — AI drives more chip designs, meaning more EDA software sold, and Cadence.AI tools deepen the platform's indispensability rather than commoditising it. The 35-year accumulation of proprietary process node data and deeply embedded workflow lock-in represents a compounding barrier that no AI model can replicate or bypass."
+  },
+  "lastAnalyzed": "April 2026"
+}
