@@ -2,6 +2,7 @@
   "slug": "pltr",
   "ticker": "PLTR",
   "name": "Palantir Technologies",
+  "lastAnalyzed": "April 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -9,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$270B"
+      "value": "$330B"
     },
     {
       "label": "Current Price",
-      "value": "$120.00"
+      "value": "$139.53"
     }
   ],
   "chips": [
@@ -26,32 +27,32 @@
       "color": "success"
     }
   ],
-  "recommendation": "Accumulate",
+  "recommendation": "Strong Buy",
   "metrics": [
     {
       "title": "US Commercial Rev",
-      "value": "$255M",
-      "label": "54% YoY Growth",
+      "value": "$507M",
+      "label": "137% YoY Q4 2025",
       "icon": "TrendingUp",
       "color": "#7c3aed"
     },
     {
       "title": "Rule of 40",
-      "value": "83",
-      "label": "Best-in-Class SaaS",
+      "value": "127",
+      "label": "Q4 2025 Actual",
       "icon": "Zap",
       "color": "#3b82f6"
     },
     {
       "title": "US Govt Rev",
-      "value": "$320M",
-      "label": "Steady Mission-Critical",
+      "value": "$570M",
+      "label": "66% YoY Q4 2025",
       "icon": "Shield",
       "color": "#10b981"
     }
   ],
   "moat": {
-    "description": "Ontological data integration platform with deep government and enterprise switching costs.",
+    "description": "Ontological data integration platform with deepening government and enterprise lock-in, accelerated by the Sovereign AI OS reference architecture with NVIDIA.",
     "analysisTitle": "The Ontology Moat (AIP)",
     "analysisSummary": "Palantir's moat is built on **Operational Data Depth and AI Integration Complexity**:",
     "analysisPoints": [
@@ -61,48 +62,83 @@
       },
       {
         "title": "AIP (Artificial Intelligence Platform)",
-        "text": "AIP Boot Camps turn prospects into customers within days by demonstrating real ROI on their own data. This compressed sales cycle is creating a commercial moat with extraordinary velocity."
+        "text": "AIP Boot Camps convert prospects to enterprise customers in 5 days using their own data. This compressed sales cycle drove US commercial revenue from $1B to $2.1B+ annually since AIP's April 2023 launch, with FY2026 guidance of $3.1B (+115% YoY)."
       },
       {
         "title": "Government Lock-In",
-        "text": "15+ year relationships with US DoD, CIA, and allied intelligence agencies embed Palantir at the mission-critical layer. Switching costs are measured in years, not months."
+        "text": "15+ year relationships with US DoD, CIA, and allied intelligence agencies embed Palantir at the mission-critical layer. A $1B DHS blanket purchase agreement (2026) across CBP and ICE, plus a potential $10B US Army framework, demonstrate government lock-in measured in decades, not years."
       }
     ]
   },
   "growth": {
-    "score": 88,
-    "description": "US commercial segment growing at 50%+ YoY; AIP creating an entirely new demand curve for enterprise AI."
+    "score": 92,
+    "description": "Q4 2025 revenue grew 70% YoY to $1.41B; FY2026 guided at 61% growth to $7.2B with US commercial accelerating to 115% — AIP is creating an entirely new demand curve for enterprise AI.",
+    "growthAnalysis": {
+      "cagrEstimate": "40–50%",
+      "scoreDerivation": "Base 90 (30%+ CAGR, blended 3–5yr ~45%) + 5 recurring (SaaS, NRR >110%, multi-year govt contracts) + 5 TAM (AIP enterprise + Sovereign AI OS + US govt AI modernization) − 5 govt concentration (US govt ~40% revenue, DOGE risk) − 3 guidance uncertainty = 92",
+      "drivers": [
+        {
+          "name": "US Commercial (AIP)",
+          "metric": "+137% YoY Q4 2025, $507M quarterly; FY2026 guided >$3.14B (+115%)",
+          "trend": "accelerating"
+        },
+        {
+          "name": "US Government",
+          "metric": "+66% YoY Q4 2025, $570M quarterly; $1B DHS BPA + potential $10B Army framework",
+          "trend": "accelerating"
+        },
+        {
+          "name": "International",
+          "metric": "+15% YoY (trailing), returning to growth; NATO AI modernization tailwind",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If DOGE-driven budget cuts reduce US government revenue below a $1.8B FY2026 annualized run-rate, and US commercial growth decelerates below 60% YoY by Q3 2026, the $7.2B revenue guidance is at risk and the premium multiple is unsustainable",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
-    "score": 71,
-    "description": "Trading between bear ($80) and base ($155) — elevated multiple (~70x forward sales) demands continued hyper-growth execution; current price reflects AIP commercial momentum but leaves limited margin of safety."
+    "score": 75,
+    "description": "Trading 20% below the base case ($175) — attractively priced relative to FY2026 hyper-growth guidance of 61%; the premium multiple (~108× forward P/E) demands sustained execution but the trajectory fully justifies inclusion.",
+    "peAnalysis": {
+      "asOf": "April 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~217×", "note": "TTM EPS ~$0.64" },
+        { "label": "Forward P/E (NTM)", "value": "~108×", "note": "consensus NTM EPS ~$1.29" },
+        { "label": "PEG Ratio", "value": "~3.5×", "note": "fwd P/E ÷ 31% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~46×", "note": "$7.2B NTM revenue" },
+        { "label": "Price / FCF", "value": "~146×", "note": "$2.27B FCF (FY2025)" }
+      ],
+      "summary": "At ~108× forward P/E, Palantir trades at over 500% above the software sector median (~17×), reflecting the extraordinary 61% revenue growth guided for FY2026. The PEG of ~3.5× is elevated, requiring sustained hyper-growth execution; the trailing-to-forward P/E compression from 217× to 108× signals a significant earnings ramp (bullish) but leaves minimal margin of safety. Price/FCF of 146× is high even against a 51% FCF margin profile."
+    }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$80",
-      "description": "US commercial growth decelerates sharply, DOGE-driven defense cuts pressure government revenue, and valuation multiple compresses toward SaaS peers.",
+      "priceTarget": "$90",
+      "description": "DOGE-driven defense cuts and commercial growth deceleration trigger valuation multiple compression toward SaaS peers.",
       "points": [
-        "US commercial growth slows below 30% as AIP boot camp pipeline saturates",
-        "DOGE budget cuts or continuing resolution reduce government contract renewals",
-        "Competitor platforms (Microsoft Fabric, Databricks) close the ontology gap at lower cost"
+        "DOGE budget cuts reduce US government revenue below $1.8B annualized, breaking the growth narrative",
+        "US commercial growth decelerates below 40% by Q3 2026 as AIP boot camp pipeline saturates in mid-market",
+        "Multiple compression to ~20× NTM sales as growth normalization begins; stock re-rates toward high-growth SaaS median"
       ]
     },
     "base": {
-      "priceTarget": "$155",
-      "description": "AIP-driven commercial expansion sustains 40%+ US commercial growth while government revenue holds steady.",
+      "priceTarget": "$175",
+      "description": "FY2026 guidance of 61% revenue growth materializes while the Sovereign AI OS partnership with NVIDIA expands the commercial moat.",
       "points": [
-        "US commercial revenue crosses $2B annualized run-rate by end of 2026",
-        "International commercial segment returns to double-digit growth",
-        "Rule of 40 score stays above 70, confirming elite operating efficiency"
+        "FY2026 revenue of $7.2B achieved; US commercial crosses $3.1B annualized (+115% YoY guide)",
+        "Adjusted FCF reaches $4.0B midpoint of guidance (51%+ FCF margin), supporting buybacks",
+        "Rule of 40 score sustains above 100, confirming Palantir as the highest-efficiency AI platform"
       ]
     },
     "bull": {
-      "priceTarget": "$260",
-      "description": "Palantir becomes the de facto AI operating system for Fortune 500 and allied governments globally.",
+      "priceTarget": "$290",
+      "description": "Palantir becomes the de facto AI operating system for Fortune 500 enterprises and allied governments, with AIP commercial accelerating beyond guidance.",
       "points": [
-        "AIP becomes the enterprise standard for AI-to-action workflows, displacing legacy BI tools",
-        "NATO and Five Eyes expansion drives international government revenue above $500M",
-        "Palantir OS abstracts away all underlying AI models, creating durable platform lock-in at 100+ enterprise accounts"
+        "AIP becomes the enterprise AI standard; US commercial accelerates beyond $4B by FY2027, well ahead of the 115% guide",
+        "NATO and Five Eyes Sovereign AI OS deployments drive international government revenue above $1B",
+        "Palantir OS abstracts away underlying AI model providers, creating durable platform lock-in at 200+ enterprise accounts globally"
       ]
     }
   },
@@ -125,7 +161,7 @@
     },
     "bundling": {
       "status": "intact",
-      "note": "Foundry + AIP + Gotham + Apollo creates an integrated stack that is increasingly difficult to unbundle once adopted enterprise-wide."
+      "note": "Foundry + AIP + Gotham + Apollo + NVIDIA Sovereign AI OS creates an integrated stack that is increasingly difficult to unbundle once adopted enterprise-wide."
     },
     "proprietaryData": {
       "status": "strong",
@@ -133,7 +169,7 @@
     },
     "regulatoryLockIn": {
       "status": "strong",
-      "note": "FedRAMP, IL4/IL5, and classified environment certifications create significant regulatory moats that take years for competitors to replicate."
+      "note": "FedRAMP, IL4/IL5, and classified environment certifications combined with a $1B DHS blanket purchase agreement create regulatory moats that take years for competitors to replicate."
     },
     "networkEffects": {
       "status": "weakened",
@@ -147,7 +183,7 @@
       "status": "strong",
       "note": "For defense and intelligence clients, Palantir IS the system of record for operational AI — there is no competing alternative at the same security clearance level."
     },
-    "verdict": "Palantir's moat is highly AI-resilient because AI is the product, not a threat to it. The Ontology platform deepens in value as more AI models are layered on top, making Palantir the connective tissue of enterprise AI operations."
-  },
-  "lastAnalyzed": "February 2026"
+    "aiResilienceScore": 91,
+    "verdict": "Palantir is a structural AI beneficiary — AI is the product, not the threat. The Ontology platform deepens in value as AI models multiply, with Palantir becoming the connective tissue between AI capabilities and real-world operations. The Sovereign AI OS reference architecture with NVIDIA (March 2026) further cements the integrated stack across Foundry, AIP, Apollo, and Blackwell GPUs, making the platform harder to unbundle. Regulatory lock-in via FedRAMP/IL4/IL5 and the $1B DHS blanket agreement make displacement costs prohibitive for government clients across any AI era."
+  }
 }
