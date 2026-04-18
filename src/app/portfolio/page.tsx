@@ -237,6 +237,22 @@ export default function PortfolioPage() {
 
   const maxWeight = Math.max(...portfolio.map((p) => dynamicWeights[p.ticker] ?? 0));
 
+  // Weighted total daily % change across the portfolio
+  const weightedDailyChange: number | null = (() => {
+    if (!allPricesLoaded) return null;
+    let acc = 0;
+    let totalW = 0;
+    portfolio.forEach(p => {
+      const cp = allChangePercents[p.ticker];
+      const w = dynamicWeights[p.ticker] ?? 0;
+      if (cp != null && w > 0) {
+        acc += cp * w;
+        totalW += w;
+      }
+    });
+    return totalW === 0 ? null : acc / totalW;
+  })();
+
   // Weighted bear/base/bull expected returns across the portfolio
   const weightedScenarioReturns: { bear: number | null; base: number | null; bull: number | null } = (() => {
     if (!allPricesLoaded) return { bear: null, base: null, bull: null };
@@ -381,6 +397,22 @@ export default function PortfolioPage() {
             <div>
               <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Selection Threshold</p>
               <p className="text-lg font-bold">Overall Score ≥ {PORTFOLIO_THRESHOLD} / 100</p>
+            </div>
+            <div>
+              <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-2">Today&apos;s Portfolio Change</p>
+              {!allPricesLoaded ? (
+                <Spinner size="sm" color="default" />
+              ) : weightedDailyChange == null ? (
+                <p className="text-2xl font-black text-white/20">—</p>
+              ) : (
+                <div className={`flex items-center gap-2 ${weightedDailyChange >= 0 ? "text-success" : "text-danger"}`}>
+                  {weightedDailyChange >= 0 ? <TrendingUp size={20} /> : <TrendingDown size={20} />}
+                  <span className="text-2xl font-black tabular-nums">
+                    {weightedDailyChange >= 0 ? "+" : ""}{weightedDailyChange.toFixed(2)}%
+                  </span>
+                </div>
+              )}
+              <p className="text-[10px] text-white/30 mt-1">position-weighted · across {portfolio.length} holdings</p>
             </div>
             <div>
               <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-3">Est. 1-Year Return</p>
