@@ -222,5 +222,49 @@
       "note": "Google Workspace is the system of record for email, calendar, documents, and video conferencing for hundreds of millions of businesses globally. While not as deeply embedded in regulated enterprise workflows as Microsoft 365, the switching costs are comparable — years of email history, calendar integrations, and Docs collaboration workflows create meaningful migration friction. AI-assisted Workspace features (Gemini in Gmail, Docs, Sheets) are incrementally deepening the lock-in."
     },
     "verdict": "Alphabet is a net AI beneficiary — the Q4 2025 results prove it conclusively. Search revenue accelerated to +17% YoY as AI Overviews and AI Max expanded the monetizable query universe rather than shrinking it; Google Cloud +48% YoY outperformed Azure for the first time on AI infrastructure demand. Three of the four strongest AI-resilient moats (proprietary data flywheel, network effects, and transaction embedding) are actively strengthening as AI adoption scales; public data access is downgraded to intact as Claude managed agents and agentic AI browse the web directly, bypassing Google's search index as the primary information intermediary. The primary structural risk is the DOJ-mandated loss of exclusive default search agreements, which will gradually erode distribution advantage over 2026-2027 — but at 90%+ search market share, the distribution moat has substantial buffer before competitive erosion becomes existential."
+  },
+  "previousTenMoats": {
+    "snapshotDate": "March 2026",
+    "learnedInterfaces": {
+      "status": "strong",
+      "note": "Google.com, Maps, Gmail, and now AI Mode have become the most habitual digital interfaces in the world. AI Overviews (1.5B MAUs) and AI Mode (75M DAUs) deepen the interface rather than commoditise it."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "AI agents could increasingly bypass traditional Search for transactional queries by going directly to source APIs. Google's Gemini integration and AI Mode keep it in the orchestration loop for most workflows, but the long-term risk of agentic AI reducing browser-based search query volume is real."
+    },
+    "publicDataAccess": {
+      "status": "strong",
+      "note": "Google's web crawl covers 130T+ URLs with real-time indexing, the Knowledge Graph links 500B+ facts, and Google Maps contributes unique geospatial data updated by 1B+ contributors — genuine data assets no competitor can replicate. Controlling public data access at this scale is a durable moat."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "Google DeepMind is the world's leading applied AI research organisation. Gemini 2.5 Pro leads the WebDev Arena reasoning leaderboard (ELO 1420), AlphaFold revolutionised protein science, and Veo 3 is the benchmark for AI video generation."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Google Workspace (3B+ users), Android (3B+ devices), Chrome (65%+ browser share), and YouTube (2.7B MAUs) create an ecosystem where each product reinforces the others. Gemini integration across Workspace, Android, and Chrome is extending bundling into the AI era."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Google's data assets — Search intent across 8.5B+ daily queries, Maps traffic patterns, YouTube watch history (1B+ hours/day), Gmail metadata, and Android sensor data — form the world's largest behavioural dataset."
+    },
+    "regulatoryLockIn": {
+      "status": "weakened",
+      "note": "The September 2025 DOJ remedies ruling banned all exclusive default search agreements — Google's primary distribution mechanism, worth ~$20B/year in payments to Apple and others. The DOJ and 35 states filed an appeal in February 2026 seeking harsher remedies."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "YouTube's creator-viewer flywheel (2.7B MAUs, 500+ hours of video uploaded per minute), Google Maps' user-contributed data (1B+ contributors), and Android's developer ecosystem all compound with scale."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Google Pay, Google Shopping, hotel/flight search, and increasingly AI-powered shopping agents embed Google in the transaction layer of consumer commerce."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "Google Workspace is the system of record for email, calendar, documents, and video conferencing for hundreds of millions of businesses globally. Switching costs are meaningful — years of email history, calendar integrations, and Docs collaboration workflows create migration friction."
+    },
+    "verdict": "Alphabet is a net AI beneficiary — Q4 2025 results prove it. Search revenue accelerated to +17% YoY as AI Overviews and AI Max expanded the monetizable query universe; Google Cloud +48% YoY outperformed Azure for the first time. PublicDataAccess rated strong: Google's 130T+ URL crawl and Knowledge Graph are unrivaled data assets with durable distribution advantage."
   }
 }
