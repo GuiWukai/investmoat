@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$14.3B"
+      "value": "$9.87B"
     },
     {
       "label": "Price",
-      "value": "$27.38"
+      "value": "$18.92"
     }
   ],
   "chips": [
@@ -51,85 +51,97 @@
     }
   ],
   "moat": {
-    "description": "Deep collaborative network effects and high switching costs via embedded design systems and team workflows.",
+    "description": "Deep collaborative network effects and high switching costs via embedded design systems and team workflows — though Claude Design's April 2026 launch directly attacks the zero-to-one phase and erodes the bundling and talent-scarcity moats.",
     "analysisTitle": "The Collaboration Lock-In Moat",
     "analysisSummary": "Figma's moat is built on **Network Effects and Organisational Switching Costs**:",
     "analysisPoints": [
       {
         "title": "Team Network Effects",
-        "text": "Figma's real-time multiplayer canvas means every designer, PM, and developer on a team is embedded in shared component libraries and design systems. Migrating away doesn't just require one person to switch tools — it requires the entire organisation to migrate its institutional knowledge, design systems, and shared assets simultaneously."
+        "text": "Figma's real-time multiplayer canvas means every designer, PM, and developer on a team is embedded in shared component libraries and design systems. Migrating away doesn't just require one person to switch tools — it requires the entire organisation to migrate its institutional knowledge, design systems, and shared assets simultaneously. This network effect remains the strongest part of the moat and is not directly threatened by Claude Design."
       },
       {
         "title": "System of Record for Design",
-        "text": "At thousands of companies, Figma is the canonical source of truth for product design — brand guidelines, UI components, and interaction specs all live there. Dev Mode creates a direct design-to-developer handoff pipeline, making Figma structurally embedded in the software development lifecycle, not just the design team's workflow."
+        "text": "At thousands of companies, Figma is the canonical source of truth for product design — brand guidelines, UI components, and interaction specs all live there. Dev Mode creates a direct design-to-developer handoff pipeline, making Figma structurally embedded in the software development lifecycle. Claude Design exports to HTML and Claude Code directly, creating a competing pathway, but years of accumulated organisational design assets remain in Figma and cannot be migrated cheaply."
       },
       {
-        "title": "Expanding Product Suite",
-        "text": "With eight products (Design, FigJam, Slides, Sites, Make, Draw, Dev Mode, Buzz), Figma is expanding beyond design into presentation, brainstorming, and front-end publishing. Each added product deepens organisational reliance and raises the total switching cost as teams embed Figma into more workflows."
+        "title": "Expanding Product Suite Under Pressure",
+        "text": "With eight products (Design, FigJam, Slides, Sites, Make, Draw, Dev Mode, Buzz), Figma's bundle raised switching costs across teams. However, Claude Design now directly competes with FigJam (brainstorming), Slides (presentations), Sites (web publishing), and Make (prototyping) — offering these capabilities to all paid Claude subscribers from a single text-prompt interface. The bundle's competitive differentiation has narrowed materially since the Claude Design launch on April 17, 2026."
       }
     ]
   },
   "growth": {
     "score": 82,
-    "description": "2025 revenue hit $1.06B at 41% growth with 2026 guidance of ~30% growth; a $33B TAM at 3% penetration and AI product expansion (Figma Make, Sites, Weave) provide multiple durable growth vectors."
+    "description": "Q4 2025 revenue hit $303.8M (+40% YoY), full-year 2025 at $1.06B (+41%), with 2026 guidance of $1.37B (+30%). NDR expanded to 136% from 131% in Q3. AI credits monetisation began March 2026. Key risk: Claude Design from Anthropic (April 2026) targets the zero-to-one design workflow, potentially weighing on new logo acquisition and long-term NDR into 2027.",
+    "growthAnalysis": {
+      "cagrEstimate": "25–30%",
+      "scoreDerivation": "Base 80 (25–30% CAGR; 30%+ guidance tempered by Claude Design overhang) + 7 recurring NRR 136% + 3 AI credits TAM − 3 Claude Design headwind − 5 AI R&D cost drag = 82",
+      "drivers": [
+        { "name": "Core Design Platform", "metric": "+40% YoY Q4 2025, $303.8M quarterly revenue", "trend": "stable" },
+        { "name": "AI Credits (Make, Sites, Weave)", "metric": "Monetisation launched March 2026, incremental ARPU uplift", "trend": "accelerating" },
+        { "name": "Enterprise Expansion", "metric": "NDR 136% Q4 2025 (up from 131% Q3), $10K+ cohort growing", "trend": "stable" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If Claude Design captures >15% of new design-project starts among Claude Enterprise accounts by end of 2026, Figma NDR compresses toward 115% and 2026 revenue growth misses the 30% guidance by 5+ percentage points",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
-    "score": 78,
-    "description": "At $27.38, FIG trades between the bear ($20) and base ($35) scenarios at ~8.5x forward revenue — attractive for a 30%-growth SaaS with 136% NRR, though AI disruption fears justify a discount."
+    "score": 80,
+    "description": "At $18.92, FIG trades 33% below the revised base case ($28) — deeply discounted relative to all scenarios. The stock has fallen 31% since the March 2026 analysis and briefly traded below the prior bear target ($20) on the Claude Design announcement. New scenarios reflect direct competition from Anthropic in the zero-to-one design layer."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$20",
-      "description": "AI design tools (Google Stitch, Canva AI) accelerate commoditisation of core UI design, causing net revenue retention to fall and growth to stall at 10–15%, compressing multiples to 5–6x forward revenue.",
+      "priceTarget": "$13",
+      "description": "Claude Design and Google Stitch together erode Figma's new-logo pipeline and cause net revenue retention to compress from 136% toward 110%, slowing growth to 10–12% by 2027 and collapsing the multiple to 4–5x forward revenue.",
       "points": [
-        "Google Stitch's AI-native canvas captures meaningful market share among new design teams, slowing Figma's new logo acquisition and enterprise upsells",
-        "Net dollar retention compresses from 136% toward 110% as teams substitute AI-generated UI for Figma-designed components",
-        "Operating losses widen as AI R&D spend escalates while top-line growth decelerates, spooking growth investors"
+        "Claude Design captures meaningful share of zero-to-one design workflows among Claude Enterprise subscribers, slowing Figma's new seat acquisition and pressuring upsell motions",
+        "Net dollar retention falls from 136% toward 110% by Q4 2026 as teams adopt Claude Design for FigJam, Slides, and early-stage prototyping without paying Figma",
+        "AI R&D spend escalates while top-line growth decelerates to 10–12%, triggering a multiple compression to 4–5x forward revenue and a re-rating below $6B market cap"
       ]
     },
     "base": {
-      "priceTarget": "$35",
-      "description": "Figma sustains ~30% revenue growth through 2026–27 by monetising AI tools (Make, Weave, Sites), expanding enterprise contracts, and maintaining strong retention — reaching ~$1.75B revenue with improving operating leverage.",
+      "priceTarget": "$28",
+      "description": "Figma holds its enterprise core — network effects, Dev Mode embedding, and years of accumulated design assets prove stickier than feared — growing at ~25% in 2026–27 with NDR sustaining above 120% as AI credit monetisation offsets Claude Design pressure.",
       "points": [
-        "Figma Make and Figma Sites drive AI credit consumption, adding meaningful ARPU uplift to existing enterprise accounts",
-        "Net dollar retention holds above 125% as the expanding product suite offsets isolated churn from AI disruption",
-        "Path to $100M+ operating income in 2026 validates the profitability inflection, attracting quality-growth investors"
+        "NDR holds above 120% as the enterprise design-system lock-in and real-time collaboration features retain power users who find Claude Design insufficient for complex, multi-team workflows",
+        "Figma AI credits (Make, Sites, Weave) generate $80–100M in incremental 2026 revenue, partially offsetting slower seat growth from Claude Design's non-designer penetration",
+        "Path to $100M+ operating income in 2026 validates the profitability inflection, providing a valuation floor at ~8–9x forward revenue on $1.55B 2027E revenue"
       ]
     },
     "bull": {
-      "priceTarget": "$55",
-      "description": "Figma becomes the dominant AI-native design platform — AI tools re-accelerate growth to 35%+, enterprise penetration deepens, and the Dev Mode pipeline embeds Figma as an irreplaceable SDLC layer.",
+      "priceTarget": "$45",
+      "description": "Figma successfully repositions as the AI-native enterprise design OS — its AI tools re-accelerate growth to 30%+, Dev Mode becomes indispensable in the SDLC, and Claude Design proves more complementary than competitive for professional design teams.",
       "points": [
-        "Figma Make and AI design agents drive re-acceleration to 35%+ revenue growth as non-designers adopt the platform at scale",
-        "Enterprise TAM expansion into developer workflow tooling (Dev Mode, Sites) opens a second growth S-curve beyond core design",
-        "Strategic partnership or acquisition interest from a cloud hyperscaler (Microsoft, Salesforce) provides a valuation floor and potential exit premium"
+        "Figma Make and AI design agents drive expansion to 30%+ growth as enterprise teams adopt Figma's AI layer for complex, brand-consistent workflows that Claude Design cannot match",
+        "Dev Mode embedding deepens — Figma becomes the authoritative design-to-code bridge even as Claude Code gains traction, because enterprise teams demand a single system of record",
+        "Strategic partnership with a cloud hyperscaler (Microsoft, Google) validates Figma's enterprise positioning and provides a valuation re-rating to 12–13x forward revenue"
       ]
     }
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "strong",
-      "note": "Designers build deep muscle memory around Figma's Auto Layout, component variants, and constraint system — relearning an equivalent workflow in a competing tool carries a multi-month productivity hit."
+      "status": "intact",
+      "note": "Claude Design (April 2026) abstracts away Figma's UI entirely for non-designers — founders, marketers, and PMs can now generate prototypes and slides via text prompts without learning Auto Layout or component variants. Power designers retain deep Figma muscle memory, but the moat no longer covers the zero-to-one design phase."
     },
     "businessLogic": {
       "status": "intact",
-      "note": "Figma's component/variant architecture, design tokens, and shared library logic encode complex organisational design systems that are expensive to replicate or migrate elsewhere."
+      "note": "Figma's component/variant architecture, design tokens, and shared library logic encode complex organisational design systems that are expensive to replicate or migrate. Claude Design can read these systems from codebases, but cannot yet replace the depth of multi-year enterprise design-system configuration stored in Figma."
     },
     "publicDataAccess": {
       "status": "destroyed",
       "note": "N/A — Figma does not derive competitive advantage from controlling access to public data sources."
     },
     "talentScarcity": {
-      "status": "weakened",
-      "note": "AI tools like Stitch are democratising UI design, lowering the barrier for non-designers to produce professional-quality work and eroding the value of Figma-specific expertise as a hiring differentiator."
+      "status": "destroyed",
+      "note": "Claude Design (April 2026) explicitly targets the 'non-designer' — founders, marketers, and PMs who previously hired Figma-trained designers for zero-to-one work. Anthropic's CPO (Mike Krieger) left Figma's board days before the launch, signalling the competitive intent. The Figma-specific talent moat has effectively collapsed for early-stage design workflows."
     },
     "bundling": {
-      "status": "intact",
-      "note": "Eight bundled products (Design, FigJam, Slides, Sites, Make, Draw, Dev Mode, Buzz) mean customers rarely buy Figma for a single use case — cross-product stickiness raises the effective switching cost meaningfully."
+      "status": "weakened",
+      "note": "Claude Design directly overlaps with FigJam (brainstorming), Slides (presentations), Sites (web publishing), and Make (prototyping) — offering all four capabilities to every paid Claude subscriber via text prompts. While Figma's eight-product bundle retains value for enterprise teams needing deep design-system integration, the competitive differentiation of the bundle has narrowed materially."
     },
     "proprietaryData": {
       "status": "weakened",
-      "note": "Figma holds vast design data from teams but it is not a moat-grade proprietary asset — Google, Canva, and Adobe are training AI on comparable design corpora without Figma's data advantage."
+      "note": "Figma holds vast design data from enterprise teams, but Claude Design can ingest a company's codebase and design files to extract and apply brand-consistent design systems — partially replicating Figma's proprietary-data advantage. Google, Canva, and Anthropic are training AI on comparable design corpora without Figma's data exclusivity."
     },
     "regulatoryLockIn": {
       "status": "destroyed",
@@ -137,17 +149,17 @@
     },
     "networkEffects": {
       "status": "strong",
-      "note": "Shared design systems, component libraries, and real-time collaboration make Figma exponentially more valuable as more teammates join — the organisational network effect creates high collective switching costs."
+      "note": "Shared design systems, component libraries, and real-time multiplayer collaboration make Figma exponentially more valuable as more teammates join. Claude Design routes collaborative editing to Canva rather than Figma, leaving Figma's organisational network effect largely intact for existing enterprise deployments."
     },
     "transactionEmbedding": {
       "status": "intact",
-      "note": "Dev Mode embeds Figma into the developer handoff layer of every product team's daily build cycle, making it a functional dependency in the software development lifecycle, not just a design tool."
+      "note": "Dev Mode embeds Figma in the developer handoff layer of every product team's daily build cycle. Claude Design now offers a competing pathway — designs can be exported directly to Claude Code — but this pipeline is nascent and does not yet displace established enterprise Dev Mode workflows. A material threat to monitor over the next 2–4 quarters."
     },
     "systemOfRecord": {
       "status": "intact",
-      "note": "Figma is the canonical system of record for product design assets, brand components, and interaction specs at thousands of companies — replacing it requires migrating the organisation's entire design history."
+      "note": "Figma remains the canonical system of record for product design assets, brand components, and interaction specs at thousands of companies. New design projects may increasingly start in Claude Design, but years of accumulated organisational design history remain in Figma and cannot be migrated cheaply — preserving the system-of-record moat for existing accounts."
     },
-    "verdict": "Figma's AI moat picture is mixed: network effects and system-of-record status are genuinely durable, but the learned-interface and talent-scarcity moats face direct erosion from AI-native tools like Google Stitch. The bull case depends on whether Figma's own AI products (Make, Sites, Weave) can convert disruption into a growth accelerant rather than a headwind."
+    "verdict": "Figma is now a net loser from AI development. The Claude Design launch on April 17, 2026 — backed by Anthropic's Opus 4.7 model and distributed to all paid Claude subscribers — directly attacks the zero-to-one design workflow that drives Figma's new-seat acquisition. The talent-scarcity moat is effectively destroyed (Anthropic's CPO left Figma's board the day before launch), bundling is weakened by direct overlap across FigJam, Slides, Sites, and Make, and the learned-interface moat has retreated to power-user workflows only. Network effects and system-of-record status remain genuinely durable for existing enterprise accounts — the organisational switching cost of migrating years of design assets is real — but they are defensive moats that protect existing revenue rather than driving new growth. Figma's AI era durability depends entirely on whether Dev Mode embedding and enterprise design-system lock-in prove stickier than the simplicity of Claude Design for non-designers."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "April 2026"
 }
