@@ -207,5 +207,49 @@
       "note": "Cloudflare manages DNS zones and SSL certificates as systems of record for domain identity. With AI Gateway, Cloudflare is emerging as the canonical configuration and observability layer for managed agent deployments — enterprises store rate limits, LLM provider routing, caching rules, and agent call logs in Cloudflare's platform. While not a system of record for financial or HR data, the growing role as the authoritative configuration layer for enterprise AI agent infrastructure upgrades this from weakened to intact."
     },
     "verdict": "Cloudflare is a net beneficiary of AI — the shift from human users to AI agents as the primary internet traffic source creates massive demand for Cloudflare's edge network, security layer, and Workers compute runtime. The proprietary threat-intelligence data flywheel and network effects are the two most AI-resilient moats, both of which strengthen as AI-driven attack vectors increase the value of real-time threat data. The primary AI risk is that hyperscalers bundle security capabilities into their managed AI platforms, reducing the independent security and CDN market. Overall, Cloudflare's architecture — where AI inference, security, and networking converge at the same edge node — positions it as critical infrastructure for the agentic internet."
+  },
+  "previousTenMoats": {
+    "snapshotDate": "March 2026",
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Security engineers trained on Cloudflare's unified dashboard, Workers CLI, and Zero Trust policy engine invest significant institutional knowledge — Teams migrating would need to retrain and rebuild configurations. AI slightly weakens this moat by abstracting infrastructure management."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "Full SASE deployments (Magic WAN + Gateway + DLP + Access + Magic Firewall) are deeply configured per enterprise network topology. The 7-year, $12.7M/yr SASE deal demonstrates that Cloudflare's logic is embedded for a decade, not a quarter."
+    },
+    "publicDataAccess": {
+      "status": "intact",
+      "note": "Cloudflare's 1.1.1.1 resolver processes a significant fraction of global DNS queries, giving it unique internet-wide visibility. AI is slightly weakening this by enabling threat-intel synthesis from other data sources, but the volume advantage remains."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Global BGP peering engineers, DDoS research team, and cryptography experts (TLS 1.3 adoption) represent genuine talent scarcity. AI augments but does not replace this specialisation."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "CDN + DDoS + SASE + Zero Trust + DNS + R2 + Workers + AI Gateway from a single platform. Enterprises expanding from CDN to Zero Trust to Workers create deep multi-product lock-in that AI point-solutions cannot easily replicate."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "215 billion threats blocked daily across 332,000+ customers and 38% of the Fortune 500. This threat intelligence dataset is continuously updated, contractually exclusive, and central to every security product Cloudflare ships."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "FedRAMP authorised, compliant with GDPR/CCPA/NIS-2; R2's zero-egress-fee model positions Cloudflare as the natural winner from EU Data Act compliance requirements. Multi-year government and critical infrastructure contracts create durable switching barriers."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "Classic network effects: each new customer adds threat telemetry that improves security for all others. The developer ecosystem on Workers creates a second flywheel — more apps on Workers → more edge compute demand → better performance for all."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Every HTTP request from a Cloudflare customer transits Cloudflare's network — embedded in the critical path of web traffic. AI Gateway is emerging as an important layer for agent API calls, but adoption is still early and enterprise agent infrastructure is not yet predominantly Cloudflare-routed."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "Cloudflare manages DNS zones and SSL certificates as systems of record for domain identity. AI Gateway is emerging but not yet established as the canonical configuration layer for enterprise AI agent infrastructure."
+    },
+    "verdict": "Cloudflare is a net beneficiary of AI — the shift from human users to AI agents as the primary internet traffic source creates massive demand for Cloudflare's edge network, security layer, and Workers compute runtime. TransactionEmbedding rated intact: AI Gateway is valuable but enterprise agent infrastructure routing through Cloudflare is still in early adoption."
   }
 }

@@ -86,9 +86,9 @@ export const getAverageScore = ([moat, growth, valuation]: number[]) =>
 const MAX_PORTFOLIO  = 25;
 const MIN_AVG_SCORE  = 75;
 
-/** Compute moat score from a stock JSON's tenMoats field. */
+/** Compute moat score from a stock JSON's tenMoats field (with optional momentum). */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const m = (json: { tenMoats: any }) => computeMoatScore(json.tenMoats);
+const m = (json: { tenMoats: any; previousTenMoats?: any }) => computeMoatScore(json.tenMoats, json.previousTenMoats);
 
 /** Read growth score from a stock JSON. */
 const g = (json: { growth: { score: number } }) => json.growth.score;

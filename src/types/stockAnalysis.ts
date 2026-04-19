@@ -40,6 +40,12 @@ export interface TenMoatsData {
   verdict: string;
 }
 
+/** Full tenMoats snapshot from a prior analysis period, used to compute moat momentum. */
+export interface TenMoatsSnapshot extends TenMoatsData {
+  /** The analysis period this snapshot was captured from, e.g. "March 2026". */
+  snapshotDate: string;
+}
+
 export interface GridCard {
   label: string;
   text: string;
@@ -133,5 +139,11 @@ export interface StockAnalysisData {
     bull: Scenario;
   };
   tenMoats: TenMoatsData;
+  /**
+   * Previous tenMoats snapshot used to compute moat momentum.
+   * When present, computeMoatScore() applies a bounded ±5 pt adjustment
+   * to reward improving moats and penalise deteriorating ones.
+   */
+  previousTenMoats?: TenMoatsSnapshot;
   extraSections?: ExtraSection[];
 }

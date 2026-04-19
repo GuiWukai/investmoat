@@ -192,5 +192,49 @@
     },
     "verdict": "Microsoft's AI-vulnerable moats face moderate pressure (interfaces, talent scarcity), but its AI-resilient fortress — system of record, regulatory lock-in, transaction embedding, and the Azure proprietary data flywheel — is actively strengthened by AI. The businessLogic moat is rated intact: Azure AI remains a major enterprise re-platforming destination, but Claude managed agents and external agentic platforms create genuine competition for the enterprise automation layer that Copilot targets."
   },
+  "previousTenMoats": {
+    "snapshotDate": "March 2026",
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "Copilot abstracts traditional Office UI but enterprise muscle-memory, deep training investments, and workflow integration remain entrenched. AI cuts both ways."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "Azure AI Platform positions Microsoft as the enterprise AI re-platforming destination. Copilot is embedded in every enterprise workflow automation layer, and no external managed agent platform has yet demonstrated the ability to displace it at scale."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Bing search advantage commoditised; OpenAI partnership exclusivity is fracturing as OpenAI expands to Google/Oracle. No unique public data edge remains."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "GitHub Copilot and Azure AI raise developer productivity broadly, reducing reliance on rare senior engineering talent as a moat."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Office + Teams + Azure + Security + Copilot bundle deepened by AI integration. 70% of Fortune 500 using Copilot creates emergent bundle value no point-solution replicates."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Azure telemetry, LinkedIn social graph, and GitHub code corpus are unrivaled enterprise data assets. The AI flywheel compounds as more Copilot usage flows back into model training."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "JEDI/DoD contracts, FedRAMP High, HIPAA, and government cloud compliance create irreplaceable switching costs."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "450M+ paid commercial Microsoft 365 seats and the Azure developer ecosystem enhanced by an AI model marketplace of 1,900+ models — more models attract more workloads."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Embedded in every enterprise workflow: procurement, finance, HR, legal, and collaboration — with Copilot now embedded inside those workflows, deepening extraction costs."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "Active Directory controls identity, SharePoint holds documents, Dynamics owns CRM, Teams owns communications. The enterprise OS. Migration remains a multi-year IT programme."
+    },
+    "verdict": "Microsoft's AI-vulnerable moats face moderate pressure (interfaces, talent scarcity), but its AI-resilient fortress — system of record, regulatory lock-in, transaction embedding, and the Azure proprietary data flywheel — is actively strengthened by AI. BusinessLogic rated strong: Azure AI is the dominant enterprise re-platforming destination with no credible external agent layer displacing Copilot at scale."
+  },
   "lastAnalyzed": "April 2026"
 }

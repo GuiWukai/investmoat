@@ -1,4 +1,4 @@
-import type { TenMoatsData } from '@/types/stockAnalysis';
+import type { TenMoatsData, TenMoatsSnapshot } from '@/types/stockAnalysis';
 
 // Status → point scale. Gaps are equal (25 pts each) so a single status
 // step up/down has the same impact regardless of where on the scale it occurs.
@@ -86,7 +86,8 @@ function breadthBonus(applicableCount: number): number {
 }
 
 /**
- * Compute a 0–100 moat score from the ten moats assessment.
+ * Core moat score computation (no momentum). Extracted so it can be called
+ * on both the current and previous snapshot to derive the delta.
  *
  * AI-resilient moats (networkEffects, proprietaryData, systemOfRecord,
  * regulatoryLockIn, transactionEmbedding) carry differentiated base weights
@@ -105,7 +106,7 @@ function breadthBonus(applicableCount: number): number {
  *   4 N/A vulnerable   → 60/(60+vApplicable) resilient / rest vulnerable + 1 pt
  *   all vulnerable N/A → 100% resilient / 0% vulnerable + 0 pts
  */
-export function computeMoatScore(tenMoats: TenMoatsData): number {
+function computeRawMoatScore(tenMoats: TenMoatsData): number {
   const resilient = weightedGroupScore([
     [tenMoats.networkEffects,        RESILIENT_WEIGHTS.networkEffects],
     [tenMoats.proprietaryData,       RESILIENT_WEIGHTS.proprietaryData],
@@ -128,6 +129,27 @@ export function computeMoatScore(tenMoats: TenMoatsData): number {
   const base = resilient.score * rW / total + vulnerable.score * vW / total;
   const applicableCount = resilient.applicableCount + vulnerable.applicableCount;
   return Math.min(100, Math.round(base + breadthBonus(applicableCount)));
+}
+
+/**
+ * Compute a 0–100 moat score with optional momentum adjustment.
+ *
+ * When a previousTenMoats snapshot is supplied, the score is nudged by
+ * ±0–5 points based on the direction and magnitude of change:
+ *   momentum adjustment = clamp(round(delta × 0.3), −5, +5)
+ *
+ * This rewards companies actively strengthening their competitive position
+ * and penalises those showing measurable moat erosion, without double-counting
+ * the underlying status change (which the raw score already captures).
+ * The cap of ±5 keeps momentum secondary to the structural score.
+ */
+export function computeMoatScore(tenMoats: TenMoatsData, previousTenMoats?: TenMoatsSnapshot): number {
+  const current = computeRawMoatScore(tenMoats);
+  if (!previousTenMoats) return current;
+  const previous = computeRawMoatScore(previousTenMoats);
+  const delta = current - previous;
+  const momentumAdj = Math.min(5, Math.max(-5, Math.round(delta * 0.3)));
+  return Math.min(100, Math.max(0, current + momentumAdj));
 }
 
 /**
