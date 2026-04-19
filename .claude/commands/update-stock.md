@@ -112,14 +112,27 @@ Review each moat status if any of the following have occurred since the last upd
 - `weakened` → `destroyed`: requires evidence that the moat source no longer creates switching costs
 - Do not move a status more than one level per update unless a catastrophic event occurred
 
-Update `aiResilienceScore` and `verdict` if 2+ moat statuses have changed.
+**If any moat status is changing, snapshot the old state first:**
+
+Before modifying `tenMoats`, copy the entire current `tenMoats` object into `previousTenMoats` and add a `snapshotDate` field set to the current value of `lastAnalyzed`. Then update `tenMoats` with the new statuses. This enables the momentum scoring system to compute the delta automatically.
+
+```json
+"previousTenMoats": {
+  "snapshotDate": "March 2026",
+  ...all ten moat fields copied from the current tenMoats...
+}
+```
+
+If the stock already has a `previousTenMoats` from a prior update, **replace it** — only one snapshot is stored (the immediately prior state). The snapshot should not accumulate across multiple updates.
+
+Update `verdict` if 2+ moat statuses have changed.
 
 ### 8. Recommendation
 
 Recalculate the composite score after all updates:
 
 ```
-composite = (moatScore + growthScore + valuationScore) / 3
+composite = moatScore × 0.40 + growthScore × 0.35 + valuationScore × 0.25
 ```
 
 Update `recommendation` based on:

@@ -217,7 +217,6 @@ Create `src/data/stocks/{slug}.json` using the schema below. Replace all placeho
     "networkEffects": { "status": "intact", "note": "{Explanation}" },
     "transactionEmbedding": { "status": "intact", "note": "{Explanation}" },
     "systemOfRecord": { "status": "intact", "note": "{Explanation}" },
-    "aiResilienceScore": 0,
     "verdict": "{2-sentence AI moat verdict}"
   }
 }
@@ -259,23 +258,19 @@ Add an entry in the `stocksMap` object:
 
 ### Step 6b — Register in `src/app/stockData.ts` (required for portfolio/coverage lists)
 
-Add the stock to the `allCoverageData` array:
+Add the stock to the `allCoverageData` array. All three scores and price targets are derived automatically from the JSON via the `m()`, `g()`, `v()`, and `t()` helpers — do not hardcode them:
 
 ```typescript
-{
-  name: "{Display Name}",
-  ticker: "{TICKER}",
-  slug: "{slug}",
-  scores: [m({slug}Data), {growthScore}, {valuationScore}],
-  href: "/stocks/{slug}",
-  category: "{Big Tech | Financials | Healthcare | Hard Assets | Industrials | Other}",
-  bearTarget: "{e.g. $300}",
-  baseTarget: "{e.g. $450}",
-  bullTarget: "{e.g. $580}"
-},
+{ name: "{Display Name}", ticker: "{TICKER}", slug: "{slug}", scores: [m({slug}Data), g({slug}Data), v({slug}Data)], href: "/stocks/{slug}", category: "{Big Tech | Financials | Healthcare | Hard Assets | Industrials | Other}", ...t({slug}Data) },
 ```
 
-Place it in the array sorted approximately by composite score (highest first). The portfolio/excluded split is automatic — stocks with average score ≥ 75 and within the top 20 enter the portfolio.
+Also add the import at the top of `stockData.ts` with the other imports:
+
+```typescript
+import {slug}Data from '@/data/stocks/{slug}.json';
+```
+
+Place the entry in the array sorted approximately by composite score (highest first). The portfolio/excluded split is automatic — stocks with weighted composite score ≥ 75 and within the top 25 enter the portfolio.
 
 ---
 
