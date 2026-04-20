@@ -281,7 +281,6 @@ export default function PortfolioPage() {
   sorted.slice(0, remainder).forEach((p) => { floors[p.ticker]++; });
   const dynamicWeights = floors;
 
-  const maxWeight = Math.max(...portfolio.map((p) => dynamicWeights[p.ticker] ?? 0));
 
   const weightedDailyChange: number | null = (() => {
     if (!allPricesLoaded) return null;
@@ -569,19 +568,7 @@ export default function PortfolioPage() {
                 <CategoryBadge category={stock.category} />
               </div>
 
-              {/* Weight bar */}
-              <div className="flex-1 flex items-center gap-3 min-w-0">
-                <div className="flex-1 h-[3px] bg-white/[0.05] rounded-full overflow-hidden max-w-[160px]">
-                  <div
-                    className="h-full rounded-full transition-all duration-700"
-                    style={{
-                      width: `${maxWeight > 0 ? ((dynamicWeights[stock.ticker] ?? 0) / maxWeight) * 100 : 0}%`,
-                      background: stock.color,
-                      opacity: 0.7,
-                    }}
-                  />
-                </div>
-              </div>
+              <div className="flex-1" />
 
               {/* Per-stock bear/base/bull */}
               <div className="hidden lg:flex flex-col items-end shrink-0 w-36">
