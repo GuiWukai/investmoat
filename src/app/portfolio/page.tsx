@@ -531,7 +531,8 @@ export default function PortfolioPage() {
             <h2 className="text-xl font-bold text-white/85">Allocation Breakdown</h2>
           </div>
           <div className="h-px flex-1 bg-white/[0.05]" />
-          <div className="flex items-center gap-1 bg-white/[0.04] border border-white/[0.06] rounded-lg p-1 shrink-0">
+          {/* Toggle only visible on mobile — desktop shows both columns */}
+          <div className="flex lg:hidden items-center gap-1 bg-white/[0.04] border border-white/[0.06] rounded-lg p-1 shrink-0">
             {([['score', 'Score'], ['change', '1D %']] as const).map(([val, label]) => (
               <button
                 key={val}
@@ -605,46 +606,45 @@ export default function PortfolioPage() {
                 }
               </div>
 
-              {/* Score or 1D% */}
-              {scoreColumn === 'score' ? (
-                <DynamicScore
-                  slug={stock.stock.slug}
-                  moat={stock.stock.scores[0]}
-                  growth={stock.stock.scores[1]}
-                  fallbackVal={stock.stock.scores[2]}
-                  bearTarget={stock.stock.bearTarget}
-                  baseTarget={stock.stock.baseTarget}
-                  bullTarget={stock.stock.bullTarget}
-                >
-                  {(avg, loading) => (
-                    <div className="text-right shrink-0 w-12">
-                      <p className="section-label mb-1">Score</p>
-                      {loading
-                        ? <Spinner size="sm" color="default" className="mt-0.5" />
-                        : <div className={`text-sm font-black ${getScoreColor(avg)}`}>{avg}</div>
-                      }
-                    </div>
-                  )}
-                </DynamicScore>
-              ) : (
-                <div className="text-right shrink-0 w-14">
-                  <p className="section-label mb-1">1D</p>
-                  {!allPricesLoaded
-                    ? <Spinner size="sm" color="default" className="mt-0.5" />
-                    : (() => {
-                        const cp = allChangePercents[stock.ticker];
-                        if (cp == null) return <span className="text-xs text-white/25">—</span>;
-                        const pos = cp >= 0;
-                        return (
-                          <div className={`flex items-center justify-end gap-0.5 ${pos ? "text-emerald-400" : "text-rose-400"}`}>
-                            {pos ? <TrendingUp size={10} /> : <TrendingDown size={10} />}
-                            <span className="text-xs font-black tabular-nums">{pos ? "+" : ""}{cp.toFixed(2)}%</span>
-                          </div>
-                        );
-                      })()
-                  }
-                </div>
-              )}
+              {/* Score — always visible on desktop, toggle-gated on mobile */}
+              <DynamicScore
+                slug={stock.stock.slug}
+                moat={stock.stock.scores[0]}
+                growth={stock.stock.scores[1]}
+                fallbackVal={stock.stock.scores[2]}
+                bearTarget={stock.stock.bearTarget}
+                baseTarget={stock.stock.baseTarget}
+                bullTarget={stock.stock.bullTarget}
+              >
+                {(avg, loading) => (
+                  <div className={`text-right shrink-0 w-12 ${scoreColumn !== 'score' ? 'hidden lg:block' : ''}`}>
+                    <p className="section-label mb-1">Score</p>
+                    {loading
+                      ? <Spinner size="sm" color="default" className="mt-0.5" />
+                      : <div className={`text-sm font-black ${getScoreColor(avg)}`}>{avg}</div>
+                    }
+                  </div>
+                )}
+              </DynamicScore>
+
+              {/* 1D% — always visible on desktop, toggle-gated on mobile */}
+              <div className={`text-right shrink-0 w-14 ${scoreColumn !== 'change' ? 'hidden lg:block' : ''}`}>
+                <p className="section-label mb-1">1D</p>
+                {!allPricesLoaded
+                  ? <Spinner size="sm" color="default" className="mt-0.5" />
+                  : (() => {
+                      const cp = allChangePercents[stock.ticker];
+                      if (cp == null) return <span className="text-xs text-white/25">—</span>;
+                      const pos = cp >= 0;
+                      return (
+                        <div className={`flex items-center justify-end gap-0.5 ${pos ? "text-emerald-400" : "text-rose-400"}`}>
+                          {pos ? <TrendingUp size={10} /> : <TrendingDown size={10} />}
+                          <span className="text-xs font-black tabular-nums">{pos ? "+" : ""}{cp.toFixed(2)}%</span>
+                        </div>
+                      );
+                    })()
+                }
+              </div>
 
               {/* Weight */}
               <div className="tabular-nums w-9 text-right shrink-0">
