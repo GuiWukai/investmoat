@@ -5,15 +5,15 @@
 @tailwind utilities;
 
 :root {
-  --background: #05070a;
+  --background: #040608;
   --foreground: #ffffff;
-  
-  --primary: #006fee;
+
+  --primary: #3b82f6;
   --secondary: #6366f1;
   --accent: #10b981;
-  
-  --glass-bg: rgba(15, 23, 42, 0.4);
-  --glass-border: rgba(255, 255, 255, 0.08);
+
+  --glass-bg: rgba(10, 16, 30, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.06);
   --glass-blur: blur(20px);
 }
 
@@ -37,8 +37,16 @@ h1, h2, h3, h4 {
   flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
-  background: radial-gradient(circle at top right, rgba(0, 111, 238, 0.03), transparent),
-              radial-gradient(circle at bottom left, rgba(99, 102, 241, 0.03), transparent);
+  background:
+    radial-gradient(ellipse 80% 40% at 10% 0%, rgba(59, 130, 246, 0.055) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 100%, rgba(99, 102, 241, 0.04) 0%, transparent 60%),
+    var(--background);
+}
+
+.dot-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.032) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-position: 0 0;
 }
 
 @media (min-width: 1024px) {
@@ -112,7 +120,7 @@ h1, h2, h3, h4 {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+  background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(148,163,184,0.7) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -170,17 +178,26 @@ h1, h2, h3, h4 {
 .gradient-text-animated {
   background: linear-gradient(
     90deg,
-    #34d399 0%,
-    #67e8f9 25%,
-    #a78bfa 50%,
-    #67e8f9 75%,
-    #34d399 100%
+    #60a5fa 0%,
+    #a78bfa 30%,
+    #34d399 55%,
+    #a78bfa 75%,
+    #60a5fa 100%
   );
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shimmer 4s linear infinite;
+  animation: shimmer 5s linear infinite;
+}
+
+/* Section label */
+.section-label {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,0.22);
 }
 
 /* HeroUI overrides */
