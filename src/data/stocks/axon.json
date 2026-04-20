@@ -2,7 +2,7 @@
   "slug": "axon",
   "ticker": "AXON",
   "name": "Axon Enterprise",
-  "lastAnalyzed": "March 2026",
+  "lastAnalyzed": "April 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$39.9B"
+      "value": "$32.4B"
     },
     {
       "label": "Current Price",
-      "value": "$496.27"
+      "value": "$402.85"
     }
   ],
   "chips": [
@@ -88,8 +88,8 @@
           "trend": "accelerating"
         },
         {
-          "name": "Platform Expansion (Axon 911 + Commercial)",
-          "metric": "Prepared/Carbyne acquisitions enter $6B+ dispatch market; Axon Body Mini targets retail/healthcare",
+          "name": "Platform Expansion (Axon Vision + 911 + Commercial)",
+          "metric": "Axon Vision (April 2026) adds AI real-time CCTV detection; Axon 911 enters $6B+ dispatch market; Axon Body Mini shipping mid-2026 to retail/healthcare",
           "trend": "accelerating"
         }
       ],
@@ -99,38 +99,38 @@
     }
   },
   "valuation": {
-    "score": 71,
-    "description": "AXON has pulled back 43% from its August 2025 all-time high of $885, currently at ~$496 with a $39.9B market cap. At ~11× NTM P/S on $3.57B 2026 guidance and ~57× forward non-GAAP P/E, valuation is rich but more reasonable than the summer 2025 peak (~22× P/S). The $14.4B contracted backlog — 4× annual revenue — de-risks the growth path materially. The stock sits between the bear ($360) and base ($540) scenarios, offering ~9% upside to fair value with significant optionality from commercial market expansion.",
+    "score": 84,
+    "description": "AXON has pulled back 55% from its August 2025 all-time high of $885, currently at ~$403 with a $32.4B market cap. At ~9× NTM P/S on $3.57B 2026 guidance and ~51× forward non-GAAP P/E, valuation is materially more attractive than at any point in 2025. The $14.4B contracted backlog — 5× annual revenue — de-risks the growth path significantly. The stock now sits close to bear-case territory ($360), offering ~34% upside to fair value and substantial optionality from Axon Week 2026 product launches including Axon Vision, Axon 911, and commercial expansion.",
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "April 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~141×",
-          "note": "GAAP near-breakeven; one-time items distort"
+          "value": "~264×",
+          "note": "GAAP heavily distorted by stock-based comp"
         },
         {
           "label": "Forward P/E (NTM, non-GAAP)",
-          "value": "~57×",
-          "note": "consensus non-GAAP EPS ~$8.75"
+          "value": "~51×",
+          "note": "consensus non-GAAP EPS ~$7.85"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.9×",
+          "value": "~1.7×",
           "note": "fwd P/E ÷ 30% non-GAAP EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~11×",
+          "value": "~9×",
           "note": "$3.57B NTM revenue (2026 guide midpoint)"
         },
         {
           "label": "Price / FCF",
-          "value": "~45×",
-          "note": "~$880M FCF (FY2025 adj. EBITDA ~25.5%)"
+          "value": "~35×",
+          "note": "~$910M NTM adj. EBITDA; TTM FCF depressed by inventory"
         }
       ],
-      "summary": "AXON trades at ~57× forward non-GAAP P/E — expensive relative to the tech sector median (~30–35×) but justifiable given 30%+ CAGR to 2028 with $14.4B contracted visibility and software gross margins exceeding 80%. The PEG of ~1.9× is elevated but below the 2.0× threshold for 'expensive' given the locked-in nature of the revenue backlog. Critically, the 43% drawdown from all-time highs has compressed the P/S from ~22× to ~11×, creating a meaningfully better entry point than existed at any point in 2025."
+      "summary": "AXON trades at ~51× forward non-GAAP P/E — rich relative to the tech sector median (~30–35×) but more compelling than at any point in 2025. The PEG of ~1.7× has compressed below the 2.0× 'expensive' threshold for the first time since 2024, and the NTM P/S of ~9× represents the deepest discount to the platform's intrinsic growth rate since early 2024. The 55% drawdown from all-time highs and the proximity to the $360 bear target create a meaningful asymmetry — $14.4B contracted backlog ensures floor-level revenue visibility while Axon Week 2026 product launches (Axon Vision, Axon 911) expand the upside case."
     }
   },
   "scenarios": {
@@ -184,7 +184,7 @@
     },
     "bundling": {
       "status": "strong",
-      "note": "TASER + Body Camera + Evidence.com + Draft One + Drone + Axon 911 in a single Officer Safety Plan bundle. Agencies adopting the full suite cannot selectively replace one component — the legal evidence chain would break. The bundle is the moat."
+      "note": "TASER + Body Camera + Evidence.com + Draft One + Drone + Axon 911 + Axon Vision (April 2026) in a single Officer Safety Plan bundle. Agencies adopting the full suite cannot selectively replace one component — the legal evidence chain would break. Each Axon Week product launch deepens bundle lock-in further."
     },
     "proprietaryData": {
       "status": "strong",
