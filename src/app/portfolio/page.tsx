@@ -109,6 +109,28 @@ const stockMeta: Record<string, { color: string; category: string; exclusionReas
   SOL:   { color: "#9945ff", category: "Digital Assets" },
   SOFI:  { color: "#6366f1", category: "FinTech" },
   FANUY: { color: "#f59e0b", category: "Robotics" },
+  // Previously missing colors
+  AAPL:  { color: "#a8a8a8", category: "Big Tech" },
+  ANET:  { color: "#ff6900", category: "AI Infrastructure" },
+  APP:   { color: "#e8341c", category: "AdTech" },
+  ARM:   { color: "#0091bd", category: "Semiconductors" },
+  AXON:  { color: "#fbbf24", category: "Industrials" },
+  CCJ:   { color: "#8b5e3c", category: "Hard Assets" },
+  COIN:  { color: "#0052ff", category: "Digital Assets" },
+  DIS:   { color: "#1f3572", category: "Media" },
+  FICO:  { color: "#c0392b", category: "Financial Data" },
+  FIG:   { color: "#f24e1e", category: "Enterprise SaaS" },
+  GEV:   { color: "#0066b1", category: "Utilities" },
+  ICE:   { color: "#1a3a6b", category: "Financials" },
+  LMT:   { color: "#1d4b8f", category: "Industrials" },
+  MSTR:  { color: "#ff8c00", category: "Digital Assets" },
+  NEE:   { color: "#00aeef", category: "Utilities" },
+  NET:   { color: "#f38020", category: "Cybersecurity" },
+  NOW:   { color: "#62d84e", category: "Enterprise SaaS" },
+  PANW:  { color: "#00c1d5", category: "Cybersecurity" },
+  RDDT:  { color: "#ff4500", category: "Big Tech" },
+  SE:    { color: "#ee2537", category: "Eco-System" },
+  TTD:   { color: "#3363ff", category: "AdTech" },
 };
 
 // ─── Category colour helper ───────────────────────────────────────────────────
@@ -138,6 +160,9 @@ const CATEGORY_STYLES: Record<string, string> = {
   "Utilities":           "bg-rose-500/10 text-rose-400 border-rose-500/15",
   "Industrials":         "bg-orange-500/10 text-orange-400 border-orange-500/15",
   "Healthcare":          "bg-teal-500/10 text-teal-400 border-teal-500/15",
+  "AdTech":              "bg-orange-500/10 text-orange-400 border-orange-500/15",
+  "Media":               "bg-violet-500/10 text-violet-400 border-violet-500/15",
+  "Consumer Retail":     "bg-teal-500/10 text-teal-400 border-teal-500/15",
 };
 
 function CategoryBadge({ category }: { category: string }) {
