@@ -1,4 +1,4 @@
-import type { TenMoatsData, TenMoatsSnapshot } from '@/types/stockAnalysis';
+import type { MoatAssessmentData, TenMoatsData, TenMoatsSnapshot } from '@/types/stockAnalysis';
 
 // Status → point scale. Gaps are equal (25 pts each) so a single status
 // step up/down has the same impact regardless of where on the scale it occurs.
@@ -85,9 +85,48 @@ function breadthBonus(applicableCount: number): number {
   return Math.min(4, Math.max(0, applicableCount - 5));
 }
 
+// Status rank for direction comparison: higher = stronger moat.
+const STATUS_RANK: Record<string, number> = { strong: 3, intact: 2, weakened: 1, destroyed: 0 };
+
 /**
- * Core moat score computation (no momentum). Extracted so it can be called
- * on both the current and previous snapshot to derive the delta.
+ * Per-moat momentum adjustment.
+ *
+ * For each applicable moat, compares the current status rank against the previous
+ * snapshot's rank and multiplies the step change (+1 improving, −1 degrading) by
+ * the moat's base weight. Summing across all moats gives a signed score where
+ * growing moats add and shrinking moats deduct — weighted by importance:
+ *
+ *   highest-weight moat (15) improving one step  → +1 pt  (15 / 15 = 1.0)
+ *   lowest-weight moat  ( 3) improving one step  →  0 pt  ( 3 / 15 = 0.2, rounds to 0)
+ *   all ten moats improving one step (sum = 100)  → capped +5 pts
+ *
+ * N/A moats are excluded from both the current and previous direction.
+ * Result is clamped to [−5, +5] to keep momentum secondary to the structural score.
+ */
+function moatMomentumAdjustment(current: TenMoatsData, previous: TenMoatsData): number {
+  const moats: Array<[MoatAssessmentData, MoatAssessmentData, number]> = [
+    [current.networkEffects,       previous.networkEffects,       RESILIENT_WEIGHTS.networkEffects],
+    [current.proprietaryData,      previous.proprietaryData,      RESILIENT_WEIGHTS.proprietaryData],
+    [current.systemOfRecord,       previous.systemOfRecord,       RESILIENT_WEIGHTS.systemOfRecord],
+    [current.regulatoryLockIn,     previous.regulatoryLockIn,     RESILIENT_WEIGHTS.regulatoryLockIn],
+    [current.transactionEmbedding, previous.transactionEmbedding, RESILIENT_WEIGHTS.transactionEmbedding],
+    [current.businessLogic,        previous.businessLogic,        VULNERABLE_WEIGHTS.businessLogic],
+    [current.bundling,             previous.bundling,             VULNERABLE_WEIGHTS.bundling],
+    [current.learnedInterfaces,    previous.learnedInterfaces,    VULNERABLE_WEIGHTS.learnedInterfaces],
+    [current.talentScarcity,       previous.talentScarcity,       VULNERABLE_WEIGHTS.talentScarcity],
+    [current.publicDataAccess,     previous.publicDataAccess,     VULNERABLE_WEIGHTS.publicDataAccess],
+  ];
+  let weightedSteps = 0;
+  for (const [curr, prev, weight] of moats) {
+    if (moatPoints(curr) === null || moatPoints(prev) === null) continue;
+    const steps = (STATUS_RANK[curr.status] ?? 0) - (STATUS_RANK[prev.status] ?? 0);
+    weightedSteps += steps * weight;
+  }
+  return Math.min(5, Math.max(-5, Math.round(weightedSteps / 15)));
+}
+
+/**
+ * Core moat score computation (no momentum).
  *
  * AI-resilient moats (networkEffects, proprietaryData, systemOfRecord,
  * regulatoryLockIn, transactionEmbedding) carry differentiated base weights
@@ -132,23 +171,18 @@ function computeRawMoatScore(tenMoats: TenMoatsData): number {
 }
 
 /**
- * Compute a 0–100 moat score with optional momentum adjustment.
+ * Compute a 0–100 moat score with optional per-moat momentum adjustment.
  *
- * When a previousTenMoats snapshot is supplied, the score is nudged by
- * ±0–5 points based on the direction and magnitude of change:
- *   momentum adjustment = clamp(round(delta × 0.3), −5, +5)
- *
- * This rewards companies actively strengthening their competitive position
- * and penalises those showing measurable moat erosion, without double-counting
- * the underlying status change (which the raw score already captures).
- * The cap of ±5 keeps momentum secondary to the structural score.
+ * When a previousTenMoats snapshot is supplied, each moat's status direction is
+ * compared individually against the snapshot. Growing moats add points; shrinking
+ * moats deduct points — each weighted by that moat's base weight and capped at ±5.
+ * This keeps momentum secondary to the structural score while making high-weight
+ * moats moving in the right direction visible in the final number.
  */
 export function computeMoatScore(tenMoats: TenMoatsData, previousTenMoats?: TenMoatsSnapshot): number {
   const current = computeRawMoatScore(tenMoats);
   if (!previousTenMoats) return current;
-  const previous = computeRawMoatScore(previousTenMoats);
-  const delta = current - previous;
-  const momentumAdj = Math.min(5, Math.max(-5, Math.round(delta * 0.3)));
+  const momentumAdj = moatMomentumAdjustment(tenMoats, previousTenMoats);
   return Math.min(100, Math.max(0, current + momentumAdj));
 }
 
