@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$885B"
+      "value": "~$830B"
     },
     {
       "label": "Price",
-      "value": "~$937"
+      "value": "~$924"
     }
   ],
   "chips": [
@@ -36,16 +36,16 @@
       "color": "#e8294b"
     },
     {
-      "title": "Orforglipron FDA",
-      "value": "Apr 10",
-      "label": "Oral GLP-1 approval deadline — potentially March 28",
+      "title": "Foundayo Approved",
+      "value": "Apr 1",
+      "label": "FDA-approved oral GLP-1 pill — 1,390 debut-week Rx; $1.5–2.8B 2026 analyst est.",
       "icon": "Award",
       "color": "#7c3aed"
     },
     {
-      "title": "Retatrutide Ph.2",
+      "title": "Retatrutide Ph.3",
       "value": "28.7%",
-      "label": "Mean body weight loss at high dose — best-in-class pipeline",
+      "label": "TRIUMPH-4 Phase 3 confirmed — 71.2 lbs avg loss; 7 more Ph.3 readouts in 2026",
       "icon": "Zap",
       "color": "#059669"
     }
@@ -71,10 +71,10 @@
   },
   "growth": {
     "score": 90,
-    "description": "Q4 2025: $19.29B revenue (+42.6% YoY, beat) — Mounjaro $7.41B (+110%), Zepbound $4.26B (+123%). FY2026 guidance of $80–83B implies ~45% revenue growth on a $55B base. Orforglipron oral GLP-1 FDA decision by April 10 (potentially March 28), and retatrutide Phase 2 achieved 28.7% mean weight loss at high dose. The Hims & Hers / Novo Nordisk distribution deal (official launch today) intensifies oral competition in the telehealth channel but does not change tirzepatide's clinical superiority or LLY's patent wall into the late 2030s.",
+    "description": "FY2025: $65.18B revenue (+44.7% YoY). Q4 2025: $19.29B (+42.6% YoY) — Mounjaro $7.41B (+110%), Zepbound $4.26B (+123%). FY2026 guidance $80–83B (~25% YoY). Foundayo (orforglipron oral GLP-1) FDA-approved April 1, 2026 — 1,390 debut-week Rx (vs Wegovy pill 3,071 in first 4 days); analyst 2026 revenue est. $1.5–2.8B, priced at $299/mo self-pay or $25/mo with commercial insurance. Retatrutide TRIUMPH-4 Phase 3 confirmed 28.7% body weight loss / 71.2 lbs avg at high dose — seven additional Ph.3 readouts expected in 2026; GlobalData projects $15.6B in 2031 peak sales. Q1 2026 earnings April 30 (est. $17.6B revenue, EPS $7.21).",
     "growthAnalysis": {
       "cagrEstimate": "35–45%",
-      "scoreDerivation": "Base 90 (30%+ CAGR) + 5 oral GLP-1 TAM expansion (orforglipron FDA imminent, opens injection-resistant patients) + 5 retatrutide next-gen catalyst (28.7% Phase 2 weight loss) − 5 oral competition headwind (Novo Wegovy pill via Hims, Structure Therapeutics aleniglipron Phase 2 data) − 5 pricing risk (Medicare Part D negotiation risk) = 90",
+      "scoreDerivation": "Base 90 (30%+ CAGR) + 5 oral GLP-1 TAM expansion (Foundayo FDA-approved April 1, opens injection-resistant patients) + 5 retatrutide next-gen catalyst (TRIUMPH-4 Phase 3 confirmed 28.7%/71.2 lbs; 7 more 2026 readouts) − 5 oral competition headwind (Wegovy pill led debut-week scripts 3,071 vs Foundayo 1,390; Structure Therapeutics aleniglipron Phase 2) − 5 pricing risk (Medicare Part D negotiation risk) = 90",
       "drivers": [
         {
           "name": "Mounjaro (diabetes)",
@@ -87,21 +87,21 @@
           "trend": "accelerating"
         },
         {
-          "name": "Orforglipron + Retatrutide",
-          "metric": "FDA decision Apr 10; retatrutide 28.7% Phase 2 weight loss, Phase 3 ongoing",
+          "name": "Foundayo (oral GLP-1) + Retatrutide",
+          "metric": "Foundayo FDA-approved Apr 1, 2026 — 1,390 debut-week Rx; retatrutide TRIUMPH-4 Ph.3 confirmed 28.7%/71.2 lbs",
           "trend": "accelerating"
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If Hims & Hers / Novo distribution partnership shifts 15%+ of new GLP-1 prescriptions to oral semaglutide before orforglipron approval, AND Structure Therapeutics' aleniglipron Phase 3 data outperforms orforglipron in 2027, LLY's oral market share erodes below 30% and consensus EPS estimates for 2028 decline 15%+",
+      "keyRisk": "If Novo Nordisk's oral Wegovy pill sustains a >2:1 prescription lead over Foundayo through Q3 2026 AND Structure Therapeutics' aleniglipron Phase 3 outperforms orforglipron in 2027, LLY's oral GLP-1 market share falls below 25% and analyst 2028 EPS estimates decline 15%+",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 77,
-    "description": "At ~$937 — down 13% YTD and 17% from the 52-week high of $1,132 — LLY trades at a widening discount to the $1,200 base case. The pullback reflects oral competition fears (Hims/Novo deal) and orforglipron FDA uncertainty, not fundamental impairment of a company guiding $80–83B revenue for 2026 (~45% growth). Analyst consensus sits at $1,217.",
+    "score": 78,
+    "description": "At ~$924 — 23% below the $1,200 base case and 19% off the 52-week high of $1,134 — LLY continues to trade at a discount despite clearing the biggest near-term catalyst risk: Foundayo (orforglipron) FDA-approved April 1, 2026. The persistent discount reflects early prescription competition from the Wegovy pill and investor caution ahead of the April 30 Q1 2026 earnings call. Analyst consensus target is ~$1,218, implying 32% upside from current levels.",
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "April 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
@@ -129,35 +129,35 @@
           "note": "~$25B FCF (NTM est.)"
         }
       ],
-      "summary": "At 33× forward P/E with a PEG of 0.7×, LLY is significantly cheaper than its pharma peer average (~45×) and even cheaper than the broad healthcare sector (~28× on much lower growth). A PEG under 1.0 on 45% EPS growth is rare in large-cap pharma and typically signals a mispriced growth story — the oral competition fears driving the 13% YTD decline are creating an attractive entry. The wide gap between the 49× trailing and 33× forward P/E reflects accelerating EPS, not compression."
+      "summary": "At ~33× forward GAAP P/E with a PEG of ~0.7×, LLY remains significantly cheaper than its large-cap pharma peer average (~45×), despite Foundayo's FDA approval on April 1 adding a third major commercial product to the portfolio. The sub-1.0 PEG on ~45% EPS growth is characteristic of a mispriced compounder — the market is paying a Wegovy-competition discount on a franchise that now holds both the leading injectable (Zepbound/Mounjaro) and an approved oral (Foundayo). The 49× trailing versus 33× forward P/E gap confirms accelerating earnings, not multiple expansion."
     }
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$650",
-      "description": "Oral GLP-1 competition accelerates via the Hims/Novo telehealth channel while pricing reform erodes net revenue, and a pipeline setback triggers multiple compression.",
+      "description": "Foundayo adoption disappoints as Wegovy pill leads on scripts, pricing pressure erodes net revenue, and a retatrutide late Phase 3 setback removes the next-gen premium.",
       "points": [
-        "Hims & Hers / Novo Nordisk distribution partnership captures 20%+ of new GLP-1 telehealth prescriptions for oral Wegovy before orforglipron launches; Structure Therapeutics' aleniglipron Phase 3 outperforms orforglipron, fragmenting LLY's oral market share below 25%",
-        "U.S. Medicare/Medicaid Part D GLP-1 coverage price negotiations cut net pricing by 25%+ before 2028, compressing revenue growth below 15% and pushing FY2027 revenue to ~$90B vs. consensus $110B+",
-        "Retatrutide Phase 3 trial fails to replicate the 28.7% Phase 2 weight-loss result — settling at ~20% mean loss — eliminating the 'best-in-class next-gen' premium and leaving LLY without a differentiated asset beyond Zepbound"
+        "Novo Nordisk's oral Wegovy pill sustains a >2:1 prescription lead over Foundayo through 2026, capturing 30%+ of new oral GLP-1 prescriptions; Structure Therapeutics' aleniglipron Phase 3 outperforms Foundayo in 2027, fragmenting LLY's oral market share below 20%",
+        "U.S. Medicare/Medicaid Part D GLP-1 net pricing negotiations cut realised prices by 25%+ before 2028, compressing revenue growth below 15% and pushing FY2027 revenue to ~$90B vs. consensus $110B+",
+        "Retatrutide late Phase 3 readouts fail to maintain the TRIUMPH-4 superiority across all indications — settling at ~20% mean weight loss — eliminating the 'best-in-class next-gen' premium and leaving LLY without a differentiated asset beyond Zepbound"
       ]
     },
     "base": {
       "priceTarget": "$1,200",
-      "description": "FDA approves orforglipron by April 10, LLY negotiates comparable telehealth distribution to offset the Hims/Novo deal, and retatrutide Phase 3 confirms superiority — restoring the premium multiple.",
+      "description": "Foundayo gains adoption momentum closing the Wegovy script gap by Q3 2026, retatrutide's remaining Phase 3 readouts confirm superiority, and FY2026 revenue closes at the high end of guidance.",
       "points": [
-        "FDA approves orforglipron oral GLP-1 pill by April 10, 2026; LLY negotiates telehealth channel deals with Hims or rival platforms within 60 days, capturing 30%+ of the oral GLP-1 prescribing market",
-        "Retatrutide Phase 3 confirms 22%+ mean body weight loss (vs. Wegovy ~15%), FDA approval by late 2026 — establishing Lilly as the only company with best-in-class oral and injectable next-gen GLP-1s",
-        "Donanemab (Alzheimer's) reaches $2B+ annual revenue by 2027, and FY2026 revenue closes at the high end of the $80–83B guidance range, with EPS of $28–30"
+        "Foundayo narrows the Wegovy pill prescription gap to <1.5:1 by Q3 2026 as patients and prescribers favour its no food/water restriction dosing; LLY secures telehealth distribution with Hims or a rival platform, capturing 25%+ of new oral GLP-1 Rx",
+        "Retatrutide's remaining 2026 Phase 3 readouts maintain 22%+ mean body weight loss across indications, with FDA submission by end of 2026 — establishing LLY as the only company with best-in-class oral and injectable next-gen GLP-1s",
+        "Kisunla (donanemab) exceeds $500M FY2026 revenue on growing Alzheimer's formulary access, and FY2026 revenue closes at the high end of $80–83B guidance with non-GAAP EPS ~$35"
       ]
     },
     "bull": {
       "priceTarget": "$1,750",
-      "description": "Retatrutide becomes best-in-class weight-loss drug with 25%+ body weight reduction, oral GLP-1 captures mainstream adoption, and Alzheimer's franchise reaches $5B+.",
+      "description": "Retatrutide becomes the best-in-class weight-loss drug confirmed by Phase 3 data, Foundayo accelerates to mainstream oral adoption, and Kisunla reaches blockbuster scale.",
       "points": [
-        "Retatrutide achieves 25%+ mean body weight loss in Phase 3, approved by FDA in 2027 and generating $15B+ in annual revenue by 2029",
-        "Orforglipron oral pill penetrates 30% of obesity drug market within 3 years of launch, doubling the addressable patient pool vs. injection-only therapies",
-        "Donanemab Alzheimer's franchise and oncology pipeline (e.g., LOXO-305) collectively reach $8B+ revenue by 2028, reducing GLP-1 concentration risk below 50%"
+        "Retatrutide Phase 3 breadth (TRIUMPH-4 confirmed 28.7%/71.2 lbs avg) across all 2026 readouts leads to FDA approval by mid-2027; GlobalData $15.6B 2031 sales projection realised, generating >$10B revenue by 2029",
+        "Foundayo penetrates 30%+ of the oral obesity market within 3 years of launch, as no food/water restriction advantage drives patient preference over Wegovy pill — doubling the addressable patient pool vs. injection-only therapies",
+        "Kisunla (donanemab) reaches $3B+ annual revenue by 2028 as Alzheimer's diagnosis rates improve and reimbursement expands globally, reducing GLP-1 revenue concentration below 60%"
       ]
     }
   },
@@ -188,11 +188,11 @@
     },
     "regulatoryLockIn": {
       "status": "strong",
-      "note": "FDA approvals, EU and global regulatory clearances, GMP manufacturing facility certifications, and payer formulary placements create compounding switching barriers that take years to displace."
+      "note": "Mounjaro, Zepbound, and now Foundayo (FDA-approved April 1, 2026) each carry independent FDA approvals, EU/global regulatory clearances, GMP manufacturing certifications, and payer formulary placements — three interlocking regulatory moats that compound switching barriers across both injectable and oral GLP-1 channels."
     },
     "networkEffects": {
       "status": "intact",
-      "note": "Growing physician experience with tirzepatide creates a prescribing flywheel — more patient success stories build physician confidence and peer recommendations, reinforcing Lilly's market share without additional marketing spend."
+      "note": "Growing physician experience with tirzepatide creates a prescribing flywheel — more patient success stories build prescriber confidence and peer recommendations. Foundayo's April 2026 launch extends this network into the oral GLP-1 segment, deepening the flywheel across both injectable and pill modalities."
     },
     "transactionEmbedding": {
       "status": "intact",
@@ -204,5 +204,5 @@
     },
     "verdict": "Lilly's core moat — patent-protected biologics with regulatory approval — is structurally immune to AI disruption, and AI drug discovery tools actually accelerate Lilly's pipeline advantage by compressing early-stage discovery timelines. The company is a net beneficiary of AI adoption, using it to identify novel targets and optimize clinical trials faster than underfunded competitors."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "April 2026"
 }
