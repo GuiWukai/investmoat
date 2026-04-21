@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { ChevronRight, BarChart3, Search, X } from "lucide-react";
-import { Chip, Spinner } from "@heroui/react";
+import { ChevronRight, Search, X, SlidersHorizontal } from "lucide-react";
+import { Spinner } from "@heroui/react";
 import { allCoverageData, getAverageScore } from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
 
@@ -18,20 +18,41 @@ const TICKER_COLORS: Record<string, string> = {
 };
 
 const CATEGORIES = [
-  { label: "Large Cap Tech",       key: "Big Tech"     },
-  { label: "Financials & SaaS",    key: "Financials"   },
-  { label: "Hard Assets & Crypto", key: "Hard Assets"  },
-  { label: "Healthcare",           key: "Healthcare"   },
+  { label: "All",                  key: "all"        },
+  { label: "Large Cap Tech",       key: "Big Tech"   },
+  { label: "Financials & SaaS",    key: "Financials" },
+  { label: "Hard Assets",          key: "Hard Assets"},
+  { label: "Healthcare",           key: "Healthcare" },
+  { label: "Industrials",          key: "Industrials"},
+  { label: "Other",                key: "Other"      },
 ];
 
+function scoreColor(score: number) {
+  if (score >= 90) return "#10b981";
+  if (score >= 80) return "#3b82f6";
+  if (score >= 70) return "#f59e0b";
+  return "#ef4444";
+}
 
-function DynamicOverall({
+function ScorePill({ value }: { value: number }) {
+  const color = scoreColor(value);
+  return (
+    <span
+      className="inline-flex items-center justify-center w-9 h-7 rounded-lg text-xs font-black tabular-nums"
+      style={{ color, background: `${color}18`, border: `1px solid ${color}30` }}
+    >
+      {value}
+    </span>
+  );
+}
+
+function DynamicScore({
   slug, moat, growth, fallbackVal, bearTarget, baseTarget, bullTarget,
 }: {
   slug: string; moat: number; growth: number; fallbackVal: number;
   bearTarget: string; baseTarget: string; bullTarget: string;
 }) {
-  const [avg, setAvg] = useState(() => Math.round(getAverageScore([moat, growth, fallbackVal])));
+  const [score, setScore] = useState(() => Math.round(getAverageScore([moat, growth, fallbackVal])));
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -47,7 +68,7 @@ function DynamicOverall({
         if (cancelled) return;
         if (d?.price != null) {
           const liveVal = computeValuationScore(d.price, bear, base, bull);
-          setAvg(Math.round(getAverageScore([moat, growth, liveVal])));
+          setScore(Math.round(getAverageScore([moat, growth, liveVal])));
         }
         setLoading(false);
       })
@@ -55,38 +76,69 @@ function DynamicOverall({
     return () => { cancelled = true; };
   }, [slug, moat, growth, bearTarget, baseTarget, bullTarget]);
 
-  if (loading) return <Spinner size="sm" color="default" />;
+  if (loading) return <Spinner size="sm" color="default" classNames={{ wrapper: "w-7 h-7" }} />;
+  return <ScorePill value={score} />;
+}
 
-  const color = avg >= 90 ? "success" : avg >= 80 ? "primary" : avg >= 70 ? "warning" : "danger";
+function SubScore({ label, value }: { label: string; value: number }) {
   return (
-    <Chip size="sm" color={color} variant="flat" classNames={{ content: "font-black text-sm tabular-nums" }}>
-      {avg}
-    </Chip>
+    <div className="flex flex-col items-center gap-0.5 min-w-[40px]">
+      <span className="text-[9px] font-bold uppercase tracking-widest text-white/25">{label}</span>
+      <span className="text-sm font-bold tabular-nums" style={{ color: scoreColor(value) }}>{value}</span>
+    </div>
   );
 }
 
-
-function StockRow({ stock, delay }: { stock: typeof allCoverageData[0]; delay?: number }) {
+function StockRow({ stock, rank, delay }: { stock: typeof allCoverageData[0]; rank?: number; delay?: number }) {
   const router = useRouter();
+  const accentColor = TICKER_COLORS[stock.ticker] ?? '#6b7280';
+
   return (
     <button
       onClick={() => router.push(stock.href)}
-      className="w-full flex items-center gap-4 px-5 py-4 bg-[#05070a] hover:bg-white/[0.06] transition-colors group text-left animate-slide-in-left stagger-fill-both"
+      className="group w-full flex items-center gap-3 sm:gap-4 px-4 sm:px-5 py-3.5 hover:bg-white/[0.04] transition-colors text-left"
       style={delay !== undefined ? { animationDelay: `${delay}s` } : undefined}
     >
-      <div
-        className="w-1 self-stretch rounded-full shrink-0"
-        style={{ background: TICKER_COLORS[stock.ticker] ?? '#6b7280' }}
-      />
+      {/* Rank */}
+      {rank !== undefined && (
+        <span className="hidden sm:block text-[11px] font-bold text-white/15 tabular-nums w-5 shrink-0 text-right">
+          {rank}
+        </span>
+      )}
 
-      <div className="min-w-[150px]">
-        <div className="font-bold text-sm text-white">{stock.name}</div>
-        <div className="text-[10px] text-white/30 tracking-widest font-black uppercase">{stock.ticker}</div>
+      {/* Ticker badge */}
+      <div
+        className="shrink-0 flex items-center justify-center h-8 px-2 rounded-lg text-[11px] font-black tracking-wider"
+        style={{
+          background: `${accentColor}18`,
+          border: `1px solid ${accentColor}30`,
+          color: accentColor,
+          minWidth: '44px',
+        }}
+      >
+        {stock.ticker}
       </div>
 
-      {/* Composite score */}
-      <div className="ml-auto flex items-center gap-4 shrink-0">
-        <DynamicOverall
+      {/* Name */}
+      <div className="flex-1 min-w-0">
+        <div className="font-semibold text-sm text-white/90 group-hover:text-white transition-colors truncate leading-tight">
+          {stock.name}
+        </div>
+      </div>
+
+      {/* Sub-scores — desktop only */}
+      <div className="hidden md:flex items-center gap-5 shrink-0">
+        <SubScore label="Moat" value={Math.round(stock.scores[0])} />
+        <SubScore label="Growth" value={Math.round(stock.scores[1])} />
+        <SubScore label="Val" value={Math.round(stock.scores[2])} />
+      </div>
+
+      {/* Divider */}
+      <div className="hidden md:block w-px h-6 bg-white/[0.07] shrink-0" />
+
+      {/* Overall score */}
+      <div className="shrink-0">
+        <DynamicScore
           slug={stock.slug}
           moat={stock.scores[0]}
           growth={stock.scores[1]}
@@ -95,105 +147,174 @@ function StockRow({ stock, delay }: { stock: typeof allCoverageData[0]; delay?: 
           baseTarget={stock.baseTarget}
           bullTarget={stock.bullTarget}
         />
-        <ChevronRight
-          size={16}
-          className="text-white/20 group-hover:text-white/60 transition-colors"
-        />
       </div>
+
+      <ChevronRight
+        size={14}
+        className="shrink-0 text-white/15 group-hover:text-white/50 transition-colors"
+      />
+    </button>
+  );
+}
+
+function CategoryPill({
+  label, count, active, onClick,
+}: { label: string; count?: number; active: boolean; onClick: () => void }) {
+  return (
+    <button
+      onClick={onClick}
+      className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
+        active
+          ? 'bg-blue-500/20 border border-blue-500/40 text-blue-300'
+          : 'bg-white/[0.04] border border-white/10 text-white/40 hover:text-white/70 hover:bg-white/[0.07]'
+      }`}
+    >
+      {label}
+      {count !== undefined && (
+        <span className={`text-[10px] font-bold ${active ? 'text-blue-400/70' : 'text-white/20'}`}>
+          {count}
+        </span>
+      )}
     </button>
   );
 }
 
 export default function StocksPage() {
   const [query, setQuery] = useState("");
+  const [activeCategory, setActiveCategory] = useState("all");
   const inputRef = useRef<HTMLInputElement>(null);
 
   const trimmed = query.trim().toLowerCase();
-  const filteredStocks = trimmed
-    ? allCoverageData
-        .filter(s => s.name.toLowerCase().includes(trimmed) || s.ticker.toLowerCase().includes(trimmed))
-        .sort((a, b) => getAverageScore(b.scores) - getAverageScore(a.scores))
-    : null;
+
+  const allSorted = [...allCoverageData].sort(
+    (a, b) => getAverageScore(b.scores) - getAverageScore(a.scores)
+  );
+
+  const filtered = allSorted.filter(s => {
+    const matchesCategory = activeCategory === "all" || s.category === activeCategory;
+    const matchesQuery = !trimmed ||
+      s.name.toLowerCase().includes(trimmed) ||
+      s.ticker.toLowerCase().includes(trimmed);
+    return matchesCategory && matchesQuery;
+  });
+
+  const categoryCount = (key: string) =>
+    key === "all" ? allCoverageData.length : allCoverageData.filter(s => s.category === key).length;
+
+  const visibleCategories = CATEGORIES.filter(c => categoryCount(c.key) > 0);
+
+  const avgScore = Math.round(
+    allCoverageData.reduce((sum, s) => sum + getAverageScore(s.scores), 0) / allCoverageData.length
+  );
 
   return (
-    <div className="animate-fade-in space-y-12">
-      <header className="mb-8 md:mb-12 animate-fade-up stagger-fill-both" style={{ animationDelay: '0s' }}>
-        <h1 className="text-3xl md:text-5xl font-extrabold gradient-text-animated mb-4">
+    <div className="animate-fade-in space-y-8">
+      {/* Header */}
+      <header className="animate-fade-up stagger-fill-both" style={{ animationDelay: '0s' }}>
+        <p className="section-label mb-2">Coverage Universe</p>
+        <h1 className="text-3xl md:text-4xl font-extrabold gradient-text-animated mb-3">
           Stock Coverage
         </h1>
-        <p className="text-white/60 text-base md:text-xl max-w-2xl animate-fade-up stagger-fill-both stagger-2">
-          {allCoverageData.length} stocks across four categories, scored on moat durability, growth trajectory, and live valuation.
+        <p className="text-white/40 text-sm md:text-base max-w-xl">
+          {allCoverageData.length} stocks scored on moat durability, growth trajectory, and live valuation.
         </p>
 
-        {/* Search input */}
-        <div className="relative mt-6 max-w-md animate-fade-up stagger-fill-both" style={{ animationDelay: '0.1s' }}>
-          <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-white/30 pointer-events-none" />
+        {/* Quick stats */}
+        <div className="flex items-center gap-6 mt-5">
+          {[
+            { label: "Avg Score", value: avgScore },
+            { label: "Total Stocks", value: allCoverageData.length },
+            { label: "Categories", value: visibleCategories.length - 1 },
+          ].map(stat => (
+            <div key={stat.label} className="flex items-baseline gap-1.5">
+              <span className="text-2xl font-black text-white tabular-nums">{stat.value}</span>
+              <span className="text-[11px] text-white/25 font-medium">{stat.label}</span>
+            </div>
+          ))}
+        </div>
+      </header>
+
+      {/* Controls */}
+      <div className="animate-fade-up stagger-fill-both space-y-3" style={{ animationDelay: '0.08s' }}>
+        <div className="relative max-w-sm">
+          <Search size={14} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-white/25 pointer-events-none" />
           <input
             ref={inputRef}
             type="text"
             value={query}
             onChange={e => setQuery(e.target.value)}
             placeholder="Search by name or ticker…"
-            className="w-full bg-white/5 border border-white/10 rounded-xl pl-10 pr-10 py-2.5 text-base text-white placeholder:text-white/25 focus:outline-none focus:border-white/25 focus:bg-white/[0.07] transition-colors"
+            className="w-full bg-white/[0.04] border border-white/10 rounded-xl pl-9 pr-9 py-2 text-sm text-white placeholder:text-white/20 focus:outline-none focus:border-white/20 focus:bg-white/[0.06] transition-all"
           />
           {query && (
             <button
               onClick={() => { setQuery(""); inputRef.current?.focus(); }}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 hover:text-white/60 transition-colors"
-              aria-label="Clear search"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-white/25 hover:text-white/50 transition-colors"
+              aria-label="Clear"
             >
-              <X size={15} />
+              <X size={13} />
             </button>
           )}
         </div>
-      </header>
 
-      {/* Search results */}
-      {filteredStocks !== null ? (
-        <section className="animate-fade-up stagger-fill-both" style={{ animationDelay: '0s' }}>
-          <div className="flex items-center gap-4 mb-5">
-            <Search size={18} className="text-white/40 shrink-0" />
-            <h2 className="text-lg font-bold text-white/80">Results</h2>
-            <div className="h-px flex-1 bg-white/10" />
-            <span className="text-xs text-white/20 font-medium">{filteredStocks.length} stock{filteredStocks.length !== 1 ? 's' : ''}</span>
+        <div className="flex items-center gap-2 flex-wrap">
+          <SlidersHorizontal size={12} className="text-white/20 shrink-0" />
+          {visibleCategories.map(cat => (
+            <CategoryPill
+              key={cat.key}
+              label={cat.label}
+              count={cat.key !== "all" ? categoryCount(cat.key) : undefined}
+              active={activeCategory === cat.key}
+              onClick={() => setActiveCategory(cat.key)}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Stock list */}
+      <div className="animate-fade-up stagger-fill-both" style={{ animationDelay: '0.16s' }}>
+        {/* Column headers — desktop */}
+        <div className="hidden md:flex items-center gap-4 px-5 pb-2">
+          <span className="w-5 shrink-0" />
+          <span className="w-[44px] shrink-0" />
+          <span className="flex-1 text-[10px] font-bold uppercase tracking-widest text-white/20">Company</span>
+          <div className="flex items-center gap-5 shrink-0">
+            {["Moat", "Growth", "Val"].map(col => (
+              <span key={col} className="text-[10px] font-bold uppercase tracking-widest text-white/20 min-w-[40px] text-center">{col}</span>
+            ))}
           </div>
+          <div className="w-px shrink-0" />
+          <span className="text-[10px] font-bold uppercase tracking-widest text-white/20 w-9 text-center shrink-0">Score</span>
+          <span className="w-3.5 shrink-0" />
+        </div>
 
-          {filteredStocks.length === 0 ? (
-            <div className="rounded-2xl border border-white/5 bg-white/5 backdrop-blur-lg px-6 py-12 text-center">
-              <p className="text-white/40 text-sm">No stocks match &ldquo;{query.trim()}&rdquo;</p>
-            </div>
-          ) : (
-            <div className="rounded-2xl overflow-hidden border border-white/5 bg-white/[0.08] backdrop-blur-lg grid grid-cols-1 lg:grid-cols-2 gap-px">
-              {filteredStocks.map((stock, idx) => (
-                <StockRow key={stock.ticker} stock={stock} delay={0.05 + idx * 0.04} />
-              ))}
-            </div>
-          )}
-        </section>
-      ) : (
-        /* Normal category sections */
-        CATEGORIES.map((cat, catIdx) => {
-          const stocks = allCoverageData
-            .filter(s => s.category === cat.key)
-            .sort((a, b) => getAverageScore(b.scores) - getAverageScore(a.scores));
-          return (
-            <section key={cat.key} className="animate-fade-up stagger-fill-both" style={{ animationDelay: `${0.15 + catIdx * 0.1}s` }}>
-              <div className="flex items-center gap-4 mb-5">
-                <BarChart3 size={18} className="text-white/40 shrink-0" />
-                <h2 className="text-lg font-bold text-white/80">{cat.label}</h2>
-                <div className="h-px flex-1 bg-white/10" />
-                <span className="text-xs text-white/20 font-medium">{stocks.length} stocks</span>
-              </div>
+        {filtered.length === 0 ? (
+          <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] px-6 py-16 text-center">
+            <p className="text-white/30 text-sm">
+              {trimmed ? `No stocks match "${query.trim()}"` : "No stocks in this category"}
+            </p>
+          </div>
+        ) : (
+          <div className="rounded-2xl overflow-hidden border border-white/[0.07] bg-white/[0.025] divide-y divide-white/[0.04]">
+            {filtered.map((stock, idx) => (
+              <StockRow
+                key={stock.ticker}
+                stock={stock}
+                rank={idx + 1}
+                delay={0.02 * Math.min(idx, 10)}
+              />
+            ))}
+          </div>
+        )}
 
-              <div className="rounded-2xl overflow-hidden border border-white/5 bg-white/[0.08] backdrop-blur-lg grid grid-cols-1 lg:grid-cols-2 gap-px">
-                {stocks.map((stock, idx) => (
-                  <StockRow key={stock.ticker} stock={stock} delay={0.2 + catIdx * 0.1 + idx * 0.05} />
-                ))}
-              </div>
-            </section>
-          );
-        })
-      )}
+        {filtered.length > 0 && (
+          <p className="text-center text-[11px] text-white/15 font-medium mt-3">
+            {filtered.length} stock{filtered.length !== 1 ? 's' : ''}
+            {activeCategory !== "all" ? ` · ${CATEGORIES.find(c => c.key === activeCategory)?.label}` : ' · All Categories'}
+            {trimmed ? ` matching "${trimmed}"` : ''}
+          </p>
+        )}
+      </div>
     </div>
   );
 }
