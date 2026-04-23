@@ -60,6 +60,7 @@ import rddt from './rddt.json';
 import sea from './sea.json';
 import ttd from './ttd.json';
 import ice from './ice.json';
+import okta from './okta.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -122,6 +123,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   sea: sea as StockAnalysisData,
   ttd: ttd as StockAnalysisData,
   ice: ice as StockAnalysisData,
+  okta: okta as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
