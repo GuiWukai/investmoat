@@ -1,0 +1,177 @@
+{
+  "slug": "okta",
+  "ticker": "OKTA",
+  "name": "Okta Inc.",
+  "lastAnalyzed": "April 2026",
+  "headerStats": [
+    { "label": "Ticker",       "value": "OKTA"   },
+    { "label": "Market Cap",   "value": "~$13B"  },
+    { "label": "Current Price","value": "$76.00" }
+  ],
+  "chips": [
+    { "label": "Identity Security | Workforce & Customer IAM", "color": "primary" },
+    { "label": "AI Agent Identity Pioneer",                    "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "ACV",
+      "value": "$3B+",
+      "label": "Annual Contract Value — Q4 FY2026 Milestone",
+      "icon": "Shield",
+      "color": "#005ABA"
+    },
+    {
+      "title": "FCF Margin",
+      "value": "~30%",
+      "label": "FY2026 FCF ~$863M — 6.6% FCF Yield at $76",
+      "icon": "TrendingUp",
+      "color": "#10b981"
+    },
+    {
+      "title": "Integrations",
+      "value": "8,200+",
+      "label": "Okta Integration Network — Vendor-Neutral Identity Flywheel",
+      "icon": "Zap",
+      "color": "#7c3aed"
+    }
+  ],
+  "moat": {
+    "description": "Okta is the authoritative identity system of record for 19,000+ enterprise customers, embedded in every authentication event and anchored by compliance requirements and an 8,200-integration ecosystem that competitors cannot replicate.",
+    "analysisTitle": "The Identity System-of-Record Moat",
+    "analysisSummary": "Okta's moat is built on **Transaction Embedding, Regulatory Compliance, and System-of-Record Gravity**:",
+    "analysisPoints": [
+      {
+        "title": "Transaction Embedding — Every Login Flows Through Okta",
+        "text": "Okta sits inline with every authentication event across an enterprise — every employee login, every app access, every API call. Removing it would break access to all 8,200+ integrated applications simultaneously, making it operationally irreplaceable in the short term. The launch of Okta for AI Agents (GA April 30, 2026) extends this embedding to non-human identities, multiplying the number of identity transactions per customer."
+      },
+      {
+        "title": "System of Record for Enterprise Identity",
+        "text": "Okta's Universal Directory is the authoritative truth for who can access what across the enterprise — a repository of provisioning rules, group memberships, HR integrations, and access policies accumulated over years. Migrating this to a competitor requires re-mapping every app integration, re-certifying access policies, and reconciling years of audit logs — a 12–24 month project with significant business risk."
+      },
+      {
+        "title": "Regulatory Lock-in and Compliance Inertia",
+        "text": "SOX, HIPAA, PCI-DSS, and FedRAMP audits depend on Okta's access logs and certification trails. FedRAMP High authorization locks in federal agency customers for the duration of their procurement cycle. Switching vendors mid-compliance cycle is not a practical option for regulated industries, creating a moat that renews with each compliance audit."
+      }
+    ]
+  },
+  "growth": {
+    "score": 70,
+    "description": "FY2026 delivered $2.919B in revenue (+12% YoY) and $863M in FCF (~30% margin), with ACV surpassing $3B. FY2027 guidance of 9% growth ($3.17–3.19B) disappointed investors but includes a ~1pp headwind from deliberately accelerating professional services partner migration. The strategic catalyst is Okta for AI Agents (GA April 30, 2026), which treats every AI agent as a managed identity — potentially thousands of new billable identities per enterprise customer. Identity Governance (IGA) is also growing rapidly, adding a second expansion vector.",
+    "growthAnalysis": {
+      "cagrEstimate": "9–13%",
+      "scoreDerivation": "Base 67 (9–13% blended CAGR, 8–15% band) + 5 TAM expansion (AI agent identity is a new identity surface; IGA/governance displacing SailPoint) − 2 guidance width (FY2027 guide decelerated from 12% to 9%, NRR at 106% vs 110%+ prior year) = 70",
+      "drivers": [
+        {
+          "name": "Workforce Identity Cloud (Core)",
+          "metric": "+11% YoY; ACV crossed $3B; cRPO $2.51B (+12% YoY)",
+          "trend": "stable"
+        },
+        {
+          "name": "AI Agent Identity + IGA",
+          "metric": "Okta for AI Agents GA April 30; IGA fastest-growing module; TAM $29B→$56B by 2029 (IDC)",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Customer Identity Cloud (Auth0)",
+          "metric": "Auth0 for AI Agents GA Oct 2025; developer-first CIAM embedded in 8,200+ integrations",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If Microsoft Entra ID captures 10%+ of net new workforce identity ARR from Okta's SMB and mid-market customers by end of FY2028 (evidenced by NRR falling below 102% for two consecutive quarters), revenue growth stalls at 4–6% and the AI agent identity narrative fails to offset core attrition",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 77,
+    "description": "At $76, OKTA trades 24% below the base case ($100) — attractively priced for a business generating ~$863M in annual free cash flow (~6.6% FCF yield) with $4.8B in remaining performance obligations and an imminent AI agent identity catalyst. The stock has fallen ~20% in 2026 from early-year highs, with the 52-week range spanning $62.66–$127.57. The $1B buyback authorized in January 2026 provides a floor signal from management. Forward non-GAAP P/E of ~20× is a meaningful discount to the 30–35× sector median for enterprise security SaaS, reflecting the 9% FY2027 growth guide — but FY2027 FCF of $850–880M implies a P/FCF of just ~15×, which is compelling for the asset quality.",
+    "peAnalysis": {
+      "asOf": "April 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)",      "value": "~58×",  "note": "FY2026 GAAP EPS $1.31" },
+        { "label": "Forward P/E (NTM, non-GAAP)", "value": "~20×", "note": "consensus NTM EPS ~$3.75" },
+        { "label": "PEG Ratio",                "value": "~1.9×", "note": "fwd P/E ÷ 11% EPS CAGR" },
+        { "label": "Price / Sales (NTM)",      "value": "~4.1×", "note": "$3.18B NTM revenue" },
+        { "label": "Price / FCF",              "value": "~15×",  "note": "$863M FCF (FY2026 TTM)" }
+      ],
+      "summary": "At ~20× forward non-GAAP P/E, Okta trades at a 35–45% discount to the enterprise security SaaS sector median (~30–35×), reflecting decelerated 9% FY2027 growth versus 20–30%+ at faster-growing peers like CrowdStrike and Zscaler. The PEG of ~1.9× is elevated but not extreme for an identity franchise with $3B+ ACV, $4.8B RPO, and an AI agent identity platform launching April 30. The wide gap between trailing GAAP P/E (~58×) and forward non-GAAP (~20×) is largely structural — GAAP includes $500M+ in annual stock-based compensation, and GAAP profitability only emerged in FY2026 — making the forward non-GAAP multiple the more meaningful valuation lens; the P/FCF of ~15× tells a similar story of a business trading well below its intrinsic earnings power."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$48",
+      "description": "Microsoft Entra's free bundling captures material SMB/mid-market share, NRR falls below 100%, and the AI agent identity opportunity fails to monetize at scale — triggering multiple compression to ~10× FCF.",
+      "points": [
+        "Microsoft Entra ID expansion into Okta's mid-market base drives NRR below 100% by mid-FY2028, confirmed by two consecutive quarters of net customer ARR contraction",
+        "Okta for AI Agents generates less than $50M incremental ARR in its first 18 months — insufficient to offset core workforce identity attrition",
+        "FY2028 revenue growth decelerates to 4–6% and non-GAAP operating margin compresses back toward 20% as Okta increases discounting to defend renewals",
+        "Multiple compresses to 10× FCF on ~$820M FCF → ~$8.2B market cap → ~$48/share"
+      ]
+    },
+    "base": {
+      "priceTarget": "$100",
+      "description": "Okta executes FY2027 guidance, NRR stabilizes at 105–107%, AI agent identity adds $150M+ incremental ARR by FY2028, and FCF expands to $900M+ — rewarded with a 20× forward FCF multiple.",
+      "points": [
+        "FY2027 revenue lands at $3.18B (+9%), with NRR stabilizing at 105–107% as COVID-era contract bloat fully cycles off",
+        "Okta for AI Agents reaches 1,000+ paying enterprise deployments by end of FY2027, contributing $75–150M in incremental ARR",
+        "IGA module grows 30%+ YoY as enterprises consolidate SailPoint/Saviynt governance onto the Okta platform",
+        "FY2028 FCF crosses $900M; multiple expands to 20× FCF on $900M → ~$18B market cap → ~$100/share"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$155",
+      "description": "AI agent identity becomes a $500M+ platform by FY2029, NRR re-accelerates to 112%+ as agents multiply per customer, and Okta re-rates to 25× FCF as growth returns to 15%+.",
+      "points": [
+        "Each enterprise customer deploys hundreds–thousands of AI agents, each requiring Okta-managed identity — average ARR per customer expands 30%+ by FY2029 as agent identity monetizes at per-agent pricing",
+        "NRR re-accelerates to 112%+ by FY2028 as AI agent identity drives net-new expansion ARR without displacing existing workforce identity revenue",
+        "IGA + PAM convergence positions Okta as the end-to-end identity governance platform, displacing SailPoint/CyberArk in a subset of Fortune 1000 accounts",
+        "FY2029 FCF reaches $1.1B+ at expanding margins; multiple of 25× FCF → ~$27.5B market cap → ~$155/share"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Okta's admin console, Workflow Builder, and policy configuration involve significant institutional knowledge — but AI-powered admin tooling is gradually reducing the expertise barrier."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Each enterprise has years of HR-to-Okta provisioning rules, app-specific lifecycle policies, and group management logic — rebuilding this in Microsoft Entra or Ping Identity is a 12–24 month migration project."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — Okta's moat is not based on access to public datasets; its advantage is proprietary authentication event data and identity lifecycle records, which are distinct from public data access."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Okta-certified administrators are in demand, but AI-assisted policy configuration and auto-remediation tools are gradually lowering the skill bar required to deploy and manage identity workflows."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Workforce Identity + Customer Identity Cloud + IGA + Privileged Access creates meaningful within-identity bundling, though Microsoft bundles Entra ID more deeply within M365/Azure, capping the moat for Microsoft-centric customers."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "ThreatInsight aggregates billions of authentication signals across 19,000+ enterprise customers to detect credential-stuffing and account-takeover attacks — a network threat-intelligence dataset that cannot be replicated by a single-tenant deployment."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "FedRAMP High, HIPAA, SOX, and PCI-DSS compliance audits depend on Okta's access certification and audit logs. Switching identity providers mid-compliance cycle requires full re-certification — a multi-quarter undertaking that effectively anchors regulated customers."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "The Okta Integration Network (OIN) creates a genuine indirect network effect: 8,200+ ISV integrations make Okta the path-of-least-resistance identity choice, attracting more enterprises, which attracts more ISVs building native Okta integrations."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Every authentication event — employee logins, API calls, partner access, and AI agent requests — flows through Okta in real time. Removing it breaks all access instantly; it is embedded at the critical path of daily operations."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "Okta's Universal Directory is the enterprise's authoritative source of truth for who exists, what they can access, and what they are provisioned to — replacing it requires reconciling years of identity lifecycle data, a 12–24 month undertaking with significant compliance and operational risk."
+    },
+    "aiResilienceScore": 82,
+    "verdict": "Okta is a net beneficiary of AI adoption in the long run: the explosion of AI agents creates an entirely new identity surface that every organization must manage, and Okta's position as the universal identity directory (human and non-human) makes it the natural registry. Transaction embedding and system-of-record are the strongest AI-era moats — AI agents amplify the number of transactions flowing through Okta rather than threatening them. The primary AI-era risk is that Microsoft uses AI-accelerated Copilot/Entra development to close Okta's feature gap faster than Okta can differentiate, pressuring the bundling and learned-interface moats in Microsoft-centric enterprises. On balance, Okta's identity infrastructure is AI-resilient: more agents mean more identities, more policies, and more Okta revenue."
+  }
+}
