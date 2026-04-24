@@ -63,6 +63,7 @@ const YAHOO_SYMBOL_MAP: Record<string, string> = {
   fig:        'FIG',
   disney:     'DIS',
   fanuc:      'FANUY',
+  ice:        'ICE',
 };
 
 export async function GET(
