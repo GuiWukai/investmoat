@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$105B"
+      "value": "~$88B"
     },
     {
       "label": "Price",
-      "value": "~$101"
+      "value": "~$85"
     }
   ],
   "chips": [
@@ -33,23 +33,23 @@
   "recommendation": "Strong Buy",
   "metrics": [
     {
-      "title": "Now Assist ACV",
-      "value": "$1B+",
-      "label": "$1B ACV milestone — 18 months after launch",
+      "title": "AI ACV Target",
+      "value": "$1.5B",
+      "label": "2026 AI ACV guidance raised 50% at Q1 2026 earnings",
       "icon": "Zap",
       "color": "#0cceaf"
     },
     {
       "title": "FCF Margin",
       "value": "35%",
-      "label": "FY2025 Full-Year Free Cash Flow",
+      "label": "FY2025 FCF — 44% in Q1 2026 alone",
       "icon": "TrendingUp",
       "color": "#7c3aed"
     },
     {
-      "title": "Total RPO",
-      "value": "$28.2B",
-      "label": "+26.5% YoY Contracted Backlog",
+      "title": "cRPO",
+      "value": "$12.64B",
+      "label": "+22.5% YoY Q1 2026 Contracted Backlog",
       "icon": "Lock",
       "color": "#2563eb"
     }
@@ -72,54 +72,58 @@
         "text": "ServiceNow processes workflow execution data across 8,800 enterprises — IT incident patterns, resolution timelines, approval chain structures, and employee productivity metrics. This data trains Now Assist AI models in ways no startup can replicate without first acquiring an equivalent enterprise installed base. The more workflows run on the platform, the smarter the AI recommendations become, creating a compounding data advantage that widens with scale rather than equalizing."
       },
       {
-        "title": "Autonomous Workforce: AI Deepens the Moat",
-        "text": "ServiceNow's February 2026 Autonomous Workforce launch — teams of AI specialists that resolve >90% of IT requests without human intervention — transforms the platform from workflow software into an AI operating system. The Moveworks EmployeeWorks integration (February 2026) adds conversational AI for autonomous password resets, software approvals, and IT helpdesk tasks. Deep NVIDIA integration via AI Control Tower lets enterprises govern models, agents, and prompts from any system through ServiceNow's compliance infrastructure. This is the opposite of AI disruption: enterprises that want to deploy AI agents at scale need ServiceNow's workflow infrastructure, compliance controls, and audit trails to do so safely. AI makes ServiceNow the required orchestration layer, not a legacy incumbency to replace."
+        "title": "Autonomous Workforce + Agentic Pricing: AI Deepens the Moat",
+        "text": "ServiceNow's Autonomous Workforce (GA Q2 2026) resolves >90% of IT requests without human intervention. The newly introduced Agentic ACV pricing model charges customers for tasks completed by AI agents — a business model shift that dramatically expands TAM beyond per-seat subscriptions. Moveworks EmployeeWorks (February 2026) adds conversational AI for autonomous password resets, software approvals, and IT helpdesk tasks, with the integrated employee experience business growing 5× YoY in Q1 2026. A Google Cloud partnership announced April 22, 2026 enables cross-platform AI agent interoperability. This is the opposite of AI disruption: enterprises deploying AI agents at scale need ServiceNow's workflow infrastructure, compliance controls, and audit trails to do so safely."
+      },
+      {
+        "title": "Armis + Veza: New Security and Identity Moats",
+        "text": "The April 2026 acquisition of Armis ($7.75B, ServiceNow's largest ever) adds Cyber Asset Management Intelligence across OT, IoT, medical devices, and physical AI — trusted by 9 of the Fortune 10 and 35%+ of the Fortune 100. Armis is a Gartner Magic Quadrant Leader for CPS Protection Platforms, and brings NIS2 and CISA compliance workflows that no pure ITSM competitor can match. The March 2026 Veza acquisition adds AI-native identity intelligence, giving enterprises continuous visibility into access rights across all digital resources. Both acquisitions deepen the proprietary asset data flywheel and extend regulatory lock-in into physical and OT security — where switching costs are even higher than in IT service management."
       }
     ]
   },
   "growth": {
     "score": 87,
-    "description": "19–20% subscription revenue growth with $28.2B RPO backlog providing 2+ years of contracted visibility. Now Assist hit $1B ACV in March 2026 — 18 months after launch and the fastest AI product ramp in enterprise SaaS history — with Autonomous Workforce opening a new consumption-based revenue layer on top of subscriptions. FY2026 FCF margin is guided to 36% — operating leverage is real and compounding.",
+    "description": "22% subscription revenue growth in Q1 2026 with $12.64B cRPO (+22.5% YoY) providing contracted revenue visibility. Management raised full-year AI ACV guidance to $1.5B — 50% above any prior software benchmark — while introducing a new Agentic ACV pricing model (task-based) that could significantly expand TAM. Gross margin faces a temporary 300 bps headwind from Armis integration and AI infrastructure investment, but operating margins remain at 32% non-GAAP with FCF margin at 44% in Q1. FY2026 subscription revenue guidance raised to $15.74–15.78B (+20.5–21% CC).",
     "additionalNote": {
       "title": "Key Growth Catalysts",
       "points": [
-        "Now Assist reached $1B ACV in March 2026 — 18 months after launch and the fastest AI product ramp in enterprise SaaS history — with 1,700+ customers live and AI agent consumption growing 55× since May 2025",
-        "Autonomous Workforce (GA Q2 2026) resolves >90% of IT requests autonomously — creating a consumption-based revenue layer on top of subscriptions",
-        "Moveworks acquisition adds ~1 ppt to FY2026 revenue and extends AI conversational search to ~200M enterprise employees",
-        "US federal government business growing 30%+ YoY; Now Assist AI products are FedRAMP-authorized and actively deployed across agencies",
-        "Land-and-expand engine accelerating: customers with $5M+ ACV reached 603 (+20% YoY), with average ACV per $5M+ customer growing to $14.5M"
+        "AI ACV target raised to $1.5B for FY2026 — 50% above prior guidance — with new Agentic ACV model (task-based pricing) opening a consumption revenue layer on top of subscriptions",
+        "Armis acquisition (closed April 19, 2026, $7.75B) adds OT/IoT Cyber Asset Management Intelligence trusted by 9 of the Fortune 10, creating a new security and risk TAM expansion",
+        "Autonomous Workforce (GA Q2 2026) handled 90%+ of employee IT requests in internal deployment at 99% faster resolution than human agents; Sales CRM NNACV grew 5× YoY Q1 2026",
+        "Moveworks-integrated EmployeeWorks business grew 5× YoY in Q1 2026; Moveworks deal count grew 80% YoY, with more 7-figure deals in Q1 2026 than all of 2025",
+        "Land-and-expand engine: customers with $5M+ ACV reached 603 (+20% YoY), average ACV per $5M+ customer growing to $14.5M; Google Cloud partnership expands cross-platform AI agent reach"
       ]
     },
     "growthAnalysis": {
-      "cagrEstimate": "18–20%",
-      "scoreDerivation": "Base 80 (15–30% CAGR) + 5 recurring (98% renewal, $28.2B RPO backlog) + 5 AI TAM expansion (Now Assist $1B+ ACV, Autonomous Workforce) − 3 slight deceleration (21% → 19.5–20% guide) = 87",
+      "cagrEstimate": "19–22%",
+      "scoreDerivation": "Base 80 (15–30% CAGR, 22% Q1 2026 actual) + 5 recurring (98% renewal, $12.64B cRPO) + 5 TAM expansion (AI ACV $1.5B target, Armis OT security) − 3 gross margin compression (subscription GM −300 bps from Armis/AI infra) = 87",
       "drivers": [
         {
-          "name": "Now Assist AI",
-          "metric": "$1B ACV milestone March 2026 (18 months post-launch), 55× consumption growth since May 2025",
+          "name": "Agentic AI (Now Assist + Autonomous Workforce)",
+          "metric": "$1.5B ACV target FY2026 (raised 50%); new task-based pricing model in GA Q2 2026",
           "trend": "accelerating"
         },
         {
           "name": "Core Subscription",
-          "metric": "+21% YoY Q4 2025, cRPO +25% YoY to $12.85B",
+          "metric": "+22% YoY Q1 2026 (19% CC), cRPO +22.5% YoY to $12.64B",
           "trend": "stable"
         },
         {
-          "name": "Federal & Public Sector",
-          "metric": "+30% YoY Q3 2025, FedRAMP High + Moveworks FedRAMP Moderate",
+          "name": "Security & Risk (Armis + Veza)",
+          "metric": "Armis closed Apr 2026 ($7.75B); 9 of Fortune 10 customers; expands OT/IoT security TAM",
           "trend": "accelerating"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "If Microsoft Copilot Studio achieves >20% win rate in new enterprise ITSM evaluations by end of 2026, ServiceNow's new-logo growth decelerates below 15% and Now Assist ACV stalls under $800M",
-      "marginTrend": "expanding"
+      "keyRisk": "If Armis integration dilutes non-GAAP operating margin below 30% by Q4 2026, or Salesforce Agentforce IT Service surpasses 1,000 ITSM accounts by end of 2026, growth re-rates below 18% and the valuation multiple compresses further",
+      "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 80,
-    "description": "At ~$101 — down ~52% from the 52-week high and ~35% below the base case ($155) — ServiceNow remains in deep value territory. The broader 'SaaSpocalypse' has compressed B2B software valuations ~25–30% YTD in 2026, with ServiceNow falling 30%+ as the market reprices agentic AI risk despite fundamentals that remain strong: 20% subscription revenue growth, $28.2B contracted backlog, and $5B in share buyback authorization. This is pricing in AI disruption that the 98% renewal rate and Now Assist's $1B ACV milestone actively contradict.",
+    "score": 83,
+    "description": "At ~$85 — down ~60% from the 52-week high of $211.48 and touching an intraday low of $81.24 post-Q1 2026 earnings — ServiceNow is priced near its bear case. The Q1 2026 selloff (−14% on April 22) reflected investor concern about 300 bps of subscription gross margin compression from Armis integration and AI infrastructure investment, not fundamental deterioration: subscription revenue grew 22% YoY, non-GAAP operating margin held at 32%, and FCF margin hit 44% in the quarter. The Armis acquisition ($7.75B) creates near-term multiple compression risk but a substantial long-term TAM expansion into OT/IoT security.",
     "valuationNote": {
-      "text": "At $101 vs. a base case of $155, NOW trades at a 35% discount to fair value. The $28.2B total RPO provides ~2.1 years of contracted revenue visibility, making the bear case ($70) unlikely without a catastrophic macro or AI disruption event. With FCF margins expanding to a guided 36% in FY2026, the stock trades at ~23× P/FCF — one of the most attractive FCF yields in enterprise SaaS.",
+      "text": "At ~$85 vs. a base case of $155, NOW trades at a 45% discount to fair value. The $12.64B cRPO (+22.5% YoY) provides strong contracted revenue visibility. At ~19× P/FCF on $4.6B of annual free cash flow — combined with a $5B buyback authorization — this represents one of the most compelling FCF yields in enterprise SaaS. Management beat non-GAAP estimates by ~76% ($0.97 vs. $0.55 consensus) and raised FY2026 subscription guidance, making the selloff driven by gross margin optics rather than earnings power.",
       "fairValue": "$155"
     },
     "peAnalysis": {
@@ -127,62 +131,62 @@
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~59×",
-          "note": "SBC-heavy; GAAP EPS ~$1.75 TTM"
+          "value": "~50×",
+          "note": "SBC-heavy; GAAP TTM EPS ~$1.68"
         },
         {
           "label": "Forward P/E (NTM, non-GAAP)",
-          "value": "~25×",
-          "note": "consensus non-GAAP EPS ~$4.00"
+          "value": "~22×",
+          "note": "consensus non-GAAP EPS ~$3.75"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.25×",
-          "note": "fwd P/E ÷ 20% EPS CAGR"
+          "value": "~1.05×",
+          "note": "fwd P/E ÷ 21% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~6.8×",
-          "note": "$15.5B FY2026 revenue guide"
+          "value": "~5.6×",
+          "note": "$15.75B FY2026 revenue guide"
         },
         {
           "label": "Price / FCF",
-          "value": "~23×",
+          "value": "~19×",
           "note": "$4.6B FY2025 FCF (TTM)"
         }
       ],
-      "summary": "At ~25× forward non-GAAP P/E — among the lowest multiples NOW has traded at in five years — ServiceNow is priced in line with the enterprise SaaS median despite superior growth (20% vs. 8–15% peers), near-zero churn, and an AI monetization layer that peers lack entirely. A PEG of 1.25× is historically cheap for this quality of compounding, especially with Now Assist having just crossed $1B ACV in 18 months. The SaaSpocalypse de-rating is an opportunity, not a structural impairment: the $5B buyback authorization signals management's conviction at current prices."
+      "summary": "At ~22× forward non-GAAP P/E — the lowest valuation NOW has traded at since 2019 — ServiceNow is now in line with the post-SaaSpocalypse enterprise software sector median (~22×) despite growing subscription revenue at 22% vs. the peer median of 12–15%. A PEG of ~1.05× signals growth-at-a-reasonable-price territory: the stock is not pricing in any AI monetization premium despite Now Assist having the fastest ACV ramp in enterprise SaaS history. The gap between trailing GAAP P/E (~50×) and forward non-GAAP P/E (~22×) reflects SBC amortization and Armis acquisition costs — the underlying cash earnings power is significantly higher than GAAP implies, and FCF margin of 35–44% confirms this."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$70",
-      "description": "AI disrupts workflow SaaS faster than ServiceNow can monetize it; revenue growth decelerates below 12% and the multiple compresses to 18–20×.",
+      "priceTarget": "$60",
+      "description": "Armis integration disappoints and Salesforce ITSM gains real traction; subscription gross margin stays depressed below 80% and the multiple compresses to 16–18× non-GAAP earnings.",
       "points": [
-        "AI-native competitors (Microsoft Copilot Studio, Salesforce Agentforce) replicate core ITSM workflows at lower cost; ServiceNow new-logo win rates fall below 50% by 2027",
-        "Now Assist stalls below $750M ACV as enterprises find AI agent deployment more complex than expected, causing deal downgrades and delayed expansion",
-        "Macro recession triggers large enterprise IT budget freezes; multi-year contracts face renegotiation pressure and NRR falls below 105% for the first time",
-        "Multiple compresses to 18–20× forward non-GAAP earnings as the SaaSpocalypse narrative proves partially correct"
+        "Armis integration proves operationally complex — OT/IoT margins drag group subscription gross margin below 80% through 2027, forcing consensus EPS cuts of 15–20%",
+        "Salesforce Agentforce IT Service surpasses 1,000 ITSM accounts by end of 2026, creating a credible alternative narrative that depresses ServiceNow new-logo win rates below 55%",
+        "Macro recession triggers enterprise IT budget freezes; large deal slippage (as seen with Middle East deals in Q1 2026) becomes structural, and cRPO growth decelerates below 18% YoY",
+        "Multiple compresses to 16–18× forward non-GAAP EPS as gross margin concerns combine with slower growth — matching the 2022 trough valuation floor"
       ]
     },
     "base": {
       "priceTarget": "$155",
-      "description": "Growth sustains at 19–20% as Now Assist scales to $2B+ ACV and Autonomous Workforce adds a consumption layer; multiple re-rates to ~32× as the AI-threat narrative fades.",
+      "description": "Subscription revenue sustains at 20–21% growth as AI ACV reaches $2B+ and Armis gross margin headwinds prove transitory; multiple re-rates to 32–35× as AI monetization credibility builds.",
       "points": [
-        "Now Assist scales from $600M to $2B+ ACV by end of 2027 as 1,700+ live customers expand AI modules and Autonomous Workforce reaches 200+ enterprise deployments",
-        "cRPO sustains 20–22% growth through Q4 2026, confirming the trajectory and enabling a multiple re-rate from 29× to 32–34× forward non-GAAP EPS",
-        "Moveworks integration creates the 'AI front door' for enterprise employees, accelerating expansion deals within the existing account base",
-        "FCF margin reaches 36–37%, validating operating leverage and supporting a Dividend or buyback programme initiation"
+        "AI ACV reaches $2B by end of 2026 and $3B+ by end of 2027, driven by Autonomous Workforce GA adoption and Agentic pricing (task-based) contributing incremental revenue beyond seat subscriptions",
+        "Armis subscription gross margin improves to 82%+ by Q4 2026 as hardware-bundled deals are replaced by pure software/SaaS contracts; group gross margin recovers to 83%",
+        "cRPO sustains 20–22% growth through Q4 2026, and Veza identity intelligence accelerates Zero Trust mandates inside the federal customer base",
+        "FCF margin holds at 35% as Armis integration costs peak in H1 2026, validating operating leverage and supporting the $5B buyback at current depressed prices"
       ]
     },
     "bull": {
-      "priceTarget": "$235",
-      "description": "AI agents prove transformative for enterprise operations; ServiceNow becomes the required orchestration layer for enterprise AI, re-accelerating growth to 25%+ and expanding the multiple to 38–42×.",
+      "priceTarget": "$240",
+      "description": "Agentic pricing becomes the dominant AI monetization model in enterprise software; ServiceNow's Autonomous Workforce becomes the enterprise AI standard, re-accelerating growth to 25%+ with multiple expansion to 40–45×.",
       "points": [
-        "Autonomous Workforce is adopted by 1,000+ enterprises by end of 2027; Now Assist ACV reaches $4B+, creating a consumption revenue layer that drives net new ACV well above consensus",
-        "ServiceNow wins large enterprise AI orchestration mandates vs. AWS, Microsoft, and Salesforce, establishing itself as the AI backbone for government, healthcare, and financial services",
-        "International expansion (APAC and Middle East sovereign AI cloud) adds 5+ ppts to revenue growth, pushing 2027 revenue toward $20B+",
-        "Multiple expands to 38–42× forward non-GAAP EPS as the market re-rates the platform from 'workflow SaaS' to 'enterprise AI infrastructure' — mirroring how Azure was re-rated in 2020–2021"
+        "Autonomous Workforce is adopted by 1,000+ enterprises by end of 2027; Agentic ACV (task-based) reaches $4B+, creating a structurally larger revenue layer than the legacy per-seat model",
+        "Armis synergies materialize faster than expected — OT/IoT security becomes a mandatory ITSM adjacency post-NIS2 and CISA mandates, with Armis + ServiceNow winning 100+ large enterprise security consolidation deals by 2027",
+        "Google Cloud AI agent interoperability drives 20%+ new logo acceleration in APAC and EMEA, pushing 2027 subscription revenue toward $20B",
+        "Multiple expands to 40–45× forward non-GAAP EPS as the market re-rates the platform from 'workflow SaaS' to 'enterprise AI operating system' — the same re-rating that took Microsoft from 25× to 35× in 2020–2022"
       ]
     }
   },
@@ -193,7 +197,7 @@
     },
     "businessLogic": {
       "status": "strong",
-      "note": "ServiceNow stores the accumulated business logic of enterprise operations — approval chains, escalation paths, SLA definitions, CMDB relationships, and custom workflow scripts specific to each organization. This is 5–15 years of operational DNA encoded in flows, scripts, and table configurations that is nearly impossible to fully document or migrate. No AI can reconstruct this logic without first understanding each organization's unique operational context and history."
+      "note": "ServiceNow stores the accumulated business logic of enterprise operations — approval chains, escalation paths, SLA definitions, CMDB relationships, and custom workflow scripts specific to each organization. This is 5–15 years of operational DNA encoded in flows, scripts, and table configurations that is nearly impossible to fully document or migrate. Salesforce Agentforce IT Service (launched 2025) is the first credible ITSM alternative in a decade, with 180+ signups by February 2026 vs. ServiceNow's 8,600 ITSM customers — nascent but the most serious competitive challenge in ServiceNow's history. The depth of existing business logic encoding makes displacement a multi-year programme even if Salesforce accelerates adoption."
     },
     "publicDataAccess": {
       "status": "weakened",
@@ -205,15 +209,15 @@
     },
     "bundling": {
       "status": "strong",
-      "note": "ServiceNow sells 25+ enterprise products (IT, HR, Finance, Legal, Security Operations, Customer Service, Creator, and now AI agents) on a single data model and workflow engine. Multi-product adoption is accelerating: 5+ Now Assist product deals grew 10× YoY in Q4 2025. The cross-workflow integration value — an IT incident auto-triggering an HR notification and finance approval — cannot be replicated by point solutions, and AI agents make this cross-domain orchestration even more valuable."
+      "note": "ServiceNow sells 25+ enterprise products (IT, HR, Finance, Legal, Security Operations, Customer Service, Creator, and now AI agents) on a single data model and workflow engine. Multi-product adoption is accelerating: 5+ Now Assist product deals grew 10× YoY in Q4 2025. The Armis and Veza acquisitions add OT/IoT cyber asset management and identity intelligence to the bundle — products regulated industries are now mandated to deploy. The cross-workflow integration value — an IT incident triggering an HR notification, finance approval, and Armis asset isolation — cannot be replicated by any single-domain competitor, and the Sales CRM bundle grew NNACV 5× YoY in Q1 2026."
     },
     "proprietaryData": {
       "status": "strong",
-      "note": "ServiceNow processes workflow execution data across 8,800 enterprises — IT incident patterns, resolution timelines, approval chain structures, and employee productivity metrics. This data trains Now Assist AI models through a compounding flywheel: more workflows → better AI recommendations → more Now Assist adoption → more workflow data. No competitor can replicate this proprietary training corpus without first acquiring an equivalent enterprise installed base at comparable scale."
+      "note": "ServiceNow processes workflow execution data across 8,800 enterprises — IT incident patterns, resolution timelines, approval chain structures, and employee productivity metrics. This data trains Now Assist AI models through a compounding flywheel: more workflows → better AI recommendations → more Now Assist adoption → more workflow data. The Armis acquisition (April 2026) adds the world's most comprehensive OT/IoT asset intelligence dataset — 9 of the Fortune 10's critical infrastructure asset topology — creating a proprietary physical-world data layer no software competitor can replicate. Veza adds identity access rights data across all enterprise digital resources. The combined dataset is unique in depth and breadth."
     },
     "regulatoryLockIn": {
       "status": "strong",
-      "note": "ServiceNow holds FedRAMP High Authorization — one of the most stringent cloud security certifications available — used by US federal agencies whose business grew 30%+ YoY in Q3 2025. In March 2026, Autonomous Workforce was certified for Government Community Cloud (GCC) and National Security Cloud (NSC), extending AI agent capabilities to the most sensitive federal environments. The GSA OneGov deal provides a government-wide procurement vehicle for mandated ITSM modernization at up to 70% discount. HIPAA, SOC 2, PCI DSS, and ISO 27001 certifications are contractually required by healthcare and financial services customers. Re-certifying a competing platform takes 18–36 months minimum. Named Forrester Wave Leader for Industry Cloud for Public Sector (Q1 2026)."
+      "note": "ServiceNow holds FedRAMP High Authorization used by US federal agencies growing 30%+ YoY, with Autonomous Workforce certified for Government Community Cloud and National Security Cloud (March 2026). The GSA OneGov vehicle provides mandated ITSM modernization procurement at up to 70% discount. HIPAA, SOC 2, PCI DSS, and ISO 27001 certifications are contractually required in healthcare and financial services. The Armis acquisition (April 2026) adds CISA-mandated OT/IoT security compliance and NIS2 (Europe) requirements — regulated industries must now assess OT cyber risks, and Armis + ServiceNow is the only integrated solution with both asset visibility and workflow automation. Re-certifying a competing platform takes 18–36 months minimum; adding OT security compliance makes the barrier even higher."
     },
     "networkEffects": {
       "status": "intact",
@@ -221,13 +225,13 @@
     },
     "transactionEmbedding": {
       "status": "strong",
-      "note": "Every IT incident ticket, HR service request, procurement approval, change management event, and compliance attestation flows through ServiceNow at 8,800+ enterprises. ServiceNow IS the transaction layer for enterprise operational workflows — not adjacent to it. With Autonomous Workforce now resolving >90% of IT requests without human intervention, the embedding depth increases further as AI agents become dependent on ServiceNow's orchestration infrastructure, workflow history, and system integrations."
+      "note": "Every IT incident ticket, HR service request, procurement approval, change management event, compliance attestation, and now OT/IoT asset risk event flows through ServiceNow at 8,800+ enterprises. ServiceNow IS the transaction layer for enterprise operational workflows. Autonomous Workforce resolves >90% of IT requests without human intervention, making AI agents themselves dependent on ServiceNow's orchestration infrastructure. Armis integration will route physical asset alerts (OT equipment anomalies, IoT device violations) through ServiceNow workflows, adding an entirely new category of embedded transaction — operational technology events — that no other workflow platform can intercept."
     },
     "systemOfRecord": {
       "status": "strong",
       "note": "ServiceNow is the authoritative system of record for IT assets (CMDB), incidents, changes, the service catalog, HR service requests, and compliance events at most Fortune 500 companies. All audit trails, SLA histories, regulatory records, and workflow archives reside in ServiceNow. For regulated industries — banking, healthcare, government — this record-keeping is legally mandated and represents data that cannot be migrated without extraordinary operational and compliance risk. Migration from ServiceNow is a multi-year programme, not a procurement decision."
     },
-    "verdict": "ServiceNow is one of the clearest AI beneficiaries in enterprise software — the proliferation of AI agents increases demand for the workflow orchestration infrastructure ServiceNow uniquely provides, with compliance controls, audit trails, and system integrations that enterprises require to deploy AI safely at scale. The four strongest AI-resilient moats (system-of-record, transaction embedding, regulatory lock-in, proprietary data flywheel) are all actively strengthening as AI adoption expands. The primary AI risk is interface commoditization — if LLMs allow rapid configuration of competing workflow platforms, the learned interface and talent scarcity moats weaken further — but this is structurally offset by the depth of existing workflow logic, compliance certifications, and proprietary training data that competitors cannot shortcut. ServiceNow enters the AI era not as a legacy incumbent under threat, but as the enterprise operating system through which AI must be deployed."
+    "verdict": "ServiceNow is one of the clearest AI beneficiaries in enterprise software — the proliferation of AI agents increases demand for the workflow orchestration, compliance controls, and audit trails that ServiceNow uniquely provides at enterprise scale. The four strongest AI-resilient moats (system-of-record, transaction embedding, regulatory lock-in, proprietary data flywheel) are all actively strengthening: Armis adds OT/IoT asset intelligence and CISA/NIS2 regulatory lock-in, Veza adds identity data, and Autonomous Workforce makes AI agents themselves dependent on ServiceNow infrastructure. The primary near-term risk is Salesforce Agentforce ITSM — the most credible competitive threat in a decade, with 180+ accounts by February 2026 — but at 2.1% of ServiceNow's installed base, displacement requires years of proof-of-concept before the CMDB data gravity challenge becomes acute. ServiceNow is not a legacy incumbent under threat; it is the enterprise operating system through which AI must be deployed, and every AI agent deployment strengthens rather than erodes its moat."
   },
   "lastAnalyzed": "April 2026"
 }
