@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$2.25T"
+      "value": "$2.78T"
     },
     {
       "label": "Price",
-      "value": "$213.77"
+      "value": "$264"
     }
   ],
   "chips": [
@@ -38,7 +38,7 @@
     {
       "title": "AWS Margin",
       "value": "35%",
-      "label": "Q4 2025 — +24% YoY; Q1 2026 due Apr 29",
+      "label": "Q4 2025 — +24% YoY; re-acceleration to 29–30% expected FY 2026",
       "icon": "Cloud",
       "color": "#006fee"
     },
@@ -51,7 +51,7 @@
     }
   ],
   "moat": {
-    "description": "Dominant scale, switching costs (Prime), and cost advantage (Logistics). AWS backlog hits $244B, up 40% YoY. Amazon is Anthropic's primary training cloud partner — AWS runs Project Rainier (the world's largest AI training cluster) on Trainium2, deepening AWS's AI infrastructure moat. Anthropic Mythos (frontier model, April 2026) and Project Glasswing (AI cybersecurity with Amazon, Apple, Nvidia) were launched on AWS, cementing Anthropic's commercial momentum ($30B+ run-rate revenue) as a direct AWS growth driver. Competitive pressure from Azure (+39% YoY) and GCP (+36% YoY) growing faster than AWS on AI workloads is a monitored risk.",
+    "description": "Dominant scale, switching costs (Prime), and cost advantage (Logistics). AWS backlog hits $244B+, up 40%+ YoY. Amazon has now committed $33B total to Anthropic ($8B prior + $25B new deal at $380B valuation, announced April 20, 2026) — and Anthropic in turn committed $100B+ in AWS spend over the next 10 years, with 5 GW of capacity additions and access to Trainium2 through Trainium4. This bilateral lock-in (Amazon funds Anthropic; Anthropic is Anthropic's primary cloud) is structurally unmatched by any competitor. Anthropic Mythos and Project Glasswing run on AWS Bedrock. Competitive pressure from Azure (+39% YoY) and GCP (+36% YoY) is a monitored risk but the Anthropic $100B commitment provides a 10-year AWS demand floor.",
     "analysisTitle": "The Economic Moat",
     "analysisSummary": "Amazon possesses a **Wide Economic Moat** driven by four primary pillars:",
     "analysisPoints": [
@@ -69,30 +69,30 @@
       },
       {
         "title": "AWS as the Primary AI Training Cloud",
-        "text": "Amazon's $8B investment in Anthropic secured AWS as the exclusive primary cloud for training and deploying Claude models — including Project Rainier, the world's largest AI training cluster built on Amazon's proprietary Trainium2 chips. This is not a passive financial stake: Anthropic's models run on AWS Bedrock (the fastest-growing AWS service by usage), Claude powers Alexa's AI transformation, and every Claude API call routes through AWS infrastructure. As Anthropic's valuation approaches $200B+, Amazon holds a strategic asset that simultaneously deepens the AWS AI infrastructure moat (Trainium2 workloads), expands the AWS customer base (Anthropic customers are AWS customers), and positions Alexa as a frontier AI assistant. No competing cloud has locked in an equivalent frontier model lab at this depth of infrastructure integration."
+        "text": "Amazon has now invested $33B total in Anthropic ($8B prior + $25B new, April 20, 2026) — locking in AWS as the exclusive primary cloud for training and deploying Claude models at a $380B Anthropic valuation. Crucially, Anthropic committed to spending $100B+ on AWS technologies over the next 10 years, adding 5 GW of capacity and using Trainium2 through Trainium4 (including future chip generations). This is a bilateral strategic lock-in: Amazon funds Anthropic's growth; Anthropic is structurally dependent on AWS for every Claude API call, Bedrock workload, and frontier model training run. Anthropic's $30B+ annualised revenue (up from $9B at end-2025) is entirely routed through AWS infrastructure — making Anthropic the single fastest-growing AWS revenue driver. The $100B commitment provides a 10-year structural demand floor for AWS that no competing cloud can replicate."
       }
     ]
   },
   "growth": {
     "score": 87,
-    "description": "AWS re-accelerated to 24% in Q4 2025 — fastest growth in 13 quarters — with a $244B backlog (+40% YoY) underpinning durable AI-driven demand. Advertising grew 23% to $21.3B in Q4. Q1 2026 guidance (revenue $173.5–$178.5B, consensus $177.1B; EPS est. $1.64) is due April 29; the key watch is whether AWS sustains 20%+ growth, as Azure (+39%) and GCP (+36%) are growing materially faster. Anthropic Mythos launch (April 2026) and its $30B+ annualised revenue run rate are accelerating Bedrock demand. Tariff headwinds — 145% on Chinese goods, de minimis fully eliminated — are a real but manageable operating income drag.",
+    "description": "AWS re-accelerated to 24% in Q4 2025 — fastest growth in 13 quarters — with a $244B+ backlog (+40% YoY). Oppenheimer and Morgan Stanley expect AWS to re-accelerate toward 29–30% for full-year 2026, driven by enterprise AI migration and Bedrock adoption. The $25B additional Anthropic investment (April 2026, total $33B) brings Anthropic's $100B+ AWS commitment over 10 years — a structural demand floor. Advertising grew 23% to $21.3B in Q4; Q1 2026 revenue consensus is $177.2B (+13% YoY), EPS $1.63. Goldman Sachs raised PT to $290. Tariff headwinds — Chinese seller strain from 125–145% tariffs — are a manageable headwind offset by Amazon's logistics advantage.",
     "additionalNote": {
       "title": "Financial Outlook",
       "points": [
-        "AWS growth re-accelerated to 24% in Q4 2025, highest rate in 13 quarters; $244B backlog up 40% YoY. Q1 2026 due April 29.",
-        "Advertising revenue reached $21.3B (+22% YoY), cementing Amazon as a top-3 digital ad platform; Q1 2026 est. ~$17.1B (+23% YoY).",
-        "Anthropic run-rate revenue surpassed $30B in early 2026 (up from ~$9B at end of 2025); all Anthropic workloads route through AWS Bedrock, making it the fastest-growing AWS revenue driver.",
-        "Supreme Court ruled 6-3 (Feb 2026) against Trump's tariff authority under IEEPA — materially reduces worst-case tariff scenario for Amazon marketplace. Amazon imposed 3.5% FBA fuel surcharge (effective Apr 17) as a partial offset to logistics cost inflation."
+        "AWS growth re-accelerated to 24% in Q4 2025, highest rate in 13 quarters; $244B+ backlog up 40%+ YoY. Oppenheimer/Morgan Stanley forecast AWS re-acceleration to 29–30% for FY 2026.",
+        "Advertising revenue reached $21.3B (+22% YoY Q4), cementing Amazon as a top-3 digital ad platform; Goldman Sachs sees advertising margins becoming a 'second engine' for earnings growth.",
+        "Amazon committed $33B total to Anthropic ($8B prior + $25B new at $380B valuation, April 2026); Anthropic committed $100B+ in AWS spend over 10 years with 5 GW capacity additions — the largest bilateral AI infrastructure lock-in in cloud history.",
+        "Tariff headwinds persist (125–145% on Chinese goods, de minimis eliminated); Chinese sellers (~50%+ of marketplace) raising prices or reducing listings. Amazon's FBA fuel surcharge (3.5%, Apr 17) partially offsets logistics cost inflation. Bill Ackman's Pershing Square disclosed a significant AMZN position in April 2026."
       ]
     },
     "growthAnalysis": {
       "cagrEstimate": "15–20%",
-      "scoreDerivation": "Base 80 (15–30% blended CAGR) + 5 recurring revenue (AWS contracts + Prime) + 5 TAM expansion (AI inference + sovereign cloud) − 2 Q1 2026 guidance width − 2 Azure/GCP competitive acceleration (39%/36% vs AWS 24%) + 1 Anthropic Mythos launch driving Bedrock demand = 87",
+      "scoreDerivation": "Base 80 (15–30% blended CAGR) + 5 recurring revenue (AWS contracts + Prime) + 5 TAM expansion (AI inference + sovereign cloud) − 2 Azure/GCP competitive acceleration (39%/36% vs AWS 24%) + 1 Anthropic Mythos driving Bedrock demand − 2 tariff/marketplace headwinds (Chinese sellers) = 87",
       "drivers": [
         {
           "name": "AWS Cloud",
-          "metric": "+24% YoY (Q4 2025), $244B backlog (+40% YoY); Q1 2026 due Apr 29",
-          "trend": "stable"
+          "metric": "+24% YoY (Q4 2025), $244B+ backlog (+40% YoY); FY 2026 re-acceleration to 29–30% expected",
+          "trend": "accelerating"
         },
         {
           "name": "Advertising",
@@ -111,8 +111,8 @@
     }
   },
   "valuation": {
-    "score": 79,
-    "description": "Stock at ~$214 sits ~21% below our updated base fair value of $270, offering an improved margin of safety. The Supreme Court's 6-3 ruling (Feb 2026) against Trump's tariff authority under IEEPA materially reduces the sharpest bear scenario — but Amazon's own 3.5% FBA fuel surcharge (effective April 17) and $0.08/unit rate increases create a managed headwind. Anthropic's run-rate revenue surpassing $30B (up from ~$9B at end of 2025) is a significant upside catalyst not fully reflected in consensus; every dollar of Anthropic revenue routes through AWS Bedrock infrastructure. Q1 2026 earnings are due April 29 — the key read on whether AWS holds above 20% growth and whether the operating income guidance midpoint ($19B vs. $22.2B consensus) proves overly conservative.",
+    "score": 67,
+    "description": "Stock at ~$264 sits ~2% below our base fair value of $270 — the margin of safety has compressed materially from the prior $213 entry point. The $25B additional Anthropic investment (April 2026, $100B AWS commitment over 10 years) is a structural catalyst not fully priced in; Goldman Sachs raised its PT to $290. Bull case remains $330 if AWS re-accelerates above 30% as Oppenheimer/Morgan Stanley expect. Key near-term catalyst: Q1 2026 earnings (April 29) — the read on whether AWS holds or exceeds 24% growth and confirms the acceleration thesis. At current prices, risk/reward is balanced; new positions should await a pullback or post-earnings confirmation.",
     "valuationNote": {
       "text": "Using a 10-year DCF with a 9% WACC and a 3.5% terminal growth rate, our fair value estimate for AMZN is",
       "fairValue": "$270/share"
@@ -122,41 +122,41 @@
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~29.7×",
+          "value": "~36.8×",
           "note": "$7.17 TTM EPS (FY 2025)"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~26.1×",
+          "value": "~32.4×",
           "note": "consensus EPS est. $8.16"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.44×",
+          "value": "~1.80×",
           "note": "fwd P/E ÷ ~18% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~2.79×",
+          "value": "~3.61×",
           "note": "~$770B NTM revenue est."
         },
         {
           "label": "Price / FCF",
-          "value": "~280×",
+          "value": "~361×",
           "note": "$7.7B TTM FCF (capex-distorted)"
         }
       ],
-      "summary": "At ~26× forward earnings, AMZN trades at a modest 3-turn premium to the megacap peer median (~23×), consistent with its AWS and advertising quality mix. The PEG of 1.44× sits in the 'premium; requires execution' range — investors are paying for the AI infrastructure call option. The compression from 29.7× trailing to 26.1× forward signals a meaningful earnings ramp through 2026, contingent on the capex cycle beginning to monetise."
+      "summary": "At ~32× forward earnings, AMZN now trades at a meaningful premium to the megacap peer median (~23×), reflecting the AWS AI acceleration thesis and Anthropic lock-in. The PEG of 1.80× is firmly in 'premium; requires execution' territory — the multiple is pricing in AWS re-acceleration to 29–30% and the $100B Anthropic AWS commitment materialising. The compression from 36.8× trailing to 32.4× forward signals a significant earnings ramp expectation through 2026–2027, contingent on the $200B capex cycle beginning to monetise."
     }
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$170",
-      "description": "Despite the Supreme Court's Feb 2026 tariff ruling, seller cost pass-through (3.5% FBA fuel surcharge + FBA rate hikes) weighs on GMV, the $200B capex cycle extends FCF compression, and AWS decelerates to low-teens growth as Azure and GCP win disproportionate enterprise AI workloads.",
+      "description": "Persistent 125–145% tariffs on Chinese goods cause Chinese sellers (~50%+ of marketplace) to reduce listings and raise prices, disrupting the marketplace flywheel. The $200B capex cycle extends FCF compression while AWS decelerates as Azure and GCP win disproportionate enterprise AI inference workloads.",
       "points": [
-        "FBA fuel surcharge (3.5%, effective Apr 17) and rate increases squeeze third-party sellers already absorbing higher input costs; Chinese sellers — 50%+ of marketplace — reduce listings, disrupting the marketplace flywheel",
-        "AWS decelerates to low-teens % as Azure (+39% YoY) and Google Cloud (+36% YoY) continue gaining enterprise AI inference share; AWS market share erodes below 28%",
-        "$200B capex drives FCF near-zero for 2026–2027; consumer confidence deteriorates amid macro headwinds, compressing the multiple to 20–22× forward earnings"
+        "FBA fuel surcharge (3.5%, effective Apr 17) and rate increases squeeze third-party sellers; Chinese sellers (~50%+ of marketplace GMV) reduce listings or raise prices 20–30%, eroding Amazon's low-price competitive advantage and consumer traffic",
+        "AWS decelerates toward low-teens % as Azure (+39% YoY) and Google Cloud (+36% YoY) continue gaining enterprise AI inference share; the $100B Anthropic AWS commitment is insufficient to offset broader enterprise switching; AWS market share erodes below 28%",
+        "$200B capex drives FCF near-zero for 2026–2027; Q1 2026 earnings disappoint on operating income, the multiple compresses to 22–24× forward earnings, and stock retraces to $170 bear case"
       ]
     },
     "base": {
@@ -172,7 +172,7 @@
       "priceTarget": "$330",
       "description": "AWS re-accelerates above 30% as sovereign AI, enterprise inference, and Anthropic's explosive growth (Mythos model, Project Glasswing) concentrate workloads on the platform, Trainium chips establish a durable silicon moat, and the capex cycle delivers transformational FCF by 2028.",
       "points": [
-        "AWS growth re-accelerates above 30% as sovereign AI demand + Bedrock enterprise adoption + Anthropic Mythos/Glasswing workloads drive the $244B backlog to $350B+ by end of 2026; Anthropic's $30B+ run rate scales to $60B+, making it the single largest AWS revenue driver",
+        "AWS growth re-accelerates above 30% as sovereign AI demand + Bedrock enterprise adoption + Anthropic's $100B AWS commitment (5 GW capacity, Trainium2–4) drive the $244B+ backlog to $350B+ by end of 2026; Anthropic's $30B+ run rate scales to $60B+, making it the single largest AWS revenue driver",
         "Trainium3/4 chips achieve cost-performance parity with Nvidia H100/B200 for inference at scale — AWS silicon (Graviton + Trainium) at $10B+ annualised run rate growing triple digits — creating a 2–3 year lead-time moat",
         "FCF surpasses $80B by 2027–2028 as capex transitions to depreciation tailwinds; a capital return programme (buybacks) is announced, triggering a re-rating toward 35× forward earnings"
       ]
@@ -201,7 +201,7 @@
     },
     "proprietaryData": {
       "status": "strong",
-      "note": "Purchase intent data, AWS usage telemetry, and last-mile logistics operational data are genuinely irreplaceable. AWS $244B backlog reflects deep customer commitment. The Anthropic partnership adds a new proprietary data dimension: Project Rainier generates terabytes of AI training workload telemetry on Trainium2 chips that no competitor can observe — informing next-generation silicon design and AI infrastructure optimization in ways that compound AWS's custom silicon advantage over time."
+      "note": "Purchase intent data, AWS usage telemetry, and last-mile logistics operational data are genuinely irreplaceable. AWS $244B+ backlog reflects deep customer commitment. The Anthropic bilateral lock-in ($33B Amazon investment; $100B+ Anthropic AWS commitment over 10 years) creates a proprietary data feedback loop: Anthropic's training workloads on Trainium2–4 generate silicon telemetry no competitor can observe, compounding AWS's custom chip advantage. This is now a structural, not just financial, relationship."
     },
     "regulatoryLockIn": {
       "status": "strong",
