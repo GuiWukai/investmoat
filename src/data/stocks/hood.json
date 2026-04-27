@@ -1,0 +1,179 @@
+{
+  "slug": "hood",
+  "ticker": "HOOD",
+  "name": "Robinhood Markets",
+  "lastAnalyzed": "April 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "HOOD" },
+    { "label": "Market Cap", "value": "~$76.3B" },
+    { "label": "Current Price", "value": "~$84.71" }
+  ],
+  "chips": [
+    { "label": "Retail Brokerage | Options | Crypto | Prediction Markets", "color": "primary" },
+    { "label": "Super-App Transition | RIA | International Expansion", "color": "success" },
+    { "label": "Revenue Cyclicality Risk", "color": "warning" }
+  ],
+  "recommendation": "Hold",
+  "metrics": [
+    {
+      "title": "Revenue (FY2025)",
+      "value": "$4.5B",
+      "label": "+52% YoY; Adj. EBITDA $2.5B (56% margin); EPS $2.05 (record)",
+      "icon": "TrendingUp",
+      "color": "#00c805"
+    },
+    {
+      "title": "Platform Assets",
+      "value": "$324B",
+      "label": "+68% YoY; 27M funded customers; 4.2M Gold subscribers",
+      "icon": "Shield",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "Gross Margin",
+      "value": "92%",
+      "label": "TTM; FCF $1.1B; net deposits $68B in 2025; ROIC 8.4%",
+      "icon": "BarChart3",
+      "color": "#10b981"
+    }
+  ],
+  "moat": {
+    "score": 60,
+    "description": "Robinhood's moat rests on regulatory standing as a licensed broker-dealer across 50 US states plus growing crypto licenses (Bitstamp EU/UK, pending WonderFi Canada), a 27M-user behavioral data flywheel that powers Cortex AI, and growing transaction embedding as $324B in platform assets creates meaningful switching friction — with a bundling strategy that is rapidly expanding from trading into retirement, credit, prediction markets, and RIA custody via TradePMR.",
+    "analysisTitle": "The Retail Financial Platform Transition Moat",
+    "analysisSummary": "Robinhood's competitive position rests on **Regulatory Infrastructure, Proprietary Behavioral Data, and an accelerating Super-App Bundling Strategy**. The core moat is moderately durable but not yet structurally entrenched — the company is mid-transition from a single-product brokerage into a financial super-app, and the moat strengthens materially with each product layer added:",
+    "analysisPoints": [
+      {
+        "title": "Regulatory Infrastructure — The License Moat",
+        "text": "Robinhood holds FINRA/SEC broker-dealer registration, SIPC membership, money transmission licenses across 50 US states, and is acquiring Bitstamp's FCA (UK) and MiCA-equivalent (EU) crypto licenses plus the MIAX Derivatives Exchange operating license — giving it a regulated exchange of its own. The $45M SEC fine in January 2025 for compliance violations is a reminder that this regulatory infrastructure requires constant investment, but it also underscores that the cost to replicate it is high. Most importantly, Robinhood's favorable standing under SEC Chair Atkins (appointed 2025) has removed the existential PFOF ban risk, and the deregulatory environment has enabled the prediction markets and crypto product expansion that drove 2025's record performance."
+      },
+      {
+        "title": "Behavioral Data Flywheel — 27M Users × Real-Money Decisions",
+        "text": "Robinhood's 27M funded customers generate a unique dataset: real-money trading decisions across equities, options, crypto, and prediction markets by the largest retail investor demographic in the US (median age ~32). This data powers Robinhood Cortex — the AI market analysis product launched in 2025 — and informs market-making, product development, and user acquisition. Unlike social media engagement data, financial behavioral data is intrinsically high-signal: every trade is a real capital commitment. This dataset is being extended by TradePMR (RIA advisor behavior) and WonderFi (Canadian retail crypto), creating a cross-market behavioral intelligence layer that no new entrant can bootstrap quickly."
+      },
+      {
+        "title": "Super-App Bundling in Progress",
+        "text": "In 2021, 75% of Robinhood's revenue was transaction-based. By 9M 2025 that had fallen to ~55%, with Gold subscriptions, net interest (margin lending, cash sweep), and prediction markets making up an increasing share. The product suite now includes: retail equities, options, crypto, IRA/retirement accounts, Robinhood Gold ($5/month), margin lending, cash sweep (5% APY), a credit card, bank account, prediction markets, and — via TradePMR — RIA custody for registered investment advisors. Users with 3+ products have materially higher retention, and the MIAX Derivatives Exchange acquisition will deepen engagement further. The bundle is not yet as entrenched as Schwab or Fidelity, but the trajectory is clear: each product added raises the switching cost."
+      }
+    ]
+  },
+  "growth": {
+    "score": 80,
+    "description": "FY2025 revenue of $4.5B grew 52% — aided by a crypto bull run, prediction market launch, and favorable regulatory tailwinds — with Q4 2025 normalizing to +27% YoY at $1.28B. The 3–5 year blended CAGR of 15–25% is supported by four compounding growth engines: TradePMR RIA expansion (~$12T addressable AUM market), MIAX exchange (proprietary derivatives venue), WonderFi (Canadian crypto leadership), and a Robinhood Gold subscriber base at 4.2M growing toward a potential 10M+ target. Revenue cyclicality tied to trading volumes and crypto prices is the primary risk to sustained compounding.",
+    "growthAnalysis": {
+      "cagrEstimate": "15–25%",
+      "scoreDerivation": "Base 80 (15–30% blended CAGR; FY2025 +52%, Q4 2025 normalizing to +27%; 2026 consensus ~25% revenue growth) + 3 Gold subscription recurring layer (4.2M subscribers at $5/month growing; NRR characteristics as subs expand to credit, margin, cash sweep) + 5 TAM expansion (TradePMR unlocks $12T RIA AUM market; MIAX exchange adds derivatives trading venue; WonderFi adds Canadian crypto; prediction markets from ~$100M ARR) − 8 cyclicality (transaction-based revenue ~55% of total; crypto revenue fell to near-zero in 2022 bear market; options/equities volume also market-dependent; trough scenario meaningful) = 80",
+      "drivers": [
+        {
+          "name": "Transaction Revenue (Options + Crypto + Equities)",
+          "metric": "$2.5B FY2025 est.; options +50% YoY Q3, crypto +300%+ YoY Q3 2025",
+          "trend": "stable"
+        },
+        {
+          "name": "Robinhood Gold + Net Interest",
+          "metric": "4.2M Gold subs (record); Net interest $456M Q3 2025 (+66% YoY); cash sweep 5% APY",
+          "trend": "accelerating"
+        },
+        {
+          "name": "New Platforms (TradePMR, MIAX, Prediction Markets)",
+          "metric": "Prediction markets ~$100M ARR; TradePMR RIA platform acquired Feb 2026; MIAX exchange 90% stake",
+          "trend": "accelerating"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If Bitcoin falls below $40K and total crypto market cap contracts 50%+ by end of 2026, Robinhood's crypto transaction revenue collapses from ~$900M toward $150M, total FY2026 revenue misses consensus $5.5B by $1.5B+, and the EPS consensus of $2.44 is cut to ~$1.20 — forcing a re-rating toward trough multiples",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 72,
+    "description": "At ~$84.71, HOOD sits between the bear ($45) and base ($100) scenarios — approximately 15% below fair value on the base case, offering modest upside. At ~35× forward NTM earnings on $2.44 consensus EPS, the stock carries a premium multiple that reflects both Robinhood's rapid growth and the significant cyclicality risk embedded in the trading-revenue model. The stock is not cheap, but it is not at bubble-level valuations either — a fair-value entry requires confidence in the super-app thesis sustaining 25%+ growth through 2026.",
+    "peAnalysis": {
+      "asOf": "April 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~41×", "note": "FY2025 EPS $2.05" },
+        { "label": "Forward P/E (NTM)", "value": "~35×", "note": "consensus NTM EPS ~$2.44" },
+        { "label": "PEG Ratio", "value": "~1.6×", "note": "fwd P/E ÷ ~22% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~14×", "note": "~$5.5B NTM revenue est." },
+        { "label": "Price / FCF", "value": "~69×", "note": "$1.1B FCF (TTM); expected to grow" }
+      ],
+      "summary": "At ~35× forward earnings vs. the Capital Markets industry median of ~17×, HOOD carries a 2× sector premium reflecting its growth rate — but a PEG of 1.6× is expensive relative to high-quality compounders like Mastercard (1.8×) or Visa (1.7×) that have far more durable moats. The P/FCF of 69× on TTM FCF is elevated, though FCF should grow substantially as EBITDA margins expand — NTM FCF likely closer to $1.6–1.9B, implying ~45× on forward FCF. The gap between trailing P/E (41×) and forward (35×) confirms an earnings ramp is priced in, but execution on the super-app transition must materialize to justify the premium."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$45",
+      "description": "Crypto bear market collapses transaction revenue, regulatory tailwinds reverse, and a macro downturn compresses trading volumes — forcing a re-rating toward cyclical trough multiples on depressed earnings.",
+      "points": [
+        "Bitcoin falls to $40K or below by end of 2026 following a macro tightening event or crypto-specific regulatory shock — crypto transaction revenue falls from ~$900M toward $150–200M, cutting total FY2026 revenue to ~$3.0–3.2B vs. consensus $5.5B",
+        "PFOF regulatory risk resurfaces under a new political/regulatory regime (post-2026 election cycle), threatening ~$700M in annual PFOF revenue and forcing Robinhood to restructure its market-making relationships at a cost to margins",
+        "TradePMR integration delays and MIAX exchange startup costs consume $200–300M in incremental opex without near-term revenue offset, while WonderFi regulatory approval in Canada stalls — delaying international expansion by 12–18 months",
+        "Trough EPS of ~$0.80–1.00; market reprices at 15–20× trough earnings = ~$40–50/share"
+      ]
+    },
+    "base": {
+      "priceTarget": "$100",
+      "description": "Continued 20–25% revenue growth as Gold subscriptions scale, prediction markets ramp, and TradePMR adds RIA distribution — with crypto markets stable and the MIAX exchange approaching breakeven.",
+      "points": [
+        "FY2026 revenue reaches $5.5B (+22% YoY) driven by Gold subscribers growing from 4.2M to 6M+ (+$72M incremental ARR), prediction markets scaling from $100M to $250–300M ARR, and net interest holding at $1.5B+ as platform assets grow toward $400B",
+        "TradePMR generates $60–80M in year-1 revenue from RIA custody fee capture on $50B+ in advisor-managed assets, establishing Robinhood's first beachhead in the $12T RIA market and adding 2–3% to total revenue",
+        "MIAX exchange operational by H2 2026, processing Robinhood's own options order flow at reduced cost and generating incremental exchange fee revenue — expanding EBITDA margins from 56% toward 60%+",
+        "NTM EPS of ~$2.80–3.00; re-rates to 33–36× = ~$95–108/share"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$175",
+      "description": "The super-app thesis fully materializes: Gold hits 10M subscribers, MIAX exchange captures meaningful market share, WonderFi makes Robinhood the dominant Canadian retail crypto platform, and platform assets reach $600B+ — warranting a re-rating toward premium consumer fintech multiples.",
+      "points": [
+        "Robinhood Gold subscribers reach 8–10M by 2027, generating $480–600M in recurring annual subscription revenue — establishing a durable, non-cyclical earnings floor that supports a higher base valuation multiple",
+        "MIAX exchange achieves 5%+ US options market share by end of 2026 (vs. CBOE at ~33%), generating $300–400M in exchange fee revenue and positioning Robinhood as a vertically integrated broker-exchange — comparable to Coinbase's regulatory infrastructure position in crypto",
+        "WonderFi closes on schedule, making Robinhood the dominant retail crypto platform in Canada ($2.1B+ AUM from Bitbuy + Coinsquare); Bitstamp EU/UK integration adds 750K+ international users to the ecosystem, unlocking $200M+ in international revenue by 2027",
+        "Platform assets reach $600B+, total revenue $7.5–8B by 2027, EPS $4.50–5.00; stock re-rates to 35–40× on forward earnings = $157–200/share (12–24 month horizon capped at $175)"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "Robinhood's deliberate simplicity — mobile-first, minimal friction — was a disruptive advantage in 2015 but has been replicated by every major broker (Fidelity, Schwab, Webull). The interface requires minimal learning investment from users, which paradoxically reduces switching friction. AI agents can navigate any brokerage UI equally well, further eroding this moat. Robinhood Cortex adds an AI-powered layer, but competitors are shipping equivalent features."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "Retail trading does not embed proprietary business logic into customer workflows. A user's trading strategy, watchlists, and portfolio configuration are fully portable via ACATS account transfer. The exception is Robinhood's prediction markets infrastructure (built with Susquehanna's MIAX), which has some structural complexity — but even this is replicable. AI accelerates the portability of any remaining logic advantages."
+    },
+    "publicDataAccess": {
+      "status": "weakened",
+      "note": "Robinhood distributes market data (prices, news, analyst ratings) that is available from dozens of competing sources. Cortex aggregates public AI-generated market insights that are structurally non-proprietary. No exclusive contractual data access exists comparable to Bloomberg Terminal or ICE Data Services. AI actually commoditizes this further by making public market analysis available for free."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Robinhood employs fintech and ML engineers, but this talent pool is broadly available in San Francisco and not materially scarcer than at Coinbase, SoFi, or any large traditional brokerage. The regulatory compliance specialists required for broker-dealer operations are specialized, but not uniquely scarce. AI coding tools continue to compress engineering talent differentiation across fintech."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "The super-app transition is real and accelerating: equities, options, crypto, retirement (IRA), Gold subscription, margin lending, cash sweep (5% APY), credit card, bank account, prediction markets, and — via TradePMR — RIA advisory. Revenue mix shifted from 75% transaction-based (2021) to 55% (9M 2025), with recurring and interest revenues growing. Users with 3+ products churn at materially lower rates. The bundle is not yet as entrenched as a Schwab or Fidelity relationship, but each product addition raises switching costs. AI is neutral here — competitors can also build bundles, but Robinhood's organic 27M user base is a structural advantage for cross-sell velocity."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Robinhood's 27M funded customers generate real-money trading behavioral data at scale — the largest retail investor behavioral dataset in the US skewed toward the 25–40 demographic. Order flow data from PFOF relationships reveals retail sentiment in real time. This powers Cortex AI features and informs product personalization at a granularity no new entrant can replicate without years of user acquisition. TradePMR adds RIA advisor transaction data; WonderFi adds Canadian retail crypto behavior. AI strengthens this moat — Cortex and future AI products become more accurate as the dataset grows, creating a compounding intelligence advantage."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "Robinhood holds FINRA and SEC broker-dealer registration, SIPC membership, money transmission licenses in all 50 US states plus DC, and crypto exchange licenses via Bitstamp (FCA UK, expanding EU). The pending MIAX Derivatives Exchange acquisition will add a CFTC-regulated exchange operating license — a rare and costly regulatory achievement. The $45M SEC settlement in January 2025 is a reminder that regulatory maintenance is expensive, but it also signals that Robinhood has the institutional compliance infrastructure to resolve regulatory disputes rather than face existential enforcement risk. The deregulatory stance of SEC Chair Atkins has materially reduced near-term PFOF risk. Not as strong as Coinbase's ETF custodian position, but structurally meaningful."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "Robinhood's 27M user base creates order-flow density that improves PFOF pricing — more orders enable better execution quality from market makers, which attracts more users. Prediction markets are liquidity-dependent: more participants create tighter spreads and more accurate pricing, directly driving user engagement. Community features (trending stocks, watchlist sharing) add lightweight social network effects. Gold subscribers create a direct economic incentive network: more Gold members fund higher cash sweep rates for all users. These are real but not dominant network effects — the platform does not exhibit Metcalfe's Law dynamics the way a social network does. AI can enhance community features and strengthen the data-driven network over time."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Robinhood processes daily trading transactions for 27M users across equities, options, crypto, and prediction markets. $324B in platform assets creates direct switching friction — moving accounts requires ACATS transfer (5–7 business days), tax lot migration, and re-establishing recurring investments and direct deposits. Gold members routing direct deposit to Robinhood's bank account anchor their financial center-of-gravity on the platform. MIAX exchange acquisition deepens this: Robinhood will be embedded as both broker and exchange for its own user order flow, eliminating one revenue layer that currently goes to third-party exchanges. The transaction embedding is real but lacks the institutional-infrastructure depth of Coinbase's ETF custodianship or Mastercard's payment rails."
+    },
+    "systemOfRecord": {
+      "status": "weakened",
+      "note": "Robinhood holds users' brokerage and crypto account records, tax lot history, and IRA contribution records — creating genuine switching friction at tax time and for retirement accounts. However, all of this is portable: ACATS transfers move equity accounts; crypto self-custody or exchange-to-exchange transfers move crypto; IRA transfers are standard. The system-of-record moat is real but shallow — comparable to a neobank rather than a core banking system. It lacks the institutional-depth switching cost of a Fiserv or FIS core banking platform. RIA custody via TradePMR adds a more durable layer: advisors who migrate their book to Robinhood's RIA platform face meaningful operational switching costs to move back."
+    },
+    "aiResilienceScore": 60,
+    "verdict": "Robinhood is a modest net beneficiary of AI in the near term — Cortex monetizes the behavioral data flywheel, and AI-powered features deepen Gold subscription engagement. However, three moats face genuine AI headwinds: public data access (AI makes market analysis freely available, weakening Robinhood's data curation value), business logic (trading workflows have no AI-resistant complexity), and learned interfaces (AI abstracts any remaining UX differentiation). The AI-resilient core — proprietary behavioral data, regulatory infrastructure, and transaction embedding — is solid but not exceptional: Robinhood's data moat is younger and less exclusive than Bloomberg's, its regulatory moat is narrower than Coinbase's ETF custodian position, and its transaction embedding lacks institutional-infrastructure depth. The key AI-era opportunity is prediction markets: AI-enhanced market analysis and agentic trading flows will require regulated on-ramps, and Robinhood's combination of broker-dealer license and retail distribution positions it to capture this flow. The primary AI-era risk is that Cortex becomes commoditized before it creates durable user lock-in."
+  }
+}
