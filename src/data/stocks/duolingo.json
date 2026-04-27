@@ -1,0 +1,181 @@
+{
+  "slug": "duolingo",
+  "ticker": "DUOL",
+  "name": "Duolingo",
+  "lastAnalyzed": "April 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "DUOL" },
+    { "label": "Market Cap", "value": "~$4.9B" },
+    { "label": "Current Price", "value": "~$105" }
+  ],
+  "chips": [
+    { "label": "EdTech Leader", "color": "primary" },
+    { "label": "AI-Enhanced Learning", "color": "success" },
+    { "label": "Gamification Moat", "color": "secondary" },
+    { "label": "DAU Investment Cycle", "color": "warning" },
+    { "label": "Multi-Subject Expansion", "color": "primary" }
+  ],
+  "recommendation": "Hold",
+  "metrics": [
+    {
+      "title": "Revenue (FY2025)",
+      "value": "$1.03B",
+      "label": "+38.7% YoY; FY2026 guided +15–18%",
+      "icon": "TrendingUp",
+      "color": "#58CC02"
+    },
+    {
+      "title": "Daily Active Users",
+      "value": "52.7M",
+      "label": "Q4 2025; +35% YoY; 12.2M paid subs",
+      "icon": "Users",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "Gross Margin",
+      "value": "72.8%",
+      "label": "Q4 2025; Adj. EBITDA ~29% (FY2025)",
+      "icon": "BarChart3",
+      "color": "#10b981"
+    }
+  ],
+  "moat": {
+    "score": 50,
+    "description": "Duolingo's moat rests on deep habit formation through streak psychology, a proprietary behavioral learning data flywheel powering BirdBrain AI personalization, and a global brand that 500M+ registered users associate with language learning — none of which a new entrant can rapidly replicate.",
+    "analysisTitle": "The Habit-Formation and Data Flywheel Moat",
+    "analysisSummary": "Duolingo's competitive position rests on **Learned Interfaces (streak psychology + gamification)**, **Proprietary Behavioral Data (BirdBrain AI flywheel)**, and an **expanding multi-subject platform**. It lacks network effects, transaction embedding, and regulatory lock-in — positioning it below typical consumer platform benchmarks but above generic EdTech apps. Moat score of 50 is intentionally below the 63–88 consumer platform peer range: Duolingo is a consumer app, not a platform. It has no Meta-style network effects, no Netflix-scale content exclusivity, and no system-of-record lock-in. The moat is real but narrow.",
+    "analysisPoints": [
+      {
+        "title": "Streak Psychology (Learned Interface)",
+        "text": "Duolingo's streak mechanic is one of the most psychologically effective habit-formation mechanisms in consumer software. Users who have maintained 365+ day streaks report genuine anxiety at the prospect of losing them — creating daily return behavior that is psychological rather than rational. Combined with XP leagues, achievement badges, and character animations, Duolingo's interface investment creates meaningful switching friction for engaged learners. AI strengthens this moat: BirdBrain adaptive content and Duolingo Max features (Roleplay, Explain My Answer, Video Call) make the in-app experience more compelling, turning potential AI disruption into a product advantage."
+      },
+      {
+        "title": "Proprietary Data Flywheel (BirdBrain AI)",
+        "text": "Duolingo has collected learning behavior data from 500M+ registered users over 12+ years — covering error patterns, exercise completion rates, engagement drop-off points, and retention triggers across 40+ languages. This powers BirdBrain, their personalized AI model, which adapts content to each user's learning history in real time. A new entrant in 2026 cannot replicate this behavioral signal: it requires years of diverse learner engagement to achieve comparable personalization quality. As AI improves, this data advantage compounds — better models trained on richer behavioral data produce better learning outcomes, creating a self-reinforcing cycle."
+      },
+      {
+        "title": "Multi-Subject Platform Expansion",
+        "text": "Duolingo is expanding beyond language learning into math, music, and chess — the chess course was the fastest-launched in Duolingo history. At 9.2% paid subscriber penetration of MAU and 8% Duolingo Max share of the paid base (~1M Max users), the platform expansion represents a meaningful TAM extension with the same freemium flywheel as the core language business. Each new subject adds both a new acquisition surface and incrementally deepens Duolingo Max's multi-product value proposition at ~$30/month."
+      }
+    ]
+  },
+  "growth": {
+    "score": 81,
+    "description": "Duolingo is in a deliberate investment cycle — voluntarily compressing EBITDA margins from ~29% (FY2025) to ~25% (FY2026) to invest in DAU growth, free-learner experience, and new subject categories. FY2026 revenue guidance of 15–18% is conservative; reacceleration to 20%+ depends on whether the DAU gains convert to paid subscriber growth beginning in 2027.",
+    "growthAnalysis": {
+      "cagrEstimate": "15–18%",
+      "scoreDerivation": "Base 80 (15–30% CAGR; FY2026 guided +15–18% after +38.7% in FY2025) + 3 subscription ARPU improvement (Duolingo Max at ~$30/month vs Super at ~$7/month; Max share growing from 5% to 8%+ of paid base) + 5 TAM expansion (math, music, chess add new addressable markets; Duolingo English Test growing; Max unlocks higher-ARPU tier in existing base) − 5 margin compression (adj. EBITDA deliberately guided down from 29% to 25% in FY2026) − 2 growth deceleration (revenue growth from 38.7% to 15–18% is a significant deceleration; investor confidence in reacceleration is unproven) = 81",
+      "drivers": [
+        {
+          "name": "Subscription Revenue (Super + Max)",
+          "metric": "+46% YoY in Q2 2025; ~81% of FY2025 revenue; 12.2M paid subs Q4 2025",
+          "trend": "stable"
+        },
+        {
+          "name": "Duolingo Max (AI-Powered Tier)",
+          "metric": "8% of paid base in Q2 2025 (up from 5%); ~3–4× higher ARPU vs Super at ~$30/month",
+          "trend": "accelerating"
+        },
+        {
+          "name": "New Subject Verticals (Math, Music, Chess)",
+          "metric": "Chess fastest-launched course in Duolingo history; expanding TAM beyond 40-language core",
+          "trend": "accelerating"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If ChatGPT or Gemini conversational language tutoring captures 15%+ of mobile language-learning session share by end of 2027, Duolingo's DAU investment cycle fails to convert to paid subscriber growth and the $400M buyback is consumed defending the stock rather than returning capital from excess earnings",
+      "marginTrend": "compressing"
+    }
+  },
+  "valuation": {
+    "score": 80,
+    "description": "At ~$105, Duolingo sits between its $65 bear and $160 base scenario — deeply discounted from its 52-week high of $544.93 — offering a rare opportunity to buy a profitable, growing EdTech leader at ~4× forward sales and ~13× trailing GAAP earnings. The stock has fallen ~70% from its high on a deliberate margin-for-growth strategic pivot, not a fundamental business deterioration. Re-rating requires confidence that the DAU investment converts to reaccelerated subscriber growth from 2027.",
+    "peAnalysis": {
+      "asOf": "April 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~13×", "note": "TTM GAAP EPS ~$8.00" },
+        { "label": "Forward P/E (NTM)", "value": "~16×", "note": "est. FY2026 EPS ~$6.50 on margin dip" },
+        { "label": "PEG Ratio", "value": "~1.0×", "note": "fwd P/E ÷ ~16% NTM growth" },
+        { "label": "Price / Sales (NTM)", "value": "~4×", "note": "$1.21B FY2026 guided revenue" },
+        { "label": "Price / FCF", "value": "~18×", "note": "$265M levered FCF (TTM)" }
+      ],
+      "summary": "At ~16× forward P/E on 15–18% revenue growth, Duolingo trades at a PEG of ~1.0 — technically GARP territory — but the 2026 margin compression year makes the forward multiple temporarily elevated relative to normalised earnings power. The trailing P/E of ~13× on strong FY2025 profitability (before the deliberate investment cycle) is strikingly cheap for a 72%+ gross margin software business crossing $1B in revenue. The ~4× forward P/S is well below consumer software peers growing at comparable rates, suggesting the market is pricing in sustained growth disappointment rather than a temporary investment trough — which creates asymmetric upside if the DAU investment pays off."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$65",
+      "description": "AI-native language tutors (ChatGPT, Gemini) capture meaningful mobile session share; DAU investment fails to drive subscriber conversion; margins stay compressed; Duolingo re-rates to ~2.5× forward P/S as growth stalls at 8–10%.",
+      "points": [
+        "ChatGPT conversational language tutoring reaches 20%+ of Duolingo's core user demographic by end of 2027, stalling DAU growth below 10% annually",
+        "Deliberate margin investment fails to produce DAU or subscriber reacceleration; adj. EBITDA stays depressed at 20–22% with no recovery timeline",
+        "Paid subscriber growth decelerates to 10–12% as free-learner improvements cannibalise conversion incentives rather than expanding the paid funnel",
+        "Market re-rates to ~2.5× forward P/S (~$65) as growth narrative breaks and Duolingo is valued as a mature consumer app rather than a growth platform"
+      ]
+    },
+    "base": {
+      "priceTarget": "$160",
+      "description": "DAU investment pays off in 2H 2026–2027 with paid subscriber growth reaccelerating to 20%+; Duolingo Max expands from 8% to 15%+ of paid base; revenue grows 16% in 2026 then reaccelerates; stock re-rates to ~5× forward P/S.",
+      "points": [
+        "DAU reaches 65M+ by end of 2026 (+20% YoY on plan); paid subscriber penetration of MAU improves from 9.2% to 10.5%+ as free-learner improvements deepen the conversion funnel",
+        "Duolingo Max expands from 8% to 15% of paid subscriber base, driving ARPU improvement as the AI-powered tier gains adoption at ~$30/month",
+        "Math and chess verticals add 3–5M new DAU by end of 2026, diversifying the growth surface beyond language learning",
+        "Adj. EBITDA margin recovers to 27–28% by 2027; stock re-rates to ~5× forward P/S (~$160) as reacceleration thesis is confirmed"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$260",
+      "description": "Duolingo Max becomes the dominant AI-powered personal education platform; paid subscribers exceed 20M by 2027 with Max driving significant ARPU expansion; new verticals add $150–200M in revenue; stock re-rates to ~7× forward P/S on 25%+ growth.",
+      "points": [
+        "Duolingo Max paid subscribers reach 4M+ (20% of total paid base) by 2027, driving blended ARPU expansion from ~$8/month to $12–14/month",
+        "Chess, math, and music verticals collectively reach $150–200M in annual revenue by 2027, adding a second growth engine beyond core language learning",
+        "AI tutoring features (Video Call with Lily, Roleplay) prove meaningfully superior to ChatGPT for structured learning, reinforcing Duolingo as the default mobile education platform",
+        "Revenue reaccelerates to 25%+ by 2027; stock re-rates to ~7× forward P/S ($260 at ~$1.7B FY2027E revenue)"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Duolingo's streak mechanic creates genuine daily behavioral habit formation: users maintaining 365+ day streaks report real anxiety at the prospect of losing them, creating return behavior that is psychological rather than rational. The gamification system (XP leagues, achievement badges, character animations with Duo the owl) has accumulated years of psychological weight in existing users that a new app cannot instantly replicate. AI strengthens this moat — Duolingo Max's Roleplay, Explain My Answer, and Video Call features make the in-app experience more adaptive and compelling, turning potential AI disruption into a product advantage."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "BirdBrain — Duolingo's personalised spaced-repetition and exercise-sequencing algorithm — adapts to each user's error patterns and completion history. Switching apps resets this personalisation and sunk-cost history. However, BirdBrain's underlying logic (spaced repetition, gamified sequencing) is well-documented and replicable. The switching cost here is more about data (years of personal learning history) than proprietary algorithm logic that competitors cannot understand or approximate."
+    },
+    "publicDataAccess": {
+      "status": "weakened",
+      "note": "Duolingo's 40-language curriculum represents years of content creation investment that is meaningful but not structurally inaccessible. AI can now generate equivalent language learning exercise content at low cost, dramatically reducing the barrier to entry for well-resourced competitors (Google, OpenAI, Babbel). The content library is defensible through quality and breadth, but not through contractual exclusivity or irreproducible data."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Duolingo employs ML engineers for BirdBrain and AI researchers for Max features, but this talent profile is broadly available across the tech industry. No unique research capability creates scarcity analogous to NVIDIA's CUDA team or ASML's EUV engineers. AI coding tools further reduce the differentiation that specialised ML talent once provided."
+    },
+    "bundling": {
+      "status": "weakened",
+      "note": "Duolingo's subscription tiers (Free → Super Duolingo ~$7/month → Duolingo Max ~$30/month) represent an emerging bundling story: Max adds AI conversation features, chess, math, and music to language learning in a single subscription. However, at 8% Max penetration of paid subscribers (~1M users), integration between verticals is still shallow — math and chess are separate modules, not deeply integrated with language learning outcomes. Bundling is an aspiration under construction rather than an entrenched multi-product moat."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Duolingo's 12+ year accumulation of learning behavior data from 500M+ registered users — covering error patterns, engagement drop-off points, exercise completion rates, and retention triggers across 40+ languages and difficulty levels — is genuinely proprietary and continuously updated at scale. This data powers BirdBrain's personalisation and informs product decisions at a granularity no new entrant can match. AI strengthens this moat: Duolingo's behavioral data is the training signal for better AI-powered features, creating a compounding advantage as the user base grows and each interaction generates more signal."
+    },
+    "regulatoryLockIn": {
+      "status": "destroyed",
+      "note": "N/A — Duolingo is a consumer EdTech app with no government certifications, procurement contracts, or accreditation requirements that create structural switching costs. The Duolingo English Test (DET) has growing institutional recognition at universities as an alternative to TOEFL/IELTS, which creates limited regulatory tailwind, but DET represents a small portion of revenue and is not a structural platform lock-in mechanism."
+    },
+    "networkEffects": {
+      "status": "weakened",
+      "note": "Duolingo's weekly XP leagues create competitive social dynamics — users compete against peers in the same league tier, driving return behavior through social comparison. However, the core language learning value proposition is fundamentally individual: learning Spanish does not get better because more people use Duolingo. Network effects are secondary to the core product and are easily replicable by competitors. Duolingo for Schools creates teacher-student connections but represents a small share of overall engagement."
+    },
+    "transactionEmbedding": {
+      "status": "destroyed",
+      "note": "N/A — Duolingo is a consumer subscription app, not a payment processor or financial transaction intermediary. No transaction embedding moat applies."
+    },
+    "systemOfRecord": {
+      "status": "weakened",
+      "note": "A learner's streak count, XP level, course completion history, and achievement badges represent years of accumulated progress that are behaviorally painful to abandon — a form of system-of-record switching cost for engaged users. A 500-day-streak user has a very high behavioral cost to switching. However, this data is not portable, not mission-critical (unlike financial or healthcare records), and does not create the kind of institutional lock-in that defines strong system-of-record moats. Casual users — the majority of the base — have low attachment to their progress history."
+    },
+    "aiResilienceScore": 50,
+    "verdict": "Duolingo is a net beneficiary of AI in the near term — it has embedded GPT-4 into Duolingo Max to offer AI conversation practice, grammar explanation, and video call features that strengthen both the learned interface and proprietary data moats. The BirdBrain behavioral data flywheel becomes more valuable as AI improves personalisation. However, two moats face genuine AI headwinds: public data access (AI can now generate equivalent learning content cheaply, lowering competitive barriers) and business logic (BirdBrain's spaced-repetition logic can be approximated by well-resourced AI labs). The existential AI question for Duolingo is not whether AI helps internally — it clearly does — but whether ChatGPT's conversational fluency becomes a credible substitute for gamified structured learning at scale. Evidence so far favors Duolingo's habit-formation loop over unstructured AI conversation, but this remains the primary thesis risk through 2027."
+  }
+}
