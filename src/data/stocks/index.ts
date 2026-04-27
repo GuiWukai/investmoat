@@ -61,6 +61,7 @@ import sea from './sea.json';
 import ttd from './ttd.json';
 import ice from './ice.json';
 import duolingo from './duolingo.json';
+import hood from './hood.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -124,6 +125,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   ttd: ttd as StockAnalysisData,
   ice: ice as StockAnalysisData,
   duolingo: duolingo as StockAnalysisData,
+  hood: hood as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
