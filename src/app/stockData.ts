@@ -77,6 +77,7 @@ import netData     from '@/data/stocks/net.json';
 import rddtData    from '@/data/stocks/rddt.json';
 import seaData     from '@/data/stocks/sea.json';
 import oktaData    from '@/data/stocks/okta.json';
+import duolingoData from '@/data/stocks/duolingo.json';
 
 // Weighted composite: Moat 40% · Growth 35% · Valuation 25%
 // scores = [moatScore, growthScore, valuationScore]
@@ -170,6 +171,7 @@ const allCoverageData = [
     { name: "Reddit",            ticker: "RDDT",  slug: "rddt",        scores: [m(rddtData),        g(rddtData),        v(rddtData)],        href: "/stocks/rddt",        category: "Big Tech",    ...t(rddtData)        },
     { name: "Sea Limited",       ticker: "SE",    slug: "sea",         scores: [m(seaData),         g(seaData),         v(seaData)],         href: "/stocks/sea",         category: "Other",       ...t(seaData)         },
     { name: "Okta",              ticker: "OKTA",  slug: "okta",        scores: [m(oktaData),        g(oktaData),        v(oktaData)],        href: "/stocks/okta",        category: "Big Tech",    ...t(oktaData)        },
+    { name: "Duolingo",          ticker: "DUOL",  slug: "duolingo",    scores: [m(duolingoData),    g(duolingoData),    v(duolingoData)],    href: "/stocks/duolingo",    category: "Other",       ...t(duolingoData)    },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────
