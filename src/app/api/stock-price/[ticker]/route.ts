@@ -64,6 +64,10 @@ const YAHOO_SYMBOL_MAP: Record<string, string> = {
   disney:     'DIS',
   fanuc:      'FANUY',
   ice:        'ICE',
+  okta:       'OKTA',
+  duolingo:   'DUOL',
+  hood:       'HOOD',
+  vst:        'VST',
 };
 
 export async function GET(
