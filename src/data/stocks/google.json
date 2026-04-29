@@ -2,7 +2,7 @@
   "slug": "google",
   "ticker": "GOOGL",
   "name": "Alphabet Inc.",
-  "lastAnalyzed": "March 2026",
+  "lastAnalyzed": "April 29, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$3.66T"
+      "value": "~$4.4T"
     },
     {
       "label": "Price",
-      "value": "$305.00"
+      "value": "~$365"
     }
   ],
   "chips": [
@@ -31,28 +31,28 @@
   "metrics": [
     {
       "title": "Search Revenue",
-      "value": "$63B",
-      "label": "Q4 2025 (YoY +17%)",
+      "value": "$60.4B",
+      "label": "Q1 2026 (YoY +19%); AI Mode driving 3× longer queries",
       "icon": "Globe",
       "color": "#4285F4"
     },
     {
       "title": "Google Cloud",
-      "value": "$17.7B",
-      "label": "Q4 2025 (YoY +48%, margin 30%)",
+      "value": "$20B",
+      "label": "Q1 2026 (YoY +63%); $80B+ ARR run rate; margin expanding",
       "icon": "Cloud",
       "color": "#34A853"
     },
     {
       "title": "Cloud Backlog",
-      "value": "$240B",
-      "label": "2× YoY — multi-year revenue visibility",
+      "value": "$460B",
+      "label": "Nearly 2× QoQ — record contracted revenue visibility",
       "icon": "Lock",
       "color": "#FBBC05"
     }
   ],
   "moat": {
-    "description": "Search monopoly with AI Overviews monetizing at comparable CPCs, Google Cloud accelerating to $70B+ ARR with a $240B backlog, and Android/YouTube data flywheels form a durable multi-moat position. DOJ ruling (Sept 2025) banned exclusive default deals but preserved Android and Chrome — a near-best-case regulatory outcome.",
+    "description": "Search monopoly with AI Overviews monetizing at comparable CPCs, Google Cloud re-accelerating to +63% YoY ($80B+ ARR) with a $460B backlog, and Android/YouTube data flywheels form a durable multi-moat position. Q1 2026 total revenue +22% to $109.9B — definitively proving Alphabet as a net AI beneficiary. DOJ ruling (Sept 2025) banned exclusive default deals but preserved Android and Chrome — a near-best-case regulatory outcome.",
     "analysisTitle": "The Information Moat",
     "analysisSummary": "Google's moat rests on **Data Supremacy and Ecosystem Lock-In**:",
     "analysisPoints": [
@@ -62,7 +62,7 @@
       },
       {
         "title": "Google Cloud — Breakout Acceleration",
-        "text": "Google Cloud exited 2025 at a $70B+ annualised run rate, growing +48% YoY in Q4 2025 with a $240B contracted backlog (doubled YoY). Operating margin expanded from 17.5% to 30.1% in a single year. In Q4 2025, Google Cloud outperformed Microsoft Azure for the first time — a structural milestone. With over half of Alphabet's 2026 ML compute allocated to Cloud and billion-dollar deals exceeding the prior three years combined, the competitive trajectory points toward closing the gap with AWS."
+        "text": "Google Cloud accelerated to +63% YoY in Q1 2026 ($20.03B quarterly, $80B+ ARR run rate) with a $460B contracted backlog (nearly 2× the Q4 2025 figure of $240B in a single quarter). Operating margin continued expanding. Google Cloud outgrew both Azure (+40%) and AWS (+28%) in Q1 2026 — establishing Cloud as the fastest-growing hyperscaler by YoY growth rate. The $460B backlog provides contracted revenue visibility extending well into 2028, making Cloud's growth trajectory the most reliable in its history."
       },
       {
         "title": "YouTube & the Data Flywheel",
@@ -71,112 +71,109 @@
     ]
   },
   "growth": {
-    "score": 84,
-    "description": "Google Cloud re-accelerated to +48% YoY in Q4 2025 with a $240B backlog, Search accelerated to +17% as AI Overviews monetize well, and FY2025 total revenue hit $402.8B (+15%). Blended 3-5 year CAGR of 14-18% is driven by Cloud becoming a structural #2 behind AWS and AI products expanding monetizable query volume.",
+    "score": 87,
+    "description": "Q1 2026 was a structural breakout: total revenue $109.9B (+22% YoY, beat $106.9B consensus). Google Cloud re-accelerated to +63% YoY ($20.03B) — up from +48% in Q4 2025 — with backlog nearly doubling QoQ to $460B. Search revenue +19% YoY ($60.4B). Operating income grew 30% to $39.7B; operating margin expanded +2pp to 36.1%. Net income $62.58B (includes significant non-operating investment gains). Paid subscriptions reached 350M — their strongest ever consumer AI quarter driven by the Gemini app. The blended 3–5 year CAGR estimate rises materially on Cloud's structural acceleration.",
     "additionalNote": {
       "title": "Key Growth Catalysts",
       "points": [
-        "Google Cloud +48% YoY in Q4 2025, $240B backlog (2× YoY), $70B+ ARR run rate — outperformed Azure for the first time",
-        "AI Overviews at 1.5B+ monthly users monetizing at search-comparable CPCs; Search revenue accelerated every quarter in 2025 (+10% → +12% → +15% → +17%)",
-        "AI Max for Search is Google's fastest-growing ad product; advertisers used Gemini to create 70M+ creative assets in Q4 2025 alone",
-        "Gemini 2.5 Pro leads reasoning benchmarks (WebDev Arena ELO 1420); 750M Gemini app MAUs creating new consumer AI monetization surface",
-        "Waymo received $16B investment round (Feb 2026) — autonomous ride-hailing scaling in SF, LA, Phoenix, and Austin"
+        "Google Cloud +63% YoY in Q1 2026 ($20.03B), backlog $460B (nearly 2× QoQ from $240B) — fastest acceleration in Cloud history, outpacing Azure (+40%) and AWS (+28%) in Q1 2026",
+        "Search revenue +19% YoY ($60.4B) — continuing the acceleration trend; AI Mode driving 3× longer queries, all-time high query volume; AI Max for Search scaling to millions of advertisers",
+        "Total revenue $109.9B (+22% YoY), operating margin 36.1% (+2pp YoY), paid subscriptions 350M (strongest ever consumer AI quarter from Gemini app)",
+        "Gemini 2.5 Pro leads reasoning benchmarks (WebDev Arena ELO 1420); YouTube ads $9.88B Q1 2026; Waymo scaling in SF, LA, Phoenix, and Austin after $16B investment round (Feb 2026)"
       ]
     },
     "growthAnalysis": {
-      "cagrEstimate": "14-18%",
-      "scoreDerivation": "Base 80 (15-30% CAGR, blended ~14-18%) + 3 Cloud re-acceleration ($240B backlog, 48% Q4 growth, margin expansion to 30%) + 3 AI Overviews TAM expansion (Search CPC growth not erosion, AI Max fastest-growing product) − 2 FCF pressure ($175-185B CapEx in 2026 vs. $73B FCF in 2025) = 84",
+      "cagrEstimate": "17-22%",
+      "scoreDerivation": "Base 80 (17-22% CAGR, blended; Cloud at $80B+ ARR growing 63%) + 5 Cloud re-acceleration ($460B backlog, 63% Q1 growth, margin expanding) + 3 AI Overviews/Search expansion (+19% Q1, AI Mode all-time high queries) − 1 FCF pressure ($175B+ 2026 CapEx, Q1 net income inflated by investment gains) = 87",
       "drivers": [
         {
           "name": "Google Cloud",
-          "metric": "+48% YoY Q4 2025, $70B+ ARR, $240B backlog",
+          "metric": "+63% YoY Q1 2026, $20.03B; $80B+ ARR run rate; $460B backlog (nearly 2× QoQ)",
           "trend": "accelerating"
         },
         {
           "name": "Search & AI Overviews",
-          "metric": "+17% YoY Q4 2025, 1.5B MAUs, AI Mode 75M DAUs",
+          "metric": "+19% YoY Q1 2026 ($60.4B); all-time high query volume; AI Mode 3× longer queries",
           "trend": "accelerating"
         },
         {
-          "name": "YouTube",
-          "metric": "+9% YoY Q4 2025, $60B+ annual revenue, 325M+ paid subscribers",
+          "name": "YouTube & Subscriptions",
+          "metric": "+YoY Q1 2026 $9.88B ads; 350M paid subscribers — strongest consumer AI quarter ever",
           "trend": "stable"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "If the DOJ appeal (filed Feb 2026) wins harsher remedies that force data-sharing with Bing/DuckDuckGo at scale by end of 2027, Google's search quality advantage erodes and CPC premium compresses — causing Search revenue growth to decelerate below 10% and re-rating the multiple toward 18-20× forward earnings",
+      "keyRisk": "If the DOJ appeal (filed Feb 2026) wins harsher remedies forcing data-sharing with rivals, Google's search quality advantage erodes and CPC premium compresses — decelerating Search below 10% and re-rating the multiple toward 18–20×; the Q1 2026 Cloud +63% and $460B backlog reduce the magnitude of this risk but do not eliminate the regulatory overhang",
       "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 73,
-    "description": "At ~$305, GOOGL trades at ~24× NTM earnings — a modest premium to the S&P 500 (~21×) that is well-supported by 14-18% revenue CAGR, Cloud acceleration to $70B+ ARR, and AI Overviews monetization proving out. The stock has re-rated from $172 to $305 (+77%) on the back of Cloud's breakout. Current price sits 13% below our base case of $350 (analyst consensus $351) and 42% below our bull case, offering a reasonable risk/reward for a business with durable structural moats. Notably, Alphabet holds two off-balance-sheet positions not reflected in any current consensus model: a ~7% stake in SpaceX (~$56–90B at current ~$350B private valuation) and a minority position in Anthropic. A SpaceX IPO — which is increasingly anticipated — would crystallise a material balance-sheet windfall and is not in the $350 base case.",
+    "score": 72,
+    "description": "At ~$365 (post-earnings estimate), GOOGL has re-rated materially on Q1 2026's structural breakthrough: Cloud at +63% with a $460B backlog, Search at +19%, operating margin 36.1%. We raise the base case from $350 to $420 to reflect the Cloud's dramatic re-acceleration. At $365, the stock sits 13% below the new base case — a similar margin of safety to before, now backed by a fundamentally stronger growth profile. Alphabet's SpaceX stake (~7%, valued ~$56–90B at private valuations) and Anthropic minority position remain off-balance-sheet optionalities not in consensus.",
     "valuationNote": {
-      "text": "With $73.3B in FY2025 FCF, a $240B Cloud backlog, and AI monetization in early innings, Alphabet's intrinsic value continues to compound. Near-term FCF will be pressured by $175-185B CapEx in 2026, but the investments are demand-constrained (Sundar Pichai: 'supply, not demand, is the limiting factor'). Our 12-24 month base case fair value is",
-      "fairValue": "$350"
+      "text": "With Q1 2026 Cloud at $20B quarterly ($80B+ ARR) growing 63%, a $460B backlog, and Search +19% YoY, Alphabet's earnings power is compounding faster than consensus expected. Near-term FCF is pressured by $175B+ 2026 CapEx, but investments are demand-constrained. Our raised 12–24 month base case fair value is",
+      "fairValue": "$420"
     },
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "April 2026 (Q1 2026 actuals)",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~28×",
-          "note": "TTM EPS $10.81"
+          "value": "~27×",
+          "note": "TTM EPS ~$13.50 (Q1 2026 boosted by investment gains)"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~24×",
-          "note": "consensus NTM EPS ~$12.70"
+          "value": "~25×",
+          "note": "NTM EPS ~$14.50 (raised on Cloud +63%, Search +19%)"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.7×",
-          "note": "fwd P/E ÷ 14% EPS CAGR"
+          "value": "~1.4×",
+          "note": "fwd P/E ÷ ~18% EPS CAGR (revised up on Cloud re-acceleration)"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~8.3×",
-          "note": "~$440B NTM revenue est."
+          "value": "~8.6×",
+          "note": "~$510B NTM revenue est. (raised materially on Q1 beat)"
         },
         {
           "label": "Price / FCF",
-          "value": "~51×",
-          "note": "$73.3B FCF (FY2025)"
+          "value": "~60×",
+          "note": "FCF compressed by $175B+ 2026 CapEx vs $73.3B FY2025 FCF"
         }
       ],
-      "summary": "At ~24× forward NTM earnings, GOOGL trades at a modest premium to the S&P 500 (~21×) but below the mega-cap tech median (~26-28×), reflecting the market's lingering caution around DOJ risk and CapEx intensity — not fundamentals. The PEG of ~1.7× is in premium territory but justified by Cloud's breakout (48% YoY) and AI Overviews monetization proof. The P/FCF of ~51× will compress in 2026 as $175-185B CapEx weighs on near-term free cash flow, but this represents investment-cycle optionality rather than structural margin compression."
+      "summary": "At ~25× forward NTM earnings post-Q1 2026 beat, GOOGL has de-rated slightly from the prior 24× as the stock ran up. However, EPS estimates have been revised up materially on Cloud's +63% growth and Search's +19% acceleration. The PEG of 1.4× is attractive for the new growth profile — Cloud at $80B+ ARR growing 63% with a $460B backlog is a structural step-change, not a cyclical acceleration. The P/FCF appears elevated but reflects a $175B+ 2026 investment cycle that is demand-constrained, not supply-side misallocation."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$215",
-      "description": "DOJ appeal wins harsher remedies eroding search distribution; AI disrupts CPCs faster than AI Max offsets; CapEx cycle proves premature.",
+      "priceTarget": "$235",
+      "description": "DOJ appeal wins harsher remedies eroding search distribution; Cloud growth decelerates sharply from the Q1 2026 peak; AI disrupts CPCs faster than AI Max can offset.",
       "points": [
-        "DOJ appeal (Feb 2026) succeeds in mandating search data-sharing with rivals, eroding Google's quality advantage and compressing Search CPCs by 15%+ by end of 2027",
-        "AI Mode cannibalises traditional search ad slots faster than AI Max compensates, causing Search revenue growth to stall below 8% in 2026",
-        "$175-185B CapEx in 2026 produces returns below consensus expectations; Cloud growth decelerates to sub-25% as hyperscaler competition intensifies",
-        "Multiple compresses to 18-20× forward earnings as FCF yield deteriorates and the regulatory narrative dominates sentiment"
+        "DOJ appeal (Feb 2026) succeeds in mandating search data-sharing with rivals, eroding Google's quality advantage and compressing Search CPCs by 15%+ by end of 2027; Search revenue growth stalls below 8%",
+        "Cloud growth decelerates from the Q1 2026 peak of 63% to below 25% by end of 2026 as the $460B backlog proves inflated by short-term AI hype or competitors regain lost ground; CapEx cycle proves premature",
+        "Multiple compresses to 18–20× forward earnings as FCF yield deteriorates and the regulatory narrative dominates; net income is also normalised from Q1's elevated investment gains"
       ]
     },
     "base": {
-      "priceTarget": "$350",
-      "description": "Cloud sustains 35%+ growth toward $100B ARR, Search holds 15%+ growth, AI Overviews and AI Max ramp monetization — multiple re-rates to 25-26× as FCF recovers in 2027.",
+      "priceTarget": "$420",
+      "description": "Cloud sustains 40%+ growth toward $110B+ ARR on the $460B backlog, Search holds 15–18% growth, operating margin expands — multiple re-rates to 26–28× as FCF recovers in 2027.",
       "points": [
-        "Google Cloud exits 2026 at $90B+ ARR, sustaining 35%+ growth with the $240B backlog providing contracted revenue visibility through 2028",
-        "Search revenue holds 13-15% growth in 2026 as AI Max for Search scales to millions of advertisers and AI Overviews expand to new query categories",
-        "DOJ appeal resolved without structural divestiture; Gemini app monetization (750M MAUs) adds a new consumer AI revenue layer by end of 2026",
-        "FCF recovers toward $90B+ in 2027 as CapEx cycle moderates; multiple re-rates from 24× to 26× as earnings power becomes clearer"
+        "Google Cloud exits 2026 at $110B+ ARR, sustaining 40%+ growth with the $460B contracted backlog providing revenue visibility through 2028–2029; operating margin expands beyond the Q1 2026 level",
+        "Search revenue sustains 15–18% growth in 2026 as AI Max for Search scales to millions of advertisers, AI Mode drives longer queries at higher CPCs, and AI Overviews expand to new query categories",
+        "DOJ appeal resolved without structural divestiture; Gemini paid subscriptions (350M strong) create a new $10B+ consumer AI revenue layer; SpaceX stake ($56B+) and Anthropic position remain hidden balance-sheet optionality",
+        "FCF recovers toward $100B+ in 2027 as CapEx cycle moderates; multiple re-rates from 25× to 27× as Cloud earnings power becomes clearer"
       ]
     },
     "bull": {
-      "priceTarget": "$450",
-      "description": "Google Cloud becomes clear #2 behind AWS, AI Overviews expand total search monetization beyond consensus, and Waymo/Gemini create new large revenue streams. A SpaceX IPO at the current ~$350B private valuation crystallises a multi-billion dollar balance-sheet windfall not in any current model.",
+      "priceTarget": "$560",
+      "description": "Google Cloud becomes clear #2 behind AWS, AI Overviews and AI Mode expand total search monetization well beyond consensus, Waymo/Gemini create new large revenue streams, and a SpaceX IPO crystallises a hidden balance-sheet windfall.",
       "points": [
-        "Google Cloud sustains 40%+ growth through 2027, exits at $130B+ ARR and narrows the gap with AWS to within 10 percentage points of revenue share",
-        "Gemini 3.x wins large enterprise AI deployments over GPT-4 and Claude; Vertex AI becomes the preferred foundation model platform for regulated industries",
-        "AI Mode and AI Max expand Google's monetizable query universe by 30%+, pushing Search revenue growth to 20%+ and re-rating the stock toward 30× forward earnings",
-        "Waymo reaches cash flow breakeven in 2027 on the back of the $16B investment and commercial expansion — adding meaningful autonomous vehicle optionality to the sum-of-parts valuation",
-        "SpaceX IPO at $800B–$1.5T valuation crystallises Alphabet's ~7% stake ($56B–$105B) as a cash or distributable asset — a hidden balance-sheet windfall not reflected in any current consensus model or analyst price target"
+        "Google Cloud sustains 50%+ growth through mid-2026, exits 2026 at $130B+ ARR and narrows the gap with AWS to within 10pp of revenue share; the $460B backlog converts at an accelerating pace",
+        "Gemini 3.x wins large enterprise AI deployments over GPT-4 and Claude; Vertex AI becomes the preferred foundation model platform for regulated industries; AI Mode expands Google's monetizable query universe by 30%+",
+        "Waymo reaches cash flow breakeven in 2027 after the $16B investment; Gemini paid subscriptions (350M and growing) create a $15B+ consumer AI revenue line",
+        "SpaceX IPO at $800B–$1.5T valuation crystallises Alphabet's ~7% stake ($56B–$105B) as a balance-sheet windfall not in any current consensus model; multiple re-rates toward 30× on confirmed Cloud + AI monetization"
       ]
     }
   },
@@ -221,6 +218,6 @@
       "status": "intact",
       "note": "Google Workspace is the system of record for email, calendar, documents, and video conferencing for hundreds of millions of businesses globally. While not as deeply embedded in regulated enterprise workflows as Microsoft 365, the switching costs are comparable — years of email history, calendar integrations, and Docs collaboration workflows create meaningful migration friction. AI-assisted Workspace features (Gemini in Gmail, Docs, Sheets) are incrementally deepening the lock-in."
     },
-    "verdict": "Alphabet is a net AI beneficiary — the Q4 2025 results prove it conclusively. Search revenue accelerated to +17% YoY as AI Overviews and AI Max expanded the monetizable query universe rather than shrinking it; Google Cloud +48% YoY outperformed Azure for the first time on AI infrastructure demand. Three of the four strongest AI-resilient moats (proprietary data flywheel, network effects, and transaction embedding) are actively strengthening as AI adoption scales; public data access is downgraded to intact as Claude managed agents and agentic AI browse the web directly, bypassing Google's search index as the primary information intermediary. The primary structural risk is the DOJ-mandated loss of exclusive default search agreements, which will gradually erode distribution advantage over 2026-2027 — but at 90%+ search market share, the distribution moat has substantial buffer before competitive erosion becomes existential."
+    "verdict": "Alphabet is a confirmed net AI beneficiary — the Q1 2026 results prove it decisively. Total revenue +22% to $109.9B; Google Cloud +63% YoY ($20B quarterly, $460B backlog) — outgrowing both Azure (+40%) and AWS (+28%); Search +19% with all-time high query volume driven by AI Mode and AI Overviews. Three of the four strongest AI-resilient moats (proprietary data flywheel, network effects, and transaction embedding) are actively strengthening as AI adoption scales. Public data access remains at intact as Claude managed agents and agentic AI browse the web directly, bypassing Google's search index as the primary information intermediary. The primary structural risk is the DOJ-mandated loss of exclusive default search agreements, which will gradually erode distribution advantage — but at 90%+ search market share and with Cloud's $460B backlog de-risking the growth story, the moat fortress is in its strongest position in years."
   }
 }
