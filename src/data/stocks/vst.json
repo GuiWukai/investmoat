@@ -1,0 +1,153 @@
+{
+  "slug": "vst",
+  "ticker": "VST",
+  "name": "Vistra Corp.",
+  "titleColor": "#E8401C",
+  "headerStats": [
+    { "label": "Ticker", "value": "VST" },
+    { "label": "Market Cap", "value": "~$55B" },
+    { "label": "Price", "value": "~$163" }
+  ],
+  "chips": [
+    { "label": "Energy | Integrated Power", "color": "primary" },
+    { "label": "AI Power Duopoly", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Nuclear Fleet",
+      "value": "6.4 GW",
+      "label": "2nd-Largest US Competitive Nuclear Fleet — 4 Plants / 6 Reactors",
+      "icon": "Zap",
+      "color": "#E8401C"
+    },
+    {
+      "title": "2026 Adj. EBITDA Guidance",
+      "value": "$7.2B",
+      "label": "Midpoint +22% YoY — FCF Yield ~8% at Current Price",
+      "icon": "TrendingUp",
+      "color": "#00a650"
+    },
+    {
+      "title": "Hyperscaler Nuclear PPAs",
+      "value": "3,809 MW",
+      "label": "20-Year Agreements with Amazon (1,200 MW) and Meta (2,609 MW)",
+      "icon": "Shield",
+      "color": "#E8401C"
+    }
+  ],
+  "moat": {
+    "description": "Vistra's moat layers a physically irreplicable 6.4 GW nuclear fleet — licensed through 2037–2053 and locked into 20-year contracts with Amazon and Meta — onto the retail electricity integration of TXU Energy's 5 million Texas customers, creating a dual-layer competitive advantage that no pure-play generator or standalone retailer can replicate.",
+    "analysisTitle": "The Integrated Power Fortress",
+    "analysisSummary": "Vistra sits at the convergence of **three structural tailwinds** — AI data center power demand, the nuclear renaissance, and Texas's explosive grid growth — protected by a moat built on NRC licensing barriers, long-duration hyperscaler contracts, and the only fully integrated retail-generation model at scale in US deregulated markets:",
+    "analysisPoints": [
+      {
+        "title": "Nuclear Fleet Locked Into 20-Year Hyperscaler Contracts",
+        "text": "Vistra operates the second-largest competitive nuclear fleet in the US at 6.4 GW across four plants (Comanche Peak TX, Perry OH, Davis-Besse OH, Beaver Valley PA). In 2025–2026, Vistra secured 20-year PPAs with Amazon (1,200 MW, Comanche Peak, starting Q4 2027) and Meta (2,609 MW across three PJM plants, starting late 2026) — totalling ~3.8 GW of nuclear capacity committed under long-duration contracts at premium prices. These agreements provide revenue visibility into the 2040s and represent the largest corporate clean energy procurement deals in US history; the Meta deal even includes 433 MW of nuclear uprates that Meta is funding. No competitor can replicate this combination of licensed in-market nuclear assets and contracted hyperscaler demand."
+      },
+      {
+        "title": "Integrated Retail-Generation: The Structural Hedge",
+        "text": "Unlike pure-play generators such as Constellation Energy, Vistra's TXU Energy retail business serves approximately 5 million customers as Texas's largest competitive retail electricity provider, generating $1.6B in EBITDA in 2025. This vertical integration creates a natural earnings hedge: when generation margins compress as power prices fall, retail margins expand (customers pay above-spot rates); when prices spike, generation profits surge. The operational synergy extends to load forecasting — TXU's customer data improves Luminant's dispatch optimization — and to capital allocation: retail cash flows fund generation investment without reliance on volatile spot market conditions. No standalone generator or standalone retailer in the US deregulated market can replicate this full-stack integration at comparable scale."
+      },
+      {
+        "title": "ERCOT Structural Dominance in the AI Power Epicenter",
+        "text": "Vistra's Comanche Peak nuclear plant and large gas generation fleet dominate the ERCOT market, where hyperscalers are building massive data center campuses across North Texas, creating the fastest-growing demand region in US power. ERCOT's energy-only market design (no capacity payments) means that when demand growth outpaces supply — which is structurally underway — prices spike dramatically and Vistra's in-market assets capture that upside. Vistra also operates the world's largest battery energy storage system (1,020 MW), positioned to capture ancillary services revenue during peak scarcity events. The Cogentrix acquisition (5,500 MW, pending close mid-2026) will expand this portfolio to ~50 GW across ERCOT, PJM, ISO-NE, CAISO, and NYISO, diversifying exposure to all major data center demand zones."
+      }
+    ]
+  },
+  "growth": {
+    "score": 78,
+    "description": "Vistra issued 2026 adj. EBITDA guidance of $6.8B–$7.6B (midpoint $7.2B, +22%–29% YoY from FY2025's record $5.9B) with adj. FCF before growth of $3.9B–$4.7B (midpoint $4.3B, yield ~8% at current price); the Meta nuclear PPA begins revenue delivery in late 2026, the Amazon Comanche Peak PPA ramps from Q4 2027 through 2032, and the pending Cogentrix acquisition ($4B, ~5,500 MW) is expected to add $0.9B+ incremental EBITDA — supporting a 15–18% EBITDA CAGR through 2028.",
+    "additionalNote": {
+      "title": "Growth Drivers (3-Year Horizon)",
+      "points": [
+        "Nuclear PPA ramp: Meta's 2,609 MW PPA begins delivering late 2026 with full capacity online by 2034 (including 433 MW of uprates Meta is funding); Amazon's 1,200 MW Comanche Peak PPA starts Q4 2027 ramping to full by 2032 — both at premium above-market pricing, adding high-margin contracted revenue as each MW comes online",
+        "Cogentrix acquisition (pending mid-2026): ~5,500 MW of modern combined-cycle and combustion turbine gas assets across PJM, ISO-NE, and ERCOT acquired at ~$730/kW — highly competitive with replacement cost; expected to be meaningfully EBITDA accretive from day one and positions Vistra to offer gas-backed firm power to data center co-location customers",
+        "ERCOT demand acceleration: Texas is adding 50+ GW of potential data center load through 2030 as hyperscalers and AI infrastructure companies build mega-campuses; reserve margins are structurally tightening, boosting uncontracted generation margins and creating demand for Vistra's battery storage for ancillary services revenue",
+        "Capital return flywheel: $3B earmarked for shareholders via buybacks and dividends in 2026–2027 at ~$163/share, reducing share count toward ~320M; 2027 guided FCF per share of ~$16 implies the stock trades at roughly 10x 2027 FCF if no re-rating occurs — creating a powerful per-share growth engine independent of multiple expansion"
+      ]
+    }
+  },
+  "valuation": {
+    "score": 76,
+    "description": "At ~$163, Vistra trades at just 8–9x forward 2026 EV/EBITDA — a steep discount to Constellation Energy's ~18x — despite comparably strategic nuclear PPA commitments, a superior FCF yield (~8% vs CEG's ~3.5%), and EBITDA growing 22–29% in 2026; the stock sits 26% below the $220 base case and offers 84% upside to the bull case.",
+    "valuationNote": {
+      "text": "Vistra's conventional utility multiples (P/E, EV/EBITDA) understate its quality — the appropriate frame is contracted infrastructure with growth: 20-year fixed-price nuclear PPAs with hyperscalers deserve the same valuation treatment as toll-road concessions or long-term regulated utility assets. On that basis, 12–15x 2027E EBITDA of $8.5B+ implies an enterprise value of $100–125B and equity value of $80–105B — $250–$330/share on ~330M shares. The current 8–9x 2026E multiple reflects the market's residual uncertainty about the Cogentrix integration, GAAP hedge-loss noise (Q4 2025 EPS miss), and VST's higher leverage vs CEG. As the 2027 guidance materializes and PPA ramp execution is confirmed, a re-rating toward 12x+ becomes the base case.",
+      "fairValue": "$220"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$90",
+      "description": "Power prices collapse across ERCOT and PJM as renewable overbuild outpaces demand growth, Cogentrix integration consumes unexpected capital, and rising rates impair Vistra's leveraged balance sheet — compressing EBITDA and forcing debt reduction that crowds out shareholder returns.",
+      "points": [
+        "ERCOT scarcity pricing events fail to materialise as 30+ GW of new wind/solar comes online in Texas by 2026–2027, depressing energy market prices and uncontracted generation margins; Vistra's unhedged gas fleet earns below-cost-of-capital returns, and the retail business faces margin pressure as competitive providers undercut TXU Energy",
+        "Cogentrix integration reveals unexpected operational issues (unplanned outages, emissions compliance costs) adding $300M+ in remediation costs on top of $4B acquisition price; combined with the Lotus acquisition, total debt surpasses $25B and the net leverage ratio climbs above 4x, triggering credit-watch scrutiny",
+        "Interest rates remain elevated at 5%+ through 2027, increasing refinancing costs on $3B+ of near-term maturities; EBITDA falls to $5.5B and FCF before growth to $2.5B, insufficient to support current buyback pace and dividend growth — the stock de-rates to 8x depressed earnings (~$90)"
+      ]
+    },
+    "base": {
+      "priceTarget": "$220",
+      "description": "Cogentrix closes on schedule, Meta's nuclear PPA delivers as contracted in late 2026, and ERCOT data center demand sustains power prices above historical norms — 2027 EBITDA reaches $8.5B and the market re-rates Vistra to 12x forward EV/EBITDA as execution risk fades.",
+      "points": [
+        "Cogentrix acquisition closes Q3 2026, adding ~5,500 MW of modern gas assets and ~$0.9B incremental EBITDA; management confirms 2027 adj. EBITDA trajectory of $8.0–9.0B and the market begins pricing Vistra as a contracted infrastructure platform rather than a commodity generator",
+        "Meta's 2,609 MW nuclear PPA begins delivering power in Q4 2026 at above-market contracted rates; Amazon's Comanche Peak 1,200 MW contract starts ramping Q4 2027 as guided, confirming the nuclear revenue visibility story that commands premium multiples",
+        "Vistra announces 1–2 additional data center PPAs totalling 1,000–2,000 MW from either co-location (behind-the-meter) or new 20-year offtake agreements, demonstrating that the existing 3.8 GW of committed capacity is the floor, not the ceiling, of hyperscaler demand for Vistra's nuclear fleet"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$300",
+      "description": "Vistra becomes the second pillar of the US AI power infrastructure alongside Constellation Energy — signing 2–3 additional major nuclear PPAs for remaining uncontracted capacity, benefiting from historic ERCOT scarcity events, and re-rating to 15x 2027 EBITDA as a contracted infrastructure platform.",
+      "points": [
+        "Vistra announces nuclear co-location agreements for Comanche Peak or Beaver Valley for 500–1,000 MW of behind-the-meter data center load — validating Talen's Susquehanna co-location model at larger scale, with premium pricing that adds $500M+ incremental annual EBITDA at near-zero incremental capital cost",
+        "A severe ERCOT scarcity event (extended heat wave or winter storm) drives power prices to $5,000–$9,000/MWh for 30+ hours, delivering $1B+ of incremental unhedged generation profit in a single quarter; the market revises upward its assessment of Vistra's Texas weather optionality and assigns a higher base EBITDA estimate",
+        "Cogentrix integration exceeds expectations — the 5,500 MW gas fleet delivers $1.2B+ in EBITDA vs the initial ~$0.9B estimate, reducing pro forma leverage to below 2.5x by end-2026 and enabling an accelerated buyback of $2B+ that reduces share count toward 310M; 2027 FCF/share approaches $20 and the stock re-rates to 15x forward EV/EBITDA (~$300)"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — Vistra is a power generator and retailer; while TXU Energy operates customer-facing billing portals, the Texas deregulated market enables straightforward provider switching and no complex learned workflow creates meaningful interface-based lock-in."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Vistra's nuclear plant operations encode decades of plant-specific NRC compliance protocols, fuel cycle management, and outage scheduling; its ERCOT trading desk optimises dispatch across a 44 GW portfolio using proprietary algorithms built on 15+ years of real-time market participation that competitors cannot quickly replicate."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — Vistra does not control access to any unique public data source; this moat category does not apply to its power generation or retail electricity business model."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "NRC-licensed reactor operators are critically scarce — the NRC estimates a persistent 30%+ national shortfall in qualified nuclear professionals; staffing Vistra's 6 reactors across 4 plants requires hundreds of facility-specific licensed operators whose credentials cannot be transferred or rapidly reproduced, constraining the entire industry's ability to expand nuclear capacity."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Vistra's integrated retail-generation model bundles TXU Energy's customer relationships with Luminant's generation dispatch — creating a natural hedge that pure-play generators and standalone retailers cannot replicate; the bundling produces structural margin smoothing across energy price cycles and enables superior load-forecasting that reduces basis risk vs. pure-play competitors."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Vistra holds a tri-layered proprietary dataset: plant-specific operational data from 6 nuclear reactors (30+ years of performance history), real-time ERCOT trading data from one of the largest market participants, and behavioural/consumption data from 5 million+ retail customers — a combination that drives dispatch optimisation and retail pricing decisions unavailable to competitors."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "Vistra holds NRC operating licences for 4 nuclear plants with expiry dates spanning 2037–2053 (Perry extended through 2046 in July 2025), retail electricity provider (REP) certification in Texas, and ERCOT qualified scheduling entity status; each nuclear licence is facility-specific and represents decades of regulatory investment that no new entrant can shortcut."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "No network effects exist in power generation or retail electricity — electrons are a commodity on the grid and additional customers do not increase the value of the service for existing ones; this moat does not apply structurally to Vistra's business model."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Vistra's 20-year nuclear PPAs with Amazon (1,200 MW, Comanche Peak) and Meta (2,609 MW, Perry/Davis-Besse/Beaver Valley) create deep bilateral dependencies with two of the world's largest hyperscalers that cannot be unwound without abandoning decade-long infrastructure commitments; 5 million retail customers on automatic billing add a second layer of daily transaction embedding."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — Vistra is not a system of record for any information function; this moat category does not apply to power generation or retail electricity."
+    },
+    "aiResilienceScore": 76,
+    "verdict": "Vistra is a net beneficiary of AI adoption: the hyperscaler data centre buildout directly drives demand for its nuclear baseload and dispatchable gas generation, while its 20-year PPAs with Amazon and Meta structurally embed it into the AI power infrastructure for the next two decades. The core nuclear and regulatory moats (physical plant ownership, NRC licences, talent scarcity) are entirely AI-immune — AI cannot operate a reactor, obtain an NRC licence, or build a power plant."
+  },
+  "lastAnalyzed": "April 2026"
+}

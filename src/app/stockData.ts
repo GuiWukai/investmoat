@@ -79,6 +79,7 @@ import seaData     from '@/data/stocks/sea.json';
 import oktaData    from '@/data/stocks/okta.json';
 import duolingoData from '@/data/stocks/duolingo.json';
 import hoodData     from '@/data/stocks/hood.json';
+import vstData      from '@/data/stocks/vst.json';
 
 // Weighted composite: Moat 40% · Growth 35% · Valuation 25%
 // scores = [moatScore, growthScore, valuationScore]
@@ -115,6 +116,7 @@ const allCoverageData = [
     { name: "MercadoLibre",      ticker: "MELI",  slug: "meli",        scores: [m(meliData),        g(meliData),        v(meliData)],        href: "/stocks/meli",        category: "Other",       ...t(meliData)        },
     { name: "Ferrari",           ticker: "RACE",  slug: "race",        scores: [m(raceData),        g(raceData),        v(raceData)],        href: "/stocks/race",        category: "Other",       ...t(raceData)        },
     { name: "Constellation Energy", ticker: "CEG", slug: "ceg",       scores: [m(cegData),         g(cegData),         v(cegData)],         href: "/stocks/ceg",         category: "Other",       ...t(cegData)         },
+    { name: "Vistra Corp.",         ticker: "VST", slug: "vst",        scores: [m(vstData),         g(vstData),         v(vstData)],         href: "/stocks/vst",         category: "Other",       ...t(vstData)         },
     { name: "UnitedHealth",      ticker: "UNH",   slug: "unh",         scores: [m(unhData),         g(unhData),         v(unhData)],         href: "/stocks/unh",         category: "Healthcare",  ...t(unhData)         },
     { name: "Moody's",           ticker: "MCO",   slug: "mco",         scores: [m(mcoData),         g(mcoData),         v(mcoData)],         href: "/stocks/mco",         category: "Financials",  ...t(mcoData)         },
     { name: "Intercontinental Exchange", ticker: "ICE", slug: "ice",  scores: [m(iceData),         g(iceData),         v(iceData)],         href: "/stocks/ice",         category: "Financials",  ...t(iceData)         },
