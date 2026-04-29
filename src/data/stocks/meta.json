@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$1.46T"
+      "value": "~$1.61T"
     },
     {
       "label": "Current Price",
-      "value": "$575"
+      "value": "~$631"
     }
   ],
   "chips": [
@@ -30,22 +30,22 @@
   "metrics": [
     {
       "title": "Daily Active People",
-      "value": "3.58B",
-      "label": "Family of Apps Dec 2025 (+7% YoY)",
+      "value": "3.56B",
+      "label": "Family of Apps Q1 2026 (+4% YoY)",
       "icon": "Users",
       "color": "#1877F2"
     },
     {
       "title": "Ad Impressions",
-      "value": "+18%",
-      "label": "Q4 2025 YoY; avg price/ad +6%",
+      "value": "+19%",
+      "label": "Q1 2026 YoY; avg price/ad +12% YoY",
       "icon": "Share2",
       "color": "#050505"
     },
     {
       "title": "Capex (AI)",
-      "value": "$72B",
-      "label": "FY2025 actual; $115–135B guided 2026",
+      "value": "$125–145B",
+      "label": "2026 guidance raised (from $115–135B); Q1 revenue +33% YoY ($56.3B)",
       "icon": "Cpu",
       "color": "#3b82f6"
     }
@@ -79,106 +79,106 @@
   },
   "growth": {
     "score": 86,
-    "description": "FY2025 revenue reached $201B (+22% YoY); Q4 2025 accelerated to +24% YoY ($59.9B). AI-driven ad optimisation (Advantage+), Reels monetisation, and WhatsApp Business all contributed. Q1 2026 guided $53.5–56.5B (beat consensus $51.4B; +17% YoY midpoint), with earnings due April 29. Muse Spark (April 8, 2026) is the key new TAM catalyst: a frontier AI model deployed across 3B+ daily users creates a new engagement compounding layer that directly expands ad inventory. Ray-Ban smart glasses (next-gen Scriber/Blazer) launch April 14 at $499 — 7M+ units sold in 2025 tripled from prior year.",
+    "description": "Q1 2026 revenue of $56.3B re-accelerated to +33% YoY (from +24% in Q4 2025), beating the $55.45B consensus. EPS came in at $10.44 (includes an $8.03B income tax benefit from US tax law changes; adjusted EPS ~$7.31, still a beat). Net income $26.77B (+61% YoY). Ad impressions grew 19% and average price per ad rose 12% — both metrics accelerating vs Q4 2025. Family daily active people reached 3.56B (+4% YoY, slight QoQ seasonality dip from 3.58B in Q4). Operating margin was 41%. Q2 guided $58–61B ($59.5B midpoint). The capex raise to $125–145B (from $115–135B) weighed on the stock (-6% after hours). Muse Spark deployed across all surfaces is not yet in consensus estimates.",
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
-        "Ad platform AI: Advantage+ and AI-optimised ad delivery drove 18% impression growth and 6% CPM expansion in Q4 2025 — AI is the engine behind sustained double-digit ad revenue compounding",
-        "Muse Spark (April 8, 2026): Meta's first frontier model from Superintelligence Labs, deployed across all surfaces — leads HealthBench Hard (42.8) and CharXiv reasoning (86.4) vs GPT-5.4 and Gemini 3.1 Pro; persistent memory across apps creates a new engagement and switching-cost layer",
-        "Ray-Ban smart glasses: Next-gen Scriber/Blazer launch April 14 at $499 (including prescription); 7M+ pairs sold in 2025 (tripled YoY); wearables are emerging as Meta's third platform after mobile apps",
-        "WhatsApp monetisation: WhatsApp paid messaging and Meta Verified drove 54% YoY growth in 'Other Revenue' in Q4 2025; this remains an underpenetrated $10B+ opportunity across 2B+ WhatsApp users"
+        "Q1 2026 revenue +33% YoY ($56.3B, beat $55.45B) — significant re-acceleration from +24% in Q4 2025; ad impressions +19% and avg price/ad +12% confirm AI-driven ad platform pricing power is intact and strengthening",
+        "Muse Spark (April 8, 2026): Meta's first frontier model from Superintelligence Labs, deployed across all surfaces — leads HealthBench Hard (42.8) and CharXiv reasoning (86.4) vs GPT-5.4; not yet in consensus estimates; persistent memory creates switching cost layer across 3.56B daily users",
+        "Capex raised to $125–145B for 2026 (from $115–135B) due to higher component pricing and additional data centre capacity; market reaction -6% AH reflects FCF compression concerns, but Q1 operating margin of 41% confirms the core ad business is funding the build-out",
+        "Q2 guided $58–61B ($59.5B midpoint, +~25% YoY); WhatsApp paid messaging and Ray-Ban Scriber/Blazer (launched April 14 at $499) remain unmonetised optionalities not in consensus"
       ]
     },
     "growthAnalysis": {
-      "cagrEstimate": "18–22%",
-      "scoreDerivation": "Base 80 (18–22% revenue CAGR, dominant market share) + 5 AI advertising moat (Advantage+ re-builds post-ATT) + 3 WhatsApp/new revenue optionality − 3 2026 capex compression risk + 1 Muse Spark frontier AI deployment (new engagement TAM across 3B+ users) = 86",
+      "cagrEstimate": "20–25%",
+      "scoreDerivation": "Base 80 (20–25% revenue CAGR, dominant market share) + 5 AI advertising moat (Advantage+ re-builds post-ATT; Q1 +19% impressions, +12% price) + 3 WhatsApp/new revenue optionality − 3 2026 capex compression risk ($125–145B, raised from $115–135B) + 1 Muse Spark frontier AI deployment = 86",
       "drivers": [
         {
           "name": "Core Ad Revenue",
-          "metric": "+22% FY2025; Q4 2025 +24% YoY ($58.9B); Q1 2026 guided $53.5–56.5B (+17% YoY mid)",
-          "trend": "stable"
+          "metric": "+33% YoY Q1 2026 ($56.3B actual, beat $55.45B); Q2 guided $58–61B (+~25% YoY mid)",
+          "trend": "accelerating"
         },
         {
           "name": "WhatsApp & Other Revenue",
-          "metric": "+54% YoY Q4 2025; paid messaging + Meta Verified scaling",
+          "metric": "+54% YoY Q4 2025; paid messaging + Meta Verified scaling; Q1 2026 data pending confirmation",
           "trend": "accelerating"
         },
         {
           "name": "Reality Labs",
-          "metric": "Q4 2025 revenue $955M (−12% YoY); losses >$5B/yr ongoing",
+          "metric": "Q4 2025 revenue $955M (−12% YoY); Ray-Ban Scriber/Blazer launched Apr 14 at $499; losses >$5B/yr ongoing",
           "trend": "stable"
         }
       ],
       "primaryType": "revenue",
-      "keyRisk": "If 2026 capex of $115–135B does not yield measurable AI revenue by H2 2026 — specifically Muse Spark fails to drive engagement/ad revenue uplift, no WhatsApp commerce inflection, and FCF compresses below $30B — the market re-rates from a quality compounder to a capex-heavy infrastructure bet; Ray-Ban privacy lawsuit (California, March 2026) adds regulatory overhang",
+      "keyRisk": "If 2026 capex of $125–145B (raised from $115–135B) does not yield measurable AI revenue by H2 2026 — Muse Spark fails to drive engagement uplift, no WhatsApp commerce inflection, FCF compresses below $30B — the market re-rates from compounder to capex-heavy infrastructure bet; DAP growth deceleration (3.58B Q4 → 3.56B Q1, +4% YoY vs +7% prior) could signal user saturation; Ray-Ban privacy lawsuit (California) adds regulatory overhang",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 80,
-    "description": "At ~$575, META trades at a 24% discount to our updated base fair value of $760 and is down ~27% from its Aug 2025 ATH of $788 — the most attractive valuation since 2024. Muse Spark's April 8 launch is not yet in consensus estimates; it represents an unpriced option on frontier AI engagement monetisation across 3B+ daily users. Q1 2026 guidance ($53.5–56.5B) beat the Street ($51.4B), and Q1 earnings on April 29 are the next catalyst. The $115–135B 2026 capex ramp compresses near-term FCF but the core advertising earnings engine (~41% operating margin in Q4) remains structurally intact.",
+    "score": 79,
+    "description": "At ~$631 (post-earnings, -6% on capex raise), META trades at a 23% discount to the raised base fair value of $820, which reflects Q1 2026's +33% revenue re-acceleration and the Q2 guidance of $58–61B. The capex raise to $125–145B drove the after-hours sell-off, but the core advertising engine remains at 41% operating margin. At 18× NTM earnings (adjusted EPS ~$35 for 2026E) on a business growing 20–25% annually, the risk/reward remains compelling. Muse Spark across 3.56B daily users is still not in consensus models.",
     "valuationNote": {
-      "text": "Using a 10-year DCF with a 9% WACC, 20% near-term EPS growth decelerating to 3.5% terminal growth, and adjusting for Reality Labs losses and capex normalisation, our fair value estimate for META is",
-      "fairValue": "$760/share"
+      "text": "Using a 10-year DCF with a 9% WACC, 22% near-term EPS growth decelerating to 3.5% terminal growth, and adjusting for Reality Labs losses and $125–145B 2026 capex, our fair value estimate for META is",
+      "fairValue": "$820/share"
     },
     "peAnalysis": {
-      "asOf": "April 2026",
+      "asOf": "April 2026 (Q1 2026 actuals)",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~20×",
-          "note": "TTM EPS $29.23 (FY2025)"
+          "value": "~18×",
+          "note": "TTM EPS ~$35 (Q1 2026 $10.44 incl $8B tax benefit)"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~19×",
-          "note": "consensus ~$30 EPS 2026E"
+          "value": "~18×",
+          "note": "NTM EPS ~$35 (2026E; note Q1 tax benefit is non-recurring)"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.1×",
-          "note": "fwd P/E ÷ ~18% EPS CAGR"
+          "value": "~0.82×",
+          "note": "fwd P/E ÷ ~22% revenue CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~6.6×",
-          "note": "~$222B NTM revenue est."
+          "value": "~2.7×",
+          "note": "~$238B NTM revenue est. (raised on +33% Q1 beat)"
         },
         {
           "label": "Price / Free Cash Flow",
-          "value": "~28×",
-          "note": "~$52B FY2025 FCF; 2026 capex ramp may compress"
+          "value": "~25×",
+          "note": "FCF compressed in 2026 by $125–145B capex vs ~$52B FY2025"
         }
       ],
-      "summary": "At ~19× forward earnings with a PEG of 1.1×, META is the cheapest it has been relative to growth in two years. The multiple compression from 22× (March 2026) to 19× reflects macro/capex concerns, not fundamental deterioration — Q4 2025 delivered 41% operating margins and $8.88 EPS. Muse Spark's deployment across 3B+ users is not reflected in any consensus model. At this price, investors pay less than the S&P 500 average multiple for a business with 18–22% revenue CAGR, dominant ad-platform pricing power, and a now-credible frontier AI position."
+      "summary": "At ~18× forward earnings — the cheapest relative to growth of any Mag-7 member — META's valuation remains extremely compelling. Revenue re-accelerated to +33% YoY in Q1 2026 (ad impressions +19%, price/ad +12%). The Q1 EPS of $10.44 was boosted by an $8.03B income tax benefit (non-recurring); adjusted EPS was ~$7.31, still a beat. The PEG of 0.82× is the lowest in years. The capex raise to $125–145B is the only meaningful near-term negative; it compresses 2026 FCF but funds the infrastructure for a business growing 20–25% annually."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$460",
-      "description": "The $115–135B 2026 capex cycle delivers no measurable AI revenue uplift, a macro-driven ad recession compresses CPMs, and Ray-Ban privacy litigation triggers EU regulatory action that limits biometric data collection.",
+      "priceTarget": "$475",
+      "description": "The $125–145B 2026 capex delivers no measurable AI revenue uplift, a macro-driven ad recession compresses CPMs, and DAP growth deceleration accelerates as the social graph saturates.",
       "points": [
-        "Muse Spark fails to drive engagement uplift; capex ROI debate intensifies as FCF compresses below $30B in 2026; market re-rates to 15–17× forward earnings",
-        "Ad-market recession (macro slowdown, tariff impact on SMB ad budgets) drives CPM deflation, ending the Advantage+ monetisation tailwind",
-        "Ray-Ban privacy litigation (California, March 2026) and UK investigation lead to EU biometric data restrictions, delaying the wearables platform and increasing compliance costs"
+        "Muse Spark fails to drive engagement uplift; Q1 2026 DAP growth deceleration (+4% YoY, 3.56B) continues, signalling user saturation; capex ROI debate intensifies as FCF compresses below $20B; market re-rates to 13–15× forward earnings",
+        "Ad-market recession (macro slowdown, tariff impact on SMB ad budgets) drives CPM deflation after Q1 2026's strong +12% avg price/ad; ad impressions decelerate below 10%",
+        "Ray-Ban privacy litigation (California) and EU biometric data restrictions delay wearables platform; capex raise to $125–145B proves premature"
       ]
     },
     "base": {
-      "priceTarget": "$760",
-      "description": "Muse Spark drives measurable engagement uplift and ad inventory expansion, ad revenue compounds at 15–18% annually, WhatsApp business messaging scales to $5B+ revenue, and Ray-Ban glasses establish wearables as Meta's third platform.",
+      "priceTarget": "$820",
+      "description": "Revenue sustains 20–25% growth as Muse Spark drives engagement uplift, Q2 2026 guidance ($58–61B) is met, WhatsApp business messaging scales to $5B+, and ad revenue compounds at 20%+ annually.",
       "points": [
-        "Muse Spark increases daily session time across Meta apps by 10–15% by year-end 2026, expanding ad inventory; persistent memory locks in users at scale",
-        "Core ad revenue grows 15–18% annually; Advantage+ and AI-driven formats deliver higher CPMs for SMBs; Q1 2026 earnings (Apr 29) confirm beat vs guidance",
-        "Ray-Ban Scriber/Blazer (April 14 launch, $499) sells 10M+ pairs in 2026; WhatsApp paid messaging reaches $5B+ revenue; buybacks continue at $50B+ pace"
+        "Revenue sustains 20–25% annual growth: Q2 2026 $58–61B guide is met or beat; Muse Spark increases session time 10–15% across apps by year-end 2026, expanding ad inventory and reinforcing the +19% impression growth trend",
+        "Advantage+ and AI-driven formats sustain 10–12% CPM expansion; WhatsApp paid messaging reaches $5B+ revenue; Ray-Ban Scriber/Blazer sells 10M+ pairs in 2026",
+        "Operating margin sustains ~41%; capex of $125–145B funds infrastructure without triggering a credit downgrade; buybacks continue at $50B+ pace; FY2026 EPS lands at $33–35"
       ]
     },
     "bull": {
-      "priceTarget": "$950",
-      "description": "Muse Spark becomes the default AI assistant for billions, WhatsApp commerce inflects to $15B+ revenue, and Ray-Ban glasses establish the wearable AI platform standard — Meta emerges as a full-stack AI company alongside OpenAI, Google, and Anthropic.",
+      "priceTarget": "$1,000",
+      "description": "Muse Spark becomes the default AI assistant for billions, WhatsApp commerce inflects to $15B+ revenue, and Ray-Ban wearables establish the AI platform standard — Meta emerges as a full-stack AI company alongside OpenAI and Google.",
       "points": [
-        "Muse Spark (Superintelligence Labs) scales to 2B+ monthly active users by end of 2026, generating direct AI revenue and driving ad impression growth above 25% YoY",
-        "WhatsApp commerce and business messaging inflect to $15B+ by 2027; Meta's AI ad tools become the default for 10M+ SMBs globally, sustaining 20%+ CPM expansion",
-        "Ray-Ban wearables reach 20M+ units annually; AR display glasses launch in 2027; Reality Labs approaches breakeven as hardware revenue offsets VR losses"
+        "Muse Spark scales to 2B+ monthly active users by end of 2026, generating direct AI revenue and driving ad impression growth above 25% YoY; persistent memory creates a new monetisable surface",
+        "WhatsApp commerce and business messaging inflect to $15B+ by 2027; Meta's AI ad tools become the default for 10M+ SMBs globally, sustaining 15%+ CPM expansion through 2027",
+        "Ray-Ban wearables reach 20M+ units annually; AR display glasses launch in 2027; FY2026 EPS lands at $40+ as capex ROI materialises; multiple re-rates to 25× on AI revenue confirmation"
       ]
     }
   },
@@ -225,5 +225,5 @@
     },
     "verdict": "Meta's AI moat took a step-change on April 8, 2026 with the Muse Spark launch. Meta Superintelligence Labs — built around Alexandr Wang — has produced a genuine frontier model competitive with GPT-5.4 and Gemini 3.1 Pro, deployed immediately to 3B+ daily users. This upgrades learnedInterfaces from intact to strong: persistent Muse Spark memory across all Meta apps creates a new switching-cost layer that did not exist at any meaningful scale with Llama. Combined with the unrivaled social graph (networkEffects: strong), irreplaceable behavioral dataset (proprietaryData: strong), WhatsApp commerce infrastructure (transactionEmbedding: strong), and AWS/Azure-independent compute ownership (MTIA chips, owned data centers), Meta now holds 6 strong moats out of 10 applicable — the highest in its history. Regulatory drag from GDPR, DMA, and the Ray-Ban privacy litigation remains a structural cap on the regulatoryLockIn moat."
   },
-  "lastAnalyzed": "April 2026"
+  "lastAnalyzed": "April 29, 2026"
 }
