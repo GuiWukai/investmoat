@@ -1,0 +1,211 @@
+{
+  "slug": "bkng",
+  "ticker": "BKNG",
+  "name": "Booking Holdings Inc.",
+  "lastAnalyzed": "April 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "BKNG" },
+    { "label": "Market Cap", "value": "~$141B" },
+    { "label": "Price", "value": "~$177" }
+  ],
+  "chips": [
+    { "label": "Consumer Discretionary | Travel", "color": "primary" },
+    { "label": "Accumulate", "color": "warning" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Room Nights",
+      "value": "338M",
+      "label": "Q1 2026 — +6% YoY (+8% ex-Middle East impact)",
+      "icon": "Globe",
+      "color": "#006fee"
+    },
+    {
+      "title": "Free Cash Flow",
+      "value": "$9.1B",
+      "label": "FY2025 — +15% YoY; 34% FCF margin; record year",
+      "icon": "DollarSign",
+      "color": "#17c964"
+    },
+    {
+      "title": "Gross Bookings",
+      "value": "$186B",
+      "label": "FY2025 — +12% YoY; flights +37%, attractions +80%",
+      "icon": "TrendingUp",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "score": 72,
+    "description": "World's largest online travel marketplace with 4.4M+ properties, $9.1B FCF, and a Genius loyalty program driving 50%+ of room nights. The Merchant Model transition (68% of revenue) embeds BKNG as the payment processor between traveler and property — deepening the transaction layer as AI-powered agentic travel takes hold.",
+    "analysisTitle": "The Travel Marketplace Moat",
+    "analysisSummary": "Booking Holdings operates a **Wide Economic Moat** built on two primary pillars:",
+    "analysisPoints": [
+      {
+        "title": "Two-Sided Network Effect",
+        "text": "4.4M+ properties globally generate unmatched selection, attracting travelers who generate reviews that attract more properties. This flywheel has compounded for 25+ years and makes Booking.com the default global accommodation search engine in Europe and increasingly worldwide — a position that no AI system can replicate quickly."
+      },
+      {
+        "title": "Transaction Embedding via Merchant Model",
+        "text": "The shift to the Merchant Model (now 68% of revenue, up from ~63% two years ago) means BKNG literally processes the payment between traveler and property. Hotels depend on Booking's payment rails, extranet, and channel management integrations. Management is actively positioning BKNG as the API endpoint all AI agents will call — embedding into the agentic travel stack rather than being disrupted by it."
+      },
+      {
+        "title": "Genius Loyalty Flywheel",
+        "text": "50% of all room nights come from Genius loyalty members; Tier 2–3 members (30% of active travelers) generate the mid-50s% of room nights. Free breakfasts, room upgrades, priority service, and exclusive discounts reward the most valuable travelers for staying within the Booking.com ecosystem — a compounding retention mechanism that strengthens with every additional booking."
+      },
+      {
+        "title": "Proprietary Travel Data",
+        "text": "Billions of historical bookings, pricing signals, conversion patterns, and traveler preferences feed AI personalisation engines and hotel pricing optimisation tools. The data flywheel makes Booking's recommendations increasingly accurate relative to any new entrant, and is being deployed in the AI Trip Planner and agentic rebooking flows now live in 10+ countries."
+      }
+    ]
+  },
+  "growth": {
+    "score": 74,
+    "description": "FY2025 delivered $26.9B revenue (+13%) and $9.1B FCF (+15%). Q1 2026 beat estimates (revenue $5.5B, +16%; gross bookings $53.8B, +15%) but Q2 2026 guidance was cut to +4–6% due to Middle East conflict. Full-year 2026 is guided at high-single-digits to low-double-digits. The structural growth engine is Connected Trip: flights grew +37% to 68M tickets and attractions grew +80% in FY2025, while Genius loyalty deepening drives higher repeat bookings and lifetime value.",
+    "additionalNote": {
+      "title": "Growth Outlook",
+      "points": [
+        "Q1 2026 actuals: revenue $5.5B (+16%), gross bookings $53.8B (+15%), adj. EBITDA $1.3B (+19%), room nights 338M (+6%; +8% ex-Middle East). Clean beat across all metrics — the core business is operationally healthy.",
+        "Q2 2026 guidance revised down: room nights +2–4%; gross bookings, revenue, and adj. EBITDA each +4–6%. Middle East conflict assumed to continue through June; H2 2026 expected to recover. Record quarterly buyback of $3.6B in Q1 2026 signals management's conviction in undervaluation.",
+        "Transformation Program on track: $500–550M in FY2026 run-rate savings; $700M reinvested in AI capabilities and Connected Trip expansion, expected to generate ~$400M incremental revenue. AI-powered customer service automation already reducing contact volume meaningfully.",
+        "FY2026 full-year guidance: gross bookings high-single-digits to low-double-digits; revenue high-single-digits; adj. EBITDA growing slightly faster than revenue; adj. EPS growth in low-to-mid teens. Share count declining rapidly — $21.8B remaining buyback authorisation."
+      ]
+    },
+    "growthAnalysis": {
+      "cagrEstimate": "10–13%",
+      "scoreDerivation": "Base 67 (8–15% CAGR: FY2025 +13%, FY2026 guided ~9%, FY2027–28 recovery to 12–14%) + 4 Genius loyalty quasi-recurring retention (50% of room nights from repeat Genius members; Tier 2/3 drives 55%+ of nights; creates compounding LTV vs. one-time bookers) + 5 Connected Trip TAM expansion (flights +37% to 68M tickets, attractions +80% YoY; each vertical at scale adds a new revenue layer) − 2 Middle East geopolitical lumpiness (Q2 2026 guided only +4–6%; depresses blended CAGR) = 74",
+      "drivers": [
+        {
+          "name": "Core Accommodation",
+          "metric": "+8% room nights YoY (FY2025); 338M room nights Q1 2026; 4.4M+ properties",
+          "trend": "stable"
+        },
+        {
+          "name": "Connected Trip (Flights & Attractions)",
+          "metric": "Flights +37% to 68M tickets (FY2025); Attractions +80% YoY; growing share of total bookings",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Genius Loyalty & Merchant Model",
+          "metric": "50% of room nights from Genius members; Merchant model 68% of revenue (from ~63% two years ago)",
+          "trend": "accelerating"
+        }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If Google AI Travel Mode captures >15% of European hotel searches previously routed through Booking.com by end of 2027, core room night growth decelerates below 5% and the network effect flywheel begins to erode",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 79,
+    "description": "BKNG is trading at a historically rare discount: forward P/E of ~17× versus its 10-year trailing median of 31.6×, a PEG of ~0.93, and a Price/FCF of ~15.5× for a business with 30–44% ROIC. The stock fell ~24% from its 52-week high ($233.58) driven by the February 2026 AI disintermediation scare and the April 2026 Middle East guidance cut. At ~$177, the stock trades ~18% below our base case of $215 — a margin of safety unusual for a business generating $9.1B in annual FCF. Management's record $3.6B quarterly buyback reinforces this read.",
+    "valuationNote": {
+      "text": "Using a discounted FCF model with a 9% WACC and 3% terminal growth rate, incorporating FY2025 actuals ($9.1B FCF, 34% FCF margin) and FY2026 guidance (high-single-digit to low-double-digit revenue growth with EBITDA margin expansion), our 12–18 month base fair value estimate for BKNG is",
+      "fairValue": "$215/share"
+    },
+    "peAnalysis": {
+      "asOf": "April 2026 (post 25-for-1 split; Q1 2026 actuals)",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~27×",
+          "note": "TTM GAAP EPS ~$6.60 (KAYAK impairment depresses)"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~17×",
+          "note": "consensus NTM EPS ~$10.40 (split-adjusted)"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~0.93×",
+          "note": "fwd P/E ÷ ~18% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~5.0×",
+          "note": "~$28.5B NTM revenue estimate"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~15.5×",
+          "note": "$9.1B FCF (FY2025 record)"
+        }
+      ],
+      "summary": "At ~17× forward earnings, BKNG trades at a ~25–30% discount to its OTA peer group median (~22–24×) and at roughly half its 10-year trailing P/E median of 31.6×. A PEG of 0.93 places it in GARP territory — rare for a business with 30%+ ROIC and 34% FCF margins. The large gap between trailing GAAP P/E (~27×, depressed by the KAYAK goodwill impairment) and forward P/E (~17×, reflecting the earnings ramp) signals a substantial adj. earnings improvement path, with consensus NTM EPS of ~$10.40 representing ~57% above the TTM GAAP figure — a bullish inflection if delivered."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$145",
+      "description": "AI disintermediation accelerates alongside EU regulatory penalties and extended Middle East disruption, compressing FCF and re-rating the multiple simultaneously.",
+      "points": [
+        "Google AI Travel Mode captures 15–20% of European hotel search intent previously routed through Booking.com by 2027, stalling core room night growth at 0–3%; BKNG's paid search dependency rises to offset lost organic traffic, compressing adj. EBITDA margins by 3–5pp",
+        "EU hotel class action (€8B sought) results in a €2–3B settlement coinciding with the Italy antitrust investigation imposing structural remedies that erode Booking.com's commission take-rate across the EU",
+        "Middle East conflict extends well into H2 2026 and spreads to adjacent markets; FY2026 revenue growth stalls at 4–5%; FCF compresses to $7.5–8B; multiple contracts to 14–16× FCF"
+      ]
+    },
+    "base": {
+      "priceTarget": "$215",
+      "description": "Middle East recovery in H2 2026 as guided, Connected Trip accelerates, AI threat partially offset by BKNG's API positioning, and the multiple re-rates from ~17× toward ~22× forward P/E.",
+      "points": [
+        "H2 2026 Middle East recovery materialises as guided; FY2026 revenue reaches $28–29B; Q3/Q4 2026 room nights re-accelerate to 7–9% growth; FY2026 FCF approaches $9.5–10B",
+        "Connected Trip momentum sustained: flights sustain >20% growth; attractions and OpenTable international add $1.5–2B incremental revenue by FY2027; Genius Tier 3 penetration deepens retention among highest-LTV travelers",
+        "Agentic AI product launches show measurable conversion improvement; BKNG secures API integrations with one or more major AI agent providers (OpenAI Operator, Google Gemini); FY2027 revenue growth re-accelerates to 12–14%"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$310",
+      "description": "Booking.com becomes the de facto API endpoint for AI travel agents globally, Connected Trip scales significantly, EU risks resolve favourably, and the multiple re-rates toward the 10-year average.",
+      "points": [
+        "BKNG's AI agent API strategy succeeds: agentic booking flows become a standard integration for OpenAI, Google, Apple, and Amazon agents by 2027, adding $2–3B incremental annual revenue and reinforcing network effects by routing more bookings through the platform",
+        "Connected Trip captures 12–15% of total gross bookings by FY2028 (vs. ~5% today): flights, attractions, experiences, and fintech payments from the Merchant Model each scale to $3–5B annual revenue",
+        "EU regulatory headwinds resolve without material financial penalties; buyback programme reduces share count to ~700M by FY2028; FY2028 FCF reaches $13–14B; multiple expands to 24–26× forward earnings"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "Booking.com's interface is highly optimised but increasingly abstracted away by AI agents, Google Hotel Search, and metasearch — travelers book without touching the Booking.com UI directly, eroding interface loyalty."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "While integrated into hotel channel management and PMS APIs, BKNG's business logic is standard OTA plumbing rather than deeply enterprise-configured workflows. Hotel partners can onboard to Expedia or Airbnb without significant re-engineering."
+    },
+    "publicDataAccess": {
+      "status": "weakened",
+      "note": "Pricing and availability data is accessible via APIs and scrapers across Google, Expedia, and metasearch. AI synthesis makes equivalent price-comparison data freely replicable, eroding this as a competitive differentiator."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Standard internet-scale tech talent pool; AI automates data science, pricing optimisation, and customer service roles that previously required specialised travel industry expertise."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Genius loyalty (50% of room nights from members; Tier 2/3 generates 55%+ of nights) creates genuine multi-product stickiness. Connected Trip bundling of flights, hotels, and attractions is growing but still ~5% of total bookings — real but nascent."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Billions of historical booking transactions, pricing signals, and traveler preferences feed AI personalisation and hotel pricing tools. Meaningful data flywheel, but not contractually exclusive — hotel partners can share data with competing platforms."
+    },
+    "regulatoryLockIn": {
+      "status": "weakened",
+      "note": "EU DMA gatekeeper designation removes parity clause enforcement — the regulation constrains BKNG's competitive advantage rather than protecting it. Spain fine (€413M, on appeal), Italy investigation (April 2026), and €8B hotel class action are material headwinds, not moat reinforcers."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "Classic two-sided marketplace flywheel: 4.4M+ properties globally → more traveler selection → more bookings → more reviews → better discovery → more properties list. Dominant in European accommodations with 25+ years of compounding. AI-powered personalisation is strengthening the relevance loop."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Merchant Model (68% of revenue, growing) means BKNG processes the payment between traveler and property. Hotels depend on Booking's channel management and payment rails. Management is positioning BKNG as the API endpoint all AI agents call — deepening rather than weakening the transaction layer."
+    },
+    "systemOfRecord": {
+      "status": "weakened",
+      "note": "Booking history, payment preferences, and reviews create moderate switching friction for loyal travelers. But data migration to Expedia or hotel-direct programmes is feasible within 1–2 trip cycles, limiting true system-of-record stickiness."
+    },
+    "verdict": "Booking Holdings is a net beneficiary of AI in the medium term but faces a genuine near-term threat from Google AI Travel Mode and autonomous booking agents. The two durable moats — network effects (4.4M-property flywheel, Genius loyalty compounding) and transaction embedding (Merchant Model processing 68% of bookings) — are AI-resilient and strengthen as personalisation improves. The most significant AI risk is agentic disintermediation: if Google's, OpenAI's, or Apple's agents learn to book hotels directly via property APIs at scale by 2027, BKNG's 15–25% commission take-rate faces structural pressure. Management's API-positioning strategy — embedding BKNG as the execution layer all AI agents call — is sound and aligns with the company's scale and inventory depth, but its success is not yet proven at the revenue line. BKNG enters the AI era as a structurally durable but not invulnerable platform, with the AI resilience score of 70 reflecting two strengthened moats (network effects, transaction embedding) against five that AI is weakening."
+  }
+}
