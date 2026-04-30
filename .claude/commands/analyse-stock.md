@@ -492,3 +492,42 @@ When generating the stock JSON, include `peAnalysis` inside the `valuation` obje
 - **Score alignment**: moat.score and aiResilienceScore must be within 5 points unless you document the structural reason
 - **Peer calibration**: Always state which peer-group stocks you compared against before finalising the moat score
 - **Analysis date**: Always set `lastAnalyzed` to the current month and year (e.g., `"March 2026"`) in the JSON output. Never omit this field.
+
+---
+
+## Step 9 — Register the Stock Page
+
+**Always run this after writing the JSON.** Without it the `/stocks/{slug}` page returns a 404.
+
+There are two registry files. Both must be updated:
+
+### `src/data/stocks/index.ts` (controls page routing — missing = 404)
+
+Add an import at the end of the import block:
+```typescript
+import {slug} from './{slug}.json';
+```
+
+Add an entry in `stocksMap` before the closing `}`:
+```typescript
+  {slug}: {slug} as StockAnalysisData,
+```
+
+### `src/app/stockData.ts` (controls portfolio/coverage lists)
+
+Add an import at the end of the import block:
+```typescript
+import {slug}Data from '@/data/stocks/{slug}.json';
+```
+
+Add an entry in `allCoverageData` before the closing `]`:
+```typescript
+{ name: "{Display Name}", ticker: "{TICKER}", slug: "{slug}", scores: [m({slug}Data), g({slug}Data), v({slug}Data)], href: "/stocks/{slug}", category: "{Big Tech|Financials|Healthcare|Industrials|Hard Assets|Other}", ...t({slug}Data) },
+```
+
+**Verify** both files contain the slug before committing:
+```bash
+grep -n "{slug}" src/data/stocks/index.ts src/app/stockData.ts
+```
+
+Each file must show at least two matches (import + map/array entry). If either shows zero matches, fix it before pushing.
