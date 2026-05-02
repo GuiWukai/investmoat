@@ -80,6 +80,7 @@ import oktaData    from '@/data/stocks/okta.json';
 import duolingoData from '@/data/stocks/duolingo.json';
 import hoodData     from '@/data/stocks/hood.json';
 import vstData      from '@/data/stocks/vst.json';
+import tmoData      from '@/data/stocks/tmo.json';
 
 // Weighted composite: Moat 40% · Growth 35% · Valuation 25%
 // scores = [moatScore, growthScore, valuationScore]
@@ -176,6 +177,7 @@ const allCoverageData = [
     { name: "Okta",              ticker: "OKTA",  slug: "okta",        scores: [m(oktaData),        g(oktaData),        v(oktaData)],        href: "/stocks/okta",        category: "Big Tech",    ...t(oktaData)        },
     { name: "Duolingo",          ticker: "DUOL",  slug: "duolingo",    scores: [m(duolingoData),    g(duolingoData),    v(duolingoData)],    href: "/stocks/duolingo",    category: "Other",       ...t(duolingoData)    },
     { name: "Robinhood Markets", ticker: "HOOD",  slug: "hood",        scores: [m(hoodData),        g(hoodData),        v(hoodData)],        href: "/stocks/hood",        category: "Financials",  ...t(hoodData)        },
+    { name: "Thermo Fisher Scientific", ticker: "TMO", slug: "tmo",    scores: [m(tmoData),         g(tmoData),         v(tmoData)],         href: "/stocks/tmo",         category: "Healthcare",  ...t(tmoData)         },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────
