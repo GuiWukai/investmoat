@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$142B"
+      "value": "$130B"
     },
     {
       "label": "Price",
-      "value": "$448.20"
+      "value": "$426.06"
     }
   ],
   "chips": [
@@ -26,26 +26,26 @@
       "color": "success"
     }
   ],
-  "recommendation": "Hold",
+  "recommendation": "Accumulate",
   "metrics": [
     {
-      "title": "Ratings Revenue",
-      "value": "$3.4B",
-      "label": "Recurring Market Lead",
+      "title": "Q1 2026 Revenue",
+      "value": "$4.17B",
+      "label": "+10% YoY (beat consensus)",
       "icon": "Landmark",
       "color": "#cf102d"
     },
     {
-      "title": "EBITDA Margin",
-      "value": "48.5%",
-      "label": "Scalable Capital Markets",
+      "title": "Indices Growth",
+      "value": "+17%",
+      "label": "Q1 2026 fastest segment",
       "icon": "TrendingUp",
       "color": "#3b82f6"
     },
     {
-      "title": "Dividend Growth",
-      "value": "10%",
-      "label": "Consistent 5yr CAGR",
+      "title": "FY26 EPS Guidance",
+      "value": "$19.40-19.65",
+      "label": "Narrowed and reaffirmed",
       "icon": "Shield",
       "color": "#10b981"
     }
@@ -70,12 +70,12 @@
     ]
   },
   "growth": {
-    "score": 78,
-    "description": "Index licensing (S&P 500) and ESG data integration."
+    "score": 80,
+    "description": "Q1 2026 total revenue +10% YoY ($4.17B), above the 6-8% organic guidance midpoint. Indices led at +17% (ETF AUM tailwind); Ratings +13% as the refinancing wall drives issuance. Adjusted EPS +13.7%."
   },
   "valuation": {
-    "score": 78,
-    "description": "Trading between bear ($400) and base ($500) — tariff and rate uncertainty compresses near-term issuance volumes; the refinancing wall and private credit expansion represent durable multi-year tailwinds."
+    "score": 84,
+    "description": "Stock pulled back to $426.06, only ~6.5% above the bear-case target ($400) despite Q1 2026 beating guidance. Price now sits ~26% of the way from bear to base — most of the cyclical uncertainty appears already discounted."
   },
   "scenarios": {
     "bear": {
@@ -149,5 +149,5 @@
     },
     "verdict": "S&P Global's regulatory moat (NRSRO status) and role as the definitive system of record for credit risk makes them uniquely AI-resilient. AI disrupts analysis, not the legal requirement to use S&P ratings."
   },
-  "lastAnalyzed": "February 2026"
+  "lastAnalyzed": "May 2026"
 }
