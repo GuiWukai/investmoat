@@ -110,26 +110,48 @@ export function ScenarioPriceBar({
 
       <div className="relative h-28 mt-6 mb-2">
         {pricePct != null && price != null && (
-          <div
-            className="absolute top-0 flex flex-col items-center pointer-events-none"
-            style={{ left: `${pricePct}%`, transform: 'translateX(-50%)' }}
-          >
-            <span
-              className="text-[11px] font-bold text-white whitespace-nowrap rounded-md px-2 py-1 border backdrop-blur"
+          <>
+            {/* Floating label sits above the dot, connected by a thin line */}
+            <div
+              className="absolute flex flex-col items-center pointer-events-none"
               style={{
-                background: 'rgba(255,255,255,0.06)',
-                borderColor: 'rgba(255,255,255,0.15)',
+                left: `${pricePct}%`,
+                bottom: 'calc(50% + 7px)',
+                transform: 'translateX(-50%)',
               }}
             >
-              {sym}
-              {fmt(price)}
-            </span>
-            <div className="w-px h-3 bg-white/50 mt-0.5" />
+              <span
+                className="text-[11px] font-bold text-white whitespace-nowrap rounded-md px-2 py-1 border backdrop-blur"
+                style={{
+                  background: 'rgba(255,255,255,0.06)',
+                  borderColor: 'rgba(255,255,255,0.15)',
+                }}
+              >
+                {sym}
+                {fmt(price)}
+              </span>
+              <div className="w-px h-2 bg-white/50" />
+            </div>
+
+            {/* Dot sits ON the bar */}
             <div
-              className="w-3 h-3 rounded-full bg-white shadow-lg"
-              style={{ boxShadow: '0 0 0 3px rgba(15,23,42,0.9), 0 0 12px rgba(255,255,255,0.4)' }}
-            />
-          </div>
+              className="absolute pointer-events-none"
+              style={{
+                left: `${pricePct}%`,
+                top: '50%',
+                transform: 'translate(-50%, -50%)',
+                zIndex: 10,
+              }}
+            >
+              <div
+                className="w-3.5 h-3.5 rounded-full bg-white"
+                style={{
+                  boxShadow:
+                    '0 0 0 3px rgba(15,23,42,0.95), 0 0 12px rgba(255,255,255,0.45)',
+                }}
+              />
+            </div>
+          </>
         )}
 
         <div
