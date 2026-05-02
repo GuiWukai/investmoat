@@ -22,14 +22,26 @@ const MONTHS = [
   "July", "August", "September", "October", "November", "December",
 ];
 
-/** Parse a "Month YYYY" string into a monotonic integer (year*12 + monthIndex) for sorting. */
+/**
+ * Parse a "Month YYYY" or "Month DD, YYYY" string into a monotonic integer
+ * (year*384 + month*32 + day) for sorting. Day defaults to 0 when absent so
+ * "May 2026" still sorts after "April 29, 2026" — month-precision dates land
+ * at the start of their month.
+ */
 function parseAnalysisDate(s: string | undefined): number {
   if (!s) return 0;
-  const [month, yearStr] = s.split(" ");
-  const m = MONTHS.indexOf(month);
-  const y = Number(yearStr);
+  const tokens = s.trim().split(/\s+/);
+  if (tokens.length < 2) return 0;
+  const m = MONTHS.indexOf(tokens[0]);
+  const y = Number(tokens[tokens.length - 1]);
   if (m < 0 || !Number.isFinite(y)) return 0;
-  return y * 12 + m;
+  // Optional middle token = day (e.g. "April 29, 2026" → tokens[1] = "29,")
+  let day = 0;
+  if (tokens.length >= 3) {
+    const d = Number(tokens[1].replace(/,/g, ""));
+    if (Number.isFinite(d)) day = d;
+  }
+  return y * 384 + m * 32 + day;
 }
 
 type SortKey = "score-desc" | "score-asc" | "date-desc" | "date-asc";
