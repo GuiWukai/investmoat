@@ -1,0 +1,189 @@
+{
+  "slug": "cdns",
+  "ticker": "CDNS",
+  "name": "Cadence Design Systems",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "CDNS"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$93B"
+    },
+    {
+      "label": "Current Price",
+      "value": "$340.94"
+    }
+  ],
+  "chips": [
+    {
+      "label": "EDA Software | Chip Design Tools",
+      "color": "primary"
+    },
+    {
+      "label": "Two-Firm Oligopoly",
+      "color": "success"
+    }
+  ],
+  "recommendation": "Strong Buy",
+  "metrics": [
+    {
+      "title": "Q1 2026 Revenue",
+      "value": "$1.47B",
+      "label": "+19% YoY (beat consensus)",
+      "icon": "TrendingUp",
+      "color": "#7c3aed"
+    },
+    {
+      "title": "Record Backlog",
+      "value": "$8.0B",
+      "label": "$4.0B converts in next 12mo",
+      "icon": "Database",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "Non-GAAP Op Margin",
+      "value": "44.7%",
+      "label": "+180bps YoY; 2026 EPS guide $7.85-7.95",
+      "icon": "Zap",
+      "color": "#10b981"
+    }
+  ],
+  "moat": {
+    "description": "Two-firm oligopoly with Synopsys (~30% / ~31% share) in EDA software — the design tools every advanced semiconductor on Earth is built with.",
+    "analysisTitle": "The Foundry-Certified Software Moat",
+    "analysisSummary": "Cadence's moat is the **software twin to ASML's physical EUV monopoly** — every leading chip design runs through CDNS or SNPS:",
+    "analysisPoints": [
+      {
+        "title": "Foundry Certification Lock-in",
+        "text": "TSMC, Samsung, and Intel Foundry certify CDNS tools and PDKs at every new process node. Customer designs inherit that certification. Switching to a non-certified flow restarts the qualification cycle and risks tapeout failure — a multi-million-dollar event."
+      },
+      {
+        "title": "Design Methodology Embedment",
+        "text": "Customers like Apple, NVIDIA, AMD, and Qualcomm encode chip-design methodologies into CDNS flows over 3-5 year programs. OpenAccess design databases store years of project artifacts. Migration costs are measured in years, not quarters."
+      },
+      {
+        "title": "AI Tailwind, Not Threat",
+        "text": "AI is a customer for CDNS, not a competitor. Every AI chip needs more EDA seats, more verification cycles, more IP. Q1 2026 results show this directly — IP business +22% YoY, IP demand led by 'AI, HPC, and automotive workloads'. Cadence's own AI tools (Cerebrus, Verisium, AgentStack) deepen the platform stickiness."
+      }
+    ]
+  },
+  "growth": {
+    "score": 88,
+    "description": "Q1 2026 revenue +19% YoY ($1.47B, beat). 2026 guide raised to $6.125-6.225B (16-18% growth) with non-GAAP EPS $7.85-7.95. Record $8B backlog with $4B converting in next 12 months. AI EDA TAM growing ~24% CAGR through 2032 per industry estimates.",
+    "growthAnalysis": {
+      "cagrEstimate": "15-18%",
+      "scoreDerivation": "Base 80 (15-30% CAGR band) + 3 recurring (~85% maintenance/subscription, NRR implied >110% from backlog growth) + 5 TAM expansion (AI design + Hexagon mechanical/EDA convergence) + 0 (margins expanding, not compressing) = 88",
+      "drivers": [
+        {
+          "name": "Core EDA + AI Design",
+          "metric": "Q1 +19% YoY revenue, AgentStack/Super Agent AI launches",
+          "trend": "accelerating"
+        },
+        {
+          "name": "IP Business",
+          "metric": "+22% YoY in Q1 2026, led by AI/HPC/automotive workloads",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Hexagon Acquisition",
+          "metric": "+$160M revenue in 2026; mechanical-electrical convergence",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If global AI capex digestion in 2H 2026 cuts hyperscaler chip-design starts by >20%, EDA seat-count growth decelerates below 12% and the multi-year $8B backlog conversion slows — testing the durability of the AI tailwind narrative.",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 72,
+    "description": "At $340.94 the stock sits ~72% of the way from bear ($240) to base ($380), close to the 12-month consensus analyst target of ~$375. Multiple is premium (~43× forward P/E, PEG ~2.7) but justified by the duopoly moat structure and AI tailwind — though it leaves limited margin of safety vs the bear case.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~76×", "note": "elevated by SBC + Hexagon charges" },
+        { "label": "Forward P/E (NTM)", "value": "~43×", "note": "$7.90 mid 2026 EPS guide" },
+        { "label": "PEG Ratio", "value": "~2.7×", "note": "fwd P/E ÷ ~16% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~15×", "note": "$6.18B mid 2026 revenue" },
+        { "label": "Price / FCF", "value": "~55×", "note": "premium for moat durability" }
+      ],
+      "summary": "Forward P/E of ~43× is a premium to the software-sector median (~28-32×) and the PEG of ~2.7 sits in the 'expensive' band. The market is paying for moat durability and AI optionality, not GARP. Trailing-to-forward gap signals an EPS ramp as Hexagon dilution annualises and AI seat upgrades flow through."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$240",
+      "description": "AI capex digestion in 2H 2026 cuts chip-design starts; China export controls return permanently; Hexagon integration drags margins.",
+      "points": [
+        "Hyperscaler chip-design starts decelerate >20% in 2H 2026, cutting EDA seat growth below 10%",
+        "BIS reinstates EDA export restrictions to China, removing ~10% of revenue base",
+        "Hexagon integration costs exceed plan, op-margin expansion stalls below 44%"
+      ]
+    },
+    "base": {
+      "priceTarget": "$380",
+      "description": "2026 guidance hits ($6.2B revenue / $7.90 EPS), $8B backlog converts on schedule, AI design tailwind continues at current pace.",
+      "points": [
+        "Revenue lands at top of $6.125-6.225B guide; 16-18% organic growth holds in 2027",
+        "IP business sustains 20%+ YoY growth driven by AI/HPC/automotive design starts",
+        "Non-GAAP op margin expands 100-200bps as Hexagon synergies materialise"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$520",
+      "description": "AI EDA share gains accelerate, ASIC design capex inflects up, Hexagon mechanical-electrical convergence opens a new $5B+ TAM.",
+      "points": [
+        "Cadence captures disproportionate share of the AI EDA segment (24% CAGR), pushing revenue growth above 20%",
+        "Hyperscaler in-house ASIC programs (Trainium, TPU, MTIA, Maia) drive a 5-year EDA seat expansion cycle",
+        "Hexagon-Cadence multi-physics platform unlocks automotive/aerospace digital-twin TAM, adding $1B+ revenue by 2028"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Chip designers train for years on Cadence Virtuoso, Innovus, and Genus. AI agents are starting to abstract some lower-level operations (floorplanning, basic verification), but timing closure and signoff still require expert human judgment."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "Apple, NVIDIA, AMD, and Qualcomm encode customer-specific chip-design methodologies into Cadence flows over 3-5 year programs. Migrating a methodology to a competitor takes 18-24 months and risks tapeout failure."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — EDA business derives moat from foundry-licensed PDKs and customer-proprietary design data, not from public datasets."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Field application engineers (FAEs) embedded with TSMC, Samsung, and Intel customers are deeply scarce. AI augments junior verification work but does not yet replace the cross-tool methodology expertise."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Cohesive design suite — Innovus + Quantus + Genus + Verisium + Cerebrus share data across the RTL-to-tapeout flow. Hexagon acquisition adds mechanical-electrical co-design, extending the bundle into multi-physics simulation that competitors cannot match."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Decades of foundry-certified reference flows, timing/power signoff data, and customer-specific design databases (OpenAccess format). PDKs licensed from foundries are integrated with proprietary methodologies that are CDNS-exclusive."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "Foundry certification at TSMC, Samsung, and Intel for each new process node creates re-certification costs at every migration. ITAR-controlled defense designs further lock in customers. Renewed each node, so not a 50-year regulatory moat like NRSRO."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "IP ecosystem network effect — more customers using Cadence flows attracts more 3rd-party IP partners (Arm, RISC-V vendors), which makes the platform more attractive for the next customer. Direct effects bounded by duopoly with SNPS."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Embedded in the chip-design workflow at every stage from RTL through tapeout. Royalty IP is also embedded in shipped silicon — Cadence collects per-unit royalties on Tensilica DSPs and other licensable cores. Not a payment-rail moat like V/MA."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "OpenAccess design databases store the authoritative system-of-record for every chip program — netlists, constraints, layouts, verification artifacts. Multi-year project data lives in CDNS-native formats that cannot be exported losslessly."
+    },
+    "aiResilienceScore": 94,
+    "verdict": "Cadence is a clear net beneficiary of AI. Chip complexity is the engine of EDA growth, and AI is making chips more complex faster than at any point in history. The strongest moats — businessLogic, bundling, proprietaryData, systemOfRecord — are all AI-strengthened, while the AI-vulnerable categories (learnedInterfaces, talentScarcity) are merely intact rather than destroyed because expert judgment in timing closure and signoff remains irreplaceable. The duopoly with SNPS caps the score below ASML's 94 (true monopoly), but CDNS sits firmly in the MSCI/V/MA tier of structurally durable software moats."
+  }
+}
