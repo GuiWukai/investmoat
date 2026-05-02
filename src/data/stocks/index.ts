@@ -65,6 +65,7 @@ import hood from './hood.json';
 import vst from './vst.json';
 import tmo from './tmo.json';
 import klac from './klac.json';
+import lng from './lng.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -132,6 +133,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   vst: vst as StockAnalysisData,
   tmo: tmo as StockAnalysisData,
   klac: klac as StockAnalysisData,
+  lng: lng as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
