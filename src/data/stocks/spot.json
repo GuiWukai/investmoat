@@ -1,0 +1,162 @@
+{
+  "slug": "spot",
+  "ticker": "SPOT",
+  "name": "Spotify Technology",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "SPOT" },
+    { "label": "Market Cap", "value": "~$140B" },
+    { "label": "Current Price", "value": "~$700" }
+  ],
+  "chips": [
+    { "label": "Music Streaming | Audio", "color": "primary" },
+    { "label": "Margin Inflection", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "MAUs",
+      "value": "~720M",
+      "label": "Including ~290M Premium subscribers",
+      "icon": "Users",
+      "color": "#1db954"
+    },
+    {
+      "title": "FY26 Revenue Growth",
+      "value": "+15-18%",
+      "label": "Mix of price + sub growth",
+      "icon": "TrendingUp",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "Gross Margin",
+      "value": "~33%",
+      "label": "Expanded from ~25% in 2023",
+      "icon": "Percent",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "description": "Global audio platform with the largest MAU base in music streaming, deep personalisation data, and a durable position with the major labels — moat is moderate and reinforced by behavioural switching costs.",
+    "analysisTitle": "The Audio Personalisation Moat",
+    "analysisSummary": "Spotify's moat is built on **scale, personalisation data, and behavioural switching costs** — meaningful but bounded by label cost economics:",
+    "analysisPoints": [
+      {
+        "title": "Personalisation Data Depth",
+        "text": "Hundreds of billions of listens, skips, saves, and playlist behaviours feed Spotify's recommendation models. Apple Music, Amazon Music, and YouTube Music cannot match the depth of behavioural signal Spotify accumulates daily, and the data flywheel compounds."
+      },
+      {
+        "title": "Library and Playlist Embedment",
+        "text": "Users invest years building libraries, playlists, and follow-graphs. The cognitive switching cost — losing a curated 'Discover Weekly' history, friend-graph, and saved albums — is real even if technical data export becomes mandated by EU regulation."
+      },
+      {
+        "title": "Audiobook and Podcast Integration",
+        "text": "Spotify is now the second-largest audiobook platform globally, and the largest podcast platform by listening hours. Bundling audiobooks into Premium tiers expands ARPU and adds switching cost without commensurate label-cost exposure — a real margin lever."
+      }
+    ]
+  },
+  "growth": {
+    "score": 78,
+    "description": "FY26 revenue growth +15-18%, balanced between Premium price increases (~6% effective) and subscriber additions (+18M net). Gross margin expanded from ~25% in 2023 to ~33% on advertising, marketplace, and operating leverage. Operating leverage flowing through as the post-2023 cost discipline holds.",
+    "growthAnalysis": {
+      "cagrEstimate": "15-18%",
+      "scoreDerivation": "Base 80 (15-30% CAGR low band) + 3 margin expansion (gross margin trending to 35% on ads, audiobooks, marketplace) - 5 label cost negotiation overhang (next major label deals 2027-28) = 78",
+      "drivers": [
+        { "name": "Premium Subscribers", "metric": "+18M net adds; ARPU rising on price increases", "trend": "stable" },
+        { "name": "Audiobook + Podcast", "metric": "Audiobook revenue +60% YoY; podcast ad revenue scaling", "trend": "accelerating" },
+        { "name": "Advertising", "metric": "Programmatic + creator marketplace expanding; supply growing faster than CPMs", "trend": "stable" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If 2027-28 label renewal cycles result in materially higher minimum-guarantee royalties or new performance-based escalators, the gross margin expansion thesis stalls and the multiple compresses meaningfully.",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 60,
+    "description": "At ~$700 SPOT trades at ~38× FY26 EPS — premium that prices in continued margin expansion. Margin trajectory supports the multiple if label negotiations are benign; otherwise rerating risk is meaningful.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Forward P/E (FY26)", "value": "~38×", "note": "EPS ~$18.50; premium to streaming peers" },
+        { "label": "Forward P/E (FY27)", "value": "~28×", "note": "Assumes 35% EPS growth on margin leverage" },
+        { "label": "Price / Sales (FY26)", "value": "~5.5×", "note": "Premium to ARPU peers reflects scale" },
+        { "label": "PEG Ratio", "value": "~1.4×", "note": "Reasonable on EPS leverage durability" },
+        { "label": "FCF Yield", "value": "~2.5%", "note": "FCF accelerating; ~$3.5B run-rate" }
+      ],
+      "summary": "Valuation prices in continued margin expansion; downside is 2027-28 label cost negotiations producing higher minimum guarantees."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$450",
+      "description": "Label renegotiation in 2027-28 raises minimum guarantees, margin expansion stalls, multiple compresses to 25× on growth normalisation.",
+      "points": [
+        "Major label renewals in 2027-28 raise minimum guarantees by 200-300 bps",
+        "Subscriber growth slows below 12% YoY on price-fatigue in mature markets",
+        "AI-generated music degrades library economics or triggers per-stream payout pressure"
+      ]
+    },
+    "base": {
+      "priceTarget": "$850",
+      "description": "Margin expands toward 35%, audiobook + advertising scale, FY27 EPS reaches $25, multiple sustains at 32-35×.",
+      "points": [
+        "FY27 Premium subscribers exceed 320M; ARPU rises 4-5% per year",
+        "Audiobook attaches into 30%+ of Premium subscribers",
+        "Advertising revenue grows 25%+ as programmatic + creator marketplace mature"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$1100",
+      "description": "Spotify becomes the dominant global audio platform, super-premium tier launches, gross margin reaches 38%, multiple sustains 35× on durable growth.",
+      "points": [
+        "Super-premium tier (HiFi + concerts + bundle) launches at >$20/mo with 30M+ adopters",
+        "Marketplace + creator monetisation reach 10%+ of revenue",
+        "Operating margin reaches 18%; FCF compounds at 30%+ for 3+ years"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "User library, playlists, follow-graph, and 'Discover' history create real cognitive switching cost — but largely substitutable on technical migration."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "Recommendation algorithms are real but increasingly replicable by Apple/Amazon/YouTube on similar scale data; the algorithm advantage is narrowing."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "ML/audio engineering talent is broadly available; not a differentiating Spotify scarcity."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Music + podcasts + audiobooks bundle is real and expanding; rivals offer subsets but not the full audio bundle at parity."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Hundreds of billions of listening events feed personalisation; Spotify's behavioural data depth is genuinely differentiated and compounds with scale."
+    },
+    "regulatoryLockIn": {
+      "status": "destroyed",
+      "note": "N/A — content licensing is the constraint, not regulatory."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "Social graph (friend follows, collaborative playlists) is meaningful but secondary to content access."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Premium subscription is auto-renewed and embedded in mobile carrier and family-plan bundles globally."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "Spotify is the de-facto system of record for music listening identity for 720M+ users — playlists, library, history, and follow-graph live there."
+    },
+    "aiResilienceScore": 60,
+    "verdict": "Spotify's moat is data-driven personalisation + behavioural embedment — AI is neutral-to-positive (improves recommendation, lowers customer service costs). The label-cost economics define the long-term economic ceiling more than any AI threat."
+  }
+}

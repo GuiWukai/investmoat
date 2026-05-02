@@ -1,0 +1,162 @@
+{
+  "slug": "baba",
+  "ticker": "BABA",
+  "name": "Alibaba Group",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "BABA" },
+    { "label": "Market Cap", "value": "~$280B" },
+    { "label": "Current Price", "value": "~$118" }
+  ],
+  "chips": [
+    { "label": "China E-commerce | Cloud | AI", "color": "primary" },
+    { "label": "China Risk", "color": "warning" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Cloud Revenue Growth",
+      "value": "+25-30%",
+      "label": "AI-led; Qwen ecosystem driving inference demand",
+      "icon": "Cloud",
+      "color": "#FF6A00"
+    },
+    {
+      "title": "Net Cash + Investments",
+      "value": "~$70B",
+      "label": "Significant excess capital vs market cap",
+      "icon": "DollarSign",
+      "color": "#10b981"
+    },
+    {
+      "title": "Adj EBITA Margin",
+      "value": "~14%",
+      "label": "Recovering on Taobao/Tmall + AI cost discipline",
+      "icon": "Percent",
+      "color": "#0ea5e9"
+    }
+  ],
+  "moat": {
+    "description": "Largest Chinese e-commerce + leading domestic cloud and the leading domestic LLM franchise (Qwen) — moats are genuine but the equity carries persistent China regulatory and geopolitical risk.",
+    "analysisTitle": "The China Platform Moat",
+    "analysisSummary": "Alibaba's moat is **scale leadership across Chinese e-commerce, cloud, and AI** — durable structurally with persistent geopolitical / regulatory tail risk:",
+    "analysisPoints": [
+      {
+        "title": "Taobao + Tmall Marketplace Dominance",
+        "text": "Despite competitive share loss to Pinduoduo and Douyin, Taobao + Tmall remain the largest Chinese e-commerce GMV at ~$650B+. The marketplace network effects (merchant base + buyer base + payment + logistics) compound and Alibaba's investment in Tmall premium segment + Taobao value cohorts is showing GMV stabilisation."
+      },
+      {
+        "title": "Alibaba Cloud + Qwen Franchise",
+        "text": "Alicloud is the leading domestic cloud (~37% Chinese cloud share). Qwen LLM family is the leading open-source-style Chinese model with global penetration in non-US markets and is the foundation for Alicloud AI inference revenue. Cloud + AI revenue grew 25-30% in 2026 with margin expansion as the franchise scales."
+      },
+      {
+        "title": "Capital Return and Restructuring",
+        "text": "$25B+ buyback authorisation, ~$70B net cash + investment portfolio, and Cainiao + Lazada restructured as standalone brands creates capital allocation flexibility. The discount in BABA from peak valuation has compressed materially through buyback execution alone."
+      }
+    ]
+  },
+  "growth": {
+    "score": 68,
+    "description": "FY27 (March year-end) revenue growth +12-15%, with cloud/AI +25-30%, e-commerce +5-7%, international +20%+. AI/cloud is the swing factor — Qwen ecosystem traction translates to Alicloud inference revenue. Margin recovery on cost discipline + AI mix.",
+    "growthAnalysis": {
+      "cagrEstimate": "10-15%",
+      "scoreDerivation": "Base 75 (8-15% CAGR top of band) + 5 cloud/AI optionality (Qwen + AI inference 25-30%) - 5 China e-commerce competition (PDD + Douyin) - 7 geopolitical / regulatory discount = 68",
+      "drivers": [
+        { "name": "Cloud + Qwen AI", "metric": "+25-30% YoY; Qwen ecosystem driving inference revenue", "trend": "accelerating" },
+        { "name": "Taobao + Tmall Group", "metric": "+5-7% YoY; stabilising on premium + value segments", "trend": "stable" },
+        { "name": "International (Lazada + AliExpress)", "metric": "+20%+ YoY; SE Asia + EU growth", "trend": "accelerating" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If US-China geopolitical tensions accelerate (additional ADR delisting risk, technology export controls on Chinese AI) or Chinese consumer continues stagnating through 2027, the discount in BABA persists indefinitely and the buyback alone is insufficient to drive material rerating.",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 86,
+    "description": "At ~$118 BABA trades at ~10× FY27 EPS — an extreme discount to global tech peers. ~$70B net cash + investments equates to ~25% of market cap, with the operating business at ~7× EPS. Valuation prices in worst-case geopolitical and competitive scenarios.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Forward P/E (FY27)", "value": "~10×", "note": "EPS ~$11.30; deep discount to global peers" },
+        { "label": "Forward P/E ex-cash", "value": "~7×", "note": "Stripping ~$70B net cash + investments" },
+        { "label": "Price / Sales (FY27)", "value": "~1.8×", "note": "Discount to global e-commerce + cloud" },
+        { "label": "FCF Yield", "value": "~7%", "note": "FCF strong; capital return active" },
+        { "label": "EV / EBITDA (NTM)", "value": "~5×", "note": "Vs global cloud peers ~12-18×" }
+      ],
+      "summary": "Valuation prices in deep geopolitical and competitive risk; quality of underlying franchise and capital position supports rerating thesis."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$80",
+      "description": "China consumer stagnates, geopolitical tensions accelerate, ADR delisting risk materialises, multiple stays at 8× depressed earnings.",
+      "points": [
+        "Chinese consumer discretionary weakness persists through 2027",
+        "Pinduoduo + Douyin continue gaining e-commerce share",
+        "ADR delisting risk materialises (PCAOB / SEC enforcement) or new tariff regime restricts cloud/AI"
+      ]
+    },
+    "base": {
+      "priceTarget": "$160",
+      "description": "Cloud + AI sustains 25%+ growth, e-commerce stabilises, FY28 EPS reaches $13, multiple expands to 13× as discount narrows.",
+      "points": [
+        "Cloud/AI revenue exceeds $25B run-rate by FY28",
+        "Taobao + Tmall GMV stabilises with premium segment recovery",
+        "Capital return continues; share count -3-4% per year"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$220",
+      "description": "Geopolitical tensions stabilise, Qwen becomes dominant non-US LLM globally, FY29 EPS reaches $16+, multiple rerates to 15× on franchise quality reassessment.",
+      "points": [
+        "Qwen achieves >40% non-US LLM market share by FY29",
+        "Cloud/AI revenue exceeds $35B by FY29 with margin expansion",
+        "Capital allocation reignites M&A in international e-commerce or AI infra"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Taobao/Tmall consumer interface and merchant tools have decades of Chinese consumer learning embedded."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Merchant ERP, fulfilment integration (Cainiao), payment (Alipay legacy), and ad-tech encode platform business logic that took years to build."
+    },
+    "publicDataAccess": {
+      "status": "weakened",
+      "note": "Some access to public Chinese commerce signal but not differentiating data."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Chinese cloud + AI engineering talent at Alibaba's scale is real and durable; Qwen team rivals global ML labs."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Taobao + Tmall + Alipay (legacy) + Cainiao logistics + Alicloud + Qwen creates one of the deepest e-commerce + AI bundles globally."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Trillions of Chinese commerce, search, and behaviour signals feed Qwen + recommendation + ad targeting — uniquely massive Chinese-language dataset."
+    },
+    "regulatoryLockIn": {
+      "status": "weakened",
+      "note": "Chinese cloud regulatory regime favours domestic players (Alicloud + Tencent + Huawei) but Common Prosperity oversight is a real overhang."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "Two-sided merchant + buyer marketplace at $650B+ GMV — the largest Chinese e-commerce network with classic positive feedback dynamics."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Merchant ERP, fulfilment, and payment integrations create deep multi-year switching costs for merchants of all sizes."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "Taobao + Tmall is the system of record for hundreds of millions of Chinese merchants and buyers; Alicloud is system of record for many Chinese enterprises."
+    },
+    "aiResilienceScore": 70,
+    "verdict": "Alibaba's moats are substantively AI-positive — Qwen + Alicloud + commerce data flywheel compound with AI adoption. The franchise question is geopolitical and regulatory, not technological; valuation prices in worst-case outcomes and ignores AI franchise."
+  }
+}

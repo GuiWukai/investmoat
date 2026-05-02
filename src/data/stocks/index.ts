@@ -66,6 +66,25 @@ import vst from './vst.json';
 import tmo from './tmo.json';
 import klac from './klac.json';
 import lng from './lng.json';
+import smci from './smci.json';
+import vrt from './vrt.json';
+import dell from './dell.json';
+import crdo from './crdo.json';
+import nvo from './nvo.json';
+import hims from './hims.json';
+import spot from './spot.json';
+import uber from './uber.json';
+import abnb from './abnb.json';
+import keys from './keys.json';
+import keyence from './keyence.json';
+import de from './de.json';
+import etn from './etn.json';
+import nke from './nke.json';
+import lulu from './lulu.json';
+import el from './el.json';
+import baba from './baba.json';
+import pdd from './pdd.json';
+import bidu from './bidu.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -134,6 +153,25 @@ const stocksMap: Record<string, StockAnalysisData> = {
   tmo: tmo as StockAnalysisData,
   klac: klac as StockAnalysisData,
   lng: lng as StockAnalysisData,
+  smci: smci as StockAnalysisData,
+  vrt: vrt as StockAnalysisData,
+  dell: dell as StockAnalysisData,
+  crdo: crdo as StockAnalysisData,
+  nvo: nvo as StockAnalysisData,
+  hims: hims as StockAnalysisData,
+  spot: spot as StockAnalysisData,
+  uber: uber as StockAnalysisData,
+  abnb: abnb as StockAnalysisData,
+  keys: keys as StockAnalysisData,
+  keyence: keyence as StockAnalysisData,
+  de: de as StockAnalysisData,
+  etn: etn as StockAnalysisData,
+  nke: nke as StockAnalysisData,
+  lulu: lulu as StockAnalysisData,
+  el: el as StockAnalysisData,
+  baba: baba as StockAnalysisData,
+  pdd: pdd as StockAnalysisData,
+  bidu: bidu as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {

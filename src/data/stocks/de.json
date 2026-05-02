@@ -1,0 +1,162 @@
+{
+  "slug": "de",
+  "ticker": "DE",
+  "name": "Deere & Company",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "DE" },
+    { "label": "Market Cap", "value": "~$130B" },
+    { "label": "Current Price", "value": "~$485" }
+  ],
+  "chips": [
+    { "label": "Agriculture | Construction", "color": "primary" },
+    { "label": "Cyclical Compounder", "color": "warning" }
+  ],
+  "recommendation": "Hold",
+  "metrics": [
+    {
+      "title": "FY26 EPS Guide",
+      "value": "$22-25",
+      "label": "Trough cycle; expected to recover from FY25",
+      "icon": "TrendingUp",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "Operating Margin",
+      "value": "~17%",
+      "label": "Down from ~22% peak; recovering on cycle",
+      "icon": "Percent",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "Precision Ag Subscriptions",
+      "value": "~$1B run-rate",
+      "label": "Recurring software ARR; growing 30%+",
+      "icon": "Wifi",
+      "color": "#10b981"
+    }
+  ],
+  "moat": {
+    "description": "Dominant North American farm equipment franchise with the largest agricultural dealer network and a credible precision-ag software franchise — durable but cyclical, with farmer balance sheets currently soft.",
+    "analysisTitle": "The Dealer-Plus-Software Moat",
+    "analysisSummary": "Deere's moat is **the largest agricultural dealer network in the West paired with a growing precision-ag software franchise** — durable on hardware, with optionality on software:",
+    "analysisPoints": [
+      {
+        "title": "Dealer Network Density",
+        "text": "Deere's North American dealer footprint is unmatched — closer to farms, faster service, and parts availability that competitors (CNH, AGCO, Kubota) cannot match in core US/Canadian markets. Switching tractor brands means losing service proximity, which is a first-order farmer concern in season."
+      },
+      {
+        "title": "Precision Ag Software Optionality",
+        "text": "John Deere Operations Centre + See & Spray + autonomous tractors are real software franchises with ~$1B ARR run-rate growing 30%+. The recurring-revenue layer compounds on the installed base of ~750K connected machines and is a meaningful moat extension if execution holds."
+      },
+      {
+        "title": "Cyclical Discipline",
+        "text": "Through-cycle margin discipline (operating margin ~14-22%) and capital return have been industry-leading. Deere's mid-cycle through-cycle margin floor of ~16% holds even in farmer-soft cycles like FY25-26 — better than CNH/AGCO."
+      }
+    ]
+  },
+  "growth": {
+    "score": 60,
+    "description": "FY26 EPS guide $22-25, recovering modestly from FY25 trough. Farmer balance sheets remain soft on grain prices; the cyclical recovery is back-end-loaded into FY27. Long-term thesis is precision ag software ARR + autonomous farming TAM expansion against cyclical hardware base.",
+    "growthAnalysis": {
+      "cagrEstimate": "5-8%",
+      "scoreDerivation": "Base 65 (4-8% CAGR top of band) + 5 precision ag ARR optionality (30%+ growth) - 5 cyclicality (FY25-26 trough) - 5 farmer balance sheet (grain prices weak) = 60",
+      "drivers": [
+        { "name": "Agriculture & Turf", "metric": "Trough cycle FY25-26; recovery dependent on grain prices and farmer income", "trend": "decelerating" },
+        { "name": "Construction & Forestry", "metric": "Tied to non-residential construction cycle; mixed", "trend": "stable" },
+        { "name": "Precision Ag Software ARR", "metric": "$1B run-rate growing 30%+; subscription mix shift in progress", "trend": "accelerating" }
+      ],
+      "primaryType": "market share",
+      "keyRisk": "If farmer income remains depressed through 2026-27 due to sustained low grain prices and high input costs, the equipment replacement cycle delays further and Deere's earnings power compresses to $20 EPS, triggering a multiple compression to 13-14×.",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 70,
+    "description": "At ~$485 Deere trades at ~21× trough FY26 EPS — premium reflecting precision-ag software optionality, but the cyclical pattern argues for waiting for through-cycle multiple. Through-cycle valuation is more like 14-16× normalised earnings.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Forward P/E (FY26)", "value": "~21×", "note": "EPS ~$23 mid; trough cycle valuation" },
+        { "label": "Forward P/E (FY27)", "value": "~16×", "note": "Assumes recovery to $30 EPS" },
+        { "label": "Price / Sales (NTM)", "value": "~3×", "note": "Premium reflecting software mix" },
+        { "label": "PEG Ratio", "value": "~3×", "note": "Reflects through-cycle CAGR not trough" },
+        { "label": "FCF Yield", "value": "~3%", "note": "FCF compressed; recovers with cycle" }
+      ],
+      "summary": "Valuation prices in cyclical recovery and software optionality. Margin of safety is modest at current levels."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$370",
+      "description": "Farmer income stays soft through 2027, equipment cycle bottom delays, multiple compresses to 14× depressed earnings.",
+      "points": [
+        "Grain prices remain low through 2027; farmer income stays below long-term average",
+        "Equipment replacement cycle delays into 2028, deferring revenue recovery",
+        "Precision ag software ARR growth slows below 20% on slower hardware install base"
+      ]
+    },
+    "base": {
+      "priceTarget": "$540",
+      "description": "Cyclical recovery in FY27 drives EPS to $30, precision ag ARR continues compounding, multiple sustains 18×.",
+      "points": [
+        "Grain prices recover modestly in 2026-27, farmer income normalises",
+        "FY27 EPS reaches $30 on volume + price + cost discipline",
+        "Precision ag ARR exceeds $1.4B run-rate by FY27"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$680",
+      "description": "Cyclical recovery + autonomous tractor commercial launch drives premium multiple expansion to 22×, FY28 EPS reaches $35+.",
+      "points": [
+        "Autonomous tractor commercial deployment accelerates in 2026-27",
+        "Precision ag ARR surpasses $2B by FY28 with 90%+ gross margins",
+        "Capital return increases as cycle EBITDA recovers above 25%"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Farmers and operators learn Deere controls and Operations Centre over years; some switching friction at the operator level."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Operations Centre + See & Spray + autonomous tractor software encode farm-level business logic that compounds with installed base."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Agricultural-engineering and dealer-service technician bench is real and durable — Deere's training pipeline is decades old."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Tractor + implements + precision ag software + financing bundle is the most complete in the industry; rivals address subsets."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Operations Centre data on ~750K connected machines covering ~325M acres globally is genuinely unique — feeds See & Spray, autonomy, and agronomic insights."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "EPA emissions, NHTSA on-road, and global homologation create real new-entrant barriers in agricultural equipment."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "Dealer network density creates a flywheel — more Deere machines in a region attract more dealer investment, attracting more buyers."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "John Deere Financial finances ~50% of equipment, dealer parts contracts, and precision-ag subscriptions create deep recurring embedment."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "Operations Centre is becoming the system of record for many farm operations — agronomy, equipment, financials in one platform."
+    },
+    "aiResilienceScore": 60,
+    "verdict": "Deere is a high-quality industrial-AI franchise — autonomous farming and computer vision (See & Spray) compound the moat. The thesis question is cyclical (farmer balance sheet) not technological. AI is structurally additive."
+  }
+}

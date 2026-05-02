@@ -1,0 +1,162 @@
+{
+  "slug": "lulu",
+  "ticker": "LULU",
+  "name": "Lululemon Athletica",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "LULU" },
+    { "label": "Market Cap", "value": "~$32B" },
+    { "label": "Current Price", "value": "~$260" }
+  ],
+  "chips": [
+    { "label": "Premium Athletic Apparel", "color": "primary" },
+    { "label": "Beaten-Down Quality", "color": "warning" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "FY26 Revenue Growth",
+      "value": "+5-8%",
+      "label": "International offsetting flat North America",
+      "icon": "TrendingUp",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "Operating Margin",
+      "value": "~22%",
+      "label": "Industry-leading; durable through turnaround",
+      "icon": "Percent",
+      "color": "#10b981"
+    },
+    {
+      "title": "International Mix",
+      "value": "~30%",
+      "label": "Growing 25%+ vs flat NA",
+      "icon": "Globe",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "description": "Premium athletic apparel category leader with industry-leading margins, deep brand authority in women's athleisure, and meaningful international growth runway — currently navigating a North America women's product reset.",
+    "analysisTitle": "The Premium Brand Moat",
+    "analysisSummary": "Lululemon's moat is **brand authority + premium price-pointing + community marketing** — durable, with international expansion as the structural growth lever:",
+    "analysisPoints": [
+      {
+        "title": "Premium Brand Authority",
+        "text": "Lululemon retains the highest pricing power in athletic apparel — average ticket prices materially above Nike, Adidas, and Athleta. The brand authority in women's yoga/run/train apparel persists despite the FY24-25 product reset and supports gross margins of ~58% vs Nike's ~42%."
+      },
+      {
+        "title": "Community Marketing and Ambassador Programme",
+        "text": "Local store ambassador networks, run/yoga clubs, and grassroots events build customer loyalty that traditional retail cannot replicate. The model produces low CAC and high repeat-rate vs DTC apparel competitors. Lower paid-marketing intensity is the structural margin source."
+      },
+      {
+        "title": "International Growth Runway",
+        "text": "International (China, EU, Asia ex-China) is ~30% of revenue and growing 25%+ — a multi-year runway as China builds out and EU markets penetrate. International margin profile is improving as scale develops, providing offset to NA softness."
+      }
+    ]
+  },
+  "growth": {
+    "score": 62,
+    "description": "FY26 revenue growth +5-8% as international growth (~25%) offsets flat-to-negative NA. Operating margin durably ~22%. Women's product reset is the swing factor — recovery in NA women's revenue would inflect total growth back toward 10%+.",
+    "growthAnalysis": {
+      "cagrEstimate": "6-10%",
+      "scoreDerivation": "Base 70 (8-15% CAGR low band) + 5 international optionality (China + EU 25%+ growth) - 7 NA weakness (women's reset overhang) - 6 competition (Alo, Vuori, Athleta, Bandier) = 62",
+      "drivers": [
+        { "name": "International (China + EU)", "metric": "+25%+ YoY; multi-year runway", "trend": "accelerating" },
+        { "name": "Men's Category", "metric": "+10-15% YoY; structural under-penetration", "trend": "stable" },
+        { "name": "NA Women's", "metric": "Flat-to-slightly-down; reset in progress", "trend": "decelerating" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If NA women's continues declining through 2027 and international growth moderates simultaneously (China consumer slowdown), the multiple compresses to 16× and the turnaround thesis lengthens to multi-year.",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 78,
+    "description": "At ~$260 LULU trades at ~17× FY26 EPS — discount to its 5-year median (~32×) and to historical multiples. The discount prices in NA women's risk; recovery + international expansion supports upside on a 2-3 year hold.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Forward P/E (FY26)", "value": "~17×", "note": "EPS ~$15.30; significant discount to historical" },
+        { "label": "Forward P/E (FY27)", "value": "~15×", "note": "Assumes recovery to $17 EPS" },
+        { "label": "Price / Sales (FY26)", "value": "~2.5×", "note": "Discount to historical 4-5×" },
+        { "label": "PEG Ratio", "value": "~1.8×", "note": "Reasonable on growth recovery" },
+        { "label": "FCF Yield", "value": "~6%", "note": "FCF strong even through reset" }
+      ],
+      "summary": "Valuation prices in turnaround uncertainty; quality of underlying franchise + international growth supports rerating thesis."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$200",
+      "description": "NA women's continues declining, international growth moderates on China weakness, multiple compresses to 13× as growth normalises.",
+      "points": [
+        "NA women's revenue continues declining through 2027",
+        "China consumer slowdown compresses international growth below 15%",
+        "Margin compresses below 20% on promotional intensity"
+      ]
+    },
+    "base": {
+      "priceTarget": "$330",
+      "description": "FY26 revenue +6-7%, NA women's stabilises, international sustains 20%+, multiple rerates to 19-21×.",
+      "points": [
+        "NA women's stabilises by mid-FY26 with new product launches",
+        "International (China + EU + ROAP) continues 20%+ growth",
+        "Operating margin holds 22%; FCF compounds"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$430",
+      "description": "Women's product reset succeeds, NA growth reaccelerates to high-single-digits, multiple rerates to 25× on quality reassessment.",
+      "points": [
+        "FY27 NA women's grows mid-single-digits on new product cycle",
+        "International scales to 35%+ of revenue with margin expansion",
+        "Men's category exceeds 25% of total revenue with sustained 15%+ growth"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — consumer brand."
+    },
+    "businessLogic": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Premium athletic apparel design and product development talent is real and durable; Lululemon's bench is among the deepest in athleisure."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Apparel + accessories + Mirror (now sunset) + community programming creates real category bundling within athletic apparel."
+    },
+    "proprietaryData": {
+      "status": "weakened",
+      "note": "Loyalty program and store-level transaction data is real but not deeply monetised."
+    },
+    "regulatoryLockIn": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "Community programming, ambassador network, and local club integration creates real social-proof network effects unique to Lululemon."
+    },
+    "transactionEmbedding": {
+      "status": "weakened",
+      "note": "No subscription; embedment is brand affinity and habit, not technical lock-in."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "aiResilienceScore": 45,
+    "verdict": "Lululemon's moat is brand + community + premium pricing — AI is largely neutral on the franchise. The thesis question is product execution and international expansion, not technological obsolescence; current valuation provides margin of safety against execution risk."
+  }
+}

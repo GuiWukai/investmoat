@@ -1,0 +1,162 @@
+{
+  "slug": "abnb",
+  "ticker": "ABNB",
+  "name": "Airbnb",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "ABNB" },
+    { "label": "Market Cap", "value": "~$85B" },
+    { "label": "Current Price", "value": "~$135" }
+  ],
+  "chips": [
+    { "label": "Marketplace | Travel", "color": "primary" },
+    { "label": "Two-Sided Network", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Active Listings",
+      "value": "~8.5M",
+      "label": "Up from 7.7M FY24",
+      "icon": "Home",
+      "color": "#FF5A5F"
+    },
+    {
+      "title": "FY26 Revenue Growth",
+      "value": "+10-13%",
+      "label": "Bookings growth + ADR + Experiences",
+      "icon": "TrendingUp",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "Adj EBITDA Margin",
+      "value": "~36%",
+      "label": "Industry-leading; capital-light",
+      "icon": "Percent",
+      "color": "#10b981"
+    }
+  ],
+  "moat": {
+    "description": "Largest two-sided alternative-accommodation network globally, with brand + supply density that no traditional OTA or hotel chain can replicate — moat is real, growth profile is the question.",
+    "analysisTitle": "The Supply-Density Marketplace Moat",
+    "analysisSummary": "Airbnb's moat is **supply density and brand recognition in alternative accommodations** — a marketplace with genuine network effects and category leadership:",
+    "analysisPoints": [
+      {
+        "title": "Supply Network Density",
+        "text": "8.5M+ active listings across 220+ countries gives Airbnb supply breadth no competitor can match. Booking, Vrbo, and regional rivals carry partial subsets — the density advantage compounds as travellers find what they want only on Airbnb in many markets."
+      },
+      {
+        "title": "Brand and Search Default",
+        "text": "Airbnb is the verb for alternative accommodation. ~90% of traffic is direct or organic vs Booking's 40%+ paid. The marketing advantage compounds the unit economics — Airbnb's CAC is materially lower than rivals' and that translates to margin."
+      },
+      {
+        "title": "Experiences and Services Expansion",
+        "text": "May 2025 relaunch of Experiences + Services adds two-sided supply categories. Early traction is modest but the strategic logic is real — the same trip-planning identity expands ARPU without new acquisition cost. Execution is the question."
+      }
+    ]
+  },
+  "growth": {
+    "score": 70,
+    "description": "FY26 revenue growth +10-13% on bookings + ADR + early Experiences contribution. Bookings growth has slowed from 2022-23 highs; the platform is mature in core US/EU markets and growth depends on emerging markets + new categories. Margin remains industry-leading at ~36%.",
+    "growthAnalysis": {
+      "cagrEstimate": "10-13%",
+      "scoreDerivation": "Base 75 (8-15% CAGR mid-band) + 3 Experiences/Services optionality (May 2025 relaunch) - 5 mature core market growth deceleration - 3 regulation overhang (urban short-term rental restrictions) = 70",
+      "drivers": [
+        { "name": "Nights Booked Growth", "metric": "+8-10% YoY; ADR +2-3%; mature core markets", "trend": "stable" },
+        { "name": "Experiences and Services", "metric": "May 2025 relaunch; modest revenue but strategic optionality", "trend": "accelerating" },
+        { "name": "Emerging Markets", "metric": "Latam, Asia ex-China driving incremental growth", "trend": "accelerating" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If urban short-term-rental regulation tightens further across major US/EU cities in 2026-27 (NYC, Barcelona, Berlin precedents extending), supply growth in highest-ADR markets reverses and ADR + bookings growth compresses simultaneously.",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 70,
+    "description": "At ~$135 ABNB trades at ~24× FY26 EPS — fair for a capital-light two-sided marketplace with 36% EBITDA margin. Multiple has compressed from 35× in 2024 as growth normalised; current valuation provides reasonable margin of safety.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Forward P/E (FY26)", "value": "~24×", "note": "EPS ~$5.60; reasonable on margin durability" },
+        { "label": "Forward P/E (FY27)", "value": "~21×", "note": "Assumes 12-15% EPS growth" },
+        { "label": "Price / Sales (FY26)", "value": "~6×", "note": "Fair vs marketplace peers" },
+        { "label": "PEG Ratio", "value": "~2.0×", "note": "Premium reflecting capital-light economics" },
+        { "label": "FCF Yield", "value": "~5%", "note": "TTM FCF ~$4.3B; capital return active" }
+      ],
+      "summary": "Valuation reflects the compounding profile after 2024-25 multiple compression; the upside lies in Experiences + emerging market reacceleration."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$95",
+      "description": "Urban regulation tightens, growth deceleration intensifies, Experiences/Services launch underwhelms, multiple compresses to 18× on mature-marketplace status.",
+      "points": [
+        "Major US/EU cities tighten short-term-rental rules, reducing high-ADR supply",
+        "Bookings growth slows below 5% YoY in 2027",
+        "Experiences/Services revenue contribution remains immaterial through 2027"
+      ]
+    },
+    "base": {
+      "priceTarget": "$170",
+      "description": "FY26 revenue +12%, EBITDA margin holds 36%, Experiences scale modestly, multiple stays at 25-27×.",
+      "points": [
+        "Nights booked +9% YoY; ADR +3%",
+        "Experiences/Services reach mid-single-digit revenue contribution by FY27",
+        "Buyback program returns 60%+ of FCF; share count -3-4% per year"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$220",
+      "description": "Experiences/Services becomes a meaningful growth pillar, emerging markets accelerate, FY28 EPS exceeds $9, multiple rerates to 28×.",
+      "points": [
+        "Experiences/Services revenue scales to 10%+ of total by FY28",
+        "Emerging market growth (Latam, Asia ex-China) reaccelerates above 25% YoY",
+        "AI-driven trip planning shifts traveller surplus toward Airbnb's higher-ADR product"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Trip planning and search filters create modest learning friction; substitutable on technical migration."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Search ranking, dynamic pricing, and host trust scoring are real differentiated systems."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Marketplace engineering talent is broadly available."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Stays + Experiences + Services bundle is real but early; the bundling thesis is strategic optionality more than current moat."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Trip-level booking, search-intent, and host-quality data accumulating across 8.5M listings is genuinely unique and feeds search ranking + pricing + trust."
+    },
+    "regulatoryLockIn": {
+      "status": "destroyed",
+      "note": "Regulation is a headwind, not a moat — urban short-term-rental rules are a structural overhang."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "Supply density attracts demand; demand attracts new hosts. Classic two-sided marketplace economics with category leadership."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Stored payment, traveller verification, and host onboarding create meaningful repeat-friction; not as deep as enterprise SaaS embedment."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "Airbnb is the de-facto system of record for traveller alternative-accommodation identity and history for 150M+ users."
+    },
+    "aiResilienceScore": 65,
+    "verdict": "Airbnb's network + brand + data moats are durable in the AI era — generative trip planning is more likely to surface Airbnb supply than disintermediate it. The growth question is regulatory and category-extension, not technological obsolescence."
+  }
+}

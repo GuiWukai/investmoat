@@ -1,0 +1,162 @@
+{
+  "slug": "dell",
+  "ticker": "DELL",
+  "name": "Dell Technologies",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "DELL" },
+    { "label": "Market Cap", "value": "~$95B" },
+    { "label": "Current Price", "value": "~$140" }
+  ],
+  "chips": [
+    { "label": "Enterprise IT | AI Server", "color": "primary" },
+    { "label": "Scale Leader", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "AI Server Backlog",
+      "value": "~$16B",
+      "label": "Up from ~$9B at start of FY26",
+      "icon": "Box",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "ISG Revenue Growth",
+      "value": "+38% YoY",
+      "label": "AI-server-led; CSG (PCs) flat to modestly up",
+      "icon": "TrendingUp",
+      "color": "#10b981"
+    },
+    {
+      "title": "FCF (TTM)",
+      "value": "~$5.5B",
+      "label": "Capital return ~80% of FCF",
+      "icon": "DollarSign",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "description": "Largest enterprise-IT distribution channel in the West paired with hyperscaler-grade AI server engineering — scale and relationships, not software stickiness.",
+    "analysisTitle": "The Enterprise Distribution Moat",
+    "analysisSummary": "Dell's edge is **scale across enterprise distribution and AI server engineering** — durable but not a software-grade moat:",
+    "analysisPoints": [
+      {
+        "title": "Enterprise Channel Reach",
+        "text": "Dell's direct sales and channel partner network covers virtually every Fortune 1000 IT estate. New entrants in AI servers (SMCI, Lenovo, ODMs) struggle to clear procurement, security, and global support qualification cycles that Dell has cleared decades ago."
+      },
+      {
+        "title": "AI Factory Engineering Depth",
+        "text": "Dell's PowerEdge XE9712 and integrated AI Factory rack solution co-engineered with NVIDIA carry credibility with regulated enterprises (banks, healthcare, defence) that hyperscale-style ODMs cannot match. Sovereign AI deployments increasingly reference Dell as the default."
+      },
+      {
+        "title": "Capital Allocation Discipline",
+        "text": "Dell returns ~80% of FCF to shareholders via buybacks and dividends, with EPS growth amplified by the buyback. The capital return story is a real component of the IRR thesis for long-term holders."
+      }
+    ]
+  },
+  "growth": {
+    "score": 76,
+    "description": "FY26 ISG revenue grew +38% YoY on AI-server demand; AI server backlog stepped from ~$9B to ~$16B during the year. CSG (PC) segment is flat as the Windows 11 refresh has run its course. EPS growth is amplified by buybacks; FY26 adjusted EPS ~$9.50 (+25% YoY).",
+    "growthAnalysis": {
+      "cagrEstimate": "12-18%",
+      "scoreDerivation": "Base 80 (15-30% CAGR mid-band; weighted blended) + 3 backlog visibility ($16B AI server backlog) - 4 mix/margin (AI-server gross margin <8%, dilutive to corporate ~22%) - 3 PC cyclicality (CSG ~50% of revenue, flat) = 76",
+      "drivers": [
+        { "name": "AI Server / ISG", "metric": "+38% YoY; backlog $16B; primary growth engine", "trend": "accelerating" },
+        { "name": "CSG (PCs)", "metric": "Flat to low-single-digit growth; Windows 11 refresh complete", "trend": "stable" },
+        { "name": "Capital Return", "metric": "~80% of FCF returned via buyback/dividend; share count -3% YoY", "trend": "stable" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If AI-server gross margin compresses below 6% on hyperscaler bake-offs through 2026-27, ISG operating profit could decline despite revenue growth, breaking the EPS-leverage thesis and triggering a multiple de-rate to single-digit P/E.",
+      "marginTrend": "compressing"
+    }
+  },
+  "valuation": {
+    "score": 78,
+    "description": "At ~$140 Dell trades at ~15× FY26 EPS, a meaningful discount to Big Tech peers despite EPS growth amplified by aggressive buybacks. The discount reflects the AI-server margin question and PC cyclicality but provides reasonable margin of safety.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Forward P/E (FY26)", "value": "~15×", "note": "Adj EPS ~$9.50; discount on margin uncertainty" },
+        { "label": "Forward P/E (FY27)", "value": "~13×", "note": "Assumes 12-15% EPS growth on buyback amplification" },
+        { "label": "FCF Yield", "value": "~6%", "note": "TTM FCF ~$5.5B vs $95B mkt cap" },
+        { "label": "PEG Ratio", "value": "~1.0×", "note": "Reasonable on growth and capital return" },
+        { "label": "EV / EBITDA (NTM)", "value": "~9×", "note": "Discount to HPE ~11× and Cisco ~13×" }
+      ],
+      "summary": "Dell trades like a cyclical with embedded AI-infrastructure exposure. The buyback-driven EPS leverage compounds the upside if AI-server margins hold."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$95",
+      "description": "AI-server gross margin compresses below 6%, ISG operating profit declines, PC cycle stays soft, multiple stays at 11-12× depressed earnings.",
+      "points": [
+        "AI-server gross margin compresses to <6% on hyperscaler pricing pressure",
+        "PC market remains flat through 2027; Windows refresh fails to materialise upside",
+        "Sovereign AI win rate disappoints vs HPE/Lenovo competition"
+      ]
+    },
+    "base": {
+      "priceTarget": "$170",
+      "description": "AI server backlog converts at 8-10% gross margin, ISG sustains 25%+ growth, PC modestly recovers, EPS reaches $11.50, multiple 15-16×.",
+      "points": [
+        "FY27 ISG revenue grows 25-30% on AI-server backlog conversion",
+        "Sovereign AI deals add incremental backlog visibility through 2028",
+        "Buyback continues at ~$5B annually; share count -3-4% per year"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$220",
+      "description": "Vera-Rubin generation drives margin expansion as Dell wins higher-mix sovereign AI deals; FY28 EPS exceeds $14; multiple expands to 18×.",
+      "points": [
+        "Vera-Rubin AI servers ship at 12%+ gross margin on premium mix",
+        "Sovereign AI wins exceed $20B cumulative through 2028",
+        "Multiple rerates to 18× as enterprise AI thesis matures and PC cyclicality fades"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — server and PC OEM with limited end-user UI moat."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "Dell APEX consumption-based IT and storage software (PowerStore, PowerScale) carry some sticky business logic, but most of the franchise is hardware."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "AI server engineering, supply-chain, and global account management talent is real and durable — Dell's bench depth is among the deepest in IT hardware."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "AI Factory bundles compute + storage + networking + services co-engineered with NVIDIA — a meaningful enterprise simplification not available from pure-play assemblers."
+    },
+    "proprietaryData": {
+      "status": "destroyed",
+      "note": "N/A — no proprietary-data moat at scale."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "FedRAMP, ITAR, and government cloud certifications + decades of clearance in regulated industries create real switching friction for sensitive workloads."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "N/A — no network effects in hardware sales."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Enterprise procurement integrations, supply-chain APIs, and global support contracts create real friction for swap-out — but procurement strategies cap the depth."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "aiResilienceScore": 47,
+    "verdict": "Dell is a durable AI-capex beneficiary with genuine enterprise distribution and engineering moats, but the underlying franchise is hardware and the AI-server margin question dominates the multi-year thesis. Buyback amplification and capital discipline make the equity story compelling at current valuation despite the structural margin headwind."
+  }
+}

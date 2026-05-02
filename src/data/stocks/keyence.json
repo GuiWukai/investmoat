@@ -1,0 +1,162 @@
+{
+  "slug": "keyence",
+  "ticker": "6861.T",
+  "name": "Keyence Corporation",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "6861.T / KYCCF" },
+    { "label": "Market Cap", "value": "~¥18T (~$120B)" },
+    { "label": "Current Price", "value": "~¥75,000" }
+  ],
+  "chips": [
+    { "label": "Factory Automation | Sensors", "color": "primary" },
+    { "label": "Premium Quality Compounder", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Operating Margin",
+      "value": "~50%",
+      "label": "Industry-leading; durable for decades",
+      "icon": "Percent",
+      "color": "#10b981"
+    },
+    {
+      "title": "Direct Sales Force",
+      "value": "100%",
+      "label": "No distributors; consultative sales drives premium pricing",
+      "icon": "Users",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "FY26 Revenue Growth",
+      "value": "+8-11%",
+      "label": "Constant currency; resilient through cycles",
+      "icon": "TrendingUp",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "description": "Japanese factory-automation and machine-vision specialist with a unique direct-sales-only model that compounds technical depth, application knowledge, and ~50% operating margins — one of the highest-quality industrial franchises globally.",
+    "analysisTitle": "The Direct-Sales Application Moat",
+    "analysisSummary": "Keyence's moat is **the direct-sales-only consultative model** — a structural advantage that distributor-dependent competitors cannot replicate without dismantling their channel partners:",
+    "analysisPoints": [
+      {
+        "title": "Direct-Sales-Only Channel",
+        "text": "Every Keyence sales engineer visits the factory floor, identifies the application, and proposes the sensor or vision system. There are no distributors taking margin or filtering customer requirements. The model produces ~50% operating margins because pricing power comes from solving the problem, not selling a commodity sensor — a structural advantage Cognex, Omron, and SICK cannot match without rebuilding their channel."
+      },
+      {
+        "title": "Application Knowledge Compounding",
+        "text": "Decades of application data — what sensor solves which inspection problem in which industry — accumulate inside Keyence. Newer competitors lack the application-engineering bench depth required for complex inline-inspection problems, especially in semis, EV battery, and pharma manufacturing."
+      },
+      {
+        "title": "Premium Product Mix and Cash Generation",
+        "text": "Keyence focuses on high-spec sensors, vision, laser, and measurement products where customer benefits dwarf the unit cost. Operating margins of ~50% (vs Cognex ~30%, Omron ~10%) and net cash position of >¥3T provide resilience through cycles and optionality for capital allocation."
+      }
+    ]
+  },
+  "growth": {
+    "score": 72,
+    "description": "FY26 (FY ending March 2027) revenue growth +8-11% constant currency on factory automation recovery, EV battery capex, and semis fab capex spillover. Operating margin durably ~50%. Growth profile has slowed from the 2010s 15-20% but the franchise remains exceptional.",
+    "growthAnalysis": {
+      "cagrEstimate": "8-12%",
+      "scoreDerivation": "Base 75 (8-15% CAGR mid-band) + 3 EV / semi capex tailwind - 3 mature core market - 3 yen FX volatility (when reporting in USD) = 72",
+      "drivers": [
+        { "name": "Asia ex-Japan Capex", "metric": "China + SE Asia + India factory automation capex", "trend": "stable" },
+        { "name": "EV Battery and Semis", "metric": "Highest-precision inspection demand for EV battery and semis fab", "trend": "accelerating" },
+        { "name": "Pharma & Medical Manufacturing", "metric": "Inspection + traceability demand growing on regulation", "trend": "accelerating" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If factory automation capex digestion deepens in China through 2026-27 and EV battery capex moderates simultaneously, Keyence revenue growth could compress to low single digits and the multiple — historically held at 30×+ — could compress to 20-22× before stabilising.",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 65,
+    "description": "Keyence trades at ~28× FY26 earnings — historically a 30-40× multiple, and currently in the lower half of that range. Premium reflects ~50% margins and durable franchise. The valuation is full but not stretched given the quality.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Forward P/E (FY26)", "value": "~28×", "note": "Quality industrial; lower half of historical range" },
+        { "label": "Forward P/E (FY27)", "value": "~25×", "note": "Assumes 10% EPS growth on capex recovery" },
+        { "label": "Price / Sales (FY26)", "value": "~13×", "note": "Reflects 50% operating margin" },
+        { "label": "PEG Ratio", "value": "~2.5×", "note": "Premium on durability + cash" },
+        { "label": "EV / EBITDA (NTM)", "value": "~17×", "note": "Discount to Cognex ~30× and Fanuc ~20×" }
+      ],
+      "summary": "Valuation is full but defensible by margin and balance-sheet quality; the franchise rarely trades cheap and current levels are an entry point on quality terms."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "¥58,000",
+      "description": "China factory automation capex deepens, EV battery capex moderates, multiple compresses to 22× on growth normalisation.",
+      "points": [
+        "China capex digestion through 2027 compresses Asia ex-Japan growth below 5%",
+        "EV battery capex moderates as global EV demand growth slows",
+        "Yen strengthens vs USD, compressing reported earnings for foreign holders"
+      ]
+    },
+    "base": {
+      "priceTarget": "¥90,000",
+      "description": "FY26 revenue +9-10%, operating margin sustains ~50%, multiple holds at 28-30×, capital return modestly increases.",
+      "points": [
+        "Asia ex-Japan factory automation capex sustains 10%+ growth",
+        "EV battery and semis inspection demand continues compounding",
+        "Yen stabilises around 150-155/USD; FX neutral"
+      ]
+    },
+    "bull": {
+      "priceTarget": "¥115,000",
+      "description": "Capex super-cycle in EV, semis, and humanoid robotics drives reacceleration; margin sustains; multiple expands toward 35×.",
+      "points": [
+        "Humanoid robotics manufacturing scales, driving inspection capex growth",
+        "Pharma/medical inspection mandate expansions create new TAM",
+        "Yen weakens to 160+/USD, lifting reported revenue and earnings"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Application engineers and operators trained on Keyence sensor and vision software persist with the brand on subsequent installations."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "Application-specific configuration, inspection logic, and inline-process programming embed Keyence in customer manufacturing recipes — replacing this is a multi-quarter qualification exercise."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "Application engineering bench depth and the direct-sales engineer training pipeline is genuinely scarce and a long-term Keyence advantage."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Sensor + vision + measurement + laser product portfolio bundling at the application level — meaningful but bounded vs full automation suites."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Decades of application-knowledge accumulation feeds the consultative-sales process — real but not algorithmically monetised."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "Once specified into a regulated manufacturing process (pharma, medical, food), Keyence sensors are validated into the process and replacement requires re-qualification."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Sensors and vision systems embed into manufacturing recipes for the production-line lifetime (5-15 years); swap-out is a process re-qualification event."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "aiResilienceScore": 65,
+    "verdict": "Keyence is one of the highest-quality industrial franchises globally — direct sales + application knowledge + ~50% margins. AI is a net positive (machine-vision deep-learning expands TAM and complexity, favouring Keyence's application-engineering depth). The franchise question is capex cyclicality, not technological obsolescence."
+  }
+}

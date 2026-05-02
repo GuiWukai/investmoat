@@ -1,0 +1,162 @@
+{
+  "slug": "vrt",
+  "ticker": "VRT",
+  "name": "Vertiv Holdings",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "VRT" },
+    { "label": "Market Cap", "value": "~$50B" },
+    { "label": "Current Price", "value": "~$130" }
+  ],
+  "chips": [
+    { "label": "Power & Thermal | Data Center", "color": "primary" },
+    { "label": "AI Infrastructure Leader", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "FY26 Revenue Guide",
+      "value": "~$11.5B",
+      "label": "+22% YoY on AI capacity build-out",
+      "icon": "TrendingUp",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "Backlog",
+      "value": "~$9B",
+      "label": "+30% YoY; book-to-bill >1.3×",
+      "icon": "Box",
+      "color": "#10b981"
+    },
+    {
+      "title": "Adj Operating Margin",
+      "value": "~21%",
+      "label": "Expanding ~250 bps YoY",
+      "icon": "Percent",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "description": "Critical mission-critical power and thermal infrastructure for AI data centres, with deep engineering integration across hyperscaler footprints and irreplaceable scale at the rack-and-room level.",
+    "analysisTitle": "The Power-and-Thermal Stack Moat",
+    "analysisSummary": "Vertiv's moat is built on **engineering integration and switching costs at the data-centre power and cooling layer** — the hyperscalers cannot rip-and-replace UPS, busway, and cooling without rebuilding the room:",
+    "analysisPoints": [
+      {
+        "title": "Reference-Design Co-Engineering with NVIDIA",
+        "text": "Vertiv co-engineers NVL72 reference cooling and power architectures with NVIDIA, ensuring every Blackwell and Vera-Rubin rack design ships with a Vertiv-validated thermal and power stack. This positions Vertiv as the default at every new AI buildout cycle."
+      },
+      {
+        "title": "Liquid-Cooling Scale and Specification Lock-In",
+        "text": "Vertiv's CDU (coolant distribution unit) and rear-door heat exchanger products are spec'd into hyperscaler reference architectures. Once a campus is built around Vertiv liquid-cooling, the next generation of AI racks slots into the same plumbing, creating a multi-year revenue tail per site."
+      },
+      {
+        "title": "Service Contract Embedment",
+        "text": "Vertiv operates one of the largest installed bases of mission-critical UPS and cooling globally. Service revenue is recurring, high-margin, and effectively non-switchable — moving service contracts off Vertiv requires re-certifying every UPS and CDU on site."
+      }
+    ]
+  },
+  "growth": {
+    "score": 84,
+    "description": "Q1 2026 orders +30% YoY, backlog ~$9B, book-to-bill >1.3×. FY26 revenue guide ~$11.5B (+22% YoY), with adj op margin expanding ~250 bps. AI data-centre capex is the structural driver and pipeline visibility extends through 2028 across hyperscaler campus reservations.",
+    "growthAnalysis": {
+      "cagrEstimate": "20-25%",
+      "scoreDerivation": "Base 80 (15-30% CAGR mid-band) + 5 backlog visibility (~$9B, book-to-bill >1.3) + 3 margin expansion (op margin +250 bps) - 4 capex cyclicality risk = 84",
+      "drivers": [
+        { "name": "AI Data-Centre Capex", "metric": "Hyperscaler 2026 capex >$430B; Vertiv share growing on liquid-cooling spec wins", "trend": "accelerating" },
+        { "name": "Liquid Cooling Mix", "metric": "Liquid cooling revenue +60% YoY; CDU and RDHX dominant", "trend": "accelerating" },
+        { "name": "Service Recurring Base", "metric": "Service ~25% of revenue, growing mid-teens", "trend": "stable" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If hyperscaler capex digestion arrives in 2027 (as with the 2022-23 cycle), backlog growth pauses and the multiple compresses from ~30× to ~20× rapidly — the stock has demonstrated 30%+ drawdowns on early signs of capex moderation.",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 60,
+    "description": "At ~$130 VRT trades at ~30× FY26 EPS — a premium that prices in continued AI-capex acceleration. Backlog supports the multiple but leaves modest margin of safety. Re-rating risk is asymmetric to the downside if 2027 capex moderates.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Forward P/E (FY26)", "value": "~30×", "note": "EPS ~$4.30 mid; premium to industrial peers" },
+        { "label": "Forward P/E (FY27)", "value": "~24×", "note": "Assumes ~25% EPS growth on backlog conversion" },
+        { "label": "PEG Ratio", "value": "~1.4×", "note": "30× ÷ 22% growth; reasonable on visibility" },
+        { "label": "Price / Sales (FY26)", "value": "~4.4×", "note": "Reflects mission-critical premium" },
+        { "label": "EV / EBITDA (NTM)", "value": "~22×", "note": "Premium to Schneider ~17× and Eaton ~19×" }
+      ],
+      "summary": "The valuation is full but supported by the backlog and margin trajectory. The asymmetry is to the downside on AI-capex moderation, where the multiple historically halves quickly."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$80",
+      "description": "AI data-centre capex moderates in 2027, backlog growth flattens, multiple compresses to 18-20× as the cyclical re-rate plays through.",
+      "points": [
+        "Hyperscaler 2027 capex grows <10% YoY; orders book-to-bill drops below 1.0",
+        "Liquid-cooling competition from Schneider and Boyd intensifies, eroding pricing power",
+        "Margin expansion stalls as the AI-driven mix benefit normalises"
+      ]
+    },
+    "base": {
+      "priceTarget": "$155",
+      "description": "FY26 revenue lands at $11.5B with 22% growth; backlog continues building through 2027 on Vera-Rubin reference designs; multiple sustains 25-28×.",
+      "points": [
+        "FY26 revenue $11.5B; FY27 grows 18-20% as backlog converts",
+        "Adj op margin reaches 22% on liquid-cooling mix",
+        "Vera-Rubin reference design wins announced in 2026 secure the next AI buildout cycle"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$200",
+      "description": "AI capex super-cycle extends through 2028, Vertiv dominates liquid-cooling, multiple expands to 35× on durable mid-teens growth visibility.",
+      "points": [
+        "AI infrastructure capex sustains 25%+ growth through 2028",
+        "Liquid cooling penetrates >70% of new-build AI capacity, with Vertiv share >40%",
+        "International expansion (Middle East sovereign AI, EU) adds incremental TAM"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — physical infrastructure vendor with no end-user interface."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "Vertiv's monitoring and management software (Environet, Trellis) is real but secondary to the hardware franchise."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — no public-data moat."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Mission-critical electrical and thermal engineering talent is scarce; Vertiv has decades of bench depth from the Liebert/Emerson lineage."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Power + thermal + service stack ships as one engineered solution to hyperscalers, with co-engineered NVIDIA reference designs deepening the bundle."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Decades of installed-base telemetry from the Liebert UPS fleet feeds reliability engineering and predictive service — real but not fully monetised."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "UL/CE/IEC certifications and hyperscaler-specific qualification cycles take 18-24 months to clear; this is a meaningful new-entrant barrier."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "N/A — no network effects in mission-critical hardware sales."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Once installed, UPS and CDU equipment is effectively impossible to displace mid-life; service contracts run for the asset life (15-20 years)."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — hardware vendor, not a system of record."
+    },
+    "aiResilienceScore": 60,
+    "verdict": "Vertiv is a durable AI-capex beneficiary with real hardware-engineering and switching-cost moats, but the business is structurally cyclical and the franchise concentrates around physical embedment rather than software-resilient moat sources. The fortress is real for the duration of the AI buildout — the question is what the run-rate looks like when capex normalises."
+  }
+}
