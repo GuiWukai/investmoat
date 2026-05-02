@@ -63,6 +63,7 @@ import ice from './ice.json';
 import duolingo from './duolingo.json';
 import hood from './hood.json';
 import vst from './vst.json';
+import cdns from './cdns.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -128,6 +129,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   duolingo: duolingo as StockAnalysisData,
   hood: hood as StockAnalysisData,
   vst: vst as StockAnalysisData,
+  cdns: cdns as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
