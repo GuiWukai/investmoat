@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$270B"
+      "value": "$345B"
     },
     {
       "label": "Current Price",
-      "value": "$120.00"
+      "value": "$144.07"
     }
   ],
   "chips": [
@@ -29,23 +29,23 @@
   "recommendation": "Accumulate",
   "metrics": [
     {
-      "title": "US Commercial Rev",
-      "value": "$255M",
-      "label": "54% YoY Growth",
+      "title": "US Commercial Growth",
+      "value": "+137%",
+      "label": "Q4 2025 YoY (accelerating)",
       "icon": "TrendingUp",
       "color": "#7c3aed"
     },
     {
-      "title": "Rule of 40",
-      "value": "83",
-      "label": "Best-in-Class SaaS",
+      "title": "Q1 2026 Guidance",
+      "value": "$1.54B",
+      "label": "+74% YoY consensus (reports May 4)",
       "icon": "Zap",
       "color": "#3b82f6"
     },
     {
-      "title": "US Govt Rev",
-      "value": "$320M",
-      "label": "Steady Mission-Critical",
+      "title": "Govt Backlog",
+      "value": "$1B+",
+      "label": "DoD AI mission-critical pipeline",
       "icon": "Shield",
       "color": "#10b981"
     }
@@ -71,11 +71,11 @@
   },
   "growth": {
     "score": 88,
-    "description": "US commercial segment growing at 50%+ YoY; AIP creating an entirely new demand curve for enterprise AI."
+    "description": "Q4 2025 US Commercial revenue +137% YoY (re-acceleration from +54% earlier in the year). Wedbush flags 'unprecedented demand' for AIP. Wall St Q1 2026 consensus: $1.54B (+74% YoY) — reports May 4."
   },
   "valuation": {
-    "score": 71,
-    "description": "Trading between bear ($80) and base ($155) — elevated multiple (~70x forward sales) demands continued hyper-growth execution; current price reflects AIP commercial momentum but leaves limited margin of safety."
+    "score": 69,
+    "description": "At $144 the stock sits ~85% of the way from bear ($80) to base ($155) — most of the optical discount has been worked off as the price recovered from the early-year low of $105. Limited margin of safety; thesis depends on Q1 results validating the +137% commercial trajectory."
   },
   "scenarios": {
     "bear": {
@@ -149,5 +149,5 @@
     },
     "verdict": "Palantir's moat is highly AI-resilient because AI is the product, not a threat to it. The Ontology platform deepens in value as more AI models are layered on top, making Palantir the connective tissue of enterprise AI operations."
   },
-  "lastAnalyzed": "February 2026"
+  "lastAnalyzed": "May 2026"
 }
