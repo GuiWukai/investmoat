@@ -82,6 +82,7 @@ import hoodData     from '@/data/stocks/hood.json';
 import vstData      from '@/data/stocks/vst.json';
 import tmoData      from '@/data/stocks/tmo.json';
 import klacData     from '@/data/stocks/klac.json';
+import lngData      from '@/data/stocks/lng.json';
 
 // Weighted composite: Moat 40% · Growth 35% · Valuation 25%
 // scores = [moatScore, growthScore, valuationScore]
@@ -180,6 +181,7 @@ const allCoverageData = [
     { name: "Robinhood Markets", ticker: "HOOD",  slug: "hood",        scores: [m(hoodData),        g(hoodData),        v(hoodData)],        href: "/stocks/hood",        category: "Financials",  ...t(hoodData)        },
     { name: "Thermo Fisher Scientific", ticker: "TMO", slug: "tmo",    scores: [m(tmoData),         g(tmoData),         v(tmoData)],         href: "/stocks/tmo",         category: "Healthcare",  ...t(tmoData)         },
     { name: "KLA Corporation",   ticker: "KLAC",  slug: "klac",        scores: [m(klacData),        g(klacData),        v(klacData)],        href: "/stocks/klac",        category: "Big Tech",    ...t(klacData)        },
+    { name: "Cheniere Energy",   ticker: "LNG",   slug: "lng",         scores: [m(lngData),         g(lngData),         v(lngData)],         href: "/stocks/lng",         category: "Other",       ...t(lngData)         },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────

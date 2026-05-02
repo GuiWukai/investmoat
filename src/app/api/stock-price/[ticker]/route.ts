@@ -70,6 +70,7 @@ const YAHOO_SYMBOL_MAP: Record<string, string> = {
   vst:        'VST',
   tmo:        'TMO',
   klac:       'KLAC',
+  lng:        'LNG',
 };
 
 export async function GET(

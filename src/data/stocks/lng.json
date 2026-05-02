@@ -1,0 +1,189 @@
+{
+  "slug": "lng",
+  "ticker": "LNG",
+  "name": "Cheniere Energy",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "LNG"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$58B"
+    },
+    {
+      "label": "Current Price",
+      "value": "$270.06"
+    }
+  ],
+  "chips": [
+    {
+      "label": "LNG Export | Energy Infrastructure",
+      "color": "primary"
+    },
+    {
+      "label": "20-Year Take-or-Pay Contracts",
+      "color": "success"
+    }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "FY26 Adj EBITDA Guide",
+      "value": "$6.75-$7.25B",
+      "label": "DCF guide $4.35-4.85B; ~95% contracted",
+      "icon": "TrendingUp",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "2026 Production",
+      "value": "51-53 MTPA",
+      "label": "+5 MTPA YoY from Stage 3 ramp",
+      "icon": "Zap",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "Contracted Backlog",
+      "value": ">95% / 10yr",
+      "label": "20-year SPAs; new CPC SPA through 2050",
+      "icon": "Shield",
+      "color": "#10b981"
+    }
+  ],
+  "moat": {
+    "description": "The largest US LNG exporter — first-mover at Sabine Pass, scale leader at Corpus Christi, with FERC + DOE export licences that take years to replicate.",
+    "analysisTitle": "The Permitted Tollbooth Moat",
+    "analysisSummary": "Cheniere's moat is the **regulatory + contractual fortress** built around physical export terminals — replicating it requires years of FERC permitting, DOE export licences, and 20-year offtake commitments before the first cargo loads:",
+    "analysisPoints": [
+      {
+        "title": "FERC + DOE Permitting Stack",
+        "text": "Building a US LNG export terminal requires FERC liquefaction approval and DOE non-FTA export authorisation. Both are multi-year processes with capped issuance. Cheniere's permit stack at Sabine Pass and Corpus Christi is effectively impossible to replicate at scale by a new entrant — the LNG project sponsors that have tried (Tellurian, NextDecade) have largely failed to reach FID."
+      },
+      {
+        "title": "Take-or-Pay Contracted Cash Flows",
+        "text": ">95% of capacity is contracted for the next 10 years on 20-year SPAs with creditworthy global utilities and oil majors. The fixed-fee component is take-or-pay regardless of whether the buyer lifts the cargo — cash flows are bond-like, not commodity-cyclical. New SPA with Taiwan's CPC for 1.2 MTPA runs through 2050."
+      },
+      {
+        "title": "Brownfield Expansion Advantage",
+        "text": "Stage 3 (Corpus Christi) is ~95% complete with first LNG already achieved at Train 5. Brownfield expansion at existing terminals avoids the 5-7 year permitting cycle a greenfield competitor faces — Cheniere can add capacity at half the cost-and-time of a new entrant. Stage 4 expansion + Sabine Pass Train 9 are next in the pipeline."
+      }
+    ]
+  },
+  "growth": {
+    "score": 65,
+    "description": "FY25 revenue $20.0B, adj EBITDA $6.9B, DCF $5.3B (FY25). FY26 guide: adj EBITDA $6.75-7.25B (flat-to-modestly-up YoY) and production 51-53 MTPA (+5 vs 2025) — Stage 3 volume ramp offset by lower spot-cargo margins. Long-term growth comes from contracted Stage 3 + Sabine Train 9 + Stage 4 FID, layered on the 20-year SPA base.",
+    "growthAnalysis": {
+      "cagrEstimate": "6-9%",
+      "scoreDerivation": "Base 60 (4-8% blended revenue CAGR — top of band as Stage 3 + Train 9 layer on) + 5 contracted (95% take-or-pay, 20-year SPAs uniquely durable cash flows) + 3 TAM expansion (US gas demand from AI data centres spills to LNG export) - 3 commodity-margin compression (2026 guide reflects lower spot margins) = 65",
+      "drivers": [
+        {
+          "name": "Stage 3 Volume Ramp",
+          "metric": "Trains 3-7 ramping spring/summer/fall 2026; +5 MTPA YoY",
+          "trend": "accelerating"
+        },
+        {
+          "name": "New Long-Term SPAs",
+          "metric": "CPC (Taiwan) 1.2 MTPA through 2050; pipeline of additional commitments",
+          "trend": "stable"
+        },
+        {
+          "name": "Capital Allocation",
+          "metric": "20/20 Vision plan: ~$20B over 20 years on buybacks/dividends; new authorisation announced",
+          "trend": "accelerating"
+        }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If global LNG prices collapse below $7/MMBtu Henry Hub-equivalent for a sustained period in 2026-27 and lifting margins compress to single digits, FCF generation drops below the bottom of the DCF guide and the 20/20 Vision buyback cadence has to slow — testing whether the contracted base alone supports the equity story.",
+      "marginTrend": "compressing"
+    }
+  },
+  "valuation": {
+    "score": 74,
+    "description": "At $270.06 the stock sits ~64% of the way from bear ($200) to base ($310). Trailing P/E of ~11× is well below the broader-market median, reflecting the contracted-cash-flow nature of the business and modest 2026 EBITDA guide. Forward P/E of ~18-19× reflects expected EPS normalisation as Stage 3 financing rolls through. Analyst median target ~$295 implies modest upside from here.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~11×", "note": "TTM diluted EPS $24.14" },
+        { "label": "Forward P/E (NTM)", "value": "~18-19×", "note": "consensus reflects Stage 3 ramp dilution" },
+        { "label": "PEG Ratio", "value": "~2.5×", "note": "fwd P/E ÷ ~7-8% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~3×", "note": "~$20B FY revenue base" },
+        { "label": "EV / EBITDA (NTM)", "value": "~12-13×", "note": "vs peer midstream ~10-12×" }
+      ],
+      "summary": "Trailing P/E of ~11× understates the quality of contracted cash flows; forward P/E of ~18-19× reflects expected EPS dip as Stage 3 financing depreciates through. PEG ~2.5 is a premium to commodity peers but justified by 95% contracted backlog. EV/EBITDA at ~12-13× is fair-to-modest premium vs midstream peers — paying for the brownfield expansion runway that single-asset peers cannot match."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$200",
+      "description": "Global LNG glut materialises in 2026-27, lifting margins compress, Stage 3 commissioning hits delays, multiple compresses toward 8-9× EBITDA.",
+      "points": [
+        "Henry Hub-equivalent global LNG prices fall below $7/MMBtu sustained, lifting margins drop to <$1/MMBtu",
+        "Stage 3 commissioning slips 6-12 months, deferring volume ramp into 2027 and FCF below low end of guide",
+        "Buyback cadence under 20/20 Vision slows as DCF prints below $4.35B floor"
+      ]
+    },
+    "base": {
+      "priceTarget": "$310",
+      "description": "FY26 guide hits midpoint ($7B EBITDA), Stage 3 trains 3-7 substantially complete on schedule, contracted SPAs ramp through 2027, multiple holds at ~12× EBITDA.",
+      "points": [
+        "FY26 adj EBITDA lands at $7B midpoint of guide; FY27 reaches $7.5-8B as Stage 3 fully ramps",
+        "Stage 4 expansion (Corpus Christi) reaches FID in 2026-27 with anchor SPAs signed",
+        "20/20 Vision buyback cadence sustains share count reduction at 2-3% annually"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$420",
+      "description": "Multi-year LNG super-cycle from European gas demand + Asian coal-to-gas + AI-driven US gas growth, Stage 4 + Train 9 reach FID in quick succession, multiple expands toward 14× EBITDA.",
+      "points": [
+        "European gas demand persists at elevated levels through 2027 from continued Russian pipeline displacement",
+        "Stage 4 (Corpus Christi) and Sabine Pass Train 9 both FID in 2026-27, locking in expansion to 80+ MTPA by 2030",
+        "AI-driven US gas demand pulls Henry Hub up, widening LNG arb and lifting margins back toward $2/MMBtu"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — B2B physical commodity export business with no end-user interface or UI workflow."
+    },
+    "businessLogic": {
+      "status": "destroyed",
+      "note": "N/A — physical infrastructure business; the moat is in permits and contracts, not software-encoded customer business logic."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — LNG export business does not derive moat from public datasets."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "LNG operations engineers and commercial counterparty teams are scarce, and Cheniere has the longest US operating track record. Real but not differentiating vs other major LNG operators (Shell, TotalEnergies, QatarEnergy)."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Vertically integrated value chain — liquefaction + shipping fleet + trading desk + commercial counterparty network + brownfield expansion engineering. Most LNG project sponsors are single-asset operators without this stack; the bundle creates real optimisation flexibility (cargo redirection, basin arbitrage, fleet utilisation)."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Decade of operating data from Sabine Pass + early Corpus Christi trains, plus optimisation knowledge from being the first US export operator. Real but the data is operational, not customer-proprietary in the way SPGI's NRSRO data is."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "FERC liquefaction permits + DOE non-FTA export licences are multi-year capped-issuance regulatory moats. New entrants face 5-7 year permitting cycles before FID — the failure rate (Tellurian, NextDecade) demonstrates the moat is real. ITAR-comparable national-energy-security alignment with US administrations adds a strategic protection layer."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "Operational scale across 7 trains plus an integrated shipping/trading desk creates real optimisation network effects — Cheniere can redirect cargoes, arbitrage basins, and optimise fleet utilisation in ways single-asset peers cannot. Indirect effect bounded by the small number of global LNG buyers."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": ">95% of capacity contracted for 10+ years on 20-year SPAs with take-or-pay structure. Buyers (utilities, oil majors, sovereign LNG importers) cannot replace the supply without rebuilding terminals — replacement is measured in years not quarters. Cash flows are bond-like."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — physical infrastructure business; system-of-record moats apply to data systems, not export terminals."
+    },
+    "aiResilienceScore": 84,
+    "verdict": "Cheniere is a moderate AI beneficiary. The strongest moats — regulatoryLockIn, transactionEmbedding, bundling — are AI-neutral or AI-strengthened (AI-driven US gas demand from data centres spills to global export demand). The AI-vulnerable moats are largely N/A because the business is physical infrastructure rather than software-encoded workflow. Sits in the regulated-infrastructure tier alongside ICE/MCO but a notch below because of underlying commodity-price exposure on the lifting margin."
+  }
+}
