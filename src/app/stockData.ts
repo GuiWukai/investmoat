@@ -103,11 +103,12 @@ const g = (json: { growth: { score: number } }) => json.growth.score;
 /** Read valuation score from a stock JSON. */
 const v = (json: { valuation: { score: number } }) => json.valuation.score;
 
-/** Read bear/base/bull price targets from a stock JSON. */
-const t = (json: { scenarios: { bear: { priceTarget: string }; base: { priceTarget: string }; bull: { priceTarget: string } } }) => ({
+/** Read bear/base/bull price targets and lastAnalyzed from a stock JSON. */
+const t = (json: { lastAnalyzed: string; scenarios: { bear: { priceTarget: string }; base: { priceTarget: string }; bull: { priceTarget: string } } }) => ({
     bearTarget: json.scenarios.bear.priceTarget,
     baseTarget: json.scenarios.base.priceTarget,
     bullTarget: json.scenarios.bull.priceTarget,
+    lastAnalyzed: json.lastAnalyzed,
 });
 
 // ─── All analyzed stocks (single source of truth) ─────────────────────────────
