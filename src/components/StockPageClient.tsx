@@ -13,6 +13,7 @@ import {
 } from '@/components/AnalysisComponents';
 import { LivePriceWidget } from '@/components/LivePriceWidget';
 import { DynamicValuationGauge } from '@/components/DynamicValuationGauge';
+import { ScenarioPriceBar } from '@/components/ScenarioPriceBar';
 import { stockData, getAverageScore } from '@/app/stockData';
 import { getStockData } from '@/data/stocks';
 import type { TenMoatsAssessment } from '@/app/tenMoatsData';
@@ -446,6 +447,12 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
                   </div>
                 )}
                 {data.valuation.peAnalysis && <ForwardPECard data={data.valuation.peAnalysis} />}
+                <ScenarioPriceBar
+                  slug={data.slug}
+                  bearTarget={data.scenarios.bear.priceTarget}
+                  baseTarget={data.scenarios.base.priceTarget}
+                  bullTarget={data.scenarios.bull.priceTarget}
+                />
                 <ScenarioCard type="Bear" priceTarget={data.scenarios.bear.priceTarget} description={data.scenarios.bear.description} points={data.scenarios.bear.points} />
                 <ScenarioCard type="Base" priceTarget={data.scenarios.base.priceTarget} description={data.scenarios.base.description} points={data.scenarios.base.points} />
                 <ScenarioCard type="Bull" priceTarget={data.scenarios.bull.priceTarget} description={data.scenarios.bull.description} points={data.scenarios.bull.points} />
@@ -515,6 +522,12 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
               </div>
             )}
             {data.valuation.peAnalysis && <ForwardPECard data={data.valuation.peAnalysis} />}
+            <ScenarioPriceBar
+              slug={data.slug}
+              bearTarget={data.scenarios.bear.priceTarget}
+              baseTarget={data.scenarios.base.priceTarget}
+              bullTarget={data.scenarios.bull.priceTarget}
+            />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <ScenarioCard type="Bear" priceTarget={data.scenarios.bear.priceTarget} description={data.scenarios.bear.description} points={data.scenarios.bear.points} />
               <ScenarioCard type="Base" priceTarget={data.scenarios.base.priceTarget} description={data.scenarios.base.description} points={data.scenarios.base.points} />
