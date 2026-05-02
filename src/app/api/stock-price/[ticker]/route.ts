@@ -68,6 +68,7 @@ const YAHOO_SYMBOL_MAP: Record<string, string> = {
   duolingo:   'DUOL',
   hood:       'HOOD',
   vst:        'VST',
+  tmo:        'TMO',
 };
 
 export async function GET(

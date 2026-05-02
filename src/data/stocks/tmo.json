@@ -1,0 +1,189 @@
+{
+  "slug": "tmo",
+  "ticker": "TMO",
+  "name": "Thermo Fisher Scientific",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "TMO"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$175B"
+    },
+    {
+      "label": "Current Price",
+      "value": "$469.21"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Lab Tools | Bioprocessing | Diagnostics",
+      "color": "primary"
+    },
+    {
+      "label": "Razor-Blade Compounder",
+      "color": "success"
+    }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Q1 2026 Revenue",
+      "value": "$11.0B",
+      "label": "+6% YoY (1% organic + 3% M&A + 2% FX)",
+      "icon": "TrendingUp",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "FY26 Adj EPS Guide",
+      "value": "$24.64-$25.12",
+      "label": "+8-10% YoY; raised after Q1 beat",
+      "icon": "Zap",
+      "color": "#10b981"
+    },
+    {
+      "title": "Adj Operating Margin",
+      "value": "21.8%",
+      "label": "−10bps YoY incl. 80bps tariff drag",
+      "icon": "Shield",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "description": "Lab-tools and bioprocessing razor-blade with FDA-validated workflows that make switching prohibitively expensive in regulated pharma manufacturing.",
+    "analysisTitle": "The FDA-Validated Workflow Moat",
+    "analysisSummary": "Thermo Fisher's moat is the **regulatory cost of switching** — once a TMO instrument is validated for cGMP production, swapping it requires re-running the full regulatory submission:",
+    "analysisPoints": [
+      {
+        "title": "FDA-Validated Switching Cost",
+        "text": "When a pharma customer validates a TMO instrument or reagent for cGMP production, replacing it requires full process revalidation — months of work, $millions in cost, and tapeout-equivalent regulatory risk. This is the dominant moat for the bioproduction segment."
+      },
+      {
+        "title": "Razor-Blade Economics",
+        "text": "TMO sells the instrument once, then captures recurring consumables, reagents, and service revenue at high margins for the instrument's 8-15 year life. Roughly 80% of revenue is recurring consumables/service — the installed base compounds even when capex slows."
+      },
+      {
+        "title": "M&A Compounding Engine",
+        "text": "TMO has a 30-year track record of acquiring scientific tooling companies (Life Tech, Patheon, PPD, Thermo Electron, Olink, Clario) and bolting them onto the global commercial channel. The bolt-on model adds 2-3pp of growth above organic in most years."
+      }
+    ]
+  },
+  "growth": {
+    "score": 62,
+    "description": "Q1 2026 revenue +6% YoY ($11.01B) with only +1% organic — pharma/biotech bioprocessing recovery is partial. FY26 guide raised to $47.3-48.1B (6-8% reported, 3-4% organic) and adj EPS $24.64-25.12 (+8-10%). Pharma & biotech leading; tariff drag (80bps) compressing op margin near term.",
+    "growthAnalysis": {
+      "cagrEstimate": "6-9%",
+      "scoreDerivation": "Base 60 (4-8% blended organic + bolt-on M&A puts top of range near 8% boundary) + 5 recurring (~80% consumables/service) + 2 TAM expansion (Clario clinical trial services) - 5 cyclical pharma/biotech end-market = 62",
+      "drivers": [
+        {
+          "name": "Life Sciences Solutions",
+          "metric": "+13% reported, +1% organic in Q1 2026 (bioproduction recovering)",
+          "trend": "stable"
+        },
+        {
+          "name": "Lab Products & Biopharma Services",
+          "metric": "+7% reported, +4% organic (clinical research strong)",
+          "trend": "accelerating"
+        },
+        {
+          "name": "M&A Bolt-Ons (Clario)",
+          "metric": "$0.01 EPS contribution Q1; full-year accretion to ramp",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If pharma/biotech bioproduction capex stays soft through 2H 2026 with organic growth stuck below 3%, EPS guidance is at risk and the multi-year compounder narrative requires the next bolt-on to re-anchor — testing the 8-10% EPS-growth thesis.",
+      "marginTrend": "compressing"
+    }
+  },
+  "valuation": {
+    "score": 79,
+    "description": "Stock has fallen ~27% from 52-week high of $643.99 to $469.21, sitting only ~17% above the bear-case target. Forward P/E of ~18.4× is well below the healthcare-tools sector median (~24-28×) and well below TMO's own 5-year average. The market is pricing in continued bioprocessing softness; the consensus analyst target of ~$620 implies meaningful re-rating if organic growth re-accelerates.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~25×", "note": "TTM GAAP EPS depressed by acquisition charges" },
+        { "label": "Forward P/E (NTM)", "value": "~18.4×", "note": "$24.88 mid 2026 EPS guide" },
+        { "label": "PEG Ratio", "value": "~2.1×", "note": "fwd P/E ÷ ~9% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~3.7×", "note": "$47.7B mid 2026 revenue" },
+        { "label": "Price / FCF", "value": "~24×", "note": "FCF conversion ~80% of net income" }
+      ],
+      "summary": "Forward P/E of ~18.4× is a meaningful discount to the healthcare-tools sector median (~24-28×), reflecting the bioprocessing softness already in the price. PEG ~2.1 sits in the 'premium-but-defensible' band given the recurring revenue base. The trailing-vs-forward gap signals the EPS ramp from Clario integration and bioproduction recovery rolling through 2026 numbers."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$400",
+      "description": "Bioprocessing recovery stalls into 2027, organic growth stays at 1-2%, tariff drag persists, and the multiple compresses toward 16× forward earnings.",
+      "points": [
+        "Pharma/biotech capex remains soft, organic growth stuck at 1-2% through 2026 and 2027",
+        "Tariff and FX drag persist, compressing adjusted op margin below 21.5%",
+        "Forward P/E re-rates to ~16× as the slow-organic narrative becomes structural"
+      ]
+    },
+    "base": {
+      "priceTarget": "$560",
+      "description": "FY26 guide hits midpoint ($47.7B / $24.88 EPS), organic growth re-accelerates to 4-5% in 2H, multiple holds at ~22× forward.",
+      "points": [
+        "Organic growth re-accelerates to 4-5% in 2H 2026 as bioproduction inventory destocking ends",
+        "Clario integration contributes >$0.30 to 2027 EPS, M&A bolt-on cadence resumes",
+        "Adj op margin recovers to 22.5%+ as tariff impact annualises and productivity programs offset"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$700",
+      "description": "Bioprocessing fully recovers to mid-single-digit organic growth, M&A pipeline delivers a transformational deal, and multiple expands toward TMO's 5-year average ~26× forward.",
+      "points": [
+        "GLP-1 manufacturing capacity buildouts and biologics pipeline drive bioproduction back to 8%+ organic",
+        "Transformational M&A deal (>$10B) in clinical trials, diagnostics, or specialty consumables",
+        "Forward P/E re-rates to 24-26× as compounder narrative reasserts; EPS power approaches $28 by 2027"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Lab scientists train on Thermo Scientific platforms (Orbitrap mass spec, Vanquish HPLC) and Pierce reagents over years. Methods libraries embedded in customer SOPs. AI is starting to abstract some operations but the regulatory validation layer keeps interface mastery sticky."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Customer SOPs and validated workflows are encoded against specific TMO instruments and reagent SKUs. Switching forces re-validation. Strong but not deeply customized like enterprise software."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — lab tools business does not derive moat from public datasets."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Field application scientists who deploy TMO instruments at biotech customers are scarce, but not as differentiating as Cadence FAEs because the workflows are more standardized."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Instruments + reagents + consumables + service + clinical trial software (Clario) — the cross-sell engine drives 5-7% of organic growth annually. Competitors (Danaher, Agilent) have narrower bundles in any single segment."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Installed-base service contracts and customer-specific validated method libraries. Real but the data is customer-owned, not TMO-exclusive."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "FDA-validated workflows for cGMP biopharma manufacturing, EU GMP, USP/EP pharmacopeia methods. Once a customer validates a TMO instrument for production, replacement requires full revalidation — months of work, multi-million-dollar cost, regulatory risk. This is the core moat."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "Scale buying through one-stop-shop channel; broad portfolio attracts large pharma master service agreements. Indirect network effects via reagent ecosystem partners."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Reagents, consumables, and service contracts embedded in daily lab operations — every research lab and biopharma plant places weekly TMO orders. Cannot be removed without operational disruption."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "Sample tracking, QC data, and method libraries for many customers run on TMO software (SampleManager LIMS, Chromeleon, Clario eCOA). Not the SoR for the science itself but a SoR for compliance data."
+    },
+    "aiResilienceScore": 84,
+    "verdict": "Thermo Fisher is a moderate AI beneficiary. The strongest moats — regulatory lock-in, transaction embedding, and the bundling razor-blade — are AI-neutral or AI-strengthened (AI assists method development without disrupting the regulatory cost-of-switching). The AI-vulnerable categories (learnedInterfaces, businessLogic, talentScarcity) are merely intact rather than destroyed because regulated workflows protect them. Sits in the healthcare peer range (80-90) alongside ISRG/LLY, just below the financial-data oligopoly tier."
+  }
+}
