@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { ChevronRight, ChevronDown, Search, X, SlidersHorizontal, ArrowUpDown } from "lucide-react";
-import { Spinner } from "@heroui/react";
+import { ChevronRight, Search, X, SlidersHorizontal, ArrowUpDown } from "lucide-react";
+import { Select, SelectItem, Spinner } from "@heroui/react";
 import { allCoverageData, getAverageScore } from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
 
@@ -279,47 +279,57 @@ export default function StocksPage() {
         <div className="flex items-center gap-2">
           <SlidersHorizontal size={12} className="text-white/20 shrink-0" />
           <span className="text-[10px] font-bold uppercase tracking-widest text-white/30 shrink-0">Category</span>
-          <div className="relative">
-            <select
-              value={activeCategory}
-              onChange={e => setActiveCategory(e.target.value)}
-              aria-label="Filter stocks by category"
-              className="appearance-none bg-white/[0.04] border border-white/10 rounded-full pl-3.5 pr-8 py-1.5 text-xs font-semibold text-white/70 hover:text-white/90 focus:outline-none focus:border-white/20 focus:bg-white/[0.07] transition-all cursor-pointer"
-            >
-              {visibleCategories.map(cat => (
-                <option key={cat.key} value={cat.key} className="bg-neutral-900 text-white">
-                  {cat.label}{cat.key !== "all" ? ` (${categoryCount(cat.key)})` : ` (${allCoverageData.length})`}
-                </option>
-              ))}
-            </select>
-            <ChevronDown
-              size={11}
-              className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-white/40"
-            />
-          </div>
+          <Select
+            size="sm"
+            radius="full"
+            selectedKeys={[activeCategory]}
+            onSelectionChange={(keys) => {
+              const k = Array.from(keys as Set<React.Key>)[0];
+              if (k) setActiveCategory(k as string);
+            }}
+            aria-label="Filter stocks by category"
+            className="min-w-[14rem] max-w-[14rem]"
+            classNames={{
+              trigger: "bg-white/[0.04] border border-white/10 hover:!bg-white/[0.07] data-[hover=true]:bg-white/[0.07] data-[focus=true]:bg-white/[0.07] data-[open=true]:bg-white/[0.07]",
+              value: "text-xs font-semibold text-white/70",
+              selectorIcon: "text-white/40",
+              popoverContent: "bg-neutral-900 border border-white/10",
+            }}
+          >
+            {visibleCategories.map(cat => (
+              <SelectItem key={cat.key} className="text-white">
+                {cat.label}{cat.key !== "all" ? ` (${categoryCount(cat.key)})` : ` (${allCoverageData.length})`}
+              </SelectItem>
+            ))}
+          </Select>
         </div>
 
         <div className="flex items-center gap-2">
           <ArrowUpDown size={12} className="text-white/20 shrink-0" />
           <span className="text-[10px] font-bold uppercase tracking-widest text-white/30 shrink-0">Sort</span>
-          <div className="relative">
-            <select
-              value={sortKey}
-              onChange={e => setSortKey(e.target.value as SortKey)}
-              aria-label="Sort stocks by"
-              className="appearance-none bg-white/[0.04] border border-white/10 rounded-full pl-3.5 pr-8 py-1.5 text-xs font-semibold text-white/70 hover:text-white/90 focus:outline-none focus:border-white/20 focus:bg-white/[0.07] transition-all cursor-pointer"
-            >
-              {SORT_OPTIONS.map(opt => (
-                <option key={opt.value} value={opt.value} className="bg-neutral-900 text-white">
-                  {opt.label}
-                </option>
-              ))}
-            </select>
-            <ChevronDown
-              size={11}
-              className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-white/40"
-            />
-          </div>
+          <Select
+            size="sm"
+            radius="full"
+            selectedKeys={[sortKey]}
+            onSelectionChange={(keys) => {
+              const k = Array.from(keys as Set<React.Key>)[0];
+              if (k) setSortKey(k as SortKey);
+            }}
+            aria-label="Sort stocks by"
+            className="min-w-[16rem] max-w-[16rem]"
+            classNames={{
+              trigger: "bg-white/[0.04] border border-white/10 hover:!bg-white/[0.07] data-[hover=true]:bg-white/[0.07] data-[focus=true]:bg-white/[0.07] data-[open=true]:bg-white/[0.07]",
+              value: "text-xs font-semibold text-white/70",
+              selectorIcon: "text-white/40",
+              popoverContent: "bg-neutral-900 border border-white/10",
+            }}
+          >
+            {SORT_OPTIONS.map(opt => (
+              <SelectItem key={opt.value} className="text-white">
+                {opt.label}
+              </SelectItem>
+            ))}
+          </Select>
         </div>
       </div>
 
