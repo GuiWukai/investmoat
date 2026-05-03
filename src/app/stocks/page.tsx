@@ -193,28 +193,6 @@ function StockRow({ stock, rank, delay }: { stock: typeof allCoverageData[0]; ra
   );
 }
 
-function CategoryPill({
-  label, count, active, onClick,
-}: { label: string; count?: number; active: boolean; onClick: () => void }) {
-  return (
-    <button
-      onClick={onClick}
-      className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
-        active
-          ? 'bg-blue-500/20 border border-blue-500/40 text-blue-300'
-          : 'bg-white/[0.04] border border-white/10 text-white/40 hover:text-white/70 hover:bg-white/[0.07]'
-      }`}
-    >
-      {label}
-      {count !== undefined && (
-        <span className={`text-[10px] font-bold ${active ? 'text-blue-400/70' : 'text-white/20'}`}>
-          {count}
-        </span>
-      )}
-    </button>
-  );
-}
-
 export default function StocksPage() {
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("all");
@@ -298,17 +276,27 @@ export default function StocksPage() {
           )}
         </div>
 
-        <div className="flex items-center gap-2 flex-wrap">
+        <div className="flex items-center gap-2">
           <SlidersHorizontal size={12} className="text-white/20 shrink-0" />
-          {visibleCategories.map(cat => (
-            <CategoryPill
-              key={cat.key}
-              label={cat.label}
-              count={cat.key !== "all" ? categoryCount(cat.key) : undefined}
-              active={activeCategory === cat.key}
-              onClick={() => setActiveCategory(cat.key)}
+          <span className="text-[10px] font-bold uppercase tracking-widest text-white/30 shrink-0">Category</span>
+          <div className="relative">
+            <select
+              value={activeCategory}
+              onChange={e => setActiveCategory(e.target.value)}
+              aria-label="Filter stocks by category"
+              className="appearance-none bg-white/[0.04] border border-white/10 rounded-full pl-3.5 pr-8 py-1.5 text-xs font-semibold text-white/70 hover:text-white/90 focus:outline-none focus:border-white/20 focus:bg-white/[0.07] transition-all cursor-pointer"
+            >
+              {visibleCategories.map(cat => (
+                <option key={cat.key} value={cat.key} className="bg-neutral-900 text-white">
+                  {cat.label}{cat.key !== "all" ? ` (${categoryCount(cat.key)})` : ` (${allCoverageData.length})`}
+                </option>
+              ))}
+            </select>
+            <ChevronDown
+              size={11}
+              className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-white/40"
             />
-          ))}
+          </div>
         </div>
 
         <div className="flex items-center gap-2">
