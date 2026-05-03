@@ -70,9 +70,27 @@ const FAQS = [
 ];
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': 'https://investmoat.com/#faq',
+  mainEntity: FAQS.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: a,
+    },
+  })),
+};
+
 export default function HomePage() {
   return (
     <div className="animate-fade-in dot-pattern">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <header className="relative pt-6 md:pt-12 pb-20 md:pb-24">
