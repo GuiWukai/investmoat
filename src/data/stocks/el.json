@@ -1,0 +1,162 @@
+{
+  "slug": "el",
+  "ticker": "EL",
+  "name": "Estée Lauder",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "EL" },
+    { "label": "Market Cap", "value": "~$30B" },
+    { "label": "Current Price", "value": "~$83" }
+  ],
+  "chips": [
+    { "label": "Beauty | Prestige Cosmetics", "color": "primary" },
+    { "label": "Deep Turnaround", "color": "warning" }
+  ],
+  "recommendation": "Speculative Buy",
+  "metrics": [
+    {
+      "title": "FY26 Revenue Growth",
+      "value": "Flat to +3%",
+      "label": "Stabilising after FY24-25 declines",
+      "icon": "TrendingUp",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "Operating Margin",
+      "value": "~10%",
+      "label": "Down from ~20% pre-correction; recovery target ~14%",
+      "icon": "Percent",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "Asia Travel Retail Mix",
+      "value": "~22%",
+      "label": "Down from ~33% peak; reset in progress",
+      "icon": "Plane",
+      "color": "#ef4444"
+    }
+  ],
+  "moat": {
+    "description": "Largest pure-play prestige beauty conglomerate (La Mer, Clinique, Estée Lauder, MAC, Tom Ford, Jo Malone) with deep brand portfolio — moat real but currently weakened by Asia travel retail collapse and SK-II / Korean / Chinese competitive pressure.",
+    "analysisTitle": "The Prestige Brand Portfolio Moat",
+    "analysisSummary": "Estée Lauder's moat is **a portfolio of prestige beauty brands with global distribution scale** — durable in theory, currently strained:",
+    "analysisPoints": [
+      {
+        "title": "Prestige Brand Heritage",
+        "text": "La Mer, Estée Lauder, Tom Ford, Jo Malone, MAC, Clinique combine for one of the deepest prestige beauty portfolios globally. Brand heritage and pricing power persist even through current weakness — La Mer maintains $300+ price points and gross margins materially above mass-beauty peers."
+      },
+      {
+        "title": "Global Distribution Footprint",
+        "text": "Distribution scale across department stores, travel retail, specialty (Sephora, Ulta), and DTC remains a competitive advantage smaller prestige players cannot match. The Asia travel retail collapse is cyclical, not structural — recovery thesis hinges on Chinese consumer return."
+      },
+      {
+        "title": "M&A and Brand Building Track Record",
+        "text": "EL has a long track record of acquiring and scaling prestige brands (Tom Ford, Jo Malone, Bobbi Brown, La Mer). Capital allocation track record is real, although recent acquisitions (Tom Ford, Deciem) have been mixed on near-term returns."
+      }
+    ]
+  },
+  "growth": {
+    "score": 50,
+    "description": "FY26 revenue flat-to-slightly-up after FY24-25 cumulative ~25% decline. Recovery dependent on Chinese consumer + travel retail rebuild. Operating margin recovery target ~14% by FY28 vs current ~10%. The path is multi-year and execution-dependent.",
+    "growthAnalysis": {
+      "cagrEstimate": "3-6%",
+      "scoreDerivation": "Base 60 (4-8% CAGR low band) + 3 margin recovery optionality (PRGM cost program $0.8-1B run-rate savings) - 7 China consumer weakness - 6 competitive pressure (LVMH, L'Oréal, Korean / Chinese brands) = 50",
+      "drivers": [
+        { "name": "Asia Travel Retail", "metric": "Stabilising at lower base; recovery dependent on Chinese consumer", "trend": "stable" },
+        { "name": "PRGM Cost Program", "metric": "$0.8-1B run-rate savings; key margin recovery lever", "trend": "accelerating" },
+        { "name": "Brand Portfolio Performance", "metric": "Mixed; Clinique + Tom Ford strong, MAC weak, La Mer stable", "trend": "stable" }
+      ],
+      "primaryType": "market share",
+      "keyRisk": "If Chinese consumer fails to recover through 2027 and Korean/Chinese prestige brands continue gaining share, EL's recovery thesis stalls and the multiple compresses further toward distressed-asset valuation.",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 80,
+    "description": "At ~$83 EL has been beaten down ~75% from 2021 highs and trades at ~22× depressed FY26 EPS. On normalised earnings ($6+ FY28E) the multiple drops to 14×, providing meaningful margin of safety if turnaround executes.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Forward P/E (FY26)", "value": "~22×", "note": "EPS ~$3.80 trough" },
+        { "label": "Forward P/E (FY28)", "value": "~14×", "note": "Assumes margin recovery to ~14% and EPS to $6+" },
+        { "label": "Price / Sales (FY26)", "value": "~2×", "note": "Significant discount to historical median" },
+        { "label": "Dividend Yield", "value": "~3.2%", "note": "Cut from $0.66 to $0.35 quarterly; sustainable" },
+        { "label": "FCF Yield", "value": "~4%", "note": "Compressed; recovers with margin" }
+      ],
+      "summary": "Valuation reflects worst-case turnaround scenario; through-cycle multiple supports material upside if execution holds."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$60",
+      "description": "Chinese consumer fails to recover, Korean/Chinese brands continue share gain, margin recovery stalls below 12%, multiple stays 18× depressed earnings.",
+      "points": [
+        "Chinese consumer discretionary weakness persists through 2027",
+        "Korean/Chinese prestige brands continue share gain in Asia",
+        "PRGM savings disappoint vs $0.8-1B target"
+      ]
+    },
+    "base": {
+      "priceTarget": "$110",
+      "description": "Modest Chinese recovery + PRGM cost program drives margin to 13%, FY28 EPS reaches $5.50, multiple holds 20×.",
+      "points": [
+        "Asia travel retail stabilises at FY25 base; modest reacceleration FY27",
+        "Operating margin recovers to 13% by FY28 on PRGM savings",
+        "Brand portfolio renormalises with Clinique + Tom Ford leading"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$150",
+      "description": "Full Chinese consumer recovery + successful PRGM execution drives FY28 EPS to $7+, multiple rerates to 22× on quality reassessment.",
+      "points": [
+        "Chinese consumer recovery accelerates in 2026-27 driven by stimulus + travel reopening",
+        "Operating margin recovers toward 16% by FY29",
+        "M&A reignites with bolt-on acquisitions in Asian and indie prestige brands"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — consumer brand."
+    },
+    "businessLogic": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Brand-building and prestige-marketing talent is real but increasingly available across the industry."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Multi-brand portfolio gives meaningful retailer-shelf and travel-retail negotiating power that single-brand competitors cannot match."
+    },
+    "proprietaryData": {
+      "status": "weakened",
+      "note": "Loyalty + DTC data exists but is fragmented across brands and not deeply monetised."
+    },
+    "regulatoryLockIn": {
+      "status": "destroyed",
+      "note": "N/A — beauty regulation is broadly applicable to all market participants."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "transactionEmbedding": {
+      "status": "weakened",
+      "note": "No subscription; embedment is brand affinity and habit, easily disrupted by Korean / Chinese / indie competition."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "aiResilienceScore": 35,
+    "verdict": "Estée Lauder's moat is brand + distribution scale, AI-neutral but currently strained by competitive and consumer headwinds. The thesis is turnaround execution and Chinese consumer recovery, not technological — current valuation provides material margin of safety with elevated execution risk."
+  }
+}

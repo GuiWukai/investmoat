@@ -83,6 +83,25 @@ import vstData      from '@/data/stocks/vst.json';
 import tmoData      from '@/data/stocks/tmo.json';
 import klacData     from '@/data/stocks/klac.json';
 import lngData      from '@/data/stocks/lng.json';
+import smciData     from '@/data/stocks/smci.json';
+import vrtData      from '@/data/stocks/vrt.json';
+import dellData     from '@/data/stocks/dell.json';
+import crdoData     from '@/data/stocks/crdo.json';
+import nvoData      from '@/data/stocks/nvo.json';
+import himsData     from '@/data/stocks/hims.json';
+import spotData     from '@/data/stocks/spot.json';
+import uberData     from '@/data/stocks/uber.json';
+import abnbData     from '@/data/stocks/abnb.json';
+import keysData     from '@/data/stocks/keys.json';
+import keyenceData  from '@/data/stocks/keyence.json';
+import deData       from '@/data/stocks/de.json';
+import etnData      from '@/data/stocks/etn.json';
+import nkeData      from '@/data/stocks/nke.json';
+import luluData     from '@/data/stocks/lulu.json';
+import elData       from '@/data/stocks/el.json';
+import babaData     from '@/data/stocks/baba.json';
+import pddData      from '@/data/stocks/pdd.json';
+import biduData     from '@/data/stocks/bidu.json';
 
 // Weighted composite: Moat 40% · Growth 35% · Valuation 25%
 // scores = [moatScore, growthScore, valuationScore]
@@ -182,6 +201,25 @@ const allCoverageData = [
     { name: "Thermo Fisher Scientific", ticker: "TMO", slug: "tmo",    scores: [m(tmoData),         g(tmoData),         v(tmoData)],         href: "/stocks/tmo",         category: "Healthcare",  ...t(tmoData)         },
     { name: "KLA Corporation",   ticker: "KLAC",  slug: "klac",        scores: [m(klacData),        g(klacData),        v(klacData)],        href: "/stocks/klac",        category: "Big Tech",    ...t(klacData)        },
     { name: "Cheniere Energy",   ticker: "LNG",   slug: "lng",         scores: [m(lngData),         g(lngData),         v(lngData)],         href: "/stocks/lng",         category: "Other",       ...t(lngData)         },
+    { name: "Super Micro Computer", ticker: "SMCI", slug: "smci",      scores: [m(smciData),        g(smciData),        v(smciData)],        href: "/stocks/smci",        category: "Big Tech",    ...t(smciData)        },
+    { name: "Vertiv Holdings",   ticker: "VRT",   slug: "vrt",         scores: [m(vrtData),         g(vrtData),         v(vrtData)],         href: "/stocks/vrt",         category: "Industrials", ...t(vrtData)         },
+    { name: "Dell Technologies", ticker: "DELL",  slug: "dell",        scores: [m(dellData),        g(dellData),        v(dellData)],        href: "/stocks/dell",        category: "Big Tech",    ...t(dellData)        },
+    { name: "Credo Technology",  ticker: "CRDO",  slug: "crdo",        scores: [m(crdoData),        g(crdoData),        v(crdoData)],        href: "/stocks/crdo",        category: "Big Tech",    ...t(crdoData)        },
+    { name: "Novo Nordisk",      ticker: "NVO",   slug: "nvo",         scores: [m(nvoData),         g(nvoData),         v(nvoData)],         href: "/stocks/nvo",         category: "Healthcare",  ...t(nvoData)         },
+    { name: "Hims & Hers Health",ticker: "HIMS",  slug: "hims",        scores: [m(himsData),        g(himsData),        v(himsData)],        href: "/stocks/hims",        category: "Healthcare",  ...t(himsData)        },
+    { name: "Spotify",           ticker: "SPOT",  slug: "spot",        scores: [m(spotData),        g(spotData),        v(spotData)],        href: "/stocks/spot",        category: "Big Tech",    ...t(spotData)        },
+    { name: "Uber Technologies", ticker: "UBER",  slug: "uber",        scores: [m(uberData),        g(uberData),        v(uberData)],        href: "/stocks/uber",        category: "Big Tech",    ...t(uberData)        },
+    { name: "Airbnb",            ticker: "ABNB",  slug: "abnb",        scores: [m(abnbData),        g(abnbData),        v(abnbData)],        href: "/stocks/abnb",        category: "Big Tech",    ...t(abnbData)        },
+    { name: "Keysight Technologies", ticker: "KEYS", slug: "keys",     scores: [m(keysData),        g(keysData),        v(keysData)],        href: "/stocks/keys",        category: "Industrials", ...t(keysData)        },
+    { name: "Keyence Corporation",ticker: "6861.T",slug: "keyence",    scores: [m(keyenceData),     g(keyenceData),     v(keyenceData)],     href: "/stocks/keyence",     category: "Industrials", ...t(keyenceData)     },
+    { name: "Deere & Company",   ticker: "DE",    slug: "de",          scores: [m(deData),          g(deData),          v(deData)],          href: "/stocks/de",          category: "Industrials", ...t(deData)          },
+    { name: "Eaton Corporation", ticker: "ETN",   slug: "etn",         scores: [m(etnData),         g(etnData),         v(etnData)],         href: "/stocks/etn",         category: "Industrials", ...t(etnData)         },
+    { name: "Nike",              ticker: "NKE",   slug: "nke",         scores: [m(nkeData),         g(nkeData),         v(nkeData)],         href: "/stocks/nke",         category: "Other",       ...t(nkeData)         },
+    { name: "Lululemon Athletica",ticker: "LULU", slug: "lulu",        scores: [m(luluData),        g(luluData),        v(luluData)],        href: "/stocks/lulu",        category: "Other",       ...t(luluData)        },
+    { name: "Estée Lauder",      ticker: "EL",    slug: "el",          scores: [m(elData),          g(elData),          v(elData)],          href: "/stocks/el",          category: "Other",       ...t(elData)          },
+    { name: "Alibaba Group",     ticker: "BABA",  slug: "baba",        scores: [m(babaData),        g(babaData),        v(babaData)],        href: "/stocks/baba",        category: "Big Tech",    ...t(babaData)        },
+    { name: "PDD Holdings",      ticker: "PDD",   slug: "pdd",         scores: [m(pddData),         g(pddData),         v(pddData)],         href: "/stocks/pdd",         category: "Other",       ...t(pddData)         },
+    { name: "Baidu",             ticker: "BIDU",  slug: "bidu",        scores: [m(biduData),        g(biduData),        v(biduData)],        href: "/stocks/bidu",        category: "Big Tech",    ...t(biduData)        },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────

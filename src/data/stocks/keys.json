@@ -1,0 +1,162 @@
+{
+  "slug": "keys",
+  "ticker": "KEYS",
+  "name": "Keysight Technologies",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "KEYS" },
+    { "label": "Market Cap", "value": "~$30B" },
+    { "label": "Current Price", "value": "~$170" }
+  ],
+  "chips": [
+    { "label": "Test & Measurement | Electronics", "color": "primary" },
+    { "label": "AI / 6G Infrastructure", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "FY26 Revenue Growth",
+      "value": "+8-11%",
+      "label": "Recovery from 2023-24 cyclical trough",
+      "icon": "TrendingUp",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "Operating Margin",
+      "value": "~26%",
+      "label": "Recovering toward 28-30% pre-cycle",
+      "icon": "Percent",
+      "color": "#10b981"
+    },
+    {
+      "title": "AI / Datacom Mix",
+      "value": "~30%",
+      "label": "Growing 25%+ on AI infrastructure test demand",
+      "icon": "Cpu",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "description": "Premium electronic test and measurement franchise built on the Hewlett-Packard / Agilent legacy, with deep technical IP in RF/microwave, optical, and digital test — irreplaceable in regulated and bleeding-edge electronics development.",
+    "analysisTitle": "The Test-Standards Moat",
+    "analysisSummary": "Keysight's moat is **decades of accumulated test IP, calibration standards, and customer R&D embedment** — not flashy, but exceptionally durable:",
+    "analysisPoints": [
+      {
+        "title": "Calibration and Standards Heritage",
+        "text": "Keysight's signal-source and analyser calibration traceability — inherited from HP — is reference-standard across global telecom regulators, defence labs, and semiconductor fabs. Replacing Keysight in a calibration chain requires re-validating every measurement, an expensive multi-year exercise."
+      },
+      {
+        "title": "Software Embedment in R&D Workflows",
+        "text": "PathWave and KeysightCare software embed into customer R&D workflows for chip design, RF/wireless, optical, and EDA test. Designs validated on Keysight tools carry test scripts and reference suites that take years to re-author on competitor platforms. This is the modern moat compounding on top of the hardware franchise."
+      },
+      {
+        "title": "AI / Datacom and 6G Optionality",
+        "text": "AI infrastructure (800G/1.6T optical, PCIe 6.0, NVLink test) and 6G research are the next test-equipment supercycles. Keysight is the broadest portfolio test vendor for these standards — Anritsu and Rohde & Schwarz address subsets but only Keysight covers the full stack."
+      }
+    ]
+  },
+  "growth": {
+    "score": 70,
+    "description": "FY26 revenue growth +8-11% on recovery from cyclical trough; AI/datacom is the swing factor at +25% growth. Operating margin recovering toward 28-30% pre-cycle as utilisation normalises. Spirent acquisition adds incremental network test capabilities.",
+    "growthAnalysis": {
+      "cagrEstimate": "7-10%",
+      "scoreDerivation": "Base 75 (8-15% CAGR low band) + 3 AI/datacom mix (highest-growth segment, 25%+) + 2 Spirent integration (network test capabilities) - 5 cyclicality (test capex follows electronics R&D capex with 12-18 month lag) - 5 mature commercial market growth = 70",
+      "drivers": [
+        { "name": "AI / Datacom Test", "metric": "+25% YoY; 800G/1.6T optical and PCIe 6.0 test", "trend": "accelerating" },
+        { "name": "Aerospace & Defence", "metric": "+10% YoY; durable defence + space spend", "trend": "stable" },
+        { "name": "Commercial Communications", "metric": "Mid-single-digits; 5G mature, 6G research early", "trend": "stable" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If AI infrastructure capex digestion arrives in 2027 (as with the 2022-23 5G cycle), the AI/datacom segment growth halves and operating margin recovery stalls — Keysight's cyclicality is real and historically the multiple compresses 25-30% during digestion phases.",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 70,
+    "description": "At ~$170 KEYS trades at ~22× FY26 EPS — fair for a quality cyclical with margin recovery and AI exposure. Discount to specialty equipment peers reflects the test-instrument cycle pattern; reasonable risk-reward on 5-year hold.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Forward P/E (FY26)", "value": "~22×", "note": "EPS ~$7.70; mid-cycle multiple" },
+        { "label": "Forward P/E (FY27)", "value": "~19×", "note": "Assumes margin recovery + AI mix tailwind" },
+        { "label": "Price / Sales (FY26)", "value": "~5.5×", "note": "Premium reflecting software embedment" },
+        { "label": "PEG Ratio", "value": "~2.5×", "note": "Premium on quality + AI mix; cyclic adjusted" },
+        { "label": "EV / EBITDA (NTM)", "value": "~16×", "note": "Vs Anritsu ~12×, AMETEK ~17×" }
+      ],
+      "summary": "Valuation is fair-to-modest premium reflecting quality + AI exposure; cyclical risk is to the downside in a 2027 digestion."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$130",
+      "description": "AI capex digestion in 2027 compresses datacom growth, commercial comms cycle stays soft, multiple compresses to 17-18× depressed earnings.",
+      "points": [
+        "AI/datacom test growth slows below 10% in 2027 on capex moderation",
+        "Commercial communications fails to reaccelerate as 6G research stays early",
+        "Spirent integration disappoints; goodwill impairment risk"
+      ]
+    },
+    "base": {
+      "priceTarget": "$210",
+      "description": "FY26 revenue +9-10%, AI/datacom sustains 25%, margin recovers to 28%, FY27 EPS reaches $9.50, multiple holds at 22-24×.",
+      "points": [
+        "AI/datacom sustains 20-25% growth through 2027",
+        "Operating margin recovers to 28-30% on volume + Spirent synergies",
+        "Aerospace & defence remains durable amidst geopolitical demand"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$280",
+      "description": "AI capex super-cycle persists, 6G research begins meaningful capex spend by 2027-28, multiple expands to 28× on durable mid-teens growth.",
+      "points": [
+        "AI/datacom test sustains 25%+ growth through 2028",
+        "6G research drives commercial communications reacceleration in 2027-28",
+        "Defence spend accelerates with sustained geopolitical tension"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Test engineer learning curve on PathWave and instrument workflows is meaningful — engineers train for years on Keysight platforms."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "PathWave software platforms encode customer-specific test scripts, calibration sequences, and R&D workflow business logic that take years to migrate."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "Microwave/RF, optical, and high-speed digital test engineering talent is genuinely scarce; Keysight has the deepest bench inherited from HP/Agilent."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Hardware + PathWave + KeysightCare service bundle is the broadest in test; rivals address subsets but no one matches the full stack."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Calibration libraries and reference measurement databases accumulate over decades and feed standards-compliance — real but not data-flywheel-monetised."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "NIST/UKAS/PTB calibration traceability and ITAR-controlled defence test products are real regulatory moats; replacing Keysight in regulated calibration chains takes years."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "N/A — instrument vendor with no network effects."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Test instruments have 10-15 year service lives; once installed in a customer R&D lab, swap-out is multi-year."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "PathWave is becoming the system of record for R&D test scripts and calibration data in many customer organisations."
+    },
+    "aiResilienceScore": 70,
+    "verdict": "Keysight is a high-quality test-and-measurement franchise with deep regulatory + software embedment moats. AI is a net positive demand driver (test capex follows AI infra capex) and the moat is largely AI-resilient — the primary risk is cyclical digestion, not technological disruption."
+  }
+}

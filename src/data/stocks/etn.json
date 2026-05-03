@@ -1,0 +1,162 @@
+{
+  "slug": "etn",
+  "ticker": "ETN",
+  "name": "Eaton Corporation",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "ETN" },
+    { "label": "Market Cap", "value": "~$140B" },
+    { "label": "Current Price", "value": "~$355" }
+  ],
+  "chips": [
+    { "label": "Power Management | Electrification", "color": "primary" },
+    { "label": "AI / Grid Beneficiary", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Electrical Backlog",
+      "value": "~$12B",
+      "label": "+15% YoY; data centre + utility-led",
+      "icon": "Box",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "FY26 EPS Guide",
+      "value": "~$12.30",
+      "label": "+12% YoY at midpoint",
+      "icon": "TrendingUp",
+      "color": "#10b981"
+    },
+    {
+      "title": "Operating Margin",
+      "value": "~24%",
+      "label": "Expanded from ~17% in 2020",
+      "icon": "Percent",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "description": "Industrial power management leader with structural exposure to electrification, AI data centre power, grid hardening, and aerospace — broad-based moat with a 100+ year industrial franchise.",
+    "analysisTitle": "The Electrification Bridge Moat",
+    "analysisSummary": "Eaton's moat is **scale + engineering + customer specification across the electrification supply chain** — durable, broad-based, and AI-tailwind exposed:",
+    "analysisPoints": [
+      {
+        "title": "Data Centre Power Specification",
+        "text": "Eaton supplies switchgear, UPS, busway, and PDUs into hyperscaler data centres. Specification cycles are 12-18 months and once Eaton equipment is engineered into a campus, future expansions follow the same spec — long-tail revenue per qualified site."
+      },
+      {
+        "title": "Grid Hardening and Utility Capex",
+        "text": "US utility capex on transmission, distribution, and grid hardening is in a multi-year up-cycle driven by AI data centre load growth, electrification, and reliability mandates. Eaton's switchgear, transformer, and protection product breadth make it a primary beneficiary alongside Schneider, Siemens, and ABB."
+      },
+      {
+        "title": "Aerospace Tier-1 Position",
+        "text": "Eaton's aerospace fluid, electrical, and conveyance content per aircraft is meaningful and growing on next-generation military and commercial platforms. Defence + commercial aerospace recovery layers another durable revenue stream on top of electrification."
+      }
+    ]
+  },
+  "growth": {
+    "score": 75,
+    "description": "FY26 EPS guide ~$12.30 (+12% YoY); electrical segment backlog +15% YoY led by data centre and utility customers. Operating margin durably ~24%. AI infrastructure capex is the primary growth tailwind, with utility grid spend a secondary multi-year driver.",
+    "growthAnalysis": {
+      "cagrEstimate": "10-13%",
+      "scoreDerivation": "Base 75 (8-15% CAGR mid-band) + 5 AI / grid tailwind (data centre + utility multi-year up-cycle) - 5 cyclicality (industrials cycle risk in 2027-28) = 75",
+      "drivers": [
+        { "name": "Electrical Americas", "metric": "Data centre + utility led; backlog +15% YoY", "trend": "accelerating" },
+        { "name": "Aerospace", "metric": "Commercial recovery + defence; mid-teens growth", "trend": "stable" },
+        { "name": "Vehicle / eMobility", "metric": "Slow EV recovery; modest growth", "trend": "stable" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If AI data centre capex moderates in 2027 simultaneously with utility capex digestion, the electrical segment growth halves and the multiple compresses from 27× to 20× rapidly — Eaton has shown 25-30% drawdowns on cyclical scares historically.",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 60,
+    "description": "At ~$355 ETN trades at ~29× FY26 EPS — premium that prices in continued AI tailwind. Backlog supports the multiple but margin of safety is thin. Cyclical re-rating risk is asymmetric to the downside.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Forward P/E (FY26)", "value": "~29×", "note": "EPS ~$12.30; AI premium" },
+        { "label": "Forward P/E (FY27)", "value": "~25×", "note": "Assumes 12-15% EPS growth" },
+        { "label": "Price / Sales (FY26)", "value": "~5×", "note": "Premium reflecting AI mix" },
+        { "label": "PEG Ratio", "value": "~2.5×", "note": "Premium on growth + visibility" },
+        { "label": "EV / EBITDA (NTM)", "value": "~19×", "note": "Premium to Schneider ~17× and Hubbell ~17×" }
+      ],
+      "summary": "Valuation is full but supported by backlog + margin profile; the asymmetry is to the downside on AI capex moderation."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$240",
+      "description": "AI data centre capex moderates in 2027, utility capex digestion overlaps, multiple compresses to 18-20× on growth normalisation.",
+      "points": [
+        "Hyperscaler 2027 capex grows <10% YoY; data centre orders book-to-bill below 1.0",
+        "Utility capex moderates as grid-hardening pull-forward unwinds",
+        "Aerospace defence spend slows on government budget pressure"
+      ]
+    },
+    "base": {
+      "priceTarget": "$420",
+      "description": "FY26 EPS lands at $12.30 midpoint, backlog continues growing, multiple sustains 27-29×.",
+      "points": [
+        "FY27 EPS reaches $14 on backlog conversion and margin expansion",
+        "Data centre electrical revenue grows 25%+ in 2026 and 2027",
+        "Buyback + dividend program returns 60%+ of FCF"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$520",
+      "description": "AI capex super-cycle extends through 2028, multiple expands to 32× on durable mid-teens growth, FY28 EPS exceeds $16.",
+      "points": [
+        "AI infrastructure capex sustains 25%+ growth through 2028",
+        "Utility grid capex remains in multi-year up-cycle on reliability mandates",
+        "International electrification (EU, Middle East) adds incremental TAM"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — industrial hardware vendor."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Brightlayer software for grid + microgrid + data centre management is a real but secondary franchise; not a primary moat lever."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Power-systems engineering and high-voltage application talent is real and durable; Eaton's bench depth from a 100+ year history is meaningful."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Switchgear + UPS + busway + PDU + service bundle is broad and engineered to spec; smaller rivals address subsets."
+    },
+    "proprietaryData": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "UL/CSA/IEC certifications, FedRAMP and utility specification standards create real new-entrant barriers; replacing Eaton in a regulated grid or data centre takes years."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Specified-in switchgear and UPS equipment have 15-25 year service lives; service contracts run for the asset life."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "aiResilienceScore": 55,
+    "verdict": "Eaton is a durable AI-capex and electrification beneficiary with real engineering + specification + service moats — though the moat sources are physical embedment more than software. The franchise is structurally cyclical; valuation prices in continued tailwinds with limited margin of safety."
+  }
+}

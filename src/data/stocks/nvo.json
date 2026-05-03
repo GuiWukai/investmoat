@@ -1,0 +1,162 @@
+{
+  "slug": "nvo",
+  "ticker": "NVO",
+  "name": "Novo Nordisk",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "NVO" },
+    { "label": "Market Cap", "value": "~$300B" },
+    { "label": "Current Price", "value": "~$70" }
+  ],
+  "chips": [
+    { "label": "Pharma | GLP-1 | Diabetes / Obesity", "color": "primary" },
+    { "label": "Beaten Down Quality", "color": "warning" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "GLP-1 Revenue Share",
+      "value": "~55%",
+      "label": "Share of global GLP-1 market vs Lilly's ~40%",
+      "icon": "Activity",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "FY26 Revenue Growth",
+      "value": "+12-16%",
+      "label": "Constant currency; reduced from 2024 highs",
+      "icon": "TrendingUp",
+      "color": "#10b981"
+    },
+    {
+      "title": "Operating Margin",
+      "value": "~44%",
+      "label": "Industry-leading despite supply build-out costs",
+      "icon": "Percent",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "description": "Century-old peptide manufacturing scale and GLP-1 IP portfolio anchored by semaglutide — facing real share-loss to Lilly's tirzepatide but still the global leader in obesity and diabetes therapeutics.",
+    "analysisTitle": "The Peptide Manufacturing Moat",
+    "analysisSummary": "Novo's moat is built on **century-old peptide manufacturing depth and the semaglutide IP estate** — replicable in theory, decades-long in practice:",
+    "analysisPoints": [
+      {
+        "title": "Peptide Manufacturing Scale",
+        "text": "Novo Nordisk has invested >$25B in peptide and GLP-1 manufacturing capacity globally — the Catalent acquisition and Kalundborg expansion alone took years to deliver. New entrants attempting to scale GLP-1 supply face 5-7 year capacity build cycles, and even Lilly is supply-constrained. This is the dominant practical moat."
+      },
+      {
+        "title": "Semaglutide IP and Label Position",
+        "text": "Semaglutide (Ozempic, Wegovy, Rybelsus) carries a deep regulatory and clinical data base that supports label expansion (Alzheimer's, MASH, kidney). Patent expiry in major markets begins 2032-33, leaving a 6-7 year monetisation runway plus next-gen molecule (CagriSema, oral amycretin)."
+      },
+      {
+        "title": "Pricing Power Erosion vs Lilly",
+        "text": "Tirzepatide (Mounjaro, Zepbound) has better trial efficacy than semaglutide on weight loss, and Lilly is winning incremental share from late-2025. Novo's response — CagriSema, oral amycretin, weekly insulin — has been mixed, with CagriSema Phase 3 disappointing relative to expectations. This pressure has compressed Novo's multiple from premium to discount."
+      }
+    ]
+  },
+  "growth": {
+    "score": 70,
+    "description": "FY26 constant-currency revenue guide +12-16%, down sharply from 2024's ~30% but still industry-leading. GLP-1 franchise grows 15-20% on volume; Lilly share gains and US compounding settlement temper the trajectory. Pipeline catalysts (oral amycretin Phase 3, semaglutide MASH/Alzheimer's readouts) provide 2026-28 optionality.",
+    "growthAnalysis": {
+      "cagrEstimate": "10-15%",
+      "scoreDerivation": "Base 75 (8-15% CAGR upper band) + 3 GLP-1 TAM expansion (label expansions, oral formulations) - 5 competition (Lilly tirzepatide share gain ongoing) - 3 CagriSema disappointment overhang = 70",
+      "drivers": [
+        { "name": "Wegovy / Ozempic Volume", "metric": "Volume +20-25% YoY; price headwinds in US net pricing", "trend": "stable" },
+        { "name": "CagriSema and Next-Gen Pipeline", "metric": "Phase 3 readouts 2026-27; mixed early data", "trend": "stable" },
+        { "name": "Manufacturing Capacity Ramp", "metric": "Kalundborg expansion + Catalent integration unlocks supply through 2028", "trend": "accelerating" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If oral amycretin or CagriSema fail to demonstrate clinically meaningful differentiation vs tirzepatide and orforglipron in 2026-27 readouts, Novo's market share continues drifting toward a 40/60 split with Lilly and the multiple compresses further toward the global pharma median 12-13×.",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 86,
+    "description": "At ~$70 NVO has been beaten down ~50% from 2024 highs and now trades at ~16× forward EPS — a discount to its 5-year median (~24×) and to Eli Lilly (~32×). The discount prices in continued share loss but ignores manufacturing scale and pipeline optionality, providing material margin of safety.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Forward P/E (NTM)", "value": "~16×", "note": "EPS ~$4.40; significant discount to historical median" },
+        { "label": "Forward P/E (FY27)", "value": "~14×", "note": "Assumes 12-15% EPS growth on volume + cost leverage" },
+        { "label": "Price / Sales (NTM)", "value": "~6×", "note": "Vs LLY ~13×, GPharma median ~3×" },
+        { "label": "PEG Ratio", "value": "~1.2×", "note": "Reasonable on 12-15% growth durability" },
+        { "label": "FCF Yield", "value": "~5%", "note": "Capacity capex elevated through 2027" }
+      ],
+      "summary": "Valuation prices in a worst-case competitive scenario; pipeline catalysts and manufacturing scale provide upside to the rerating thesis."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$50",
+      "description": "Lilly's tirzepatide and orforglipron capture incremental share, CagriSema fails to differentiate, multiple compresses to 12× on long-term franchise erosion concerns.",
+      "points": [
+        "Lilly share of GLP-1 market exceeds 50% by 2027",
+        "CagriSema Phase 3 weight-loss data fails to differentiate vs tirzepatide",
+        "US Medicare price negotiation begins compressing semaglutide net pricing in 2027"
+      ]
+    },
+    "base": {
+      "priceTarget": "$95",
+      "description": "Volume growth 18-20% on supply unlock and label expansion, margin sustains 44%, oral amycretin shows clinical promise, multiple rerates to 20× as panic-discount fades.",
+      "points": [
+        "GLP-1 market share stabilises around 50/50 with Lilly through 2028",
+        "Oral amycretin Phase 3 data positive in 2027; new growth vector",
+        "Semaglutide MASH or Alzheimer's label expansion approved adding incremental TAM"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$130",
+      "description": "Pipeline produces a clear next-generation winner (oral amycretin or successor) restoring premium multiple; manufacturing scale turns into pricing power; multiple rerates to 24-26×.",
+      "points": [
+        "Oral amycretin or CagriSema demonstrates differentiation from tirzepatide in head-to-head trials",
+        "Manufacturing scale + cost advantages convert to share gain in non-US markets",
+        "Multiple rerates to 24-26× as the franchise quality is reassessed"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — pharmaceutical manufacturer with no end-user UI moat."
+    },
+    "businessLogic": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Peptide chemistry, formulation, and clinical-development talent at Novo Nordisk's scale is genuinely scarce — but not unique to Novo (Lilly has rebuilt similar bench)."
+    },
+    "bundling": {
+      "status": "weakened",
+      "note": "Insulin + GLP-1 + complementary diabetes care offers some bundling at the patient/payer level, but pricing pressure and unbundled prescribing limit moat power."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Decades of clinical trial data on semaglutide, including real-world outcomes data, supports label expansion and payer dialogue — real but increasingly mirrored by Lilly."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "FDA, EMA, and global regulatory approvals + GMP manufacturing certifications are the practical moat — replicating Novo's regulatory footprint takes a decade."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Once prescribed and titrated, GLP-1 patients exhibit real switching friction — though Lilly's tirzepatide is increasingly winning new starts."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "aiResilienceScore": 55,
+    "verdict": "Novo's moat is regulatory-and-manufacturing rather than data-and-network, which makes it AI-neutral — neither helped nor materially threatened by AI. The franchise question is competitive vs Lilly, not technological obsolescence; current valuation prices in worst-case competitive outcomes and ignores manufacturing scale and pipeline."
+  }
+}

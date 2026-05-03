@@ -1,0 +1,162 @@
+{
+  "slug": "crdo",
+  "ticker": "CRDO",
+  "name": "Credo Technology Group",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "CRDO" },
+    { "label": "Market Cap", "value": "~$13B" },
+    { "label": "Current Price", "value": "~$80" }
+  ],
+  "chips": [
+    { "label": "AI Connectivity | Active Cables", "color": "primary" },
+    { "label": "Hyperscaler Design Wins", "color": "success" }
+  ],
+  "recommendation": "Speculative Buy",
+  "metrics": [
+    {
+      "title": "FY26 Revenue Guide",
+      "value": "~$1.2B",
+      "label": "+90% YoY on AEC ramp",
+      "icon": "TrendingUp",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "Gross Margin",
+      "value": "~64%",
+      "label": "Specialty silicon, premium pricing",
+      "icon": "Percent",
+      "color": "#10b981"
+    },
+    {
+      "title": "AEC Mix",
+      "value": ">75%",
+      "label": "Active electrical cables for 800G/1.6T AI clusters",
+      "icon": "Cable",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "description": "Specialty connectivity silicon (Active Electrical Cables, Optical DSPs) designed into the largest hyperscaler AI clusters — design-win-driven, with multi-year visibility once spec'd in.",
+    "analysisTitle": "The AEC Design-Win Moat",
+    "analysisSummary": "Credo's moat is **multi-year design wins inside hyperscaler AI cluster reference architectures** — once a SerDes IP block or AEC SKU is qualified, the customer sticks with it for the platform life:",
+    "analysisPoints": [
+      {
+        "title": "AEC Performance Lead at 800G/1.6T",
+        "text": "Credo's AECs deliver lower-power, higher-reliability links inside AI racks vs passive DACs and active optical cables — the only practical option above 800G inside-rack at scale. Credo holds first-mover lead vs Marvell and Broadcom AEC offerings."
+      },
+      {
+        "title": "Hyperscaler Design-In Stickiness",
+        "text": "Once a hyperscaler qualifies a SerDes or AEC into a reference architecture, the design persists for the platform's full deployment cycle (3-5 years). Credo has design wins at multiple top-5 hyperscalers, providing structural revenue visibility through 2028."
+      },
+      {
+        "title": "Vertical Integration of SerDes IP",
+        "text": "Credo owns the SerDes IP that goes into both its merchant chips and licensable IP cores. This vertical integration allows margin capture at multiple layers (chip + cable + IP licensing) that competitors built on third-party IP cannot match."
+      }
+    ]
+  },
+  "growth": {
+    "score": 88,
+    "description": "FY26 revenue guide ~$1.2B, +90% YoY, on AEC ramp into Microsoft, Amazon, and additional hyperscaler footprints. Gross margin holds 64% on premium specialty silicon. The growth profile is among the highest in semis, but customer concentration and platform-cycle risk are real.",
+    "growthAnalysis": {
+      "cagrEstimate": "40-60%",
+      "scoreDerivation": "Base 90 (>30% CAGR hypergrowth) + 3 design-win visibility (multi-hyperscaler 800G/1.6T wins) - 3 customer concentration (top-2 hyperscalers >55% revenue) - 2 platform-cycle volatility = 88",
+      "drivers": [
+        { "name": "800G/1.6T AEC Ramp", "metric": "Primary FY26 driver; AEC mix >75% of revenue", "trend": "accelerating" },
+        { "name": "Optical DSP", "metric": "Secondary growth lever; ramping into linear-drive optical applications", "trend": "accelerating" },
+        { "name": "SerDes IP Licensing", "metric": "Higher-margin licensable IP; growing but small base", "trend": "stable" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If Marvell or Broadcom secure share of next-generation hyperscaler AEC sockets in 2026-27, Credo's revenue concentration converts to volatility — single-customer share loss can compress revenue 30%+ in a quarter as platform cycles transition.",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 50,
+    "description": "At ~$80 CRDO trades at ~50× FY26 EPS — a hypergrowth multiple that prices in continued share gain and design-win expansion. Margin of safety is thin and any platform-cycle wobble compresses the multiple sharply.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Forward P/E (FY26)", "value": "~50×", "note": "EPS ~$1.60; growth-stock multiple" },
+        { "label": "Forward P/E (FY27)", "value": "~32×", "note": "Assumes 50% EPS growth" },
+        { "label": "Price / Sales (FY26)", "value": "~11×", "note": "Premium to specialty-semi peers" },
+        { "label": "PEG Ratio", "value": "~0.9×", "note": "Reasonable if growth sustains" },
+        { "label": "EV / Sales (NTM)", "value": "~10.5×", "note": "Vs Marvell ~7×, Broadcom ~13× (cap-weighted)" }
+      ],
+      "summary": "Valuation is fair given hypergrowth and design-win visibility but offers little cushion if customer concentration or competitive share-loss surprises materialise."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$45",
+      "description": "Marvell/Broadcom secure share of next-platform AEC sockets, customer concentration manifests as revenue volatility, multiple compresses to 25× as growth normalises.",
+      "points": [
+        "Lose share at top-2 hyperscaler in 2026-27 platform transition",
+        "Optical-DSP traction disappoints vs linear-drive incumbents",
+        "Hyperscaler capex digestion in 2027 amplifies the share-loss impact"
+      ]
+    },
+    "base": {
+      "priceTarget": "$110",
+      "description": "FY26 revenue $1.2B converts as guided; FY27 grows another 50%+ on 1.6T AEC ramp; multiple holds at 35-40× on visibility.",
+      "points": [
+        "FY27 revenue $1.8-2.0B; design wins persist through 1.6T platform cycle",
+        "Customer count expands from current top-3 to top-5 hyperscaler design wins",
+        "Optical-DSP attaches incremental revenue at 60%+ gross margin"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$160",
+      "description": "Credo establishes durable AEC franchise across all top-5 hyperscalers, expands into co-packaged optics adjacent TAM, multiple stays at 45×+ on accelerating revenue and IP licensing.",
+      "points": [
+        "Design wins at all top-5 hyperscalers and major Tier-2 neoclouds by FY27",
+        "Co-packaged optics partnership with NVIDIA or hyperscaler announced",
+        "SerDes IP licensing scales to 15%+ of revenue at 90%+ gross margin"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — semiconductor IP/component vendor."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "SerDes IP and SDK ecosystem represent real software embedment in customer reference designs, but ultimately a hardware franchise."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "High-speed SerDes design talent is among the scarcest in semis — Credo's team is a defined top-tier asset that explains the design-win pace."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Combined AEC + DSP + IP licensing offering is differentiated, though limited bundling power at the customer level."
+    },
+    "proprietaryData": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "regulatoryLockIn": {
+      "status": "weakened",
+      "note": "Standard SerDes export-control compliance only; no meaningful regulatory moat."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Once a SerDes IP block or AEC SKU is qualified into a reference architecture, the design persists for 3-5 years — strong embedment within the platform cycle but the cycle itself is the constraint."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "aiResilienceScore": 50,
+    "verdict": "Credo's moat is talent-and-design-win driven, with strong multi-year embedment inside the platform cycle but real cyclic exposure at platform transitions. The thesis is hypergrowth + share gain, not durable economic franchise — appropriately sized as a high-conviction speculative position rather than a core compounder."
+  }
+}

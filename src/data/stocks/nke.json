@@ -1,0 +1,162 @@
+{
+  "slug": "nke",
+  "ticker": "NKE",
+  "name": "Nike",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "NKE" },
+    { "label": "Market Cap", "value": "~$110B" },
+    { "label": "Current Price", "value": "~$73" }
+  ],
+  "chips": [
+    { "label": "Athletic Apparel | Footwear", "color": "primary" },
+    { "label": "Turnaround", "color": "warning" }
+  ],
+  "recommendation": "Speculative Buy",
+  "metrics": [
+    {
+      "title": "FY26 Revenue Growth",
+      "value": "Flat to -3%",
+      "label": "Trough year; recovery expected FY27",
+      "icon": "TrendingDown",
+      "color": "#ef4444"
+    },
+    {
+      "title": "Gross Margin",
+      "value": "~42%",
+      "label": "Down from 46% pre-correction; recovering",
+      "icon": "Percent",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "Direct Mix",
+      "value": "~42%",
+      "label": "Wholesale rebuild progressing under Hill leadership",
+      "icon": "ShoppingBag",
+      "color": "#10b981"
+    }
+  ],
+  "moat": {
+    "description": "Iconic global athletic brand with the deepest sports marketing footprint in apparel/footwear — durable but currently weakened by execution missteps; turnaround under CEO Elliott Hill is the thesis.",
+    "analysisTitle": "The Iconic Brand Moat",
+    "analysisSummary": "Nike's moat is **brand + sports marketing scale + product innovation cadence** — temporarily weakened but structurally intact:",
+    "analysisPoints": [
+      {
+        "title": "Brand and Athlete Marketing Footprint",
+        "text": "Nike's athlete and team contracts (NBA, NFL collegiate, EPL/UEFA, Olympics) are unmatched in scale globally. The marketing flywheel — visibility on the world's biggest sporting moments — compounds product launches and pricing power. Lululemon, Adidas, On, and Hoka have brand strength in subsets; only Nike spans every major sport globally."
+      },
+      {
+        "title": "Wholesale + DTC Channel Mix Rebuild",
+        "text": "The 2020-23 DTC over-pivot weakened wholesale relationships; Hill's strategy under-way reverses the missteps and rebuilds partnerships with Foot Locker, Dick's, JD Sports. The rebuild is multi-quarter but addresses the primary execution wound. Successful rebuild restores the brand's traffic flywheel."
+      },
+      {
+        "title": "Product Innovation Cadence",
+        "text": "Nike's R&D and product development pipeline (Pegasus, Vomero, Alphafly, Air Max) remains the deepest in sport footwear. The 2024-25 lineage gap created an opening for Hoka, On, and New Balance — but the 2026 product cycle is reportedly the deepest in 5 years. Innovation cadence is the biggest swing factor."
+      }
+    ]
+  },
+  "growth": {
+    "score": 55,
+    "description": "FY26 revenue flat-to-slightly-down on inventory work-down + wholesale rebuild + Greater China weakness. FY27 expected to inflect to mid-single-digit growth as new product cycle, wholesale rebuild, and DTC normalisation align. Gross margin recovering toward 44-45% on lower discounting.",
+    "growthAnalysis": {
+      "cagrEstimate": "3-6%",
+      "scoreDerivation": "Base 60 (4-8% CAGR low band) + 3 turnaround optionality (Hill leadership, product cycle) - 5 China weakness - 3 competition (Hoka/On/New Balance share gain) = 55",
+      "drivers": [
+        { "name": "North America", "metric": "Trough on inventory work-down; recovery expected late FY26", "trend": "stable" },
+        { "name": "Greater China", "metric": "Persistent weakness; competitive and macro headwinds", "trend": "decelerating" },
+        { "name": "Innovation Cadence", "metric": "2026 product cycle reportedly deepest in 5 years; key swing", "trend": "accelerating" }
+      ],
+      "primaryType": "market share",
+      "keyRisk": "If FY27 fails to inflect to mid-single-digit growth and Greater China remains weak, the turnaround thesis stalls and the multiple compresses to 18× as the market reassesses brand pricing power vs Hoka/On/Adidas.",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 78,
+    "description": "At ~$73 NKE trades at ~22× depressed FY26 EPS — discount to its 5-year median (~28×) and to Lululemon (~26×). The discount prices in turnaround risk; through-cycle EPS recovery to $4+ implies 18× normalised, which provides meaningful upside.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Forward P/E (FY26)", "value": "~22×", "note": "EPS ~$3.30; trough cycle" },
+        { "label": "Forward P/E (FY27)", "value": "~17×", "note": "Assumes EPS recovery to $4.30+" },
+        { "label": "Price / Sales (FY26)", "value": "~2.3×", "note": "Discount to historical median" },
+        { "label": "Dividend Yield", "value": "~2.3%", "note": "Sustained through trough cycle" },
+        { "label": "FCF Yield", "value": "~5%", "note": "FCF compressed; recovers with margin" }
+      ],
+      "summary": "Valuation prices in turnaround uncertainty; through-cycle multiple suggests material upside if FY27 inflects."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$55",
+      "description": "Turnaround stalls, Greater China stays weak, Hoka/On continue share gains, multiple compresses to 16× depressed earnings.",
+      "points": [
+        "FY27 fails to inflect to mid-single-digit growth",
+        "Greater China revenue continues declining",
+        "Hoka/On/New Balance share gains accelerate; Nike NA share continues drifting"
+      ]
+    },
+    "base": {
+      "priceTarget": "$95",
+      "description": "FY27 inflects to mid-single-digit growth, gross margin recovers to 44-45%, EPS rebuilds to $4.30, multiple holds 22-24×.",
+      "points": [
+        "FY27 revenue grows mid-single-digits as wholesale rebuild and product cycle align",
+        "Greater China stabilises at low growth on competitive normalisation",
+        "Direct + wholesale channel mix optimises around 40/60 split"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$130",
+      "description": "Hill turnaround succeeds, product cycle resonates, FY28 EPS exceeds $5.50, multiple expands to 25× on brand quality reassessment.",
+      "points": [
+        "FY28 revenue grows 8%+ on innovation cadence + Greater China recovery",
+        "Gross margin recovers to 46%+ on lower discount and direct mix",
+        "Athletic apparel category leadership reasserted; multiple rerates"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — consumer brand, not interface."
+    },
+    "businessLogic": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Sports marketing, athlete relationship, and product design talent at Nike's scale is real and durable."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Footwear + apparel + accessories + Nike+ digital ecosystem creates real cross-category buy-rate vs single-category rivals."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Nike+ membership and DTC data on hundreds of millions of consumers feeds product development and personalised marketing."
+    },
+    "regulatoryLockIn": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "N/A — consumer brand, not network."
+    },
+    "transactionEmbedding": {
+      "status": "weakened",
+      "note": "Subscription not material; embedment is brand affinity, not technical lock-in."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "aiResilienceScore": 50,
+    "verdict": "Nike's moat is brand + scale + product cadence — AI is largely neutral (improves marketing efficiency, accelerates design but does not threaten the brand). The thesis question is execution-and-China, not technological obsolescence; turnaround thesis is reasonable at depressed valuation."
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "slug": "hims",
+  "ticker": "HIMS",
+  "name": "Hims & Hers Health",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "HIMS" },
+    { "label": "Market Cap", "value": "~$11B" },
+    { "label": "Current Price", "value": "~$50" }
+  ],
+  "chips": [
+    { "label": "Telehealth | DTC Subscription", "color": "primary" },
+    { "label": "Speculative Growth", "color": "warning" }
+  ],
+  "recommendation": "Speculative Buy",
+  "metrics": [
+    {
+      "title": "FY26 Revenue Guide",
+      "value": "$2.4-2.5B",
+      "label": "+45-50% YoY",
+      "icon": "TrendingUp",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "Subscribers",
+      "value": "~3.0M",
+      "label": "Up from 2.2M end FY25",
+      "icon": "Users",
+      "color": "#10b981"
+    },
+    {
+      "title": "Adj EBITDA Margin",
+      "value": "~12%",
+      "label": "Expanding on operational leverage",
+      "icon": "Percent",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "description": "DTC telehealth subscription brand with vertical pharmacy and personalised compounded prescriptions — narrow brand moat, expanding clinical footprint, real regulatory tail risk.",
+    "analysisTitle": "The DTC Telehealth Brand Moat",
+    "analysisSummary": "Hims's moat is **brand recognition + vertical pharmacy operations** in telehealth subscription — real but narrow, with regulatory exposure to compounded GLP-1 fluctuations:",
+    "analysisPoints": [
+      {
+        "title": "DTC Brand Reach in Targeted Categories",
+        "text": "Hims has built genuine brand awareness in men's hair loss, sexual health, mental health, weight-loss, and women's hormonal health. The marketing flywheel and CAC-LTV economics in these categories are durable in normal market conditions, with subscriber retention in established categories averaging 12+ months."
+      },
+      {
+        "title": "Vertical Pharmacy and Compounding Operations",
+        "text": "Hims operates its own 503A/503B-style compounding pharmacies, allowing personalised GLP-1 and dermatology formulations. The April 2025 FDA shortage delisting forced compounded semaglutide off the market, but Hims has pivoted to oral GLP-1 personalisation and licensed Wegovy distribution — narrower but legal channel."
+      },
+      {
+        "title": "Clinical Network Scale",
+        "text": "Hims contracts with a national network of providers, allowing rapid intake-to-prescription on a single subscription stack. Switching costs for the patient are low but the convenience-and-pricing UX advantage vs traditional telehealth is real."
+      }
+    ]
+  },
+  "growth": {
+    "score": 80,
+    "description": "FY26 revenue guide $2.4-2.5B (+45-50% YoY); subscribers ~3M. Weight-loss category remains the swing factor — branded Wegovy distribution licence + oral GLP-1 personalisation are growing but at lower margin than 2024 compounded semaglutide. New categories (testosterone, women's health) extend the platform.",
+    "growthAnalysis": {
+      "cagrEstimate": "30-45%",
+      "scoreDerivation": "Base 90 (>30% CAGR hypergrowth) + 3 platform extension (women's health, testosterone, weight-loss next-gen) - 7 regulatory/category risk (compounded GLP-1 ban, ongoing FTC/state-AG scrutiny) - 6 margin compression (branded GLP-1 lower margin than compounded) = 80",
+      "drivers": [
+        { "name": "Weight-Loss Category", "metric": "Branded Wegovy + oral GLP-1; revenue growing but mix margin lower than 2024", "trend": "stable" },
+        { "name": "Subscriber Growth", "metric": "+800K subscribers FY26; CAC payback <12 months in established categories", "trend": "accelerating" },
+        { "name": "New Category Expansion", "metric": "Women's health, testosterone, longevity adding incremental cohorts", "trend": "accelerating" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If FDA enforcement against personalised compounding tightens further or state regulators impose telehealth-prescription restrictions on GLP-1 in 2026-27, the weight-loss category could decline 30-40% and the margin profile compresses materially.",
+      "marginTrend": "compressing"
+    }
+  },
+  "valuation": {
+    "score": 55,
+    "description": "At ~$50 HIMS trades at ~50× FY26 EPS — a hypergrowth multiple that prices in continued execution and expanding categories. Volatility around regulatory news cycles is high; the multiple has shown 40%+ drawdowns multiple times.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Forward P/E (FY26)", "value": "~50×", "note": "EPS ~$1.00 mid; growth-stock multiple" },
+        { "label": "Forward P/E (FY27)", "value": "~32×", "note": "Assumes 50% EPS growth on subscriber + category" },
+        { "label": "Price / Sales (FY26)", "value": "~4.5×", "note": "Premium vs Tele/DTC peers" },
+        { "label": "PEG Ratio", "value": "~1.1×", "note": "Fair on growth, none on regulatory risk" },
+        { "label": "FCF Yield", "value": "~3%", "note": "FCF building as capex moderates" }
+      ],
+      "summary": "Valuation discounts none of the regulatory or category-shift risk; the equity is a high-volatility growth-and-execution position rather than a quality compounder."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$28",
+      "description": "FDA compounding enforcement tightens further, weight-loss category declines, multiple compresses to 20-25× on growth deceleration.",
+      "points": [
+        "FDA or state AG enforcement restricts personalised GLP-1 telehealth prescribing",
+        "Branded Wegovy distribution disappoints on margin and subscriber retention",
+        "Subscriber growth slows below 25% YoY as marketing CAC rises"
+      ]
+    },
+    "base": {
+      "priceTarget": "$70",
+      "description": "FY26 revenue $2.5B at high end, subscriber growth +35%, EBITDA margin expands to 14%, multiple holds at 35×.",
+      "points": [
+        "Subscriber base reaches 3.5M end-FY26",
+        "Weight-loss category settles into branded + oral mix at sustainable margin",
+        "New categories (women's health, testosterone) reach 15%+ of revenue"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$110",
+      "description": "Hims becomes the dominant DTC chronic-care platform, EBITDA margin expands toward 20%, multiple sustains 40×+ on durable growth.",
+      "points": [
+        "Subscriber base exceeds 4.5M with NRR >115%",
+        "International expansion (UK, Canada, EU pilot) materialises in 2026-27",
+        "Platform category mix diversifies the regulatory tail-risk concentration"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "Subscription UX and re-fill workflow drive some switching cost, but rivals can replicate the UI quickly."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "Telehealth intake-to-prescription workflows are largely commoditised software."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "DTC marketing and telehealth-clinician supply are increasingly available at scale to competitors."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Multi-category subscription bundle (hair + weight + mental health + skin) creates real ARPU expansion and retention vs single-category telehealth — Hims's primary moat lever."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Subscription health-and-outcomes data accumulating across 3M+ patients is real, though monetisation pathways limited by HIPAA and consent."
+    },
+    "regulatoryLockIn": {
+      "status": "weakened",
+      "note": "Telehealth and compounding regulation is fluid; the April 2025 GLP-1 compounding ban demonstrated the franchise's regulatory exposure."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "N/A — DTC subscription, not a network-effects business."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Subscription auto-fills, integrated lab workups, and chronic-care titration plans create real friction for swap-out at the patient level."
+    },
+    "systemOfRecord": {
+      "status": "weakened",
+      "note": "Hims is becoming the system of record for personalised chronic-care for younger demographics, but the moat is shallow vs primary care + EHR systems."
+    },
+    "aiResilienceScore": 38,
+    "verdict": "Hims is a brand-and-bundle moat business in a regulated industry — AI is neutral-to-positive on cost (provider productivity) but the dominant moat questions are regulatory and competitive. The thesis is execution-and-category-expansion, not durable franchise economics, appropriately sized as speculative growth."
+  }
+}
