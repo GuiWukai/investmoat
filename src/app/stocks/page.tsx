@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { ChevronRight, Search, X, SlidersHorizontal } from "lucide-react";
-import { Spinner } from "@heroui/react";
+import { ChevronRight, Search, X, SlidersHorizontal, ArrowUpDown } from "lucide-react";
+import { Select, SelectItem, Spinner } from "@heroui/react";
 import { allCoverageData, getAverageScore } from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
 
@@ -16,6 +16,42 @@ const TICKER_COLORS: Record<string, string> = {
   GOOGL:"#4285f4", AAPL: "#555555", AVGO: "#cc0000", TSM:  "#0071c5",
   MU:   "#0099cc", ISRG: "#009688",
 };
+
+const MONTHS = [
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December",
+];
+
+/**
+ * Parse a "Month YYYY" or "Month DD, YYYY" string into a monotonic integer
+ * (year*384 + month*32 + day) for sorting. Day defaults to 0 when absent so
+ * "May 2026" still sorts after "April 29, 2026" — month-precision dates land
+ * at the start of their month.
+ */
+function parseAnalysisDate(s: string | undefined): number {
+  if (!s) return 0;
+  const tokens = s.trim().split(/\s+/);
+  if (tokens.length < 2) return 0;
+  const m = MONTHS.indexOf(tokens[0]);
+  const y = Number(tokens[tokens.length - 1]);
+  if (m < 0 || !Number.isFinite(y)) return 0;
+  // Optional middle token = day (e.g. "April 29, 2026" → tokens[1] = "29,")
+  let day = 0;
+  if (tokens.length >= 3) {
+    const d = Number(tokens[1].replace(/,/g, ""));
+    if (Number.isFinite(d)) day = d;
+  }
+  return y * 384 + m * 32 + day;
+}
+
+type SortKey = "score-desc" | "score-asc" | "date-desc" | "date-asc";
+
+const SORT_OPTIONS: { value: SortKey; label: string }[] = [
+  { value: "score-desc", label: "Score (high → low)" },
+  { value: "score-asc",  label: "Score (low → high)" },
+  { value: "date-desc",  label: "Analysis Date (newest first)" },
+  { value: "date-asc",   label: "Analysis Date (oldest first)" },
+];
 
 const CATEGORIES = [
   { label: "All",                  key: "all"        },
@@ -157,38 +193,21 @@ function StockRow({ stock, rank, delay }: { stock: typeof allCoverageData[0]; ra
   );
 }
 
-function CategoryPill({
-  label, count, active, onClick,
-}: { label: string; count?: number; active: boolean; onClick: () => void }) {
-  return (
-    <button
-      onClick={onClick}
-      className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
-        active
-          ? 'bg-blue-500/20 border border-blue-500/40 text-blue-300'
-          : 'bg-white/[0.04] border border-white/10 text-white/40 hover:text-white/70 hover:bg-white/[0.07]'
-      }`}
-    >
-      {label}
-      {count !== undefined && (
-        <span className={`text-[10px] font-bold ${active ? 'text-blue-400/70' : 'text-white/20'}`}>
-          {count}
-        </span>
-      )}
-    </button>
-  );
-}
-
 export default function StocksPage() {
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("all");
+  const [sortKey, setSortKey] = useState<SortKey>("score-desc");
   const inputRef = useRef<HTMLInputElement>(null);
 
   const trimmed = query.trim().toLowerCase();
 
-  const allSorted = [...allCoverageData].sort(
-    (a, b) => getAverageScore(b.scores) - getAverageScore(a.scores)
-  );
+  const allSorted = [...allCoverageData].sort((a, b) => {
+    const [mode, dir] = sortKey.split("-") as ["score" | "date", "desc" | "asc"];
+    const cmp = mode === "score"
+      ? getAverageScore(a.scores) - getAverageScore(b.scores)
+      : parseAnalysisDate(a.lastAnalyzed) - parseAnalysisDate(b.lastAnalyzed);
+    return dir === "desc" ? -cmp : cmp;
+  });
 
   const filtered = allSorted.filter(s => {
     const matchesCategory = activeCategory === "all" || s.category === activeCategory;
@@ -257,17 +276,60 @@ export default function StocksPage() {
           )}
         </div>
 
-        <div className="flex items-center gap-2 flex-wrap">
+        <div className="flex items-center gap-2">
           <SlidersHorizontal size={12} className="text-white/20 shrink-0" />
-          {visibleCategories.map(cat => (
-            <CategoryPill
-              key={cat.key}
-              label={cat.label}
-              count={cat.key !== "all" ? categoryCount(cat.key) : undefined}
-              active={activeCategory === cat.key}
-              onClick={() => setActiveCategory(cat.key)}
-            />
-          ))}
+          <span className="text-[10px] font-bold uppercase tracking-widest text-white/30 shrink-0">Category</span>
+          <Select
+            size="sm"
+            radius="full"
+            selectedKeys={[activeCategory]}
+            onSelectionChange={(keys) => {
+              const k = Array.from(keys as Set<React.Key>)[0];
+              if (k) setActiveCategory(k as string);
+            }}
+            aria-label="Filter stocks by category"
+            className="min-w-[14rem] max-w-[14rem]"
+            classNames={{
+              trigger: "bg-white/[0.04] border border-white/10 hover:!bg-white/[0.07] data-[hover=true]:bg-white/[0.07] data-[focus=true]:bg-white/[0.07] data-[open=true]:bg-white/[0.07]",
+              value: "text-xs font-semibold text-white/70",
+              selectorIcon: "text-white/40",
+              popoverContent: "bg-neutral-900 border border-white/10",
+            }}
+          >
+            {visibleCategories.map(cat => (
+              <SelectItem key={cat.key} className="text-white">
+                {cat.label}{cat.key !== "all" ? ` (${categoryCount(cat.key)})` : ` (${allCoverageData.length})`}
+              </SelectItem>
+            ))}
+          </Select>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <ArrowUpDown size={12} className="text-white/20 shrink-0" />
+          <span className="text-[10px] font-bold uppercase tracking-widest text-white/30 shrink-0">Sort</span>
+          <Select
+            size="sm"
+            radius="full"
+            selectedKeys={[sortKey]}
+            onSelectionChange={(keys) => {
+              const k = Array.from(keys as Set<React.Key>)[0];
+              if (k) setSortKey(k as SortKey);
+            }}
+            aria-label="Sort stocks by"
+            className="min-w-[16rem] max-w-[16rem]"
+            classNames={{
+              trigger: "bg-white/[0.04] border border-white/10 hover:!bg-white/[0.07] data-[hover=true]:bg-white/[0.07] data-[focus=true]:bg-white/[0.07] data-[open=true]:bg-white/[0.07]",
+              value: "text-xs font-semibold text-white/70",
+              selectorIcon: "text-white/40",
+              popoverContent: "bg-neutral-900 border border-white/10",
+            }}
+          >
+            {SORT_OPTIONS.map(opt => (
+              <SelectItem key={opt.value} className="text-white">
+                {opt.label}
+              </SelectItem>
+            ))}
+          </Select>
         </div>
       </div>
 
