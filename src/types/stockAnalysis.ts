@@ -1,5 +1,5 @@
 export type MoatStatus = 'strong' | 'intact' | 'weakened' | 'destroyed';
-export type RecommendationStatus = 'Strong Buy' | 'Accumulate' | 'Hold' | 'Speculative Buy';
+export type RecommendationStatus = 'Strong Buy' | 'Accumulate' | 'Hold' | 'Speculative Buy' | 'Avoid';
 export type ChipColor = 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
 
 export interface StockMetric {
@@ -38,6 +38,8 @@ export interface TenMoatsData {
   transactionEmbedding: MoatAssessmentData;
   systemOfRecord: MoatAssessmentData;
   verdict: string;
+  /** Authored hand-score; not currently consumed by the UI (moat score is computed from statuses). */
+  aiResilienceScore?: number;
 }
 
 export interface GridCard {
