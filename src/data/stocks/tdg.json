@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$72B"
+      "value": "~$68B"
     },
     {
       "label": "Price",
-      "value": "~$1,350"
+      "value": "~$1,220"
     }
   ],
   "chips": [
@@ -31,8 +31,8 @@
   "metrics": [
     {
       "title": "EBITDA Margin",
-      "value": "52.4%",
-      "label": "Q1 FY2026 — Revenue $2.285B (+14% YoY)",
+      "value": "52.6%",
+      "label": "Q2 FY2026 — Revenue $2.544B (+18% YoY)",
       "icon": "TrendingUp",
       "color": "#1a5276"
     },
@@ -45,8 +45,8 @@
     },
     {
       "title": "FY2026 Guidance",
-      "value": "$9.94B",
-      "label": "Revenue — EBITDA $5.21B | Adj EPS $38.38",
+      "value": "$10.35B",
+      "label": "Revenue raised to $10.3-10.4B | Adj EPS $38.83-40.21",
       "icon": "Wrench",
       "color": "#148f77"
     }
@@ -71,8 +71,8 @@
     ]
   },
   "growth": {
-    "score": 78,
-    "description": "Q1 FY2026 revenue grew 14% YoY to $2.285B with adj EPS of $8.23 — beating consensus across the board. TransDigm deployed $3.16B in acquisitions in FY2025: Stellant Systems ($960M, electro-mechanical actuation), Jet Parts Engineering (~$1.1B), and Victor Sierra Aviation (~$1.1B) — all high-sole-source-content businesses that expand the aftermarket compounding engine. FY2026 guidance: $9.94B revenue, $5.21B adj EBITDA, $38.38 adj EPS. Net debt/EBITDA at 5.7× is tracking toward the target range.",
+    "score": 80,
+    "description": "Q2 FY2026 revenue grew 18.3% YoY to $2.544B with adj EPS of $9.85 (vs $9.53 consensus) and EBITDA-as-defined of $1.337B (52.6% margin). Management raised FY2026 guidance: revenue $10.3-10.4B (from $9.94B), adj EPS $38.83-$40.21. The Jet Parts Engineering and Victor Sierra Aviation acquisitions (~$2.2B combined) closed and are integrating, adding ~$280M in annualized revenue. The acquisition compounding engine continues to deliver.",
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
@@ -84,11 +84,11 @@
     }
   },
   "valuation": {
-    "score": 65,
-    "description": "At ~$1,350, TransDigm is trading right at the base case — fair value, not a discount. The stock has been re-rated upward on Q1 FY2026 beats and the acquisition pipeline, but the asymmetry vs. the $1,900 bull case requires execution across 2-3 years. High leverage (5.7× net debt/EBITDA) remains a valuation anchor.",
+    "score": 78,
+    "description": "At ~$1,220 — 49% above bear ($850) and 24% below the base case ($1,600) — TransDigm offers attractive risk/reward after Q2 FY2026 beat-and-raise. Stock rallied ~6% pre-market on May 5 results. High leverage remains a structural feature, not a bug.",
     "valuationNote": {
-      "text": "TransDigm intentionally operates with 6–8× net debt/EBITDA, returning capital via special dividends rather than buybacks. At $1,350 = base case fair value, the risk/reward is balanced: 29% downside to bear ($850) vs. 41% upside to bull ($1,900).",
-      "fairValue": "$1,350"
+      "text": "TransDigm intentionally operates with 6–8× net debt/EBITDA, returning capital via special dividends rather than buybacks. At ~$1,220, risk/reward improves: 30% downside to bear ($850) vs. 31% upside to base ($1,600) and 72% to bull ($2,100).",
+      "fairValue": "$1,600"
     }
   },
   "scenarios": {
@@ -166,5 +166,5 @@
     },
     "verdict": "TransDigm's moat is almost entirely AI-immune. Regulatory certification cannot be automated — the FAA and DOD will not approve AI-designed substitutes without decades of physical certification testing. The sole-source aftermarket model becomes more durable, not weaker, as aircraft fleets age and alternatives become even less economical to certify."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "May 2026"
 }

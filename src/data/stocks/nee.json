@@ -2,7 +2,7 @@
   "slug": "nee",
   "ticker": "NEE",
   "name": "NextEra Energy, Inc.",
-  "lastAnalyzed": "March 2026",
+  "lastAnalyzed": "May 2026",
   "titleColor": "#00827F",
   "headerStats": [
     {
@@ -11,11 +11,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$193B"
+      "value": "~$200B"
     },
     {
       "label": "Price",
-      "value": "~$91"
+      "value": "~$97"
     }
   ],
   "chips": [
@@ -32,15 +32,15 @@
   "metrics": [
     {
       "title": "Renewables Backlog",
-      "value": "30 GW",
+      "value": "33 GW",
       "label": "Record — Solar, Wind & Storage through 2029",
       "icon": "Zap",
       "color": "#00827F"
     },
     {
-      "title": "Adj. EPS Growth",
-      "value": "8%+",
-      "label": "Guided through 2032 and 2035",
+      "title": "Q1 2026 Adj EPS",
+      "value": "$1.09",
+      "label": "Beat $0.94 est; FY guide $3.92–4.02",
       "icon": "TrendingUp",
       "color": "#006E51"
     },
@@ -72,8 +72,8 @@
     ]
   },
   "growth": {
-    "score": 72,
-    "description": "NEE's growth engine is dual-track: FPL compounds at 8-10% EPS annually through regulated rate base expansion in the fastest-growing US state; NEER adds 4-6 GW of new renewable capacity per year under long-term PPAs, now turbocharged by hyperscaler demand. The core risk is that negative FCF (-$12B TTM) means all growth requires continuous, large-scale capital markets access.",
+    "score": 73,
+    "description": "Q1 2026 confirmed the growth engine is intact: adj EPS of $1.09 beat consensus of $0.94 by $0.15, with adjusted earnings up to $2.275B from $2.04B a year ago. The 33 GW renewables backlog (up from 30 GW) and reaffirmed FY guide of $3.92–$4.02 underline 8%+ EPS compounding. Revenue of $6.7B missed top-line expectations but margin and EPS strength offset. The core risk remains negative FCF and reliance on continuous capital markets access.",
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
@@ -109,8 +109,8 @@
     }
   },
   "valuation": {
-    "score": 69,
-    "description": "At ~$91, NEE trades near its 52-week high and close to analyst consensus (~$93-94). The stock is priced for execution: at 23× forward earnings, it carries a 54% premium to the utility sector median (~15×), justified by its superior growth profile but leaving limited margin of safety if either the IRA tax credit regime changes or interest rates spike.",
+    "score": 66,
+    "description": "At ~$97, NEE has rallied to near its 52-week high of $98.75 and now sits ~1% below the base case ($98). The stock is fully priced for execution: at ~24× forward earnings, it carries a meaningful premium to the utility sector median, justified by its superior growth profile but leaving little margin of safety if either the IRA tax credit regime changes or interest rates spike.",
     "valuationNote": {
       "text": "NEE's negative FCF (-$12B TTM from $25B annual capex) makes traditional FCF yield analysis misleading — this is a capital-deployment machine, not a cash-generative compounder. The appropriate valuation lens is regulated rate base multiple (~1.8-2.2× for premium utilities) and dividend yield trajectory (6-10% annual DPS growth guided). At $91, the 3.1% dividend yield is fair but not compelling for a utility with this level of balance sheet leverage ($93B net debt).",
       "fairValue": "$98"

@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$450B"
+      "value": "~$650B"
     },
     {
       "label": "Current Price",
-      "value": "~$400"
+      "value": "~$578"
     }
   ],
   "chips": [
@@ -109,8 +109,8 @@
     }
   },
   "valuation": {
-    "score": 67,
-    "description": "MU has surged from ~$105 to ~$400 since the prior analysis — the stock has already far exceeded the prior bull target of $200. At ~$400, Micron trades at only ~13× FY2026 consensus EPS of ~$32, which looks optically cheap. However, the multiple reflects the known supercycle, and a trough-to-peak EPS swing of 10:1 means that paying 13× peak earnings carries meaningful cyclical downside. The current price sits just below the base target of $420, indicating fair but not discounted entry.",
+    "score": 51,
+    "description": "MU has continued its run from ~$400 to ~$578 since the March analysis, now trading 38% above the base case of $420 and only ~11% below the bull target of $650. Q3 FY2026 guidance was overwhelmingly strong with HBM3E and HBM4 fully sold out for CY2026. At ~$578, Micron trades at ~14× consensus FY2026 EPS revised higher — optically reasonable, but the margin of safety is gone. Most of the supercycle is now in the price.",
     "valuationNote": {
       "text": "At ~$400, Micron trades at ~13× FY2026 consensus EPS of ~$32 — far below software peers at 20–30×, but memory cycles mean peak multiples compress fast when demand softens. If HBM4 delivers a durable margin floor above 50%, the base case of $420 is conservative. The PEG of ~0.5 signals deep growth-adjusted value — but only if the cycle sustains.",
       "fairValue": "~$420"
@@ -222,5 +222,5 @@
     },
     "verdict": "Micron is a net beneficiary of AI in the near term — the HBM4 supercycle is directly driven by AI infrastructure build-out, and talentScarcity and proprietaryData moats are strengthened by AI's demands on specialized chip design. However, the oligopoly structure and commodity memory exposure mean the AI tailwind is cyclical rather than structural: Micron does not own a software layer, a data flywheel, or a network effect that compounds independently of the hardware cycle. The moat is durable only as long as the HBM margin premium holds."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "May 2026"
 }

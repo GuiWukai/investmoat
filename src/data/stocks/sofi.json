@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$24B"
+      "value": "~$20B"
     },
     {
       "label": "Price",
-      "value": "~$19"
+      "value": "~$16"
     }
   ],
   "chips": [
@@ -29,25 +29,25 @@
   "recommendation": "Accumulate",
   "metrics": [
     {
-      "title": "Members",
-      "value": "10M+",
-      "label": "34% YoY Growth (FY2024)",
-      "icon": "Users",
-      "color": "#6366f1"
-    },
-    {
-      "title": "Fee Revenue",
-      "value": "$970M",
-      "label": "+74% YoY — 37% of Total Revenue",
+      "title": "Q1 Revenue",
+      "value": "$1.09B",
+      "label": "+41% YoY (Q1 2026) — Record loan originations $12.2B",
       "icon": "TrendingUp",
       "color": "#22c55e"
     },
     {
-      "title": "Adj. EBITDA Mgn",
-      "value": "27%",
-      "label": "Q4 2024 — Expanding from 16% in '22",
+      "title": "Net Income",
+      "value": "$166.7M",
+      "label": "Q1 2026 — More than 2× YoY ($71.1M)",
       "icon": "BarChart2",
       "color": "#f59e0b"
+    },
+    {
+      "title": "Deposits",
+      "value": "$40.2B",
+      "label": "Q1 2026 — Personal loans +51%, student +119% YoY",
+      "icon": "Users",
+      "color": "#6366f1"
     }
   ],
   "moat": {
@@ -71,11 +71,11 @@
   },
   "growth": {
     "score": 82,
-    "description": "25-35% revenue CAGR with fee-based revenue (now 37% of total) growing at 74% YoY in 2024, diversifying away from interest-rate-sensitive lending toward high-margin platform economics."
+    "description": "Q1 2026 revenue of $1.09B grew 41% YoY with record loan originations of $12.2B, personal loans +51% and student loans +119% YoY. Net income of $166.7M more than doubled YoY. Galileo platform revenue fell 27% on the Chime exit and credit metrics softened, driving a ~9% post-earnings selloff despite the top-line beat. The lending engine remains strong; the fee-based platform business needs new wins to offset Chime."
   },
   "valuation": {
-    "score": 79,
-    "description": "At ~$19 — 27% below the base case of $26 — SoFi offers a meaningful margin of safety on a business compounding revenue at 25-35% with expanding EBITDA margins; CEO Noto bought 56,000 shares in March 2026, signalling insider conviction amid the 40%+ drawdown from the $32.73 ATH.",
+    "score": 84,
+    "description": "At ~$16 — 38% below the base case of $26 and ~30% YTD drawdown — SoFi offers an attractive margin of safety after the post-Q1 selloff. Revenue grew 41% YoY in Q1 2026 and net income more than doubled, but investor concerns over Galileo (Chime exit) and credit quality have compressed the multiple even as fundamentals strengthened.",
     "peAnalysis": {
       "asOf": "March 2026",
       "rows": [
@@ -180,5 +180,5 @@
     },
     "verdict": "SoFi's bank charter (regulatoryLockIn: strong) is a genuine AI-era moat — it cannot be disrupted by a language model — and the Galileo/Technisys infrastructure creates a system-of-record and transaction-embedding position in the B2B fintech stack. However, AI threatens the interface layer and could compress the underwriting advantage as competitors access similar models, keeping the AI resilience score in the solid-but-not-exceptional range."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "May 2026"
 }

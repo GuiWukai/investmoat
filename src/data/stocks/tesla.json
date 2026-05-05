@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$1.43T"
+      "value": "~$1.47T"
     },
     {
       "label": "Price",
-      "value": "~$383"
+      "value": "~$394"
     }
   ],
   "chips": [
@@ -29,23 +29,23 @@
   "recommendation": "Hold",
   "metrics": [
     {
-      "title": "Vehicle Deliveries",
-      "value": "1.636M",
-      "label": "FY2025 — Down 9% YoY | First Annual Volume Decline",
+      "title": "Q1 Deliveries",
+      "value": "358,023",
+      "label": "Q1 2026 — Missed by ~7,600 | 50K+ inventory build",
       "icon": "Car",
       "color": "#cc0000"
     },
     {
-      "title": "Operating Margin",
-      "value": "5.7%",
-      "label": "FY2025 — Q4 20.1% Gross Margin (2-Year High)",
+      "title": "Gross Margin",
+      "value": "21.1%",
+      "label": "Q1 2026 — +478bps YoY | Rev $22.38B, EPS $0.41",
       "icon": "TrendingUp",
       "color": "#f5a524"
     },
     {
-      "title": "Energy Revenue",
-      "value": "$12.7B",
-      "label": "FY2025 +27% YoY — 46.7 GWh Deployed (+49%)",
+      "title": "Capex Plan",
+      "value": "$25B",
+      "label": "FY2026 — Up from $20B prior | Q1 capex +67% YoY",
       "icon": "Cpu",
       "color": "#3b82f6"
     }
@@ -70,8 +70,8 @@
     ]
   },
   "growth": {
-    "score": 78,
-    "description": "FY2025 deliveries fell 9% to 1.636M — Tesla's first annual volume decline — and total revenue of $94.8B also declined. However, Q4 2025 gross margin recovered to 20.1% (a two-year high), suggesting the pricing/cost cycle has turned. Robotaxi launched in Austin on June 22, 2025 (10–20 vehicles, supervised), but California denied the permit in February 2026. Optimus is at 1,000+ prototypes with internal Gigafactory use. Model S/X production discontinued; Fremont capacity repurposed for Optimus manufacturing. $20B+ capex planned for 2026 — the largest single-year investment in Tesla's history.",
+    "score": 76,
+    "description": "Q1 2026 revenue of $22.38B (slightly below $22.64B consensus); EPS of $0.41 beat the $0.37 estimate. Deliveries of 358,023 missed by ~7,600 units, with Tesla building 50,000+ more vehicles than it sold (notable inventory build). Gross margin jumped to 21.1% (+478bps YoY), the bright spot. Capex now guided to $25B for FY2026, $5B above prior — the largest annual investment in Tesla's history, weighted toward Optimus and Robotaxi. Stock down ~14% YTD into the print.",
     "additionalNote": {
       "title": "2026 Growth Catalysts",
       "points": [
@@ -84,10 +84,10 @@
     }
   },
   "valuation": {
-    "score": 65,
-    "description": "At ~$383, Tesla trades just below the updated base case of $380 — at the base, not at a discount. The FY2025 delivery decline and California Robotaxi denial added uncertainty, but Q4 gross margin recovery to 20.1% and energy storage strength support the floor. The stock embeds significant option value on Robotaxi and Optimus that is not yet revenue-generating.",
+    "score": 64,
+    "description": "At ~$394, Tesla trades 4% above the base case of $380 — fair to slightly rich. Q1 2026 delivered an EPS beat on better gross margin but a slight revenue miss and inventory build, while $25B capex guidance (up from $20B) raises near-term FCF concerns. The stock embeds significant option value on Robotaxi and Optimus that is not yet revenue-generating.",
     "valuationNote": {
-      "text": "Sum-of-parts: ~$80 for the auto business at normalized margins, ~$120 for Energy & Services (growing 27%+ annually), and ~$180 option value on Robotaxi/Optimus. At $383 ≈ $380 base case, margin of safety is minimal — Hold existing positions, add size only on pullbacks toward $300 or better.",
+      "text": "Sum-of-parts: ~$80 for the auto business at normalized margins, ~$120 for Energy & Services (growing 27%+ annually), and ~$180 option value on Robotaxi/Optimus. At $394 vs. $380 base case, margin of safety is minimal — Hold existing positions, add size only on pullbacks toward $300 or better.",
       "fairValue": "~$380"
     }
   },
@@ -169,5 +169,5 @@
     },
     "verdict": "Tesla's pivot from auto OEM to autonomous AI platform is the defining investment question of the decade. The FSD data flywheel and Optimus platform are genuinely AI-resilient moats — but the transition requires flawless execution while auto margins are under pressure. The bull case is transformative; the bear case is a very expensive car company."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "May 2026"
 }
