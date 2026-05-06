@@ -2,7 +2,7 @@
   "slug": "anet",
   "ticker": "ANET",
   "name": "Arista Networks",
-  "lastAnalyzed": "March 2026",
+  "lastAnalyzed": "May 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$167B"
+      "value": "$217B"
     },
     {
       "label": "Current Price",
-      "value": "$131.22"
+      "value": "$172.50"
     }
   ],
   "chips": [
@@ -31,8 +31,8 @@
   "metrics": [
     {
       "title": "Revenue",
-      "value": "$9.01B",
-      "label": "+28.6% YoY FY2025; Q1 2026 guide $2.6B; 25% growth guided for 2026",
+      "value": "$2.71B",
+      "label": "Q1 2026 +35.1% YoY; Q2 2026 guide ~$2.8B; full-year tracking ahead of plan",
       "icon": "TrendingUp",
       "color": "#6366f1"
     },
@@ -71,8 +71,8 @@
     ]
   },
   "growth": {
-    "score": 85,
-    "description": "FY2025 delivered $9.01B revenue (+28.6% YoY) with AI networking revenue targeted at $3.25B for 2026 and management guiding 25% full-year growth, underpinned by $4.7B in deferred revenue and an expanding 100K+ GPU cluster deployment cycle.",
+    "score": 87,
+    "description": "Q1 2026 revenue hit $2.71B (+35.1% YoY) — meaningfully above the $2.6B guide — and Q2 is guided to ~$2.8B with non-GAAP operating margin 46–47%; AI networking revenue tracking ahead of the $3.25B 2026 target and consensus EPS estimate now $3.54.",
     "growthAnalysis": {
       "cagrEstimate": "20–25%",
       "scoreDerivation": "Base 80 (15–30% CAGR; FY2026 guided 25%, 2028 target implies ~19% CAGR) + 5 TAM expansion (TAM expanded from $60B to $105B; AI networking 40%+ CAGR sub-segment) + 3 deferred revenue visibility ($4.7B backlog = 52% annual revenue) − 3 customer concentration (Microsoft + Meta ~35% of revenue; hyperscaler capex sentiment risk) = 85",
@@ -99,8 +99,8 @@
     }
   },
   "valuation": {
-    "score": 79,
-    "description": "ANET trades at ~$131 — down 20% from its 52-week high of $164.94 and below the analyst consensus target of $177 — placing the stock at ~38× 2026 forward P/E, more reasonably valued than at any point in the past 18 months with the $4.7B deferred revenue base de-risking the near-term revenue path.",
+    "score": 67,
+    "description": "ANET trades at ~$172.50 — up 33% YTD and back near 52-week highs after the Q1 beat — placing the stock between base ($180) and bull ($260). At ~49× 2026 forward P/E the multiple has re-expanded; the Q1 beat justifies upward estimate revisions but limits near-term margin of safety.",
     "peAnalysis": {
       "asOf": "March 2026",
       "rows": [

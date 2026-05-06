@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$3.9B (CAD)"
+      "value": "~$3.5B (CAD)"
     },
     {
       "label": "Price",
-      "value": "~$27 CAD"
+      "value": "~$24.36 CAD"
     },
     {
       "label": "Mine",
@@ -26,11 +26,11 @@
       "color": "warning"
     },
     {
-      "label": "Speculative Buy",
+      "label": "High-Grade Producer",
       "color": "success"
     }
   ],
-  "recommendation": "Speculative Buy",
+  "recommendation": "Accumulate",
   "metrics": [
     {
       "title": "Gold Grade",
@@ -47,9 +47,9 @@
       "color": "#64748b"
     },
     {
-      "title": "2025 Annual Production",
-      "value": "174k oz AuEq",
-      "label": "Record; 2026E: 190k–225k oz",
+      "title": "Q1 2026 Production",
+      "value": "46,743 oz AuEq",
+      "label": "Ore Processed +37% YoY; 2026 Guidance Reiterated",
       "icon": "Zap",
       "color": "#10b981"
     },
@@ -86,11 +86,11 @@
   },
   "growth": {
     "score": 85,
-    "description": "Stage 3 plant commissioned (Dec 2025); Stage 4 expansion underway targeting 400k+ oz run-rate. 2026 guidance implies 9–29% YoY production growth. Score reflects strong production expansion potential, tempered by capital intensity ($75–80M Stage 4 capex in 2026) and execution dependency in an underground PNG mining context."
+    "description": "Q1 2026 production of 46,743 oz AuEq with ore throughput +37% YoY and strong recoveries (Au 95.1%, Cu 94.0%). 2026 guidance of 190–225k oz reiterated, with H2-weighting as enabler projects (pastefill, fleet expansion, 15.3 MW power upgrade) complete in H1. Stage 4 expansion ~96% spent or committed. Lateral development hit a record 3,007 metres in Q1 — execution remains on track for the 400k+ oz run-rate trajectory."
   },
   "valuation": {
-    "score": 80,
-    "description": "At ~$27 CAD, stock trades well below base case ($38 CAD) given ~$5,000/oz gold prices and ~$1,010/oz AISC delivering ~$3,990/oz margins. Stage 4 execution is the primary re-rating catalyst."
+    "score": 81,
+    "description": "At ~$24.36 CAD, stock trades 36% below the base case ($38 CAD). Gold near $4,591/oz against ~$1,010/oz AISC implies ~$3,580/oz margins on growing production. Analyst consensus target ~$34.75 CAD (~43% upside). Stage 4 execution and Q2 H2-weighted production ramp are the primary re-rating catalysts."
   },
   "scenarios": {
     "bear": {
@@ -191,5 +191,5 @@
       "closing": "Production is expected to be weighted to H2 2026, as key enabler projects (pastefill plant, fleet expansion, power upgrade to 15.3 MW, 60-tonne truck river crossings) complete mostly in H1 2026."
     }
   ],
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "May 2026"
 }

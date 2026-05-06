@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$329B"
+      "value": "$575B"
     },
     {
       "label": "Price",
-      "value": "$204.00"
+      "value": "$356.00"
     }
   ],
   "chips": [
@@ -26,12 +26,12 @@
       "color": "success"
     }
   ],
-  "recommendation": "Accumulate",
+  "recommendation": "Hold",
   "metrics": [
     {
-      "title": "Data Center Rev",
-      "value": "$5.4B",
-      "label": "39% YoY Growth (Q4 2025)",
+      "title": "Q1 2026 EPS",
+      "value": "$1.37",
+      "label": "Beat by 9.6%; +43% YoY from $0.96 — data center momentum continues",
       "icon": "Cpu",
       "color": "#ed1c24"
     },
@@ -70,39 +70,39 @@
     ]
   },
   "growth": {
-    "score": 92,
-    "description": "Q4 2025 revenue hit a record $10.3B (+34% YoY); Data Center at $5.4B (+39%). MI450 and Helios rack-scale systems ramp in 2H 2026; OpenAI selected AMD to build 6 GW of AI compute capacity."
+    "score": 93,
+    "description": "Q1 2026 EPS $1.37 beat consensus by ~10% (+43% YoY); the OpenAI 6 GW compute deal, multi-year Meta partnership, and the MI450/Helios ramp into 2H 2026 are driving consensus upgrades and a 60%+ YTD stock rally."
   },
   "valuation": {
     "score": 70,
-    "description": "At ~$204, trading between bear ($110) and base ($230) — well into the recovery from early-2026 lows. Strong Q4 beat and 2H 2026 MI450 catalyst support the base case; export control headwinds on China revenue remain a near-term overhang."
+    "description": "At ~$356, AMD trades just below the revised base ($390) on the back of the OpenAI 6 GW commitment and Meta multi-year deal — fair-to-modestly-rich entry, with risk/reward improving if 2H 2026 MI450/Helios execution lands as guided."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$110",
-      "description": "MI300X/MI350 adoption stalls, CUDA continues to dominate, and AMD loses server CPU share to ARM-based competitors.",
+      "priceTarget": "$215",
+      "description": "AI capex moderates in 2027, NVIDIA reasserts dominance with Rubin Ultra, and the OpenAI/Meta deals scale back materially.",
       "points": [
-        "ROCm software ecosystem fails to reach critical developer mass vs CUDA's 4M+ community",
-        "Intel 18A process surprise recaptures meaningful server CPU share from EPYC",
-        "AI GPU revenue misses guidance as hyperscalers consolidate on NVIDIA infrastructure"
+        "Hyperscaler AI capex growth decelerates from 40%+ to mid-teens as training-cluster overbuild concerns surface",
+        "Rubin Ultra performance leadership widens vs. MI450, capping AMD's share of new AI GPU spend at <15%",
+        "Intel 18A regains incremental server CPU share, slowing EPYC's compounding"
       ]
     },
     "base": {
-      "priceTarget": "$230",
-      "description": "Continued EPYC share gains in servers and MI300/350 series captures 15-20% of AI GPU TAM as the clear alternative to NVIDIA.",
+      "priceTarget": "$390",
+      "description": "MI450/Helios ramps to volume in 2H 2026, OpenAI 6 GW deal deploys on schedule, and AMD compounds AI GPU share toward 20% of TAM.",
       "points": [
-        "AI GPU revenue reaches $8-10B, with Microsoft and Meta as anchor MI350 customers",
-        "EPYC server market share reaches 35%+ as hyperscalers pursue vendor diversification",
-        "PC recovery lifts Client segment revenue, expanding overall margin profile"
+        "AI GPU revenue reaches $25–30B in FY2026 as OpenAI, Meta, and Microsoft scale MI450 deployments",
+        "EPYC server share crosses 35%, with hyperscaler vendor diversification accelerating",
+        "Operating margin expands to 30%+ as AI mix and software (ROCm) adoption improves pricing"
       ]
     },
     "bull": {
-      "priceTarget": "$320",
-      "description": "AMD becomes the true second-source for global AI infrastructure, with ROCm reaching parity with CUDA for key workloads.",
+      "priceTarget": "$560",
+      "description": "AMD becomes a credible second-source AI standard, capturing 25%+ of AI GPU spend as ROCm reaches functional parity with CUDA for inference and key training workloads.",
       "points": [
-        "MI400 series achieves competitive performance with NVIDIA on transformer training workloads",
-        "Major hyperscaler commits 30%+ of AI infrastructure budget to AMD for vendor diversification",
-        "ROCm achieves critical mass with 500k+ developers, enabling a genuine CUDA alternative"
+        "MI500 roadmap (2027) achieves performance parity with NVIDIA on flagship training workloads",
+        "OpenAI 6 GW commitment scales to 10 GW with multi-year extension, and a second hyperscaler signs a similar deal",
+        "ROCm crosses 1M+ developers and becomes the default open alternative for inference workloads"
       ]
     }
   },
@@ -149,5 +149,5 @@
     },
     "verdict": "AMD's moat is weakening in AI-resilient categories vs. NVIDIA. Execution quality is world-class, but CUDA's network effect remains the dominant barrier — AMD's upside is a CUDA challenger, not a CUDA replacer."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "May 2026"
 }

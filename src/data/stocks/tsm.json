@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$1.81T"
+      "value": "~$2.06T"
     },
     {
       "label": "Current Price",
-      "value": "$348.70"
+      "value": "$401.71"
     }
   ],
   "chips": [
@@ -30,16 +30,16 @@
   "recommendation": "Strong Buy",
   "metrics": [
     {
-      "title": "Revenue",
-      "value": "$122B",
-      "label": "~36% YoY Growth (FY2025)",
+      "title": "Q1 2026 Revenue",
+      "value": "$35.9B",
+      "label": "+40.6% YoY; FY2026 guide raised to 30%+",
       "icon": "TrendingUp",
       "color": "#0071c5"
     },
     {
-      "title": "Gross Margin",
-      "value": "62.3%",
-      "label": "Record Q4 2025, Expanding",
+      "title": "Q2 2026 GM Guide",
+      "value": "65.5–67.5%",
+      "label": "Record-trajectory; 3nm reaches corp avg H2 2026",
       "icon": "Zap",
       "color": "#3b82f6"
     },
@@ -71,8 +71,8 @@
     ]
   },
   "growth": {
-    "score": 85,
-    "description": "FY2025 revenue hit $122B (+35.9% YoY) with a record 62.3% gross margin in Q4. Management guides 25% USD revenue CAGR through 2029, with AI accelerator revenue growing at 54–56% CAGR from 2024–2029. N2 entered high-volume manufacturing in Q4 2025; CoWoS advanced packaging capacity expanding 69% in 2026 to meet a persistent supply shortfall.",
+    "score": 87,
+    "description": "Q1 2026 delivered record revenue of $35.9B (+40.6% YoY) with net income +58.3% YoY; Q2 2026 guidance points to $39.0–40.2B revenue (+10% QoQ) and gross margin of 65.5–67.5%. Management raised FY2026 outlook to 30%+ revenue growth and reaffirmed 25% USD CAGR through 2029, with AI accelerator revenue still tracking 54–56% CAGR. N2 in HVM with strong yield; CoWoS capacity expanding 69% in 2026 against a persistent supply shortfall.",
     "additionalNote": {
       "title": "AI Chip Tailwinds",
       "points": [
@@ -84,7 +84,7 @@
     },
     "growthAnalysis": {
       "cagrEstimate": "25–30%",
-      "scoreDerivation": "Base 80 (25–30% CAGR) + 5 TAM expansion (AI accelerator at 54–56% CAGR, sovereign AI buildout) + 3 customer visibility (multi-year AI backlog, CoWoS demand 3yr+) − 3 N2/overseas fab dilution (2–4% GM headwind from ramp) = 85",
+      "scoreDerivation": "Base 82 (FY2026 raised to 30%+) + 5 TAM expansion (AI accelerator at 54–56% CAGR, sovereign AI buildout) + 3 customer visibility (multi-year AI backlog, CoWoS demand 3yr+) − 3 N2/overseas fab dilution (2–4% GM headwind from ramp) = 87",
       "drivers": [
         {
           "name": "AI Accelerators / CoWoS",
@@ -108,14 +108,14 @@
     }
   },
   "valuation": {
-    "score": 72,
-    "description": "At $348.70 — roughly 13% below the base case of $400 — TSMC offers modest upside to fair value with significant optionality to the bull case. The prior bull target of $280 was decisively exceeded on the back of record FY2025 earnings and upward CAGR guidance revisions. Scenarios have been reset from current price levels.",
+    "score": 65,
+    "description": "At $401.71 — essentially at the base case of $400 — TSMC is fairly valued with meaningful optionality to the bull case ($560). Q1 2026's record results and a raised FY2026 outlook (30%+ revenue growth) have lifted the stock right onto fair value; further re-rating now requires the bull case to play out (sovereign AI demand and A16 wins).",
     "valuationNote": {
       "text": "Base-case fair value of ~$400 reflects ~30x forward 2026E EPS — reasonable for a monopoly franchise guiding 25% revenue CAGR through 2029. The geopolitical discount remains (US tariff risks, Taiwan cross-strait tensions), but TSMC's $165B US investment commitment and Japanese fab buildout are actively reducing the structural basis for that discount.",
       "fairValue": "~$400"
     },
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "May 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
@@ -221,5 +221,5 @@
     },
     "verdict": "TSMC is a direct and primary beneficiary of the AI era — every frontier AI model requires more TSMC-made chips, and the AI boom has structurally deepened the design ecosystem network effects. The AI-resilient moats (proprietary process data, regulatory lock-in from CHIPS Act and allied government partnerships, customer PDK embedding) are all intact or strengthening. The primary risk is geopolitical, not competitive: Taiwan cross-strait tensions and US tariff policy are the only plausible paths to moat disruption, and TSMC's $165B US investment commitment is actively reducing that structural risk."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "May 2026"
 }

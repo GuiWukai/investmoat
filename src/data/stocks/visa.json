@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$550B"
+      "value": "$640B"
     },
     {
       "label": "Price",
-      "value": "$282.10"
+      "value": "$331.51"
     }
   ],
   "chips": [
@@ -26,19 +26,19 @@
       "color": "success"
     }
   ],
-  "recommendation": "Strong Buy",
+  "recommendation": "Accumulate",
   "metrics": [
     {
-      "title": "Payment Volume",
-      "value": "$15.1T",
-      "label": "Trailing 12 Months",
+      "title": "Q2 FY2026 Revenue",
+      "value": "$11.2B",
+      "label": "+17% YoY — strongest growth since 2013 ex-COVID",
       "icon": "DollarSign",
       "color": "#1a1f71"
     },
     {
-      "title": "Operating Margin",
-      "value": "67.2%",
-      "label": "Incredible Scalability",
+      "title": "Q2 FY2026 EPS",
+      "value": "$3.31",
+      "label": "Non-GAAP +20% YoY; $20B new buyback authorized",
       "icon": "Zap",
       "color": "#f7b600"
     },
@@ -70,14 +70,14 @@
     ]
   },
   "growth": {
-    "score": 82,
-    "description": "Ongoing shift from cash to digital and expansion into B2B payments."
+    "score": 84,
+    "description": "Q2 FY2026 (Apr-2026 print) delivered $11.2B revenue (+17% YoY), the strongest top-line growth since 2013 excluding the post-pandemic recovery, with non-GAAP EPS up 20% to $3.31 on broad-based volume gains. Cross-border volume continues to outpace domestic payment volume, and a fresh $20B buyback authorization underscores capital-return durability. Ongoing shift from cash to digital and expansion into B2B payments via Visa Direct remain the principal multi-year drivers."
   },
   "valuation": {
-    "score": 71,
-    "description": "Trading between bear ($245) and base ($335) — consistent 10-12% EPS compounder at 28x forward P/E; modest discount to intrinsic value with cross-border volume as the key upside lever.",
+    "score": 66,
+    "description": "Trading at $331.51 — essentially at the base case ($335) following the post-Q2 FY2026 earnings rally — Visa is now fairly valued. The 17% revenue growth print expanded the multiple, and further upside requires the bull case (Visa Direct B2B scale, AI-driven fraud expansion) to materialise. Consistent 12-15% EPS compounder; cross-border volume remains the swing factor.",
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "May 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
@@ -178,5 +178,5 @@
     },
     "verdict": "Visa is among the most AI-resilient companies in the portfolio. Their moat lives entirely in AI-resistant categories: network effects, transaction embedding, and regulatory infrastructure that took decades to build."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "May 2026"
 }

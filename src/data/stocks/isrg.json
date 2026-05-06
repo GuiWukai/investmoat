@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$184B"
+      "value": "~$162B"
     },
     {
       "label": "Price",
-      "value": "$526.00"
+      "value": "~$452"
     }
   ],
   "chips": [
@@ -26,26 +26,26 @@
       "color": "success"
     }
   ],
-  "recommendation": "Accumulate",
+  "recommendation": "Strong Buy",
   "metrics": [
     {
-      "title": "Installed Base",
-      "value": "~11,000+",
-      "label": "da Vinci Systems Worldwide (1,721 Placed FY2025)",
+      "title": "Q1 2026 Revenue",
+      "value": "$2.77B",
+      "label": "+23% YoY — Beat Street by 6%",
       "icon": "Cpu",
       "color": "#009688"
     },
     {
-      "title": "Revenue",
-      "value": "$10.1B",
-      "label": "FY2025 — +21% YoY Growth",
+      "title": "Q1 da Vinci Procedures",
+      "value": "~847,000",
+      "label": "+16% YoY; Ion Procedures +39% to ~43,000",
       "icon": "TrendingUp",
       "color": "#00796b"
     },
     {
-      "title": "da Vinci 5",
-      "value": "870",
-      "label": "dV5 Placements in FY2025 (303 in Q4)",
+      "title": "Q1 Operating Income",
+      "value": "$1.08B",
+      "label": "+40% YoY — Margin Expansion Despite dV5 Mix",
       "icon": "Database",
       "color": "#4db6ac"
     }
@@ -74,12 +74,12 @@
     ]
   },
   "growth": {
-    "score": 82,
-    "description": "FY2025 revenue hit $10.1B (+21% YoY) as combined da Vinci and Ion procedures grew 18% in Q4. Intuitive placed 1,721 da Vinci systems in 2025 (870 dV5), with dV5 now the dominant new placement. 2026 guidance of 13–15% procedure growth was viewed as conservative by analysts (UBS has $740 target). Margin headwinds from dV5 product mix are temporary; Ion procedures grew 44% in Q4, establishing a second growth platform."
+    "score": 84,
+    "description": "Q1 2026 revenue of $2.77B grew 23% YoY (beating consensus by 6%), with da Vinci procedures +16% to ~847k and Ion procedures +39% to ~43k. Operating income jumped 40% to $1.08B as margin expansion arrived faster than feared. Management raised 2026 procedure guidance after the print, and the analyst mean target sits at $577 (above current ~$452). dV5 placement momentum and Ion's pulmonology platform underwrite multi-year double-digit growth."
   },
   "valuation": {
-    "score": 64,
-    "description": "At ~$526, trading fractionally above the base case ($520) at ~59x trailing adjusted EPS of $8.93 — in line with the five-year average of 60x. The stock dipped post-earnings on 2026 guidance below expectations, creating a minor pullback opportunity. Bear ($280) reflects multiple compression on competitive disruption; base ($520) is fair value at normalized multiples."
+    "score": 72,
+    "description": "At ~$452, ISRG trades 13% below the base case ($520) — the stock has pulled back despite the Q1 2026 beat as the broader medtech complex de-rated. Analyst mean target $577 implies ~26% upside; targets range $532–$651. Bear ($280) reflects multiple compression on competitive disruption; base ($520) is fair value at normalized multiples — current level offers a discount with the moat compounding."
   },
   "scenarios": {
     "bear": {
@@ -156,5 +156,5 @@
     },
     "verdict": "AI is a net tailwind for Intuitive Surgical. Unlike software companies where AI threatens to commoditize the product, AI strengthens Intuitive's moat by adding guided surgery intelligence on top of the installed base — creating a new monetization layer without displacing the physical lock-in. The primary competitive risk is not AI but well-funded platform challengers (Medtronic, J&J) in the next 5-10 years."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "May 2026"
 }

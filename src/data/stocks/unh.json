@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$265B"
+      "value": "~$340B"
     },
     {
       "label": "Price",
-      "value": "~$285"
+      "value": "~$370"
     }
   ],
   "chips": [
@@ -36,23 +36,23 @@
     {
       "title": "FY2025 Revenue",
       "value": "$447.6B",
-      "label": "2026 guidance: >$439B — first revenue decline in a decade",
-      "icon": "TrendingDown",
-      "color": "#dc2626"
+      "label": "2026 guidance: >$439B; Q1 2026 beat drove +34% rally",
+      "icon": "TrendingUp",
+      "color": "#16a34a"
     },
     {
       "title": "Forward P/E",
-      "value": "~10x",
-      "label": "vs. 5-year avg of 17x — cheap, but earnings declining",
+      "value": "~13x",
+      "label": "Recovery from ~10x trough; Goldman target $435",
       "icon": "BarChart",
       "color": "#d97706"
     },
     {
       "title": "DOJ Investigation",
-      "value": "Criminal",
-      "label": "Expanding to Optum Rx — former employees being interviewed",
+      "value": "Active",
+      "label": "Criminal + civil probes ongoing; Q1 beat reduced the discount",
       "icon": "Shield",
-      "color": "#dc2626"
+      "color": "#d97706"
     }
   ],
   "moat": {
@@ -75,8 +75,8 @@
     ]
   },
   "growth": {
-    "score": 52,
-    "description": "UNH's 2026 revenue guidance of >$439B represents the first annual revenue decline in over a decade, down from $447.6B in FY2025, driven by Medicare Advantage member losses, Optum Health restructuring, and DOJ-related uncertainty. Long-term demographic tailwinds (70M baby boomers) remain, but the 3-5 year CAGR has reset to low-single digits until the DOJ investigation resolves and Medicare Advantage margins normalize.",
+    "score": 55,
+    "description": "UNH's 2026 revenue guidance of >$439B still represents the first annual revenue decline in over a decade, but a Q1 2026 earnings beat surprised the market and drove the stock up ~34% over the past month. Medicare Advantage member losses and Optum Health restructuring continue to weigh on near-term growth, while long-term demographic tailwinds (70M baby boomers) remain. Goldman Sachs added UNH to its Conviction List with a $435 target. 3-5 year CAGR remains low-single digits until DOJ resolution and MA margins fully normalize.",
     "growthAnalysis": {
       "cagrEstimate": "2–5%",
       "scoreDerivation": "Base 40 (below 4% near-term CAGR due to 2026 revenue decline) + 5 recurring premium base + 5 Optum Analytics TAM − 5 Optum Health restructuring drag − 3 DOJ overhang on MA contracting = 42, rounded to 52 reflecting long-term demographic tailwind floor",
@@ -103,10 +103,10 @@
     }
   },
   "valuation": {
-    "score": 78,
-    "description": "At ~$285 — a 55% collapse from the $630 peak — UNH trades at ~10x forward P/E. However, the cheapness is partially illusory: 2026 earnings are declining and forward EPS estimates keep falling as the DOJ probe expands. The stock sits between bear ($200) and base ($380), implying a fair risk/reward but not a compelling entry given the binary DOJ outcome still unresolved.",
+    "score": 66,
+    "description": "At ~$370 — having rallied ~30% off the March lows on a Q1 2026 earnings beat — UNH now trades essentially at the base case ($380). The deep-value setup has largely closed: forward P/E has expanded toward ~13×, and Goldman's $435 target reflects renewed confidence in margin recovery. The DOJ criminal+civil investigation remains a binary overhang, so while the trajectory has improved, the asymmetric risk/reward of three months ago is gone.",
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "May 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
@@ -209,5 +209,5 @@
     },
     "verdict": "UnitedHealth remains an AI beneficiary through Optum's data flywheel — the 140M-member claims database is irreplaceable training data for clinical AI models. However, the DOJ criminal investigation has weakened the regulatory lock-in moat tier, reducing AI resilience from 93 to 86. The most AI-durable moats (proprietary data, network effects, transaction embedding, system of record) remain intact. The key structural risk is not AI disruption but regulatory-imposed constraints on Medicare Advantage coding practices, which could structurally impair profitability regardless of AI strength."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "May 2026"
 }
