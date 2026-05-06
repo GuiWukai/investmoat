@@ -75,7 +75,20 @@
   },
   "growth": {
     "score": 79,
-    "description": "Q2 FY2026 delivered $111.2B revenue (+17% YoY), iPhone +22%, Services a record $30.98B, and gross margin 49.3% — the iPhone 17 supercycle continues at a faster clip than guided, with management raising the FY2026 outlook on the print."
+    "description": "Q2 FY2026 delivered $111.2B revenue (+17% YoY), iPhone +22%, Services a record $30.98B, and gross margin 49.3% — the iPhone 17 supercycle continues at a faster clip than guided, with management raising the FY2026 outlook on the print.",
+    "growthAnalysis": {
+      "cagrEstimate": "7-10%",
+      "scoreDerivation": "Base 70 (7-10% CAGR mid-band) + 6 iPhone 17 supercycle re-acceleration + 5 Services compounding + 3 record gross margin - 5 regulatory/tariff overhang = 79",
+      "drivers": [
+        { "name": "iPhone Cycle", "metric": "$56.99B Q2 FY26 (+22% YoY) — March-quarter record on iPhone 17 demand", "trend": "accelerating" },
+        { "name": "Services Revenue", "metric": "$30.98B Q2 FY26 (+16% YoY) at 76%+ gross margin — all-time high", "trend": "stable" },
+        { "name": "Installed Base / Buybacks", "metric": "2.5B+ active devices; new $100B buyback authorization mechanically lifts EPS 3-4% per year", "trend": "stable" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If iPhone 17/Apple Intelligence fails to drive a sustained multi-year supercycle through FY2027 and DMA-style App Store regulation spreads to the US, Services growth decelerates below 10% while iPhone normalizes to 215-225M units — collapsing the dual-engine narrative the multiple is priced for.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
     "score": 67,

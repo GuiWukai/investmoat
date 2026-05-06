@@ -73,6 +73,19 @@
   "growth": {
     "score": 76,
     "description": "Q1 2026 delivered solid results: revenue +8.1% to $2.08B with both MIS and MA growing 8%, adj EPS +13% to $4.33 (beating consensus by 2.6%), and adj operating margin expanded 150bps to 53.2%. Growth has moderated from 2025's record pace as the debt issuance comparison base normalises, but the recurring quality of MA and durability of the duopoly remain intact. Full-year 2026 EPS guidance of $16.40–$17.00 was maintained.",
+    "growthAnalysis": {
+      "cagrEstimate": "8-12%",
+      "scoreDerivation": "Base 70 + duopoly pricing power (+4) + MA recurring revenue mix (+4) + private credit TAM expansion (+2) - cyclical issuance comp (-4) = 76",
+      "drivers": [
+        { "name": "MIS Ratings", "metric": "Q1 2026 MIS revenue +8% YoY on refinancing wave", "trend": "decelerating" },
+        { "name": "Moody's Analytics", "metric": "MA revenue +8% YoY, 96% recurring", "trend": "stable" },
+        { "name": "Adj Operating Margin", "metric": "53.2% in Q1 2026, +150bps YoY", "trend": "accelerating" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "Corporate debt issuance freeze in a 2026-2027 recession could compress MIS revenue 30%+ as in 2008-2009.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "expanding"
+    },
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [

@@ -71,7 +71,20 @@
   },
   "growth": {
     "score": 88,
-    "description": "Q4 2025 US Commercial revenue +137% YoY (re-acceleration from +54% earlier in the year). Wedbush flags 'unprecedented demand' for AIP. Wall St Q1 2026 consensus: $1.54B (+74% YoY) — reports May 4."
+    "description": "Q4 2025 US Commercial revenue +137% YoY (re-acceleration from +54% earlier in the year). Wedbush flags 'unprecedented demand' for AIP. Wall St Q1 2026 consensus: $1.54B (+74% YoY) — reports May 4.",
+    "growthAnalysis": {
+      "cagrEstimate": "32-42%",
+      "scoreDerivation": "Base 88 (32-42% CAGR mid-band) + 6 Q1 2026 +85% YoY beat and US commercial +133% + 4 raised FY26 guide to +71% + 3 Rule-of-40 above 80 - 13 premium-multiple compression risk = 88",
+      "drivers": [
+        { "name": "US Commercial / AIP", "metric": "Q1 2026 US commercial revenue $595M (+133% YoY, +18% QoQ); 1,007 commercial customers (+31% YoY); 139 US commercial deals over $1M", "trend": "accelerating" },
+        { "name": "Total Revenue Growth", "metric": "Q1 2026 revenue $1.63B (+85% YoY) vs $1.54B consensus; FY26 guide raised to $7.65-7.66B (+71% YoY)", "trend": "accelerating" },
+        { "name": "Government / Defense", "metric": "DoD AI mission-critical pipeline >$1B backlog; Maven, TITAN, NATO/Five Eyes expansion sustaining 30%+ growth", "trend": "stable" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "Palantir trades at one of the richest software multiples ever (>70x revenue). If US commercial growth decelerates from 130%+ toward 60% by late 2026 as AIP boot-camp pipeline matures and Microsoft Fabric/Databricks close the ontology gap, the multiple could compress 40-50% even on continued execution — a valuation-driven drawdown rather than a fundamentals failure.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
     "score": 69,

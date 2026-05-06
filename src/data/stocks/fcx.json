@@ -75,7 +75,20 @@
   },
   "growth": {
     "score": 70,
-    "description": "Q1 2026 beat on price strength: revenue $6.23B and adjusted EPS $0.57 cleared consensus by 21%, with EBITDA of $2.47B (+24% vs. estimate). Grasberg Block Cave restart is slower than originally planned — 2026 sales guidance revised down to 3.1B lbs copper / 650k oz gold, with ~65% of capacity by H2 2026 and ~80% by mid-2027. Indonesia signed an MoU for life-of-resource extension of PT Freeport Indonesia rights — a strong positive on long-term reserves."
+    "description": "Q1 2026 beat on price strength: revenue $6.23B and adjusted EPS $0.57 cleared consensus by 21%, with EBITDA of $2.47B (+24% vs. estimate). Grasberg Block Cave restart is slower than originally planned — 2026 sales guidance revised down to 3.1B lbs copper / 650k oz gold, with ~65% of capacity by H2 2026 and ~80% by mid-2027. Indonesia signed an MoU for life-of-resource extension of PT Freeport Indonesia rights — a strong positive on long-term reserves.",
+    "growthAnalysis": {
+      "cagrEstimate": "9-13%",
+      "scoreDerivation": "Base 60 + 8 (copper electrification/AI demand structural deficit) + 5 (Grasberg recovery to 1.6B lbs/yr by 2027-2029) + 2 (Indonesia life-of-resource MoU de-risks long-term reserves) - 5 (Grasberg phased ramp delayed; 2026 guidance cut) = 70",
+      "drivers": [
+        { "name": "Copper price", "metric": "Q1 2026 realized strength drove 21% adj EPS beat; structural demand from EVs, grid, AI data centers", "trend": "accelerating" },
+        { "name": "Grasberg production ramp", "metric": "2026 ~65% capacity H2, ~80% mid-2027; recovery to 1.6B lbs/yr 2027-2029", "trend": "decelerating" },
+        { "name": "Reserve longevity", "metric": "PT Freeport Indonesia life-of-resource MoU extends 30+ year mine life", "trend": "stable" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "Grasberg block-cave geomechanical setbacks or further mudslide events delay full ramp into late 2027+, combined with China property weakness pulling copper to $3.50/lb — would compress 2026-2027 EBITDA by 30-40%.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "stable"
+    }
   },
   "valuation": {
     "score": 67,

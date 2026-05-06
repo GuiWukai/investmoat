@@ -71,7 +71,20 @@
   },
   "growth": {
     "score": 84,
-    "description": "Q2 FY2026 (Apr-2026 print) delivered $11.2B revenue (+17% YoY), the strongest top-line growth since 2013 excluding the post-pandemic recovery, with non-GAAP EPS up 20% to $3.31 on broad-based volume gains. Cross-border volume continues to outpace domestic payment volume, and a fresh $20B buyback authorization underscores capital-return durability. Ongoing shift from cash to digital and expansion into B2B payments via Visa Direct remain the principal multi-year drivers."
+    "description": "Q2 FY2026 (Apr-2026 print) delivered $11.2B revenue (+17% YoY), the strongest top-line growth since 2013 excluding the post-pandemic recovery, with non-GAAP EPS up 20% to $3.31 on broad-based volume gains. Cross-border volume continues to outpace domestic payment volume, and a fresh $20B buyback authorization underscores capital-return durability. Ongoing shift from cash to digital and expansion into B2B payments via Visa Direct remain the principal multi-year drivers.",
+    "growthAnalysis": {
+      "cagrEstimate": "10-13%",
+      "scoreDerivation": "Base 74 + duopoly network effects (+5) + cross-border acceleration (+4) + Visa Direct B2B optionality (+3) - regulatory/antitrust overhang (-2) = 84",
+      "drivers": [
+        { "name": "Payment Volume", "metric": "Q2 FY26 payments volume +9% YoY constant FX", "trend": "stable" },
+        { "name": "Cross-Border Volume", "metric": "Q2 FY26 cross-border +13% YoY (ex-intra-EU)", "trend": "accelerating" },
+        { "name": "Value-Added Services", "metric": "VAS revenue +22% YoY in Q2 FY26", "trend": "accelerating" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "CFPB / DOJ antitrust action or EU interchange caps over the next 12-24 months could compress network economics.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "stable"
+    }
   },
   "valuation": {
     "score": 66,

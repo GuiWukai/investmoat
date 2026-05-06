@@ -71,7 +71,20 @@
   },
   "growth": {
     "score": 83,
-    "description": "Q1 FY26 revenue +12% YoY ($6.4B, beat). AI-first ARR more than tripled YoY; Firefly ended quarter at ~$250M ARR with generative-credit consumption +45% QoQ — AI monetization is now visibly working, not just pitched."
+    "description": "Q1 FY26 revenue +12% YoY ($6.4B, beat). AI-first ARR more than tripled YoY; Firefly ended quarter at ~$250M ARR with generative-credit consumption +45% QoQ — AI monetization is now visibly working, not just pitched.",
+    "growthAnalysis": {
+      "cagrEstimate": "9-12%",
+      "scoreDerivation": "Base 73 (9-12% CAGR mid-band) + 7 AI-first ARR tripling + 5 Firefly Enterprise +50% new-logo growth + 3 expanding non-GAAP margin - 5 AI-native displacement risk = 83",
+      "drivers": [
+        { "name": "Digital Media ARR", "metric": "Q1 FY26 revenue $6.40B (+11% YoY); Digital Media segment +12% YoY with ARR re-acceleration", "trend": "accelerating" },
+        { "name": "Firefly / AI-First Apps", "metric": "Firefly ARR ~$250M; AI-first ARR >3x YoY; Firefly Enterprise new customer acquisition +50% YoY", "trend": "accelerating" },
+        { "name": "Creative Freemium Funnel", "metric": "Creative freemium MAU crossed 80M (+50% YoY) across Express, Photoshop web/mobile, Lightroom, Premiere", "trend": "accelerating" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If Figma's IPO-fueled enterprise expansion, Canva AI, and OS-native generative tools (Apple Intelligence, Google Imagen, Microsoft Copilot Designer) compress Creative Cloud net-revenue retention below 105% through FY2027, the AI-monetization re-acceleration story breaks and the multiple compresses further toward legacy-software peers.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
     "score": 79,

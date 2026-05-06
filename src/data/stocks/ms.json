@@ -73,6 +73,19 @@
   "growth": {
     "score": 70,
     "description": "Q1 2026 was a record quarter: revenue $20.6B (+16% YoY), EPS $3.43 (+32%), ROTCE 27.1%. Wealth Management revenue $8.5B (record) at 30.4% pre-tax margin with $118B of NNA. The wealth flywheel is firing — net new assets at this pace add ~$400B+ of AUM annually, generating durable fee growth even before market appreciation.",
+    "growthAnalysis": {
+      "cagrEstimate": "7-10%",
+      "scoreDerivation": "Base 65 + 8 for record Wealth quarter and 27% ROTCE + 4 for $400B+ annualized NNA flywheel - 7 for ISG cyclicality off peaks = 70",
+      "drivers": [
+        { "name": "Wealth Management", "metric": "WM revenue record $8.5B; $118B NNA in quarter (~$400B+ annualized)", "trend": "accelerating" },
+        { "name": "Investment Banking & Markets", "metric": "Q1 2026 revenue +16% YoY to $20.6B with ISG strength", "trend": "accelerating" },
+        { "name": "Investment Management alternatives", "metric": "Private credit and alts AUM scaling via Eaton Vance/Parametric", "trend": "stable" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "Equity market drawdown in 2026-2027 compresses fee-based AUM while M&A freeze cuts ISG revenue 25-30%, pushing 2027 EPS to ~$10-11.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "expanding"
+    },
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [

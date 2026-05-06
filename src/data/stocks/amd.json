@@ -71,7 +71,20 @@
   },
   "growth": {
     "score": 93,
-    "description": "Q1 2026 EPS $1.37 beat consensus by ~10% (+43% YoY); the OpenAI 6 GW compute deal, multi-year Meta partnership, and the MI450/Helios ramp into 2H 2026 are driving consensus upgrades and a 60%+ YTD stock rally."
+    "description": "Q1 2026 EPS $1.37 beat consensus by ~10% (+43% YoY); the OpenAI 6 GW compute deal, multi-year Meta partnership, and the MI450/Helios ramp into 2H 2026 are driving consensus upgrades and a 60%+ YTD stock rally.",
+    "growthAnalysis": {
+      "cagrEstimate": "28-38%",
+      "scoreDerivation": "Base 88 (28-38% CAGR mid-band) + 6 Q2 guide implying +46% YoY + 5 Data Center +57% YoY and OpenAI/Meta deals + 3 expanding gross margin - 9 NVIDIA Rubin Ultra competitive overhang = 93",
+      "drivers": [
+        { "name": "Data Center / Instinct GPUs", "metric": "Q1 2026 Data Center revenue $5.8B (+57% YoY); MI450 + Helios volume ramp 2H 2026; OpenAI 6 GW commitment", "trend": "accelerating" },
+        { "name": "EPYC Server CPUs", "metric": "Server share compounding past 35% as hyperscalers diversify; embedded in Data Center segment alongside GPUs", "trend": "accelerating" },
+        { "name": "Client / Ryzen", "metric": "Ryzen retail share ~46% in Q4; consumer client revenue stable with AI-PC mix lift", "trend": "stable" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If NVIDIA's Rubin Ultra widens the performance gap on flagship training workloads through 2027 and ROCm fails to close the developer-ecosystem gap to CUDA, AMD's AI GPU share stalls below 15% of TAM and the 28-38% CAGR collapses toward 15-20% — invalidating the consensus upgrade cycle priced in after the OpenAI deal.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
     "score": 70,

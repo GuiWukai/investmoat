@@ -58,6 +58,19 @@
   "growth": {
     "score": 78,
     "description": "Vistra issued 2026 adj. EBITDA guidance of $6.8B–$7.6B (midpoint $7.2B, +22%–29% YoY from FY2025's record $5.9B) with adj. FCF before growth of $3.9B–$4.7B (midpoint $4.3B, yield ~8% at current price); the Meta nuclear PPA begins revenue delivery in late 2026, the Amazon Comanche Peak PPA ramps from Q4 2027 through 2032, and the pending Cogentrix acquisition ($4B, ~5,500 MW) is expected to add $0.9B+ incremental EBITDA — supporting a 15–18% EBITDA CAGR through 2028.",
+    "growthAnalysis": {
+      "cagrEstimate": "8-13%",
+      "scoreDerivation": "Base 65 + 10 (2026 EBITDA guide +22-29% YoY and 3.8 GW of contracted nuclear PPAs) + 5 (Cogentrix accretion and ERCOT scarcity tailwind) - 2 (leverage and hedge-loss optical noise) = 78",
+      "drivers": [
+        { "name": "Hyperscaler Nuclear PPA Ramp", "metric": "Meta 2,609 MW (deliveries late 2026) + Amazon 1,200 MW (Q4 2027) at premium contracted pricing", "trend": "accelerating" },
+        { "name": "Cogentrix Accretion", "metric": "~5,500 MW closing mid-2026 at ~$730/kW; $0.9B+ incremental EBITDA", "trend": "accelerating" },
+        { "name": "ERCOT Demand Growth", "metric": "50+ GW potential data center load through 2030; 2026 EBITDA midpoint $7.2B (+22-29%)", "trend": "accelerating" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "ERCOT renewable overbuild compresses scarcity pricing while Cogentrix integration absorbs unexpected capex; combined with sustained 5%+ rates, leverage above 4x could crowd out buybacks within 12-18 months.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "expanding"
+    },
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [

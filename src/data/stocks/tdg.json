@@ -73,6 +73,19 @@
   "growth": {
     "score": 80,
     "description": "Q2 FY2026 revenue grew 18.3% YoY to $2.544B with adj EPS of $9.85 (vs $9.53 consensus) and EBITDA-as-defined of $1.337B (52.6% margin). Management raised FY2026 guidance: revenue $10.3-10.4B (from $9.94B), adj EPS $38.83-$40.21. The Jet Parts Engineering and Victor Sierra Aviation acquisitions (~$2.2B combined) closed and are integrating, adding ~$280M in annualized revenue. The acquisition compounding engine continues to deliver.",
+    "growthAnalysis": {
+      "cagrEstimate": "12-18%",
+      "scoreDerivation": "Base 70 + 10 (raised FY2026 guide and 18.3% organic+M&A growth) + 5 (NATO defense ramp and aftermarket pricing) - 5 (leverage and rate sensitivity) = 80",
+      "drivers": [
+        { "name": "Aftermarket Price Escalation", "metric": "5-8% annual price increases on ~85% sole-source parts", "trend": "stable" },
+        { "name": "M&A Compounding", "metric": "Jet Parts Engineering + Victor Sierra add ~$280M annualized revenue; FY2026 guide raised to $10.3-10.4B", "trend": "accelerating" },
+        { "name": "Defense & MRO Demand", "metric": "Q2 FY2026 revenue +18.3% YoY; EBITDA margin 52.6% (+ ~100bps)", "trend": "accelerating" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "Sustained high interest rates lifting interest expense above $1.5B and a cyclical air-travel shock would simultaneously compress FCF and slow MRO volumes within 12-24 months.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "expanding"
+    },
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [

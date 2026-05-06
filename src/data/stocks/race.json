@@ -73,6 +73,19 @@
   "growth": {
     "score": 67,
     "description": "Q1 FY2026 revenue €1.85B (+3% reported, +6% constant currency) with EBITDA €722M (39.1% margin) and EBIT €548M (29.7%). Adj EPS $2.73 beat consensus by ~1%. FY2026 guidance reaffirmed: €7.5B revenue, adj EBITDA ≥€2.93B (≥39%), adj EPS ≥€9.45. Ferrari noted negative currency headwinds, higher D&A, and brand and racing investments. The Ferrari Luce EV will be fully unveiled in 2026 — the first full-electric model, expected to command €350,000+. Hybrid models now exceed 60% of deliveries.",
+    "growthAnalysis": {
+      "cagrEstimate": "5-9%",
+      "scoreDerivation": "Base 60 + 10 (pricing power and Tailor Made mix) + 5 (Purosangue/EV launches) - 8 (FX and US tariff overhang capping volume upside) = 67",
+      "drivers": [
+        { "name": "Personalization & Mix", "metric": "Tailor Made >20% of revenue on flagships, growing faster than base ASP", "trend": "accelerating" },
+        { "name": "Price/Mix Pricing Power", "metric": "Q1 FY2026 revenue +6% cc on roughly flat volumes; FY2026 guide €7.5B", "trend": "stable" },
+        { "name": "Electrification Premium", "metric": "Ferrari Luce EV unveil 2026 at €350,000+ base price", "trend": "accelerating" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "US tariffs (28.8% of sales) and FX headwinds compress 2026-2027 reported growth; cyclical luxury demand in China and Middle East could slow waitlist conversion over 12-24 months.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "stable"
+    },
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
