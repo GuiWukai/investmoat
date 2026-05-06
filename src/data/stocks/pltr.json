@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$345B"
+      "value": "$325B"
     },
     {
       "label": "Current Price",
-      "value": "$144.07"
+      "value": "$135.91"
     }
   ],
   "chips": [
@@ -26,27 +26,27 @@
       "color": "success"
     }
   ],
-  "recommendation": "Accumulate",
+  "recommendation": "Strong Buy",
   "metrics": [
     {
       "title": "US Commercial Growth",
-      "value": "+137%",
-      "label": "Q4 2025 YoY (accelerating)",
+      "value": "+133%",
+      "label": "Q1 2026 YoY ($595M; FY26 guide >120%)",
       "icon": "TrendingUp",
       "color": "#7c3aed"
     },
     {
-      "title": "Q1 2026 Guidance",
-      "value": "$1.54B",
-      "label": "+74% YoY consensus (reports May 4)",
+      "title": "Q1 2026 Revenue",
+      "value": "$1.63B",
+      "label": "+85% YoY beat ($1.54B consensus)",
       "icon": "Zap",
       "color": "#3b82f6"
     },
     {
-      "title": "Govt Backlog",
-      "value": "$1B+",
-      "label": "DoD AI mission-critical pipeline",
-      "icon": "Shield",
+      "title": "FY26 Guide Raised",
+      "value": "$7.65B",
+      "label": "+71% YoY; Q2 guide $1.8B (vs $1.68B)",
+      "icon": "TrendingUp",
       "color": "#10b981"
     }
   ],
@@ -70,14 +70,14 @@
     ]
   },
   "growth": {
-    "description": "Q4 2025 US Commercial revenue +137% YoY (re-acceleration from +54% earlier in the year). Wedbush flags 'unprecedented demand' for AIP. Wall St Q1 2026 consensus: $1.54B (+74% YoY) — reports May 4.",
+    "description": "Q1 2026 (reported May 4) revenue $1.63B (+85% YoY) beat $1.54B consensus; US commercial $595M (+133% YoY); US government +84% YoY. FY26 guide raised to $7.65–$7.66B (+71% YoY) and US commercial guide raised to >$3.224B (+120%+); Q2 guide $1.8B vs $1.68B consensus; adj FCF FY26 raised to $4.2–$4.4B. Stock fell ~7% post-print on valuation skepticism despite the beat.",
     "growthAnalysis": {
       "cagrEstimate": "32-42%",
-      "scoreDerivation": "Base 88 (32-42% CAGR mid-band) + 6 Q1 2026 +85% YoY beat and US commercial +133% + 4 raised FY26 guide to +71% + 3 Rule-of-40 above 80 - 13 premium-multiple compression risk = 88",
+      "scoreDerivation": "Base 92 (37% CAGR mid-band of 32-42%) + ~3 trajectory (2 of 3 drivers accelerating, government stable) + 4 expanding margins + 3 TAM expansion - 5 moderate premium-multiple compression risk ≈ 97. Q1 2026 +85% YoY beat with adj EPS $0.33 vs $0.28 and FY26 guide raised to +71% validate the upper end of the CAGR band; key offset remains the >40x revenue multiple.",
       "drivers": [
-        { "name": "US Commercial / AIP", "metric": "Q1 2026 US commercial revenue $595M (+133% YoY, +18% QoQ); 1,007 commercial customers (+31% YoY); 139 US commercial deals over $1M", "trend": "accelerating" },
-        { "name": "Total Revenue Growth", "metric": "Q1 2026 revenue $1.63B (+85% YoY) vs $1.54B consensus; FY26 guide raised to $7.65-7.66B (+71% YoY)", "trend": "accelerating" },
-        { "name": "Government / Defense", "metric": "DoD AI mission-critical pipeline >$1B backlog; Maven, TITAN, NATO/Five Eyes expansion sustaining 30%+ growth", "trend": "stable" }
+        { "name": "US Commercial / AIP", "metric": "Q1 2026 US commercial revenue $595M (+133% YoY); 1,007 commercial customers (+31% YoY); 139 US commercial deals over $1M; FY26 US commercial guide raised to >$3.224B (+120% YoY)", "trend": "accelerating" },
+        { "name": "Total Revenue Growth", "metric": "Q1 2026 revenue $1.63B (+85% YoY) vs $1.54B consensus; Q2 2026 guide $1.8B vs $1.68B; FY26 guide raised to $7.65-7.66B (+71% YoY)", "trend": "accelerating" },
+        { "name": "Government / Defense", "metric": "Q1 2026 US government +84% YoY; DoD AI mission-critical pipeline >$1B; Maven, TITAN, NATO/Five Eyes expansion sustaining 30%+ growth", "trend": "stable" }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "Palantir trades at one of the richest software multiples ever (>70x revenue). If US commercial growth decelerates from 130%+ toward 60% by late 2026 as AIP boot-camp pipeline matures and Microsoft Fabric/Databricks close the ontology gap, the multiple could compress 40-50% even on continued execution — a valuation-driven drawdown rather than a fundamentals failure.",
@@ -86,31 +86,31 @@
     }
   },
   "valuation": {
-    "score": 69,
-    "description": "At $144 the stock sits ~85% of the way from bear ($80) to base ($155) — most of the optical discount has been worked off as the price recovered from the early-year low of $105. Limited margin of safety; thesis depends on Q1 results validating the +137% commercial trajectory."
+    "score": 74,
+    "description": "At $135.91 (down ~7% post-Q1 print) the stock sits ~64% of the way from revised bear ($85) to base ($165) — the post-earnings pullback restored a modest margin of safety even as raised FY26 guidance ($7.65B, +71%) lifted the base target. Multiple still rich (>40x revenue); thesis hinges on US commercial run-rate clearing the >$3.2B FY26 guide."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$80",
-      "description": "US commercial growth decelerates sharply, DOGE-driven defense cuts pressure government revenue, and valuation multiple compresses toward SaaS peers.",
+      "priceTarget": "$85",
+      "description": "US commercial growth decelerates from 130%+ as AIP boot-camp pipeline matures, valuation multiple compresses toward 25-30x revenue as competitors close the ontology gap.",
       "points": [
-        "US commercial growth slows below 30% as AIP boot camp pipeline saturates",
+        "US commercial growth slows below 50% by late 2026 as AIP boot camp pipeline saturates",
         "DOGE budget cuts or continuing resolution reduce government contract renewals",
-        "Competitor platforms (Microsoft Fabric, Databricks) close the ontology gap at lower cost"
+        "Multiple compresses from ~45x revenue toward 25-30x as Microsoft Fabric/Databricks close the ontology gap at lower cost"
       ]
     },
     "base": {
-      "priceTarget": "$155",
-      "description": "AIP-driven commercial expansion sustains 40%+ US commercial growth while government revenue holds steady.",
+      "priceTarget": "$165",
+      "description": "FY26 trajectory holds at the raised +71% guide with US commercial clearing the >$3.224B target; multiple settles at ~35-40x forward revenue.",
       "points": [
-        "US commercial revenue crosses $2B annualized run-rate by end of 2026",
-        "International commercial segment returns to double-digit growth",
-        "Rule of 40 score stays above 70, confirming elite operating efficiency"
+        "FY26 revenue lands within $7.65–$7.66B guide (+71% YoY) with US commercial >$3.224B (+120%+)",
+        "FY27 sustains 40%+ blended growth with Rule of 40 above 70, confirming elite operating efficiency",
+        "Adj FCF reaches the raised $4.2–$4.4B FY26 outlook, anchoring the premium multiple"
       ]
     },
     "bull": {
-      "priceTarget": "$260",
-      "description": "Palantir becomes the de facto AI operating system for Fortune 500 and allied governments globally.",
+      "priceTarget": "$275",
+      "description": "Palantir becomes the de facto AI operating system for Fortune 500 and allied governments globally, sustaining a >50x revenue multiple on accelerating commercial penetration.",
       "points": [
         "AIP becomes the enterprise standard for AI-to-action workflows, displacing legacy BI tools",
         "NATO and Five Eyes expansion drives international government revenue above $500M",
