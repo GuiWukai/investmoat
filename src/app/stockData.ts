@@ -124,11 +124,22 @@ import regnData     from '@/data/stocks/regn.json';
 import dashData     from '@/data/stocks/dash.json';
 import rblxData     from '@/data/stocks/rblx.json';
 
-// Weighted composite: Moat 40% · Growth 35% · Valuation 25%
+// Multiplicative composite (CES-style weighted geometric mean):
+//
+//   composite = (m/100)^0.40 × (g/100)^0.35 × (v/100)^0.25 × 100
+//
+// Equivalent to the weighted arithmetic mean when all pillars are equal;
+// strictly lower when they differ. The bottleneck behaviour is built in —
+// any pillar near zero disproportionately drags the score, with no need
+// for a separate penalty term. Pillar weights still 0.40 · 0.35 · 0.25.
+//
 // scores = [moatScore, growthScore, valuationScore]
 // Returns a float for precise sorting/comparison; callers round for display.
 export const getAverageScore = ([moat, growth, valuation]: number[]) =>
-    moat * 0.40 + growth * 0.35 + valuation * 0.25;
+    Math.pow(moat / 100, 0.40)
+    * Math.pow(growth / 100, 0.35)
+    * Math.pow(valuation / 100, 0.25)
+    * 100;
 
 const MAX_PORTFOLIO  = 25;
 const MIN_AVG_SCORE  = 75;
