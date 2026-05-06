@@ -123,6 +123,7 @@ import vrtxData     from '@/data/stocks/vrtx.json';
 import regnData     from '@/data/stocks/regn.json';
 import dashData     from '@/data/stocks/dash.json';
 import rblxData     from '@/data/stocks/rblx.json';
+import cashData     from '@/data/stocks/cash.json';
 
 // Multiplicative composite (CES-style weighted geometric mean):
 //
@@ -177,7 +178,21 @@ const t = (json: { scenarios: { bear: { priceTarget: string }; base: { priceTarg
 // ─── All analyzed stocks (single source of truth) ─────────────────────────────
 // scores = [computedMoatScore, growthScore, valuationScore]
 // All three scores and targets derive from the stock's JSON — edit the JSON, not this file.
-const allCoverageData = [
+export type CoverageEntry = {
+  name: string;
+  ticker: string;
+  slug: string;
+  scores: number[];
+  href: string;
+  category: string;
+  bearTarget: string;
+  baseTarget: string;
+  bullTarget: string;
+  /** Pinned positions are always included in the portfolio regardless of composite score. Their weight is computed dynamically by the portfolio page. */
+  pinned?: boolean;
+};
+
+const allCoverageData: CoverageEntry[] = [
     { name: "GE Vernova",        ticker: "GEV",   slug: "gev",         scores: [m(gevData),         g(gevData),         v(gevData)],         href: "/stocks/gev",         category: "Industrials", ...t(gevData)         },
     { name: "Cameco",            ticker: "CCJ",   slug: "ccj",         scores: [m(ccjData),         g(ccjData),         v(ccjData)],         href: "/stocks/ccj",         category: "Hard Assets", ...t(ccjData)         },
     { name: "MercadoLibre",      ticker: "MELI",  slug: "meli",        scores: [m(meliData),        g(meliData),        v(meliData)],        href: "/stocks/meli",        category: "Other",       ...t(meliData)        },
@@ -286,16 +301,23 @@ const allCoverageData = [
     { name: "Regeneron",         ticker: "REGN",  slug: "regn",        scores: [m(regnData),        g(regnData),        v(regnData)],        href: "/stocks/regn",        category: "Healthcare",  ...t(regnData)        },
     { name: "DoorDash",          ticker: "DASH",  slug: "dash",        scores: [m(dashData),        g(dashData),        v(dashData)],        href: "/stocks/dash",        category: "Other",       ...t(dashData)        },
     { name: "Roblox",            ticker: "RBLX",  slug: "rblx",        scores: [m(rblxData),        g(rblxData),        v(rblxData)],        href: "/stocks/rblx",        category: "Other",       ...t(rblxData)        },
+    // Pinned positions bypass the score-threshold filter and are always included in the portfolio.
+    // Their weight is computed dynamically by the portfolio page (see PortfolioPage.cashWeight).
+    { name: "Cash & Equivalents",ticker: "USD",   slug: "cash",        scores: [m(cashData),        g(cashData),        v(cashData)],        href: "/stocks/cash",        category: "Hard Assets", ...t(cashData),        pinned: true  },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────
 export { allCoverageData };
 
-// ─── Portfolio: top MAX_PORTFOLIO stocks with avg >= MIN_AVG_SCORE ────────────
-export const stockData = [...allCoverageData]
+// ─── Portfolio: pinned positions + top score-eligible compounders ─────────────
+const isPinned = (s: { pinned?: boolean }) => s.pinned === true;
+const pinnedCoverage = allCoverageData.filter(isPinned);
+const dynamicCoverage = allCoverageData
+    .filter(s => !isPinned(s))
     .sort((a, b) => getAverageScore(b.scores) - getAverageScore(a.scores))
     .filter(s => getAverageScore(s.scores) >= MIN_AVG_SCORE)
-    .slice(0, MAX_PORTFOLIO);
+    .slice(0, MAX_PORTFOLIO - pinnedCoverage.length);
+export const stockData = [...pinnedCoverage, ...dynamicCoverage];
 
 // ─── Excluded: all analyzed stocks not in the portfolio ───────────────────────
 const portfolioTickers = new Set(stockData.map(s => s.ticker));

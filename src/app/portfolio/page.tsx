@@ -131,6 +131,7 @@ const stockMeta: Record<string, { color: string; category: string; exclusionReas
   RDDT:  { color: "#ff4500", category: "Big Tech" },
   SE:    { color: "#ee2537", category: "Eco-System" },
   TTD:   { color: "#3363ff", category: "AdTech" },
+  USD:   { color: "#10b981", category: "Cash" },
 };
 
 // ─── Category colour helper ───────────────────────────────────────────────────
@@ -163,6 +164,7 @@ const CATEGORY_STYLES: Record<string, string> = {
   "AdTech":              "bg-orange-500/10 text-orange-400 border-orange-500/15",
   "Media":               "bg-violet-500/10 text-violet-400 border-violet-500/15",
   "Consumer Retail":     "bg-teal-500/10 text-teal-400 border-teal-500/15",
+  "Cash":                "bg-emerald-500/10 text-emerald-400 border-emerald-500/15",
 };
 
 function CategoryBadge({ category }: { category: string }) {
@@ -208,30 +210,39 @@ export default function PortfolioPage() {
   }, []);
 
   const portfolio = useMemo(() => {
-    return [...allCoverageData]
-      .map(s => {
-        const price = allPrices[s.ticker];
-        const bear = parseScenarioPrice(s.bearTarget);
-        const base = parseScenarioPrice(s.baseTarget);
-        const bull = parseScenarioPrice(s.bullTarget);
-        const composite = (price != null && bear && base && bull)
-          ? getAverageScore([s.scores[0], s.scores[1], computeValuationScore(price, bear, base, bull)])
-          : getAverageScore(s.scores);
-        return { s, composite };
-      })
+    const computed = allCoverageData.map(s => {
+      const price = allPrices[s.ticker];
+      const bear = parseScenarioPrice(s.bearTarget);
+      const base = parseScenarioPrice(s.baseTarget);
+      const bull = parseScenarioPrice(s.bullTarget);
+      const liveVal = (price != null && price > 0 && bear && base && bull)
+        ? computeValuationScore(price, bear, base, bull)
+        : null;
+      const composite = liveVal != null
+        ? getAverageScore([s.scores[0], s.scores[1], liveVal])
+        : getAverageScore(s.scores);
+      return { s, composite, liveVal };
+    });
+
+    const pinned = computed.filter(({ s }) => s.pinned === true);
+    const dynamic = computed
+      .filter(({ s }) => s.pinned !== true)
       .sort((a, b) => b.composite - a.composite)
       .filter(({ composite }) => composite >= PORTFOLIO_THRESHOLD)
-      .slice(0, MAX_PORTFOLIO)
-      .map(({ s, composite }) => ({
-        ticker:   s.ticker,
-        name:     s.name,
-        slug:     s.slug,
-        href:     s.href,
-        color:    stockMeta[s.ticker]?.color    ?? "#888888",
-        category: stockMeta[s.ticker]?.category ?? "Other",
-        stock:    s,
-        composite,
-      }));
+      .slice(0, MAX_PORTFOLIO - pinned.length);
+
+    return [...pinned, ...dynamic].map(({ s, composite, liveVal }) => ({
+      ticker:   s.ticker,
+      name:     s.name,
+      slug:     s.slug,
+      href:     s.href,
+      color:    stockMeta[s.ticker]?.color    ?? "#888888",
+      category: stockMeta[s.ticker]?.category ?? "Other",
+      stock:    s,
+      composite,
+      liveVal,
+      isPinned: s.pinned === true,
+    }));
   }, [allPrices]);
 
   const liveScores: Record<string, number> = {};
@@ -244,14 +255,46 @@ export default function PortfolioPage() {
   const SCORE_BASELINE = 70;
   const MAX_WEIGHT_PCT = 10;
 
+  // ─── Dynamic cash weight ─────────────────────────────────────────────────────
+  // Cash is held as a hedge / reinvestment reserve, so its weight should expand
+  // when the equity opportunity set is stretched and contract when bargains emerge.
+  // We use the live-valuation-score average across non-pinned positions as the signal:
+  //   avg val score 100 → very cheap → cash floor (~3%)
+  //   avg val score 65  → fair (base) → moderate cash (~12%)
+  //   avg val score 30  → stretched   → max cash (~22%)
+  // Bounds are clamped to [3%, 22%] so cash always plays its hedge role without
+  // ever dominating the book.
+  const CASH_MIN_PCT = 3;
+  const CASH_MAX_PCT = 22;
+  const equityValuationScores = portfolio
+    .filter((p) => !p.isPinned)
+    .map((p) => p.liveVal ?? p.stock.scores[2])
+    .filter((v): v is number => v != null);
+  const avgValScore = equityValuationScores.length > 0
+    ? equityValuationScores.reduce((s, v) => s + v, 0) / equityValuationScores.length
+    : 65;
+  // Linear interpolation: cash% = 30 - 0.275 * avgValScore, clamped.
+  // (avgVal=100 → 2.5 → clamped to 3; avgVal=65 → 12.1; avgVal=30 → 21.75; avgVal=20 → 24.5 → clamped to 22.)
+  const dynamicCashPct = Math.round(
+    Math.max(CASH_MIN_PCT, Math.min(CASH_MAX_PCT, 30 - 0.275 * avgValScore))
+  );
+
+  const pinnedTickers = new Set(portfolio.filter((p) => p.isPinned).map((p) => p.ticker));
+  const equityBudget = 100 - dynamicCashPct;
+
   const adjusted = Object.fromEntries(
-    portfolio.map((p) => [p.ticker, Math.max((liveScores[p.ticker] ?? 0) - SCORE_BASELINE, 1)])
+    portfolio
+      .filter((p) => !p.isPinned)
+      .map((p) => [p.ticker, Math.max((liveScores[p.ticker] ?? 0) - SCORE_BASELINE, 1)])
   );
 
   const rawWeights: Record<string, number> = {};
+  // Pinned positions (cash) get their fixed dynamic share up-front.
+  portfolio.filter((p) => p.isPinned).forEach((p) => { rawWeights[p.ticker] = dynamicCashPct; });
+
   const capped = new Set<string>();
-  let uncappedTickers = portfolio.map((p) => p.ticker);
-  let budget = 100;
+  let uncappedTickers = portfolio.filter((p) => !p.isPinned).map((p) => p.ticker);
+  let budget = equityBudget;
 
   while (uncappedTickers.length > 0) {
     const poolScore = uncappedTickers.reduce((s, t) => s + adjusted[t], 0);
@@ -277,7 +320,10 @@ export default function PortfolioPage() {
 
   const floors = Object.fromEntries(portfolio.map((p) => [p.ticker, Math.floor(rawWeights[p.ticker])]));
   const remainder = 100 - Object.values(floors).reduce((a, b) => a + b, 0);
-  const sorted = [...portfolio].sort((a, b) => (rawWeights[b.ticker] % 1) - (rawWeights[a.ticker] % 1));
+  // Distribute the rounding remainder only to non-pinned positions so cash stays at its computed weight.
+  const sorted = [...portfolio]
+    .filter((p) => !pinnedTickers.has(p.ticker))
+    .sort((a, b) => (rawWeights[b.ticker] % 1) - (rawWeights[a.ticker] % 1));
   sorted.slice(0, remainder).forEach((p) => { floors[p.ticker]++; });
   const dynamicWeights = floors;
 
@@ -346,8 +392,9 @@ export default function PortfolioPage() {
         </h1>
         <p className="text-white/45 text-base md:text-lg max-w-2xl leading-relaxed">
           {portfolio.length} high-conviction positions selected for moat durability, growth scaling,
-          and valuation discipline. Higher-scoring positions receive proportionally larger allocations
-          (max 10% per position).
+          and valuation discipline. Higher-scoring equities receive proportionally larger allocations
+          (max 10% per position). Cash is held as a dynamic hedge — currently {dynamicCashPct}% based
+          on the live valuation environment.
         </p>
       </header>
 

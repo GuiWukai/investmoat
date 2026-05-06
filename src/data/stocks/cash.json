@@ -1,0 +1,186 @@
+{
+  "slug": "cash",
+  "ticker": "USD",
+  "name": "Cash & Equivalents",
+  "titleColor": "#10b981",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "USD"
+    },
+    {
+      "label": "1-Month T-Bill Yield",
+      "value": "~4.30%"
+    },
+    {
+      "label": "Money Market Yield",
+      "value": "~4.45%"
+    },
+    {
+      "label": "Default Risk",
+      "value": "Zero (US Treasury)"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Defensive | Reinvestment Reserve",
+      "color": "primary"
+    },
+    {
+      "label": "Dynamic Hedge",
+      "color": "success"
+    },
+    {
+      "label": "Inflation Risk",
+      "color": "warning"
+    }
+  ],
+  "recommendation": "Hold",
+  "metrics": [
+    {
+      "title": "Money Market Yield",
+      "value": "~4.45%",
+      "label": "Vanguard VMFXX as of May 2026",
+      "icon": "Percent",
+      "color": "#10b981"
+    },
+    {
+      "title": "Real Yield (after CPI)",
+      "value": "~1.7%",
+      "label": "vs. ~2.7% headline CPI YoY",
+      "icon": "TrendingUp",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "USD Reserve Share",
+      "value": "~57.8%",
+      "label": "Down from ~65% in 2014 (de-dollarisation drift)",
+      "icon": "Globe",
+      "color": "#8b5cf6"
+    },
+    {
+      "title": "Liquidity",
+      "value": "T+0",
+      "label": "Same-day settlement; zero drawdown risk on principal",
+      "icon": "ShieldCheck",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "description": "Cash is held as a dynamic hedge and reinvestment reserve — its weight rises when valuations are stretched and shrinks when high-quality opportunities emerge. The USD itself benefits from universal settlement status and zero principal drawdown.",
+    "analysisTitle": "The Optionality Moat",
+    "analysisSummary": "Cash's role is as a **Crash Hedge, Dry Powder, and Volatility Buffer** — not as a long-term holding:",
+    "analysisPoints": [
+      {
+        "title": "Universal Settlement",
+        "text": "The USD denominates ~88% of global FX transactions and ~58% of central bank reserves. Every other asset class is ultimately priced and settled in dollars, giving cash a structural network advantage that takes decades to erode."
+      },
+      {
+        "title": "Zero Nominal Drawdown",
+        "text": "Unlike any other asset, money-market and short-duration Treasury holdings carry no mark-to-market volatility on principal. In a 2008- or 2020-style dislocation, cash buyers transact at the bottom while levered holders are forced sellers."
+      },
+      {
+        "title": "Positive Real Yield",
+        "text": "With 1-month T-bills at ~4.3% and headline CPI at ~2.7%, cash delivers a positive real yield for the first sustained period in 15 years. The opportunity cost of holding cash is the lowest it has been since the 2007 cycle."
+      },
+      {
+        "title": "Optionality Value",
+        "text": "Cash is the only asset whose value rises in expectation when other asset prices fall. A 20% S&P drawdown effectively raises the future return on every dollar held in reserve — a feature no productive asset can replicate."
+      }
+    ]
+  },
+  "growth": {
+    "description": "Cash does not compound through reinvestment — it earns the prevailing risk-free rate. With Fed funds at 4.25–4.50% and short Treasuries yielding ~4.3%, holders capture ~1.7% real return after CPI. The growth thesis is purely the persistence of the risk-free rate; if the Fed cuts aggressively into 2026–27, the real return compresses fast.",
+    "growthAnalysis": {
+      "cagrEstimate": "4-5%",
+      "scoreDerivation": "Base ~61 (4-5% nominal CAGR is mid-band) + 0 (drivers stable) + 0 (margin stable) + 0 (no TAM expansion — yield is mechanical) - 5 (moderate inflation/real-yield risk) = ~56",
+      "drivers": [
+        { "name": "Short Treasury yield", "metric": "1-mo T-bill ~4.30%; 3-mo ~4.25%; Fed funds 4.25–4.50%", "trend": "stable" },
+        { "name": "Real yield gap", "metric": "Nominal yield ~4.45% minus CPI ~2.70% = +1.75% real", "trend": "stable" },
+        { "name": "Money market AUM", "metric": "US MMF assets ~$7.0T (record high) — reflects sustained demand for risk-free yield", "trend": "stable" }
+      ],
+      "primaryType": "market share",
+      "keyRisk": "Fed pivots dovish in H2 2026 amid growth slowdown; cuts 100–150 bps over 12 months, dragging T-bill yields to ~3% and turning real yield negative if CPI stays sticky.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 65,
+    "description": "Cash trades at par by definition — there is no over- or under-valuation, only opportunity cost. With short yields at ~4.3% and equity earnings yields at ~3.8% (S&P 500 forward), the spread favours cash for the first time since 2007. Valuation 'score' anchored at the base case (par) — cash cannot be 'cheap' or 'expensive' in price terms, only in relative-yield terms."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "~3.0% yield",
+      "description": "Fed cuts aggressively into a soft-landing or mild recession, dragging T-bill yields to ~3% while CPI remains sticky around 2.7%, compressing real yield toward zero.",
+      "points": [
+        "Fed funds rate cut 125–150 bps over 12 months",
+        "Money-market yields drift below 3.25%",
+        "Real yield approaches zero or turns slightly negative"
+      ]
+    },
+    "base": {
+      "priceTarget": "~4.5% yield",
+      "description": "Fed holds at current restrictive levels through most of 2026; short rates persist around 4.3–4.5% as inflation moderates gradually but stays above target.",
+      "points": [
+        "Fed funds held at 4.25–4.50% for most of 2026",
+        "Money-market yields stay in the 4.30–4.60% range",
+        "Real yield maintained at ~+1.5–1.8%"
+      ]
+    },
+    "bull": {
+      "priceTarget": "~5.0% yield",
+      "description": "Reaccelerating inflation or tariff-driven price shocks force the Fed to hold or modestly hike; cash holders capture sustained 5%+ nominal yield with strong real returns.",
+      "points": [
+        "CPI reaccelerates above 3% on tariffs / energy shock",
+        "Fed signals 'higher for longer' or one additional 25 bps hike",
+        "Real yield expands toward +2.5% as nominal yields rise faster than CPI"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — cash has no interface or UX surface to learn."
+    },
+    "businessLogic": {
+      "status": "destroyed",
+      "note": "N/A — cash is a unit of account, not a business with proprietary logic."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — yields and rates are fully public; no proprietary data dynamic applies."
+    },
+    "talentScarcity": {
+      "status": "destroyed",
+      "note": "N/A — holding cash requires no specialist talent."
+    },
+    "bundling": {
+      "status": "destroyed",
+      "note": "N/A — cash is a singular fungible asset, not a bundleable product."
+    },
+    "proprietaryData": {
+      "status": "destroyed",
+      "note": "N/A — there is no proprietary data layer to a fiat unit of account."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "USD is US legal tender, the unit of US tax obligations, and the dominant settlement currency for global trade and commodities — embedded in regulatory frameworks worldwide."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "USD remains the dominant global FX (~88% of transactions) and reserve currency (~58% of reserves), but reserve share has slowly drifted from ~65% in 2014 as BRICS+ pursue de-dollarisation."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Cash is the transaction layer itself — every wage, rent, tax, and trade is denominated and settled in it. Switching costs to any alternative are effectively infinite at the system level."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "The USD is the unit of account for nearly all global financial records, contracts, and price discovery. No other store of value comes close to its system-of-record status."
+    },
+    "aiResilienceScore": 88,
+    "verdict": "Cash's moat is structural and AI-immune — AI cannot displace the unit of account in which AI services themselves are priced. The slow erosion comes from de-dollarisation and inflation, not technological disruption."
+  },
+  "lastAnalyzed": "May 2026"
+}

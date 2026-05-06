@@ -106,6 +106,7 @@ import vrtx from './vrtx.json';
 import regn from './regn.json';
 import dash from './dash.json';
 import rblx from './rblx.json';
+import cash from './cash.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -214,6 +215,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   regn: regn as StockAnalysisData,
   dash: dash as StockAnalysisData,
   rblx: rblx as StockAnalysisData,
+  cash: cash as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
