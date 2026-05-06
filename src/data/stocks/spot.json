@@ -89,11 +89,13 @@
   "scenarios": {
     "bear": {
       "priceTarget": "$450",
-      "description": "Label renegotiation in 2027-28 raises minimum guarantees, margin expansion stalls, multiple compresses to 25× on growth normalisation.",
+      "description": "Label renegotiation in 2027-28 raises minimum guarantees, margin expansion stalls, FY27 EPS lands ~$18 and the multiple compresses to ~25× on growth normalisation ($18 × 25× ≈ $450).",
       "points": [
-        "Major label renewals in 2027-28 raise minimum guarantees by 200-300 bps",
+        "Major label renewals in 2027-28 raise minimum guarantees by 200-300 bps, capping gross margin at ~33%",
         "Subscriber growth slows below 12% YoY on price-fatigue in mature markets",
-        "AI-generated music degrades library economics or triggers per-stream payout pressure"
+        "AI-generated music degrades library economics or triggers per-stream payout pressure",
+        "Apple One / YouTube Premium bundles compress Family + Student tiers, eroding ARPU mix in DM1/DM2 markets",
+        "USD strengthens 8-10% on a flight-to-quality cycle, suppressing reported revenue growth to high single digits even as constant-currency growth holds in the mid-teens"
       ]
     },
     "base": {
@@ -107,9 +109,11 @@
     },
     "bull": {
       "priceTarget": "$1100",
-      "description": "Spotify becomes the dominant global audio platform, super-premium tier launches, gross margin reaches 38%, multiple sustains 35× on durable growth.",
+      "description": "Spotify becomes the dominant global audio platform, audiobook + marketplace mix shifts away from label economics, FY27 EPS reaches ~$30-32 and the multiple sustains 35× on durable margin expansion ($31 × 35× ≈ $1100).",
       "points": [
-        "Super-premium tier (HiFi + concerts + bundle) launches at >$20/mo with 30M+ adopters",
+        "If a HiFi/concerts super-premium tier launches in 2026 and reaches 30M+ adopters by end-2027 at >$20/mo",
+        "Audiobook + creator marketplace lift blended gross margin past 38% as label-cost mix declines below 60% of revenue",
+        "Spotify's proprietary listening data becomes a structural advantage for AI-music labelling, recommendation, and ad targeting that scale rivals cannot replicate",
         "Marketplace + creator monetisation reach 10%+ of revenue",
         "Operating margin reaches 18%; FCF compounds at 30%+ for 3+ years"
       ]
