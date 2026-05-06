@@ -1,0 +1,167 @@
+{
+  "slug": "kkr",
+  "ticker": "KKR",
+  "name": "KKR & Co",
+  "titleColor": "#005a9c",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "KKR"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$92B"
+    },
+    {
+      "label": "Price",
+      "value": "~$102"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Financials | Alternative Asset Manager",
+      "color": "primary"
+    },
+    {
+      "label": "Diversified Alts Platform",
+      "color": "success"
+    }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Total AUM",
+      "value": "$758B",
+      "label": "Q1 2026 — +14% YoY (Fee-paying $615B)",
+      "icon": "Landmark",
+      "color": "#005a9c"
+    },
+    {
+      "title": "Fee Related Earnings",
+      "value": "$1.02B",
+      "label": "+23.5% YoY in Q1 2026",
+      "icon": "TrendingUp",
+      "color": "#10b981"
+    },
+    {
+      "title": "Adjusted EPS",
+      "value": "$1.39",
+      "label": "Q1 2026 — beat consensus by $0.11",
+      "icon": "Award",
+      "color": "#3b82f6"
+    }
+  ],
+  "moat": {
+    "description": "KKR is the most diversified alternative asset manager outside Blackstone — $758B AUM across PE, credit, infrastructure, real estate, and insurance (Global Atlantic). The model uniquely combines fee-related earnings, balance-sheet investing, and a captive insurance liability base, creating three orthogonal earnings streams from one capital-allocation engine.",
+    "analysisTitle": "The Three-Engine Compounder",
+    "analysisSummary": "KKR's competitive position rests on **three reinforcing engines — fee-related earnings, balance-sheet investing, and Global Atlantic insurance** — each with its own moat:",
+    "analysisPoints": [
+      {
+        "title": "FRE Engine: Locked-Up Fee Streams",
+        "text": "$615B of fee-paying AUM generates $4B+ of annualized FRE growing 20%+ per year. The structure mirrors Blackstone — long-duration LP commitments, brand-name fundraising, and a deep dealflow funnel. KKR's flagship PE, infrastructure, and credit franchises consistently rank top-3 globally and re-raise larger successor funds each vintage."
+      },
+      {
+        "title": "Balance Sheet Engine: Permanent Capital",
+        "text": "Unlike Blackstone, KKR retains a meaningful balance sheet — $30B+ of investments alongside LPs and in strategic holdings. This permanent capital compounds at 10-15% annually, generates carried interest on co-invest, and provides flexibility to seed new strategies, acquire platforms (Arctos in Q1 2026 added $16B of sports-franchise AUM), and underwrite at speed."
+      },
+      {
+        "title": "Insurance Engine: Global Atlantic Flywheel",
+        "text": "Global Atlantic — fully owned since 2024 — generates $200B+ of liability flow that KKR Asset Management invests across credit, real estate, and structured products. The insurance balance sheet is annuitized capital that grows organically and through reinsurance flows, paying KKR a management fee on every dollar invested. This is the highest-margin, most durable AUM in the platform and is rapidly approaching half of total AUM."
+      }
+    ]
+  },
+  "growth": {
+    "score": 82,
+    "description": "Q1 2026 was an outstanding quarter: AUM $758B (+14% YoY), fee-paying AUM $615B (+13%), FRE $1.02B (+23.5%), total operating earnings $1.3B (+19%), $28B raised in the quarter and $127B LTM. Adjusted EPS of $1.39 beat consensus. The Arctos acquisition adds $16B of sports-franchise AUM and a $10B fee-paying base. KKR is compounding faster than any large-cap alt in the public market.",
+    "additionalNote": {
+      "title": "Growth Drivers (3-Year Horizon)",
+      "points": [
+        "Global Atlantic insurance: liability AUM scales toward $400B as reinsurance and pension risk transfer flows accelerate, locking in long-duration FRE",
+        "Asia and infrastructure: KKR's regional infrastructure platforms in Asia and Europe scale through the multi-trillion-dollar energy-transition and digital buildout",
+        "Private wealth: K-Series perpetual vehicles democratize KKR access to the RIA channel — a multi-year compounder on top of the institutional base",
+        "Strategic acquisitions: Arctos and adjacent platform deals expand the fee base into sports, music royalties, and other private-market verticals"
+      ]
+    }
+  },
+  "valuation": {
+    "score": 70,
+    "description": "At ~$102, KKR trades at ~25x forward FRE per share — a discount to Blackstone (~30x) despite faster FRE growth (+23.5% vs +23%) and a more diversified earnings stream that includes Global Atlantic insurance income. The stock is in the lower half of the bear-to-base range ($80 to $130), offering an attractive risk/reward setup. Sits ~22% above the bear case and ~27% below base.",
+    "valuationNote": {
+      "text": "KKR is the cheapest large-cap alt manager on FRE growth — the multiple discount to Blackstone reflects the optical complexity of the three-engine model and balance-sheet exposure. As Global Atlantic earnings stabilize at scale and FRE compounds 20%+, the multiple should converge toward Blackstone's. Fair value is $130, with a path to $165 if the insurance flywheel delivers as guided.",
+      "fairValue": "$130"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$80",
+      "description": "Recession freezes capital markets, Global Atlantic alternatives investments mark down, balance-sheet investments lose value, and the multiple compresses on complexity concerns.",
+      "points": [
+        "Recession drives Global Atlantic credit losses higher and forces mark-to-market writedowns on balance-sheet investments; book value declines 10-15%",
+        "Fundraising slows from $127B LTM toward $80B as LPs pause and private wealth flows soften",
+        "Multiple compresses from 25x FRE/share to ~18x on lower growth — implying ~$80"
+      ]
+    },
+    "base": {
+      "priceTarget": "$130",
+      "description": "AUM compounds toward $900B by 2027 driven by Global Atlantic, infrastructure, and private credit; FRE grows 20%; the multiple holds at ~25x.",
+      "points": [
+        "AUM crosses $900B by year-end 2027 with FPAUM at $720B+",
+        "FRE per share grows toward $5.50 by 2027 (from ~$4 currently) on operating leverage",
+        "Multiple holds at ~25x — implying ~$130"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$165",
+      "description": "Global Atlantic insurance economics scale faster than expected, balance-sheet investments harvest meaningful gains, and the multiple re-rates toward Blackstone parity.",
+      "points": [
+        "Global Atlantic liability AUM crosses $400B and generates $1.5B+ of incremental FRE",
+        "Strategic Holdings (long-duration balance-sheet investments) achieves the management's targeted fee-related contribution by 2030 and re-rates KKR's valuation framework",
+        "Multiple expands to 30x FRE/share on $5.50 FRE — implying ~$165"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "LP allocators, consultants, and Global Atlantic policyholder distribution channels have built workflows around KKR's reporting, capital-call, and investment processes; switching costs are operational and meaningful."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "50-year underwriting and capital-allocation framework refined across PE, credit, infrastructure, and insurance is core institutional IP; the integrated insurance + asset management model is uniquely complex and difficult to replicate."
+    },
+    "publicDataAccess": {
+      "status": "weakened",
+      "note": "Macro and public-market data is broadly available; KKR's edge is private deal flow, portfolio operating data, and insurance liability data."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "Senior dealmakers and fundraisers across PE, credit, infrastructure, and insurance are scarce; KKR's partnership culture and carried-interest economics retain talent through cycles."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "PE + credit + infrastructure + real estate + insurance solutions + capital markets bundle gives LPs a one-stop alternatives platform; cross-fund commitments deepen the relationship."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Portfolio-company operating data across hundreds of investments, infrastructure operating data across regulated assets, and insurance liability behavioral data form a deep proprietary dataset informing underwriting."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "Insurance company licenses (Global Atlantic), RIA registration, and ERISA frameworks create regulatory compliance moats; insurance regulation in particular requires multi-year approval to enter."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "GP-LP network reinforces — capital scale begets deal flow begets returns begets new commitments. Insurance flywheel adds: more liabilities = more invested capital = better returns = more pension risk transfer wins."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "8-12 year fund lock-ups, perpetual insurance liabilities, and K-Series perpetual private wealth vehicles structurally embed capital for the long term — switching is not possible mid-fund and operationally difficult thereafter."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "For institutional LPs evaluating diversified alternatives platforms, KKR is one of three or four default GPs — its 50-year track record and scale set the institutional standard."
+    },
+    "verdict": "KKR is structurally AI-resilient and uniquely positioned among alts via the three-engine model (FRE + balance sheet + insurance). AI accelerates portfolio-company value creation, insurance underwriting, and credit selection without disintermediating the LP relationship moat. The complexity discount creates the cheapest entry among scaled large-cap alts."
+  },
+  "lastAnalyzed": "May 2026"
+}

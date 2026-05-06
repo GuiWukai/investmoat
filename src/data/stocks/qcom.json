@@ -1,0 +1,170 @@
+{
+  "slug": "qcom",
+  "ticker": "QCOM",
+  "name": "Qualcomm Incorporated",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "QCOM" },
+    { "label": "Market Cap", "value": "~$197B" },
+    { "label": "Price", "value": "~$186" }
+  ],
+  "chips": [
+    { "label": "Semiconductors | Mobile | Auto | Data Center AI", "color": "primary" },
+    { "label": "Royalty Cash Flow", "color": "success" },
+    { "label": "Mobile Cyclicality", "color": "warning" }
+  ],
+  "recommendation": "Hold",
+  "metrics": [
+    {
+      "title": "Q2 FY2026 Revenue",
+      "value": "$10.6B",
+      "label": "-3% YoY at midpoint of guidance; net profit +162% YoY",
+      "icon": "TrendingUp",
+      "color": "#3253dc"
+    },
+    {
+      "title": "Automotive Revenue",
+      "value": "Record",
+      "label": "Q2 FY2026 record auto chip revenue; design-win backlog >$45B",
+      "icon": "Car",
+      "color": "#10b981"
+    },
+    {
+      "title": "AI200 / AI250 Data Center",
+      "value": "2026 / 2027",
+      "label": "HUMAIN 200MW deployment in Saudi Arabia starting 2026",
+      "icon": "Cpu",
+      "color": "#ff6b35"
+    }
+  ],
+  "moat": {
+    "description": "Qualcomm's moat is anchored by an essential 5G/6G standard-essential patent (SEP) royalty franchise (QTL) that compounds with every smartphone shipped globally, plus chipset IP leadership in mobile, automotive, and (newly) data center AI inferencing. The mobile handset business is structurally cyclical and increasingly threatened by Apple's in-house modem transition, but the licensing royalty stream is extraordinarily durable.",
+    "analysisTitle": "The Standard-Essential Patent Royalty Engine",
+    "analysisSummary": "Qualcomm's competitive position rests on **regulatory lock-in (essential 5G/6G patents), proprietary chipset IP (Snapdragon SoC + Hexagon NPU), and high-stickiness automotive design wins** that span 7-10 year vehicle development cycles:",
+    "analysisPoints": [
+      {
+        "title": "QTL: The 5G/6G Royalty Tax",
+        "text": "Qualcomm Technology Licensing (QTL) collects royalties on essentially every 3G/4G/5G handset sold worldwide, including from competitors who do not use Qualcomm chips. The portfolio of 140,000+ patents covering cellular standards is the single most defensible IP asset in mobile communications. Cross-licensing agreements with Apple, Samsung, Huawei, and Xiaomi have all been renewed through the late 2020s. As the industry moves toward 6G standardization (2028-2030), Qualcomm's continued contribution to 3GPP standards extends the royalty runway by another decade."
+      },
+      {
+        "title": "Snapdragon: The Premium Android Default",
+        "text": "Snapdragon 8 Gen 4 and the recently launched Oryon CPU architecture have re-established Qualcomm as the performance leader in premium Android SoCs. Samsung's Galaxy S26 launched globally on Snapdragon (vs. prior Exynos split), validating the platform advantage. Hexagon NPU integration enables on-device generative AI features that competing chipsets struggle to match at comparable power envelopes."
+      },
+      {
+        "title": "Automotive: From Infotainment to Full ADAS",
+        "text": "Qualcomm's Snapdragon Digital Chassis has accumulated a design-win backlog exceeding $45B across major OEMs (BMW, Mercedes, GM, Hyundai, Stellantis). Each automotive design win is a 5-7 year revenue stream with high margins and high switching costs once embedded in the vehicle E/E architecture. Q2 FY2026 set a record for auto chip revenue, and the segment is on track to be a $10B+ business by FY2029."
+      },
+      {
+        "title": "AI200/AI250: The Inference-First Data Center Bet",
+        "text": "Qualcomm announced AI200 (2026) and AI250 (2027) rack-scale data center accelerators based on the Hexagon NPU architecture, optimized for inferencing workloads with 768GB LPDDR per card and direct liquid cooling. Saudi Arabia's HUMAIN (PIF-backed) committed to 200MW of AI200 racks starting in 2026 — the first marquee customer. This is a credibility play in the inference-tier AI accelerator market currently dominated by NVIDIA and AMD; success is not guaranteed but optionality is meaningful."
+      }
+    ]
+  },
+  "growth": {
+    "score": 58,
+    "description": "Q2 FY2026 revenue $10.6B (-3% YoY) at midpoint of guidance; June quarter guided to $9.6B (-7% YoY) on weak Android demand. Mobile (QCT handsets) is in a soft patch, partially offset by record automotive revenue and rising IoT. Net income jumped 162% YoY in Q2 on lower QTL legal expenses and operating leverage. Medium-term growth depends on three vectors: (1) automotive ramp toward $10B+ run-rate, (2) on-device AI re-acceleration of premium Android ASPs, (3) data center AI inference traction (AI200/AI250). Apple modem transition (Apple now ships its own C1/C2 modem in part of the iPhone lineup) is a structural headwind reducing QCT handset revenue by an estimated $3-4B annually through 2027.",
+    "growthAnalysis": {
+      "cagrEstimate": "5-10%",
+      "scoreDerivation": "Base 55 (5-15% CAGR mid-band) + 5 automotive backlog ($45B+ design wins, record Q2) + 5 data center AI optionality (HUMAIN 200MW) - 5 Apple modem displacement (Apple C1/C2 in 2026 iPhones, reducing QCT handset revenue) - 2 Android demand softness (Q3 FY2026 guidance -7% YoY) = 58",
+      "drivers": [
+        { "name": "QCT Handsets (Snapdragon)", "metric": "~60% of revenue; -3% YoY in Q2 FY2026; Apple modem loss accelerating", "trend": "decelerating" },
+        { "name": "QCT Automotive", "metric": "Record Q2 FY2026; $45B+ design-win backlog; tracking $10B+ FY2029 run-rate", "trend": "accelerating" },
+        { "name": "QTL Licensing", "metric": "~$1.5B/quarter recurring; cross-license renewals through 2028+", "trend": "stable" },
+        { "name": "Data Center AI (AI200/AI250)", "metric": "HUMAIN 200MW commitment 2026; commercial revenue from H2 FY2026", "trend": "accelerating" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If Apple completes full modem in-housing across the iPhone lineup by FY2027 AND Samsung shifts Galaxy S27 to Exynos again, QCT handset revenue could decline 15%+ and the diversification narrative (auto + AI) cannot offset the absolute revenue loss before FY2028.",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 72,
+    "description": "At ~$186, Qualcomm trades at ~14× FY2026 EPS — meaningfully below the semiconductor peer average and below its own 5-year median multiple of ~17×. The discount reflects (1) Apple modem displacement risk, (2) cyclical Android softness, and (3) skepticism on data center AI execution. The 162% net profit jump in Q2 FY2026 on a -3% revenue print signals underlying earnings power that the market is not yet rewarding. Free cash flow yield is ~6%, with $10B+ in annual capital return capacity through dividends and buybacks.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~16×", "note": "TTM EPS ~$11.50" },
+        { "label": "Forward P/E (NTM)", "value": "~14×", "note": "consensus FY2026 EPS ~$13.30" },
+        { "label": "PEG Ratio", "value": "~1.6×", "note": "fwd P/E / ~9% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~4.6×", "note": "~$43B NTM revenue" },
+        { "label": "FCF Yield", "value": "~6%", "note": "~$12B TTM FCF" }
+      ],
+      "summary": "QCOM screens cheap on absolute multiples (~14× forward P/E), but the PEG of ~1.6 reflects the market's view that growth is structurally muted by Apple modem loss. The asymmetry comes from auto + AI inference optionality: if either segment accelerates materially, the multiple re-rates from semis-laggard to semis-average. The 6% FCF yield + capital return program provides a real floor."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$135",
+      "description": "Apple completes full modem in-housing, Samsung returns to Exynos, AI200 fails to win additional marquee customers beyond HUMAIN, and the QCT handset business shrinks to ~50% of total revenue.",
+      "points": [
+        "Apple ships its own modem in 100% of iPhone lineup by FY2027, removing $4-5B/year of QCT handset revenue and ~$1B of operating profit",
+        "Samsung Galaxy S27 returns to majority Exynos, eroding Snapdragon's premium Android share",
+        "AI200 ramp disappoints — HUMAIN remains the only meaningful customer through 2027 — and Qualcomm writes down a portion of the data center investment",
+        "Multiple compresses to ~11× forward EPS as Qualcomm is re-rated as a structurally declining mobile business with optionality that did not materialize"
+      ]
+    },
+    "base": {
+      "priceTarget": "$220",
+      "description": "Automotive revenue continues to compound at 25%+ annually toward a $10B FY2029 run-rate, AI200 wins 1-2 additional cloud or sovereign customers, QCT handsets stabilize as Apple modem displacement is offset by share gains in premium Android, and the multiple expands modestly.",
+      "points": [
+        "Automotive revenue scales from ~$3B to $5B+ by FY2027 on the $45B design-win backlog converting to production deliveries",
+        "AI200 secures 1-2 additional marquee customers (sovereign or hyperscaler) adding $1-2B of annualised revenue by FY2028",
+        "QTL royalty stream remains stable at ~$6B/year as 5G adoption deepens in emerging markets and 6G standardization extends the runway",
+        "Multiple expands to ~16× forward EPS on FY2027 EPS of ~$14, with $10B+ annual capital return providing additional ~3-4% yield"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$320",
+      "description": "AI200/AI250 emerges as a credible NVIDIA inference-tier alternative, automotive scales faster than $10B/yr, on-device AI drives premium Android ASP expansion, and Qualcomm re-rates to peer-average semi multiples on durable diversification.",
+      "points": [
+        "AI200/AI250 capture 5-10% of the rack-scale AI inference market by 2028 (a $20B+ TAM by then), driving $3-5B of incremental high-margin data center revenue",
+        "Automotive accelerates to $10B+ run-rate by FY2028 (one year ahead of plan) as ADAS Level 3+ ships across the BMW, Mercedes, and Stellantis fleets",
+        "On-device generative AI becomes a premium Android differentiator, lifting Snapdragon 8-series ASPs by 15-20% and partially offsetting Apple modem revenue loss",
+        "Multiple expands to ~20× forward EPS on FY2027 EPS of $16+, with QTL renewals through 2030 adding terminal-value confidence"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "Snapdragon developer SDKs and the Hexagon NPU toolchain create some learned-interface stickiness for OEM SoC integration teams, but the moat is modest — competing SoCs (MediaTek, Apple Silicon, Samsung Exynos) have comparable developer tooling."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "Qualcomm's modem and RF front-end designs embody decades of accumulated cellular signal processing know-how that competitors cannot reverse-engineer. The Hexagon NPU represents a similar accumulated body of low-power AI inference IP. This is genuinely proprietary technical knowledge."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Not applicable — Qualcomm is a chip and IP licensing company, not a data platform; controlling access to a public data source is not part of the business model."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "RF/modem engineering and standards-committee participation talent is genuinely scarce globally — the 3GPP standardization process has only a few hundred engineers worldwide qualified to contribute meaningfully. Qualcomm employs a large fraction of them. Custom NPU and Oryon CPU teams (acquired via Nuvia) compound this advantage."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Snapdragon SoC + Snapdragon X modem + RF front-end + WiFi/BT combo chips are sold as a bundled platform to handset OEMs, raising switching costs and giving Qualcomm pricing leverage. Snapdragon Digital Chassis bundles compute + connectivity + ADAS for autos."
+    },
+    "proprietaryData": {
+      "status": "weakened",
+      "note": "Qualcomm has telemetry from billions of Snapdragon-powered devices but does not aggregate or monetize this as a data product. Modest secondary advantage at best — the company's value is in chip design IP and patents, not in data network effects."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "Qualcomm's 140,000+ patents covering 3G/4G/5G/6G cellular standards are essential to industry compliance — every handset OEM globally must license them. FCC/CE-equivalent regulatory certifications for cellular modems require extensive testing that Qualcomm has already cleared. This is the single most durable moat in the company."
+    },
+    "networkEffects": {
+      "status": "weakened",
+      "note": "Modest indirect network effects via Snapdragon developer ecosystem (Qualcomm AI Engine Direct SDK, game developer relations), but these are not a primary moat. The cellular standards process itself creates a kind of network effect for the SEP holder, but that's already captured in regulatory lock-in."
+    },
+    "transactionEmbedding": {
+      "status": "weakened",
+      "note": "Snapdragon chips are physically embedded in 70%+ of premium Android handsets and an expanding share of vehicles, but they are not embedded in the financial transaction layer. Some embedding via secure enclave / SE for mobile payments, but this is not a primary moat."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "Not applicable — Qualcomm does not maintain a system-of-record platform; it sells chips and licenses IP."
+    },
+    "verdict": "Qualcomm's moat structure is led by regulatoryLockIn (essential 5G/6G patents), businessLogic (modem + Hexagon NPU IP), and talentScarcity (RF/standards engineers). These moats are highly AI-resilient — generative AI does not threaten cellular standards, and on-device AI actually plays into Hexagon's strengths. The structural risks are not AI-related: they are (1) Apple's continued modem in-housing, which compresses QCT handset revenue, and (2) execution risk on data center AI inference (AI200/AI250) where NVIDIA and AMD are entrenched. The QTL royalty stream alone justifies a meaningful floor valuation; the question is whether automotive + AI compound on top of a stable handset business or merely backfill against Apple-driven mobile decline."
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "slug": "elv",
+  "ticker": "ELV",
+  "name": "Elevance Health, Inc.",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "ELV" },
+    { "label": "Market Cap", "value": "~$80B" },
+    { "label": "Price", "value": "~$369" }
+  ],
+  "chips": [
+    { "label": "Healthcare | Managed Care + Carelon", "color": "primary" },
+    { "label": "Blue Cross Blue Shield Anchor", "color": "success" },
+    { "label": "Medicare Risk-Adjustment Overhang", "color": "warning" }
+  ],
+  "recommendation": "Hold",
+  "metrics": [
+    {
+      "title": "Q1 2026 Operating Revenue",
+      "value": "$49.5B",
+      "label": "+1.5% YoY; adj. diluted EPS $12.58 vs. $11.03 estimate",
+      "icon": "TrendingUp",
+      "color": "#16a34a"
+    },
+    {
+      "title": "FY2026 Adj. EPS Guidance",
+      "value": ">$26.75",
+      "label": "Raised after Q1 beat; ~3% YoY growth",
+      "icon": "BarChart",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "Medicare Accrual",
+      "value": "$935M",
+      "label": "Q1 charge tied to MA risk-adjustment data; range -$585M to +$565M",
+      "icon": "Shield",
+      "color": "#d97706"
+    }
+  ],
+  "moat": {
+    "description": "Elevance is the largest Blue Cross Blue Shield (BCBS) licensee in the US (14 states), giving it brand-protected, state-level managed care contracts that competitors cannot replicate. The Carelon services arm (analytics, pharmacy, behavioral, post-acute) is the UNH-Optum analog and is the primary growth engine, but it remains smaller and less integrated than Optum.",
+    "analysisTitle": "The BCBS Anchor + Carelon Build",
+    "analysisSummary": "Elevance's competitive position rests on **regulatory lock-in (state-level Medicaid contracts + BCBS branding), bilateral provider network effects, and proprietary claims data on 47M+ medical members**:",
+    "analysisPoints": [
+      {
+        "title": "BCBS License: A Brand-Protected Geographic Monopoly",
+        "text": "Elevance holds exclusive BCBS licenses in 14 states (CA, NY, GA, OH, IN, KY, VA, WI, CO, CT, ME, MO, NV, NH). The BCBS brand carries decades of provider trust and member familiarity that single-state plans cannot match. Switching out of an Elevance BCBS plan typically means switching out of the BCBS network — a meaningful behavioral and clinical disruption for members."
+      },
+      {
+        "title": "State Medicaid + Medicare Advantage Contracts",
+        "text": "Elevance administers Medicaid managed care in many of its BCBS states under multi-year capitation contracts that require state-specific licensure, actuarial certification, and network adequacy compliance. Each contract represents 3-5 years of regulated revenue with built-in renewal mechanisms; exit is operationally and politically difficult. Medicare Advantage contracts add another federal-program embedding layer."
+      },
+      {
+        "title": "Carelon: The Healthcare Services Build",
+        "text": "Carelon (formerly IngenioRx + various M&A) is Elevance's pharmacy benefit, analytics, behavioral health, and post-acute services platform. Carelon Services and Carelon Rx now generate ~$60B+ of segment revenue and are growing faster than the legacy Health Benefits business. The strategy mirrors UNH's Optum playbook with a 5-7 year lag; the directional thesis is sound but execution risk is real."
+      },
+      {
+        "title": "Claims Data on 47M+ Members",
+        "text": "Decades of claims data across 47M+ medical members and additional pharmacy/dental/vision lives feed risk-adjustment models, care management programs, and underwriting. While the dataset is meaningfully smaller than UNH's 140M-member base, it is still a structural asset for population health analytics and value-based care contracting in BCBS states."
+      }
+    ]
+  },
+  "growth": {
+    "score": 52,
+    "description": "Q1 2026 operating revenue of $49.5B grew only 1.5% YoY but EPS of $12.58 beat consensus by 14% and management raised FY2026 adj. EPS guidance to >$26.75. Q1 included a $935M Medicare Advantage risk-adjustment accrual that is binary (range: -$585M to +$565M from accrual). Medium-term growth depends on Carelon scaling (15%+ organic) offsetting low-single-digit Health Benefits growth as MA member counts stabilize after 2025-2026 repricing. Demographic tailwind (Medicare-eligible boomers) supports a ~3-5% structural revenue base into the late 2020s.",
+    "growthAnalysis": {
+      "cagrEstimate": "3-6%",
+      "scoreDerivation": "Base 50 (3-8% CAGR) + 5 Carelon services scaling (~15% organic, growing share of mix) + 3 demographic tailwind (Medicare-eligible boomers) - 3 Medicare Advantage repricing drag (industry-wide MCR pressure) - 3 Medicaid redetermination overhang = 52",
+      "drivers": [
+        { "name": "Health Benefits (commercial + government)", "metric": "47M+ medical members; 1-2% growth in 2026", "trend": "stable" },
+        { "name": "Carelon Services + Rx", "metric": "~$60B+ segment revenue; 12-15% organic growth", "trend": "accelerating" },
+        { "name": "Medicare Advantage", "metric": "~$935M Q1 risk-adj accrual; member count stabilizing in 2026 after losses", "trend": "stable" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If the Medicare Advantage risk-adjustment accrual proves materially under-reserved (i.e., outside the +$565M upper bound) AND CMS imposes additional MA benchmark cuts in 2027, Elevance's MA business swings to operating losses and FY2027 EPS estimates fall below $25.",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 78,
+    "description": "At ~$369, ELV trades at ~14× FY2026 EPS guidance — a significant discount to its ~17× historical average and below most managed-care peers despite a Q1 beat that triggered a guidance raise. The discount reflects Medicare Advantage uncertainty (industry-wide), the $935M risk-adjustment accrual, and skepticism on Carelon's path to Optum-like margins. The dividend yield is ~1.8% and the company has been an aggressive buyer of its own stock.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~16×", "note": "TTM GAAP EPS depressed by Q1 accrual" },
+        { "label": "Forward P/E (NTM)", "value": "~14×", "note": "FY2026 adj. EPS guide >$26.75" },
+        { "label": "PEG Ratio", "value": "~3.0×", "note": "fwd P/E / ~5% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~0.4×", "note": "~$200B NTM operating revenue" },
+        { "label": "Price / FCF", "value": "~12×", "note": "~$7B TTM FCF" }
+      ],
+      "summary": "ELV screens cheap on absolute multiples (~14× forward, ~12× FCF), with a meaningful discount to UNH (~13×, but with active DOJ probe) and other managed-care peers. The PEG of ~3.0 reflects modest near-term EPS growth, but the asymmetry comes from Carelon's eventual contribution and any positive MA risk-adjustment resolution (the $935M accrual could be revised down by up to $585M)."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$280",
+      "description": "Medicare Advantage benchmarks are cut further in 2027, the $935M risk-adjustment accrual proves under-reserved, and Carelon margins disappoint relative to the Optum playbook.",
+      "points": [
+        "CMS imposes additional MA benchmark reductions of 3-5% in 2027, forcing Elevance to exit unprofitable MA markets and shrink the segment by 10%+ of members",
+        "The Medicare Advantage risk-adjustment liability is settled at the high end of the disclosed range (+$565M above accrual) and a parallel DOJ-style investigation extends to Elevance's coding practices",
+        "Carelon services growth decelerates to single digits as competitive pressure from Optum + CVS Caremark intensifies, leaving margin expansion below plan",
+        "Multiple compresses to ~10× forward EPS as the stock trades on Health Benefits earnings alone with no Carelon premium"
+      ]
+    },
+    "base": {
+      "priceTarget": "$430",
+      "description": "FY2026 EPS lands at the high end of >$26.75 guidance, MA repricing produces stable 2027 economics, Carelon continues 12-15% organic growth, and the multiple expands modestly toward historical average.",
+      "points": [
+        "Adj. EPS reaches ~$27 in FY2026 with the MA risk-adjustment accrual resolved within the disclosed range",
+        "Carelon Services + Rx revenue grows 12-15% in FY2026 and reaches $70B+ segment revenue, with operating margins expanding toward 7-8%",
+        "Medicaid redetermination headwinds fully wash out by mid-2026; member count stabilizes and dual-eligible SNP enrollment grows",
+        "Multiple re-rates to ~16× forward EPS on FY2027 EPS of ~$28-29, with $4-5B of annual buyback supporting per-share growth"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$560",
+      "description": "Carelon scales toward Optum-comparable margins, MA returns to growth in 2027 after repricing, and Elevance re-rates to peer-leading multiples.",
+      "points": [
+        "Carelon Services + Rx reaches $80B+ in FY2027 with operating margins expanding toward 9-10% (closing half the gap to Optum), driving segment operating income above $7B",
+        "Medicare Advantage member count returns to growth in 2027 as competitors retreat from unprofitable markets, allowing Elevance to expand share with disciplined pricing",
+        "AI-powered claims and care management products from Carelon become licensed externally, opening a healthcare-services-as-a-platform revenue stream valued at premium multiples",
+        "Multiple expands to ~18-19× forward EPS on FY2027 EPS of ~$30, with continued capital return providing additional total-return cushion"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Provider portals, claims submission systems, and Carelon care-management workflows accumulate years of organizational learning across hospital systems, physician groups, and HR benefits teams. Switching adds material retraining cost across thousands of users."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "Risk-adjustment models, actuarial pricing, network adequacy compliance algorithms, and Carelon clinical-decision-support tools represent decades of proprietary healthcare data science specific to Elevance's BCBS state populations and government-program rules."
+    },
+    "publicDataAccess": {
+      "status": "weakened",
+      "note": "Carelon aggregates some publicly available CMS and NIH datasets into proprietary analytical products, but the primary advantage is private claims data on 47M+ members, not public data access."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Healthcare actuaries, BCBS-license-trained underwriters, and clinical informaticists are genuinely scarce. Elevance is one of the largest employers of MA-experienced actuaries in the US, though the talent base is smaller than UNH/Optum's."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Health Benefits + Carelon Rx (PBM) + Carelon Behavioral + Carelon Services (analytics, post-acute) form a vertically integrated bundle that employers and state Medicaid agencies cannot easily unbundle without contracting with multiple vendors. Bundling is less mature than Optum's but directionally similar."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "47M+ medical members generate decades of claims data — not as comprehensive as UNH's 140M-member base but still one of the two or three largest private claims datasets in the US, powering risk-adjustment and care-management analytics that smaller insurers cannot replicate."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "BCBS license exclusivity in 14 states is a brand-protected regulatory monopoly within those geographies — the BCBS Association's licensing framework restricts which entity can use the brand in each state, effectively granting Elevance a multi-decade BCBS franchise in its footprint. State Medicaid managed-care contracts add multi-year regulated revenue with high re-licensure barriers. Federal MA contracts add another layer."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "Bilateral provider-employer network effects: Elevance's 1.7M+ provider relationships in BCBS states make it the broadest network for employers in those geographies, and providers cannot afford to be out-of-network for the dominant BCBS plan in their state. Decades of network compounding create real switching friction on both sides."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Pharmacy benefit management (Carelon Rx), claims processing, utilization management, and care coordination are embedded in the daily clinical and financial operations of employers, hospitals, state Medicaid agencies, and Medicare Advantage programs. Replacing Elevance requires simultaneously rebuilding pharmacy networks, claims infrastructure, and provider contracting."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "Elevance's claims systems are the authoritative system of record for member health and financial transactions across 47M+ lives. Carelon's care-management and behavioral-health platforms are the system of record for clinical decisions in thousands of provider practices in BCBS states."
+    },
+    "verdict": "Elevance's moat structure is led by regulatoryLockIn (BCBS license exclusivity in 14 states, state Medicaid contracts), networkEffects (1.7M+ provider relationships), proprietaryData (47M+ member claims), and systemOfRecord (claims authority). These moats are highly AI-resilient — AI does not threaten state-licensed managed care; it actually plays into Carelon's analytics and care-management strengths. The structural risk is not AI disruption but Medicare Advantage policy and the unresolved $935M risk-adjustment accrual. Carelon is the key swing factor — if it scales toward Optum-like margins, ELV deserves a peer-leading multiple; if it stalls, the stock remains a low-multiple Health Benefits compounder with demographic tailwinds."
+  }
+}

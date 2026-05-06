@@ -1,0 +1,167 @@
+{
+  "slug": "jpm",
+  "ticker": "JPM",
+  "name": "JPMorgan Chase",
+  "titleColor": "#0a3d62",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "JPM"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$837B"
+    },
+    {
+      "label": "Price",
+      "value": "~$312"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Financials | Money Center Bank",
+      "color": "primary"
+    },
+    {
+      "label": "Scale + Regulatory Moat",
+      "color": "success"
+    }
+  ],
+  "recommendation": "Hold",
+  "metrics": [
+    {
+      "title": "Q1 2026 EPS",
+      "value": "$5.94",
+      "label": "+17% YoY — Net income $16.5B",
+      "icon": "Landmark",
+      "color": "#0a3d62"
+    },
+    {
+      "title": "Q1 2026 ROTCE",
+      "value": "23%",
+      "label": "Industry-leading; ROE 19%",
+      "icon": "TrendingUp",
+      "color": "#10b981"
+    },
+    {
+      "title": "Book Value / Share",
+      "value": "$128.38",
+      "label": "+8% YoY at March 31, 2026",
+      "icon": "Shield",
+      "color": "#3b82f6"
+    }
+  ],
+  "moat": {
+    "description": "The largest US bank by assets and market cap, JPMorgan combines unrivaled scale, a fortress balance sheet, and the most diversified franchise in global finance — investment banking #1, payments rails carrying ~$10T/day, and a $4T deposit base — creating a cost-of-capital and cost-to-serve advantage that no peer can match.",
+    "analysisTitle": "The Fortress Scale Moat",
+    "analysisSummary": "JPM's competitive position rests on **scale economies, regulatory capital advantages, and embedded corporate treasury workflows** that compound over time:",
+    "analysisPoints": [
+      {
+        "title": "Scale Economies in Tech and Risk",
+        "text": "JPM spends ~$17B/year on technology — more than the entire revenue of most regional banks. This budget funds the firm's data, AI, fraud, and risk infrastructure, which is amortized across $4T of deposits, $1.4T of loans, and trillions of trading flow. The cost-per-customer of compliance, KYC, and cyber spend is structurally lower at JPM than at any peer, widening the gap each cycle."
+      },
+      {
+        "title": "Payments and Treasury Embedding",
+        "text": "JPM Payments processes more than $10 trillion of payment volume daily, holds top-3 share in US treasury services, and operates the rails behind hundreds of Fortune 500 corporate ERP integrations. Once a CFO's accounts payable, payroll, and FX hedging are wired into JPM's APIs, switching costs become operational rather than financial — these relationships persist for decades."
+      },
+      {
+        "title": "Capital and Funding Cost Advantage",
+        "text": "As a GSIB with the lowest funding cost in the universal-bank tier, JPM compounds book value through every cycle (BVPS +8% YoY in Q1 2026 to $128.38). The combination of a 15%+ CET1 ratio, $1.5T of HQLA, and consistent 19-23% ROTCE means JPM is the only bank that can simultaneously buy back stock, pay a growing dividend, and gain share in downturns when peers are forced to retrench."
+      }
+    ]
+  },
+  "growth": {
+    "score": 64,
+    "description": "Q1 2026 revenue +10% YoY to $50.5B, net income +13% to $16.5B, EPS +17% to $5.94, with ROTCE of 23%. Markets, asset & wealth management, and investment banking fees all contributed; full-year NII guidance was nudged lower (~$103B) on tariff-driven rate uncertainty, but the franchise's earnings power remains exceptional. Forward EPS growth of 5-8% from a record base reflects the law of large numbers more than franchise weakness.",
+    "additionalNote": {
+      "title": "Growth Drivers (3-Year Horizon)",
+      "points": [
+        "Asset & Wealth Management: AUM compounding at high single digits as the First Republic acquisition matures and net new money flows accelerate",
+        "Investment Banking recovery: a multi-year IB fee tailwind as M&A and IPO activity normalizes from the 2022-2024 trough",
+        "Payments share gains: real-time payments, embedded finance APIs, and treasury services taking share from regionals weakened by 2023's deposit shocks",
+        "Capital return: ~$30B+ in annual buybacks plus a growing dividend reduce share count by 2-3% per year, supporting double-digit EPS growth even at single-digit revenue growth"
+      ]
+    }
+  },
+  "valuation": {
+    "score": 60,
+    "description": "At ~$312, JPM trades at ~2.4x book value ($128.38) and ~13.5x 2026E EPS — a premium to the universal-bank peer group (~10-12x) but justified by best-in-class ROTCE of 23%. Sits between the base ($330) and bull ($380) targets, leaving roughly 6% upside to base and ~22% to bull. Most of the franchise quality is recognized; further upside requires sustained ROTCE >20% and continued share gains.",
+    "valuationNote": {
+      "text": "JPM is rarely cheap — the market understands the franchise. The right way to own it is as a dollar-cost-averaged compounder: BVPS grew 8% YoY, the dividend yields ~2%, and buybacks add another 2-3% annually. Total shareholder return tracks book value compounding plus modest multiple expansion. A bear-case dislocation back to ~1.7x book ($220) would be a generational entry point.",
+      "fairValue": "$330"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$220",
+      "description": "A tariff-driven recession triggers a credit cycle, NIM compresses as the Fed cuts, and reserve builds drive EPS toward $18-19; the multiple compresses to ~1.7x book.",
+      "points": [
+        "US recession in 2026-2027 drives credit losses up 50-80% from current levels; CCB net charge-offs spike toward 4%, and commercial real estate marks crystallize $5-10B of incremental losses",
+        "Fed cuts 200bps to support growth; NIM compresses 30-40bps and 2027 EPS falls to ~$18-19 versus ~$23 currently",
+        "Multiple compresses from 2.4x book to ~1.7x book on $130 BVPS — implying ~$220"
+      ]
+    },
+    "base": {
+      "priceTarget": "$330",
+      "description": "Soft landing scenario — credit normalizes mildly, IB fees recover, and JPM compounds book value 7-9% annually; the stock trades at ~2.4x forward book on $138 BVPS.",
+      "points": [
+        "Modest credit normalization from current cyclically low levels; CCB and CIB credit costs rise gradually but remain manageable",
+        "Investment banking and Markets revenue grow mid-single digits as M&A pipeline converts and capital markets activity remains constructive",
+        "EPS reaches ~$24 in 2027; at 13.5x and ~2.4x BVPS of $138, fair value is ~$330"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$380",
+      "description": "AI-driven productivity gains widen JPM's cost-to-serve advantage; payments and AWM accelerate; the market re-rates the franchise to a premium multiple given best-in-class ROTCE.",
+      "points": [
+        "AI-led operating leverage drives the efficiency ratio below 50% and pushes ROTCE sustainably above 23%",
+        "Payments revenue grows 12-15% as embedded finance and real-time payments drive share gains from regionals; AWM AUM crosses $5T",
+        "Multiple re-rates to ~2.7x book on $140 BVPS — implying ~$380"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "strong",
+      "note": "Corporate treasurers, FX traders, and prime brokerage clients have built workflows around JPM's Access, JPM Coin, and CIB platforms over decades; the cost of retraining staff and re-integrating ERP/treasury systems makes switching prohibitive."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Risk, capital allocation, and credit underwriting frameworks refined across 200+ years and the 2008/2020/2023 cycles are core IP; AI augments but cannot replicate institutional risk culture and regulatory relationships."
+    },
+    "publicDataAccess": {
+      "status": "weakened",
+      "note": "Public economic and market data is broadly available; JPM's edge is internal flow data, not public-data aggregation."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Top-tier investment bankers, traders, and risk officers remain scarce, but the pool is more mobile than in many industries — bonus inflation is the ongoing tax JPM pays to retain talent."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Consumer banking + cards + mortgages + wealth + corporate treasury + IB + markets = a deeply cross-sold relationship; primary-bank households use 6+ products on average, raising switching costs across the platform."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "JPM sees ~50% of US consumer spending flow, $10T+ daily payments, and the largest corporate deposit footprint — a real-time view of macro and credit conditions no peer can match, fueling underwriting, marketing, and trading edge."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "GSIB designation, $1.5T HQLA, 15%+ CET1, and approved IRB models embed JPM in the regulatory architecture; new entrants face a 10-year licensing and capital path to even approach competitive scale."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "Investment banking is a relationship and league-table network; payments rails strengthen with each corporate added; AWM intermediation grows with the LP-GP network — multiple compounding network effects across the franchise."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "JPM is wired into Fortune 500 ERP, AP/AR, payroll, and FX systems via APIs; treasury management mandates run for decades and are renewed rather than re-bid; payments and custody flows are operationally embedded."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "Primary-bank status across consumer households, corporate treasuries, and institutional custody makes JPM the system of record for cash, payments, and securities holdings for a meaningful share of the global economy."
+    },
+    "verdict": "JPMorgan is the AI-resilient money-center bank par excellence — its moats (regulatory capital, scale tech spend, transaction embedding, primary-bank status) are structurally reinforced by AI, which lowers JPM's cost-to-serve faster than smaller peers can keep up. The bear case is cyclical, not structural. Own the compounder; size up at lower multiples of book."
+  },
+  "lastAnalyzed": "May 2026"
+}

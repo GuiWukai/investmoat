@@ -1,0 +1,167 @@
+{
+  "slug": "bx",
+  "ticker": "BX",
+  "name": "Blackstone",
+  "titleColor": "#000000",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "BX"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$152B"
+    },
+    {
+      "label": "Price",
+      "value": "~$124"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Financials | Alternative Asset Manager",
+      "color": "primary"
+    },
+    {
+      "label": "LP Relationship Moat",
+      "color": "success"
+    }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Total AUM",
+      "value": "$1.30T",
+      "label": "Q1 2026 — +12% YoY (Fee-earning $937B)",
+      "icon": "Landmark",
+      "color": "#000000"
+    },
+    {
+      "title": "Fee Related Earnings",
+      "value": "$1.55B",
+      "label": "+23% YoY in Q1 2026",
+      "icon": "TrendingUp",
+      "color": "#10b981"
+    },
+    {
+      "title": "Distributable Earnings",
+      "value": "$1.76B",
+      "label": "+25% YoY ($1.36/share)",
+      "icon": "Award",
+      "color": "#3b82f6"
+    }
+  ],
+  "moat": {
+    "description": "Blackstone is the world's largest alternative asset manager at $1.3T AUM, with a 40-year track record of compounding LP capital across private equity, real estate, credit, and infrastructure. The moat is built on relationships with the world's largest pensions, sovereigns, and insurance balance sheets — capital that is sticky for 8-12 years per fund and that Blackstone's brand can re-raise at scale every cycle.",
+    "analysisTitle": "The LP Relationship and Brand Moat",
+    "analysisSummary": "Blackstone's competitive position rests on **fund persistence, LP gravity, and platform scale** that compound with each successive vintage:",
+    "analysisPoints": [
+      {
+        "title": "Locked-Up Capital and Fund Persistence",
+        "text": "More than 70% of Blackstone's AUM is in funds with 8-12 year contractual lock-ups, generating management fees that are effectively annuitized. Performance-revenue-eligible AUM hit a record $635B in Q1 2026 — every dollar that crosses its preferred-return hurdle generates 20% carried interest on top. Unlike a public asset manager facing daily redemption risk, Blackstone's fee base is structurally more durable than a SaaS company's ARR."
+      },
+      {
+        "title": "LP Gravity and Brand",
+        "text": "The world's 200 largest LPs — public pensions, sovereign wealth funds, insurance balance sheets — concentrate allocations into a small handful of brand-name GPs. Blackstone is the default. Q1 2026 inflows of $69B (and $250B over the LTM) demonstrate that even in a soft fundraising environment, capital concentrates toward Blackstone. New entrants cannot bridge a 40-year track record across a full cycle; LP allocation committees explicitly prefer multi-cycle history."
+      },
+      {
+        "title": "Platform Scale and Private Wealth",
+        "text": "The BCRED, BREIT, and BXPE perpetual-capital vehicles have institutionalized retail access to alternatives — private wealth AUM now exceeds $250B and grows in tandem with the registered investment advisor channel. Insurance solutions (via Corebridge, Resolution Life, AIG flow) provide another perpetual-capital pillar. These structures lock fees in for the very long term and feed Blackstone's origination engine across credit, real estate, and infrastructure."
+      }
+    ]
+  },
+  "growth": {
+    "score": 80,
+    "description": "Q1 2026 was a record print: AUM $1.30T (+12% YoY), fee-earning AUM $937.6B (+9%), FRE +23% to $1.55B, DE +25% to $1.76B, $69B of inflows in the quarter and $250B LTM. Credit & Insurance AUM grew 18% to $457.5B as private credit continued to scale, and three of four segments grew management fees 15%+. The growth engine is firing on private wealth, insurance, and infrastructure simultaneously.",
+    "additionalNote": {
+      "title": "Growth Drivers (3-Year Horizon)",
+      "points": [
+        "Private credit scaling: BCRED and direct-lending vehicles grow toward $700B+ AUM as banks retreat from middle-market lending",
+        "AI infrastructure: Blackstone's data-center, power, and digital-infra platforms (QTS, Aligned) ride the multi-trillion-dollar AI buildout cycle",
+        "Insurance solutions: perpetual-capital insurance accounts compound at high single digits and generate annuity-like FRE",
+        "Private wealth retail: $250B+ of private wealth AUM compounds at 15%+ as RIA allocations to alternatives migrate from 0% toward 10-20%"
+      ]
+    }
+  },
+  "valuation": {
+    "score": 60,
+    "description": "At ~$124, BX trades at ~30x forward FRE per share — a premium to traditional asset managers (15-20x) but justified by the FRE growth profile (+23% YoY) and the perpetual-capital share of AUM. Sits between base ($140) and bull ($175) targets, with limited near-term margin of safety. The bull case requires sustained 20%+ FRE growth.",
+    "valuationNote": {
+      "text": "Blackstone is rarely 'cheap' on near-term multiples — the right framework is duration of compounding. With $1.3T of AUM growing 10-12%, FRE compounding 20%+, and a 4% dividend yield from distributable earnings, the total-return math works at any entry price below $130. A market drawdown that took BX back to ~$100 (the Q1 2026 low) would be a generational entry.",
+      "fairValue": "$140"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$95",
+      "description": "Tariff-driven recession freezes capital markets, LPs slow new commitments, performance fees collapse, and the multiple compresses on FRE growth concerns.",
+      "points": [
+        "Recession freezes M&A and IPO exits; realizations fall 50%+ and net accrued performance fees mark down meaningfully",
+        "LP fundraising slows from $250B LTM toward $150B as institutional allocators pause new commitments and private wealth retail cools",
+        "Multiple compresses from 30x FRE/share to ~22x on a slower-growth narrative — implying ~$95"
+      ]
+    },
+    "base": {
+      "priceTarget": "$140",
+      "description": "AUM compounds toward $1.55T over 18-24 months as fundraising remains constructive; FRE per share grows ~18%; multiple holds at ~30x.",
+      "points": [
+        "AUM crosses $1.5T by year-end 2027 driven by private credit, infrastructure, and private wealth inflows",
+        "FRE per share compounds toward ~$5 by 2027 as fee-earning AUM grows 12% and operating leverage drives margins higher",
+        "Multiple holds at ~30x as the franchise remains the gold-standard alternatives platform — implying ~$140"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$175",
+      "description": "Private wealth retail explodes, insurance balance-sheet partnerships accelerate, performance fees from a vintage 2018-2020 cohort harvest, and multiple expands to 35x on durability of FRE growth.",
+      "points": [
+        "Private wealth AUM doubles toward $500B as RIAs systematically allocate 10-20% to alternatives via BCRED/BREIT/BXPE",
+        "Realization wave from 2018-2020 vintages drives $5-7B of net realized performance fees over 2026-2028",
+        "Multiple expands to 35x FRE/share on $5+ FRE — implying ~$175"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "LP allocators, consultants, and private wealth platforms have built diligence, reporting, and capital-call workflows around Blackstone's standards; the cost of onboarding a new GP at scale is high and discourages switching."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "40-year underwriting frameworks across PE, real estate, credit, and infrastructure are core institutional IP; investment-committee logic is honed across multiple cycles and embeds risk-adjusted return discipline that AI cannot replicate."
+    },
+    "publicDataAccess": {
+      "status": "weakened",
+      "note": "Most macro and public-market data is broadly available; Blackstone's edge is private-market data and deal flow, not public data."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "Senior dealmakers, fundraisers, and investment-committee partners with multi-cycle track records are genuinely scarce; Blackstone's brand attracts the best talent globally and retains them via carried-interest economics."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "PE + real estate + credit + infrastructure + insurance solutions + private wealth = a one-stop alternatives bundle for the largest LPs, who allocate across funds within a single GP relationship to simplify diligence and reporting."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Portfolio-company operating data across hundreds of holdings, real-estate cap-rate and rent data across millions of square feet, and private-credit borrower performance data form a uniquely deep proprietary dataset that informs underwriting and portfolio construction."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "Registered investment adviser status, ERISA fiduciary frameworks, and SEC oversight create regulatory compliance moats; new entrants must build out a 5-10 year compliance and reporting infrastructure to compete for institutional mandates."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "Self-reinforcing GP-LP network — the more capital Blackstone manages, the more deal flow and co-invest opportunities it sees, the better the returns, the more LPs commit. Each fund vintage strengthens the next."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Capital commitments are contractually locked for 8-12 years; LPs cannot redeem mid-fund; perpetual-capital vehicles (BCRED/BREIT/BXPE) extend duration further. Switching is not just costly — it is structurally impossible until lock-up expiration."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "For LP allocation committees, Blackstone is the default benchmark for alternatives — performance, fund terms, and reporting set the industry standard against which other GPs are measured."
+    },
+    "verdict": "Blackstone is structurally AI-resilient — its moats are LP relationships, brand, and locked-up capital, none of which AI can disintermediate. AI strengthens Blackstone by accelerating diligence, portfolio-company value creation, and origination at scale. The risk is cyclical (recession, rate spikes, M&A freezes), not structural; this is a multi-decade compounder."
+  },
+  "lastAnalyzed": "May 2026"
+}

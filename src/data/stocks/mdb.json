@@ -1,0 +1,216 @@
+{
+  "slug": "mdb",
+  "ticker": "MDB",
+  "name": "MongoDB, Inc.",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "MDB"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$22B"
+    },
+    {
+      "label": "Current Price",
+      "value": "~$267"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Document DB | Atlas Vector",
+      "color": "primary"
+    },
+    {
+      "label": "Narrow Moat",
+      "color": "warning"
+    },
+    {
+      "label": "AI Optionality",
+      "color": "secondary"
+    }
+  ],
+  "recommendation": "Hold",
+  "metrics": [
+    {
+      "title": "Q4 FY2026 Revenue",
+      "value": "$695M",
+      "label": "+27% YoY — full-year FY2026 revenue $2.46B (+23% YoY)",
+      "icon": "Database",
+      "color": "#00ed64"
+    },
+    {
+      "title": "Atlas Revenue Growth",
+      "value": "+29% YoY",
+      "label": "Atlas now 70%+ of total revenue; 65,200+ customers",
+      "icon": "Cloud",
+      "color": "#2563eb"
+    },
+    {
+      "title": "FY2027 Guidance",
+      "value": "16-18%",
+      "label": "Revenue growth deceleration; post-earnings stock fell 22%",
+      "icon": "TrendingDown",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "description": "MongoDB is the leading document database (NoSQL) standard with Atlas as a fully managed multi-cloud platform, plus growing AI-era relevance via integrated vector search and Voyage AI embedding/reranking models — but faces narrowing developer mindshare against PostgreSQL extensions and cloud-native vector databases.",
+    "analysisTitle": "The Document Database Standard (Under Pressure)",
+    "analysisSummary": "MongoDB's moat is real but contested — built on **Developer Standard, Atlas Multi-Cloud, and Vector AI Integration**:",
+    "analysisPoints": [
+      {
+        "title": "Document Database Standard for JSON Workloads",
+        "text": "MongoDB is the de facto standard for document/JSON workloads with millions of developers and a deep ecosystem of drivers, ORMs, and frameworks (Mongoose, Node.js, etc.). For applications with flexible schemas, nested documents, and rapid iteration, MongoDB's developer experience remains best-in-class. 65,200+ paying customers, with 2,700 added in Q4 FY2026."
+      },
+      {
+        "title": "Atlas Multi-Cloud Managed Service",
+        "text": "Atlas runs on AWS, Azure, and GCP with single-pane multi-region replication, backup, and security — meaningful differentiation vs. self-managed alternatives. Atlas grew 29% YoY in Q4 FY2026 and now represents 70%+ of total revenue, with consumption-based pricing capturing workload expansion."
+      },
+      {
+        "title": "Voyage AI Integration & Vector Search",
+        "text": "MongoDB acquired Voyage AI in 2024 and has integrated five new embedding models (Voyage 4 series), Automated Embedding for Community Vector Search, and reranking APIs into Atlas — positioning the platform as a unified data + retrieval layer for production AI/RAG workloads. This is the strongest bull case: developers can keep transactional data, vector embeddings, and metadata in one database."
+      },
+      {
+        "title": "Open-Source Roots & Developer Mindshare",
+        "text": "MongoDB Community Edition retains a large open-source footprint and is taught in countless bootcamps and CS programs — keeping the developer funnel healthy. However, PostgreSQL with pgvector and JSONB has emerged as the most credible competitive threat, and AWS DocumentDB / Azure Cosmos DB offer API-compatible alternatives that some workloads migrate to."
+      }
+    ]
+  },
+  "growth": {
+    "score": 76,
+    "description": "FY2026 revenue grew 23% to $2.46B with Q4 at +27% — solid but management's FY2027 guidance of 16-18% growth triggered a 22% post-earnings selloff on March 2, 2026, signaling structural deceleration. Atlas at +29% YoY remains the bright spot and now represents 70%+ of total revenue; non-Atlas (license) revenue is in secular decline. Voyage AI integration and vector search are credible AI-era growth levers but unlikely to fully offset the consumption normalization MongoDB is seeing in its core base.",
+    "growthAnalysis": {
+      "cagrEstimate": "16-20%",
+      "scoreDerivation": "Base 80 (15-30% CAGR; FY27 guide 16-18%) + 5 Atlas momentum (+29% YoY, 70%+ of mix) + 3 AI optionality (Voyage AI, vector search) − 12 deceleration risk (FY27 guide implies steep step-down from 23% to 17%) = 76",
+      "drivers": [
+        {
+          "name": "Atlas (Managed Cloud DB)",
+          "metric": "+29% YoY Q4 FY2026; 70%+ of revenue mix",
+          "trend": "stable"
+        },
+        {
+          "name": "Vector Search & Voyage AI",
+          "metric": "5 embedding models integrated; Automated Embedding GA; AI workload TAM expansion",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Enterprise Advanced (License)",
+          "metric": "Declining single-digit; secular shift to Atlas managed model",
+          "trend": "decelerating"
+        }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If PostgreSQL with pgvector continues to gain developer mindshare for new application starts and AI workloads, MongoDB's net new logo growth could decelerate further; combined with consumption optimization in the existing Atlas base, FY2028 growth could fall to 12-14%, re-rating the multiple toward legacy database levels.",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 65,
+    "description": "At ~$267 — down from $480+ peaks but rebounded from the post-earnings $200 lows — MDB trades at ~$22B market cap. Consensus price target of $369 implies ~40% upside (per 34 analysts), but the bear case played out clearly with the 22% post-earnings selloff. At ~9× forward sales on FY2027 revenue of ~$2.85B (16-18% guide) and ~50× forward P/E, valuation reflects a growth-at-reasonable-price profile but not a bargain — the multi-quarter deceleration trend means the multiple may compress further if FY2027 guidance is missed.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "N/A",
+          "note": "GAAP loss; SBC-heavy"
+        },
+        {
+          "label": "Forward P/E (NTM, non-GAAP)",
+          "value": "~50×",
+          "note": "consensus non-GAAP EPS ~$5.30"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~3.0×",
+          "note": "fwd P/E ÷ 17% EPS CAGR — elevated"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~9×",
+          "note": "$2.85B FY2027 revenue est."
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~50×",
+          "note": "FCF margin ~15%"
+        }
+      ],
+      "summary": "At ~9× forward sales and ~50× forward non-GAAP P/E, MDB is no longer cheap given the FY2027 deceleration to 16-18% growth. PEG of 3.0× is elevated for a database business decelerating toward mid-teens — the AI/vector optionality is keeping the multiple elevated relative to fundamentals. The post-earnings selloff repriced bear concerns but the stock has already rebounded ~25% from the lows, leaving limited margin of safety unless Voyage AI / vector search drives material upside surprise."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$170",
+      "description": "FY2027 growth lands at the low end of guidance; PostgreSQL pgvector wins AI/RAG mindshare; Atlas consumption optimization persists; multiple compresses to 6× forward sales.",
+      "points": [
+        "FY2027 revenue grows at 15-16% (low end of guide), with Atlas decelerating to 22% YoY as enterprise consumption optimization continues",
+        "PostgreSQL pgvector + cloud-native vector DBs (Pinecone, Weaviate) capture 60%+ of new AI/RAG application starts, leaving MongoDB Vector Search confined to existing customers",
+        "Multiple compresses to 6× forward sales as growth optics deteriorate; FY2028 guide opens 12-14% range, validating secular concerns"
+      ]
+    },
+    "base": {
+      "priceTarget": "$340",
+      "description": "FY2027 growth at the high end of 16-18% guide; Atlas stabilizes at 28%+; Voyage AI integration drives meaningful vector search wins; multiple holds at 10-11× forward sales.",
+      "points": [
+        "FY2027 revenue grows 18% to ~$2.9B with Atlas at 28% YoY and stable margins; consumption headwinds prove transitory",
+        "Voyage AI + Atlas Vector Search captures 25%+ of new AI/RAG application starts at MongoDB customers, contributing $250M+ run-rate by end of FY2027",
+        "Net retention stabilizes at 115%+; non-GAAP operating margin expands to 18% on operating leverage; multiple holds at 10× forward sales"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$520",
+      "description": "Atlas Vector Search becomes the leading unified data + retrieval layer for production AI; growth re-accelerates to 22%+; multiple expands to 14× forward sales.",
+      "points": [
+        "Atlas Vector Search + Voyage AI emerges as the de facto unified data layer for production AI/RAG, capturing 40%+ of new AI application starts globally",
+        "FY2028 revenue re-accelerates to 22-25% YoY as AI workload TAM expansion outpaces core consumption normalization; non-GAAP margin reaches 20%+",
+        "Multiple re-rates to 14× forward sales as MDB transitions from 'legacy NoSQL' narrative to 'AI data platform' narrative; large-cap acquirer interest provides downside support"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "MongoDB Query Language (MQL), aggregation pipelines, and Atlas console require developer fluency built over years; AI-assisted query generation is reducing some of this friction but advanced data modeling still requires expertise."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Applications encode schema design decisions, aggregation pipelines, and indexing strategies in MongoDB — meaningful migration cost but documents/JSON are increasingly portable to PostgreSQL JSONB and other databases."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Not applicable — MongoDB hosts customer-private operational data, not public datasets."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "MongoDB-fluent developers are abundant relative to demand; the broader pool of generalist backend engineers can pick up MQL quickly, and AI-assisted query generation is reducing the scarcity premium for basic operations."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Atlas bundles operational DB + Vector Search + Search (Lucene) + Stream Processing + Triggers + Charts + Voyage AI embedding/reranking — a meaningful bundle but fewer SKUs and lower cross-product attach than ServiceNow or Datadog."
+    },
+    "proprietaryData": {
+      "status": "weakened",
+      "note": "Customer data resides in MongoDB Atlas but customers retain ownership and portability. Voyage AI embeddings are proprietary models trained on text/image data, not customer database content — a moat for the AI product line but not a database-wide flywheel."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "Atlas holds SOC 2, HIPAA, ISO 27001, PCI DSS, and FedRAMP Moderate certifications; meaningful for regulated workloads but matched by hyperscaler-managed databases and not as deep as ServiceNow's federal lock-in."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "Indirect network effects via the developer ecosystem (drivers, ORMs, courses, community) — large but not exclusive, and PostgreSQL has comparable or larger community gravity for new application starts."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Every CRUD operation, every read/write, and increasingly every vector search at MongoDB customer applications flows through Atlas — embedded at the application data layer but not at the workflow/system-of-record level."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "MongoDB is the system of record for the operational data of millions of applications, but the database market is fragmented (PostgreSQL, MySQL, Cosmos, DynamoDB, etc.) — MongoDB is a leading standard within document/NoSQL, not a universal standard like ServiceNow in workflows."
+    },
+    "verdict": "MongoDB has a real but narrowing moat: it is the leading document database standard with strong developer mindshare and a credible AI integration play via Voyage AI and Atlas Vector Search. However, FY2027 guidance of 16-18% growth signals structural deceleration, and PostgreSQL pgvector + cloud-native vector databases are pressuring new application starts in the most strategically important AI/RAG workloads. The Voyage AI vision (unified data + retrieval layer for production AI) is the bull case but execution risk is elevated. At ~9× forward sales and 3.0× PEG, the stock prices in optionality but offers limited margin of safety until growth re-accelerates or vector search wins materialize at scale."
+  },
+  "lastAnalyzed": "May 2026"
+}

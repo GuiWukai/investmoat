@@ -1,0 +1,167 @@
+{
+  "slug": "ms",
+  "ticker": "MS",
+  "name": "Morgan Stanley",
+  "titleColor": "#005eb8",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "MS"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$302B"
+    },
+    {
+      "label": "Price",
+      "value": "~$188"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Financials | Wealth + Investment Bank",
+      "color": "primary"
+    },
+    {
+      "label": "Wealth Management Moat",
+      "color": "success"
+    }
+  ],
+  "recommendation": "Hold",
+  "metrics": [
+    {
+      "title": "Q1 2026 EPS",
+      "value": "$3.43",
+      "label": "+32% YoY — Net income $5.6B",
+      "icon": "Landmark",
+      "color": "#005eb8"
+    },
+    {
+      "title": "Q1 2026 ROTCE",
+      "value": "27.1%",
+      "label": "Record Q1 — Revenue $20.6B",
+      "icon": "TrendingUp",
+      "color": "#10b981"
+    },
+    {
+      "title": "Net New Assets (WM)",
+      "value": "$118B",
+      "label": "Q1 2026 — Wealth Mgmt revenue $8.5B (record)",
+      "icon": "Award",
+      "color": "#3b82f6"
+    }
+  ],
+  "moat": {
+    "description": "Morgan Stanley's transformation under Gorman/Pick has produced the dominant US wealth management franchise (~$8T client assets across WM and IM) bolted onto a top-tier global investment bank. The wealth franchise generates fee-based, recurring earnings that command an asset-manager multiple; the IB franchise delivers cyclical upside. The combination is structurally less cyclical than pure investment banks.",
+    "analysisTitle": "The Wealth Management Flywheel",
+    "analysisSummary": "MS's competitive position rests on **the Wealth Management franchise (E*Trade + advisor channel + workplace) reinforcing the IB franchise** — a model purpose-built to compound recurring fees on top of capital markets cyclicality:",
+    "analysisPoints": [
+      {
+        "title": "Scaled Wealth Platform",
+        "text": "Wealth Management generated record Q1 2026 revenue of $8.5B at 30.4% pre-tax margin and pulled in $118B of net new assets. The combination of the legacy Smith Barney advisor channel + E*Trade self-directed retail + Solium workplace stock-plan administration is a unique funnel — workplace participants graduate to E*Trade self-direction and ultimately to advisor-led households as wealth grows. No US peer has all three channels at scale."
+      },
+      {
+        "title": "Recurring Fee Mix Drives Multiple",
+        "text": "Roughly 60%+ of Wealth Management revenue is fee-based (advisory, asset management, lending) rather than transactional, generating earnings with the durability of an asset manager but at universal-bank scale. This durable mix supports a higher P/E than pure capital-markets peers, and the consistent ~30% pre-tax margin compounds book value through the cycle."
+      },
+      {
+        "title": "Investment Banking and Markets Optionality",
+        "text": "The Institutional Securities franchise (M&A advisory, ECM/DCM, Equities, FICC) provides cyclical upside on top of the recurring wealth base. Q1 2026 saw record total revenue ($20.6B) as ISG benefited from strong markets and the IB rebound. Morgan Stanley's #2-3 position globally in M&A and equities remains durable, while the franchise enjoys cross-sell into the wealth client base."
+      }
+    ]
+  },
+  "growth": {
+    "score": 70,
+    "description": "Q1 2026 was a record quarter: revenue $20.6B (+16% YoY), EPS $3.43 (+32%), ROTCE 27.1%. Wealth Management revenue $8.5B (record) at 30.4% pre-tax margin with $118B of NNA. The wealth flywheel is firing — net new assets at this pace add ~$400B+ of AUM annually, generating durable fee growth even before market appreciation.",
+    "additionalNote": {
+      "title": "Growth Drivers (3-Year Horizon)",
+      "points": [
+        "Wealth Management compounding: NNA running at $400B+ annualized; fee-based AUM grows toward $3T+ over 24 months as client assets approach $9T",
+        "Workplace funnel monetization: Solium workplace participants increasingly migrate to advised relationships, lifting fee rates and revenue per household",
+        "Investment Management private credit: alternatives and private market AUM scale through Eaton Vance and Parametric platforms",
+        "ISG cyclical upside: capital markets activity recovery drives advisory and underwriting fees toward 2021 peaks"
+      ]
+    }
+  },
+  "valuation": {
+    "score": 56,
+    "description": "At ~$188, MS trades at ~14x 2026E EPS (~$13) and ~3.0x tangible book — a premium to GS reflecting the wealth franchise's recurring revenue. The stock is near its 52-week high of $194 and sits between base ($200) and bull ($240) targets, with limited margin of safety. ROTCE of 27% justifies the premium, but a normalization in markets activity would pressure the multiple.",
+    "valuationNote": {
+      "text": "Morgan Stanley's wealth franchise warrants a higher multiple than pure investment banks — the recurring fee mix is closer to an asset manager. The 14x P/E captures most of this re-rating already. At lower multiples (closer to 11x and 2.4x TBV) the stock is a compelling dollar-cost-averaged compounder. Add on weakness; existing holders should hold.",
+      "fairValue": "$200"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$140",
+      "description": "Recession compresses both AUM (market drawdown) and IB activity; NNA slows; ROTCE falls toward 14-15%; multiple de-rates.",
+      "points": [
+        "Equity market drawdown of 20-25% compresses fee-based AUM and Wealth Management revenue meaningfully",
+        "M&A and IB activity freezes; ISG revenues fall 25-30% from 2026 highs; 2027 EPS compresses to ~$10-11",
+        "Multiple compresses to ~13x and ~2.3x TBV — implying ~$140"
+      ]
+    },
+    "base": {
+      "priceTarget": "$200",
+      "description": "Wealth Management compounds at low double digits; ISG normalizes off 2026 highs but stays above pre-2024 levels; ROTCE settles at 18-20%.",
+      "points": [
+        "Wealth Management AUM crosses $9T over 24 months; fee-based AUM grows toward $3T; recurring revenue compounds",
+        "ISG revenues moderate from 2026 record but remain robust; capital markets activity remains constructive",
+        "EPS reaches ~$14 in 2027; at ~14x and ~3.0x TBV, fair value ~$200"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$240",
+      "description": "Wealth Management franchise re-rates to asset-manager multiple, ISG sustains an M&A super-cycle, and the market recognizes MS as a hybrid wealth/IB compounder.",
+      "points": [
+        "Wealth Management margins expand toward 32-33% as scale leverage drives operating efficiency",
+        "Sustained M&A super-cycle drives ISG revenues toward 2021 peaks for multiple years",
+        "Multiple expands to ~16x and ~3.4x TBV on $15 EPS — implying ~$240"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Wealth Management advisors and clients have built workflows around the legacy Smith Barney platform, E*Trade interface, and Solium workplace tooling; switching wealth platforms is operationally costly and emotionally hard."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Wealth advisor coaching frameworks, IB underwriting playbooks, and market-making risk models are refined institutional IP; AI augments advisor productivity but client trust remains a human relationship."
+    },
+    "publicDataAccess": {
+      "status": "weakened",
+      "note": "Public market data is broadly available; MS's edge is private client data and deal-flow intelligence."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Top-tier wealth advisors (capable of running $1B+ books) and senior M&A bankers are scarce; MS's training pipeline and brand attract talent, but advisor compensation inflation is the ongoing tax."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Workplace stock plan + E*Trade self-directed + advisor-led wealth + IB advisory + capital markets execution + IM products = a deeply cross-sold platform; clients flow up the value chain from workplace to advised, raising lifetime value and switching costs."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Wealth client behavioral data across $7T+ of assets, workplace participant data, and institutional order flow give MS a unique view of retail and institutional capital allocation patterns."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "GSIB designation, FINRA broker-dealer status, RIA registration, ERISA fiduciary frameworks, and trust company licensing create regulatory compliance moats that take years to replicate."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "Workplace plans funnel participants to E*Trade and advisors; advisor referrals beget advisor referrals; IB league-table presence reinforces wealth client trust. Self-reinforcing loops across the platform."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Wealth client cash, custody, lending, and advisory mandates are embedded across multiple products; workplace plans are multi-year corporate contracts; switching is operationally and contractually meaningful."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "For its 7M+ wealth clients, Morgan Stanley is the system of record for custody, performance reporting, and tax tracking; this is more durable than capital-markets relationships at peer banks."
+    },
+    "verdict": "Morgan Stanley is more AI-resilient than pure investment banks because its wealth franchise depends on advisor-client trust and is operationally embedded in client households. AI augments advisor productivity (planning, tax optimization, portfolio rebalancing) without replacing the relationship. The wealth flywheel makes MS a structurally less cyclical, longer-duration compounder than peers."
+  },
+  "lastAnalyzed": "May 2026"
+}

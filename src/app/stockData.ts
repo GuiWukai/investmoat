@@ -102,6 +102,27 @@ import elData       from '@/data/stocks/el.json';
 import babaData     from '@/data/stocks/baba.json';
 import pddData      from '@/data/stocks/pdd.json';
 import biduData     from '@/data/stocks/bidu.json';
+import snowData     from '@/data/stocks/snow.json';
+import ddogData     from '@/data/stocks/ddog.json';
+import mdbData      from '@/data/stocks/mdb.json';
+import snpsData     from '@/data/stocks/snps.json';
+import cdnsData     from '@/data/stocks/cdns.json';
+import crwvData     from '@/data/stocks/crwv.json';
+import nbisData     from '@/data/stocks/nbis.json';
+import jpmData      from '@/data/stocks/jpm.json';
+import bxData       from '@/data/stocks/bx.json';
+import kkrData      from '@/data/stocks/kkr.json';
+import gsData       from '@/data/stocks/gs.json';
+import msData       from '@/data/stocks/ms.json';
+import pwrData      from '@/data/stocks/pwr.json';
+import ttData       from '@/data/stocks/tt.json';
+import honData      from '@/data/stocks/hon.json';
+import qcomData     from '@/data/stocks/qcom.json';
+import elvData      from '@/data/stocks/elv.json';
+import vrtxData     from '@/data/stocks/vrtx.json';
+import regnData     from '@/data/stocks/regn.json';
+import dashData     from '@/data/stocks/dash.json';
+import rblxData     from '@/data/stocks/rblx.json';
 
 // Weighted composite: Moat 40% · Growth 35% · Valuation 25%
 // scores = [moatScore, growthScore, valuationScore]
@@ -220,6 +241,27 @@ const allCoverageData = [
     { name: "Alibaba Group",     ticker: "BABA",  slug: "baba",        scores: [m(babaData),        g(babaData),        v(babaData)],        href: "/stocks/baba",        category: "Big Tech",    ...t(babaData)        },
     { name: "PDD Holdings",      ticker: "PDD",   slug: "pdd",         scores: [m(pddData),         g(pddData),         v(pddData)],         href: "/stocks/pdd",         category: "Other",       ...t(pddData)         },
     { name: "Baidu",             ticker: "BIDU",  slug: "bidu",        scores: [m(biduData),        g(biduData),        v(biduData)],        href: "/stocks/bidu",        category: "Big Tech",    ...t(biduData)        },
+    { name: "Snowflake",         ticker: "SNOW",  slug: "snow",        scores: [m(snowData),        g(snowData),        v(snowData)],        href: "/stocks/snow",        category: "Big Tech",    ...t(snowData)        },
+    { name: "Datadog",           ticker: "DDOG",  slug: "ddog",        scores: [m(ddogData),        g(ddogData),        v(ddogData)],        href: "/stocks/ddog",        category: "Big Tech",    ...t(ddogData)        },
+    { name: "MongoDB",           ticker: "MDB",   slug: "mdb",         scores: [m(mdbData),         g(mdbData),         v(mdbData)],         href: "/stocks/mdb",         category: "Big Tech",    ...t(mdbData)         },
+    { name: "Synopsys",          ticker: "SNPS",  slug: "snps",        scores: [m(snpsData),        g(snpsData),        v(snpsData)],        href: "/stocks/snps",        category: "Big Tech",    ...t(snpsData)        },
+    { name: "Cadence Design Systems", ticker: "CDNS", slug: "cdns",   scores: [m(cdnsData),        g(cdnsData),        v(cdnsData)],        href: "/stocks/cdns",        category: "Big Tech",    ...t(cdnsData)        },
+    { name: "CoreWeave",         ticker: "CRWV",  slug: "crwv",        scores: [m(crwvData),        g(crwvData),        v(crwvData)],        href: "/stocks/crwv",        category: "Big Tech",    ...t(crwvData)        },
+    { name: "Nebius Group",      ticker: "NBIS",  slug: "nbis",        scores: [m(nbisData),        g(nbisData),        v(nbisData)],        href: "/stocks/nbis",        category: "Big Tech",    ...t(nbisData)        },
+    { name: "JPMorgan Chase",    ticker: "JPM",   slug: "jpm",         scores: [m(jpmData),         g(jpmData),         v(jpmData)],         href: "/stocks/jpm",         category: "Financials",  ...t(jpmData)         },
+    { name: "Blackstone",        ticker: "BX",    slug: "bx",          scores: [m(bxData),          g(bxData),          v(bxData)],          href: "/stocks/bx",          category: "Financials",  ...t(bxData)          },
+    { name: "KKR & Co",          ticker: "KKR",   slug: "kkr",         scores: [m(kkrData),         g(kkrData),         v(kkrData)],         href: "/stocks/kkr",         category: "Financials",  ...t(kkrData)         },
+    { name: "Goldman Sachs",     ticker: "GS",    slug: "gs",          scores: [m(gsData),          g(gsData),          v(gsData)],          href: "/stocks/gs",          category: "Financials",  ...t(gsData)          },
+    { name: "Morgan Stanley",    ticker: "MS",    slug: "ms",          scores: [m(msData),          g(msData),          v(msData)],          href: "/stocks/ms",          category: "Financials",  ...t(msData)          },
+    { name: "Quanta Services",   ticker: "PWR",   slug: "pwr",         scores: [m(pwrData),         g(pwrData),         v(pwrData)],         href: "/stocks/pwr",         category: "Industrials", ...t(pwrData)         },
+    { name: "Trane Technologies",ticker: "TT",    slug: "tt",          scores: [m(ttData),          g(ttData),          v(ttData)],          href: "/stocks/tt",          category: "Industrials", ...t(ttData)          },
+    { name: "Honeywell",         ticker: "HON",   slug: "hon",         scores: [m(honData),         g(honData),         v(honData)],         href: "/stocks/hon",         category: "Industrials", ...t(honData)         },
+    { name: "Qualcomm",          ticker: "QCOM",  slug: "qcom",        scores: [m(qcomData),        g(qcomData),        v(qcomData)],        href: "/stocks/qcom",        category: "Big Tech",    ...t(qcomData)        },
+    { name: "Elevance Health",   ticker: "ELV",   slug: "elv",         scores: [m(elvData),         g(elvData),         v(elvData)],         href: "/stocks/elv",         category: "Healthcare",  ...t(elvData)         },
+    { name: "Vertex Pharmaceuticals", ticker: "VRTX", slug: "vrtx",   scores: [m(vrtxData),        g(vrtxData),        v(vrtxData)],        href: "/stocks/vrtx",        category: "Healthcare",  ...t(vrtxData)        },
+    { name: "Regeneron",         ticker: "REGN",  slug: "regn",        scores: [m(regnData),        g(regnData),        v(regnData)],        href: "/stocks/regn",        category: "Healthcare",  ...t(regnData)        },
+    { name: "DoorDash",          ticker: "DASH",  slug: "dash",        scores: [m(dashData),        g(dashData),        v(dashData)],        href: "/stocks/dash",        category: "Other",       ...t(dashData)        },
+    { name: "Roblox",            ticker: "RBLX",  slug: "rblx",        scores: [m(rblxData),        g(rblxData),        v(rblxData)],        href: "/stocks/rblx",        category: "Other",       ...t(rblxData)        },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────

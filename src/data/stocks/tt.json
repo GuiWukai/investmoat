@@ -1,0 +1,161 @@
+{
+  "slug": "tt",
+  "ticker": "TT",
+  "name": "Trane Technologies",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "TT" },
+    { "label": "Market Cap", "value": "~$110B" },
+    { "label": "Current Price", "value": "~$493" }
+  ],
+  "chips": [
+    { "label": "HVAC | Climate Solutions", "color": "primary" },
+    { "label": "Data Centre Cooling Beneficiary", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Enterprise Backlog",
+      "value": "~$10.7B",
+      "label": "+30% vs YE25; record on data-centre demand",
+      "icon": "Box",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "FY26 EPS Guide",
+      "value": "$14.75-$14.95",
+      "label": "Raised post-Q1; +13% YoY at midpoint",
+      "icon": "TrendingUp",
+      "color": "#10b981"
+    },
+    {
+      "title": "Q1 Organic Bookings",
+      "value": "+24%",
+      "label": "Driven by Americas Commercial HVAC / data centres",
+      "icon": "Activity",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "description": "Global HVAC and climate-solutions leader with a dominant Americas Commercial position, a high-margin recurring service base, and an accelerating presence in modular data-centre cooling — moat sources are channel embedment, refrigerant compliance scale, and service-fleet density.",
+    "analysisTitle": "The Refrigerant Transition and Service-Fleet Moat",
+    "analysisSummary": "Trane's moat is **specification embedment plus a service-and-controls flywheel that compounds with each refrigerant transition** — and the AI data-centre cooling cycle now layers a TAM expansion on top:",
+    "analysisPoints": [
+      {
+        "title": "Refrigerant Transition Compliance Scale",
+        "text": "Each EPA/global refrigerant phase-down (R-410A → A2L blends, and the next step beyond) forces a re-engineering of the entire chiller, rooftop, and VRF lineup. Trane has the scale to certify across geographies fastest, capture the share-shift window, and price-in the regulatory premium — small competitors lose share each cycle."
+      },
+      {
+        "title": "Modular Data-Centre Cooling via Stellar Energy",
+        "text": "The Stellar Energy acquisition (closed early 2026) makes Trane a top-tier provider of modular chiller plants and packaged cooling skids for hyperscaler campuses. Stellar is guided to ~$500M revenue in 2026 scaling to $1B+ in 2-3 years at mid-teens-plus EBITDA, with reference designs for liquid-to-air chilled-water rejection."
+      },
+      {
+        "title": "Service Channel and Building Controls Density",
+        "text": "Trane's service technician fleet, BAS (building automation system) installed base, and Tracer SC controls platform create high-margin recurring revenue and a switching cost — once a campus is on Trane controls and service, the next chiller replacement defaults to Trane equipment."
+      }
+    ]
+  },
+  "growth": {
+    "score": 74,
+    "description": "Q1 2026 organic bookings +24%, backlog $10.7B (+30% vs YE25), FY26 EPS guide raised to $14.75-$14.95 (+13% YoY mid). Americas Commercial HVAC + data-centre cooling drive the growth; Residential and EMEA are slower-growing ballast. Stellar Energy adds a $1B data-centre cooling growth lane on top of the core franchise.",
+    "growthAnalysis": {
+      "cagrEstimate": "10-13%",
+      "scoreDerivation": "Base 70 (8-15% CAGR mid-band) + 5 backlog visibility (+30% YoY, record) + 4 data-centre cooling TAM expansion via Stellar - 5 cyclicality risk (residential + EMEA exposure) = 74",
+      "drivers": [
+        { "name": "Americas Commercial HVAC", "metric": "Data-centre + reshoring drive 20%+ bookings growth; backlog at record", "trend": "accelerating" },
+        { "name": "Stellar / Data-Centre Cooling", "metric": "$500M FY26 → $1B+ in 2-3 years at mid-teens+ EBITDA margin", "trend": "accelerating" },
+        { "name": "Residential & EMEA", "metric": "Mid-single-digit growth on refrigerant transition tailwind, more cyclical", "trend": "stable" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If hyperscaler 2027 capex moderates and data-centre cooling bookings flatten, the recently expanded multiple compresses fast — Trane is structurally cyclical (residential + EMEA) and the data-centre cooling growth is now priced in.",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 70,
+    "description": "At ~$493 TT trades at ~33× FY26 EPS midpoint — premium to industrial peers and a meaningful re-rating versus the historical 25-28× range. Backlog and Stellar story support the multiple but the asymmetry now leans modestly downside.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Forward P/E (FY26)", "value": "~33×", "note": "EPS $14.85 mid; data-centre re-rating" },
+        { "label": "Forward P/E (FY27)", "value": "~29×", "note": "Assumes ~13% EPS growth on backlog conversion" },
+        { "label": "PEG Ratio", "value": "~2.7×", "note": "Premium on durable low-double-digit growth" },
+        { "label": "Price / Sales (FY26)", "value": "~4.7×", "note": "Reflects services + data-centre mix premium" },
+        { "label": "EV / EBITDA (NTM)", "value": "~22×", "note": "Premium to Carrier ~18× and Lennox ~20×" }
+      ],
+      "summary": "Premium but supported by record backlog and the Stellar data-centre lane; not cheap, with downside re-rating risk on capex moderation."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$360",
+      "description": "Data-centre cooling bookings normalise in 2027, residential cycle stays soft, multiple compresses to ~22-24× on growth normalisation.",
+      "points": [
+        "Hyperscaler 2027 capex grows <10% YoY, slowing data-centre cooling orders",
+        "Residential refrigerant transition pull-forward unwinds in 2027",
+        "Stellar integration runs slower than guided, dampening data-centre revenue mix"
+      ]
+    },
+    "base": {
+      "priceTarget": "$545",
+      "description": "FY26 EPS lands near $14.85, FY27 grows to $16.75 on backlog conversion plus Stellar ramp, multiple sustains 31-33×.",
+      "points": [
+        "Backlog continues building through 2026 with bookings >1.1× book-to-bill",
+        "Adj operating margin expands ~50 bps on services + data-centre mix",
+        "Stellar revenue tracks $700-800M in 2027 at mid-teens-plus EBITDA"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$720",
+      "description": "Data-centre cooling super-cycle extends through 2028, Stellar exceeds $1B run-rate by 2027, FY28 EPS exceeds $20, multiple expands to ~36×.",
+      "points": [
+        "AI data-centre cooling capex sustains 25%+ growth through 2028",
+        "Trane wins reference-design slots in next-gen liquid-to-chilled-water rejection systems",
+        "Refrigerant phase-down in EMEA accelerates the international upgrade cycle"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "Not applicable — industrial HVAC equipment vendor."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "Tracer SC and BAS controls software is a real recurring franchise but secondary to the equipment + service moat."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Not applicable — no public-data moat."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "HVAC service technicians and refrigeration engineers are scarce; Trane's training programs and dealer network create a real labour moat."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Equipment + controls + service + (now) modular data-centre cooling skids ship as one engineered solution; competitors cover subsets."
+    },
+    "proprietaryData": {
+      "status": "weakened",
+      "note": "Building telemetry from connected chillers and BAS feeds predictive service, but data leverage is internal and not yet externally monetised."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "EPA refrigerant phase-downs (A2L now, the next step ahead) require multi-year recertification of every SKU — Trane's scale lets it certify fastest and capture the share-shift window each transition."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "Not applicable — equipment + service vendor with no network effects."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Once a building or campus is on Trane controls and service contracts, replacement chillers default to Trane; service contracts run for the asset life (15-25 years)."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "Not applicable — equipment vendor, not a system of record."
+    },
+    "verdict": "Trane is a high-quality cyclical compounder with real moats in refrigerant compliance scale and service-fleet embedment, now layered with a data-centre cooling growth lane via Stellar. Valuation has re-rated to a premium that prices much of the data-centre story in; the franchise is durable but the entry multiple matters."
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "slug": "snow",
+  "ticker": "SNOW",
+  "name": "Snowflake Inc.",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "SNOW"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$42B"
+    },
+    {
+      "label": "Current Price",
+      "value": "~$141"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Cloud Data Platform | AI Cortex",
+      "color": "primary"
+    },
+    {
+      "label": "Narrowing Moat",
+      "color": "warning"
+    },
+    {
+      "label": "AI Beneficiary (lagging)",
+      "color": "secondary"
+    }
+  ],
+  "recommendation": "Speculative Buy",
+  "metrics": [
+    {
+      "title": "Q4 FY2026 Revenue",
+      "value": "$1.28B",
+      "label": "+30% YoY — beat $1.25B consensus; product revenue ~$1.21B",
+      "icon": "Database",
+      "color": "#29b5e8"
+    },
+    {
+      "title": "RPO",
+      "value": "$9.77B",
+      "label": "+42% YoY — strong contracted backlog despite stock selloff",
+      "icon": "Lock",
+      "color": "#2563eb"
+    },
+    {
+      "title": "Cortex AI Run-Rate",
+      "value": "~$100M",
+      "label": "9,100+ accounts using Cortex; 200%+ AI workload growth — but trails Databricks ($1B AI run-rate)",
+      "icon": "Zap",
+      "color": "#7c3aed"
+    }
+  ],
+  "moat": {
+    "description": "Snowflake operates the multi-cloud data warehouse / lakehouse standard for SQL analytics, with switching costs rooted in data gravity, governance, and an embedded ecosystem of pipelines, BI tools, and Marketplace data shares.",
+    "analysisTitle": "The Data Gravity Moat (Under Pressure)",
+    "analysisSummary": "Snowflake's moat is real but narrower than peers — built on **Data Gravity, Multi-Cloud Neutrality, and Cortex AI Optionality**:",
+    "analysisPoints": [
+      {
+        "title": "Data Gravity & System of Record for Analytics",
+        "text": "Snowflake stores petabytes of structured/semi-structured data for thousands of enterprises — dbt models, Fivetran pipelines, Tableau/Looker dashboards, and Marketplace data shares all anchor to the warehouse. Migrating off Snowflake means rewriting hundreds of SQL pipelines, re-permissioning data, and re-certifying every downstream consumer — a 12-24 month program with extreme operational risk."
+      },
+      {
+        "title": "Multi-Cloud Neutrality & Zero Vendor Lock-In",
+        "text": "Snowflake runs identically on AWS, Azure, and GCP — making it the Switzerland of cloud data. As the EU AI Act and data sovereignty regulations push enterprises to keep data within specific clouds/regions, Snowflake's 'bring the model to the data' architecture (vs. external API calls) becomes increasingly differentiated. SQL analysts and BI users overwhelmingly prefer Snowflake's ease of use over Databricks' Spark-first model."
+      },
+      {
+        "title": "Cortex AI & Snowflake Intelligence Control Plane",
+        "text": "Cortex AI (LLM functions, vector search, agents) reached 9,100+ accounts with 200%+ workload growth in FY2026. Cortex Code is now used by 50%+ of customers. The April 2026 expansion of Snowflake Intelligence positions the platform as the agentic AI control plane for governed enterprise data — but Cortex's ~$100M AI run-rate trails Databricks' $1B+ AI run-rate, and Databricks is winning ~70% of head-to-head AI/ML evaluations."
+      },
+      {
+        "title": "Marketplace & Data Sharing Network",
+        "text": "Snowflake Marketplace hosts 3,000+ third-party datasets that customers can query without ETL — a flywheel that strengthens as more data providers and consumers join. Native Apps and the Snowpark Container Services extend the platform into application hosting, deepening embeddedness beyond pure SQL workloads."
+      }
+    ]
+  },
+  "growth": {
+    "score": 84,
+    "description": "Q4 FY2026 product revenue grew 30% YoY to ~$1.21B, with RPO accelerating to $9.77B (+42% YoY) — indicating strong contracted forward visibility despite the post-earnings stock selloff. Cortex AI is gaining traction (9,100+ accounts, 200%+ workload growth) but remains tiny vs. Databricks' AI lead. Management's posture has shifted to AI-first growth, but a $318M GAAP operating loss and reinvestment-heavy mode keep margins under pressure. Net retention remains strong (~125%+) and the consumption model captures upside as workloads grow.",
+    "growthAnalysis": {
+      "cagrEstimate": "22-28%",
+      "scoreDerivation": "Base 85 (25%+ CAGR on $4.7B base) + 5 RPO acceleration (+42% YoY signals durable demand) − 6 Databricks competitive pressure (winning ~70% of AI/ML evals; SNOW Cortex at 1/10 of DBX AI run-rate) = 84",
+      "drivers": [
+        {
+          "name": "Core Data Warehouse / Consumption",
+          "metric": "+30% YoY Q4 FY2026; RPO $9.77B (+42% YoY)",
+          "trend": "stable"
+        },
+        {
+          "name": "Cortex AI & Snowflake Intelligence",
+          "metric": "9,100+ accounts; 200%+ workload growth; ~$100M run-rate",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Marketplace & Native Apps",
+          "metric": "3,000+ datasets; Snowpark Container Services expanding",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If Databricks (post-IPO at ~$134B valuation) sustains its 65% YoY growth and 10:1 AI revenue lead, Snowflake's premium for SQL-first analytics erodes as enterprises consolidate onto the lakehouse architecture — pushing growth below 20% by FY2028 and re-rating the multiple toward legacy software levels.",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 76,
+    "description": "At ~$141 — down ~50% from the 52-week high of $280.67 — SNOW trades near its bear-case territory after a 17% post-earnings selloff. The stock at ~$140 vs. a $233 consensus 12-month target implies ~66% upside from sell-side, with 45 of 52 covering analysts at Buy/Strong Buy. Forward EV/Sales has compressed to ~7-8× on FY2027 revenue — well below the 15-20× peak — and RPO of $9.77B (+42% YoY) provides a strong floor. The bear thesis (Databricks displacement) is now substantially priced in.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "N/A",
+          "note": "GAAP operating loss of $318M Q4 FY2026"
+        },
+        {
+          "label": "Forward P/E (NTM, non-GAAP)",
+          "value": "~70×",
+          "note": "consensus non-GAAP EPS ~$2.00; expected to expand"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~7-8×",
+          "note": "$5.6-6.0B FY2027 revenue est."
+        },
+        {
+          "label": "EV / RPO",
+          "value": "~4×",
+          "note": "$9.77B contracted backlog"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~35×",
+          "note": "FCF margin ~25%"
+        }
+      ],
+      "summary": "At ~7-8× forward sales, Snowflake is trading at the lowest multiple since IPO despite still growing 30% with $9.77B in RPO — a re-rating that prices in Databricks risk and reflects sector-wide compression. The 70× forward non-GAAP P/E is high in absolute terms but reasonable given EPS is in early expansion phase. The 4× EV/RPO ratio is the cleanest valuation lens: contracted backlog provides 1.6× of current market cap in committed revenue, before any new bookings."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$95",
+      "description": "Databricks IPO captures the AI/ML data narrative; Cortex underperforms expectations; consumption growth decelerates below 20% as enterprises shift workloads to lakehouse architecture.",
+      "points": [
+        "Databricks public listing (2026) and aggressive AI go-to-market drive 25%+ of new AI/ML data workloads to lakehouse, leaving Snowflake with the legacy SQL analytics share",
+        "Cortex AI run-rate stalls below $250M by end of FY2027 vs. Databricks' $2B+ AI revenue, validating the perception that SNOW is an AI laggard",
+        "Product revenue growth decelerates to 18-20% by Q4 FY2027 as net retention falls toward 115%; multiple compresses to 5× forward sales"
+      ]
+    },
+    "base": {
+      "priceTarget": "$185",
+      "description": "Cortex AI scales to $500M+ run-rate by end of FY2027; consumption growth holds at 25-28%; Snowflake Intelligence becomes the agentic control plane for governed enterprise data.",
+      "points": [
+        "Q1 FY2027 product revenue grows 28-30% YoY with stable net retention above 125%, validating the consumption model durability",
+        "Cortex AI reaches $500M run-rate by end of FY2027 driven by Snowflake Intelligence agents, Cortex Code (50%+ adoption), and vector search workloads",
+        "RPO sustains 30%+ YoY growth and the multiple re-rates to 9-10× forward sales as the Databricks competitive panic subsides"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$280",
+      "description": "Cortex becomes the standard AI/agent control plane for governed enterprise data; data sovereignty regulation drives 'bring model to data' architecture; SNOW rejoins the high-growth software cohort.",
+      "points": [
+        "EU AI Act and data sovereignty regulations across major economies make external LLM APIs untenable for enterprise data, driving 30%+ acceleration in Cortex AI workloads",
+        "Snowflake Intelligence + Cortex Code become the de facto agentic control plane for SQL-governed enterprise data, with 25,000+ accounts using AI features by end of FY2028",
+        "Product revenue re-accelerates to 32-35% YoY in FY2027 as the platform expands into Native Apps hosting; multiple expands to 13-15× forward sales"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "Not applicable — Snowflake is a backend data platform; the SQL interface is universal and not a learned-UI moat."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Customers encode thousands of SQL transformations, dbt models, stored procedures, and access policies in Snowflake — a meaningful but not primary moat, as SQL is portable to other warehouses with effort."
+    },
+    "publicDataAccess": {
+      "status": "intact",
+      "note": "Snowflake Marketplace hosts 3,000+ third-party datasets accessible without ETL, creating a data-access flywheel as more providers join — secondary to the core warehouse moat."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "SnowPro-certified engineers exist but the broader SQL/data engineering pool is large; AI-assisted SQL generation (Cortex Code, Copilot) is reducing the scarcity premium for routine warehousing tasks."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Snowflake bundles warehouse + Snowpark + Cortex AI + Marketplace + Native Apps + Streamlit on a single platform — multi-product adoption is rising but fewer SKUs than ServiceNow or hyperscaler equivalents."
+    },
+    "proprietaryData": {
+      "status": "weakened",
+      "note": "Customer data resides in Snowflake but customers retain ownership and can export it. Snowflake collects query telemetry to optimize Cortex models, but this is a secondary data flywheel — not as strong as ServiceNow's workflow data or Databricks' ML training data."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "FedRAMP High Authorized, HIPAA-eligible, SOC 2, ISO 27001, and PCI DSS certified — meaningful in regulated industries but matched by hyperscalers and Databricks. EU AI Act 'data residency' rules favor Snowflake's bring-compute-to-data model."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "Marketplace data sharing creates indirect network effects: more data providers → more consumers → more providers. 3,000+ datasets and growing, but not yet at the scale of true network-effect dominance."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Every analytics query, BI dashboard refresh, and dbt transformation flows through Snowflake at customer enterprises — embedded in the analytics stack but not at the system-of-record level for operational transactions."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "Snowflake is the system of record for analytical (warehouse) data at thousands of enterprises — but increasingly contested by Databricks (lakehouse) and hyperscaler-native warehouses (BigQuery, Redshift, Fabric). Strong but not exclusive standard."
+    },
+    "verdict": "Snowflake's moat is real but actively under siege from Databricks, which is winning ~70% of head-to-head AI/ML evaluations and has 10× the AI run-rate. The data gravity, multi-cloud neutrality, and SQL ergonomics moats remain intact for legacy analytics workloads, but the AI-era 'lakehouse vs. warehouse' debate has structurally narrowed Snowflake's growth premium. Cortex AI and Snowflake Intelligence are credible AI plays but late — the next 12-18 months determine whether SNOW becomes the agentic control plane for governed data or settles into the role of the SQL warehouse standard at a permanently lower multiple."
+  },
+  "lastAnalyzed": "May 2026"
+}
