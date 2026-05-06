@@ -17,7 +17,7 @@ import { ScenarioPriceBar } from '@/components/ScenarioPriceBar';
 import { stockData, getAverageScore } from '@/app/stockData';
 import { getStockData } from '@/data/stocks';
 import type { TenMoatsAssessment } from '@/app/tenMoatsData';
-import { computeMoatScore } from '@/lib/valuationScore';
+import { computeMoatScore, computeGrowthScore } from '@/lib/valuationScore';
 import type { StockAnalysisData } from '@/types/stockAnalysis';
 import { TrendingUp, TrendingDown, Minus } from 'lucide-react';
 
@@ -238,7 +238,8 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
   const [liveValScore, setLiveValScore] = useState<number>(data.valuation.score);
   const [valLoading, setValLoading] = useState(true);
   const liveMoatScore = computeMoatScore(data.tenMoats);
-  const dynamicOverallScore = Math.round(getAverageScore([liveMoatScore, data.growth.score, liveValScore]));
+  const growthScore = computeGrowthScore(data.growth.growthAnalysis) ?? 0;
+  const dynamicOverallScore = Math.round(getAverageScore([liveMoatScore, growthScore, liveValScore]));
 
   const dynamicRecommendation: 'Strong Buy' | 'Accumulate' | 'Hold' | 'Speculative Buy' =
     dynamicOverallScore >= 85 ? 'Strong Buy' :
@@ -381,7 +382,7 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
             label: 'Growth',
             gauge: (
               <ScoreGauge
-                score={data.growth.score}
+                score={growthScore}
                 label="Growth Score"
                 description={data.growth.description}
               />

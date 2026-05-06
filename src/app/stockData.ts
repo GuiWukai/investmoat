@@ -2,7 +2,7 @@
 // stock's JSON file — single source of truth, no manual sync required.
 //
 //   m(json)  →  moat score      computed from tenMoats via Ten Moats formula
-//   g(json)  →  growth score    read from json.growth.score
+//   g(json)  →  growth score    derived from json.growth.growthAnalysis
 //   v(json)  →  valuation score read from json.valuation.score
 //   t(json)  →  { bearTarget, baseTarget, bullTarget } from json.scenarios
 //
@@ -138,23 +138,19 @@ const MIN_AVG_SCORE  = 75;
 const m = (json: { tenMoats: any }) => computeMoatScore(json.tenMoats);
 
 /**
- * Resolve a stock's growth score: prefer the derived score from growthAnalysis
- * when keyRiskSeverity is populated (the migrated state); otherwise fall back to
- * the author-set growth.score for legacy stocks pending backfill.
- *
- * The parameter shape is loose because imported JSON types widen literal unions
- * to plain strings (e.g. trend → string instead of 'accelerating' | 'stable' | …);
- * we cast inside after the keyRiskSeverity guard, which itself is one of the
- * narrow enum values.
+ * Resolve a stock's growth score from its growthAnalysis fields. The derived
+ * formula in src/lib/valuationScore.ts:computeGrowthScore is the sole source of
+ * truth — there is no longer an author-set fallback. parseCagrEstimate and
+ * keyRiskSeverity are required by the schema, so a null derived score implies
+ * malformed data and we surface it loudly.
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const g = (json: { growth: { score: number; growthAnalysis?: any } }): number => {
-  const ga = json.growth.growthAnalysis;
-  if (ga?.keyRiskSeverity) {
-    const derived = computeGrowthScore(ga as GrowthAnalysisInput);
-    if (derived != null) return derived;
+const g = (json: { slug: string; growth: { growthAnalysis: any } }): number => {
+  const derived = computeGrowthScore(json.growth.growthAnalysis as GrowthAnalysisInput);
+  if (derived == null) {
+    throw new Error(`computeGrowthScore returned null for ${json.slug} — check cagrEstimate parseability`);
   }
-  return json.growth.score;
+  return derived;
 };
 
 /** Read valuation score from a stock JSON. */

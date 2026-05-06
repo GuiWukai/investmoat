@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getStockData, getAllSlugs } from '@/data/stocks';
 import StockPageClient from '@/components/StockPageClient';
-import { computeMoatScore } from '@/lib/valuationScore';
+import { computeMoatScore, computeGrowthScore } from '@/lib/valuationScore';
 
 const SITE_URL = 'https://investmoat.com';
 
@@ -35,8 +35,9 @@ export async function generateMetadata(
 
   const title = `${data.name} (${data.ticker})`;
   const moatScore = computeMoatScore(data.tenMoats);
+  const growthScore = computeGrowthScore(data.growth.growthAnalysis) ?? 0;
   const description =
-    `${data.moat.description} Moat: ${moatScore}/100 · Growth: ${data.growth.score}/100 · ${data.recommendation}.`;
+    `${data.moat.description} Moat: ${moatScore}/100 · Growth: ${growthScore}/100 · ${data.recommendation}.`;
   const canonicalUrl = `${SITE_URL}/stocks/${data.slug}`;
   const publishedTime = lastAnalyzedToISO(data.lastAnalyzed);
 
@@ -81,7 +82,7 @@ export default async function Page({ params }: { params: Promise<{ ticker: strin
   if (!data) notFound();
 
   const moatScore = computeMoatScore(data.tenMoats);
-  const growthScore = data.growth.score;
+  const growthScore = computeGrowthScore(data.growth.growthAnalysis) ?? 0;
   const valuationScore = data.valuation.score;
   const compositeScore = Math.round(moatScore * 0.4 + growthScore * 0.35 + valuationScore * 0.25);
   const canonicalUrl = `${SITE_URL}/stocks/${data.slug}`;
