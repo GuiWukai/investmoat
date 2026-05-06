@@ -1,0 +1,167 @@
+{
+  "slug": "gs",
+  "ticker": "GS",
+  "name": "Goldman Sachs",
+  "titleColor": "#7399c6",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "GS"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$267B"
+    },
+    {
+      "label": "Price",
+      "value": "~$917"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Financials | Investment Bank",
+      "color": "primary"
+    },
+    {
+      "label": "Capital Markets Network",
+      "color": "success"
+    }
+  ],
+  "recommendation": "Speculative Buy",
+  "metrics": [
+    {
+      "title": "Q1 2026 EPS",
+      "value": "$17.55",
+      "label": "+24% YoY — Net income $5.63B",
+      "icon": "Landmark",
+      "color": "#7399c6"
+    },
+    {
+      "title": "Q1 2026 ROE",
+      "value": "19.8%",
+      "label": "Best Q1 ROE in over a decade",
+      "icon": "TrendingUp",
+      "color": "#10b981"
+    },
+    {
+      "title": "Assets Under Supervision",
+      "value": "$3.65T",
+      "label": "Record — AWM growth engine",
+      "icon": "Award",
+      "color": "#3b82f6"
+    }
+  ],
+  "moat": {
+    "description": "Goldman Sachs is the dominant global investment bank — #1 or #2 in M&A advisory, equity underwriting, and equities trading — with a culture and client roster built over 155 years that no peer has been able to replicate. The moat is the network: every blue-chip CEO has a Goldman banker, every large fund pays Goldman commissions, and Goldman sees the deal flow first.",
+    "analysisTitle": "The Capital Markets Network Moat",
+    "analysisSummary": "Goldman's competitive position rests on **client relationships, league-table dominance, and trading scale** — a virtuous network where each strengthens the others:",
+    "analysisPoints": [
+      {
+        "title": "League-Table Network Effects",
+        "text": "Goldman has held the #1 or #2 position in global M&A advisory for the better part of three decades. CEOs hire the bank with the most relevant experience and the deepest cross-border network — and Goldman, by virtue of having advised on the most deals, has the most relevant experience. This is a self-reinforcing loop: more mandates beget more references beget more mandates. Q1 2026 IB fees rebounded sharply as M&A activity normalized."
+      },
+      {
+        "title": "Equities Franchise and Trading Scale",
+        "text": "Q1 2026 delivered record Equities revenues within Global Banking & Markets ($12.74B segment revenue, +19% YoY). Goldman's prime brokerage, derivatives, and program trading franchises see institutional flow that smaller competitors cannot match — and the data from that flow informs market-making across products. Trading scale is a moat that compounds with electronification, as fixed costs (tech, risk, compliance) spread over more volume."
+      },
+      {
+        "title": "Asset & Wealth Management Pivot",
+        "text": "AUS hit a record $3.65T in Q1 2026, with management-fee growth providing increasingly visible recurring revenue. The pivot toward AWM (alternatives, private credit, ultra-high-net-worth wealth) reduces earnings cyclicality, supports a higher multiple, and leverages Goldman's institutional brand into a fee-based franchise that the market values at 15-20x rather than 8-10x."
+      }
+    ]
+  },
+  "growth": {
+    "score": 62,
+    "description": "Q1 2026 revenue +14% YoY to $17.23B, EPS $17.55 (+24%, second-highest quarter ever), ROE 19.8%. Global Banking & Markets +19% to $12.74B with record Equities; AWM at record $3.65T AUS. Goldman's earnings power is back near the cyclical highs of 2021 — the question is durability. Forward growth depends on sustained M&A recovery and AWM compounding; capital markets activity remains structurally cyclical.",
+    "additionalNote": {
+      "title": "Growth Drivers (3-Year Horizon)",
+      "points": [
+        "M&A recovery: a multi-year IB fee tailwind as deal pipelines convert from 2024-2025 build-up; Q1 2026 already showing strength",
+        "Equities franchise: continued share gains in prime brokerage, derivatives, and structured products as banks consolidate around top players",
+        "AWM compounding: AUS crossing $4T over the next 18-24 months; alternatives and private credit drive higher fee rates and stickier capital",
+        "Capital efficiency: targeted ROE ~15%+ through-cycle as the bank exits non-core consumer (Marcus, Apple Card runoff) and reallocates capital to higher-return businesses"
+      ]
+    }
+  },
+  "valuation": {
+    "score": 56,
+    "description": "At ~$917, GS trades at ~13x 2026E EPS (~$70) and ~1.7x tangible book — the high end of its historical range, reflecting a cyclical earnings peak. The stock has rallied ~82% over the past year and sits between base ($930) and bull ($1,100) targets, with limited margin of safety. A normalization in capital markets activity could pressure both EPS and the multiple.",
+    "valuationNote": {
+      "text": "Goldman is a great franchise but a cyclical stock. The 1.7x TBV multiple is appropriate at peak ROE (~19%) but compresses to ~1.2-1.3x at trough. The right way to own GS is to buy when capital markets are out of favor (TBV multiple <1.3x), not at cyclical highs. Wait for a better entry; trim into strength.",
+      "fairValue": "$930"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$650",
+      "description": "Tariff-driven recession freezes M&A and IPO markets, trading volumes compress, IB fees fall 30-40%, and the multiple de-rates to trough TBV.",
+      "points": [
+        "M&A pipeline freezes; investment banking fees fall 35% from 2026 peak; capital markets activity contracts as in 2022-2023",
+        "Trading revenues normalize off cyclical highs; ROE falls to 12-13%; 2027 EPS compresses to ~$50",
+        "Multiple compresses to ~1.3x TBV — implying ~$650"
+      ]
+    },
+    "base": {
+      "priceTarget": "$930",
+      "description": "Capital markets activity remains constructive but cools modestly off Q1 2026 highs; AWM continues to compound; ROE settles at ~15-17% through-cycle.",
+      "points": [
+        "M&A and IB fees grow modestly off elevated 2026 base; Equities/FICC normalize but stay above pre-2024 levels",
+        "AWM AUS crosses $4T; management fees provide visible recurring revenue; AWM segment margins expand",
+        "EPS reaches ~$72 in 2027; at 13x and ~1.7x TBV, fair value ~$930"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$1,100",
+      "description": "Multi-year M&A super-cycle plays out, AWM accelerates, the consumer drag fully runs off, and the market re-rates GS toward an asset-light franchise multiple.",
+      "points": [
+        "Sustained M&A super-cycle drives IB fees toward 2021 peak; ECM/DCM activity remains elevated",
+        "AWM crosses $4.5T AUS; alternatives and ultra-HNW wealth drive 15%+ AWM growth and meaningful margin expansion",
+        "Multiple re-rates to ~1.9x TBV on durability of AWM and IB recovery — implying ~$1,100"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Institutional clients have built workflows around Goldman's Marquee platform, prime services, and execution algos; while not as sticky as a corporate treasury system, the cost of switching prime brokers is meaningful."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "M&A advisory frameworks, trading risk models, and underwriting playbooks refined over 155 years are core IP; AI augments idea generation and pitch creation but cannot replace senior banker judgment and CEO relationships."
+    },
+    "publicDataAccess": {
+      "status": "weakened",
+      "note": "Public market data is commoditized; Goldman's edge is its private client and deal-flow data, not public-data aggregation."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Senior M&A bankers, market-makers, and equity research analysts with multi-decade reputations are scarce; Goldman attracts and retains the top tier through compensation and prestige, but talent is mobile and bonus inflation is a real cost."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "M&A advisory + ECM/DCM underwriting + Markets execution + AWM + private wealth = cross-sold relationships; large clients consume multiple services, raising switching costs across the platform."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Order flow, deal pipeline, and CEO-level corporate intelligence give Goldman a real-time view of capital markets activity that informs both proprietary trading and advisory work."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "GSIB designation, FINRA broker-dealer status, prime brokerage licensing, and Federal Reserve oversight create a multi-year regulatory moat; new entrants face a long capital and licensing path to compete in capital markets at scale."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "League-table dominance is a network effect — more mandates beget more references and more talent recruitment; institutional trading scale reinforces market-making advantages; AWM benefits as capital markets clients become wealth clients."
+    },
+    "transactionEmbedding": {
+      "status": "weakened",
+      "note": "Capital markets relationships are deal-by-deal rather than embedded in client systems; AWM mandates are stickier but redeemable; the franchise is more relationship-driven than infrastructure-embedded."
+    },
+    "systemOfRecord": {
+      "status": "weakened",
+      "note": "Goldman is a top-tier execution venue and advisor but not the system of record for client cash, custody, or trading positions in the way a custodian or universal bank is; this limits the franchise's structural durability versus JPM."
+    },
+    "verdict": "Goldman has a durable network and brand moat in capital markets, but the franchise is more cyclical and relationship-driven than the universal-bank or alts peer set. AI accelerates banker productivity and pitch creation, modestly widening Goldman's lead in advisory, but cannot substitute for CEO trust. Hold; size up at trough multiples (~1.3x TBV)."
+  },
+  "lastAnalyzed": "May 2026"
+}

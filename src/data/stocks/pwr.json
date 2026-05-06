@@ -1,0 +1,161 @@
+{
+  "slug": "pwr",
+  "ticker": "PWR",
+  "name": "Quanta Services",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "PWR" },
+    { "label": "Market Cap", "value": "~$112B" },
+    { "label": "Current Price", "value": "~$762" }
+  ],
+  "chips": [
+    { "label": "Electrical Infrastructure | EPC", "color": "primary" },
+    { "label": "Grid Build-Out | AI Power Beneficiary", "color": "success" }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Total Backlog",
+      "value": "~$48.5B",
+      "label": "Record; book-to-bill 1.6× in Q1",
+      "icon": "Box",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "FY26 Adj EPS Guide",
+      "value": "$13.55-$14.25",
+      "label": "Raised post-Q1; +20% YoY at midpoint",
+      "icon": "TrendingUp",
+      "color": "#10b981"
+    },
+    {
+      "title": "FY26 Revenue Guide",
+      "value": "$34.7-35.2B",
+      "label": "Raised ~$1.5B vs initial guide on grid demand",
+      "icon": "BarChart",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "description": "The largest specialty electrical and pipeline contractor in North America with a 20,000+ skilled-craft workforce and multi-decade master service agreements with US investor-owned utilities — a moat built on labour scarcity, safety record, and utility relationship depth.",
+    "analysisTitle": "The Skilled-Labour and Utility-Relationship Moat",
+    "analysisSummary": "Quanta's moat is **scarce skilled craft labour plus utility customer entrenchment** — neither can be replicated quickly, and both are accelerating as the AI grid build-out collides with a structural lineman shortage:",
+    "analysisPoints": [
+      {
+        "title": "Lineman and Skilled-Craft Scarcity",
+        "text": "The US faces a multi-decade shortage of qualified linemen, transmission engineers, and high-voltage substation technicians. Quanta operates the country's largest private lineman training college (Northwest Lineman College) and its captive workforce of 20,000+ craft labourers is effectively impossible to replicate — competitors must hire from the same scarce pool, which advantages the largest, best-paying employer."
+      },
+      {
+        "title": "Utility Master Service Agreements",
+        "text": "Quanta holds long-tenured MSAs with most US investor-owned utilities. These framework contracts provide first-call status on transmission, distribution, and substation work for the duration of the relationship — switching contractors mid-program is operationally painful for utilities and rarely happens once Quanta is embedded."
+      },
+      {
+        "title": "Self-Perform Scale and Equipment Fleet",
+        "text": "Quanta self-performs ~85% of its work versus subcontracting, owns one of the largest specialised heavy equipment fleets in the industry, and runs proprietary safety and productivity systems. This vertical integration is the reason it converts backlog at higher margins than smaller rivals and wins large EPC awards on schedule certainty."
+      }
+    ]
+  },
+  "growth": {
+    "score": 85,
+    "description": "Q1 2026 revenue +26% YoY to $7.87B; record $48.5B backlog with book-to-bill 1.6×; FY26 adj EPS guide raised to $13.55-$14.25 (+20% YoY mid). Drivers are utility transmission build-out, data-centre power feeds, and renewables interconnect — all multi-year capex programs with explicit utility integrated resource plans behind them.",
+    "growthAnalysis": {
+      "cagrEstimate": "15-18%",
+      "scoreDerivation": "Base 80 (15-30% CAGR mid-band) + 8 record backlog with 1.6× book-to-bill (multi-year visibility) + 3 guide raise post-Q1 - 6 cyclicality / project execution risk = 85",
+      "drivers": [
+        { "name": "Utility Transmission & Distribution", "metric": "Multi-decade up-cycle on AI load growth + grid hardening; MSA backlog +25% YoY", "trend": "accelerating" },
+        { "name": "Renewables Interconnect", "metric": "Solar + storage interconnect queues drive EPC pipeline through 2030", "trend": "accelerating" },
+        { "name": "Pipeline / Industrial", "metric": "LNG export build + industrial reshoring; mid-single-digit growth", "trend": "stable" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If utility capex pulls forward and digests in 2028-29 simultaneously with AI data-centre power moderation, backlog growth pauses and the ~50× multiple compresses sharply — Quanta has shown 30%+ drawdowns on cyclical scares historically and the stock is at a record valuation.",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 68,
+    "description": "At ~$762 PWR trades at ~54× FY26 adj EPS midpoint — a record premium that prices in continued AI-grid super-cycle. Backlog visibility is excellent, but valuation has stretched faster than fundamentals, and the asymmetry has tilted toward the downside on any capex moderation signal.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Forward P/E (FY26 adj)", "value": "~54×", "note": "EPS $13.90 mid; record-high multiple" },
+        { "label": "Forward P/E (FY27 adj)", "value": "~46×", "note": "Assumes ~17% EPS growth on backlog conversion" },
+        { "label": "PEG Ratio", "value": "~3.0×", "note": "Premium even on durable mid-teens growth" },
+        { "label": "Price / Sales (FY26)", "value": "~3.2×", "note": "EPC services premium reflecting AI grid mix" },
+        { "label": "EV / EBITDA (NTM)", "value": "~32×", "note": "Premium to MasTec ~14× and EMCOR ~18×" }
+      ],
+      "summary": "Valuation prices in a multi-year AI grid super-cycle without much room for disappointment; the backlog supports the story but the multiple leaves no margin of safety."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$530",
+      "description": "AI data-centre power build-out moderates and utility capex digests in 2028, multiple compresses to ~30-32× on growth normalisation while FY27 EPS still grows mid-teens.",
+      "points": [
+        "Hyperscaler 2028 capex grows <10% YoY, slowing data-centre power feed orders",
+        "Utility transmission queue clears faster than expected as siting reform passes, pulling forward and then digesting capex",
+        "Lineman wage inflation outpaces price escalators, compressing margin in the back half of 2027"
+      ]
+    },
+    "base": {
+      "priceTarget": "$830",
+      "description": "FY26 adj EPS lands near $14, FY27 grows to $16.50 on backlog conversion, multiple sustains 48-52× given visibility on the multi-year grid build-out.",
+      "points": [
+        "Backlog continues building through 2027 with book-to-bill staying above 1.2×",
+        "Margin expands ~50 bps as transmission mix and self-perform percentage tick higher",
+        "M&A bolt-ons in renewables and substation engineering add 2-3% to growth"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$1,200",
+      "description": "Grid super-cycle extends through 2030 as AI training and inference capacity quadruples, FY28 adj EPS exceeds $20, multiple expands to ~60× on durable visibility.",
+      "points": [
+        "AI infrastructure power demand sustains 25%+ growth through 2030",
+        "Utility long-range integrated resource plans formalise multi-decade transmission upgrades",
+        "Quanta consolidates fragmented specialty contractor market via accretive M&A"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "Not applicable — physical EPC services contractor, no end-user interface."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "Proprietary project management, safety, and productivity systems are real internal tooling but not an externally defensible software franchise."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Not applicable — no public-data moat."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "Quanta's 20,000+ craft workforce, captive Northwest Lineman College training pipeline, and ability to pay top-of-market wages compound as the US lineman shortage deepens — this is the single most durable moat the company has."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Self-perform across transmission, distribution, substation, communications, and renewables interconnect lets Quanta bid integrated EPC scope that smaller specialists cannot match."
+    },
+    "proprietaryData": {
+      "status": "weakened",
+      "note": "Decades of project execution data inform bid pricing and safety analytics, but the data is internal and not externally monetised."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "Utility prequalification, OSHA safety records, and union/IBEW relationships create real new-entrant barriers — clearing them takes years and a clean incident history."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "Not applicable — services contractor with no network effect."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Master service agreements and multi-year framework contracts with most US IOUs make Quanta the default first-call contractor for the duration of the program."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "Not applicable — not a system of record."
+    },
+    "verdict": "Quanta is the cleanest pure-play on the US grid build-out and AI power demand, with a genuinely scarce moat in skilled craft labour and entrenched utility relationships. The franchise is durable for the cycle's duration; the only meaningful risk is valuation, which already prices in a long super-cycle with little room for disappointment."
+  }
+}

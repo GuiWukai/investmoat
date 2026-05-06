@@ -1,0 +1,170 @@
+{
+  "slug": "rblx",
+  "ticker": "RBLX",
+  "name": "Roblox Corporation",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "RBLX" },
+    { "label": "Market Cap", "value": "~$32B" },
+    { "label": "Price", "value": "~$48" }
+  ],
+  "chips": [
+    { "label": "UGC Gaming Platform | Creator Economy", "color": "primary" },
+    { "label": "Network Effects", "color": "success" },
+    { "label": "Safety + Age-Verification Headwinds", "color": "warning" }
+  ],
+  "recommendation": "Hold",
+  "metrics": [
+    {
+      "title": "Q1 2026 Revenue",
+      "value": "$1.4B",
+      "label": "+39% YoY; bookings $1.7B",
+      "icon": "TrendingUp",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "DAU",
+      "value": "132M",
+      "label": "Q1 2026; -8% from Q4 2025 peak after age-verification rollout",
+      "icon": "Users",
+      "color": "#7c3aed"
+    },
+    {
+      "title": "FY2026 Bookings Guidance",
+      "value": "+8-12%",
+      "label": "Cut from prior guide; safety measures driving headwind",
+      "icon": "AlertTriangle",
+      "color": "#d97706"
+    }
+  ],
+  "moat": {
+    "description": "Roblox is the dominant user-generated-content (UGC) gaming platform with two-sided creator-player network effects and a proprietary developer toolchain (Roblox Studio) that has compounded for 18+ years. The platform faces a near-term headwind from mandatory age-ID verification rollouts that have reduced DAU by ~12M, but the underlying creator economy (~$1B+ paid out to developers annually) and engagement per user are still scaling.",
+    "analysisTitle": "The UGC Creator Flywheel",
+    "analysisSummary": "Roblox's competitive position rests on **creator-player network effects, learned interfaces (Roblox Studio + Lua/Luau scripting), and proprietary behavioral data on hundreds of millions of users across billions of play sessions**:",
+    "analysisPoints": [
+      {
+        "title": "Two-Sided Creator-Player Network",
+        "text": "Roblox has 12M+ creators, of whom ~10,000+ earn meaningful income (top creators earn $1M+ annually). The platform paid out $900M+ to developers in 2025 and is on track to exceed $1B in 2026. Creators bring players (their friends, audience, communities) and players attract more creators (because of the monetisation potential). This bilateral compound has been running since 2008."
+      },
+      {
+        "title": "Roblox Studio: The Learned-Interface Moat",
+        "text": "Roblox Studio is the proprietary game development environment used by every Roblox creator. It uses Luau (Roblox's TypeScript-like Lua dialect) and a deeply integrated physics, animation, avatar, and monetisation system. Creators have invested years learning Studio; ports to Unity or Unreal are operationally costly and lose the integrated avatar/economy/discovery layer. Studio is also adding AI-assist features for non-coders (text-to-3D, code generation), expanding the addressable creator base."
+      },
+      {
+        "title": "Demographic Expansion + Bookings Growth",
+        "text": "Q1 2026 bookings reached $1.7B (~+25% YoY) as ARPU rose despite DAU decline. Older user segments (17+) are the fastest-growing demographic, increasing average bookings per DAU. Roblox is investing in adult-appropriate experiences (live concerts, branded experiences, sports) that monetise at higher ARPU than the legacy kids' base."
+      },
+      {
+        "title": "Proprietary Behavioral Data",
+        "text": "Roblox accumulates session-level data on hundreds of millions of users across billions of play sessions per year — covering engagement patterns, social graph, in-experience purchases, and discovery flow. This dataset powers recommendation, content moderation, and creator monetisation in ways no new entrant can match without a comparable user base. AI strengthens this moat: better personalisation models compound as the data scale grows."
+      }
+    ]
+  },
+  "growth": {
+    "score": 70,
+    "description": "Q1 2026 revenue $1.4B (+39% YoY), bookings $1.7B (~+25% YoY), but DAU declined to 132M (down from a Q3 2025 peak of 152M) following mandatory age-ID rollout and regional restrictions. Management cut FY2026 guidance — bookings now guided +8-12% and revenue +20-25% — citing safety-measure headwinds. The stock fell 19% on the print. Underlying engagement per remaining user is rising and ARPU/DAU is at all-time highs, but DAU growth is the central thesis question through 2027.",
+    "growthAnalysis": {
+      "cagrEstimate": "15-25%",
+      "scoreDerivation": "Base 75 (15-30% CAGR) + 5 ARPU expansion (older demographics, branded experiences) + 3 creator economy compounding ($1B+ payouts in 2026) - 8 DAU contraction post age-verification (down ~12M from Q3 2025 peak) - 5 guidance cut (FY2026 bookings now +8-12% vs prior expectations) = 70",
+      "drivers": [
+        { "name": "DAU", "metric": "132M Q1 2026; -8% from Q3 2025 peak; safety-measure headwind", "trend": "decelerating" },
+        { "name": "Bookings", "metric": "$1.7B Q1 2026; ARPU rising as older demographics grow", "trend": "stable" },
+        { "name": "Creator Payouts", "metric": "$900M+ in 2025; on track for $1B+ in 2026", "trend": "accelerating" },
+        { "name": "Branded / Live Experiences", "metric": "Sports + music partnerships expanding; higher-ARPU adult content", "trend": "accelerating" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If age-verification rollouts in additional jurisdictions (UK, Australia, EU member states) drive DAU below 120M by end of 2026 AND content-safety controversies trigger app-store penalties, Roblox bookings growth stalls below 10% and the creator-economy flywheel slows below the developer-payout threshold needed for top creators to remain on platform.",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 72,
+    "description": "At ~$48, Roblox trades at ~5× forward sales and ~36× forward FCF on lowered FY2026 guidance. The stock has fallen ~50% from its 52-week high on the guidance cut and DAU contraction, creating a setup where downside from current levels requires further DAU erosion or material content-safety incidents. The platform remains highly profitable on a bookings basis and continues to generate positive free cash flow even after the safety-measure investment cycle.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "n/m", "note": "GAAP loss; not yet GAAP-profitable" },
+        { "label": "Forward P/E (NTM)", "value": "n/m", "note": "Adj. EPS positive but small; FCF more relevant" },
+        { "label": "Price / Sales (NTM)", "value": "~5×", "note": "FY2026 revenue guide $5.5-5.8B" },
+        { "label": "Price / Bookings (NTM)", "value": "~4×", "note": "FY2026 bookings guide $7B+" },
+        { "label": "Price / FCF", "value": "~36×", "note": "~$900M TTM FCF" }
+      ],
+      "summary": "Roblox is best valued on price/bookings (~4×) and price/FCF (~36×) given GAAP unprofitability. The PS/PB multiples have compressed meaningfully from prior years, reflecting the DAU deceleration concern. Valuation is reasonable for a 20-25% growth platform with positive FCF, but a re-rating requires DAU re-acceleration or evidence that ARPU/bookings can grow durably without DAU growth."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$32",
+      "description": "Age-verification rollouts spread to additional jurisdictions causing further DAU contraction, content-safety controversies trigger app-store penalties, and creator economy slows as top creators reduce activity.",
+      "points": [
+        "DAU falls below 120M by end of 2026 as UK, Australia, and EU member states mandate age-ID verification with material friction; bookings growth stalls at 5-8%",
+        "Renewed content-safety controversy (predator incidents, child-safety lawsuits) triggers app-store policy enforcement that restricts in-app purchases for under-13 accounts, compressing bookings 10%+",
+        "Top creators reduce activity as DAU contraction shrinks the addressable audience; creator payouts plateau, slowing the flywheel that has compounded for 18 years",
+        "Multiple compresses to ~3× forward sales as Roblox is re-rated as a maturing gaming platform with structural safety overhang"
+      ]
+    },
+    "base": {
+      "priceTarget": "$60",
+      "description": "Safety-measure headwinds wash out by end of 2026, DAU stabilizes at ~135-140M with rising ARPU, and bookings re-accelerate to mid-teens growth in 2027.",
+      "points": [
+        "DAU stabilizes at 135-140M by end of 2026 as remaining markets complete age-verification rollouts and the safety-measure transition is largely behind the company",
+        "Bookings reach $7-7.4B FY2026 (+10-15% YoY) and re-accelerate to 18-20% growth in 2027 as new branded experiences and music/sports partnerships drive higher ARPU",
+        "Creator economy crosses $1B in payouts in 2026 and reaches $1.5B in 2027 as top creators remain on platform and the next wave of AI-assisted creators expands content supply",
+        "Multiple expands modestly to ~5.5× forward sales on FY2027 revenue of $7B+ as the DAU/safety transition is confirmed manageable"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$92",
+      "description": "Roblox emerges as the dominant cross-generational UGC platform, AI-generated content expands the creator base 10x, and branded/live experiences drive ARPU expansion that re-rates the multiple.",
+      "points": [
+        "AI-assisted content creation (text-to-3D, code generation) expands the active creator base from 12M to 50M+ by 2028, dramatically increasing content supply and per-user engagement",
+        "Branded experiences (Walmart, Nike, NFL, Universal) and live music partnerships (Travis Scott-style concerts at scale) drive ARPU/DAU above $50, expanding bookings to $12B+ by 2028",
+        "Older demographics (17+) become the majority of DAU by 2028 as Roblox captures Gen Z + early-millennial casual gamers, structurally expanding the TAM beyond the kids' platform narrative",
+        "Multiple expands to ~7× forward sales on FY2027 revenue of $7B+, re-rating Roblox as the YouTube-of-gaming platform with durable network effects"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "strong",
+      "note": "Roblox Studio is the proprietary game development environment for the entire Roblox ecosystem — creators invest years learning Luau, the studio editor, and the integrated avatar/economy/discovery system. AI-assisted creation features (text-to-3D, code-gen) are extending the learned-interface moat to non-coders rather than replacing it. Player-side: avatar, friend graph, and discovery feed accumulate years of personal context that competitor platforms cannot replicate."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Roblox's economy engine (Robux + DevEx + creator payouts), physics engine, avatar system, and matchmaking infrastructure represent 18 years of accumulated proprietary technical work. Replicable in principle but operationally costly and requires equivalent platform scale to monetise."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Not applicable — Roblox is a closed UGC platform; controlling access to a public data source is not part of the business model."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Game-engine engineering and live-ops talent is broadly available across the industry; no unique research scarcity creates structural barriers vs. Unity, Epic, or large game studios. AI coding tools further reduce the differentiation that specialised platform engineers once provided."
+    },
+    "bundling": {
+      "status": "weakened",
+      "note": "Roblox Premium subscription bundles a monthly Robux stipend with platform features but is not a deeply differentiated bundle. The platform is more about open access than bundled tiers; bundling is a modest moat at best."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Roblox accumulates session-level behavioral data across hundreds of millions of users and billions of play sessions per year — engagement patterns, social graph, in-experience purchases, friend-network discovery. This is genuinely proprietary and compounds with platform scale; AI strengthens the moat by improving recommendation, moderation, and creator monetisation models trained on the data."
+    },
+    "regulatoryLockIn": {
+      "status": "destroyed",
+      "note": "Not applicable — Roblox has no government certifications, licensure, or accreditation that creates structural switching costs. If anything, regulatory pressure (age verification, content safety, KOSA-style legislation) is a headwind, not a moat."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "Two-sided creator-player network effects: creators bring their audiences and friend graphs to the platform, players attract more creators because of monetisation potential, and the cycle has compounded for 18 years to produce 12M+ creators and 130M+ DAU. Friend-graph effects (kids playing with friends) create powerful demand-side stickiness that competitors cannot replicate without comparable population coverage."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Robux is embedded in the daily spending behavior of tens of millions of users, and Roblox's gift card distribution at retail (Walmart, Target, Apple App Store) makes it the default in-game currency in the kids/teen demographic. Creator-side: developer payments through DevEx are deeply embedded in creators' income streams, making platform exit financially costly for top earners."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "Roblox is the system of record for player avatars, friend graphs, achievement history, and creator earnings/IP. Creators' Studio projects, asset libraries, and revenue history are all platform-locked and not portable. Players' avatars, inventories, and social graphs are similarly platform-bound."
+    },
+    "verdict": "Roblox's moat structure is led by networkEffects (creator-player flywheel compounded for 18 years), learnedInterfaces (Roblox Studio + Luau scripting), proprietaryData (session-level behavioral data), and transactionEmbedding (Robux + DevEx). These moats are largely AI-resilient — AI strengthens the platform by expanding the creator base via text-to-3D and code-gen tools, and by improving recommendation models trained on the proprietary behavioral data. The structural risk is regulatory/safety-driven DAU contraction (age-ID verification, KOSA-style legislation) rather than AI disruption. Long-term thesis depends on whether older demographics + branded experiences sustain ARPU growth as DAU growth normalises."
+  }
+}

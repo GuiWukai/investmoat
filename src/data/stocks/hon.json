@@ -1,0 +1,161 @@
+{
+  "slug": "hon",
+  "ticker": "HON",
+  "name": "Honeywell International",
+  "lastAnalyzed": "May 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "HON" },
+    { "label": "Market Cap", "value": "~$135B" },
+    { "label": "Current Price", "value": "~$210" }
+  ],
+  "chips": [
+    { "label": "Diversified Industrial | Automation", "color": "primary" },
+    { "label": "Aerospace Spin June 2026", "color": "warning" }
+  ],
+  "recommendation": "Hold",
+  "metrics": [
+    {
+      "title": "FY26 EPS Guide",
+      "value": "$8.88-$9.18",
+      "label": "Continuing ops; aerospace spin June 29, 2026",
+      "icon": "TrendingUp",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "Aerospace Backlog",
+      "value": "~$19B",
+      "label": "+20% YoY; orders +28% LTM",
+      "icon": "Box",
+      "color": "#10b981"
+    },
+    {
+      "title": "FY26 Free Cash Flow Guide",
+      "value": "$5.3-$5.6B",
+      "label": "Reaffirmed post-Q1; supports buyback + dividend",
+      "icon": "DollarSign",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "description": "A 100+ year diversified industrial conglomerate breaking into three pure-plays (Aerospace, Automation, Advanced Materials) — moats are real but unevenly distributed across segments, with Aerospace certifications the strongest and the integrated-conglomerate moat actively dissolving via spin-offs.",
+    "analysisTitle": "The Aerospace-Certifications and Automation-Software Moat",
+    "analysisSummary": "Honeywell's residual moat post-Aerospace spin (June 29, 2026) sits in **process-automation install base + aerospace certifications (pre-spin)** — durable but more fragmented than the integrated conglomerate of a decade ago:",
+    "analysisPoints": [
+      {
+        "title": "Aerospace Certification Lock-In (pre-spin)",
+        "text": "Honeywell Aerospace's APUs, avionics, and propulsion content are certified into multi-decade airframe programs (Boeing, Airbus, defence platforms) with $19B backlog and 26.5% segment margins. Once a system is type-certified into an airframe, swapping it requires recertification — a multi-year, multi-million-dollar barrier. Spinning into HONA on June 29, 2026 will surface this moat as a pure-play."
+      },
+      {
+        "title": "Process-Automation Installed Base (Experion / DCS)",
+        "text": "Honeywell Process Solutions' Experion DCS and legacy industrial controls run inside refineries, chemical plants, and pharma facilities globally — switching costs are extreme because plant operating procedures, safety logic, and operator training are bound to the control system. The recurring services and modernisation revenue is durable, even as the install base ages."
+      },
+      {
+        "title": "Building Automation Channel and Software",
+        "text": "Building Automation grew 8% organically in Q1 across both Solutions and Products, with Forge / Niagara software platforms creating cross-product stickiness. This is a real but secondary franchise — Johnson Controls, Schneider, and Siemens all compete head-on, so moat depth here is moderate rather than dominant."
+      }
+    ]
+  },
+  "growth": {
+    "score": 58,
+    "description": "Q1 FY26 EPS $2.45 (+11% YoY) on $9.14B revenue (+2.4% YoY, narrowly missing top-line). FY26 EPS guide reaffirmed at $8.88-$9.18 (continuing ops). Aerospace orders +28% LTM with $19B backlog drives the high-quality growth, but Aerospace spins on June 29, 2026 — RemainCo's growth profile is mid-single-digit at best, dragged by Industrial Automation softness.",
+    "growthAnalysis": {
+      "cagrEstimate": "5-8%",
+      "scoreDerivation": "Base 60 (4-8% CAGR mid-band) + 4 Aerospace pre-spin contribution (high-quality growth backlog) + 2 portfolio simplification thesis - 8 RemainCo growth dilution post-spin (Automation + Materials are slower) = 58",
+      "drivers": [
+        { "name": "Aerospace (pre-spin, becomes HONA)", "metric": "Orders +28% LTM, backlog $19B (+20% YoY); spins June 29, 2026", "trend": "accelerating" },
+        { "name": "Building Automation", "metric": "+8% organic in Q1; Forge / Niagara software cross-sell", "trend": "stable" },
+        { "name": "Industrial Automation", "metric": "Soft on warehouse / process capex; divesting Warehouse + Workflow Solutions", "trend": "stable" }
+      ],
+      "primaryType": "market share",
+      "keyRisk": "Post-spin RemainCo (Automation + Materials) faces structural mid-single-digit growth at best, with no clean catalyst. If the spin distribution disappoints on relative re-rating, holders end up with two slower-growing pieces and one premium aerospace name — net total return depends on how the parts trade.",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 76,
+    "description": "At ~$210 HON trades at ~23× FY26 EPS — modest premium that reflects a sum-of-parts opportunity around the June 2026 aerospace spin. Aerospace alone (HONA) likely commands 25-30× as a pure-play; RemainCo trades at 18-20×. Sum-of-parts implies ~$245 fair value, with optionality on portfolio simplification creating a more attractive risk-reward than the headline multiple suggests.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        { "label": "Forward P/E (FY26 cont ops)", "value": "~23×", "note": "EPS $9.03 mid; pre-spin blended" },
+        { "label": "Forward P/E (FY27 post-spin RemainCo)", "value": "~20×", "note": "Estimated post-spin Automation + Materials" },
+        { "label": "PEG Ratio", "value": "~3.0×", "note": "High vs growth — reflects spin optionality more than core growth" },
+        { "label": "Sum-of-Parts Fair Value", "value": "~$245", "note": "HONA at 28× + RemainCo at 19×, net of stranded costs" },
+        { "label": "EV / EBITDA (NTM)", "value": "~14×", "note": "In line with diversified industrial peers" }
+      ],
+      "summary": "Modestly cheap on sum-of-parts; the aerospace spin is the catalyst. Headline multiple looks fair but the discount to break-up value is the actual investment thesis."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$170",
+      "description": "Spin distribution disappoints on relative re-rating, RemainCo de-rates to ~16-17× on slow growth, HONA trades in line with peers without a premium.",
+      "points": [
+        "Industrial Automation revenue declines mid-single-digit in 2027 on capex digestion",
+        "Aerospace spin executes but trades at parent-company multiple, capturing no re-rating",
+        "Stranded costs from separation impair RemainCo margin by 100+ bps for two years"
+      ]
+    },
+    "base": {
+      "priceTarget": "$245",
+      "description": "Aerospace spins cleanly in June 2026 and HONA re-rates to a 28× pure-play multiple; RemainCo trades at ~19× as a streamlined Automation + Materials franchise.",
+      "points": [
+        "FY27 sum-of-parts: HONA EPS ~$5 at 28× = $140; RemainCo EPS ~$5.50 at 19× = $105, total ~$245",
+        "Buyback continues funded by $5.3-5.6B FY26 FCF",
+        "Building Automation continues mid-to-high-single-digit growth post-spin"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$310",
+      "description": "Aerospace spin re-rates HONA to 32× as a defence + commercial pure-play, RemainCo benefits from incremental M&A and reaches 22× on accelerating Automation growth, FY28 sum-of-parts compounds.",
+      "points": [
+        "HONA wins next-generation defence platform content, lifting backlog above $25B by 2028",
+        "RemainCo accretive M&A in process software boosts growth to high-single-digit",
+        "Capital return accelerates as portfolio simplifies"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "Not applicable — diversified industrial vendor with no end-user interface."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Experion DCS, Forge, and Niagara are genuinely sticky industrial control and building software platforms; the legacy install base in process automation is one of the franchise's most durable moats."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Not applicable — no public-data moat."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Honeywell's engineering bench is real but no longer a scarce moat post-spin given how dispersed the businesses are."
+    },
+    "bundling": {
+      "status": "weakened",
+      "note": "The integrated conglomerate bundle is actively dissolving via the aerospace spin and Warehouse / Workflow divestiture — the surviving bundle is narrower."
+    },
+    "proprietaryData": {
+      "status": "weakened",
+      "note": "Process and building telemetry from the install base is real but underleveraged commercially relative to potential."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "Aerospace FAA / EASA type certifications and process-safety SIL-rated controls create multi-decade switching barriers — these survive the spin and sit primarily in HONA."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "Not applicable — industrial vendor with no network effects."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Process control DCS, building automation, and aerospace components are embedded in customer assets for 20-30 year service lives; replacement is rare and expensive."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "Not applicable — not a system of record."
+    },
+    "verdict": "Honeywell is a high-quality but slow-growing diversified industrial whose investment thesis now hinges on the June 2026 aerospace spin unlocking sum-of-parts value rather than on organic growth. Real moats survive in process automation and aerospace certifications; the integrated-conglomerate moat is being dissolved by management, intentionally."
+  }
+}

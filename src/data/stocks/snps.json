@@ -1,0 +1,208 @@
+{
+  "slug": "snps",
+  "ticker": "SNPS",
+  "name": "Synopsys, Inc.",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "SNPS"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$97.5B"
+    },
+    {
+      "label": "Current Price",
+      "value": "~$497"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Semiconductors | EDA Software",
+      "color": "primary"
+    },
+    {
+      "label": "Duopoly Moat",
+      "color": "success"
+    }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Q1 FY2026 Revenue",
+      "value": "$2.41B",
+      "label": "+66% YoY — first full quarter post-Ansys close; Design Automation +96% YoY",
+      "icon": "Cpu",
+      "color": "#ef4444"
+    },
+    {
+      "title": "FY2026 Guidance",
+      "value": "$9.56–9.66B",
+      "label": "~36% YoY growth at midpoint; non-GAAP EPS $14.38–14.46; Ansys ~$2.9B contribution",
+      "icon": "TrendingUp",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "EDA Market Share",
+      "value": "~35%",
+      "label": "Co-leader with Cadence in chip design EDA tools — ~75% combined duopoly share",
+      "icon": "Target",
+      "color": "#10b981"
+    }
+  ],
+  "moat": {
+    "description": "Co-dominant EDA tools provider with deeply embedded software workflows used by every advanced chip designer; Ansys integration extends moat into multiphysics simulation.",
+    "analysisTitle": "The EDA Workflow Lock-In Moat",
+    "analysisSummary": "Synopsys's moat is built on **mission-critical software embedded in every advanced chip tape-out**:",
+    "analysisPoints": [
+      {
+        "title": "Workflow Lock-In",
+        "text": "Every modern chip from NVIDIA, Apple, AMD, and Qualcomm passes through Synopsys's design and verification flows. Switching tools mid-roadmap costs years and risks tape-out failure — making the EDA toolchain effectively non-substitutable."
+      },
+      {
+        "title": "Ansys Multiphysics Stack",
+        "text": "The $35B Ansys acquisition (closed mid-2025) bolts simulation (thermal, electromagnetic, structural) onto silicon design — enabling 'silicon-to-systems' workflows. Joint products begin shipping H1 FY2026 with monetization in FY2027 and $400M revenue synergies targeted by year four."
+      },
+      {
+        "title": "AI Chip Design Tailwind",
+        "text": "AI accelerator complexity (multi-die, 3D-IC, advanced packaging) drives EDA tool intensity. Synopsys's AI-powered DSO.ai and VSO.ai chip design copilots are gaining traction with 800+ commercial tape-outs, deepening usage per customer."
+      }
+    ]
+  },
+  "growth": {
+    "score": 82,
+    "description": "Q1 FY2026 revenue of $2.41B (+66% YoY) reflected the first full quarter with Ansys consolidated. Stripping the acquisition, organic Design Automation grew strongly while Design IP slipped 6.5% YoY on customer mix. Management reiterated FY2026 guidance of $9.56–9.66B (~36% YoY at midpoint) with Ansys contributing ~$2.9B. Underlying organic EDA growth runs ~10–12% with ~22% non-GAAP EPS CAGR through 2027 as integration synergies and AI-design product mix lift margins toward the 40.5%+ target.",
+    "growthAnalysis": {
+      "cagrEstimate": "12–18%",
+      "scoreDerivation": "Base 80 (organic 10–12% with ~22% EPS CAGR — solid 8–15% bracket plus mix toward higher-margin AI tooling) + 5 Ansys revenue synergies ($400M by year 4 plus multiphysics TAM expansion) − 3 integration risk and Design IP softness in early quarters = 82",
+      "drivers": [
+        {
+          "name": "Design Automation (core EDA)",
+          "metric": "$2.0B Q1 FY2026 (+96% YoY incl. Ansys; ~10–12% organic); benefits from rising AI chip complexity",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Ansys Multiphysics",
+          "metric": "$886M Q1 FY2026; FY2026 contribution ~$2.9B targeted, growing double-digits",
+          "trend": "stable"
+        },
+        {
+          "name": "Design IP",
+          "metric": "$407M Q1 FY2026 (-6.5% YoY); customer-program timing; rebound expected H2 FY2026",
+          "trend": "decelerating"
+        }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If Ansys integration distracts the engineering org and joint product monetization slips beyond FY2027, organic EDA growth slows toward 7–8% while integration costs and amortization weigh on EPS — compressing the multiple from ~35× forward toward ~25×",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 64,
+    "description": "At ~$497, SNPS trades at ~35× forward P/E on FY2026 EPS guide of ~$14.42 — slightly above the historic ~30× average and reflecting the 'transition year' premium for Ansys integration. The stock has rallied ~24% in the past month after reaffirming FY2026 guidance and announcing a $2B buyback. Base case fair value of ~$525 implies modest upside; the margin of safety has narrowed materially after the rally, but the duopoly moat and synergy ramp underwrite the valuation through FY2027.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~85×",
+          "note": "Ansys deal amortization weighing on TTM GAAP EPS"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~35×",
+          "note": "non-GAAP FY2026 EPS guide ~$14.42"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.6×",
+          "note": "fwd P/E ÷ ~22% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~10×",
+          "note": "$97.5B mkt cap / ~$9.6B FY2026 revenue"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~45×",
+          "note": "FCF compressed near-term by Ansys integration costs"
+        }
+      ],
+      "summary": "At ~35× forward P/E, SNPS trades at a modest premium to its 5-year average of ~30× and a steep premium to the broader software sector — defensible given the EDA duopoly position and Ansys synergy runway, but light on margin of safety. PEG of ~1.6× is reasonable for a recurring-license franchise with ~95% renewal rates and clear AI tailwinds, though the Design IP softness in Q1 FY2026 and the 'transition year' framing keep the valuation score in the mid-60s rather than higher."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$380",
+      "description": "Ansys integration dilutes execution focus; joint product monetization slips beyond FY2027; Design IP softness persists; multiple compresses on weaker EPS trajectory.",
+      "points": [
+        "FY2026 revenue lands below the low end of $9.56B guide as Design IP weakness persists into H2 and Ansys revenue synergies are deferred",
+        "Joint Synopsys-Ansys product launches slip to FY2028, eroding the integration narrative and forcing a multiple re-rating toward 26× forward",
+        "Cadence captures incremental EDA share at advanced nodes (3nm/2nm verification) while Synopsys engineering attention is diverted to integration"
+      ]
+    },
+    "base": {
+      "priceTarget": "$525",
+      "description": "FY2026 revenue lands in $9.56–9.66B guide; Ansys integration tracks plan; joint products begin monetizing in FY2027; AI chip design tailwind sustains 10%+ organic growth.",
+      "points": [
+        "FY2026 non-GAAP EPS hits $14.42 midpoint with non-GAAP operating margin ~40.5% as guided, validating cost-synergy execution",
+        "First wave of joint Synopsys-Ansys products ships H2 FY2026 and books initial monetization in FY2027, supporting the path to $400M revenue synergies by year four",
+        "AI-driven DSO.ai and VSO.ai design tool adoption expands the EDA wallet share per customer, lifting organic Design Automation growth above 12% in FY2027"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$680",
+      "description": "Ansys synergies ramp ahead of plan; AI chip design intensity drives organic EDA growth toward 15%; multiphysics + silicon bundle commands premium pricing; multiple expands toward 40× forward.",
+      "points": [
+        "Joint Synopsys-Ansys workflows are adopted by hyperscaler in-house silicon teams (Google TPU, Amazon Trainium, Meta MTIA) and command premium ASPs, accelerating revenue synergies above $500M by FY2028",
+        "Organic EDA growth inflects above 15% as 3D-IC and chiplet packaging drive 2× tool intensity per design, expanding TAM beyond the historic ~10% trajectory",
+        "Operating margin reaches 43%+ by FY2027 as integration costs roll off and AI productivity tools lift R&D efficiency, lifting non-GAAP EPS toward $18 and re-rating the multiple"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "Not applicable — Synopsys sells specialised engineering software to chip designers, not consumer-facing UI experiences."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "EDA design rules, verification methodologies, and place-and-route algorithms encode decades of accumulated chip design IP that AI cannot independently replicate."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Not applicable — Synopsys does not derive moat from public data access."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "EDA tool architects, verification methodology experts, and physical design engineers are extraordinarily scarce; Synopsys's R&D org embeds 30+ years of know-how unavailable elsewhere."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Full-flow bundle from RTL synthesis through physical design, verification, IP, and now Ansys multiphysics simulation creates an integrated stack competitors cannot easily unbundle."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Telemetry from 800+ commercial AI-driven tape-outs feeds DSO.ai and VSO.ai optimization models, generating compounding tool quality improvements unavailable to challengers."
+    },
+    "regulatoryLockIn": {
+      "status": "weakened",
+      "note": "U.S. export controls restrict EDA tool sales to Chinese advanced-node customers (BIS rules tightened 2024–2025); creates revenue headwind but also reinforces the U.S./Western EDA duopoly's structural protection."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "Foundry partnerships (TSMC, Samsung, Intel) certify Synopsys reference flows for each new node, creating bilateral lock-in between fabs and design tools."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Every advanced chip tape-out runs Synopsys tools at multiple stages — switching mid-program risks tape-out delays worth tens of millions per slip."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "Synopsys is the de facto system of record for chip design databases, verification environments, and IP libraries — the EDA toolchain IS the design history."
+    },
+    "verdict": "Synopsys's moat is highly AI-resilient: AI accelerates chip design complexity and increases EDA tool intensity rather than disrupting it. The duopoly with Cadence is structurally protected by tape-out risk aversion, foundry certification cycles, and decades of accumulated methodology IP. Ansys integration extends the moat into multiphysics — a logical adjacency where AI chip thermal and 3D-IC challenges demand integrated tooling."
+  },
+  "lastAnalyzed": "May 2026"
+}

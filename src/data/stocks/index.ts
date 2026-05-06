@@ -85,6 +85,27 @@ import el from './el.json';
 import baba from './baba.json';
 import pdd from './pdd.json';
 import bidu from './bidu.json';
+import snow from './snow.json';
+import ddog from './ddog.json';
+import mdb from './mdb.json';
+import snps from './snps.json';
+import cdns from './cdns.json';
+import crwv from './crwv.json';
+import nbis from './nbis.json';
+import jpm from './jpm.json';
+import bx from './bx.json';
+import kkr from './kkr.json';
+import gs from './gs.json';
+import ms from './ms.json';
+import pwr from './pwr.json';
+import tt from './tt.json';
+import hon from './hon.json';
+import qcom from './qcom.json';
+import elv from './elv.json';
+import vrtx from './vrtx.json';
+import regn from './regn.json';
+import dash from './dash.json';
+import rblx from './rblx.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -172,6 +193,27 @@ const stocksMap: Record<string, StockAnalysisData> = {
   baba: baba as StockAnalysisData,
   pdd: pdd as StockAnalysisData,
   bidu: bidu as StockAnalysisData,
+  snow: snow as StockAnalysisData,
+  ddog: ddog as StockAnalysisData,
+  mdb: mdb as StockAnalysisData,
+  snps: snps as StockAnalysisData,
+  cdns: cdns as StockAnalysisData,
+  crwv: crwv as StockAnalysisData,
+  nbis: nbis as StockAnalysisData,
+  jpm: jpm as StockAnalysisData,
+  bx: bx as StockAnalysisData,
+  kkr: kkr as StockAnalysisData,
+  gs: gs as StockAnalysisData,
+  ms: ms as StockAnalysisData,
+  pwr: pwr as StockAnalysisData,
+  tt: tt as StockAnalysisData,
+  hon: hon as StockAnalysisData,
+  qcom: qcom as StockAnalysisData,
+  elv: elv as StockAnalysisData,
+  vrtx: vrtx as StockAnalysisData,
+  regn: regn as StockAnalysisData,
+  dash: dash as StockAnalysisData,
+  rblx: rblx as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
