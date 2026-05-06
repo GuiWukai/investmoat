@@ -141,13 +141,17 @@ const m = (json: { tenMoats: any }) => computeMoatScore(json.tenMoats);
  * Resolve a stock's growth score: prefer the derived score from growthAnalysis
  * when keyRiskSeverity is populated (the migrated state); otherwise fall back to
  * the author-set growth.score for legacy stocks pending backfill.
+ *
+ * The parameter shape is loose because imported JSON types widen literal unions
+ * to plain strings (e.g. trend → string instead of 'accelerating' | 'stable' | …);
+ * we cast inside after the keyRiskSeverity guard, which itself is one of the
+ * narrow enum values.
  */
-const g = (json: {
-  growth: { score: number; growthAnalysis?: GrowthAnalysisInput };
-}): number => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const g = (json: { growth: { score: number; growthAnalysis?: any } }): number => {
   const ga = json.growth.growthAnalysis;
   if (ga?.keyRiskSeverity) {
-    const derived = computeGrowthScore(ga);
+    const derived = computeGrowthScore(ga as GrowthAnalysisInput);
     if (derived != null) return derived;
   }
   return json.growth.score;
