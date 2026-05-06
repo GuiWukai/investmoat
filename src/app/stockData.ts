@@ -124,11 +124,22 @@ import regnData     from '@/data/stocks/regn.json';
 import dashData     from '@/data/stocks/dash.json';
 import rblxData     from '@/data/stocks/rblx.json';
 
-// Weighted composite: Moat 40% · Growth 35% · Valuation 25%
+// Weighted composite: Moat 40% · Growth 35% · Valuation 25%, with a
+// bottleneck penalty so a single broken pillar can't be averaged away.
 // scores = [moatScore, growthScore, valuationScore]
+//
+//   composite = m·0.40 + g·0.35 + v·0.25
+//             − max(0, 55 − min(m,g,v)) × 0.8
+//
+// Any pillar below 55 docks the composite proportionally. A pillar at 41
+// (e.g., growth for a stock with collapsed YoY + high keyRiskSeverity)
+// subtracts (55−41)·0.8 = 11.2 points — enough to flip a borderline Hold
+// into Speculative Buy. Pillars ≥ 55 incur no penalty.
+//
 // Returns a float for precise sorting/comparison; callers round for display.
 export const getAverageScore = ([moat, growth, valuation]: number[]) =>
-    moat * 0.40 + growth * 0.35 + valuation * 0.25;
+    moat * 0.40 + growth * 0.35 + valuation * 0.25
+    - Math.max(0, 55 - Math.min(moat, growth, valuation)) * 0.8;
 
 const MAX_PORTFOLIO  = 25;
 const MIN_AVG_SCORE  = 75;
