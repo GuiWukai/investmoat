@@ -78,7 +78,6 @@
     ]
   },
   "growth": {
-    "score": 86,
     "description": "Q1 2026 revenue of $56.3B re-accelerated to +33% YoY (from +24% in Q4 2025), beating the $55.45B consensus. EPS came in at $10.44 (includes an $8.03B income tax benefit from US tax law changes; adjusted EPS ~$7.31, still a beat). Net income $26.77B (+61% YoY). Ad impressions grew 19% and average price per ad rose 12% — both metrics accelerating vs Q4 2025. Family daily active people reached 3.56B (+4% YoY, slight QoQ seasonality dip from 3.58B in Q4). Operating margin was 41%. Q2 guided $58–61B ($59.5B midpoint). The capex raise to $125–145B (from $115–135B) weighed on the stock (-6% after hours). Muse Spark deployed across all surfaces is not yet in consensus estimates.",
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
@@ -111,6 +110,7 @@
       ],
       "primaryType": "both",
       "keyRisk": "If 2026 capex of $125–145B (raised from $115–135B) does not yield measurable AI revenue by H2 2026 — Muse Spark fails to drive engagement uplift, no WhatsApp commerce inflection, FCF compresses below $30B — the market re-rates from compounder to capex-heavy infrastructure bet; DAP growth deceleration (3.58B Q4 → 3.56B Q1, +4% YoY vs +7% prior) could signal user saturation; Ray-Ban privacy lawsuit (California) adds regulatory overhang",
+      "keyRiskSeverity": "high",
       "marginTrend": "expanding"
     }
   },

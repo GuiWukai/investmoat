@@ -61,7 +61,6 @@
     ]
   },
   "growth": {
-    "score": 80,
     "description": "Q4 2025 marketplace GOV $29.7B (+39% YoY incl. Deliveroo, +27% organic), revenue $3.96B (+38%), orders 903M (+32%). Q1 2026 consensus $4.12B revenue (+36% YoY). Growth is now driven by (1) DashPass + frequency uplift, (2) grocery/retail vertical expansion, (3) advertising platform, and (4) international integration of Wolt + Deliveroo. Stated FY2026 priorities are Deliveroo integration and continued ads scaling. Adj. EBITDA margin is expanding as marketplace operating leverage and ads contribution compound.",
     "growthAnalysis": {
       "cagrEstimate": "20-30%",
@@ -74,6 +73,7 @@
       ],
       "primaryType": "both",
       "keyRisk": "If Deliveroo integration triggers material customer churn in the UK/UAE OR Uber Eats sustains aggressive US discounting that compresses DoorDash take-rates by 100-150bps through 2027, GOV growth decelerates to mid-teens and adj. EBITDA margins flatten rather than expand, breaking the operating-leverage thesis.",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },

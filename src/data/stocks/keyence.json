@@ -56,7 +56,6 @@
     ]
   },
   "growth": {
-    "score": 72,
     "description": "FY26 (FY ending March 2027) revenue growth +8-11% constant currency on factory automation recovery, EV battery capex, and semis fab capex spillover. Operating margin durably ~50%. Growth profile has slowed from the 2010s 15-20% but the franchise remains exceptional.",
     "growthAnalysis": {
       "cagrEstimate": "8-12%",
@@ -68,6 +67,7 @@
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If factory automation capex digestion deepens in China through 2026-27 and EV battery capex moderates simultaneously, Keyence revenue growth could compress to low single digits and the multiple — historically held at 30×+ — could compress to 20-22× before stabilising.",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },

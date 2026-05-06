@@ -71,8 +71,20 @@
     ]
   },
   "growth": {
-    "score": 80,
     "description": "Q1 2026 was a clear acceleration: revenue +14.1% YoY to $850.8M, organic growth above 13%, adj EPS +14%, adj EBITDA +19%, with index asset-based fee run rate hitting a record $872M (+25% YoY) and ETF-linked AUM reaching ~$7T. Both EPS and revenue beat consensus, confirming the AUM flywheel and the BlackRock 2035 anchor are compounding through equity market strength.",
+    "growthAnalysis": {
+      "cagrEstimate": "12-16%",
+      "scoreDerivation": "Base 72 + AUM flywheel acceleration (+5) + private assets TAM (+3) + 95% recurring revenue (+2) - equity market cyclicality risk (-2) = 80",
+      "drivers": [
+        { "name": "Asset-Based Fees", "metric": "Q1 2026 ABF run-rate $872M, +25% YoY", "trend": "accelerating" },
+        { "name": "Index Subscriptions", "metric": "Organic subscription growth ~8-9% YoY", "trend": "stable" },
+        { "name": "Private Assets", "metric": "Burgiss/RCA segment scaling double-digit", "trend": "accelerating" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "Sustained 30%+ global equity drawdown over 12-18 months would compress AUM-linked fees and re-rate the multiple.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "expanding"
+    },
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [

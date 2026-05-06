@@ -70,8 +70,20 @@
     ]
   },
   "growth": {
-    "score": 82,
-    "description": "Q1 2026 revenue of $1.09B grew 41% YoY with record loan originations of $12.2B, personal loans +51% and student loans +119% YoY. Net income of $166.7M more than doubled YoY. Galileo platform revenue fell 27% on the Chime exit and credit metrics softened, driving a ~9% post-earnings selloff despite the top-line beat. The lending engine remains strong; the fee-based platform business needs new wins to offset Chime."
+    "description": "Q1 2026 revenue of $1.09B grew 41% YoY with record loan originations of $12.2B, personal loans +51% and student loans +119% YoY. Net income of $166.7M more than doubled YoY. Galileo platform revenue fell 27% on the Chime exit and credit metrics softened, driving a ~9% post-earnings selloff despite the top-line beat. The lending engine remains strong; the fee-based platform business needs new wins to offset Chime.",
+    "growthAnalysis": {
+      "cagrEstimate": "25-35%",
+      "scoreDerivation": "Base 70 + 12 for revenue +41% YoY and net income doubling + 5 for record originations - 5 for Galileo softness and credit metric watch = 82",
+      "drivers": [
+        { "name": "Lending engine", "metric": "Record $12.2B originations; personal loans +51%, student loans +119% YoY", "trend": "accelerating" },
+        { "name": "Total revenue growth", "metric": "Q1 2026 revenue +41% YoY to $1.09B", "trend": "accelerating" },
+        { "name": "Galileo platform", "metric": "Platform revenue -27% on Chime exit; needs new wins", "trend": "decelerating" }
+      ],
+      "primaryType": "market share",
+      "keyRisk": "Consumer credit cycle in 2026-2027 lifts charge-offs and forces reserve builds, slowing originations while Galileo struggles to replace Chime.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
     "score": 84,

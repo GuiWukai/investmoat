@@ -71,8 +71,20 @@
     ]
   },
   "growth": {
-    "score": 64,
     "description": "Q1 2026 revenue +10% YoY to $50.5B, net income +13% to $16.5B, EPS +17% to $5.94, with ROTCE of 23%. Markets, asset & wealth management, and investment banking fees all contributed; full-year NII guidance was nudged lower (~$103B) on tariff-driven rate uncertainty, but the franchise's earnings power remains exceptional. Forward EPS growth of 5-8% from a record base reflects the law of large numbers more than franchise weakness.",
+    "growthAnalysis": {
+      "cagrEstimate": "4-7%",
+      "scoreDerivation": "Base 60 + 8 for ROTCE 23% and broad-based revenue +10% - 4 for mature scale and lowered NII guide = 64",
+      "drivers": [
+        { "name": "Markets & Investment Banking", "metric": "Q1 2026 revenue +10% YoY to $50.5B; IB fees recovering", "trend": "accelerating" },
+        { "name": "Asset & Wealth Management", "metric": "AUM compounding high single digits; net new money accelerating", "trend": "stable" },
+        { "name": "Capital return", "metric": "~$30B+ buybacks/year reduce share count 2-3% annually", "trend": "stable" }
+      ],
+      "primaryType": "market share",
+      "keyRisk": "Tariff-driven 2026-2027 recession could trigger a credit cycle; CCB charge-offs spiking toward 4% plus NIM compression would push EPS toward $18-19.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "stable"
+    },
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [

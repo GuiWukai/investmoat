@@ -70,8 +70,20 @@
     ]
   },
   "growth": {
-    "score": 76,
     "description": "Q1 2026 revenue of $22.38B (slightly below $22.64B consensus); EPS of $0.41 beat the $0.37 estimate. Deliveries of 358,023 missed by ~7,600 units, with Tesla building 50,000+ more vehicles than it sold (notable inventory build). Gross margin jumped to 21.1% (+478bps YoY), the bright spot. Capex now guided to $25B for FY2026, $5B above prior — the largest annual investment in Tesla's history, weighted toward Optimus and Robotaxi. Stock down ~14% YTD into the print.",
+    "growthAnalysis": {
+      "cagrEstimate": "15-22%",
+      "scoreDerivation": "Base 78 (15-22% CAGR mid-band) + 5 gross margin re-expansion to 21.1% + 4 Robotaxi/Optimus optionality + 2 sub-$30K vehicle catalyst - 13 auto deceleration and inventory build = 76",
+      "drivers": [
+        { "name": "Auto Deliveries", "metric": "Q1 2026 deliveries 358,023 (missed by ~7,600); 50,000+ inventory build pushed days-of-supply to 27 from 15; revenue $22.38B (+16% YoY) helped by ASP/mix", "trend": "decelerating" },
+        { "name": "Energy Storage", "metric": "Q1 2026 deployments 8.8 GWh (-38% QoQ, well below 12-14 GWh consensus); segment revenue $2.41B (-12% YoY) — lumpy but secular tailwind intact", "trend": "decelerating" },
+        { "name": "FSD / Robotaxi / Optimus", "metric": "Austin Robotaxi network expanding; Optimus transitioning from prototype to limited Fremont production by end-2026; $25B capex (+25%) weighted to autonomy", "trend": "accelerating" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If the sub-$30K vehicle slips into 2027, Robotaxi remains stuck in Austin without NHTSA federal framework approval, and Optimus misses its limited-production milestone by end-2026, Tesla's growth narrative collapses to a low-margin auto business — at which point the multiple compresses from 100x+ toward auto-OEM levels (10-15x), implying a 50%+ drawdown even on stable fundamentals.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "expanding"
+    },
     "additionalNote": {
       "title": "2026 Growth Catalysts",
       "points": [

@@ -86,14 +86,13 @@ export interface StockAnalysisData {
     analysisPoints: AnalysisPoint[];
   };
   growth: {
-    score: number;
     description: string;
     additionalNote?: {
       title: string;
       points: string[];
     };
-    /** Structured growth analysis — required for new stocks, optional for legacy. */
-    growthAnalysis?: {
+    /** Structured growth analysis — required. The growth score is derived from these fields via computeGrowthScore. */
+    growthAnalysis: {
       /** Blended 3–5 year revenue CAGR estimate, e.g. "15–20%". Anchors the score to the rubric. */
       cagrEstimate: string;
       /** Shows score derivation: base CAGR score + named adjustments = final. */
@@ -108,6 +107,8 @@ export interface StockAnalysisData {
       primaryType: 'TAM expansion' | 'market share' | 'both';
       /** Specific, falsifiable risk with a named time horizon. */
       keyRisk: string;
+      /** Severity of keyRisk — feeds the risk-discount term in computeGrowthScore. */
+      keyRiskSeverity: 'low' | 'moderate' | 'high' | 'severe';
       /** Operating margin direction — feeds the −5 margin compression adjustment. */
       marginTrend: 'expanding' | 'stable' | 'compressing';
     };

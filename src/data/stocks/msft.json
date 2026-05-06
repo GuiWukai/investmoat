@@ -70,7 +70,6 @@
     ]
   },
   "growth": {
-    "score": 89,
     "description": "Q3 FY26 revenue of $82.9B (+18% YoY) beat the $81.4B consensus. Azure delivered 40% USD / 39% CC growth — beating the guided 37–38% CC and ending concerns about structural deceleration. Intelligent Cloud reached $34.68B (beat $34.27B consensus); Productivity & Business Processes $35.01B (+17% YoY). EPS came in at $4.27 adjusted vs $4.06 expected. Despite the across-the-board beat, the stock slipped ~3% after hours, likely reflecting the market selling the pre-earnings run-up (+20% in the prior month). M365 Copilot seats at 15M (+160% YoY), monetisation in early innings. The April 2026 OpenAI partnership restructuring eliminates the revenue share Microsoft paid to OpenAI — a direct operating margin tailwind. Overall operating margin remains 47.1%.",
     "growthAnalysis": {
       "cagrEstimate": "15–17%",
@@ -82,6 +81,7 @@
       ],
       "primaryType": "both",
       "keyRisk": "If Azure growth decelerates below 32% in FY2027 due to capacity constraints persisting beyond H1 FY27 and Google Cloud (+63% Q1 2026) and AWS (+28%) continue taking share of new enterprise AI inference, the premium multiple compresses and the $475 base case collapses; the Q3 FY26 beat and re-acceleration to 40% reduces this risk but does not eliminate it",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },

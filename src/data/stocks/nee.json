@@ -72,7 +72,6 @@
     ]
   },
   "growth": {
-    "score": 73,
     "description": "Q1 2026 confirmed the growth engine is intact: adj EPS of $1.09 beat consensus of $0.94 by $0.15, with adjusted earnings up to $2.275B from $2.04B a year ago. The 33 GW renewables backlog (up from 30 GW) and reaffirmed FY guide of $3.92–$4.02 underline 8%+ EPS compounding. Revenue of $6.7B missed top-line expectations but margin and EPS strength offset. The core risk remains negative FCF and reliance on continuous capital markets access.",
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
@@ -105,6 +104,7 @@
       ],
       "primaryType": "both",
       "keyRisk": "If the Inflation Reduction Act's clean energy tax credits (ITC/PTC) are repealed or materially curtailed before 2027, NEER renewable project IRRs fall below the investment threshold and the 30 GW backlog partially collapses — forcing either project cancellations or a rights offering that dilutes existing shareholders by 10-15%",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },

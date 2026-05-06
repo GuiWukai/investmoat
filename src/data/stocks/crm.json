@@ -70,8 +70,20 @@
     ]
   },
   "growth": {
-    "score": 80,
-    "description": "Q4 FY2026 revenue hit a record $11.2B (+12% YoY) — the fastest growth in two years — driven by Agentforce, which reached $800M ARR (+169% YoY) with 29,000 deals closed. FY27 guidance of 10–11% growth and a $50B buyback signal management confidence. The primary risk is whether Agentforce pricing scales to drive meaningful ARPU expansion beyond early pilots."
+    "description": "Q4 FY2026 revenue hit a record $11.2B (+12% YoY) — the fastest growth in two years — driven by Agentforce, which reached $800M ARR (+169% YoY) with 29,000 deals closed. FY27 guidance of 10–11% growth and a $50B buyback signal management confidence. The primary risk is whether Agentforce pricing scales to drive meaningful ARPU expansion beyond early pilots.",
+    "growthAnalysis": {
+      "cagrEstimate": "9-12%",
+      "scoreDerivation": "Base 73 (9-12% CAGR mid-band) + 6 Agentforce ARR +169% YoY + 4 fastest revenue growth in two years + 3 margin/buyback discipline - 6 Microsoft Copilot competitive pressure = 80",
+      "drivers": [
+        { "name": "Agentforce / Data 360", "metric": "Combined ARR $2.9B (+200% YoY); Agentforce alone $800M ARR (+169% YoY); 29,000 deals; 60%+ from existing-customer expansion", "trend": "accelerating" },
+        { "name": "Core Multi-Cloud", "metric": "Q4 FY26 revenue $11.2B (+12% YoY) — fastest in two years; FY27 guide $45.8-46.2B (+10-11%)", "trend": "accelerating" },
+        { "name": "Operating Leverage", "metric": "Non-GAAP operating margin sustained ~33%+; $50B buyback signals capital-return discipline", "trend": "stable" }
+      ],
+      "primaryType": "market share",
+      "keyRisk": "If Agentforce per-conversation pricing fails to translate pilot deployments into durable ARPU expansion by mid-FY2027 and Microsoft Dynamics 365 + Copilot accelerates net-new logo wins at the SMB/mid-market layer, Salesforce's seat-growth-plus-AI-attach narrative breaks and revenue growth re-decelerates below 9%.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "stable"
+    }
   },
   "valuation": {
     "score": 82,

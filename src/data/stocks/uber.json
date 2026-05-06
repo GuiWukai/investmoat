@@ -56,7 +56,6 @@
     ]
   },
   "growth": {
-    "score": 78,
     "description": "Gross bookings TTM ~$185B (+18% YoY). Mobility growth +20%, Delivery +15%, both with operating leverage. Adj EBITDA margin expanded to ~16% on revenue and continuing to expand. FCF ~$8B TTM with capital return now active via buybacks.",
     "growthAnalysis": {
       "cagrEstimate": "15-20%",
@@ -68,6 +67,7 @@
       ],
       "primaryType": "both",
       "keyRisk": "If Tesla Robotaxi launches at consumer-facing scale on its own app and successfully aggregates demand, or if Waymo decides to launch its own consumer app outside Uber, the autonomy disruption thesis materialises and Uber loses pricing power on the highest-margin urban routes by 2028-29.",
+      "keyRiskSeverity": "high",
       "marginTrend": "expanding"
     }
   },

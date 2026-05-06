@@ -2,7 +2,7 @@
 // stock's JSON file — single source of truth, no manual sync required.
 //
 //   m(json)  →  moat score      computed from tenMoats via Ten Moats formula
-//   g(json)  →  growth score    read from json.growth.score
+//   g(json)  →  growth score    derived from json.growth.growthAnalysis
 //   v(json)  →  valuation score read from json.valuation.score
 //   t(json)  →  { bearTarget, baseTarget, bullTarget } from json.scenarios
 //
@@ -13,7 +13,7 @@
 // To add a new stock: import its JSON, add an entry to allCoverageData.
 // All scores and targets will be derived automatically.
 
-import { computeMoatScore } from '@/lib/valuationScore';
+import { computeMoatScore, computeGrowthScore, type GrowthAnalysisInput } from '@/lib/valuationScore';
 
 import aaplData    from '@/data/stocks/aapl.json';
 import adbeData    from '@/data/stocks/adbe.json';
@@ -137,8 +137,21 @@ const MIN_AVG_SCORE  = 75;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const m = (json: { tenMoats: any }) => computeMoatScore(json.tenMoats);
 
-/** Read growth score from a stock JSON. */
-const g = (json: { growth: { score: number } }) => json.growth.score;
+/**
+ * Resolve a stock's growth score from its growthAnalysis fields. The derived
+ * formula in src/lib/valuationScore.ts:computeGrowthScore is the sole source of
+ * truth — there is no longer an author-set fallback. parseCagrEstimate and
+ * keyRiskSeverity are required by the schema, so a null derived score implies
+ * malformed data and we surface it loudly.
+ */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const g = (json: { slug: string; growth: { growthAnalysis: any } }): number => {
+  const derived = computeGrowthScore(json.growth.growthAnalysis as GrowthAnalysisInput);
+  if (derived == null) {
+    throw new Error(`computeGrowthScore returned null for ${json.slug} — check cagrEstimate parseability`);
+  }
+  return derived;
+};
 
 /** Read valuation score from a stock JSON. */
 const v = (json: { valuation: { score: number } }) => json.valuation.score;

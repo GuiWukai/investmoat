@@ -78,7 +78,6 @@
     ]
   },
   "growth": {
-    "score": 84,
     "description": "Q4 FY2026 product revenue grew 30% YoY to ~$1.21B, with RPO accelerating to $9.77B (+42% YoY) — indicating strong contracted forward visibility despite the post-earnings stock selloff. Cortex AI is gaining traction (9,100+ accounts, 200%+ workload growth) but remains tiny vs. Databricks' AI lead. Management's posture has shifted to AI-first growth, but a $318M GAAP operating loss and reinvestment-heavy mode keep margins under pressure. Net retention remains strong (~125%+) and the consumption model captures upside as workloads grow.",
     "growthAnalysis": {
       "cagrEstimate": "22-28%",
@@ -102,6 +101,7 @@
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If Databricks (post-IPO at ~$134B valuation) sustains its 65% YoY growth and 10:1 AI revenue lead, Snowflake's premium for SQL-first analytics erodes as enterprises consolidate onto the lakehouse architecture — pushing growth below 20% by FY2028 and re-rating the multiple toward legacy software levels.",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },

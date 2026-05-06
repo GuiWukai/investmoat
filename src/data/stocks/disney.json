@@ -75,7 +75,6 @@
     ]
   },
   "growth": {
-    "score": 60,
     "description": "Disney is a slow-revenue-growth, fast-earnings-leverage story. FY2025 revenue grew only 3.4% to $94.4B, but FCF expanded 17.7% to $10.1B and streaming turned structurally profitable. Q1 FY2026 DTC operating income grew 72% YoY to $450M. FY2026 guidance calls for double-digit adjusted EPS growth (from ~$5.85 in FY2025), driven primarily by DTC margin expansion, not top-line acceleration.",
     "additionalNote": {
       "title": "DTC Profitability Inflection and ESPN Digital Transition",
@@ -109,6 +108,7 @@
       ],
       "primaryType": "both",
       "keyRisk": "If US domestic parks attendance declines >10% by end of 2026 due to consumer recession, the Experiences segment (>60% of total segment operating income) reverses, offsetting the DTC profit ramp and causing FY2026 EPS to miss the double-digit growth target — triggering multiple compression on the stocks already-depressed 15x forward P/E",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },

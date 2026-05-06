@@ -71,7 +71,6 @@
     ]
   },
   "growth": {
-    "score": 87,
     "description": "Q1 2026 revenue hit $2.71B (+35.1% YoY) — meaningfully above the $2.6B guide — and Q2 is guided to ~$2.8B with non-GAAP operating margin 46–47%; AI networking revenue tracking ahead of the $3.25B 2026 target and consensus EPS estimate now $3.54.",
     "growthAnalysis": {
       "cagrEstimate": "20–25%",
@@ -95,6 +94,7 @@
       ],
       "primaryType": "both",
       "keyRisk": "If NVIDIA successfully bundles NVLink/InfiniBand with GPU shipments at 3+ major hyperscalers by end of 2026, displacing Ethernet for AI clusters >50,000 GPUs, Arista's AI networking revenue growth decelerates to below 20% and the $3.25B 2026 target is revised down, triggering consensus cuts",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },

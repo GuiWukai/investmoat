@@ -70,8 +70,20 @@
     ]
   },
   "growth": {
-    "score": 76,
-    "description": "FY2025 results (reported late April 2026) delivered record net sales and double-digit profit growth, driven by strong factory automation and robotics demand in China and the Americas. The post-pandemic destocking trough is firmly behind FANUC, with Citi and Bernstein reaffirming Buy ratings. Semiconductor fab buildouts (TSMC Arizona, Samsung Texas) and EV battery automation continue driving CNC demand. Humanoid robot motion-control optionality remains a medium-term upside catalyst."
+    "description": "FY2025 results (reported late April 2026) delivered record net sales and double-digit profit growth, driven by strong factory automation and robotics demand in China and the Americas. The post-pandemic destocking trough is firmly behind FANUC, with Citi and Bernstein reaffirming Buy ratings. Semiconductor fab buildouts (TSMC Arizona, Samsung Texas) and EV battery automation continue driving CNC demand. Humanoid robot motion-control optionality remains a medium-term upside catalyst.",
+    "growthAnalysis": {
+      "cagrEstimate": "5-9%",
+      "scoreDerivation": "Base 70 + CNC category monopoly (+4) + semi/EV automation tailwind (+3) + humanoid robot optionality (+2) - China capex cyclicality (-3) = 76",
+      "drivers": [
+        { "name": "Factory Automation", "metric": "FY2025 record net sales ¥857B, +8% YoY", "trend": "accelerating" },
+        { "name": "Operating Margin", "metric": "FY2025 op margin 21.4%, +150bps YoY; FY2026 guide 23.3%", "trend": "accelerating" },
+        { "name": "Robot Orders", "metric": "China + Americas robot demand recovering double-digit", "trend": "accelerating" }
+      ],
+      "primaryType": "market share",
+      "keyRisk": "China capex cycle stalls and Chinese robot OEMs (Estun, Inovance) drive ASP compression in FANUC's robot segment over 2-3 years.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
     "score": 75,

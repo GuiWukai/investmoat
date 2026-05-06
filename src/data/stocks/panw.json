@@ -71,7 +71,6 @@
     ]
   },
   "growth": {
-    "score": 82,
     "description": "Q2 FY2026 delivered $2.6B revenue (+15% YoY) with NGS ARR growing 33% YoY to $6.3B — the NGS ARR is the leading indicator that platform transition is accelerating even as total revenue growth moderates. RPO of $16B (+23% YoY) provides exceptional forward visibility. FY2026 non-GAAP EPS guidance of $3.65–3.70 faces near-term pressure from the $25B CyberArk acquisition integration (Q3 non-GAAP EPS guided at $0.78–0.80 vs $0.92 consensus) — a deliberate investment in identity security that expands the TAM significantly.",
     "growthAnalysis": {
       "cagrEstimate": "15–20%",
@@ -95,6 +94,7 @@
       ],
       "primaryType": "both",
       "keyRisk": "If CyberArk integration takes 12+ months longer than guided, driving FY2026 non-GAAP EPS below $3.50 (vs $3.65–3.70 guidance) for two consecutive quarters, investors lose confidence in the platform consolidation ROI thesis and the stock re-rates toward 12× NTM P/S, implying meaningful downside",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },

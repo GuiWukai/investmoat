@@ -70,7 +70,6 @@
     ]
   },
   "growth": {
-    "score": 88,
     "description": "FY2025 revenue of $530M is set to expand ~6× to $3.0–3.4B in FY2026 — extreme hypergrowth from a small base. Q1 2026 revenue of $227.7M with Q2 guidance of $375M shows sequential acceleration as Meta and Microsoft contracts ramp. The $50B backlog, $4B convert raise, and $16–20B FY2026 capex plan signal aggressive buildout, but also concentrate execution risk: capacity must come online to recognize backlog revenue, and any datacenter/power delays directly hit numbers.",
     "growthAnalysis": {
       "cagrEstimate": "100–250%",
@@ -94,6 +93,7 @@
       ],
       "primaryType": "market share",
       "keyRisk": "If $16–20B FY2026 capex execution slips on power/datacenter availability, NVIDIA Vera Rubin allocation timing, or convertible debt service capacity — Nebius misses the FY2026 $3.0–3.4B revenue guide and the equity story re-rates sharply on dilution risk and broken hypergrowth narrative",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },

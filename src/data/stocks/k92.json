@@ -85,8 +85,20 @@
     ]
   },
   "growth": {
-    "score": 85,
-    "description": "Q1 2026 production of 46,743 oz AuEq with ore throughput +37% YoY and strong recoveries (Au 95.1%, Cu 94.0%). 2026 guidance of 190–225k oz reiterated, with H2-weighting as enabler projects (pastefill, fleet expansion, 15.3 MW power upgrade) complete in H1. Stage 4 expansion ~96% spent or committed. Lateral development hit a record 3,007 metres in Q1 — execution remains on track for the 400k+ oz run-rate trajectory."
+    "description": "Q1 2026 production of 46,743 oz AuEq with ore throughput +37% YoY and strong recoveries (Au 95.1%, Cu 94.0%). 2026 guidance of 190–225k oz reiterated, with H2-weighting as enabler projects (pastefill, fleet expansion, 15.3 MW power upgrade) complete in H1. Stage 4 expansion ~96% spent or committed. Lateral development hit a record 3,007 metres in Q1 — execution remains on track for the 400k+ oz run-rate trajectory.",
+    "growthAnalysis": {
+      "cagrEstimate": "20-28%",
+      "scoreDerivation": "Base 60 + 12 (production trajectory 174k → 190-225k → 400k+ oz, ~2.3x over 3-4 years) + 8 (Stage 3 commissioned on time, fourth consecutive year beating guidance) + 5 (gold price ~$4,591/oz vs. AISC $1,010/oz = ~$3,580/oz margins) = 85",
+      "drivers": [
+        { "name": "Production volume", "metric": "2025 174k oz → 2026 guidance 190-225k oz (+15-29% YoY) → Stage 4 run-rate 400k+ oz by 2027-2028", "trend": "accelerating" },
+        { "name": "Realized gold price vs. AISC", "metric": "Gold ~$4,591/oz vs. AISC ~$1,010/oz = $3,580/oz margin per oz produced", "trend": "accelerating" },
+        { "name": "Exploration upside", "metric": "Record $31-35M 2026 exploration; Kora/Judd open in multiple directions; Blue Lake Porphyry pending", "trend": "accelerating" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "Single-asset PNG concentration: a Stage 4 ramp delay (geotechnical, permitting, or community/sovereign disruption) combined with a gold correction to $3,000/oz would cut operating cash flow ~50% over 12-18 months.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
     "score": 81,

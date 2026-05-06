@@ -86,8 +86,20 @@
     ]
   },
   "growth": {
-    "score": 50,
-    "description": "Gold delivered 65%+ returns in 2025, posting 50+ all-time records. De-dollarisation momentum is accelerating (USD's share of global FX reserves at 30-year low of ~40%, gold at 30-year high of ~30%). Central bank buying projected at 850t+ in 2026. Gold does not compound like a business but is a powerful portfolio hedge with structural tailwinds."
+    "description": "Gold delivered 65%+ returns in 2025, posting 50+ all-time records. De-dollarisation momentum is accelerating (USD's share of global FX reserves at 30-year low of ~40%, gold at 30-year high of ~30%). Central bank buying projected at 850t+ in 2026. Gold does not compound like a business but is a powerful portfolio hedge with structural tailwinds.",
+    "growthAnalysis": {
+      "cagrEstimate": "7-11%",
+      "scoreDerivation": "Base 50 (commodity has no underlying earnings compounding) + 5 (structural central bank demand >1,000t/yr) + 3 (de-dollarisation tailwind) - 8 (no organic compounding; 2025's 65% return pulled forward future returns) = 50",
+      "drivers": [
+        { "name": "Central bank demand", "metric": "1,045t in 2024 (3rd consecutive year >1,000t); 2026 estimate 850t+", "trend": "stable" },
+        { "name": "De-dollarisation", "metric": "USD share of global FX reserves at 30-yr low ~40%; gold share at 30-yr high ~30%", "trend": "accelerating" },
+        { "name": "Real yields & macro", "metric": "G7 fiscal deficits structurally negative for fiat; tariff/geopolitical uncertainty premium", "trend": "stable" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "Hawkish Fed surprise + rapid geopolitical de-escalation drives a 20-25% drawdown to ~$3,800/oz over 6-12 months as real yields rise and safe-haven premium unwinds.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "stable"
+    }
   },
   "valuation": {
     "score": 78,

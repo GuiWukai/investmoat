@@ -71,7 +71,6 @@
     ]
   },
   "growth": {
-    "score": 75,
     "description": "FY2025 revenue grew 9% to $7.2B despite a challenging Q4 (trading revenue disappointed amid crypto price volatility). Subscription and services revenue — the durable, non-cyclical revenue base — grew 23% to $2.8B. Total trading volume doubled YoY to all-time highs, and crypto market share doubled. FY2026 total revenue could reach $8B+ if crypto markets sustain elevated activity, with subscription/services providing a growing floor. The structural growth driver is institutional crypto adoption (ETF AUM, corporate treasury, sovereign wealth) — a multi-decade trend in its early stages.",
     "growthAnalysis": {
       "cagrEstimate": "15–25%",
@@ -95,6 +94,7 @@
       ],
       "primaryType": "both",
       "keyRisk": "If Bitcoin falls to $40K and crypto market cap contracts 50%+ by end of 2026 — driven by macro tightening or regulatory reversal — Coinbase's transaction revenue collapses from $4B+ toward $1.5B, USDC market cap shrinks as stablecoin demand falls, and total FY2026 revenue misses $8B by $3B+",
+      "keyRiskSeverity": "high",
       "marginTrend": "expanding"
     }
   },

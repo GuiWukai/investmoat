@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 import { getStockData } from '@/data/stocks';
-import { computeMoatScore } from '@/lib/valuationScore';
+import { computeMoatScore, computeGrowthScore } from '@/lib/valuationScore';
 
 export const runtime = 'edge';
 export const size = { width: 1200, height: 630 };
@@ -37,7 +37,7 @@ export default async function Image({
   }
 
   const moatScore = computeMoatScore(data.tenMoats);
-  const growthScore = data.growth.score;
+  const growthScore = computeGrowthScore(data.growth.growthAnalysis) ?? 0;
   const recommendation = data.recommendation;
 
   function scoreColor(s: number): string {

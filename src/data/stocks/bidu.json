@@ -56,7 +56,6 @@
     ]
   },
   "growth": {
-    "score": 50,
     "description": "FY26 revenue growth +5-8% as cloud + autonomy growth offsets search advertising decline. Search ad revenue declining mid-single-digits; AI cloud +30%+; autonomy revenue still small. The transition is multi-year and execution-dependent.",
     "growthAnalysis": {
       "cagrEstimate": "5-8%",
@@ -68,6 +67,7 @@
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If AI cloud growth fails to compensate for search decline through 2027 and Apollo commercial deployment is delayed by Chinese regulatory pace, Baidu's revenue compresses and the transition thesis collapses, leaving the equity as a melting search asset.",
+      "keyRiskSeverity": "high",
       "marginTrend": "compressing"
     }
   },

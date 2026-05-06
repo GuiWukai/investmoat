@@ -71,8 +71,20 @@
     ]
   },
   "growth": {
-    "score": 75,
     "description": "Calpine acquisition closed January 7, 2026 ($26.6B total) — the largest US power deal since TXU in 2007 — creating the nation's largest electricity producer with 55 GW of combined nuclear, natural gas, and geothermal capacity. 2026 adj. EPS guidance of $11.37 (+21% YoY) and EBITDA margin expansion to 21.4% reflect accelerating contract repricing. Dividend raised 10% with another 10% increase pledged for 2026.",
+    "growthAnalysis": {
+      "cagrEstimate": "10-15%",
+      "scoreDerivation": "Base 65 + 10 (Calpine accretion and 2026 EPS +21%) + 5 (TMI restart and hyperscaler PPA pipeline) - 5 (PPA renegotiation risk post AI executive order) = 75",
+      "drivers": [
+        { "name": "Hyperscaler PPA Repricing", "metric": "20-year contracts with Microsoft (835 MW), Meta (1.1 GW), Alphabet (500 MW) at 30-50% premium pricing", "trend": "accelerating" },
+        { "name": "Calpine Integration", "metric": "55 GW combined fleet; 2026 EPS guide $11.37 (+21% YoY); EBITDA margin 21.4%", "trend": "accelerating" },
+        { "name": "Three Mile Island Restart", "metric": "835 MW Crane Clean Energy Center on track for Q4 2027 under Microsoft 20-year PPA", "trend": "stable" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "Hyperscaler PPA renegotiations following the Trump AI executive order, plus NRC delays on the TMI restart, could push major revenue catalysts from 2027 into 2028-2030.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "expanding"
+    },
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [

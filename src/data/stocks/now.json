@@ -82,7 +82,6 @@
     ]
   },
   "growth": {
-    "score": 87,
     "description": "22% subscription revenue growth in Q1 2026 with $12.64B cRPO (+22.5% YoY) providing contracted revenue visibility. Management raised full-year AI ACV guidance to $1.5B — 50% above any prior software benchmark — while introducing a new Agentic ACV pricing model (task-based) that could significantly expand TAM. Gross margin faces a temporary 300 bps headwind from Armis integration and AI infrastructure investment, but operating margins remain at 32% non-GAAP with FCF margin at 44% in Q1. FY2026 subscription revenue guidance raised to $15.74–15.78B (+20.5–21% CC).",
     "additionalNote": {
       "title": "Key Growth Catalysts",
@@ -116,6 +115,7 @@
       ],
       "primaryType": "both",
       "keyRisk": "If Armis integration dilutes non-GAAP operating margin below 30% by Q4 2026, or Salesforce Agentforce IT Service surpasses 1,000 ITSM accounts by end of 2026, growth re-rates below 18% and the valuation multiple compresses further",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },

@@ -70,7 +70,6 @@
     ]
   },
   "growth": {
-    "score": 84,
     "description": "Q1 2026 revenue of $1.47B (+18.7% YoY) beat estimates, with management raising FY2026 guidance to ~$6.18B (~17% YoY) and a record $8B backlog providing strong visibility. All three segments — Core EDA, IP, and System Design & Analysis — grew double-digit, signaling broad-based demand from AI silicon programs. EPS CAGR of ~18–20% through 2027 is supported by mix shift toward higher-margin AI tools and emulation hardware refresh cycles.",
     "growthAnalysis": {
       "cagrEstimate": "14–18%",
@@ -94,6 +93,7 @@
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If U.S. EDA export restrictions expand to all advanced-node Chinese designers (currently only the Entity List), Cadence loses ~10–12% of revenue with limited near-term offset, pressuring FY2027 growth toward 12% and forcing multiple compression",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },

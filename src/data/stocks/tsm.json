@@ -71,7 +71,6 @@
     ]
   },
   "growth": {
-    "score": 87,
     "description": "Q1 2026 delivered record revenue of $35.9B (+40.6% YoY) with net income +58.3% YoY; Q2 2026 guidance points to $39.0–40.2B revenue (+10% QoQ) and gross margin of 65.5–67.5%. Management raised FY2026 outlook to 30%+ revenue growth and reaffirmed 25% USD CAGR through 2029, with AI accelerator revenue still tracking 54–56% CAGR. N2 in HVM with strong yield; CoWoS capacity expanding 69% in 2026 against a persistent supply shortfall.",
     "additionalNote": {
       "title": "AI Chip Tailwinds",
@@ -104,6 +103,7 @@
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If US tariff enforcement (50% domestic sourcing mandate) forces major AI customers to commit >30% of leading-edge wafers to Intel 18A or Samsung SF2 by end of 2027, TSMC loses AI ASIC anchor business before N2/A16 margins are fully monetised",
+      "keyRiskSeverity": "high",
       "marginTrend": "expanding"
     }
   },

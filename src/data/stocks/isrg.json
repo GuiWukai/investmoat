@@ -74,8 +74,20 @@
     ]
   },
   "growth": {
-    "score": 84,
-    "description": "Q1 2026 revenue of $2.77B grew 23% YoY (beating consensus by 6%), with da Vinci procedures +16% to ~847k and Ion procedures +39% to ~43k. Operating income jumped 40% to $1.08B as margin expansion arrived faster than feared. Management raised 2026 procedure guidance after the print, and the analyst mean target sits at $577 (above current ~$452). dV5 placement momentum and Ion's pulmonology platform underwrite multi-year double-digit growth."
+    "description": "Q1 2026 revenue of $2.77B grew 23% YoY (beating consensus by 6%), with da Vinci procedures +16% to ~847k and Ion procedures +39% to ~43k. Operating income jumped 40% to $1.08B as margin expansion arrived faster than feared. Management raised 2026 procedure guidance after the print, and the analyst mean target sits at $577 (above current ~$452). dV5 placement momentum and Ion's pulmonology platform underwrite multi-year double-digit growth.",
+    "growthAnalysis": {
+      "cagrEstimate": "12-18%",
+      "scoreDerivation": "Base 74 + dV5 upgrade cycle (+4) + Ion platform second growth vector (+3) + razor-and-blades recurring economics (+3) - Medtronic Hugo / J&J Ottava competitive risk (-0) = 84",
+      "drivers": [
+        { "name": "da Vinci Procedures", "metric": "Q1 2026 procedures +16% YoY (~847k)", "trend": "stable" },
+        { "name": "Ion Platform", "metric": "Q1 2026 Ion procedures +39% YoY (~43k)", "trend": "accelerating" },
+        { "name": "Operating Income", "metric": "Q1 2026 op income +40% YoY ($1.08B)", "trend": "accelerating" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "Medtronic Hugo and J&J Ottava gain meaningful general-surgery share over 3-5 years, pressuring da Vinci ASPs and placement growth.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
     "score": 72,

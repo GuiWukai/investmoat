@@ -71,8 +71,20 @@
     ]
   },
   "growth": {
-    "score": 78,
-    "description": "Firedancer is live on mainnet (1M+ TPS capable), 6 spot SOL ETFs are approved with $800M AUM, and the SEC/CFTC jointly classified SOL as a digital commodity on March 17, 2026 — removing the securities overhang. Goldman Sachs holds $108M in SOL ETFs and Walmart OnePay integration is expanding retail adoption. FTX estate liquidation (~$3.5B in SOL sold 2024-2025) has largely cleared as a headwind."
+    "description": "Firedancer is live on mainnet (1M+ TPS capable), 6 spot SOL ETFs are approved with $800M AUM, and the SEC/CFTC jointly classified SOL as a digital commodity on March 17, 2026 — removing the securities overhang. Goldman Sachs holds $108M in SOL ETFs and Walmart OnePay integration is expanding retail adoption. FTX estate liquidation (~$3.5B in SOL sold 2024-2025) has largely cleared as a headwind.",
+    "growthAnalysis": {
+      "cagrEstimate": "35-55%",
+      "scoreDerivation": "Base 60 + 10 (Firedancer + Alpenglow eliminate outage risk + 150ms finality) + 6 (SEC/CFTC digital commodity classification + 6 spot ETFs unlock institutional capital) + 4 (Walmart OnePay + Visa/PayPal payments embedding) - 2 (severe crypto cycle volatility caps confidence) = 78",
+      "drivers": [
+        { "name": "Institutional ETF flows", "metric": "6 spot SOL ETFs at $800M AUM (post-March 2026 launch); Goldman Sachs $108M held; trajectory toward $5B+ in 12 months", "trend": "accelerating" },
+        { "name": "Network usage & DeFi TVL", "metric": "DeFi TVL ~$8B; Firedancer 1M+ TPS capacity; Walmart OnePay onboarding mass-market users", "trend": "accelerating" },
+        { "name": "Regulatory legitimacy", "metric": "SEC/CFTC digital commodity classification (March 17, 2026) removes securities overhang", "trend": "accelerating" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "Crypto risk-off cycle (rate hikes, dollar strength, or BTC drawdown) drags SOL 40%+ lower over 6-12 months despite improved fundamentals; Ethereum L2s reaching cost parity could compress Solana's structural performance differentiation over 2-3 years.",
+      "keyRiskSeverity": "severe",
+      "marginTrend": "stable"
+    }
   },
   "valuation": {
     "score": 84,

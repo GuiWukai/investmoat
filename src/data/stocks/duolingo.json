@@ -60,7 +60,6 @@
     ]
   },
   "growth": {
-    "score": 81,
     "description": "Duolingo is in a deliberate investment cycle — voluntarily compressing EBITDA margins from ~29% (FY2025) to ~25% (FY2026) to invest in DAU growth, free-learner experience, and new subject categories. FY2026 revenue guidance of 15–18% is conservative; reacceleration to 20%+ depends on whether the DAU gains convert to paid subscriber growth beginning in 2027.",
     "growthAnalysis": {
       "cagrEstimate": "15–18%",
@@ -84,6 +83,7 @@
       ],
       "primaryType": "both",
       "keyRisk": "If ChatGPT or Gemini conversational language tutoring captures 15%+ of mobile language-learning session share by end of 2027, Duolingo's DAU investment cycle fails to convert to paid subscriber growth and the $400M buyback is consumed defending the stock rather than returning capital from excess earnings",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "compressing"
     }
   },

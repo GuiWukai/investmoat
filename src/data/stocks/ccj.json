@@ -71,8 +71,20 @@
     ]
   },
   "growth": {
-    "score": 78,
-    "description": "Q1 2026 EPS $0.46 beat consensus by $0.10 with net earnings +87% YoY to $131M and adjusted EBITDA $509M — uranium realized price climbed to $66.21/lb (vs. $62.55/lb prior-year) and management held 2026 guidance intact, with the India deliveries and Westinghouse AP1000 cadence still ahead."
+    "description": "Q1 2026 EPS $0.46 beat consensus by $0.10 with net earnings +87% YoY to $131M and adjusted EBITDA $509M — uranium realized price climbed to $66.21/lb (vs. $62.55/lb prior-year) and management held 2026 guidance intact, with the India deliveries and Westinghouse AP1000 cadence still ahead.",
+    "growthAnalysis": {
+      "cagrEstimate": "14-18%",
+      "scoreDerivation": "Base 60 + 10 (Westinghouse AP1000 contract pipeline & $80B U.S. Government partnership) + 6 (long-term uranium contract repricing through 2030) + 4 (India deal + Q1 EPS +87% YoY) - 2 (commodity cycle exposure) = 78",
+      "drivers": [
+        { "name": "Uranium realized price", "metric": "Q1 2026 realized $66.21/lb vs. $62.55/lb YoY (+5.9%); long-term price ~$80-85/lb", "trend": "accelerating" },
+        { "name": "Westinghouse EBITDA contribution", "metric": "FY2025 $690M+ (Cameco's 49% share) vs. $380M prior-year guidance — +80% step-up", "trend": "accelerating" },
+        { "name": "Contracted volume", "metric": "230M lbs committed across 39 utilities; ~28M lb/yr through 2030, India adds 22M lbs through 2035", "trend": "accelerating" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "Uranium spot reverses if Kazakh/Russian export restrictions resolve and 10-15M lbs/yr re-enter spot market over 2026-2027 — could compress realized prices toward contract floors and de-rate the equity.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
     "score": 69,

@@ -71,8 +71,20 @@
     ]
   },
   "growth": {
-    "score": 87,
-    "description": "Q1 2026 was a blowout: orders of $18.3B (+71% YoY), revenue $9.34B (+7%), adjusted EBITDA margin +390 bps, and EPS of $17.44 vs. $1.67 forecast (>900% beat). Management raised guidance and Jefferies took its target to $1,350. AI-data-center power demand, Prolec GE accretion, and grid electrification continue to fill the $150B+ backlog."
+    "description": "Q1 2026 was a blowout: orders of $18.3B (+71% YoY), revenue $9.34B (+7%), adjusted EBITDA margin +390 bps, and EPS of $17.44 vs. $1.67 forecast (>900% beat). Management raised guidance and Jefferies took its target to $1,350. AI-data-center power demand, Prolec GE accretion, and grid electrification continue to fill the $150B+ backlog.",
+    "growthAnalysis": {
+      "cagrEstimate": "10-15%",
+      "scoreDerivation": "Base 70 + 12 (Q1 2026 orders +71% and EPS >900% beat) + 8 (turbine slots sold out through 2029, Prolec GE accretion) - 3 (Wind segment losses) = 87",
+      "drivers": [
+        { "name": "AI Data Center Power Orders", "metric": "Q1 2026 orders $18.3B (+71% YoY); $150B+ backlog", "trend": "accelerating" },
+        { "name": "Gas Turbine Capacity Ramp", "metric": "Slots sold out through 2029; expanding from 55 to 70-80 units/year", "trend": "accelerating" },
+        { "name": "Electrification + Prolec GE", "metric": "Adj EBITDA margin +390 bps in Q1 2026; integrated generation-to-grid offering", "trend": "accelerating" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "Greenville manufacturing expansion delays of 12-18 months would cap turbine deliveries and extend backlog conversion into 2028, while continued offshore Wind write-downs ($1B+) could compress group margins through 2027.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
     "score": 60,

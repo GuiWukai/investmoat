@@ -56,7 +56,6 @@
     ]
   },
   "growth": {
-    "score": 88,
     "description": "FY26 revenue guide ~$1.2B, +90% YoY, on AEC ramp into Microsoft, Amazon, and additional hyperscaler footprints. Gross margin holds 64% on premium specialty silicon. The growth profile is among the highest in semis, but customer concentration and platform-cycle risk are real.",
     "growthAnalysis": {
       "cagrEstimate": "40-60%",
@@ -68,6 +67,7 @@
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If Marvell or Broadcom secure share of next-generation hyperscaler AEC sockets in 2026-27, Credo's revenue concentration converts to volatility — single-customer share loss can compress revenue 30%+ in a quarter as platform cycles transition.",
+      "keyRiskSeverity": "high",
       "marginTrend": "stable"
     }
   },

@@ -71,8 +71,20 @@
     ]
   },
   "growth": {
-    "score": 62,
     "description": "Q1 2026 revenue +14% YoY to $17.23B, EPS $17.55 (+24%, second-highest quarter ever), ROE 19.8%. Global Banking & Markets +19% to $12.74B with record Equities; AWM at record $3.65T AUS. Goldman's earnings power is back near the cyclical highs of 2021 — the question is durability. Forward growth depends on sustained M&A recovery and AWM compounding; capital markets activity remains structurally cyclical.",
+    "growthAnalysis": {
+      "cagrEstimate": "5-8%",
+      "scoreDerivation": "Base 60 + 10 for record Q1 prints and AWM compounding - 8 for cyclical-peak earnings and reversion risk = 62",
+      "drivers": [
+        { "name": "Global Banking & Markets", "metric": "GBM revenue +19% YoY to $12.74B; record Equities", "trend": "accelerating" },
+        { "name": "Asset & Wealth Management", "metric": "AUS record $3.65T, on track to cross $4T", "trend": "stable" },
+        { "name": "M&A advisory", "metric": "IB fees recovering off 2022-2024 trough", "trend": "accelerating" }
+      ],
+      "primaryType": "market share",
+      "keyRisk": "Capital-markets cyclical reversion in 2026-2027 — a tariff-driven M&A freeze could cut IB fees 30-40% and compress ROE toward 12-13%.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "expanding"
+    },
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [

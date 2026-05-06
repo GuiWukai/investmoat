@@ -56,7 +56,6 @@
     ]
   },
   "growth": {
-    "score": 82,
     "description": "FY26 revenue growth +25-30% blended (Pinduoduo +15-20%, Temu +50%+ but slowing). Operating margin compressed by Temu losses; standalone Pinduoduo margin remains industry-leading. Tariff and US regulatory risk are acute swing factors.",
     "growthAnalysis": {
       "cagrEstimate": "20-30%",
@@ -68,6 +67,7 @@
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If US closes the de minimis loophole on Chinese cross-border parcels and applies broad Section 301 tariffs to Temu, Temu's unit economics flip from loss-leading to unviable in major markets and the international growth thesis collapses, compressing the multiple toward Pinduoduo standalone.",
+      "keyRiskSeverity": "high",
       "marginTrend": "compressing"
     }
   },

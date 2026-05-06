@@ -71,7 +71,6 @@
     ]
   },
   "growth": {
-    "score": 85,
     "description": "Institutional adoption is accelerating into new territory. Morgan Stanley launched MSBT on April 8 — the first bank-issued spot Bitcoin ETF — at a record-low 0.14% fee, drawing $100M+ in its first week. Goldman Sachs filed its Bitcoin Premium Income ETF on April 14, with SEC approval expected by mid-June 2026. Cumulative spot ETF inflows reached $57B+ with BlackRock IBIT holding $55B+ AUM. BTC recovered to ~$75,500 from the February crash low of $60,000 as the Strait of Hormuz reopened and geopolitical risk-off faded. Bitcoin hit an all-time high of $126,080 in October 2025; the cycle peak window (mid-2026) remains ahead. The US Strategic Bitcoin Reserve is operational and the BITCOIN Act is advancing in Congress.",
     "growthAnalysis": {
       "cagrEstimate": "30–60%",
@@ -95,6 +94,7 @@
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If US Congressional opposition delays Strategic Bitcoin Reserve active accumulation beyond Q3 2026, the sovereign demand catalyst evaporates and ETF inflows slow below $500M/month — removing the primary price support at $65,000–$70,000 and invalidating the base case cycle peak",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },

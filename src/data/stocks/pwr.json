@@ -56,7 +56,6 @@
     ]
   },
   "growth": {
-    "score": 85,
     "description": "Q1 2026 revenue +26% YoY to $7.87B; record $48.5B backlog with book-to-bill 1.6×; FY26 adj EPS guide raised to $13.55-$14.25 (+20% YoY mid). Drivers are utility transmission build-out, data-centre power feeds, and renewables interconnect — all multi-year capex programs with explicit utility integrated resource plans behind them.",
     "growthAnalysis": {
       "cagrEstimate": "15-18%",
@@ -68,6 +67,7 @@
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If utility capex pulls forward and digests in 2028-29 simultaneously with AI data-centre power moderation, backlog growth pauses and the ~50× multiple compresses sharply — Quanta has shown 30%+ drawdowns on cyclical scares historically and the stock is at a record valuation.",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },

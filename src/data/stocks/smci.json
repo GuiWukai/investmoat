@@ -56,7 +56,6 @@
     ]
   },
   "growth": {
-    "score": 76,
     "description": "FY26 revenue guide of $33-37B implies +45-60% YoY off the cleaned-up FY25 base. Blackwell GB200/GB300 NVL72 racks are the key driver, with DLC mix expanding rapidly. Margins remain the swing factor — gross margin compressed to ~10.5% on AI-server mix and pricing pressure from hyperscaler bake-offs.",
     "growthAnalysis": {
       "cagrEstimate": "25-35%",
@@ -68,6 +67,7 @@
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If gross margin compresses below 9% sustained as Dell/HPE close the time-to-market gap on Blackwell-Ultra and Vera-Rubin in late 2026, EPS leverage reverses and the cyclical-multiple-trap thesis dominates — the stock has historically de-rated to <10× forward earnings on margin-compression scares.",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "compressing"
     }
   },

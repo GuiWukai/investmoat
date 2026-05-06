@@ -56,7 +56,6 @@
     ]
   },
   "growth": {
-    "score": 70,
     "description": "FY26 constant-currency revenue guide +12-16%, down sharply from 2024's ~30% but still industry-leading. GLP-1 franchise grows 15-20% on volume; Lilly share gains and US compounding settlement temper the trajectory. Pipeline catalysts (oral amycretin Phase 3, semaglutide MASH/Alzheimer's readouts) provide 2026-28 optionality.",
     "growthAnalysis": {
       "cagrEstimate": "10-15%",
@@ -68,6 +67,7 @@
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If oral amycretin or CagriSema fail to demonstrate clinically meaningful differentiation vs tirzepatide and orforglipron in 2026-27 readouts, Novo's market share continues drifting toward a 40/60 split with Lilly and the multiple compresses further toward the global pharma median 12-13×.",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },

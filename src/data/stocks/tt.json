@@ -56,7 +56,6 @@
     ]
   },
   "growth": {
-    "score": 74,
     "description": "Q1 2026 organic bookings +24%, backlog $10.7B (+30% vs YE25), FY26 EPS guide raised to $14.75-$14.95 (+13% YoY mid). Americas Commercial HVAC + data-centre cooling drive the growth; Residential and EMEA are slower-growing ballast. Stellar Energy adds a $1B data-centre cooling growth lane on top of the core franchise.",
     "growthAnalysis": {
       "cagrEstimate": "10-13%",
@@ -68,6 +67,7 @@
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If hyperscaler 2027 capex moderates and data-centre cooling bookings flatten, the recently expanded multiple compresses fast — Trane is structurally cyclical (residential + EMEA) and the data-centre cooling growth is now priced in.",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },

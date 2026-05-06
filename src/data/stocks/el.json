@@ -56,7 +56,6 @@
     ]
   },
   "growth": {
-    "score": 50,
     "description": "FY26 revenue flat-to-slightly-up after FY24-25 cumulative ~25% decline. Recovery dependent on Chinese consumer + travel retail rebuild. Operating margin recovery target ~14% by FY28 vs current ~10%. The path is multi-year and execution-dependent.",
     "growthAnalysis": {
       "cagrEstimate": "3-6%",
@@ -68,6 +67,7 @@
       ],
       "primaryType": "market share",
       "keyRisk": "If Chinese consumer fails to recover through 2027 and Korean/Chinese prestige brands continue gaining share, EL's recovery thesis stalls and the multiple compresses further toward distressed-asset valuation.",
+      "keyRiskSeverity": "high",
       "marginTrend": "expanding"
     }
   },

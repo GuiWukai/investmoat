@@ -71,7 +71,6 @@
     ]
   },
   "growth": {
-    "score": 65,
     "description": "FY25 revenue $20.0B, adj EBITDA $6.9B, DCF $5.3B (FY25). FY26 guide: adj EBITDA $6.75-7.25B (flat-to-modestly-up YoY) and production 51-53 MTPA (+5 vs 2025) — Stage 3 volume ramp offset by lower spot-cargo margins. Long-term growth comes from contracted Stage 3 + Sabine Train 9 + Stage 4 FID, layered on the 20-year SPA base.",
     "growthAnalysis": {
       "cagrEstimate": "6-9%",
@@ -95,6 +94,7 @@
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If global LNG prices collapse below $7/MMBtu Henry Hub-equivalent for a sustained period in 2026-27 and lifting margins compress to single digits, FCF generation drops below the bottom of the DCF guide and the 20/20 Vision buyback cadence has to slow — testing whether the contracted base alone supports the equity story.",
+      "keyRiskSeverity": "high",
       "marginTrend": "compressing"
     }
   },

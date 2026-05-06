@@ -70,7 +70,6 @@
     ]
   },
   "growth": {
-    "score": 87,
     "description": "FY2026 delivered $5.25B ARR (+24% YoY) and the first $1B+ net new ARR year in company history. Next-Gen SIEM (+75% YoY to $585M ARR) is emerging as a second growth engine alongside identity (+34% to $520M+) and cloud (+45%+). FY2027 guided at 22–23% revenue growth ($5.87–5.93B), with net new ARR in Q4 FY2026 growing 47% YoY — a strong re-acceleration signal.",
     "growthAnalysis": {
       "cagrEstimate": "20–24%",
@@ -94,6 +93,7 @@
       ],
       "primaryType": "both",
       "keyRisk": "If Q1 FY2027 revenue misses the guided $1.36B range and NRR slips below 112% by mid-2026, the growth re-acceleration narrative breaks and the market re-rates from ~18x NTM revenue toward 14–15x, implying 20–25% downside from current levels",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },

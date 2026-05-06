@@ -56,7 +56,6 @@
     ]
   },
   "growth": {
-    "score": 70,
     "description": "FY2026 delivered $2.919B in revenue (+12% YoY) and $863M in FCF (~30% margin), with ACV surpassing $3B. FY2027 guidance of 9% growth ($3.17–3.19B) disappointed investors but includes a ~1pp headwind from deliberately accelerating professional services partner migration. The strategic catalyst is Okta for AI Agents (GA April 30, 2026), which treats every AI agent as a managed identity — potentially thousands of new billable identities per enterprise customer. Identity Governance (IGA) is also growing rapidly, adding a second expansion vector.",
     "growthAnalysis": {
       "cagrEstimate": "9–13%",
@@ -80,6 +79,7 @@
       ],
       "primaryType": "both",
       "keyRisk": "If Microsoft Entra ID captures 10%+ of net new workforce identity ARR from Okta's SMB and mid-market customers by end of FY2028 (evidenced by NRR falling below 102% for two consecutive quarters), revenue growth stalls at 4–6% and the AI agent identity narrative fails to offset core attrition",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },

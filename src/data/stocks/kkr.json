@@ -71,8 +71,20 @@
     ]
   },
   "growth": {
-    "score": 82,
     "description": "Q1 2026 was an outstanding quarter: AUM $758B (+14% YoY), fee-paying AUM $615B (+13%), FRE $1.02B (+23.5%), total operating earnings $1.3B (+19%), $28B raised in the quarter and $127B LTM. Adjusted EPS of $1.39 beat consensus. The Arctos acquisition adds $16B of sports-franchise AUM and a $10B fee-paying base. KKR is compounding faster than any large-cap alt in the public market.",
+    "growthAnalysis": {
+      "cagrEstimate": "12-18%",
+      "scoreDerivation": "Base 70 + 10 for FRE +23.5% and fastest large-cap alt growth + 5 for three-engine model with insurance optionality - 3 for balance-sheet mark-to-market exposure = 82",
+      "drivers": [
+        { "name": "Fee-related earnings", "metric": "FRE +23.5% YoY to $1.02B; FPAUM +13% to $615B", "trend": "accelerating" },
+        { "name": "Global Atlantic insurance", "metric": "Liability AUM scaling toward $400B; long-duration FRE compounding", "trend": "accelerating" },
+        { "name": "Private wealth & strategic M&A", "metric": "$127B LTM raised; Arctos adds $16B AUM", "trend": "stable" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "Recession marks down balance-sheet investments and Global Atlantic credit, while LP fundraising slows from $127B LTM toward $80B over 12-18 months.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "expanding"
+    },
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [

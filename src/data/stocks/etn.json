@@ -56,7 +56,6 @@
     ]
   },
   "growth": {
-    "score": 75,
     "description": "FY26 EPS guide ~$12.30 (+12% YoY); electrical segment backlog +15% YoY led by data centre and utility customers. Operating margin durably ~24%. AI infrastructure capex is the primary growth tailwind, with utility grid spend a secondary multi-year driver.",
     "growthAnalysis": {
       "cagrEstimate": "10-13%",
@@ -68,6 +67,7 @@
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If AI data centre capex moderates in 2027 simultaneously with utility capex digestion, the electrical segment growth halves and the multiple compresses from 27× to 20× rapidly — Eaton has shown 25-30% drawdowns on cyclical scares historically.",
+      "keyRiskSeverity": "high",
       "marginTrend": "expanding"
     }
   },

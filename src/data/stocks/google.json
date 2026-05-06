@@ -71,7 +71,6 @@
     ]
   },
   "growth": {
-    "score": 87,
     "description": "Q1 2026 was a structural breakout: total revenue $109.9B (+22% YoY, beat $106.9B consensus). Google Cloud re-accelerated to +63% YoY ($20.03B) — up from +48% in Q4 2025 — with backlog nearly doubling QoQ to $460B. Search revenue +19% YoY ($60.4B). Operating income grew 30% to $39.7B; operating margin expanded +2pp to 36.1%. Net income $62.58B (includes significant non-operating investment gains). Paid subscriptions reached 350M — their strongest ever consumer AI quarter driven by the Gemini app. The blended 3–5 year CAGR estimate rises materially on Cloud's structural acceleration.",
     "additionalNote": {
       "title": "Key Growth Catalysts",
@@ -104,6 +103,7 @@
       ],
       "primaryType": "both",
       "keyRisk": "If the DOJ appeal (filed Feb 2026) wins harsher remedies forcing data-sharing with rivals, Google's search quality advantage erodes and CPC premium compresses — decelerating Search below 10% and re-rating the multiple toward 18–20×; the Q1 2026 Cloud +63% and $460B backlog reduce the magnitude of this risk but do not eliminate the regulatory overhang",
+      "keyRiskSeverity": "high",
       "marginTrend": "stable"
     }
   },

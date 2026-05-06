@@ -71,7 +71,6 @@
     ]
   },
   "growth": {
-    "score": 85,
     "description": "Q3 FY2026 delivered $1.24B revenue (+26% YoY) — the fourth consecutive billion-dollar quarter — with royalty revenue at record $737M (+27% YoY) as Armv9 penetration surpasses 50% of the mix. FY2026 full-year consensus stands at $4.85B. Data center royalties are the fastest-growing segment, having doubled YoY, as hyperscaler ARM chip adoption (AWS, Microsoft, Google) accelerates. An investor day on March 24, 2026 is expected to update long-term targets consistent with $8–10B revenue by FY2028.",
     "growthAnalysis": {
       "cagrEstimate": "22–28%",
@@ -95,6 +94,7 @@
       ],
       "primaryType": "both",
       "keyRisk": "If RISC-V achieves >15% data center processor share by end of 2027 — driven by hyperscalers designing custom RISC-V chips (similar to Google's Tensor or Amazon's Inferentia) — ARM's data center royalty growth trajectory slows materially and the $8B+ FY2028 target requires revision",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },

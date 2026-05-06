@@ -71,7 +71,6 @@
     ]
   },
   "growth": {
-    "score": 88,
     "description": "FY2025 delivered $2.17B revenue (+29.8% YoY) with Q4 accelerating to 34% — the fastest quarterly growth in two years. Management guided FY2026 at $2.785–2.795B (+28–29%), RPO surged 48% YoY to $2.5B, and new ACV in Q4 grew nearly 50% YoY — its fastest pace since 2021. DBNRR at 120% signals strong upsell traction as enterprises consolidate onto the Connectivity Cloud platform.",
     "growthAnalysis": {
       "cagrEstimate": "25–29%",
@@ -95,6 +94,7 @@
       ],
       "primaryType": "both",
       "keyRisk": "If hyperscaler-managed AI agent platforms (AWS Bedrock Agents, Anthropic Managed Agents on AWS/Azure) capture >20% of enterprise agent infrastructure deployments by end of 2026 — running natively on AWS Lambda or Azure Functions rather than Cloudflare Workers — the AI-agent TAM expansion thesis fails to materialise, leaving Cloudflare dependent on the more contested CDN/SASE market where Palo Alto and Zscaler are accelerating bundled offers and RPO growth decelerates below 25%",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
