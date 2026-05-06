@@ -100,7 +100,7 @@
   },
   "valuation": {
     "score": 84,
-    "description": "AXON has pulled back 55% from its August 2025 all-time high of $885, currently at ~$403 with a $32.4B market cap. At ~9× NTM P/S on $3.57B 2026 guidance and ~51× forward non-GAAP P/E, valuation is materially more attractive than at any point in 2025. The $14.4B contracted backlog — 5× annual revenue — de-risks the growth path significantly. The stock now sits close to bear-case territory ($360), offering ~34% upside to fair value and substantial optionality from Axon Week 2026 product launches including Axon Vision, Axon 911, and commercial expansion.",
+    "description": "AXON has pulled back 55% from its August 2025 all-time high of $885, currently at ~$403 with a $32.4B market cap. At ~9× NTM P/S on $3.57B 2026 guidance and ~51× forward non-GAAP P/E, valuation is materially more attractive than at any point in 2025. The $14.4B contracted backlog — 5× annual revenue — de-risks the growth path significantly. With the bear at $320 (~21% downside) and base at $540 (~34% upside), risk-reward skews positive, and there is substantial optionality from Axon Week 2026 product launches including Axon Vision, Axon 911, and commercial expansion.",
     "peAnalysis": {
       "asOf": "April 2026",
       "rows": [
@@ -130,35 +130,36 @@
           "note": "~$910M NTM adj. EBITDA; TTM FCF depressed by inventory"
         }
       ],
-      "summary": "AXON trades at ~51× forward non-GAAP P/E — rich relative to the tech sector median (~30–35×) but more compelling than at any point in 2025. The PEG of ~1.7× has compressed below the 2.0× 'expensive' threshold for the first time since 2024, and the NTM P/S of ~9× represents the deepest discount to the platform's intrinsic growth rate since early 2024. The 55% drawdown from all-time highs and the proximity to the $360 bear target create a meaningful asymmetry — $14.4B contracted backlog ensures floor-level revenue visibility while Axon Week 2026 product launches (Axon Vision, Axon 911) expand the upside case."
+      "summary": "AXON trades at ~51× forward non-GAAP P/E — rich relative to the tech sector median (~30–35×) but more compelling than at any point in 2025. The PEG of ~1.7× has compressed below the 2.0× 'expensive' threshold for the first time since 2024, and the NTM P/S of ~9× represents the deepest discount to the platform's intrinsic growth rate since early 2024. The 55% drawdown from all-time highs creates a meaningful asymmetry against the $320 bear / $540 base / $800 bull triangulation — $14.4B contracted backlog ensures floor-level revenue visibility while Axon Week 2026 product launches (Axon Vision, Axon 911) expand the upside case."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$360",
+      "priceTarget": "$320",
       "description": "Federal DOJ grant cuts materially slow new contract signings, antitrust scrutiny stalls Axon 911 expansion, and Draft One faces regulatory backlash — 2026 revenue misses the low end of guidance, re-rating the multiple to 8× NTM revenue.",
       "points": [
-        "DOJ federal grant cuts of 15%+ cause 25%+ of agencies to defer new OSP contract renewals into 2027–28, causing bookings growth to decelerate below 20% and consensus 2026 revenue estimates to come down by $300M+",
+        "DOJ federal grant cuts of 15%+ cause 25%+ of agencies to defer new OSP contract renewals into 2027–28, causing bookings growth to decelerate below 20% and consensus 2026 revenue estimates to come down by $300M+ to ~$3.27B",
         "FTC or DOJ antitrust action targets Axon's acquisition of Prepared and Carbyne, blocking Axon 911 market entry and removing the emergency dispatch TAM expansion story",
         "A high-profile wrongful arrest linked to a Draft One AI-generated report triggers congressional hearings, a federal moratorium on AI-generated police reports, and a sharp slowdown in software ARR growth to below 20%",
-        "Multiple compresses to ~8× NTM P/S as growth expectations reset and regulatory risk discount widens"
+        "Multiple compresses to ~8× NTM P/S on reduced ~$3.27B revenue (≈$26B mkt cap / ~$320), as growth expectations reset and the regulatory risk discount widens"
       ]
     },
     "base": {
       "priceTarget": "$540",
-      "description": "Axon delivers 2026 guidance of 27–30% revenue growth, ARR crosses $1.7B, Draft One reaches 500,000 cumulative reports, and the $14.4B backlog provides revenue floor — multiple sustains at ~11× NTM P/S.",
+      "description": "Axon delivers 2026 guidance of 27–30% revenue growth, ARR crosses $1.7B, Draft One reaches 500,000 cumulative reports, and the $14.4B backlog provides revenue floor — multiple re-rates from ~9× back to ~11× NTM P/S as backlog conversion de-risks the path to the $6B 2028 target.",
       "points": [
         "FY2026 revenue lands at $3.55–3.60B, mid-range of guidance, with large agency renewals and Draft One upsells driving ARR to $1.65–1.70B by Q4 2026",
         "Software gross margins expand to 82–83% and overall adjusted EBITDA margin improves from 25.5% toward 27%, demonstrating operating leverage on the platform",
         "Axon Body Mini ships mid-2026 and signs initial commercial contracts with 3–5 major retailers/healthcare systems, establishing a proof-of-concept for TAM expansion beyond law enforcement",
-        "International revenue accelerates to 25%+ of total as EU/UK law enforcement agencies begin multi-year Evidence.com transitions"
+        "International revenue accelerates to 25%+ of total as EU/UK law enforcement agencies begin multi-year Evidence.com transitions",
+        "Multiple re-rates from current ~9× NTM P/S to ~11× on end-of-2026 NTM revenue (~$3.95B rolling into 2027), as $14.4B backlog conversion validates the $6B 2028 trajectory and compresses execution risk"
       ]
     },
     "bull": {
       "priceTarget": "$800",
       "description": "Draft One becomes a mandatory element of every OSP contract, commercial markets validate at scale, and Axon 911 secures 200+ dispatch center contracts — revenue trajectory re-rates toward the $6B 2028 target ahead of schedule.",
       "points": [
-        "Draft One penetrates 80%+ of the installed base by end of 2026, doubling software ARR attach rates and pushing total ARR toward $2B — creating a step-change in recurring revenue mix",
+        "Draft One penetrates 80%+ of the installed base by end of 2026, doubling software ARR attach rates and pushing total ARR toward $2B — this requires ARR growth to re-accelerate above 2025's 35% pace to ~54% (the swing factor of the bull case, not a foregone conclusion), creating a step-change in recurring revenue mix",
         "Axon Body Mini secures 5+ Fortune 500 retail and healthcare accounts totalling >$200M new ACV, validating the commercial TAM and adding a third revenue pillar beyond law enforcement",
         "Axon 911 wins 300+ emergency dispatch contracts by end of 2026, creating the only end-to-end public safety platform from 911 call through court submission and re-rating the addressable market to $10B+",
         "Revenue trajectory toward $5.5B in 2027 forces consensus upgrades, compressing apparent multiple back to 15× NTM revenue and driving re-rating toward all-time highs"
