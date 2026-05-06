@@ -95,6 +95,7 @@
       ],
       "primaryType": "both",
       "keyRisk": "If hyperscaler-managed AI agent platforms (AWS Bedrock Agents, Anthropic Managed Agents on AWS/Azure) capture >20% of enterprise agent infrastructure deployments by end of 2026 — running natively on AWS Lambda or Azure Functions rather than Cloudflare Workers — the AI-agent TAM expansion thesis fails to materialise, leaving Cloudflare dependent on the more contested CDN/SASE market where Palo Alto and Zscaler are accelerating bundled offers and RPO growth decelerates below 25%",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },

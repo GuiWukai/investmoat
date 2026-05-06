@@ -130,6 +130,85 @@ export function computeMoatScore(tenMoats: TenMoatsData): number {
   return Math.min(100, Math.round(base + breadthBonus(applicableCount)));
 }
 
+// ─── Growth score ─────────────────────────────────────────────────────────────
+
+type GrowthDriverTrend = 'accelerating' | 'stable' | 'decelerating';
+type MarginTrend = 'expanding' | 'stable' | 'compressing';
+type PrimaryGrowthType = 'TAM expansion' | 'market share' | 'both';
+type KeyRiskSeverity = 'low' | 'moderate' | 'high' | 'severe';
+
+export interface GrowthAnalysisInput {
+  cagrEstimate: string;
+  drivers: Array<{ name: string; metric: string; trend: GrowthDriverTrend }>;
+  primaryType: PrimaryGrowthType;
+  marginTrend: MarginTrend;
+  keyRisk: string;
+  keyRiskSeverity?: KeyRiskSeverity;
+}
+
+/** Parses cagrEstimate strings like "22-28%", "30%+", "<5%", ">25%" → midpoint number. Returns null if unparseable. */
+export function parseCagrEstimate(s: string): number | null {
+  const t = s.trim().replace(/%/g, '').replace(/\s+/g, '');
+  const range = t.match(/^(-?\d+(?:\.\d+)?)[-–to]+(-?\d+(?:\.\d+)?)$/i);
+  if (range) return (parseFloat(range[1]) + parseFloat(range[2])) / 2;
+  const plus = t.match(/^(-?\d+(?:\.\d+)?)\+$/);
+  if (plus) return parseFloat(plus[1]);
+  const lt = t.match(/^<(-?\d+(?:\.\d+)?)$/);
+  if (lt) return Math.max(0, parseFloat(lt[1]) - 1);
+  const gt = t.match(/^>(-?\d+(?:\.\d+)?)$/);
+  if (gt) return parseFloat(gt[1]);
+  const num = parseFloat(t);
+  return Number.isFinite(num) ? num : null;
+}
+
+/** Piecewise CAGR → base score, calibrated to the existing rubric. */
+function baseFromCagr(cagr: number): number {
+  if (cagr >= 30) return Math.min(95, 90 + (cagr - 30) * 0.25);
+  if (cagr >= 15) return 80 + ((cagr - 15) / 15) * 10;
+  if (cagr >= 8)  return 70 + ((cagr - 8) / 7) * 10;
+  if (cagr >= 4)  return 60 + ((cagr - 4) / 4) * 10;
+  if (cagr >= 0)  return 40 + (cagr / 4) * 20;
+  return 30;
+}
+
+/**
+ * Compute a 0–100 growth score from structured growthAnalysis fields.
+ * Returns null if cagrEstimate is unparseable (caller should fall back to author score).
+ *
+ *   growthScore = baseCAGR(cagrEstimate)        // 30 → 95
+ *               + trajectoryAdj(drivers)         // ±4 (net of accelerating vs decelerating)
+ *               + marginAdj(marginTrend)         // ±4
+ *               + typeAdj(primaryType)           // 0 to +4
+ *               + riskAdj(keyRiskSeverity)       // 0 to −15
+ *
+ * The risk term is treated as 0 when keyRiskSeverity is unset (legacy stocks),
+ * which biases the score upward — call sites should prefer derived only when
+ * keyRiskSeverity is present.
+ */
+export function computeGrowthScore(g: GrowthAnalysisInput): number | null {
+  const cagr = parseCagrEstimate(g.cagrEstimate);
+  if (cagr == null) return null;
+
+  const base = baseFromCagr(cagr);
+
+  const trajectory = (() => {
+    if (!g.drivers?.length) return 0;
+    const accel = g.drivers.filter(d => d.trend === 'accelerating').length;
+    const decel = g.drivers.filter(d => d.trend === 'decelerating').length;
+    return ((accel - decel) / g.drivers.length) * 4;
+  })();
+
+  const margin = ({ expanding: 4, stable: 0, compressing: -4 } as const)[g.marginTrend];
+  const type   = ({ 'TAM expansion': 3, both: 4, 'market share': 0 } as const)[g.primaryType];
+  const risk   = g.keyRiskSeverity
+    ? ({ low: 0, moderate: -5, high: -10, severe: -15 } as const)[g.keyRiskSeverity]
+    : 0;
+
+  return Math.max(0, Math.min(100, Math.round(base + trajectory + margin + type + risk)));
+}
+
+// ─── Valuation score ──────────────────────────────────────────────────────────
+
 /**
  * Compute a 0–100 valuation score from a live price vs. bear/base/bull targets.
  *

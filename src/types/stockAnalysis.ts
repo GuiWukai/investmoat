@@ -108,6 +108,8 @@ export interface StockAnalysisData {
       primaryType: 'TAM expansion' | 'market share' | 'both';
       /** Specific, falsifiable risk with a named time horizon. */
       keyRisk: string;
+      /** Severity of keyRisk — feeds the risk-discount term in computeGrowthScore. */
+      keyRiskSeverity?: 'low' | 'moderate' | 'high' | 'severe';
       /** Operating margin direction — feeds the −5 margin compression adjustment. */
       marginTrend: 'expanding' | 'stable' | 'compressing';
     };

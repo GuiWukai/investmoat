@@ -82,6 +82,8 @@ const growthAnalysisSchema = z.strictObject({
     .min(1),
   primaryType: z.enum(['TAM expansion', 'market share', 'both']),
   keyRisk: z.string().min(1),
+  /** Severity of keyRisk — feeds the risk-discount term in computeGrowthScore. Optional for now to allow phased backfill. */
+  keyRiskSeverity: z.enum(['low', 'moderate', 'high', 'severe']).optional(),
   marginTrend: z.enum(['expanding', 'stable', 'compressing']),
 });
 

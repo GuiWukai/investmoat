@@ -13,7 +13,7 @@
 // To add a new stock: import its JSON, add an entry to allCoverageData.
 // All scores and targets will be derived automatically.
 
-import { computeMoatScore } from '@/lib/valuationScore';
+import { computeMoatScore, computeGrowthScore, type GrowthAnalysisInput } from '@/lib/valuationScore';
 
 import aaplData    from '@/data/stocks/aapl.json';
 import adbeData    from '@/data/stocks/adbe.json';
@@ -137,8 +137,21 @@ const MIN_AVG_SCORE  = 75;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const m = (json: { tenMoats: any }) => computeMoatScore(json.tenMoats);
 
-/** Read growth score from a stock JSON. */
-const g = (json: { growth: { score: number } }) => json.growth.score;
+/**
+ * Resolve a stock's growth score: prefer the derived score from growthAnalysis
+ * when keyRiskSeverity is populated (the migrated state); otherwise fall back to
+ * the author-set growth.score for legacy stocks pending backfill.
+ */
+const g = (json: {
+  growth: { score: number; growthAnalysis?: GrowthAnalysisInput };
+}): number => {
+  const ga = json.growth.growthAnalysis;
+  if (ga?.keyRiskSeverity) {
+    const derived = computeGrowthScore(ga);
+    if (derived != null) return derived;
+  }
+  return json.growth.score;
+};
 
 /** Read valuation score from a stock JSON. */
 const v = (json: { valuation: { score: number } }) => json.valuation.score;
