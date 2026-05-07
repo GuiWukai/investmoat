@@ -123,6 +123,7 @@ import vrtxData     from '@/data/stocks/vrtx.json';
 import regnData     from '@/data/stocks/regn.json';
 import dashData     from '@/data/stocks/dash.json';
 import rblxData     from '@/data/stocks/rblx.json';
+import soxxData     from '@/data/stocks/soxx.json';
 
 // Multiplicative composite (CES-style weighted geometric mean):
 //
@@ -286,6 +287,7 @@ const allCoverageData = [
     { name: "Regeneron",         ticker: "REGN",  slug: "regn",        scores: [m(regnData),        g(regnData),        v(regnData)],        href: "/stocks/regn",        category: "Healthcare",  ...t(regnData)        },
     { name: "DoorDash",          ticker: "DASH",  slug: "dash",        scores: [m(dashData),        g(dashData),        v(dashData)],        href: "/stocks/dash",        category: "Other",       ...t(dashData)        },
     { name: "Roblox",            ticker: "RBLX",  slug: "rblx",        scores: [m(rblxData),        g(rblxData),        v(rblxData)],        href: "/stocks/rblx",        category: "Other",       ...t(rblxData)        },
+    { name: "iShares Semiconductor ETF", ticker: "SOXX", slug: "soxx", scores: [m(soxxData),        g(soxxData),        v(soxxData)],        href: "/stocks/soxx",        category: "Big Tech",    ...t(soxxData)        },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────
