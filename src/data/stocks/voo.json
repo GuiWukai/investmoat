@@ -1,0 +1,179 @@
+{
+  "slug": "voo",
+  "ticker": "VOO",
+  "name": "Vanguard S&P 500 ETF",
+  "titleColor": "#96151d",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "VOO"
+    },
+    {
+      "label": "AUM",
+      "value": "~$1.5T"
+    },
+    {
+      "label": "Expense Ratio",
+      "value": "0.03%"
+    }
+  ],
+  "chips": [
+    {
+      "label": "ETF | Broad Market",
+      "color": "primary"
+    },
+    {
+      "label": "Benchmark",
+      "color": "warning"
+    }
+  ],
+  "recommendation": "Hold",
+  "metrics": [
+    {
+      "title": "Holdings",
+      "value": "~500 names",
+      "label": "S&P 500 — full US large-cap exposure",
+      "icon": "Layers",
+      "color": "#96151d"
+    },
+    {
+      "title": "Top 10 Concentration",
+      "value": "~36%",
+      "label": "MSFT · NVDA · AAPL · AMZN · META · GOOGL · BRK · AVGO · LLY · JPM",
+      "icon": "PieChart",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "Expense Ratio",
+      "value": "0.03%",
+      "label": "Industry-low — Vanguard's structural cost moat",
+      "icon": "Percent",
+      "color": "#10b981"
+    }
+  ],
+  "moat": {
+    "description": "The benchmark itself — VOO is what every active manager tries to beat, and most fail. Its moat is structural cost (3 bps) plus the inherent diversification of 500 names.",
+    "analysisTitle": "The Benchmark Moat",
+    "analysisSummary": "VOO's moat is **scale + cost**, not stock selection:",
+    "analysisPoints": [
+      {
+        "title": "Cost Leadership",
+        "text": "At 3 bps the fund undercuts virtually every competing US large-cap product. Vanguard's mutual ownership structure — fund holders own the management company — creates a structural cost advantage that for-profit issuers (BlackRock, State Street) cannot match without margin destruction."
+      },
+      {
+        "title": "Diversification by Construction",
+        "text": "500 names across 11 sectors means no single-name blow-up materially impairs the fund. The trade-off is dilution: the median S&P 500 constituent has a mediocre moat, so the basket's weighted-average moat is lower than a curated portfolio's."
+      },
+      {
+        "title": "Index Methodology Quality",
+        "text": "S&P's Index Committee applies an earnings filter and a profitability screen — not a pure float-weighted scrape. This is a real but modest advantage over total-market indices like VTI; it screens out the worst small-caps but does not concentrate on the best-moat names."
+      }
+    ]
+  },
+  "growth": {
+    "description": "VOO inherits S&P 500 aggregate earnings growth — historically ~7–9% nominal, currently running closer to 10–12% as the Magnificent 7 (~32% of the index) compounds at hypergrowth rates while the bottom 400 grow at GDP+. Forward consensus calls for 11% EPS growth in 2026 and 13% in 2027, anchored on continued AI capex monetisation, margin expansion at MSFT/META/GOOGL, and Fed rate normalisation. The structural risk is mean reversion: if AI capex digestion arrives or Mag 7 margins peak, index EPS growth reverts to its long-run 7–8% trend and the elevated multiple unwinds.",
+    "growthAnalysis": {
+      "cagrEstimate": "6–10%",
+      "scoreDerivation": "Base 70 (8% midpoint — long-run S&P 500 nominal EPS growth) +0 trajectory (Mag 7 accelerating offsetting decelerating energy/staples/REITs) +0 stable margin trend (operating margins near record but holding) +0 market share (S&P 500 IS the US large-cap market — neither TAM expansion nor share capture) −5 cycle/multiple risk (forward P/E 22× vs. 17× historical average) = 65",
+      "drivers": [
+        {
+          "name": "Magnificent 7 EPS Compounding",
+          "metric": "Top-7 names (~30% of index) growing EPS 18–25% on AI monetisation; rest of S&P 493 growing ~6–8%",
+          "trend": "stable"
+        },
+        {
+          "name": "Buyback & Dividend Engine",
+          "metric": "S&P 500 returning ~$1.2T annually via buybacks + dividends — ~3% shareholder yield supplementing organic EPS growth",
+          "trend": "stable"
+        },
+        {
+          "name": "Index Composition Drift",
+          "metric": "Tech/Comm Services now ~40% of index (vs. 25% pre-2020); upgrade in basket quality vs. historical industrial/financial mix",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "market share",
+      "keyRisk": "If forward P/E reverts toward the 17× long-term average over the next 24 months — driven by AI capex digestion, Mag 7 margin compression, or a recession — the index derates 20–25% on multiples alone, even with EPS holding flat. Bull-case requires multiples to stay elevated, which is a bet on AI productivity translating to permanent margin expansion",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 50,
+    "description": "At ~$674 — within ~3% of the late-2025 all-time high — VOO trades just below the base case ($730) but at a forward P/E of ~22× vs. its 25-year average of ~17×. The index has effectively priced in continued AI productivity gains and elevated margins; modest upside to base, meaningful downside in a bear-case multiple compression. Buying VOO at this level is buying the benchmark at a premium, not at a discount."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$540",
+      "description": "Multiple compression toward the long-term 17× forward P/E combined with EPS guide-downs as AI capex digestion lands and consumer/labour cycles soften.",
+      "points": [
+        "Forward P/E derates from 22× toward 18× as AI capex digestion materialises and Mag 7 margin expansion stalls in 2H26 — index EPS holds but multiple compression drives a 20% drawdown",
+        "US recession arrives in late 2026 (yield curve re-inverts, unemployment crosses 5%) — earnings cut 8–12% in 2027; cyclicals (financials, industrials, discretionary) lead the drawdown",
+        "Tariff pass-through shock compresses S&P 500 net margin from 12.5% toward 11% as input costs rise and pricing power erodes outside Mag 7"
+      ]
+    },
+    "base": {
+      "priceTarget": "$730",
+      "description": "Earnings grow 11–13% as consensus expects, multiples hold near 22× forward as Fed cuts and AI productivity gains sustain elevated valuations.",
+      "points": [
+        "S&P 500 EPS grows 11% in 2026 and 13% in 2027 (consensus midpoint) — Mag 7 leads with 18–22% growth, the S&P 493 grows ~6–8%, and buybacks contribute ~2% of EPS lift",
+        "Fed funds rate trims to 3.0–3.25% by year-end 2026, supporting equity multiples and rotating capital from money markets back into stocks (~$2T in MMF assets above 2019 trend)",
+        "AI capex monetisation broadens beyond NVDA/AVGO/MSFT — ServiceNow, Palantir, and the next-tier hyperscaler ecosystem deliver visible margin expansion, validating the elevated multiple"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$850",
+      "description": "AI productivity translates into a durable margin step-change, multiples expand toward 24× forward, and a corporate capex cycle reignites as rates normalise — a 1990s-style melt-up.",
+      "points": [
+        "S&P 500 net margin expands from 12.5% toward 14%+ as AI agents drive structural opex reduction across SG&A; consensus EPS revisions move 5–8% higher through the year",
+        "Forward P/E re-rates to 24× — within the dot-com-era range but justified by higher quality (Mag 7 dominance + 20% software weighting vs. 10% in 1999) and lower-for-longer real rates",
+        "Sovereign wealth and pension reallocation into US equities accelerates as global capital concentrates in the AI-leadership home market — adds 50–100 bps to multi-year demand vs. trend"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — VOO is a passive index ETF wrapper with no user-facing software interface."
+    },
+    "businessLogic": {
+      "status": "destroyed",
+      "note": "N/A — the fund mechanically tracks the S&P 500 index; there is no proprietary business logic."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — the S&P 500 methodology and constituents are fully public; the wrapper has no data moat of its own."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Underlying basket includes companies dependent on scarce talent (NVDA, MSFT, GOOGL), but the moat is heavily diluted across 500 names — the median S&P 500 constituent has no talent moat."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "The ETF IS a bundle of the 500 largest US companies — the bundling is the product, and at 3 bps replication via single stocks is impossible for almost any investor."
+    },
+    "proprietaryData": {
+      "status": "weakened",
+      "note": "Top-10 holdings (Mag 7, BRK, JPM, LLY) carry strong proprietary data moats, but the bottom 490 names dilute the basket-level moat substantially."
+    },
+    "regulatoryLockIn": {
+      "status": "weakened",
+      "note": "The S&P 500 brand and methodology are licensed from S&P Global with quasi-regulatory standing in benchmarking — but the ETF wrapper itself faces commodity competition from SPY, IVV, and SPLG."
+    },
+    "networkEffects": {
+      "status": "weakened",
+      "note": "Top constituents (MSFT, NVDA, GOOGL, META) enjoy strong network effects, but at 30–35% basket weight the index-level effect is heavily diluted."
+    },
+    "transactionEmbedding": {
+      "status": "destroyed",
+      "note": "N/A — an index fund is not embedded in any customer transaction or workflow."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — VOO is not a system of record for any business function."
+    },
+    "aiResilienceScore": 55,
+    "verdict": "VOO's moat is structural cost (3 bps) and inherent diversification — not stock selection. As a benchmark it's defensible, but the basket-level moat is intentionally diluted versus a curated moat-first portfolio, which is exactly what InvestMoat is built to outperform."
+  },
+  "lastAnalyzed": "May 2026"
+}
