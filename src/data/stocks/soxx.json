@@ -1,0 +1,179 @@
+{
+  "slug": "soxx",
+  "ticker": "SOXX",
+  "name": "iShares Semiconductor ETF",
+  "titleColor": "#0066ff",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "SOXX"
+    },
+    {
+      "label": "AUM",
+      "value": "~$13B"
+    },
+    {
+      "label": "Expense Ratio",
+      "value": "0.35%"
+    }
+  ],
+  "chips": [
+    {
+      "label": "ETF | Semiconductors",
+      "color": "primary"
+    },
+    {
+      "label": "Diversified AI Bet",
+      "color": "success"
+    }
+  ],
+  "recommendation": "Accumulate",
+  "metrics": [
+    {
+      "title": "Holdings",
+      "value": "~30 names",
+      "label": "ICE Semiconductor Index — design, fab & equipment",
+      "icon": "Cpu",
+      "color": "#0066ff"
+    },
+    {
+      "title": "Top 3 Weights",
+      "value": "NVDA · AVGO · TSM",
+      "label": "Combined ~25% of fund — AI compute leaders",
+      "icon": "Layers",
+      "color": "#10b981"
+    },
+    {
+      "title": "Expense Ratio",
+      "value": "0.35%",
+      "label": "Mid-tier vs. SMH (0.35%) and PSI (0.56%)",
+      "icon": "Percent",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "description": "A diversified wrapper around the AI capex cycle's most defensible companies — TSMC's foundry monopoly, ASML's EUV monopoly, NVIDIA's CUDA network, and Broadcom's custom silicon franchise.",
+    "analysisTitle": "The Diversified Semiconductor Moat",
+    "analysisSummary": "SOXX's moat is **derived, not direct** — the wrapper itself is commoditised, but the basket aggregates moats:",
+    "analysisPoints": [
+      {
+        "title": "Concentrated Quality",
+        "text": "The ICE Semiconductor Index caps individual weights at ~8%, but the top 10 holdings — NVDA, AVGO, TSM, AMD, QCOM, TXN, AMAT, LRCX, KLAC, MU — represent ~60% of the fund and include several of the strongest-moat businesses in global tech."
+      },
+      {
+        "title": "Vertical Coverage",
+        "text": "Exposure spans the entire semi value chain: design (NVDA, AMD, QCOM), foundry (TSM, INTC), EDA (in adjacent SMH but absent here), equipment (AMAT, LRCX, KLAC), and memory (MU). A bet on AI compute without single-stock blowup risk."
+      },
+      {
+        "title": "Liquidity & Cost",
+        "text": "Mid-tier 0.35% expense ratio with daily liquidity above $1B and tight bid/ask spreads. Tax-efficient ETF wrapper avoids the K-1 and constituent rebalancing friction of holding individual semis directly."
+      }
+    ]
+  },
+  "growth": {
+    "description": "The semiconductor industry is in a multi-year AI-driven super-cycle: hyperscaler capex ($300B+ in 2026), sovereign AI infrastructure builds, and the migration from 5nm → 3nm → 2nm processes are all simultaneously expanding TAM. SOXX captures this without single-name risk — TSMC/ASML benefit from the fab build-out regardless of which AI chip designer wins, and AMAT/LRCX/KLAC sell tools to all of them. The trade-off is dilution: NVDA's hypergrowth gets averaged down by the cyclical memory and analog names. WSTS forecasts 12–14% industry revenue growth in 2026 with high-performance compute and HBM leading.",
+    "growthAnalysis": {
+      "cagrEstimate": "12–18%",
+      "scoreDerivation": "Base 80 (15% midpoint — semi industry CAGR through 2028 driven by AI capex, leading-edge nodes, and HBM demand) +1 trajectory (NVDA, AVGO, TSM accelerating offsetting INTC/MCHP decel) +3 TAM expansion (sovereign AI, edge inference, advanced packaging) −5 cycle risk (semi peak typically lasts 18–24 months from trough; current cycle entering year 2) = 79",
+      "drivers": [
+        {
+          "name": "Hyperscaler & Sovereign AI Capex",
+          "metric": "Top-4 hyperscaler 2026 capex ~$300B (+25% YoY); UAE, Saudi, India announced sovereign AI clusters",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Leading-Edge Foundry & Equipment Build-Out",
+          "metric": "TSMC 2nm ramp 2H26; CHIPS Act fabs (Intel, TSMC AZ, Samsung TX) driving WFE spend to ~$120B",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Memory / HBM Up-Cycle",
+          "metric": "HBM3E pricing +40% YoY; MU/SK Hynix sold out through 2026; DRAM contract prices rising",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If AI capex digestion arrives in 2H26 — hyperscalers deferring orders by 1–2 quarters as inference workloads consolidate on existing fleets — the basket drops 25–35% as NVDA, AVGO, AMAT all derate together. Semiconductor cycles are notoriously synchronous, and ETF diversification provides limited protection inside a single sector",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 78,
+    "description": "At ~$215 — recovered from the April 2026 tariff-driven correction low of ~$185 — SOXX trades roughly halfway between the bear ($170) and base ($260) cases. The fund's blended forward P/E sits around 24× on consensus 2026 EPS, a modest premium to its 5-year average of 22× but well below the late-2024 peak of 32×. The diversified basket trades at a discount to its highest-quality constituents (NVDA, AVGO, TSM) while still capturing the bulk of their upside — an attractive risk-adjusted entry mid-cycle."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$170",
+      "description": "AI capex pause and semi cycle peak combine with renewed US-China export controls, dragging the entire basket through a synchronous derating.",
+      "points": [
+        "Hyperscaler capex guidance for 2027 cut by 15%+ as inference workloads consolidate on existing GPU fleets and Microsoft/Meta defer 2H26 orders",
+        "US-China escalation expands semi export controls to 14nm equipment; AMAT/LRCX/KLAC China revenue (20–25%) drops to zero by Q4",
+        "HBM/DRAM oversupply emerges by Q3 26 as Samsung qualifies HBM3E into NVDA's supply chain, breaking the SK Hynix/Micron pricing duopoly"
+      ]
+    },
+    "base": {
+      "priceTarget": "$260",
+      "description": "AI capex sustains through 2027 as sovereign and enterprise demand offsets any hyperscaler digestion, while TSMC's 2nm ramp drives a full equipment WFE up-cycle.",
+      "points": [
+        "2026 industry revenue grows 13% (WSTS midpoint) with HBM and high-performance compute up 30%+, dragging the SOXX basket to a 15% earnings beat for the year",
+        "TSMC 2nm volume production ramps in 2H26 with N2P bookings already filling 2027 capacity — ASML, AMAT, and LRCX all guide CY27 WFE above $130B",
+        "Sovereign AI infrastructure (UAE G42, Saudi HUMAIN, India Mission, EU AI Factories) materialises as $50B+ of incremental 2026–27 demand, broadening the customer base beyond US hyperscalers"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$340",
+      "description": "AI capex super-cycle extends through 2028 as inference scales 10× and edge AI emerges, lifting all boats — design, foundry, equipment, and memory — simultaneously.",
+      "points": [
+        "Inference workloads scale 10× as agentic AI deployment goes mainstream in 2027, requiring a multi-year second wave of capex on top of the training build-out",
+        "On-device AI silicon (Apple, Qualcomm, AMD) drives a refresh cycle in PC, smartphone, and auto end-markets — broadening growth beyond the data centre",
+        "TSMC and Samsung sustain 50%+ gross margins on 2nm/A14, while equipment makers ride the most expensive node transition in industry history (multi-pattern EUV → high-NA EUV → A2 generations)"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — SOXX is a passive index ETF wrapper with no user-facing software interface."
+    },
+    "businessLogic": {
+      "status": "destroyed",
+      "note": "N/A — the fund mechanically tracks the ICE Semiconductor Index; there is no proprietary business logic."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — index methodology and constituents are fully public; the wrapper has no data moat of its own."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Underlying basket depends on the world's scarcest specialist talent — TSMC process engineers, ASML EUV physicists, NVIDIA CUDA architects — that takes decades to replicate."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "The ETF is itself a curated bundle of ~30 critical semiconductor names — the bundling IS the product, and replicating it via single-stock purchases incurs commission and tax friction."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Constituents control deeply proprietary IP — TSMC's process recipes, ASML's EUV optics, NVIDIA's CUDA libraries, Synopsys/Cadence-adjacent EDA — that compound with each node generation."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "CHIPS Act subsidies, export controls (EAR, BIS), and EU/Japan/Korea industrial policy entrench the incumbents in the basket and raise barriers for any new entrants."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "Several constituents enjoy strong network effects — NVIDIA's CUDA developer base (4M+), TSMC's foundry ecosystem of 500+ customers, and standardised x86/Arm/RISC-V ISAs."
+    },
+    "transactionEmbedding": {
+      "status": "weakened",
+      "note": "Semiconductors are embedded in every modern device and workload, but the ETF wrapper itself is not embedded in any customer workflow."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — an index fund is not a system of record for any customer or business function."
+    },
+    "aiResilienceScore": 75,
+    "verdict": "SOXX inherits the AI-resilient moats of its constituents — TSMC's foundry monopoly, ASML's EUV monopoly, NVIDIA's CUDA network — while diluting single-name risk. The wrapper itself has no moat, but the underlying basket is structurally the AI build-out's most defensible exposure."
+  },
+  "lastAnalyzed": "May 2026"
+}
