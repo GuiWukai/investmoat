@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$2.78T"
+      "value": "$2.89T"
     },
     {
       "label": "Price",
-      "value": "$264"
+      "value": "$274"
     }
   ],
   "chips": [
@@ -51,7 +51,7 @@
     }
   ],
   "moat": {
-    "description": "Dominant scale, switching costs (Prime), and cost advantage (Logistics). AWS backlog hits $244B+, up 40%+ YoY. Amazon has now committed $33B total to Anthropic ($8B prior + $25B new deal at $380B valuation, announced April 20, 2026) — and Anthropic in turn committed $100B+ in AWS spend over the next 10 years, with 5 GW of capacity additions and access to Trainium2 through Trainium4. This bilateral lock-in (Amazon funds Anthropic; Anthropic is Anthropic's primary cloud) is structurally unmatched by any competitor. Anthropic Mythos and Project Glasswing run on AWS Bedrock. Competitive pressure from Azure (+39% YoY) and GCP (+36% YoY) is a monitored risk but the Anthropic $100B commitment provides a 10-year AWS demand floor.",
+    "description": "Dominant scale, switching costs (Prime), and cost advantage (Logistics). AWS backlog hits $244B+, up 40%+ YoY. Amazon has now committed $33B total to Anthropic ($8B prior + $25B new deal at $380B valuation, announced April 20, 2026) — and Anthropic in turn committed $100B+ in AWS spend over the next 10 years, with 5 GW of capacity additions and access to Trainium2 through Trainium4. On May 4, 2026 Amazon launched Amazon Supply Chain Services (ASCS) — opening its full freight, distribution, fulfillment, and parcel network (≈80,000 trailers; 25% lower transport cost vs alternatives) to any business, regardless of whether they sell on Amazon. P&G, 3M, Lands' End, and American Eagle signed as anchor customers. BofA estimates a $1.3T 3PL TAM; each 1% share equals ~$13B annual revenue and the launch is being framed as the next AWS — externalising an internal capability into a high-margin platform. Competitive pressure from Azure (+39% YoY) and GCP (+36% YoY) on AWS, and from UPS/FedEx on ASCS, remains a monitored risk.",
     "analysisTitle": "The Economic Moat",
     "analysisSummary": "Amazon possesses a **Wide Economic Moat** driven by four primary pillars:",
     "analysisPoints": [
@@ -70,23 +70,28 @@
       {
         "title": "AWS as the Primary AI Training Cloud",
         "text": "Amazon has now invested $33B total in Anthropic ($8B prior + $25B new, April 20, 2026) — locking in AWS as the exclusive primary cloud for training and deploying Claude models at a $380B Anthropic valuation. Crucially, Anthropic committed to spending $100B+ on AWS technologies over the next 10 years, adding 5 GW of capacity and using Trainium2 through Trainium4 (including future chip generations). This is a bilateral strategic lock-in: Amazon funds Anthropic's growth; Anthropic is structurally dependent on AWS for every Claude API call, Bedrock workload, and frontier model training run. Anthropic's $30B+ annualised revenue (up from $9B at end-2025) is entirely routed through AWS infrastructure — making Anthropic the single fastest-growing AWS revenue driver. The $100B commitment provides a 10-year structural demand floor for AWS that no competing cloud can replicate."
+      },
+      {
+        "title": "ASCS — Logistics-as-a-Service",
+        "text": "On May 4, 2026 Amazon launched Amazon Supply Chain Services (ASCS), opening its end-to-end logistics stack — cross-border and domestic freight, bulk warehousing, fulfillment, and parcel — to any business, in any industry, on or off the Amazon marketplace. Anchor customers include P&G, 3M, Lands' End, and American Eagle, with the service explicitly targeting healthcare, automotive, manufacturing, and retail. Amazon cites up to 25% lower transport cost vs alternatives and a 20% conversion lift for fully-managed sellers, leveraging proprietary AI forecasting and a ~80,000-trailer fleet. BofA models a $1.3T 3PL TAM where each 1% share equals ~$13B in annual revenue (~+2% to retail revenue at 1% share by 2027). The strategic parallel is AWS in 2006 — externalising an internal capability into a high-margin platform business. UPS (-8.9%) and FedEx (-7.4%) sold off on the announcement, signalling that the market views this as a structural rather than incremental event."
       }
     ]
   },
   "growth": {
-    "description": "AWS re-accelerated to 28% in Q1 2026 — fastest growth in 15 quarters — beating the 24% pace of Q4 2025 and landing ahead of the 25–26% consensus. Q1 revenue came in at $181.5B (+16% YoY), beating the $177.3B consensus by $4.2B. Operating income of $23.9B crushed the $16.5–21.5B guidance range. Amazon's chips business (Graviton, Trainium, Nitro) has crossed $20B annual revenue run rate growing triple digits YoY — an emerging second AWS moat. Q2 guidance of $194–199B implies continued ~15–17% YoY revenue growth. Tariff headwinds (125–145% on Chinese goods) remain, but the operational beat and AWS trajectory confirm the re-acceleration thesis.",
+    "description": "AWS re-accelerated to 28% in Q1 2026 — fastest growth in 15 quarters — beating the 24% pace of Q4 2025 and landing ahead of the 25–26% consensus. Q1 revenue came in at $181.5B (+16% YoY), beating the $177.3B consensus by $4.2B. Operating income of $23.9B crushed the $16.5–21.5B guidance range. Amazon's chips business (Graviton, Trainium, Nitro) has crossed $20B annual revenue run rate growing triple digits YoY — an emerging second AWS moat. Q2 guidance of $194–199B implies continued ~15–17% YoY revenue growth. The May 4, 2026 launch of Amazon Supply Chain Services (ASCS) opens a new $1.3T 3PL TAM (BofA) — the third major AWS-style platform externalisation after AWS itself and the Ads business. Tariff headwinds (125–145% on Chinese goods) remain, but the operational beat, AWS trajectory, and ASCS optionality reinforce the re-acceleration thesis.",
     "additionalNote": {
       "title": "Financial Outlook",
       "points": [
         "AWS re-accelerated to 28% YoY in Q1 2026 ($37.6B revenue) — fastest in 15 quarters, +4pp vs Q4 2025 (24%) — confirming the re-acceleration thesis. Q2 guide $194–199B implies continued double-digit revenue growth.",
         "Amazon chips (Graviton, Trainium3, Nitro) crossed $20B annual revenue run rate growing triple digits YoY; Trainium2 is fully subscribed, Trainium3 launched at 40% better price-performance, Project Rainier deploying 500K+ Trainium2 chips for Anthropic — silicon becoming a durable AWS moat.",
         "Amazon committed $33B total to Anthropic ($8B prior + $25B new, April 2026); Anthropic committed $100B+ in AWS spend over 10 years — the largest bilateral AI infrastructure lock-in in cloud history.",
-        "Tariff headwinds persist (125–145% on Chinese goods); Q1 operating income of $23.9B crushed the $16.5–21.5B guidance range, demonstrating that tariff impacts are being managed. Advertising and logistics efficiency are offsetting marketplace pressure."
+        "ASCS (May 4, 2026) opens a $1.3T 3PL TAM with P&G, 3M, Lands' End, American Eagle as anchor customers; each 1% share = ~$13B annual revenue. Margin profile expected to mirror AWS (high incremental contribution on already-built infrastructure) as utilisation rises.",
+        "Tariff headwinds persist (125–145% on Chinese goods); Q1 operating income of $23.9B crushed the $16.5–21.5B guidance range, demonstrating that tariff impacts are being managed. Advertising, ASCS, and logistics efficiency are offsetting marketplace pressure."
       ]
     },
     "growthAnalysis": {
       "cagrEstimate": "15–20%",
-      "scoreDerivation": "Base 80 (15–30% blended CAGR) + 5 recurring revenue (AWS contracts + Prime) + 5 TAM expansion (AI inference + sovereign cloud + chips) − 2 Azure/GCP competitive acceleration (40%/63% vs AWS 28%) + 1 Anthropic/Bedrock demand confirmed − 1 tariff/marketplace headwinds (Chinese sellers) = 88",
+      "scoreDerivation": "Base 80 (15–30% blended CAGR) + 5 recurring revenue (AWS contracts + Prime) + 5 TAM expansion (AI inference + sovereign cloud + chips + ASCS $1.3T 3PL) − 2 Azure/GCP competitive acceleration (40%/63% vs AWS 28%) + 1 Anthropic/Bedrock demand confirmed + 1 ASCS anchor customers signed (P&G, 3M, Lands' End, AE) − 1 tariff/marketplace headwinds (Chinese sellers) = 89",
       "drivers": [
         {
           "name": "AWS Cloud",
@@ -99,46 +104,46 @@
           "trend": "accelerating"
         },
         {
-          "name": "International Retail",
-          "metric": "+16% Q1 2026 total revenue; margins expanding as capex cycle matures",
-          "trend": "stable"
+          "name": "ASCS (Supply Chain Services)",
+          "metric": "Launched May 4, 2026 — $1.3T 3PL TAM (BofA); each 1% share = ~$13B; P&G, 3M, Lands' End, American Eagle as anchor customers",
+          "trend": "accelerating"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "Azure (+40% Q3 FY26) and GCP (+63% Q1 2026) are growing materially faster than AWS (28%); if this gap widens and they capture the majority of new enterprise AI inference workloads, AWS decelerates below 20%, the $200B 2026 capex cycle proves premature, and FCF compression extends to 2028+",
+      "keyRisk": "Azure (+40% Q3 FY26) and GCP (+63% Q1 2026) are growing materially faster than AWS (28%); if this gap widens and they capture the majority of new enterprise AI inference workloads, AWS decelerates below 20%, the $200B 2026 capex cycle proves premature, and FCF compression extends to 2028+. ASCS is incremental optionality — but if it draws regulatory antitrust scrutiny (bundling logistics with marketplace dominance), the rollout could be capped before reaching scale.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 72,
-    "description": "Q1 2026 delivered a decisive confirmation: AWS at 28% (fastest in 15 quarters), operating income $23.9B (blew out the $16.5–21.5B guidance range), and chips crossing $20B ARR growing triple digits. We raise the base fair value from $270 to $295 to reflect the Q2 guide of $194–199B and the emerging chips business. At $264, the stock sits 10% below the new base case — offering a modest margin of safety post-confirmation. The bull case rises to $365 reflecting the silicon moat thesis playing out.",
+    "score": 73,
+    "description": "Q1 2026 delivered a decisive confirmation (AWS 28%, operating income $23.9B, chips >$20B ARR) and the May 4, 2026 ASCS launch unlocks a $1.3T 3PL TAM with P&G, 3M, Lands' End, and American Eagle as anchor customers. We raise the base fair value from $295 to $310 (modest, given AMZN is already at 52-week highs and ASCS revenue is back-end loaded) and the bull case from $365 to $395 to reflect AWS-style optionality on the new logistics platform. At ~$274, the stock sits ~12% below the new base case — modest margin of safety after a strong run.",
     "valuationNote": {
-      "text": "Using a 10-year DCF with a 9% WACC and a 3.5% terminal growth rate, incorporating Q1 2026 actuals (AWS 28%, operating income $23.9B) and Q2 guide ($194–199B), our fair value estimate for AMZN is",
-      "fairValue": "$295/share"
+      "text": "Using a 10-year DCF with a 9% WACC and a 3.5% terminal growth rate, incorporating Q1 2026 actuals (AWS 28%, operating income $23.9B), Q2 guide ($194–199B), and the May 2026 ASCS launch ($1.3T 3PL TAM, ~0.5–1% capture in base), our fair value estimate for AMZN is",
+      "fairValue": "$310/share"
     },
     "peAnalysis": {
-      "asOf": "April 2026 (Q1 2026 actuals)",
+      "asOf": "May 2026 (post-ASCS launch)",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~36×",
-          "note": "~$7.22 TTM EPS (updated with Q1 2026 $1.64)"
+          "value": "~38×",
+          "note": "~$7.22 TTM EPS (Q1 2026 $1.64)"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~29×",
-          "note": "NTM EPS ~$9.00 (revised up on Q1 beat)"
+          "value": "~30×",
+          "note": "NTM EPS ~$9.00 (post Q1 beat)"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.61×",
+          "value": "~1.67×",
           "note": "fwd P/E ÷ ~18% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~3.4×",
-          "note": "~$790B NTM revenue (raised on Q2 guide)"
+          "value": "~3.5×",
+          "note": "~$790B NTM revenue"
         },
         {
           "label": "Operating Income Q1",
@@ -146,34 +151,37 @@
           "note": "Beat $16.5–21.5B guide; chips >$20B ARR"
         }
       ],
-      "summary": "At ~29× forward earnings post-Q1 beat, AMZN has de-rated from the prior ~32× as the earnings ramp materialises faster than consensus expected. AWS at 28% (Q1 2026) confirms the re-acceleration thesis. The PEG of 1.61× reflects a more attractive entry point than the prior 1.80× as earnings upgrade momentum builds. The $200B capex cycle is beginning to monetise: chips at $20B+ ARR growing triple digits is a new revenue line that was not in any prior model."
+      "summary": "At ~30× forward earnings AMZN trades at a modest premium to the S&P 500 (~21×) but in line with mega-cap growth peers, reflecting the Q1 beat plus newly added ASCS optionality. The PEG of ~1.67× is fair given three concurrent growth platforms (AWS at 28%, advertising 20%+, ASCS launching into a $1.3T TAM). The trailing-vs-forward gap (~38× → 30×) signals continued earnings acceleration; ASCS revenue is not yet reflected in NTM consensus, providing potential upside to estimates over the next 2–4 quarters."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$180",
-      "description": "Persistent 125–145% tariffs cause marketplace GMV disruption; AWS growth decelerates as Azure and GCP win disproportionate enterprise AI inference workloads despite the Q1 2026 re-acceleration, and FCF compression extends to 2028+.",
+      "priceTarget": "$195",
+      "description": "Persistent 125–145% tariffs cause marketplace GMV disruption; AWS growth decelerates as Azure and GCP win disproportionate enterprise AI inference workloads despite the Q1 2026 re-acceleration; ASCS rollout stalls under antitrust scrutiny, and FCF compression extends to 2028+.",
       "points": [
         "Chinese sellers (~50%+ of marketplace GMV) reduce listings or raise prices materially post-tariff escalation, eroding Amazon's low-price advantage and consumer traffic; FBA rate increases accelerate seller churn",
         "AWS decelerates back below 20% as Azure (+40% Q3 FY26) and Google Cloud (+63% Q1 2026) continue winning enterprise AI inference — the Q1 2026 28% print proves to be a one-quarter spike, not a durable re-acceleration",
+        "ASCS triggers regulatory pushback (FTC/EU bundling concerns over marketplace + logistics dominance); P&G/3M-style anchor wins do not extend to broader 3PL share gains; UPS/FedEx undercut on price",
         "$200B capex drives FCF near-zero for 2026–2027; chips business ARR growth slows; multiple compresses to 22–24× forward earnings"
       ]
     },
     "base": {
-      "priceTarget": "$295",
-      "description": "AWS sustains 25–28% growth through 2026, chips business scales past $30B ARR, advertising reaches $90B+ annualised, and FCF rebounds above $50B by 2027 as the capex cycle matures.",
+      "priceTarget": "$310",
+      "description": "AWS sustains 25–28% growth through 2026, chips business scales past $30B ARR, advertising reaches $90B+ annualised, ASCS captures ~0.5–1% of the $1.3T 3PL TAM by 2027, and FCF rebounds above $50B by 2027 as the capex cycle matures.",
       "points": [
         "AWS sustains 25–28% growth with Q2 2026 guide ($194–199B total) on track; the Trainium/Graviton/Nitro chips business scales from $20B to $30B+ ARR as Trainium3 ramps (40% better price-performance than T2)",
         "Advertising sustains 20%+ growth reaching $90B+ annualised run rate; Anthropic's $30B+ revenue routing through AWS Bedrock compounds demand visibility",
+        "ASCS captures ~0.5–1% of the $1.3T 3PL TAM by 2027 (~$6–13B incremental run rate) on the back of P&G, 3M, Lands' End, American Eagle traction; AI forecasting + 80,000-trailer fleet drives the cited 25% transport cost advantage",
         "FCF rebounds above $50B by 2027 as the $200B capex cycle matures; tariff headwinds absorbed by operational leverage and marketplace mix shifts"
       ]
     },
     "bull": {
-      "priceTarget": "$365",
-      "description": "AWS re-accelerates above 30%, chips business at $40B+ ARR becomes Amazon's third trillion-dollar segment, and the capex cycle delivers transformational FCF by 2027–2028.",
+      "priceTarget": "$395",
+      "description": "AWS re-accelerates above 30%, chips business at $40B+ ARR becomes Amazon's third trillion-dollar segment, ASCS scales toward 2–3% of the 3PL TAM ($25–40B run rate) and is recognised as the next AWS, and the capex cycle delivers transformational FCF by 2027–2028.",
       "points": [
         "AWS sustains 30%+ growth as Anthropic's $100B AWS commitment (5 GW capacity, Trainium2–4) and sovereign AI demand drive the backlog above $350B; Bedrock becomes the default enterprise AI inference platform",
         "Chips (Graviton + Trainium + Nitro) scale past $40B ARR growing triple digits — Trainium3 achieves cost-performance parity with Nvidia H100/B200 creating a 2–3 year silicon moat that cements AWS as the lowest-cost AI training and inference cloud",
+        "ASCS scales toward 2–3% of the $1.3T 3PL TAM ($25–40B run rate) by 2028 as healthcare/automotive/manufacturing verticals onboard; market re-rates the segment at AWS-style 8–10× revenue, contributing $250–400B of equity value",
         "FCF surpasses $80B by 2027–2028 as capex transitions to depreciation tailwinds; buybacks announced, triggering re-rating toward 35× forward earnings"
       ]
     }
@@ -201,7 +209,7 @@
     },
     "proprietaryData": {
       "status": "strong",
-      "note": "Purchase intent data, AWS usage telemetry, and last-mile logistics operational data are genuinely irreplaceable. AWS $244B+ backlog reflects deep customer commitment. The Anthropic bilateral lock-in ($33B Amazon investment; $100B+ Anthropic AWS commitment over 10 years) creates a proprietary data feedback loop: Anthropic's training workloads on Trainium2–4 generate silicon telemetry no competitor can observe, compounding AWS's custom chip advantage. This is now a structural, not just financial, relationship."
+      "note": "Purchase intent data, AWS usage telemetry, and last-mile logistics operational data are genuinely irreplaceable. AWS $244B+ backlog reflects deep customer commitment. The Anthropic bilateral lock-in ($33B Amazon investment; $100B+ Anthropic AWS commitment over 10 years) creates a proprietary data feedback loop. With the May 2026 ASCS launch, Amazon now also ingests freight, warehousing, and parcel telemetry from non-Amazon shippers (P&G, 3M, Lands' End, AE) — feeding the same AI forecasting models that already power FBA, compounding the data advantage UPS/FedEx cannot match."
     },
     "regulatoryLockIn": {
       "status": "strong",
@@ -209,17 +217,17 @@
     },
     "networkEffects": {
       "status": "strong",
-      "note": "Marketplace two-sided flywheel: more buyers → more sellers → better selection → more buyers. Self-reinforcing."
+      "note": "Marketplace two-sided flywheel: more buyers → more sellers → better selection → more buyers. Self-reinforcing. ASCS extends the flywheel to non-marketplace shippers — every additional cubic foot routed through Amazon's network lowers unit cost for everyone, reinforcing the cited 25% transport cost advantage."
     },
     "transactionEmbedding": {
       "status": "strong",
-      "note": "1-click purchasing habits, Prime subscription, and AWS embedded in the infrastructure of the global internet."
+      "note": "1-click purchasing habits, Prime subscription, and AWS embedded in the infrastructure of the global internet. ASCS now embeds Amazon directly into the supply chain operations of P&G, 3M, Lands' End, and American Eagle — moving the company from being a sales channel to being core logistics infrastructure for non-Amazon revenue streams. Switching cost rises with every integrated SKU."
     },
     "systemOfRecord": {
       "status": "strong",
       "note": "AWS is the system of record for global cloud infrastructure; $142B annualized run rate and S3 stores more data than any competitor by a wide margin."
     },
-    "verdict": "Amazon's moats are overwhelmingly AI-resilient: the $244B AWS backlog, Trainium custom silicon, proprietary purchase data, and the marketplace flywheel are core strengths that are strengthening — not weakening — in the AI era."
+    "verdict": "Amazon's moats are overwhelmingly AI-resilient: the $244B AWS backlog, Trainium custom silicon, proprietary purchase data, the marketplace flywheel, and now the ASCS logistics-as-a-service platform are core strengths that are strengthening — not weakening — in the AI era. The May 2026 ASCS launch is the most consequential moat-deepening event since AWS itself, externalising 80,000-trailer logistics into a $1.3T TAM platform whose unit economics improve with every shipper added."
   },
-  "lastAnalyzed": "April 2026"
+  "lastAnalyzed": "May 2026"
 }
