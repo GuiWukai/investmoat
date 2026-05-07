@@ -114,6 +114,7 @@ const YAHOO_SYMBOL_MAP: Record<string, string> = {
   dash:       'DASH',
   rblx:       'RBLX',
   soxx:       'SOXX',
+  voo:        'VOO',
 };
 
 export async function GET(

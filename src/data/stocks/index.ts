@@ -107,6 +107,7 @@ import regn from './regn.json';
 import dash from './dash.json';
 import rblx from './rblx.json';
 import soxx from './soxx.json';
+import voo from './voo.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -216,6 +217,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   dash: dash as StockAnalysisData,
   rblx: rblx as StockAnalysisData,
   soxx: soxx as StockAnalysisData,
+  voo: voo as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
