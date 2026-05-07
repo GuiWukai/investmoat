@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$830B"
+      "value": "~$887B"
     },
     {
       "label": "Price",
-      "value": "~$924"
+      "value": "~$988"
     }
   ],
   "chips": [
@@ -29,23 +29,23 @@
   "recommendation": "Strong Buy",
   "metrics": [
     {
-      "title": "FY2026 Guidance",
-      "value": "$80–83B",
-      "label": "~45% YoY growth — Mounjaro +110% YoY in Q4 2025",
+      "title": "Q1 2026 Revenue",
+      "value": "$19.80B",
+      "label": "+56% YoY — Mounjaro $8.7B (+125%), Zepbound $4.2B (+80%); non-GAAP EPS $8.55 (+156%)",
       "icon": "TrendingUp",
       "color": "#e8294b"
     },
     {
-      "title": "Foundayo Approved",
-      "value": "Apr 1",
-      "label": "FDA-approved oral GLP-1 pill — 1,390 debut-week Rx; $1.5–2.8B 2026 analyst est.",
+      "title": "FY2026 Guidance Raised",
+      "value": "$82–85B",
+      "label": "Revenue raised from $80–83B; non-GAAP EPS guide $35.50–$37.00",
       "icon": "Award",
       "color": "#7c3aed"
     },
     {
       "title": "Retatrutide Ph.3",
       "value": "28.7%",
-      "label": "TRIUMPH-4 Phase 3 confirmed — 71.2 lbs avg loss; 7 more Ph.3 readouts in 2026",
+      "label": "TRIUMPH-4 confirmed — 71.2 lbs avg loss; 7 more Ph.3 readouts in 2026",
       "icon": "Zap",
       "color": "#059669"
     }
@@ -70,24 +70,24 @@
     ]
   },
   "growth": {
-    "description": "FY2025: $65.18B revenue (+44.7% YoY). Q4 2025: $19.29B (+42.6% YoY) — Mounjaro $7.41B (+110%), Zepbound $4.26B (+123%). FY2026 guidance $80–83B (~25% YoY). Foundayo (orforglipron oral GLP-1) FDA-approved April 1, 2026 — 1,390 debut-week Rx (vs Wegovy pill 3,071 in first 4 days); analyst 2026 revenue est. $1.5–2.8B, priced at $299/mo self-pay or $25/mo with commercial insurance. Retatrutide TRIUMPH-4 Phase 3 confirmed 28.7% body weight loss / 71.2 lbs avg at high dose — seven additional Ph.3 readouts expected in 2026; GlobalData projects $15.6B in 2031 peak sales. Q1 2026 earnings April 30 (est. $17.6B revenue, EPS $7.21).",
+    "description": "Q1 2026 (Apr 30): Revenue $19.80B (+56% YoY), non-GAAP EPS $8.55 (+156%) — both crushing consensus ($17.6B / $6.85). Mounjaro $8.7B (+125% YoY), Zepbound $4.2B (+80%) — combined $12.8B in a single quarter. Management raised FY2026 guidance to $82–85B revenue (from $80–83B) and non-GAAP EPS $35.50–$37.00. FY2025 baseline: $65.18B (+44.7%). Foundayo (orforglipron oral GLP-1) FDA-approved April 1, 2026; analyst 2026 revenue est. $1.5–2.8B, priced at $299/mo self-pay or $25/mo with commercial insurance. Retatrutide TRIUMPH-4 Phase 3 confirmed 28.7% body weight loss / 71.2 lbs avg at high dose — seven additional Ph.3 readouts expected in 2026; GlobalData projects $15.6B in 2031 peak sales.",
     "growthAnalysis": {
       "cagrEstimate": "35–45%",
-      "scoreDerivation": "Base 90 (30%+ CAGR) + 5 oral GLP-1 TAM expansion (Foundayo FDA-approved April 1, opens injection-resistant patients) + 5 retatrutide next-gen catalyst (TRIUMPH-4 Phase 3 confirmed 28.7%/71.2 lbs; 7 more 2026 readouts) − 5 oral competition headwind (Wegovy pill led debut-week scripts 3,071 vs Foundayo 1,390; Structure Therapeutics aleniglipron Phase 2) − 5 pricing risk (Medicare Part D negotiation risk) = 90",
+      "scoreDerivation": "Base 90 (30%+ CAGR) + 5 Q1 2026 confirmation (revenue +56% YoY actual, FY guidance raised to $82–85B) + 5 retatrutide next-gen catalyst (TRIUMPH-4 Phase 3 confirmed 28.7%/71.2 lbs; 7 more 2026 readouts) − 5 oral competition headwind (Wegovy pill leads early Foundayo Rx; Structure Therapeutics aleniglipron Phase 2) − 5 pricing risk (Medicare Part D negotiation risk) = 90",
       "drivers": [
         {
           "name": "Mounjaro (diabetes)",
-          "metric": "$7.41B Q4 2025 (+110% YoY), FY2025 est. ~$22B",
+          "metric": "$8.7B Q1 2026 (+125% YoY) — re-accelerated from +110% in Q4 2025",
           "trend": "accelerating"
         },
         {
           "name": "Zepbound (obesity)",
-          "metric": "$4.26B Q4 2025 (+123% YoY), launched Jan 2024 — still ramping",
-          "trend": "accelerating"
+          "metric": "$4.2B Q1 2026 (+80% YoY); growth moderating off larger base but still doubling",
+          "trend": "stable"
         },
         {
           "name": "Foundayo (oral GLP-1) + Retatrutide",
-          "metric": "Foundayo FDA-approved Apr 1, 2026 — 1,390 debut-week Rx; retatrutide TRIUMPH-4 Ph.3 confirmed 28.7%/71.2 lbs",
+          "metric": "Foundayo FDA-approved Apr 1, 2026 — early ramp; retatrutide TRIUMPH-4 Ph.3 confirmed 28.7%/71.2 lbs, 7 more readouts due",
           "trend": "accelerating"
         }
       ],
@@ -98,38 +98,38 @@
     }
   },
   "valuation": {
-    "score": 78,
-    "description": "At ~$924 — 23% below the $1,200 base case and 19% off the 52-week high of $1,134 — LLY continues to trade at a discount despite clearing the biggest near-term catalyst risk: Foundayo (orforglipron) FDA-approved April 1, 2026. The persistent discount reflects early prescription competition from the Wegovy pill and investor caution ahead of the April 30 Q1 2026 earnings call. Analyst consensus target is ~$1,218, implying 32% upside from current levels.",
+    "score": 75,
+    "description": "At ~$988 — 18% below the $1,200 base case — LLY trades at a discount that compressed only modestly after the Q1 2026 blow-out (revenue +56%, EPS $8.55 vs $6.85 est, FY guidance raised to $82–85B / EPS $35.50–37.00). The remaining gap to base reflects oral GLP-1 competition risk and Medicare Part D negotiation overhang, not earnings concerns — the print confirmed accelerating fundamentals. Analyst consensus target moved up to ~$1,235 post-print, implying ~25% upside.",
     "peAnalysis": {
-      "asOf": "April 2026",
+      "asOf": "May 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~49×",
-          "note": "TTM EPS ~$19 (FY2025 est.)"
+          "value": "~41×",
+          "note": "TTM EPS ~$24 after Q1 2026 print"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~33×",
-          "note": "consensus FY2026 EPS ~$28"
+          "value": "~27×",
+          "note": "raised FY2026 EPS guide $35.50–37.00 (mid $36.25)"
         },
         {
           "label": "PEG Ratio",
-          "value": "~0.7×",
+          "value": "~0.6×",
           "note": "fwd P/E ÷ ~45% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~11×",
-          "note": "$80–83B FY2026 guidance"
+          "value": "~10×",
+          "note": "raised $82–85B FY2026 revenue guide"
         },
         {
           "label": "Price / FCF",
-          "value": "~35×",
-          "note": "~$25B FCF (NTM est.)"
+          "value": "~33×",
+          "note": "~$27B FCF (NTM est.) on guidance raise"
         }
       ],
-      "summary": "At ~33× forward GAAP P/E with a PEG of ~0.7×, LLY remains significantly cheaper than its large-cap pharma peer average (~45×), despite Foundayo's FDA approval on April 1 adding a third major commercial product to the portfolio. The sub-1.0 PEG on ~45% EPS growth is characteristic of a mispriced compounder — the market is paying a Wegovy-competition discount on a franchise that now holds both the leading injectable (Zepbound/Mounjaro) and an approved oral (Foundayo). The 49× trailing versus 33× forward P/E gap confirms accelerating earnings, not multiple expansion."
+      "summary": "Forward P/E compressed from ~33× to ~27× post-print as guidance was raised faster than the share price moved — PEG fell to ~0.6×, deepening the relative discount to large-cap pharma peers (~45×). The 41× trailing vs 27× forward gap confirms still-accelerating earnings, not multiple expansion. The Q1 print resolved the 'will guidance hold' overhang; the market now needs evidence Foundayo can close the script gap with Wegovy oral and that retatrutide's remaining 2026 readouts hold the TRIUMPH-4 bar."
     }
   },
   "scenarios": {
@@ -204,5 +204,5 @@
     },
     "verdict": "Lilly's core moat — patent-protected biologics with regulatory approval — is structurally immune to AI disruption, and AI drug discovery tools actually accelerate Lilly's pipeline advantage by compressing early-stage discovery timelines. The company is a net beneficiary of AI adoption, using it to identify novel targets and optimize clinical trials faster than underfunded competitors."
   },
-  "lastAnalyzed": "April 2026"
+  "lastAnalyzed": "May 2026"
 }
