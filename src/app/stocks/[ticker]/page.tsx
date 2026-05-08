@@ -84,7 +84,7 @@ export default async function Page({ params }: { params: Promise<{ ticker: strin
   const moatScore = computeMoatScore(data.tenMoats);
   const growthScore = computeGrowthScore(data.growth.growthAnalysis) ?? 0;
   const valuationScore = data.valuation.score;
-  const compositeScore = Math.round(moatScore * 0.4 + growthScore * 0.35 + valuationScore * 0.25);
+  const compositeScore = Math.round(moatScore * 0.4 + growthScore * 0.3 + valuationScore * 0.3);
   const canonicalUrl = `${SITE_URL}/stocks/${data.slug}`;
   const ogImageUrl = `${canonicalUrl}/opengraph-image`;
   const description =
