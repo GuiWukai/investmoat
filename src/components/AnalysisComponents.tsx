@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import { TrendingUp, PlusCircle, Minus, Zap, ShieldCheck, ShieldX, RefreshCw } from "lucide-react";
+import { TrendingUp, PlusCircle, Minus, Zap, ShieldCheck, ShieldX, RefreshCw, FileText, Mic, Newspaper, BookOpen, Database as DatabaseIcon, Landmark as LandmarkIcon, ExternalLink } from "lucide-react";
 import { Spinner } from "@heroui/react";
-import type { TenMoatsAssessment, MoatStatus } from "@/app/tenMoatsData";
+import type { TenMoatsAssessment, MoatStatus, Citation, CitationType } from "@/app/tenMoatsData";
 
 // ─── Count-up animation ────────────────────────────────────────────────────────
 function useCountUp(target: number, duration = 900): number {
@@ -337,8 +337,53 @@ const moatStatusConfig: Record<MoatStatus, { label: string; color: string; bgCol
   destroyed: { label: 'N/A',      color: '#71717a', bgColor: 'rgba(113,113,122,0.08)' },
 };
 
-function MoatRow({ label, status, note }: { label: string; status: MoatStatus; note: string }) {
+const citationTypeConfig: Record<CitationType, { label: string; icon: React.ReactNode }> = {
+  'filing':         { label: 'Filing',     icon: <FileText size={10} /> },
+  'earnings-call':  { label: 'Call',       icon: <Mic size={10} /> },
+  'press':          { label: 'Press',      icon: <Newspaper size={10} /> },
+  'research':       { label: 'Research',   icon: <BookOpen size={10} /> },
+  'data':           { label: 'Data',       icon: <DatabaseIcon size={10} /> },
+  'regulator':      { label: 'Regulator',  icon: <LandmarkIcon size={10} /> },
+};
+
+function Citations({ items }: { items: Citation[] }) {
+  return (
+    <ul className="mt-2 space-y-1">
+      {items.map((c, i) => {
+        const cfg = citationTypeConfig[c.type];
+        const isLink = !!c.url;
+        const Tag = isLink ? 'a' : 'span';
+        return (
+          <li key={i} className="flex items-start gap-2 text-[11px] leading-snug">
+            <span className="text-white/25 tabular-nums shrink-0 mt-px">{i + 1}.</span>
+            <span className="inline-flex items-center gap-1 shrink-0 px-1.5 py-0.5 rounded text-white/40 bg-white/[0.04] border border-white/[0.06] mt-px">
+              <span className="text-white/35">{cfg.icon}</span>
+              <span className="text-[9px] font-bold uppercase tracking-wider">{cfg.label}</span>
+            </span>
+            <span className="min-w-0 flex-1">
+              <Tag
+                {...(isLink ? { href: c.url, target: '_blank', rel: 'noopener noreferrer' } : {})}
+                className={`text-white/55 ${isLink ? 'hover:text-white underline decoration-white/15 hover:decoration-white/40 underline-offset-2' : ''}`}
+              >
+                {c.label}
+                {isLink && <ExternalLink size={9} className="inline ml-1 -mt-0.5 opacity-60" />}
+              </Tag>
+              {c.asOf && <span className="text-white/22 ml-1.5">· {c.asOf}</span>}
+              {c.quote && (
+                <span className="block text-white/35 italic mt-0.5">&ldquo;{c.quote}&rdquo;</span>
+              )}
+            </span>
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
+function MoatRow({ label, status, note, citations }: { label: string; status: MoatStatus; note: string; citations?: Citation[] }) {
   const cfg = moatStatusConfig[status];
+  const [open, setOpen] = useState(false);
+  const hasCitations = !!citations && citations.length > 0;
   return (
     <div className="flex items-start gap-3 py-2.5 border-b border-white/[0.04] last:border-none">
       <div className="w-1.5 h-1.5 rounded-full shrink-0 mt-1.5" style={{ background: cfg.color }} />
@@ -349,8 +394,19 @@ function MoatRow({ label, status, note }: { label: string; status: MoatStatus; n
             style={{ color: cfg.color, background: cfg.bgColor }}>
             {cfg.label}
           </span>
+          {hasCitations && (
+            <button
+              type="button"
+              onClick={() => setOpen(o => !o)}
+              aria-expanded={open}
+              className="text-[9px] font-black uppercase tracking-widest px-1.5 py-0.5 rounded text-white/45 bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.07] hover:text-white/70 transition-colors"
+            >
+              {citations!.length} {citations!.length === 1 ? 'source' : 'sources'} {open ? '▴' : '▾'}
+            </button>
+          )}
         </div>
         <p className="text-xs text-white/40 leading-relaxed">{note}</p>
+        {hasCitations && open && <Citations items={citations!} />}
       </div>
     </div>
   );
@@ -392,8 +448,8 @@ export function TenMoatsCard({ data }: { data: TenMoatsAssessment }) {
             <span className="text-[10px] font-black uppercase tracking-widest text-white/40">AI-Vulnerable Moats</span>
           </div>
           {vulnerableMoats.map(({ label, key }) => {
-            const item = data[key] as { status: MoatStatus; note: string };
-            return <MoatRow key={key} label={label} status={item.status} note={item.note} />;
+            const item = data[key] as { status: MoatStatus; note: string; citations?: Citation[] };
+            return <MoatRow key={key} label={label} status={item.status} note={item.note} citations={item.citations} />;
           })}
         </div>
 
@@ -406,8 +462,8 @@ export function TenMoatsCard({ data }: { data: TenMoatsAssessment }) {
             <span className="text-[10px] font-black uppercase tracking-widest text-white/40">AI-Resilient Moats</span>
           </div>
           {resilientMoats.map(({ label, key }) => {
-            const item = data[key] as { status: MoatStatus; note: string };
-            return <MoatRow key={key} label={label} status={item.status} note={item.note} />;
+            const item = data[key] as { status: MoatStatus; note: string; citations?: Citation[] };
+            return <MoatRow key={key} label={label} status={item.status} note={item.note} citations={item.citations} />;
           })}
         </div>
       </div>

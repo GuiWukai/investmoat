@@ -21,9 +21,24 @@ export interface Scenario {
   points: string[];
 }
 
+export type CitationType = 'filing' | 'earnings-call' | 'press' | 'research' | 'data' | 'regulator';
+
+export interface Citation {
+  /** Short human-readable label, e.g. "Apple 10-K FY24, p.18" */
+  label: string;
+  /** Optional link. Omit for paywalled or primary-source-only references. */
+  url?: string;
+  type: CitationType;
+  /** Optional one-line excerpt to show under the label. */
+  quote?: string;
+  /** Free-form date marker, e.g. "Q3 2025" or "2025-03-12". */
+  asOf?: string;
+}
+
 export interface MoatAssessmentData {
   status: MoatStatus;
   note: string;
+  citations?: Citation[];
 }
 
 export interface TenMoatsData {
