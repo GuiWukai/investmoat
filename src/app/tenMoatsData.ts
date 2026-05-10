@@ -3,9 +3,20 @@
 
 export type MoatStatus = 'strong' | 'intact' | 'weakened' | 'destroyed';
 
+export type CitationType = 'filing' | 'earnings-call' | 'press' | 'research' | 'data' | 'regulator';
+
+export interface Citation {
+  label: string;
+  url?: string;
+  type: CitationType;
+  quote?: string;
+  asOf?: string;
+}
+
 export interface MoatAssessment {
   status: MoatStatus;
   note: string;
+  citations?: Citation[];
 }
 
 export interface TenMoatsAssessment {

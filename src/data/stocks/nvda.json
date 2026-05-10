@@ -176,7 +176,14 @@
     },
     "talentScarcity": {
       "status": "strong",
-      "note": "GPU chip architects, CUDA kernel engineers, and AI systems researchers remain extraordinarily scarce and cannot be AI-replaced."
+      "note": "GPU chip architects, CUDA kernel engineers, and AI systems researchers remain extraordinarily scarce and cannot be AI-replaced.",
+      "citations": [
+        {
+          "label": "NVIDIA 10-K — Human capital disclosure",
+          "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=10-K",
+          "type": "filing"
+        }
+      ]
     },
     "bundling": {
       "status": "intact",
@@ -184,15 +191,42 @@
     },
     "proprietaryData": {
       "status": "strong",
-      "note": "Millions of CUDA training runs generate proprietary AI workload optimization insights unavailable to competitors."
+      "note": "Millions of CUDA training runs generate proprietary AI workload optimization insights unavailable to competitors.",
+      "citations": [
+        {
+          "label": "NVIDIA Developer — CUDA platform documentation",
+          "url": "https://developer.nvidia.com/cuda-toolkit",
+          "type": "data"
+        }
+      ]
     },
     "regulatoryLockIn": {
       "status": "weakened",
-      "note": "Export control whipsaw persists: H20 ban (April 2025) caused a $4.5B charge, reversed July 2025; H200 approved December 2025; 400K+ units cleared for China in April 2026. Policy risk remains structurally elevated despite the near-term reopening."
+      "note": "Export control whipsaw persists: H20 ban (April 2025) caused a $4.5B charge, reversed July 2025; H200 approved December 2025; 400K+ units cleared for China in April 2026. Policy risk remains structurally elevated despite the near-term reopening.",
+      "citations": [
+        {
+          "label": "U.S. Bureau of Industry and Security — Advanced computing export controls",
+          "url": "https://www.bis.doc.gov/",
+          "type": "regulator"
+        },
+        {
+          "label": "NVIDIA Q1 FY26 8-K — H20 charge disclosure",
+          "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=8-K",
+          "type": "filing",
+          "asOf": "Apr 2025"
+        }
+      ]
     },
     "networkEffects": {
       "status": "strong",
-      "note": "4M+ CUDA developers create the largest and most entrenched AI developer community — switching has a multi-year rewrite cost."
+      "note": "4M+ CUDA developers create the largest and most entrenched AI developer community — switching has a multi-year rewrite cost.",
+      "citations": [
+        {
+          "label": "NVIDIA GTC keynote — CUDA developer community size",
+          "type": "press",
+          "asOf": "GTC 2024"
+        }
+      ]
     },
     "transactionEmbedding": {
       "status": "strong",

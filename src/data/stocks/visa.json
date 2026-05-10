@@ -170,19 +170,48 @@
     },
     "proprietaryData": {
       "status": "strong",
-      "note": "$15T+ in annual transaction data provides unmatched real-time fraud intelligence, merchant analytics, and economic insights."
+      "note": "$15T+ in annual transaction data provides unmatched real-time fraud intelligence, merchant analytics, and economic insights.",
+      "citations": [
+        {
+          "label": "Visa 10-K — Total payments volume disclosure",
+          "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001403161&type=10-K",
+          "type": "filing"
+        }
+      ]
     },
     "regulatoryLockIn": {
       "status": "strong",
-      "note": "Bank card association memberships, PCI compliance infrastructure, and regulatory approval in 200+ countries is a decades-long moat."
+      "note": "Bank card association memberships, PCI compliance infrastructure, and regulatory approval in 200+ countries is a decades-long moat.",
+      "citations": [
+        {
+          "label": "PCI Security Standards Council",
+          "url": "https://www.pcisecuritystandards.org/",
+          "type": "regulator"
+        }
+      ]
     },
     "networkEffects": {
       "status": "strong",
-      "note": "The quintessential two-sided network: 4.3B Visa cards × 130M merchant locations. More merchants → more cardholders → more merchants."
+      "note": "The quintessential two-sided network: 4.3B Visa cards × 130M merchant locations. More merchants → more cardholders → more merchants.",
+      "citations": [
+        {
+          "label": "Visa 10-K — Cards in circulation & merchant locations",
+          "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001403161&type=10-K",
+          "type": "filing",
+          "quote": "Approximately 4.6 billion Visa-branded cards used at over 130 million merchant locations."
+        }
+      ]
     },
     "transactionEmbedding": {
       "status": "strong",
-      "note": "Visa IS the transaction infrastructure — embedded in every point-of-sale, online checkout, and cross-border payment globally."
+      "note": "Visa IS the transaction infrastructure — embedded in every point-of-sale, online checkout, and cross-border payment globally.",
+      "citations": [
+        {
+          "label": "Visa Investor Relations — Operational performance",
+          "url": "https://investor.visa.com/",
+          "type": "data"
+        }
+      ]
     },
     "systemOfRecord": {
       "status": "strong",

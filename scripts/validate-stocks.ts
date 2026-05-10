@@ -22,8 +22,23 @@ const DIM = '\x1b[2m';
 const RESET = '\x1b[0m';
 
 type Failure = { file: string; message: string };
+type Warning = { file: string; message: string };
 
-function validateFile(file: string): Failure[] {
+const MOAT_KEYS = [
+  'learnedInterfaces', 'businessLogic', 'publicDataAccess', 'talentScarcity', 'bundling',
+  'proprietaryData', 'regulatoryLockIn', 'networkEffects', 'transactionEmbedding', 'systemOfRecord',
+] as const;
+
+function citationCount(tenMoats: Record<string, unknown>): number {
+  let n = 0;
+  for (const key of MOAT_KEYS) {
+    const moat = tenMoats[key] as { citations?: unknown[] } | undefined;
+    if (moat?.citations && Array.isArray(moat.citations)) n += moat.citations.length;
+  }
+  return n;
+}
+
+function validateFile(file: string): { failures: Failure[]; warnings: Warning[] } {
   const fullPath = join(STOCKS_DIR, file);
   const slug = basename(file, '.json');
 
@@ -31,27 +46,34 @@ function validateFile(file: string): Failure[] {
   try {
     raw = JSON.parse(readFileSync(fullPath, 'utf-8'));
   } catch (err) {
-    return [{ file, message: `JSON parse error: ${(err as Error).message}` }];
+    return { failures: [{ file, message: `JSON parse error: ${(err as Error).message}` }], warnings: [] };
   }
 
   const result = stockAnalysisSchema.safeParse(raw);
   if (!result.success) {
-    return result.error.issues.map((issue) => ({
-      file,
-      message: `${issue.path.join('.') || '<root>'}: ${issue.message}`,
-    }));
+    return {
+      failures: result.error.issues.map((issue) => ({
+        file,
+        message: `${issue.path.join('.') || '<root>'}: ${issue.message}`,
+      })),
+      warnings: [],
+    };
   }
 
   if (result.data.slug !== slug) {
-    return [
-      {
-        file,
-        message: `slug "${result.data.slug}" does not match filename "${slug}"`,
-      },
-    ];
+    return {
+      failures: [{ file, message: `slug "${result.data.slug}" does not match filename "${slug}"` }],
+      warnings: [],
+    };
   }
 
-  return [];
+  const warnings: Warning[] = [];
+  const cites = citationCount(result.data.tenMoats as unknown as Record<string, unknown>);
+  if (cites === 0) {
+    warnings.push({ file, message: 'tenMoats has no citations — credibility gap on every moat row' });
+  }
+
+  return { failures: [], warnings };
 }
 
 function main(): void {
@@ -62,9 +84,11 @@ function main(): void {
   }
 
   const failures: Failure[] = [];
+  const warnings: Warning[] = [];
   for (const file of files) {
-    const fileFailures = validateFile(file);
-    failures.push(...fileFailures);
+    const { failures: f, warnings: w } = validateFile(file);
+    failures.push(...f);
+    warnings.push(...w);
   }
 
   if (failures.length > 0) {
@@ -84,6 +108,14 @@ function main(): void {
       `\n${DIM}Schema: src/lib/stockSchema.ts — update both schema and src/types/stockAnalysis.ts when fields change.${RESET}`,
     );
     process.exit(1);
+  }
+
+  if (warnings.length > 0) {
+    console.warn(`${YELLOW}⚠ ${warnings.length} stock file(s) without citations${RESET}`);
+    for (const { file, message } of warnings) {
+      console.warn(`  ${DIM}•${RESET} ${YELLOW}${file}${RESET} — ${message}`);
+    }
+    console.warn('');
   }
 
   console.log(`${GREEN}✓ Validated ${files.length} stock file(s)${RESET}`);

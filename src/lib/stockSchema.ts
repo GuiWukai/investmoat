@@ -38,9 +38,18 @@ const analysisPointSchema = z.strictObject({
   text: z.string().min(1),
 });
 
+const citationSchema = z.strictObject({
+  label: z.string().min(1),
+  url: z.string().url().optional(),
+  type: z.enum(['filing', 'earnings-call', 'press', 'research', 'data', 'regulator']),
+  quote: z.string().min(1).optional(),
+  asOf: z.string().min(1).optional(),
+});
+
 const moatAssessmentSchema = z.strictObject({
   status: moatStatusSchema,
   note: z.string().min(1),
+  citations: z.array(citationSchema).min(1).max(4).optional(),
 });
 
 const score0to100 = z.number().int().min(0).max(100);

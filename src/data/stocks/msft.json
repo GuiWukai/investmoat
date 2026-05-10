@@ -168,19 +168,52 @@
     },
     "bundling": {
       "status": "strong",
-      "note": "Office + Teams + Azure + Security + Copilot bundle deepened by AI integration. 70% of Fortune 500 using Copilot creates emergent bundle value no point-solution replicates."
+      "note": "Office + Teams + Azure + Security + Copilot bundle deepened by AI integration. 70% of Fortune 500 using Copilot creates emergent bundle value no point-solution replicates.",
+      "citations": [
+        {
+          "label": "Microsoft Q2 FY25 earnings call — Copilot Fortune 500 adoption",
+          "type": "earnings-call",
+          "asOf": "Q2 FY25"
+        }
+      ]
     },
     "proprietaryData": {
       "status": "strong",
-      "note": "Azure telemetry, LinkedIn social graph, and GitHub code corpus are unrivaled enterprise data assets. The AI flywheel compounds as more Copilot usage flows back into model training."
+      "note": "Azure telemetry, LinkedIn social graph, and GitHub code corpus are unrivaled enterprise data assets. The AI flywheel compounds as more Copilot usage flows back into model training.",
+      "citations": [
+        {
+          "label": "Microsoft 10-K — Segment disclosures (Productivity & Business Processes, Intelligent Cloud)",
+          "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000789019&type=10-K",
+          "type": "filing"
+        },
+        {
+          "label": "GitHub Octoverse — annual developer report",
+          "url": "https://github.blog/news-insights/octoverse/",
+          "type": "data"
+        }
+      ]
     },
     "regulatoryLockIn": {
       "status": "strong",
-      "note": "JEDI/DoD contracts, FedRAMP High, HIPAA, and government cloud compliance create irreplaceable switching costs. Regulatory overhang persists: the FTC/DOJ joint probe into cloud licensing and AI bundling continues under the Trump administration; Japan FTC raided Microsoft Japan in early 2026. Partial relief: the UK's digital markets regulator narrowed its cloud competition inquiry effective April 1, 2026, removing one vector of structural remedy risk. Net assessment: lock-in from government cloud certifications is undiminished; antitrust risk is a multiple overhang, not a moat threat."
+      "note": "JEDI/DoD contracts, FedRAMP High, HIPAA, and government cloud compliance create irreplaceable switching costs. Regulatory overhang persists: the FTC/DOJ joint probe into cloud licensing and AI bundling continues under the Trump administration; Japan FTC raided Microsoft Japan in early 2026. Partial relief: the UK's digital markets regulator narrowed its cloud competition inquiry effective April 1, 2026, removing one vector of structural remedy risk. Net assessment: lock-in from government cloud certifications is undiminished; antitrust risk is a multiple overhang, not a moat threat.",
+      "citations": [
+        {
+          "label": "FedRAMP Marketplace — Microsoft authorisations",
+          "url": "https://marketplace.fedramp.gov/",
+          "type": "regulator"
+        }
+      ]
     },
     "networkEffects": {
       "status": "strong",
-      "note": "450M+ paid commercial Microsoft 365 seats (up from 400M) and the Azure developer ecosystem enhanced by an AI model marketplace of 1,900+ models — more models attract more workloads. GitHub Copilot reached 4.7M paid subscribers (+75% YoY), reinforcing developer flywheel."
+      "note": "450M+ paid commercial Microsoft 365 seats (up from 400M) and the Azure developer ecosystem enhanced by an AI model marketplace of 1,900+ models — more models attract more workloads. GitHub Copilot reached 4.7M paid subscribers (+75% YoY), reinforcing developer flywheel.",
+      "citations": [
+        {
+          "label": "Microsoft FY25 earnings — M365 commercial seats disclosure",
+          "type": "earnings-call",
+          "asOf": "FY25"
+        }
+      ]
     },
     "transactionEmbedding": {
       "status": "strong",
