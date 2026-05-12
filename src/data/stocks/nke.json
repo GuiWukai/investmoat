@@ -5,8 +5,8 @@
   "lastAnalyzed": "May 2026",
   "headerStats": [
     { "label": "Ticker", "value": "NKE" },
-    { "label": "Market Cap", "value": "~$110B" },
-    { "label": "Current Price", "value": "~$73" }
+    { "label": "Market Cap", "value": "~$62B" },
+    { "label": "Current Price", "value": "~$42" }
   ],
   "chips": [
     { "label": "Athletic Apparel | Footwear", "color": "primary" },
@@ -24,7 +24,7 @@
     {
       "title": "Gross Margin",
       "value": "~42%",
-      "label": "Down from 46% pre-correction; recovering",
+      "label": "Down 330bps YoY; tariffs + discounting pressure persists",
       "icon": "Percent",
       "color": "#f59e0b"
     },
@@ -56,61 +56,61 @@
     ]
   },
   "growth": {
-    "description": "FY26 revenue flat-to-slightly-down on inventory work-down + wholesale rebuild + Greater China weakness. FY27 expected to inflect to mid-single-digit growth as new product cycle, wholesale rebuild, and DTC normalisation align. Gross margin recovering toward 44-45% on lower discounting.",
+    "description": "FY26 Q4 revenue guided -2% to -4% (vs +1.9% consensus); Greater China expected to fall ~20% this quarter on Anta/local-brand share gains. Q3 FY26 was a slight beat ($11.28B rev, EPS $0.35) but NIKE Direct -4% and digital -12%. FY27 inflection still the thesis (mid-single-digit growth, GM recovery to 44%) but the bar has lowered and tariff drag is now material.",
     "growthAnalysis": {
-      "cagrEstimate": "3-6%",
-      "scoreDerivation": "Base 60 (4-8% CAGR low band) + 3 turnaround optionality (Hill leadership, product cycle) - 5 China weakness - 3 competition (Hoka/On/New Balance share gain) = 55",
+      "cagrEstimate": "2-5%",
+      "scoreDerivation": "Base 60 (4-8% CAGR low band) + 3 turnaround optionality (Hill leadership, NA order book) - 7 China deterioration (20% Q4 decline guided) - 3 competition (Hoka/On + Anta share gain) = 53",
       "drivers": [
-        { "name": "North America", "metric": "Trough on inventory work-down; recovery expected late FY26", "trend": "stable" },
-        { "name": "Greater China", "metric": "Persistent weakness; competitive and macro headwinds", "trend": "decelerating" },
-        { "name": "Innovation Cadence", "metric": "2026 product cycle reportedly deepest in 5 years; key swing", "trend": "accelerating" }
+        { "name": "North America", "metric": "Strong summer order book; mgmt sees positive sell-through despite Mideast disruption", "trend": "stable" },
+        { "name": "Greater China", "metric": "Q4 FY26 guided ~-20%; Anta capturing basketball/lifestyle share", "trend": "decelerating" },
+        { "name": "Innovation Cadence", "metric": "2026 product cycle reportedly deepest in 5 years; key swing factor", "trend": "accelerating" }
       ],
       "primaryType": "market share",
-      "keyRisk": "If FY27 fails to inflect to mid-single-digit growth and Greater China remains weak, the turnaround thesis stalls and the multiple compresses to 18× as the market reassesses brand pricing power vs Hoka/On/Adidas.",
-      "keyRiskSeverity": "moderate",
-      "marginTrend": "expanding"
+      "keyRisk": "If China continues declining 15%+ into FY27 and tariff pass-through fails (class-action over tariff pricing already filed), gross margin recovery stalls below 43% and FY27 EPS comes in below $4, pushing the bear case to <$35.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "compressing"
     }
   },
   "valuation": {
-    "score": 78,
-    "description": "At ~$73 NKE trades at ~22× depressed FY26 EPS — discount to its 5-year median (~28×) and to Lululemon (~26×). The discount prices in turnaround risk; through-cycle EPS recovery to $4+ implies 18× normalised, which provides meaningful upside.",
+    "score": 82,
+    "description": "At ~$42 NKE trades at ~13× depressed FY26 EPS — a deep discount to its 5-year median (~28×) and the cheapest the brand has been in over a decade. Through-cycle FY27 EPS recovery to $4+ implies just ~10× on the next-year number, with a 3% dividend yield as carry. Valuation now prices in a failed turnaround.",
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
-        { "label": "Forward P/E (FY26)", "value": "~22×", "note": "EPS ~$3.30; trough cycle" },
-        { "label": "Forward P/E (FY27)", "value": "~17×", "note": "Assumes EPS recovery to $4.30+" },
-        { "label": "Price / Sales (FY26)", "value": "~2.3×", "note": "Discount to historical median" },
-        { "label": "Dividend Yield", "value": "~2.3%", "note": "Sustained through trough cycle" },
-        { "label": "FCF Yield", "value": "~5%", "note": "FCF compressed; recovers with margin" }
+        { "label": "Forward P/E (FY26)", "value": "~13×", "note": "EPS ~$3.30; trough cycle" },
+        { "label": "Forward P/E (FY27)", "value": "~10×", "note": "Assumes EPS recovery to $4.30+" },
+        { "label": "Price / Sales (FY26)", "value": "~1.3×", "note": "Deepest discount to historical median in 10+ years" },
+        { "label": "Dividend Yield", "value": "~3.8%", "note": "Sustained through trough cycle" },
+        { "label": "FCF Yield", "value": "~7%", "note": "FCF compressed; recovers with margin" }
       ],
-      "summary": "Valuation prices in turnaround uncertainty; through-cycle multiple suggests material upside if FY27 inflects."
+      "summary": "Valuation prices in a failed turnaround; any FY27 inflection or China stabilisation drives material upside."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$55",
-      "description": "Turnaround stalls, Greater China stays weak, Hoka/On continue share gains, multiple compresses to 16× depressed earnings.",
+      "priceTarget": "$32",
+      "description": "Turnaround stalls, China continues -15% into FY27, tariffs persist, FY27 EPS comes in below $3.50, multiple compresses to ~9× as the market reprices the brand toward Adidas-style structural decline.",
       "points": [
-        "FY27 fails to inflect to mid-single-digit growth",
-        "Greater China revenue continues declining",
-        "Hoka/On/New Balance share gains accelerate; Nike NA share continues drifting"
+        "FY27 fails to inflect; revenue still flat-to-down",
+        "Greater China revenue continues declining 15%+ on Anta/local share gains",
+        "Tariff class-action and gross margin compression below 41%"
       ]
     },
     "base": {
-      "priceTarget": "$95",
-      "description": "FY27 inflects to mid-single-digit growth, gross margin recovers to 44-45%, EPS rebuilds to $4.30, multiple holds 22-24×.",
+      "priceTarget": "$65",
+      "description": "FY27 inflects to low-to-mid-single-digit growth, gross margin stabilises around 43-44%, EPS rebuilds to $4.20, multiple expands modestly to ~15×.",
       "points": [
-        "FY27 revenue grows mid-single-digits as wholesale rebuild and product cycle align",
-        "Greater China stabilises at low growth on competitive normalisation",
-        "Direct + wholesale channel mix optimises around 40/60 split"
+        "FY27 revenue grows low-single-digits as NA order book + product cycle land",
+        "Greater China stabilises after Q4 FY26 reset",
+        "Tariff pass-through partially offsets margin drag"
       ]
     },
     "bull": {
-      "priceTarget": "$130",
-      "description": "Hill turnaround succeeds, product cycle resonates, FY28 EPS exceeds $5.50, multiple expands to 25× on brand quality reassessment.",
+      "priceTarget": "$95",
+      "description": "Hill turnaround executes, 2026 product cycle resonates, FY28 EPS recovers to $5+, multiple rerates to 19× on brand reassessment and China stabilisation.",
       "points": [
-        "FY28 revenue grows 8%+ on innovation cadence + Greater China recovery",
-        "Gross margin recovers to 46%+ on lower discount and direct mix",
+        "FY28 revenue grows 6-8% on innovation cadence + Greater China recovery",
+        "Gross margin recovers to 45%+ on lower discount and direct mix",
         "Athletic apparel category leadership reasserted; multiple rerates"
       ]
     }
@@ -157,6 +157,6 @@
       "note": "N/A."
     },
     "aiResilienceScore": 50,
-    "verdict": "Nike's moat is brand + scale + product cadence — AI is largely neutral (improves marketing efficiency, accelerates design but does not threaten the brand). The thesis question is execution-and-China, not technological obsolescence; turnaround thesis is reasonable at depressed valuation."
+    "verdict": "Nike's moat is brand + scale + product cadence — AI is largely neutral (improves marketing efficiency, accelerates design but does not threaten the brand). The thesis question is execution-and-China, not technological obsolescence; with stock at $42 (52-week low) and FY27 EPS recovery still intact, the risk/reward has improved despite worsening China — turnaround thesis is now priced as failed."
   }
 }
