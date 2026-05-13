@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
-import { PieChart, ShieldCheck, ChevronRight, TrendingUp, TrendingDown } from "lucide-react";
+import { PieChart, ShieldCheck, ChevronRight, TrendingUp, TrendingDown, Eye } from "lucide-react";
 import { Spinner } from "@heroui/react";
 import { allCoverageData, getAverageScore } from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
@@ -66,6 +66,7 @@ function DynamicScore({
 // ─── Portfolio threshold ──────────────────────────────────────────────────────
 const PORTFOLIO_THRESHOLD = 75;
 const MAX_PORTFOLIO = 25;
+const NEAR_TOP_COUNT = 10;
 
 // ─── Per-ticker metadata (display color, category, exclusion reason) ──────────
 const stockMeta: Record<string, { color: string; category: string; exclusionReason?: string }> = {
@@ -207,7 +208,7 @@ export default function PortfolioPage() {
     return () => { cancelled = true; };
   }, []);
 
-  const portfolio = useMemo(() => {
+  const ranked = useMemo(() => {
     return [...allCoverageData]
       .map(s => {
         const price = allPrices[s.ticker];
@@ -220,9 +221,7 @@ export default function PortfolioPage() {
         return { s, composite };
       })
       .sort((a, b) => b.composite - a.composite)
-      .filter(({ composite }) => composite >= PORTFOLIO_THRESHOLD)
-      .slice(0, MAX_PORTFOLIO)
-      .map(({ s, composite }) => ({
+      .map(({ s, composite }, idx) => ({
         ticker:   s.ticker,
         name:     s.name,
         slug:     s.slug,
@@ -231,8 +230,19 @@ export default function PortfolioPage() {
         category: stockMeta[s.ticker]?.category ?? "Other",
         stock:    s,
         composite,
+        rank:     idx + 1,
       }));
   }, [allPrices]);
+
+  const portfolio = useMemo(
+    () => ranked.filter(r => r.composite >= PORTFOLIO_THRESHOLD).slice(0, MAX_PORTFOLIO),
+    [ranked]
+  );
+
+  const nearTop = useMemo(() => {
+    const inPortfolio = new Set(portfolio.map(p => p.ticker));
+    return ranked.filter(r => !inPortfolio.has(r.ticker)).slice(0, NEAR_TOP_COUNT);
+  }, [ranked, portfolio]);
 
   const liveScores: Record<string, number> = {};
   portfolio.forEach(p => { liveScores[p.ticker] = Math.round(p.composite); });
@@ -678,6 +688,154 @@ export default function PortfolioPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Watchlist (next-best, not in portfolio) ──────────────────────── */}
+      {nearTop.length > 0 && (
+        <section className="animate-fade-up stagger-fill-both pb-12" style={{ animationDelay: '0.45s' }}>
+          <div className="flex items-center gap-4 mb-5">
+            <div>
+              <p className="section-label mb-1">Watchlist</p>
+              <h2 className="text-xl font-bold text-white/85">Near the Top {MAX_PORTFOLIO}</h2>
+            </div>
+            <div className="h-px flex-1 bg-white/[0.05]" />
+            <div className="flex items-center gap-1.5 text-white/30 shrink-0">
+              <Eye size={13} />
+              <span className="text-[11px] font-bold uppercase tracking-wider">{nearTop.length}</span>
+            </div>
+          </div>
+
+          <p className="text-white/40 text-xs md:text-sm mb-4 max-w-2xl leading-relaxed">
+            The next {nearTop.length} highest-ranked names that fell outside the {MAX_PORTFOLIO}-position
+            portfolio. Worth tracking — a moat upgrade, growth re-acceleration, or valuation reset could
+            promote them.
+          </p>
+
+          <div className="rounded-2xl overflow-hidden border border-white/[0.05] bg-white/[0.02]">
+            {/* Table header */}
+            <div className="flex items-center gap-3 md:gap-4 px-4 md:px-5 py-2.5 border-b border-white/[0.05] bg-white/[0.02]">
+              <div className="w-0.5 shrink-0" />
+              <div className="section-label w-9 text-right shrink-0">#</div>
+              <div className="section-label min-w-[110px] md:min-w-[140px]">Holding</div>
+              <div className="section-label hidden sm:block shrink-0 w-24">Category</div>
+              <div className="flex-1" />
+              <div className="hidden lg:block section-label text-right shrink-0 w-36">1-Yr Return</div>
+              <div className={`section-label text-right shrink-0 w-12 ${scoreColumn !== 'score' ? 'hidden lg:block' : ''}`}>Score</div>
+              <div className={`section-label text-right shrink-0 w-14 ${scoreColumn !== 'change' ? 'hidden lg:block' : ''}`}>1D %</div>
+              <div className="w-[15px] shrink-0" />
+            </div>
+
+            {/* Data rows */}
+            <div className="divide-y divide-white/[0.04]">
+              {nearTop.map((stock, idx) => (
+                <button
+                  key={stock.ticker}
+                  onClick={() => router.push(stock.href)}
+                  className="w-full flex items-center gap-3 md:gap-4 px-4 md:px-5 py-3.5 hover:bg-white/[0.04] transition-colors group text-left animate-slide-in-left stagger-fill-both"
+                  style={{ animationDelay: `${0.5 + idx * 0.035}s` }}
+                >
+                  {/* Color accent */}
+                  <div className="w-0.5 self-stretch rounded-full shrink-0" style={{ background: stock.color }} />
+
+                  {/* Rank */}
+                  <div className="w-9 text-right shrink-0">
+                    <span className="text-xs font-black text-white/35 tabular-nums">#{stock.rank}</span>
+                  </div>
+
+                  {/* Name + ticker */}
+                  <div className="min-w-[110px] md:min-w-[140px]">
+                    <div className="font-bold text-sm text-white/90 leading-tight">{stock.name}</div>
+                    <div className="text-[10px] text-white/28 tracking-[0.12em] font-black uppercase mt-0.5">{stock.ticker}</div>
+                  </div>
+
+                  {/* Category badge */}
+                  <div className="hidden sm:block shrink-0 w-24">
+                    <CategoryBadge category={stock.category} />
+                  </div>
+
+                  <div className="flex-1" />
+
+                  {/* Per-stock bear/base/bull */}
+                  <div className="hidden lg:flex items-center justify-end shrink-0 w-36">
+                    {!allPricesLoaded
+                      ? <Spinner size="sm" color="default" />
+                      : (() => {
+                          const price = allPrices[stock.ticker];
+                          const bear  = parseScenarioPrice(stock.stock.bearTarget);
+                          const base  = parseScenarioPrice(stock.stock.baseTarget);
+                          const bull  = parseScenarioPrice(stock.stock.bullTarget);
+                          if (price == null || !bear || !base || !bull || price <= 0)
+                            return <span className="text-xs text-white/25">—</span>;
+                          const fmt = (t: number) => {
+                            const r = ((t - price) / price) * 100;
+                            return { r, str: `${r >= 0 ? "+" : ""}${r.toFixed(0)}%`, pos: r >= 0 };
+                          };
+                          const b = fmt(bear), m = fmt(base), u = fmt(bull);
+                          return (
+                            <div className="flex gap-2.5 text-center">
+                              {[
+                                { label: "Bear", ...b },
+                                { label: "Base", ...m },
+                                { label: "Bull", ...u },
+                              ].map(({ label, str, pos }) => (
+                                <div key={label}>
+                                  <div className="text-[9px] text-white/20 uppercase">{label}</div>
+                                  <div className={`text-xs font-black ${pos ? "text-emerald-400" : "text-rose-400"}`}>{str}</div>
+                                </div>
+                              ))}
+                            </div>
+                          );
+                        })()
+                    }
+                  </div>
+
+                  {/* Score */}
+                  <DynamicScore
+                    slug={stock.stock.slug}
+                    moat={stock.stock.scores[0]}
+                    growth={stock.stock.scores[1]}
+                    fallbackVal={stock.stock.scores[2]}
+                    bearTarget={stock.stock.bearTarget}
+                    baseTarget={stock.stock.baseTarget}
+                    bullTarget={stock.stock.bullTarget}
+                  >
+                    {(avg, loading) => (
+                      <div className={`text-right shrink-0 w-12 ${scoreColumn !== 'score' ? 'hidden lg:block' : ''}`}>
+                        {loading
+                          ? <Spinner size="sm" color="default" />
+                          : <span className={`text-sm font-black ${getScoreColor(avg)}`}>{avg}</span>
+                        }
+                      </div>
+                    )}
+                  </DynamicScore>
+
+                  {/* 1D% */}
+                  <div className={`text-right shrink-0 w-14 ${scoreColumn !== 'change' ? 'hidden lg:block' : ''}`}>
+                    {!allPricesLoaded
+                      ? <Spinner size="sm" color="default" />
+                      : (() => {
+                          const cp = allChangePercents[stock.ticker];
+                          if (cp == null) return <span className="text-xs text-white/25">—</span>;
+                          const pos = cp >= 0;
+                          return (
+                            <div className={`flex items-center justify-end gap-0.5 ${pos ? "text-emerald-400" : "text-rose-400"}`}>
+                              {pos ? <TrendingUp size={10} /> : <TrendingDown size={10} />}
+                              <span className="text-xs font-black tabular-nums">{pos ? "+" : ""}{cp.toFixed(2)}%</span>
+                            </div>
+                          );
+                        })()
+                    }
+                  </div>
+
+                  <ChevronRight
+                    size={15}
+                    className="text-white/15 group-hover:text-white/50 transition-colors shrink-0"
+                  />
+                </button>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
     </div>
   );
