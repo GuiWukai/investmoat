@@ -14,7 +14,7 @@
     },
     {
       "label": "Current Price",
-      "value": "$401.71"
+      "value": "$399.80"
     }
   ],
   "chips": [
@@ -109,7 +109,7 @@
   },
   "valuation": {
     "score": 65,
-    "description": "At $401.71 — essentially at the base case of $400 — TSMC is fairly valued with meaningful optionality to the bull case ($560). Q1 2026's record results and a raised FY2026 outlook (30%+ revenue growth) have lifted the stock right onto fair value; further re-rating now requires the bull case to play out (sovereign AI demand and A16 wins).",
+    "description": "At $399.80 — essentially at the base case of $400 — TSMC is fairly valued with meaningful optionality to the bull case ($560). Q1 2026's record results and a raised FY2026 outlook (30%+ revenue growth) have lifted the stock right onto fair value; further re-rating now requires the bull case to play out (sovereign AI demand and A16 wins). The May 14, 2026 Trump–Xi Beijing summit produced an overall trade-truce posture (rare-earth flows resumed, tariffs scaled back) but Xi explicitly warned of 'clashes and even conflicts' if Taiwan is mishandled — a reminder that the geopolitical discount embedded in the multiple is structural, not transient.",
     "valuationNote": {
       "text": "Base-case fair value of ~$400 reflects ~30x forward 2026E EPS — reasonable for a monopoly franchise guiding 25% revenue CAGR through 2029. The geopolitical discount remains (US tariff risks, Taiwan cross-strait tensions), but TSMC's $165B US investment commitment and Japanese fab buildout are actively reducing the structural basis for that discount.",
       "fairValue": "~$400"
@@ -153,7 +153,7 @@
       "points": [
         "Commerce Department enforces 50% domestic sourcing rule, forcing NVIDIA and AI ASIC designers to dual-source with Intel 18A or Samsung — TSMC loses 20%+ of AI wafer orders",
         "Global semiconductor downturn compresses advanced-node utilization below 80%; N2 ramp dilution worsens gross margin toward sub-55%",
-        "China PLA exercises escalate toward blockade scenario, triggering a geopolitical risk premium expansion and P/E de-rating to ~17× NTM EPS",
+        "Cross-strait rhetoric escalates after Xi's May 14, 2026 Beijing-summit warning to Trump that Taiwan mishandling brings 'clashes and even conflicts'; PLA exercises move toward blockade scenario, triggering geopolitical risk premium expansion and P/E de-rating to ~17× NTM EPS",
         "Arizona fab cost overruns delay Phase 2; CHIPS Act funding faces clawback amid US political headwinds"
       ]
     },
@@ -219,7 +219,7 @@
       "status": "intact",
       "note": "TSMC is the de facto foundry of record for every leading-edge chip. Apple, NVIDIA, AMD, Qualcomm, MediaTek, and all major AI ASIC designers depend on TSMC for their most advanced products — no alternative system exists at scale. Intel 18A and Samsung SF2 remain 1–2 generations behind TSMC on yield at leading-edge nodes."
     },
-    "verdict": "TSMC is a direct and primary beneficiary of the AI era — every frontier AI model requires more TSMC-made chips, and the AI boom has structurally deepened the design ecosystem network effects. The AI-resilient moats (proprietary process data, regulatory lock-in from CHIPS Act and allied government partnerships, customer PDK embedding) are all intact or strengthening. The primary risk is geopolitical, not competitive: Taiwan cross-strait tensions and US tariff policy are the only plausible paths to moat disruption, and TSMC's $165B US investment commitment is actively reducing that structural risk."
+    "verdict": "TSMC is a direct and primary beneficiary of the AI era — every frontier AI model requires more TSMC-made chips, and the AI boom has structurally deepened the design ecosystem network effects. The AI-resilient moats (proprietary process data, regulatory lock-in from CHIPS Act and allied government partnerships, customer PDK embedding) are all intact or strengthening. The primary risk is geopolitical, not competitive: Taiwan cross-strait tensions and US tariff policy are the only plausible paths to moat disruption, and Xi's May 14, 2026 summit warning to Trump that mishandling Taiwan would bring 'clashes and even conflicts' confirms this remains the dominant tail risk — TSMC's $165B US investment commitment is actively reducing that structural exposure but cannot fully neutralise it."
   },
   "lastAnalyzed": "May 2026"
 }

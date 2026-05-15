@@ -5,8 +5,8 @@
   "lastAnalyzed": "May 2026",
   "headerStats": [
     { "label": "Ticker", "value": "PDD" },
-    { "label": "Market Cap", "value": "~$170B" },
-    { "label": "Current Price", "value": "~$120" }
+    { "label": "Market Cap", "value": "~$141B" },
+    { "label": "Current Price", "value": "~$99.60" }
   ],
   "chips": [
     { "label": "China E-commerce | Temu", "color": "primary" },
@@ -56,7 +56,7 @@
     ]
   },
   "growth": {
-    "description": "FY26 revenue growth +25-30% blended (Pinduoduo +15-20%, Temu +50%+ but slowing). Operating margin compressed by Temu losses; standalone Pinduoduo margin remains industry-leading. Tariff and US regulatory risk are acute swing factors.",
+    "description": "FY26 revenue growth +25-30% blended (Pinduoduo +15-20%, Temu +50%+ but slowing). Consensus for the May 27, 2026 print is revenue $15.94B (+21% YoY) and EPS $2.23 (+43% YoY). Operating margin compressed by Temu losses; standalone Pinduoduo margin remains industry-leading. Tariff and US regulatory risk are acute swing factors — partially defused by the May 14, 2026 Trump-Xi Beijing summit's trade-truce posture (tariffs scaled back, rare earths flowing).",
     "growthAnalysis": {
       "cagrEstimate": "20-30%",
       "scoreDerivation": "Base 85 (>30% CAGR mid-band) + 3 international scale (Temu in 70+ markets) - 3 Temu loss / margin compression - 3 US tariff / de minimis regulatory risk = 82",
@@ -66,24 +66,24 @@
         { "name": "Duo Duo Group", "metric": "Agriculture commerce growing on Chinese rural digitisation", "trend": "stable" }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If US closes the de minimis loophole on Chinese cross-border parcels and applies broad Section 301 tariffs to Temu, Temu's unit economics flip from loss-leading to unviable in major markets and the international growth thesis collapses, compressing the multiple toward Pinduoduo standalone.",
+      "keyRisk": "If US closes the de minimis loophole on Chinese cross-border parcels and applies broad Section 301 tariffs to Temu, Temu's unit economics flip from loss-leading to unviable in major markets and the international growth thesis collapses, compressing the multiple toward Pinduoduo standalone. The May 14, 2026 Trump-Xi summit produced a trade truce that softens — but does not eliminate — this risk; bilateral relations remain hostage to a future Taiwan escalation Xi explicitly warned about.",
       "keyRiskSeverity": "high",
       "marginTrend": "compressing"
     }
   },
   "valuation": {
-    "score": 80,
-    "description": "At ~$120 PDD trades at ~12× FY26 EPS with ~$45B net cash (~25% of market cap). Operating business at ~9× EPS — extreme discount to growth profile. Valuation prices in tariff and geopolitical worst-case scenarios.",
+    "score": 85,
+    "description": "At ~$99.60 (near 52-week low of $95.24) PDD trades at ~10× FY26 EPS with ~$45B net cash (~32% of market cap). Operating business at ~7× EPS — extreme discount to growth profile. The stock has drifted back to bear-case territory while Q1 EPS consensus calls for +43% YoY growth, and the May 14, 2026 Trump-Xi summit's trade-truce posture has reduced the most acute tail risk priced in.",
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
-        { "label": "Forward P/E (FY26)", "value": "~12×", "note": "EPS ~$10; deep growth discount" },
-        { "label": "Forward P/E ex-cash", "value": "~9×", "note": "Stripping $45B net cash" },
-        { "label": "Price / Sales (FY26)", "value": "~3×", "note": "Discount to global peers" },
-        { "label": "PEG Ratio", "value": "~0.5×", "note": "Cheap on growth, none on regulatory" },
-        { "label": "FCF Yield", "value": "~7%", "note": "FCF strong despite Temu losses" }
+        { "label": "Forward P/E (FY26)", "value": "~10×", "note": "EPS ~$10; deep growth discount" },
+        { "label": "Forward P/E ex-cash", "value": "~7×", "note": "Stripping $45B net cash" },
+        { "label": "Price / Sales (FY26)", "value": "~2.5×", "note": "Discount to global peers" },
+        { "label": "PEG Ratio", "value": "~0.4×", "note": "Cheap on growth, none on regulatory" },
+        { "label": "FCF Yield", "value": "~8%", "note": "FCF strong despite Temu losses" }
       ],
-      "summary": "Valuation prices in worst-case Temu disruption; cash position alone supports significant downside cushion."
+      "summary": "Stock at bear-case territory while underlying earnings growth remains +40%+. Cash position alone supports significant downside cushion; rerating catalyst is the May 27 print plus continued bilateral stabilisation post-summit."
     }
   },
   "scenarios": {
@@ -157,6 +157,6 @@
       "note": "Temu / Pinduoduo are not yet system of record for users — engagement is high but identity-and-history embedment is shallower than Alibaba or Amazon."
     },
     "aiResilienceScore": 50,
-    "verdict": "PDD's moats are network + supplier-scale + group-buying mechanics — AI is a positive for ad targeting and recommendation but the dominant moat questions are tariff regulatory and competitive. The thesis is regulatory risk + execution; valuation provides material upside if tariff regime stays manageable."
+    "verdict": "PDD's moats are network + supplier-scale + group-buying mechanics — AI is a positive for ad targeting and recommendation but the dominant moat questions are tariff regulatory and competitive. The May 14, 2026 Trump-Xi summit's trade-truce posture (tariffs scaled back, no new de minimis enforcement signalled) softens the most acute Temu tail risk, but a Taiwan escalation could reverse the calculus quickly. Valuation provides material upside if the trade-stabilisation regime holds."
   }
 }
