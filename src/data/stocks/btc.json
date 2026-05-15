@@ -153,12 +153,12 @@
       "note": "Not applicable — Bitcoin is intentionally single-purpose; bundling products or features would undermine its core simplicity and security guarantees."
     },
     "proprietaryData": {
-      "status": "strong",
-      "note": "The Bitcoin blockchain is an immutable, cryptographically secured, tamper-proof record of all value transfers since 2009."
+      "status": "destroyed",
+      "note": "N/A — Bitcoin's blockchain is fully public by design. Proprietary data is the opposite of what a permissionless ledger provides; the prior 'strong' rating conflated cryptographic integrity with proprietary access."
     },
     "regulatoryLockIn": {
-      "status": "strong",
-      "note": "SEC ETF approvals (11 issuers), FASB accounting treatment, US Strategic Bitcoin Reserve, Morgan Stanley MSBT (first bank-issued spot BTC ETF, Apr 2026), Goldman Sachs filing (Apr 2026), and state-level reserve laws in NH, AZ, MA."
+      "status": "weakened",
+      "note": "ETF approvals (11 issuers), FASB accounting, US Strategic Bitcoin Reserve, and Morgan Stanley MSBT (Apr 2026) confer regulatory *legitimacy* but not exclusive licensure — the same framework is being extended to ETH and SOL. Legitimacy improves capital access; it does not bar competing assets."
     },
     "networkEffects": {
       "status": "strong",
@@ -169,10 +169,10 @@
       "note": "Bitcoin is primarily a store of value rather than a daily transaction medium; Layer 2 Lightning is growing but not yet embedded."
     },
     "systemOfRecord": {
-      "status": "strong",
-      "note": "The original, most battle-tested, and most secure decentralized system of record — 15 years with zero successful protocol attacks."
+      "status": "weakened",
+      "note": "Bitcoin is a record of its own ledger, but no enterprise workflow (CRM, ERP, billing, HR) depends on it as a system of record. The protocol records itself; that is not the same as the customer-process embedding the moat measures."
     },
-    "verdict": "Bitcoin's mathematical scarcity and decentralized consensus make it uniquely immune to AI disruption. No AI can inflate the supply, hack the network, or replicate the 15-year institutional trust-building."
+    "verdict": "Bitcoin's mathematical scarcity and decentralized consensus make it uniquely immune to AI disruption. Moat ratings here are constrained to *business-moat semantics*: only network effects qualify as fully durable on that axis, since regulatory acceptance and on-chain state are not exclusive to BTC and do not produce switching costs for an enterprise customer."
   },
   "lastAnalyzed": "April 2026"
 }

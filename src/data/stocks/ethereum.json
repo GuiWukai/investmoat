@@ -141,24 +141,24 @@
       "note": "Billions in DeFi protocol logic runs on Ethereum. Migrating audited, battle-tested contracts to a competing chain is a years-long, high-risk undertaking."
     },
     "publicDataAccess": {
-      "status": "weakened",
-      "note": "Ethereum's data is public by design. Competing chains share this trait, so data access is not a differentiating moat."
+      "status": "destroyed",
+      "note": "N/A — Ethereum's data is fully public by design; data access is not a competitive moat for a permissionless ledger."
     },
     "talentScarcity": {
       "status": "strong",
       "note": "The deepest pool of audited smart contract developers, security researchers, and protocol engineers in crypto remains Ethereum-native."
     },
     "bundling": {
-      "status": "strong",
-      "note": "Ethereum bundles settlement, staking yield, DeFi primitives, stablecoins, and NFT infrastructure — a composable stack competitors cannot easily replicate end-to-end."
+      "status": "weakened",
+      "note": "Protocol composability (settlement, staking, DeFi primitives sharing state) is real but is not commercial product bundling — there is no per-customer SKU bundle locking enterprises in. Competing chains are reproducing the same composable stack."
     },
     "proprietaryData": {
-      "status": "weakened",
-      "note": "On-chain data is fully public. Ethereum has no proprietary data advantage over competing L1s."
+      "status": "destroyed",
+      "note": "N/A — on-chain data is fully public; proprietary data does not exist for a permissionless ledger by design."
     },
     "regulatoryLockIn": {
-      "status": "strong",
-      "note": "CFTC commodity classification confirmed early 2026; BlackRock's ETHB staking ETF launched on Nasdaq (March 2026) now paying monthly yield; $28.6B in regulated spot ETH ETF AUM; JPMorgan and Fidelity tokenizing assets on Ethereum under the US GENIUS Act. This regulatory moat vs competing L1s (still largely unregistered securities) is widening with each institutional filing."
+      "status": "weakened",
+      "note": "CFTC commodity classification, BlackRock ETHB staking ETF (Mar 2026), and the GENIUS Act framework confer regulatory legitimacy that meaningfully widens institutional access — but SOL has now received the same classification, so this is not exclusive licensure that bars competitors."
     },
     "networkEffects": {
       "status": "strong",
@@ -166,13 +166,13 @@
     },
     "transactionEmbedding": {
       "status": "strong",
-      "note": "DeFi protocols, stablecoin settlements, NFT marketplaces, and DAO governance are deeply embedded in Ethereum's transaction fabric."
+      "note": "DeFi protocols, stablecoin settlements, NFT marketplaces, and DAO governance are deeply embedded in Ethereum's transaction fabric — actual third-party financial workflows depend on EVM state."
     },
     "systemOfRecord": {
-      "status": "strong",
-      "note": "Ethereum is the canonical record for DeFi state, NFT ownership, and DAO governance — the highest-value smart contract history spans 9+ years."
+      "status": "weakened",
+      "note": "Ethereum is the canonical record for DeFi state, NFT ownership, and DAO governance, but enterprise business processes (CRM, ERP, billing) are not embedded against it as their source of truth. The protocol records itself; enterprises do not."
     },
-    "verdict": "Ethereum's developer ecosystem and embedded DeFi infrastructure give it strong resilience, but real competition from faster, cheaper L1s (Solana) and modularity trends (Celestia) introduce more disruption risk than Bitcoin faces. The moat is wide but not impenetrable."
+    "verdict": "Ethereum's developer ecosystem and embedded DeFi infrastructure give it strong resilience. Moat ratings here are constrained to *business-moat semantics*: composability and regulatory legitimacy are real protocol advantages but do not produce enterprise switching costs, so they are rated weakened rather than strong. Genuine moats — network effects, transaction embedding, learned interfaces, talent scarcity — remain durable."
   },
   "lastAnalyzed": "April 2026"
 }
