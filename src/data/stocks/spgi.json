@@ -120,24 +120,24 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "weakened",
-      "note": "Financial data terminal interfaces are being streamlined and commoditized by AI-powered analytics platforms."
+      "status": "strong",
+      "note": "S&P credit rating nomenclature (AAA, AA+, etc.) is embedded in trillions of dollars of fixed-income legal documents — ISDA master agreements, fund investment mandates, Basel III capital rules, and money-market eligibility rules reference S&P ratings explicitly. Replacing this learned interface across the global fixed-income complex would require amending those documents and retraining every fixed-income professional. AI-powered analytics platforms layer on top of S&P ratings rather than replacing them."
     },
     "businessLogic": {
       "status": "intact",
       "note": "Credit rating methodologies are proprietary, regulatory-recognized, and legally required — AI enhances but cannot replace the NRSRO designation."
     },
     "publicDataAccess": {
-      "status": "weakened",
-      "note": "Some financial market data is becoming more accessible through open-source and alternative data providers."
+      "status": "strong",
+      "note": "S&P aggregates decades of public filings, Platts commodity assessments, mobility/auto data (S&P Global Mobility), and ESG disclosures into proprietary datasets that took 20+ years and multiple acquisitions (IHS Markit, Kensho, Panjiva) to assemble. While retail financial data is commoditizing, the institutional-grade aggregated/curated datasets remain unique and non-replicable on a near-term horizon."
     },
     "talentScarcity": {
       "status": "intact",
       "note": "SEC-recognized credit analysts, regulatory relations specialists, and 160-year institutional knowledge cannot be replicated."
     },
     "bundling": {
-      "status": "intact",
-      "note": "Credit Ratings + Market Intelligence + Platts Commodity Data + Mobility Data = a comprehensive financial intelligence bundle."
+      "status": "strong",
+      "note": "Credit Ratings + Market Intelligence (Capital IQ) + Platts commodity assessments + Mobility data + Indices form a deeply integrated bundle — institutional users who rely on multiple S&P products face compounding switching costs because replacing the bundle requires sourcing each component from different vendors offering inferior standalone products."
     },
     "proprietaryData": {
       "status": "strong",
