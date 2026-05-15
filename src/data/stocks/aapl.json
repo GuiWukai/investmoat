@@ -125,7 +125,8 @@
   "tenMoats": {
     "learnedInterfaces": {
       "status": "strong",
-      "note": "iOS, Final Cut, Logic Pro, and the Apple HIG create deep muscle memory. Apple Intelligence further embeds users in system-level AI features exclusive to Apple hardware."
+      "aiExposure": "resilient",
+      "note": "iOS, Final Cut, Logic Pro, and the Apple HIG create deep muscle memory. Apple Intelligence further embeds users in system-level AI features exclusive to Apple hardware — on-device AI is invoked through the existing UI surfaces, deepening the interface lock-in rather than replacing it. Routed to resilient via aiExposure override."
     },
     "businessLogic": {
       "status": "intact",
@@ -141,7 +142,8 @@
     },
     "bundling": {
       "status": "strong",
-      "note": "Apple One (Music + TV+ + Arcade + iCloud + Fitness+ + News+) is a textbook bundling moat. Each bundle component individually is not best-in-class, but the integrated price and ecosystem convenience makes it compelling and sticky."
+      "aiExposure": "resilient",
+      "note": "Apple One (Music + TV+ + Arcade + iCloud + Fitness+ + News+) plus Continuity, AirDrop, Handoff, Universal Clipboard, and on-device Apple Intelligence form an integrated bundle that AI strengthens rather than threatens. Apple Intelligence requires Apple silicon + iCloud + the OS stack — the bundle is the AI moat. Routed to resilient via aiExposure override."
     },
     "proprietaryData": {
       "status": "strong",

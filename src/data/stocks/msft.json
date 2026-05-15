@@ -151,8 +151,9 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "weakened",
-      "note": "Copilot abstracts traditional Office UI but enterprise muscle-memory, deep training investments, and workflow integration remain entrenched. AI cuts both ways."
+      "status": "intact",
+      "aiExposure": "resilient",
+      "note": "The Office UI (Excel formulas, PowerPoint workflows, Word collaboration) is one of the deepest learned-interface moats in enterprise software — billions of hours of muscle-memory, decades of training investment, every business school graduate is Excel-fluent. Copilot is built on top of the surface rather than replacing it — AI strengthens the interface lock-in because the LLM's prompts and outputs flow through the existing UI primitives. Routed to resilient via aiExposure override."
     },
     "businessLogic": {
       "status": "intact",
@@ -168,7 +169,8 @@
     },
     "bundling": {
       "status": "strong",
-      "note": "Office + Teams + Azure + Security + Copilot bundle deepened by AI integration. 70% of Fortune 500 using Copilot creates emergent bundle value no point-solution replicates."
+      "aiExposure": "resilient",
+      "note": "Office + Teams + Azure + Security + Copilot bundle deepened by AI integration. 70% of Fortune 500 using Copilot creates emergent bundle value no point-solution replicates. The AI layer only works because of the bundle (Copilot needs Graph, Graph needs Office workflows, Office needs Azure identity) — AI strengthens the bundle rather than disrupting it. Routed to resilient via aiExposure override."
     },
     "proprietaryData": {
       "status": "strong",

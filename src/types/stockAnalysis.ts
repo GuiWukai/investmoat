@@ -24,6 +24,14 @@ export interface Scenario {
 export interface MoatAssessmentData {
   status: MoatStatus;
   note: string;
+  /**
+   * Optional per-stock override of this moat's AI exposure group. When set,
+   * the moat is routed to the specified bucket regardless of its default
+   * classification — letting moats like CUDA (NVDA learnedInterfaces) or the
+   * Palantir ontology (PLTR businessLogic) be recognised as AI-strengthened
+   * rather than AI-vulnerable. Defaults preserve existing behaviour.
+   */
+  aiExposure?: 'resilient' | 'vulnerable';
 }
 
 export interface TenMoatsData {

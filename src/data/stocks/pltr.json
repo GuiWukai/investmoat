@@ -125,7 +125,8 @@
     },
     "businessLogic": {
       "status": "strong",
-      "note": "Palantir encodes customer-specific workflows, decision trees, and ontologies directly into the platform — making it nearly impossible to replicate in a competitor tool."
+      "aiExposure": "resilient",
+      "note": "Palantir encodes customer-specific workflows, decision trees, and ontologies directly into the platform — making it nearly impossible to replicate in a competitor tool. AIP strengthens this moat: every additional AI agent on Foundry deepens the ontology coupling, since the LLM needs the customer's bespoke business logic to reason. Routed to resilient via aiExposure override — AI consumption of the ontology compounds the moat rather than eroding it."
     },
     "publicDataAccess": {
       "status": "weakened",

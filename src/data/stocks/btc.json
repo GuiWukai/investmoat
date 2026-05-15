@@ -153,12 +153,12 @@
       "note": "Not applicable — Bitcoin is intentionally single-purpose; bundling products or features would undermine its core simplicity and security guarantees."
     },
     "proprietaryData": {
-      "status": "strong",
-      "note": "The Bitcoin blockchain is an immutable, cryptographically secured, tamper-proof record of all value transfers since 2009."
+      "status": "destroyed",
+      "note": "N/A — Bitcoin's blockchain is fully public by design. Proprietary data is the opposite of what a permissionless ledger provides; the prior 'strong' rating conflated cryptographic integrity with proprietary access."
     },
     "regulatoryLockIn": {
-      "status": "strong",
-      "note": "SEC ETF approvals (11 issuers), FASB accounting treatment, US Strategic Bitcoin Reserve, Morgan Stanley MSBT (first bank-issued spot BTC ETF, Apr 2026), Goldman Sachs filing (Apr 2026), and state-level reserve laws in NH, AZ, MA."
+      "status": "intact",
+      "note": "BTC has captured first-mover regulatory incumbency — the US Strategic Bitcoin Reserve, the BITCOIN Act in Congress, FASB accounting treatment first applied to BTC, 11 ETF issuers, and state-level reserve laws (NH, AZ, MA) are BTC-specific frameworks. SOL received CFTC commodity classification but is not receiving Strategic-Reserve treatment. Not exclusive licensure, but durable enough to count as intact."
     },
     "networkEffects": {
       "status": "strong",
@@ -169,10 +169,10 @@
       "note": "Bitcoin is primarily a store of value rather than a daily transaction medium; Layer 2 Lightning is growing but not yet embedded."
     },
     "systemOfRecord": {
-      "status": "strong",
-      "note": "The original, most battle-tested, and most secure decentralized system of record — 15 years with zero successful protocol attacks."
+      "status": "intact",
+      "note": "Not an enterprise-workflow SoR, but BTC is the Schelling-point ledger for digital scarce-asset holdings — when sovereigns or corporates allocate to a digital reserve asset, BTC is the default (Strategy Inc. and 1,000+ corporate-treasury clones hold BTC specifically, not ETH or SOL). That institutional anchoring is a real form of system-of-record durability."
     },
-    "verdict": "Bitcoin's mathematical scarcity and decentralized consensus make it uniquely immune to AI disruption. No AI can inflate the supply, hack the network, or replicate the 15-year institutional trust-building."
+    "verdict": "Bitcoin's mathematical scarcity and decentralized consensus make it uniquely immune to AI disruption. Moat ratings here are constrained to *business-moat semantics*: only network effects qualify as fully durable on that axis, since regulatory acceptance and on-chain state are not exclusive to BTC and do not produce switching costs for an enterprise customer."
   },
   "lastAnalyzed": "April 2026"
 }

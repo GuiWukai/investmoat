@@ -41,6 +41,10 @@ const analysisPointSchema = z.strictObject({
 const moatAssessmentSchema = z.strictObject({
   status: moatStatusSchema,
   note: z.string().min(1),
+  // Optional per-stock override of AI exposure routing. See
+  // MoatAssessmentData in src/types/stockAnalysis.ts and computeMoatScore
+  // in src/lib/valuationScore.ts for how this is consumed.
+  aiExposure: z.enum(['resilient', 'vulnerable']).optional(),
 });
 
 const score0to100 = z.number().int().min(0).max(100);

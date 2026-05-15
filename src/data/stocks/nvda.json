@@ -163,12 +163,14 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "Not applicable — NVIDIA sells hardware and developer tools, not consumer UI experiences."
+      "status": "strong",
+      "aiExposure": "resilient",
+      "note": "CUDA is the canonical learned-interfaces moat in semiconductors — 15+ years of developer mindshare, every ML PhD candidate learns CUDA, every major ML framework (PyTorch, TensorFlow, JAX) is CUDA-first by default. Switching to ROCm or any alternative is a multi-year rewrite. AI demand strengthens this moat rather than commoditising it: more AI workloads to write means more CUDA-coupled code, wider switching costs. Routed to resilient via aiExposure override — the AI wave is protecting this interface, not threatening it."
     },
     "businessLogic": {
-      "status": "destroyed",
-      "note": "Not applicable to semiconductor chip design and manufacturing."
+      "status": "intact",
+      "aiExposure": "resilient",
+      "note": "Customer ML training and inference pipelines are deeply embedded against CUDA-specific business logic — Megatron, DeepSpeed, vLLM, NCCL, cuDNN, cuBLAS are not portable abstractions. Every AI lab's production training stack is CUDA-coupled workflow at the code level. AI demand strengthens this lock-in by adding more CUDA-specific framework code to every codebase; routed to resilient via aiExposure override."
     },
     "publicDataAccess": {
       "status": "destroyed",
