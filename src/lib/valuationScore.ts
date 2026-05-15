@@ -1,10 +1,12 @@
 import type { TenMoatsData } from '@/types/stockAnalysis';
 
-// Status → point scale. Gaps are equal (25 pts each) so a single status
-// step up/down has the same impact regardless of where on the scale it occurs.
-// A floor of 10 for genuinely-destroyed moats avoids a total zero contribution
-// while still pulling the group average down meaningfully.
-const MOAT_POINTS: Record<string, number> = { strong: 100, intact: 75, weakened: 50, destroyed: 10 };
+// Status → point scale. Tightened so "intact" requires demonstrable presence
+// rather than just box-checking: the gap between strong (100) and intact (65)
+// is 35 pts, and weakened (35) genuinely penalises rather than half-credits.
+// A company rated all-intact across a full moat slate now scores ~67 (vs ~79
+// under the previous 100/75/50/10 scale) — below the 75 portfolio threshold,
+// forcing real demonstrated strength to qualify.
+const MOAT_POINTS: Record<string, number> = { strong: 100, intact: 65, weakened: 35, destroyed: 10 };
 
 /** Returns null for N/A moats (excluded from group average), number otherwise. */
 function moatPoints(m: { status: string; note: string }): number | null {
@@ -14,16 +16,18 @@ function moatPoints(m: { status: string; note: string }): number | null {
 
 /**
  * Individual base weights for resilient moats (sum = 60).
- * networkEffects and proprietaryData are historically the most durable moats;
- * regulatoryLockIn and transactionEmbedding carry less weight as they are
- * more susceptible to external (policy/platform) disruption.
+ * networkEffects is the single most durable moat; transactionEmbedding and
+ * regulatoryLockIn are raised vs. the prior calibration because empirical
+ * compounders (V, MA, ICE, SPGI) prove these moats outlast cycles. proprietaryData
+ * is lowered slightly — AI commoditisation of similar-quality data means most
+ * "proprietary" data claims are weaker than they were a decade ago.
  */
 const RESILIENT_WEIGHTS = {
   networkEffects:       15,
-  proprietaryData:      15,
+  proprietaryData:      12,
   systemOfRecord:       12,
-  regulatoryLockIn:     10,
-  transactionEmbedding:  8,
+  regulatoryLockIn:     11,
+  transactionEmbedding: 10,
 } as const;
 
 /**
@@ -46,14 +50,17 @@ const VULNERABLE_TOTAL = Object.values(VULNERABLE_WEIGHTS).reduce((a, b) => a + 
  * Computes a weighted score for one moat group.
  * N/A moats are excluded; their weight redistributes proportionally across
  * remaining applicable moats (preserving the within-group relative ranking).
- * Returns the group's weighted-average score and the sum of applicable weights.
+ * intactOrBetterCount tracks moats rated intact (65) or strong (100); used by
+ * the quality-gated breadth bonus so diversification only counts when the
+ * moats are demonstrably present.
  */
 function weightedGroupScore(
   moats: Array<[{ status: string; note: string }, number]>
-): { score: number; applicableWeight: number; applicableCount: number; totalWeight: number } {
+): { score: number; applicableWeight: number; applicableCount: number; intactOrBetterCount: number; totalWeight: number } {
   let weightedSum = 0;
   let applicableWeight = 0;
   let applicableCount = 0;
+  let intactOrBetterCount = 0;
   let totalWeight = 0;
   for (const [assessment, weight] of moats) {
     totalWeight += weight;
@@ -62,27 +69,30 @@ function weightedGroupScore(
     weightedSum += pts * weight;
     applicableWeight += weight;
     applicableCount++;
+    if (pts >= MOAT_POINTS.intact) intactOrBetterCount++;
   }
   return {
     score: applicableWeight > 0 ? weightedSum / applicableWeight : 0,
     applicableWeight,
     applicableCount,
+    intactOrBetterCount,
     totalWeight,
   };
 }
 
 /**
- * Breadth bonus: +1 pt per applicable moat beyond 5, capped at +4.
- * A company defended by 8 moats is more resilient than one with 2 equally-
- * rated moats, even if their weighted averages are identical.
- *   ≤5 applicable → +0
- *    6 applicable → +1
- *    7 applicable → +2
- *    8 applicable → +3
- *   9–10 applicable → +4
+ * Quality-gated breadth bonus: +1 pt per moat rated intact-or-better beyond 5,
+ * capped at +4. Diversification only counts when the moats are demonstrably
+ * present — a company with 10 applicable but mostly-weakened moats no longer
+ * receives the breadth bonus, since broad mediocrity is not durability.
+ *   ≤5 intact-or-better → +0
+ *    6 intact-or-better → +1
+ *    7 intact-or-better → +2
+ *    8 intact-or-better → +3
+ *   9–10 intact-or-better → +4
  */
-function breadthBonus(applicableCount: number): number {
-  return Math.min(4, Math.max(0, applicableCount - 5));
+function qualityGatedBreadthBonus(intactOrBetterCount: number): number {
+  return Math.min(4, Math.max(0, intactOrBetterCount - 5));
 }
 
 /**
@@ -97,13 +107,18 @@ function breadthBonus(applicableCount: number): number {
  * are excluded; their base weight is dropped so it redistributes naturally to
  * whichever moats remain applicable within each group.
  *
- * A breadth bonus of +1 to +4 is added for each applicable moat beyond 5,
- * rewarding companies with diversified moat portfolios.
+ * Adjustments applied to the weighted base:
+ *   • Quality-gated breadth bonus: +0 to +4 for moats rated intact-or-better
+ *     beyond 5 (broad mediocrity is not durability).
+ *   • AI-vulnerability discount: −5 when the AI-vulnerable group contributes
+ *     more total score than the resilient group, catching companies whose moat
+ *     is exclusively in the AI-disruption-prone category (e.g., Adobe).
  *
  * Examples:
- *   all 10 apply       → 60% resilient / 40% vulnerable + 4 breadth pts
- *   4 N/A vulnerable   → 60/(60+vApplicable) resilient / rest vulnerable + 1 pt
- *   all vulnerable N/A → 100% resilient / 0% vulnerable + 0 pts
+ *   all 10 apply, all strong          → ~100 + 4 breadth − 0 discount = 100
+ *   all 10 apply, all intact          → ~65 + 4 breadth − 0 discount = 69
+ *   strong vulnerable only            → ~85 + 0 breadth − 5 discount = 80
+ *   networkEffects + 4 weakened       → low resilient + breadth + 0 discount
  */
 export function computeMoatScore(tenMoats: TenMoatsData): number {
   const resilient = weightedGroupScore([
@@ -126,8 +141,11 @@ export function computeMoatScore(tenMoats: TenMoatsData): number {
   const total = rW + vW;
   if (total === 0) return 0;
   const base = resilient.score * rW / total + vulnerable.score * vW / total;
-  const applicableCount = resilient.applicableCount + vulnerable.applicableCount;
-  return Math.min(100, Math.round(base + breadthBonus(applicableCount)));
+  const breadth = qualityGatedBreadthBonus(resilient.intactOrBetterCount + vulnerable.intactOrBetterCount);
+  // AI-vulnerability discount: triggers when the vulnerable group is the larger
+  // total contributor. Catches companies whose moat is mostly AI-disruption-prone.
+  const aiDiscount = vulnerable.score * vW > resilient.score * rW ? -5 : 0;
+  return Math.max(0, Math.min(100, Math.round(base + breadth + aiDiscount)));
 }
 
 // ─── Growth score ─────────────────────────────────────────────────────────────
