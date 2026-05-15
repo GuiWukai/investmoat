@@ -5,8 +5,8 @@
   "lastAnalyzed": "May 2026",
   "headerStats": [
     { "label": "Ticker", "value": "BABA" },
-    { "label": "Market Cap", "value": "~$280B" },
-    { "label": "Current Price", "value": "~$118" }
+    { "label": "Market Cap", "value": "~$345B" },
+    { "label": "Current Price", "value": "~$145.81" }
   ],
   "chips": [
     { "label": "China E-commerce | Cloud | AI", "color": "primary" },
@@ -16,8 +16,8 @@
   "metrics": [
     {
       "title": "Cloud Revenue Growth",
-      "value": "+25-30%",
-      "label": "AI-led; Qwen ecosystem driving inference demand",
+      "value": "+38%",
+      "label": "Q4 FY26 — AI triple-digit growth for 11 straight quarters",
       "icon": "Cloud",
       "color": "#FF6A00"
     },
@@ -47,7 +47,7 @@
       },
       {
         "title": "Alibaba Cloud + Qwen Franchise",
-        "text": "Alicloud is the leading domestic cloud (~37% Chinese cloud share). Qwen LLM family is the leading open-source-style Chinese model with global penetration in non-US markets and is the foundation for Alicloud AI inference revenue. Cloud + AI revenue grew 25-30% in 2026 with margin expansion as the franchise scales."
+        "text": "Alicloud is the leading domestic cloud (~37% Chinese cloud share). Qwen LLM family is the leading open-source-style Chinese model with global penetration in non-US markets and is the foundation for Alicloud AI inference revenue. Q4 FY26 cloud revenue grew 38% YoY to $6.13B with AI-related products posting triple-digit growth for the 11th straight quarter; management reaffirmed the $53B (380B yuan) AI capex plan through 2027."
       },
       {
         "title": "Capital Return and Restructuring",
@@ -56,34 +56,34 @@
     ]
   },
   "growth": {
-    "description": "FY27 (March year-end) revenue growth +12-15%, with cloud/AI +25-30%, e-commerce +5-7%, international +20%+. AI/cloud is the swing factor — Qwen ecosystem traction translates to Alicloud inference revenue. Margin recovery on cost discipline + AI mix.",
+    "description": "FY27 (March year-end) revenue growth +12-15%, with cloud/AI now accelerating to +38% (Q4 FY26 print), e-commerce +5-7%, international +20%+. AI/cloud is the swing factor — Qwen ecosystem traction is translating to outsized Alicloud inference revenue and the $53B 2025-27 AI capex plan was reaffirmed on the May 13, 2026 earnings call. Near-term GAAP profit compressed sharply (Q4 net profit -99.7% YoY) on AI investment and food delivery losses; market has accepted this as growth-stage reinvestment.",
     "growthAnalysis": {
-      "cagrEstimate": "10-15%",
-      "scoreDerivation": "Base 75 (8-15% CAGR top of band) + 5 cloud/AI optionality (Qwen + AI inference 25-30%) - 5 China e-commerce competition (PDD + Douyin) - 7 geopolitical / regulatory discount = 68",
+      "cagrEstimate": "12-17%",
+      "scoreDerivation": "Base 80 (15-30% CAGR low end, cloud accelerating to 38%) + 5 AI inference acceleration (Qwen + Alicloud 11 quarters triple-digit AI growth) - 5 China e-commerce competition (PDD + Douyin) - 5 geopolitical / regulatory discount = 75",
       "drivers": [
-        { "name": "Cloud + Qwen AI", "metric": "+25-30% YoY; Qwen ecosystem driving inference revenue", "trend": "accelerating" },
+        { "name": "Cloud + Qwen AI", "metric": "+38% YoY Q4 FY26 ($6.13B); AI products triple-digit growth 11 quarters", "trend": "accelerating" },
         { "name": "Taobao + Tmall Group", "metric": "+5-7% YoY; stabilising on premium + value segments", "trend": "stable" },
         { "name": "International (Lazada + AliExpress)", "metric": "+20%+ YoY; SE Asia + EU growth", "trend": "accelerating" }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If US-China geopolitical tensions accelerate (additional ADR delisting risk, technology export controls on Chinese AI) or Chinese consumer continues stagnating through 2027, the discount in BABA persists indefinitely and the buyback alone is insufficient to drive material rerating.",
+      "keyRisk": "If US-China geopolitical tensions reverse course again (technology export controls on Chinese AI, ADR delisting enforcement) or Chinese consumer continues stagnating through 2027, the cloud/AI growth narrative can't offset a re-widening of the country-risk discount. The May 14, 2026 Trump-Xi summit produced trade stabilisation but no structural settlement.",
       "keyRiskSeverity": "high",
-      "marginTrend": "expanding"
+      "marginTrend": "compressing"
     }
   },
   "valuation": {
-    "score": 86,
-    "description": "At ~$118 BABA trades at ~10× FY27 EPS — an extreme discount to global tech peers. ~$70B net cash + investments equates to ~25% of market cap, with the operating business at ~7× EPS. Valuation prices in worst-case geopolitical and competitive scenarios.",
+    "score": 70,
+    "description": "At ~$145.81 (post-earnings rally + Trump-Xi summit relief), BABA trades at ~13× FY27 EPS — still a discount to global tech peers but materially less than the ~10× available a quarter ago. ~$70B net cash + investments still equates to ~20% of market cap, with the operating business at ~10× EPS. Stock sits between the bear ($80) and base ($160) cases — most of the easy multiple-discount has closed; further upside now requires execution on the $53B AI capex plan.",
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
-        { "label": "Forward P/E (FY27)", "value": "~10×", "note": "EPS ~$11.30; deep discount to global peers" },
-        { "label": "Forward P/E ex-cash", "value": "~7×", "note": "Stripping ~$70B net cash + investments" },
-        { "label": "Price / Sales (FY27)", "value": "~1.8×", "note": "Discount to global e-commerce + cloud" },
-        { "label": "FCF Yield", "value": "~7%", "note": "FCF strong; capital return active" },
-        { "label": "EV / EBITDA (NTM)", "value": "~5×", "note": "Vs global cloud peers ~12-18×" }
+        { "label": "Forward P/E (FY27)", "value": "~13×", "note": "EPS ~$11.30; still discount to global peers" },
+        { "label": "Forward P/E ex-cash", "value": "~10×", "note": "Stripping ~$70B net cash + investments" },
+        { "label": "Price / Sales (FY27)", "value": "~2.2×", "note": "Discount to global e-commerce + cloud" },
+        { "label": "FCF Yield", "value": "~5%", "note": "FCF compressing on AI capex; capital return active" },
+        { "label": "EV / EBITDA (NTM)", "value": "~6×", "note": "Vs global cloud peers ~12-18×" }
       ],
-      "summary": "Valuation prices in deep geopolitical and competitive risk; quality of underlying franchise and capital position supports rerating thesis."
+      "summary": "The May 13 earnings rally + May 14 Trump-Xi summit stabilisation have closed ~25% of the country-risk discount in a week. Valuation still cheap on an absolute basis but margin of safety is narrower; from here, rerating requires the cloud/AI growth to flow through to GAAP earnings."
     }
   },
   "scenarios": {
@@ -157,6 +157,6 @@
       "note": "Taobao + Tmall is the system of record for hundreds of millions of Chinese merchants and buyers; Alicloud is system of record for many Chinese enterprises."
     },
     "aiResilienceScore": 70,
-    "verdict": "Alibaba's moats are substantively AI-positive — Qwen + Alicloud + commerce data flywheel compound with AI adoption. The franchise question is geopolitical and regulatory, not technological; valuation prices in worst-case outcomes and ignores AI franchise."
+    "verdict": "Alibaba's moats are substantively AI-positive — Qwen + Alicloud + commerce data flywheel compound with AI adoption, and the Q4 FY26 print (cloud +38%, AI triple-digit growth 11 straight quarters) confirms the AI flywheel is real. The franchise question is geopolitical and regulatory, not technological; the May 14, 2026 Trump-Xi Beijing summit's overall trade stabilisation closes part of the worst-case tail risk, though no structural settlement was achieved."
   }
 }
