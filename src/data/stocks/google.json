@@ -204,8 +204,8 @@
       "note": "Google's data assets — Search intent across 8.5B+ daily queries, Maps traffic patterns, YouTube watch history (1B+ hours/day), Gmail metadata, and Android sensor data — form the world's largest behavioural dataset. This data trains superior ad targeting models, AI Overviews relevance algorithms, and Gemini foundation models in ways that competitors training on public internet data alone cannot replicate."
     },
     "regulatoryLockIn": {
-      "status": "weakened",
-      "note": "The September 2025 DOJ remedies ruling banned all exclusive default search agreements — Google's primary distribution mechanism, worth ~$20B/year in payments to Apple and others. While the ruling rejected divestiture of Chrome and Android (a near-best-case outcome), losing the ability to pay for defaults structurally weakens Google's distribution moat over time. The DOJ and 35 states filed an appeal in February 2026 seeking harsher remedies; a parallel ad-tech case with divestiture risk for the advertising business remains in remedies phase."
+      "status": "intact",
+      "note": "The September 2025 DOJ remedies ruling banned exclusive default search agreements but preserved Chrome and Android (a near-best-case outcome). Distribution defaults remain in practice — Apple, Samsung, and OEMs still ship Google Search as the default in the absence of a credible alternative, and the underlying market structure (Android's ~70% global mobile OS share, Chrome's ~65% browser share) is unchanged. The DOJ + 35 states' February 2026 appeal and the parallel ad-tech remedies phase are real overhangs that cap upside, but the regulatory foundations of the search/ads franchise are intact rather than weakened."
     },
     "networkEffects": {
       "status": "strong",
