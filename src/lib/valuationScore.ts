@@ -302,12 +302,27 @@ export function valuationDescription(
   return `Trading ${pct}% above the bull case (${bullStr}) — premium valuation.`;
 }
 
-// Composite weighting matches the JSON-LD ratingValue shown on stock pages:
-// moat 40% · growth 30% · valuation 30%. Bands map composite → recommendation.
-export function computeComposite(moat: number, growth: number, valuation: number): number {
-  return Math.round(moat * 0.4 + growth * 0.3 + valuation * 0.3);
+// Composite: geometric (CES) mean with moat 0.40 · growth 0.30 · valuation 0.30.
+// Single source of truth — getAverageScore in stockData.ts delegates to computeCompositeRaw.
+// Weak pillars drag the score (a strong moat cannot fully offset a rich price);
+// equal pillars produce the arithmetic mean. Raw form returns a float for precise
+// sorting; computeComposite rounds for display and recommendation bands.
+export function computeCompositeRaw(moat: number, growth: number, valuation: number): number {
+  return Math.pow(moat / 100, 0.40)
+    * Math.pow(growth / 100, 0.30)
+    * Math.pow(valuation / 100, 0.30)
+    * 100;
 }
 
+export function computeComposite(moat: number, growth: number, valuation: number): number {
+  return Math.round(computeCompositeRaw(moat, growth, valuation));
+}
+
+// Bands left at the original thresholds. Geometric and arithmetic composites
+// agree on equal-pillar names (top of the universe), so shifting thresholds
+// just promotes those names spuriously. The geometric formula compresses
+// divergent-pillar stocks downward through the same bands — which is the
+// bottleneck discrimination we want.
 export function computeRecommendation(
   moat: number,
   growth: number,

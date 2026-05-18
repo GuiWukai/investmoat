@@ -13,7 +13,7 @@
 // To add a new stock: import its JSON, add an entry to allCoverageData.
 // All scores and targets will be derived automatically.
 
-import { computeMoatScore, computeGrowthScore, type GrowthAnalysisInput } from '@/lib/valuationScore';
+import { computeMoatScore, computeGrowthScore, computeCompositeRaw, type GrowthAnalysisInput } from '@/lib/valuationScore';
 
 import aaplData    from '@/data/stocks/aapl.json';
 import adbeData    from '@/data/stocks/adbe.json';
@@ -126,24 +126,11 @@ import rblxData     from '@/data/stocks/rblx.json';
 import soxxData     from '@/data/stocks/soxx.json';
 import vooData      from '@/data/stocks/voo.json';
 
-// Multiplicative composite (CES-style weighted geometric mean):
-//
-//   composite = (m/100)^0.40 × (g/100)^0.30 × (v/100)^0.30 × 100
-//
-// Equivalent to the weighted arithmetic mean when all pillars are equal;
-// strictly lower when they differ. The bottleneck behaviour is built in —
-// any pillar near zero disproportionately drags the score, with no need
-// for a separate penalty term. Pillar weights 0.40 · 0.30 · 0.30 — moat
-// stays dominant, growth and valuation share the remainder equally so
-// entry multiple bites a bit harder without demoting elite compounders.
-//
-// scores = [moatScore, growthScore, valuationScore]
-// Returns a float for precise sorting/comparison; callers round for display.
+// Delegates to computeCompositeRaw in valuationScore.ts — the single source of
+// truth for the composite formula. Returns a float for precise sorting; callers
+// round for display.
 export const getAverageScore = ([moat, growth, valuation]: number[]) =>
-    Math.pow(moat / 100, 0.40)
-    * Math.pow(growth / 100, 0.30)
-    * Math.pow(valuation / 100, 0.30)
-    * 100;
+    computeCompositeRaw(moat, growth, valuation);
 
 const MAX_PORTFOLIO  = 25;
 const MIN_AVG_SCORE  = 75;
