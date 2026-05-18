@@ -143,7 +143,7 @@ export default function HomePage() {
           {[
             { value: "25", label: "Portfolio Holdings" },
             { value: "60+", label: "Stocks Analyzed" },
-            { value: "≥ 75", label: "Score Required" },
+            { value: "≥ 80", label: "Score Required" },
             { value: "10%", label: "Max Position Weight" },
           ].map(({ value, label }, i) => (
             <div

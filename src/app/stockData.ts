@@ -133,7 +133,7 @@ export const getAverageScore = ([moat, growth, valuation]: number[]) =>
     computeCompositeRaw(moat, growth, valuation);
 
 const MAX_PORTFOLIO  = 25;
-const MIN_AVG_SCORE  = 75;
+const MIN_AVG_SCORE  = 80;
 
 /** Compute moat score from a stock JSON's tenMoats field. */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

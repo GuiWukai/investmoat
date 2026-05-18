@@ -64,7 +64,12 @@ function DynamicScore({
 }
 
 // ─── Portfolio threshold ──────────────────────────────────────────────────────
-const PORTFOLIO_THRESHOLD = 75;
+// 80 = "near Strong Buy" floor. Currently 29 names clear it (under the geometric
+// composite in valuationScore.ts), so the 25-cap binds with a small buffer —
+// the threshold becomes the binding constraint if coverage thins or valuations
+// get rich, which is the correct behaviour (portfolio shrinks rather than
+// dilutes with sub-quality names).
+const PORTFOLIO_THRESHOLD = 80;
 const MAX_PORTFOLIO = 25;
 const NEAR_TOP_COUNT = 10;
 
