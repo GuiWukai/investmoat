@@ -147,7 +147,6 @@ export const stockAnalysisSchema = z.strictObject({
   titleColor: z.string().min(1).optional(),
   headerStats: z.array(headerStatSchema).min(1),
   chips: z.array(chipSchema).min(1),
-  recommendation: recommendationSchema,
   metrics: z.array(stockMetricSchema).min(1),
   moat: z.strictObject({
     score: score0to100.optional(),

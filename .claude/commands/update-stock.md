@@ -114,15 +114,14 @@ Review each moat status if any of the following have occurred since the last upd
 
 Update `aiResilienceScore` and `verdict` if 2+ moat statuses have changed.
 
-### 8. Recommendation
+### 8. Recommendation (derived — do not set in JSON)
 
-Recalculate the composite score after all updates:
+The `recommendation` field is no longer stored in the JSON. It is computed at render time from the composite score by `computeRecommendation()` in `src/lib/valuationScore.ts` using:
 
 ```
-composite = (moatScore + growthScore + valuationScore) / 3
+composite = moatScore * 0.4 + growthScore * 0.3 + valuationScore * 0.3
 ```
 
-Update `recommendation` based on:
 | Composite | Recommendation |
 |---|---|
 | ≥ 82 | Strong Buy |
@@ -130,6 +129,8 @@ Update `recommendation` based on:
 | 68–74 | Hold |
 | 60–67 | Speculative Buy |
 | Below 60 | Avoid |
+
+Sanity-check that the resulting recommendation is what you'd expect given the updated scores — if not, the underlying scores are likely miscalibrated.
 
 ### 9. Analysis Date
 

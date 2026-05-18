@@ -134,7 +134,6 @@ Create `src/data/stocks/{slug}.json` using the schema below. Replace all placeho
     { "label": "{Sector | Sub-sector}", "color": "primary" },
     { "label": "{One-word moat descriptor}", "color": "success" }
   ],
-  "recommendation": "{Strong Buy | Accumulate | Hold | Speculative Buy}",
   "metrics": [
     {
       "title": "{Key Metric Name}",

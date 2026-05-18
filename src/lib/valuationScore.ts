@@ -1,4 +1,4 @@
-import type { TenMoatsData } from '@/types/stockAnalysis';
+import type { RecommendationStatus, TenMoatsData } from '@/types/stockAnalysis';
 
 // Status → point scale. Tightened so "intact" requires demonstrable presence
 // rather than just box-checking: the gap between strong (100) and intact (65)
@@ -300,4 +300,23 @@ export function valuationDescription(
   }
   const pct = (((price - bull) / bull) * 100).toFixed(0);
   return `Trading ${pct}% above the bull case (${bullStr}) — premium valuation.`;
+}
+
+// Composite weighting matches the JSON-LD ratingValue shown on stock pages:
+// moat 40% · growth 30% · valuation 30%. Bands map composite → recommendation.
+export function computeComposite(moat: number, growth: number, valuation: number): number {
+  return Math.round(moat * 0.4 + growth * 0.3 + valuation * 0.3);
+}
+
+export function computeRecommendation(
+  moat: number,
+  growth: number,
+  valuation: number,
+): RecommendationStatus {
+  const composite = computeComposite(moat, growth, valuation);
+  if (composite >= 82) return 'Strong Buy';
+  if (composite >= 75) return 'Accumulate';
+  if (composite >= 68) return 'Hold';
+  if (composite >= 60) return 'Speculative Buy';
+  return 'Avoid';
 }
