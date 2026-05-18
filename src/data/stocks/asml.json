@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$573B"
+      "value": "~$585B"
     },
     {
       "label": "Price",
-      "value": "~$1,474"
+      "value": "~$1,502"
     }
   ],
   "chips": [
@@ -26,7 +26,7 @@
       "color": "success"
     }
   ],
-  "recommendation": "Strong Buy",
+  "recommendation": "Accumulate",
   "metrics": [
     {
       "title": "EUV Monopoly",
@@ -45,7 +45,7 @@
     {
       "title": "Q1 2026 Revenue",
       "value": "€8.8B",
-      "label": "Beat €8.5B Estimate — +13% YoY; 2026 Guide Raised to €36–40B",
+      "label": "+13% YoY; Korea 45% of mix as China collapses to 19% from 36%; 2026 Guide €36–40B",
       "icon": "BarChart",
       "color": "#3b82f6"
     }
@@ -65,39 +65,39 @@
       },
       {
         "title": "Service Ecosystem and AI Demand Flywheel",
-        "text": "Once a machine is installed, ASML generates recurring service revenue for 20+ years. Q1 2026 service revenue grew +25% YoY as the installed base expands. AI-driven chip demand accelerated capacity buildouts, prompting management to raise full-year 2026 guidance to €36–40B from €34–39B, with CEO Fouquet citing AI chip demand as the primary driver."
+        "text": "Once a machine is installed, ASML generates recurring service revenue for 20+ years. Q1 2026 Installed Base Management revenue hit €2.5B (+25% YoY) as the installed base expands and customers pay for high-margin performance upgrades to extract more output. AI-driven chip demand accelerated capacity buildouts, prompting management to raise full-year 2026 guidance to €36–40B from €34–39B; ASML now targets 60+ EUV shipments in 2026 (vs 48 in 2025), rising to ~80 in 2027 led by HBM/memory demand."
       }
     ]
   },
   "growth": {
-    "description": "Q1 2026 revenue of €8.8B beat consensus by €0.3B (+13% YoY), prompting a guidance raise to €36–40B for full-year 2026. Service revenue accelerated +25% YoY in Q1 2026, driven by the expanding EUV installed base. High-NA EUV is ramping with ~30% EUV revenue growth expected for 2026, and EPS CAGR of ~22% through 2027 is driven by mix shift toward higher-ASP systems and margin expansion. The 2030 target of €44–60B implies 9–14% revenue CAGR from 2026's revised baseline.",
+    "description": "Q1 2026 revenue of €8.8B beat consensus by €0.3B (+13% YoY), prompting a guidance raise to €36–40B for full-year 2026. Korea drove the geographic mix to 45% of system sales as China collapsed to 19% (from 36% in Q4 2025), with EUV at 66% of system revenue. Installed Base Management revenue grew +25% YoY to €2.5B as customers pay for high-margin output upgrades. ASML recognised revenue on 2 High-NA EUV systems in Q1 and targets 60+ total EUV shipments in 2026 (vs 48 in 2025), rising to ~80 in 2027. EPS CAGR of ~22% through 2027 is driven by mix shift toward higher-ASP systems and margin expansion. The 2030 target of €44–60B implies 9–14% revenue CAGR from the revised 2026 baseline.",
     "growthAnalysis": {
       "cagrEstimate": "13–18%",
-      "scoreDerivation": "Base 80 (revenue CAGR 13–16% NTM; EPS CAGR ~22% 2025–2027 justifies 15–30% CAGR base) + 5 recurring (service contracts +25% YoY, 20-year lifetime per machine) − 5 cyclicality/concentration (China demand significantly lower 2026 due to VEU revocation; TSMC single-customer concentration) = 80",
+      "scoreDerivation": "Base 80 (revenue CAGR 13–16% NTM; EPS CAGR ~22% 2025–2027 justifies 15–30% CAGR base) + 5 recurring (Installed Base Management +25% YoY to €2.5B, 20-year lifetime per machine) − 5 cyclicality/concentration (hyperscaler AI capex digestion risk; China demand collapsed to 19% mix; TSMC/Samsung/SK Hynix triopoly concentration) = 80",
       "drivers": [
-        { "name": "EUV / High-NA Shipments", "metric": "~30% EUV revenue growth est. 2026; High-NA ramp toward 20+ units", "trend": "accelerating" },
-        { "name": "Service Revenue", "metric": "+25% YoY Q1 2026; compounding 20-year recurring base", "trend": "accelerating" },
-        { "name": "Non-China AI Capex", "metric": "Taiwan +175% YoY, Korea +46%, Japan +50% (2025); absorbing China decline", "trend": "stable" }
+        { "name": "EUV / High-NA Shipments", "metric": "60+ EUV units guided for 2026 vs 48 in 2025; 2 High-NA systems recognised in Q1 2026", "trend": "accelerating" },
+        { "name": "Installed Base Management", "metric": "€2.5B in Q1 2026, +25% YoY; high-margin output upgrades compounding on 20-year base", "trend": "accelerating" },
+        { "name": "Non-China AI Capex", "metric": "Korea 45% of Q1 system sales (memory/HBM ramp); China collapsed to 19% from 36% in Q4 2025", "trend": "stable" }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If the US/EU extend DUV immersion export controls to all remaining Chinese fabs by end of 2026, ASML loses the remaining China DUV revenue (~15% of 2025 sales) simultaneously with any AI hyperscaler capex slowdown, causing full-year 2026 revenue to miss the low end of the €36–40B guide",
+      "keyRisk": "Hyperscaler AI capex digestion: if any two of Microsoft, Meta, Alphabet, Amazon, or Oracle cut FY2027 capex guidance by >15% in their H2 2026 earnings (signalling the ~$725B Q1 2026 capex run-rate is peaking), TSMC and SK Hynix would defer EUV deliveries beginning Q1 2027, pushing ASML's 2027 revenue below €40B and compressing the forward multiple from ~36× toward the semi-cyclical norm of ~25× — a scenario rendered more probable by Burry's January-2027 SOXX/NVDA puts, SOX trading 60% above its 200-day MA, and CAPE at dot-com-peak readings",
       "keyRiskSeverity": "high",
       "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 75,
-    "description": "At ~$1,474 — up ~38% since the February 2026 update — ASML has moved from near the midpoint of the prior bear-to-base range to approximately 60% of the way toward the revised base target of $1,750, yielding a valuation score of 75. The Q1 2026 beat and guidance raise to €36–40B justify revised upward scenarios, but the margin of safety has narrowed from the February entry point. Forward P/E of ~36× sits below ASML's 5-year historical premium of ~45×, reflecting the significant earnings ramp ahead as High-NA shipments scale through 2027.",
+    "score": 74,
+    "description": "At ~$1,502 — after a 5.2% Friday-15-May drop in a broader semi sell-off (Intel −6%, AMD −5.7%, Micron −6.6%, NVDA −4.4%) — ASML sits roughly 64% of the way from the bear case ($1,050) to the base case ($1,750), yielding a valuation score of 74. The pullback has restored modest margin of safety vs the mid-May all-time-high (€1,371 ADR-implied ~$1,584), but the stock still trades above fair value once the AI-capex digestion risk is weighted. Forward P/E of ~37× sits below ASML's 5-year historical premium of ~45×, reflecting the earnings ramp ahead as High-NA shipments scale through 2027.",
     "peAnalysis": {
-      "asOf": "April 2026",
+      "asOf": "May 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~65×", "note": "TTM EPS ~€19 (FY2025 est.)" },
-        { "label": "Forward P/E (NTM)", "value": "~36×", "note": "consensus 2026 EPS €34.39" },
-        { "label": "PEG Ratio", "value": "~1.6×", "note": "fwd P/E ÷ 22% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~12.5×", "note": "€473B mkt cap / €38B NTM rev" },
-        { "label": "Price / FCF", "value": "~75×", "note": "~€6B FCF (TTM est.)" }
+        { "label": "Trailing P/E (GAAP)", "value": "~62×", "note": "TTM EPS ~€21 (post-Q1 2026)" },
+        { "label": "Forward P/E (NTM)", "value": "~37×", "note": "consensus 2026 EPS ~€35" },
+        { "label": "PEG Ratio", "value": "~1.7×", "note": "fwd P/E ÷ 22% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~13×", "note": "~€500B mkt cap / €38B NTM rev" },
+        { "label": "Price / FCF", "value": "~75×", "note": "~€6.5B FCF (TTM est.)" }
       ],
-      "summary": "At ~36× forward P/E, ASML trades at a meaningful discount to its own 5-year historical average of ~45× while still commanding a steep premium to the semiconductor sector median of ~25×, reflecting the unmatched EUV monopoly. The PEG of ~1.6× is fair but not cheap — it requires ASML to sustain ~22% EPS CAGR through 2027, which the High-NA shipment ramp and service revenue compounding make plausible. The collapse from ~65× trailing to ~36× forward signals a sharp earnings acceleration ahead as High-NA systems begin contributing meaningful revenue — a structurally bullish signal for the 2026–2027 period."
+      "summary": "At ~37× forward P/E, ASML trades at a discount to its own 5-year historical average of ~45× while still commanding a steep premium to the semiconductor sector median of ~25×, reflecting the unmatched EUV monopoly. The PEG of ~1.7× is fair but not cheap — it requires ASML to sustain ~22% EPS CAGR through 2027, which the High-NA shipment ramp and service revenue compounding make plausible. The gap between trailing (~62×) and forward (~37×) signals a sharp earnings acceleration ahead as High-NA systems begin contributing meaningful revenue — a structurally bullish signal that is partly offset by the rising probability of an AI-capex digestion event compressing the entire semi-equipment multiple toward the cyclical norm of ~25×."
     }
   },
   "scenarios": {
@@ -172,5 +172,5 @@
     },
     "verdict": "ASML is the most AI-resilient business in the portfolio. Physical hardware monopolies, regulatory protection, and manufacturing expertise rooted in physics cannot be disrupted by software AI — and the AI infrastructure boom is actively accelerating demand for ASML's machines. High-NA EUV cements this monopoly for the next decade."
   },
-  "lastAnalyzed": "April 2026"
+  "lastAnalyzed": "May 2026"
 }

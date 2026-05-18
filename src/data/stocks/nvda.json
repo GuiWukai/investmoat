@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$4.83T"
+      "value": "~$5.47T"
     },
     {
       "label": "Current Price",
-      "value": "~$199"
+      "value": "~$225"
     }
   ],
   "chips": [
@@ -31,21 +31,21 @@
     {
       "title": "Q4 FY2026 Revenue",
       "value": "$68.1B",
-      "label": "+73% YoY — Q1 FY2027 guided at $78B (+77% YoY); Data Center $62.3B quarterly record",
+      "label": "+73% YoY (Feb 2026 print) — Q1 FY2027 reports May 20 2026 after-close; Street at ~$78.8B / $1.77 EPS, ~$400M above guide midpoint",
       "icon": "Cpu",
       "color": "#76b900"
     },
     {
-      "title": "AI Chip Order Book",
-      "value": "$1T+",
-      "label": "Blackwell + Rubin through 2027 — China H200 approvals cleared April 2026",
+      "title": "Hyperscaler AI Capex",
+      "value": "~$725B",
+      "label": "2026 confirmed in Q1 earnings — but ~$2.1T cloud backlog is half-anchored to OpenAI + Anthropic, both FCF-negative",
       "icon": "Zap",
       "color": "#3b82f6"
     },
     {
       "title": "Forward P/E",
-      "value": "~24×",
-      "label": "vs. 40× TTM — accelerating EPS ramp, PEG ~0.6×",
+      "value": "~27×",
+      "label": "NTM EPS ~$8.43 (FY27 consensus); PEG ~0.6× vs. ~70% EPS growth — re-rated up from 24× as price ran to $225",
       "icon": "TrendingUp",
       "color": "#10b981"
     }
@@ -70,19 +70,19 @@
     ]
   },
   "growth": {
-    "description": "Q4 FY2026 revenue hit $68.1B (+73% YoY) on data center demand of $62.3B. Management guided Q1 FY2027 to $78B (+77% YoY vs. Q1 FY2026's $44.1B), with GAAP gross margins recovering to ~74.9% after the $4.5B H20 charge in Q1 FY2026. The China H200 export ban reversal in late 2025 — culminating in 400K+ unit approvals for ByteDance, Alibaba, and Tencent in April 2026 — restores a revenue stream previously written off. FY2027 consensus stands at $367.7B (+70% YoY). Vera Rubin first samples shipped to hyperscalers; volume production on track for H2 2026.",
+    "description": "Q4 FY2026 revenue hit $68.1B (+73% YoY) on data center demand of $62.3B. Management guided Q1 FY2027 to $78B (+77% YoY); Street sits ~$400M above the guide midpoint at ~$78.8B / $1.77 EPS into the May 20 2026 print — unusually bullish positioning given NVIDIA's typical sandbag. Q4 supply-related purchase commitments nearly doubled to $95.2B (from $50.3B), and FY2027 EPS consensus has risen to ~$8.43 (from ~$8.25 a quarter ago). China H200 approvals cleared 400K+ units for ByteDance/Alibaba/Tencent in April 2026. Vera Rubin volume production on track for H2 2026.",
     "growthAnalysis": {
       "cagrEstimate": "35–50%",
-      "scoreDerivation": "Base 90 (30%+ CAGR on $68B quarterly base) + 5 TAM expansion (sovereign AI, Rubin architecture) + 5 platform stickiness (CUDA ecosystem NRR equivalent) − 5 export control risk (China restrictions ongoing) = 95",
+      "scoreDerivation": "Base 90 (30%+ CAGR on $68B quarterly base) + 5 TAM expansion (sovereign AI, Rubin architecture) + 5 platform stickiness (CUDA ecosystem NRR equivalent) − 5 AI-capex demand concentration (OpenAI/Anthropic anchor half of $2.1T cloud backlog; both FCF-negative) = 95",
       "drivers": [
         {
           "name": "Data Center (AI Training & Inference)",
-          "metric": "$62.3B Q4 FY2026 (+73% YoY); Q1 FY2027 guided at $78B total (+77% YoY); $1T+ order book",
+          "metric": "$62.3B Q4 FY2026 (+73% YoY); Q1 FY2027 guided $78B (Street ~$78.8B); 2026 hyperscaler capex ~$725B; supply commitments $95.2B",
           "trend": "accelerating"
         },
         {
           "name": "AI Inference & Edge",
-          "metric": "NIM microservices, Jetson platform growing; enterprise AI inference TAM $200B+ by 2027",
+          "metric": "NIM microservices, Jetson platform growing; enterprise AI inference TAM $200B+ by 2027; Rubin promises 10× inference-token cost reduction vs. Blackwell",
           "trend": "accelerating"
         },
         {
@@ -92,44 +92,44 @@
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If AMD ROCm reaches 15%+ developer share by end of 2026 — aided by hardware-agnostic tools like OpenAI Triton — CUDA switching costs erode and hyperscalers accelerate in-house ASIC programs (Google TPU v6, Amazon Trainium3), threatening the 90%+ AI training market share position",
-      "keyRiskSeverity": "moderate",
+      "keyRisk": "AI-capex demand concentration risk is now the dominant near-term threat: ~$2.1T cloud backlog is roughly half-anchored to OpenAI + Anthropic (both deeply FCF-negative), Project Stargate ($500B) layers in financing-coupled commitments, and SOX trades ~62% above its 200-day MA — exceeding the Nasdaq's 55% deviation at the March 2000 peak. Burry's Scion has ~$1.1B notional of NVDA puts struck at $110–125 expiring Jan/March 2027. Falsifiable test: if any top-3 hyperscaler cuts FY2027 AI capex guidance by >10% on a single earnings print between now and Jan 2027, or if Q1 FY2027 (May 20) prints in-line/miss with a Q2 guide below $86B Street consensus, the bubble framing crystallises and multiple compression dominates the EPS ramp.",
+      "keyRiskSeverity": "high",
       "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 71,
-    "description": "At ~$199 — below the updated base target of $230 — NVDA trades at ~24× forward P/E on NTM EPS of ~$8.25, a PEG of ~0.6× against a ~40% EPS CAGR. The China H200 re-opening and $78B Q1 FY2027 guidance have pushed FY2027 consensus to $367.7B (+70% YoY), providing a floor to the bear case. The stock is modestly undervalued relative to 12–24 month fair value, with the Vera Rubin production ramp in H2 2026 as the next re-rating catalyst.",
+    "score": 66,
+    "description": "At ~$225, NVDA sits just 2% below the $230 base case after a 13% two-week rally to a $235.74 ATH (May 14) and a -4.4% pullback Friday (May 15) amid a broader semiconductor sell-off. Forward P/E is now ~27× on NTM EPS of ~$8.43 (PEG ~0.6× against ~70% FY27 EPS growth), and the May 20 Q1 FY27 print is the next binary catalyst — options imply a 5–10% move. Effectively fair-valued vs. 12-month base case, with most of the cushion to bear ($110) consumed by the rally.",
     "peAnalysis": {
-      "asOf": "April 2026",
+      "asOf": "May 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~40×",
-          "note": "TTM EPS ~$4.97 (FY2026 ramp)"
+          "value": "~42×",
+          "note": "TTM EPS ~$5.40 (FY2026 ramp)"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~24×",
-          "note": "consensus NTM EPS ~$8.25"
+          "value": "~27×",
+          "note": "consensus NTM EPS ~$8.43"
         },
         {
           "label": "PEG Ratio",
           "value": "~0.6×",
-          "note": "fwd P/E ÷ ~40% EPS CAGR"
+          "note": "fwd P/E ÷ ~70% FY27 EPS growth"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~14×",
-          "note": "~$340B NTM revenue est."
+          "value": "~15×",
+          "note": "~$365B NTM revenue est."
         },
         {
           "label": "Price / FCF",
-          "value": "~50×",
-          "note": "$96.7B FCF (TTM)"
+          "value": "~55×",
+          "note": "~$100B FCF (TTM est.)"
         }
       ],
-      "summary": "At 24× forward P/E with a PEG of 0.6×, NVDA remains cheap relative to its ~40% EPS CAGR — well below the 30–35× sector median for high-growth semiconductors. The 40× trailing P/E reflects FY2026's ramping year; the 16-point compression to 24× forward signals a rapid EPS acceleration as Q1 FY2027 ($78B guided) compounds the base. TTM Price/FCF of ~50× is elevated in absolute terms but reasonable for a business generating 94%+ ROIC with $1T+ in committed demand."
+      "summary": "At 27× forward P/E with a PEG of ~0.6×, NVDA still screens cheap on growth-adjusted multiples — but the absolute price/sales (~15×) and price/FCF (~55×) sit well above sector medians, leaving the stock more dependent on the Q1 FY27 print and Q2 guide to validate the FY27 ramp. The SOX trades ~62% above its 200-day MA — higher than the Nasdaq's 55% deviation at the March 2000 peak — meaning NVDA's PEG support depends on EPS growth actually compounding, not on the multiple absorbing any miss."
     }
   },
   "scenarios": {
@@ -206,5 +206,5 @@
     },
     "verdict": "NVIDIA's moat is almost entirely AI-resilient. The CUDA network effect and proprietary compute standard deepen as AI infrastructure spending grows — making NVIDIA the infrastructure of the AI economy."
   },
-  "lastAnalyzed": "April 2026"
+  "lastAnalyzed": "May 2026"
 }
