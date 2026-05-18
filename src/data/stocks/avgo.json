@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$1.81T"
+      "value": "$2.01T"
     },
     {
       "label": "Price",
-      "value": "$381"
+      "value": "$423"
     }
   ],
   "chips": [
@@ -26,7 +26,6 @@
       "color": "success"
     }
   ],
-  "recommendation": "Strong Buy",
   "metrics": [
     {
       "title": "AI Revenue",
@@ -77,14 +76,14 @@
     "description": "AI XPU revenue grew 106% YoY to $8.4B in Q1 FY2026, with Q2 guided to $10.7B (+140% YoY); full-year FY2026 AI revenue tracking ~$46B (+134% YoY). Meta partnership extended through 2029 (multi-GW MTIA, April 14 2026); Google agreement through 2031; Anthropic tripling compute to 3GW+ by year-end. Management has explicit 'line of sight' to $100B+ in AI chip revenue in FY2027, up from $20B in FY2025. VMware infrastructure software ARR growing 19% YoY with 93% gross margins. Total backlog exceeds $73B for 18-month delivery.",
     "growthAnalysis": {
       "cagrEstimate": "30–50%",
-      "scoreDerivation": "Base 90 (30%+ CAGR: AI XPU revenue +134% YoY to ~$46B FY2026; management guides $100B+ AI chips in FY2027 from $20B in FY2025) + 5 recurring (VMware ARR +19% YoY on $27B+ annualised base, 93% gross margins) + 5 TAM expansion (AI XPU TAM growing toward $200B+ by 2027; 6 hyperscaler co-development programs incl. Meta through 2029, Google through 2031) − 8 customer concentration (single client ~42% of Q1 FY2026 revenue) = 92",
+      "scoreDerivation": "Base 90 (30%+ CAGR: AI XPU revenue +134% YoY to ~$46B FY2026; management guides $100B+ AI chips in FY2027 from $20B in FY2025) + 5 recurring (VMware ARR +19% YoY on $27B+ annualised base, 93% gross margins) + 5 TAM expansion (AI XPU TAM growing toward $200B+ by 2027; 6 hyperscaler co-development programs incl. Meta through 2029, Google through 2031) − 8 customer/buyer concentration (single client ~42% of Q1 FY2026 revenue; 5 hyperscalers ~84% of 2026 AI capex; OpenAI $18B financing snag May 2026 a concrete capex-digestion data point) = 92",
       "drivers": [
         { "name": "AI Custom Silicon (XPU)", "metric": "+106% YoY to $8.4B in Q1 FY2026; Q2 guided $10.7B (+~140% YoY); FY2026 full-year tracking ~$46B (+134% YoY)", "trend": "accelerating" },
         { "name": "Infrastructure Software (VMware/VCF)", "metric": "+1% revenue YoY, +19% ARR YoY; $9.2B TCV booked in Q1", "trend": "stable" },
         { "name": "AI Networking (Tomahawk/Jericho)", "metric": "Included in $12.5B semiconductor revenue (+52% YoY Q1); Tomahawk 6 launched at 102.4 Tbps", "trend": "accelerating" }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If one or more of the top 3 XPU customers (Google, Meta, Anthropic) cuts custom silicon orders or shifts fully to in-house ASIC design by end of FY2027, Broadcom's path to $100B+ AI chip revenue collapses; separately, if VMware 3-year contract renewals show >15% churn by Q4 FY2026, software ARR growth stalls below 10% and degrades the bundling moat",
+      "keyRisk": "AI-capex digestion risk is now the dominant near-term threat: 5 hyperscalers fund ~84% of 2026 datacenter capex (~$725B) and 3 vendors (NVDA/AMD/AVGO) supply 96% of accelerators — if any of Google/Meta/Anthropic/OpenAI cuts XPU orders or pushes out delivery by 2+ quarters before FY2027, the $100B+ AI chip target collapses. The May 8 2026 OpenAI/Broadcom $18B financing snag (Microsoft conditioning a 40% off-take purchase) is the first concrete data point; if the OpenAI 10GW program slips materially or Microsoft walks by end of Q3 FY2026, expect a sharper de-rating. Separately, if VMware 3-year contract renewals show >15% churn by Q4 FY2026, software ARR growth stalls below 10% and degrades the bundling moat",
       "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     },
@@ -103,21 +102,21 @@
     }
   },
   "valuation": {
-    "score": 74,
-    "description": "At ~$381, Broadcom trades approximately 22% below the refreshed $490 base case — still an attractive entry point as AI revenue accelerates toward $46B in FY2026 (+134% YoY). The forward P/E of ~33× (non-GAAP NTM) sits above the AI semiconductor peer group but the PEG of 0.70 signals growth-at-a-reasonable-price territory; Q2 FY2026 guidance of $22B revenue (+47% YoY) and $10.7B AI revenue (+140% YoY) implies a major earnings ramp into FY2027's guided $100B+ AI chip revenue.",
+    "score": 71,
+    "description": "At ~$423 (after Friday May 15 broad chip sell-off; ATH $440 set May 14), Broadcom trades approximately 14% below the $490 base case — still attractive but the cushion has compressed materially since April as the stock re-rated +11% on Q1 results and analyst hikes (Wells Fargo $545, Evercore $582). Forward P/E of ~36× (non-GAAP NTM) sits above the AI semiconductor peer group; the PEG of ~0.77 keeps the name in GARP territory, but valuation is increasingly sensitive to Q2 FY2026 print (June 3) and to AI-capex digestion signals after the May 8 OpenAI/Broadcom $18B financing snag.",
     "peAnalysis": {
-      "asOf": "April 2026",
+      "asOf": "May 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~74×", "note": "TTM GAAP EPS ~$5.17" },
-        { "label": "Forward P/E (NTM)", "value": "~33×", "note": "non-GAAP NTM EPS est. ~$11.60" },
-        { "label": "PEG Ratio", "value": "~0.70×", "note": "fwd P/E ÷ ~47% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~21×", "note": "~$87B NTM revenue est." },
-        { "label": "Price / FCF", "value": "~62×", "note": "~$29B FCF (TTM est.)" }
+        { "label": "Trailing P/E (GAAP)", "value": "~82×", "note": "TTM GAAP EPS ~$5.17" },
+        { "label": "Forward P/E (NTM)", "value": "~36×", "note": "non-GAAP NTM EPS est. ~$11.75" },
+        { "label": "PEG Ratio", "value": "~0.77×", "note": "fwd P/E ÷ ~47% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~23×", "note": "~$87B NTM revenue est." },
+        { "label": "Price / FCF", "value": "~69×", "note": "~$29B FCF (TTM est.)" }
       ],
-      "summary": "At ~33× forward P/E (non-GAAP), Broadcom trades above the AI semiconductor peer group (~24–25×), reflecting the market's growing confidence in the $46B FY2026 AI revenue trajectory and the $100B+ FY2027 path. The PEG of 0.70 remains firmly in GARP territory — growth is still outpacing the multiple. The wide trailing-to-forward P/E gap (74× to 33×) is a signal, not a red flag: it reflects a step-change in non-GAAP earnings as VMware amortization gradually rolls off and AI chip revenue compounds at 130%+ annually. FCF multiple compresses rapidly toward 25–30× on FY2027 estimates."
+      "summary": "At ~36× forward P/E (non-GAAP), Broadcom trades meaningfully above the AI semiconductor peer group (~25–27×), reflecting market confidence in the $46B FY2026 AI revenue trajectory and the $100B+ FY2027 path. The PEG of ~0.77 keeps the name in GARP territory — growth is still outpacing the multiple — but the cushion has compressed. With SOX +65% YTD and Burry-style bubble warnings active, AVGO's multiple is now more vulnerable to any Q2 FY2026 guidance miss or further AI-capex digestion signals. FCF multiple compresses toward 28–32× on FY2027 estimates if $100B+ AI chip revenue is achieved."
     },
     "valuationNote": {
-      "text": "Multi-year customer commitments — Meta through 2029, Google through 2031, Anthropic tripling to 3GW+ by year-end — alongside the $73B AI order backlog provide extraordinary forward visibility. Full-year FY2026 AI revenue is tracking toward $46B (+134% YoY); Q2 FY2026 guidance of $22B revenue (+47% YoY) and $10.7B AI revenue implies continued acceleration. Q1 FY2026 FCF was $8.0B (41% of revenue); TTM FCF is ~$29B; the stock trades at ~62× TTM FCF but that multiple compresses rapidly toward 25–30× on FY2027 estimates if $100B+ AI chip revenue is achieved.",
+      "text": "Multi-year customer commitments — Meta through 2029, Google through 2031, Anthropic tripling to 3GW+ by year-end — alongside the $73B AI order backlog provide extraordinary forward visibility. Q2 FY2026 (reporting June 3 2026) is guided to $22B revenue (+47% YoY) and $10.7B AI revenue (+140% YoY); the print is now the key near-term catalyst against an increasingly bubble-conscious tape (SOX +65% YTD, Burry SOXX/QQQ/NVDA/PLTR/ORCL puts disclosed). The OpenAI $18B financing snag (Microsoft conditioning a 40% off-take) is the first tangible AI-capex digestion data point and must be monitored: a clean Q2 print plus OpenAI deal resolution would unwind the May sell-off; a guide-down or program slip would justify a deeper re-rating. Recent sell-side targets cluster $475–$582 (Wells Fargo $545 on May 14, avg ~$508).",
       "fairValue": "$490"
     }
   },
@@ -194,7 +193,7 @@
       "status": "strong",
       "note": "VMware vCenter is the system of record for enterprise compute inventory — every VM, every workload, every resource allocation lives in vCenter. This is as sticky as it gets in infrastructure software."
     },
-    "verdict": "Broadcom is a net AI beneficiary with two compounding engines: custom XPU co-development for six hyperscaler customers (AI revenue +106% YoY in Q1 FY2026; full-year FY2026 tracking ~$46B, +134% YoY) and VMware's stranglehold on enterprise virtualization (ARR +19% YoY at 93% gross margins). The strongest AI-resilient moats are systemOfRecord (vCenter as compute-inventory authority), businessLogic (custom silicon embedded in hyperscaler training pipelines), and talentScarcity (scarce custom ASIC design teams). The Meta partnership extension through 2029 and Google agreement through 2031 meaningfully reduce medium-term customer concentration risk. Two risks require monitoring: the CISPE antitrust complaint with the EU Commission (filed March 2026, still pending — no ruling issued) over VMware pricing practices, and customer concentration (one client ~42% of Q1 FY2026 revenue); neither changes moat status today but both require reassessment if the EU rules adversely or concentration worsens."
+    "verdict": "Broadcom is a net AI beneficiary with two compounding engines: custom XPU co-development for six hyperscaler customers (AI revenue +106% YoY in Q1 FY2026; full-year FY2026 tracking ~$46B, +134% YoY) and VMware's stranglehold on enterprise virtualization (ARR +19% YoY at 93% gross margins). The strongest AI-resilient moats are systemOfRecord (vCenter as compute-inventory authority), businessLogic (custom silicon embedded in hyperscaler training pipelines), and talentScarcity (scarce custom ASIC design teams). The Meta partnership extension through 2029 and Google agreement through 2031 meaningfully reduce medium-term customer concentration risk. Three risks require monitoring as of May 2026: (1) AI-capex digestion / hyperscaler concentration — the May 8 2026 OpenAI/Broadcom $18B financing snag (Microsoft conditioning a 40% off-take) is the first concrete capex-strain data point, and broader bubble warnings (Burry SOXX/NVDA puts; SOX +65% YTD) make the multiple more fragile; (2) the CISPE antitrust complaint with the EU Commission (filed March 2026, still pending) over VMware pricing practices; (3) customer concentration (one client ~42% of Q1 FY2026 revenue). None changes moat status today but all require reassessment after Q2 FY2026 results (June 3 2026)."
   },
-  "lastAnalyzed": "April 2026"
+  "lastAnalyzed": "May 2026"
 }

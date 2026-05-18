@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getStockData, getAllSlugs } from '@/data/stocks';
 import StockPageClient from '@/components/StockPageClient';
-import { computeMoatScore, computeGrowthScore } from '@/lib/valuationScore';
+import { computeMoatScore, computeGrowthScore, computeRecommendation } from '@/lib/valuationScore';
 
 const SITE_URL = 'https://investmoat.com';
 
@@ -36,8 +36,9 @@ export async function generateMetadata(
   const title = `${data.name} (${data.ticker})`;
   const moatScore = computeMoatScore(data.tenMoats);
   const growthScore = computeGrowthScore(data.growth.growthAnalysis) ?? 0;
+  const recommendation = computeRecommendation(moatScore, growthScore, data.valuation.score);
   const description =
-    `${data.moat.description} Moat: ${moatScore}/100 · Growth: ${growthScore}/100 · ${data.recommendation}.`;
+    `${data.moat.description} Moat: ${moatScore}/100 · Growth: ${growthScore}/100 · ${recommendation}.`;
   const canonicalUrl = `${SITE_URL}/stocks/${data.slug}`;
   const publishedTime = lastAnalyzedToISO(data.lastAnalyzed);
 
@@ -51,7 +52,7 @@ export async function generateMetadata(
       `${data.name} stock analysis`,
       `${data.ticker} moat score`,
       `${data.ticker} valuation`,
-      `${data.ticker} ${data.recommendation.toLowerCase()}`,
+      `${data.ticker} ${recommendation.toLowerCase()}`,
       'moat investing',
       'AI era stocks',
     ],
@@ -85,10 +86,11 @@ export default async function Page({ params }: { params: Promise<{ ticker: strin
   const growthScore = computeGrowthScore(data.growth.growthAnalysis) ?? 0;
   const valuationScore = data.valuation.score;
   const compositeScore = Math.round(moatScore * 0.4 + growthScore * 0.3 + valuationScore * 0.3);
+  const recommendation = computeRecommendation(moatScore, growthScore, valuationScore);
   const canonicalUrl = `${SITE_URL}/stocks/${data.slug}`;
   const ogImageUrl = `${canonicalUrl}/opengraph-image`;
   const description =
-    `${data.moat.description} Moat: ${moatScore}/100 · Growth: ${growthScore}/100 · ${data.recommendation}.`;
+    `${data.moat.description} Moat: ${moatScore}/100 · Growth: ${growthScore}/100 · ${recommendation}.`;
   const datePublished = lastAnalyzedToISO(data.lastAnalyzed);
 
   const headline = `${data.name} (${data.ticker}) — InvestMoat Analysis`;
@@ -138,7 +140,7 @@ export default async function Page({ params }: { params: Promise<{ ticker: strin
           ratingValue: compositeScore,
           bestRating: 100,
           worstRating: 0,
-          name: data.recommendation,
+          name: recommendation,
         },
         mainEntityOfPage: {
           '@type': 'WebPage',

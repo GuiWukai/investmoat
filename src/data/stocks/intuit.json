@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$100B"
+      "value": "~$109B"
     },
     {
       "label": "Price",
-      "value": "~$355"
+      "value": "~$393"
     }
   ],
   "chips": [
@@ -26,7 +26,6 @@
       "color": "success"
     }
   ],
-  "recommendation": "Accumulate",
   "metrics": [
     {
       "title": "QBO Revenue Growth",
@@ -61,7 +60,7 @@
       },
       {
         "title": "TurboTax: Weakening but Managed (24%)",
-        "text": "IRS Direct File expanded to 25 states covering 30M+ eligible taxpayers; Intuit exited the IRS Free File Program; and the Direct File Act of 2026 debates a federal mandate for free filing. TurboTax Live (human-assisted) remains the pivot to higher-ARPU defensible territory, guided +8% in FY2026, but the secular headwind is structural."
+        "text": "IRS Direct File expanded to 25 states covering 30M+ eligible taxpayers; Intuit exited the IRS Free File Program; and the Direct File Act of 2026 debates a federal mandate for free filing. TurboTax revenue grew +12% in Q2 FY2026 ($581M) — ahead of the +8% FY26 guide — as TurboTax Live (human-assisted) continues the pivot to higher-ARPU defensible territory. The May 20 Q3 print covering the full tax season is the year's most important data point on whether Direct File is materially denting unit volumes."
       },
       {
         "title": "AI-Native Challenger Risk to the Bundle",
@@ -70,14 +69,14 @@
     ]
   },
   "growth": {
-    "description": "Q2 FY2026 revenue of $4.65B (+17% YoY) beat the $4.53B consensus; QuickBooks Online Accounting grew +24% and Global Business Solutions +18%. FY2026 full-year guidance reiterated at $20.997–21.186B (+12–13%), with GAAP EPS of $15.49–15.69 (+13–15%) and Non-GAAP EPS of $22.98–23.18. Growth has decelerated from the 15–20% band into the 10–14% range as TurboTax faces IRS Direct File pressure and AI-native bookkeeping tools mount a credible challenge to the bundle. Score downgraded from 84: CAGR profile has dropped from the 15–30% band to the 8–15% band — a structural shift, not a cyclical blip.",
+    "description": "Q2 FY2026 revenue of $4.7B (+17% YoY) beat the $4.53B consensus; QuickBooks Online Accounting grew +24%, Global Business Solutions +18%, Credit Karma +23% (well above guided 10–13%), and TurboTax +12%. FY2026 full-year guidance reiterated at $20.997–21.186B (+12–13%), with GAAP EPS of $15.49–15.69 and Non-GAAP EPS of $22.98–23.18. Q3 FY2026 (the seasonally critical tax-season quarter) is set to print May 20 with consensus at $8.54B revenue / $12.57 non-GAAP EPS and guidance of $12.45–12.51 EPS. Growth has stabilised in the 10–14% range; Credit Karma's reacceleration is the key positive surprise, while TurboTax has so far weathered IRS Direct File expansion better than feared.",
     "growthAnalysis": {
       "cagrEstimate": "10–14%",
       "scoreDerivation": "Base 67 (8–15% CAGR) + 5 recurring subscription (QuickBooks high switching costs, ~65% subscription mix) + 3 AI TAM expansion (Intuit Assist Deduction Maximizer, QBO AI agentic features in beta) − 2 competitive headwinds (AI-native startups + IRS Direct File Act debate) = 73",
       "drivers": [
-        { "name": "Global Business Solutions (QuickBooks)", "metric": "+18% YoY, $3.2B Q2 FY26; Online Ecosystem +21%", "trend": "stable" },
-        { "name": "Credit Karma", "metric": "+10–13% FY2026 guided; consumer credit recovery tailwind", "trend": "accelerating" },
-        { "name": "Consumer (TurboTax)", "metric": "+8% FY2026 guided; TurboTax Live was +47% in FY2025", "trend": "stable" }
+        { "name": "Global Business Solutions (QuickBooks)", "metric": "+18% YoY Q2 FY26; QBO Online Accounting +24%; FY26 guided +14–15%", "trend": "stable" },
+        { "name": "Credit Karma", "metric": "+23% YoY Q2 FY26 (well above +10–13% guided); consumer credit recovery accelerating", "trend": "accelerating" },
+        { "name": "Consumer (TurboTax)", "metric": "+12% YoY Q2 FY26 ($581M); FY2026 guided +8%; Q3 May 20 is tax-season verdict", "trend": "stable" }
       ],
       "primaryType": "both",
       "keyRisk": "If the Direct File Act of 2026 passes into federal law by end of FY2026, expanding IRS free filing to all income levels nationally, TurboTax unit volumes could fall 15–20% and the Consumer segment misses its FY2027 growth trajectory — removing ~$1.5B of high-margin Consumer revenue from the model",
@@ -86,38 +85,38 @@
     }
   },
   "valuation": {
-    "score": 74,
-    "description": "Trading ~$355 — 17% below the base case ($430) — as AI disruption fears have compressed the forward GAAP P/E from ~45× to ~23×. At ~16× non-GAAP forward earnings and ~4.7× NTM sales, valuation is the most attractive since 2019. The selloff reflects real structural risks but has overshot fundamentals given the Q2 FY2026 beat and reiterated full-year guidance.",
+    "score": 69,
+    "description": "Trading ~$393 — 9% below the base case ($430) — after rallying ~11% off April lows into the May 20 Q3 print. Forward GAAP P/E has recovered from ~23× to ~25× as AI disruption fears moderate following the Q2 beat and analyst reiterations (TD Cowen target $576, Buy). At ~17× non-GAAP forward earnings and ~5.2× NTM sales, valuation remains attractive but the deep-discount window has narrowed.",
     "peAnalysis": {
-      "asOf": "April 2026",
+      "asOf": "May 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~26×",
+          "value": "~29×",
           "note": "TTM GAAP EPS ~$13.70 (FY2025)"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~23×",
+          "value": "~25×",
           "note": "FY2026 GAAP EPS guide ~$15.59"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.6×",
+          "value": "~1.8×",
           "note": "fwd GAAP P/E ÷ 14% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~4.7×",
+          "value": "~5.2×",
           "note": "$21.1B FY2026 guided revenue"
         },
         {
           "label": "Price / FCF",
-          "value": "~16×",
+          "value": "~18×",
           "note": "$6.1B FCF TTM (FY2025)"
         }
       ],
-      "summary": "At ~23× GAAP forward P/E, Intuit trades below the quality-software sector median (~28–32×) and at its lowest multiple in 6+ years — a significant discount for a business generating $6.1B in annual FCF with 7M+ switching-cost SMB customers. On a non-GAAP basis the forward P/E drops to ~15× and the PEG to ~1.1×, deep into growth-at-a-reasonable-price territory. The narrow trailing-to-forward P/E gap (26× → 23×) reflects an earnings ramp from operating leverage, not deceleration — the AI fear compression has overshot fundamentals."
+      "summary": "At ~25× GAAP forward P/E, Intuit trades roughly in line with the quality-software sector median (~28–32×) after rebounding from April's 6-year low. On a non-GAAP basis the forward P/E sits ~17× and the PEG ~1.2×, still firmly in growth-at-a-reasonable-price territory. The Q2 FY2026 beat (revenue +17%, Credit Karma +23%) and reiterated full-year guidance ($20.997–21.186B) have validated the bull's view that AI fear-compression overshot fundamentals. With the May 20 Q3 print imminent and tax-season results as the year's most-watched data point, valuation has tightened but stays attractive vs the $430 base."
     }
   },
   "scenarios": {
@@ -193,5 +192,5 @@
     "aiResilienceScore": 85,
     "verdict": "Intuit is a net beneficiary of AI on balance — its proprietary financial dataset (100M+ users' tax returns, SMB financials, credit profiles) becomes more valuable as the AI training-data arms race intensifies, and the transactionEmbedding and systemOfRecord moats are structurally immune to LLM substitution. The chief AI risk is bundling: agentic point-solutions (Puzzle, Digits, Campfire) can replicate individual features cheaply, eroding the premium for the all-in-one suite. The 2-point gap between moatScore (87) and aiResilienceScore (85) reflects that Anthropic Managed Agents directly target Intuit's core tax and accounting workflows — a specific, named AI threat already in market. In the AI era, Intuit's durability depends on whether its data flywheel monetisation (Intuit Assist, Deduction Maximizer) accelerates faster than challenger bundling erodes."
   },
-  "lastAnalyzed": "April 2026"
+  "lastAnalyzed": "May 2026"
 }

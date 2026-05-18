@@ -83,7 +83,6 @@ export interface StockAnalysisData {
   /** Ordered stats shown in the header (Ticker, Market Cap, Price, etc.) */
   headerStats: Array<{ label: string; value: string }>;
   chips: Array<{ label: string; color: ChipColor }>;
-  recommendation: RecommendationStatus;
   metrics: StockMetric[];
   moat: {
     /** Computed dynamically from tenMoats via computeMoatScore(); optional in JSON. */

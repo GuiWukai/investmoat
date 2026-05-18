@@ -5,14 +5,13 @@
   "lastAnalyzed": "May 2026",
   "headerStats": [
     { "label": "Ticker", "value": "BIDU" },
-    { "label": "Market Cap", "value": "~$33B" },
-    { "label": "Current Price", "value": "~$95" }
+    { "label": "Market Cap", "value": "~$47B" },
+    { "label": "Current Price", "value": "~$135" }
   ],
   "chips": [
     { "label": "Search | AI Cloud | Apollo", "color": "primary" },
     { "label": "Deep Discount", "color": "warning" }
   ],
-  "recommendation": "Speculative Buy",
   "metrics": [
     {
       "title": "FY26 Revenue Growth",
@@ -61,9 +60,9 @@
       "cagrEstimate": "5-8%",
       "scoreDerivation": "Base 65 (4-8% CAGR top of band) + 5 AI cloud + autonomy optionality - 7 search advertising structural decline - 8 competition (Bytedance, Tencent, Xiaohongshu) and Chinese geopolitical risk - 5 execution risk on transition = 50",
       "drivers": [
-        { "name": "AI Cloud (ERNIE-led)", "metric": "+30%+ YoY; key transition lever", "trend": "accelerating" },
-        { "name": "Apollo Robotaxi", "metric": "7M+ cumulative rides; loss-making but scaling", "trend": "accelerating" },
-        { "name": "Search Advertising", "metric": "Mid-single-digit declines on user migration to short-video and social", "trend": "decelerating" }
+        { "name": "AI Cloud (ERNIE-led)", "metric": "FY25 AI Cloud +34% to RMB30B; AI Cloud Infra +143% YoY in Q4; Q1 2026 print pending", "trend": "accelerating" },
+        { "name": "Apollo Robotaxi", "metric": "20M+ cumulative rides by Feb 2026 across 26 cities; 10M+ in 2025 alone; loss-making but scaling", "trend": "accelerating" },
+        { "name": "Search Advertising", "metric": "Core ads -6% YoY in Q4 2025; mid- to high-single-digit declines on user migration to short-video and social", "trend": "decelerating" }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If AI cloud growth fails to compensate for search decline through 2027 and Apollo commercial deployment is delayed by Chinese regulatory pace, Baidu's revenue compresses and the transition thesis collapses, leaving the equity as a melting search asset.",
@@ -72,18 +71,18 @@
     }
   },
   "valuation": {
-    "score": 85,
-    "description": "At ~$95 Baidu trades at ~9× FY26 EPS with ~$26B net cash (~80% of market cap). Operating business at ~2× EPS — extreme distressed-asset valuation. Valuation prices in worst-case search collapse without crediting AI cloud or Apollo optionality.",
+    "score": 63,
+    "description": "At ~$135 (Friday close $135.33, -5.6% into Q1 2026 print) Baidu trades fractionally above the $130 base case. Re-rating has compressed the distressed discount — operating business now ~5× EPS ex-cash. Still attractive vs $180 bull but no longer a deep-value layup; valuation now requires AI cloud + Apollo to keep delivering.",
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
-        { "label": "Forward P/E (FY26)", "value": "~9×", "note": "EPS ~$10.50; distressed multiple" },
-        { "label": "Forward P/E ex-cash", "value": "~2×", "note": "Stripping $26B net cash + investments" },
-        { "label": "Price / Sales (FY26)", "value": "~1.6×", "note": "Deep discount to global cloud + autonomy peers" },
-        { "label": "FCF Yield", "value": "~10%", "note": "Strong despite search decline" },
-        { "label": "EV / EBITDA (NTM)", "value": "~3×", "note": "Vs global cloud peers ~12-18×" }
+        { "label": "Forward P/E (FY26)", "value": "~13×", "note": "EPS ~$10.50; multiple expanded with re-rating" },
+        { "label": "Forward P/E ex-cash", "value": "~5×", "note": "Stripping $26B net cash + investments" },
+        { "label": "Price / Sales (FY26)", "value": "~2.3×", "note": "Still discount to global cloud + autonomy peers" },
+        { "label": "FCF Yield", "value": "~7%", "note": "Solid despite search decline" },
+        { "label": "EV / EBITDA (NTM)", "value": "~5×", "note": "Vs global cloud peers ~12-18×" }
       ],
-      "summary": "Valuation reflects expectation of search decline and modest credit for AI/autonomy; cash position alone covers most of the market cap."
+      "summary": "Re-rating from ~$95 → ~$135 has unwound the deepest discount. Cash still covers ~55% of market cap but transition execution now matters more for the next leg."
     }
   },
   "scenarios": {

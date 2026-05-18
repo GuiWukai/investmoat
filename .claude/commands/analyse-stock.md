@@ -322,7 +322,9 @@ After setting scenarios, assess valuation multiples:
 
 ## Step 7 — Composite Score and Recommendation
 
-**Composite score = (moatScore + growthScore + valuationScore) / 3**
+The recommendation is derived at render time from the composite score — do not author it in the JSON. `computeRecommendation()` in `src/lib/valuationScore.ts` applies the bands below to the composite:
+
+**Composite score = moatScore × 0.4 + growthScore × 0.3 + valuationScore × 0.3**
 
 | Composite | Recommendation |
 |---|---|
@@ -439,7 +441,7 @@ If you must review inline, compare the analysis to the current data and flag:
 3. **Moat status changes** — any moat whose status should be upgraded or downgraded given recent news
 4. **Score drift** — if the composite score has changed materially (±5 or more), update all three scores
 5. **moat.score ↔ aiResilienceScore misalignment** — if the gap has grown beyond 5 points without a documented reason, reconcile them
-6. **Recommendation consistency** — ensure recommendation aligns with the updated composite score
+6. **Recommendation** — derived from composite score by `computeRecommendation()`; if the resulting band feels wrong, recalibrate the underlying scores rather than touching the recommendation directly
 
 Propose specific JSON edits for any fields that need updating.
 
