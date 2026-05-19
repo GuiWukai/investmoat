@@ -158,11 +158,20 @@ const g = (json: { slug: string; growth: { growthAnalysis: any } }): number => {
 /** Read valuation score from a stock JSON. */
 const v = (json: { valuation: { score: number } }) => json.valuation.score;
 
-/** Read bear/base/bull price targets from a stock JSON. */
-const t = (json: { scenarios: { bear: { priceTarget: string }; base: { priceTarget: string }; bull: { priceTarget: string } } }) => ({
+/**
+ * Read bear/base/bull price targets and the portfolio-exclusion flag from a
+ * stock JSON. Both are scenario-/policy-level metadata pulled from the same
+ * file; combining them here means every row in allCoverageData auto-propagates
+ * the exclusion flag without per-row edits.
+ */
+const t = (json: {
+    excludeFromPortfolio?: boolean;
+    scenarios: { bear: { priceTarget: string }; base: { priceTarget: string }; bull: { priceTarget: string } };
+}) => ({
     bearTarget: json.scenarios.bear.priceTarget,
     baseTarget: json.scenarios.base.priceTarget,
     bullTarget: json.scenarios.bull.priceTarget,
+    excludeFromPortfolio: json.excludeFromPortfolio === true,
 });
 
 // ─── All analyzed stocks (single source of truth) ─────────────────────────────
@@ -285,7 +294,11 @@ const allCoverageData = [
 export { allCoverageData };
 
 // ─── Portfolio: top MAX_PORTFOLIO stocks with avg >= MIN_AVG_SCORE ────────────
+// Excludes assets without a business-moat thesis (excludeFromPortfolio = true
+// in the JSON). They remain scored and visible on /stocks but can't enter the
+// portfolio ranking.
 export const stockData = [...allCoverageData]
+    .filter(s => !s.excludeFromPortfolio)
     .sort((a, b) => getAverageScore(b.scores) - getAverageScore(a.scores))
     .filter(s => getAverageScore(s.scores) >= MIN_AVG_SCORE)
     .slice(0, MAX_PORTFOLIO);

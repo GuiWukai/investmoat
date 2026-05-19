@@ -214,7 +214,13 @@ export default function PortfolioPage() {
   }, []);
 
   const ranked = useMemo(() => {
-    return [...allCoverageData]
+    // Assets flagged excludeFromPortfolio in the JSON (crypto, gold,
+    // single-asset proxy holdcos) are scored and visible on /stocks but
+    // never enter the portfolio ranking — and so never surface in the
+    // "Near the Top 25" watchlist either, since they're structurally
+    // ineligible rather than borderline.
+    return allCoverageData
+      .filter(s => !s.excludeFromPortfolio)
       .map(s => {
         const price = allPrices[s.ticker];
         const bear = parseScenarioPrice(s.bearTarget);

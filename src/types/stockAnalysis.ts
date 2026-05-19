@@ -76,6 +76,13 @@ export interface StockAnalysisData {
   slug: string;
   ticker: string;
   name: string;
+  /**
+   * When true, the stock is scored and visible on /stocks but excluded from the
+   * /portfolio ranking. Used for assets that lack a business-moat thesis
+   * (crypto protocols, gold, single-asset proxy holdcos) — the framework
+   * scores them but they don't belong in a moat-first portfolio.
+   */
+  excludeFromPortfolio?: boolean;
   /** Month and year this analysis was last updated, e.g. "March 2026" */
   lastAnalyzed?: string;
   /** Optional hex colour applied to the page title */
