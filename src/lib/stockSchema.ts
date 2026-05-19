@@ -143,10 +143,6 @@ export const stockAnalysisSchema = z.strictObject({
     .regex(/^[a-z0-9-]+$/, 'slug must be lowercase alphanumeric (hyphens allowed)'),
   ticker: z.string().min(1),
   name: z.string().min(1),
-  // When true, excluded from /portfolio ranking but still scored and visible
-  // on /stocks. For assets without a business-moat thesis (crypto, gold,
-  // single-asset proxy holdcos).
-  excludeFromPortfolio: z.boolean().optional(),
   lastAnalyzed: z.string().min(1).optional(),
   titleColor: z.string().min(1).optional(),
   headerStats: z.array(headerStatSchema).min(1),
