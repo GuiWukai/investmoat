@@ -68,13 +68,27 @@ export interface TenMoatsData {
  *  - credibleNeutrality: resistance to capture by any controlling entity
  *  - regulatoryIncumbency: ETF / classification / sovereign-reserve standing
  *  - securityBudget: economic security from hashrate or staked capital
+ *
+ * primaryMoat declares which pillar is this protocol's *actual* moat. The
+ * scoring function up-weights the primary pillar (50%) and down-weights the
+ * other four (12.5% each) — so BTC scores on its credible neutrality, ETH on
+ * its network effects, without being averaged through pillars that aren't
+ * what makes each protocol durable.
  */
+export type CryptoMoatPillar =
+  | 'networkEffects'
+  | 'schellingPoint'
+  | 'credibleNeutrality'
+  | 'regulatoryIncumbency'
+  | 'securityBudget';
+
 export interface CryptoMoatsData {
   networkEffects: MoatAssessmentData;
   schellingPoint: MoatAssessmentData;
   credibleNeutrality: MoatAssessmentData;
   regulatoryIncumbency: MoatAssessmentData;
   securityBudget: MoatAssessmentData;
+  primaryMoat: CryptoMoatPillar;
   verdict: string;
 }
 

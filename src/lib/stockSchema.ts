@@ -67,12 +67,21 @@ const tenMoatsSchema = z.strictObject({
 });
 
 // Crypto-protocol moat framework. See CryptoMoatsData in stockAnalysis.ts.
+// primaryMoat selects which pillar this protocol is actually scored on
+// (50% weight; the four others 12.5% each).
 const cryptoMoatsSchema = z.strictObject({
   networkEffects: moatAssessmentSchema,
   schellingPoint: moatAssessmentSchema,
   credibleNeutrality: moatAssessmentSchema,
   regulatoryIncumbency: moatAssessmentSchema,
   securityBudget: moatAssessmentSchema,
+  primaryMoat: z.enum([
+    'networkEffects',
+    'schellingPoint',
+    'credibleNeutrality',
+    'regulatoryIncumbency',
+    'securityBudget',
+  ]),
   verdict: z.string().min(1),
 });
 

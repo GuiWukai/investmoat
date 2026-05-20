@@ -421,7 +421,7 @@ export function TenMoatsCard({ data }: { data: TenMoatsAssessment }) {
 // split (protocol moats are AI-resilient by nature); a single flat list with
 // the verdict above.
 export function CryptoMoatsCard({ data }: { data: CryptoMoatsData }) {
-  const pillars: Array<{ label: string; key: keyof Omit<CryptoMoatsData, 'verdict'> }> = [
+  const pillars: Array<{ label: string; key: keyof Omit<CryptoMoatsData, 'verdict' | 'primaryMoat'> }> = [
     { label: 'Network Effects',        key: 'networkEffects' },
     { label: 'Schelling Point',        key: 'schellingPoint' },
     { label: 'Credible Neutrality',    key: 'credibleNeutrality' },
