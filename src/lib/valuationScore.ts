@@ -1,6 +1,7 @@
 import type {
   AssetClass,
   CommodityMoatsData,
+  CryptoMoatPillar,
   CryptoMoatsData,
   RecommendationStatus,
   StockAnalysisData,
@@ -165,40 +166,37 @@ export function computeMoatScore(tenMoats: TenMoatsData): number {
 // comparable across asset classes: BTC moat=100 measures protocol durability,
 // not the same thing as AXON moat=92.
 
-const CRYPTO_MOAT_WEIGHTS: Record<keyof Omit<CryptoMoatsData, 'verdict'>, number> = {
-  networkEffects:        25,
-  schellingPoint:        25,
-  credibleNeutrality:    20,
-  regulatoryIncumbency:  15,
-  securityBudget:        15,
-};
-
-// Commodity weights are dynamic via primaryMoat — see computeCommodityMoatScore.
+// Both commodity and crypto frameworks use dynamic weights via primaryMoat:
+// the declared primary pillar gets 50%, the non-primary pillars split the
+// remaining 50% equally. N/A pillars (destroyed with "N/A"/"Not applicable"
+// note) drop out and their weight redistributes.
 const COMMODITY_PRIMARY_WEIGHT = 50;
 const COMMODITY_OTHER_WEIGHT = 25;
+const CRYPTO_PRIMARY_WEIGHT = 50;
+const CRYPTO_OTHER_WEIGHT = 12.5;
 
-// Shared weighted-average scorer for the simpler frameworks. N/A pillars
-// (destroyed status with "N/A"/"Not applicable" note) drop out and their
-// weight redistributes.
-function weightedMoatScore<K extends string>(
-  moats: Record<K, { status: string; note: string }> & { verdict: string },
-  weights: Record<K, number>,
-): number {
+/**
+ * Compute crypto moat score with dynamic weights driven by primaryMoat.
+ * Primary pillar gets 50%; the four other pillars share the remaining 50%
+ * (12.5% each). Lets BTC score on credibleNeutrality, ETH on networkEffects,
+ * SOL on its consumer networkEffects — without averaging through pillars
+ * that don't define what makes each protocol durable.
+ */
+export function computeCryptoMoatScore(data: CryptoMoatsData): number {
+  const pillars: CryptoMoatPillar[] = [
+    'networkEffects', 'schellingPoint', 'credibleNeutrality', 'regulatoryIncumbency', 'securityBudget',
+  ];
   let sum = 0;
   let total = 0;
-  for (const key of Object.keys(weights) as K[]) {
-    const m = moats[key];
-    const pts = moatPoints(m);
+  for (const p of pillars) {
+    const pts = moatPoints(data[p]);
     if (pts === null) continue;
-    sum += pts * weights[key];
-    total += weights[key];
+    const weight = p === data.primaryMoat ? CRYPTO_PRIMARY_WEIGHT : CRYPTO_OTHER_WEIGHT;
+    sum += pts * weight;
+    total += weight;
   }
   if (total === 0) return 0;
   return Math.max(0, Math.min(100, Math.round(sum / total)));
-}
-
-export function computeCryptoMoatScore(data: CryptoMoatsData): number {
-  return weightedMoatScore(data, CRYPTO_MOAT_WEIGHTS);
 }
 
 /**
