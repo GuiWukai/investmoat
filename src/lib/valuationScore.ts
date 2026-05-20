@@ -173,11 +173,9 @@ const CRYPTO_MOAT_WEIGHTS: Record<keyof Omit<CryptoMoatsData, 'verdict'>, number
   securityBudget:        15,
 };
 
-const COMMODITY_MOAT_WEIGHTS: Record<keyof Omit<CommodityMoatsData, 'verdict'>, number> = {
-  absoluteScarcity:  40,
-  monetaryHistory:   35,
-  industrialUtility: 25,
-};
+// Commodity weights are dynamic via primaryMoat — see computeCommodityMoatScore.
+const COMMODITY_PRIMARY_WEIGHT = 50;
+const COMMODITY_OTHER_WEIGHT = 25;
 
 // Shared weighted-average scorer for the simpler frameworks. N/A pillars
 // (destroyed status with "N/A"/"Not applicable" note) drop out and their
@@ -203,8 +201,29 @@ export function computeCryptoMoatScore(data: CryptoMoatsData): number {
   return weightedMoatScore(data, CRYPTO_MOAT_WEIGHTS);
 }
 
+/**
+ * Compute commodity moat score with dynamic weights driven by primaryMoat.
+ * Primary pillar gets COMMODITY_PRIMARY_WEIGHT (50); the other two share
+ * COMMODITY_OTHER_WEIGHT (25 each). This lets gold score on its monetary
+ * history without being dragged by tail industrial demand, and copper score
+ * on its industrial utility without being dragged by its weak monetary
+ * history.
+ */
 export function computeCommodityMoatScore(data: CommodityMoatsData): number {
-  return weightedMoatScore(data, COMMODITY_MOAT_WEIGHTS);
+  const pillars: Array<keyof Omit<CommodityMoatsData, 'verdict' | 'primaryMoat'>> = [
+    'absoluteScarcity', 'monetaryHistory', 'industrialUtility',
+  ];
+  let sum = 0;
+  let total = 0;
+  for (const p of pillars) {
+    const pts = moatPoints(data[p]);
+    if (pts === null) continue;
+    const weight = p === data.primaryMoat ? COMMODITY_PRIMARY_WEIGHT : COMMODITY_OTHER_WEIGHT;
+    sum += pts * weight;
+    total += weight;
+  }
+  if (total === 0) return 0;
+  return Math.max(0, Math.min(100, Math.round(sum / total)));
 }
 
 /**

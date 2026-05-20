@@ -80,15 +80,24 @@ export interface CryptoMoatsData {
 
 /**
  * Commodity moat framework. Three pillars that capture the durability of a
- * physical store-of-value asset:
+ * physical store-of-value or industrial asset:
  *  - absoluteScarcity: supply-curve inelasticity to demand
  *  - monetaryHistory: Lindy as a store of value / institutional recognition
  *  - industrialUtility: real-world demand floor outside monetary use
+ *
+ * primaryMoat declares which pillar is this commodity's *actual* moat. The
+ * scoring function up-weights the primary pillar (50%) and down-weights the
+ * other two (25% each) — so gold scores on its monetary history without
+ * being dragged by industrial demand, and copper scores on its industrial
+ * utility without being dragged by its weak monetary history.
  */
+export type CommodityMoatPillar = 'absoluteScarcity' | 'monetaryHistory' | 'industrialUtility';
+
 export interface CommodityMoatsData {
   absoluteScarcity: MoatAssessmentData;
   monetaryHistory: MoatAssessmentData;
   industrialUtility: MoatAssessmentData;
+  primaryMoat: CommodityMoatPillar;
   verdict: string;
 }
 

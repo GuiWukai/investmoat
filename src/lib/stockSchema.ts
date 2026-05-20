@@ -77,10 +77,13 @@ const cryptoMoatsSchema = z.strictObject({
 });
 
 // Commodity moat framework. See CommodityMoatsData in stockAnalysis.ts.
+// primaryMoat selects which pillar this commodity is actually scored on
+// (50% weight; others 25% each).
 const commodityMoatsSchema = z.strictObject({
   absoluteScarcity: moatAssessmentSchema,
   monetaryHistory: moatAssessmentSchema,
   industrialUtility: moatAssessmentSchema,
+  primaryMoat: z.enum(['absoluteScarcity', 'monetaryHistory', 'industrialUtility']),
   verdict: z.string().min(1),
 });
 

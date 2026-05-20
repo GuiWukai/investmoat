@@ -453,7 +453,7 @@ export function CryptoMoatsCard({ data }: { data: CryptoMoatsData }) {
 
 // ─── CommodityMoatsCard ───────────────────────────────────────────────────────
 export function CommodityMoatsCard({ data }: { data: CommodityMoatsData }) {
-  const pillars: Array<{ label: string; key: keyof Omit<CommodityMoatsData, 'verdict'> }> = [
+  const pillars: Array<{ label: string; key: keyof Omit<CommodityMoatsData, 'verdict' | 'primaryMoat'> }> = [
     { label: 'Absolute Scarcity',  key: 'absoluteScarcity' },
     { label: 'Monetary History',   key: 'monetaryHistory' },
     { label: 'Industrial Utility', key: 'industrialUtility' },
