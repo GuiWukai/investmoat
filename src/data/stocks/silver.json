@@ -92,8 +92,8 @@
   "growth": {
     "description": "Silver demand growth is structural: solar PV (~20% of total demand and growing 12%+/yr), industrial electronics, and EV power systems are layering on top of cyclical investment demand. The Silver Institute confirmed a 5th consecutive annual deficit in 2025 (~170 Moz) — the longest deficit streak in modern silver-market history. Below-ground supply growth is constrained because ~70% of new silver comes from base-metal mines whose economics are not silver-driven.",
     "growthAnalysis": {
-      "cagrEstimate": "7-11%",
-      "scoreDerivation": "Base 71 (7-11% price CAGR midpoint reflecting structural deficit + solar tailwind) + 1 trajectory (solar accelerating, industrial stable, investment stable) + 4 margin (deficit expanding into 5th year) + 3 TAM expansion (solar PV, EV electronics) − 5 moderate risk (cyclical exposure to industrial recession) = 74",
+      "cagrEstimate": "7-10%",
+      "scoreDerivation": "Base 71 (7-10% price CAGR midpoint reflecting structural deficit + solar tailwind) + 1 trajectory (solar accelerating, industrial stable, investment stable) + 0 margin (cyclical industrial metal — price trajectory not a compounding revenue base) + 3 TAM expansion (solar PV, EV electronics) − 5 moderate risk (cyclical exposure to industrial recession) = 70",
       "drivers": [
         {
           "name": "Solar PV Demand",
@@ -114,7 +114,7 @@
       "primaryType": "TAM expansion",
       "keyRisk": "A coordinated industrial slowdown (solar PV oversupply, EV demand contraction, China property drag) combined with a hawkish Fed surprise pushes silver back to $32/oz, expanding gold/silver ratio to 110+ as the safe-haven trade routes through gold rather than silver.",
       "keyRiskSeverity": "moderate",
-      "marginTrend": "expanding"
+      "marginTrend": "stable"
     }
   },
   "valuation": {
