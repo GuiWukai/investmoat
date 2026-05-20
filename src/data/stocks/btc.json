@@ -11,7 +11,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$1.5T"
+      "value": "~$1.6T"
     },
     {
       "label": "Circulating Supply",
@@ -38,15 +38,15 @@
     },
     {
       "title": "Spot ETF AUM",
-      "value": "~$96.5B",
-      "label": "US Spot Bitcoin ETFs — $57B+ Cumulative Inflows",
+      "value": "~$105B",
+      "label": "US Spot Bitcoin ETFs — $58.7B Cumulative Inflows",
       "icon": "Shield",
       "color": "#3b82f6"
     },
     {
       "title": "Exchange Reserves",
-      "value": "7-Year Lows",
-      "label": "BTC Leaving Exchanges — Whale Accumulation Signal",
+      "value": "~3.0M BTC",
+      "label": "Lowest Since 2018 — ETF Demand 10× Mining Issuance",
       "icon": "Globe",
       "color": "#10b981"
     }
@@ -71,19 +71,19 @@
     ]
   },
   "growth": {
-    "description": "Institutional adoption is accelerating into new territory. Morgan Stanley launched MSBT on April 8 — the first bank-issued spot Bitcoin ETF — at a record-low 0.14% fee, drawing $100M+ in its first week. Goldman Sachs filed its Bitcoin Premium Income ETF on April 14, with SEC approval expected by mid-June 2026. Cumulative spot ETF inflows reached $57B+ with BlackRock IBIT holding $55B+ AUM. BTC recovered to ~$75,500 from the February crash low of $60,000 as the Strait of Hormuz reopened and geopolitical risk-off faded. Bitcoin hit an all-time high of $126,080 in October 2025; the cycle peak window (mid-2026) remains ahead. The US Strategic Bitcoin Reserve is operational and the BITCOIN Act is advancing in Congress.",
+    "description": "BTC recovered to ~$80,800 in May 2026 — back above $80K for the first time in three months — as ETF inflows resumed for four consecutive sessions ($532M on May 4, $467M on May 5, led by IBIT and FBTC). Cumulative spot ETF inflows now $58.7B (vs $61.2B October peak). Structural supply squeeze intensifying: ETFs absorbing 4,500–5,000 BTC/day vs ~450 BTC/day mining issuance — a 10:1 demand/supply ratio. Exchange reserves at ~3.0M BTC, lowest since 2018. White House adviser Patrick Witt (May 6) confirmed a Strategic Bitcoin Reserve framework announcement is coming 'in the next few weeks'; BITCOIN Act (S.954/H.R.2032) still pending Congressional codification with NDAA late-2026 the next realistic window. Bitcoin hit an ATH of $126,080 in October 2025; historical halving-cycle analogs point to a potential October 2026 cycle bottom if the four-year pattern still holds, though ETF front-loading may have permanently altered the cycle.",
     "growthAnalysis": {
       "cagrEstimate": "30–60%",
-      "scoreDerivation": "Base 90 (30%+ institutional adoption CAGR; ETF cumulative inflows $0 → $57B+; Morgan Stanley MSBT launched Apr 8 as first bank-issued spot BTC ETF; Goldman Sachs filing Apr 14) + 5 sovereign/SWF new TAM (US Strategic Reserve operational; BITCOIN Act progressing; NH, AZ, MA state reserves passed) − 5 cycle timing risk (geopolitical volatility, Iran risk-off to $60K Feb crash, BTC still 40% below Oct 2025 ATH) − 5 retail disengagement (active addresses at multi-year lows, on-chain activity muted despite institutional surge) = 85",
+      "scoreDerivation": "Base 90 (30%+ institutional adoption CAGR; ETF cumulative inflows $0 → $58.7B; 10:1 ETF demand vs mining issuance; exchange reserves at 8-year low) + 5 sovereign/SWF new TAM (US holds 328K BTC by forfeiture; Witt confirms framework announcement 'in next few weeks'; NH, AZ, MA state reserves passed) − 5 cycle timing risk (BTC 36% below Oct 2025 ATH; CoinDesk/historical halving model suggests potential October 2026 bottom) − 5 retail disengagement (active addresses at multi-year lows despite institutional surge) = 85",
       "drivers": [
         {
           "name": "Spot ETF / Institutional Adoption",
-          "metric": "~$96.5B AUM; $57B+ cumulative inflows; IBIT $55B+ (45%+ share); Morgan Stanley MSBT launched Apr 8; Goldman Sachs filing Apr 14",
+          "metric": "~$105B AUM; $58.7B cumulative inflows; ETFs absorbing 4,500–5,000 BTC/day vs 450 BTC/day mined (10:1 ratio)",
           "trend": "accelerating"
         },
         {
           "name": "Sovereign Treasury / Strategic Reserve",
-          "metric": "US Strategic Bitcoin Reserve active; government BTC transfers to Coinbase April 2026",
+          "metric": "US holds 328K BTC (forfeiture-funded); BITCOIN Act pending; framework update 'in next few weeks' per White House (May 6)",
           "trend": "stable"
         },
         {
@@ -93,14 +93,14 @@
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If US Congressional opposition delays Strategic Bitcoin Reserve active accumulation beyond Q3 2026, the sovereign demand catalyst evaporates and ETF inflows slow below $500M/month — removing the primary price support at $65,000–$70,000 and invalidating the base case cycle peak",
+      "keyRisk": "If the BITCOIN Act fails to clear NDAA late-2026 markup and the Strategic Reserve remains forfeiture-only (no active accumulation), the sovereign demand catalyst evaporates and the historical halving-cycle pattern reasserts — driving an October 2026 bottom back to $55K–$60K and invalidating the base case cycle peak",
       "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },
   "valuation": {
     "score": 85,
-    "description": "At ~$75,500 — down 40% from the October 2025 all-time high of $126,080 — BTC is recovering toward the $76,000 breakout level as geopolitical risk-off fades (Iran ceasefire, Strait of Hormuz reopened). Morgan Stanley MSBT launched April 8 (first bank-issued spot BTC ETF), partially materializing the base case institutional catalyst. Goldman Sachs Bitcoin Income ETF filed April 14, pending SEC review by mid-June. Cumulative ETF inflows now $57B+; ETF AUM ~$96.5B (down from peak due to price drawdown, not demand). Trading 53% below the base case ($160,000); valuation score reflects deep discount with institutional demand providing a durable floor around $65,000–$70,000. Cycle peak window (mid-2026) remains ahead."
+    "description": "At ~$80,800 — 36% below the October 2025 ATH of $126,080 — BTC has broken back above the $80K psychological level on four consecutive sessions of ETF inflows ($532M May 4, $467M May 5). Cumulative ETF inflows now $58.7B, approaching but not yet eclipsing the $61.2B October peak. The structural setup is the cleanest of the cycle: 10:1 ETF-to-mining demand imbalance, exchange reserves at 8-year lows (~3M BTC), and a Strategic Reserve framework announcement telegraphed for 'the next few weeks'. Trading 50% below the base case ($160,000) with institutional demand providing a durable floor at $70K–$75K. Bear-to-bull skew: -38% downside, +334% upside from current."
   },
   "scenarios": {
     "bear": {
@@ -134,7 +134,7 @@
   "cryptoMoats": {
     "networkEffects": {
       "status": "strong",
-      "note": "Largest hashrate (~700 EH/s), deepest liquidity, broadest exchange/custody integration, 52.4M+ unique holders. Metcalfe's Law compounding since 2009 — a new chain can fork the code but can't fork 15 years of adoption."
+      "note": "Largest hashrate (~970 EH/s, ATH), deepest liquidity, broadest exchange/custody integration, 52.4M+ unique holders. Metcalfe's Law compounding since 2009 — a new chain can fork the code but can't fork 15+ years of adoption."
     },
     "schellingPoint": {
       "status": "strong",
@@ -155,5 +155,5 @@
     "primaryMoat": "credibleNeutrality",
     "verdict": "Bitcoin's moat is monetary, not corporate. Four pillars rate strong — network Lindy, Schelling-point status, credible neutrality (primary), and security budget — combining into the strongest monetary moat ever built outside of fiat. Regulatory incumbency rates intact: real and BTC-exclusive, but one US administration deep and politically reversible vs gold's multilateral Basel III Tier 1 standing. The framework's way of saying 'uniquely uncopyable on what matters most, with regulatory momentum that still needs to compound into durable standing.'"
   },
-  "lastAnalyzed": "April 2026"
+  "lastAnalyzed": "May 2026"
 }
