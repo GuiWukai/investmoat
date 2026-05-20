@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getStockData, getAllSlugs } from '@/data/stocks';
 import StockPageClient from '@/components/StockPageClient';
-import { computeMoatScore, computeGrowthScore, computeComposite, computeRecommendation } from '@/lib/valuationScore';
+import { computeAssetMoatScore, computeGrowthScore, computeComposite, computeRecommendation } from '@/lib/valuationScore';
 
 const SITE_URL = 'https://investmoat.com';
 
@@ -34,7 +34,7 @@ export async function generateMetadata(
   if (!data) return {};
 
   const title = `${data.name} (${data.ticker})`;
-  const moatScore = computeMoatScore(data.tenMoats);
+  const moatScore = computeAssetMoatScore(data);
   const growthScore = computeGrowthScore(data.growth.growthAnalysis) ?? 0;
   const recommendation = computeRecommendation(moatScore, growthScore, data.valuation.score);
   const description =
@@ -82,7 +82,7 @@ export default async function Page({ params }: { params: Promise<{ ticker: strin
   const data = getStockData(ticker);
   if (!data) notFound();
 
-  const moatScore = computeMoatScore(data.tenMoats);
+  const moatScore = computeAssetMoatScore(data);
   const growthScore = computeGrowthScore(data.growth.growthAnalysis) ?? 0;
   const valuationScore = data.valuation.score;
   const compositeScore = computeComposite(moatScore, growthScore, valuationScore);

@@ -13,7 +13,8 @@
 // To add a new stock: import its JSON, add an entry to allCoverageData.
 // All scores and targets will be derived automatically.
 
-import { computeMoatScore, computeGrowthScore, computeCompositeRaw, type GrowthAnalysisInput } from '@/lib/valuationScore';
+import { computeAssetMoatScore, computeGrowthScore, computeCompositeRaw, type GrowthAnalysisInput } from '@/lib/valuationScore';
+import type { StockAnalysisData } from '@/types/stockAnalysis';
 
 import aaplData    from '@/data/stocks/aapl.json';
 import adbeData    from '@/data/stocks/adbe.json';
@@ -135,9 +136,11 @@ export const getAverageScore = ([moat, growth, valuation]: number[]) =>
 const MAX_PORTFOLIO  = 25;
 const MIN_AVG_SCORE  = 80;
 
-/** Compute moat score from a stock JSON's tenMoats field. */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const m = (json: { tenMoats: any }) => computeMoatScore(json.tenMoats);
+/**
+ * Compute moat score by dispatching on the JSON's assetClass.
+ * Defaults to the equity 10-moat framework when assetClass is unset.
+ */
+const m = (json: unknown) => computeAssetMoatScore(json as StockAnalysisData);
 
 /**
  * Resolve a stock's growth score from its growthAnalysis fields. The derived

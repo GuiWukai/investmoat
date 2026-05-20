@@ -1,4 +1,11 @@
-import type { RecommendationStatus, TenMoatsData } from '@/types/stockAnalysis';
+import type {
+  AssetClass,
+  CommodityMoatsData,
+  CryptoMoatsData,
+  RecommendationStatus,
+  StockAnalysisData,
+  TenMoatsData,
+} from '@/types/stockAnalysis';
 
 // Status → point scale. Tightened so "intact" requires demonstrable presence
 // rather than just box-checking: the gap between strong (100) and intact (65)
@@ -146,6 +153,78 @@ export function computeMoatScore(tenMoats: TenMoatsData): number {
   // learnedInterfaces is marked resilient doesn't take the discount.
   const aiDiscount = vulnerableScore * vW > resilientScore * rW ? -5 : 0;
   return Math.max(0, Math.min(100, Math.round(base + breadth + aiDiscount)));
+}
+
+// ─── Asset-class-specific moat scoring ────────────────────────────────────────
+//
+// Equities are scored via the 10-moat framework above. Crypto protocols and
+// commodities have categorically different sources of durability — protocol
+// effects, credible neutrality, monetary history, supply inelasticity — that
+// the business-moat framework can't see. Each asset class gets its own
+// pillar set and weights. Outputs are still 0–100 but are NOT directly
+// comparable across asset classes: BTC moat=100 measures protocol durability,
+// not the same thing as AXON moat=92.
+
+const CRYPTO_MOAT_WEIGHTS: Record<keyof Omit<CryptoMoatsData, 'verdict'>, number> = {
+  networkEffects:        25,
+  schellingPoint:        25,
+  credibleNeutrality:    20,
+  regulatoryIncumbency:  15,
+  securityBudget:        15,
+};
+
+const COMMODITY_MOAT_WEIGHTS: Record<keyof Omit<CommodityMoatsData, 'verdict'>, number> = {
+  absoluteScarcity:  40,
+  monetaryHistory:   35,
+  industrialUtility: 25,
+};
+
+// Shared weighted-average scorer for the simpler frameworks. N/A pillars
+// (destroyed status with "N/A"/"Not applicable" note) drop out and their
+// weight redistributes.
+function weightedMoatScore<K extends string>(
+  moats: Record<K, { status: string; note: string }> & { verdict: string },
+  weights: Record<K, number>,
+): number {
+  let sum = 0;
+  let total = 0;
+  for (const key of Object.keys(weights) as K[]) {
+    const m = moats[key];
+    const pts = moatPoints(m);
+    if (pts === null) continue;
+    sum += pts * weights[key];
+    total += weights[key];
+  }
+  if (total === 0) return 0;
+  return Math.max(0, Math.min(100, Math.round(sum / total)));
+}
+
+export function computeCryptoMoatScore(data: CryptoMoatsData): number {
+  return weightedMoatScore(data, CRYPTO_MOAT_WEIGHTS);
+}
+
+export function computeCommodityMoatScore(data: CommodityMoatsData): number {
+  return weightedMoatScore(data, COMMODITY_MOAT_WEIGHTS);
+}
+
+/**
+ * Dispatcher: compute the moat score using the framework that matches the
+ * asset's class. Defaults to equity / tenMoats when assetClass is unset.
+ * Throws if the matching moats field is missing — schema validation should
+ * have caught that, so a runtime miss is a bug.
+ */
+export function computeAssetMoatScore(data: StockAnalysisData): number {
+  const ac: AssetClass = data.assetClass ?? 'equity';
+  if (ac === 'crypto') {
+    if (!data.cryptoMoats) throw new Error(`${data.slug}: assetClass=crypto but cryptoMoats missing`);
+    return computeCryptoMoatScore(data.cryptoMoats);
+  }
+  if (ac === 'commodity') {
+    if (!data.commodityMoats) throw new Error(`${data.slug}: assetClass=commodity but commodityMoats missing`);
+    return computeCommodityMoatScore(data.commodityMoats);
+  }
+  if (!data.tenMoats) throw new Error(`${data.slug}: assetClass=equity but tenMoats missing`);
+  return computeMoatScore(data.tenMoats);
 }
 
 // ─── Growth score ─────────────────────────────────────────────────────────────
