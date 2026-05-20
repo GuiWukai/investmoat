@@ -1,0 +1,193 @@
+{
+  "slug": "uranium",
+  "ticker": "U",
+  "name": "Uranium",
+  "assetClass": "commodity",
+  "titleColor": "#d4c419",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "U"
+    },
+    {
+      "label": "Spot Price",
+      "value": "~$72/lb U3O8"
+    },
+    {
+      "label": "Annual Demand",
+      "value": "~190 Mlbs"
+    },
+    {
+      "label": "Annual Mine Supply",
+      "value": "~145 Mlbs"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Commodity | Nuclear Fuel",
+      "color": "primary"
+    },
+    {
+      "label": "AI-Power Demand",
+      "color": "success"
+    },
+    {
+      "label": "Cyclical",
+      "color": "warning"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "Spot Price",
+      "value": "~$72/lb",
+      "label": "Down from $107 ATH (Feb 2024) — Consolidating Above Long-Run $55 Mine Incentive",
+      "icon": "Coins",
+      "color": "#d4c419"
+    },
+    {
+      "title": "Structural Deficit",
+      "value": "−45 Mlbs",
+      "label": "2026 Mine Supply vs Reactor Demand — Widening through 2030",
+      "icon": "TrendingDown",
+      "color": "#ef4444"
+    },
+    {
+      "title": "Hyperscaler Nuclear PPAs",
+      "value": "12+ GW",
+      "label": "MSFT-Constellation, AMZN-Talen, GOOGL-Kairos, META-Sempra Signed 2024-2026",
+      "icon": "Zap",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "Reactor Pipeline",
+      "value": "65 GW",
+      "label": "Under Construction Globally — Plus 100+ GW Planned and 90 GW Restart-Eligible",
+      "icon": "Cpu",
+      "color": "#3b82f6"
+    }
+  ],
+  "moat": {
+    "description": "Uranium has the narrowest, hardest moat of any commodity: there is no substitute for fission fuel, supply is geographically concentrated and structurally inelastic, and AI data center power demand is creating an entirely new buyer cohort.",
+    "analysisTitle": "The No-Substitute Moat",
+    "analysisSummary": "Uranium's moat is built on **Irreplaceability, Supply Concentration, and Inelastic Build Cycles**:",
+    "analysisPoints": [
+      {
+        "title": "No Substitute Exists",
+        "text": "Fission requires uranium (or plutonium derived from uranium). Thorium reactors are a decade-plus from commercial scale, fusion further still. Every operating reactor and every new build is locked into uranium fuel for the lifetime of the asset — no other commodity in the universe has this structural buyer captivity."
+      },
+      {
+        "title": "Geographic Concentration",
+        "text": "Kazakhstan produces ~43% of global supply; Canada, Australia, and Namibia produce most of the rest. Russia controls ~40% of conversion and enrichment capacity. This is a more concentrated supply chain than oil, copper, or rare earths — geopolitical risk premia flow durably to the metal."
+      },
+      {
+        "title": "Long-Cycle Supply",
+        "text": "A new uranium mine takes 10-20 years from discovery to first production. Even uncovered restart capacity at Cigar Lake, McArthur River, and ISR projects in Kazakhstan cannot scale to close the deficit before 2030. Supply is effectively fixed inside the planning horizon for the AI build."
+      },
+      {
+        "title": "AI Power Demand Inflection",
+        "text": "Hyperscaler nuclear PPAs (Microsoft-Constellation Three Mile Island, Amazon-Talen Susquehanna, Google-Kairos SMRs, Meta-Sempra) signed 2024-2026 represent ~12 GW of new nuclear demand directly attributable to AI compute. This is an entirely new buyer cohort the supply curve never expected."
+      }
+    ]
+  },
+  "growth": {
+    "description": "Uranium demand is in a structural inflection driven by three simultaneous demand vectors: AI hyperscaler nuclear PPAs (~12 GW signed 2024-2026), reactor life-extensions and restarts (Three Mile Island, Palisades, Japan fleet), and new builds (65+ GW under construction globally, led by China, India, UAE, Egypt). Against this, mine supply growth is capped by 10-20 year permit cycles and Russian enrichment-supply sanctions risk. The Sprott Physical Uranium Trust and ETF accumulation absorb spot supply that previously cleared at much lower prices.",
+    "growthAnalysis": {
+      "cagrEstimate": "9-13%",
+      "scoreDerivation": "Base 74 (9-13% price CAGR midpoint reflecting structural deficit + AI demand inflection) + 3 trajectory (hyperscaler PPAs accelerating, restarts accelerating, new builds stable) + 0 margin (cyclical industrial commodity — price trajectory not a compounding revenue base) + 3 TAM expansion (AI data center power demand is new TAM) − 5 moderate risk (nuclear accident headline risk, Russian sanctions disruption, fusion-breakthrough tail risk) = 75",
+      "drivers": [
+        {
+          "name": "Hyperscaler Nuclear PPAs",
+          "metric": "~12 GW signed 2024-2026 (MSFT-Constellation, AMZN-Talen, GOOGL-Kairos, META-Sempra); 20+ GW additional in advanced negotiation",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Reactor Restarts & Life Extensions",
+          "metric": "Three Mile Island restart (2028), Palisades restart (2026), Japan restarting 12+ reactors; US fleet life extensions to 80 yrs adding 50+ reactor-years of demand",
+          "trend": "accelerating"
+        },
+        {
+          "name": "New Reactor Construction",
+          "metric": "65 GW under construction globally (China 28 GW, India 7 GW, Egypt/UAE/Turkey 8 GW combined); 100+ GW planned",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "A second Fukushima-scale nuclear accident in 2026-2027 reverses public acceptance trends and triggers Western reactor shutdowns; combined with a hyperscaler retreat from nuclear PPAs (e.g., SMR cost overruns derail the AI-power thesis), spot uranium falls back to $50/lb support as ETF holders capitulate.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 81,
+    "description": "Uranium spot at ~$72/lb sits 37% of the way from bear ($50) toward base ($110) — well below long-run incentive pricing of $80-90/lb needed to motivate new mine builds. With ~45 Mlbs of structural deficit widening through 2030 and ETF accumulation absorbing what little spot supply trades, the asymmetry is bear-protected. Bank of America year-end target $95/lb; Citi $105/lb; Sprott structural-deficit model implies $130+/lb fair value by 2028."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$50/lb",
+      "description": "A second major nuclear accident reverses public acceptance and Western governments order temporary shutdowns; hyperscalers retreat from nuclear PPAs as SMR cost overruns derail the AI-power thesis.",
+      "points": [
+        "Fukushima-scale accident in a Western reactor (US, EU, or Japan) triggers temporary fleet shutdowns and public-acceptance collapse; uranium-spot ETF holders liquidate",
+        "SMR costs overrun by 2-3x at NuScale, X-Energy, or Oklo lead reactors; hyperscalers pivot back to natural gas peakers for AI power",
+        "Kazakh production scales faster than consensus (Cigar Lake ramp, ISR expansion) and Russian enrichment supply returns post-sanctions, removing supply-side scarcity premium"
+      ]
+    },
+    "base": {
+      "priceTarget": "$110/lb",
+      "description": "Structural deficit widens as planned: hyperscaler PPAs scale to 25+ GW by 2028, reactor restarts complete, and new builds in China/India/Middle East stay on schedule.",
+      "points": [
+        "Hyperscaler nuclear PPAs scale from ~12 GW (signed) to 25+ GW by 2028 as Microsoft, Amazon, Google, and Meta lock in 20-year contracts to underwrite reactor restarts and SMR pilot deployments",
+        "Three Mile Island, Palisades, and 4-6 Japanese reactors restart on schedule; Western governments classify uranium as a critical mineral and accelerate strategic stockpiling",
+        "Mine supply growth tracks ~1-2%/yr against 4-5%/yr demand growth; Sprott Physical Uranium Trust accumulates 5+ Mlbs/yr of incremental holdings, tightening visible spot inventories"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$180/lb",
+      "description": "Acute physical squeeze as AI-power demand inflects faster than consensus; a major supply disruption (Kazakh political event, Cigar Lake outage, Russian enrichment sanctions escalation) tips the market into visible shortage.",
+      "points": [
+        "AI hyperscaler nuclear PPA pipeline doubles consensus by 2027, requiring 30+ GW of new nuclear capacity that the existing reactor pipeline cannot deliver before 2032 — utilities bid spot uranium to incentivize restarts and accelerate SMR builds",
+        "Kazakh political instability, Cigar Lake operational disruption, or Russian enrichment supply cutoff removes 20+ Mlbs/yr of supply; Sprott and Yellow Cake ETFs accelerate physical accumulation as price squeeze accelerates",
+        "Multiple Western governments classify uranium as a critical mineral and add strategic reserves — adding a sovereign demand layer that pulls forward 5-7 years of deficit pricing into a single 12-month repricing event"
+      ]
+    }
+  },
+  "commodityMoats": {
+    "absoluteScarcity": {
+      "status": "intact",
+      "note": "Uranium reserves are large in aggregate (~6 Mt at <$130/lb) but high-grade deposits are rare and geographically concentrated. New mines take 10-20 years from discovery to first production. Demand is locked in by reactor builds — supply has no short-cycle response mechanism. Inelastic supply curve is structural, not absolute."
+    },
+    "monetaryHistory": {
+      "status": "destroyed",
+      "note": "Not applicable — uranium has never been money or a store of value. Purely industrial commodity tied to nuclear power generation; not a monetary asset by any historical standard."
+    },
+    "industrialUtility": {
+      "status": "strong",
+      "note": "No substitute exists for fission fuel. Thorium reactors are a decade-plus from commercial scale; fusion further still. Every operating reactor and every new build is locked into uranium fuel for the asset's lifetime — the only commodity in the universe with this structural buyer captivity. AI hyperscaler PPAs (~12 GW signed 2024-2026) are creating an entirely new buyer cohort the supply curve never expected."
+    },
+    "primaryMoat": "industrialUtility",
+    "verdict": "Uranium's moat is the narrowest and hardest of any commodity in the framework. Industrial utility is strong (irreplaceability + buyer captivity + AI-power demand inflection); absolute scarcity is intact via permit-lag and geographic concentration; monetary history doesn't apply. The framework's primary-moat weighting puts uranium's industrial moat at 50%, lifting the score above hybrid commodities like silver. A real industrial moat — narrow but uncopyable — not a hedge or store of value."
+  },
+  "extraSections": [
+    {
+      "type": "grid-cards",
+      "title": "Three Demand Vectors",
+      "accentColor": "#d4c419",
+      "gridHeader": "The Nuclear Renaissance Stack",
+      "intro": "Uranium demand growth is the rare case where three independent demand layers are stacking simultaneously while the supply curve is structurally fixed for the rest of the decade.",
+      "cards": [
+        {
+          "label": "AI Hyperscaler PPAs",
+          "text": "~12 GW signed 2024-2026 across Microsoft, Amazon, Google, and Meta. 20+ GW additional in advanced negotiation. An entirely new buyer cohort the supply curve never anticipated."
+        },
+        {
+          "label": "Reactor Restarts",
+          "text": "Three Mile Island Unit 1 (Constellation-Microsoft, 2028), Palisades (Holtec, 2026), and 12+ Japanese reactors all coming back online. Plus US fleet life extensions to 80 years."
+        },
+        {
+          "label": "New Construction",
+          "text": "65 GW under construction globally — China 28 GW, India 7 GW, Egypt/UAE/Turkey 8 GW. Plus 100+ GW planned through 2040. Permit-lag locks the supply curve for a decade."
+        }
+      ]
+    }
+  ],
+  "lastAnalyzed": "May 2026"
+}

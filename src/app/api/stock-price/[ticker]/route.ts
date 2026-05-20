@@ -19,6 +19,7 @@ const YAHOO_SYMBOL_MAP: Record<string, string> = {
   gold:       'GC=F',
   copper:     'HG=F',
   silver:     'SI=F',
+  uranium:    'URA',
   btc:        'BTC-USD',
   k92:        'KNT.TO',
   pltr:       'PLTR',
