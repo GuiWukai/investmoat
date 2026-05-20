@@ -17,6 +17,7 @@ const YAHOO_SYMBOL_MAP: Record<string, string> = {
   spgi:       'SPGI',
   intuit:     'INTU',
   gold:       'GC=F',
+  copper:     'HG=F',
   btc:        'BTC-USD',
   k92:        'KNT.TO',
   pltr:       'PLTR',

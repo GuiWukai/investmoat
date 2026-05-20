@@ -33,6 +33,7 @@ import crowdstrikeData from '@/data/stocks/crowdstrike.json';
 import ethereumData from '@/data/stocks/ethereum.json';
 import fcxData     from '@/data/stocks/fcx.json';
 import goldData    from '@/data/stocks/gold.json';
+import copperData  from '@/data/stocks/copper.json';
 import googleData  from '@/data/stocks/google.json';
 import intuitData  from '@/data/stocks/intuit.json';
 import isrgData    from '@/data/stocks/isrg.json';
@@ -213,6 +214,7 @@ const allCoverageData = [
     { name: "K92 Mining",        ticker: "KNT",   slug: "k92",         scores: [m(k92Data),         g(k92Data),         v(k92Data)],         href: "/stocks/k92",         category: "Hard Assets", ...t(k92Data)         },
     { name: "Freeport-McMoRan",  ticker: "FCX",   slug: "fcx",         scores: [m(fcxData),         g(fcxData),         v(fcxData)],         href: "/stocks/fcx",         category: "Hard Assets", ...t(fcxData)         },
     { name: "Gold",              ticker: "XAU",   slug: "gold",        scores: [m(goldData),        g(goldData),        v(goldData)],        href: "/stocks/gold",        category: "Hard Assets", ...t(goldData)        },
+    { name: "Copper",            ticker: "HG",    slug: "copper",      scores: [m(copperData),      g(copperData),      v(copperData)],      href: "/stocks/copper",      category: "Hard Assets", ...t(copperData)      },
     { name: "Costco",            ticker: "COST",  slug: "costco",      scores: [m(costcoData),      g(costcoData),      v(costcoData)],      href: "/stocks/costco",      category: "Financials",  ...t(costcoData)      },
     { name: "Walt Disney",       ticker: "DIS",   slug: "disney",      scores: [m(disneyData),      g(disneyData),      v(disneyData)],      href: "/stocks/disney",      category: "Other",       ...t(disneyData)      },
     { name: "ServiceNow",        ticker: "NOW",   slug: "now",         scores: [m(nowData),         g(nowData),         v(nowData)],         href: "/stocks/now",         category: "Big Tech",    ...t(nowData)         },

@@ -18,6 +18,7 @@ import adbe from './adbe.json';
 import spgi from './spgi.json';
 import intuit from './intuit.json';
 import gold from './gold.json';
+import copper from './copper.json';
 import btc from './btc.json';
 import ethereum from './ethereum.json';
 import solana from './solana.json';
@@ -218,6 +219,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   rblx: rblx as StockAnalysisData,
   soxx: soxx as StockAnalysisData,
   voo: voo as StockAnalysisData,
+  copper: copper as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
