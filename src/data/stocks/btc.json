@@ -99,17 +99,17 @@
     }
   },
   "valuation": {
-    "score": 85,
-    "description": "At ~$80,800 — 36% below the October 2025 ATH of $126,080 — BTC has broken back above the $80K psychological level on four consecutive sessions of ETF inflows ($532M May 4, $467M May 5). Cumulative ETF inflows now $58.7B, approaching but not yet eclipsing the $61.2B October peak. The structural setup is the cleanest of the cycle: 10:1 ETF-to-mining demand imbalance, exchange reserves at 8-year lows (~3M BTC), and a Strategic Reserve framework announcement telegraphed for 'the next few weeks'. Trading 50% below the base case ($160,000) with institutional demand providing a durable floor at $70K–$75K. Bear-to-bull skew: -38% downside, +334% upside from current."
+    "score": 82,
+    "description": "At ~$80,800 — 36% below the October 2025 ATH of $126,080 — BTC has broken back above the $80K psychological level on four consecutive sessions of ETF inflows ($532M May 4, $467M May 5). Cumulative ETF inflows now $58.7B, approaching but not yet eclipsing the $61.2B October peak. The structural setup is the cleanest of the cycle: 10:1 ETF-to-mining demand imbalance, exchange reserves at 8-year lows (~3M BTC), and a Strategic Reserve framework announcement telegraphed for 'the next few weeks'. Trading 50% below the base case ($160,000). The refined bear ($45K, -44%) now prices in two scenarios the prior estimate underweighted: a policy reversal that strips out sovereign demand, and a dollar liquidity shock that forces leveraged unwinds. Bear-to-bull skew: -44% downside, +334% upside from current."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$50,000",
-      "description": "Extended geopolitical crisis combined with US recession triggers sustained ETF outflows and a full post-halving cycle drawdown to prior ATH support.",
+      "priceTarget": "$45,000",
+      "description": "Sovereign demand catalyst fails to materialize while a US dollar liquidity shock forces broad risk-asset deleveraging — driving BTC through the prior cycle low and toward 2024 breakout support.",
       "points": [
-        "Middle East escalation causes sustained risk-off across all asset classes; BTC ETF weekly outflows exceed $500M for 6+ consecutive weeks",
-        "US Strategic Bitcoin Reserve execution is delayed by Congressional opposition, removing a key sovereign demand catalyst",
-        "On-chain activity continues declining (active addresses at multi-year lows) as retail exits; miner capitulation accelerates at sub-$55,000"
+        "BITCOIN Act fails to clear NDAA late-2026 markup AND the Strategic Reserve framework remains forfeiture-only with no active accumulation — removing the sovereign demand thesis and triggering an ETF outflow cascade",
+        "Dollar liquidity crunch (DXY > 110, Fed forced to pause cuts in a credit event) forces leveraged crypto positions to unwind; ETF weekly outflows exceed $1B for 4+ consecutive weeks, breaking the 10:1 ETF/mining demand-supply ratio",
+        "Historical halving-cycle bottom pattern reasserts in October 2026 as miner capitulation accelerates sub-$55K; on-chain active addresses stay at multi-year lows, signaling no retail re-engagement to absorb the institutional unwind"
       ]
     },
     "base": {
