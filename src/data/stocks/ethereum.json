@@ -2,6 +2,7 @@
   "slug": "ethereum",
   "ticker": "ETH",
   "name": "Ethereum",
+  "assetClass": "crypto",
   "titleColor": "#627eea",
   "headerStats": [
     {
@@ -130,48 +131,28 @@
       ]
     }
   },
-  "tenMoats": {
-    "learnedInterfaces": {
-      "status": "strong",
-      "note": "Solidity and the EVM are the default learned interface for smart contract developers — retraining costs are high and tooling is deeply entrenched."
-    },
-    "businessLogic": {
-      "status": "strong",
-      "note": "Billions in DeFi protocol logic runs on Ethereum. Migrating audited, battle-tested contracts to a competing chain is a years-long, high-risk undertaking."
-    },
-    "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — Ethereum's data is fully public by design; data access is not a competitive moat for a permissionless ledger."
-    },
-    "talentScarcity": {
-      "status": "strong",
-      "note": "The deepest pool of audited smart contract developers, security researchers, and protocol engineers in crypto remains Ethereum-native."
-    },
-    "bundling": {
-      "status": "weakened",
-      "note": "Protocol composability (settlement, staking, DeFi primitives sharing state) is real but is not commercial product bundling — there is no per-customer SKU bundle locking enterprises in. Competing chains are reproducing the same composable stack."
-    },
-    "proprietaryData": {
-      "status": "destroyed",
-      "note": "N/A — on-chain data is fully public; proprietary data does not exist for a permissionless ledger by design."
-    },
-    "regulatoryLockIn": {
-      "status": "weakened",
-      "note": "CFTC commodity classification, BlackRock ETHB staking ETF (Mar 2026), and the GENIUS Act framework confer regulatory legitimacy that meaningfully widens institutional access — but SOL has now received the same classification, so this is not exclusive licensure that bars competitors."
-    },
+  "cryptoMoats": {
     "networkEffects": {
       "status": "strong",
-      "note": "65%+ developer share, the largest DeFi TVL, and the deepest stablecoin liquidity create compounding Metcalfe-Law network effects."
+      "note": "Largest smart-contract platform by TVL, deepest DeFi ecosystem, most stablecoin issuance, 65%+ smart-contract developer share. Network effects compound across L2s (Base, Arbitrum, OP), which inherit ETH security and settlement."
     },
-    "transactionEmbedding": {
-      "status": "strong",
-      "note": "DeFi protocols, stablecoin settlements, NFT marketplaces, and DAO governance are deeply embedded in Ethereum's transaction fabric — actual third-party financial workflows depend on EVM state."
+    "schellingPoint": {
+      "status": "intact",
+      "note": "Default settlement layer for tokenized assets, stablecoins, and NFTs. Not the digital-gold default (BTC owns that) but the digital-finance default. Solidity and the EVM are the de facto smart-contract standard."
     },
-    "systemOfRecord": {
-      "status": "weakened",
-      "note": "Ethereum is the canonical record for DeFi state, NFT ownership, and DAO governance, but enterprise business processes (CRM, ERP, billing) are not embedded against it as their source of truth. The protocol records itself; enterprises do not."
+    "credibleNeutrality": {
+      "status": "intact",
+      "note": "More decentralized than SOL, but the Ethereum Foundation and Vitalik retain outsized roadmap influence. The Merge demonstrated leader-driven protocol evolution — a feature for ETH's adaptability, but reduces credible neutrality vs BTC's frozen monetary policy."
     },
-    "verdict": "Ethereum's developer ecosystem and embedded DeFi infrastructure give it strong resilience. Moat ratings here are constrained to *business-moat semantics*: composability and regulatory legitimacy are real protocol advantages but do not produce enterprise switching costs, so they are rated weakened rather than strong. Genuine moats — network effects, transaction embedding, learned interfaces, talent scarcity — remain durable."
+    "regulatoryIncumbency": {
+      "status": "intact",
+      "note": "CFTC commodity classification, spot ETF approved, BlackRock ETHB staking ETF (Mar 2026), GENIUS Act framework. Materially widens institutional access — but no Strategic Reserve eligibility yet, that line is currently BTC-only."
+    },
+    "securityBudget": {
+      "status": "intact",
+      "note": "Top PoS chain by stake (>$50B+ economic security). Less battle-tested than BTC PoW, but the largest validator-secured chain in existence. Slashing economics make 51% attacks prohibitively expensive."
+    },
+    "verdict": "Ethereum's moat is real but more contestable than BTC's. Strong network effects in DeFi and stablecoins; intact on neutrality, regulation, and security but not strong on any of them. The category-leading smart-contract chain — not the category-leading store of value."
   },
   "lastAnalyzed": "April 2026"
 }

@@ -2,6 +2,7 @@
   "slug": "gold",
   "ticker": "XAU",
   "name": "Gold",
+  "assetClass": "commodity",
   "titleColor": "#FFD700",
   "headerStats": [
     {
@@ -133,48 +134,21 @@
       ]
     }
   },
-  "tenMoats": {
-    "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "Not applicable — gold is a physical commodity with no interface or UX consideration."
+  "commodityMoats": {
+    "absoluteScarcity": {
+      "status": "intact",
+      "note": "Above-ground supply grows ~1.5% annually from mining; no synthesis path. Supply curve relatively inelastic to demand spikes — below BTC's mathematical scarcity but materially better than fiat. Annual issuance has been stable for decades."
     },
-    "businessLogic": {
-      "status": "destroyed",
-      "note": "Not applicable to a millennia-old physical store of value."
+    "monetaryHistory": {
+      "status": "strong",
+      "note": "5,000 years of unbroken store-of-value status. Central bank reserves total ~$2T+. Basel III Tier 1 asset status. The Schelling point for institutional flight-to-safety predates every other monetary asset and is universally recognized across civilizations, governments, and institutions."
     },
-    "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — gold price is fully public and transparent; no proprietary data access advantage applies to a physical commodity."
-    },
-    "talentScarcity": {
-      "status": "destroyed",
-      "note": "N/A — gold trading and storage requires no uniquely scarce talent; not a meaningful competitive dynamic for a physical store of value."
-    },
-    "bundling": {
-      "status": "destroyed",
-      "note": "N/A — gold cannot be bundled; it is a singular commodity asset that derives value from scarcity and universality."
-    },
-    "proprietaryData": {
+    "industrialUtility": {
       "status": "weakened",
-      "note": "Gold mining companies hold geological survey data, but spot gold itself has no proprietary data component."
+      "note": "Industrial demand is only ~10% of total gold consumption (electronics, dental, aerospace). Real but tail demand — does not function as a moat-grade demand floor the way solar PV does for silver or grid/AI buildout does for copper. Gold's price is set almost entirely by monetary and investment demand."
     },
-    "regulatoryLockIn": {
-      "status": "strong",
-      "note": "Basel III Tier 1 asset status, central bank reserve requirements, and 5,000 years of recognized monetary status."
-    },
-    "networkEffects": {
-      "status": "strong",
-      "note": "Universal recognition across all civilizations, governments, and institutions for 5,000 years — the ultimate global network effect."
-    },
-    "transactionEmbedding": {
-      "status": "weakened",
-      "note": "Gold is not meaningfully embedded in modern digital transactions; it functions as a store of value, not a medium of exchange."
-    },
-    "systemOfRecord": {
-      "status": "strong",
-      "note": "Physical gold has zero counterparty risk — the ultimate 'true bearer' record independent of any issuer, system, or government."
-    },
-    "verdict": "Gold's AI resilience comes from regulatory recognition and universal network acceptance earned over millennia. AI cannot disrupt gold, but it also cannot help gold compete with AI-native value stores."
+    "primaryMoat": "monetaryHistory",
+    "verdict": "Gold's moat is overwhelmingly its monetary history. Lindy as a store of value is the dominant pillar (strong); absolute scarcity is intact via 1.5%/yr issuance growth; industrial utility is weakened because tail demand at ~10% of consumption cannot anchor price. AI cannot disrupt gold — but also cannot help gold compete with AI-native value stores."
   },
   "extraSections": [
     {

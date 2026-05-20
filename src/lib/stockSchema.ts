@@ -66,6 +66,29 @@ const tenMoatsSchema = z.strictObject({
   aiResilienceScore: score0to100.optional(),
 });
 
+// Crypto-protocol moat framework. See CryptoMoatsData in stockAnalysis.ts.
+const cryptoMoatsSchema = z.strictObject({
+  networkEffects: moatAssessmentSchema,
+  schellingPoint: moatAssessmentSchema,
+  credibleNeutrality: moatAssessmentSchema,
+  regulatoryIncumbency: moatAssessmentSchema,
+  securityBudget: moatAssessmentSchema,
+  verdict: z.string().min(1),
+});
+
+// Commodity moat framework. See CommodityMoatsData in stockAnalysis.ts.
+// primaryMoat selects which pillar this commodity is actually scored on
+// (50% weight; others 25% each).
+const commodityMoatsSchema = z.strictObject({
+  absoluteScarcity: moatAssessmentSchema,
+  monetaryHistory: moatAssessmentSchema,
+  industrialUtility: moatAssessmentSchema,
+  primaryMoat: z.enum(['absoluteScarcity', 'monetaryHistory', 'industrialUtility']),
+  verdict: z.string().min(1),
+});
+
+const assetClassSchema = z.enum(['equity', 'crypto', 'commodity']);
+
 const scenarioSchema = z.strictObject({
   priceTarget: z.string().min(1),
   description: z.string().min(1),
@@ -136,43 +159,59 @@ const extraSectionSchema = z.strictObject({
   closing: z.string().min(1).optional(),
 });
 
-export const stockAnalysisSchema = z.strictObject({
-  slug: z
-    .string()
-    .min(1)
-    .regex(/^[a-z0-9-]+$/, 'slug must be lowercase alphanumeric (hyphens allowed)'),
-  ticker: z.string().min(1),
-  name: z.string().min(1),
-  lastAnalyzed: z.string().min(1).optional(),
-  titleColor: z.string().min(1).optional(),
-  headerStats: z.array(headerStatSchema).min(1),
-  chips: z.array(chipSchema).min(1),
-  metrics: z.array(stockMetricSchema).min(1),
-  moat: z.strictObject({
-    score: score0to100.optional(),
-    description: z.string().min(1),
-    analysisTitle: z.string().min(1),
-    analysisSummary: z.string().min(1),
-    analysisPoints: z.array(analysisPointSchema).min(1),
-  }),
-  growth: z.strictObject({
-    description: z.string().min(1),
-    additionalNote: additionalNoteSchema.optional(),
-    growthAnalysis: growthAnalysisSchema,
-  }),
-  valuation: z.strictObject({
-    score: score0to100,
-    description: z.string().min(1),
-    valuationNote: valuationNoteSchema.optional(),
-    peAnalysis: peAnalysisSchema.optional(),
-  }),
-  scenarios: z.strictObject({
-    bear: scenarioSchema,
-    base: scenarioSchema,
-    bull: scenarioSchema,
-  }),
-  tenMoats: tenMoatsSchema,
-  extraSections: z.array(extraSectionSchema).min(1).optional(),
-});
+export const stockAnalysisSchema = z
+  .strictObject({
+    slug: z
+      .string()
+      .min(1)
+      .regex(/^[a-z0-9-]+$/, 'slug must be lowercase alphanumeric (hyphens allowed)'),
+    ticker: z.string().min(1),
+    name: z.string().min(1),
+    assetClass: assetClassSchema.optional(),
+    lastAnalyzed: z.string().min(1).optional(),
+    titleColor: z.string().min(1).optional(),
+    headerStats: z.array(headerStatSchema).min(1),
+    chips: z.array(chipSchema).min(1),
+    metrics: z.array(stockMetricSchema).min(1),
+    moat: z.strictObject({
+      score: score0to100.optional(),
+      description: z.string().min(1),
+      analysisTitle: z.string().min(1),
+      analysisSummary: z.string().min(1),
+      analysisPoints: z.array(analysisPointSchema).min(1),
+    }),
+    growth: z.strictObject({
+      description: z.string().min(1),
+      additionalNote: additionalNoteSchema.optional(),
+      growthAnalysis: growthAnalysisSchema,
+    }),
+    valuation: z.strictObject({
+      score: score0to100,
+      description: z.string().min(1),
+      valuationNote: valuationNoteSchema.optional(),
+      peAnalysis: peAnalysisSchema.optional(),
+    }),
+    scenarios: z.strictObject({
+      bear: scenarioSchema,
+      base: scenarioSchema,
+      bull: scenarioSchema,
+    }),
+    tenMoats: tenMoatsSchema.optional(),
+    cryptoMoats: cryptoMoatsSchema.optional(),
+    commodityMoats: commodityMoatsSchema.optional(),
+    extraSections: z.array(extraSectionSchema).min(1).optional(),
+  })
+  // Exactly one moat framework must be present, matching assetClass. Defaults
+  // to 'equity' / tenMoats when assetClass is unset.
+  .refine(
+    (d) => {
+      const ac = d.assetClass ?? 'equity';
+      if (ac === 'equity')    return !!d.tenMoats       && !d.cryptoMoats   && !d.commodityMoats;
+      if (ac === 'crypto')    return !!d.cryptoMoats    && !d.tenMoats      && !d.commodityMoats;
+      if (ac === 'commodity') return !!d.commodityMoats && !d.tenMoats      && !d.cryptoMoats;
+      return false;
+    },
+    { message: 'assetClass must match exactly one of tenMoats / cryptoMoats / commodityMoats' },
+  );
 
 export type StockAnalysisSchema = z.infer<typeof stockAnalysisSchema>;

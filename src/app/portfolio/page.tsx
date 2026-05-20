@@ -64,7 +64,12 @@ function DynamicScore({
 }
 
 // ─── Portfolio threshold ──────────────────────────────────────────────────────
-const PORTFOLIO_THRESHOLD = 75;
+// 80 = "near Strong Buy" floor. Currently 29 names clear it (under the geometric
+// composite in valuationScore.ts), so the 25-cap binds with a small buffer —
+// the threshold becomes the binding constraint if coverage thins or valuations
+// get rich, which is the correct behaviour (portfolio shrinks rather than
+// dilutes with sub-quality names).
+const PORTFOLIO_THRESHOLD = 80;
 const MAX_PORTFOLIO = 25;
 const NEAR_TOP_COUNT = 10;
 
@@ -88,6 +93,9 @@ const stockMeta: Record<string, { color: string; category: string; exclusionReas
   SPGI:  { color: "#cf102d", category: "Financials" },
   INTU:  { color: "#2ca01c", category: "FinTech" },
   XAU:   { color: "#ffd700", category: "Hard Assets",     exclusionReason: "Lowest overall score (57) driven by weak growth (50) and poor valuation basis (55). Gold produces no earnings or cash flows, making intrinsic value impossible to anchor. Valid as a macro fear hedge in a separate allocation, but has no place in a quality-focused compounder portfolio." },
+  HG:    { color: "#b87333", category: "Hard Assets" },
+  XAG:   { color: "#c0c0c0", category: "Hard Assets" },
+  U:     { color: "#d4c419", category: "Hard Assets" },
   BTC:   { color: "#f7931a", category: "Digital Assets" },
   KNT:   { color: "#8b7355", category: "Hard Assets",     exclusionReason: "Weakest moat score in the entire coverage universe (42). Mining is a commodity business with no pricing power, no network effects, and no switching costs. High growth (85) reflects production expansion upside — not the scalable, capital-light compounding this portfolio targets." },
   FCX:   { color: "#b8732d", category: "Hard Assets",     exclusionReason: "Commodity copper producer with no pricing power — FCX sells at LME spot price regardless of asset quality. Indonesia sovereign risk at Grasberg, competition from major miners (Codelco, BHP, Glencore), and earnings volatility disqualify it from a portfolio targeting structural moats and durable compounding." },

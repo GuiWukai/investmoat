@@ -1,0 +1,193 @@
+{
+  "slug": "silver",
+  "ticker": "XAG",
+  "name": "Silver",
+  "assetClass": "commodity",
+  "titleColor": "#c0c0c0",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "XAG"
+    },
+    {
+      "label": "Spot Price",
+      "value": "~$50/oz"
+    },
+    {
+      "label": "Gold/Silver Ratio",
+      "value": "~92x"
+    },
+    {
+      "label": "Annual Mine Supply",
+      "value": "~830 Moz"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Commodity | Hybrid Hard Asset",
+      "color": "primary"
+    },
+    {
+      "label": "Solar Demand",
+      "color": "success"
+    },
+    {
+      "label": "Cyclical",
+      "color": "warning"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "Spot Price",
+      "value": "~$50/oz",
+      "label": "Approaching 1980 Hunt-Brothers ATH ($50.35)",
+      "icon": "Coins",
+      "color": "#c0c0c0"
+    },
+    {
+      "title": "Supply Deficit",
+      "value": "−170 Moz",
+      "label": "Silver Institute 2025 — 5th Consecutive Annual Deficit",
+      "icon": "TrendingDown",
+      "color": "#ef4444"
+    },
+    {
+      "title": "Solar PV Demand",
+      "value": "~230 Moz",
+      "label": "~20% of Total Demand; +12% YoY in 2025",
+      "icon": "Zap",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "Gold/Silver Ratio",
+      "value": "~92x",
+      "label": "Long-Run Avg ~60x — Compression Catalyst for Silver",
+      "icon": "BarChart3",
+      "color": "#3b82f6"
+    }
+  ],
+  "moat": {
+    "description": "Silver sits between gold and copper — half monetary metal, half industrial input. 4,000 years of monetary history give it a real but secondary Lindy moat; solar PV and electronics give it a structural industrial demand floor that gold lacks.",
+    "analysisTitle": "The Hybrid Moat",
+    "analysisSummary": "Silver's moat is built on **Dual Demand, Supply Constraint, and Historical Trust**:",
+    "analysisPoints": [
+      {
+        "title": "Dual Demand Profile",
+        "text": "Roughly 50% industrial (solar PV ~20%, electronics ~22%, brazing, antimicrobial coatings) and 50% investment/jewelry. Silver does not depend on monetary narrative alone — solar PV is a structural growth vector that compounds independently of safe-haven flows."
+      },
+      {
+        "title": "Constrained Supply Curve",
+        "text": "~70% of silver supply is a by-product of copper, zinc, lead, and gold mining. Primary silver mines are rare, and supply cannot respond to a price signal in silver alone — only to a price signal in the host metal. Result: structural deficit when industrial demand inflects."
+      },
+      {
+        "title": "Monetary Memory",
+        "text": "Used as money for 4,000+ years (Greek drachma, Roman denarius, Chinese sycee, US Silver Certificate until 1968). Bullion coins minted by every major government (American Eagle, Maple Leaf, Philharmonic). Not a modern central-bank reserve, but the second-most-recognised hard money on Earth."
+      },
+      {
+        "title": "Gold/Silver Ratio Mean Reversion",
+        "text": "Gold/silver ratio currently ~92x against a long-run average of ~60x and a bull-cycle compression target of 40-50x. In every prior precious-metals bull cycle, silver has out-performed gold on percentage basis as the ratio compresses."
+      }
+    ]
+  },
+  "growth": {
+    "description": "Silver demand growth is structural: solar PV (~20% of total demand and growing 12%+/yr), industrial electronics, and EV power systems are layering on top of cyclical investment demand. The Silver Institute confirmed a 5th consecutive annual deficit in 2025 (~170 Moz) — the longest deficit streak in modern silver-market history. Below-ground supply growth is constrained because ~70% of new silver comes from base-metal mines whose economics are not silver-driven.",
+    "growthAnalysis": {
+      "cagrEstimate": "7-10%",
+      "scoreDerivation": "Base 71 (7-10% price CAGR midpoint reflecting structural deficit + solar tailwind) + 1 trajectory (solar accelerating, industrial stable, investment stable) + 0 margin (cyclical industrial metal — price trajectory not a compounding revenue base) + 3 TAM expansion (solar PV, EV electronics) − 5 moderate risk (cyclical exposure to industrial recession) = 70",
+      "drivers": [
+        {
+          "name": "Solar PV Demand",
+          "metric": "~230 Moz silver consumed in PV in 2025 (+12% YoY); IEA forecasts 600 GW+/yr solar capacity additions through 2030",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Industrial & Electronics",
+          "metric": "~310 Moz electronics demand; EV power electronics and 5G/AI semiconductor packaging adding incremental layers",
+          "trend": "stable"
+        },
+        {
+          "name": "Investment Demand",
+          "metric": "Coin & bar demand recovering after 2023-24 outflows; ETF holdings up 38% YoY in 2025 on PM cycle re-acceleration",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "A coordinated industrial slowdown (solar PV oversupply, EV demand contraction, China property drag) combined with a hawkish Fed surprise pushes silver back to $32/oz, expanding gold/silver ratio to 110+ as the safe-haven trade routes through gold rather than silver.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 76,
+    "description": "Silver at ~$50/oz is testing the 1980 Hunt-Brothers all-time high. Sits ~55% of the way from bear ($32) to base ($65) — attractive but the gold/silver ratio at 92x is still well above the long-run 60x, leaving room for compression-driven upside. JP Morgan year-end target $58/oz; Bank of America $65/oz; Silver Institute supply/demand model implies $70+/oz fair value at current deficit run-rate."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$32/oz",
+      "description": "Industrial demand contraction (solar PV oversupply, EV slowdown) combines with a hawkish Fed surprise to break the precious-metals bull; gold/silver ratio expands back to 110+ as silver de-rates faster than gold.",
+      "points": [
+        "Chinese solar PV capacity reaches a glut in 2026; module prices fall another 25%+ and thrifting reduces silver-per-cell by 15-20%",
+        "Global recession in H2 2026 pushes industrial silver demand from +4% to flat, breaking the structural-deficit narrative",
+        "Real yields rise sharply on a hawkish Fed pivot; both gold and silver de-rate but silver underperforms due to its industrial cyclical bias"
+      ]
+    },
+    "base": {
+      "priceTarget": "$65/oz",
+      "description": "Structural deficit holds for a 6th consecutive year; solar PV demand growth tracks IEA forecasts; gold/silver ratio compresses to ~70 as the PM bull cycle continues at moderate pace.",
+      "points": [
+        "Silver Institute confirms 2026 deficit of 150-200 Moz; combined deficit since 2021 surpasses 800 Moz, draining visible inventories below 5 months of demand",
+        "Gold sustains $4,500-5,500/oz range and gold/silver ratio compresses from 92 to ~70 as silver catches the precious-metals bid that gold has already absorbed",
+        "EV and AI-electronics silver demand adds 30-50 Moz/yr of incremental industrial demand, offsetting any solar-PV thrifting"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$95/oz",
+      "description": "Precious-metals mania driven by sovereign-debt stress or a major fiat-confidence event compresses the gold/silver ratio to ~50; physical squeeze on registered COMEX inventories triggers a 1980-style spike.",
+      "points": [
+        "Gold breaks $6,000/oz on a sovereign debt or fiat-confidence event; gold/silver ratio compresses from 92 to ~50 as silver follows gold higher on a percentage basis",
+        "Registered COMEX silver inventories fall below 30 Moz (vs ~50 Moz current); concentrated short positions face delivery-month squeeze risk",
+        "BRICS+ settlement mechanism adds silver to the basket alongside gold, creating a sovereign demand layer that previously did not exist"
+      ]
+    }
+  },
+  "commodityMoats": {
+    "absoluteScarcity": {
+      "status": "intact",
+      "note": "~70% of silver comes from base-metal by-product mining (copper, zinc, lead, gold); primary silver mines are rare and supply cannot respond to a silver-only price signal. Stock-to-flow is materially worse than gold (silver ~1x vs gold ~62x) because industrial consumption is real and non-recoverable. Structural deficit has held for 5 consecutive years."
+    },
+    "monetaryHistory": {
+      "status": "intact",
+      "note": "4,000+ years as money — Greek drachma, Roman denarius, Chinese sycee, US Silver Certificate until 1968. Bullion coins minted by every major government (American Eagle, Maple Leaf, Philharmonic). Not a modern central-bank reserve asset and not Basel III Tier 1, so monetary history is real but secondary to gold's."
+    },
+    "industrialUtility": {
+      "status": "intact",
+      "note": "~50% of demand is industrial — solar PV (~20%, growing 12%/yr), electronics (~22%), brazing, antimicrobial coatings. Highest electrical and thermal conductivity of any metal; antimicrobial properties make it irreplaceable in medical and food-contact applications. Smaller growth TAM than copper's electrification thesis but a structural demand floor that gold fundamentally lacks."
+    },
+    "primaryMoat": "industrialUtility",
+    "verdict": "Silver's moat is the hybrid case: real on all three pillars, strong on none. Monetary history is genuine but secondary to gold; industrial utility is genuine but smaller-TAM than copper; absolute scarcity is intact via by-product constraint rather than mathematical limit. Sits structurally between gold (77) and copper (51) — a real cycle play with two demand engines, but not a moat-grade compounder."
+  },
+  "extraSections": [
+    {
+      "type": "grid-cards",
+      "title": "Why Silver Now",
+      "accentColor": "#c0c0c0",
+      "gridHeader": "The Hybrid Thesis",
+      "intro": "Silver is the only asset that combines a multi-millennial monetary history with a structural industrial growth vector. Both demand engines are accelerating simultaneously while the supply curve is structurally constrained.",
+      "cards": [
+        {
+          "label": "Structural Deficit",
+          "text": "5 consecutive years of deficit per the Silver Institute. Combined 2021-2025 deficit ~800 Moz against annual mine supply of ~830 Moz — nearly one full year of mine production now drawn down from above-ground inventories."
+        },
+        {
+          "label": "Solar PV Step-Change",
+          "text": "Solar PV consumed ~230 Moz of silver in 2025 (~20% of total demand) and is growing 12%/yr against IEA forecasts of 600+ GW/yr in new capacity additions through 2030. Thrifting reduces silver-per-cell at the margin but cannot offset the absolute demand growth."
+        },
+        {
+          "label": "Ratio Compression",
+          "text": "Gold/silver ratio currently ~92x vs long-run average ~60x. In every prior PM bull cycle since 1971 the ratio has compressed to 40-60x, with silver outperforming gold on a percentage basis. Mean reversion to 60x with gold flat would imply silver at ~$77/oz."
+        }
+      ]
+    }
+  ],
+  "lastAnalyzed": "May 2026"
+}

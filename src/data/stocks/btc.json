@@ -2,6 +2,7 @@
   "slug": "btc",
   "ticker": "BTC",
   "name": "Bitcoin",
+  "assetClass": "crypto",
   "titleColor": "#f7931a",
   "headerStats": [
     {
@@ -130,48 +131,28 @@
       ]
     }
   },
-  "tenMoats": {
-    "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "Not applicable — Bitcoin is a decentralized monetary protocol, not a software interface product."
-    },
-    "businessLogic": {
-      "status": "destroyed",
-      "note": "Not applicable — Bitcoin's protocol rules are immutable by design; there is no configurable business logic layer. This is a feature, not a vulnerability."
-    },
-    "publicDataAccess": {
-      "status": "destroyed",
-      "note": "Not applicable — the Bitcoin blockchain is fully public and transparent by design; data access is not a competitive moat for a monetary protocol."
-    },
-    "talentScarcity": {
-      "status": "weakened",
-      "note": "Bitcoin core development talent remains specialized, but the protocol is intentionally simple and resistant to complex change."
-    },
-    "bundling": {
-      "status": "destroyed",
-      "note": "Not applicable — Bitcoin is intentionally single-purpose; bundling products or features would undermine its core simplicity and security guarantees."
-    },
-    "proprietaryData": {
-      "status": "destroyed",
-      "note": "N/A — Bitcoin's blockchain is fully public by design. Proprietary data is the opposite of what a permissionless ledger provides; the prior 'strong' rating conflated cryptographic integrity with proprietary access."
-    },
-    "regulatoryLockIn": {
-      "status": "intact",
-      "note": "BTC has captured first-mover regulatory incumbency — the US Strategic Bitcoin Reserve, the BITCOIN Act in Congress, FASB accounting treatment first applied to BTC, 11 ETF issuers, and state-level reserve laws (NH, AZ, MA) are BTC-specific frameworks. SOL received CFTC commodity classification but is not receiving Strategic-Reserve treatment. Not exclusive licensure, but durable enough to count as intact."
-    },
+  "cryptoMoats": {
     "networkEffects": {
       "status": "strong",
-      "note": "The largest crypto network with 52.4M+ unique holders and the broadest institutional support — Metcalfe's Law compounding since 2009."
+      "note": "Largest hashrate (~700 EH/s), deepest liquidity, broadest exchange/custody integration, 52.4M+ unique holders. Metcalfe's Law compounding since 2009 — a new chain can fork the code but can't fork 15 years of adoption."
     },
-    "transactionEmbedding": {
-      "status": "weakened",
-      "note": "Bitcoin is primarily a store of value rather than a daily transaction medium; Layer 2 Lightning is growing but not yet embedded."
+    "schellingPoint": {
+      "status": "strong",
+      "note": "BTC is the default 'digital scarce asset' for sovereigns, corporates, and pensions. Strategy Inc.'s 1,000+ corporate-treasury clones hold BTC specifically, not ETH or SOL. The category-leading digital store of value."
     },
-    "systemOfRecord": {
-      "status": "intact",
-      "note": "Not an enterprise-workflow SoR, but BTC is the Schelling-point ledger for digital scarce-asset holdings — when sovereigns or corporates allocate to a digital reserve asset, BTC is the default (Strategy Inc. and 1,000+ corporate-treasury clones hold BTC specifically, not ETH or SOL). That institutional anchoring is a real form of system-of-record durability."
+    "credibleNeutrality": {
+      "status": "strong",
+      "note": "No CEO, no foundation control, no roadmap, no governance token. The 21M cap is protocol-enforced. Structurally uncopyable by any entity that needs monetary control — which is why central banks cannot replicate it and gold has lasted 5,000 years on the same principle."
     },
-    "verdict": "Bitcoin's mathematical scarcity and decentralized consensus make it uniquely immune to AI disruption. Moat ratings here are constrained to *business-moat semantics*: only network effects qualify as fully durable on that axis, since regulatory acceptance and on-chain state are not exclusive to BTC and do not produce switching costs for an enterprise customer."
+    "regulatoryIncumbency": {
+      "status": "strong",
+      "note": "First spot ETF (Jan 2024), first CFTC commodity classification, US Strategic Bitcoin Reserve operational (2025), BITCOIN Act advancing in Congress, FASB accounting treatment first applied to BTC, state-level reserve laws (NH, AZ, MA). These are BTC-exclusive frameworks — SOL/ETH did not receive Strategic-Reserve treatment."
+    },
+    "securityBudget": {
+      "status": "strong",
+      "note": "Largest honest hashpower of any PoW chain — most expensive to attack. Self-reinforcing flywheel: security attracts capital attracts security. The 19th-largest electrical 'consumer' on Earth functions as BTC's economic security perimeter."
+    },
+    "verdict": "Bitcoin's moat is monetary, not corporate. Five protocol-level pillars — network Lindy, Schelling-point status, credible neutrality, regulatory incumbency, and security budget — combine into the strongest monetary moat ever built outside of fiat. All five rate strong, which is the framework's way of saying 'uniquely uncopyable.'"
   },
   "lastAnalyzed": "April 2026"
 }

@@ -9,15 +9,14 @@ import {
   AnalysisSection,
   ScenarioCard,
   RecommendationBadge,
-  TenMoatsCard,
+  MoatsCard,
 } from '@/components/AnalysisComponents';
 import { LivePriceWidget } from '@/components/LivePriceWidget';
 import { DynamicValuationGauge } from '@/components/DynamicValuationGauge';
 import { ScenarioPriceBar } from '@/components/ScenarioPriceBar';
 import { stockData, getAverageScore } from '@/app/stockData';
 import { getStockData } from '@/data/stocks';
-import type { TenMoatsAssessment } from '@/app/tenMoatsData';
-import { computeMoatScore, computeGrowthScore } from '@/lib/valuationScore';
+import { computeAssetMoatScore, computeGrowthScore } from '@/lib/valuationScore';
 import type { StockAnalysisData } from '@/types/stockAnalysis';
 import { TrendingUp, TrendingDown, Minus } from 'lucide-react';
 
@@ -237,7 +236,7 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
   const stockEntry = stockData.find(s => s.ticker === data.ticker);
   const [liveValScore, setLiveValScore] = useState<number>(data.valuation.score);
   const [valLoading, setValLoading] = useState(true);
-  const liveMoatScore = computeMoatScore(data.tenMoats);
+  const liveMoatScore = computeAssetMoatScore(data);
   const growthScore = computeGrowthScore(data.growth.growthAnalysis) ?? 0;
   const dynamicOverallScore = Math.round(getAverageScore([liveMoatScore, growthScore, liveValScore]));
 
@@ -374,7 +373,7 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
             detail: (
               <div className="space-y-4">
                 {MoatAnalysisCard}
-                <TenMoatsCard data={data.tenMoats as unknown as TenMoatsAssessment} />
+                <MoatsCard data={data} />
               </div>
             ),
           },
@@ -468,7 +467,7 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
         <AnalysisSection title={data.moat.analysisTitle}>
           <div className="space-y-5">
             {MoatAnalysisCard}
-            <TenMoatsCard data={data.tenMoats as unknown as TenMoatsAssessment} />
+            <MoatsCard data={data} />
           </div>
         </AnalysisSection>
       </div>

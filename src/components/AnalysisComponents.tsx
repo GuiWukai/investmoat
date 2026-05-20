@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { TrendingUp, PlusCircle, Minus, Zap, ShieldCheck, ShieldX, RefreshCw } from "lucide-react";
 import { Spinner } from "@heroui/react";
 import type { TenMoatsAssessment, MoatStatus } from "@/app/tenMoatsData";
+import type { CommodityMoatsData, CryptoMoatsData, StockAnalysisData } from "@/types/stockAnalysis";
 
 // ─── Count-up animation ────────────────────────────────────────────────────────
 function useCountUp(target: number, duration = 900): number {
@@ -413,4 +414,80 @@ export function TenMoatsCard({ data }: { data: TenMoatsAssessment }) {
       </div>
     </div>
   );
+}
+
+// ─── CryptoMoatsCard ──────────────────────────────────────────────────────────
+// Five-pillar monetary-moat framework for crypto protocols. No AI-resilience
+// split (protocol moats are AI-resilient by nature); a single flat list with
+// the verdict above.
+export function CryptoMoatsCard({ data }: { data: CryptoMoatsData }) {
+  const pillars: Array<{ label: string; key: keyof Omit<CryptoMoatsData, 'verdict'> }> = [
+    { label: 'Network Effects',        key: 'networkEffects' },
+    { label: 'Schelling Point',        key: 'schellingPoint' },
+    { label: 'Credible Neutrality',    key: 'credibleNeutrality' },
+    { label: 'Regulatory Incumbency',  key: 'regulatoryIncumbency' },
+    { label: 'Security Budget',        key: 'securityBudget' },
+  ];
+
+  return (
+    <div className="space-y-4">
+      <div className="rounded-2xl border border-white/[0.05] bg-white/[0.02] p-5">
+        <p className="section-label mb-2">Crypto Moat Verdict</p>
+        <p className="text-sm text-white/60 leading-relaxed">{data.verdict}</p>
+      </div>
+      <div className="rounded-2xl border border-emerald-500/[0.1] bg-emerald-500/[0.02] p-5">
+        <div className="flex items-center gap-2 mb-4">
+          <div className="w-6 h-6 rounded-lg bg-emerald-500/10 flex items-center justify-center shrink-0">
+            <ShieldCheck size={13} color="#34d399" />
+          </div>
+          <span className="text-[10px] font-black uppercase tracking-widest text-white/40">Monetary Protocol Moats</span>
+        </div>
+        {pillars.map(({ label, key }) => {
+          const item = data[key];
+          return <MoatRow key={key} label={label} status={item.status} note={item.note} />;
+        })}
+      </div>
+    </div>
+  );
+}
+
+// ─── CommodityMoatsCard ───────────────────────────────────────────────────────
+export function CommodityMoatsCard({ data }: { data: CommodityMoatsData }) {
+  const pillars: Array<{ label: string; key: keyof Omit<CommodityMoatsData, 'verdict' | 'primaryMoat'> }> = [
+    { label: 'Absolute Scarcity',  key: 'absoluteScarcity' },
+    { label: 'Monetary History',   key: 'monetaryHistory' },
+    { label: 'Industrial Utility', key: 'industrialUtility' },
+  ];
+
+  return (
+    <div className="space-y-4">
+      <div className="rounded-2xl border border-white/[0.05] bg-white/[0.02] p-5">
+        <p className="section-label mb-2">Commodity Moat Verdict</p>
+        <p className="text-sm text-white/60 leading-relaxed">{data.verdict}</p>
+      </div>
+      <div className="rounded-2xl border border-emerald-500/[0.1] bg-emerald-500/[0.02] p-5">
+        <div className="flex items-center gap-2 mb-4">
+          <div className="w-6 h-6 rounded-lg bg-emerald-500/10 flex items-center justify-center shrink-0">
+            <ShieldCheck size={13} color="#34d399" />
+          </div>
+          <span className="text-[10px] font-black uppercase tracking-widest text-white/40">Physical Asset Moats</span>
+        </div>
+        {pillars.map(({ label, key }) => {
+          const item = data[key];
+          return <MoatRow key={key} label={label} status={item.status} note={item.note} />;
+        })}
+      </div>
+    </div>
+  );
+}
+
+// ─── MoatsCard dispatcher ─────────────────────────────────────────────────────
+// Single entry point used by stock pages. Picks the right framework's renderer
+// based on data.assetClass.
+export function MoatsCard({ data }: { data: StockAnalysisData }) {
+  const ac = data.assetClass ?? 'equity';
+  if (ac === 'crypto' && data.cryptoMoats)       return <CryptoMoatsCard data={data.cryptoMoats} />;
+  if (ac === 'commodity' && data.commodityMoats) return <CommodityMoatsCard data={data.commodityMoats} />;
+  if (data.tenMoats) return <TenMoatsCard data={data.tenMoats as unknown as TenMoatsAssessment} />;
+  return null;
 }

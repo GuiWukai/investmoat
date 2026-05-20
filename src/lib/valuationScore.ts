@@ -1,4 +1,11 @@
-import type { RecommendationStatus, TenMoatsData } from '@/types/stockAnalysis';
+import type {
+  AssetClass,
+  CommodityMoatsData,
+  CryptoMoatsData,
+  RecommendationStatus,
+  StockAnalysisData,
+  TenMoatsData,
+} from '@/types/stockAnalysis';
 
 // Status → point scale. Tightened so "intact" requires demonstrable presence
 // rather than just box-checking: the gap between strong (100) and intact (65)
@@ -146,6 +153,97 @@ export function computeMoatScore(tenMoats: TenMoatsData): number {
   // learnedInterfaces is marked resilient doesn't take the discount.
   const aiDiscount = vulnerableScore * vW > resilientScore * rW ? -5 : 0;
   return Math.max(0, Math.min(100, Math.round(base + breadth + aiDiscount)));
+}
+
+// ─── Asset-class-specific moat scoring ────────────────────────────────────────
+//
+// Equities are scored via the 10-moat framework above. Crypto protocols and
+// commodities have categorically different sources of durability — protocol
+// effects, credible neutrality, monetary history, supply inelasticity — that
+// the business-moat framework can't see. Each asset class gets its own
+// pillar set and weights. Outputs are still 0–100 but are NOT directly
+// comparable across asset classes: BTC moat=100 measures protocol durability,
+// not the same thing as AXON moat=92.
+
+const CRYPTO_MOAT_WEIGHTS: Record<keyof Omit<CryptoMoatsData, 'verdict'>, number> = {
+  networkEffects:        25,
+  schellingPoint:        25,
+  credibleNeutrality:    20,
+  regulatoryIncumbency:  15,
+  securityBudget:        15,
+};
+
+// Commodity weights are dynamic via primaryMoat — see computeCommodityMoatScore.
+const COMMODITY_PRIMARY_WEIGHT = 50;
+const COMMODITY_OTHER_WEIGHT = 25;
+
+// Shared weighted-average scorer for the simpler frameworks. N/A pillars
+// (destroyed status with "N/A"/"Not applicable" note) drop out and their
+// weight redistributes.
+function weightedMoatScore<K extends string>(
+  moats: Record<K, { status: string; note: string }> & { verdict: string },
+  weights: Record<K, number>,
+): number {
+  let sum = 0;
+  let total = 0;
+  for (const key of Object.keys(weights) as K[]) {
+    const m = moats[key];
+    const pts = moatPoints(m);
+    if (pts === null) continue;
+    sum += pts * weights[key];
+    total += weights[key];
+  }
+  if (total === 0) return 0;
+  return Math.max(0, Math.min(100, Math.round(sum / total)));
+}
+
+export function computeCryptoMoatScore(data: CryptoMoatsData): number {
+  return weightedMoatScore(data, CRYPTO_MOAT_WEIGHTS);
+}
+
+/**
+ * Compute commodity moat score with dynamic weights driven by primaryMoat.
+ * Primary pillar gets COMMODITY_PRIMARY_WEIGHT (50); the other two share
+ * COMMODITY_OTHER_WEIGHT (25 each). This lets gold score on its monetary
+ * history without being dragged by tail industrial demand, and copper score
+ * on its industrial utility without being dragged by its weak monetary
+ * history.
+ */
+export function computeCommodityMoatScore(data: CommodityMoatsData): number {
+  const pillars: Array<keyof Omit<CommodityMoatsData, 'verdict' | 'primaryMoat'>> = [
+    'absoluteScarcity', 'monetaryHistory', 'industrialUtility',
+  ];
+  let sum = 0;
+  let total = 0;
+  for (const p of pillars) {
+    const pts = moatPoints(data[p]);
+    if (pts === null) continue;
+    const weight = p === data.primaryMoat ? COMMODITY_PRIMARY_WEIGHT : COMMODITY_OTHER_WEIGHT;
+    sum += pts * weight;
+    total += weight;
+  }
+  if (total === 0) return 0;
+  return Math.max(0, Math.min(100, Math.round(sum / total)));
+}
+
+/**
+ * Dispatcher: compute the moat score using the framework that matches the
+ * asset's class. Defaults to equity / tenMoats when assetClass is unset.
+ * Throws if the matching moats field is missing — schema validation should
+ * have caught that, so a runtime miss is a bug.
+ */
+export function computeAssetMoatScore(data: StockAnalysisData): number {
+  const ac: AssetClass = data.assetClass ?? 'equity';
+  if (ac === 'crypto') {
+    if (!data.cryptoMoats) throw new Error(`${data.slug}: assetClass=crypto but cryptoMoats missing`);
+    return computeCryptoMoatScore(data.cryptoMoats);
+  }
+  if (ac === 'commodity') {
+    if (!data.commodityMoats) throw new Error(`${data.slug}: assetClass=commodity but commodityMoats missing`);
+    return computeCommodityMoatScore(data.commodityMoats);
+  }
+  if (!data.tenMoats) throw new Error(`${data.slug}: assetClass=equity but tenMoats missing`);
+  return computeMoatScore(data.tenMoats);
 }
 
 // ─── Growth score ─────────────────────────────────────────────────────────────
@@ -302,12 +400,27 @@ export function valuationDescription(
   return `Trading ${pct}% above the bull case (${bullStr}) — premium valuation.`;
 }
 
-// Composite weighting matches the JSON-LD ratingValue shown on stock pages:
-// moat 40% · growth 30% · valuation 30%. Bands map composite → recommendation.
-export function computeComposite(moat: number, growth: number, valuation: number): number {
-  return Math.round(moat * 0.4 + growth * 0.3 + valuation * 0.3);
+// Composite: geometric (CES) mean with moat 0.40 · growth 0.30 · valuation 0.30.
+// Single source of truth — getAverageScore in stockData.ts delegates to computeCompositeRaw.
+// Weak pillars drag the score (a strong moat cannot fully offset a rich price);
+// equal pillars produce the arithmetic mean. Raw form returns a float for precise
+// sorting; computeComposite rounds for display and recommendation bands.
+export function computeCompositeRaw(moat: number, growth: number, valuation: number): number {
+  return Math.pow(moat / 100, 0.40)
+    * Math.pow(growth / 100, 0.30)
+    * Math.pow(valuation / 100, 0.30)
+    * 100;
 }
 
+export function computeComposite(moat: number, growth: number, valuation: number): number {
+  return Math.round(computeCompositeRaw(moat, growth, valuation));
+}
+
+// Bands left at the original thresholds. Geometric and arithmetic composites
+// agree on equal-pillar names (top of the universe), so shifting thresholds
+// just promotes those names spuriously. The geometric formula compresses
+// divergent-pillar stocks downward through the same bands — which is the
+// bottleneck discrimination we want.
 export function computeRecommendation(
   moat: number,
   growth: number,

@@ -2,6 +2,16 @@ export type MoatStatus = 'strong' | 'intact' | 'weakened' | 'destroyed';
 export type RecommendationStatus = 'Strong Buy' | 'Accumulate' | 'Hold' | 'Speculative Buy' | 'Avoid';
 export type ChipColor = 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
 
+/**
+ * Asset-class-aware moat framework. Equities are scored against the 10-moat
+ * business framework (TenMoatsData); crypto protocols against a 5-pillar
+ * monetary-moat framework (CryptoMoatsData); commodities against a 3-pillar
+ * commodity framework (CommodityMoatsData). Scores are NOT directly comparable
+ * across asset classes — a BTC moat of 100 measures protocol durability, not
+ * the same thing as an equity moat of 100.
+ */
+export type AssetClass = 'equity' | 'crypto' | 'commodity';
+
 export interface StockMetric {
   title: string;
   value: string;
@@ -50,6 +60,47 @@ export interface TenMoatsData {
   aiResilienceScore?: number;
 }
 
+/**
+ * Crypto-protocol moat framework. Five pillars that capture what makes a
+ * monetary protocol durable rather than what makes a business durable.
+ *  - networkEffects: Lindy / hashrate / liquidity / integration breadth
+ *  - schellingPoint: default-choice status within its category
+ *  - credibleNeutrality: resistance to capture by any controlling entity
+ *  - regulatoryIncumbency: ETF / classification / sovereign-reserve standing
+ *  - securityBudget: economic security from hashrate or staked capital
+ */
+export interface CryptoMoatsData {
+  networkEffects: MoatAssessmentData;
+  schellingPoint: MoatAssessmentData;
+  credibleNeutrality: MoatAssessmentData;
+  regulatoryIncumbency: MoatAssessmentData;
+  securityBudget: MoatAssessmentData;
+  verdict: string;
+}
+
+/**
+ * Commodity moat framework. Three pillars that capture the durability of a
+ * physical store-of-value or industrial asset:
+ *  - absoluteScarcity: supply-curve inelasticity to demand
+ *  - monetaryHistory: Lindy as a store of value / institutional recognition
+ *  - industrialUtility: real-world demand floor outside monetary use
+ *
+ * primaryMoat declares which pillar is this commodity's *actual* moat. The
+ * scoring function up-weights the primary pillar (50%) and down-weights the
+ * other two (25% each) — so gold scores on its monetary history without
+ * being dragged by industrial demand, and copper scores on its industrial
+ * utility without being dragged by its weak monetary history.
+ */
+export type CommodityMoatPillar = 'absoluteScarcity' | 'monetaryHistory' | 'industrialUtility';
+
+export interface CommodityMoatsData {
+  absoluteScarcity: MoatAssessmentData;
+  monetaryHistory: MoatAssessmentData;
+  industrialUtility: MoatAssessmentData;
+  primaryMoat: CommodityMoatPillar;
+  verdict: string;
+}
+
 export interface GridCard {
   label: string;
   text: string;
@@ -76,6 +127,12 @@ export interface StockAnalysisData {
   slug: string;
   ticker: string;
   name: string;
+  /**
+   * Selects which moat framework scores this asset. Defaults to 'equity'.
+   * When set to 'crypto', cryptoMoats must be present (tenMoats ignored);
+   * when set to 'commodity', commodityMoats must be present.
+   */
+  assetClass?: AssetClass;
   /** Month and year this analysis was last updated, e.g. "March 2026" */
   lastAnalyzed?: string;
   /** Optional hex colour applied to the page title */
@@ -142,6 +199,11 @@ export interface StockAnalysisData {
     base: Scenario;
     bull: Scenario;
   };
-  tenMoats: TenMoatsData;
+  /** Equity moat framework. Required when assetClass is 'equity' (default). */
+  tenMoats?: TenMoatsData;
+  /** Crypto moat framework. Required when assetClass is 'crypto'. */
+  cryptoMoats?: CryptoMoatsData;
+  /** Commodity moat framework. Required when assetClass is 'commodity'. */
+  commodityMoats?: CommodityMoatsData;
   extraSections?: ExtraSection[];
 }
