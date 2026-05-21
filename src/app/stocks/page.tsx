@@ -1,11 +1,12 @@
 'use client';
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ChevronRight, Search, X, SlidersHorizontal } from "lucide-react";
 import { Spinner } from "@heroui/react";
 import { allCoverageData, getAverageScore } from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
+import { useAllStockPrices } from "@/hooks/useAllStockPrices";
 
 const TICKER_COLORS: Record<string, string> = {
   MSFT: "#00a4ef", AMZN: "#f59e0b", ASML: "#0071c5", V:    "#1a1f71",
@@ -47,37 +48,23 @@ function ScorePill({ value }: { value: number }) {
   );
 }
 
-function DynamicScore({
-  slug, moat, growth, fallbackVal, bearTarget, baseTarget, bullTarget,
+function LiveScore({
+  price, pricesLoaded, moat, growth, fallbackVal, bearTarget, baseTarget, bullTarget,
 }: {
-  slug: string; moat: number; growth: number; fallbackVal: number;
+  price: number | null | undefined;
+  pricesLoaded: boolean;
+  moat: number; growth: number; fallbackVal: number;
   bearTarget: string; baseTarget: string; bullTarget: string;
 }) {
-  const [score, setScore] = useState(() => Math.round(getAverageScore([moat, growth, fallbackVal])));
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const bear = parseScenarioPrice(bearTarget);
-    const base = parseScenarioPrice(baseTarget);
-    const bull = parseScenarioPrice(bullTarget);
-    if (!bear || !base || !bull) { setLoading(false); return; }
-
-    let cancelled = false;
-    fetch(`/api/stock-price/${slug}`)
-      .then(r => (r.ok ? r.json() : null))
-      .then(d => {
-        if (cancelled) return;
-        if (d?.price != null) {
-          const liveVal = computeValuationScore(d.price, bear, base, bull);
-          setScore(Math.round(getAverageScore([moat, growth, liveVal])));
-        }
-        setLoading(false);
-      })
-      .catch(() => { if (!cancelled) setLoading(false); });
-    return () => { cancelled = true; };
-  }, [slug, moat, growth, bearTarget, baseTarget, bullTarget]);
-
-  if (loading) return <Spinner size="sm" color="default" classNames={{ wrapper: "w-7 h-7" }} />;
+  if (!pricesLoaded) {
+    return <Spinner size="sm" color="default" classNames={{ wrapper: "w-7 h-7" }} />;
+  }
+  const bear = parseScenarioPrice(bearTarget);
+  const base = parseScenarioPrice(baseTarget);
+  const bull = parseScenarioPrice(bullTarget);
+  const score = (price != null && bear && base && bull)
+    ? Math.round(getAverageScore([moat, growth, computeValuationScore(price, bear, base, bull)]))
+    : Math.round(getAverageScore([moat, growth, fallbackVal]));
   return <ScorePill value={score} />;
 }
 
@@ -90,7 +77,19 @@ function SubScore({ label, value }: { label: string; value: number }) {
   );
 }
 
-function StockRow({ stock, rank, delay }: { stock: typeof allCoverageData[0]; rank?: number; delay?: number }) {
+function StockRow({
+  stock,
+  rank,
+  delay,
+  price,
+  pricesLoaded,
+}: {
+  stock: typeof allCoverageData[0];
+  rank?: number;
+  delay?: number;
+  price: number | null | undefined;
+  pricesLoaded: boolean;
+}) {
   const router = useRouter();
   const accentColor = TICKER_COLORS[stock.ticker] ?? '#6b7280';
 
@@ -139,8 +138,9 @@ function StockRow({ stock, rank, delay }: { stock: typeof allCoverageData[0]; ra
 
       {/* Overall score */}
       <div className="shrink-0">
-        <DynamicScore
-          slug={stock.slug}
+        <LiveScore
+          price={price}
+          pricesLoaded={pricesLoaded}
           moat={stock.scores[0]}
           growth={stock.scores[1]}
           fallbackVal={stock.scores[2]}
@@ -184,6 +184,7 @@ export default function StocksPage() {
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("all");
   const inputRef = useRef<HTMLInputElement>(null);
+  const { prices, loaded: pricesLoaded } = useAllStockPrices();
 
   const trimmed = query.trim().toLowerCase();
 
@@ -303,6 +304,8 @@ export default function StocksPage() {
                 stock={stock}
                 rank={idx + 1}
                 delay={0.02 * Math.min(idx, 10)}
+                price={prices[stock.ticker]}
+                pricesLoaded={pricesLoaded}
               />
             ))}
           </div>
