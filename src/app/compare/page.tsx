@@ -62,12 +62,6 @@ function CompareInner() {
     setSelected(slugs.slice(0, MAX_TICKERS));
   }, []);
 
-  const gridCols = stocks.length === 1
-    ? 'grid-cols-1 max-w-md'
-    : stocks.length === 2
-      ? 'grid-cols-1 md:grid-cols-2'
-      : 'grid-cols-1 md:grid-cols-2 xl:grid-cols-3';
-
   return (
     <div className="animate-fade-in dot-pattern space-y-8">
       <header className="pt-6 md:pt-12 animate-fade-up stagger-fill-both" style={{ animationDelay: '0s' }}>
@@ -99,21 +93,43 @@ function CompareInner() {
         </div>
       ) : (
         <>
-          <div
-            className={`grid gap-4 ${gridCols} animate-fade-up stagger-fill-both`}
-            style={{ animationDelay: '0.16s' }}
-          >
-            {stocks.map(stock => (
+          {stocks.length === 1 ? (
+            <div className="max-w-md animate-fade-up stagger-fill-both" style={{ animationDelay: '0.16s' }}>
               <CompareCard
-                key={stock.slug}
-                data={stock}
-                price={prices[stock.slug]}
-                changePercent={changePercents[stock.slug]}
+                data={stocks[0]}
+                price={prices[stocks[0].slug]}
+                changePercent={changePercents[stocks[0].slug]}
                 pricesLoaded={pricesLoaded}
-                onRemove={() => handleRemove(stock.slug)}
+                onRemove={() => handleRemove(stocks[0].slug)}
               />
-            ))}
-          </div>
+            </div>
+          ) : (
+            <div
+              className="animate-fade-up stagger-fill-both flex md:grid md:grid-cols-2 xl:grid-cols-3 gap-4 overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none -mx-4 px-4 md:mx-0 md:px-0 pb-3 md:pb-0 scroll-pl-4 md:scroll-pl-0"
+              style={{ animationDelay: '0.16s' }}
+            >
+              {stocks.map(stock => (
+                <div
+                  key={stock.slug}
+                  className="snap-start shrink-0 w-[88vw] sm:w-[78vw] md:w-auto"
+                >
+                  <CompareCard
+                    data={stock}
+                    price={prices[stock.slug]}
+                    changePercent={changePercents[stock.slug]}
+                    pricesLoaded={pricesLoaded}
+                    onRemove={() => handleRemove(stock.slug)}
+                  />
+                </div>
+              ))}
+            </div>
+          )}
+
+          {stocks.length >= 2 && (
+            <p className="md:hidden text-[11px] text-white/30 text-center -mt-3">
+              Swipe to see other tickers
+            </p>
+          )}
 
           {stocks.length >= 2 && (
             <div className="animate-fade-up stagger-fill-both" style={{ animationDelay: '0.24s' }}>

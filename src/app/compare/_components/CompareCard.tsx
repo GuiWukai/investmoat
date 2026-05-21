@@ -46,15 +46,15 @@ export function CompareCard({ data, price, changePercent, pricesLoaded, onRemove
   const bullReturn = fmtReturn(bull);
 
   return (
-    <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 flex flex-col gap-5">
+    <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4 md:p-5 flex flex-col gap-4 md:gap-5 h-full">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="text-[10px] font-black tracking-[0.18em] text-white/30 uppercase mb-1">
             {data.ticker}
           </p>
-          <h3 className="text-lg font-bold text-white/90 leading-tight truncate">{data.name}</h3>
+          <h3 className="text-base md:text-lg font-bold text-white/90 leading-tight truncate">{data.name}</h3>
           {data.lastAnalyzed && (
-            <p className="text-[10px] text-white/25 mt-0.5">As of {data.lastAnalyzed}</p>
+            <p className="text-[10px] text-white/25 mt-0.5 hidden sm:block">As of {data.lastAnalyzed}</p>
           )}
         </div>
         <button
@@ -66,15 +66,15 @@ export function CompareCard({ data, price, changePercent, pricesLoaded, onRemove
         </button>
       </div>
 
-      <div className="flex items-end justify-between gap-3 pb-4 border-b border-white/[0.05]">
+      <div className="flex items-end justify-between gap-3 pb-3 md:pb-4 border-b border-white/[0.05]">
         <div>
           <p className="section-label mb-1">Live Price</p>
           {!pricesLoaded ? (
             <Spinner size="sm" color="default" />
           ) : price == null ? (
-            <p className="text-2xl font-black text-white/30">—</p>
+            <p className="text-xl md:text-2xl font-black text-white/30">—</p>
           ) : (
-            <p className="text-2xl font-black text-white tabular-nums">${price.toFixed(2)}</p>
+            <p className="text-xl md:text-2xl font-black text-white tabular-nums">${price.toFixed(2)}</p>
           )}
         </div>
         <div className="text-right">
@@ -95,14 +95,14 @@ export function CompareCard({ data, price, changePercent, pricesLoaded, onRemove
       </div>
 
       <div
-        className="rounded-xl border p-4 text-center"
+        className="rounded-xl border p-3 md:p-4 text-center"
         style={{ background: compositeStyle.bg, borderColor: compositeStyle.border }}
       >
         <p className="section-label mb-1">Composite Score</p>
-        <p className="text-4xl font-black tabular-nums" style={{ color: compositeStyle.text }}>
+        <p className="text-3xl md:text-4xl font-black tabular-nums" style={{ color: compositeStyle.text }}>
           {composite}
         </p>
-        <p className="text-[10px] text-white/35 mt-1">out of 100</p>
+        <p className="text-[10px] text-white/35 mt-0.5">out of 100</p>
       </div>
 
       <div className="grid grid-cols-3 gap-2">

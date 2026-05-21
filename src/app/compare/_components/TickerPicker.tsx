@@ -100,8 +100,8 @@ export function TickerPicker({ selected, onAdd, onRemove, maxTickers }: Props) {
             onKeyDown={handleKeyDown}
             placeholder={
               selected.length === 0
-                ? 'Search by name or ticker to start comparing…'
-                : `Add another ticker (${selected.length}/${maxTickers})…`
+                ? 'Search name or ticker…'
+                : `Add ticker (${selected.length}/${maxTickers})…`
             }
             className="w-full bg-white/[0.04] border border-white/10 rounded-xl pl-9 pr-9 py-2.5 text-sm text-white placeholder:text-white/25 focus:outline-none focus:border-white/20 focus:bg-white/[0.06] transition-all"
           />

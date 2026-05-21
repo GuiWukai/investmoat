@@ -30,22 +30,26 @@ export function MoatMatrix({ stocks }: Props) {
   }
 
   return (
-    <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 md:p-6">
+    <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4 md:p-6">
       <div className="flex items-center gap-2.5 mb-2">
         <Layers size={16} className="text-amber-400" />
         <h3 className="font-bold text-white/85">Ten-Moat Framework</h3>
       </div>
-      <p className="text-white/40 text-xs md:text-sm mb-5 leading-relaxed">
+      <p className="text-white/40 text-xs md:text-sm mb-4 md:mb-5 leading-relaxed">
         Resilient moats (top five) score 60% of the moat composite; vulnerable moats (bottom five) score 40%.
         {skippedCount > 0 && ` Skipping ${skippedCount} non-equity ticker${skippedCount !== 1 ? 's' : ''}.`}
       </p>
 
-      <div className="overflow-x-auto -mx-5 md:-mx-6 px-5 md:px-6">
-        <table className="w-full min-w-[480px]">
+      <div className="overflow-x-auto -mx-4 md:-mx-6 px-0 md:px-6">
+        <table className="w-full" style={{ minWidth: `${140 + equityStocks.length * 92}px` }}>
           <thead>
             <tr className="border-b border-white/[0.06]">
-              <th className="text-left section-label py-2 pr-4">Moat Type</th>
-              <th className="text-right section-label py-2 pr-4 hidden sm:table-cell w-12">Wt.</th>
+              <th
+                className="text-left section-label py-2 pl-4 md:pl-0 pr-3 md:pr-4 sticky left-0 z-10 bg-[#090b0d] md:bg-transparent md:static"
+              >
+                Moat Type
+              </th>
+              <th className="text-right section-label py-2 pr-3 md:pr-4 hidden sm:table-cell w-12">Wt.</th>
               {equityStocks.map(s => (
                 <th key={s.slug} className="text-center section-label py-2 px-2">
                   {s.ticker}
@@ -63,16 +67,16 @@ export function MoatMatrix({ stocks }: Props) {
                   key={key}
                   className={`border-b border-white/[0.03] last:border-0 ${isGroupBoundary ? 'border-t-2 border-t-white/[0.08]' : ''}`}
                 >
-                  <td className="py-2.5 pr-4">
+                  <td className="py-2.5 pl-4 md:pl-0 pr-3 md:pr-4 sticky left-0 z-10 bg-[#090b0d] md:bg-transparent md:static shadow-[1px_0_0_rgba(255,255,255,0.04)] md:shadow-none">
                     <div className="flex items-center gap-2">
                       <span
-                        className={`inline-block w-1 h-3 rounded-full ${isResilient ? 'bg-emerald-500/60' : 'bg-amber-500/60'}`}
+                        className={`inline-block w-1 h-3 rounded-full shrink-0 ${isResilient ? 'bg-emerald-500/60' : 'bg-amber-500/60'}`}
                         aria-hidden
                       />
-                      <span className="text-xs md:text-sm font-semibold text-white/80">{meta.label}</span>
+                      <span className="text-[11px] md:text-sm font-semibold text-white/80 leading-tight">{meta.label}</span>
                     </div>
                   </td>
-                  <td className="py-2.5 pr-4 text-right hidden sm:table-cell">
+                  <td className="py-2.5 pr-3 md:pr-4 text-right hidden sm:table-cell">
                     <span className="text-xs font-mono text-white/30">{meta.weight}</span>
                   </td>
                   {equityStocks.map(stock => {
@@ -87,10 +91,10 @@ export function MoatMatrix({ stocks }: Props) {
                     const isNA = moat.status === 'destroyed' && (moat.note.startsWith('N/A') || moat.note.startsWith('Not applicable'));
                     const style = STATUS_STYLES[moat.status];
                     return (
-                      <td key={stock.slug} className="py-2.5 px-2 text-center">
+                      <td key={stock.slug} className="py-2.5 px-1.5 md:px-2 text-center">
                         <span
                           title={moat.note}
-                          className={`inline-flex items-center justify-center text-[10px] md:text-[11px] font-black px-2 py-1 rounded-md border ${
+                          className={`inline-flex items-center justify-center text-[10px] md:text-[11px] font-black px-1.5 md:px-2 py-1 rounded-md border ${
                             isNA
                               ? 'text-white/30 bg-white/[0.04] border-white/10'
                               : `${style.text} ${style.bg} ${style.border}`
