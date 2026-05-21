@@ -6,7 +6,7 @@ import { AllocationPie } from "./_components/AllocationPie";
 import { StrategySummary } from "./_components/StrategySummary";
 import { HoldingsTable } from "./_components/HoldingsTable";
 import { FIN_CATEGORIES, TECH_CATEGORIES } from "./_lib/meta";
-import { useAllStockPrices } from "./_lib/useAllStockPrices";
+import { useAllStockPrices } from "@/hooks/useAllStockPrices";
 import {
   computeDynamicWeights,
   computeRanked,

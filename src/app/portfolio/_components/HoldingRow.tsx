@@ -5,8 +5,8 @@ import { ChevronRight, TrendingDown, TrendingUp } from "lucide-react";
 import { Spinner } from "@heroui/react";
 import { parseScenarioPrice } from "@/lib/valuationScore";
 import { getScoreColor, type RankedStock } from "../_lib/meta";
+import { liveCompositeScore } from "../_lib/scoring";
 import { CategoryBadge } from "./CategoryBadge";
-import { DynamicScore } from "./DynamicScore";
 
 export type HoldingRowProps = {
   stock: RankedStock;
@@ -104,24 +104,23 @@ export function HoldingRow({
         {renderReturns()}
       </div>
 
-      <DynamicScore
-        slug={stock.stock.slug}
-        moat={stock.stock.scores[0]}
-        growth={stock.stock.scores[1]}
-        fallbackVal={stock.stock.scores[2]}
-        bearTarget={stock.stock.bearTarget}
-        baseTarget={stock.stock.baseTarget}
-        bullTarget={stock.stock.bullTarget}
-      >
-        {(avg, loading) => (
-          <div className={`text-right shrink-0 w-12 ${scoreColumn !== 'score' ? 'hidden lg:block' : ''}`}>
-            {loading
-              ? <Spinner size="sm" color="default" />
-              : <span className={`text-sm font-black ${getScoreColor(avg)}`}>{avg}</span>
-            }
-          </div>
-        )}
-      </DynamicScore>
+      <div className={`text-right shrink-0 w-12 ${scoreColumn !== 'score' ? 'hidden lg:block' : ''}`}>
+        {!pricesLoaded
+          ? <Spinner size="sm" color="default" />
+          : (() => {
+              const avg = liveCompositeScore(
+                price,
+                stock.stock.scores[0],
+                stock.stock.scores[1],
+                stock.stock.scores[2],
+                stock.stock.bearTarget,
+                stock.stock.baseTarget,
+                stock.stock.bullTarget,
+              );
+              return <span className={`text-sm font-black ${getScoreColor(avg)}`}>{avg}</span>;
+            })()
+        }
+      </div>
 
       <div className={`text-right shrink-0 w-14 ${scoreColumn !== 'change' ? 'hidden lg:block' : ''}`}>
         {renderChange()}

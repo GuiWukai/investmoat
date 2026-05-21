@@ -21,13 +21,15 @@ export function AllocationPie({ portfolio, weights, scoresLoading }: Props) {
 
   const slices = useMemo(() => {
     const cx = 100, cy = 100, outerR = 88, innerR = 56, GAP = 0.016;
-    let cumAngle = -Math.PI / 2;
-    return pieSorted.map((stock) => {
-      const w = weights[stock.ticker] ?? 0;
-      const sliceAngle = (w / 100) * 2 * Math.PI;
-      const sa = cumAngle + GAP / 2;
-      const ea = cumAngle + sliceAngle - GAP / 2;
-      cumAngle += sliceAngle;
+    const sliceAngles = pieSorted.map(s => ((weights[s.ticker] ?? 0) / 100) * 2 * Math.PI);
+    const startAngles = sliceAngles.map((_, i) =>
+      -Math.PI / 2 + sliceAngles.slice(0, i).reduce((a, b) => a + b, 0)
+    );
+
+    return pieSorted.map((stock, idx) => {
+      const sliceAngle = sliceAngles[idx];
+      const sa = startAngles[idx] + GAP / 2;
+      const ea = startAngles[idx] + sliceAngle - GAP / 2;
       const largeArc = (ea - sa) > Math.PI ? 1 : 0;
       const c = Math.cos, s = Math.sin;
       const d = [
