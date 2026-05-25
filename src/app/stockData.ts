@@ -98,6 +98,7 @@ import uberData     from '@/data/stocks/uber.json';
 import abnbData     from '@/data/stocks/abnb.json';
 import keysData     from '@/data/stocks/keys.json';
 import keyenceData  from '@/data/stocks/keyence.json';
+import catData      from '@/data/stocks/cat.json';
 import deData       from '@/data/stocks/de.json';
 import etnData      from '@/data/stocks/etn.json';
 import nkeData      from '@/data/stocks/nke.json';
@@ -257,6 +258,7 @@ const allCoverageData = [
     { name: "Airbnb",            ticker: "ABNB",  slug: "abnb",        scores: [m(abnbData),        g(abnbData),        v(abnbData)],        href: "/stocks/abnb",        category: "Big Tech",    ...t(abnbData)        },
     { name: "Keysight Technologies", ticker: "KEYS", slug: "keys",     scores: [m(keysData),        g(keysData),        v(keysData)],        href: "/stocks/keys",        category: "Industrials", ...t(keysData)        },
     { name: "Keyence Corporation",ticker: "6861.T",slug: "keyence",    scores: [m(keyenceData),     g(keyenceData),     v(keyenceData)],     href: "/stocks/keyence",     category: "Industrials", ...t(keyenceData)     },
+    { name: "Caterpillar",       ticker: "CAT",   slug: "cat",         scores: [m(catData),         g(catData),         v(catData)],         href: "/stocks/cat",         category: "Industrials", ...t(catData)         },
     { name: "Deere & Company",   ticker: "DE",    slug: "de",          scores: [m(deData),          g(deData),          v(deData)],          href: "/stocks/de",          category: "Industrials", ...t(deData)          },
     { name: "Eaton Corporation", ticker: "ETN",   slug: "etn",         scores: [m(etnData),         g(etnData),         v(etnData)],         href: "/stocks/etn",         category: "Industrials", ...t(etnData)         },
     { name: "Nike",              ticker: "NKE",   slug: "nke",         scores: [m(nkeData),         g(nkeData),         v(nkeData)],         href: "/stocks/nke",         category: "Other",       ...t(nkeData)         },
