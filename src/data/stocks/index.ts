@@ -80,6 +80,7 @@ import uber from './uber.json';
 import abnb from './abnb.json';
 import keys from './keys.json';
 import keyence from './keyence.json';
+import cat from './cat.json';
 import de from './de.json';
 import etn from './etn.json';
 import nke from './nke.json';
@@ -190,6 +191,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   abnb: abnb as StockAnalysisData,
   keys: keys as StockAnalysisData,
   keyence: keyence as StockAnalysisData,
+  cat: cat as StockAnalysisData,
   de: de as StockAnalysisData,
   etn: etn as StockAnalysisData,
   nke: nke as StockAnalysisData,
