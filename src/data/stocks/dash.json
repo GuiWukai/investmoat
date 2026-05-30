@@ -5,8 +5,8 @@
   "lastAnalyzed": "May 2026",
   "headerStats": [
     { "label": "Ticker", "value": "DASH" },
-    { "label": "Market Cap", "value": "~$74B" },
-    { "label": "Price", "value": "~$173" }
+    { "label": "Market Cap", "value": "~$79B" },
+    { "label": "Price", "value": "~$190" }
   ],
   "chips": [
     { "label": "Delivery | Marketplace | Ads", "color": "primary" },
@@ -15,23 +15,23 @@
   ],
   "metrics": [
     {
-      "title": "Q4 2025 Marketplace GOV",
-      "value": "$29.7B",
-      "label": "+39% YoY (incl. Deliveroo); +27% organic FY2025",
+      "title": "Q1 2026 Marketplace GOV",
+      "value": "$31.6B",
+      "label": "+37% YoY (incl. Deliveroo); ~24% organic ex-Deliveroo",
       "icon": "TrendingUp",
       "color": "#ff3008"
     },
     {
-      "title": "Q4 2025 Revenue",
-      "value": "$3.96B",
-      "label": "+38% YoY; total orders +32% to 903M",
+      "title": "Q1 2026 Revenue",
+      "value": "$4.04B",
+      "label": "+33% YoY (slight miss vs $4.15B est.); total orders 933M (+27%)",
       "icon": "BarChart",
       "color": "#10b981"
     },
     {
-      "title": "Q1 2026 Revenue (est.)",
-      "value": "~$4.12B",
-      "label": "+36% YoY consensus; report May 6, 2026",
+      "title": "Q2 2026 GOV Guide",
+      "value": "$32.4–33.4B",
+      "label": "well above the ~$28B Street modelled; EPS $0.42 beat $0.37; +10% post-print",
       "icon": "Clock",
       "color": "#0ea5e9"
     }
@@ -60,12 +60,12 @@
     ]
   },
   "growth": {
-    "description": "Q4 2025 marketplace GOV $29.7B (+39% YoY incl. Deliveroo, +27% organic), revenue $3.96B (+38%), orders 903M (+32%). Q1 2026 consensus $4.12B revenue (+36% YoY). Growth is now driven by (1) DashPass + frequency uplift, (2) grocery/retail vertical expansion, (3) advertising platform, and (4) international integration of Wolt + Deliveroo. Stated FY2026 priorities are Deliveroo integration and continued ads scaling. Adj. EBITDA margin is expanding as marketplace operating leverage and ads contribution compound.",
+    "description": "Q1 2026 (reported May 6 2026) marketplace GOV $31.6B (+37% YoY incl. Deliveroo, ~24% organic), revenue $4.04B (+33%) — a slight miss vs. the $4.15B consensus — and orders 933M (+27%). EPS of $0.42 beat the $0.37 estimate, and the strong Q2 GOV guide of $32.4–33.4B (well above the ~$28B Street modelled) drove shares ~10% higher. Growth is driven by (1) DashPass + frequency uplift, (2) grocery/retail vertical expansion, (3) advertising platform, and (4) international integration of Wolt + Deliveroo. FY2026 priorities remain Deliveroo integration and ads scaling. Adj. EBITDA margin is expanding as marketplace operating leverage and ads contribution compound.",
     "growthAnalysis": {
       "cagrEstimate": "20-30%",
       "scoreDerivation": "Base 80 (15-30% CAGR) + 5 advertising acceleration ($2B+ run-rate, 70% margin contribution) + 5 international optionality (Deliveroo + Wolt combined platform) - 5 integration execution risk (Deliveroo close late 2025, 18-24 month integration) - 3 grocery margin drag (lower take-rate vs. restaurant) = 82, anchored to 80",
       "drivers": [
-        { "name": "US Marketplace GOV", "metric": "~$29.7B Q4 2025; ~60%+ US restaurant delivery share; frequency rising via DashPass", "trend": "stable" },
+        { "name": "US Marketplace GOV", "metric": "$31.6B Q1 2026 (+37% YoY, ~24% organic); ~60%+ US restaurant delivery share; Q2 GOV guide $32.4–33.4B", "trend": "stable" },
         { "name": "International (Wolt + Deliveroo)", "metric": "40+ countries combined; Deliveroo integration through 2026-2027", "trend": "accelerating" },
         { "name": "Advertising (Symbiosis)", "metric": "Doubled partner count H2 2025; >$2B 2026 run-rate", "trend": "accelerating" },
         { "name": "DashPass Subscribers", "metric": "~22M+; 4-5x order frequency vs non-members", "trend": "accelerating" }

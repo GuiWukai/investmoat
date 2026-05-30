@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$54.6B"
+      "value": "~$62B"
     },
     {
       "label": "Price",
-      "value": "$90.02"
+      "value": "~$102"
     }
   ],
   "chips": [
@@ -29,23 +29,23 @@
   ],
   "metrics": [
     {
-      "title": "Revenue",
-      "value": "$22.9B",
-      "label": "+36.4% YoY FY2025; net income $1.6B (+260%)",
+      "title": "Q1 2026 Revenue",
+      "value": "$7.1B",
+      "label": "+46.6% YoY; Shopee revenue $4.5B (+44%), core marketplace +61% to $3.8B",
       "icon": "TrendingUp",
       "color": "#e8281b"
     },
     {
       "title": "Shopee GMV",
-      "value": "$127.4B",
-      "label": "+26.8% YoY; 2026 guide +25%; 400M buyers",
+      "value": "$37.3B",
+      "label": "Q1 2026 (+30.2% YoY); 4.0B orders (+29%); FY guide raised to ~25% growth",
       "icon": "ShoppingCart",
       "color": "#3b82f6"
     },
     {
       "title": "Adj EBITDA",
-      "value": "$3.4B",
-      "label": "+73.5% YoY; 20M sellers; 7 SE Asian markets",
+      "value": "$1.03B",
+      "label": "Q1 2026 (+9.3% YoY); net income $438M (+7%); all segments profitable",
       "icon": "BarChart3",
       "color": "#10b981"
     }
@@ -70,15 +70,15 @@
     ]
   },
   "growth": {
-    "description": "Sea Limited is growing revenue 36%+ driven by Shopee GMV compounding at 25%+ and SeaMoney digital financial services expanding across 7 Southeast Asian markets, with net income inflecting sharply (+260% YoY) as platform economics scale.",
+    "description": "Q1 2026 (reported May 12 2026) revenue grew 46.6% YoY to $7.1B, beating the ~$6.45B consensus. Shopee GMV reached $37.3B (+30.2% YoY) on 4.0B orders (+29.3%), with Shopee revenue +44% to $4.5B (core marketplace +61% to $3.8B). Group net income was $438M (+7%) and adjusted EBITDA $1.03B (+9.3%), all segments profitable. Management raised 2026 guidance to ~25% Shopee GMV growth (from ~20%) with flat-or-better adjusted EBITDA — driven by Shopee compounding and SeaMoney expanding across 7 Southeast Asian markets.",
     "growthAnalysis": {
       "cagrEstimate": "22–30%",
       "scoreDerivation": "Base 80 (22–30% CAGR; FY2025 revenue +36.4%; net income +259.7%; adj EBITDA +73.5%) + 5 multi-segment platform compounding (Shopee + SeaMoney synergy: each Shopee purchase deepens SeaMoney engagement; cross-sell creates durable revenue diversification and FCF acceleration) + 2 Southeast Asia digital economy TAM (680M population; e-commerce penetration still <20% in most markets; fintech penetration <30%) − 5 Garena secular decline (gaming revenues declining as key titles age; Free Fire and PUBG Mobile user bases mature without clear successor franchise; gaming is a meaningful drag on blended growth rates) = 82",
       "drivers": [
         {
           "name": "Shopee E-Commerce",
-          "metric": "GMV +26.8% YoY to $127.4B; 2026 guide +25%; 400M buyers, 20M sellers",
-          "trend": "stable"
+          "metric": "GMV $37.3B Q1 2026 (+30.2% YoY); revenue +44%, core marketplace +61%; FY guide raised to ~25% growth",
+          "trend": "accelerating"
         },
         {
           "name": "SeaMoney Digital Finance",
@@ -98,10 +98,10 @@
     }
   },
   "valuation": {
-    "score": 81,
-    "description": "At $90.02 (May 7, 2026), Sea trades at ~1.9× NTM P/S — a 38% discount to the $145 base case and well below the analyst consensus target of ~$162 (Moderate Buy). Q1 2026 results report May 12; alternative data suggests TikTok Shop GMV growth in SEA has decelerated from ~70% YoY in Q2 2025 to ~30% in late 2025, weakening the primary bear thesis even as the print risk keeps the stock range-bound.",
+    "score": 80,
+    "description": "At ~$102 after the May 12 Q1 beat (+14% reaction), Sea trades at ~2.1× NTM P/S — still a ~30% discount to the $145 base case and below the analyst consensus target of ~$162 (Moderate Buy). Q1 cleared the print risk decisively: revenue +47%, Shopee GMV +30%, and a raised FY guide (~25% GMV growth) with all segments profitable. With the TikTok Shop bear thesis weakening and the profitability inflection confirmed, the discount to base looks increasingly unwarranted.",
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "May 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
