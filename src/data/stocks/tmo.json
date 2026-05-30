@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$175B"
+      "value": "~$181B"
     },
     {
       "label": "Current Price",
-      "value": "$469.21"
+      "value": "~$487"
     }
   ],
   "chips": [
@@ -98,18 +98,18 @@
     }
   },
   "valuation": {
-    "score": 79,
-    "description": "Stock has fallen ~27% from 52-week high of $643.99 to $469.21, sitting only ~17% above the bear-case target. Forward P/E of ~18.4× is well below the healthcare-tools sector median (~24-28×) and well below TMO's own 5-year average. The market is pricing in continued bioprocessing softness; the consensus analyst target of ~$620 implies meaningful re-rating if organic growth re-accelerates.",
+    "score": 78,
+    "description": "At ~$487 the stock has recovered off its lows but still sits ~24% below the 52-week high of $643.99 and ~22% above the bear case. Forward P/E of ~19× remains well below the healthcare-tools sector median (~24-28×) and TMO's own 5-year average. RBC Capital restarted coverage in late May 2026 (Sector Perform, $490 PT), and management used the May Investor Day to reaffirm the long-term compounder framework and the $0.47 quarterly dividend. The market is still pricing in bioprocessing softness; the consensus analyst target of ~$580-620 implies meaningful re-rating if organic growth re-accelerates.",
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
         { "label": "Trailing P/E (GAAP)", "value": "~25×", "note": "TTM GAAP EPS depressed by acquisition charges" },
-        { "label": "Forward P/E (NTM)", "value": "~18.4×", "note": "$24.88 mid 2026 EPS guide" },
+        { "label": "Forward P/E (NTM)", "value": "~19×", "note": "$24.88 mid 2026 EPS guide" },
         { "label": "PEG Ratio", "value": "~2.1×", "note": "fwd P/E ÷ ~9% EPS CAGR" },
         { "label": "Price / Sales (NTM)", "value": "~3.7×", "note": "$47.7B mid 2026 revenue" },
         { "label": "Price / FCF", "value": "~24×", "note": "FCF conversion ~80% of net income" }
       ],
-      "summary": "Forward P/E of ~18.4× is a meaningful discount to the healthcare-tools sector median (~24-28×), reflecting the bioprocessing softness already in the price. PEG ~2.1 sits in the 'premium-but-defensible' band given the recurring revenue base. The trailing-vs-forward gap signals the EPS ramp from Clario integration and bioproduction recovery rolling through 2026 numbers."
+      "summary": "Forward P/E of ~19× is a meaningful discount to the healthcare-tools sector median (~24-28×), reflecting the bioprocessing softness already in the price. PEG ~2.1 sits in the 'premium-but-defensible' band given the recurring revenue base. The trailing-vs-forward gap signals the EPS ramp from Clario integration and bioproduction recovery rolling through 2026 numbers. A pending microbiology-business divestiture would modestly sharpen portfolio focus."
     }
   },
   "scenarios": {
