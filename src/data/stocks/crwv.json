@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$69B"
+      "value": "~$55B"
     },
     {
       "label": "Current Price",
-      "value": "~$125"
+      "value": "~$107"
     }
   ],
   "chips": [
@@ -28,16 +28,16 @@
   ],
   "metrics": [
     {
-      "title": "Q4 2025 Revenue",
-      "value": "$1.57B",
-      "label": "+110% YoY — FY2025 revenue $5.13B (+168% YoY); net loss -$1.20B",
+      "title": "Q1 2026 Revenue",
+      "value": "$2.1B",
+      "label": "+112% YoY, +32% QoQ — beat $1.97B; but FY26 guide held at $12–13B, below the $14–16B Street had modelled",
       "icon": "Cpu",
       "color": "#10b981"
     },
     {
       "title": "Revenue Backlog",
-      "value": "~$95B",
-      "label": "Up from $66.8B at Q4 2025; Meta deal extension to 2032 + Vera Rubin commit",
+      "value": "$99.4B",
+      "label": "record bookings quarter; >$40B new commitments signed; ~3.5 GW contracted power",
       "icon": "BarChart",
       "color": "#3b82f6"
     },
@@ -69,14 +69,14 @@
     ]
   },
   "growth": {
-    "description": "FY2025 revenue of $5.13B (+168% YoY) and Q4 2025 of $1.57B (+110% YoY) reflect hypergrowth on the back of the NVIDIA platform ramp. Revenue backlog exploded to ~$95B (from $66.8B at Q4) on the Meta extension to 2032 and Vera Rubin commitments. FY2026 consensus revenue sits around $14–16B (~180–200% growth). However, GAAP losses widened to -$1.20B and the model remains cash-flow negative as capex outpaces revenue recognition. Q1 2026 print May 7 is the next catalyst.",
+    "description": "Q1 2026 (reported May 7 2026) delivered revenue of $2.1B (+112% YoY, +32% QoQ), beating the ~$1.97B consensus, and the strongest bookings quarter in company history lifted revenue backlog to $99.4B (>$40B of new commitments signed). But the print was two-sided: management held the FY2026 revenue guide at $12–13B — below the $14–16B the Street had penciled in — and guided Q2 to $2.45–2.6B (midpoint $2.53B vs. $2.69B consensus), while profit margins compressed as capex (now $31–35B for 2026) outpaces revenue recognition. The 2026 exit run-rate floor was raised $1B to $18–19B, with FY27 exit run-rate reiterated at >$30B (>75% contracted).",
     "growthAnalysis": {
       "cagrEstimate": "70–120%",
       "scoreDerivation": "Base 95 (hypergrowth at scale: 168% FY2025, 110% Q4 2025, ~$95B backlog supporting multi-year visibility) − 5 customer concentration risk and unit-economics uncertainty as scale rises = 90",
       "drivers": [
         {
           "name": "Hyperscaler Capacity Contracts",
-          "metric": "$95B revenue backlog; Microsoft 67% FY2025 + OpenAI $11.9B + Meta $21B + smaller AI labs",
+          "metric": "$99.4B revenue backlog (>$40B signed in Q1); Q1 revenue $2.1B (+112%); FY26 guide $12–13B (~140% growth, below $14–16B Street est.)",
           "trend": "accelerating"
         },
         {
@@ -93,12 +93,12 @@
       "primaryType": "market share",
       "keyRisk": "If Microsoft accelerates its in-house AI infrastructure buildout (Azure + AMD MI400 + custom Maia ASICs) and lets the CoreWeave contract decay at 2027 renewal — CRWV's revenue trajectory inverts and the $21B+ debt stack triggers covenant pressure as collateralized GPUs depreciate faster than backlog recognition",
       "keyRiskSeverity": "high",
-      "marginTrend": "stable"
+      "marginTrend": "compressing"
     }
   },
   "valuation": {
-    "score": 55,
-    "description": "At ~$125, CRWV trades at ~5× FY2026 estimated revenue (~$14B) and ~13× FY2025 sales — a discount to NVIDIA's ~14× P/S but with vastly inferior unit economics, GAAP losses, ~$21B debt load, and concentrated customer book. The valuation has decompressed from 2025 highs (~$187) on AI bubble concerns. The $95B backlog provides a partial valuation floor, but the asset-financed model, customer concentration, and uncertain steady-state margins keep the score in the mid-50s. This is a high-conviction speculative bet, not a value name.",
+    "score": 50,
+    "description": "At ~$107 after the mixed Q1 print, CRWV trades at ~9× the FY2026 revenue guide ($12–13B) — on the lower-than-hoped guide the multiple is effectively richer than it looks for a capital-intensive, deeply unprofitable business with extreme customer concentration, ~$21B debt, and now compressing margins. The record $99.4B backlog is the bull anchor; the below-consensus FY and Q2 guides are the bear's. This is a high-conviction speculative bet, not a value name.",
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
@@ -114,18 +114,18 @@
         },
         {
           "label": "EV / Sales (NTM)",
-          "value": "~6.5×",
-          "note": "$69B mkt cap + ~$21B debt / ~$14B FY2026 revenue est."
+          "value": "~6×",
+          "note": "$55B mkt cap + ~$21B debt / ~$12.5B FY2026 guide"
         },
         {
-          "label": "Price / Sales (TTM)",
-          "value": "~13×",
-          "note": "$69B mkt cap / $5.13B FY2025 revenue"
+          "label": "Price / Sales (FY26)",
+          "value": "~4.4×",
+          "note": "$55B mkt cap / ~$12.5B FY2026 revenue guide"
         },
         {
           "label": "EV / Backlog",
-          "value": "~0.95×",
-          "note": "$90B EV / ~$95B contracted future revenue"
+          "value": "~0.77×",
+          "note": "~$76B EV / $99.4B contracted future revenue"
         }
       ],
       "summary": "Traditional P/E is not meaningful — CRWV is GAAP loss-making with a cash-burn profile. The ~6.5× EV/NTM-Sales is roughly half of NVIDIA but reflects vastly inferior margin structure (CRWV is essentially a leveraged GPU rental business with hyperscaler concentration). EV/Backlog of ~0.95× provides a partial valuation anchor — investors are paying roughly $1 for $1 of contracted future revenue, which is not cheap given execution risk, contract-renewal risk, and the asset-financed depreciation curve."
@@ -143,9 +143,9 @@
     },
     "base": {
       "priceTarget": "$135",
-      "description": "FY2026 revenue lands at $14–15B (~180% growth); customer concentration eases as OpenAI and Meta ramp through 2026; NVIDIA Vera Rubin transition reinforces preferred-partner status; first GAAP profitability glimpsed late 2027.",
+      "description": "FY2026 revenue lands in the guided $12–13B range (~140% growth); customer concentration eases as OpenAI and Meta ramp through 2026; NVIDIA Vera Rubin transition reinforces preferred-partner status; first GAAP profitability glimpsed late 2027.",
       "points": [
-        "FY2026 revenue lands at $14–15B with Microsoft share declining toward 50% as OpenAI ($11.9B over 5 years) and Meta ($21B through 2032) capacity ramps materially",
+        "FY2026 revenue lands in the guided $12–13B range with Microsoft share declining toward 50% as OpenAI ($11.9B over 5 years) and Meta ($21B through 2032) capacity ramps materially",
         "Backlog grows to $110–125B by year-end on incremental sovereign and enterprise AI deals plus Vera Rubin capacity bookings, providing 8+ years of forward revenue visibility",
         "Adjusted EBITDA margin reaches ~40% by Q4 2026 (vs. ~35% in 2025) as the GPU base scales and operating leverage kicks in, though GAAP profitability remains 12–18 months away"
       ]
