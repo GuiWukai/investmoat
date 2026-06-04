@@ -72,7 +72,7 @@
     "description": "FY2025 revenue of $530M is set to expand ~6× to $3.0–3.4B in FY2026 — extreme hypergrowth from a small base. Q1 2026 revenue of $227.7M with Q2 guidance of $375M shows sequential acceleration as Meta and Microsoft contracts ramp. The $50B backlog, $4B convert raise, and $16–20B FY2026 capex plan signal aggressive buildout, but also concentrate execution risk: capacity must come online to recognize backlog revenue, and any datacenter/power delays directly hit numbers.",
     "growthAnalysis": {
       "cagrEstimate": "100–250%",
-      "scoreDerivation": "Base 95 (hypergrowth from $530M to $3B+ — ~500% YoY) − 5 execution risk on $16–20B capex buildout, capacity gating, and customer concentration to two hyperscalers − 2 thin coverage and high volatility = 88",
+      "scoreDerivation": "Base 95 (hypergrowth from $530M to $3B+ — ~500% YoY) + 4 trajectory (all three drivers accelerating) − 10 high execution risk ($16–20B capex buildout, capacity gating, two-hyperscaler customer concentration, thin coverage and high volatility) = 89",
       "drivers": [
         {
           "name": "Meta Capacity Contract",
@@ -92,7 +92,7 @@
       ],
       "primaryType": "market share",
       "keyRisk": "If $16–20B FY2026 capex execution slips on power/datacenter availability, NVIDIA Vera Rubin allocation timing, or convertible debt service capacity — Nebius misses the FY2026 $3.0–3.4B revenue guide and the equity story re-rates sharply on dilution risk and broken hypergrowth narrative",
-      "keyRiskSeverity": "moderate",
+      "keyRiskSeverity": "high",
       "marginTrend": "stable"
     }
   },
@@ -203,5 +203,5 @@
     },
     "verdict": "Nebius's moat is narrow and unproven: NVIDIA equity backing plus inherited Yandex infrastructure heritage provide early advantages, but most of the 10 moats are destroyed or weakened. The business is fundamentally a hypergrowth, leveraged, concentrated GPU cloud with execution risk on a $16–20B capex plan. Investment thesis rests entirely on growth (88 score) and the durability of NVIDIA preferred-partner status. Suitable only as a small speculative position sized to risk; high volatility and thin analyst coverage amplify drawdown potential."
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "June 2026"
 }

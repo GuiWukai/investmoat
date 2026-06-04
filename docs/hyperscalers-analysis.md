@@ -37,7 +37,7 @@ Sorted by composite. Recommendation bands: ≥82 Strong Buy · 75–81 Accumulat
 | 4 | **AMZN** | 82 | 89 | 73 | **81** | Accumulate | $274 | $2.89T | 15–20% |
 | 5 | **GOOGL** | 86 | 80 | 72 | **80** | Accumulate | ~$365 | ~$4.4T | 17–22% |
 | 6 | **CRWV** | 22 | 89 | 55 | **44** | Avoid | ~$125 | ~$69B | 70–120% |
-| 7 | **NBIS** | 22 | 94 | 50 | **44** | Avoid | ~$175 | ~$44.4B | 100–250% |
+| 7 | **NBIS** | 22 | 89 | 50 | **43** | Avoid | ~$175 | ~$44.4B | 100–250% |
 
 **The headline:** the top five cluster within 3 composite points (83→80) — this is one of
 the highest-quality cohorts in the entire universe. The two neoclouds sit ~36 points
