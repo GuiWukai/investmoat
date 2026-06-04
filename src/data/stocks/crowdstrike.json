@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$110B"
+      "value": "$178B"
     },
     {
       "label": "Current Price",
-      "value": "$437.83"
+      "value": "$701"
     }
   ],
   "chips": [
@@ -29,23 +29,23 @@
   "metrics": [
     {
       "title": "ARR",
-      "value": "$5.25B",
-      "label": "+24% YoY; $1B+ Net New ARR (FY2026)",
+      "value": "$5.51B",
+      "label": "+24% YoY; record Q1 net new ARR $256M (+32% YoY)",
       "icon": "TrendingUp",
       "color": "#e8281b"
     },
     {
-      "title": "Next-Gen SIEM",
-      "value": "$585M",
-      "label": "+75% YoY ARR — displacing Splunk/QRadar",
-      "icon": "Shield",
+      "title": "Revenue",
+      "value": "$1.39B",
+      "label": "Q1 FY2027 +26% YoY — 4th consecutive quarter of acceleration",
+      "icon": "Zap",
       "color": "#3b82f6"
     },
     {
-      "title": "Net Retention",
-      "value": "115%",
-      "label": "Gross Retention 97% — Best-in-Class",
-      "icon": "Zap",
+      "title": "Free Cash Flow",
+      "value": "$468M",
+      "label": "Record Q1 FCF; CFO $591M — ~34% FCF margin",
+      "icon": "DollarSign",
       "color": "#10b981"
     }
   ],
@@ -69,15 +69,15 @@
     ]
   },
   "growth": {
-    "description": "FY2026 delivered $5.25B ARR (+24% YoY) and the first $1B+ net new ARR year in company history. Next-Gen SIEM (+75% YoY to $585M ARR) is emerging as a second growth engine alongside identity (+34% to $520M+) and cloud (+45%+). FY2027 guided at 22–23% revenue growth ($5.87–5.93B), with net new ARR in Q4 FY2026 growing 47% YoY — a strong re-acceleration signal.",
+    "description": "Q1 FY2027 (reported June 3, 2026) confirmed the re-acceleration thesis: revenue of $1.39B (+26% YoY, ahead of the $1.36B guide) marked the fourth consecutive quarter of acceleration, with record Q1 net new ARR of $256M (+32% YoY) lifting ending ARR to $5.51B (+24%). Record Q1 FCF of $468M (CFO $591M, ~34% margin) and non-GAAP EPS of $1.10 beat the $1.07 estimate. Management raised FY2027 net new ARR growth guidance by ~520bps and lifted FY2027 revenue guidance to $5.915–5.959B (23–24% growth). A 4-for-1 stock split takes effect after the June 25, 2026 record date.",
     "growthAnalysis": {
-      "cagrEstimate": "20–24%",
-      "scoreDerivation": "Base 80 (20–24% blended CAGR) + 5 recurring (ARR model, NRR 115%) + 5 TAM expansion (Next-Gen SIEM displacing Splunk, Charlotte AI consumption layer) − 3 guidance width (Q1 FY2027 guided $1.36B vs $1.40B consensus, slight miss) = 87",
+      "cagrEstimate": "22–26%",
+      "scoreDerivation": "Base 86 (22–26% blended CAGR; Q1 FY2027 revenue +26%, FY2027 guide raised to 23–24%) + 4 trajectory (net new ARR re-accelerated to +32% YoY; SIEM, identity, and cloud all accelerating) + 4 margin expanding (record Q1 FCF, ~34% FCF margin) + 4 TAM expansion (Next-Gen SIEM displacing Splunk, Charlotte AI agentic consumption layer) − 5 valuation/competition risk (stock re-rated ~60% to ~$700; Microsoft Defender bundling pressure) = 93",
       "drivers": [
         {
           "name": "Core Falcon Platform (ARR)",
-          "metric": "+24% YoY to $5.25B; $1.01B net new ARR in FY2026 (+25% YoY)",
-          "trend": "stable"
+          "metric": "+24% YoY ending ARR $5.51B; record Q1 net new ARR $256M (+32% YoY re-acceleration)",
+          "trend": "accelerating"
         },
         {
           "name": "Next-Gen SIEM",
@@ -91,16 +91,16 @@
         }
       ],
       "primaryType": "both",
-      "keyRisk": "If Q1 FY2027 revenue misses the guided $1.36B range and NRR slips below 112% by mid-2026, the growth re-acceleration narrative breaks and the market re-rates from ~18x NTM revenue toward 14–15x, implying 20–25% downside from current levels",
+      "keyRisk": "After re-rating ~60% in roughly a month to ~$700 (near the Street-high $800 target), CRWD trades at a rich ~25× NTM revenue; if net new ARR growth stalls below 25% or Microsoft Defender/Sentinel bundling accelerates SMB churn, the multiple compresses back toward 18× NTM revenue, implying 25%+ downside",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 68,
-    "description": "At ~$438, CRWD sits between the bear ($260) and base ($460) scenarios — roughly 5% below fair value. Q4 FY2026 beat consensus and delivered the first $1B net new ARR year. Q1 FY2027 (reporting June 9) is guided at $1.36B revenue / ARR $5.50B / non-GAAP EPS $1.06–1.07. The stock trades at ~18x NTM revenue and ~73x forward non-GAAP P/E, elevated but below its 5-year average of ~150x forward P/E, reflecting a genuine de-rating as growth moderates from 30%+ toward 22–24%.",
+    "score": 59,
+    "description": "At ~$701, CRWD has re-rated ~60% since the May analysis after a Q1 FY2027 beat-and-raise (revenue $1.39B vs $1.36B guide, EPS $1.10 vs $1.07) and now trades just above the revised base case ($620), roughly a third of the way to the bull case ($880). Analyst targets repriced sharply higher — Goldman $726, Morgan Stanley $690, Jefferies $775, JPMorgan $800 — though the ~$567 consensus sits below the current price, signalling the stock is running ahead of the median estimate. At ~30× NTM revenue and a triple-digit forward non-GAAP P/E the premium is elevated even for a re-accelerating 24%+ ARR compounder. A 4-for-1 split takes effect after the June 25, 2026 record date (all targets here are pre-split).",
     "peAnalysis": {
-      "asOf": "May 2026",
+      "asOf": "June 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
@@ -109,56 +109,56 @@
         },
         {
           "label": "Forward P/E (NTM, non-GAAP)",
-          "value": "~72×",
-          "note": "consensus non-GAAP EPS ~$5.96"
+          "value": "~118×",
+          "note": "consensus non-GAAP EPS ~$5.96 (FY2027)"
         },
         {
           "label": "PEG Ratio",
-          "value": "~2.9×",
+          "value": "~4.7×",
           "note": "fwd P/E ÷ 25% non-GAAP EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~18×",
+          "value": "~30×",
           "note": "$5.9B NTM revenue (FY2027 guide)"
         },
         {
           "label": "Price / FCF",
-          "value": "~87×",
-          "note": "$1.24B FCF (FY2026 TTM)"
+          "value": "~95×",
+          "note": "~$1.9B FCF (FY2027E)"
         }
       ],
-      "summary": "CRWD trades at ~72× forward non-GAAP P/E, a steep premium to the growth-tech sector median (~30–35×) but well below its own 5-year average of ~150×, reflecting meaningful multiple compression as the business matures from hypergrowth into a 22–24% compounder. The PEG of ~2.9× signals investors are still paying a significant premium for growth, requiring consistent execution to justify — any NRR slippage or revenue guidance miss would compress the multiple sharply. The gap between a near-zero trailing GAAP P/E and 72× forward non-GAAP is a genuine earnings ramp signal: FY2026 marked the first $1B non-GAAP operating income year, with GAAP profitability emerging."
+      "summary": "After the ~60% post-earnings re-rating, CRWD trades at ~118× forward non-GAAP P/E and ~30× NTM revenue — back toward the rich end of its history despite the business now compounding at a 'mature' 24% rather than 30%+. The PEG of ~4.7× shows investors are paying up for the re-acceleration and AI-security narrative; with the consensus price target (~$567) sitting below the market price, the multiple, not the fundamentals, is the swing factor. The beat-and-raise and record Q1 FCF justify a premium, but the margin of safety has compressed materially versus the May analysis."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$260",
-      "description": "ARR growth decelerates to sub-18% as DOGE-driven federal budget cuts, Microsoft Defender bundling pressure, and NRR erosion below 110% trigger multiple compression to 13–14x NTM revenue.",
+      "priceTarget": "$460",
+      "description": "The AI-security re-rating deflates: net new ARR growth stalls below 25%, Microsoft Defender bundling pressures SMB retention, and the multiple compresses from ~30× toward 16–18× NTM revenue.",
       "points": [
-        "Federal agency contract non-renewals materialise from DOGE spending cuts, slowing ARR by $200M+ vs FY2027 guidance",
+        "Net new ARR growth decelerates below 25% as the FY2027 re-acceleration proves a one-off rather than a durable trend",
         "NRR slips below 112% for two consecutive quarters as SMB budget pressure limits upsell of identity and SIEM modules",
         "Microsoft Defender + Sentinel bundling converts 5%+ of Falcon's SMB installed base by end of 2026",
-        "Multiple compresses to 13–14x NTM revenue as growth-stock premium fades toward sector median"
+        "Multiple compresses to 16–18× NTM revenue as the AI-security premium fades — ~34% downside from current levels"
       ]
     },
     "base": {
-      "priceTarget": "$460",
-      "description": "CrowdStrike delivers FY2027 guidance ($5.87–5.93B revenue, +22–23% YoY) with ARR crossing $6.3B, NRR stable at 115%, and FCF margins expanding toward 30%.",
+      "priceTarget": "$620",
+      "description": "CrowdStrike sustains the raised FY2027 guidance (23–24% revenue growth, $5.915–5.959B) with ending ARR crossing $6.5B, FCF margin holding ~33%, and the multiple normalising toward ~25× NTM revenue as the re-acceleration proves durable.",
       "points": [
-        "FY2027 revenue lands at $5.9B with net new ARR growing 20%+ YoY, ARR crosses $6.3B",
-        "Next-Gen SIEM crosses $1B ARR by Q3 FY2027 as Splunk migration cycles accelerate",
+        "FY2027 revenue lands at the high end of the $5.915–5.959B guide with net new ARR growing 27%+ YoY, ARR crosses $6.5B",
+        "Next-Gen SIEM crosses $1B ARR as Splunk migration cycles accelerate",
         "Identity and cloud security modules each reach $700M+ ARR, sustaining platform consolidation momentum",
-        "FCF margin expands to 28–30% as operating leverage on the $5B+ ARR base kicks in"
+        "FCF margin holds ~33% as operating leverage on the $5.5B+ ARR base offsets continued growth investment"
       ]
     },
     "bull": {
-      "priceTarget": "$700",
-      "description": "CrowdStrike becomes the dominant AI-native security operating system, with ARR re-accelerating toward $8B+ as Charlotte AI drives new consumption and SIEM displacement exceeds expectations.",
+      "priceTarget": "$880",
+      "description": "CrowdStrike cements itself as the AI-native security operating system — Charlotte AI agentic consumption and Next-Gen SIEM displacement re-accelerate ARR toward $8B+, supporting and exceeding Street-high (~$800) targets and a sustained premium multiple.",
       "points": [
-        "ARR reaches $8B+ by FY2028 as Next-Gen SIEM alone crosses $2B ARR, displacing Splunk across Fortune 500",
+        "ARR reaches $8B+ by FY2028 as Next-Gen SIEM alone crosses $2B ARR, displacing Splunk across the Fortune 500",
         "Charlotte AI (agentic security layer) drives a new consumption model, adding $500M+ ARR from AI-native workflows",
-        "Falcon Flex $1.69B account ARR grows 60%+ YoY as enterprises consolidate all security on a single platform",
+        "Falcon Flex deal flow grows 50%+ YoY as enterprises consolidate all security on a single platform",
         "International government contracts and sovereign cloud deals add an incremental growth vector beyond North America"
       ]
     }
@@ -206,5 +206,5 @@
     },
     "verdict": "CrowdStrike's moat is highly AI-resilient — AI enhances the Threat Graph by processing more telemetry faster, and Charlotte AI adds a new consumption layer on top of existing data assets. AI is an accelerant to CrowdStrike's moat, not a disruptor."
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "June 2026"
 }
