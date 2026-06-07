@@ -26,7 +26,7 @@ import {
   DollarSign, Users, Target, Layers, Play, Car,
   Battery, Globe, CreditCard, ShieldCheck, BarChart3, PenTool,
   Image, Landmark, Shield, BarChart, Calculator, Coins, Lock,
-  Pickaxe, Gem, CheckCircle,
+  Pickaxe, Gem, CheckCircle, Rocket, Satellite,
 } from 'lucide-react';
 
 const ICON_MAP: Record<string, React.FC<{ size?: number; className?: string; color?: string }>> = {
@@ -34,7 +34,7 @@ const ICON_MAP: Record<string, React.FC<{ size?: number; className?: string; col
   DollarSign, Users, Target, Layers, Play, TrendingUp: TrendingUp as React.FC<{ size?: number; className?: string; color?: string }>, Car,
   Battery, Globe, CreditCard, ShieldCheck, BarChart3, PenTool,
   Image, Landmark, Shield, BarChart, Calculator, Coins, Lock,
-  Pickaxe, Gem, CheckCircle,
+  Pickaxe, Gem, CheckCircle, Rocket, Satellite,
 };
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
