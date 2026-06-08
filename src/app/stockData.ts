@@ -36,6 +36,7 @@ import goldData    from '@/data/stocks/gold.json';
 import copperData  from '@/data/stocks/copper.json';
 import silverData  from '@/data/stocks/silver.json';
 import uraniumData from '@/data/stocks/uranium.json';
+import spacexData  from '@/data/stocks/spacex.json';
 import googleData  from '@/data/stocks/google.json';
 import intuitData  from '@/data/stocks/intuit.json';
 import isrgData    from '@/data/stocks/isrg.json';
@@ -290,6 +291,7 @@ const allCoverageData = [
     { name: "Roblox",            ticker: "RBLX",  slug: "rblx",        scores: [m(rblxData),        g(rblxData),        v(rblxData)],        href: "/stocks/rblx",        category: "Other",       ...t(rblxData)        },
     { name: "iShares Semiconductor ETF", ticker: "SOXX", slug: "soxx", scores: [m(soxxData),        g(soxxData),        v(soxxData)],        href: "/stocks/soxx",        category: "Big Tech",    ...t(soxxData)        },
     { name: "Vanguard S&P 500 ETF", ticker: "VOO",  slug: "voo",        scores: [m(vooData),         g(vooData),         v(vooData)],         href: "/stocks/voo",         category: "Other",       ...t(vooData)         },
+    { name: "SpaceX",            ticker: "SPCX",  slug: "spacex",      scores: [m(spacexData),      g(spacexData),      v(spacexData)],      href: "/stocks/spacex",      category: "Industrials", ...t(spacexData)      },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────
