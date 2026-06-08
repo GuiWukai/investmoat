@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$4.1T"
+      "value": "$4.4T"
     },
     {
       "label": "Price",
-      "value": "$278.00"
+      "value": "$300.00"
     }
   ],
   "chips": [
@@ -50,7 +50,7 @@
     }
   ],
   "moat": {
-    "description": "The most powerful consumer ecosystem on earth — iPhone lock-in, App Store dominance, and a services flywheel that compounds with every user added.",
+    "description": "The most powerful consumer ecosystem on earth — iPhone lock-in, App Store dominance, and a services flywheel that compounds with every user added. WWDC 2026's Gemini-powered 'Siri AI' resolves the AI overhang on the upgrade cycle but reframes the thesis: Apple is renting frontier intelligence from Google (~$1B/yr) rather than owning it, so the durable moat is the ecosystem and distribution — not a proprietary-AI advantage. Structural moats are unchanged; the score holds at ~89.",
     "analysisTitle": "The Ecosystem Flywheel",
     "analysisSummary": "Apple's moat is built on **Ecosystem Lock-In and Emotional Brand Loyalty**:",
     "analysisPoints": [
@@ -73,7 +73,7 @@
     ]
   },
   "growth": {
-    "description": "Q2 FY2026 delivered $111.2B revenue (+17% YoY), iPhone +22%, Services a record $30.98B, and gross margin 49.3% — the iPhone 17 supercycle continues at a faster clip than guided, with management raising the FY2026 outlook on the print.",
+    "description": "Q2 FY2026 delivered $111.2B revenue (+17% YoY), iPhone +22%, Services a record $30.98B, EPS $2.01 (+22%), and gross margin 49.3%; Q3 guidance is +14–17% revenue at 47.5–48.5% gross margin. At WWDC 2026 Apple shipped its long-delayed AI do-over — a Gemini-powered 'Siri AI' (standalone app plus system assistant, Fall 2026 launch) — removing the 'Apple is behind on AI' overhang on the upgrade cycle, though the early analyst read is that it is largely undifferentiated from Gemini on Android.",
     "growthAnalysis": {
       "cagrEstimate": "7-10%",
       "scoreDerivation": "Base 70 (7-10% CAGR mid-band) + 6 iPhone 17 supercycle re-acceleration + 5 Services compounding + 3 record gross margin - 5 regulatory/tariff overhang = 79",
@@ -83,41 +83,41 @@
         { "name": "Installed Base / Buybacks", "metric": "2.5B+ active devices; new $100B buyback authorization mechanically lifts EPS 3-4% per year", "trend": "stable" }
       ],
       "primaryType": "both",
-      "keyRisk": "If iPhone 17/Apple Intelligence fails to drive a sustained multi-year supercycle through FY2027 and DMA-style App Store regulation spreads to the US, Services growth decelerates below 10% while iPhone normalizes to 215-225M units — collapsing the dual-engine narrative the multiple is priced for.",
+      "keyRisk": "If Siri AI (Gemini-powered, Fall 2026) proves undifferentiated and fails to drive a sustained upgrade supercycle through FY2027, while DMA-style App Store regulation spreads to the US and the Google dependency (search-default + Gemini) draws antitrust remedies, Services growth decelerates below 10% and iPhone normalizes to 215–225M units — collapsing the dual-engine narrative the multiple is priced for.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 67,
-    "description": "At $278, trading just below base ($285) — the Q2 beat has lifted the stock past the prior trading range; risk/reward is balanced near fair value with ~37% upside to bull and ~33% downside to bear."
+    "score": 65,
+    "description": "At ~$300, the post-WWDC run has carried the stock to fair value (base $300) — the Q2 beat and the removal of the AI overhang are now priced in. Risk/reward is balanced: ~28% upside to bull ($385) vs ~33% downside to bear ($200), with analyst skepticism on Siri AI differentiation capping near-term upside."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$185",
-      "description": "iPhone 17 supercycle fades faster than expected; tariffs and rising memory costs compress margins; regulatory pressure on App Store economics materialises in the US.",
+      "priceTarget": "$200",
+      "description": "Siri AI proves undifferentiated and the iPhone upgrade cycle fades; tariffs and rising memory costs compress margins; US App Store regulation and antitrust pressure on the Google deals materialise.",
       "points": [
-        "iPhone units normalise to 215–225M in FY2027 as the upgrade cycle exhausts pent-up demand; China share stabilises but does not compound",
-        "US antitrust action against the App Store, mirroring EU DMA pressure, forces meaningful take-rate reductions toward 15–17%",
-        "Memory cost inflation and tariff headwinds prevent gross margin expansion beyond 47%, disappointing consensus expectations of 49%+"
+        "iPhone units normalise to 215–225M in FY2027 as Siri AI fails to spark incremental upgrades; China share stabilises but does not compound",
+        "US antitrust action forces App Store take-rates toward 15–17% and/or unwinds the ~$20B/yr Google search-default payment, denting high-margin Services",
+        "Memory-cost inflation and tariff headwinds cap gross margin below 47%, disappointing consensus expectations of 49%+"
       ]
     },
     "base": {
-      "priceTarget": "$285",
-      "description": "iPhone 17 cycle delivers strong FY2026, services compounds at 13–15% annually, buybacks mechanically lift EPS, and Apple Intelligence deepens the platform's AI differentiation.",
+      "priceTarget": "$300",
+      "description": "The iPhone cycle delivers strong FY2026, Services compounds at 13–15% annually, buybacks lift EPS, and Gemini-powered Siri AI ships credibly enough to sustain the upgrade base without Apple owning the model.",
       "points": [
-        "iPhone units sustain 235–245M in FY2026 as iPhone 17 demand outpaces supply, with Apple Intelligence driving incremental switchers and upgraders",
+        "iPhone units sustain 235–245M in FY2026 as Siri AI ships in the fall and removes the AI overhang on upgraders",
         "Services reach $130B+ annualized revenue in FY2026, with advertising, iCloud, and payments as the primary growth pillars",
-        "EPS compounding at 12–15% annually supported by buybacks retiring 3–4% of shares outstanding per year"
+        "EPS compounds 12–15% annually on buybacks retiring 3–4% of shares per year; the ~$1B/yr Gemini cost is immaterial to margins"
       ]
     },
     "bull": {
-      "priceTarget": "$380",
-      "description": "Apple Intelligence becomes the defining consumer AI platform, a second-generation Vision Pro opens spatial computing, and health hardware unlocks a major new revenue stream.",
+      "priceTarget": "$385",
+      "description": "Siri AI exceeds skeptical expectations and drives a genuine multi-year supercycle, services advertising inflects, and new hardware (Vision/health) opens fresh TAM.",
       "points": [
-        "Apple Intelligence drives a multi-year supercycle — 260M+ iPhone units in FY2027 as AI features become a must-have rather than a nice-to-have",
-        "A sub-$1,500 Vision Pro 2 achieves mainstream adoption, establishing a new $30B+ spatial computing revenue stream by FY2028",
-        "Health monitoring hardware (blood glucose sensor, blood pressure cuff) clears FDA approval, opening a $50B+ medical device adjacent market"
+        "Siri AI becomes a daily-use differentiator that pulls forward a 260M+ unit iPhone year in FY2027 as AI features become must-have",
+        "A lower-priced Vision device and/or services-advertising scale add a $30B+ incremental revenue stream by FY2028",
+        "Health monitoring hardware (blood glucose sensor, blood pressure cuff) clears FDA approval, opening a $50B+ adjacent medical market"
       ]
     }
   },
@@ -125,7 +125,7 @@
     "learnedInterfaces": {
       "status": "strong",
       "aiExposure": "resilient",
-      "note": "iOS, Final Cut, Logic Pro, and the Apple HIG create deep muscle memory. Apple Intelligence further embeds users in system-level AI features exclusive to Apple hardware — on-device AI is invoked through the existing UI surfaces, deepening the interface lock-in rather than replacing it. Routed to resilient via aiExposure override."
+      "note": "iOS, Final Cut, Logic Pro, and the Apple HIG create deep muscle memory. WWDC 2026's Siri AI adds a system-level plus standalone-app assistant surface, but its intelligence is now supplied by Google Gemini — the interface lock-in is unchanged and AI-resilient (a competing chatbot can't operate Apple's closed ecosystem), while the underlying model is rented. Routed to resilient via aiExposure override: resilient because the interface is AI-agnostic, not because the AI is proprietary."
     },
     "businessLogic": {
       "status": "intact",
@@ -133,7 +133,7 @@
     },
     "publicDataAccess": {
       "status": "weakened",
-      "note": "Apple is not a data company. Siri historically lagged on web intelligence, and Apple Intelligence is primarily on-device — limiting the data network effects that Google and Meta enjoy."
+      "note": "Apple is not a data/frontier-model company — the WWDC 2026 decision to power Siri AI with Google Gemini rather than an in-house model confirms it. Apple controls valuable private data but does not leverage it into a public-data or model-scale advantage, limiting the data network effects Google and Meta enjoy."
     },
     "talentScarcity": {
       "status": "strong",
@@ -142,15 +142,15 @@
     "bundling": {
       "status": "strong",
       "aiExposure": "resilient",
-      "note": "Apple One (Music + TV+ + Arcade + iCloud + Fitness+ + News+) plus Continuity, AirDrop, Handoff, Universal Clipboard, and on-device Apple Intelligence form an integrated bundle that AI strengthens rather than threatens. Apple Intelligence requires Apple silicon + iCloud + the OS stack — the bundle is the AI moat. Routed to resilient via aiExposure override."
+      "note": "Apple One (Music + TV+ + Arcade + iCloud + Fitness+ + News+) plus Continuity, AirDrop, Handoff, and Universal Clipboard form an integrated bundle a point-solution AI can't replicate. Post-WWDC 2026, Siri AI's intelligence comes from Gemini via Apple's three-tier privacy stack (on-device / Private Cloud Compute / Gemini) — so the bundle is the distribution moat, not a proprietary-AI moat. Routed to resilient via aiExposure override: the ecosystem integration is AI-agnostic and not disruptable by a competing assistant."
     },
     "proprietaryData": {
       "status": "strong",
-      "note": "On-device health data (HealthKit), financial data (Apple Pay), and location/behavior data are held privately as a brand differentiator. Apple's 'privacy as a feature' stance is itself a moat against data-hungry competitors."
+      "note": "On-device health data (HealthKit), financial data (Apple Pay), and behavioral data are held privately as a brand differentiator and remain exclusive. 'Privacy as a feature' is still a moat, though modestly diluted now that Siri AI can route queries to Google Gemini when needed — the three-tier privacy stack keeps sensitive context on-device/Private Cloud Compute, but the headline intelligence is no longer Apple-owned."
     },
     "regulatoryLockIn": {
       "status": "weakened",
-      "note": "Historically a non-factor, but the EU DMA is forcing Apple to allow sideloading and third-party app stores on iOS — a meaningful crack in the App Store monopoly. This is the most significant regulatory threat to Apple's moat."
+      "note": "Historically a non-factor, but the EU DMA is forcing Apple to allow sideloading and third-party app stores on iOS — a meaningful crack in the App Store monopoly. The new ~$1B/yr Gemini-Siri deal stacks on the ~$20B/yr Google search-default arrangement, deepening a Google dependency that sits squarely in antitrust crosshairs (DOJ/EU). Regulation remains the most significant threat to Apple's moat."
     },
     "networkEffects": {
       "status": "strong",
@@ -164,7 +164,7 @@
       "status": "strong",
       "note": "iCloud Photos is the photo library. Contacts, Notes, Reminders, and Calendar are the default PIM stack. Health app is the health record. For hundreds of millions of consumers, Apple is the system of record for their personal data."
     },
-    "verdict": "Apple's consumer ecosystem moat is remarkably resilient to AI disruption — in fact, Apple Intelligence deepens the platform advantage. The primary risks are regulatory (DMA/App Store) and competitive (China smartphone market). The on-device AI privacy architecture is a genuine differentiator that leverages Apple's hardware-software integration advantage."
+    "verdict": "Apple's consumer ecosystem moat — switching costs, network effects, transaction embedding, and system of record — is structurally untouched by AI and remains gold-standard (~89). But WWDC 2026 reframed the AI narrative: by powering Siri AI with Google Gemini (~$1B/yr) instead of its own foundation model, Apple converted a claimed proprietary-AI moat into a rented capability and deepened a strategic/antitrust dependency on Google (stacking on the ~$20B/yr search-default deal). The honest read is that Apple is AI-resilient by being AI-agnostic — its moat is distribution an LLM can't replicate, not a frontier model — and the near-term win is that shipping a credible assistant removes the 'Apple is behind' overhang, even as analysts flag Siri AI as largely undifferentiated from Gemini on Android."
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "June 2026"
 }
