@@ -21,6 +21,7 @@ import gold from './gold.json';
 import copper from './copper.json';
 import silver from './silver.json';
 import uranium from './uranium.json';
+import spacex from './spacex.json';
 import btc from './btc.json';
 import ethereum from './ethereum.json';
 import solana from './solana.json';
@@ -226,6 +227,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   copper: copper as StockAnalysisData,
   silver: silver as StockAnalysisData,
   uranium: uranium as StockAnalysisData,
+  spacex: spacex as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {

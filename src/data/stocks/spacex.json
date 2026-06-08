@@ -1,0 +1,181 @@
+{
+  "slug": "spacex",
+  "ticker": "SPCX",
+  "name": "Space Exploration Technologies (SpaceX)",
+  "lastAnalyzed": "June 2026",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "SPCX (IPO)"
+    },
+    {
+      "label": "Valuation",
+      "value": "~$1.75T"
+    },
+    {
+      "label": "IPO Price",
+      "value": "$135"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Aerospace | Launch | Satellite Broadband",
+      "color": "primary"
+    },
+    {
+      "label": "Pre-IPO → Nasdaq Jun 12 2026",
+      "color": "warning"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "FY2025 Revenue",
+      "value": "$18.7B",
+      "label": "+43% YoY (from $13.1B in 2024). Adjusted EBITDA $6.58B (~35% margin), but GAAP net loss of $4.94B — driven by >$6B of xAI/AI-compute losses and Starship R&D. Operating cash flow $6.8B against $20.7B capex → deeply FCF-negative.",
+      "icon": "Rocket",
+      "color": "#005288"
+    },
+    {
+      "title": "Starlink Engine",
+      "value": "$11.4B",
+      "label": "61% of revenue, +48% YoY, $4.4B operating profit — the group's only real profit centre. 10.3M subscribers (Q1 2026) across 160+ markets, but ARPU has fallen $99 (2023) → $81 (2025) → $66 (Q1 2026) as the mix shifts international and consumer.",
+      "icon": "Satellite",
+      "color": "#1a8cff"
+    },
+    {
+      "title": "IPO Terms",
+      "value": "$1.75T",
+      "label": "~$135/share, ~$75B raise, ~13B shares, Nasdaq debut June 12 2026 — the largest IPO in history. ~90× trailing sales. Musk holds ~42% equity but ~85% voting power via 10-vote Class B shares; public Class A holders get one vote.",
+      "icon": "DollarSign",
+      "color": "#10b981"
+    }
+  ],
+  "moat": {
+    "description": "Reusable-rocket cost monopoly (82% of global launch) plus the Starlink spectrum-and-scale flywheel.",
+    "analysisTitle": "The Reusability + Spectrum Moat",
+    "analysisSummary": "SpaceX's durability is physical and regulatory, not software. Two reinforcing engines:",
+    "analysisPoints": [
+      {
+        "title": "Reusable-Launch Cost Monopoly",
+        "text": "165 orbital launches in 2025 (82% global share) on a fleet of reusable Falcon boosters — one flew a 29th time. No competitor (Blue Origin, Rocket Lab, ULA, China) has matched orbital-class reuse at cadence, giving SpaceX a structural cost-per-kg advantage measured in years, not quarters."
+      },
+      {
+        "title": "Spectrum + Orbital Slots",
+        "text": "Starlink's FCC spectrum grants and ITU orbital-slot filings are scarce, first-mover, government-allocated assets. A rival cannot simply out-spend its way past the regulatory queue — this is the single hardest part of the moat to replicate."
+      },
+      {
+        "title": "The Self-Funding Flywheel",
+        "text": "SpaceX launches its own constellation at internal cost, so every Falcon flight makes Starlink cheaper to deploy, and Starlink cash flow funds the next constellation tranche and Starship. Vertical integration competitors must buy launch on the open market to compete."
+      }
+    ]
+  },
+  "growth": {
+    "description": "FY2025 revenue grew 43% to $18.7B, the third straight year of ~40–50% growth, led by Starlink (+48% to $11.4B, 61% of the total). Subscriber growth is explosive — 2.3M (2023) → 10.3M (Q1 2026) — but ARPU is compressing hard ($99 → $66) as the mix tilts to lower-priced international and consumer plans, so revenue grows slower than the sub count. The next legs are direct-to-cell (carrier partnerships, ~7–8M reachable users by late 2025), Starship-enabled bulk constellation deployment, and a speculative AI-compute/connectivity layer (xAI, orbital data centres). Bulls model a ~$60B annualised run-rate exiting 2026, but that leans heavily on AI-compute contracts that are not yet de-risked; a Starlink-led base is closer to $24–30B for 2026.",
+    "growthAnalysis": {
+      "cagrEstimate": "30–40%",
+      "scoreDerivation": "Base 91 (~35% blended CAGR, 30%+ band) + 5 recurring (Starlink subscription base, 10M+ and compounding) + 4 both (direct-to-cell + AI-compute TAM expansion on top of share gains) + ~3 trajectory (Starlink and launch accelerating) − 10 high risk (Starship execution, ARPU compression, FCF burn) = 88. Margin held stable: Starlink operating profit and consolidated EBITDA are expanding, but GAAP remains a loss and ARPU is falling, so no margin credit.",
+      "drivers": [
+        {
+          "name": "Starlink Broadband",
+          "metric": "$11.4B (+48% YoY), 10.3M subs (Q1 2026), $4.4B op profit; ARPU $66 and falling",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Launch Services",
+          "metric": "165 launches in 2025 (82% global share), ~$22B cumulative federal contracts; Starship targeting up to 25 launches/yr",
+          "trend": "stable"
+        },
+        {
+          "name": "Direct-to-Cell + AI Compute",
+          "metric": "D2C carrier deals reaching ~7–8M users; xAI/AI-compute optionality (bull-case $60B run-rate)",
+          "trend": "accelerating"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "Starship is the linchpin of the next constellation generation and the cost curve, yet SpaceX flew only 5 of a targeted 25 test flights in 2025 — a 5× miss. If Starship does not reach reliable orbital-class reuse and a sustained ≥15 launches/yr cadence by end of 2027, V3 Starlink deployment and the launch-cost step-down slip, undercutting both the $60B run-rate bull case and the FCF turn the $1.75T valuation requires.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 60,
+    "description": "At the ~$135 IPO price (~$1.75T) SpaceX lists at roughly 90× trailing sales and ~50–60× 2026E revenue, with a GAAP net loss and deeply negative free cash flow ($6.8B operating cash flow vs. $20.7B capex). That is among the richest large-cap debuts ever — the price embeds flawless Starlink scaling, a Starship turnaround, and AI-compute optionality that has barely begun. Standard earnings multiples are not meaningful pre-profit, so the case rests on price/sales and the credibility of the forward run-rate. There is little margin of safety at issue: the IPO price sits above our base-case fair value and a quarter of the way into the bull case.",
+    "valuationNote": {
+      "text": "P/E is omitted — SpaceX is GAAP loss-making ($4.94B net loss in 2025) and FCF-negative, so earnings multiples are meaningless. Valuation is anchored on price/sales (~90× trailing, ~50–60× 2026E) and EV/EBITDA (~$1.75T vs. $6.6B adjusted EBITDA ≈ 265×). The premium is paid for monopoly cost position, spectrum, and Mars/Starship optionality — not current cash generation.",
+      "fairValue": "$115 (base) — premium for the monopoly and optionality, but below the hyped issue price"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$80",
+      "description": "Growth-stock derating meets execution slips: the market refuses to pay 90× sales for a GAAP-loss, dual-class-controlled company, and Starship/ARPU disappointments compound into a permanent re-rate toward ~$1.0T.",
+      "points": [
+        "Starship continues to miss cadence targets through 2027 (as in 2025's 5-of-25), delaying V3 Starlink and the launch-cost step-down",
+        "Starlink ARPU keeps falling below $60 and net adds slow as Amazon Kuiper reaches commercial scale, capping broadband revenue growth below 30%",
+        "Post-lockup supply plus governance discount (Musk ~85% voting control, key-man risk) compress the multiple to ~40–50× sales"
+      ]
+    },
+    "base": {
+      "priceTarget": "$115",
+      "description": "Starlink scales as expected and launch dominance holds, but the AI-compute run-rate stays modest and capex keeps FCF negative — the market settles the stock modestly below its hyped IPO price at ~$1.5T.",
+      "points": [
+        "2026 revenue lands ~$28–32B on Starlink ~$18–22B plus record launch volume, with adjusted EBITDA margin holding ~35%",
+        "Direct-to-cell reaches commercial scale with major carriers but contributes a single-digit-billions revenue layer, not a step-change",
+        "Starship reaches orbital reuse but at a cadence below 15/yr, so the cost-curve and FCF turn arrive later than bulls assume"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$195",
+      "description": "The flywheel inflects on all cylinders: Starship hits cadence, Starlink + D2C compound, and AI-compute contracts materialise toward a ~$60B run-rate, re-rating the company toward ~$2.5T.",
+      "points": [
+        "Starship reaches ≥15 launches/yr with reliable reuse, collapsing $/kg and enabling V3 Starlink mass deployment",
+        "AI-compute/connectivity contracts (xAI, orbital data centres, enterprise/defence) drive the exit-2026 run-rate toward $60B",
+        "Starlink crosses ~20M subscribers with ARPU stabilising, and free cash flow turns positive, validating a premium growth multiple"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — launch is a contracted service and the Starlink terminal is deliberately plug-and-play. There is no complex interface customers invest years mastering."
+    },
+    "businessLogic": {
+      "status": "destroyed",
+      "note": "N/A — SpaceX does not embed configurable software into customers' proprietary workflows. Launch and broadband are procurement/utility relationships, not business-logic lock-in."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — the company does not monetise gated access to a public dataset."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "Reusable-orbital propulsion, GNC, and large-scale satellite-manufacturing expertise is the scarcest engineering talent in aerospace, and SpaceX has assembled the only team operating it at cadence. AI augments but does not replace rocket and spacecraft engineers — this scarcity is AI-resilient."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Vertical integration is the bundle: in-house launch deploys Starlink at internal cost, ground network plus terminal plus connectivity is sold as one stack, and D2C bundles satellite into carrier plans. Competitors must assemble these pieces on the open market. AI-compute/connectivity is an emerging extension of the same bundle."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "500+ Falcon flights and 29× booster reuse generate proprietary reliability, recovery, and reuse telemetry no rival possesses, plus a continuous stream of constellation operations data. Real and compounding, but it improves operations rather than being the directly-monetised product."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "FCC spectrum grants, ITU orbital-slot priority, FAA launch licences, and NASA/DoD national-security launch certification are scarce, slow, first-mover-advantaged assets. Switching launch providers requires re-certification, and spectrum/slots cannot be out-spent past the regulatory queue. This is the hardest moat to replicate and is AI-irrelevant."
+    },
+    "networkEffects": {
+      "status": "weakened",
+      "note": "Starlink's edge is primarily economies of scale and the self-funding launch flywheel, not classic network effects — added users on a cell congest capacity rather than improve it. A genuine two-sided effect is only now emerging in direct-to-cell (more carriers → more reach → more attractive to carriers). Marked weakened to reflect that the durability is scale/spectrum-driven, with D2C as the upside path to a real network effect."
+    },
+    "transactionEmbedding": {
+      "status": "destroyed",
+      "note": "N/A — SpaceX does not sit in a payment or transaction layer."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — it is not the authoritative record for any external business function."
+    },
+    "verdict": "SpaceX is a net AI beneficiary on the demand side — AI buildout drives launch demand, satellite connectivity, and a nascent orbital-compute opportunity — while its core moats (regulatory spectrum/slots, scarce aerospace talent, reusable-launch cost position) are essentially AI-irrelevant and therefore AI-resilient. It carries almost none of the AI-vulnerable software moats (no learned interface, business-logic, public-data, transaction, or system-of-record exposure), so AI cannot erode the durability it has. The honest limitation is that much of the moat slate is N/A and the heaviest-weighted resilient moat — network effects — is only scale-deep, capping the score. Durable physical/regulatory monopoly, but not a software-style compounder.",
+    "aiResilienceScore": 67
+  }
+}
