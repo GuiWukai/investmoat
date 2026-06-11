@@ -2,11 +2,11 @@
   "slug": "baba",
   "ticker": "BABA",
   "name": "Alibaba Group",
-  "lastAnalyzed": "May 2026",
+  "lastAnalyzed": "June 2026",
   "headerStats": [
     { "label": "Ticker", "value": "BABA" },
-    { "label": "Market Cap", "value": "~$280B" },
-    { "label": "Current Price", "value": "~$118" }
+    { "label": "Market Cap", "value": "~$273B" },
+    { "label": "Current Price", "value": "~$116" }
   ],
   "chips": [
     { "label": "China E-commerce | Cloud | AI", "color": "primary" },
@@ -15,8 +15,8 @@
   "metrics": [
     {
       "title": "Cloud Revenue Growth",
-      "value": "+25-30%",
-      "label": "AI-led; Qwen ecosystem driving inference demand",
+      "value": "+38%",
+      "label": "FQ4 FY26; AI products triple-digit for 11th straight quarter",
       "icon": "Cloud",
       "color": "#FF6A00"
     },
@@ -28,15 +28,15 @@
       "color": "#10b981"
     },
     {
-      "title": "Adj EBITA Margin",
-      "value": "~14%",
-      "label": "Recovering on Taobao/Tmall + AI cost discipline",
-      "icon": "Percent",
-      "color": "#0ea5e9"
+      "title": "Quick Commerce Growth",
+      "value": "+57%",
+      "label": "FQ4 FY26; subsidy-heavy, compressing near-term margins",
+      "icon": "Zap",
+      "color": "#f97316"
     }
   ],
   "moat": {
-    "description": "Largest Chinese e-commerce + leading domestic cloud and the leading domestic LLM franchise (Qwen) — moats are genuine but the equity carries persistent China regulatory and geopolitical risk.",
+    "description": "Largest Chinese e-commerce + leading domestic cloud and the leading domestic LLM franchise (Qwen) — moats are genuine but the equity carries persistent China regulatory and geopolitical risk, elevated in June 2026 by the Pentagon adding Alibaba to its 1260H 'Chinese military companies' list (no direct sanctions, but DoD contracting bans and US-counterparty compliance risk). Moat statuses unchanged — the designation affects the equity discount, not the underlying franchise durability.",
     "analysisTitle": "The China Platform Moat",
     "analysisSummary": "Alibaba's moat is **scale leadership across Chinese e-commerce, cloud, and AI** — durable structurally with persistent geopolitical / regulatory tail risk:",
     "analysisPoints": [
@@ -46,7 +46,7 @@
       },
       {
         "title": "Alibaba Cloud + Qwen Franchise",
-        "text": "Alicloud is the leading domestic cloud (~37% Chinese cloud share). Qwen LLM family is the leading open-source-style Chinese model with global penetration in non-US markets and is the foundation for Alicloud AI inference revenue. Cloud + AI revenue grew 25-30% in 2026 with margin expansion as the franchise scales."
+        "text": "Alicloud is the leading domestic cloud (~37% Chinese cloud share). Qwen LLM family is the leading open-source-style Chinese model with global penetration in non-US markets and is the foundation for Alicloud AI inference revenue. Cloud revenue grew 38% YoY in FQ4 FY26 (external +40%), with AI-related products posting triple-digit growth for an 11th consecutive quarter and now ~30% of external cloud revenue."
       },
       {
         "title": "Capital Return and Restructuring",
@@ -55,34 +55,34 @@
     ]
   },
   "growth": {
-    "description": "FY27 (March year-end) revenue growth +12-15%, with cloud/AI +25-30%, e-commerce +5-7%, international +20%+. AI/cloud is the swing factor — Qwen ecosystem traction translates to Alicloud inference revenue. Margin recovery on cost discipline + AI mix.",
+    "description": "FQ4 FY26 (March quarter, reported May 2026): revenue +11% YoY like-for-like (+3% reported, ex Sun Art/Intime disposals), cloud +38% with AI products triple-digit for an 11th straight quarter, quick commerce +57%. Near-term profitability is being sacrificed to the investment cycle — FQ4 non-GAAP net income fell ~100% YoY on quick-commerce subsidies, Qwen app user acquisition and cloud capex.",
     "growthAnalysis": {
       "cagrEstimate": "10-15%",
-      "scoreDerivation": "Base 75 (8-15% CAGR top of band) + 5 cloud/AI optionality (Qwen + AI inference 25-30%) - 5 China e-commerce competition (PDD + Douyin) - 7 geopolitical / regulatory discount = 68",
+      "scoreDerivation": "Base 76 (10-15% CAGR, midpoint 12.5%) + 3 trajectory (cloud/AI +38% and quick commerce +57% accelerating, e-commerce stable) - 4 margin compression (quick-commerce subsidies + AI capex collapsed FQ4 FY26 non-GAAP profit) + 3 TAM expansion - 10 high risk (Pentagon 1260H designation, geopolitics) = 68",
       "drivers": [
-        { "name": "Cloud + Qwen AI", "metric": "+25-30% YoY; Qwen ecosystem driving inference revenue", "trend": "accelerating" },
-        { "name": "Taobao + Tmall Group", "metric": "+5-7% YoY; stabilising on premium + value segments", "trend": "stable" },
-        { "name": "International (Lazada + AliExpress)", "metric": "+20%+ YoY; SE Asia + EU growth", "trend": "accelerating" }
+        { "name": "Cloud + Qwen AI", "metric": "+38% YoY FQ4 FY26 (external +40%); AI products triple-digit for 11th straight quarter, ~30% of external cloud revenue", "trend": "accelerating" },
+        { "name": "Taobao + Tmall Group", "metric": "Group revenue +11% YoY like-for-like FQ4 FY26; CMR growth continues on premium + value segments", "trend": "stable" },
+        { "name": "Quick Commerce (Taobao Instant + Ele.me)", "metric": "+57% YoY FQ4 FY26; subsidy-heavy and margin-dilutive near term", "trend": "accelerating" }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If US-China geopolitical tensions accelerate (additional ADR delisting risk, technology export controls on Chinese AI) or Chinese consumer continues stagnating through 2027, the discount in BABA persists indefinitely and the buyback alone is insufficient to drive material rerating.",
+      "keyRisk": "The Pentagon added Alibaba to its 1260H 'Chinese military companies' list in June 2026 (DoD direct-contracting ban from late June 2026, third-party procurement ban from June 2027). If geopolitical escalation continues (export controls on Chinese AI, ADR delisting risk) while the quick-commerce subsidy war keeps margins depressed through FY27, the discount persists indefinitely and the buyback alone is insufficient to drive material rerating.",
       "keyRiskSeverity": "high",
-      "marginTrend": "expanding"
+      "marginTrend": "compressing"
     }
   },
   "valuation": {
-    "score": 86,
-    "description": "At ~$118 BABA trades at ~10× FY27 EPS — an extreme discount to global tech peers. ~$70B net cash + investments equates to ~25% of market cap, with the operating business at ~7× EPS. Valuation prices in worst-case geopolitical and competitive scenarios.",
+    "score": 79,
+    "description": "At ~$116 BABA trades ~27% below the base case ($160). Near-term earnings are depressed by the quick-commerce subsidy war and AI capex (FQ4 FY26 non-GAAP net income fell ~100% YoY), but cloud +38% and ~$70B net cash + investments support the rerating thesis; the Pentagon 1260H designation (June 2026) keeps the geopolitical discount wide.",
     "peAnalysis": {
-      "asOf": "May 2026",
+      "asOf": "June 2026",
       "rows": [
-        { "label": "Forward P/E (FY27)", "value": "~10×", "note": "EPS ~$11.30; deep discount to global peers" },
-        { "label": "Forward P/E ex-cash", "value": "~7×", "note": "Stripping ~$70B net cash + investments" },
+        { "label": "Forward P/E (FY27)", "value": "~11×", "note": "FY27 EPS estimates trimmed as quick-commerce + AI investment compress near-term earnings; still a deep discount to global peers" },
+        { "label": "Forward P/E ex-cash", "value": "~8×", "note": "Stripping ~$70B net cash + investments" },
         { "label": "Price / Sales (FY27)", "value": "~1.8×", "note": "Discount to global e-commerce + cloud" },
-        { "label": "FCF Yield", "value": "~7%", "note": "FCF strong; capital return active" },
-        { "label": "EV / EBITDA (NTM)", "value": "~5×", "note": "Vs global cloud peers ~12-18×" }
+        { "label": "FCF Yield", "value": "~3-4%", "note": "FCF depressed by quick-commerce subsidies, Qwen app user acquisition and cloud capex" },
+        { "label": "EV / EBITDA (NTM)", "value": "~6×", "note": "Vs global cloud peers ~12-18×" }
       ],
-      "summary": "Valuation prices in deep geopolitical and competitive risk; quality of underlying franchise and capital position supports rerating thesis."
+      "summary": "Valuation prices in deep geopolitical and competitive risk; the investment cycle depresses near-term earnings and FCF, but the cloud/AI franchise quality and capital position support the rerating thesis."
     }
   },
   "scenarios": {

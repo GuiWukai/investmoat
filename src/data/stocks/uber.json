@@ -2,11 +2,11 @@
   "slug": "uber",
   "ticker": "UBER",
   "name": "Uber Technologies",
-  "lastAnalyzed": "May 2026",
+  "lastAnalyzed": "June 2026",
   "headerStats": [
     { "label": "Ticker", "value": "UBER" },
-    { "label": "Market Cap", "value": "~$170B" },
-    { "label": "Current Price", "value": "~$80" }
+    { "label": "Market Cap", "value": "~$141B" },
+    { "label": "Current Price", "value": "~$69" }
   ],
   "chips": [
     { "label": "Mobility | Delivery | Network", "color": "primary" },
@@ -14,23 +14,23 @@
   ],
   "metrics": [
     {
-      "title": "Gross Bookings (TTM)",
-      "value": "~$185B",
-      "label": "Mobility + Delivery; +18% YoY",
+      "title": "Gross Bookings (Q1 2026)",
+      "value": "$53.7B",
+      "label": "+25% YoY (+21% constant currency); Mobility +25%, Delivery +28%",
       "icon": "TrendingUp",
       "color": "#0ea5e9"
     },
     {
-      "title": "Adj EBITDA Margin",
-      "value": "~16%",
-      "label": "Of revenue; expanding",
+      "title": "Adj EBITDA (Q1 2026)",
+      "value": "$2.5B",
+      "label": "+33% YoY; 4.6% of gross bookings, up from 4.4%",
       "icon": "Percent",
       "color": "#10b981"
     },
     {
       "title": "FCF (TTM)",
-      "value": "~$8B",
-      "label": "Capital-light free-cash compounder now",
+      "value": "~$9.8B",
+      "label": "Record TTM FCF; $3B buyback in Q1 2026",
       "icon": "DollarSign",
       "color": "#f59e0b"
     }
@@ -46,43 +46,43 @@
       },
       {
         "title": "Cross-App Bundling and Membership",
-        "text": "Uber One bundles mobility + delivery + grocery + ad-supported value, creating cross-category retention. ~30M+ Uber One members generate 4-5× the gross bookings of non-members. The bundle compounds the network advantage with subscription stickiness."
+        "text": "Uber One bundles mobility + delivery + grocery + ad-supported value, creating cross-category retention. Uber One reached 50M members in Q1 2026 and now drives roughly half of total Mobility and Delivery gross bookings. The bundle compounds the network advantage with subscription stickiness."
       },
       {
         "title": "Autonomous-Ready Demand Layer",
-        "text": "As Waymo, Tesla Robotaxi, and Aurora deploy autonomy, Uber positions itself as the consumer demand and dispatch layer. Waymo and Wayve partnerships, plus exclusive market deals (e.g., Waymo on Uber in Atlanta), validate the thesis that operators want Uber's demand network rather than rebuild app distribution. The risk: Tesla deciding to vertically integrate."
+        "text": "As Waymo, Tesla Robotaxi, and Aurora deploy autonomy, Uber positions itself as the consumer demand and dispatch layer. Waymo and Wayve partnerships, exclusive market deals (e.g., Waymo on Uber in Austin and Atlanta), and the NVIDIA partnership targeting a 100,000-vehicle autonomous network from 2027 validate the thesis that operators want Uber's demand network rather than rebuild app distribution. The risk materialising: Tesla began Cybercab volume production at Giga Texas in April 2026 and is expanding its own ride-hailing network in Austin, Dallas, and Houston, while Waymo now delivers 500K+ paid robotaxi rides weekly."
       }
     ]
   },
   "growth": {
-    "description": "Gross bookings TTM ~$185B (+18% YoY). Mobility growth +20%, Delivery +15%, both with operating leverage. Adj EBITDA margin expanded to ~16% on revenue and continuing to expand. FCF ~$8B TTM with capital return now active via buybacks.",
+    "description": "Q1 2026 (reported May 2026): gross bookings $53.7B, +25% YoY (+21% constant currency), beating the guided range. Mobility +25% (+20% cc), Delivery +28% (+23% cc). Adj EBITDA $2.5B, +33% YoY, with margin at 4.6% of gross bookings (up from 4.4%). FCF a record $9.8B TTM; $3B buyback in Q1. Q2 2026 guide: 18-22% constant-currency bookings growth.",
     "growthAnalysis": {
       "cagrEstimate": "15-20%",
-      "scoreDerivation": "Base 80 (15-30% CAGR mid-band) + 3 operating leverage (margin expansion durable) - 5 autonomy uncertainty (Tesla Robotaxi, Waymo direct-app risk) = 78",
+      "scoreDerivation": "Base 82 (15-20% CAGR, midpoint 17.5%) + 4 trajectory (all three drivers accelerating in Q1 2026: Mobility +25%, Delivery +28%, Uber One 50M members) + 4 margin expansion (adj EBITDA +33%, 4.6% of bookings) + 4 dual TAM expansion and share gains - 10 high autonomy risk (Tesla Cybercab production, Waymo scale) = 84",
       "drivers": [
-        { "name": "Mobility Bookings", "metric": "+20% YoY; price + frequency growth across geographies", "trend": "accelerating" },
-        { "name": "Delivery Bookings", "metric": "+15% YoY; grocery and convenience extending TAM", "trend": "stable" },
-        { "name": "Uber One + Advertising", "metric": "Uber One ~30M members; advertising revenue ~$1.5B run-rate", "trend": "accelerating" }
+        { "name": "Mobility Bookings", "metric": "+25% YoY reported (+20% cc) Q1 2026; price + frequency growth across geographies", "trend": "accelerating" },
+        { "name": "Delivery Bookings", "metric": "+28% YoY reported (+23% cc) Q1 2026, up from ~15%; grocery and convenience extending TAM", "trend": "accelerating" },
+        { "name": "Uber One + Advertising", "metric": "Uber One reached 50M members in Q1 2026 (from ~30M), now ~half of total bookings", "trend": "accelerating" }
       ],
       "primaryType": "both",
-      "keyRisk": "If Tesla Robotaxi launches at consumer-facing scale on its own app and successfully aggregates demand, or if Waymo decides to launch its own consumer app outside Uber, the autonomy disruption thesis materialises and Uber loses pricing power on the highest-margin urban routes by 2028-29.",
+      "keyRisk": "Tesla began Cybercab volume production at Giga Texas in April 2026 and is expanding its own consumer ride-hailing network in Austin, Dallas, and Houston, while Waymo operates 500K+ paid robotaxi rides weekly. If Tesla scales direct-to-consumer demand aggregation or Waymo expands its own app outside Uber-partnered cities, Uber loses pricing power on the highest-margin urban routes by 2028-29.",
       "keyRiskSeverity": "high",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 75,
-    "description": "At ~$80 Uber trades at ~28× FY26 EPS and ~5% FCF yield. Reasonable for a free-cash compounder with two-sided network economics; premium prices in autonomy partnership thesis but provides modest cushion if disruption is partial.",
+    "score": 83,
+    "description": "At ~$69 Uber trades ~27% below the base case ($95), at ~24× FY26 EPS and ~7% FCF yield, after robotaxi fears compressed the multiple ~30% from the October 2025 peak even as Q1 2026 bookings accelerated to +25% YoY and TTM FCF hit a record $9.8B. The market is pricing meaningful autonomy disruption; fundamentals are not yet showing it.",
     "peAnalysis": {
-      "asOf": "May 2026",
+      "asOf": "June 2026",
       "rows": [
-        { "label": "Forward P/E (FY26)", "value": "~28×", "note": "EPS ~$2.85; premium reflecting growth + FCF" },
-        { "label": "Forward P/E (FY27)", "value": "~22×", "note": "Assumes 25% EPS growth on operating leverage" },
-        { "label": "FCF Yield", "value": "~5%", "note": "TTM FCF $8B; capital return building" },
-        { "label": "PEG Ratio", "value": "~1.4×", "note": "Fair on growth + autonomy partner thesis" },
-        { "label": "EV / EBITDA (NTM)", "value": "~17×", "note": "Premium to Lyft, discount to high-growth platforms" }
+        { "label": "Forward P/E (FY26)", "value": "~24×", "note": "EPS ~$2.85; multiple compressed by AV competition fears" },
+        { "label": "Forward P/E (FY27)", "value": "~19×", "note": "Assumes ~25% EPS growth on operating leverage" },
+        { "label": "FCF Yield", "value": "~7%", "note": "Record TTM FCF $9.8B; $3B Q1 buyback, $16B authorization remaining" },
+        { "label": "PEG Ratio", "value": "~1.2×", "note": "Cheap on growth if the demand-aggregator thesis holds" },
+        { "label": "EV / EBITDA (NTM)", "value": "~13×", "note": "Premium to Lyft, discount to high-growth platforms" }
       ],
-      "summary": "Uber is now a free-cash compounder with network durability. The main valuation question is autonomy disruption risk vs partnership upside."
+      "summary": "Uber is a free-cash compounder with network durability trading at a fear-discounted multiple. The valuation question remains autonomy disruption risk vs partnership upside — Q1 2026 acceleration suggests the disruption is not yet visible in the numbers."
     }
   },
   "scenarios": {
