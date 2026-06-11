@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$585B"
+      "value": "~$677B"
     },
     {
       "label": "Price",
-      "value": "~$1,502"
+      "value": "~$1,758"
     }
   ],
   "chips": [
@@ -85,18 +85,18 @@
     }
   },
   "valuation": {
-    "score": 74,
-    "description": "At ~$1,502 — after a 5.2% Friday-15-May drop in a broader semi sell-off (Intel −6%, AMD −5.7%, Micron −6.6%, NVDA −4.4%) — ASML sits roughly 64% of the way from the bear case ($1,050) to the base case ($1,750), yielding a valuation score of 74. The pullback has restored modest margin of safety vs the mid-May all-time-high (€1,371 ADR-implied ~$1,584), but the stock still trades above fair value once the AI-capex digestion risk is weighted. Forward P/E of ~37× sits below ASML's 5-year historical premium of ~45×, reflecting the earnings ramp ahead as High-NA shipments scale through 2027.",
+    "score": 65,
+    "description": "At ~$1,758 (June 10, 2026) — within 4% of the all-time high ($1,831) after an AI-fueled EUV demand rally and broker upgrades — ASML now trades fractionally ABOVE the base case of $1,750, yielding a valuation score of 65. The May pullback has fully reversed; the margin of safety is gone and the stock is pricing in flawless execution of the 60+ EUV shipment ramp. Upside from here depends on the bull case ($2,500: sovereign fabs, 30+ High-NA shipments, 55%+ gross margin) while the AI-capex digestion risk remains live. Forward P/E of ~43× now sits near ASML's 5-year historical premium of ~45×.",
     "peAnalysis": {
-      "asOf": "May 2026",
+      "asOf": "June 2026 (price ~$1,758)",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~62×", "note": "TTM EPS ~€21 (post-Q1 2026)" },
-        { "label": "Forward P/E (NTM)", "value": "~37×", "note": "consensus 2026 EPS ~€35" },
-        { "label": "PEG Ratio", "value": "~1.7×", "note": "fwd P/E ÷ 22% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~13×", "note": "~€500B mkt cap / €38B NTM rev" },
-        { "label": "Price / FCF", "value": "~75×", "note": "~€6.5B FCF (TTM est.)" }
+        { "label": "Trailing P/E (GAAP)", "value": "~72×", "note": "TTM EPS ~€21 (post-Q1 2026)" },
+        { "label": "Forward P/E (NTM)", "value": "~43×", "note": "consensus 2026 EPS ~€35" },
+        { "label": "PEG Ratio", "value": "~2.0×", "note": "fwd P/E ÷ 22% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~15×", "note": "~€582B mkt cap / €38B NTM rev" },
+        { "label": "Price / FCF", "value": "~90×", "note": "~€6.5B FCF (TTM est.)" }
       ],
-      "summary": "At ~37× forward P/E, ASML trades at a discount to its own 5-year historical average of ~45× while still commanding a steep premium to the semiconductor sector median of ~25×, reflecting the unmatched EUV monopoly. The PEG of ~1.7× is fair but not cheap — it requires ASML to sustain ~22% EPS CAGR through 2027, which the High-NA shipment ramp and service revenue compounding make plausible. The gap between trailing (~62×) and forward (~37×) signals a sharp earnings acceleration ahead as High-NA systems begin contributing meaningful revenue — a structurally bullish signal that is partly offset by the rising probability of an AI-capex digestion event compressing the entire semi-equipment multiple toward the cyclical norm of ~25×."
+      "summary": "At ~43× forward P/E after the June rally, ASML now trades near its own 5-year historical average of ~45× and at a steep premium to the semiconductor sector median of ~25×, reflecting the unmatched EUV monopoly. The PEG of ~2.0× is no longer cheap — it requires ASML to sustain ~22% EPS CAGR through 2027 with no multiple compression, which the High-NA shipment ramp and service revenue compounding make plausible but leave no room for disappointment. The gap between trailing (~72×) and forward (~43×) still signals a sharp earnings acceleration ahead as High-NA systems contribute meaningful revenue — a structurally bullish signal that is offset by the rising probability of an AI-capex digestion event compressing the entire semi-equipment multiple toward the cyclical norm of ~25×."
     }
   },
   "scenarios": {
@@ -171,5 +171,5 @@
     },
     "verdict": "ASML is the most AI-resilient business in the portfolio. Physical hardware monopolies, regulatory protection, and manufacturing expertise rooted in physics cannot be disrupted by software AI — and the AI infrastructure boom is actively accelerating demand for ASML's machines. High-NA EUV cements this monopoly for the next decade."
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "June 2026"
 }
