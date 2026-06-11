@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$2.06T"
+      "value": "~$2.10T"
     },
     {
       "label": "Current Price",
-      "value": "$401.71"
+      "value": "$408.75"
     }
   ],
   "chips": [
@@ -70,7 +70,7 @@
     ]
   },
   "growth": {
-    "description": "Q1 2026 delivered record revenue of $35.9B (+40.6% YoY) with net income +58.3% YoY; Q2 2026 guidance points to $39.0–40.2B revenue (+10% QoQ) and gross margin of 65.5–67.5%. Management raised FY2026 outlook to 30%+ revenue growth and reaffirmed 25% USD CAGR through 2029, with AI accelerator revenue still tracking 54–56% CAGR. N2 in HVM with strong yield; CoWoS capacity expanding 69% in 2026 against a persistent supply shortfall.",
+    "description": "Q1 2026 delivered record revenue of $35.9B (+40.6% YoY) with net income +58.3% YoY; Q2 2026 guidance points to $39.0–40.2B revenue (+10% QoQ) and gross margin of 65.5–67.5%. Management raised FY2026 outlook to 30%+ revenue growth and reaffirmed 25% USD CAGR through 2029, with AI accelerator revenue still tracking 54–56% CAGR. N2 in HVM with strong yield; CoWoS capacity expanding 69% in 2026 against a persistent supply shortfall. May 2026 monthly revenue (reported June 10) hit a record NT$416.98B (+30.1% YoY, +1.5% MoM), with Jan–May revenue +30.0% YoY — tracking in line with the raised FY2026 outlook.",
     "additionalNote": {
       "title": "AI Chip Tailwinds",
       "points": [
@@ -101,30 +101,30 @@
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If US tariff enforcement (50% domestic sourcing mandate) forces major AI customers to commit >30% of leading-edge wafers to Intel 18A or Samsung SF2 by end of 2027, TSMC loses AI ASIC anchor business before N2/A16 margins are fully monetised",
+      "keyRisk": "If US tariff enforcement (50% domestic sourcing mandate) forces major AI customers to commit >30% of leading-edge wafers to Intel 18A or Samsung SF2 by end of 2027, TSMC loses AI ASIC anchor business before N2/A16 margins are fully monetised. Early diversification evidence is appearing: Google has reportedly ordered 3M+ TPUs from Intel Foundry for 2028 and NVIDIA is evaluating 18A for a next-gen graphics chip — offset for now by Intel itself outsourcing >90% of Nova Lake desktop tiles to TSMC N2 and 18A yields not expected at industry standard until 2027",
       "keyRiskSeverity": "high",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 65,
-    "description": "At $401.71 — essentially at the base case of $400 — TSMC is fairly valued with meaningful optionality to the bull case ($560). Q1 2026's record results and a raised FY2026 outlook (30%+ revenue growth) have lifted the stock right onto fair value; further re-rating now requires the bull case to play out (sovereign AI demand and A16 wins).",
+    "score": 64,
+    "description": "At $408.75 — marginally above the base case of $400 — TSMC is fairly valued with meaningful optionality to the bull case ($560). Q1 2026's record results, the raised FY2026 outlook (30%+ revenue growth), and a record May monthly revenue print (+30.1% YoY) keep fundamentals on track; further re-rating now requires the bull case to play out (sovereign AI demand and A16 wins).",
     "valuationNote": {
       "text": "Base-case fair value of ~$400 reflects ~30x forward 2026E EPS — reasonable for a monopoly franchise guiding 25% revenue CAGR through 2029. The geopolitical discount remains (US tariff risks, Taiwan cross-strait tensions), but TSMC's $165B US investment commitment and Japanese fab buildout are actively reducing the structural basis for that discount.",
       "fairValue": "~$400"
     },
     "peAnalysis": {
-      "asOf": "May 2026",
+      "asOf": "June 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~33.5×",
-          "note": "$10.42 FY2025 EPS (ADS)"
+          "value": "~35×",
+          "note": "~$11.7 TTM EPS (ADS) incl. Q1 2026 (+58% net income)"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~27×",
-          "note": "consensus EPS est. ~$12.61"
+          "value": "~28×",
+          "note": "consensus NTM EPS est. ~$14.5 post guidance raise"
         },
         {
           "label": "PEG Ratio",
@@ -142,7 +142,7 @@
           "note": "$32B FCF (FY2025)"
         }
       ],
-      "summary": "At ~27× forward P/E, TSMC trades at a premium to the semiconductor sector median (~20×) but at a discount to its own growth trajectory. A PEG of ~1.1× — near the 1.0 GARP threshold — signals the stock is fairly to modestly priced for a business guiding 25% revenue CAGR through 2029. The gap between trailing (~33.5×) and forward (~27×) P/E reflects a healthy earnings ramp as N2 scales and AI accelerator mix increases."
+      "summary": "At ~28× forward P/E, TSMC trades at a premium to the semiconductor sector median (~20×) but at a discount to its own growth trajectory. A PEG of ~1.1× — near the 1.0 GARP threshold — signals the stock is fairly to modestly priced for a business guiding 25% revenue CAGR through 2029. The gap between trailing (~35×) and forward (~28×) P/E reflects a healthy earnings ramp as N2 scales and AI accelerator mix increases; the record May revenue print (+30.1% YoY) supports the consensus earnings trajectory into the July Q2 report."
     }
   },
   "scenarios": {
@@ -220,5 +220,5 @@
     },
     "verdict": "TSMC is a direct and primary beneficiary of the AI era — every frontier AI model requires more TSMC-made chips, and the AI boom has structurally deepened the design ecosystem network effects. The AI-resilient moats (proprietary process data, regulatory lock-in from CHIPS Act and allied government partnerships, customer PDK embedding) are all intact or strengthening. The primary risk is geopolitical, not competitive: Taiwan cross-strait tensions and US tariff policy are the only plausible paths to moat disruption, and TSMC's $165B US investment commitment is actively reducing that structural risk."
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "June 2026"
 }
