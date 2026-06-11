@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$130B"
+      "value": "$123.5B"
     },
     {
       "label": "Price",
-      "value": "$426.06"
+      "value": "$426.52"
     }
   ],
   "chips": [
@@ -74,7 +74,7 @@
       "cagrEstimate": "8-12%",
       "scoreDerivation": "Base 72 + duopoly ratings position (+4) + indices ETF AUM tailwind (+3) + Platts commodities optionality (+2) - issuance cyclicality risk (-1) = 80",
       "drivers": [
-        { "name": "Ratings", "metric": "Q1 2026 Ratings revenue +13% YoY on refinancing wall", "trend": "stable" },
+        { "name": "Ratings", "metric": "Q1 2026 Ratings revenue +13% YoY on refinancing wall; private credit ratings revenue +25% YoY", "trend": "stable" },
         { "name": "Indices", "metric": "Q1 2026 Indices revenue +17% YoY ($519M)", "trend": "accelerating" },
         { "name": "Operating Margin", "metric": "Q1 2026 op margin 51.8%, +100bps YoY", "trend": "accelerating" }
       ],
@@ -85,8 +85,8 @@
     }
   },
   "valuation": {
-    "score": 84,
-    "description": "Stock pulled back to $426.06, only ~6.5% above the bear-case target ($400) despite Q1 2026 beating guidance. Price now sits ~26% of the way from bear to base — most of the cyclical uncertainty appears already discounted."
+    "score": 83,
+    "description": "At $426.52 the stock remains only ~6.6% above the bear-case target ($400) despite Q1 2026 beating guidance and Ratings private credit revenue growing 25% YoY. Price sits ~27% of the way from bear ($400) to base ($500) — most of the cyclical uncertainty appears already discounted. Near-term catalyst: the Mobility Global (MBGL) spin-off distributes July 1, 2026 (record date June 15), with $2B of Mobility notes priced in May — post-spin, SPGI becomes a purer ratings/indices/data compounder, which has historically supported a higher multiple."
   },
   "scenarios": {
     "bear": {
@@ -128,7 +128,7 @@
     },
     "publicDataAccess": {
       "status": "strong",
-      "note": "S&P aggregates decades of public filings, Platts commodity assessments, mobility/auto data (S&P Global Mobility), and ESG disclosures into proprietary datasets that took 20+ years and multiple acquisitions (IHS Markit, Kensho, Panjiva) to assemble. While retail financial data is commoditizing, the institutional-grade aggregated/curated datasets remain unique and non-replicable on a near-term horizon."
+      "note": "S&P aggregates decades of public filings, Platts commodity assessments, and ESG disclosures into proprietary datasets that took 20+ years and multiple acquisitions (IHS Markit, Kensho, Panjiva) to assemble. The mobility/auto dataset departs with the Mobility Global spin-off (distribution July 1, 2026), but the core ratings history, Platts benchmarks, and Capital IQ corpus — now also being licensed into enterprise AI platforms (Cohere North collaboration, June 2026) — remain unique and non-replicable on a near-term horizon."
     },
     "talentScarcity": {
       "status": "intact",
@@ -160,5 +160,5 @@
     },
     "verdict": "S&P Global's regulatory moat (NRSRO status) and role as the definitive system of record for credit risk makes them uniquely AI-resilient. AI disrupts analysis, not the legal requirement to use S&P ratings."
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "June 2026"
 }
