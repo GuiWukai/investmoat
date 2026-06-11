@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$227B"
+      "value": "$216B"
     },
     {
       "label": "Current Price",
-      "value": "$277"
+      "value": "$265"
     }
   ],
   "chips": [
@@ -73,7 +73,7 @@
     "description": "Q3 FY2026 (reported June 2, 2026) was a record beat-and-raise: revenue of $3.0B (+31% YoY) with NGS ARR surging 60% YoY to $8.18B — the largest quarterly outperformance to date — and RPO of $18.4B (+36%). CEO Nikesh Arora cited accelerating organic bookings and CyberArk integration running ahead of schedule. Management raised FY2026 guidance to revenue of $11.415–11.425B (24% growth), NGS ARR of $8.90–8.95B (59–60%), RPO of $20.9–21.0B, and non-GAAP EPS of $3.77–3.79 (above the prior $3.65–3.70). The CyberArk-driven margin digestion the May analysis flagged is resolving faster than feared — though part of the NGS ARR acceleration is inorganic.",
     "growthAnalysis": {
       "cagrEstimate": "18–24%",
-      "scoreDerivation": "Base 84 (18–24% CAGR; FY2026 revenue guide +24%, organic bookings re-accelerating) + 4 trajectory (NGS ARR +60% YoY, platformization and CyberArk cross-sell all accelerating) + 0 margin (op margin ~30%, stable through CyberArk digestion) + 4 TAM expansion (identity/PAM via CyberArk, AI SecOps) − 5 valuation/inorganic-mix risk (stock +60% in a month to ~$277; part of NGS ARR growth is inorganic CyberArk) = 87",
+      "scoreDerivation": "Base 84 (18–24% CAGR; FY2026 revenue guide +24%, organic bookings re-accelerating) + 4 trajectory (NGS ARR +60% YoY, platformization and CyberArk cross-sell all accelerating) + 0 margin (op margin ~30%, stable through CyberArk digestion) + 4 TAM expansion (identity/PAM via CyberArk, AI SecOps) − 5 valuation/inorganic-mix risk (stock re-rated sharply post-earnings, now ~$265; part of NGS ARR growth is inorganic CyberArk) = 87",
       "drivers": [
         {
           "name": "Next-Generation Security ARR",
@@ -92,14 +92,14 @@
         }
       ],
       "primaryType": "both",
-      "keyRisk": "With NGS ARR growth flattered by the inorganic CyberArk contribution and the stock having re-rated ~60% to ~$277, if organic bookings decelerate as CyberArk laps or integration costs resurface, FY2027 EPS estimates get cut and the multiple compresses from ~14× toward 10× NTM P/S, implying 25%+ downside",
+      "keyRisk": "With NGS ARR growth flattered by the inorganic CyberArk contribution and the stock still richly rated at ~$265, if organic bookings decelerate as CyberArk laps or integration costs resurface, FY2027 EPS estimates get cut and the multiple compresses from ~14× toward 10× NTM P/S, implying 25%+ downside",
       "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 69,
-    "description": "PANW re-rated ~60% from the May analysis to ~$277 following a record Q3 FY2026 beat-and-raise (revenue +31%, NGS ARR +60% YoY, FY26 EPS guide lifted to $3.77–3.79). At ~17× NTM P/S and a low-60s× forward non-GAAP P/E, the stock sits just below the revised base case ($290) and well above the bear ($200). The CyberArk integration — the May valuation's principal risk — is running ahead of schedule, shifting the debate from execution to multiple sustainability now that much of the NGS ARR acceleration is inorganic.",
+    "score": 72,
+    "description": "PANW has eased to ~$265 (June 10, 2026) from the ~$277 post-earnings level, digesting the record Q3 FY2026 beat-and-raise (revenue +31%, NGS ARR +60% YoY, FY26 EPS guide lifted to $3.77–3.79). At ~16.5× NTM P/S and a ~60× forward non-GAAP P/E, the stock sits ~9% below the base case ($290) and well above the bear ($200). The CyberArk integration — the May valuation's principal risk — is running ahead of schedule, shifting the debate from execution to multiple sustainability now that much of the NGS ARR acceleration is inorganic.",
     "peAnalysis": {
       "asOf": "June 2026",
       "rows": [
@@ -110,26 +110,26 @@
         },
         {
           "label": "Forward P/E (NTM, non-GAAP)",
-          "value": "~63×",
+          "value": "~60×",
           "note": "FY2027E non-GAAP EPS ~$4.40"
         },
         {
           "label": "PEG Ratio",
-          "value": "~2.9×",
+          "value": "~2.7×",
           "note": "fwd P/E ÷ ~22% non-GAAP EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~17.5×",
+          "value": "~16.5×",
           "note": "~$13B NTM revenue (FY2027E incl. CyberArk)"
         },
         {
           "label": "Price / FCF",
-          "value": "~45×",
+          "value": "~43×",
           "note": "~$5B FCF (FY2027E)"
         }
       ],
-      "summary": "The ~60% re-rating has lifted PANW to ~17.5× NTM P/S and a low-60s× forward non-GAAP P/E — a clear premium to the cybersecurity median and approaching CrowdStrike-like territory. The PEG of ~2.9× signals the stock is now pricing in sustained 20%+ growth and a clean CyberArk integration. The $18.4B RPO keeps revenue low-risk; the open question is multiple sustainability, especially as the headline NGS ARR growth is partly inorganic and will decelerate as CyberArk laps."
+      "summary": "The ~60% re-rating has lifted PANW to ~16.5× NTM P/S and a ~60× forward non-GAAP P/E — a clear premium to the cybersecurity median and approaching CrowdStrike-like territory. The PEG of ~2.9× signals the stock is now pricing in sustained 20%+ growth and a clean CyberArk integration. The $18.4B RPO keeps revenue low-risk; the open question is multiple sustainability, especially as the headline NGS ARR growth is partly inorganic and will decelerate as CyberArk laps."
     }
   },
   "scenarios": {
