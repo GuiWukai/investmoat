@@ -2,7 +2,7 @@
   "slug": "fico",
   "ticker": "FICO",
   "name": "Fair Isaac Corporation",
-  "lastAnalyzed": "April 2026",
+  "lastAnalyzed": "June 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$21.5B"
+      "value": "~$28B"
     },
     {
       "label": "Current Price",
-      "value": "~$1,037"
+      "value": "~$1,239"
     }
   ],
   "chips": [
@@ -29,23 +29,23 @@
   ],
   "metrics": [
     {
-      "title": "Revenue",
-      "value": "$1.991B",
-      "label": "FY2025 actual; FY2026 guided $2.35B (+18% YoY); B2B Scores +36% in Q1 FY2026",
+      "title": "Q2 FY2026 Revenue",
+      "value": "$692M",
+      "label": "+39% YoY; Scores +60% ($475M), B2B +72%; FY2026 guide raised to $2.45B",
       "icon": "TrendingUp",
       "color": "#2563eb"
     },
     {
-      "title": "Gross Margin",
-      "value": "82.2%",
-      "label": "FY2025 GAAP; non-GAAP op margin 54% (+432bps YoY in Q1 FY2026)",
+      "title": "Q2 FY2026 GAAP EPS",
+      "value": "$11.14",
+      "label": "vs $6.59 prior year (+69%); FY2026 guide raised to $35.60 GAAP / $40.45 non-GAAP",
       "icon": "Zap",
       "color": "#16a34a"
     },
     {
       "title": "Platform ARR",
-      "value": "$303M",
-      "label": "Q1 FY2026; +33% YoY; $119M trailing ACV bookings (+36% YoY); 6-year high",
+      "value": "$349M",
+      "label": "Q2 FY2026; +49% YoY (mid-30s% ex-migrations); Platform NRR 136%; $126M TTM ACV bookings (+36% YoY)",
       "icon": "Shield",
       "color": "#9333ea"
     }
@@ -61,28 +61,28 @@
       },
       {
         "title": "Transaction Embedding — Direct Licence Expands Margin",
-        "text": "FICO's Mortgage Direct Licence program (launched October 1, 2025) licences scores directly to tri-merge resellers, bypassing the credit bureau markup that historically doubled the end cost to lenders. FICO offers two pricing options: a standard $10/score or a performance model at $4.95/score plus $33/funded loan. The programme projects at least $300M in incremental CY2026 revenue. B2B Scores grew 36% YoY in Q1 FY2026 and B2B mortgage originations grew ~53% in the quarter. FICO Score 10T adopters now represent $377B in annual originations and $1.6T in eligible servicing volume — nearly doubling in the past year since the late-2025 historical data release unblocked lender adoption."
+        "text": "FICO's Mortgage Direct Licence program (launched October 1, 2025) licences scores directly to tri-merge resellers, bypassing the credit bureau markup that historically doubled the end cost to lenders. FICO offers two pricing options: a standard $10/score or a performance model at $4.95/score plus $33/funded loan. The programme projected at least $300M in incremental CY2026 revenue and is tracking ahead: B2B Scores grew 72% YoY in Q2 FY2026 (Scores segment +60% to $475M), driven by direct licence mortgage pricing and volume. FICO Score 10T adopters now represent $377B in annual originations and $1.6T in eligible servicing volume — nearly doubling in the past year since the late-2025 historical data release unblocked lender adoption."
       },
       {
         "title": "FICO Platform — The Second Moat, Independent of GSE Politics",
-        "text": "The FICO Platform is a cloud-based decision management system with $303M ARR growing 33% YoY as of Q1 FY2026. Banks that migrate origination, account management, and collections to the Platform face multi-year re-implementation costs to switch — entirely independent of whether they use FICO or VantageScore for their credit pulls. ACV bookings hit a 6-year high ($119M trailing 12-month, +36% YoY). Gartner recognised FICO as a Magic Quadrant leader for decision intelligence. The FICO/Plaid UltraFICO partnership targeting thin-file borrowers with cash flow data is in active launch for 2026. Platform NRR remains above 120%, and the transition from legacy on-premise software (non-Platform ARR declining 8% YoY) to the cloud Platform creates a multi-year revenue acceleration runway regardless of score mandate outcomes."
+        "text": "The FICO Platform is a cloud-based decision management system with $349M ARR growing 49% YoY (mid-30s% excluding migrations) as of Q2 FY2026. Banks that migrate origination, account management, and collections to the Platform face multi-year re-implementation costs to switch — entirely independent of whether they use FICO or VantageScore for their credit pulls. ACV bookings continue at a 6-year high ($126M trailing 12-month, +36% YoY). Gartner recognised FICO as a Magic Quadrant leader for decision intelligence. The FICO/Plaid UltraFICO partnership targeting thin-file borrowers with cash flow data is in active launch for 2026. Platform NRR remains above 120%, and the transition from legacy on-premise software (non-Platform ARR declining 8% YoY) to the cloud Platform creates a multi-year revenue acceleration runway regardless of score mandate outcomes."
       }
     ]
   },
   "growth": {
-    "description": "FY2025 revenue hit $1.991B (+16% YoY). Q1 FY2026 continued at $512M (+16%) with B2B Scores at +36% YoY. FY2026 guidance of $2.35B implies 18% growth at ~54% non-GAAP operating margins. The structural near-term driver is the direct licence programme ($300M+ incremental CY2026). Platform ARR at $303M (+33% YoY) and $119M in trailing ACV bookings support software segment acceleration after years of single-digit growth. Growth score is tempered by the VantageScore pricing war and Senate/FTC regulatory overhang, which introduce tail risk on the Scores segment pricing-power thesis for the first time.",
+    "description": "Q2 FY2026 (reported April 28, 2026) was a blowout: revenue $692M (+39% YoY), Scores revenue +60% to $475M with B2B +72% on direct licence mortgage pricing and volume, and GAAP EPS $11.14 vs $6.59 prior year. FY2026 guidance was raised from $2.35B to $2.45B revenue (+23% YoY) with non-GAAP EPS of $40.45. The direct licence programme is delivering ahead of the $300M+ incremental thesis. Platform ARR reached $349M (+49% YoY, mid-30s% excluding migrations) with Platform NRR of 136% and $126M TTM ACV bookings (+36% YoY). Growth score remains tempered by the VantageScore pricing war and Senate/FTC regulatory overhang, which introduce tail risk on the Scores segment pricing-power thesis.",
     "growthAnalysis": {
       "cagrEstimate": "15–18%",
-      "scoreDerivation": "Base 80 (15–22% revenue CAGR) + 5 recurring (Platform ARR +33% YoY; direct licence economics; Platform NRR >120%) + 3 TAM expansion (FICO 10T direct licensing; UltraFICO/Plaid; FICO Platform new verticals) + 2 earnings trajectory (NTM EPS consensus ~$43 implies ~28% EPS CAGR vs 18% prior estimate; PEG compressed to 0.87×) − 7 regulatory headwind (VA/FHA/USDA now join FHFA in accepting alternatives; Fannie Mae eliminated minimum credit score requirement; Senate/FTC investigation ongoing; Experian $0.99 vs FICO $10.00 pricing war) = 83",
+      "scoreDerivation": "Base 80 (15–22% revenue CAGR; FY2026 guide raised to $2.45B, +23% YoY) + 5 recurring (Platform ARR $349M +49% YoY, mid-30s% organic; Platform NRR 136%; direct licence economics) + 3 TAM expansion (FICO 10T direct licensing; UltraFICO/Plaid; FICO Platform new verticals) + 2 earnings trajectory (Q2 FY2026 GAAP EPS +69% YoY; FY2026 non-GAAP EPS guide raised to $40.45, ~40% YoY growth) − 7 regulatory headwind (VA/FHA/USDA now join FHFA in accepting alternatives; Fannie Mae eliminated minimum credit score requirement; Senate/FTC investigation ongoing; Experian $0.99 vs FICO $10.00 pricing war) = 83",
       "drivers": [
         {
           "name": "B2B Scores — Direct Licence Programme",
-          "metric": "+36% YoY Q1 FY2026; $300M+ incremental CY2026 from Oct 2025 direct licence launch",
+          "metric": "+72% YoY Q2 FY2026 (Scores segment +60% to $475M); direct licence mortgage pricing/volume driving the surge, ahead of the $300M+ incremental CY2026 thesis",
           "trend": "accelerating"
         },
         {
           "name": "FICO Platform (Decision Management SaaS)",
-          "metric": "Platform ARR $303M (+33% YoY); ACV bookings $119M TTM (+36% YoY); record Q1 FY2026 ACV $38M",
+          "metric": "Platform ARR $349M (+49% YoY, mid-30s% ex-migrations); ACV bookings $126M TTM (+36% YoY); Platform NRR 136%",
           "trend": "accelerating"
         },
         {
@@ -98,38 +98,38 @@
     }
   },
   "valuation": {
-    "score": 82,
-    "description": "FICO has fallen ~57% from its all-time high of $2,382 (November 2024) to ~$1,037, driven by four compounding overhangs: VantageScore 4.0's FHFA approval (July 2025), Fannie Mae eliminating minimum credit score requirements (November 2025), VA/FHA/USDA updating guidelines to accept non-FICO creditworthiness evidence (April 2026), and Senator Hawley's Senate investigation plus FTC referral (March 24, 2026). However, the forward valuation has improved materially: at ~24× NTM consensus P/E (vs ~31× in March 2026) and a PEG of ~0.87× reflecting ~28% EPS CAGR, FICO trades near the most attractive multiples in its recent history. The stock sits ~37% above the bear target ($700) and ~42% below the base ($1,800), implying the market is pricing in a severe regulatory outcome — one that remains structurally unlikely given institutional entrenchment, the 18–36 month integration lag, and FICO's dominance across the full credit lifecycle beyond mortgages.",
+    "score": 78,
+    "description": "FICO has rebounded ~19% from the April 2026 lows (~$1,037) to ~$1,239 following the blowout Q2 FY2026 print (+39% revenue, FY guide raised to $2.45B / $40.45 non-GAAP EPS), but remains ~48% below the November 2024 all-time high of $2,382 on the regulatory overhangs: VantageScore 4.0's FHFA approval, Fannie Mae eliminating minimum credit score requirements, VA/FHA/USDA accepting non-FICO creditworthiness evidence, and Senator Hawley's Senate investigation plus FTC referral. At ~31× FY2026 guided non-GAAP EPS with EPS growing ~40% this year, the PEG remains near 1.0×. The stock sits ~77% above the bear target ($700) and ~31% below the base ($1,800) — the post-earnings rally has consumed part of the margin of safety, but the market is still pricing in a materially adverse regulatory outcome.",
     "peAnalysis": {
-      "asOf": "April 2026",
+      "asOf": "June 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~40×",
-          "note": "TTM GAAP EPS ~$26"
+          "value": "~39×",
+          "note": "TTM GAAP EPS ~$32 (incl. Q2 FY2026 $11.14)"
         },
         {
-          "label": "Forward P/E (NTM)",
-          "value": "~24×",
-          "note": "NTM consensus EPS ~$43"
+          "label": "Forward P/E (FY2026 non-GAAP)",
+          "value": "~31×",
+          "note": "FY2026 non-GAAP EPS guide $40.45"
         },
         {
           "label": "PEG Ratio",
-          "value": "~0.87×",
-          "note": "fwd P/E ÷ 28% EPS CAGR"
+          "value": "~1.0×",
+          "note": "fwd P/E ÷ ~30% blended EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~9×",
-          "note": "~$2.35–2.5B NTM revenue"
+          "value": "~11×",
+          "note": "~$2.45–2.55B NTM revenue"
         },
         {
           "label": "Price / FCF",
-          "value": "~29×",
-          "note": "~$739M FCF (FY2025 actual)"
+          "value": "~35×",
+          "note": "~$800M TTM FCF (vs $739M FY2025)"
         }
       ],
-      "summary": "FICO's NTM forward P/E of ~24× has compressed dramatically from ~31× in March 2026 — now trading at a substantial discount to financial data peers (MSCI ~40×, Moody's ~35×, S&P Global ~33×) despite 82% gross margins, the highest in the group. The PEG of ~0.87× — below 1.0 for the first time in recent history — signals growth at a genuinely reasonable price: a ~28% EPS CAGR is being purchased at 24× NTM earnings, entirely due to a regulatory-risk discount that is real but likely overstated relative to institutional adoption friction. The ~40% gap between trailing P/E (~40×) and forward P/E (~24×) reflects a sharp earnings acceleration driven by the direct licence programme ramp and operating leverage — a gap that closes bullishly if investigations produce no binding pricing cap."
+      "summary": "The post-Q2 rally has partially closed the regulatory-risk discount: FICO's forward P/E has re-rated from ~24× in April 2026 to ~31× at ~$1,239, now roughly in line with financial data peers (MSCI ~40×, Moody's ~30×, S&P Global ~33×) but still well below FICO's own pre-2025 premium. A PEG near 1.0× on ~30% blended EPS growth remains attractive for an 82%-gross-margin royalty model. The Q2 FY2026 print (+39% revenue, B2B Scores +72%) validated the direct licence ramp ahead of the $300M thesis — the remaining discount is almost entirely attributable to the unresolved Senate/FTC investigation, which would close bullishly if no binding pricing cap emerges."
     }
   },
   "scenarios": {

@@ -11,7 +11,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$1.6T"
+      "value": "~$1.23T"
     },
     {
       "label": "Circulating Supply",
@@ -38,15 +38,15 @@
     },
     {
       "title": "Spot ETF AUM",
-      "value": "~$105B",
-      "label": "US Spot Bitcoin ETFs — $58.7B Cumulative Inflows",
+      "value": "~$80.4B",
+      "label": "Down from $104.3B — record 13-day, $4.33B outflow streak (May 15–Jun 3); cumulative inflows ~$55B",
       "icon": "Shield",
       "color": "#3b82f6"
     },
     {
       "title": "Exchange Reserves",
       "value": "~3.0M BTC",
-      "label": "Lowest Since 2018 — ETF Demand 10× Mining Issuance",
+      "label": "Still Near 2018 Lows — but ETF flows flipped negative; ETF holdings 1.277M BTC (−7.2% from Oct peak)",
       "icon": "Globe",
       "color": "#10b981"
     }
@@ -71,36 +71,36 @@
     ]
   },
   "growth": {
-    "description": "BTC recovered to ~$80,800 in May 2026 — back above $80K for the first time in three months — as ETF inflows resumed for four consecutive sessions ($532M on May 4, $467M on May 5, led by IBIT and FBTC). Cumulative spot ETF inflows now $58.7B (vs $61.2B October peak). Structural supply squeeze intensifying: ETFs absorbing 4,500–5,000 BTC/day vs ~450 BTC/day mining issuance — a 10:1 demand/supply ratio. Exchange reserves at ~3.0M BTC, lowest since 2018. White House adviser Patrick Witt (May 6) confirmed a Strategic Bitcoin Reserve framework announcement is coming 'in the next few weeks'; BITCOIN Act (S.954/H.R.2032) still pending Congressional codification with NDAA late-2026 the next realistic window. Bitcoin hit an ATH of $126,080 in October 2025; historical halving-cycle analogs point to a potential October 2026 cycle bottom if the four-year pattern still holds, though ETF front-loading may have permanently altered the cycle.",
+    "description": "BTC broke down to ~$61,500 by June 10, 2026 — 51% below the October 2025 ATH of $126,080 — as the early-May recovery reversed into the longest spot-ETF outflow streak since launch: 13 consecutive trading days (May 15–June 3) with $4.33B exiting, dropping ETF AUM from $104.3B to $80.4B and cumulative inflows to ~$55B. The 10:1 ETF-demand-vs-mining-issuance ratio that anchored the supply-squeeze thesis has flipped negative for now. Strategy's first-ever BTC sale (32 BTC for $2.5M, May 26–31, to fund its STRC preferred dividend — framed by CEO Phong Le as market 'inoculation') added to the deleveraging before the firm resumed buying 1,550 BTC June 1–7 (holdings: 843,706 BTC). On the catalyst side, Strategic Bitcoin Reserve executive director Bo Hines says the reserve architecture will be unveiled 'in short order', ahead of the July 22, 2026 regulatory report deadline; the BITCOIN Act still awaits the late-2026 NDAA window. The halving-cycle October 2026 bottom thesis is now actively playing out.",
     "growthAnalysis": {
       "cagrEstimate": "30–60%",
-      "scoreDerivation": "Base 90 (30%+ institutional adoption CAGR; ETF cumulative inflows $0 → $58.7B; 10:1 ETF demand vs mining issuance; exchange reserves at 8-year low) + 5 sovereign/SWF new TAM (US holds 328K BTC by forfeiture; Witt confirms framework announcement 'in next few weeks'; NH, AZ, MA state reserves passed) − 5 cycle timing risk (BTC 36% below Oct 2025 ATH; CoinDesk/historical halving model suggests potential October 2026 bottom) − 5 retail disengagement (active addresses at multi-year lows despite institutional surge) = 85",
+      "scoreDerivation": "Base 94 (30–60% long-run institutional adoption CAGR, midpoint 45%) − 1 driver trajectory (lead ETF driver flipped accelerating → decelerating on the record 13-day, $4.33B outflow streak; sovereign and corporate drivers stable) + 3 TAM expansion (sovereign/SWF demand layer: SBR architecture due 'in short order' before the July 22 report deadline; NH, AZ, MA state reserves) − 10 key risk now high (price 51% below ATH, ETF AUM −23% from peak, halving-cycle October 2026 bottom thesis actively playing out, retail still disengaged) = 85 (was 93 in May; severity raised moderate → high because the bear-case outflow trigger has partially materialised)",
       "drivers": [
         {
           "name": "Spot ETF / Institutional Adoption",
-          "metric": "~$105B AUM; $58.7B cumulative inflows; ETFs absorbing 4,500–5,000 BTC/day vs 450 BTC/day mined (10:1 ratio)",
-          "trend": "accelerating"
+          "metric": "AUM $80.4B, down from $104.3B; record 13-day outflow streak −$4.33B (May 15–Jun 3); cumulative inflows ~$55B; ETF holdings 1.277M BTC (−7.2% from Oct 2025 peak)",
+          "trend": "decelerating"
         },
         {
           "name": "Sovereign Treasury / Strategic Reserve",
-          "metric": "US holds 328K BTC (forfeiture-funded); BITCOIN Act pending; framework update 'in next few weeks' per White House (May 6)",
+          "metric": "US holds 328K BTC (forfeiture-funded); SBR architecture to be unveiled 'in short order' per executive director Bo Hines, ahead of July 22, 2026 regulatory report deadline; BITCOIN Act awaits late-2026 NDAA window",
           "trend": "stable"
         },
         {
           "name": "Corporate Treasury Adoption",
-          "metric": "Strategy Inc. playbook adopted by 1,000+ companies globally",
+          "metric": "Strategy holds 843,706 BTC; first-ever sale (32 BTC, $2.5M, May 26–31) to fund STRC preferred dividend, then resumed buying 1,550 BTC June 1–7; 1,000+ corporate adopters globally",
           "trend": "stable"
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If the BITCOIN Act fails to clear NDAA late-2026 markup and the Strategic Reserve remains forfeiture-only (no active accumulation), the sovereign demand catalyst evaporates and the historical halving-cycle pattern reasserts — driving an October 2026 bottom back to $55K–$60K and invalidating the base case cycle peak",
-      "keyRiskSeverity": "moderate",
+      "keyRisk": "The May–June ETF outflow cascade ($4.33B over 13 days — the bear case's demand-reversal trigger, partially materialised) extends through summer: if the Strategic Reserve architecture due before the July 22 report disappoints (forfeiture-only, no active accumulation) and the BITCOIN Act misses the NDAA late-2026 window, the halving-cycle pattern completes with an October 2026 bottom in the $45K–$55K range — Strategy's preferred-dividend-funded sale, however symbolic, showed the corporate-treasury bid can also reverse",
+      "keyRiskSeverity": "high",
       "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 82,
-    "description": "At ~$80,800 — 36% below the October 2025 ATH of $126,080 — BTC has broken back above the $80K psychological level on four consecutive sessions of ETF inflows ($532M May 4, $467M May 5). Cumulative ETF inflows now $58.7B, approaching but not yet eclipsing the $61.2B October peak. The structural setup is the cleanest of the cycle: 10:1 ETF-to-mining demand imbalance, exchange reserves at 8-year lows (~3M BTC), and a Strategic Reserve framework announcement telegraphed for 'the next few weeks'. Trading 50% below the base case ($160,000). The refined bear ($45K, -44%) now prices in two scenarios the prior estimate underweighted: a policy reversal that strips out sovereign demand, and a dollar liquidity shock that forces leveraged unwinds. Bear-to-bull skew: -44% downside, +334% upside from current."
+    "score": 86,
+    "description": "At ~$61,500 — 51% below the October 2025 ATH of $126,080 — BTC has retraced deep into the bear-base corridor after the longest ETF outflow streak since launch ($4.33B over 13 days, AUM $104.3B → $80.4B). The supply-squeeze mechanics that defined the May setup have inverted for now, but the price has done most of the de-rating work: BTC sits just 37% above the bear target ($45K, −27% downside) and 62% below the base case ($160K, +160% upside), with the bull ($350K) a +469% tail. The July 22 Strategic Reserve architecture deadline is the binary catalyst — a credible active-accumulation framework likely marks the cycle low, while a forfeiture-only disappointment opens the door to the $45K–$55K October bottom scenario already contemplated by the bear case. Skew has improved with the drawdown: −27% downside vs +160% to base."
   },
   "scenarios": {
     "bear": {
@@ -155,5 +155,5 @@
     "primaryMoat": "credibleNeutrality",
     "verdict": "Bitcoin's moat is monetary, not corporate. Four pillars rate strong — network Lindy, Schelling-point status, credible neutrality (primary), and security budget — combining into the strongest monetary moat ever built outside of fiat. Regulatory incumbency rates intact: real and BTC-exclusive, but one US administration deep and politically reversible vs gold's multilateral Basel III Tier 1 standing. The framework's way of saying 'uniquely uncopyable on what matters most, with regulatory momentum that still needs to compound into durable standing.'"
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "June 2026"
 }

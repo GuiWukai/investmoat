@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$3.05T"
+      "value": "~$2.95T"
     },
     {
       "label": "Price",
-      "value": "~$411"
+      "value": "~$397"
     }
   ],
   "chips": [
@@ -36,8 +36,8 @@
     },
     {
       "title": "Copilot Seats",
-      "value": "15M",
-      "label": "+160% YoY Paid Seats",
+      "value": "20M",
+      "label": "Q3 FY26 — +33% QoQ from 15M; seat adds +250% YoY, fastest since launch",
       "icon": "Laptop",
       "color": "#ffb900"
     },
@@ -69,13 +69,13 @@
     ]
   },
   "growth": {
-    "description": "Q3 FY26 revenue of $82.9B (+18% YoY) beat the $81.4B consensus. Azure delivered 40% USD / 39% CC growth — beating the guided 37–38% CC and ending concerns about structural deceleration. Intelligent Cloud reached $34.68B (beat $34.27B consensus); Productivity & Business Processes $35.01B (+17% YoY). EPS came in at $4.27 adjusted vs $4.06 expected. Despite the across-the-board beat, the stock slipped ~3% after hours, likely reflecting the market selling the pre-earnings run-up (+20% in the prior month). M365 Copilot seats at 15M (+160% YoY), monetisation in early innings. The April 2026 OpenAI partnership restructuring eliminates the revenue share Microsoft paid to OpenAI — a direct operating margin tailwind. Overall operating margin remains 47.1%.",
+    "description": "Q3 FY26 revenue of $82.9B (+18% YoY) beat the $81.4B consensus. Azure delivered 40% USD / 39% CC growth — beating the guided 37–38% CC and ending concerns about structural deceleration. Intelligent Cloud reached $34.68B (beat $34.27B consensus); Productivity & Business Processes $35.01B (+17% YoY). EPS came in at $4.27 adjusted vs $4.06 expected. Despite the across-the-board beat, the stock slipped ~3% after hours, likely reflecting the market selling the pre-earnings run-up (+20% in the prior month). M365 Copilot seats reached 20M (+33% QoQ from 15M; seat adds +250% YoY, the fastest since launch), with Accenture committing 740,000+ seats — the largest Copilot win to date; monetisation remains in early innings. The AI business surpassed a $37B annual revenue run rate (+123% YoY). The April 2026 OpenAI partnership restructuring eliminates the revenue share Microsoft paid to OpenAI — a direct operating margin tailwind. Overall operating margin remains 47.1%.",
     "growthAnalysis": {
       "cagrEstimate": "15–17%",
       "scoreDerivation": "Base 80 (15–30% CAGR) + 5 recurring subscription (M365 NRR >110%, 450M seats) + 5 TAM expansion (enterprise AI inference, Copilot ARPU ramp) − 1 post-beat sell-off (stock -3% AH despite beat; market priced in perfection) = 89",
       "drivers": [
         { "name": "Intelligent Cloud / Azure", "metric": "+40% USD / +39% CC Q3 FY26, $34.68B — beat guided 37–38% CC; re-acceleration confirmed", "trend": "accelerating" },
-        { "name": "M365 Copilot Monetisation", "metric": "15M paid seats +160% YoY; April 15 free-tier restriction for >2,000 seat orgs adds ARPU tailwind", "trend": "accelerating" },
+        { "name": "M365 Copilot Monetisation", "metric": "20M paid seats Q3 FY26 (+33% QoQ from 15M; seat adds +250% YoY); 50K+ seat customers quadrupled; Accenture 740K-seat win", "trend": "accelerating" },
         { "name": "Productivity & Business Processes", "metric": "+17% YoY, $35.01B Q3 FY26 (beat $34.43B consensus); 450M commercial seats", "trend": "stable" }
       ],
       "primaryType": "both",
@@ -85,38 +85,38 @@
     }
   },
   "valuation": {
-    "score": 74,
-    "description": "At ~$411 — after a ~20% month-long recovery from April lows — MSFT now sits 13% below the raised base case of $475, which reflects Q3 FY26's Azure re-acceleration to 40% (beat guided 37–38%). The stock's -3% AH reaction to a strong beat reflects the market selling the pre-earnings run-up. We raise the base from $450 to $475 on confirmed Azure momentum. At 22× NTM earnings, the risk/reward remains attractive for long-term holders; the forward P/E has barely moved as earnings estimates have risen in tandem with the stock.",
+    "score": 76,
+    "description": "At ~$397 (June 10, 2026) — having drifted ~3% lower since the Q3 FY26 print — MSFT sits 16% below the base case of $475, which reflects Q3 FY26's Azure re-acceleration to 40% (beat guided 37–38%). The pullback despite a clean beat (Copilot at 20M seats, AI run rate $37B +123%) modestly improves the entry point. At ~21.5× NTM earnings, the risk/reward remains attractive for long-term holders; the forward P/E has compressed slightly as earnings estimates rose while the stock eased.",
     "peAnalysis": {
-      "asOf": "April 2026 (Q3 FY2026 actuals)",
+      "asOf": "June 2026 (Q3 FY2026 actuals; price ~$397)",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~33×",
+          "value": "~32×",
           "note": "TTM GAAP EPS ~$12.50 (GAAP includes SBC/amortization)"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~22×",
+          "value": "~21.5×",
           "note": "NTM EPS ~$18.50 (raised on Q3 beat, EPS $4.27 adj)"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.4×",
+          "value": "~1.35×",
           "note": "fwd P/E ÷ ~16% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~9.5×",
+          "value": "~8.8×",
           "note": "~$335B NTM revenue est. (raised on Q3 beat)"
         },
         {
           "label": "Price / Free Cash Flow",
-          "value": "~34×",
+          "value": "~33.5×",
           "note": "~$88B NTM FCF est."
         }
       ],
-      "summary": "At ~22× forward earnings, MSFT's multiple has barely moved as earnings estimates rose in proportion to the stock's recovery. The 1.4× PEG against a 16% EPS CAGR keeps Microsoft in GARP territory. Q3 FY26 EPS of $4.27 adjusted beat the $4.06 consensus, confirming the earnings ramp is tracking ahead of schedule. The re-acceleration of Azure to 40% — above the guided 37–38% — removes the deceleration risk that compressed the multiple through early 2026."
+      "summary": "At ~21.5× forward earnings, MSFT's multiple has compressed slightly as the stock eased to ~$397 while estimates held. The ~1.35× PEG against a 16% EPS CAGR keeps Microsoft in GARP territory. Q3 FY26 EPS of $4.27 adjusted beat the $4.06 consensus, confirming the earnings ramp is tracking ahead of schedule. The re-acceleration of Azure to 40% — above the guided 37–38% — removes the deceleration risk that compressed the multiple through early 2026."
     }
   },
   "scenarios": {
@@ -156,7 +156,7 @@
     },
     "businessLogic": {
       "status": "intact",
-      "note": "Azure AI Platform positions Microsoft as the enterprise AI re-platforming destination, and the April 2026 launch of in-house models (MAI-Transcribe-1, MAI-Voice-1, MAI-Image-2) deepens Azure's independence from OpenAI. However, Claude managed agents (Anthropic's /v1/agents platform) are a credible competing enterprise AI automation layer — enterprises can build Claude-native agent workflows that call Microsoft Graph APIs directly, bypassing Copilot's higher-margin service layer. This competitive pressure from external managed agent platforms downgrades this moat from strong to intact. Additional structural risk: the April 2026 partnership restructuring gives OpenAI freedom to route workloads to any cloud provider; the 'first on Azure' clause provides partial protection but Azure no longer holds contractual exclusivity over OpenAI compute, and some inference workloads will migrate to AWS and GCP over time. Ongoing risk: OpenAI's ~$3B acquisition of Windsurf creates a direct GitHub Copilot competitor, though Azure captures the compute regardless of which AI layer wins."
+      "note": "Azure AI Platform positions Microsoft as the enterprise AI re-platforming destination, and the April 2026 launch of in-house models (MAI-Transcribe-1, MAI-Voice-1, MAI-Image-2) deepens Azure's independence from OpenAI. At Build 2026 (June 2026), Microsoft shipped MAI-Thinking-1 — its first in-house reasoning model, trained without OpenAI data — plus a production coding model for Copilot workflows, further reducing frontier-model dependency. However, Claude managed agents (Anthropic's /v1/agents platform) are a credible competing enterprise AI automation layer — enterprises can build Claude-native agent workflows that call Microsoft Graph APIs directly, bypassing Copilot's higher-margin service layer. This competitive pressure from external managed agent platforms downgrades this moat from strong to intact. Additional structural risk: the April 2026 partnership restructuring gives OpenAI freedom to route workloads to any cloud provider; the 'first on Azure' clause provides partial protection but Azure no longer holds contractual exclusivity over OpenAI compute, and some inference workloads will migrate to AWS and GCP over time. Ongoing risk: OpenAI's ~$3B acquisition of Windsurf creates a direct GitHub Copilot competitor, though Azure captures the compute regardless of which AI layer wins."
     },
     "publicDataAccess": {
       "status": "destroyed",
@@ -193,5 +193,5 @@
     },
     "verdict": "Microsoft's AI-vulnerable moats face moderate pressure (interfaces, talent scarcity), but its AI-resilient fortress — system of record, regulatory lock-in, transaction embedding, and the Azure proprietary data flywheel — is actively strengthened by AI. The businessLogic moat is rated intact: Azure AI remains a major enterprise re-platforming destination, but Claude managed agents and external agentic platforms create genuine competition for the enterprise automation layer that Copilot targets. The April 2026 OpenAI partnership restructuring formalises an arms-length commercial relationship — non-exclusive license through 2032, revenue share eliminated (margin-accretive), OpenAI multi-cloud freedom granted — reducing the catastrophic-fracture tail risk while introducing a more gradual structural risk: Azure's share of OpenAI compute may erode over time as OpenAI diversifies infrastructure. Net moat impact is marginally negative on businessLogic and already-destroyed publicDataAccess; the fortress moats are unaffected."
   },
-  "lastAnalyzed": "April 29, 2026"
+  "lastAnalyzed": "June 2026"
 }

@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$88B"
+      "value": "~$111B"
     },
     {
       "label": "Price",
-      "value": "~$85"
+      "value": "$108.07"
     }
   ],
   "chips": [
@@ -89,7 +89,8 @@
         "Armis acquisition (closed April 19, 2026, $7.75B) adds OT/IoT Cyber Asset Management Intelligence trusted by 9 of the Fortune 10, creating a new security and risk TAM expansion",
         "Autonomous Workforce (GA Q2 2026) handled 90%+ of employee IT requests in internal deployment at 99% faster resolution than human agents; Sales CRM NNACV grew 5× YoY Q1 2026",
         "Moveworks-integrated EmployeeWorks business grew 5× YoY in Q1 2026; Moveworks deal count grew 80% YoY, with more 7-figure deals in Q1 2026 than all of 2025",
-        "Land-and-expand engine: customers with $5M+ ACV reached 603 (+20% YoY), average ACV per $5M+ customer growing to $14.5M; Google Cloud partnership expands cross-platform AI agent reach"
+        "Land-and-expand engine: customers with $5M+ ACV reached 630 (+22% YoY) with 16 deals >$5M NNACV in Q1 (+80% YoY); Google Cloud partnership expands cross-platform AI agent reach",
+        "Knowledge 2026 (May): Autonomous Security and Risk launched on the Armis + Veza integration; AI Control Tower expanded into enterprise-wide AI governance; Action Fabric and the ServiceNow MCP Server hit GA, opening the 'system of action' to external agents built on Claude, Copilot, or custom stacks"
       ]
     },
     "growthAnalysis": {
@@ -119,42 +120,42 @@
     }
   },
   "valuation": {
-    "score": 83,
-    "description": "At ~$85 — down ~60% from the 52-week high of $211.48 and touching an intraday low of $81.24 post-Q1 2026 earnings — ServiceNow is priced near its bear case. The Q1 2026 selloff (−14% on April 22) reflected investor concern about 300 bps of subscription gross margin compression from Armis integration and AI infrastructure investment, not fundamental deterioration: subscription revenue grew 22% YoY, non-GAAP operating margin held at 32%, and FCF margin hit 44% in the quarter. The Armis acquisition ($7.75B) creates near-term multiple compression risk but a substantial long-term TAM expansion into OT/IoT security.",
+    "score": 77,
+    "description": "At $108.07, ServiceNow has recovered ~27% from the post-Q1 intraday low of $81.24 as the market digested the Armis gross-margin optics and responded to Knowledge 2026 (Autonomous Security and Risk, AI Control Tower expansion, Action Fabric/MCP Server GA). The stock is still ~49% below the 52-week high of $211.48 and ~30% below the base case ($155). Q1 fundamentals remain intact: subscription revenue +22% YoY, non-GAAP operating margin 32%, FCF margin 44% in the quarter — the recovery has consumed part of the April mispricing but the risk-reward remains favourable.",
     "valuationNote": {
-      "text": "At ~$85 vs. a base case of $155, NOW trades at a 45% discount to fair value. The $12.64B cRPO (+22.5% YoY) provides strong contracted revenue visibility. At ~19× P/FCF on $4.6B of annual free cash flow — combined with a $5B buyback authorization — this represents one of the most compelling FCF yields in enterprise SaaS. Management beat non-GAAP estimates by ~76% ($0.97 vs. $0.55 consensus) and raised FY2026 subscription guidance, making the selloff driven by gross margin optics rather than earnings power.",
+      "text": "At ~$108 vs. a base case of $155, NOW trades at a ~30% discount to fair value. The $12.64B cRPO (+22.5% YoY) provides strong contracted revenue visibility. At ~24× P/FCF on $4.6B of annual free cash flow — combined with a $5B buyback authorization — the FCF yield is no longer the post-selloff bargain of April but remains attractive for a 20%+ grower. Management beat non-GAAP estimates by ~76% ($0.97 vs. $0.55 consensus) and raised FY2026 subscription guidance; Knowledge 2026's Armis-powered security launches have begun rebuilding the AI-monetization narrative.",
       "fairValue": "$155"
     },
     "peAnalysis": {
-      "asOf": "April 2026",
+      "asOf": "June 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~50×",
+          "value": "~64×",
           "note": "SBC-heavy; GAAP TTM EPS ~$1.68"
         },
         {
           "label": "Forward P/E (NTM, non-GAAP)",
-          "value": "~22×",
+          "value": "~29×",
           "note": "consensus non-GAAP EPS ~$3.75"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.05×",
+          "value": "~1.4×",
           "note": "fwd P/E ÷ 21% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~5.6×",
+          "value": "~7.1×",
           "note": "$15.75B FY2026 revenue guide"
         },
         {
           "label": "Price / FCF",
-          "value": "~19×",
+          "value": "~24×",
           "note": "$4.6B FY2025 FCF (TTM)"
         }
       ],
-      "summary": "At ~22× forward non-GAAP P/E — the lowest valuation NOW has traded at since 2019 — ServiceNow is now in line with the post-SaaSpocalypse enterprise software sector median (~22×) despite growing subscription revenue at 22% vs. the peer median of 12–15%. A PEG of ~1.05× signals growth-at-a-reasonable-price territory: the stock is not pricing in any AI monetization premium despite Now Assist having the fastest ACV ramp in enterprise SaaS history. The gap between trailing GAAP P/E (~50×) and forward non-GAAP P/E (~22×) reflects SBC amortization and Armis acquisition costs — the underlying cash earnings power is significantly higher than GAAP implies, and FCF margin of 35–44% confirms this."
+      "summary": "At ~29× forward non-GAAP P/E after the recovery to ~$108, ServiceNow has moved from the deepest discount since 2019 (~22× in April) back to a modest premium over the enterprise software sector median (~22×) — justified by 22% subscription growth vs. the 12–15% peer median. A PEG of ~1.4× still sits in reasonable territory and prices in little of the AI monetization optionality from the $1.5B AI ACV target and the new task-based Agentic pricing model. The gap between trailing GAAP P/E (~64×) and forward non-GAAP P/E (~29×) reflects SBC amortization and Armis acquisition costs — underlying cash earnings power is significantly higher than GAAP implies, and the 35–44% FCF margin confirms this."
     }
   },
   "scenarios": {
@@ -232,5 +233,5 @@
     },
     "verdict": "ServiceNow is one of the clearest AI beneficiaries in enterprise software — the proliferation of AI agents increases demand for the workflow orchestration, compliance controls, and audit trails that ServiceNow uniquely provides at enterprise scale. The four strongest AI-resilient moats (system-of-record, transaction embedding, regulatory lock-in, proprietary data flywheel) are all actively strengthening: Armis adds OT/IoT asset intelligence and CISA/NIS2 regulatory lock-in, Veza adds identity data, and Autonomous Workforce makes AI agents themselves dependent on ServiceNow infrastructure. The primary near-term risk is Salesforce Agentforce ITSM — the most credible competitive threat in a decade, with 180+ accounts by February 2026 — but at 2.1% of ServiceNow's installed base, displacement requires years of proof-of-concept before the CMDB data gravity challenge becomes acute. ServiceNow is not a legacy incumbent under threat; it is the enterprise operating system through which AI must be deployed, and every AI agent deployment strengthens rather than erodes its moat."
   },
-  "lastAnalyzed": "April 2026"
+  "lastAnalyzed": "June 2026"
 }

@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$178B"
+      "value": "$164B"
     },
     {
       "label": "Current Price",
-      "value": "$701"
+      "value": "$643"
     }
   ],
   "chips": [
@@ -91,14 +91,14 @@
         }
       ],
       "primaryType": "both",
-      "keyRisk": "After re-rating ~60% in roughly a month to ~$700 (near the Street-high $800 target), CRWD trades at a rich ~25× NTM revenue; if net new ARR growth stalls below 25% or Microsoft Defender/Sentinel bundling accelerates SMB churn, the multiple compresses back toward 18× NTM revenue, implying 25%+ downside",
+      "keyRisk": "Even after an ~11% post-earnings pullback to ~$643, CRWD trades at a rich ~27× NTM revenue; if net new ARR growth stalls below 25% or Microsoft Defender/Sentinel bundling accelerates SMB churn, the multiple compresses back toward 18× NTM revenue, implying 25%+ downside",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 59,
-    "description": "At ~$701, CRWD has re-rated ~60% since the May analysis after a Q1 FY2027 beat-and-raise (revenue $1.39B vs $1.36B guide, EPS $1.10 vs $1.07) and now trades just above the revised base case ($620), roughly a third of the way to the bull case ($880). Analyst targets repriced sharply higher — Goldman $726, Morgan Stanley $690, Jefferies $775, JPMorgan $800 — though the ~$567 consensus sits below the current price, signalling the stock is running ahead of the median estimate. At ~30× NTM revenue and a triple-digit forward non-GAAP P/E the premium is elevated even for a re-accelerating 24%+ ARR compounder. A 4-for-1 split takes effect after the June 25, 2026 record date (all targets here are pre-split).",
+    "score": 63,
+    "description": "At ~$643 (June 10, 2026), CRWD has given back part of the post-earnings spike — shares fell ~11% after the June 3 Q1 FY2027 beat-and-raise (revenue $1.39B vs $1.36B guide, EPS $1.10 vs $1.07) as a stock priced for perfection sold the news — and now trades just above the base case ($620). Analyst targets repriced higher — Goldman $726, Morgan Stanley $690, Jefferies $775, JPMorgan $800 — though the consensus sits below the current price, signalling the stock is running ahead of the median estimate. At ~27× NTM revenue and a ~108× forward non-GAAP P/E the premium remains elevated even for a re-accelerating 24%+ ARR compounder. A 4-for-1 split takes effect after the June 25, 2026 record date, trading split-adjusted from July 2 (all targets here are pre-split).",
     "peAnalysis": {
       "asOf": "June 2026",
       "rows": [
@@ -109,26 +109,26 @@
         },
         {
           "label": "Forward P/E (NTM, non-GAAP)",
-          "value": "~118×",
+          "value": "~108×",
           "note": "consensus non-GAAP EPS ~$5.96 (FY2027)"
         },
         {
           "label": "PEG Ratio",
-          "value": "~4.7×",
+          "value": "~4.3×",
           "note": "fwd P/E ÷ 25% non-GAAP EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~30×",
+          "value": "~27×",
           "note": "$5.9B NTM revenue (FY2027 guide)"
         },
         {
           "label": "Price / FCF",
-          "value": "~95×",
+          "value": "~86×",
           "note": "~$1.9B FCF (FY2027E)"
         }
       ],
-      "summary": "After the ~60% post-earnings re-rating, CRWD trades at ~118× forward non-GAAP P/E and ~30× NTM revenue — back toward the rich end of its history despite the business now compounding at a 'mature' 24% rather than 30%+. The PEG of ~4.7× shows investors are paying up for the re-acceleration and AI-security narrative; with the consensus price target (~$567) sitting below the market price, the multiple, not the fundamentals, is the swing factor. The beat-and-raise and record Q1 FCF justify a premium, but the margin of safety has compressed materially versus the May analysis."
+      "summary": "Even after the ~11% post-earnings pullback to ~$643, CRWD trades at ~108× forward non-GAAP P/E and ~27× NTM revenue — toward the rich end of its history despite the business now compounding at a 'mature' 24% rather than 30%+. The PEG of ~4.3× shows investors are still paying up for the re-acceleration and AI-security narrative; with the consensus price target sitting below the market price, the multiple, not the fundamentals, is the swing factor. The beat-and-raise and record Q1 FCF justify a premium, but the margin of safety remains thin versus the May analysis."
     }
   },
   "scenarios": {

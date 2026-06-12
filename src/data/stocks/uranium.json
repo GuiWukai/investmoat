@@ -11,7 +11,7 @@
     },
     {
       "label": "Spot Price",
-      "value": "~$72/lb U3O8"
+      "value": "~$86/lb U3O8"
     },
     {
       "label": "Annual Demand",
@@ -39,8 +39,8 @@
   "metrics": [
     {
       "title": "Spot Price",
-      "value": "~$72/lb",
-      "label": "Down from $107 ATH (Feb 2024) — Consolidating Above Long-Run $55 Mine Incentive",
+      "value": "~$86/lb",
+      "label": "Rebounded Above $100 in Feb 2026, Consolidating Mid-$80s — Term Price $90/lb, Highest Since 2008",
       "icon": "Coins",
       "color": "#d4c419"
     },
@@ -90,7 +90,7 @@
     ]
   },
   "growth": {
-    "description": "Uranium demand is in a structural inflection driven by three simultaneous demand vectors: AI hyperscaler nuclear PPAs (~12 GW signed 2024-2026), reactor life-extensions and restarts (Three Mile Island, Palisades, Japan fleet), and new builds (65+ GW under construction globally, led by China, India, UAE, Egypt). Against this, mine supply growth is capped by 10-20 year permit cycles and Russian enrichment-supply sanctions risk. The Sprott Physical Uranium Trust and ETF accumulation absorb spot supply that previously cleared at much lower prices.",
+    "description": "Uranium demand is in a structural inflection driven by three simultaneous demand vectors: AI hyperscaler nuclear PPAs (~12 GW signed 2024-2026), reactor life-extensions and restarts (Three Mile Island, Palisades, Japan fleet), and new builds (65+ GW under construction globally, led by China, India, UAE, Egypt). As of June 2026 the supply-side discipline thesis is playing out: spot rebounded above $100/lb in late February 2026 before consolidating in the mid-$80s, the long-term contract price has climbed to $90/lb (highest since 2008), Kazatomprom signalled a reduction in its nominal 2026 production level, and the Sprott Physical Uranium Trust purchased 5+ Mlbs YTD 2026 after a six-month lull. Mine supply growth remains capped by 10-20 year permit cycles and Russian enrichment-supply sanctions risk.",
     "growthAnalysis": {
       "cagrEstimate": "9-13%",
       "scoreDerivation": "Base 74 (9-13% price CAGR midpoint reflecting structural deficit + AI demand inflection) + 3 trajectory (hyperscaler PPAs accelerating, restarts accelerating, new builds stable) + 0 margin (cyclical industrial commodity — price trajectory not a compounding revenue base) + 3 TAM expansion (AI data center power demand is new TAM) − 5 moderate risk (nuclear accident headline risk, Russian sanctions disruption, fusion-breakthrough tail risk) = 75",
@@ -118,8 +118,8 @@
     }
   },
   "valuation": {
-    "score": 81,
-    "description": "Uranium spot at ~$72/lb sits 37% of the way from bear ($50) toward base ($110) — well below long-run incentive pricing of $80-90/lb needed to motivate new mine builds. With ~45 Mlbs of structural deficit widening through 2030 and ETF accumulation absorbing what little spot supply trades, the asymmetry is bear-protected. Bank of America year-end target $95/lb; Citi $105/lb; Sprott structural-deficit model implies $130+/lb fair value by 2028."
+    "score": 75,
+    "description": "Uranium spot at ~$86/lb (June 9, 2026) sits ~60% of the way from bear ($50) toward base ($110) after rebounding above $100/lb in late February 2026 and consolidating through the spring — now at the top of the $80-90/lb long-run incentive band needed to motivate new mine builds. The term price at $90/lb is the highest since 2008, with producers sold forward multiple years and 2025 contracting (82 Mlbs) still well below the ~150 Mlbs replacement rate — pent-up utility demand remains. With ~45 Mlbs of structural deficit widening through 2030, Kazatomprom trimming its nominal 2026 production plan, and Sprott absorbing 5+ Mlbs YTD, the asymmetry remains bear-protected, though the easy re-rating from the low-$70s has been captured."
   },
   "scenarios": {
     "bear": {
@@ -189,5 +189,5 @@
       ]
     }
   ],
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "June 2026"
 }

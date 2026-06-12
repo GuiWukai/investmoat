@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$2.89T"
+      "value": "$2.63T"
     },
     {
       "label": "Price",
-      "value": "$274"
+      "value": "$238"
     }
   ],
   "chips": [
@@ -115,33 +115,33 @@
     }
   },
   "valuation": {
-    "score": 73,
-    "description": "Q1 2026 delivered a decisive confirmation (AWS 28%, operating income $23.9B, chips >$20B ARR) and the May 4, 2026 ASCS launch unlocks a $1.3T 3PL TAM with P&G, 3M, Lands' End, and American Eagle as anchor customers. We raise the base fair value from $295 to $310 (modest, given AMZN is already at 52-week highs and ASCS revenue is back-end loaded) and the bull case from $365 to $395 to reflect AWS-style optionality on the new logistics platform. At ~$274, the stock sits ~12% below the new base case — modest margin of safety after a strong run.",
+    "score": 81,
+    "description": "Q1 2026 delivered a decisive confirmation (AWS 28%, operating income $23.9B, chips >$20B ARR) and the May 4, 2026 ASCS launch unlocks a $1.3T 3PL TAM with P&G, 3M, Lands' End, and American Eagle as anchor customers. The base fair value of $310 and bull case of $395 (set in May to reflect AWS-style optionality on the new logistics platform) are unchanged. At ~$238 (June 10, 2026), the stock has pulled back ~15% from its May 5 all-time high of $278.56 amid broader mega-cap rotation and FTC-trial overhang (October 2026) — leaving it ~23% below the base case and meaningfully improving the margin of safety with no fundamental deterioration since the Q1 beat.",
     "valuationNote": {
       "text": "Using a 10-year DCF with a 9% WACC and a 3.5% terminal growth rate, incorporating Q1 2026 actuals (AWS 28%, operating income $23.9B), Q2 guide ($194–199B), and the May 2026 ASCS launch ($1.3T 3PL TAM, ~0.5–1% capture in base), our fair value estimate for AMZN is",
       "fairValue": "$310/share"
     },
     "peAnalysis": {
-      "asOf": "May 2026 (post-ASCS launch)",
+      "asOf": "June 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~38×",
+          "value": "~33×",
           "note": "~$7.22 TTM EPS (Q1 2026 $1.64)"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~30×",
+          "value": "~26×",
           "note": "NTM EPS ~$9.00 (post Q1 beat)"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.67×",
+          "value": "~1.46×",
           "note": "fwd P/E ÷ ~18% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~3.5×",
+          "value": "~3.0×",
           "note": "~$790B NTM revenue"
         },
         {
@@ -150,7 +150,7 @@
           "note": "Beat $16.5–21.5B guide; chips >$20B ARR"
         }
       ],
-      "summary": "At ~30× forward earnings AMZN trades at a modest premium to the S&P 500 (~21×) but in line with mega-cap growth peers, reflecting the Q1 beat plus newly added ASCS optionality. The PEG of ~1.67× is fair given three concurrent growth platforms (AWS at 28%, advertising 20%+, ASCS launching into a $1.3T TAM). The trailing-vs-forward gap (~38× → 30×) signals continued earnings acceleration; ASCS revenue is not yet reflected in NTM consensus, providing potential upside to estimates over the next 2–4 quarters."
+      "summary": "After the ~15% pullback from the May high, AMZN trades at ~26× forward earnings — a modest premium to the S&P 500 (~21×) and at the cheap end of mega-cap growth peers despite the Q1 beat plus newly added ASCS optionality. The PEG of ~1.46× is attractive given three concurrent growth platforms (AWS at 28%, advertising 20%+, ASCS launching into a $1.3T TAM). The trailing-vs-forward gap (~33× → 26×) signals continued earnings acceleration; ASCS revenue is not yet reflected in NTM consensus, providing potential upside to estimates over the next 2–4 quarters."
     }
   },
   "scenarios": {
@@ -228,5 +228,5 @@
     },
     "verdict": "Amazon's moats are overwhelmingly AI-resilient: the $244B AWS backlog, Trainium custom silicon, proprietary purchase data, the marketplace flywheel, and now the ASCS logistics-as-a-service platform are core strengths that are strengthening — not weakening — in the AI era. The May 2026 ASCS launch is the most consequential moat-deepening event since AWS itself, externalising 80,000-trailer logistics into a $1.3T TAM platform whose unit economics improve with every shipper added."
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "June 2026"
 }
