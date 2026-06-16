@@ -134,7 +134,7 @@ Sanity-check that the resulting recommendation is what you'd expect given the up
 
 ### 9. Analysis Date
 
-**Always** update `lastAnalyzed` to the current month and year (e.g., `"March 2026"`) at the end of every update run, regardless of whether any other fields changed. This field records when a human-reviewed analysis was last performed.
+**Always** update `lastAnalyzed` to the current date with **day precision** (e.g., `"June 16, 2026"`) at the end of every update run, regardless of whether any other fields changed. Use the full `"Month D, YYYY"` form, not just the month and year. This field records the exact date a human-reviewed analysis was last performed.
 
 ### 10. stockData.ts Entry
 
@@ -153,7 +153,7 @@ After making all changes:
 2. **Check score consistency** — the `scores` array in `stockData.ts` must match the scores in the JSON file
 3. **Check scenario consistency** — the shorthand targets in `stockData.ts` must match `priceTarget` values in the JSON
 4. **Check portfolio impact** — if the composite score crosses the 75 threshold (either direction), the stock will move between portfolio and excluded. Confirm this is the intended outcome.
-5. **Confirm `lastAnalyzed` is set** — must be updated to the current month and year before committing.
+5. **Confirm `lastAnalyzed` is set** — must be updated to the current date with day precision (e.g., `"June 16, 2026"`) before committing.
 6. **Run lint** — `npm run lint` to catch TypeScript issues
 
 ---
