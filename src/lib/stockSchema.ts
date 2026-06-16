@@ -177,7 +177,17 @@ export const stockAnalysisSchema = z
     ticker: z.string().min(1),
     name: z.string().min(1),
     assetClass: assetClassSchema.optional(),
-    lastAnalyzed: z.string().min(1).optional(),
+    // Date this analysis was last updated. New/updated entries use day
+    // precision ("June 16, 2026"); the legacy month-and-year form
+    // ("March 2026") is still accepted for historical entries. Both are
+    // parsed by lastAnalyzedToISO (page.tsx) and parseLastAnalyzed (sitemap.ts).
+    lastAnalyzed: z
+      .string()
+      .regex(
+        /^[A-Za-z]+ (\d{1,2}, )?\d{4}$/,
+        'lastAnalyzed must be "Month D, YYYY" (preferred) or "Month YYYY"',
+      )
+      .optional(),
     titleColor: z.string().min(1).optional(),
     headerStats: z.array(headerStatSchema).min(1),
     chips: z.array(chipSchema).min(1),

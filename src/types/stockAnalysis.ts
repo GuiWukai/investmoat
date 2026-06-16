@@ -147,7 +147,12 @@ export interface StockAnalysisData {
    * when set to 'commodity', commodityMoats must be present.
    */
   assetClass?: AssetClass;
-  /** Month and year this analysis was last updated, e.g. "March 2026" */
+  /**
+   * Date this analysis was last updated, with day precision, e.g. "June 16, 2026".
+   * New and updated analyses should always use the full day-precision form.
+   * The legacy month-and-year form ("March 2026") is still accepted for
+   * historical entries and is treated as the first of that month.
+   */
   lastAnalyzed?: string;
   /** Optional hex colour applied to the page title */
   titleColor?: string;
