@@ -3,12 +3,13 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
-import { Search, X, BarChart2, TrendingUp, Menu } from 'lucide-react';
+import { Search, X, BarChart2, TrendingUp, Menu, GitCompare } from 'lucide-react';
 import { allCoverageData } from '@/app/stockData';
 
 const navLinks = [
   { name: 'Portfolio', href: '/portfolio', icon: BarChart2 },
   { name: 'Stocks', href: '/stocks', icon: TrendingUp },
+  { name: 'Compare', href: '/compare', icon: GitCompare },
 ];
 
 type StockResult = { name: string; ticker: string; href: string };
