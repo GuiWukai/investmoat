@@ -113,6 +113,7 @@ import dash from './dash.json';
 import rblx from './rblx.json';
 import soxx from './soxx.json';
 import voo from './voo.json';
+import inio from './inio.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -228,6 +229,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   silver: silver as StockAnalysisData,
   uranium: uranium as StockAnalysisData,
   spacex: spacex as StockAnalysisData,
+  inio: inio as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
