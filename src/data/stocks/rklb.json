@@ -1,0 +1,186 @@
+{
+  "slug": "rklb",
+  "ticker": "RKLB",
+  "name": "Rocket Lab Corporation",
+  "lastAnalyzed": "June 19, 2026",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "RKLB (Nasdaq)"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$51B"
+    },
+    {
+      "label": "Price",
+      "value": "~$104.50"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Aerospace | Launch | Space Systems",
+      "color": "primary"
+    },
+    {
+      "label": "Pre-Profit · Speculative",
+      "color": "warning"
+    },
+    {
+      "label": "Neutron = Swing Factor",
+      "color": "danger"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "Q1 2026 Revenue",
+      "value": "$200.3M",
+      "label": "Record quarter, +63.5% YoY. Space Systems $136.7M (now the larger, stickier segment) + Launch Services $63.7M. GAAP net loss narrowed to ~$45M. Q2 2026 guided to $225–240M — implying ~50%+ growth holds.",
+      "icon": "Rocket",
+      "color": "#e4002b"
+    },
+    {
+      "title": "Contracted Backlog",
+      "value": "$2.2B",
+      "label": "+108% YoY and +20% sequentially — roughly 3× trailing revenue, providing multi-year visibility before Neutron flies. Mix is shifting toward higher-value defense and constellation/Space Systems work.",
+      "icon": "Layers",
+      "color": "#10b981"
+    },
+    {
+      "title": "Neutron",
+      "value": "NET Q4 2026",
+      "label": "Medium-lift reusable rocket (~13t to LEO) — the entire growth re-rating hinges on it. Five commercial launch contracts signed before first flight, but a Jan 2026 tank failure pushed the debut to no-earlier-than Q4 2026. ~$1.34B net cash ($1.38B cash vs $0.14B debt) funds the ramp.",
+      "icon": "DollarSign",
+      "color": "#1a8cff"
+    }
+  ],
+  "moat": {
+    "description": "A narrow-but-real moat from the regulatory and engineering barrier to orbital launch plus a vertically integrated space-systems stack — a clear step below SpaceX and still unproven at medium-lift.",
+    "analysisTitle": "The Orbital Barrier + Vertical Stack",
+    "analysisSummary": "Rocket Lab's durability is physical, regulatory, and talent-based — not software. **Three** reinforcing pillars, all earlier-stage than an incumbent like SpaceX:",
+    "analysisPoints": [
+      {
+        "title": "Regulatory + Capability Barrier",
+        "text": "Reaching orbit is one of the hardest combined regulatory, capital, and engineering barriers in existence. Rocket Lab is one of only a handful of Western companies with an operational orbital launcher — Electron has flown 70+ missions — holding FAA launch licences, ITAR clearance, and a NASA/Space Force track record. The barrier to entry is genuinely high, but RKLB's specific franchise is nascent versus SpaceX's certified national-security pipeline, so this is durable rather than dominant."
+      },
+      {
+        "title": "Vertical-Integration Stack",
+        "text": "The real differentiator is breadth: launch plus an in-house Space Systems arm (reaction wheels, star trackers, solar arrays, separation systems, radios, and flight software embedded in other operators' and government satellites) plus full spacecraft. It is an end-to-end 'space company' bundle competitors must assemble piecemeal, and Space Systems — now the larger segment at $136.7M of Q1 revenue — carries higher switching costs than launch."
+      },
+      {
+        "title": "Scarce Aerospace Talent",
+        "text": "Reusable propulsion, GNC, and spacecraft-manufacturing expertise is among the scarcest engineering talent in the economy, and Rocket Lab has assembled one of the few teams operating an orbital rocket at cadence. AI augments but does not replace rocket and spacecraft engineers, so this scarcity is AI-resilient — though it is execution, not a structural lock-in."
+      }
+    ]
+  },
+  "growth": {
+    "description": "Q1 2026 was a record at $200.3M revenue (+63.5% YoY), with Space Systems ($136.7M) now outweighing Launch Services ($63.7M) and Q2 guided to $225–240M. The $2.2B backlog (+108% YoY) is roughly 3× trailing revenue and underwrites multi-year 40%+ growth even before the medium-lift Neutron contributes a dollar. The next leg is Neutron: a reusable ~13-tonne-to-LEO vehicle targeting a no-earlier-than Q4 2026 debut, with five commercial contracts already signed — it opens the medium-lift, defense, and constellation-deployment TAM that Electron is too small to serve. The honest caveat is that Rocket Lab remains GAAP loss-making (net loss ~$45M in Q1, narrowing) and consensus does not model breakeven until ~2027, so the hypergrowth is real but not yet self-funding.",
+    "growthAnalysis": {
+      "cagrEstimate": "30–40%",
+      "scoreDerivation": "Base 91 (~35% blended 3–5yr CAGR, 30%+ band) + ~3 trajectory (Space Systems accelerating, Neutron a new leg; Launch stable) + 0 margin (still GAAP loss-making, Neutron investment offsets gross-margin gains) + 4 both (Neutron TAM expansion on top of small-launch share gains) − 10 high risk (Neutron unproven, tank failure already slipped the debut) = 88.",
+      "drivers": [
+        {
+          "name": "Space Systems",
+          "metric": "$136.7M Q1 2026 (now the larger segment); satellite components + spacecraft + constellation work, defense-led backlog",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Launch Services (Electron)",
+          "metric": "$63.7M Q1 2026; 70+ Electron missions, dominant dedicated small-launch share but a small absolute market",
+          "trend": "stable"
+        },
+        {
+          "name": "Neutron (medium-lift, reusable)",
+          "metric": "Pre-revenue; ~13t to LEO, 5 commercial contracts signed, first flight NET Q4 2026 — the new TAM unlock",
+          "trend": "accelerating"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "Neutron is the linchpin of the entire re-rating and the path to scale, yet a January 2026 tank failure already pushed first flight to no-earlier-than Q4 2026. If Neutron does not reach orbit and a credible cadence by end of 2027, the medium-lift, defense, and constellation revenue that justifies a ~50× sales multiple slips, and the stock de-rates toward its backlog-supported small-launch-plus-Space-Systems base.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 60,
+    "description": "At ~$104.50 (~$51B) Rocket Lab trades at roughly 50–55× 2026E sales and ~75× trailing sales, against a GAAP net loss and no profitability modeled before ~2027 — an extreme multiple that already prices in a successful Neutron and years of compounding. The stock sits essentially on top of the ~$103–105 analyst consensus target after a run to a $150 May-2026 high, so there is little margin of safety: the price is just above our base case and a fraction of the way into the bull case. The ~$1.34B net-cash position funds the Neutron ramp but provides almost no valuation floor at these multiples — this is a momentum/optionality holding, not a value one.",
+    "valuationNote": {
+      "text": "P/E is omitted — Rocket Lab is GAAP loss-making (net loss ~$45M in Q1 2026) and not expected to reach breakeven until ~2027, so earnings multiples are meaningless. Valuation rests on price/sales (~75× trailing, ~50–55× 2026E) and the credibility of the Neutron-driven forward revenue ramp. The premium is paid for the orbital barrier, the Space Systems stack, and Neutron optionality — not current cash generation.",
+      "fairValue": "$100 (base) — roughly current price; rich on every sales metric, with the upside entirely Neutron-contingent"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$55",
+      "description": "Neutron slips materially or fails its debut and the growth-stock multiple compresses: the market refuses to pay 50× sales for a loss-making launcher, re-rating the stock toward its backlog-supported base.",
+      "points": [
+        "Neutron's first flight slips into 2027 or fails to reach orbit, pushing the medium-lift revenue and cost-curve story out by a year or more",
+        "Price/sales compresses from ~50× toward ~25–30× as rates stay higher and capital rotates out of unprofitable space names",
+        "Continued cash burn on the Neutron ramp forces a dilutive raise despite the current ~$1.34B net-cash cushion"
+      ]
+    },
+    "base": {
+      "priceTarget": "$100",
+      "description": "Space Systems keeps compounding and Electron holds its niche, Neutron debuts roughly on the Q4 2026 schedule, and the market keeps paying a premium-but-cooling multiple near the current price.",
+      "points": [
+        "FY2026 revenue lands near $900M–$1.0B (+~40%) on Space Systems strength and the $2.2B backlog converting",
+        "Neutron reaches orbit around Q4 2026 / early 2027 but at low initial cadence, so its revenue contribution is still modest through 2027",
+        "Forward price/sales drifts from ~50× toward ~40× as revenue catches up to the multiple, keeping the stock range-bound near $100"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$165",
+      "description": "The flywheel inflects: Neutron succeeds and ramps cadence, defense and constellation wins accelerate, and Rocket Lab re-rates as the credible Western #2 launch-plus-space-systems platform toward and beyond its prior high.",
+      "points": [
+        "Neutron reaches orbit on or near schedule and scales toward a multi-launch annual cadence, validating the reusable medium-lift cost curve",
+        "Defense and national-security awards plus a constellation/end-to-end mission win push backlog and FY2027 revenue toward $1.5B+",
+        "Operating losses narrow sharply toward breakeven, letting the market underwrite a durable-platform premium rather than pure optionality"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — launch and satellite components are contracted, engineer-to-spec services. There is no complex interface customers invest years mastering."
+    },
+    "businessLogic": {
+      "status": "destroyed",
+      "note": "N/A — Rocket Lab does not embed configurable software into customers' proprietary workflows. Launch and hardware are procurement relationships, not business-logic lock-in."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — the company does not monetise gated access to a public dataset."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "Reusable-propulsion, GNC, and spacecraft-manufacturing expertise is among the scarcest engineering talent in the economy, and Rocket Lab operates one of the few orbital teams at cadence. AI augments but does not replace rocket engineers, so this scarcity is AI-resilient — routed to the resilient bucket accordingly.",
+      "aiExposure": "resilient"
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Vertical integration is the bundle: launch plus an in-house Space Systems arm (components, radios, flight software, full spacecraft) sold as an end-to-end stack competitors must assemble piecemeal. Real and differentiating, but not yet an emergent lock-in at SpaceX's scale."
+    },
+    "proprietaryData": {
+      "status": "weakened",
+      "note": "70+ Electron missions generate proprietary reliability, recovery, and manufacturing telemetry, but the dataset is far smaller than SpaceX's 500+ flights and it improves operations rather than being a directly-monetised product."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "FAA launch licences, ITAR clearance, and NASA/Space Force pedigree are scarce, slow-to-earn assets that gate entry. But Neutron is not yet certified for national-security launch and RKLB's government franchise is nascent versus SpaceX/ULA — present and AI-resilient, not yet dominant."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "N/A — launch and satellite manufacturing have no meaningful network effect; an additional customer does not make the service more valuable to others."
+    },
+    "transactionEmbedding": {
+      "status": "destroyed",
+      "note": "N/A — Rocket Lab does not sit in a payment or transaction layer of customers' daily operations."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — it is not the authoritative record for any external business function."
+    },
+    "verdict": "Rocket Lab is a modest net AI beneficiary on the demand side — AI-driven defense, earth-observation, and connectivity buildouts lift launch and satellite-component demand — while its applicable moats (the regulatory/engineering barrier to orbit, scarce aerospace talent, the vertically integrated stack) are essentially AI-irrelevant and therefore AI-resilient. It carries none of the AI-vulnerable software moats (no learned interface, business-logic, public-data, transaction, or system-of-record exposure), so AI cannot erode the durability it has. The honest limitation is that the moat is narrow and execution-dependent: most categories are N/A, the regulatory and data moats are intact rather than strong, and the whole thesis hinges on Neutron flying. Durable enough to be the credible Western #2, but a clear step below SpaceX.",
+    "aiResilienceScore": 62
+  }
+}
