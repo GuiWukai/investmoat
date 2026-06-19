@@ -97,7 +97,7 @@ const stockMeta: Record<string, { color: string; category: string; exclusionReas
   XAG:   { color: "#c0c0c0", category: "Hard Assets" },
   U:     { color: "#d4c419", category: "Hard Assets" },
   BTC:   { color: "#f7931a", category: "Digital Assets" },
-  KNT:   { color: "#8b7355", category: "Hard Assets",     exclusionReason: "Weakest moat score in the entire coverage universe (42). Mining is a commodity business with no pricing power, no network effects, and no switching costs. High growth (85) reflects production expansion upside — not the scalable, capital-light compounding this portfolio targets." },
+  KNT:   { color: "#8b7355", category: "Hard Assets",     exclusionReason: "Composite (73) falls below the portfolio threshold. The moat score (59) is typical for a single-asset miner — strong PNG regulatory lock-in and a top-5% orebody, offset by selling a fungible, price-taking commodity to switchable smelters with no pricing power or network effects. High growth (87) reflects production-expansion upside, not the scalable, capital-light compounding this portfolio targets." },
   FCX:   { color: "#b8732d", category: "Hard Assets",     exclusionReason: "Commodity copper producer with no pricing power — FCX sells at LME spot price regardless of asset quality. Indonesia sovereign risk at Grasberg, competition from major miners (Codelco, BHP, Glencore), and earnings volatility disqualify it from a portfolio targeting structural moats and durable compounding." },
   TSM:   { color: "#0071c5", category: "Foundry" },
   MU:    { color: "#0099cc", category: "Memory" },

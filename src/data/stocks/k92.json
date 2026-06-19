@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$3.5B (CAD)"
+      "value": "~$5.9B (CAD)"
     },
     {
       "label": "Price",
-      "value": "~$24.36 CAD"
+      "value": "~$24.26 CAD"
     },
     {
       "label": "Mine",
@@ -79,7 +79,7 @@
       },
       {
         "title": "Strong Balance Sheet",
-        "text": "Record cash position of $183M (including $124M net cash) entering 2026 provides full funding for Stage 4 without dilutive equity raises."
+        "text": "Cash position of ~$287M as of Q1 2026 (up from $183M entering the year), with Q1 operating cash flow of $132.9M (+64% YoY), provides full funding for Stage 4 without dilutive equity raises."
       }
     ]
   },
@@ -87,10 +87,10 @@
     "description": "Q1 2026 production of 46,743 oz AuEq with ore throughput +37% YoY and strong recoveries (Au 95.1%, Cu 94.0%). 2026 guidance of 190–225k oz reiterated, with H2-weighting as enabler projects (pastefill, fleet expansion, 15.3 MW power upgrade) complete in H1. Stage 4 expansion ~96% spent or committed. Lateral development hit a record 3,007 metres in Q1 — execution remains on track for the 400k+ oz run-rate trajectory.",
     "growthAnalysis": {
       "cagrEstimate": "20-28%",
-      "scoreDerivation": "Base 60 + 12 (production trajectory 174k → 190-225k → 400k+ oz, ~2.3x over 3-4 years) + 8 (Stage 3 commissioned on time, fourth consecutive year beating guidance) + 5 (gold price ~$4,591/oz vs. AISC $1,010/oz = ~$3,580/oz margins) = 85",
+      "scoreDerivation": "Base 60 + 12 (production trajectory 174k → 190-225k → 400k+ oz, ~2.3x over 3-4 years) + 8 (Stage 3 commissioned on time, fourth consecutive year beating guidance) + 5 (gold price ~$4,200/oz vs. AISC $1,010/oz = ~$3,190/oz margins) = 85",
       "drivers": [
         { "name": "Production volume", "metric": "2025 174k oz → 2026 guidance 190-225k oz (+15-29% YoY) → Stage 4 run-rate 400k+ oz by 2027-2028", "trend": "accelerating" },
-        { "name": "Realized gold price vs. AISC", "metric": "Gold ~$4,591/oz vs. AISC ~$1,010/oz = $3,580/oz margin per oz produced", "trend": "accelerating" },
+        { "name": "Realized gold price vs. AISC", "metric": "Gold ~$4,200/oz vs. AISC ~$1,010/oz = $3,190/oz margin per oz produced", "trend": "accelerating" },
         { "name": "Exploration upside", "metric": "Record $31-35M 2026 exploration; Kora/Judd open in multiple directions; Blue Lake Porphyry pending", "trend": "accelerating" }
       ],
       "primaryType": "TAM expansion",
@@ -101,7 +101,7 @@
   },
   "valuation": {
     "score": 81,
-    "description": "At ~$24.36 CAD, stock trades 36% below the base case ($38 CAD). Gold near $4,591/oz against ~$1,010/oz AISC implies ~$3,580/oz margins on growing production. Analyst consensus target ~$34.75 CAD (~43% upside). Stage 4 execution and Q2 H2-weighted production ramp are the primary re-rating catalysts."
+    "description": "At ~$24.26 CAD, stock trades 36% below the base case ($38 CAD). Gold near $4,200/oz against ~$1,010/oz AISC implies ~$3,190/oz margins on growing production. Analyst consensus target ~$36.68 CAD (~51% upside). Stage 4 execution and the H2-weighted production ramp are the primary re-rating catalysts."
   },
   "scenarios": {
     "bear": {
@@ -116,9 +116,9 @@
     },
     "base": {
       "priceTarget": "$38.00 CAD",
-      "description": "Gold holds above $4,500/oz and Stage 4 ramp-up proceeds on schedule, driving a production and cash flow re-rating.",
+      "description": "Gold holds near $4,200/oz and Stage 4 ramp-up proceeds on schedule, driving a production and cash flow re-rating.",
       "points": [
-        "2026 production reaches the top half of 190–225k oz guidance at $4,000+/oz margins",
+        "2026 production reaches the top half of 190–225k oz guidance at $3,000+/oz margins",
         "Stage 4 DFS confirms 400k+ oz pathway, triggering analyst target upgrades",
         "Blue Lake Porphyry drilling results attract strategic acquirer interest"
       ]
@@ -167,14 +167,14 @@
       "note": "N/A — gold mining is a commodity business with no network effects; output is priced by global spot markets regardless of volume."
     },
     "transactionEmbedding": {
-      "status": "destroyed",
-      "note": "N/A — K92 sells gold at spot market prices with no offtake agreements; it is a pure price-taker with zero transaction embedding power."
+      "status": "weakened",
+      "note": "K92 sells gold doré at spot and a copper-gold-silver flotation concentrate under offtake/sales agreements with smelters and traders. As with FCX, output is fungible and counterparties are switchable, so embedding is limited — but not entirely absent."
     },
     "systemOfRecord": {
       "status": "destroyed",
       "note": "N/A — K92 is not a system of record for any business function; value is entirely in the ore body and mining license, not information systems."
     },
-    "verdict": "Only 3 of the 10 moats genuinely apply to K92: regulatory lock-in (strong — PNG Special Mining Lease), proprietary data (intact — geological ore body models), and talent scarcity (intact — underground PNG mining expertise). The remaining 7 moats are N/A for a single-mine commodity producer. AI cannot disrupt K92's ore body or mining license, but AI-driven mine planning improvements are industry-wide and do not create differentiation. Score is peer-calibrated to the commodities group, slightly below FCX (60) to reflect single-mine, single-jurisdiction concentration."
+    "verdict": "Only 3 of the 10 moats genuinely apply to K92: regulatory lock-in (strong — PNG Special Mining Lease), proprietary data (intact — geological ore body models), and talent scarcity (intact — underground PNG mining expertise). The remaining 7 moats are N/A for a single-mine commodity producer. AI cannot disrupt K92's ore body or mining license, but AI-driven mine planning improvements are industry-wide and do not create differentiation. The computed moat score (~59) is in line with mining peer FCX (~59): both are concentration-risk commodity producers selling fungible output under switchable smelter offtake agreements. The score sits well below software/platform compounders, reflecting that gold is a fungible, price-taking commodity with no pricing power."
   },
   "extraSections": [
     {
@@ -202,5 +202,5 @@
       "closing": "Production is expected to be weighted to H2 2026, as key enabler projects (pastefill plant, fleet expansion, power upgrade to 15.3 MW, 60-tonne truck river crossings) complete mostly in H1 2026."
     }
   ],
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "June 18, 2026"
 }
