@@ -64,7 +64,7 @@ export default async function Image({
           height: '100%',
           display: 'flex',
           flexDirection: 'column',
-          background: 'linear-gradient(135deg, #07070f 0%, #0d0d20 60%, #0a0a18 100%)',
+          background: 'linear-gradient(135deg, #080a0e 0%, #11120c 55%, #0a0b0d 100%)',
           padding: '72px 80px',
           position: 'relative',
         }}
@@ -75,7 +75,7 @@ export default async function Image({
             position: 'absolute',
             inset: 0,
             backgroundImage:
-              'linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)',
+              'linear-gradient(rgba(201,169,106,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(201,169,106,0.035) 1px, transparent 1px)',
             backgroundSize: '60px 60px',
           }}
         />
@@ -93,8 +93,8 @@ export default async function Image({
             style={{
               fontSize: '22px',
               fontWeight: 800,
-              color: 'rgba(255,255,255,0.4)',
-              letterSpacing: '0.06em',
+              color: 'rgba(201,169,106,0.7)',
+              letterSpacing: '0.12em',
             }}
           >
             INVESTMOAT

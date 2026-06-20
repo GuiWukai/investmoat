@@ -375,7 +375,7 @@ export default function PortfolioPage() {
         {/* Visual Allocation */}
         <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6">
           <div className="flex items-center gap-2.5 mb-6">
-            <PieChart size={16} className="text-blue-400" />
+            <PieChart size={16} className="text-[#c9a96a]" />
             <h3 className="font-bold text-white/85">Visual Allocation</h3>
           </div>
 

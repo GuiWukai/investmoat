@@ -166,13 +166,13 @@ function CategoryPill({
       onClick={onClick}
       className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
         active
-          ? 'bg-blue-500/20 border border-blue-500/40 text-blue-300'
+          ? 'bg-[#c9a96a]/15 border border-[#c9a96a]/40 text-[#e4c98a]'
           : 'bg-white/[0.04] border border-white/10 text-white/40 hover:text-white/70 hover:bg-white/[0.07]'
       }`}
     >
       {label}
       {count !== undefined && (
-        <span className={`text-[10px] font-bold ${active ? 'text-blue-400/70' : 'text-white/20'}`}>
+        <span className={`text-[10px] font-bold ${active ? 'text-[#c9a96a]/70' : 'text-white/20'}`}>
           {count}
         </span>
       )}
