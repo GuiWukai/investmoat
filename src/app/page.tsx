@@ -95,40 +95,41 @@ export default function HomePage() {
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <header className="relative pt-6 md:pt-12 pb-20 md:pb-24">
         {/* Ambient glows */}
-        <div className="pointer-events-none absolute -top-40 -left-40 w-[560px] h-[560px] rounded-full bg-blue-600/[0.07] blur-[100px]" />
-        <div className="pointer-events-none absolute -top-10 right-10 w-72 h-72 rounded-full bg-indigo-500/[0.05] blur-[70px]" />
+        <div className="pointer-events-none absolute -top-40 -left-40 w-[560px] h-[560px] rounded-full bg-[#c9a96a]/[0.06] blur-[100px]" />
+        <div className="pointer-events-none absolute -top-10 right-10 w-72 h-72 rounded-full bg-[#c9a96a]/[0.04] blur-[70px]" />
 
         <div className="relative animate-fade-up stagger-fill-both" style={{ animationDelay: '0s' }}>
           {/* Eyebrow */}
-          <div className="flex items-center gap-2.5 mb-8">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-400/70" />
-            <span className="text-[11px] font-semibold text-blue-400/50 uppercase tracking-[0.18em]">
-              Open Source · AI-Era Portfolio
+          <div className="flex items-center gap-3 mb-8">
+            <span className="h-px w-8 bg-[#c9a96a]/50" />
+            <span className="text-[11px] font-bold text-[#c9a96a]/75 uppercase tracking-[0.22em] font-mono">
+              Systematic Equity Research · Est. 2026
             </span>
           </div>
 
           {/* Headline */}
-          <h1 className="text-[clamp(3.2rem,10vw,7rem)] font-extrabold leading-[0.88] tracking-tight mb-8">
-            <span className="text-white/75">Invest in</span><br />
-            <span className="gradient-text-animated">Moats,</span><br />
-            <span className="text-white/[0.14]">Not Markets.</span>
+          <h1 className="text-[clamp(3.2rem,10vw,7rem)] font-bold leading-[0.9] tracking-tight mb-8">
+            <span className="text-white/85">Invest in</span><br />
+            <span className="gradient-text-animated italic">Moats,</span><br />
+            <span className="text-white/[0.18]">Not Markets.</span>
           </h1>
 
-          <p className="text-white/45 text-base md:text-lg max-w-lg leading-relaxed mb-10">
-            A high-conviction portfolio of 25 businesses scored across moat strength,
-            growth trajectory, and live valuation — built to compound in the AI era.
+          <p className="text-white/50 text-base md:text-lg max-w-xl leading-relaxed mb-10">
+            A high-conviction portfolio of 25 businesses, each underwritten on moat durability,
+            growth trajectory, and live valuation. Disciplined, transparent, and built to
+            compound through the AI era.
           </p>
 
           <div className="flex flex-wrap gap-3 mb-14">
             <Link
               href="/portfolio"
-              className="flex items-center gap-2 px-6 py-3 primary-gradient rounded-xl font-bold text-white text-sm hover:opacity-90 transition-opacity"
+              className="flex items-center gap-2 px-6 py-3 primary-gradient rounded-lg font-bold text-[#0a0b0d] text-sm hover:opacity-90 transition-opacity"
             >
               View Portfolio <ArrowRight size={16} />
             </Link>
             <Link
               href="/stocks"
-              className="flex items-center gap-2 px-6 py-3 bg-white/[0.04] hover:bg-white/[0.07] border border-white/[0.08] rounded-xl font-bold text-white/80 text-sm transition-colors"
+              className="flex items-center gap-2 px-6 py-3 bg-white/[0.04] hover:bg-white/[0.07] border border-[#c9a96a]/20 rounded-lg font-bold text-white/80 text-sm transition-colors"
             >
               Explore Coverage
             </Link>
@@ -137,13 +138,13 @@ export default function HomePage() {
 
         {/* Stats strip */}
         <div
-          className="relative grid grid-cols-2 md:grid-cols-4 rounded-2xl overflow-hidden border border-white/[0.06] animate-fade-up stagger-fill-both"
+          className="relative grid grid-cols-2 md:grid-cols-4 rounded-xl overflow-hidden border border-[#c9a96a]/[0.14] animate-fade-up stagger-fill-both"
           style={{ animationDelay: '0.15s' }}
         >
           {[
-            { value: "25", label: "Portfolio Holdings" },
-            { value: "60+", label: "Stocks Analyzed" },
-            { value: "≥ 80", label: "Score Required" },
+            { value: "25", label: "Conviction Holdings" },
+            { value: "60+", label: "Under Coverage" },
+            { value: "≥ 80", label: "Inclusion Threshold" },
             { value: "10%", label: "Max Position Weight" },
           ].map(({ value, label }, i) => (
             <div
@@ -176,18 +177,18 @@ export default function HomePage() {
             {
               num: '01',
               icon: <ShieldCheck size={20} />,
-              accent: 'text-blue-400',
-              iconBg: 'bg-blue-500/10',
-              border: 'border-blue-500/[0.12]',
+              accent: 'text-[#e4c98a]',
+              iconBg: 'bg-[#c9a96a]/10',
+              border: 'border-[#c9a96a]/[0.18]',
               title: 'Economic Moats Compound',
               text: 'The best businesses become harder to compete with over time. Pricing power, switching costs, and network effects strengthen as the business scales, delivering above-market returns on capital for decades.',
             },
             {
               num: '02',
               icon: <Brain size={20} />,
-              accent: 'text-violet-400',
-              iconBg: 'bg-violet-500/10',
-              border: 'border-violet-500/[0.12]',
+              accent: 'text-blue-400',
+              iconBg: 'bg-blue-500/10',
+              border: 'border-blue-500/[0.12]',
               title: 'AI Rewrites the Playbook',
               text: 'Most competitive advantages are AI-vulnerable. We weight proprietary data, regulatory lock-in, and network effects 60% more heavily — the moats AI cannot replicate or destroy.',
             },
@@ -583,27 +584,27 @@ export default function HomePage() {
         <div className="relative overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02] p-10 md:p-14 text-center">
           {/* Glow behind CTA */}
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-            <div className="w-96 h-40 bg-blue-600/[0.07] blur-[60px] rounded-full" />
+            <div className="w-96 h-40 bg-[#c9a96a]/[0.08] blur-[60px] rounded-full" />
           </div>
           <div className="relative">
             <p className="section-label mb-4">Ready to explore?</p>
-            <h3 className="text-2xl md:text-4xl font-extrabold gradient-text mb-4">
+            <h3 className="text-2xl md:text-4xl font-bold gradient-text mb-4">
               View the portfolio
             </h3>
-            <p className="text-white/38 max-w-md mx-auto text-sm leading-relaxed mb-8">
+            <p className="text-white/45 max-w-md mx-auto text-sm leading-relaxed mb-8">
               Explore the current 25-stock allocation, browse all 60+ analyzed assets,
               or dive into individual company reports with moat scores, scenarios, and live valuations.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Link
                 href="/portfolio"
-                className="flex items-center gap-2 px-6 py-3 primary-gradient rounded-xl font-bold text-white text-sm hover:opacity-90 transition-opacity"
+                className="flex items-center gap-2 px-6 py-3 primary-gradient rounded-lg font-bold text-[#0a0b0d] text-sm hover:opacity-90 transition-opacity"
               >
                 View Portfolio <ArrowRight size={16} />
               </Link>
               <Link
                 href="/stocks"
-                className="flex items-center gap-2 px-6 py-3 bg-white/[0.04] hover:bg-white/[0.07] border border-white/[0.08] rounded-xl font-bold text-white/75 text-sm transition-colors"
+                className="flex items-center gap-2 px-6 py-3 bg-white/[0.04] hover:bg-white/[0.07] border border-[#c9a96a]/20 rounded-lg font-bold text-white/75 text-sm transition-colors"
               >
                 All Coverage
               </Link>

@@ -200,16 +200,16 @@ function NavLink({ href, name, icon: Icon, onClick }: { href: string; name: stri
       }`}
     >
       {isActive && (
-        <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/15 to-indigo-500/10 border border-blue-500/20" />
+        <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#c9a96a]/15 to-[#9c7f44]/10 border border-[#c9a96a]/25" />
       )}
       <Icon
         className={`w-4 h-4 relative z-10 flex-shrink-0 transition-colors ${
-          isActive ? 'text-blue-400' : 'text-white/30 group-hover:text-white/60'
+          isActive ? 'text-[#e4c98a]' : 'text-white/30 group-hover:text-white/60'
         }`}
       />
       <span className="relative z-10">{name}</span>
       {isActive && (
-        <span className="ml-auto relative z-10 w-1.5 h-1.5 rounded-full bg-blue-400" />
+        <span className="ml-auto relative z-10 w-1.5 h-1.5 rounded-full bg-[#e4c98a]" />
       )}
     </Link>
   );
@@ -232,8 +232,8 @@ export function NavBar() {
         </button>
 
         <Link href="/" className="flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
-          <span className="primary-gradient w-7 h-7 rounded-lg flex items-center justify-center text-[13px] font-bold text-white shadow-lg shadow-blue-500/20">M</span>
-          <span className="font-semibold text-white text-[15px]">InvestMoat</span>
+          <span className="primary-gradient w-7 h-7 rounded-md flex items-center justify-center text-[13px] font-black text-[#0a0b0d] shadow-lg shadow-[#c9a96a]/20">M</span>
+          <span className="font-semibold text-white text-[16px] tracking-tight" style={{ fontFamily: 'var(--font-serif)' }}>InvestMoat</span>
         </Link>
 
         <button
@@ -271,12 +271,12 @@ export function NavBar() {
         {/* Logo */}
         <div className="mb-8">
           <Link href="/" className="flex items-center gap-2.5 group" style={{ textDecoration: 'none' }}>
-            <span className="primary-gradient w-8 h-8 rounded-xl flex items-center justify-center text-sm font-bold text-white shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/30 transition-shadow">
+            <span className="primary-gradient w-9 h-9 rounded-lg flex items-center justify-center text-base font-black text-[#0a0b0d] shadow-lg shadow-[#c9a96a]/20 group-hover:shadow-[#c9a96a]/40 transition-shadow">
               M
             </span>
             <div>
-              <div className="text-[15px] font-semibold text-white leading-none">InvestMoat</div>
-              <div className="text-[10px] text-white/25 font-medium mt-0.5 leading-none">Investment Research</div>
+              <div className="text-[17px] font-semibold text-white leading-none tracking-tight" style={{ fontFamily: 'var(--font-serif)' }}>InvestMoat</div>
+              <div className="text-[9px] text-[#c9a96a]/65 font-bold mt-1 leading-none uppercase tracking-[0.18em] font-mono">Systematic Equity Research</div>
             </div>
           </Link>
         </div>
@@ -296,9 +296,16 @@ export function NavBar() {
           </nav>
         </div>
 
-        {/* Footer */}
-        <div className="mt-auto pt-5 border-t border-white/[0.05] text-[10px] text-white/15 font-medium">
-          &copy; 2026 InvestMoat
+        {/* Footer — fund credential */}
+        <div className="mt-auto pt-5 border-t border-[#c9a96a]/10">
+          <div className="flex items-center gap-1.5 mb-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="text-[9px] font-bold uppercase tracking-[0.18em] text-white/35 font-mono">Markets · Live Data</span>
+          </div>
+          <p className="text-[10px] text-white/25 leading-relaxed font-mono">
+            Independent moat-driven equity research.
+          </p>
+          <p className="text-[10px] text-white/15 font-mono mt-1.5">&copy; 2026 InvestMoat</p>
         </div>
       </aside>
     </>
