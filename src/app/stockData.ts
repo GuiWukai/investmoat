@@ -132,6 +132,7 @@ import rblxData     from '@/data/stocks/rblx.json';
 import soxxData     from '@/data/stocks/soxx.json';
 import vooData      from '@/data/stocks/voo.json';
 import inioData     from '@/data/stocks/inio.json';
+import rklbData     from '@/data/stocks/rklb.json';
 
 // Delegates to computeCompositeRaw in valuationScore.ts — the single source of
 // truth for the composite formula. Returns a float for precise sorting; callers
@@ -294,6 +295,7 @@ const allCoverageData = [
     { name: "Vanguard S&P 500 ETF", ticker: "VOO",  slug: "voo",        scores: [m(vooData),         g(vooData),         v(vooData)],         href: "/stocks/voo",         category: "Other",       ...t(vooData)         },
     { name: "SpaceX",            ticker: "SPCX",  slug: "spacex",      scores: [m(spacexData),      g(spacexData),      v(spacexData)],      href: "/stocks/spacex",      category: "Industrials", ...t(spacexData)      },
     { name: "INNIO",             ticker: "INIO",  slug: "inio",        scores: [m(inioData),        g(inioData),        v(inioData)],        href: "/stocks/inio",        category: "Industrials", ...t(inioData)        },
+    { name: "Rocket Lab",        ticker: "RKLB",  slug: "rklb",        scores: [m(rklbData),        g(rklbData),        v(rklbData)],        href: "/stocks/rklb",        category: "Industrials", ...t(rklbData)        },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────
