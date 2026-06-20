@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import { Search, X, BarChart2, TrendingUp, Menu } from 'lucide-react';
 import { allCoverageData } from '@/app/stockData';
+import { MoatMark } from '@/components/MoatMark';
 
 const navLinks = [
   { name: 'Portfolio', href: '/portfolio', icon: BarChart2 },
@@ -232,7 +233,9 @@ export function NavBar() {
         </button>
 
         <Link href="/" className="flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
-          <span className="primary-gradient w-7 h-7 rounded-md flex items-center justify-center text-[13px] font-black text-[#0a0b0d] shadow-lg shadow-[#c9a96a]/20">M</span>
+          <span className="primary-gradient w-7 h-7 rounded-md flex items-center justify-center text-[#0a0b0d] shadow-lg shadow-[#c9a96a]/20">
+            <MoatMark className="w-4 h-4" strokeWidth={1.9} />
+          </span>
           <span className="font-semibold text-white text-[16px] tracking-tight" style={{ fontFamily: 'var(--font-serif)' }}>InvestMoat</span>
         </Link>
 
@@ -271,8 +274,8 @@ export function NavBar() {
         {/* Logo */}
         <div className="mb-8">
           <Link href="/" className="flex items-center gap-2.5 group" style={{ textDecoration: 'none' }}>
-            <span className="primary-gradient w-9 h-9 rounded-lg flex items-center justify-center text-base font-black text-[#0a0b0d] shadow-lg shadow-[#c9a96a]/20 group-hover:shadow-[#c9a96a]/40 transition-shadow">
-              M
+            <span className="primary-gradient w-9 h-9 rounded-lg flex items-center justify-center text-[#0a0b0d] shadow-lg shadow-[#c9a96a]/20 group-hover:shadow-[#c9a96a]/40 transition-shadow">
+              <MoatMark className="w-5 h-5" strokeWidth={1.8} />
             </span>
             <div>
               <div className="text-[17px] font-semibold text-white leading-none tracking-tight" style={{ fontFamily: 'var(--font-serif)' }}>InvestMoat</div>
