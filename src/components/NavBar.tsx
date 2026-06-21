@@ -236,7 +236,7 @@ export function NavBar() {
           <span className="primary-gradient w-7 h-7 rounded-md flex items-center justify-center text-[#0a0b0d] shadow-lg shadow-[#c9a96a]/20">
             <MoatMark className="w-4 h-4" strokeWidth={1.9} />
           </span>
-          <span className="font-semibold text-white text-[16px] tracking-tight" style={{ fontFamily: 'var(--font-serif)' }}>InvestMoat</span>
+          <span className="font-semibold text-white text-[17px] tracking-tight" style={{ fontFamily: 'var(--font-brand)' }}>InvestMoat</span>
         </Link>
 
         <button
@@ -278,7 +278,7 @@ export function NavBar() {
               <MoatMark className="w-5 h-5" strokeWidth={1.8} />
             </span>
             <div>
-              <div className="text-[17px] font-semibold text-white leading-none tracking-tight" style={{ fontFamily: 'var(--font-serif)' }}>InvestMoat</div>
+              <div className="text-[18px] font-semibold text-white leading-none tracking-tight" style={{ fontFamily: 'var(--font-brand)' }}>InvestMoat</div>
               <div className="text-[9px] text-[#c9a96a]/65 font-bold mt-1 leading-none uppercase tracking-[0.18em] font-mono">Systematic Equity Research</div>
             </div>
           </Link>
