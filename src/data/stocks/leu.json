@@ -1,0 +1,171 @@
+{
+  "slug": "leu",
+  "ticker": "LEU",
+  "name": "Centrus Energy Corp",
+  "titleColor": "#6D28D9",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "LEU"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$3.8B"
+    },
+    {
+      "label": "Price",
+      "value": "~$190"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Hard Assets | Nuclear Fuel Cycle",
+      "color": "primary"
+    },
+    {
+      "label": "Western Enrichment Monopoly",
+      "color": "success"
+    },
+    {
+      "label": "Funding-Dependent",
+      "color": "warning"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "Order Backlog",
+      "value": "$3.8B",
+      "label": "Contracted through 2040; includes a $900M DOE HALEU task order (Jan 2026) to scale Piketon, Ohio",
+      "icon": "Shield",
+      "color": "#6D28D9"
+    },
+    {
+      "title": "HALEU Position",
+      "value": "Only US Producer",
+      "label": "First and sole NRC-licensed HALEU enricher in the Western world; HALEU TAM ~$2.8B by 2030, ~$8B by 2035",
+      "icon": "Atom",
+      "color": "#059669"
+    },
+    {
+      "title": "FY2026 Revenue Guide",
+      "value": "$450–500M",
+      "label": "Q1'26 net income $10.0M on $76.7M revenue; Technical Solutions +47%; ~$1.87B cash vs. ~$1.21B LT debt",
+      "icon": "TrendingUp",
+      "color": "#6D28D9"
+    }
+  ],
+  "moat": {
+    "description": "Centrus's moat rests on being the only US-owned-and-operated uranium enrichment technology and the first and sole NRC-licensed producer of HALEU in the Western world — a national-security barrier reinforced by a ~$3.8B contracted backlog stretching to 2040 and sole-source US Department of Energy funding for the Piketon, Ohio cascade.",
+    "analysisTitle": "The Western Enrichment Monopoly",
+    "analysisSummary": "Centrus owns **the only domestic US uranium-enrichment capability** at a moment when re-shoring the nuclear fuel cycle away from Russia's Rosatom has become explicit US energy and national-security policy:",
+    "analysisPoints": [
+      {
+        "title": "The Only Western HALEU Producer",
+        "text": "High-Assay Low-Enriched Uranium (HALEU, 5–20% U-235) is the fuel required by nearly every advanced and small modular reactor design — Oklo, X-energy, TerraPower — yet before Centrus the only commercial supplier on Earth was Russia's Rosatom. Centrus is the first and only company to receive an NRC license to produce HALEU and the only Western enricher actually producing it at its Piketon, Ohio plant. That first-mover regulatory position, paired with a multi-year US Department of Energy production contract and a $900M task order (January 2026) to build commercial-scale capacity, makes Centrus the default fuel supplier for the entire Western SMR industry."
+      },
+      {
+        "title": "American Centrifuge: Classified, Export-Controlled Technology",
+        "text": "The AC100M centrifuge is the only US-origin enrichment machine and the only enrichment technology that is both American-owned and free of foreign technology-control encumbrances — URENC and Orano cascades on US soil operate under foreign technology-sharing restrictions that bar them from HALEU and defense work. The centrifuge designs are classified and export-controlled, the manufacturing know-how took two decades and billions of federal dollars to rebuild, and the security-cleared workforce cannot be assembled quickly. This is a physical, national-security engineering moat that no software or foreign entrant can replicate on a relevant timeline."
+      },
+      {
+        "title": "Contracted Backlog & Sole-Source Government Demand",
+        "text": "Centrus carries a ~$3.8B revenue backlog extending to 2040 across its LEU (enriched uranium for existing reactors) and Technical Solutions (HALEU and engineering) segments. Long-term SWU supply contracts lock in utilities, while the US government is effectively a captive customer: re-establishing a domestic enrichment base is a stated policy goal, and Centrus is the only vendor that can deliver it. June 2026 brought a non-binding LOI with Oklo for fuel supply, an early signal that commercial HALEU offtake is beginning to convert the policy tailwind into private demand."
+      }
+    ]
+  },
+  "growth": {
+    "description": "Q1 2026 returned net income of $10.0M on $76.7M revenue with the Technical Solutions (HALEU) segment up 47%, and management guided FY2026 revenue to $450–500M; the $3.8B backlog to 2040 plus the $900M DOE expansion order frame a multi-year ramp, though the slope depends on federal appropriations cadence and the pace at which SMR developers actually deploy.",
+    "growthAnalysis": {
+      "cagrEstimate": "12-18%",
+      "scoreDerivation": "Base 80 (12–18% blended revenue CAGR) + 2.7 (2 of 3 drivers accelerating) + 0 (margin trend stable — early HALEU economics unproven) + 3 (TAM expansion: a net-new HALEU market) − 10 (high keyRiskSeverity: revenue cadence is appropriations- and SMR-deployment-dependent) = 76",
+      "drivers": [
+        { "name": "HALEU production ramp", "metric": "$900M DOE task order (Jan 2026) to scale Piketon; Technical Solutions revenue +47% YoY", "trend": "accelerating" },
+        { "name": "Contracted backlog", "metric": "~$3.8B across LEU + Technical Solutions, extending to 2040", "trend": "accelerating" },
+        { "name": "Commercial LEU / SWU contracts", "metric": "FY2026 revenue guided $450–500M; SWU pricing recovering as utilities de-risk from Rosatom", "trend": "stable" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "HALEU demand beyond the DOE is contingent on SMR developers (Oklo, X-energy, TerraPower) reaching commercial deployment on schedule and on continued Congressional appropriations; a funding lapse or multi-year SMR slip through 2027–2029 would strand the second cascade and de-rate the equity sharply.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 63,
+    "description": "At ~$190 the stock has rallied several-fold on the HALEU thesis and sits modestly above a base case of ~$175 — fairly valued leaning rich, with JPMorgan at a $236 Hold; current earnings ($10M quarterly) are thin relative to a ~$3.8B market cap, so the price already discounts substantial HALEU success and leaves little margin of safety."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$90",
+      "description": "Commercial HALEU demand disappoints as SMR deployments slip, appropriations for the Piketon expansion arrive in fits and starts, SWU prices soften as enrichment capacity normalizes, and the market re-rates a pre-earnings story back toward tangible cash flows.",
+      "points": [
+        "SMR developers (Oklo, X-energy, TerraPower) push first commercial reactor dates from the late-2020s into the 2030s; non-DOE HALEU offtake fails to materialize and the second cascade is deferred, leaving Centrus dependent on lumpy government task orders",
+        "A Congressional appropriations lapse or continuing-resolution gridlock delays funding for the Piketon expansion; the DOE backlog converts to revenue more slowly than guided and FY2027 revenue lands below $450M",
+        "Russian/Rosatom enrichment re-enters Western markets via waivers or sanctions easing, and incremental URENC/Orano capacity comes online — SWU spot prices fall and Centrus's pricing power on legacy LEU contracts compresses"
+      ]
+    },
+    "base": {
+      "priceTarget": "$175",
+      "description": "The HALEU ramp proceeds on the DOE backlog, the first commercial offtake LOIs (Oklo and peers) convert to binding contracts, SWU prices stay firm on de-risking from Russian supply, and revenue scales toward $600M+ by 2028 — but the equity digests its multi-year rally and trades roughly sideways to modestly higher.",
+      "points": [
+        "Piketon HALEU production scales on schedule under the $900M task order; Technical Solutions revenue continues compounding ~30–40% and the segment turns reliably profitable by FY2027",
+        "One to two SMR developers convert LOIs into binding multi-year HALEU offtake agreements, validating commercial (non-DOE) demand and underwriting financing for the second enrichment cascade",
+        "Long-term SWU contracting stays firm as US and European utilities continue diversifying away from Rosatom; the LEU segment delivers steady, contracted cash flow that funds the HALEU buildout"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$300",
+      "description": "HALEU becomes the binding bottleneck for the Western SMR and AI-datacenter nuclear buildout, Centrus signs multiple binding commercial offtakes, the second cascade is financed and expanded, and earnings inflect as the only Western supplier prices scarce fuel into a supply-constrained market.",
+      "points": [
+        "HALEU demand outruns Centrus's near-term capacity as the SMR pipeline and AI-driven nuclear PPAs accelerate; the company finances a materially larger second cascade and signs binding offtakes at premium pricing, capturing the $8B-by-2035 HALEU TAM",
+        "A second DOE/national-security award (or allied-government contract) expands the enrichment base, cementing Centrus as the strategic Western enrichment champion and adding a defense/space (HALEU and tritium-adjacent) demand leg",
+        "SWU spot prices spike on a structural Western supply deficit as Rosatom is durably excluded; the legacy LEU segment's cash flow inflects and the combined business re-rates from a story stock to a profitable, contracted compounder"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — Centrus sells enriched uranium and HALEU as a commodity fuel; there is no user-trained interface or workflow creating switching costs, so this moat category does not apply."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "The AC100M American Centrifuge is classified, export-controlled enrichment technology rebuilt over two decades with billions in federal investment; the cascade engineering, manufacturing know-how, and security-cleared workforce are physical national-security IP that no software or foreign entrant can replicate — AI cannot substitute for it, so it routes to the resilient pool.",
+      "aiExposure": "resilient"
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — Centrus does not control any unique public data source; this moat category does not apply to a uranium enrichment business."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Centrifuge engineers, enrichment physicists, and NRC-qualified, security-cleared nuclear technicians are a scarce discipline with multi-year clearance timelines; Centrus holds essentially the only assembled US enrichment workforce, though competition for nuclear talent from SMR developers and utilities creates some retention pressure."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Centrus bundles enriched uranium (SWU), HALEU production, transportation, and fuel-cycle engineering services into an integrated offering that utilities and the DOE value for supply security, though technically sophisticated buyers could in principle source components separately."
+    },
+    "proprietaryData": {
+      "status": "weakened",
+      "note": "Centrus holds decades of proprietary centrifuge-performance and enrichment-operations data from the American Centrifuge and Megatons-to-Megawatts programs, but it is not a compounding, network-scale data asset — its durability comes from physical technology and regulatory position rather than data accumulation."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "Centrus is the first and only holder of an NRC license to produce HALEU and the only US-owned enrichment operator; enrichment is among the most heavily regulated activities in existence (NRC licensing, nuclear non-proliferation controls, export restrictions), creating multi-decade barriers to entry and making Centrus the default vendor for US government nuclear-fuel policy."
+    },
+    "networkEffects": {
+      "status": "weakened",
+      "note": "Enrichment is a commodity-style fuel service with no Metcalfe's-Law dynamics — the value of Centrus's product does not increase as more utilities buy it; the only network-adjacent effect is the deepening of utility and government relationships as the installed reactor base grows."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Multi-year SWU supply contracts and sole-source DOE HALEU task orders embed Centrus as the default Western enrichment supplier with a ~$3.8B backlog to 2040; switching enrichers requires re-contracting, security vetting, and government approvals, making mid-program switching prohibitive for utilities and effectively impossible for the US government, which has no domestic alternative."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — Centrus is not a system of record for any information function; this moat category does not apply to a uranium enrichment business."
+    },
+    "aiResilienceScore": 78,
+    "verdict": "Centrus is a net beneficiary of AI adoption through the data-center nuclear-power tailwind — AI-driven electricity demand is accelerating the SMR buildout that HALEU fuels, and Centrus is the only Western supplier of that fuel. Its core moats — classified centrifuge technology, the sole NRC HALEU license, and sole-source government demand — are physical and regulatory advantages entirely immune to AI-driven disruption; the real risk is commercial and political (SMR deployment pace and appropriations), not technological obsolescence."
+  },
+  "lastAnalyzed": "June 21, 2026"
+}

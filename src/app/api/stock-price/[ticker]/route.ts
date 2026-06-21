@@ -47,6 +47,7 @@ const YAHOO_SYMBOL_MAP: Record<string, string> = {
   isrg:       'ISRG',
   fcx:        'FCX',
   ccj:        'CCJ',
+  leu:        'LEU',
   ceg:        'CEG',
   gev:        'GEV',
   tdg:        'TDG',

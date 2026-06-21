@@ -43,6 +43,7 @@ import race from './race.json';
 import ceg from './ceg.json';
 import gev from './gev.json';
 import ccj from './ccj.json';
+import leu from './leu.json';
 import unh from './unh.json';
 import mco from './mco.json';
 import sofi from './sofi.json';
@@ -156,6 +157,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   ceg: ceg as StockAnalysisData,
   gev: gev as StockAnalysisData,
   ccj: ccj as StockAnalysisData,
+  leu: leu as StockAnalysisData,
   unh: unh as StockAnalysisData,
   mco: mco as StockAnalysisData,
   sofi: sofi as StockAnalysisData,
