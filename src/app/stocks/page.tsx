@@ -1,8 +1,8 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { useRouter } from "next/navigation";
-import { ChevronRight, Search, X, SlidersHorizontal, ArrowUp, ArrowDown, ArrowUpDown } from "lucide-react";
+import { ChevronRight, Search, X, SlidersHorizontal, ArrowUp, ArrowDown, ArrowUpDown, ChevronDown } from "lucide-react";
 import { Spinner } from "@heroui/react";
 import { allCoverageData, getAverageScore } from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
@@ -183,6 +183,66 @@ function CategoryPill({
   );
 }
 
+// ─── Mobile dropdown shell ──────────────────────────────────────────────────────
+function MobileDropdown({
+  label, value, icon, children,
+}: {
+  label: string;
+  value: string;
+  icon: ReactNode;
+  children: (close: () => void) => ReactNode;
+}) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        onClick={() => setOpen(o => !o)}
+        className="w-full flex items-center gap-2 px-3 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-left transition-colors hover:bg-white/[0.06]"
+      >
+        <span className="text-white/30 shrink-0">{icon}</span>
+        <span className="flex flex-col min-w-0 leading-tight">
+          <span className="text-[9px] font-bold uppercase tracking-widest text-white/25">{label}</span>
+          <span className="text-xs font-semibold text-white/85 truncate">{value}</span>
+        </span>
+        <ChevronDown
+          size={14}
+          className={`ml-auto shrink-0 text-white/30 transition-transform ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+      {open && (
+        <div className="absolute z-50 top-full left-0 right-0 mt-1.5 rounded-xl border border-white/10 bg-[#0c0e13] shadow-2xl overflow-hidden max-h-72 overflow-y-auto">
+          {children(() => setOpen(false))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function DropdownItem({
+  active, onClick, children,
+}: { active: boolean; onClick: () => void; children: ReactNode }) {
+  return (
+    <button
+      onClick={onClick}
+      className={`w-full flex items-center justify-between gap-2 px-3 py-2.5 text-left text-sm transition-colors border-b border-white/[0.04] last:border-0 ${
+        active ? "bg-[#c9a96a]/10 text-[#e4c98a]" : "text-white/65 hover:bg-white/[0.04]"
+      }`}
+    >
+      {children}
+    </button>
+  );
+}
+
 export default function StocksPage() {
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("all");
@@ -323,7 +383,8 @@ export default function StocksPage() {
           )}
         </div>
 
-        <div className="flex items-center gap-2 flex-wrap">
+        {/* Desktop: category pills (sorting is handled by column headers) */}
+        <div className="hidden md:flex items-center gap-2 flex-wrap">
           <SlidersHorizontal size={12} className="text-white/20 shrink-0" />
           {visibleCategories.map(cat => (
             <CategoryPill
@@ -336,26 +397,50 @@ export default function StocksPage() {
           ))}
         </div>
 
-        {/* Mobile sort control — column headers are hidden below md */}
-        <div className="flex md:hidden items-center gap-2 overflow-x-auto pb-0.5">
-          <span className="text-[10px] font-bold uppercase tracking-widest text-white/25 shrink-0">Sort</span>
-          {SORT_OPTIONS.map(opt => {
-            const active = sortKey === opt.key;
-            return (
-              <button
-                key={opt.key}
-                onClick={() => handleSort(opt.key)}
-                className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold whitespace-nowrap transition-all ${
-                  active
-                    ? "bg-[#c9a96a]/15 border border-[#c9a96a]/40 text-[#e4c98a]"
-                    : "bg-white/[0.04] border border-white/10 text-white/40"
-                }`}
-              >
-                {opt.label}
-                <SortIndicator active={active} dir={sortDir} />
-              </button>
-            );
-          })}
+        {/* Mobile: filter + sort dropdowns (pills/headers are hidden below md) */}
+        <div className="grid grid-cols-2 gap-2 md:hidden">
+          <MobileDropdown
+            label="Filter"
+            value={CATEGORIES.find(c => c.key === activeCategory)?.label ?? "All"}
+            icon={<SlidersHorizontal size={14} />}
+          >
+            {(close) =>
+              visibleCategories.map(cat => (
+                <DropdownItem
+                  key={cat.key}
+                  active={activeCategory === cat.key}
+                  onClick={() => { setActiveCategory(cat.key); close(); }}
+                >
+                  <span>{cat.label}</span>
+                  {cat.key !== "all" && (
+                    <span className="text-[11px] font-bold text-white/25">{categoryCount(cat.key)}</span>
+                  )}
+                </DropdownItem>
+              ))
+            }
+          </MobileDropdown>
+
+          <MobileDropdown
+            label="Sort by"
+            value={`${SORT_OPTIONS.find(o => o.key === sortKey)?.label ?? "Score"} · ${sortDir === "asc" ? "Asc" : "Desc"}`}
+            icon={<ArrowUpDown size={14} />}
+          >
+            {(close) =>
+              SORT_OPTIONS.map(opt => {
+                const active = sortKey === opt.key;
+                return (
+                  <DropdownItem
+                    key={opt.key}
+                    active={active}
+                    onClick={() => { const wasActive = active; handleSort(opt.key); if (!wasActive) close(); }}
+                  >
+                    <span>{opt.label}</span>
+                    <SortIndicator active={active} dir={sortDir} />
+                  </DropdownItem>
+                );
+              })
+            }
+          </MobileDropdown>
         </div>
       </div>
 
