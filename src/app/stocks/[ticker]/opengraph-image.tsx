@@ -14,6 +14,17 @@ export default async function Image({
   const { ticker } = await params;
   const data = getStockData(ticker);
 
+  // Brand wordmark font (Libre Caslon Display) — bundled TTF passed to Satori,
+  // which doesn't read CSS/web fonts. Falls back to default sans on failure.
+  const caslon = await fetch(
+    new URL('../../_fonts/LibreCaslonDisplay-Regular.ttf', import.meta.url),
+  )
+    .then((r) => r.arrayBuffer())
+    .catch(() => null);
+  const brandFonts = caslon
+    ? [{ name: 'Libre Caslon Display', data: caslon, weight: 400 as const, style: 'normal' as const }]
+    : undefined;
+
   if (!data) {
     return new ImageResponse(
       (
@@ -24,15 +35,16 @@ export default async function Image({
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            background: '#07070f',
-            fontSize: 48,
-            color: 'white',
+            background: '#080a0e',
+            fontFamily: caslon ? 'Libre Caslon Display' : undefined,
+            fontSize: 64,
+            color: '#f4f1ea',
           }}
         >
           InvestMoat
         </div>
       ),
-      { width: 1200, height: 630 }
+      { width: 1200, height: 630, fonts: brandFonts }
     );
   }
 
@@ -91,13 +103,14 @@ export default async function Image({
         >
           <span
             style={{
-              fontSize: '22px',
-              fontWeight: 800,
-              color: 'rgba(201,169,106,0.7)',
-              letterSpacing: '0.12em',
+              fontFamily: caslon ? 'Libre Caslon Display' : undefined,
+              fontSize: '26px',
+              fontWeight: 400,
+              color: 'rgba(201,169,106,0.85)',
+              letterSpacing: '0.04em',
             }}
           >
-            INVESTMOAT
+            InvestMoat
           </span>
           <div
             style={{
@@ -207,6 +220,6 @@ export default async function Image({
         </div>
       </div>
     ),
-    { width: 1200, height: 630 }
+    { width: 1200, height: 630, fonts: brandFonts }
   );
 }
