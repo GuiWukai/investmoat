@@ -95,13 +95,26 @@ function SortHeader({
   );
 }
 
+const SORT_LABEL: Record<SortKey, string> = {
+  name: "Score", moat: "Moat", growth: "Growth", val: "Val", score: "Score",
+};
+
 function StockRow({
-  stock, rank, liveScore, loading,
+  stock, rank, liveScore, loading, sortKey,
 }: {
-  stock: typeof allCoverageData[0]; rank?: number; liveScore: number; loading: boolean;
+  stock: typeof allCoverageData[0]; rank?: number; liveScore: number; loading: boolean; sortKey: SortKey;
 }) {
   const router = useRouter();
   const accentColor = TICKER_COLORS[stock.ticker] ?? '#6b7280';
+
+  // On mobile the Moat/Growth/Val sub-scores are hidden, so the single visible
+  // pill must reflect whatever column is being sorted — otherwise sorting by
+  // Moat looks broken (the composite Score isn't monotonic). Sub-scores are
+  // static (no price needed); only the composite waits on live prices.
+  const subValue =
+    sortKey === "moat"   ? Math.round(stock.scores[0]) :
+    sortKey === "growth" ? Math.round(stock.scores[1]) :
+    sortKey === "val"    ? Math.round(stock.scores[2]) : null;
 
   return (
     <button
@@ -145,12 +158,24 @@ function StockRow({
       {/* Divider */}
       <div className="hidden md:block w-px h-6 bg-white/[0.07] shrink-0" />
 
-      {/* Overall score */}
-      <div className="shrink-0">
+      {/* Score — desktop always shows the composite */}
+      <div className="hidden md:block shrink-0">
         {loading
           ? <Spinner size="sm" color="default" classNames={{ wrapper: "w-7 h-7" }} />
           : <ScorePill value={liveScore} />
         }
+      </div>
+
+      {/* Score — mobile reflects the active sort column so the order reads correctly */}
+      <div className="md:hidden flex flex-col items-end gap-0.5 shrink-0">
+        {subValue !== null ? (
+          <ScorePill value={subValue} />
+        ) : loading ? (
+          <Spinner size="sm" color="default" classNames={{ wrapper: "w-7 h-7" }} />
+        ) : (
+          <ScorePill value={liveScore} />
+        )}
+        <span className="text-[8px] font-bold uppercase tracking-widest text-white/25">{SORT_LABEL[sortKey]}</span>
       </div>
 
       <ChevronRight
@@ -486,6 +511,7 @@ export default function StocksPage() {
                 rank={idx + 1}
                 liveScore={liveScores[stock.ticker] ?? Math.round(getAverageScore(stock.scores))}
                 loading={!pricesLoaded}
+                sortKey={sortKey}
               />
             ))}
           </div>
