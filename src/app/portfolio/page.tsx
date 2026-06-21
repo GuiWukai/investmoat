@@ -358,9 +358,9 @@ export default function PortfolioPage() {
 
       {/* ── Header ───────────────────────────────────────────────────────── */}
       <header className="pt-6 md:pt-12 pb-12 animate-fade-up stagger-fill-both" style={{ animationDelay: '0s' }}>
-        <p className="section-label mb-3">Portfolio</p>
+        <p className="section-label mb-3">IM25</p>
         <h1 className="text-4xl md:text-6xl font-extrabold gradient-text-animated leading-tight mb-4">
-          Portfolio Distribution
+          The IM25
         </h1>
         <p className="text-white/45 text-base md:text-lg max-w-2xl leading-relaxed">
           {portfolio.length} high-conviction positions selected for moat durability, growth scaling,

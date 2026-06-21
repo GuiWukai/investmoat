@@ -8,7 +8,7 @@ import { allCoverageData } from '@/app/stockData';
 import { MoatMark } from '@/components/MoatMark';
 
 const navLinks = [
-  { name: 'Portfolio', href: '/portfolio', icon: BarChart2 },
+  { name: 'IM25', href: '/portfolio', icon: BarChart2 },
   { name: 'Stocks', href: '/stocks', icon: TrendingUp },
 ];
 
