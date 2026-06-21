@@ -83,7 +83,7 @@
     },
     "growthAnalysis": {
       "cagrEstimate": "6–8%",
-      "scoreDerivation": "Base 52 (6–8% CAGR) + 5 high-visibility government contracts (multi-year, very predictable) + 5 TAM expansion (MFC double-digit through 2030, space-based interceptors) = 62",
+      "scoreDerivation": "Base 67.5 (6–8% CAGR, 7% midpoint) + 2.7 trajectory (2 of 3 drivers accelerating: MFC and F-35 sustainment) + 4 expanding margins + 4 growth type 'both' (TAM expansion via space interceptors + share of allied procurement) − 5 moderate key-risk (FY2027 budget/sequestration) = 73",
       "drivers": [
         {
           "name": "Missiles & Fire Control",
@@ -205,8 +205,8 @@
       "note": "Defense prime contractor status requires DoD facility security clearances, ITAR compliance, DCAA audit approval, and continuous performance evaluations — barriers new entrants cannot clear in under a decade. The F-35 is a sole-source program: no other company can manufacture the airframe without an Act of Congress. Multi-year procurement contracts (e.g., the $15B Lots 20-21 award) lock in LMT for 3-5 year production cycles. Foreign Military Sales require US government approval, extending LMT's regulatory protection internationally. AI is irrelevant to regulatory lock-in."
     },
     "networkEffects": {
-      "status": "weakened",
-      "note": "The F-35 multinational coalition (20+ nations) creates genuine interoperability value — shared upgrades, common spare parts logistics, and combined training exercises justify the platform's cost for smaller air forces. More nations on F-35 makes the platform more valuable for all. However, this is a physical coalition effect, not a software network: it does not compound at the rate of software platforms, and switching from F-35 to Eurofighter or Rafale is a legitimate (if costly) alternative for some nations."
+      "status": "intact",
+      "note": "The F-35 multinational coalition (20+ nations, 1,000+ aircraft) is a demonstrably present and growing network effect: shared block upgrades, common spare-parts pooling, and combined training exercises mean each additional operator increases interoperability value for all — genuine increasing returns at the platform level that justify the cost for smaller air forces. It does not reach 'strong' because this is a physical coalition effect rather than a compounding software network — it scales more slowly than software platforms, and switching from F-35 to Eurofighter, Rafale, KF-21, or Gripen remains a legitimate (if costly) alternative for some nations."
     },
     "transactionEmbedding": {
       "status": "strong",
