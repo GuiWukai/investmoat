@@ -361,7 +361,7 @@ export default function StocksPage() {
       </header>
 
       {/* Controls */}
-      <div className="animate-fade-up stagger-fill-both space-y-3" style={{ animationDelay: '0.08s' }}>
+      <div className="relative z-30 animate-fade-up stagger-fill-both space-y-3" style={{ animationDelay: '0.08s' }}>
         <div className="relative max-w-sm">
           <Search size={14} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-white/25 pointer-events-none" />
           <input
@@ -445,7 +445,7 @@ export default function StocksPage() {
       </div>
 
       {/* Stock list */}
-      <div className="animate-fade-up stagger-fill-both" style={{ animationDelay: '0.16s' }}>
+      <div className="relative z-0 animate-fade-up stagger-fill-both" style={{ animationDelay: '0.16s' }}>
         {/* Column headers — desktop (sortable) */}
         <div className="hidden md:flex items-center gap-4 px-5 pb-2">
           <span className="w-5 shrink-0" />
