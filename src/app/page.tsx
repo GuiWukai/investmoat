@@ -125,7 +125,7 @@ export default function HomePage() {
               href="/portfolio"
               className="flex items-center gap-2 px-6 py-3 primary-gradient rounded-lg font-bold text-[#0a0b0d] text-sm hover:opacity-90 transition-opacity"
             >
-              View Portfolio <ArrowRight size={16} />
+              View the IM25 <ArrowRight size={16} />
             </Link>
             <Link
               href="/stocks"
@@ -589,7 +589,7 @@ export default function HomePage() {
           <div className="relative">
             <p className="section-label mb-4">Ready to explore?</p>
             <h3 className="text-2xl md:text-4xl font-bold gradient-text mb-4">
-              View the portfolio
+              View the IM25
             </h3>
             <p className="text-white/45 max-w-md mx-auto text-sm leading-relaxed mb-8">
               Explore the current 25-stock allocation, browse all 60+ analyzed assets,
@@ -600,7 +600,7 @@ export default function HomePage() {
                 href="/portfolio"
                 className="flex items-center gap-2 px-6 py-3 primary-gradient rounded-lg font-bold text-[#0a0b0d] text-sm hover:opacity-90 transition-opacity"
               >
-                View Portfolio <ArrowRight size={16} />
+                View the IM25 <ArrowRight size={16} />
               </Link>
               <Link
                 href="/stocks"
