@@ -5,7 +5,16 @@ export const alt = 'InvestMoat — Systematic Moat Equity Research';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
-export default function Image() {
+export default async function Image() {
+  // Load the brand wordmark font (Libre Caslon Display) for the title.
+  // next/og (Satori) doesn't read CSS/web fonts, so the TTF is bundled and
+  // passed explicitly; fall back to the default sans if it can't be read.
+  const caslon = await fetch(
+    new URL('./_fonts/LibreCaslonDisplay-Regular.ttf', import.meta.url),
+  )
+    .then((r) => r.arrayBuffer())
+    .catch(() => null);
+
   return new ImageResponse(
     (
       <div
@@ -53,10 +62,11 @@ export default function Image() {
         {/* Title */}
         <div
           style={{
-            fontSize: '92px',
-            fontWeight: 700,
+            fontFamily: caslon ? 'Libre Caslon Display' : undefined,
+            fontSize: '96px',
+            fontWeight: 400,
             color: '#f4f1ea',
-            letterSpacing: '-2px',
+            letterSpacing: '-1px',
             lineHeight: 1,
             marginBottom: '28px',
             textAlign: 'center',
@@ -113,6 +123,12 @@ export default function Image() {
         </div>
       </div>
     ),
-    { width: 1200, height: 630 }
+    {
+      width: 1200,
+      height: 630,
+      fonts: caslon
+        ? [{ name: 'Libre Caslon Display', data: caslon, weight: 400 as const, style: 'normal' as const }]
+        : undefined,
+    }
   );
 }
