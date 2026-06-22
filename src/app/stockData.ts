@@ -134,6 +134,7 @@ import soxxData     from '@/data/stocks/soxx.json';
 import vooData      from '@/data/stocks/voo.json';
 import inioData     from '@/data/stocks/inio.json';
 import rklbData     from '@/data/stocks/rklb.json';
+import amkrData     from '@/data/stocks/amkr.json';
 
 // Delegates to computeCompositeRaw in valuationScore.ts — the single source of
 // truth for the composite formula. Returns a float for precise sorting; callers
@@ -298,6 +299,7 @@ const allCoverageData = [
     { name: "SpaceX",            ticker: "SPCX",  slug: "spacex",      scores: [m(spacexData),      g(spacexData),      v(spacexData)],      href: "/stocks/spacex",      category: "Industrials", ...t(spacexData)      },
     { name: "INNIO",             ticker: "INIO",  slug: "inio",        scores: [m(inioData),        g(inioData),        v(inioData)],        href: "/stocks/inio",        category: "Industrials", ...t(inioData)        },
     { name: "Rocket Lab",        ticker: "RKLB",  slug: "rklb",        scores: [m(rklbData),        g(rklbData),        v(rklbData)],        href: "/stocks/rklb",        category: "Industrials", ...t(rklbData)        },
+    { name: "Amkor Technology",  ticker: "AMKR",  slug: "amkr",        scores: [m(amkrData),        g(amkrData),        v(amkrData)],        href: "/stocks/amkr",        category: "Big Tech",    ...t(amkrData)        },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────

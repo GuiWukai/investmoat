@@ -1,0 +1,212 @@
+{
+  "slug": "amkr",
+  "ticker": "AMKR",
+  "name": "Amkor Technology, Inc.",
+  "lastAnalyzed": "June 22, 2026",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "AMKR"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$22.4B"
+    },
+    {
+      "label": "Current Price",
+      "value": "~$91"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Semiconductors | OSAT & Advanced Packaging",
+      "color": "primary"
+    },
+    {
+      "label": "#2 OSAT",
+      "color": "success"
+    },
+    {
+      "label": "Cyclical · Thin Margin",
+      "color": "warning"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "Q1 FY2026 Revenue",
+      "value": "$1.68B",
+      "label": "record Q1, +27% YoY (reported); EPS $0.33 beat the $0.22 Street by ~50%. Advanced products (HD Fan-Out, 2.5D for AI accelerators) grew 29% to $1.37B — 81% of sales. Q2 guided to $1.75–1.85B, EPS $0.42–0.52, gross margin 14.5–15.5%.",
+      "icon": "Cpu",
+      "color": "#2563eb"
+    },
+    {
+      "title": "2030 Roadmap",
+      "value": "~$11B / 3× EPS",
+      "label": "management's long-range target: ~$11B revenue and roughly triple FY2025 EPS (~$1.50 → ~$4.50) by 2030, driven by AI/HPC advanced-packaging mix and the TSMC-anchored Arizona facility. FY2026 guide ~$7.75B (+15%).",
+      "icon": "TrendingUp",
+      "color": "#10b981"
+    },
+    {
+      "title": "2026 Capex",
+      "value": "$2.5–3.0B",
+      "label": "an outsized spend (vs. ~$7.75B revenue) concentrated on the $7B Arizona advanced-packaging campus co-located with TSMC's fabs. Pressures near-term free cash flow but underwrites the AI-packaging share-gain thesis.",
+      "icon": "Factory",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "description": "High customer-qualification switching costs and a TSMC-anchored advanced-packaging position — but a capital-intensive, thin-margin, cyclical business with no software lock-in.",
+    "analysisTitle": "The Qualification & Co-Location Moat",
+    "analysisSummary": "Amkor's durability is **real but narrow** — it rests on switching costs and onshoring, not on the wide network or software moats that protect the rest of the semiconductor value chain:",
+    "analysisPoints": [
+      {
+        "title": "Customer Qualification Switching Costs",
+        "text": "Advanced packages (HD Fan-Out, 2.5D/SWIFT) are co-developed with the customer over multi-quarter qualification cycles tied to a specific package, substrate, and test flow. Once a part ships in volume, re-qualifying a second source is costly and slow — which is the core source of Amkor's stickiness, even though large customers like Apple ultimately retain dual-sourcing leverage."
+      },
+      {
+        "title": "TSMC Co-Location & Onshoring",
+        "text": "The October 2025 ten-year capacity-reservation agreement with TSMC and the $7B Arizona campus place Amkor physically next to leading-edge US fabs, supported by CHIPS-era onshoring incentives. This creates a contractual and geographic lock-in that a Taiwan- or China-based OSAT cannot easily replicate for US-bound advanced silicon."
+      },
+      {
+        "title": "Process IP & Capital Intensity",
+        "text": "Decades of accumulated packaging process know-how and ~$2.5–3.0B/year of capital intensity raise the bar for new entrants. But the flip side is the weakness: ~14% gross margins, deep cyclicality, and the fact that IDMs/foundries (TSMC CoWoS, Samsung, Intel) increasingly pull the highest-value advanced packaging in-house, capping how much of the AI value chain Amkor can own."
+      }
+    ]
+  },
+  "growth": {
+    "description": "Amkor is riding the AI/HPC advanced-packaging wave: Q1 FY2026 revenue hit a record $1.68B (+27% YoY) and advanced products reached 81% of sales, with communications and automotive end-markets up 42% and 28%. Management guides FY2026 to ~$7.75B (+15%) and expects its AI advanced-packaging portfolio to triple in 2026 as new compute programs and the Arizona facility ramp in H2. The long-range plan targets ~$11B revenue and ~3× FY2025 EPS by 2030 — implying a high-single to low-double-digit blended CAGR off a cyclical base, with margins slowly improving as the advanced mix shifts. The catch is the cyclicality and customer concentration that have historically whipsawed OSAT growth, plus a 2026 capex load ($2.5–3.0B) that pressures free cash flow during the build-out.",
+    "growthAnalysis": {
+      "cagrEstimate": "10–15%",
+      "scoreDerivation": "Base ~76 (12.5% midpoint CAGR, 8–15% band) + 3 trajectory (advanced packaging & automotive accelerating, comms stable) + 4 margin (utilization-driven gross-margin expansion 14.2% → guided 14.5–15.5%) + 3 type (advanced-packaging TAM expansion) − 10 keyRisk (high: cyclicality, Apple concentration, FCF pressure from capex, in-house CoWoS competition) = 76",
+      "drivers": [
+        {
+          "name": "Advanced Packaging (AI/HPC)",
+          "metric": "advanced products $1.37B in Q1 FY2026 (+29% YoY, 81% of sales); AI advanced-packaging portfolio guided to triple in 2026; Arizona campus ramps H2 2026",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Automotive & Industrial",
+          "metric": "+28% YoY in Q1 FY2026 as automotive content and electrification packaging recover off a soft 2024–25 base",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Communications (Mobile)",
+          "metric": "+42% YoY in Q1 FY2026 on the seasonal flagship cycle, but structurally mature and concentrated in a few large customers",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "OSAT is a thin-margin (~14% gross), capital-intensive, cyclical business with meaningful customer concentration (a single large mobile customer is a substantial share of revenue). The 2026 capex of $2.5–3.0B exceeds net income and pressures free cash flow during the Arizona build-out, and foundries/IDMs (TSMC CoWoS, Samsung, Intel) are pulling the highest-value AI advanced packaging in-house. Falsifiable test: if FY2026 free cash flow turns materially negative or the AI advanced-packaging portfolio fails to roughly triple as guided by the Q4 FY2026 print (Feb 2027), the growth-and-margin thesis weakens and the cyclical multiple compresses.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 68,
+    "description": "At ~$91 — up from a 52-week low of ~$20 on the AI-packaging re-rating — AMKR trades around 45× FY2026 EPS (~$2.00–2.20), rich for a historically 10–20× cyclical OSAT but defensible if the 2030 ~$11B / 3× EPS roadmap plays out. The price sits roughly at the base case ($95), about 90% of the way up from the bear ($60), leaving limited margin of safety against a cyclical or capex-driven setback.",
+    "peAnalysis": {
+      "asOf": "June 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~61×",
+          "note": "FY2025 EPS ~$1.50"
+        },
+        {
+          "label": "Forward P/E (FY2026)",
+          "value": "~45×",
+          "note": "FY2026 EPS est. ~$2.00–2.20"
+        },
+        {
+          "label": "P/E on 2030 Target",
+          "value": "~20×",
+          "note": "~$4.50 EPS if the long-range plan is met"
+        },
+        {
+          "label": "Price / Sales (FY2026)",
+          "value": "~2.9×",
+          "note": "~$7.75B revenue guide"
+        },
+        {
+          "label": "Free Cash Flow",
+          "value": "pressured",
+          "note": "$2.5–3.0B capex vs. ~$0.5B net income — FCF thin-to-negative during Arizona build"
+        }
+      ],
+      "summary": "AMKR has re-rated from a low-teens cyclical multiple to ~45× forward earnings on the AI advanced-packaging thesis. That is only justified by the 2030 roadmap converting — on the long-range target the stock is ~20× earnings, but the path runs through heavy capex, thin margins, and customer concentration. The valuation now prices in execution; a single cyclical air-pocket or a capex overrun would compress the multiple quickly."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$60",
+      "description": "A semiconductor cyclical air-pocket or mobile-customer order softness collides with the peak Arizona capex spend, free cash flow turns negative, and the AI-packaging multiple compresses back toward historical OSAT norms.",
+      "points": [
+        "FY2026 revenue undershoots the ~$7.75B guide as a cyclical downturn or a major mobile customer cuts orders, dragging utilization and gross margin back below 14%",
+        "Arizona capex ($2.5–3.0B) pushes free cash flow materially negative, forcing balance-sheet caution and capping the buyback/dividend",
+        "TSMC, Samsung and Intel expand in-house advanced packaging (CoWoS/foundry-integrated), limiting Amkor's share of the highest-value AI packaging and re-rating the stock toward ~15× earnings"
+      ]
+    },
+    "base": {
+      "priceTarget": "$95",
+      "description": "FY2026 tracks the ~$7.75B (+15%) guide, the AI advanced-packaging portfolio roughly triples, Arizona ramps in H2 on schedule, and gross margin grinds into the mid-teens — keeping the premium multiple intact without further re-rating.",
+      "points": [
+        "FY2026 revenue lands near $7.75B with advanced products holding ~80%+ of sales and gross margin reaching the guided 14.5–15.5%",
+        "The TSMC-anchored Arizona facility begins volume production in H2 2026, validating the US onshoring and co-location thesis",
+        "AI/HPC advanced-packaging revenue roughly triples year-on-year as guided, offsetting maturity in mobile and keeping the 2030 roadmap on track"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$135",
+      "description": "AI/HPC packaging demand outruns capacity, Arizona reservation fills faster than planned, gross margin inflects toward the high-teens on richer mix, and the market underwrites the 2030 ~$11B / 3× EPS plan with a sustained premium multiple.",
+      "points": [
+        "Advanced-packaging demand exceeds capacity, letting Amkor raise prices and lift gross margin toward the high-teens — well above the ~14% historical band",
+        "The Arizona campus fills ahead of schedule under the 10-year TSMC agreement and attracts additional US-bound advanced-silicon customers, de-risking the 2030 ~$11B target",
+        "Amkor gains OSAT share against ASE and China-based JCET in 2.5D/fan-out, with the AI portfolio compounding above the 'triple in 2026' pace into 2027"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — Amkor sells packaging and test services, not a software interface; there is no user-facing UI or workflow that creates relearning cost."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Decades of proprietary packaging process IP (HD Fan-Out, 2.5D, SWIFT, flip-chip) and co-developed customer flows are hard to replicate, though leading foundries and ASE possess comparable capability."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — the business does not derive any moat from access to or aggregation of a public data source."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Advanced-packaging process engineers are somewhat scarce, but the talent pool is shared across ASE, JCET, foundries and IDMs, so it is not a defensible standalone moat."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Turnkey assembly + test + (increasingly) advanced packaging sold as an integrated service raises switching friction versus splitting the flow across vendors."
+    },
+    "proprietaryData": {
+      "status": "weakened",
+      "note": "Yield, reliability and process data accumulate internally, but they are operational rather than a compounding, non-replicable data asset that competitors cannot match."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "The 10-year TSMC capacity-reservation agreement, multi-quarter customer qualification barriers, and CHIPS-era US onshoring incentives create genuine multi-year switching and entry barriers for the Arizona advanced-packaging position."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "N/A — adding more customers or packages does not make the service more valuable to other customers; there is no Metcalfe-style network dynamic."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Once qualified, Amkor is embedded in a customer's supply chain at the package level — co-located with TSMC's Arizona fabs and designed into multi-year product roadmaps — though large customers retain dual-sourcing leverage."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — Amkor is not the authoritative system of record for any critical business function; it is a manufacturing-services supplier."
+    },
+    "aiResilienceScore": 54,
+    "verdict": "Amkor's moat is narrow and AI-adjacent rather than AI-resilient: it benefits enormously from AI demand for advanced packaging, but its durability rests on customer-qualification switching costs and the TSMC/onshoring lock-in, not on a defensible data, network or software advantage. The persistent risk is that foundries and IDMs pull the highest-value AI packaging in-house, leaving Amkor a thin-margin, cyclical capacity provider."
+  }
+}

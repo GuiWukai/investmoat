@@ -116,6 +116,7 @@ import soxx from './soxx.json';
 import voo from './voo.json';
 import inio from './inio.json';
 import rklb from './rklb.json';
+import amkr from './amkr.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -234,6 +235,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   spacex: spacex as StockAnalysisData,
   inio: inio as StockAnalysisData,
   rklb: rklb as StockAnalysisData,
+  amkr: amkr as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
