@@ -2,11 +2,11 @@
   "slug": "dash",
   "ticker": "DASH",
   "name": "DoorDash, Inc.",
-  "lastAnalyzed": "May 2026",
+  "lastAnalyzed": "June 24, 2026",
   "headerStats": [
     { "label": "Ticker", "value": "DASH" },
-    { "label": "Market Cap", "value": "~$79B" },
-    { "label": "Price", "value": "~$190" }
+    { "label": "Market Cap", "value": "~$75B" },
+    { "label": "Price", "value": "~$171" }
   ],
   "chips": [
     { "label": "Delivery | Marketplace | Ads", "color": "primary" },
@@ -60,35 +60,35 @@
     ]
   },
   "growth": {
-    "description": "Q1 2026 (reported May 6 2026) marketplace GOV $31.6B (+37% YoY incl. Deliveroo, ~24% organic), revenue $4.04B (+33%) — a slight miss vs. the $4.15B consensus — and orders 933M (+27%). EPS of $0.42 beat the $0.37 estimate, and the strong Q2 GOV guide of $32.4–33.4B (well above the ~$28B Street modelled) drove shares ~10% higher. Growth is driven by (1) DashPass + frequency uplift, (2) grocery/retail vertical expansion, (3) advertising platform, and (4) international integration of Wolt + Deliveroo. FY2026 priorities remain Deliveroo integration and ads scaling. Adj. EBITDA margin is expanding as marketplace operating leverage and ads contribution compound.",
+    "description": "Q1 2026 (reported May 6 2026) marketplace GOV $31.6B (+37% YoY incl. Deliveroo, ~24% organic), revenue $4.04B (+33%) — a slight miss vs. the $4.15B consensus — and orders 933M (+27%). EPS of $0.42 beat the $0.37 estimate, and the strong Q2 GOV guide of $32.4–33.4B (well above the ~$28B Street modelled) drove a brief post-print pop, but the shares have since round-tripped to ~$171 (-23% YTD, ~40% below the Oct-2025 high) as the market re-rates on management's plan — flagged in Nov 2025 — to spend several hundred million dollars more in 2026 on a single global tech stack, autonomous delivery, and merchant software. Growth is driven by (1) DashPass + frequency uplift, (2) grocery/retail vertical expansion (Dollar Tree added ~9,000 stores in May 2026), (3) advertising platform, and (4) international integration of Wolt + Deliveroo. Q1 adj. EBITDA expanded, but the elevated multi-year investment plan caps the near-term margin-leverage story, so the blended trend is best characterised as stable rather than expanding.",
     "growthAnalysis": {
-      "cagrEstimate": "20-30%",
-      "scoreDerivation": "Base 80 (15-30% CAGR) + 5 advertising acceleration ($2B+ run-rate, 70% margin contribution) + 5 international optionality (Deliveroo + Wolt combined platform) - 5 integration execution risk (Deliveroo close late 2025, 18-24 month integration) - 3 grocery margin drag (lower take-rate vs. restaurant) = 82, anchored to 80",
+      "cagrEstimate": "18-22%",
+      "scoreDerivation": "Base 83 (18-22% CAGR midpoint ~20%) + 3 trajectory (3 of 4 drivers — intl, ads, DashPass — accelerating; US marketplace stable) + 0 margin (stable: Q1 adj. EBITDA up, but the 2026 investment binge offsets near-term operating leverage) + 4 type (both TAM expansion and share gains) - 10 risk (high: margin-compression from the multi-year spend is the materialised driver of the 2026 selloff) = 80",
       "drivers": [
         { "name": "US Marketplace GOV", "metric": "$31.6B Q1 2026 (+37% YoY, ~24% organic); ~60%+ US restaurant delivery share; Q2 GOV guide $32.4–33.4B", "trend": "stable" },
-        { "name": "International (Wolt + Deliveroo)", "metric": "40+ countries combined; Deliveroo integration through 2026-2027", "trend": "accelerating" },
+        { "name": "International (Wolt + Deliveroo)", "metric": "40+ countries combined; Deliveroo posted its fastest growth in four years; integration through 2026-2027", "trend": "accelerating" },
         { "name": "Advertising (Symbiosis)", "metric": "Doubled partner count H2 2025; >$2B 2026 run-rate", "trend": "accelerating" },
         { "name": "DashPass Subscribers", "metric": "~22M+; 4-5x order frequency vs non-members", "trend": "accelerating" }
       ],
       "primaryType": "both",
-      "keyRisk": "If Deliveroo integration triggers material customer churn in the UK/UAE OR Uber Eats sustains aggressive US discounting that compresses DoorDash take-rates by 100-150bps through 2027, GOV growth decelerates to mid-teens and adj. EBITDA margins flatten rather than expand, breaking the operating-leverage thesis.",
-      "keyRiskSeverity": "moderate",
-      "marginTrend": "expanding"
+      "keyRisk": "The 2026 step-up in spending (global tech stack, autonomous delivery, merchant software) is the materialised risk: if it compresses adj. EBITDA margin expansion through 2027 without a clear monetisation payoff — compounded by Deliveroo integration churn in the UK/UAE or Uber Eats discounting taking 100-150bps of US take-rate — the operating-leverage thesis that justifies the multiple breaks and growth normalises to the mid-teens.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 65,
-    "description": "At ~$190 after the Q1 print (+10% reaction), DoorDash trades at ~55× forward FY2026 EPS (~$3.45 consensus) and ~5× forward sales — a premium to most marketplace peers, reflecting the market's pricing-in of advertising-led margin expansion and international optionality. Q1 beat on EPS and orders with a strong Q2 GOV guide, though revenue slightly missed. Sell-side average target ~$249; FCF positive and growing, balance sheet net-cash. The valuation is not cheap and the post-print pop leaves less margin of safety, but earnings power is compounding rapidly.",
+    "score": 77,
+    "description": "At ~$171 (down ~23% YTD and ~40% below the Oct-2025 high of ~$286; 52-week low ~$143 in March), DoorDash trades at ~50× forward FY2026 EPS (~$3.45 consensus) and ~5× forward sales — still a premium to most marketplace peers, but the post-Q1 pop has fully unwound and the price now sits roughly halfway between the $120 bear and $220 base, restoring some margin of safety. The selloff reflects the 2026 investment step-up (global tech stack, autonomous delivery, merchant software) compressing the near-term margin-leverage story; sell-side targets have been trimmed (e.g., Argus to $190 in June). FCF positive and growing, balance sheet net-cash, earnings power still compounding — the valuation question is whether the multi-year spend pays off.",
     "peAnalysis": {
-      "asOf": "May 2026",
+      "asOf": "June 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~95×", "note": "TTM GAAP EPS dampened by stock comp" },
+        { "label": "Trailing P/E (GAAP)", "value": "~82×", "note": "TTM GAAP EPS dampened by stock comp" },
         { "label": "Forward P/E (NTM)", "value": "~50×", "note": "consensus FY2026 EPS ~$3.45" },
         { "label": "PEG Ratio", "value": "~1.7×", "note": "fwd P/E / ~30% EPS CAGR" },
         { "label": "Price / Sales (NTM)", "value": "~5×", "note": "~$15.5B FY2026 revenue est." },
-        { "label": "Price / FCF", "value": "~33×", "note": "~$2.2B TTM FCF" }
+        { "label": "Price / FCF", "value": "~34×", "note": "~$2.2B TTM FCF" }
       ],
-      "summary": "DASH trades at a premium consumer-platform multiple (~50× forward P/E, ~5× sales). The PEG of ~1.7 on 30%+ EPS growth is fair if advertising margin contribution and Deliveroo integration deliver as planned. The $249 average sell-side target implies meaningful upside even after the recent rally; the bear case requires advertising-margin disappointment or Deliveroo customer churn."
+      "summary": "DASH still trades at a premium consumer-platform multiple (~50× forward P/E, ~5× sales), but the ~23% YTD drawdown has reset the entry point closer to the bear case. The PEG of ~1.7 on 30%+ EPS growth is fair if advertising margin contribution and Deliveroo integration deliver; the bear case requires the 2026 investment step-up to compress margins without a monetisation payoff, or Deliveroo customer churn."
     }
   },
   "scenarios": {
@@ -126,7 +126,7 @@
   "tenMoats": {
     "learnedInterfaces": {
       "status": "intact",
-      "note": "Consumer learning curve on the DoorDash app, DashPass workflows, and Cash Card payment defaults creates real habit formation. Restaurants and dashers each have learned operational interfaces (tablet OS, dasher app, MX portal) that are sticky but not insurmountable. AI-generated UIs and conversational ordering may erode some of this advantage over time."
+      "note": "Consumer learning curve on the DoorDash app, DashPass workflows, and Cash Card payment defaults creates real habit formation. Restaurants and dashers each have learned operational interfaces (tablet OS, dasher app, MX portal) that are sticky but not insurmountable. AI-generated UIs and conversational ordering may erode some of this advantage over time — DoorDash is defending the surface with its own 'Ask DoorDash' in-app AI assistant (launched June 2026) that builds carts from a recipe, photo, or plain-English request."
     },
     "businessLogic": {
       "status": "intact",
@@ -164,6 +164,7 @@
       "status": "intact",
       "note": "DoorDash is becoming a system of record for restaurant delivery operations: menu pricing, customer reviews, dasher dispatch, and increasingly point-of-sale integration. DashMart and grocery/retail extend this into a broader retail-fulfillment system of record. Not yet an irreplaceable system of record, but trending in that direction as advertising and POS integrations deepen."
     },
-    "verdict": "DoorDash's moat structure is led by networkEffects (US rider-restaurant flywheel, ~60%+ category share), transactionEmbedding (DashPass + Cash Card), and proprietaryData (order-level marketplace data). These moats are largely AI-resilient — generative AI may change ordering interfaces but the underlying delivery network and dasher liquidity cannot be replaced by language models. The structural questions are (1) Deliveroo integration execution and (2) whether advertising + Cash Card monetization can sustain margin expansion as growth normalizes. The system-of-record moat is intact and trending stronger as DashMart and POS integrations deepen."
+    "aiResilienceScore": 73,
+    "verdict": "DoorDash's moat structure is led by networkEffects (US rider-restaurant flywheel, ~60%+ category share), transactionEmbedding (DashPass + Cash Card), and proprietaryData (order-level marketplace data). These moats are largely AI-resilient — generative AI may change ordering interfaces but the underlying delivery network and dasher liquidity cannot be replaced by language models, so aiResilienceScore (73) tracks close to the raw moat score (75). The structural questions are (1) Deliveroo integration execution and (2) whether advertising + Cash Card monetization can sustain margin expansion as the 2026 investment step-up weighs on near-term operating leverage. The system-of-record moat is intact and trending stronger as DashMart and POS integrations deepen."
   }
 }

@@ -2,11 +2,11 @@
   "slug": "uber",
   "ticker": "UBER",
   "name": "Uber Technologies",
-  "lastAnalyzed": "June 2026",
+  "lastAnalyzed": "June 24, 2026",
   "headerStats": [
     { "label": "Ticker", "value": "UBER" },
-    { "label": "Market Cap", "value": "~$141B" },
-    { "label": "Current Price", "value": "~$69" }
+    { "label": "Market Cap", "value": "~$145B" },
+    { "label": "Current Price", "value": "~$70" }
   ],
   "chips": [
     { "label": "Mobility | Delivery | Network", "color": "primary" },
@@ -71,8 +71,8 @@
     }
   },
   "valuation": {
-    "score": 83,
-    "description": "At ~$69 Uber trades ~27% below the base case ($95), at ~24× FY26 EPS and ~7% FCF yield, after robotaxi fears compressed the multiple ~30% from the October 2025 peak even as Q1 2026 bookings accelerated to +25% YoY and TTM FCF hit a record $9.8B. The market is pricing meaningful autonomy disruption; fundamentals are not yet showing it.",
+    "score": 82,
+    "description": "At ~$70 Uber trades ~26% below the base case ($95) and ~33% below the ~$105 Wall Street average target (Strong Buy consensus, 26 analysts), at ~24× FY26 EPS and ~7% FCF yield, after robotaxi fears compressed the multiple ~30% from the October 2025 peak even as Q1 2026 bookings accelerated to +25% YoY and TTM FCF hit a record $9.8B. The market is pricing meaningful autonomy disruption; fundamentals are not yet showing it.",
     "peAnalysis": {
       "asOf": "June 2026",
       "rows": [
@@ -155,7 +155,7 @@
       "status": "intact",
       "note": "Uber is the system of record for mobility identity and history for ~150M+ active monthly riders globally."
     },
-    "aiResilienceScore": 70,
-    "verdict": "Uber's network and bundling moats are AI-resilient — autonomy is the disruption vector, not language models. The thesis question is whether Uber retains the consumer demand layer as autonomy operators (Waymo, Tesla, Wayve) commercialise; current partnerships and data scale support a durable demand-aggregator role, with Tesla vertical-integration the primary tail risk."
+    "aiResilienceScore": 76,
+    "verdict": "Uber's network, bundling, and transaction-embedding moats are AI-resilient — language models do not erode rider-driver liquidity. The one AI-era structural threat is autonomy: robotaxis (Tesla Cybercab, Waymo) attack the human-driven mobility network that anchors the moat, which is why aiResilienceScore (76) sits a notch below the raw moat score (83). The thesis question is whether Uber retains the consumer demand layer as autonomy operators commercialise; current partnerships (Waymo, Wayve, NVIDIA 100k-vehicle network) and trip-level data scale support a durable demand-aggregator role, with Tesla vertical-integration the primary tail risk."
   }
 }
