@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$111B"
+      "value": "~$92B"
     },
     {
       "label": "Price",
-      "value": "$108.07"
+      "value": "$89.52"
     }
   ],
   "chips": [
@@ -95,7 +95,7 @@
     },
     "growthAnalysis": {
       "cagrEstimate": "19–22%",
-      "scoreDerivation": "Base 80 (15–30% CAGR, 22% Q1 2026 actual) + 5 recurring (98% renewal, $12.64B cRPO) + 5 TAM expansion (AI ACV $1.5B target, Armis OT security) − 3 gross margin compression (subscription GM −300 bps from Armis/AI infra) = 87",
+      "scoreDerivation": "Base 83.7 (19–22% CAGR, midpoint ~20.5%, 22% Q1 2026 actual) + 2.7 trajectory (2 of 3 drivers accelerating) + 0 margin (op margin stable ~32%) + 4 both (TAM + share) − 5 moderate risk (Salesforce ITSM, Armis margin headwind) = 85",
       "drivers": [
         {
           "name": "Agentic AI (Now Assist + Autonomous Workforce)",
@@ -120,10 +120,10 @@
     }
   },
   "valuation": {
-    "score": 77,
-    "description": "At $108.07, ServiceNow has recovered ~27% from the post-Q1 intraday low of $81.24 as the market digested the Armis gross-margin optics and responded to Knowledge 2026 (Autonomous Security and Risk, AI Control Tower expansion, Action Fabric/MCP Server GA). The stock is still ~49% below the 52-week high of $211.48 and ~30% below the base case ($155). Q1 fundamentals remain intact: subscription revenue +22% YoY, non-GAAP operating margin 32%, FCF margin 44% in the quarter — the recovery has consumed part of the April mispricing but the risk-reward remains favourable.",
+    "score": 82,
+    "description": "At $89.52, ServiceNow has round-tripped back toward its post-Q1 intraday low of $81.24 (now just ~10% above it), giving back the entire spring recovery to ~$108 as the AI 'per-seat pricing collapse' fear and the Salesforce Agentforce ITSM narrative reasserted — the stock is down ~36% YTD 2026 and sits ~58% below the 52-week high of $211.48 and ~42% below the base case ($155). Analyst targets have been trimmed (consensus average ~$142 from ~$166; Wolfe to $125 from $175) but the Strong Buy consensus and a ~$100 low-end target still sit above spot. Q1 fundamentals are unchanged: subscription revenue +22% YoY, non-GAAP operating margin 32%, FCF margin 44% in the quarter — the selloff is multiple compression, not a fundamental break, and the risk-reward has improved versus the April analysis.",
     "valuationNote": {
-      "text": "At ~$108 vs. a base case of $155, NOW trades at a ~30% discount to fair value. The $12.64B cRPO (+22.5% YoY) provides strong contracted revenue visibility. At ~24× P/FCF on $4.6B of annual free cash flow — combined with a $5B buyback authorization — the FCF yield is no longer the post-selloff bargain of April but remains attractive for a 20%+ grower. Management beat non-GAAP estimates by ~76% ($0.97 vs. $0.55 consensus) and raised FY2026 subscription guidance; Knowledge 2026's Armis-powered security launches have begun rebuilding the AI-monetization narrative.",
+      "text": "At ~$89.52 vs. a base case of $155, NOW trades at a ~42% discount to fair value and below the trimmed analyst consensus (~$142 average). The $12.64B cRPO (+22.5% YoY) provides strong contracted revenue visibility. At ~20× P/FCF on $4.6B of annual free cash flow — combined with a $5B buyback authorization the company can execute into weakness — the ~5% FCF yield is back near the April post-selloff bargain for a 20%+ grower. Management beat non-GAAP estimates by ~76% ($0.97 vs. $0.55 consensus) and raised FY2026 subscription guidance; the market is discounting AI-driven seat-pricing risk that Q1's metrics (Now Assist $1M+ customers +130% YoY, AI ACV tracking to $1.5B) do not yet corroborate.",
       "fairValue": "$155"
     },
     "peAnalysis": {
@@ -131,31 +131,31 @@
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~64×",
+          "value": "~53×",
           "note": "SBC-heavy; GAAP TTM EPS ~$1.68"
         },
         {
           "label": "Forward P/E (NTM, non-GAAP)",
-          "value": "~29×",
+          "value": "~24×",
           "note": "consensus non-GAAP EPS ~$3.75"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.4×",
+          "value": "~1.1×",
           "note": "fwd P/E ÷ 21% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~7.1×",
+          "value": "~5.8×",
           "note": "$15.75B FY2026 revenue guide"
         },
         {
           "label": "Price / FCF",
-          "value": "~24×",
+          "value": "~20×",
           "note": "$4.6B FY2025 FCF (TTM)"
         }
       ],
-      "summary": "At ~29× forward non-GAAP P/E after the recovery to ~$108, ServiceNow has moved from the deepest discount since 2019 (~22× in April) back to a modest premium over the enterprise software sector median (~22×) — justified by 22% subscription growth vs. the 12–15% peer median. A PEG of ~1.4× still sits in reasonable territory and prices in little of the AI monetization optionality from the $1.5B AI ACV target and the new task-based Agentic pricing model. The gap between trailing GAAP P/E (~64×) and forward non-GAAP P/E (~29×) reflects SBC amortization and Armis acquisition costs — underlying cash earnings power is significantly higher than GAAP implies, and the 35–44% FCF margin confirms this."
+      "summary": "At ~24× forward non-GAAP P/E after the round-trip back to ~$89.52, ServiceNow trades roughly in line with the enterprise software sector median (~22×) despite growing subscription revenue at 22% vs. the 12–15% peer median — a re-rating that prices in significant AI seat-pricing risk. A PEG of ~1.1× is firmly in GARP territory and ascribes little value to the $1.5B AI ACV target or the new task-based Agentic pricing model. The gap between trailing GAAP P/E (~53×) and forward non-GAAP P/E (~24×) reflects SBC amortization and Armis acquisition costs — underlying cash earnings power is significantly higher than GAAP implies, and the 35–44% FCF margin confirms this."
     }
   },
   "scenarios": {
@@ -231,7 +231,8 @@
       "status": "strong",
       "note": "ServiceNow is the authoritative system of record for IT assets (CMDB), incidents, changes, the service catalog, HR service requests, and compliance events at most Fortune 500 companies. All audit trails, SLA histories, regulatory records, and workflow archives reside in ServiceNow. For regulated industries — banking, healthcare, government — this record-keeping is legally mandated and represents data that cannot be migrated without extraordinary operational and compliance risk. Migration from ServiceNow is a multi-year programme, not a procurement decision."
     },
-    "verdict": "ServiceNow is one of the clearest AI beneficiaries in enterprise software — the proliferation of AI agents increases demand for the workflow orchestration, compliance controls, and audit trails that ServiceNow uniquely provides at enterprise scale. The four strongest AI-resilient moats (system-of-record, transaction embedding, regulatory lock-in, proprietary data flywheel) are all actively strengthening: Armis adds OT/IoT asset intelligence and CISA/NIS2 regulatory lock-in, Veza adds identity data, and Autonomous Workforce makes AI agents themselves dependent on ServiceNow infrastructure. The primary near-term risk is Salesforce Agentforce ITSM — the most credible competitive threat in a decade, with 180+ accounts by February 2026 — but at 2.1% of ServiceNow's installed base, displacement requires years of proof-of-concept before the CMDB data gravity challenge becomes acute. ServiceNow is not a legacy incumbent under threat; it is the enterprise operating system through which AI must be deployed, and every AI agent deployment strengthens rather than erodes its moat."
+    "aiResilienceScore": 90,
+    "verdict": "ServiceNow is one of the clearest AI beneficiaries in enterprise software — the proliferation of AI agents increases demand for the workflow orchestration, compliance controls, and audit trails that ServiceNow uniquely provides at enterprise scale. The four strongest AI-resilient moats (system-of-record, transaction embedding, regulatory lock-in, proprietary data flywheel) are all actively strengthening: Armis adds OT/IoT asset intelligence and CISA/NIS2 regulatory lock-in, Veza adds identity data, and Autonomous Workforce makes AI agents themselves dependent on ServiceNow infrastructure. The primary near-term risk is Salesforce Agentforce ITSM — the most credible competitive threat in a decade, with 180+ accounts by February 2026 — but at 2.1% of ServiceNow's installed base, displacement requires years of proof-of-concept before the CMDB data gravity challenge becomes acute. ServiceNow is not a legacy incumbent under threat; it is the enterprise operating system through which AI must be deployed, and every AI agent deployment strengthens rather than erodes its moat. The aiResilienceScore (90) sits just below the raw moat score (92) to acknowledge the one genuine AI vector — the market's fear that agentic automation collapses per-seat pricing faster than task-based Agentic ACV backfills it — which is precisely the risk driving the ~36% YTD de-rating; Q1 2026 metrics (Now Assist $1M+ customers +130% YoY, AI ACV tracking to $1.5B) do not yet corroborate that fear."
   },
-  "lastAnalyzed": "June 2026"
+  "lastAnalyzed": "June 26, 2026"
 }
