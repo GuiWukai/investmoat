@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$123.5B"
+      "value": "$120.5B"
     },
     {
       "label": "Price",
-      "value": "$426.52"
+      "value": "$424.42"
     }
   ],
   "chips": [
@@ -69,7 +69,7 @@
     ]
   },
   "growth": {
-    "description": "Q1 2026 total revenue +10% YoY ($4.17B), above the 6-8% organic guidance midpoint. Indices led at +17% (ETF AUM tailwind); Ratings +13% as the refinancing wall drives issuance. Adjusted EPS +13.7%.",
+    "description": "Q1 2026 total revenue +10% YoY ($4.17B), above the 6-8% organic guidance midpoint. Indices led at +17% (ETF AUM tailwind); Ratings +13% as the refinancing wall drives issuance. Adjusted EPS +13.7%, and FY26 adjusted-EPS guidance was reaffirmed at $19.40-19.65. Energy (Platts/Commodity Insights) organic guidance was trimmed ~1pp (to 4.5-6%) on Iran-conflict energy disruption. From July 1, 2026 the Mobility segment departs in the MBGL spin-off, leaving a faster-growing ratings/indices/market-intelligence RemainCo.",
     "growthAnalysis": {
       "cagrEstimate": "8-12%",
       "scoreDerivation": "Base 72 + duopoly ratings position (+4) + indices ETF AUM tailwind (+3) + Platts commodities optionality (+2) - issuance cyclicality risk (-1) = 80",
@@ -85,8 +85,8 @@
     }
   },
   "valuation": {
-    "score": 83,
-    "description": "At $426.52 the stock remains only ~6.6% above the bear-case target ($400) despite Q1 2026 beating guidance and Ratings private credit revenue growing 25% YoY. Price sits ~27% of the way from bear ($400) to base ($500) — most of the cyclical uncertainty appears already discounted. Near-term catalyst: the Mobility Global (MBGL) spin-off distributes July 1, 2026 (record date June 15), with $2B of Mobility notes priced in May — post-spin, SPGI becomes a purer ratings/indices/data compounder, which has historically supported a higher multiple."
+    "score": 84,
+    "description": "At $424.42 (June 26, 2026) the stock trades ~6% above the bear-case target ($400) and ~24% of the way from bear ($400) to base ($500) — most of the cyclical uncertainty already appears discounted, with Q1 2026 beating guidance and Ratings private-credit revenue +25% YoY. Spin-off timing: the Mobility Global (MBGL) spin-off distributes July 1, 2026 (record date June 15; $2B of Mobility notes priced in May). June 26 is the last regular-way cum-distribution session, so from July 1 the SPGI stub re-prices mechanically lower as MBGL (estimated ~$25-33/share) separates. These bear/base/bull targets are struck on the pre-spin whole company and must be rebased to RemainCo after the distribution. Post-spin, SPGI becomes a purer ratings/indices/data compounder, which has historically supported a higher multiple."
   },
   "scenarios": {
     "bear": {
@@ -160,5 +160,5 @@
     },
     "verdict": "S&P Global's regulatory moat (NRSRO status) and role as the definitive system of record for credit risk makes them uniquely AI-resilient. AI disrupts analysis, not the legal requirement to use S&P ratings."
   },
-  "lastAnalyzed": "June 2026"
+  "lastAnalyzed": "June 26, 2026"
 }
