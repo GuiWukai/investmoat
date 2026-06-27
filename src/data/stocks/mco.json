@@ -73,9 +73,9 @@
     "description": "Q1 2026 delivered solid results: revenue +8.1% to $2.08B with both MIS and MA growing 8%, adj EPS +13% to $4.33 (beating consensus by 2.6%), and adj operating margin expanded 150bps to 53.2%. Growth has moderated from 2025's record pace as the debt issuance comparison base normalises, but the recurring quality of MA and durability of the duopoly remain intact. Full-year 2026 EPS guidance of $16.40–$17.00 was maintained. Since the May review: Moody's announced the next phase of its Microsoft partnership (embedding Moody's decision-grade intelligence into Microsoft AI solutions) and named Christina Kosmowski CEO of Moody's Analytics (June 2026) — both supportive of the MA/AI growth vector; no new earnings until late July.",
     "growthAnalysis": {
       "cagrEstimate": "8-12%",
-      "scoreDerivation": "Base 70 + duopoly pricing power (+4) + MA recurring revenue mix (+4) + private credit TAM expansion (+2) - cyclical issuance comp (-4) = 76",
+      "scoreDerivation": "Base 73 (8-12% CAGR, midpoint 10%) + 0 trajectory (1 accelerating / 1 decelerating driver) + 4 margin expanding + 4 both-type (TAM + share) - 5 moderate keyRisk = 76",
       "drivers": [
-        { "name": "MIS Ratings", "metric": "Q1 2026 MIS revenue +8% YoY on refinancing wave", "trend": "decelerating" },
+        { "name": "MIS Ratings", "metric": "MIS revenue +8% YoY; record $2T+ rated issuance, private credit +80%", "trend": "decelerating" },
         { "name": "Moody's Analytics", "metric": "MA revenue +8% YoY, 96% recurring", "trend": "stable" },
         { "name": "Adj Operating Margin", "metric": "53.2% in Q1 2026, +150bps YoY", "trend": "accelerating" }
       ],
@@ -96,9 +96,9 @@
   },
   "valuation": {
     "score": 78,
-    "description": "At ~$450 (June 2026), MCO trades at ~27× forward P/E on 2026E EPS of $16.40–$17.00 — reasonable for a regulatory duopolist with 53%+ adjusted operating margins. The base case of $560 represents ~24% upside, supported by Moody's Analytics recurring revenue durability and the duopoly's pricing power; sell-side targets moved higher post-Q1 (Wells Fargo to $590, Clear Street to $544). Trades between bear ($340) and base ($560), modestly closer to bear than at the May review.",
+    "description": "At ~$450 (June 27, 2026), MCO trades at ~27× forward P/E on 2026E EPS of $16.40–$17.00 — reasonable for a regulatory duopolist with 53%+ adjusted operating margins. The base case of $560 represents ~24% upside, supported by Moody's Analytics recurring revenue durability and the duopoly's pricing power; sell-side consensus sits near $537 with Wells Fargo high at $590. The stock sits almost exactly midway between bear ($340) and base ($560), scoring 78 on the piecewise scale.",
     "valuationNote": {
-      "text": "Moody's is a cash-compounding machine: $2.5B annual FCF on a ~$79B market cap implies a ~3% FCF yield — modest, but appropriate for a business with perpetual pricing power and a government-protected revenue stream. The $4B share buyback authorization (through open-ended timeline) reduces share count by ~2-3% annually. At the base case of $560, investors receive a ~24% return plus dividends from a business that Berkshire Hathaway identifies as a permanent holding.",
+      "text": "Moody's is a cash-compounding machine: Q1 2026 free cash flow grew 26% to $844M, putting it on track for ~$3B+ annual FCF on a ~$79B market cap (~3.5% FCF yield) — modest, but appropriate for a business with perpetual pricing power and a government-protected revenue stream. Management raised FY2026 buyback guidance to ~$2.5B, steadily reducing share count by ~2-3% annually. At the base case of $560, investors receive a ~24% return plus dividends from a business that Berkshire Hathaway identifies as a permanent holding.",
       "fairValue": "$560"
     }
   },
@@ -137,8 +137,8 @@
       "note": "Institutional investors, bond issuers, and regulators have built decades of workflows around Moody's rating nomenclature (Aaa, Aa1, etc.), research report formats, and analytical methodologies; ISDA master agreements, fund investment mandates, and regulatory reporting frameworks reference Moody's ratings explicitly — changing to an alternative system would require amending thousands of legal documents and retraining every fixed-income professional globally."
     },
     "businessLogic": {
-      "status": "strong",
-      "note": "Moody's credit rating methodologies — through-the-cycle analysis, sector-specific rating criteria, recovery rate frameworks, and stress testing models — represent 100+ years of refinement; this body of analytical logic is embedded in global credit market infrastructure and serves as the standard against which all credit risk is measured."
+      "status": "intact",
+      "note": "Moody's credit rating methodologies — through-the-cycle analysis, sector-specific rating criteria, recovery rate frameworks, and stress testing models — represent 100+ years of refinement and remain the standard against which credit risk is measured; held at intact rather than strong because AI is beginning to partially automate routine credit-analysis workflows, the same pressure reflected in talentScarcity, and to stay consistent with the identical-twin duopoly peer SPGI, whose businessLogic is rated intact for the same reason."
     },
     "publicDataAccess": {
       "status": "strong",
@@ -174,5 +174,5 @@
     },
     "verdict": "Moody's is among the most AI-resilient businesses in existence — its regulatory mandation, 100-year proprietary data, and legally embedded ratings are structurally immune to AI disruption, while AI actively strengthens its analytics division. The primary AI opportunity is conversational credit intelligence that commands premium subscription pricing; the risk of AI commoditizing credit analysis is minimal because the credibility of a Moody's rating derives from regulatory recognition and historical track record, not the underlying analytical process."
   },
-  "lastAnalyzed": "June 2026"
+  "lastAnalyzed": "June 27, 2026"
 }
