@@ -61,9 +61,6 @@ const tenMoatsSchema = z.strictObject({
   transactionEmbedding: moatAssessmentSchema,
   systemOfRecord: moatAssessmentSchema,
   verdict: z.string().min(1),
-  // Authored hand-score from earlier workflow; not currently consumed by the UI
-  // (moat score is computed via computeMoatScore in src/lib/valuationScore.ts).
-  aiResilienceScore: score0to100.optional(),
 });
 
 // Crypto-protocol moat framework. See CryptoMoatsData in stockAnalysis.ts.

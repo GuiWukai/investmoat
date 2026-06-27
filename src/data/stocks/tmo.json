@@ -182,7 +182,6 @@
       "status": "intact",
       "note": "Sample tracking, QC data, and method libraries for many customers run on TMO software (SampleManager LIMS, Chromeleon, Clario eCOA). Not the SoR for the science itself but a SoR for compliance data."
     },
-    "aiResilienceScore": 84,
     "verdict": "Thermo Fisher is a moderate AI beneficiary. The strongest moats — regulatory lock-in, transaction embedding, and the bundling razor-blade — are AI-neutral or AI-strengthened (AI assists method development without disrupting the regulatory cost-of-switching). The AI-vulnerable categories (learnedInterfaces, businessLogic, talentScarcity) are merely intact rather than destroyed because regulated workflows protect them. Sits in the healthcare peer range (80-90) alongside ISRG/LLY, just below the financial-data oligopoly tier."
   }
 }
