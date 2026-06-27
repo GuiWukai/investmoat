@@ -112,7 +112,7 @@ Review each moat status if any of the following have occurred since the last upd
 - `weakened` → `destroyed`: requires evidence that the moat source no longer creates switching costs
 - Do not move a status more than one level per update unless a catastrophic event occurred
 
-Update `aiResilienceScore` and `verdict` if 2+ moat statuses have changed.
+Update the `verdict` if 2+ moat statuses have changed.
 
 ### 8. Recommendation (derived — do not set in JSON)
 

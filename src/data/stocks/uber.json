@@ -155,7 +155,6 @@
       "status": "intact",
       "note": "Uber is the system of record for mobility identity and history for ~150M+ active monthly riders globally."
     },
-    "aiResilienceScore": 76,
-    "verdict": "Uber's network, bundling, and transaction-embedding moats are AI-resilient — language models do not erode rider-driver liquidity. The one AI-era structural threat is autonomy: robotaxis (Tesla Cybercab, Waymo) attack the human-driven mobility network that anchors the moat, which is why aiResilienceScore (76) sits a notch below the raw moat score (83). The thesis question is whether Uber retains the consumer demand layer as autonomy operators commercialise; current partnerships (Waymo, Wayve, NVIDIA 100k-vehicle network) and trip-level data scale support a durable demand-aggregator role, with Tesla vertical-integration the primary tail risk."
+    "verdict": "Uber's network, bundling, and transaction-embedding moats are AI-resilient — language models do not erode rider-driver liquidity. The one AI-era structural threat is autonomy: robotaxis (Tesla Cybercab, Waymo) attack the human-driven mobility network that anchors the moat, which tempers AI resilience a notch below the raw moat strength. The thesis question is whether Uber retains the consumer demand layer as autonomy operators commercialise; current partnerships (Waymo, Wayve, NVIDIA 100k-vehicle network) and trip-level data scale support a durable demand-aggregator role, with Tesla vertical-integration the primary tail risk."
   }
 }

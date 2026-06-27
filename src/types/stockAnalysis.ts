@@ -56,8 +56,6 @@ export interface TenMoatsData {
   transactionEmbedding: MoatAssessmentData;
   systemOfRecord: MoatAssessmentData;
   verdict: string;
-  /** Authored hand-score; not currently consumed by the UI (moat score is computed from statuses). */
-  aiResilienceScore?: number;
 }
 
 /**
