@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$50B"
+      "value": "~$43B"
     },
     {
       "label": "Price",
-      "value": "~$608"
+      "value": "~$555"
     }
   ],
   "chips": [
@@ -23,7 +23,7 @@
       "color": "success"
     },
     {
-      "label": "Accumulate",
+      "label": "Strong Buy",
       "color": "success"
     }
   ],
@@ -89,16 +89,16 @@
       "points": [
         "Global passive ETF AUM expected to grow 12–15% annually; MSCI's AUM-linked fees compound directly with market appreciation",
         "Private assets analytics: MSCI's acquisitions of Burgiss and Real Capital Analytics position it as the data standard for private equity, real estate, and infrastructure — a $10B+ TAM expansion",
-        "ESG regulatory demand: EU SFDR, UK SDR, and SEC climate disclosure rules drive structural demand for MSCI ESG ratings regardless of US political environment",
+        "ESG and climate demand: EU SFDR, UK SDR, and SEC climate disclosure rules drive structural demand for MSCI ESG ratings; the First Street acquisition (physics-based climate-risk data) deepens this franchise regardless of US political environment",
         "AI analytics layer: MSCI AI capabilities applied to factor models and portfolio construction tools command premium pricing"
       ]
     }
   },
   "valuation": {
-    "score": 67,
-    "description": "At ~$608 (June 9, 2026 close), trading just 2% below the base case ($620) and ~31× FY2026 consensus EPS of $19.60. The stock has continued grinding higher since the strong Q1 print and now sits near fair value — upside to base is largely exhausted, leaving bull-case execution (private assets flywheel, AI analytics pricing) as the driver of further returns. Margin of safety vs. bear ($420) has compressed further.",
+    "score": 73,
+    "description": "At ~$555 (June 26, 2026 close), MSCI has pulled back ~9% from its early-June high near $608 and now trades ~10% below the base case ($620) at ~28× FY2026 consensus EPS of $19.60. The selloff has restored a margin of safety — the stock sits ~68% of the way from bear ($420) to base ($620), versus near-fair-value three weeks ago — even as fundamentals are unchanged after the strong Q1 print. Sell-side consensus price targets near $690 (high $730) imply analysts see further upside; bull-case execution (private assets flywheel, First Street climate analytics, AI pricing) remains the driver beyond base.",
     "valuationNote": {
-      "text": "MSCI trades at ~35–38× forward earnings — premium relative to market but justified by 95%+ recurring revenue, 58% EBITDA margins, and near-zero capital requirements. The AUM-linked fee structure means EPS grows even without new customer acquisition in rising equity markets.",
+      "text": "At ~$555 MSCI trades at ~28× forward earnings — a premium to the market but justified by 95%+ recurring revenue, ~58% EBITDA margins, and near-zero capital intensity. PEG of ~2.0 (28× ÷ ~14% EPS CAGR) leaves limited margin of safety on the multiple itself, so returns track EPS compounding plus the AUM-linked tailwind in rising equity markets. Capital return remains aggressive: MSCI returned $549M to shareholders in Q1 2026 ($399M of buybacks), raised the dividend 14%, and has ~$1.7B remaining on its repurchase authorization.",
       "fairValue": "$620"
     }
   },
@@ -157,7 +157,7 @@
     },
     "proprietaryData": {
       "status": "strong",
-      "note": "MSCI owns 50+ years of index constituent history, Barra factor model data, and the definitive ESG and real assets databases. This data is used in fund prospectuses, regulatory filings, and academic research — the more it is cited, the more authoritative it becomes. AI makes this data more valuable by enabling new analytics products on top of it."
+      "note": "MSCI owns 50+ years of index constituent history, Barra factor model data, and the definitive ESG and real assets databases. The June 2026 acquisition of First Street adds physics-based climate-risk data, extending MSCI's proprietary dataset into a domain regulators and asset owners increasingly require. This data is used in fund prospectuses, regulatory filings, and academic research — the more it is cited, the more authoritative it becomes. AI makes this data more valuable by enabling new analytics products on top of it."
     },
     "regulatoryLockIn": {
       "status": "strong",
@@ -177,5 +177,5 @@
     },
     "verdict": "MSCI's moat is almost entirely AI-immune. The index standard network effect, legal lock-in via fund prospectuses, and 50-year data history cannot be replicated by AI — and AI analytics capabilities built on top of MSCI data actually strengthen the bundle moat. This is one of the most durable franchises in financial services."
   },
-  "lastAnalyzed": "June 2026"
+  "lastAnalyzed": "June 28, 2026"
 }
