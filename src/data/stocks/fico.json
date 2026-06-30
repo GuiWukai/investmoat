@@ -2,7 +2,7 @@
   "slug": "fico",
   "ticker": "FICO",
   "name": "Fair Isaac Corporation",
-  "lastAnalyzed": "June 2026",
+  "lastAnalyzed": "June 28, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,11 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$28B"
+      "value": "~$26B"
     },
     {
       "label": "Current Price",
-      "value": "~$1,239"
+      "value": "~$1,150"
     }
   ],
   "chips": [
@@ -98,38 +98,38 @@
     }
   },
   "valuation": {
-    "score": 78,
-    "description": "FICO has rebounded ~19% from the April 2026 lows (~$1,037) to ~$1,239 following the blowout Q2 FY2026 print (+39% revenue, FY guide raised to $2.45B / $40.45 non-GAAP EPS), but remains ~48% below the November 2024 all-time high of $2,382 on the regulatory overhangs: VantageScore 4.0's FHFA approval, Fannie Mae eliminating minimum credit score requirements, VA/FHA/USDA accepting non-FICO creditworthiness evidence, and Senator Hawley's Senate investigation plus FTC referral. At ~31× FY2026 guided non-GAAP EPS with EPS growing ~40% this year, the PEG remains near 1.0×. The stock sits ~77% above the bear target ($700) and ~31% below the base ($1,800) — the post-earnings rally has consumed part of the margin of safety, but the market is still pricing in a materially adverse regulatory outcome.",
+    "score": 80,
+    "description": "FICO has given back most of its post-Q2 rally, slipping to ~$1,150 (from ~$1,239 in early June) as the regulatory overhang re-asserts itself — now ~11% above the April 2026 lows (~$1,037) and ~52% below the November 2024 all-time high of $2,382. The discount reflects the regulatory overhangs: VantageScore 4.0's FHFA approval, Fannie Mae eliminating minimum credit score requirements, VA/FHA/USDA accepting non-FICO creditworthiness evidence, and Senator Hawley's Senate investigation plus FTC referral. At ~28× FY2026 guided non-GAAP EPS ($40.45) with EPS growing ~40% this year, the PEG sits near 0.9×. The stock trades ~64% above the bear target ($700) and ~36% below the base ($1,800) — the pullback has restored part of the margin of safety the April-to-June rally had consumed, while the market continues to price a materially adverse regulatory outcome.",
     "peAnalysis": {
       "asOf": "June 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~39×",
+          "value": "~36×",
           "note": "TTM GAAP EPS ~$32 (incl. Q2 FY2026 $11.14)"
         },
         {
           "label": "Forward P/E (FY2026 non-GAAP)",
-          "value": "~31×",
+          "value": "~28×",
           "note": "FY2026 non-GAAP EPS guide $40.45"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.0×",
+          "value": "~0.9×",
           "note": "fwd P/E ÷ ~30% blended EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~11×",
+          "value": "~10×",
           "note": "~$2.45–2.55B NTM revenue"
         },
         {
           "label": "Price / FCF",
-          "value": "~35×",
+          "value": "~33×",
           "note": "~$800M TTM FCF (vs $739M FY2025)"
         }
       ],
-      "summary": "The post-Q2 rally has partially closed the regulatory-risk discount: FICO's forward P/E has re-rated from ~24× in April 2026 to ~31× at ~$1,239, now roughly in line with financial data peers (MSCI ~40×, Moody's ~30×, S&P Global ~33×) but still well below FICO's own pre-2025 premium. A PEG near 1.0× on ~30% blended EPS growth remains attractive for an 82%-gross-margin royalty model. The Q2 FY2026 print (+39% revenue, B2B Scores +72%) validated the direct licence ramp ahead of the $300M thesis — the remaining discount is almost entirely attributable to the unresolved Senate/FTC investigation, which would close bullishly if no binding pricing cap emerges."
+      "summary": "The June pullback to ~$1,150 has re-widened the regulatory-risk discount: FICO's forward P/E has eased from ~31× in early June to ~28×, below financial data peers (MSCI ~40×, Moody's ~30×, S&P Global ~33×) and well under FICO's own pre-2025 premium. A PEG near 0.9× on ~30% blended EPS growth is attractive for an 82%-gross-margin royalty model. The Q2 FY2026 print (+39% revenue, B2B Scores +72%) validated the direct licence ramp ahead of the $300M thesis — the remaining discount is almost entirely attributable to the unresolved Senate/FTC investigation, which would close bullishly if no binding pricing cap emerges."
     }
   },
   "scenarios": {
