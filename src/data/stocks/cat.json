@@ -2,11 +2,11 @@
   "slug": "cat",
   "ticker": "CAT",
   "name": "Caterpillar Inc.",
-  "lastAnalyzed": "May 2026",
+  "lastAnalyzed": "July 2, 2026",
   "headerStats": [
     { "label": "Ticker", "value": "CAT" },
-    { "label": "Market Cap", "value": "~$420B" },
-    { "label": "Current Price", "value": "~$880" }
+    { "label": "Market Cap", "value": "~$440B" },
+    { "label": "Current Price", "value": "~$955" }
   ],
   "chips": [
     { "label": "Heavy Equipment | Mining | Energy", "color": "primary" },
@@ -15,8 +15,8 @@
   "metrics": [
     {
       "title": "Record Backlog",
-      "value": "$51B",
-      "label": "Record level; data centre + mining led",
+      "value": "$63B",
+      "label": "+22% QoQ, +79% YoY (Q1 2026); data centre + mining led",
       "icon": "Box",
       "color": "#0ea5e9"
     },
@@ -46,7 +46,7 @@
       },
       {
         "title": "Autonomous Mining Technology Leadership",
-        "text": "Caterpillar's Command autonomous haulage system operates 800+ trucks globally, having moved 11+ billion tonnes without a lost-time injury. Vale is quintupling its autonomous CAT fleet to ~90 units by 2028. At CONEXPO 2026, CAT showcased autonomous excavators for construction. The autonomous installed base creates a data flywheel — more autonomous hours generate better algorithms, which attract more mining customers to the platform."
+        "text": "Caterpillar's Command autonomous haulage system operates 800+ trucks globally, having moved 11+ billion tonnes without a lost-time injury. Vale is quintupling its autonomous CAT fleet to ~90 units by 2028. At CONEXPO 2026, CAT showcased autonomous excavators for construction, and in 2026 CAT began developing autonomous retrofit kits for third-party trucks (including Komatsu's 930E) — a signal the Command platform is becoming an industry standard rather than a CAT-iron-only feature. The autonomous installed base creates a data flywheel — more autonomous hours generate better algorithms, which attract more mining customers to the platform."
       },
       {
         "title": "Energy & Transportation — Data Centre Power Tailwind",
@@ -69,24 +69,24 @@
         { "name": "Construction Industries", "metric": "Infrastructure spending (IIJA); non-residential construction; modest volume growth", "trend": "stable" }
       ],
       "primaryType": "both",
-      "keyRisk": "If AI data centre capex moderates below 15% growth in 2027 simultaneously with a mining capex downturn, E&T and RI growth halves and the premium multiple compresses from 38× to 22-25× — CAT has historically experienced 30-40% drawdowns on cyclical scares.",
+      "keyRisk": "If AI data centre capex moderates below 15% growth in 2027 simultaneously with a mining capex downturn, E&T and RI growth halves and the premium multiple compresses from ~40× to 22-25× — CAT already trades at a three-decade-high price/sales ratio, and Michael Burry's July 2026 short disclosure shows sophisticated capital is already positioning for that de-rating. CAT has historically experienced 30-40% drawdowns on cyclical scares.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 67,
-    "description": "At ~$880 CAT trades 3% below the base case ($910) — modestly attractive but the multiple is historically elevated. Record backlog and data centre tailwind support the premium, but cyclical re-rating risk is real. Margin of safety is thin; the thesis requires continued execution on E&T and autonomy.",
+    "score": 62,
+    "description": "At ~$955 CAT trades 5% above the base case ($910) and roughly 16% of the way toward the bull case ($1,200) — the AI-infrastructure narrative has pushed price/sales to its highest level in at least three decades. The stock hit an all-time high of ~$1,065 on June 30, 2026 before pulling back after Michael Burry disclosed a short position on July 1 citing overvaluation. Record backlog and the data centre tailwind support elevated demand, but margin of safety is thin and re-rating risk is now visibly in play.",
     "peAnalysis": {
-      "asOf": "May 2026",
+      "asOf": "July 2026",
       "rows": [
-        { "label": "Trailing P/E (TTM)", "value": "~44×", "note": "TTM EPS ~$20.08" },
-        { "label": "Forward P/E (FY26)", "value": "~39×", "note": "consensus EPS ~$22.76" },
-        { "label": "PEG Ratio", "value": "~3.2×", "note": "fwd P/E ÷ ~12% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~5.5×", "note": "~$76B NTM revenue" },
-        { "label": "Price / FCF", "value": "~42×", "note": "$10B FCF (FY26E)" }
+        { "label": "Trailing P/E (TTM)", "value": "~48×", "note": "TTM EPS ~$20.00" },
+        { "label": "Forward P/E (NTM)", "value": "~40×", "note": "consensus EPS ~$24.08" },
+        { "label": "PEG Ratio", "value": "~3.3×", "note": "fwd P/E ÷ ~12% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~5.8×", "note": "~$76B NTM revenue; highest in 30+ years" },
+        { "label": "Price / FCF", "value": "~44×", "note": "$10B FCF (FY26E)" }
       ],
-      "summary": "CAT trades at 39× forward earnings vs. a typical industrial peer median of 22-25× — a significant premium that prices in the data centre power and autonomous mining narrative. PEG of 3.2× is expensive and requires sustained execution to justify. The trailing-to-forward P/E compression (44× → 39×) signals earnings recovery from the FY2025 tariff trough, which is constructive but already widely expected."
+      "summary": "CAT trades at 40× forward earnings vs. a typical industrial peer median of 22-25× — a premium that has widened further as Wall Street treats CAT as a backdoor AI-infrastructure play (shares roughly doubled over the trailing year). PEG of 3.3× and a 30-year-high price/sales ratio leave little room for execution slips. Michael Burry's July 2026 short disclosure — his first-ever bet against the name — is a visible signal that sophisticated investors view the current multiple as stretched, even though the underlying backlog and guidance remain strong."
     }
   },
   "scenarios": {
