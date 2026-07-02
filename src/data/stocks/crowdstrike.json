@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$164B"
+      "value": "$190B"
     },
     {
       "label": "Current Price",
-      "value": "$643"
+      "value": "$186"
     }
   ],
   "chips": [
@@ -69,7 +69,7 @@
     ]
   },
   "growth": {
-    "description": "Q1 FY2027 (reported June 3, 2026) confirmed the re-acceleration thesis: revenue of $1.39B (+26% YoY, ahead of the $1.36B guide) marked the fourth consecutive quarter of acceleration, with record Q1 net new ARR of $256M (+32% YoY) lifting ending ARR to $5.51B (+24%). Record Q1 FCF of $468M (CFO $591M, ~34% margin) and non-GAAP EPS of $1.10 beat the $1.07 estimate. Management raised FY2027 net new ARR growth guidance by ~520bps and lifted FY2027 revenue guidance to $5.915–5.959B (23–24% growth). A 4-for-1 stock split takes effect after the June 25, 2026 record date.",
+    "description": "Q1 FY2027 (reported June 3, 2026) confirmed the re-acceleration thesis: revenue of $1.39B (+26% YoY, ahead of the $1.36B guide) marked the fourth consecutive quarter of acceleration, with record Q1 net new ARR of $256M (+32% YoY) lifting ending ARR to $5.51B (+24%). Record Q1 FCF of $468M (CFO $591M, ~34% margin) and non-GAAP EPS of $1.10 beat the $1.07 estimate. Management raised FY2027 net new ARR growth guidance by ~520bps and lifted FY2027 revenue guidance to $5.915–5.959B (23–24% growth). The 4-for-1 stock split took effect for trading on July 2, 2026 — shares now trade split-adjusted; the split itself is a cosmetic change (share count ×4, per-share price ÷4) with no impact on the underlying growth thesis or ARR/FCF fundamentals.",
     "growthAnalysis": {
       "cagrEstimate": "22–26%",
       "scoreDerivation": "Base 86 (22–26% blended CAGR; Q1 FY2027 revenue +26%, FY2027 guide raised to 23–24%) + 4 trajectory (net new ARR re-accelerated to +32% YoY; SIEM, identity, and cloud all accelerating) + 4 margin expanding (record Q1 FCF, ~34% FCF margin) + 4 TAM expansion (Next-Gen SIEM displacing Splunk, Charlotte AI agentic consumption layer) − 5 valuation/competition risk (stock re-rated ~60% to ~$700; Microsoft Defender bundling pressure) = 93",
@@ -91,16 +91,16 @@
         }
       ],
       "primaryType": "both",
-      "keyRisk": "Even after an ~11% post-earnings pullback to ~$643, CRWD trades at a rich ~27× NTM revenue; if net new ARR growth stalls below 25% or Microsoft Defender/Sentinel bundling accelerates SMB churn, the multiple compresses back toward 18× NTM revenue, implying 25%+ downside",
+      "keyRisk": "Shares have since rallied back to ~$186 split-adjusted (~$744 pre-split, above the June 10 base case), pushing CRWD to a rich ~27× NTM revenue; if net new ARR growth stalls below 25% or Microsoft Defender/Sentinel bundling accelerates SMB churn, the multiple compresses back toward 18× NTM revenue, implying 30%+ downside from current levels",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 63,
-    "description": "At ~$643 (June 10, 2026), CRWD has given back part of the post-earnings spike — shares fell ~11% after the June 3 Q1 FY2027 beat-and-raise (revenue $1.39B vs $1.36B guide, EPS $1.10 vs $1.07) as a stock priced for perfection sold the news — and now trades just above the base case ($620). Analyst targets repriced higher — Goldman $726, Morgan Stanley $690, Jefferies $775, JPMorgan $800 — though the consensus sits below the current price, signalling the stock is running ahead of the median estimate. At ~27× NTM revenue and a ~108× forward non-GAAP P/E the premium remains elevated even for a re-accelerating 24%+ ARR compounder. A 4-for-1 split takes effect after the June 25, 2026 record date, trading split-adjusted from July 2 (all targets here are pre-split).",
+    "score": 55,
+    "description": "CrowdStrike's 4-for-1 stock split took effect for trading on July 2, 2026: shares now trade split-adjusted at ~$186, versus a pre-split close near $744 (up ~16% from the $643 level at the June 10 analysis) — the split itself is a cosmetic, non-fundamental event (share count ×4, price ÷4, market cap unchanged at ~$190B). Rather than consolidating below the base case, CRWD has since rallied back well above it, run up by continued analyst target resets (Wells Fargo to $900 pre-split / $225 split-adjusted) following the Q1 FY2027 beat-and-raise. Post-split analyst targets: Goldman ~$182 ($726 pre-split), Morgan Stanley ~$173 ($690 pre-split), Jefferies ~$194 ($775 pre-split), JPMorgan ~$200 ($800 pre-split), Wells Fargo ~$225 ($900 pre-split) — the Street's ~$179 split-adjusted mean sits below the current price, signalling the stock is running well ahead of the median estimate. At ~27× NTM revenue and a ~108× forward non-GAAP P/E, the premium is even richer than at the June 10 analysis for a re-accelerating 24%+ ARR compounder.",
     "peAnalysis": {
-      "asOf": "June 2026",
+      "asOf": "July 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
@@ -110,7 +110,7 @@
         {
           "label": "Forward P/E (NTM, non-GAAP)",
           "value": "~108×",
-          "note": "consensus non-GAAP EPS ~$5.96 (FY2027)"
+          "note": "consensus non-GAAP EPS ~$1.49 split-adjusted (FY2027)"
         },
         {
           "label": "PEG Ratio",
@@ -120,21 +120,21 @@
         {
           "label": "Price / Sales (NTM)",
           "value": "~27×",
-          "note": "$5.9B NTM revenue (FY2027 guide)"
+          "note": "$5.9B NTM revenue (FY2027 guide); unaffected by the share split"
         },
         {
           "label": "Price / FCF",
           "value": "~86×",
-          "note": "~$1.9B FCF (FY2027E)"
+          "note": "~$1.9B FCF (FY2027E); unaffected by the share split"
         }
       ],
-      "summary": "Even after the ~11% post-earnings pullback to ~$643, CRWD trades at ~108× forward non-GAAP P/E and ~27× NTM revenue — toward the rich end of its history despite the business now compounding at a 'mature' 24% rather than 30%+. The PEG of ~4.3× shows investors are still paying up for the re-acceleration and AI-security narrative; with the consensus price target sitting below the market price, the multiple, not the fundamentals, is the swing factor. The beat-and-raise and record Q1 FCF justify a premium, but the margin of safety remains thin versus the May analysis."
+      "summary": "The 4-for-1 split (effective July 2, 2026) is purely cosmetic — it does not change any valuation ratio, only the per-share price and EPS. What has changed since the June 10 analysis is the price: CRWD rallied from ~$643 to a pre-split ~$744 (~$186 split-adjusted), trading further above the base case and now above the ~$179 split-adjusted Street mean target. At ~108× forward non-GAAP P/E and ~27× NTM revenue, CRWD is toward the rich end of its history despite the business now compounding at a 'mature' 24% rather than 30%+. The beat-and-raise and record Q1 FCF justify a premium, but the margin of safety has narrowed further versus the June analysis."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$460",
-      "description": "The AI-security re-rating deflates: net new ARR growth stalls below 25%, Microsoft Defender bundling pressures SMB retention, and the multiple compresses from ~30× toward 16–18× NTM revenue.",
+      "priceTarget": "$115",
+      "description": "The AI-security re-rating deflates: net new ARR growth stalls below 25%, Microsoft Defender bundling pressures SMB retention, and the multiple compresses from ~30× toward 16–18× NTM revenue. (Split-adjusted for the 4-for-1 split effective July 2, 2026; equivalent to $460 pre-split.)",
       "points": [
         "Net new ARR growth decelerates below 25% as the FY2027 re-acceleration proves a one-off rather than a durable trend",
         "NRR slips below 112% for two consecutive quarters as SMB budget pressure limits upsell of identity and SIEM modules",
@@ -143,8 +143,8 @@
       ]
     },
     "base": {
-      "priceTarget": "$620",
-      "description": "CrowdStrike sustains the raised FY2027 guidance (23–24% revenue growth, $5.915–5.959B) with ending ARR crossing $6.5B, FCF margin holding ~33%, and the multiple normalising toward ~25× NTM revenue as the re-acceleration proves durable.",
+      "priceTarget": "$155",
+      "description": "CrowdStrike sustains the raised FY2027 guidance (23–24% revenue growth, $5.915–5.959B) with ending ARR crossing $6.5B, FCF margin holding ~33%, and the multiple normalising toward ~25× NTM revenue as the re-acceleration proves durable. (Split-adjusted for the 4-for-1 split effective July 2, 2026; equivalent to $620 pre-split.)",
       "points": [
         "FY2027 revenue lands at the high end of the $5.915–5.959B guide with net new ARR growing 27%+ YoY, ARR crosses $6.5B",
         "Next-Gen SIEM crosses $1B ARR as Splunk migration cycles accelerate",
@@ -153,8 +153,8 @@
       ]
     },
     "bull": {
-      "priceTarget": "$880",
-      "description": "CrowdStrike cements itself as the AI-native security operating system — Charlotte AI agentic consumption and Next-Gen SIEM displacement re-accelerate ARR toward $8B+, supporting and exceeding Street-high (~$800) targets and a sustained premium multiple.",
+      "priceTarget": "$220",
+      "description": "CrowdStrike cements itself as the AI-native security operating system — Charlotte AI agentic consumption and Next-Gen SIEM displacement re-accelerate ARR toward $8B+, supporting and exceeding Street-high (~$225 split-adjusted / $900 pre-split, Wells Fargo) targets and a sustained premium multiple. (Split-adjusted for the 4-for-1 split effective July 2, 2026; equivalent to $880 pre-split.)",
       "points": [
         "ARR reaches $8B+ by FY2028 as Next-Gen SIEM alone crosses $2B ARR, displacing Splunk across the Fortune 500",
         "Charlotte AI (agentic security layer) drives a new consumption model, adding $500M+ ARR from AI-native workflows",
@@ -206,5 +206,5 @@
     },
     "verdict": "CrowdStrike's moat is highly AI-resilient — AI enhances the Threat Graph by processing more telemetry faster, and Charlotte AI adds a new consumption layer on top of existing data assets. AI is an accelerant to CrowdStrike's moat, not a disruptor."
   },
-  "lastAnalyzed": "June 2026"
+  "lastAnalyzed": "July 2, 2026"
 }
