@@ -9,11 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$2.63T"
+      "value": "$2.62T"
     },
     {
       "label": "Price",
-      "value": "$238"
+      "value": "$242"
     }
   ],
   "chips": [
@@ -50,7 +50,7 @@
     }
   ],
   "moat": {
-    "description": "Dominant scale, switching costs (Prime), and cost advantage (Logistics). AWS backlog hits $244B+, up 40%+ YoY. Amazon has now committed $33B total to Anthropic ($8B prior + $25B new deal at $380B valuation, announced April 20, 2026) — and Anthropic in turn committed $100B+ in AWS spend over the next 10 years, with 5 GW of capacity additions and access to Trainium2 through Trainium4. On May 4, 2026 Amazon launched Amazon Supply Chain Services (ASCS) — opening its full freight, distribution, fulfillment, and parcel network (≈80,000 trailers; 25% lower transport cost vs alternatives) to any business, regardless of whether they sell on Amazon. P&G, 3M, Lands' End, and American Eagle signed as anchor customers. BofA estimates a $1.3T 3PL TAM; each 1% share equals ~$13B annual revenue and the launch is being framed as the next AWS — externalising an internal capability into a high-margin platform. Competitive pressure from Azure (+39% YoY) and GCP (+36% YoY) on AWS, and from UPS/FedEx on ASCS, remains a monitored risk.",
+    "description": "Dominant scale, switching costs (Prime), and cost advantage (Logistics). AWS backlog hits $244B+, up 40%+ YoY. Amazon has now committed $33B total to Anthropic ($8B prior + $25B new deal at $380B valuation, announced April 20, 2026) — and Anthropic in turn committed $100B+ in AWS spend over the next 10 years, with 5 GW of capacity additions and access to Trainium2 through Trainium4. On May 4, 2026 Amazon launched Amazon Supply Chain Services (ASCS) — opening its full freight, distribution, fulfillment, and parcel network (≈80,000 trailers; 25% lower transport cost vs alternatives) to any business, regardless of whether they sell on Amazon. P&G, 3M, Lands' End, and American Eagle signed as anchor customers. BofA estimates a $1.3T 3PL TAM; each 1% share equals ~$13B annual revenue and the launch is being framed as the next AWS — externalising an internal capability into a high-margin platform. On June 10, 2026 Amazon expanded ASCS's LTL (less-than-truckload) freight service beyond inbound-to-Amazon shipments to serve any destination — third-party warehouses, distribution centers, retail partners, and distributors — building on a base that has already moved millions of pallets annually for tens of thousands of sellers and vendors since 2019, an early proof point that the platform is scaling as designed. Competitive pressure from Azure and GCP on AWS, and from UPS/FedEx on ASCS, remains a monitored risk, as does a June 2026 report that Amazon's CEO raised security concerns with U.S. officials that contributed to an export-control ban on Anthropic's Fable 5 and Mythos 5 models — a reminder that the Anthropic relationship carries governance and regulatory tail risk alongside its commercial upside.",
     "analysisTitle": "The Economic Moat",
     "analysisSummary": "Amazon possesses a **Wide Economic Moat** driven by four primary pillars:",
     "analysisPoints": [
@@ -115,8 +115,8 @@
     }
   },
   "valuation": {
-    "score": 81,
-    "description": "Q1 2026 delivered a decisive confirmation (AWS 28%, operating income $23.9B, chips >$20B ARR) and the May 4, 2026 ASCS launch unlocks a $1.3T 3PL TAM with P&G, 3M, Lands' End, and American Eagle as anchor customers. The base fair value of $310 and bull case of $395 (set in May to reflect AWS-style optionality on the new logistics platform) are unchanged. At ~$238 (June 10, 2026), the stock has pulled back ~15% from its May 5 all-time high of $278.56 amid broader mega-cap rotation and FTC-trial overhang (October 2026) — leaving it ~23% below the base case and meaningfully improving the margin of safety with no fundamental deterioration since the Q1 beat.",
+    "score": 80,
+    "description": "Q1 2026 delivered a decisive confirmation (AWS 28%, operating income $23.9B, chips >$20B ARR) and the May 4, 2026 ASCS launch unlocks a $1.3T 3PL TAM with P&G, 3M, Lands' End, and American Eagle as anchor customers, since extended with a June 10, 2026 LTL freight expansion serving any destination. The base fair value of $310 and bull case of $395 (set in May to reflect AWS-style optionality on the new logistics platform) are unchanged. At ~$242 (July 3, 2026), the stock has stabilised after pulling back ~13% from its May 6 all-time high of $274.99, still trading ~22% below the base case with no fundamental deterioration since the Q1 beat. Q2 2026 earnings (July 30, 2026) are the next catalyst to confirm the re-acceleration thesis.",
     "valuationNote": {
       "text": "Using a 10-year DCF with a 9% WACC and a 3.5% terminal growth rate, incorporating Q1 2026 actuals (AWS 28%, operating income $23.9B), Q2 guide ($194–199B), and the May 2026 ASCS launch ($1.3T 3PL TAM, ~0.5–1% capture in base), our fair value estimate for AMZN is",
       "fairValue": "$310/share"
@@ -228,5 +228,5 @@
     },
     "verdict": "Amazon's moats are overwhelmingly AI-resilient: the $244B AWS backlog, Trainium custom silicon, proprietary purchase data, the marketplace flywheel, and now the ASCS logistics-as-a-service platform are core strengths that are strengthening — not weakening — in the AI era. The May 2026 ASCS launch is the most consequential moat-deepening event since AWS itself, externalising 80,000-trailer logistics into a $1.3T TAM platform whose unit economics improve with every shipper added."
   },
-  "lastAnalyzed": "June 2026"
+  "lastAnalyzed": "July 3, 2026"
 }
