@@ -2,11 +2,11 @@
   "slug": "okta",
   "ticker": "OKTA",
   "name": "Okta Inc.",
-  "lastAnalyzed": "April 2026",
+  "lastAnalyzed": "July 5, 2026",
   "headerStats": [
-    { "label": "Ticker",       "value": "OKTA"   },
-    { "label": "Market Cap",   "value": "~$13B"  },
-    { "label": "Current Price","value": "$76.00" }
+    { "label": "Ticker",       "value": "OKTA"    },
+    { "label": "Market Cap",   "value": "~$24.6B" },
+    { "label": "Current Price","value": "$141.42" }
   ],
   "chips": [
     { "label": "Identity Security | Workforce & Customer IAM", "color": "primary" },
@@ -14,24 +14,24 @@
   ],
   "metrics": [
     {
-      "title": "ACV",
-      "value": "$3B+",
-      "label": "Annual Contract Value — Q4 FY2026 Milestone",
+      "title": "cRPO",
+      "value": "$2.50B",
+      "label": "Current RPO — Q1 FY2027, +12% YoY",
       "icon": "Shield",
       "color": "#005ABA"
     },
     {
       "title": "FCF Margin",
-      "value": "~30%",
-      "label": "FY2026 FCF ~$863M — 6.6% FCF Yield at $76",
+      "value": "35%",
+      "label": "Q1 FY2027 FCF $271M — 35% Margin",
       "icon": "TrendingUp",
       "color": "#10b981"
     },
     {
-      "title": "Integrations",
-      "value": "8,200+",
-      "label": "Okta Integration Network — Vendor-Neutral Identity Flywheel",
-      "icon": "Zap",
+      "title": "NRR",
+      "value": "107%",
+      "label": "Net Retention Inflecting Up — Q1 FY2027",
+      "icon": "Target",
       "color": "#7c3aed"
     }
   ],
@@ -42,7 +42,7 @@
     "analysisPoints": [
       {
         "title": "Transaction Embedding — Every Login Flows Through Okta",
-        "text": "Okta sits inline with every authentication event across an enterprise — every employee login, every app access, every API call. Removing it would break access to all 8,200+ integrated applications simultaneously, making it operationally irreplaceable in the short term. The launch of Okta for AI Agents (GA April 30, 2026) extends this embedding to non-human identities, multiplying the number of identity transactions per customer."
+        "text": "Okta sits inline with every authentication event across an enterprise — every employee login, every app access, every API call. Removing it would break access to all 8,200+ integrated applications simultaneously, making it operationally irreplaceable in the short term. Okta for AI Agents, live since its April 30, 2026 GA, is already extending this embedding to non-human identities — new products drove ~25% of Q1 FY2027 bookings, with a ~40% ACV uplift on deals that attach them — multiplying the number of identity transactions per customer."
       },
       {
         "title": "System of Record for Enterprise Identity",
@@ -55,19 +55,19 @@
     ]
   },
   "growth": {
-    "description": "FY2026 delivered $2.919B in revenue (+12% YoY) and $863M in FCF (~30% margin), with ACV surpassing $3B. FY2027 guidance of 9% growth ($3.17–3.19B) disappointed investors but includes a ~1pp headwind from deliberately accelerating professional services partner migration. The strategic catalyst is Okta for AI Agents (GA April 30, 2026), which treats every AI agent as a managed identity — potentially thousands of new billable identities per enterprise customer. Identity Governance (IGA) is also growing rapidly, adding a second expansion vector.",
+    "description": "Q1 FY2027 (quarter ended April 30, 2026) revenue reached $765M (+11% YoY), ahead of the deceleration-driven fears that followed the 9% FY2027 opening guide. RPO climbed to $4.72B (+16% YoY) and cRPO to $2.50B (+12% YoY), while NRR inflected up to 107% from 106% — the first uptick in several quarters. Non-GAAP operating margin compressed 180bps YoY to 25% and FCF was $271M (35% margin) as Okta leans into AI agent identity R&D and go-to-market spend. Management raised full-year FY2027 guidance to $3.185–3.205B revenue (9–10% growth) and $855–885M FCF (27–28% margin). Okta for AI Agents (GA April 30, 2026) is already monetizing — new products drove ~25% of Q1 bookings with a ~40% ACV uplift when attached — and IGA continues to take governance share from SailPoint. The stock has re-rated sharply (+86% since April, +67% YTD) on this beat-and-raise plus the NRR inflection, but full-year growth is still decelerating versus FY2026's 12% print, so the deceleration narrative is bottoming, not reversed.",
     "growthAnalysis": {
-      "cagrEstimate": "9–13%",
-      "scoreDerivation": "Base 67 (9–13% blended CAGR, 8–15% band) + 5 TAM expansion (AI agent identity is a new identity surface; IGA/governance displacing SailPoint) − 2 guidance width (FY2027 guide decelerated from 12% to 9%, NRR at 106% vs 110%+ prior year) = 70",
+      "cagrEstimate": "9–12%",
+      "scoreDerivation": "Base 74 (9–12% blended CAGR, baseFromCagr formula) + 1.3 trajectory (1 of 3 drivers accelerating: Okta for AI Agents ~25% of Q1 bookings; Core and IGA stable) − 4 compressing margins (non-GAAP op margin −180bps YoY on AI investment) + 4 both TAM/share − 5 moderate keyRisk severity = 70",
       "drivers": [
         {
           "name": "Workforce Identity Cloud (Core)",
-          "metric": "+11% YoY; ACV crossed $3B; cRPO $2.51B (+12% YoY)",
+          "metric": "+11% YoY (Q1 FY2027); RPO $4.72B (+16% YoY); cRPO $2.50B (+12% YoY)",
           "trend": "stable"
         },
         {
           "name": "AI Agent Identity + IGA",
-          "metric": "Okta for AI Agents GA April 30; IGA fastest-growing module; TAM $29B→$56B by 2029 (IDC)",
+          "metric": "Okta for AI Agents GA April 30, live; ~25% of Q1 bookings; TAM $29B→$56B by 2029 (IDC)",
           "trend": "accelerating"
         },
         {
@@ -77,24 +77,24 @@
         }
       ],
       "primaryType": "both",
-      "keyRisk": "If Microsoft Entra ID captures 10%+ of net new workforce identity ARR from Okta's SMB and mid-market customers by end of FY2028 (evidenced by NRR falling below 102% for two consecutive quarters), revenue growth stalls at 4–6% and the AI agent identity narrative fails to offset core attrition",
+      "keyRisk": "If Microsoft Entra ID captures 10%+ of net new workforce identity ARR from Okta's SMB and mid-market customers by end of FY2028 (evidenced by NRR reversing below 105% for two consecutive quarters, undoing the Q1 FY2027 inflection to 107%), revenue growth stalls at 4–6% and the AI agent identity narrative fails to offset core attrition",
       "keyRiskSeverity": "moderate",
-      "marginTrend": "expanding"
+      "marginTrend": "compressing"
     }
   },
   "valuation": {
-    "score": 77,
-    "description": "At $76, OKTA trades 24% below the base case ($100) — attractively priced for a business generating ~$863M in annual free cash flow (~6.6% FCF yield) with $4.8B in remaining performance obligations and an imminent AI agent identity catalyst. The stock has fallen ~20% in 2026 from early-year highs, with the 52-week range spanning $62.66–$127.57. The $1B buyback authorized in January 2026 provides a floor signal from management. Forward non-GAAP P/E of ~20× is a meaningful discount to the 30–35× sector median for enterprise security SaaS, reflecting the 9% FY2027 growth guide — but FY2027 FCF of $850–880M implies a P/FCF of just ~15×, which is compelling for the asset quality.",
+    "score": 50,
+    "description": "At $141.42, OKTA trades 41% above the base case ($100) and is within ~9% of the bull case ($155), after rallying ~86% since April 2026 (~67% YTD) on a Q1 FY2027 beat-and-raise, the NRR inflection to 107%, and accelerating adoption of Okta for AI Agents. Market cap of ~$24.6B compares to trailing-twelve-month FCF of ~$896M (~3.6% FCF yield) and RPO of $4.72B. Forward non-GAAP P/E has re-rated from ~20× in April to ~30× today, closing most of the discount to the 30–35× enterprise security SaaS sector median even though FY2027 guidance of 9–10% growth remains below faster peers like CrowdStrike and Zscaler. The re-rating prices in continued execution on the AI agent identity opportunity and a durable NRR recovery, leaving materially less margin of safety than three months ago.",
     "peAnalysis": {
-      "asOf": "April 2026",
+      "asOf": "July 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)",      "value": "~58×",  "note": "FY2026 GAAP EPS $1.31" },
-        { "label": "Forward P/E (NTM, non-GAAP)", "value": "~20×", "note": "consensus NTM EPS ~$3.75" },
-        { "label": "PEG Ratio",                "value": "~1.9×", "note": "fwd P/E ÷ 11% EPS CAGR" },
-        { "label": "Price / Sales (NTM)",      "value": "~4.1×", "note": "$3.18B NTM revenue" },
-        { "label": "Price / FCF",              "value": "~15×",  "note": "$863M FCF (FY2026 TTM)" }
+        { "label": "Trailing P/E (GAAP)",      "value": "~87×",  "note": "TTM GAAP EPS ~$1.63" },
+        { "label": "Forward P/E (NTM, non-GAAP)", "value": "~30×", "note": "consensus NTM EPS ~$4.71" },
+        { "label": "PEG Ratio",                "value": "~1.2×", "note": "fwd P/E ÷ ~25% EPS growth" },
+        { "label": "Price / Sales (NTM)",      "value": "~7.7×", "note": "$3.19B FY2027 guided revenue" },
+        { "label": "Price / FCF",              "value": "~27×",  "note": "$896M FCF (TTM)" }
       ],
-      "summary": "At ~20× forward non-GAAP P/E, Okta trades at a 35–45% discount to the enterprise security SaaS sector median (~30–35×), reflecting decelerated 9% FY2027 growth versus 20–30%+ at faster-growing peers like CrowdStrike and Zscaler. The PEG of ~1.9× is elevated but not extreme for an identity franchise with $3B+ ACV, $4.8B RPO, and an AI agent identity platform launching April 30. The wide gap between trailing GAAP P/E (~58×) and forward non-GAAP (~20×) is largely structural — GAAP includes $500M+ in annual stock-based compensation, and GAAP profitability only emerged in FY2026 — making the forward non-GAAP multiple the more meaningful valuation lens; the P/FCF of ~15× tells a similar story of a business trading well below its intrinsic earnings power."
+      "summary": "At ~30× forward non-GAAP P/E, Okta has closed most of its prior discount to the 30–35× enterprise security SaaS sector median, despite FY2027 guidance of only 9–10% growth versus 20–30%+ at faster-growing peers like CrowdStrike and Zscaler. The PEG of ~1.2× looks reasonable on consensus EPS growth but assumes the AI agent identity ramp and NRR recovery (107%, up from 106%) both continue uninterrupted. The wide gap between trailing GAAP P/E (~87×) and forward non-GAAP (~30×) remains largely structural — GAAP still carries $500M+ in annual stock-based compensation — but the multiple expansion since April means the P/FCF of ~27× (versus ~15× three months ago) now reflects a business priced for continued execution rather than one trading below its intrinsic earnings power."
     }
   },
   "scenarios": {
