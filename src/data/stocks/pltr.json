@@ -9,11 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "$270B"
-    },
-    {
-      "label": "Current Price",
-      "value": "$120.00"
+      "value": "$310B"
     }
   ],
   "chips": [
@@ -26,26 +22,26 @@
       "color": "success"
     }
   ],
-  "recommendation": "Accumulate",
+  "recommendation": "Strong Buy",
   "metrics": [
     {
       "title": "US Commercial Rev",
-      "value": "$255M",
-      "label": "54% YoY Growth",
+      "value": "$595M",
+      "label": "133% YoY Growth (Q1 2026)",
       "icon": "TrendingUp",
       "color": "#7c3aed"
     },
     {
       "title": "Rule of 40",
-      "value": "83",
-      "label": "Best-in-Class SaaS",
+      "value": "145",
+      "label": "85% Growth + 60% Op Margin",
       "icon": "Zap",
       "color": "#3b82f6"
     },
     {
       "title": "US Govt Rev",
-      "value": "$320M",
-      "label": "Steady Mission-Critical",
+      "value": "$687M",
+      "label": "84% YoY Growth (Q1 2026)",
       "icon": "Shield",
       "color": "#10b981"
     }
@@ -70,34 +66,34 @@
     ]
   },
   "growth": {
-    "score": 88,
-    "description": "US commercial segment growing at 50%+ YoY; AIP creating an entirely new demand curve for enterprise AI."
+    "score": 90,
+    "description": "Growth re-accelerated in Q1 2026: total revenue +85% YoY, US revenue +104%, US commercial +133% to $595M. Management raised FY2026 guidance to ~71% growth ($7.66B) and US commercial to +120% (≥$3.224B) — AIP demand curve steepening rather than saturating."
   },
   "valuation": {
-    "score": 71,
-    "description": "Trading between bear ($80) and base ($155) — elevated multiple (~70x forward sales) demands continued hyper-growth execution; current price reflects AIP commercial momentum but leaves limited margin of safety."
+    "score": 77,
+    "description": "Trading between bear ($90) and base ($165), closer to base after the pullback from a $207 high. The Q1 2026 blowout and raised guidance improved risk/reward, though the multiple (~40x FY2026 sales) still demands sustained hyper-growth to justify."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$80",
-      "description": "US commercial growth decelerates sharply, DOGE-driven defense cuts pressure government revenue, and valuation multiple compresses toward SaaS peers.",
+      "priceTarget": "$90",
+      "description": "US commercial growth decelerates sharply from its Q1 peak, defense budget disruption pressures government renewals, and the ~40x sales multiple compresses toward high-growth SaaS peers.",
       "points": [
-        "US commercial growth slows below 30% as AIP boot camp pipeline saturates",
-        "DOGE budget cuts or continuing resolution reduce government contract renewals",
+        "US commercial growth halves off the 133% Q1 base as the AIP boot camp pipeline matures",
+        "Budget cuts or continuing resolution slow government contract renewals",
         "Competitor platforms (Microsoft Fabric, Databricks) close the ontology gap at lower cost"
       ]
     },
     "base": {
-      "priceTarget": "$155",
-      "description": "AIP-driven commercial expansion sustains 40%+ US commercial growth while government revenue holds steady.",
+      "priceTarget": "$165",
+      "description": "AIP-driven commercial expansion tracks the raised FY2026 guidance (~71% total, +120% US commercial) while government revenue keeps compounding.",
       "points": [
-        "US commercial revenue crosses $2B annualized run-rate by end of 2026",
-        "International commercial segment returns to double-digit growth",
-        "Rule of 40 score stays above 70, confirming elite operating efficiency"
+        "FY2026 revenue lands near the raised $7.66B guide with US commercial above $3.2B",
+        "Adjusted operating margin holds near 60%, keeping Rule of 40 well above 100",
+        "International commercial segment re-accelerates to double-digit growth"
       ]
     },
     "bull": {
-      "priceTarget": "$260",
+      "priceTarget": "$275",
       "description": "Palantir becomes the de facto AI operating system for Fortune 500 and allied governments globally.",
       "points": [
         "AIP becomes the enterprise standard for AI-to-action workflows, displacing legacy BI tools",
@@ -149,5 +145,5 @@
     },
     "verdict": "Palantir's moat is highly AI-resilient because AI is the product, not a threat to it. The Ontology platform deepens in value as more AI models are layered on top, making Palantir the connective tissue of enterprise AI operations."
   },
-  "lastAnalyzed": "February 2026"
+  "lastAnalyzed": "July 2026"
 }
