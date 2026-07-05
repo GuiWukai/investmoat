@@ -9,7 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$133B"
+      "value": "$120.5B"
+    },
+    {
+      "label": "Price",
+      "value": "$424.42"
     }
   ],
   "chips": [
@@ -22,26 +26,25 @@
       "color": "success"
     }
   ],
-  "recommendation": "Strong Buy",
   "metrics": [
     {
-      "title": "Ratings Revenue",
-      "value": "$1.30B",
-      "label": "+13% YoY (Q1 2026)",
+      "title": "Q1 2026 Revenue",
+      "value": "$4.17B",
+      "label": "+10% YoY (beat consensus)",
       "icon": "Landmark",
       "color": "#cf102d"
     },
     {
-      "title": "EBITDA Margin",
-      "value": "48.5%",
-      "label": "Scalable Capital Markets",
+      "title": "Indices Growth",
+      "value": "+17%",
+      "label": "Q1 2026 fastest segment",
       "icon": "TrendingUp",
       "color": "#3b82f6"
     },
     {
-      "title": "Dividend Growth",
-      "value": "10%",
-      "label": "Consistent 5yr CAGR",
+      "title": "FY26 EPS Guidance",
+      "value": "$19.40-19.65",
+      "label": "Narrowed and reaffirmed",
       "icon": "Shield",
       "color": "#10b981"
     }
@@ -66,12 +69,24 @@
     ]
   },
   "growth": {
-    "score": 78,
-    "description": "Q1 2026 revenue grew 10% YoY to $4.17B (organic CC +9%) with broad strength: Ratings +13%, Indices +17% (fastest segment), Market Intelligence +8%. FY2026 guidance calls for 6.3-8.3% revenue growth and $19.40-19.65 adjusted EPS — steady high-single-digit compounding with index licensing and private-markets data as durable drivers."
+    "description": "Q1 2026 total revenue +10% YoY ($4.17B), above the 6-8% organic guidance midpoint. Indices led at +17% (ETF AUM tailwind); Ratings +13% as the refinancing wall drives issuance. Adjusted EPS +13.7%, and FY26 adjusted-EPS guidance was reaffirmed at $19.40-19.65. Energy (Platts/Commodity Insights) organic guidance was trimmed ~1pp (to 4.5-6%) on Iran-conflict energy disruption. From July 1, 2026 the Mobility segment departs in the MBGL spin-off, leaving a faster-growing ratings/indices/market-intelligence RemainCo.",
+    "growthAnalysis": {
+      "cagrEstimate": "8-12%",
+      "scoreDerivation": "Base 72 + duopoly ratings position (+4) + indices ETF AUM tailwind (+3) + Platts commodities optionality (+2) - issuance cyclicality risk (-1) = 80",
+      "drivers": [
+        { "name": "Ratings", "metric": "Q1 2026 Ratings revenue +13% YoY on refinancing wall; private credit ratings revenue +25% YoY", "trend": "stable" },
+        { "name": "Indices", "metric": "Q1 2026 Indices revenue +17% YoY ($519M)", "trend": "accelerating" },
+        { "name": "Operating Margin", "metric": "Q1 2026 op margin 51.8%, +100bps YoY", "trend": "accelerating" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "Tariff-driven debt capital markets freeze in 2026 could halt new bond issuance for 6-12 months and compress MIS revenue.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
-    "score": 78,
-    "description": "Trading around $440 (~22x forward EPS, below its historical 25-30x) between the reset bear ($385) and base ($500), after touching a 52-week low of $361. The refinancing wall and private-credit ratings expansion remain durable multi-year tailwinds against near-term issuance and rate uncertainty."
+    "score": 84,
+    "description": "At $424.42 (June 26, 2026) the stock trades ~6% above the bear-case target ($400) and ~24% of the way from bear ($400) to base ($500) — most of the cyclical uncertainty already appears discounted, with Q1 2026 beating guidance and Ratings private-credit revenue +25% YoY. Spin-off timing: the Mobility Global (MBGL) spin-off distributes July 1, 2026 (record date June 15; $2B of Mobility notes priced in May). June 26 is the last regular-way cum-distribution session, so from July 1 the SPGI stub re-prices mechanically lower as MBGL (estimated ~$25-33/share) separates. These bear/base/bull targets are struck on the pre-spin whole company and must be rebased to RemainCo after the distribution. Post-spin, SPGI becomes a purer ratings/indices/data compounder, which has historically supported a higher multiple."
   },
   "scenarios": {
     "bear": {
@@ -104,24 +119,24 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "weakened",
-      "note": "Financial data terminal interfaces are being streamlined and commoditized by AI-powered analytics platforms."
+      "status": "strong",
+      "note": "S&P credit rating nomenclature (AAA, AA+, etc.) is embedded in trillions of dollars of fixed-income legal documents — ISDA master agreements, fund investment mandates, Basel III capital rules, and money-market eligibility rules reference S&P ratings explicitly. Replacing this learned interface across the global fixed-income complex would require amending those documents and retraining every fixed-income professional. AI-powered analytics platforms layer on top of S&P ratings rather than replacing them."
     },
     "businessLogic": {
       "status": "intact",
       "note": "Credit rating methodologies are proprietary, regulatory-recognized, and legally required — AI enhances but cannot replace the NRSRO designation."
     },
     "publicDataAccess": {
-      "status": "weakened",
-      "note": "Some financial market data is becoming more accessible through open-source and alternative data providers."
+      "status": "strong",
+      "note": "S&P aggregates decades of public filings, Platts commodity assessments, and ESG disclosures into proprietary datasets that took 20+ years and multiple acquisitions (IHS Markit, Kensho, Panjiva) to assemble. The mobility/auto dataset departs with the Mobility Global spin-off (distribution July 1, 2026), but the core ratings history, Platts benchmarks, and Capital IQ corpus — now also being licensed into enterprise AI platforms (Cohere North collaboration, June 2026) — remain unique and non-replicable on a near-term horizon."
     },
     "talentScarcity": {
       "status": "intact",
       "note": "SEC-recognized credit analysts, regulatory relations specialists, and 160-year institutional knowledge cannot be replicated."
     },
     "bundling": {
-      "status": "intact",
-      "note": "Credit Ratings + Market Intelligence + Platts Commodity Data + Mobility Data = a comprehensive financial intelligence bundle."
+      "status": "strong",
+      "note": "Credit Ratings + Market Intelligence (Capital IQ) + Platts commodity assessments + Mobility data + Indices form a deeply integrated bundle — institutional users who rely on multiple S&P products face compounding switching costs because replacing the bundle requires sourcing each component from different vendors offering inferior standalone products."
     },
     "proprietaryData": {
       "status": "strong",
@@ -145,5 +160,5 @@
     },
     "verdict": "S&P Global's regulatory moat (NRSRO status) and role as the definitive system of record for credit risk makes them uniquely AI-resilient. AI disrupts analysis, not the legal requirement to use S&P ratings."
   },
-  "lastAnalyzed": "July 2026"
+  "lastAnalyzed": "June 26, 2026"
 }

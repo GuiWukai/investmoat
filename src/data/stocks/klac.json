@@ -1,0 +1,187 @@
+{
+  "slug": "klac",
+  "ticker": "KLAC",
+  "name": "KLA Corporation",
+  "lastAnalyzed": "June 2026",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "KLAC"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$338B"
+    },
+    {
+      "label": "Current Price",
+      "value": "$253.88"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Semicap | Process Control | Wafer Inspection",
+      "color": "primary"
+    },
+    {
+      "label": "~58% Process Control Share",
+      "color": "success"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "Q3 FY2026 Revenue",
+      "value": "$3.42B",
+      "label": "+11.5% YoY (beat), non-GAAP EPS $9.40",
+      "icon": "TrendingUp",
+      "color": "#7c3aed"
+    },
+    {
+      "title": "Advanced Packaging",
+      "value": "+70% YoY",
+      "label": "#1 in process control for advanced WLP (2025)",
+      "icon": "Database",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "Q4 FY2026 Guide",
+      "value": "$3.58B",
+      "label": "Above consensus; ~$0.99 non-GAAP EPS (split-adj)",
+      "icon": "Zap",
+      "color": "#10b981"
+    }
+  ],
+  "moat": {
+    "description": "Near-monopoly (~58% process-control share in 2025, up 360bps since 2021) in semiconductor process control and wafer inspection — every advanced node ramp at TSMC, Samsung, and Intel runs through KLA tools. KLA also took the #1 position in process control for advanced wafer-level packaging in 2025.",
+    "analysisTitle": "The Yield-Learning Moat",
+    "analysisSummary": "KLA's moat is the **accumulated yield-learning data** from decades of inline wafer inspection — a proprietary defect-signature library that only deepens at each new process node:",
+    "analysisPoints": [
+      {
+        "title": "Yield-Learning Data Compounds Per Node",
+        "text": "Every wafer inspected adds to KLA's defect-signature library. Customers can't replicate this dataset because it's accumulated across the entire industry. New nodes (3nm, 2nm, 1.4nm) extend the lead — defect modes get more subtle and require more inspection sophistication, not less. Process-control share has climbed to ~58%."
+      },
+      {
+        "title": "Inline at Every Wafer",
+        "text": "KLA process-control tools sit inline in fab production lines — every wafer at TSMC's leading-edge fabs passes through KLA inspection. The transaction-embedding moat is structural: pulling KLA tools requires re-architecting fab flow."
+      },
+      {
+        "title": "Advanced Packaging is the New Front",
+        "text": "HBM stacks and chiplet integration require an order of magnitude more process control than monolithic chips. KLA grew advanced wafer-level-packaging revenue ~70% YoY and took the #1 process-control position in 2025 — a TAM that effectively didn't exist 5 years ago and is scaling toward the company's $1B+ target."
+      }
+    ]
+  },
+  "growth": {
+    "description": "Q3 FY2026 revenue $3.42B (+11.5% YoY, beat); non-GAAP EPS $9.40 pre-split (+11.8% YoY); operating margin 42.6%. Q4 FY2026 guide $3.575B (above consensus). Advanced wafer-level packaging grew ~70% YoY and KLA took the #1 process-control position. At its April analyst day KLA raised its long-term framework to ~$26B revenue by 2030 (13-17% CAGR) with 45-47% operating margins. AI capex super-cycle is the primary tailwind; semicap cyclicality is the offsetting concern.",
+    "growthAnalysis": {
+      "cagrEstimate": "11-14%",
+      "scoreDerivation": "Base 76 (11-14% blended CAGR — 11.5% Q3, 13-17% 2030 framework) + 4 trajectory (3 accelerating drivers) + 4 growth type (both TAM expansion + share gains) - 5 cyclicality (2H 2026 AI capex digestion risk) = 79",
+      "drivers": [
+        {
+          "name": "Leading-Edge Foundry/Logic",
+          "metric": "Q3 FY26 +11.5% YoY, AI compute buildout",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Advanced Packaging",
+          "metric": "+70% YoY in advanced WLP; #1 process-control share 2025",
+          "trend": "accelerating"
+        },
+        {
+          "name": "HBM / Memory",
+          "metric": "HBM4 ramp drives stacked-DRAM inspection demand",
+          "trend": "accelerating"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If AI capex digestion in late 2026 cuts hyperscaler chip-design starts and TSMC pushes out its 2nm ramp by 6+ months, KLA's advanced-packaging momentum stalls — and after a ~47% surge to ~53x forward earnings, a richly-valued multiple compresses sharply.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 63,
+    "description": "After a ~47% surge since the May review and a 10-for-1 split (effective June 12), KLA at ~$254 trades slightly above the base case ($245) and at ~53x forward earnings — well above semicap peers and its own history. The duopoly-tier moat and 2030 $26B framework justify a premium, but the margin of safety has been erased; downside to the bear case ($165) is ~35%.",
+    "peAnalysis": {
+      "asOf": "June 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~66×", "note": "TTM GAAP EPS ~$3.8 (split-adj)" },
+        { "label": "Forward P/E (NTM)", "value": "~53×", "note": "consensus FY27 EPS ~$4.8 (split-adj)" },
+        { "label": "PEG Ratio", "value": "~4.1×", "note": "fwd P/E ÷ ~13% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~21×", "note": "~$16B NTM revenue, ~$338B cap" },
+        { "label": "Price / FCF", "value": "~54×", "note": "FCF conversion ~85% of net income" }
+      ],
+      "summary": "Forward P/E of ~53× is well above semicap peers (Applied Materials ~22×, Lam Research ~28×, ASML ~32×) and KLA's own history, pricing in the AI super-cycle and the 2030 $26B / 45-47% margin framework. PEG ~4 sits firmly in the 'expensive' band. The 10-for-1 split (June 12) and +47% run-up since May have removed the margin of safety — execution missteps would re-rate the multiple quickly."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$165",
+      "description": "AI capex digestion hits semicap in late 2026, TSMC pushes 2nm ramp, advanced-packaging growth normalizes, multiple compresses to ~34× forward.",
+      "points": [
+        "AI capex digestion cuts hyperscaler chip-design starts ≥20% in late 2026",
+        "TSMC 2nm ramp slips 6+ months, deferring KLA process-control orders into 2027",
+        "Advanced-packaging growth decelerates from +70% YoY toward mid-cycle, cyclicality narrative reasserts"
+      ]
+    },
+    "base": {
+      "priceTarget": "$245",
+      "description": "FY26/27 trajectory holds (low-teens revenue growth), advanced packaging keeps gaining share, AI capex cycle continues, multiple settles ~48× near-term / ~43× on FY28 EPS.",
+      "points": [
+        "Revenue compounds at 11-14% toward the 2030 $26B framework; FY27 EPS ~$4.8 (split-adj)",
+        "Advanced packaging sustains share leadership on HBM4 and chiplet adoption",
+        "Operating margin expands toward the 45-47% 2030 target as advanced-packaging mix shifts higher"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$330",
+      "description": "Multi-year AI capex super-cycle, KLA captures disproportionate share of advanced-packaging process-control TAM, multiple holds 55×+.",
+      "points": [
+        "AI capex super-cycle extends through 2027-2028, hyperscaler ASIC programs (Trainium, MTIA, TPU) drive a 5-year fab buildout",
+        "Advanced-packaging revenue exceeds the $1B+ target and scales toward the 2030 plan",
+        "EPS power approaches ~$6.5 (split-adj) by FY28 with 45%+ op margin; multiple re-rates on monopoly-tier moat recognition"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "Fab process engineers train on KLA tools, but operator workflows are increasingly automated and AI-assisted. Interface mastery is no longer the primary lock-in."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "Yield-management algorithms and defect-signature classifiers are encoded against KLA's specific sensor data over decades. Customer fab-process tuning relies on KLA's proprietary methodologies — replicating in another vendor's tools would restart the learning curve."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — process-control business does not derive moat from public datasets."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Applications engineers embedded with TSMC, Samsung, and Intel are scarce, but the talent moat is bounded — KLA, Applied Materials, and Lam compete for the same engineering pool."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Comprehensive process-control suite — defect inspection (29xx series) + metrology (LS9xxx) + reticle inspection + advanced packaging (Kronos) + yield-management software. Competitors lack the cross-tool data integration."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Decades of accumulated defect-signature libraries, process recipes, and yield-learning data per customer per node. This is the core moat — it compounds with every wafer inspected (process-control share reached ~58% in 2025) and cannot be replicated by competitors."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "Foundry certification at TSMC, Samsung, and Intel for each new process node. US BIS export-control alignment makes KLA a strategically protected vendor (China cannot freely buy leading-edge KLA tools), reinforcing US/allied-foundry concentration."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "Yield-learning data flows back from many customer fabs, helping KLA improve algorithms which all customers benefit from. Indirect network effect bounded by the small number of leading-edge customers globally; reinforced by KLA's #1 position in advanced wafer-level-packaging process control (2025)."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "KLA tools are inline in fab production lines — every wafer at leading-edge fabs passes through inspection. Critical workflow position but not a payment-rail-level transaction moat."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "KLA yield-management software is the system of record for fab quality data — every defect, every wafer, every lot tracked through the full process. Multi-year fab data lives in KLA-native formats and feeds the next-node ramp."
+    },
+    "verdict": "KLA is a clear net beneficiary of AI. The strongest moats — proprietaryData (yield-learning library, now ~58% process-control share), systemOfRecord (yield-management software), regulatoryLockIn (foundry certs + export controls), bundling, businessLogic — are all AI-strengthened or AI-neutral. The one AI-vulnerable moat (learnedInterfaces) is correctly downgraded because operator workflows are being automated. The raised 2030 framework (~$26B revenue, 45-47% op margin) underscores structural durability — KLA sits in the ASML/MSCI tier (90-94), second only to ASML in semicap structural durability."
+  }
+}

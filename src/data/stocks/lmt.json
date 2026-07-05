@@ -2,7 +2,7 @@
   "slug": "lmt",
   "ticker": "LMT",
   "name": "Lockheed Martin Corp.",
-  "lastAnalyzed": "March 2026",
+  "lastAnalyzed": "May 2026",
   "titleColor": "#003087",
   "headerStats": [
     {
@@ -11,7 +11,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$148B"
+      "value": "~$120B"
+    },
+    {
+      "label": "Price",
+      "value": "~$518"
     }
   ],
   "chips": [
@@ -20,23 +24,22 @@
       "color": "primary"
     },
     {
-      "label": "Hold",
-      "color": "warning"
+      "label": "Accumulate",
+      "color": "success"
     }
   ],
-  "recommendation": "Hold",
   "metrics": [
     {
-      "title": "Backlog",
-      "value": "$194B",
-      "label": "Record — 17% YoY Growth, 2.5× Annual Revenue",
+      "title": "Q1 2026 Revenue",
+      "value": "$18.0B",
+      "label": "Flat YoY — EPS $6.44 missed $6.77 est",
       "icon": "Shield",
       "color": "#003087"
     },
     {
-      "title": "FY2025 FCF",
-      "value": "$6.9B",
-      "label": "4.7% FCF Yield — Expanding in 2026",
+      "title": "FY2026 FCF Guide",
+      "value": "$6.5–6.8B",
+      "label": "Q1 FCF -$291M (vs +$955M Q1'25)",
       "icon": "DollarSign",
       "color": "#1e5ba8"
     },
@@ -68,8 +71,7 @@
     ]
   },
   "growth": {
-    "score": 62,
-    "description": "LMT is not a high-growth business — it is a high-visibility, compounding-capital-return machine. Blended revenue CAGR of 6-8% masks a bifurcated story: Missiles & Fire Control growing double-digit through 2030 while Aeronautics production is range-bound. The $194B backlog (17% growth, book-to-bill 1.2) provides extraordinary multi-year revenue certainty.",
+    "description": "Q1 2026 was a soft start: revenue flat at $18.0B (missed $18.4B est), EPS of $6.44 missed $6.77 estimate, and Q1 FCF swung to -$291M from +$955M as F-16 and C-130 program delays weighed on cash conversion. Management reaffirmed full-year guidance of ~5% revenue growth and 25% operating profit growth, but execution risk has risen. The $194B backlog and structural defense demand keep the long-term story intact.",
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
@@ -81,7 +83,7 @@
     },
     "growthAnalysis": {
       "cagrEstimate": "6–8%",
-      "scoreDerivation": "Base 52 (6–8% CAGR) + 5 high-visibility government contracts (multi-year, very predictable) + 5 TAM expansion (MFC double-digit through 2030, space-based interceptors) = 62",
+      "scoreDerivation": "Base 67.5 (6–8% CAGR, 7% midpoint) + 2.7 trajectory (2 of 3 drivers accelerating: MFC and F-35 sustainment) + 4 expanding margins + 4 growth type 'both' (TAM expansion via space interceptors + share of allied procurement) − 5 moderate key-risk (FY2027 budget/sequestration) = 73",
       "drivers": [
         {
           "name": "Missiles & Fire Control",
@@ -101,12 +103,13 @@
       ],
       "primaryType": "both",
       "keyRisk": "If the US defense budget faces sequestration or continuing resolution in FY2027 that cuts procurement by 10%+, MFC ramp delays and F-35 lot deferrals compress the 2027-2028 revenue bridge before the backlog converts — particularly vulnerable if classified program write-downs recur (LMT lost $1.5B after-tax in 2024 alone)",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 74,
-    "description": "At ~$638, LMT trades between its bear case ($480) and base case ($720) — approximately 11% below fair value with meaningful margin of safety. The deceptively high trailing P/E (29.7×) reflects one-time 2025 pension charges; the forward P/E of ~21× at 2026 EPS of $29.80 is at sector median and below LMT's historical norm.",
+    "score": 86,
+    "description": "At ~$518, LMT has fallen ~19% from March levels following the Q1 2026 miss and now trades only modestly above its bear case ($480) — implying 39% upside to the base case ($720). The forward P/E of ~17× on 2026 EPS of ~$29.80 is meaningfully below LMT's 5-year average of 18.9×, providing material margin of safety if management's reaffirmed guidance holds.",
     "valuationNote": {
       "text": "The trailing-to-forward P/E gap (29.7× → 21×) is one of the clearest earnings ramp signals in the defense sector: 2025 EPS was depressed by $1.5B in after-tax classified program losses that management expects will not recur at the same scale. At the base case of $720, investors receive a 13% total return plus LMT's ~2.1% dividend — with downside well-supported by the $194B backlog.",
       "fairValue": "$720"
@@ -202,8 +205,8 @@
       "note": "Defense prime contractor status requires DoD facility security clearances, ITAR compliance, DCAA audit approval, and continuous performance evaluations — barriers new entrants cannot clear in under a decade. The F-35 is a sole-source program: no other company can manufacture the airframe without an Act of Congress. Multi-year procurement contracts (e.g., the $15B Lots 20-21 award) lock in LMT for 3-5 year production cycles. Foreign Military Sales require US government approval, extending LMT's regulatory protection internationally. AI is irrelevant to regulatory lock-in."
     },
     "networkEffects": {
-      "status": "weakened",
-      "note": "The F-35 multinational coalition (20+ nations) creates genuine interoperability value — shared upgrades, common spare parts logistics, and combined training exercises justify the platform's cost for smaller air forces. More nations on F-35 makes the platform more valuable for all. However, this is a physical coalition effect, not a software network: it does not compound at the rate of software platforms, and switching from F-35 to Eurofighter or Rafale is a legitimate (if costly) alternative for some nations."
+      "status": "intact",
+      "note": "The F-35 multinational coalition (20+ nations, 1,000+ aircraft) is a demonstrably present and growing network effect: shared block upgrades, common spare-parts pooling, and combined training exercises mean each additional operator increases interoperability value for all — genuine increasing returns at the platform level that justify the cost for smaller air forces. It does not reach 'strong' because this is a physical coalition effect rather than a compounding software network — it scales more slowly than software platforms, and switching from F-35 to Eurofighter, Rafale, KF-21, or Gripen remains a legitimate (if costly) alternative for some nations."
     },
     "transactionEmbedding": {
       "status": "strong",

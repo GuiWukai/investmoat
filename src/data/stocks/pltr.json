@@ -9,7 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$310B"
+      "value": "~$270B"
+    },
+    {
+      "label": "Current Price",
+      "value": "$112.15"
     }
   ],
   "chips": [
@@ -22,27 +26,26 @@
       "color": "success"
     }
   ],
-  "recommendation": "Strong Buy",
   "metrics": [
     {
-      "title": "US Commercial Rev",
-      "value": "$595M",
-      "label": "133% YoY Growth (Q1 2026)",
+      "title": "US Commercial Growth",
+      "value": "+133%",
+      "label": "Q1 2026 YoY ($595M; FY26 guide >120%)",
       "icon": "TrendingUp",
       "color": "#7c3aed"
     },
     {
-      "title": "Rule of 40",
-      "value": "145",
-      "label": "85% Growth + 60% Op Margin",
+      "title": "Q1 2026 Revenue",
+      "value": "$1.63B",
+      "label": "+85% YoY beat ($1.54B consensus)",
       "icon": "Zap",
       "color": "#3b82f6"
     },
     {
-      "title": "US Govt Rev",
-      "value": "$687M",
-      "label": "84% YoY Growth (Q1 2026)",
-      "icon": "Shield",
+      "title": "FY26 Guide Raised",
+      "value": "$7.65B",
+      "label": "+71% YoY; Q2 guide $1.8B (vs $1.68B)",
+      "icon": "TrendingUp",
       "color": "#10b981"
     }
   ],
@@ -66,35 +69,47 @@
     ]
   },
   "growth": {
-    "score": 90,
-    "description": "Growth re-accelerated in Q1 2026: total revenue +85% YoY, US revenue +104%, US commercial +133% to $595M. Management raised FY2026 guidance to ~71% growth ($7.66B) and US commercial to +120% (≥$3.224B) — AIP demand curve steepening rather than saturating."
+    "description": "Q1 2026 (reported May 4) revenue $1.63B (+85% YoY) beat $1.54B consensus; US commercial $595M (+133% YoY); US government +84% YoY. FY26 guide raised to $7.65–$7.66B (+71% YoY) and US commercial guide raised to >$3.224B (+120%+); Q2 guide $1.8B vs $1.68B consensus; adj FCF FY26 raised to $4.2–$4.4B. Stock fell ~7% post-print on valuation skepticism despite the beat.",
+    "growthAnalysis": {
+      "cagrEstimate": "25-35%",
+      "scoreDerivation": "Base 90 (30% CAGR mid-band of 25-35%, decel-adjusted from current ~71% to terminal mid-20s) + ~3 trajectory (2 of 3 drivers accelerating, government stable) + 4 expanding margins + 3 TAM expansion - 5 moderate premium-multiple compression risk ≈ 95. Near-term growth is well above the band (Q1 2026 +85% YoY, FY26 guide +71%), but a 5-year forward midpoint of 30% is more defensible than 37% given law-of-large-numbers decel and the >40x revenue multiple's sensitivity to growth durability.",
+      "drivers": [
+        { "name": "US Commercial / AIP", "metric": "Q1 2026 US commercial revenue $595M (+133% YoY); 1,007 commercial customers (+31% YoY); 139 US commercial deals over $1M; FY26 US commercial guide raised to >$3.224B (+120% YoY)", "trend": "accelerating" },
+        { "name": "Total Revenue Growth", "metric": "Q1 2026 revenue $1.63B (+85% YoY) vs $1.54B consensus; Q2 2026 guide $1.8B vs $1.68B; FY26 guide raised to $7.65-7.66B (+71% YoY)", "trend": "accelerating" },
+        { "name": "Government / Defense", "metric": "Q1 2026 US government +84% YoY; DoD AI mission-critical pipeline >$1B; Maven, TITAN, NATO/Five Eyes expansion sustaining 30%+ growth", "trend": "stable" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "Palantir trades at one of the richest software multiples ever (>70x revenue). If US commercial growth decelerates from 130%+ toward 60% by late 2026 as AIP boot-camp pipeline matures and Microsoft Fabric/Databricks close the ontology gap, the multiple could compress 40-50% even on continued execution — a valuation-driven drawdown rather than a fundamentals failure.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "expanding"
+    }
   },
   "valuation": {
-    "score": 77,
-    "description": "Trading between bear ($90) and base ($165), closer to base after the pullback from a $207 high. The Q1 2026 blowout and raised guidance improved risk/reward, though the multiple (~40x FY2026 sales) still demands sustained hyper-growth to justify."
+    "score": 82,
+    "description": "At $112.15 (June 27, 2026) the stock sits ~34% of the way from bear ($85) to base ($165) — trading ~32% below the base case after sliding ~15% since the June 10 review. The drawdown is a market-wide AI-sector de-rating, not company-specific: PLTR set fresh 52-week lows (down ~40% YTD) on valuation skepticism while the Q1 2026 beat (+85% YoY) and raised FY26 guide ($7.65–$7.66B) remain fully intact. This is the multiple-compression the bear/keyRisk thesis flagged, now partially realized, which improves the entry: at ~$112 the >40x revenue multiple has reset toward the low-30s on forward sales. Thesis still hinges on US commercial clearing the >$3.224B FY26 guide. Next catalyst: Q2 2026 earnings in early August."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$90",
-      "description": "US commercial growth decelerates sharply from its Q1 peak, defense budget disruption pressures government renewals, and the ~40x sales multiple compresses toward high-growth SaaS peers.",
+      "priceTarget": "$85",
+      "description": "US commercial growth decelerates from 130%+ as AIP boot-camp pipeline matures, valuation multiple compresses toward 25-30x revenue as competitors close the ontology gap.",
       "points": [
-        "US commercial growth halves off the 133% Q1 base as the AIP boot camp pipeline matures",
-        "Budget cuts or continuing resolution slow government contract renewals",
-        "Competitor platforms (Microsoft Fabric, Databricks) close the ontology gap at lower cost"
+        "US commercial growth slows below 50% by late 2026 as AIP boot camp pipeline saturates",
+        "DOGE budget cuts or continuing resolution reduce government contract renewals",
+        "Multiple compresses from ~45x revenue toward 25-30x as Microsoft Fabric/Databricks close the ontology gap at lower cost"
       ]
     },
     "base": {
       "priceTarget": "$165",
-      "description": "AIP-driven commercial expansion tracks the raised FY2026 guidance (~71% total, +120% US commercial) while government revenue keeps compounding.",
+      "description": "FY26 trajectory holds at the raised +71% guide with US commercial clearing the >$3.224B target; multiple settles at ~35-40x forward revenue.",
       "points": [
-        "FY2026 revenue lands near the raised $7.66B guide with US commercial above $3.2B",
-        "Adjusted operating margin holds near 60%, keeping Rule of 40 well above 100",
-        "International commercial segment re-accelerates to double-digit growth"
+        "FY26 revenue lands within $7.65–$7.66B guide (+71% YoY) with US commercial >$3.224B (+120%+)",
+        "FY27 sustains 40%+ blended growth with Rule of 40 above 70, confirming elite operating efficiency",
+        "Adj FCF reaches the raised $4.2–$4.4B FY26 outlook, anchoring the premium multiple"
       ]
     },
     "bull": {
       "priceTarget": "$275",
-      "description": "Palantir becomes the de facto AI operating system for Fortune 500 and allied governments globally.",
+      "description": "Palantir becomes the de facto AI operating system for Fortune 500 and allied governments globally, sustaining a >50x revenue multiple on accelerating commercial penetration.",
       "points": [
         "AIP becomes the enterprise standard for AI-to-action workflows, displacing legacy BI tools",
         "NATO and Five Eyes expansion drives international government revenue above $500M",
@@ -109,7 +124,8 @@
     },
     "businessLogic": {
       "status": "strong",
-      "note": "Palantir encodes customer-specific workflows, decision trees, and ontologies directly into the platform — making it nearly impossible to replicate in a competitor tool."
+      "aiExposure": "resilient",
+      "note": "Palantir encodes customer-specific workflows, decision trees, and ontologies directly into the platform — making it nearly impossible to replicate in a competitor tool. AIP strengthens this moat: every additional AI agent on Foundry deepens the ontology coupling, since the LLM needs the customer's bespoke business logic to reason. Routed to resilient via aiExposure override — AI consumption of the ontology compounds the moat rather than eroding it."
     },
     "publicDataAccess": {
       "status": "weakened",
@@ -145,5 +161,5 @@
     },
     "verdict": "Palantir's moat is highly AI-resilient because AI is the product, not a threat to it. The Ontology platform deepens in value as more AI models are layered on top, making Palantir the connective tissue of enterprise AI operations."
   },
-  "lastAnalyzed": "July 2026"
+  "lastAnalyzed": "June 27, 2026"
 }

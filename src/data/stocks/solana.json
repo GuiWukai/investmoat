@@ -2,6 +2,7 @@
   "slug": "solana",
   "ticker": "SOL",
   "name": "Solana",
+  "assetClass": "crypto",
   "titleColor": "#9945ff",
   "headerStats": [
     {
@@ -10,7 +11,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$52B"
+      "value": "~$48B"
     },
     {
       "label": "Active Validators",
@@ -27,7 +28,6 @@
       "color": "warning"
     }
   ],
-  "recommendation": "Accumulate",
   "metrics": [
     {
       "title": "TPS (Firedancer)",
@@ -71,12 +71,24 @@
     ]
   },
   "growth": {
-    "score": 78,
-    "description": "Firedancer is live on mainnet (1M+ TPS capable), 6 spot SOL ETFs are approved with $800M AUM, and the SEC/CFTC jointly classified SOL as a digital commodity on March 17, 2026 — removing the securities overhang. Goldman Sachs holds $108M in SOL ETFs and Walmart OnePay integration is expanding retail adoption. FTX estate liquidation (~$3.5B in SOL sold 2024-2025) has largely cleared as a headwind."
+    "description": "Firedancer is live on mainnet (1M+ TPS capable), 6 spot SOL ETFs are approved with $800M AUM, and the SEC/CFTC jointly classified SOL as a digital commodity on March 17, 2026 — removing the securities overhang. Goldman Sachs holds $108M in SOL ETFs and Walmart OnePay integration is expanding retail adoption. FTX estate liquidation (~$3.5B in SOL sold 2024-2025) has largely cleared as a headwind.",
+    "growthAnalysis": {
+      "cagrEstimate": "35-55%",
+      "scoreDerivation": "Base 60 + 10 (Firedancer + Alpenglow eliminate outage risk + 150ms finality) + 6 (SEC/CFTC digital commodity classification + 6 spot ETFs unlock institutional capital) + 4 (Walmart OnePay + Visa/PayPal payments embedding) - 2 (severe crypto cycle volatility caps confidence) = 78",
+      "drivers": [
+        { "name": "Institutional ETF flows", "metric": "6 spot SOL ETFs at $800M AUM (post-March 2026 launch); Goldman Sachs $108M held; trajectory toward $5B+ in 12 months", "trend": "accelerating" },
+        { "name": "Network usage & DeFi TVL", "metric": "DeFi TVL ~$8B; Firedancer 1M+ TPS capacity; Walmart OnePay onboarding mass-market users", "trend": "accelerating" },
+        { "name": "Regulatory legitimacy", "metric": "SEC/CFTC digital commodity classification (March 17, 2026) removes securities overhang", "trend": "accelerating" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "Crypto risk-off cycle (rate hikes, dollar strength, or BTC drawdown) drags SOL 40%+ lower over 6-12 months despite improved fundamentals; Ethereum L2s reaching cost parity could compress Solana's structural performance differentiation over 2-3 years.",
+      "keyRiskSeverity": "severe",
+      "marginTrend": "stable"
+    }
   },
   "valuation": {
-    "score": 83,
-    "description": "At ~$92, SOL has corrected 60%+ from its all-time highs and sits well below the base case of $200 — a compelling entry relative to the fundamental improvements from Firedancer, spot ETF approval, and digital commodity classification. The downside to the bear case ($50) is ~46% vs. upside to base of ~117%."
+    "score": 84,
+    "description": "At ~$85, SOL has corrected further from March 2026 levels and sits well below the base case of $200 — a compelling entry relative to the fundamental improvements from Firedancer, spot ETF approval, and digital commodity classification. The downside to the bear case ($50) is ~41% vs. upside to base of ~135%."
   },
   "scenarios": {
     "bear": {
@@ -107,48 +119,29 @@
       ]
     }
   },
-  "tenMoats": {
-    "learnedInterfaces": {
-      "status": "weakened",
-      "note": "Rust-based smart contracts have a steeper learning curve than Solidity, limiting developer portability but also slowing mass adoption relative to Ethereum's EVM ecosystem."
-    },
-    "businessLogic": {
-      "status": "weakened",
-      "note": "The Solana ecosystem is younger and has less locked-in protocol logic than Ethereum. Most high-value DeFi protocols still deploy on Ethereum first."
-    },
-    "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — all on-chain data is public by design; not a competitive moat vs. any other L1 blockchain."
-    },
-    "talentScarcity": {
-      "status": "weakened",
-      "note": "Growing developer community, but significantly smaller than Ethereum's. Rust expertise is scarcer than Solidity, creating both a barrier and a hiring constraint."
-    },
-    "bundling": {
-      "status": "weakened",
-      "note": "Solana bundles execution and settlement on one chain — simpler than Ethereum's L2 ecosystem, but the lack of modularity limits customization for institutional deployments."
-    },
-    "proprietaryData": {
-      "status": "destroyed",
-      "note": "N/A — fully public blockchain; no proprietary data advantage exists or can exist by design."
-    },
-    "regulatoryLockIn": {
-      "status": "intact",
-      "note": "The SEC and CFTC jointly classified SOL as a digital commodity on March 17, 2026 — definitively resolving the securities question that had weighed on institutional adoption since 2023. Six spot SOL ETFs are now approved and trading. Goldman Sachs holds $108M in SOL ETFs. This regulatory clarity gives institutional allocators the compliance framework to hold SOL, creating durable demand."
-    },
+  "cryptoMoats": {
     "networkEffects": {
-      "status": "strong",
-      "note": "Solana has the strongest consumer crypto network effects outside Ethereum — Phantom is the #1 mobile crypto wallet, and Jupiter dominates decentralized exchange aggregation."
+      "status": "intact",
+      "note": "Top high-throughput L1 with growing consumer mindshare — Phantom is the #1 mobile crypto wallet, Jupiter dominates DEX aggregation, leading consumer DEX volume. Smaller than ETH but the only credible challenger in the L1 race."
     },
-    "transactionEmbedding": {
+    "schellingPoint": {
       "status": "weakened",
-      "note": "Growing DeFi and payments embedding (Visa, PayPal pilots), but most high-value financial activity still routes through Ethereum. Solana leads in consumer volume, not institutional value."
+      "note": "No clear default category. Competes with ETH L2s (Base, Arbitrum), Sui, Aptos, and emerging L1s for the 'fast chain' position. Solana leads in consumer volume but is not the obvious choice for any specific institutional category."
     },
-    "systemOfRecord": {
+    "credibleNeutrality": {
       "status": "weakened",
-      "note": "A relatively young chain (launched 2020) with a history of outages. Trust as a permanent system of record is still being established vs. Ethereum's 9-year track record."
+      "note": "Solana Foundation and SOL Labs retain significant roadmap influence. ~1,700 validators vs. Ethereum's 1M+ — materially more centralized. Five+ historical chain halts demonstrate validator-coordination dependencies, though Firedancer (live 2026) addresses the outage risk."
     },
-    "verdict": "Solana's moat has materially strengthened in 2025-2026: Firedancer live on mainnet eliminates the outage risk that was the primary bear thesis, Alpenglow achieves 150ms finality, and SEC/CFTC digital commodity classification unlocks institutional adoption. The moat gap vs. Ethereum has narrowed in consumer and payments use cases. Core risks remain: validator centralization (~1,700 vs. Ethereum's 1M+), ecosystem depth still 3-5 years behind Ethereum, and performance advantages will compress as competing chains improve."
+    "regulatoryIncumbency": {
+      "status": "intact",
+      "note": "SEC/CFTC jointly classified SOL as a digital commodity (Mar 2026), resolving the securities question that overhung 2023-2025. Six spot SOL ETFs approved and trading; Goldman Sachs holds $108M in SOL ETFs. No Strategic Reserve eligibility — BTC-only territory."
+    },
+    "securityBudget": {
+      "status": "intact",
+      "note": "Large stake (~$80B+ circulating) but more concentrated validator set than ETH. Adequate economic security for current TVL but materially less robust than BTC/ETH. Firedancer reduces single-implementation risk by adding a second validator client."
+    },
+    "primaryMoat": "networkEffects",
+    "verdict": "Solana's moat is the weakest of the three covered crypto assets. Real network effects in its consumer niche; intact on regulation and security but weakened on Schelling-point status and credible neutrality. The fastest chain — but not yet the default for any category that matters."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "May 2026"
 }

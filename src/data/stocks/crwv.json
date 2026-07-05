@@ -1,0 +1,207 @@
+{
+  "slug": "crwv",
+  "ticker": "CRWV",
+  "name": "CoreWeave, Inc.",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "CRWV"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$55B"
+    },
+    {
+      "label": "Current Price",
+      "value": "~$107"
+    }
+  ],
+  "chips": [
+    {
+      "label": "AI Compute | GPU Cloud",
+      "color": "primary"
+    },
+    {
+      "label": "Narrow / Concentrated Moat",
+      "color": "warning"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "Q1 2026 Revenue",
+      "value": "$2.1B",
+      "label": "+112% YoY, +32% QoQ — beat $1.97B; but FY26 guide held at $12–13B, below the $14–16B Street had modelled",
+      "icon": "Cpu",
+      "color": "#10b981"
+    },
+    {
+      "title": "Revenue Backlog",
+      "value": "$99.4B",
+      "label": "record bookings quarter; >$40B new commitments signed; ~3.5 GW contracted power",
+      "icon": "BarChart",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "Customer Concentration",
+      "value": "67% MSFT",
+      "label": "Microsoft 67% of FY2025 rev; OpenAI ~33% of contracted future rev; concentration easing in 2026",
+      "icon": "AlertTriangle",
+      "color": "#ef4444"
+    }
+  ],
+  "moat": {
+    "description": "Pure-play NVIDIA GPU cloud with first-mover scale, deep NVIDIA partnership, and earliest access to next-gen architectures — but heavily concentrated revenue and asset-financed business model limit moat durability.",
+    "analysisTitle": "The Speed-of-Deployment Moat",
+    "analysisSummary": "CoreWeave's edge is **operational velocity and NVIDIA preferred-partner status**, not a structural moat:",
+    "analysisPoints": [
+      {
+        "title": "NVIDIA Preferred Partner",
+        "text": "CoreWeave is repeatedly first-to-market with new NVIDIA architectures (H100, H200, GB200, Vera Rubin) — a status reinforced by NVIDIA's equity stake. This deployment-velocity advantage compounds during platform transitions."
+      },
+      {
+        "title": "Hyperscaler Customer Concentration",
+        "text": "Microsoft accounted for 67% of FY2025 revenue; OpenAI represents ~33% of contracted future revenue under an $11.9B five-year deal; Meta added a $21B contract through 2032. Three customers = bulk of book — both a strength (visibility) and weakness (renewal risk)."
+      },
+      {
+        "title": "Asset-Heavy Capital Model",
+        "text": "CoreWeave funds GPU buildouts with collateralized debt (~$21B as of late 2025) backed by long-term customer contracts. The model works while contracts are signed faster than depreciation runs — a fragile equilibrium that breaks if AI capex digests."
+      }
+    ]
+  },
+  "growth": {
+    "description": "Q1 2026 (reported May 7 2026) delivered revenue of $2.1B (+112% YoY, +32% QoQ), beating the ~$1.97B consensus, and the strongest bookings quarter in company history lifted revenue backlog to $99.4B (>$40B of new commitments signed). But the print was two-sided: management held the FY2026 revenue guide at $12–13B — below the $14–16B the Street had penciled in — and guided Q2 to $2.45–2.6B (midpoint $2.53B vs. $2.69B consensus), while profit margins compressed as capex (now $31–35B for 2026) outpaces revenue recognition. The 2026 exit run-rate floor was raised $1B to $18–19B, with FY27 exit run-rate reiterated at >$30B (>75% contracted).",
+    "growthAnalysis": {
+      "cagrEstimate": "70–120%",
+      "scoreDerivation": "Base 95 (hypergrowth at scale: 168% FY2025, 110% Q4 2025, ~$95B backlog supporting multi-year visibility) − 5 customer concentration risk and unit-economics uncertainty as scale rises = 90",
+      "drivers": [
+        {
+          "name": "Hyperscaler Capacity Contracts",
+          "metric": "$99.4B revenue backlog (>$40B signed in Q1); Q1 revenue $2.1B (+112%); FY26 guide $12–13B (~140% growth, below $14–16B Street est.)",
+          "trend": "accelerating"
+        },
+        {
+          "name": "NVIDIA Architecture Refresh",
+          "metric": "First-to-market on Blackwell GB200; Vera Rubin commitments embedded in Meta 2032 contract",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Sovereign + Enterprise AI",
+          "metric": "Early traction with European and Middle East sovereign AI deployments; revenue mix still <10%",
+          "trend": "accelerating"
+        }
+      ],
+      "primaryType": "market share",
+      "keyRisk": "If Microsoft accelerates its in-house AI infrastructure buildout (Azure + AMD MI400 + custom Maia ASICs) and lets the CoreWeave contract decay at 2027 renewal — CRWV's revenue trajectory inverts and the $21B+ debt stack triggers covenant pressure as collateralized GPUs depreciate faster than backlog recognition",
+      "keyRiskSeverity": "high",
+      "marginTrend": "compressing"
+    }
+  },
+  "valuation": {
+    "score": 50,
+    "description": "At ~$107 after the mixed Q1 print, CRWV trades at ~9× the FY2026 revenue guide ($12–13B) — on the lower-than-hoped guide the multiple is effectively richer than it looks for a capital-intensive, deeply unprofitable business with extreme customer concentration, ~$21B debt, and now compressing margins. The record $99.4B backlog is the bull anchor; the below-consensus FY and Q2 guides are the bear's. This is a high-conviction speculative bet, not a value name.",
+    "peAnalysis": {
+      "asOf": "May 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "N/M",
+          "note": "GAAP net loss -$1.20B in FY2025"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "N/M",
+          "note": "still loss-making; profitability uncertain in FY2026"
+        },
+        {
+          "label": "EV / Sales (NTM)",
+          "value": "~6×",
+          "note": "$55B mkt cap + ~$21B debt / ~$12.5B FY2026 guide"
+        },
+        {
+          "label": "Price / Sales (FY26)",
+          "value": "~4.4×",
+          "note": "$55B mkt cap / ~$12.5B FY2026 revenue guide"
+        },
+        {
+          "label": "EV / Backlog",
+          "value": "~0.77×",
+          "note": "~$76B EV / $99.4B contracted future revenue"
+        }
+      ],
+      "summary": "Traditional P/E is not meaningful — CRWV is GAAP loss-making with a cash-burn profile. The ~6.5× EV/NTM-Sales is roughly half of NVIDIA but reflects vastly inferior margin structure (CRWV is essentially a leveraged GPU rental business with hyperscaler concentration). EV/Backlog of ~0.95× provides a partial valuation anchor — investors are paying roughly $1 for $1 of contracted future revenue, which is not cheap given execution risk, contract-renewal risk, and the asset-financed depreciation curve."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$50",
+      "description": "Microsoft accelerates in-house Azure AI infrastructure and lets CoreWeave contract decay at renewal; AI capex digestion delays new bookings; debt covenants tighten as GPU depreciation runs faster than backlog recognition.",
+      "points": [
+        "Microsoft contracts (67% of FY2025 revenue) are not renewed at full scale post-2027 as Azure builds out internal AI capacity with Maia ASICs and AMD MI400 GPUs, removing $8B+ of run-rate revenue",
+        "AI capex digestion in H2 2026–H1 2027 stops new hyperscaler bookings; backlog stalls below $100B and the multiple compresses toward 3× forward sales as growth decelerates",
+        "Rising interest expense on the $21B+ debt stack combined with GPU depreciation accelerating ahead of revenue recognition triggers covenant renegotiation and equity dilution"
+      ]
+    },
+    "base": {
+      "priceTarget": "$135",
+      "description": "FY2026 revenue lands in the guided $12–13B range (~140% growth); customer concentration eases as OpenAI and Meta ramp through 2026; NVIDIA Vera Rubin transition reinforces preferred-partner status; first GAAP profitability glimpsed late 2027.",
+      "points": [
+        "FY2026 revenue lands in the guided $12–13B range with Microsoft share declining toward 50% as OpenAI ($11.9B over 5 years) and Meta ($21B through 2032) capacity ramps materially",
+        "Backlog grows to $110–125B by year-end on incremental sovereign and enterprise AI deals plus Vera Rubin capacity bookings, providing 8+ years of forward revenue visibility",
+        "Adjusted EBITDA margin reaches ~40% by Q4 2026 (vs. ~35% in 2025) as the GPU base scales and operating leverage kicks in, though GAAP profitability remains 12–18 months away"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$240",
+      "description": "Sovereign AI and enterprise deployments accelerate; CoreWeave wins disproportionate share of Vera Rubin capacity; customer concentration de-risks materially; multiple re-rates on path to GAAP profitability.",
+      "points": [
+        "Sovereign AI infrastructure spending accelerates ($150B+ globally) and CoreWeave captures a disproportionate share of Western non-hyperscaler deployments, adding $15B+ to FY2027 backlog",
+        "Vera Rubin capacity at CoreWeave reaches 2× the pace of any rival (including hyperscaler in-house programs), entrenching the NVIDIA preferred-partner economic moat through 2028",
+        "GAAP profitability is achieved by Q2 2027, the multiple re-rates to ~9–10× EV/Sales on de-risked unit economics, and equity dilution risk fades as FCF inflects positive"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "Not applicable — CoreWeave sells raw GPU cloud capacity to AI labs and hyperscalers, not consumer UI experiences."
+    },
+    "businessLogic": {
+      "status": "destroyed",
+      "note": "Not applicable — CoreWeave's stack runs CUDA workloads on NVIDIA hardware; no proprietary business-logic moat."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Not applicable — CoreWeave does not derive moat from public data access."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Datacenter operations and large-scale GPU cluster engineering are scarce skills, but the talent pool is growing rapidly and large hyperscalers compete aggressively for the same engineers."
+    },
+    "bundling": {
+      "status": "weakened",
+      "note": "CoreWeave bundles GPU compute + networking + managed Kubernetes for AI workloads, but customers can replicate the stack on AWS/Azure/GCP or build in-house — the bundle is convenience, not lock-in."
+    },
+    "proprietaryData": {
+      "status": "destroyed",
+      "note": "Customer workloads are private; CoreWeave does not derive proprietary data moat from the compute it sells."
+    },
+    "regulatoryLockIn": {
+      "status": "destroyed",
+      "note": "Not applicable — no regulatory protection; in fact, CoreWeave faces export-control exposure on GPU re-rentals to restricted geographies."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "Not applicable — GPU compute is fungible across providers; no network effect between CoreWeave customers."
+    },
+    "transactionEmbedding": {
+      "status": "weakened",
+      "note": "Multi-year capacity contracts ($95B backlog) embed CoreWeave operationally for the contract life, but contract renewal is open competition with hyperscalers and other GPU clouds."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "Not applicable — CoreWeave is not the system of record for any customer's AI workload metadata or training history."
+    },
+    "verdict": "CoreWeave's moat is narrow and time-bounded: NVIDIA preferred-partner status plus operational velocity advantage during AI hypergrowth. Most of the 10 moats are destroyed or weakened — the business is fundamentally a leveraged, concentrated GPU rental operation. The investment case rests on hypergrowth durability (90 score), not moat depth. Suitable as a speculative position sized to risk."
+  },
+  "lastAnalyzed": "May 2026"
+}

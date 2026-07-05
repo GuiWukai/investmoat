@@ -9,7 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$415B"
+      "value": "~$325B"
+    },
+    {
+      "label": "Price",
+      "value": "~$77"
     }
   ],
   "chips": [
@@ -22,7 +26,6 @@
       "color": "success"
     }
   ],
-  "recommendation": "Hold",
   "metrics": [
     {
       "title": "Paid Members",
@@ -70,11 +73,10 @@
     ]
   },
   "growth": {
-    "score": 80,
     "description": "Q1 2026 delivered $12.25B revenue (+16% YoY) and 32.3% operating margin — but underlying EPS of ~$0.58 missed the $0.76 consensus (Q1 GAAP of $1.23 was boosted by the $2.8B WBD breakup fee). Q2 2026 guide of $12.57B revenue and 32.6% margin was below consensus, triggering a ~9% after-hours drop. Full-year 2026 guidance of $50.7–51.7B (12–14% growth) and 31.5% operating margin remains intact. The multi-year growth story rests on three reinforcing pillars: ad-tier scaling ($1.5B 2025 → $3B 2026 target), live sports exclusives (NFL, NBA, WWE Raw), and an emerging gaming platform (90+ titles, TV cloud gaming, #1 App Store ranking in April 2026).",
     "growthAnalysis": {
       "cagrEstimate": "12–16%",
-      "scoreDerivation": "Base 67 (12–14% 2026 guide; 12–16% multi-year CAGR) + 5 recurring subscription (325M subs, 60%+ new sign-ups choosing ad tier, high retention) + 5 ad-tier TAM ($1.5B 2025 → $3B 2026 → $5B+, ~70% incremental margin) + 5 live sports TAM (NFL, NBA, WWE Raw exclusive = premium CPM inventory competitors can't access) + 2 gaming optionality (controller app #1 App Store; TV cloud gaming launch; 74.8M downloads; IP cross-licensing flywheel) − 2 Q2 margin compression (32.6% Q2 2026 guide vs 34.1% Q2 2025) − 2 ARPU dilution (ad-tier mix shift structural headwind as premium subs migrate down) = 80",
+      "scoreDerivation": "Base ~79 (14% midpoint of the 12–16% multi-year CAGR; 12–14% 2026 guide) + 4 trajectory (all three drivers — ad tier, live sports, gaming — accelerating) + 4 margin (operating leverage expanding margin 29.5% → 31.5% → 35%+ longer-term) + 4 type (both TAM expansion and share gains) − 5 keyRisk (moderate: ad-CPM/margin execution risk in H2 2026) = 86",
       "drivers": [
         {
           "name": "Ad-Supported Tier",
@@ -94,14 +96,15 @@
       ],
       "primaryType": "both",
       "keyRisk": "If ad CPMs disappoint in 2026 and ad revenue lands below $2.5B (vs $3B target) as YouTube and Amazon CTV maintain CPM dominance, while Q2 2026 operating margin compression proves structural rather than seasonal, 2027 EPS estimates decline 10–15% and the stock re-rates to $68–72 by end of 2026",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 76,
-    "description": "At ~$97 (post-10-for-1 split), Netflix sits between the bear ($68) and base ($120) scenarios — roughly 19% below fair value. The stock dropped ~9% after Q1 2026 earnings (April 16) on a soft Q2 guide: revenue below consensus, EPS guide of $0.78 vs $0.84 expected, and Q2 margin of 32.6% marking a year-on-year contraction vs Q2 2025's 34.1%. The $2.8B WBD breakup fee (pocketed after Paramount Skydance outbid Netflix for WBD) provides an unexpected cash windfall and resumes buybacks. At ~30× forward underlying P/E (ex-fee), with a PEG near 1.0×, the stock is fairly priced for a business compounding underlying EPS 25–30% via operating leverage. Analyst consensus averages $114–115 with a Buy rating from 38 of ~45 analysts.",
+    "score": 86,
+    "description": "At ~$77 (post-10-for-1 split) Netflix has slid to within ~13% of the bear case ($68) and ~36% below the base case ($120) — the stock has de-rated steadily since the April Q1 print, touching a 52-week low near $75 on market-saturation fears in mature markets. The Q1 2026 setup is unchanged: a soft Q2 guide (revenue below consensus, Q2 margin 32.6% vs 34.1% in Q2 2025) drove the initial ~9% drop, but full-year 2026 guidance ($50.7–51.7B, 31.5% operating margin) and the ad-tier $3B target remain intact, and the $2.8B WBD breakup fee continues to fund buybacks at now-lower prices. At ~24× forward underlying P/E (ex-fee) with a PEG near 0.8×, the de-rating has turned Netflix into clear GARP for a business still compounding underlying EPS 25–30% via operating leverage. Analyst consensus averages $114–115 with a Buy rating from 38 of ~45 analysts.",
     "peAnalysis": {
-      "asOf": "April 2026",
+      "asOf": "June 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
@@ -110,26 +113,26 @@
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~30×",
+          "value": "~24×",
           "note": "consensus underlying NTM EPS est. ~$3.20"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.0×",
+          "value": "~0.8×",
           "note": "fwd P/E ÷ ~30% EPS CAGR (margin expansion)"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~8×",
+          "value": "~6×",
           "note": "$51.2B NTM revenue (FY2026 guide midpoint)"
         },
         {
           "label": "Price / FCF",
-          "value": "~44×",
-          "note": "$9.5B FCF (2025 actual); ~38× on 2026 $11B guide"
+          "value": "~34×",
+          "note": "$9.5B FCF (2025 actual); ~30× on 2026 $11B guide"
         }
       ],
-      "summary": "Netflix's ~30× forward P/E (underlying, ex-breakup fee) sits at the lower end of the consumer tech median (~30–35×); the PEG of ~1.0× is genuine GARP territory given ~30% EPS CAGR from operating margin expansion (29.5% → 31.5% → 35%+ longer-term). P/FCF of ~44× on 2025 actuals compresses to ~38× on the 2026 $11B FCF guide, showing real cash generation improving. The trailing GAAP P/E is distorted by the $2.8B WBD breakup fee — on an underlying basis it's ~39×, which means the multiple compression thesis depends entirely on margin execution in H2 2026 as front-loaded content amortization normalizes."
+      "summary": "After the de-rating to ~$77, Netflix's ~24× forward P/E (underlying, ex-breakup fee) sits below the consumer-tech median (~30–35×), and the PEG of ~0.8× is firmly in GARP territory given ~30% EPS CAGR from operating margin expansion (29.5% → 31.5% → 35%+ longer-term). P/FCF of ~34× on 2025 actuals compresses to ~30× on the 2026 $11B FCF guide, showing real cash generation improving against a now-lower price. The trailing GAAP P/E is distorted by the $2.8B WBD breakup fee — on an underlying basis it's ~31× — so the bull case still depends on margin execution in H2 2026 as front-loaded content amortization normalizes, but the valuation cushion has widened materially."
     }
   },
   "scenarios": {
@@ -207,5 +210,5 @@
     },
     "verdict": "Netflix is a net beneficiary of AI in one critical dimension: its proprietary data flywheel (viewing + gaming behavior for 325M+ subscribers) grows more valuable as AI enables faster, better content greenlight and retention decisions. The bundling moat has materially strengthened — the triple bundle of content, live sports exclusives, and gaming is now genuinely strong, with no competitor replicating all three pillars. The game controller app's #1 App Store ranking (April 2026) is the most significant gaming signal to date, validating real consumer pull rather than internal optimism. AI weakens the learned interfaces and business logic moats (recommendation commoditization), but those were already weak. The primary AI-era risk is AI-generated content reducing Netflix's content cost-per-subscriber advantage by enabling smaller studios to produce comparable quality at lower cost — a slow-burn structural threat to the core scale moat. Net durability: moderate-to-strong, anchored by proprietary data, the triple bundle, and live sports exclusivity that AI cannot replicate."
   },
-  "lastAnalyzed": "April 2026"
+  "lastAnalyzed": "June 22, 2026"
 }

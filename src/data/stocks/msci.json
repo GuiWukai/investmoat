@@ -11,6 +11,10 @@
     {
       "label": "Market Cap",
       "value": "~$43B"
+    },
+    {
+      "label": "Price",
+      "value": "~$555"
     }
   ],
   "chips": [
@@ -19,30 +23,29 @@
       "color": "success"
     },
     {
-      "label": "Accumulate",
+      "label": "Strong Buy",
       "color": "success"
     }
   ],
-  "recommendation": "Accumulate",
   "metrics": [
     {
-      "title": "AUM Benchmarked",
-      "value": "$18.3T",
-      "label": "To MSCI Equity Indexes — Up from $15.5T",
+      "title": "Q1 2026 Revenue",
+      "value": "$850.8M",
+      "label": "+14.1% YoY — Adj EPS $4.55 beat $4.43 est",
       "icon": "BarChart2",
       "color": "#c0392b"
     },
     {
-      "title": "Recurring Revenue",
-      "value": "~95%",
-      "label": "Subscription + AUM-Linked Fees",
+      "title": "Asset-Based Fee Run Rate",
+      "value": "$872M",
+      "label": "Record — +25% YoY; ETF-linked AUM at $7T",
       "icon": "RefreshCw",
       "color": "#922b21"
     },
     {
-      "title": "EBITDA Margin",
-      "value": "62.2%",
-      "label": "Q4 2025 — 11th Straight Year of Double-Digit EPS Growth",
+      "title": "Organic Growth",
+      "value": "13%+",
+      "label": "Adj EPS +14% / Adj EBITDA +19% YoY",
       "icon": "TrendingUp",
       "color": "#76b041"
     }
@@ -67,23 +70,35 @@
     ]
   },
   "growth": {
-    "score": 77,
-    "description": "FY2025 revenue grew 9.75% to $3.13B with Q4 2025 index segment organic growth of 14%. AUM benchmarked to MSCI indexes reached $18.3T (up from $15.5T) — driven by record ETF inflows. MSCI achieved its 11th consecutive year of double-digit adjusted EPS growth. BlackRock ETF agreement extended through 2035 — locking in the world's largest passive fund manager as an anchor client for the next decade.",
+    "description": "Q1 2026 was a clear acceleration: revenue +14.1% YoY to $850.8M, organic growth above 13%, adj EPS +14%, adj EBITDA +19%, with index asset-based fee run rate hitting a record $872M (+25% YoY) and ETF-linked AUM reaching ~$7T. Both EPS and revenue beat consensus, confirming the AUM flywheel and the BlackRock 2035 anchor are compounding through equity market strength.",
+    "growthAnalysis": {
+      "cagrEstimate": "12-16%",
+      "scoreDerivation": "Base 72 + AUM flywheel acceleration (+5) + private assets TAM (+3) + 95% recurring revenue (+2) - equity market cyclicality risk (-2) = 80",
+      "drivers": [
+        { "name": "Asset-Based Fees", "metric": "Q1 2026 ABF run-rate $872M, +25% YoY", "trend": "accelerating" },
+        { "name": "Index Subscriptions", "metric": "Organic subscription growth ~8-9% YoY", "trend": "stable" },
+        { "name": "Private Assets", "metric": "Burgiss/RCA segment scaling double-digit", "trend": "accelerating" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "Sustained 30%+ global equity drawdown over 12-18 months would compress AUM-linked fees and re-rate the multiple.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "expanding"
+    },
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
         "Global passive ETF AUM expected to grow 12–15% annually; MSCI's AUM-linked fees compound directly with market appreciation",
         "Private assets analytics: MSCI's acquisitions of Burgiss and Real Capital Analytics position it as the data standard for private equity, real estate, and infrastructure — a $10B+ TAM expansion",
-        "ESG regulatory demand: EU SFDR, UK SDR, and SEC climate disclosure rules drive structural demand for MSCI ESG ratings regardless of US political environment",
+        "ESG and climate demand: EU SFDR, UK SDR, and SEC climate disclosure rules drive structural demand for MSCI ESG ratings; the First Street acquisition (physics-based climate-risk data) deepens this franchise regardless of US political environment",
         "AI analytics layer: MSCI AI capabilities applied to factor models and portfolio construction tools command premium pricing"
       ]
     }
   },
   "valuation": {
-    "score": 77,
-    "description": "At ~$528, trading 25% below the base case ($620) — an attractive entry for a franchise with $18.3T in benchmarked AUM. 52-week range $487–$626 places the stock toward the lower end. 15 analysts rate Buy with average target $678 (+28% upside). The BlackRock deal extension through 2035 eliminates a key contract risk.",
+    "score": 73,
+    "description": "At ~$555 (June 26, 2026 close), MSCI has pulled back ~9% from its early-June high near $608 and now trades ~10% below the base case ($620) at ~28× FY2026 consensus EPS of $19.60. The selloff has restored a margin of safety — the stock sits ~68% of the way from bear ($420) to base ($620), versus near-fair-value three weeks ago — even as fundamentals are unchanged after the strong Q1 print. Sell-side consensus price targets near $690 (high $730) imply analysts see further upside; bull-case execution (private assets flywheel, First Street climate analytics, AI pricing) remains the driver beyond base.",
     "valuationNote": {
-      "text": "MSCI trades at ~35–38× forward earnings — premium relative to market but justified by 95%+ recurring revenue, 58% EBITDA margins, and near-zero capital requirements. The AUM-linked fee structure means EPS grows even without new customer acquisition in rising equity markets.",
+      "text": "At ~$555 MSCI trades at ~28× forward earnings — a premium to the market but justified by 95%+ recurring revenue, ~58% EBITDA margins, and near-zero capital intensity. PEG of ~2.0 (28× ÷ ~14% EPS CAGR) leaves limited margin of safety on the multiple itself, so returns track EPS compounding plus the AUM-linked tailwind in rising equity markets. Capital return remains aggressive: MSCI returned $549M to shareholders in Q1 2026 ($399M of buybacks), raised the dividend 14%, and has ~$1.7B remaining on its repurchase authorization.",
       "fairValue": "$620"
     }
   },
@@ -142,7 +157,7 @@
     },
     "proprietaryData": {
       "status": "strong",
-      "note": "MSCI owns 50+ years of index constituent history, Barra factor model data, and the definitive ESG and real assets databases. This data is used in fund prospectuses, regulatory filings, and academic research — the more it is cited, the more authoritative it becomes. AI makes this data more valuable by enabling new analytics products on top of it."
+      "note": "MSCI owns 50+ years of index constituent history, Barra factor model data, and the definitive ESG and real assets databases. The June 2026 acquisition of First Street adds physics-based climate-risk data, extending MSCI's proprietary dataset into a domain regulators and asset owners increasingly require. This data is used in fund prospectuses, regulatory filings, and academic research — the more it is cited, the more authoritative it becomes. AI makes this data more valuable by enabling new analytics products on top of it."
     },
     "regulatoryLockIn": {
       "status": "strong",
@@ -162,5 +177,5 @@
     },
     "verdict": "MSCI's moat is almost entirely AI-immune. The index standard network effect, legal lock-in via fund prospectuses, and 50-year data history cannot be replicated by AI — and AI analytics capabilities built on top of MSCI data actually strengthen the bundle moat. This is one of the most durable franchises in financial services."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "June 28, 2026"
 }

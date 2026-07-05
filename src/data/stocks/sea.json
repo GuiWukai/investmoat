@@ -2,7 +2,7 @@
   "slug": "sea",
   "ticker": "SE",
   "name": "Sea Limited",
-  "lastAnalyzed": "March 2026",
+  "lastAnalyzed": "June 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,7 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$47.9B"
+      "value": "~$53B"
+    },
+    {
+      "label": "Price",
+      "value": "~$85"
     }
   ],
   "chips": [
@@ -23,38 +27,37 @@
       "color": "success"
     }
   ],
-  "recommendation": "Strong Buy",
   "metrics": [
     {
-      "title": "Revenue",
-      "value": "$22.9B",
-      "label": "+36.4% YoY FY2025; net income $1.6B (+260%)",
+      "title": "Q1 2026 Revenue",
+      "value": "$7.1B",
+      "label": "+46.6% YoY; Shopee revenue $4.5B (+44%), core marketplace +61% to $3.8B",
       "icon": "TrendingUp",
       "color": "#e8281b"
     },
     {
       "title": "Shopee GMV",
-      "value": "$127.4B",
-      "label": "+26.8% YoY; 2026 guide +25%; 400M buyers",
+      "value": "$37.3B",
+      "label": "Q1 2026 (+30.2% YoY); 4.0B orders (+29%); FY guide raised to ~25% growth",
       "icon": "ShoppingCart",
       "color": "#3b82f6"
     },
     {
       "title": "Adj EBITDA",
-      "value": "$3.4B",
-      "label": "+73.5% YoY; 20M sellers; 7 SE Asian markets",
+      "value": "$1.03B",
+      "label": "Q1 2026 (+9.3% YoY); net income $438M (+7%); all segments profitable",
       "icon": "BarChart3",
       "color": "#10b981"
     }
   ],
   "moat": {
-    "description": "Sea Limited operates Southeast Asia's most integrated digital ecosystem — the only company combining the region's dominant e-commerce marketplace (Shopee), a fast-scaling digital financial services platform (SeaMoney), and a gaming entertainment franchise (Garena) in a bundle that no single competitor can replicate.",
+    "description": "Sea Limited operates Southeast Asia's most integrated digital ecosystem — the only company combining the region's leading e-commerce marketplace (Shopee), a fast-scaling digital financial services platform (SeaMoney), and a gaming entertainment franchise (Garena) in a bundle that no single competitor can replicate. June 2026 update: networkEffects downgraded strong → intact on documented TikTok Shop share gains (Shopee Vietnam share 64% → 56% vs TikTok 29% → 41%; Indonesia slipping to 52–55%; DBS now frames the region as a Shopee/TikTok duopoly).",
     "analysisTitle": "The Southeast Asia Digital Ecosystem Moat",
     "analysisSummary": "Sea Limited's durable competitive position rests on **Transaction Embedding (SeaMoney payment infrastructure), Network Effects (Shopee marketplace), Proprietary Consumer Data (400M buyers across 7 markets), and Bundled Platform Advantages**:",
     "analysisPoints": [
       {
         "title": "Network Effects (Shopee Marketplace)",
-        "text": "Shopee's marketplace creates Southeast Asia's most powerful consumer commerce flywheel: 400M buyers attract 20M sellers who compete on price and selection, creating lower prices that attract more buyers. This flywheel is most powerful in Indonesia (Sea's largest market), where Shopee holds over 60% e-commerce market share — a position that reflects years of compounding network density that TikTok Shop and Lazada cannot quickly replicate."
+        "text": "Shopee's marketplace creates Southeast Asia's most powerful consumer commerce flywheel: 400M buyers attract 20M sellers who compete on price and selection, creating lower prices that attract more buyers. This flywheel is most powerful in Indonesia (Sea's largest market), where Shopee holds an estimated 52–55% e-commerce market share — still the clear leader, though TikTok Shop (18–22% in Indonesia, 41% in Vietnam) has made the regional contest an effective duopoly, eroding the years of compounding network density that once looked unassailable."
       },
       {
         "title": "Transaction Embedding (SeaMoney)",
@@ -67,16 +70,15 @@
     ]
   },
   "growth": {
-    "score": 82,
-    "description": "Sea Limited is growing revenue 36%+ driven by Shopee GMV compounding at 25%+ and SeaMoney digital financial services expanding across 7 Southeast Asian markets, with net income inflecting sharply (+260% YoY) as platform economics scale.",
+    "description": "Q1 2026 (reported May 12 2026) revenue grew 46.6% YoY to $7.1B, beating the ~$6.45B consensus. Shopee GMV reached $37.3B (+30.2% YoY) on 4.0B orders (+29.3%), with Shopee revenue +44% to $4.5B (core marketplace +61% to $3.8B). Group net income was $438M (+7%) and adjusted EBITDA $1.03B (+9.3%), all segments profitable. Management raised 2026 guidance to ~25% Shopee GMV growth (from ~20%) with flat-or-better adjusted EBITDA — driven by Shopee compounding and SeaMoney expanding across 7 Southeast Asian markets. Since the print, analysts have trimmed near-term estimates on incremental ecosystem investment and TikTok Shop competition, Sea announced Shopee developer layoffs as part of an AI pivot (June 2026), and the company is pursuing banking licenses in Vietnam — the Q2 print (August) needs to show market-share stability to validate the raised guide.",
     "growthAnalysis": {
       "cagrEstimate": "22–30%",
-      "scoreDerivation": "Base 80 (22–30% CAGR; FY2025 revenue +36.4%; net income +259.7%; adj EBITDA +73.5%) + 5 multi-segment platform compounding (Shopee + SeaMoney synergy: each Shopee purchase deepens SeaMoney engagement; cross-sell creates durable revenue diversification and FCF acceleration) + 2 Southeast Asia digital economy TAM (680M population; e-commerce penetration still <20% in most markets; fintech penetration <30%) − 5 Garena secular decline (gaming revenues declining as key titles age; Free Fire and PUBG Mobile user bases mature without clear successor franchise; gaming is a meaningful drag on blended growth rates) = 82",
+      "scoreDerivation": "Base 80 (22–30% CAGR; Q1 2026 revenue +46.6%, FY guide raised to ~25% Shopee GMV growth) + 5 multi-segment platform compounding (Shopee + SeaMoney synergy; cross-sell creates durable revenue diversification) + 2 Southeast Asia digital economy TAM (680M population; e-commerce penetration still <20% in most markets) − 5 Garena secular decline (Free Fire/PUBG mature without clear successor franchise) − high-severity keyRisk penalty (TikTok Shop share gains now documented: Shopee Vietnam 64%→56% while TikTok 29%→41%; severity raised from moderate in June 2026 on post-Q1 analyst earnings revisions and DBS duopoly framing)",
       "drivers": [
         {
           "name": "Shopee E-Commerce",
-          "metric": "GMV +26.8% YoY to $127.4B; 2026 guide +25%; 400M buyers, 20M sellers",
-          "trend": "stable"
+          "metric": "GMV $37.3B Q1 2026 (+30.2% YoY); revenue +44%, core marketplace +61%; FY guide raised to ~25% growth",
+          "trend": "accelerating"
         },
         {
           "name": "SeaMoney Digital Finance",
@@ -90,43 +92,44 @@
         }
       ],
       "primaryType": "both",
-      "keyRisk": "If TikTok Shop captures 20%+ of Shopee's GMV share in Indonesia and Vietnam by end of 2026, the Shopee growth narrative breaks and the platform network effects are proven weaker than the bull case assumes",
+      "keyRisk": "TikTok Shop competition is no longer hypothetical: Shopee's Vietnam e-commerce share fell from 64% (2024) to 56% (end-2025) while TikTok Shop rose from 29% to 41%, and Indonesia share estimates have slipped to 52–55% — DBS now calls the region an effective Shopee/TikTok duopoly (May 2026). Post-Q1 analyst earnings revisions tied to incremental ecosystem investment drove a ~17% share slide May–June 2026. Layered on geographic concentration and three structurally different unit economics (Shopee margin still fragile, SeaMoney credit-cycle exposed, Garena decelerating), continued share erosion toward parity in Vietnam/Thailand breaks the platform-network-effects narrative.",
+      "keyRiskSeverity": "high",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 84,
-    "description": "At $78.85, Sea trades at just 2.1× TTM P/S — a 46% discount to the $145 base case and 83% below the $140.71 analyst consensus target — pricing in far more risk than the 36% revenue growth and rapidly improving profitability warrant.",
+    "score": 83,
+    "description": "At ~$85, Sea has given back the entire post-Q1 pop and more — down ~17% since mid-May as analysts cut estimates on incremental ecosystem investment and TikTok Shop competition fears, despite the Q1 beat (revenue +47%, Shopee GMV +30%, raised FY guide, all segments profitable). The stock now sits 41% below the $145 base case and ~42% above the $60 bear. The fundamental print was strong; the de-rating is a competition-narrative and margin-reinvestment story — which improves the entry price but raises the burden of proof on Q2 to show share stability in Vietnam and Indonesia.",
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "June 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~30×",
-          "note": "$1.6B net income FY2025"
+          "value": "~31×",
+          "note": "~$1.7B TTM net income incl. Q1 2026"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~22×",
+          "value": "~24×",
           "note": "~$2.2B NTM net income est."
         },
         {
           "label": "PEG Ratio",
-          "value": "~0.7×",
+          "value": "~0.8×",
           "note": "fwd P/E ÷ ~30% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~1.7×",
-          "note": "~$28B NTM revenue consensus"
+          "value": "~1.8×",
+          "note": "~$29B NTM revenue consensus"
         },
         {
           "label": "Price / FCF",
-          "value": "~14×",
-          "note": "~$3.4B adj EBITDA TTM"
+          "value": "~13×",
+          "note": "~$4B adj EBITDA TTM"
         }
       ],
-      "summary": "Sea trades at ~22× forward P/E with a PEG of ~0.7× — one of the cheapest growth-adjusted valuations among large-cap platform businesses globally. At ~1.7× forward P/S on 30%+ revenue growth, Sea is significantly cheaper than MercadoLibre (~5× P/S on slower growth), its closest Latin American analog. The gap between 30× trailing and 22× forward P/E reflects a genuine earnings ramp as Shopee and SeaMoney operating leverage materializes — the 260% net income growth in FY2025 was the inflection point, and forward earnings projections appear conservative given SeaMoney's early-stage scaling."
+      "summary": "After the May–June de-rating to ~$85, Sea trades at ~24× forward P/E with a PEG of ~0.8× — one of the cheapest growth-adjusted valuations among large-cap platform businesses globally. At ~1.8× forward P/S on 25–30% revenue growth, Sea is significantly cheaper than MercadoLibre (~5× P/S on slower growth), its closest emerging-market analog. The gap between trailing and forward P/E reflects a genuine earnings ramp as Shopee and SeaMoney operating leverage materializes — though analysts trimmed near-term estimates in June 2026 on management's incremental ecosystem investment, which delays (but does not derail) the margin story."
     }
   },
   "scenarios": {
@@ -191,8 +194,8 @@
       "note": "SeaMoney holds e-wallet, payment institution, and digital lending licenses across Indonesia, Vietnam, Thailand, Philippines, Malaysia, Singapore, and Taiwan — a multi-year licensing achievement creating regulatory switching costs for users with savings and credit relationships with Sea. In Indonesia (Sea's largest market), Bank Indonesia's payment system regulations create compliance barriers that new entrants must separately navigate."
     },
     "networkEffects": {
-      "status": "strong",
-      "note": "Shopee's marketplace network effects are Southeast Asia's most powerful consumer commerce flywheel: 400M buyers and 20M sellers create selection and price competition that monoculture competitors cannot match. Shopee holds 60%+ GMV share in Indonesia. SeaMoney creates a parallel network: more merchants accepting ShopeePay → more consumers using SeaMoney → more merchant acceptance. These network effects operate independently and compound together."
+      "status": "intact",
+      "note": "Downgraded strong → intact (June 2026): Shopee remains Southeast Asia's largest commerce flywheel (400M buyers, 20M sellers), but the network monopoly framing no longer holds — Shopee's Vietnam share fell from 64% (2024) to 56% (end-2025) with TikTok Shop at 41% (up from 29%), Indonesia share estimates slipped to 52–55%, and DBS now describes the region as an effective Shopee/TikTok duopoly. SeaMoney's parallel payments network remains a compounding offset, but marketplace network effects are now contested rather than dominant."
     },
     "transactionEmbedding": {
       "status": "intact",

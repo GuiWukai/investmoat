@@ -10,7 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$1.81T"
+      "value": "~$2.25T"
+    },
+    {
+      "label": "Current Price",
+      "value": "$434.55"
     }
   ],
   "chips": [
@@ -23,19 +27,18 @@
       "color": "success"
     }
   ],
-  "recommendation": "Strong Buy",
   "metrics": [
     {
-      "title": "Revenue",
-      "value": "$122B",
-      "label": "~36% YoY Growth (FY2025)",
+      "title": "Q1 2026 Revenue",
+      "value": "$35.9B",
+      "label": "+40.6% YoY; FY2026 guide raised to 30%+",
       "icon": "TrendingUp",
       "color": "#0071c5"
     },
     {
-      "title": "Gross Margin",
-      "value": "62.3%",
-      "label": "Record Q4 2025, Expanding",
+      "title": "Q2 2026 GM Guide",
+      "value": "65.5–67.5%",
+      "label": "Record-trajectory; 3nm reaches corp avg H2 2026",
       "icon": "Zap",
       "color": "#3b82f6"
     },
@@ -48,7 +51,7 @@
     }
   ],
   "moat": {
-    "description": "Unmatched process-technology leadership at 3nm and below, with customer redesign costs making TSMC effectively irreplaceable for any leading-edge chip. The AI boom has deepened the design ecosystem moat as every major AI chip — from NVIDIA Blackwell to Google TPU to custom hyperscaler ASICs — runs exclusively on TSMC silicon.",
+    "description": "Unmatched process-technology leadership at 3nm and below, with customer redesign costs making TSMC effectively irreplaceable for any leading-edge chip. The AI boom has deepened the design ecosystem moat as every major AI chip — from NVIDIA Blackwell to Google TPU to custom hyperscaler ASICs — runs exclusively on TSMC silicon. NVIDIA's reaffirmed TSMC exclusivity for its next-gen 'Rubin' architecture (citing the CoWoS advantage) and Intel 18A's persistent yield gap (50–55% vs. TSMC N2's 70%+) reinforce the thesis that no credible foundry alternative exists at the leading edge as of mid-2026.",
     "analysisTitle": "The Fabrication Monopoly",
     "analysisSummary": "TSMC's moat rests on three reinforcing pillars: **Process Secrecy, Customer Lock-In, and Scale Economics**:",
     "analysisPoints": [
@@ -67,79 +70,79 @@
     ]
   },
   "growth": {
-    "score": 85,
-    "description": "FY2025 revenue hit $122B (+35.9% YoY) with a record 62.3% gross margin in Q4. Management guides 25% USD revenue CAGR through 2029, with AI accelerator revenue growing at 54–56% CAGR from 2024–2029. N2 entered high-volume manufacturing in Q4 2025; CoWoS advanced packaging capacity expanding 69% in 2026 to meet a persistent supply shortfall.",
+    "description": "Q1 2026 delivered record revenue of $35.9B (+40.6% YoY) with net income +58.3% YoY; Q2 2026 guidance points to $39.0–40.2B revenue (+10% QoQ) and gross margin of 65.5–67.5%. Management raised FY2026 outlook to 30%+ revenue growth and reaffirmed 25% USD CAGR through 2029, with AI accelerator revenue still tracking 54–56% CAGR. N2 in HVM with strong yield and reportedly sold out through 2026 (Apple ~50% of initial capacity); CoWoS is 'extremely tight and sold out through 2026' per CEO C.C. Wei, with NVIDIA holding ~60% of 2026 allocation. May 2026 monthly revenue (reported June 10) hit a record NT$416.98B (+30.1% YoY, +1.5% MoM), with Jan–May revenue +30.0% YoY; June monthly revenue and Q2 2026 earnings are due July 10 and July 16 respectively, both still pending as of this update. A finalized US-Taiwan tariff framework (April 2026) scaled TSMC's committed US investment to ~$465B across 11 fabs in exchange for a reduced 15% tariff on Taiwan semiconductor imports, defusing the prior forced-diversification overhang.",
     "additionalNote": {
       "title": "AI Chip Tailwinds",
       "points": [
         "AI accelerator revenue at ~17–19% of wafer revenue in FY2025, on track to reach 40%+ by 2029 at 54–56% CAGR",
-        "CoWoS-L supply remains 'very tight' — 15–20% gap between demand and supply; capacity expanding 69% in 2026 with two new Arizona advanced packaging fabs announced",
-        "N2 entered high-volume manufacturing at Hsinchu and Kaohsiung in Q4 2025 with 'good yield'; N2P and A16 targeted for H2 2026 volume production",
-        "Arizona Fab 1 (4nm) in production; Fab 2 (3nm) on track for 2027 HVM; total US investment commitment raised to $165B"
+        "CoWoS capacity 'extremely tight and sold out through 2026' (CEO C.C. Wei, June 2026); NVIDIA holds ~60% of 2026 allocation (~800–850k wafers); global CoWoS demand projected +93% to 2.69M wafers in 2027",
+        "N2 in high-volume manufacturing at Hsinchu and Kaohsiung with strong yield, largely sold out through 2026 (Apple ~50% of initial capacity); NVIDIA reaffirmed TSMC for next-gen 'Rubin' citing CoWoS advantage; N2P in H2 2026, A16 (backside power) targeting Q4 2026 volume production with NVIDIA as first customer",
+        "US-Taiwan tariff framework finalized April 2026: committed US investment scaled to ~$465B across 11 fabs (from $165B) in exchange for a reduced 15% tariff; 2nd Arizona fab equipment move-in begins Q3 2026"
       ]
     },
     "growthAnalysis": {
       "cagrEstimate": "25–30%",
-      "scoreDerivation": "Base 80 (25–30% CAGR) + 5 TAM expansion (AI accelerator at 54–56% CAGR, sovereign AI buildout) + 3 customer visibility (multi-year AI backlog, CoWoS demand 3yr+) − 3 N2/overseas fab dilution (2–4% GM headwind from ramp) = 85",
+      "scoreDerivation": "Base 82 (FY2026 raised to 30%+) + 5 TAM expansion (AI accelerator at 54–56% CAGR, sovereign AI buildout) + 3 customer visibility (N2/CoWoS sold out through 2026, NVIDIA reaffirmed Rubin exclusivity) − 2 overseas fab dilution (reduced from −3: April 2026 tariff framework de-risked forced-diversification scenario, though $465B Arizona buildout still carries margin-mix drag) = 88",
       "drivers": [
         {
           "name": "AI Accelerators / CoWoS",
-          "metric": "~17–19% of wafer revenue FY2025; CoWoS +69% capacity expansion 2026",
+          "metric": "~17–19% of wafer revenue FY2025; CoWoS sold out through 2026, NVIDIA ~60% of allocation (~800–850k wafers); global demand +93% to 2.69M wafers guided for 2027",
           "trend": "accelerating"
         },
         {
           "name": "N3/N2 Advanced Logic",
-          "metric": "3nm = 28% of Q4 wafer revenue (+5pp QoQ); N2 in HVM since Q4 2025",
+          "metric": "N2 in HVM since Q4 2025 with strong yield, largely sold out through 2026 (Apple ~50%); NVIDIA reaffirmed TSMC exclusivity for Rubin; N2P/A16 volume production H2 2026",
           "trend": "accelerating"
         },
         {
           "name": "Overseas Fabs (AZ/Japan)",
-          "metric": "Arizona Fab 1 in HVM; $165B total US commitment; Japan Fab 1 operational",
+          "metric": "US commitment scaled to ~$465B across 11 fabs (from $165B) under April 2026 tariff framework; 2nd Arizona fab equipment move-in Q3 2026; Japan Fab 1 operational",
           "trend": "stable"
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If US tariff enforcement (50% domestic sourcing mandate) forces major AI customers to commit >30% of leading-edge wafers to Intel 18A or Samsung SF2 by end of 2027, TSMC loses AI ASIC anchor business before N2/A16 margins are fully monetised",
+      "keyRisk": "The prior forced-diversification risk has been substantially de-risked: the April 2026 US-Taiwan tariff framework reduced import tariffs to 15% in exchange for scaling TSMC's US investment to ~$465B/11 fabs, and NVIDIA has reaffirmed TSMC exclusivity for its next-gen 'Rubin' architecture citing the CoWoS advantage, with Intel 18A yields still stuck at 50–55% versus TSMC N2's 70%+. Residual risk: if Intel 18A yields reach parity (>65%) by end of 2027 and a major AI ASIC customer (Google TPU, Amazon Trainium) shifts >15% of leading-edge wafer volume away from TSMC, the AI ASIC anchor thesis weakens — but this is now a 2027+ risk rather than a near-term one.",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 72,
-    "description": "At $348.70 — roughly 13% below the base case of $400 — TSMC offers modest upside to fair value with significant optionality to the bull case. The prior bull target of $280 was decisively exceeded on the back of record FY2025 earnings and upward CAGR guidance revisions. Scenarios have been reset from current price levels.",
+    "score": 61,
+    "description": "At $434.55 (July 2, 2026) — up ~6% from $408.75 in early June and now 21% of the way from the base case ($400) toward the bull case ($560) — TSMC has drifted from fairly valued toward a modest premium, yielding a valuation score of 61 (down from 64). Fundamentals remain on track (N2/CoWoS sold out through 2026, FY2026 guide of 30%+ revenue growth intact) and the April 2026 tariff framework removed a key overhang, but the price run-up ahead of the July 16 Q2 earnings report has consumed some of the prior margin of safety; further re-rating now depends on Q2 results confirming the guided trajectory or the bull-case catalysts (sovereign AI demand, A16 wins) materialising.",
     "valuationNote": {
-      "text": "Base-case fair value of ~$400 reflects ~30x forward 2026E EPS — reasonable for a monopoly franchise guiding 25% revenue CAGR through 2029. The geopolitical discount remains (US tariff risks, Taiwan cross-strait tensions), but TSMC's $165B US investment commitment and Japanese fab buildout are actively reducing the structural basis for that discount.",
+      "text": "Base-case fair value of ~$400 reflects ~30x forward 2026E EPS — reasonable for a monopoly franchise guiding 25% revenue CAGR through 2029. The geopolitical discount has narrowed further: the April 2026 US-Taiwan tariff framework (15% tariff in exchange for scaling US investment to ~$465B/11 fabs) reduces the tail risk that previously justified a larger discount, though Taiwan cross-strait tensions remain a residual factor.",
       "fairValue": "~$400"
     },
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "July 2026 (price ~$434.55)",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~33.5×",
-          "note": "$10.42 FY2025 EPS (ADS)"
+          "value": "~37×",
+          "note": "~$11.7 TTM EPS (ADS) incl. Q1 2026 (+58% net income)"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~27×",
-          "note": "consensus EPS est. ~$12.61"
+          "value": "~30×",
+          "note": "consensus NTM EPS est. ~$14.5, guidance unchanged pre-Q2"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.1×",
+          "value": "~1.2×",
           "note": "fwd P/E ÷ 25% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~12×",
-          "note": "~$152B NTM revenue est."
+          "value": "~15×",
+          "note": "~$2.25T mkt cap / ~$152B NTM rev"
         },
         {
           "label": "Price / FCF",
-          "value": "~57×",
+          "value": "~61×",
           "note": "$32B FCF (FY2025)"
         }
       ],
-      "summary": "At ~27× forward P/E, TSMC trades at a premium to the semiconductor sector median (~20×) but at a discount to its own growth trajectory. A PEG of ~1.1× — near the 1.0 GARP threshold — signals the stock is fairly to modestly priced for a business guiding 25% revenue CAGR through 2029. The gap between trailing (~33.5×) and forward (~27×) P/E reflects a healthy earnings ramp as N2 scales and AI accelerator mix increases."
+      "summary": "At ~30× forward P/E, TSMC now trades at a wider premium to the semiconductor sector median (~20×) than in early June, as the price has run ahead of the last reported quarter while Q2 results (due July 16) and June monthly revenue (due July 10) remain pending. A PEG of ~1.2× is still within the fairly-priced-for-growth band but has ticked up from ~1.1×, leaving less margin of safety if the July 16 report or guidance disappoints. The gap between trailing (~37×) and forward (~30×) P/E continues to signal an earnings ramp as N2 scales and AI accelerator mix increases, but confirming that ramp now depends on the imminent Q2 print rather than being already validated by it."
     }
   },
   "scenarios": {
@@ -201,21 +204,21 @@
     },
     "regulatoryLockIn": {
       "status": "strong",
-      "note": "CHIPS Act ($8.9B direct funding, $165B total US investment commitment), Japanese METI subsidies, and EU Chips Act all directly fund TSMC facilities. The Trump administration's preference for TSMC's Arizona expansion over domestic alternatives creates a regulatory moat no competitor can manufacture around — TSMC is a declared US national security priority."
+      "note": "CHIPS Act ($8.9B direct funding), Japanese METI subsidies, and EU Chips Act all directly fund TSMC facilities. The April 2026 US-Taiwan tariff framework scaled TSMC's committed US investment to ~$465B across 11 fabs (from $165B) in exchange for a reduced 15% tariff on Taiwan semiconductor imports — formalising TSMC's status as a declared US national security priority and locking in a multi-decade domestic buildout no competitor can replicate."
     },
     "networkEffects": {
-      "status": "intact",
-      "note": "Upgraded from weakened: The AI boom has structurally deepened the design ecosystem around TSMC processes. Every major AI hyperscaler (Google TPU v5, Amazon Trainium3, Microsoft Maia2, Meta MTIA2) designs exclusively on TSMC N3/N2. The CoWoS ecosystem (TSMC packaging + SK Hynix/Micron HBM + NVIDIA/AMD logic) creates a 3-way supplier dependency. The entire AI chip startup ecosystem (Tenstorrent, Cerebras, Groq, d-Matrix) uses TSMC PDKs exclusively — this is structural moat deepening driven by AI concentration, not just market share."
+      "status": "strong",
+      "note": "The AI boom has structurally deepened the design ecosystem around TSMC processes. Every major AI hyperscaler (Google TPU v5, Amazon Trainium3, Microsoft Maia2, Meta MTIA2) designs exclusively on TSMC N3/N2. The CoWoS ecosystem (TSMC packaging + SK Hynix/Micron HBM + NVIDIA/AMD logic) creates a 3-way supplier dependency. The entire AI chip startup ecosystem (Tenstorrent, Cerebras, Groq, d-Matrix) uses TSMC PDKs exclusively — structural moat deepening driven by AI concentration, not just market share. Every additional frontier-node customer strengthens the EDA/IP/packaging ecosystem for the next."
     },
     "transactionEmbedding": {
       "status": "strong",
       "note": "Customers' entire chip design and validation workflows are embedded in TSMC's PDK. Re-taping a leading-edge chip for a competing foundry requires 2–3 years and $500M+ — making every tape-out a multi-year lock-in. AI ASIC customers have even longer design cycles (3+ years), deepening the embedding further."
     },
     "systemOfRecord": {
-      "status": "intact",
-      "note": "TSMC is the de facto foundry of record for every leading-edge chip. Apple, NVIDIA, AMD, Qualcomm, MediaTek, and all major AI ASIC designers depend on TSMC for their most advanced products — no alternative system exists at scale. Intel 18A and Samsung SF2 remain 1–2 generations behind TSMC on yield at leading-edge nodes."
+      "status": "strong",
+      "note": "TSMC is the de facto foundry of record for every leading-edge chip. Apple, NVIDIA, AMD, Qualcomm, MediaTek, and all major AI ASIC designers depend on TSMC for their most advanced products — no alternative system exists at scale. Intel 18A and Samsung SF2 remain 1–2 generations behind TSMC on yield at leading-edge nodes, and the gap is widening with each node transition."
     },
     "verdict": "TSMC is a direct and primary beneficiary of the AI era — every frontier AI model requires more TSMC-made chips, and the AI boom has structurally deepened the design ecosystem network effects. The AI-resilient moats (proprietary process data, regulatory lock-in from CHIPS Act and allied government partnerships, customer PDK embedding) are all intact or strengthening. The primary risk is geopolitical, not competitive: Taiwan cross-strait tensions and US tariff policy are the only plausible paths to moat disruption, and TSMC's $165B US investment commitment is actively reducing that structural risk."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "July 3, 2026"
 }

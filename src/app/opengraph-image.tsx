@@ -1,11 +1,20 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'InvestMoat — AI-Era Moat Portfolio';
+export const alt = 'InvestMoat — Systematic Moat Equity Research';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
-export default function Image() {
+export default async function Image() {
+  // Load the brand wordmark font (Libre Caslon Display) for the title.
+  // next/og (Satori) doesn't read CSS/web fonts, so the TTF is bundled and
+  // passed explicitly; fall back to the default sans if it can't be read.
+  const caslon = await fetch(
+    new URL('./_fonts/LibreCaslonDisplay-Regular.ttf', import.meta.url),
+  )
+    .then((r) => r.arrayBuffer())
+    .catch(() => null);
+
   return new ImageResponse(
     (
       <div
@@ -16,7 +25,7 @@ export default function Image() {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'linear-gradient(135deg, #07070f 0%, #0d0d20 60%, #0a0a18 100%)',
+          background: 'linear-gradient(135deg, #080a0e 0%, #11120c 55%, #0a0b0d 100%)',
           padding: '80px',
           position: 'relative',
         }}
@@ -27,7 +36,7 @@ export default function Image() {
             position: 'absolute',
             inset: 0,
             backgroundImage:
-              'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
+              'linear-gradient(rgba(201,169,106,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(201,169,106,0.04) 1px, transparent 1px)',
             backgroundSize: '60px 60px',
           }}
         />
@@ -36,26 +45,28 @@ export default function Image() {
           style={{
             display: 'flex',
             alignItems: 'center',
-            background: 'rgba(99,102,241,0.15)',
-            border: '1px solid rgba(99,102,241,0.4)',
+            background: 'rgba(201,169,106,0.12)',
+            border: '1px solid rgba(201,169,106,0.45)',
             borderRadius: '100px',
-            padding: '8px 20px',
-            marginBottom: '32px',
+            padding: '8px 22px',
+            marginBottom: '34px',
             fontSize: '18px',
-            color: 'rgba(165,180,252,0.9)',
-            letterSpacing: '0.04em',
+            color: 'rgba(228,201,138,0.95)',
+            letterSpacing: '0.14em',
             fontWeight: 600,
+            textTransform: 'uppercase',
           }}
         >
-          Open Source · AI-Era Portfolio
+          Systematic Equity Research
         </div>
         {/* Title */}
         <div
           style={{
-            fontSize: '86px',
-            fontWeight: 900,
-            color: 'white',
-            letterSpacing: '-3px',
+            fontFamily: caslon ? 'Libre Caslon Display' : undefined,
+            fontSize: '96px',
+            fontWeight: 400,
+            color: '#f4f1ea',
+            letterSpacing: '-1px',
             lineHeight: 1,
             marginBottom: '28px',
             textAlign: 'center',
@@ -67,14 +78,14 @@ export default function Image() {
         <div
           style={{
             fontSize: '28px',
-            color: 'rgba(255,255,255,0.55)',
+            color: 'rgba(244,241,234,0.6)',
             textAlign: 'center',
-            maxWidth: '800px',
+            maxWidth: '820px',
             lineHeight: 1.5,
           }}
         >
-          Score stocks on moat durability, growth trajectory, and live
-          valuation — build a high-conviction portfolio for the AI era.
+          Underwriting stocks on moat durability, growth trajectory, and live
+          valuation — a high-conviction portfolio for the AI era.
         </div>
         {/* Score pills row */}
         <div
@@ -85,7 +96,7 @@ export default function Image() {
           }}
         >
           {[
-            { label: 'MOAT', value: '40%', color: '#818cf8' },
+            { label: 'MOAT', value: '40%', color: '#e4c98a' },
             { label: 'GROWTH', value: '35%', color: '#34d399' },
             { label: 'VALUATION', value: '25%', color: '#fbbf24' },
           ].map(({ label, value, color }) => (
@@ -112,6 +123,12 @@ export default function Image() {
         </div>
       </div>
     ),
-    { width: 1200, height: 630 }
+    {
+      width: 1200,
+      height: 630,
+      fonts: caslon
+        ? [{ name: 'Libre Caslon Display', data: caslon, weight: 400 as const, style: 'normal' as const }]
+        : undefined,
+    }
   );
 }

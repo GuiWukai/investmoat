@@ -133,12 +133,6 @@ Calculate `moat.score` (0–100) using the following:
 
 **Exclude N/A moats from their group average.** If a group has all moats marked N/A, use only the other group's score.
 
-### Moat Score ↔ AI Resilience Score Consistency Rule
-
-`moat.score` and `tenMoats.aiResilienceScore` must be within **5 points of each other** unless there is a specific, documented structural reason for a larger gap (e.g., a physical asset business where the moat is real but AI-irrelevant). If the gap exceeds 5 points, revisit both scores — one of them is wrong.
-
-**Exception:** Non-software businesses (luxury goods, regulated utilities, physical hardware) may have a large gap by design. Document the reason explicitly in the `tenMoats.verdict`.
-
 ### Calibration Anchors
 
 Cross-check your score against these anchors before finalising:
@@ -174,13 +168,14 @@ If your score is more than 8 points outside the peer range, document why this co
 
 ---
 
-## Step 4 — AI Resilience Score
+## Step 4 — AI Resilience Verdict
 
-Calculate `aiResilienceScore` separately from `moat.score` using the same formula but with explicit focus on AI impact:
-
-- For each moat, ask: *Has AI made this moat stronger, weaker, or irrelevant since 2022?*
-- Apply the same 60/40 weighting and N/A exclusion rules
-- `aiResilienceScore` should be within 5 points of `moat.score` (see consistency rule above)
+AI exposure is already captured in `moat.score`: each moat is routed into the
+AI-resilient or AI-vulnerable group (with optional per-moat `aiExposure`
+overrides), and the scoring formula applies an AI-vulnerability discount. So
+there is no separate score to compute here — for each moat, ask *Has AI made
+this moat stronger, weaker, or irrelevant since 2022?* and let that judgement
+drive the moat statuses and `aiExposure` overrides set in Step 3.
 
 Write a `verdict` of 2–4 sentences that:
 1. States whether the company is a net beneficiary or net loser from AI
@@ -322,7 +317,9 @@ After setting scenarios, assess valuation multiples:
 
 ## Step 7 — Composite Score and Recommendation
 
-**Composite score = (moatScore + growthScore + valuationScore) / 3**
+The recommendation is derived at render time from the composite score — do not author it in the JSON. `computeRecommendation()` in `src/lib/valuationScore.ts` applies the bands below to the composite:
+
+**Composite score = moatScore × 0.4 + growthScore × 0.3 + valuationScore × 0.3**
 
 | Composite | Recommendation |
 |---|---|
@@ -366,7 +363,6 @@ Produce a structured report with these sections:
 | Transaction Embedding    | strong/intact/weakened/destroyed | strengthened/weakened/neutral/N/A |
 | System of Record         | strong/intact/weakened/destroyed | strengthened/weakened/neutral/N/A |
 
-**AI Resilience Score:** X/100
 **Verdict:** [2–4 sentences covering AI beneficiary/loser, strongest moats, biggest AI risks]
 
 ### Growth Analysis (Score: X/100)
@@ -438,8 +434,7 @@ If you must review inline, compare the analysis to the current data and flag:
 2. **Outdated price targets** — scenarios set over 6 months ago without revision
 3. **Moat status changes** — any moat whose status should be upgraded or downgraded given recent news
 4. **Score drift** — if the composite score has changed materially (±5 or more), update all three scores
-5. **moat.score ↔ aiResilienceScore misalignment** — if the gap has grown beyond 5 points without a documented reason, reconcile them
-6. **Recommendation consistency** — ensure recommendation aligns with the updated composite score
+5. **Recommendation** — derived from composite score by `computeRecommendation()`; if the resulting band feels wrong, recalibrate the underlying scores rather than touching the recommendation directly
 
 Propose specific JSON edits for any fields that need updating.
 
@@ -447,13 +442,13 @@ Propose specific JSON edits for any fields that need updating.
 
 ## lastAnalyzed Field
 
-**Always** include `lastAnalyzed` set to the current month and year at the top level of the JSON:
+**Always** include `lastAnalyzed` set to the current date with **day precision** at the top level of the JSON:
 
 ```json
-"lastAnalyzed": "March 2026"
+"lastAnalyzed": "June 16, 2026"
 ```
 
-This must be present in every newly created or updated stock JSON. It tells users when the analysis was last reviewed by a human.
+Use the full `"Month D, YYYY"` form (e.g. `"June 16, 2026"`) — not just the month and year. This must be present in every newly created or updated stock JSON. It tells users the exact date the analysis was last reviewed by a human.
 
 ---
 
@@ -489,6 +484,5 @@ When generating the stock JSON, include `peAnalysis` inside the `valuation` obje
 - **Be honest**: If the moat is weak, score it weak — don't inflate to force portfolio inclusion
 - **Be consistent**: Match the tone and depth of existing stock analyses (read `msft.json` or `nvda.json` as reference)
 - **Scenario targets must be internally consistent**: Bull target ≥ 1.5× bear target
-- **Score alignment**: moat.score and aiResilienceScore must be within 5 points unless you document the structural reason
 - **Peer calibration**: Always state which peer-group stocks you compared against before finalising the moat score
-- **Analysis date**: Always set `lastAnalyzed` to the current month and year (e.g., `"March 2026"`) in the JSON output. Never omit this field.
+- **Analysis date**: Always set `lastAnalyzed` to the current date with day precision (e.g., `"June 16, 2026"`) in the JSON output. Never omit this field, and never fall back to month-and-year only.

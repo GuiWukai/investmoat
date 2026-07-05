@@ -1,0 +1,160 @@
+{
+  "slug": "uber",
+  "ticker": "UBER",
+  "name": "Uber Technologies",
+  "lastAnalyzed": "June 24, 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "UBER" },
+    { "label": "Market Cap", "value": "~$145B" },
+    { "label": "Current Price", "value": "~$70" }
+  ],
+  "chips": [
+    { "label": "Mobility | Delivery | Network", "color": "primary" },
+    { "label": "Two-Sided Network", "color": "success" }
+  ],
+  "metrics": [
+    {
+      "title": "Gross Bookings (Q1 2026)",
+      "value": "$53.7B",
+      "label": "+25% YoY (+21% constant currency); Mobility +25%, Delivery +28%",
+      "icon": "TrendingUp",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "Adj EBITDA (Q1 2026)",
+      "value": "$2.5B",
+      "label": "+33% YoY; 4.6% of gross bookings, up from 4.4%",
+      "icon": "Percent",
+      "color": "#10b981"
+    },
+    {
+      "title": "FCF (TTM)",
+      "value": "~$9.8B",
+      "label": "Record TTM FCF; $3B buyback in Q1 2026",
+      "icon": "DollarSign",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "description": "Global two-sided network in mobility and delivery with rider-driver liquidity that no rival can replicate at the same density — moat is real, autonomy is the existential question.",
+    "analysisTitle": "The Two-Sided Liquidity Moat",
+    "analysisSummary": "Uber's moat is **network density across mobility and delivery in 70+ countries** — durable in the human-driven era, and probably durable into autonomy as the demand-aggregation layer:",
+    "analysisPoints": [
+      {
+        "title": "Liquidity Network Effects",
+        "text": "Uber's wait-times, surge dynamics, and supply density in major cities cannot be matched without simultaneous rider and driver acquisition at scale. Lyft, Bolt, and DiDi compete city-by-city; only Uber holds the global liquidity stack across both mobility and delivery."
+      },
+      {
+        "title": "Cross-App Bundling and Membership",
+        "text": "Uber One bundles mobility + delivery + grocery + ad-supported value, creating cross-category retention. Uber One reached 50M members in Q1 2026 and now drives roughly half of total Mobility and Delivery gross bookings. The bundle compounds the network advantage with subscription stickiness."
+      },
+      {
+        "title": "Autonomous-Ready Demand Layer",
+        "text": "As Waymo, Tesla Robotaxi, and Aurora deploy autonomy, Uber positions itself as the consumer demand and dispatch layer. Waymo and Wayve partnerships, exclusive market deals (e.g., Waymo on Uber in Austin and Atlanta), and the NVIDIA partnership targeting a 100,000-vehicle autonomous network from 2027 validate the thesis that operators want Uber's demand network rather than rebuild app distribution. The risk materialising: Tesla began Cybercab volume production at Giga Texas in April 2026 and is expanding its own ride-hailing network in Austin, Dallas, and Houston, while Waymo now delivers 500K+ paid robotaxi rides weekly."
+      }
+    ]
+  },
+  "growth": {
+    "description": "Q1 2026 (reported May 2026): gross bookings $53.7B, +25% YoY (+21% constant currency), beating the guided range. Mobility +25% (+20% cc), Delivery +28% (+23% cc). Adj EBITDA $2.5B, +33% YoY, with margin at 4.6% of gross bookings (up from 4.4%). FCF a record $9.8B TTM; $3B buyback in Q1. Q2 2026 guide: 18-22% constant-currency bookings growth.",
+    "growthAnalysis": {
+      "cagrEstimate": "15-20%",
+      "scoreDerivation": "Base 82 (15-20% CAGR, midpoint 17.5%) + 4 trajectory (all three drivers accelerating in Q1 2026: Mobility +25%, Delivery +28%, Uber One 50M members) + 4 margin expansion (adj EBITDA +33%, 4.6% of bookings) + 4 dual TAM expansion and share gains - 10 high autonomy risk (Tesla Cybercab production, Waymo scale) = 84",
+      "drivers": [
+        { "name": "Mobility Bookings", "metric": "+25% YoY reported (+20% cc) Q1 2026; price + frequency growth across geographies", "trend": "accelerating" },
+        { "name": "Delivery Bookings", "metric": "+28% YoY reported (+23% cc) Q1 2026, up from ~15%; grocery and convenience extending TAM", "trend": "accelerating" },
+        { "name": "Uber One + Advertising", "metric": "Uber One reached 50M members in Q1 2026 (from ~30M), now ~half of total bookings", "trend": "accelerating" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "Tesla began Cybercab volume production at Giga Texas in April 2026 and is expanding its own consumer ride-hailing network in Austin, Dallas, and Houston, while Waymo operates 500K+ paid robotaxi rides weekly. If Tesla scales direct-to-consumer demand aggregation or Waymo expands its own app outside Uber-partnered cities, Uber loses pricing power on the highest-margin urban routes by 2028-29.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 82,
+    "description": "At ~$70 Uber trades ~26% below the base case ($95) and ~33% below the ~$105 Wall Street average target (Strong Buy consensus, 26 analysts), at ~24× FY26 EPS and ~7% FCF yield, after robotaxi fears compressed the multiple ~30% from the October 2025 peak even as Q1 2026 bookings accelerated to +25% YoY and TTM FCF hit a record $9.8B. The market is pricing meaningful autonomy disruption; fundamentals are not yet showing it.",
+    "peAnalysis": {
+      "asOf": "June 2026",
+      "rows": [
+        { "label": "Forward P/E (FY26)", "value": "~24×", "note": "EPS ~$2.85; multiple compressed by AV competition fears" },
+        { "label": "Forward P/E (FY27)", "value": "~19×", "note": "Assumes ~25% EPS growth on operating leverage" },
+        { "label": "FCF Yield", "value": "~7%", "note": "Record TTM FCF $9.8B; $3B Q1 buyback, $16B authorization remaining" },
+        { "label": "PEG Ratio", "value": "~1.2×", "note": "Cheap on growth if the demand-aggregator thesis holds" },
+        { "label": "EV / EBITDA (NTM)", "value": "~13×", "note": "Premium to Lyft, discount to high-growth platforms" }
+      ],
+      "summary": "Uber is a free-cash compounder with network durability trading at a fear-discounted multiple. The valuation question remains autonomy disruption risk vs partnership upside — Q1 2026 acceleration suggests the disruption is not yet visible in the numbers."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$58",
+      "description": "Tesla Robotaxi launches at scale on its own app, autonomy disrupts urban mobility margin, Uber's pricing power compresses, multiple falls to 20×.",
+      "points": [
+        "Tesla Robotaxi launches direct-to-consumer in 2026-27 in 5+ major US markets at materially lower prices",
+        "Waymo expands rapidly in own-app outside Uber-exclusive cities",
+        "Mobility take-rate compresses below 24% as autonomy operators capture margin"
+      ]
+    },
+    "base": {
+      "priceTarget": "$95",
+      "description": "Uber sustains 15-18% bookings growth, autonomy partnerships validate the demand-aggregator thesis, FCF compounds to $11B by FY27, multiple holds at 25-28×.",
+      "points": [
+        "Waymo, Wayve, and Tesla all integrate with Uber in a meaningful subset of markets",
+        "Uber One reaches 50M members; mobility frequency grows 8-10% annually",
+        "Buyback + dividend program returns 50%+ of FCF"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$130",
+      "description": "Uber becomes the consumer demand layer for global autonomous mobility, multiple expands to 30× on durable platform economics, FCF reaches $14B+ by FY27.",
+      "points": [
+        "Uber secures multi-year exclusivity with at least 2 of the top-3 autonomy operators",
+        "Robotaxi Tier-1 city dispatch dominantly routes through Uber",
+        "International TAM (Asia ex-China, EMEA) accelerates as autonomy reaches more cities"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Consumer learning curve on rider app and habit formation is real but easily transferred."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Dispatch, surge, ETA prediction, and routing algorithms are differentiated but increasingly replicable by autonomy operators."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Marketplace engineering and operational scale talent is broadly available."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Uber One mobility + delivery + grocery + advertising bundle is genuinely differentiated; only DoorDash + Lyft attempt anything similar at much smaller scale."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Trip-level supply/demand data across 70+ countries is genuinely unique and feeds dispatch + pricing + autonomy partner integration."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "Local rideshare licences, AV partnership integrations, and city-level relationships create switching friction in many markets."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "Two-sided rider-driver liquidity in major cities is the textbook example of network effects; rivals struggle to replicate density without years of subsidy."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Stored payment, defaults, and travel/expense corporate integrations make Uber the default rideshare for both consumers and enterprises."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "Uber is the system of record for mobility identity and history for ~150M+ active monthly riders globally."
+    },
+    "verdict": "Uber's network, bundling, and transaction-embedding moats are AI-resilient — language models do not erode rider-driver liquidity. The one AI-era structural threat is autonomy: robotaxis (Tesla Cybercab, Waymo) attack the human-driven mobility network that anchors the moat, which tempers AI resilience a notch below the raw moat strength. The thesis question is whether Uber retains the consumer demand layer as autonomy operators commercialise; current partnerships (Waymo, Wayve, NVIDIA 100k-vehicle network) and trip-level data scale support a durable demand-aggregator role, with Tesla vertical-integration the primary tail risk."
+  }
+}

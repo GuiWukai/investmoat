@@ -9,7 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$1.61T"
+      "value": "~$1.46T"
+    },
+    {
+      "label": "Current Price",
+      "value": "~$576"
     }
   ],
   "chips": [
@@ -22,7 +26,6 @@
       "color": "success"
     }
   ],
-  "recommendation": "Strong Buy",
   "metrics": [
     {
       "title": "Daily Active People",
@@ -74,8 +77,7 @@
     ]
   },
   "growth": {
-    "score": 86,
-    "description": "Q1 2026 revenue of $56.3B re-accelerated to +33% YoY (from +24% in Q4 2025), beating the $55.45B consensus. EPS came in at $10.44 (includes an $8.03B income tax benefit from US tax law changes; adjusted EPS ~$7.31, still a beat). Net income $26.77B (+61% YoY). Ad impressions grew 19% and average price per ad rose 12% — both metrics accelerating vs Q4 2025. Family daily active people reached 3.56B (+4% YoY, slight QoQ seasonality dip from 3.58B in Q4). Operating margin was 41%. Q2 guided $58–61B ($59.5B midpoint). The capex raise to $125–145B (from $115–135B) weighed on the stock (-6% after hours). Muse Spark deployed across all surfaces is not yet in consensus estimates.",
+    "description": "Q1 2026 revenue of $56.3B re-accelerated to +33% YoY (from +24% in Q4 2025), beating the $55.45B consensus. EPS came in at $10.44 (includes an $8.03B income tax benefit from US tax law changes; adjusted EPS ~$7.31, still a beat). Net income $26.77B (+61% YoY). Ad impressions grew 19% and average price per ad rose 12% — both metrics accelerating vs Q4 2025. Family daily active people reached 3.56B (+4% YoY, slight QoQ seasonality dip from 3.58B in Q4). Operating margin was 41%. Q2 guided $58–61B ($59.5B midpoint). The capex raise to $125–145B (from $115–135B) weighed on the stock (-6% after hours). Muse Spark deployed across all surfaces is not yet in consensus estimates. Since the print (May–June 2026): Meta expanded its CoreWeave AI compute pact to $21B through 2032, announced a ~10% workforce reduction (~8,000 roles, May 20) supporting margins, and delayed the Muse Spark developer API multiple times (latest slip June 3) — an execution wobble on AI platform ambitions, though consumer deployment across all apps remains live.",
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
@@ -105,48 +107,49 @@
           "trend": "stable"
         }
       ],
-      "primaryType": "revenue",
-      "keyRisk": "If 2026 capex of $125–145B (raised from $115–135B) does not yield measurable AI revenue by H2 2026 — Muse Spark fails to drive engagement uplift, no WhatsApp commerce inflection, FCF compresses below $30B — the market re-rates from compounder to capex-heavy infrastructure bet; DAP growth deceleration (3.58B Q4 → 3.56B Q1, +4% YoY vs +7% prior) could signal user saturation; Ray-Ban privacy lawsuit (California) adds regulatory overhang",
+      "primaryType": "both",
+      "keyRisk": "If 2026 capex of $125–145B (raised from $115–135B) does not yield measurable AI revenue by H2 2026 — Muse Spark fails to drive engagement uplift, no WhatsApp commerce inflection, FCF compresses below $30B — the market re-rates from compounder to capex-heavy infrastructure bet; the Muse Spark developer API has now slipped multiple times (latest June 3, 2026), an early warning sign on AI execution; DAP growth deceleration (3.58B Q4 → 3.56B Q1, +4% YoY vs +7% prior) could signal user saturation; Ray-Ban privacy lawsuit (California) adds regulatory overhang",
+      "keyRiskSeverity": "high",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 79,
-    "description": "At ~$631 (post-earnings, -6% on capex raise), META trades at a 23% discount to the raised base fair value of $820, which reflects Q1 2026's +33% revenue re-acceleration and the Q2 guidance of $58–61B. The capex raise to $125–145B drove the after-hours sell-off, but the core advertising engine remains at 41% operating margin. At 18× NTM earnings (adjusted EPS ~$35 for 2026E) on a business growing 20–25% annually, the risk/reward remains compelling. Muse Spark across 3.56B daily users is still not in consensus models.",
+    "score": 83,
+    "description": "At ~$576 (June 10, 2026) — down further since the post-earnings capex sell-off on AI execution concerns (Muse Spark API delays) and elevated spending — META trades at a 30% discount to the base fair value of $820, which reflects Q1 2026's +33% revenue re-acceleration and the Q2 guidance of $58–61B. The capex raise to $125–145B and adverse social-media legal rulings remain the overhangs, but the core advertising engine runs at 41% operating margin and the May 2026 10% workforce reduction supports the cost line. At ~16.5× NTM earnings (adjusted EPS ~$35 for 2026E) on a business growing 20–25% annually, the risk/reward is the most compelling in the Mag-7. Muse Spark across 3.56B daily users is still not in consensus models.",
     "valuationNote": {
       "text": "Using a 10-year DCF with a 9% WACC, 22% near-term EPS growth decelerating to 3.5% terminal growth, and adjusting for Reality Labs losses and $125–145B 2026 capex, our fair value estimate for META is",
       "fairValue": "$820/share"
     },
     "peAnalysis": {
-      "asOf": "April 2026 (Q1 2026 actuals)",
+      "asOf": "June 2026 (Q1 2026 actuals; price ~$576)",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~18×",
+          "value": "~16.5×",
           "note": "TTM EPS ~$35 (Q1 2026 $10.44 incl $8B tax benefit)"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~18×",
+          "value": "~16.5×",
           "note": "NTM EPS ~$35 (2026E; note Q1 tax benefit is non-recurring)"
         },
         {
           "label": "PEG Ratio",
-          "value": "~0.82×",
+          "value": "~0.75×",
           "note": "fwd P/E ÷ ~22% revenue CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~2.7×",
-          "note": "~$238B NTM revenue est. (raised on +33% Q1 beat)"
+          "value": "~6.1×",
+          "note": "~$1.46T mkt cap / ~$238B NTM revenue est."
         },
         {
           "label": "Price / Free Cash Flow",
-          "value": "~25×",
+          "value": "~23×",
           "note": "FCF compressed in 2026 by $125–145B capex vs ~$52B FY2025"
         }
       ],
-      "summary": "At ~18× forward earnings — the cheapest relative to growth of any Mag-7 member — META's valuation remains extremely compelling. Revenue re-accelerated to +33% YoY in Q1 2026 (ad impressions +19%, price/ad +12%). The Q1 EPS of $10.44 was boosted by an $8.03B income tax benefit (non-recurring); adjusted EPS was ~$7.31, still a beat. The PEG of 0.82× is the lowest in years. The capex raise to $125–145B is the only meaningful near-term negative; it compresses 2026 FCF but funds the infrastructure for a business growing 20–25% annually."
+      "summary": "At ~16.5× forward earnings — the cheapest relative to growth of any Mag-7 member — META's valuation has become more compelling as the stock drifted from $631 to ~$576 on capex and AI-execution concerns. Revenue re-accelerated to +33% YoY in Q1 2026 (ad impressions +19%, price/ad +12%). The Q1 EPS of $10.44 was boosted by an $8.03B income tax benefit (non-recurring); adjusted EPS was ~$7.31, still a beat. The PEG of ~0.75× is the lowest in years. The capex raise to $125–145B and the repeated Muse Spark API delays are the meaningful near-term negatives; capex compresses 2026 FCF but funds the infrastructure for a business growing 20–25% annually."
     }
   },
   "scenarios": {
@@ -221,5 +224,5 @@
     },
     "verdict": "Meta's AI moat took a step-change on April 8, 2026 with the Muse Spark launch. Meta Superintelligence Labs — built around Alexandr Wang — has produced a genuine frontier model competitive with GPT-5.4 and Gemini 3.1 Pro, deployed immediately to 3B+ daily users. This upgrades learnedInterfaces from intact to strong: persistent Muse Spark memory across all Meta apps creates a new switching-cost layer that did not exist at any meaningful scale with Llama. Combined with the unrivaled social graph (networkEffects: strong), irreplaceable behavioral dataset (proprietaryData: strong), WhatsApp commerce infrastructure (transactionEmbedding: strong), and AWS/Azure-independent compute ownership (MTIA chips, owned data centers), Meta now holds 6 strong moats out of 10 applicable — the highest in its history. Regulatory drag from GDPR, DMA, and the Ray-Ban privacy litigation remains a structural cap on the regulatoryLockIn moat."
   },
-  "lastAnalyzed": "April 29, 2026"
+  "lastAnalyzed": "June 28, 2026"
 }

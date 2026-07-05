@@ -9,7 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$4.83T"
+      "value": "~$4.8T"
+    },
+    {
+      "label": "Current Price",
+      "value": "~$198"
     }
   ],
   "chips": [
@@ -22,26 +26,25 @@
       "color": "success"
     }
   ],
-  "recommendation": "Strong Buy",
   "metrics": [
     {
-      "title": "Q4 FY2026 Revenue",
-      "value": "$68.1B",
-      "label": "+73% YoY — Q1 FY2027 guided at $78B (+77% YoY); Data Center $62.3B quarterly record",
+      "title": "Q1 FY2027 Revenue",
+      "value": "$81.6B",
+      "label": "+85% YoY (May 20 2026 print) — beat Street ($78.8B / $1.76 EPS) at $1.87 EPS; data center $75B (+92%), networking record $14.8B (+199%). Q2 FY27 guided to $91B vs. ~$86B Street.",
       "icon": "Cpu",
       "color": "#76b900"
     },
     {
-      "title": "AI Chip Order Book",
-      "value": "$1T+",
-      "label": "Blackwell + Rubin through 2027 — China H200 approvals cleared April 2026",
+      "title": "Capital Returns",
+      "value": "+$80B",
+      "label": "buyback authorization raised by $80B; quarterly dividend hiked 25× ($0.01 → $0.25), first payout made June 26 2026. $50.3B operating cash flow in Q1 FY27 underwrites the return.",
       "icon": "Zap",
       "color": "#3b82f6"
     },
     {
       "title": "Forward P/E",
-      "value": "~24×",
-      "label": "vs. 40× TTM — accelerating EPS ramp, PEG ~0.6×",
+      "value": "~22×",
+      "label": "NTM EPS est. ~$9.00 unchanged since the print; ~21% price pullback since May compressed the multiple from ~28× — PEG ~0.4× vs. ~50% EPS CAGR",
       "icon": "TrendingUp",
       "color": "#10b981"
     }
@@ -66,20 +69,19 @@
     ]
   },
   "growth": {
-    "score": 95,
-    "description": "Q4 FY2026 revenue hit $68.1B (+73% YoY) on data center demand of $62.3B. Management guided Q1 FY2027 to $78B (+77% YoY vs. Q1 FY2026's $44.1B), with GAAP gross margins recovering to ~74.9% after the $4.5B H20 charge in Q1 FY2026. The China H200 export ban reversal in late 2025 — culminating in 400K+ unit approvals for ByteDance, Alibaba, and Tencent in April 2026 — restores a revenue stream previously written off. FY2027 consensus stands at $367.7B (+70% YoY). Vera Rubin first samples shipped to hyperscalers; volume production on track for H2 2026.",
+    "description": "Q1 FY2027 (reported May 20 2026) blew past the Street: revenue $81.6B (+85% YoY) vs. $78.8B consensus, EPS $1.87 vs. $1.76. Data center hit $75B (+92% YoY, +21% QoQ) with networking a record $14.8B (+199% YoY). Critically, management guided Q2 FY27 to $91B — well above the ~$86B Street had modelled and a clean rejection of the pre-print 'in-line/miss' bear scenario. The board added $80B to buyback authorization and raised the dividend 25×, with the first $0.25 payout made June 26 2026. On the earnings call (May 21), Huang conceded that China's AI-chip market has effectively gone to Huawei — Q1 China data-center revenue was near zero. In June 2026, roughly 10 Chinese firms (Alibaba, Tencent, ByteDance, JD, Lenovo, Foxconn) were conditionally approved to buy H200 chips under a 25%-of-China-revenue-to-Treasury arrangement, but no shipments had occurred as of this update — China remains a policy-gated wildcard, not a realized number. Vera Rubin has moved into full production with partner availability expected H2 2026. FY2027 EPS consensus remains ~$9.00, unchanged since the print. The next hard test of the thesis is the Q2 FY2027 print, due August 26, 2026, against the $91B guide.",
     "growthAnalysis": {
       "cagrEstimate": "35–50%",
-      "scoreDerivation": "Base 90 (30%+ CAGR on $68B quarterly base) + 5 TAM expansion (sovereign AI, Rubin architecture) + 5 platform stickiness (CUDA ecosystem NRR equivalent) − 5 export control risk (China restrictions ongoing) = 95",
+      "scoreDerivation": "Base 93 (35–50% CAGR, baseFromCagr formula) + 3 trajectory (2 of 3 drivers accelerating) + 3 TAM expansion (sovereign AI, Rubin ramp) − 10 high keyRisk severity (China concession, antitrust scrutiny, Q2 FY27 print still pending) = 89",
       "drivers": [
         {
           "name": "Data Center (AI Training & Inference)",
-          "metric": "$62.3B Q4 FY2026 (+73% YoY); Q1 FY2027 guided at $78B total (+77% YoY); $1T+ order book",
+          "metric": "$75B Q1 FY2027 (+92% YoY, +21% QoQ); networking record $14.8B (+199%); Q2 FY27 guided $91B (vs. ~$86B Street); 2026 hyperscaler capex ~$725B",
           "trend": "accelerating"
         },
         {
           "name": "AI Inference & Edge",
-          "metric": "NIM microservices, Jetson platform growing; enterprise AI inference TAM $200B+ by 2027",
+          "metric": "NIM microservices, Jetson platform growing; enterprise AI inference TAM $200B+ by 2027; Rubin promises 10× inference-token cost reduction vs. Blackwell",
           "trend": "accelerating"
         },
         {
@@ -89,49 +91,50 @@
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If AMD ROCm reaches 15%+ developer share by end of 2026 — aided by hardware-agnostic tools like OpenAI Triton — CUDA switching costs erode and hyperscalers accelerate in-house ASIC programs (Google TPU v6, Amazon Trainium3), threatening the 90%+ AI training market share position",
+      "keyRisk": "The stock fell ~21% from ~$250 to ~$198 between the May 20 print and this update despite the beat-and-raise quarter — driven by GPU cloud rental rates (B200) falling ~31% over three weeks (May 30–June 21), Huang's China-to-Huawei concession, macro risk-off, and ~$410M of insider selling, not a change in reported fundamentals. The Q2 FY27 print ($91B guide) has not yet happened (due Aug 26, 2026) and is now the first real test since the pullback. Falsifiable test: if the Q2 FY27 print misses the $91B guide by more than 5%, or GPU rental-rate deflation continues into Q3 signalling actual demand softening rather than sentiment, or any top-3 hyperscaler cuts FY2027 AI capex guidance by >10% on a single earnings print before then, the demand-durability thesis weakens materially.",
+      "keyRiskSeverity": "high",
       "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 71,
-    "description": "At ~$199 — below the updated base target of $230 — NVDA trades at ~24× forward P/E on NTM EPS of ~$8.25, a PEG of ~0.6× against a ~40% EPS CAGR. The China H200 re-opening and $78B Q1 FY2027 guidance have pushed FY2027 consensus to $367.7B (+70% YoY), providing a floor to the bear case. The stock is modestly undervalued relative to 12–24 month fair value, with the Vera Rubin production ramp in H2 2026 as the next re-rating catalyst.",
+    "score": 77,
+    "description": "At ~$198 (down ~21% from the ~$250 post-print level; market cap ~$4.8T), NVDA has round-tripped back below the $260 base case despite guidance ($91B Q2 FY27) that has not yet been tested — the print is due Aug 26, 2026. The decline tracks GPU cloud rental-rate deflation, Huang's May 21 concession that China's AI-chip market has gone to Huawei, broader macro risk-off, and insider selling — not a change in the earnings trajectory (NTM EPS consensus still ~$9.00). Forward P/E has compressed to ~22× (PEG ~0.4×) and the stock now sits meaningfully closer to the $130 bear case than the $430 bull case, a more attractive entry point than the May analysis implied, with Wall Street consensus (Strong Buy, ~$300 average target) not walking back estimates.",
     "peAnalysis": {
-      "asOf": "April 2026",
+      "asOf": "July 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~40×",
-          "note": "TTM EPS ~$4.97 (FY2026 ramp)"
+          "value": "~30×",
+          "note": "TTM EPS ~$6.60 (post Q1 FY27 ramp)"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~24×",
-          "note": "consensus NTM EPS ~$8.25"
+          "value": "~22×",
+          "note": "consensus NTM EPS ~$9.00, unchanged since May"
         },
         {
           "label": "PEG Ratio",
-          "value": "~0.6×",
-          "note": "fwd P/E ÷ ~40% EPS CAGR"
+          "value": "~0.4×",
+          "note": "fwd P/E ÷ ~50% EPS CAGR (3–5yr)"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~14×",
-          "note": "~$340B NTM revenue est."
+          "value": "~13×",
+          "note": "~$370B NTM revenue est."
         },
         {
           "label": "Price / FCF",
-          "value": "~50×",
-          "note": "$96.7B FCF (TTM)"
+          "value": "~43×",
+          "note": "~$112B FCF (TTM est.)"
         }
       ],
-      "summary": "At 24× forward P/E with a PEG of 0.6×, NVDA remains cheap relative to its ~40% EPS CAGR — well below the 30–35× sector median for high-growth semiconductors. The 40× trailing P/E reflects FY2026's ramping year; the 16-point compression to 24× forward signals a rapid EPS acceleration as Q1 FY2027 ($78B guided) compounds the base. TTM Price/FCF of ~50× is elevated in absolute terms but reasonable for a business generating 94%+ ROIC with $1T+ in committed demand."
+      "summary": "The ~21% price pullback since the May 20 print compressed the forward P/E from ~28× to ~22× on an unchanged ~$9.00 NTM EPS estimate, pulling the PEG to ~0.4× against a ~50% EPS CAGR — a growth-at-reasonable-price setup analysts have not walked back (Strong Buy consensus, ~$300 average 12-month target). Price/Sales (~13×) and Price/FCF (~43×) have de-rated roughly in line with the price decline but remain rich in absolute terms, leaving the multiple compression squarely a sentiment/macro story ahead of the Aug 26, 2026 Q2 FY27 print rather than an earnings reset."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$110",
-      "description": "Export controls re-escalate targeting Blackwell-class chips; hyperscaler in-house ASICs capture 20%+ of AI training workloads; CUDA developer lock-in erodes faster than expected.",
+      "priceTarget": "$130",
+      "description": "Export controls re-escalate targeting Blackwell/Rubin-class chips; hyperscaler in-house ASICs capture 20%+ of AI training workloads; an OpenAI/Anthropic funding stumble forces backlog write-downs and CUDA lock-in erodes faster than expected.",
       "points": [
         "U.S. imposes new export restrictions on Blackwell/Rubin-class chips to allied nations, removing $15B+ in annual revenue",
         "Google TPU v6 and Amazon Trainium3 capture 20%+ of hyperscaler AI training by end of 2026, pressuring NVIDIA market share below 75%",
@@ -139,16 +142,16 @@
       ]
     },
     "base": {
-      "priceTarget": "$230",
-      "description": "FY2027 on track at ~$367B; Vera Rubin ramps into H2 2026 on schedule; China H200 contributes $15-20B incremental revenue; NVIDIA Enterprise software reaches $5B+ ARR.",
+      "priceTarget": "$260",
+      "description": "FY2027 tracks toward ~$390B+ after the Q1 beat and $91B Q2 guide; Vera Rubin ramps into H2 2026 on schedule; China H200 contributes $15-20B incremental revenue; NVIDIA Enterprise software reaches $5B+ ARR.",
       "points": [
-        "Q1 FY2027 revenue lands at $78B ±2% as guided, confirming data center demand durability through Blackwell-to-Rubin transition",
-        "China H200 shipments (400K+ units cleared in April 2026) contribute $15-20B incremental FY2027 revenue, lifting total to $360B+",
+        "Q2 FY2027 revenue lands near the $91B guide, confirming data center demand durability through the Blackwell-to-Rubin transition",
+        "China H200 shipments (400K+ units cleared in April 2026) contribute $15-20B incremental FY2027 revenue, lifting the full-year total toward $390B+",
         "Vera Rubin NVL72 volume production commences H2 2026 at major hyperscalers, extending the $1T order book into FY2028"
       ]
     },
     "bull": {
-      "priceTarget": "$380",
+      "priceTarget": "$430",
       "description": "Vera Rubin cycle exceeds $1T order estimate; sovereign AI buildout accelerates to $150B+ globally; China becomes 15%+ of revenue; software inflects above $10B ARR.",
       "points": [
         "Sovereign AI infrastructure spending accelerates to $150B+ as 50+ nations deploy domestic GPU capacity, adding a recurring government revenue layer",
@@ -159,12 +162,14 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "Not applicable — NVIDIA sells hardware and developer tools, not consumer UI experiences."
+      "status": "strong",
+      "aiExposure": "resilient",
+      "note": "CUDA is the canonical learned-interfaces moat in semiconductors — 15+ years of developer mindshare, every ML PhD candidate learns CUDA, every major ML framework (PyTorch, TensorFlow, JAX) is CUDA-first by default. Switching to ROCm or any alternative is a multi-year rewrite. AI demand strengthens this moat rather than commoditising it: more AI workloads to write means more CUDA-coupled code, wider switching costs. Routed to resilient via aiExposure override — the AI wave is protecting this interface, not threatening it."
     },
     "businessLogic": {
-      "status": "destroyed",
-      "note": "Not applicable to semiconductor chip design and manufacturing."
+      "status": "intact",
+      "aiExposure": "resilient",
+      "note": "Customer ML training and inference pipelines are deeply embedded against CUDA-specific business logic — Megatron, DeepSpeed, vLLM, NCCL, cuDNN, cuBLAS are not portable abstractions. Every AI lab's production training stack is CUDA-coupled workflow at the code level. AI demand strengthens this lock-in by adding more CUDA-specific framework code to every codebase; routed to resilient via aiExposure override."
     },
     "publicDataAccess": {
       "status": "destroyed",
@@ -175,8 +180,8 @@
       "note": "GPU chip architects, CUDA kernel engineers, and AI systems researchers remain extraordinarily scarce and cannot be AI-replaced."
     },
     "bundling": {
-      "status": "intact",
-      "note": "CUDA + hardware + Mellanox networking + NIM microservices = a full-stack AI infrastructure solution competitors cannot match."
+      "status": "weakened",
+      "note": "Downgraded from intact: France's competition authority issued a finding of likely dominance abuse tied to NVIDIA's bundling practices, and the U.S. DOJ is separately examining whether the CUDA + hardware + networking bundle is exclusionary — the first concrete regulatory findings (not just investigations) aimed directly at the bundle. The commercial bundle (CUDA + hardware + Mellanox networking + NIM microservices) still delivers full-stack value competitors can't match today, but the regulatory tailwind that let NVIDIA bundle freely is now a headwind."
     },
     "proprietaryData": {
       "status": "strong",
@@ -184,7 +189,7 @@
     },
     "regulatoryLockIn": {
       "status": "weakened",
-      "note": "Export control whipsaw persists: H20 ban (April 2025) caused a $4.5B charge, reversed July 2025; H200 approved December 2025; 400K+ units cleared for China in April 2026. Policy risk remains structurally elevated despite the near-term reopening."
+      "note": "Export control whipsaw persists: H20 ban (April 2025) caused a $4.5B charge, reversed July 2025; H200 approved December 2025; 400K+ units cleared for China in April 2026 — yet on the May 21 2026 call Huang conceded China's AI-chip market has effectively gone to Huawei, and Q1 FY2027 China data-center revenue was near zero. In June 2026 roughly 10 Chinese firms were conditionally approved to buy H200 chips under a 25%-of-China-revenue-to-Treasury arrangement, but no shipments had occurred as of this update. Antitrust scrutiny has also escalated: Senators Warren and Blumenthal opened an inquiry into whether the $20B Groq investment avoids antitrust review, the DOJ is examining CUDA/bundling practices as potentially exclusionary, and France's competition authority found NVIDIA likely abused a dominant position. Policy risk remains structurally elevated on multiple fronts."
     },
     "networkEffects": {
       "status": "strong",
@@ -198,7 +203,7 @@
       "status": "intact",
       "note": "CUDA is the de facto standard platform for AI compute — the PyTorch/TF ecosystem is CUDA-first by default."
     },
-    "verdict": "NVIDIA's moat is almost entirely AI-resilient. The CUDA network effect and proprietary compute standard deepen as AI infrastructure spending grows — making NVIDIA the infrastructure of the AI economy."
+    "verdict": "NVIDIA's moat remains predominantly AI-resilient — the CUDA network effect, proprietary compute-optimisation data, and infrastructure-layer transaction embedding all deepen as AI spend grows, and neither the Q1 FY27 beat nor the subsequent ~21% price pullback changed that trajectory. The moat's soft spot has widened this quarter: regulatory lock-in stays weakened by the China policy whipsaw (Huang's Huawei concession, unrealised H200 approvals) and now also by escalating antitrust scrutiny, and bundling itself has been downgraded to weakened as that scrutiny turned from investigation into a concrete French dominance-abuse finding. NVIDIA remains the infrastructure layer of the AI economy, but the regulatory tail risk to how freely it can bundle and price is now demonstrably larger than it was in May."
   },
-  "lastAnalyzed": "April 2026"
+  "lastAnalyzed": "July 3, 2026"
 }

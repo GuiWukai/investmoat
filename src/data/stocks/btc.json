@@ -2,6 +2,7 @@
   "slug": "btc",
   "ticker": "BTC",
   "name": "Bitcoin",
+  "assetClass": "crypto",
   "titleColor": "#f7931a",
   "headerStats": [
     {
@@ -10,7 +11,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$1.5T"
+      "value": "~$1.23T"
     },
     {
       "label": "Circulating Supply",
@@ -27,7 +28,6 @@
       "color": "success"
     }
   ],
-  "recommendation": "Strong Buy",
   "metrics": [
     {
       "title": "Hash Rate",
@@ -38,15 +38,15 @@
     },
     {
       "title": "Spot ETF AUM",
-      "value": "~$96.5B",
-      "label": "US Spot Bitcoin ETFs — $57B+ Cumulative Inflows",
+      "value": "~$80.4B",
+      "label": "Down from $104.3B — record 13-day, $4.33B outflow streak (May 15–Jun 3); cumulative inflows ~$55B",
       "icon": "Shield",
       "color": "#3b82f6"
     },
     {
       "title": "Exchange Reserves",
-      "value": "7-Year Lows",
-      "label": "BTC Leaving Exchanges — Whale Accumulation Signal",
+      "value": "~3.0M BTC",
+      "label": "Still Near 2018 Lows — but ETF flows flipped negative; ETF holdings 1.277M BTC (−7.2% from Oct peak)",
       "icon": "Globe",
       "color": "#10b981"
     }
@@ -71,45 +71,45 @@
     ]
   },
   "growth": {
-    "score": 85,
-    "description": "Institutional adoption is accelerating into new territory. Morgan Stanley launched MSBT on April 8 — the first bank-issued spot Bitcoin ETF — at a record-low 0.14% fee, drawing $100M+ in its first week. Goldman Sachs filed its Bitcoin Premium Income ETF on April 14, with SEC approval expected by mid-June 2026. Cumulative spot ETF inflows reached $57B+ with BlackRock IBIT holding $55B+ AUM. BTC recovered to ~$75,500 from the February crash low of $60,000 as the Strait of Hormuz reopened and geopolitical risk-off faded. Bitcoin hit an all-time high of $126,080 in October 2025; the cycle peak window (mid-2026) remains ahead. The US Strategic Bitcoin Reserve is operational and the BITCOIN Act is advancing in Congress.",
+    "description": "BTC broke down to ~$61,500 by June 10, 2026 — 51% below the October 2025 ATH of $126,080 — as the early-May recovery reversed into the longest spot-ETF outflow streak since launch: 13 consecutive trading days (May 15–June 3) with $4.33B exiting, dropping ETF AUM from $104.3B to $80.4B and cumulative inflows to ~$55B. The 10:1 ETF-demand-vs-mining-issuance ratio that anchored the supply-squeeze thesis has flipped negative for now. Strategy's first-ever BTC sale (32 BTC for $2.5M, May 26–31, to fund its STRC preferred dividend — framed by CEO Phong Le as market 'inoculation') added to the deleveraging before the firm resumed buying 1,550 BTC June 1–7 (holdings: 843,706 BTC). On the catalyst side, Strategic Bitcoin Reserve executive director Bo Hines says the reserve architecture will be unveiled 'in short order', ahead of the July 22, 2026 regulatory report deadline; the BITCOIN Act still awaits the late-2026 NDAA window. The halving-cycle October 2026 bottom thesis is now actively playing out.",
     "growthAnalysis": {
       "cagrEstimate": "30–60%",
-      "scoreDerivation": "Base 90 (30%+ institutional adoption CAGR; ETF cumulative inflows $0 → $57B+; Morgan Stanley MSBT launched Apr 8 as first bank-issued spot BTC ETF; Goldman Sachs filing Apr 14) + 5 sovereign/SWF new TAM (US Strategic Reserve operational; BITCOIN Act progressing; NH, AZ, MA state reserves passed) − 5 cycle timing risk (geopolitical volatility, Iran risk-off to $60K Feb crash, BTC still 40% below Oct 2025 ATH) − 5 retail disengagement (active addresses at multi-year lows, on-chain activity muted despite institutional surge) = 85",
+      "scoreDerivation": "Base 94 (30–60% long-run institutional adoption CAGR, midpoint 45%) − 1 driver trajectory (lead ETF driver flipped accelerating → decelerating on the record 13-day, $4.33B outflow streak; sovereign and corporate drivers stable) + 3 TAM expansion (sovereign/SWF demand layer: SBR architecture due 'in short order' before the July 22 report deadline; NH, AZ, MA state reserves) − 10 key risk now high (price 51% below ATH, ETF AUM −23% from peak, halving-cycle October 2026 bottom thesis actively playing out, retail still disengaged) = 85 (was 93 in May; severity raised moderate → high because the bear-case outflow trigger has partially materialised)",
       "drivers": [
         {
           "name": "Spot ETF / Institutional Adoption",
-          "metric": "~$96.5B AUM; $57B+ cumulative inflows; IBIT $55B+ (45%+ share); Morgan Stanley MSBT launched Apr 8; Goldman Sachs filing Apr 14",
-          "trend": "accelerating"
+          "metric": "AUM $80.4B, down from $104.3B; record 13-day outflow streak −$4.33B (May 15–Jun 3); cumulative inflows ~$55B; ETF holdings 1.277M BTC (−7.2% from Oct 2025 peak)",
+          "trend": "decelerating"
         },
         {
           "name": "Sovereign Treasury / Strategic Reserve",
-          "metric": "US Strategic Bitcoin Reserve active; government BTC transfers to Coinbase April 2026",
+          "metric": "US holds 328K BTC (forfeiture-funded); SBR architecture to be unveiled 'in short order' per executive director Bo Hines, ahead of July 22, 2026 regulatory report deadline; BITCOIN Act awaits late-2026 NDAA window",
           "trend": "stable"
         },
         {
           "name": "Corporate Treasury Adoption",
-          "metric": "Strategy Inc. playbook adopted by 1,000+ companies globally",
+          "metric": "Strategy holds 843,706 BTC; first-ever sale (32 BTC, $2.5M, May 26–31) to fund STRC preferred dividend, then resumed buying 1,550 BTC June 1–7; 1,000+ corporate adopters globally",
           "trend": "stable"
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If US Congressional opposition delays Strategic Bitcoin Reserve active accumulation beyond Q3 2026, the sovereign demand catalyst evaporates and ETF inflows slow below $500M/month — removing the primary price support at $65,000–$70,000 and invalidating the base case cycle peak",
+      "keyRisk": "The May–June ETF outflow cascade ($4.33B over 13 days — the bear case's demand-reversal trigger, partially materialised) extends through summer: if the Strategic Reserve architecture due before the July 22 report disappoints (forfeiture-only, no active accumulation) and the BITCOIN Act misses the NDAA late-2026 window, the halving-cycle pattern completes with an October 2026 bottom in the $45K–$55K range — Strategy's preferred-dividend-funded sale, however symbolic, showed the corporate-treasury bid can also reverse",
+      "keyRiskSeverity": "high",
       "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 85,
-    "description": "At ~$75,500 — down 40% from the October 2025 all-time high of $126,080 — BTC is recovering toward the $76,000 breakout level as geopolitical risk-off fades (Iran ceasefire, Strait of Hormuz reopened). Morgan Stanley MSBT launched April 8 (first bank-issued spot BTC ETF), partially materializing the base case institutional catalyst. Goldman Sachs Bitcoin Income ETF filed April 14, pending SEC review by mid-June. Cumulative ETF inflows now $57B+; ETF AUM ~$96.5B (down from peak due to price drawdown, not demand). Trading 53% below the base case ($160,000); valuation score reflects deep discount with institutional demand providing a durable floor around $65,000–$70,000. Cycle peak window (mid-2026) remains ahead."
+    "score": 86,
+    "description": "At ~$61,500 — 51% below the October 2025 ATH of $126,080 — BTC has retraced deep into the bear-base corridor after the longest ETF outflow streak since launch ($4.33B over 13 days, AUM $104.3B → $80.4B). The supply-squeeze mechanics that defined the May setup have inverted for now, but the price has done most of the de-rating work: BTC sits just 37% above the bear target ($45K, −27% downside) and 62% below the base case ($160K, +160% upside), with the bull ($350K) a +469% tail. The July 22 Strategic Reserve architecture deadline is the binary catalyst — a credible active-accumulation framework likely marks the cycle low, while a forfeiture-only disappointment opens the door to the $45K–$55K October bottom scenario already contemplated by the bear case. Skew has improved with the drawdown: −27% downside vs +160% to base."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$50,000",
-      "description": "Extended geopolitical crisis combined with US recession triggers sustained ETF outflows and a full post-halving cycle drawdown to prior ATH support.",
+      "priceTarget": "$45,000",
+      "description": "Sovereign demand catalyst fails to materialize while a US dollar liquidity shock forces broad risk-asset deleveraging — driving BTC through the prior cycle low and toward 2024 breakout support.",
       "points": [
-        "Middle East escalation causes sustained risk-off across all asset classes; BTC ETF weekly outflows exceed $500M for 6+ consecutive weeks",
-        "US Strategic Bitcoin Reserve execution is delayed by Congressional opposition, removing a key sovereign demand catalyst",
-        "On-chain activity continues declining (active addresses at multi-year lows) as retail exits; miner capitulation accelerates at sub-$55,000"
+        "BITCOIN Act fails to clear NDAA late-2026 markup AND the Strategic Reserve framework remains forfeiture-only with no active accumulation — removing the sovereign demand thesis and triggering an ETF outflow cascade",
+        "Dollar liquidity crunch (DXY > 110, Fed forced to pause cuts in a credit event) forces leveraged crypto positions to unwind; ETF weekly outflows exceed $1B for 4+ consecutive weeks, breaking the 10:1 ETF/mining demand-supply ratio",
+        "Historical halving-cycle bottom pattern reasserts in October 2026 as miner capitulation accelerates sub-$55K; on-chain active addresses stay at multi-year lows, signaling no retail re-engagement to absorb the institutional unwind"
       ]
     },
     "base": {
@@ -131,48 +131,29 @@
       ]
     }
   },
-  "tenMoats": {
-    "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "Not applicable — Bitcoin is a decentralized monetary protocol, not a software interface product."
-    },
-    "businessLogic": {
-      "status": "destroyed",
-      "note": "Not applicable — Bitcoin's protocol rules are immutable by design; there is no configurable business logic layer. This is a feature, not a vulnerability."
-    },
-    "publicDataAccess": {
-      "status": "destroyed",
-      "note": "Not applicable — the Bitcoin blockchain is fully public and transparent by design; data access is not a competitive moat for a monetary protocol."
-    },
-    "talentScarcity": {
-      "status": "weakened",
-      "note": "Bitcoin core development talent remains specialized, but the protocol is intentionally simple and resistant to complex change."
-    },
-    "bundling": {
-      "status": "destroyed",
-      "note": "Not applicable — Bitcoin is intentionally single-purpose; bundling products or features would undermine its core simplicity and security guarantees."
-    },
-    "proprietaryData": {
-      "status": "strong",
-      "note": "The Bitcoin blockchain is an immutable, cryptographically secured, tamper-proof record of all value transfers since 2009."
-    },
-    "regulatoryLockIn": {
-      "status": "strong",
-      "note": "SEC ETF approvals (11 issuers), FASB accounting treatment, US Strategic Bitcoin Reserve, Morgan Stanley MSBT (first bank-issued spot BTC ETF, Apr 2026), Goldman Sachs filing (Apr 2026), and state-level reserve laws in NH, AZ, MA."
-    },
+  "cryptoMoats": {
     "networkEffects": {
       "status": "strong",
-      "note": "The largest crypto network with 52.4M+ unique holders and the broadest institutional support — Metcalfe's Law compounding since 2009."
+      "note": "Largest hashrate (~970 EH/s, ATH), deepest liquidity, broadest exchange/custody integration, 52.4M+ unique holders. Metcalfe's Law compounding since 2009 — a new chain can fork the code but can't fork 15+ years of adoption."
     },
-    "transactionEmbedding": {
-      "status": "weakened",
-      "note": "Bitcoin is primarily a store of value rather than a daily transaction medium; Layer 2 Lightning is growing but not yet embedded."
-    },
-    "systemOfRecord": {
+    "schellingPoint": {
       "status": "strong",
-      "note": "The original, most battle-tested, and most secure decentralized system of record — 15 years with zero successful protocol attacks."
+      "note": "BTC is the default 'digital scarce asset' for sovereigns, corporates, and pensions. Strategy Inc.'s 1,000+ corporate-treasury clones hold BTC specifically, not ETH or SOL. The category-leading digital store of value."
     },
-    "verdict": "Bitcoin's mathematical scarcity and decentralized consensus make it uniquely immune to AI disruption. No AI can inflate the supply, hack the network, or replicate the 15-year institutional trust-building."
+    "credibleNeutrality": {
+      "status": "strong",
+      "note": "No CEO, no foundation control, no roadmap, no governance token. The 21M cap is protocol-enforced. Structurally uncopyable by any entity that needs monetary control — which is why central banks cannot replicate it and gold has lasted 5,000 years on the same principle."
+    },
+    "regulatoryIncumbency": {
+      "status": "intact",
+      "note": "First spot ETF (Jan 2024), first CFTC commodity classification, US Strategic Bitcoin Reserve operational (2025), BITCOIN Act advancing in Congress, FASB accounting treatment first applied to BTC, state-level reserve laws (NH, AZ, MA). Real and BTC-exclusive — but one US administration deep and politically reversible. Compare gold's Basel III Tier 1 status (30+ year multilateral central-banking treaty): BTC's regulatory standing is intact with strong momentum, not yet the durable lock-in that would justify a strong rating."
+    },
+    "securityBudget": {
+      "status": "strong",
+      "note": "Largest honest hashpower of any PoW chain — most expensive to attack. Self-reinforcing flywheel: security attracts capital attracts security. The 19th-largest electrical 'consumer' on Earth functions as BTC's economic security perimeter."
+    },
+    "primaryMoat": "credibleNeutrality",
+    "verdict": "Bitcoin's moat is monetary, not corporate. Four pillars rate strong — network Lindy, Schelling-point status, credible neutrality (primary), and security budget — combining into the strongest monetary moat ever built outside of fiat. Regulatory incumbency rates intact: real and BTC-exclusive, but one US administration deep and politically reversible vs gold's multilateral Basel III Tier 1 standing. The framework's way of saying 'uniquely uncopyable on what matters most, with regulatory momentum that still needs to compound into durable standing.'"
   },
-  "lastAnalyzed": "April 2026"
+  "lastAnalyzed": "June 2026"
 }

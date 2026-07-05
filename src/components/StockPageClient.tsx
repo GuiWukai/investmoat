@@ -9,14 +9,14 @@ import {
   AnalysisSection,
   ScenarioCard,
   RecommendationBadge,
-  TenMoatsCard,
+  MoatsCard,
 } from '@/components/AnalysisComponents';
 import { LivePriceWidget } from '@/components/LivePriceWidget';
 import { DynamicValuationGauge } from '@/components/DynamicValuationGauge';
+import { ScenarioPriceBar } from '@/components/ScenarioPriceBar';
 import { stockData, getAverageScore } from '@/app/stockData';
 import { getStockData } from '@/data/stocks';
-import type { TenMoatsAssessment } from '@/app/tenMoatsData';
-import { computeMoatScore } from '@/lib/valuationScore';
+import { computeAssetMoatScore, computeGrowthScore } from '@/lib/valuationScore';
 import type { StockAnalysisData } from '@/types/stockAnalysis';
 import { TrendingUp, TrendingDown, Minus } from 'lucide-react';
 
@@ -26,7 +26,7 @@ import {
   DollarSign, Users, Target, Layers, Play, Car,
   Battery, Globe, CreditCard, ShieldCheck, BarChart3, PenTool,
   Image, Landmark, Shield, BarChart, Calculator, Coins, Lock,
-  Pickaxe, Gem, CheckCircle,
+  Pickaxe, Gem, CheckCircle, Rocket, Satellite,
 } from 'lucide-react';
 
 const ICON_MAP: Record<string, React.FC<{ size?: number; className?: string; color?: string }>> = {
@@ -34,7 +34,7 @@ const ICON_MAP: Record<string, React.FC<{ size?: number; className?: string; col
   DollarSign, Users, Target, Layers, Play, TrendingUp: TrendingUp as React.FC<{ size?: number; className?: string; color?: string }>, Car,
   Battery, Globe, CreditCard, ShieldCheck, BarChart3, PenTool,
   Image, Landmark, Shield, BarChart, Calculator, Coins, Lock,
-  Pickaxe, Gem, CheckCircle,
+  Pickaxe, Gem, CheckCircle, Rocket, Satellite,
 };
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -236,8 +236,9 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
   const stockEntry = stockData.find(s => s.ticker === data.ticker);
   const [liveValScore, setLiveValScore] = useState<number>(data.valuation.score);
   const [valLoading, setValLoading] = useState(true);
-  const liveMoatScore = computeMoatScore(data.tenMoats);
-  const dynamicOverallScore = Math.round(getAverageScore([liveMoatScore, data.growth.score, liveValScore]));
+  const liveMoatScore = computeAssetMoatScore(data);
+  const growthScore = computeGrowthScore(data.growth.growthAnalysis) ?? 0;
+  const dynamicOverallScore = Math.round(getAverageScore([liveMoatScore, growthScore, liveValScore]));
 
   const dynamicRecommendation: 'Strong Buy' | 'Accumulate' | 'Hold' | 'Speculative Buy' =
     dynamicOverallScore >= 85 ? 'Strong Buy' :
@@ -369,7 +370,7 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
             detail: (
               <div className="space-y-4">
                 {MoatAnalysisCard}
-                <TenMoatsCard data={data.tenMoats as unknown as TenMoatsAssessment} />
+                <MoatsCard data={data} />
               </div>
             ),
           },
@@ -377,7 +378,7 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
             label: 'Growth',
             gauge: (
               <ScoreGauge
-                score={data.growth.score}
+                score={growthScore}
                 label="Growth Score"
                 description={data.growth.description}
               />
@@ -443,6 +444,12 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
                   </div>
                 )}
                 {data.valuation.peAnalysis && <ForwardPECard data={data.valuation.peAnalysis} />}
+                <ScenarioPriceBar
+                  slug={data.slug}
+                  bearTarget={data.scenarios.bear.priceTarget}
+                  baseTarget={data.scenarios.base.priceTarget}
+                  bullTarget={data.scenarios.bull.priceTarget}
+                />
                 <ScenarioCard type="Bear" priceTarget={data.scenarios.bear.priceTarget} description={data.scenarios.bear.description} points={data.scenarios.bear.points} />
                 <ScenarioCard type="Base" priceTarget={data.scenarios.base.priceTarget} description={data.scenarios.base.description} points={data.scenarios.base.points} />
                 <ScenarioCard type="Bull" priceTarget={data.scenarios.bull.priceTarget} description={data.scenarios.bull.description} points={data.scenarios.bull.points} />
@@ -457,7 +464,7 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
         <AnalysisSection title={data.moat.analysisTitle}>
           <div className="space-y-5">
             {MoatAnalysisCard}
-            <TenMoatsCard data={data.tenMoats as unknown as TenMoatsAssessment} />
+            <MoatsCard data={data} />
           </div>
         </AnalysisSection>
       </div>
@@ -512,6 +519,12 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
               </div>
             )}
             {data.valuation.peAnalysis && <ForwardPECard data={data.valuation.peAnalysis} />}
+            <ScenarioPriceBar
+              slug={data.slug}
+              bearTarget={data.scenarios.bear.priceTarget}
+              baseTarget={data.scenarios.base.priceTarget}
+              bullTarget={data.scenarios.bull.priceTarget}
+            />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <ScenarioCard type="Bear" priceTarget={data.scenarios.bear.priceTarget} description={data.scenarios.bear.description} points={data.scenarios.bear.points} />
               <ScenarioCard type="Base" priceTarget={data.scenarios.base.priceTarget} description={data.scenarios.base.description} points={data.scenarios.base.points} />

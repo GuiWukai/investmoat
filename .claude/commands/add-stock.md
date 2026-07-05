@@ -108,11 +108,11 @@ Rate each moat as `"strong"`, `"intact"`, `"weakened"`, or `"destroyed"` and wri
 
 **If a moat is not applicable to this business model, set it to `"destroyed"` and explain it's N/A in the note.**
 
-### AI Resilience Score
-Calculate `aiResilienceScore` (0–100): weighted average favouring the AI-resilient moats. A company with all 5 resilient moats as `"strong"` scores ~90+. Weight the score toward resilient moats (60% weighting) vs vulnerable moats (40% weighting):
-- `strong` = 100 pts, `intact` = 75 pts, `weakened` = 40 pts, `destroyed` = 0 pts (or N/A = exclude from average)
-
-Write a 2-sentence `verdict` summarising the AI moat picture.
+### AI Resilience Verdict
+AI resilience is computed from the moat statuses themselves (the 60/40
+resilient-vs-vulnerable weighting lives in `computeMoatScore`), so there is no
+separate score to author. Just write a 2-sentence `verdict` summarising the AI
+moat picture — which moats are AI-resilient, which are most at risk.
 
 ---
 
@@ -134,7 +134,6 @@ Create `src/data/stocks/{slug}.json` using the schema below. Replace all placeho
     { "label": "{Sector | Sub-sector}", "color": "primary" },
     { "label": "{One-word moat descriptor}", "color": "success" }
   ],
-  "recommendation": "{Strong Buy | Accumulate | Hold | Speculative Buy}",
   "metrics": [
     {
       "title": "{Key Metric Name}",
@@ -217,7 +216,6 @@ Create `src/data/stocks/{slug}.json` using the schema below. Replace all placeho
     "networkEffects": { "status": "intact", "note": "{Explanation}" },
     "transactionEmbedding": { "status": "intact", "note": "{Explanation}" },
     "systemOfRecord": { "status": "intact", "note": "{Explanation}" },
-    "aiResilienceScore": 0,
     "verdict": "{2-sentence AI moat verdict}"
   }
 }

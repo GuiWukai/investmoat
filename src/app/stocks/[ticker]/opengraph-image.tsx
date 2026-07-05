@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 import { getStockData } from '@/data/stocks';
-import { computeMoatScore } from '@/lib/valuationScore';
+import { computeAssetMoatScore, computeGrowthScore, computeRecommendation } from '@/lib/valuationScore';
 
 export const runtime = 'edge';
 export const size = { width: 1200, height: 630 };
@@ -14,6 +14,17 @@ export default async function Image({
   const { ticker } = await params;
   const data = getStockData(ticker);
 
+  // Brand wordmark font (Libre Caslon Display) — bundled TTF passed to Satori,
+  // which doesn't read CSS/web fonts. Falls back to default sans on failure.
+  const caslon = await fetch(
+    new URL('../../_fonts/LibreCaslonDisplay-Regular.ttf', import.meta.url),
+  )
+    .then((r) => r.arrayBuffer())
+    .catch(() => null);
+  const brandFonts = caslon
+    ? [{ name: 'Libre Caslon Display', data: caslon, weight: 400 as const, style: 'normal' as const }]
+    : undefined;
+
   if (!data) {
     return new ImageResponse(
       (
@@ -24,21 +35,22 @@ export default async function Image({
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            background: '#07070f',
-            fontSize: 48,
-            color: 'white',
+            background: '#080a0e',
+            fontFamily: caslon ? 'Libre Caslon Display' : undefined,
+            fontSize: 64,
+            color: '#f4f1ea',
           }}
         >
           InvestMoat
         </div>
       ),
-      { width: 1200, height: 630 }
+      { width: 1200, height: 630, fonts: brandFonts }
     );
   }
 
-  const moatScore = computeMoatScore(data.tenMoats);
-  const growthScore = data.growth.score;
-  const recommendation = data.recommendation;
+  const moatScore = computeAssetMoatScore(data);
+  const growthScore = computeGrowthScore(data.growth.growthAnalysis) ?? 0;
+  const recommendation = computeRecommendation(moatScore, growthScore, data.valuation.score);
 
   function scoreColor(s: number): string {
     if (s >= 90) return '#34d399';
@@ -64,7 +76,7 @@ export default async function Image({
           height: '100%',
           display: 'flex',
           flexDirection: 'column',
-          background: 'linear-gradient(135deg, #07070f 0%, #0d0d20 60%, #0a0a18 100%)',
+          background: 'linear-gradient(135deg, #080a0e 0%, #11120c 55%, #0a0b0d 100%)',
           padding: '72px 80px',
           position: 'relative',
         }}
@@ -75,7 +87,7 @@ export default async function Image({
             position: 'absolute',
             inset: 0,
             backgroundImage:
-              'linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)',
+              'linear-gradient(rgba(201,169,106,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(201,169,106,0.035) 1px, transparent 1px)',
             backgroundSize: '60px 60px',
           }}
         />
@@ -91,13 +103,14 @@ export default async function Image({
         >
           <span
             style={{
-              fontSize: '22px',
-              fontWeight: 800,
-              color: 'rgba(255,255,255,0.4)',
-              letterSpacing: '0.06em',
+              fontFamily: caslon ? 'Libre Caslon Display' : undefined,
+              fontSize: '26px',
+              fontWeight: 400,
+              color: 'rgba(201,169,106,0.85)',
+              letterSpacing: '0.04em',
             }}
           >
-            INVESTMOAT
+            InvestMoat
           </span>
           <div
             style={{
@@ -207,6 +220,6 @@ export default async function Image({
         </div>
       </div>
     ),
-    { width: 1200, height: 630 }
+    { width: 1200, height: 630, fonts: brandFonts }
   );
 }

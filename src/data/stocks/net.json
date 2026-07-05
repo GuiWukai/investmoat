@@ -2,7 +2,7 @@
   "slug": "net",
   "ticker": "NET",
   "name": "Cloudflare",
-  "lastAnalyzed": "April 2026",
+  "lastAnalyzed": "June 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,7 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$68.6B"
+      "value": "$87.6B"
+    },
+    {
+      "label": "Current Price",
+      "value": "$234.50"
     }
   ],
   "chips": [
@@ -23,26 +27,25 @@
       "color": "success"
     }
   ],
-  "recommendation": "Strong Buy",
   "metrics": [
     {
       "title": "Revenue",
-      "value": "$2.17B",
-      "label": "+29.8% YoY FY2025; 2026 guide $2.79B (+28–29%)",
+      "value": "$639.8M",
+      "label": "Q1 2026 +34% YoY; FY2026 guide raised to $2.81B",
       "icon": "TrendingUp",
       "color": "#f6821f"
     },
     {
       "title": "RPO",
-      "value": "$2.50B",
-      "label": "+48% YoY — largest ACV deal ever closed in Q4 2025",
+      "value": "$2.54B",
+      "label": "+36% YoY (decelerated from +48% in Q4); cRPO 64% of total",
       "icon": "Zap",
       "color": "#3b82f6"
     },
     {
       "title": "Net Retention",
-      "value": "120%",
-      "label": "+9pp YoY; 4,298 >$100K customers (+23% YoY)",
+      "value": "118%",
+      "label": "−2pp QoQ but +7pp YoY; 4,416 >$100K customers (+25% YoY)",
       "icon": "Shield",
       "color": "#10b981"
     }
@@ -67,11 +70,10 @@
     ]
   },
   "growth": {
-    "score": 88,
-    "description": "FY2025 delivered $2.17B revenue (+29.8% YoY) with Q4 accelerating to 34% — the fastest quarterly growth in two years. Management guided FY2026 at $2.785–2.795B (+28–29%), RPO surged 48% YoY to $2.5B, and new ACV in Q4 grew nearly 50% YoY — its fastest pace since 2021. DBNRR at 120% signals strong upsell traction as enterprises consolidate onto the Connectivity Cloud platform.",
+    "description": "Q1 2026 delivered $639.8M revenue (+34% YoY), beating consensus of $622M and matching Q4's accelerated pace. FY2026 guidance was raised to $2.805–2.813B and non-GAAP EPS to $1.19–1.20 (from $1.11–1.12), and Q2 was guided to $664–665M. RPO grew to $2.54B (+36% YoY, decelerating from +48% in Q4) and DBNRR slipped 2pp sequentially to 118% — a yellow flag worth watching. Alongside earnings, Cloudflare announced a 20% workforce reduction (~1,100 roles, $140–150M charges) to pivot to an agentic-AI-first operating model, simultaneously a long-term margin catalyst and a near-term execution risk that drove the stock down ~18% on the print.",
     "growthAnalysis": {
-      "cagrEstimate": "25–29%",
-      "scoreDerivation": "Base 80 (15–30% CAGR, blended 25–29%) + 5 recurring (subscription model, NRR 120%) + 5 TAM expansion (AI agents as new internet users, TAM grows $181B→$231B by 2028) − 2 deceleration risk (Q4 34% → 2026 guide 28–29%, modest step-down) = 88",
+      "cagrEstimate": "26–30%",
+      "scoreDerivation": "Base 80 (15–30% CAGR, blended 26–30%) + 5 recurring (subscription model, NRR 118%) + 5 TAM expansion (AI agents as new internet users, TAM grows $181B→$231B by 2028) − 2 DBNRR deceleration (120 → 118 QoQ) − 1 restructuring execution risk = 87",
       "drivers": [
         {
           "name": "Zero Trust & SASE",
@@ -80,35 +82,36 @@
         },
         {
           "name": "Large Customer Expansion",
-          "metric": "4,298 customers >$100K (+23% YoY); contributing 73% of revenue vs 69% prior year",
+          "metric": "4,416 customers >$100K (+25% YoY); contributing 72% of revenue",
           "trend": "accelerating"
         },
         {
           "name": "AI Agent Infrastructure (Workers AI, AI Gateway, Agent Cloud)",
-          "metric": "Agent Cloud expansion announced April 2026; moves AI agents from dev laptops to production-grade Cloudflare edge",
+          "metric": "AI agent requests on Cloudflare's network +1,700% June 2025→May 2026; Cloudflare Environments for Claude Managed Agents launched with Anthropic; agentic-AI-first restructuring redirects ~$140M cost base toward edge AI roadmap",
           "trend": "accelerating"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "If hyperscaler-managed AI agent platforms (AWS Bedrock Agents, Anthropic Managed Agents on AWS/Azure) capture >20% of enterprise agent infrastructure deployments by end of 2026 — running natively on AWS Lambda or Azure Functions rather than Cloudflare Workers — the AI-agent TAM expansion thesis fails to materialise, leaving Cloudflare dependent on the more contested CDN/SASE market where Palo Alto and Zscaler are accelerating bundled offers and RPO growth decelerates below 25%",
+      "keyRisk": "Two converging risks: (1) the 20% workforce reduction announced May 2026 disrupts go-to-market and product velocity for 2–3 quarters, dragging DBNRR below 116% by Q4 2026; (2) hyperscaler-managed AI agent platforms (AWS Bedrock Agents, Anthropic Managed Agents on AWS/Azure) capture >20% of enterprise agent infrastructure by end of 2026, leaving Cloudflare dependent on the more contested CDN/SASE market where Palo Alto and Zscaler are accelerating bundled offers and RPO growth decelerates below 25%",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 79,
-    "description": "At $182, NET has re-rated ~14% below the March 2026 analysis price on broader market risk-off and AI competitive concerns, now sitting ~27% below the base ($250) scenario. This creates a more attractive entry point: ~25× NTM P/S vs ~27× a month ago, with underlying fundamentals unchanged — FY2026 guidance of $2.79B (+28–29%) intact, $2.5B RPO backlog, and 120% NRR. Forward non-GAAP P/E of ~163× (down from ~190×) compresses sharply toward 100× if FCF margins reach 20%+ by end of 2026 as guided.",
+    "score": 68,
+    "description": "At ~$234.50, NET has staged a violent ~56% recovery from the post-earnings ~$150 low — driven by the +1,700% surge in AI agent requests on its network, the Anthropic 'Cloudflare Environments for Claude Managed Agents' launch, and CEO Matthew Prince calling AI 'the biggest tailwind we've ever seen in Cloudflare's history' (the stock touched $270 on June 1 before settling back). The price now sits only ~6% below the base ($250) target and ~80% above the bear ($130), so the May entry asymmetry is gone: NTM P/S has re-expanded to ~31× and forward non-GAAP P/E to ~196×, pricing in flawless execution of the agentic-AI thesis through the 2–3 quarter restructuring window.",
     "peAnalysis": {
-      "asOf": "April 2026",
+      "asOf": "June 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
           "value": "N/A",
-          "note": "Net loss; GAAP EPS −$0.29 TTM"
+          "note": "Net loss; GAAP EPS negative TTM"
         },
         {
           "label": "Forward P/E (NTM, non-GAAP)",
-          "value": "~163×",
-          "note": "consensus non-GAAP EPS ~$1.115"
+          "value": "~196×",
+          "note": "raised FY26 EPS guide $1.19–1.20"
         },
         {
           "label": "PEG Ratio",
@@ -117,47 +120,47 @@
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~25×",
-          "note": "$2.79B NTM revenue (2026 guide)"
+          "value": "~31×",
+          "note": "$2.81B NTM revenue (raised guide)"
         },
         {
           "label": "Price / FCF",
-          "value": "~230×",
-          "note": "~$300M FCF (FY2025 est.)"
+          "value": "~260×",
+          "note": "Q1 FCF $84M (13% margin)"
         }
       ],
-      "summary": "NET trades at ~25× NTM P/S, down from ~27× at the March 2026 analysis — a meaningful compression while fundamentals remain intact. This is still a premium to cybersecurity peers (CrowdStrike ~16×, Palo Alto ~11×) but Cloudflare's faster revenue growth (28–29% vs 22–23%) and AI agent infrastructure optionality partially justify the gap. Forward non-GAAP P/E of ~163× (vs ~190× last month) is not actionable in isolation; the useful signal is FCF margin trajectory — Q4 2025 reached 16% and management guides 20%+ for 2026, which would compress P/FCF from ~230× toward ~120×, making the valuation materially more reasonable at current prices."
+      "summary": "NET trades at ~31× NTM P/S after the June AI-agent rally — the multiple has fully round-tripped the May restructuring selloff and now exceeds the ~27× March level. The premium to cybersecurity peers (CrowdStrike ~16×, Palo Alto ~11×) has re-widened to its largest gap of the cycle; the market is now paying for the agentic-internet thesis (AI agent requests +1,700% YoY, Anthropic managed-agent environments, Needham PT raised to $280 on June 10) rather than the current 30%+ revenue growth alone. At ~196× forward non-GAAP P/E, the FCF-margin path is the swing factor: only if the 1,100-person reduction delivers 18–20% FCF margin by Q4 2026 does the multiple compress to a defensible level for a 30%+ grower — until then, the entry asymmetry favours patience."
     }
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$130",
-      "description": "Revenue growth decelerates to 20–22% as hyperscaler bundling erodes CDN/DDoS share and SASE expansion slows, compressing P/S to ~14× on $2.79B 2026 revenue.",
+      "description": "The 20% workforce reduction disrupts go-to-market velocity and product execution for 2–3 quarters while hyperscaler bundling erodes CDN/SASE share, compressing P/S to ~14× on $2.81B 2026 revenue.",
       "points": [
-        "AWS CloudFront + Security Hub bundling displaces Cloudflare's CDN layer at 5%+ of Fortune 500 enterprises by end of 2026, stalling large-customer ACV growth below 15% YoY",
-        "DBNRR slips to 114–116% for two consecutive quarters as enterprises pause SASE expansion amid macro uncertainty and Zero Trust budget scrutiny",
+        "Agentic-AI-first restructuring removes too much sales capacity too fast — large-customer ACV growth stalls below 18% YoY through Q4 2026 as deal cycles slow and the 7-year SASE momentum cools",
+        "DBNRR slips further from 118% to 114–116% for two consecutive quarters as enterprises pause SASE expansion amid macro uncertainty and AWS CloudFront + Security Hub bundling displaces Cloudflare's CDN layer at 5%+ of Fortune 500 accounts",
         "Gross margin compresses below 73% as edge infrastructure CapEx to support AI inference workloads exceeds revenue contribution from Workers AI through 2026",
-        "Multiple re-rates to ~14× NTM P/S as growth decelerates toward 22% and FCF margin expansion stalls at 14–15%"
+        "Multiple re-rates to ~14× NTM P/S as growth decelerates toward 24% and FCF margin expansion stalls at 14–15% despite the cost actions"
       ]
     },
     "base": {
       "priceTarget": "$250",
-      "description": "Cloudflare delivers FY2026 guidance ($2.79B, +28–29% YoY) with DBNRR stable at 120% and FCF margin expanding toward 20%, sustaining a ~25× NTM P/S multiple as AI agent infrastructure demand materialises.",
+      "description": "Cloudflare delivers raised FY2026 guidance ($2.81B, +29–30% YoY; EPS $1.19–1.20) with DBNRR stabilising at 118% and FCF margin expanding toward 18–20% as the agentic-AI-first restructuring delivers the targeted operating leverage by H2 2026.",
       "points": [
-        "FY2026 revenue lands at $2.79B with large customers growing 20%+ YoY and RPO sustaining 35%+ growth through contracted multi-year SASE deals",
-        "FCF margin expands to 18–20% by Q4 2026 as operating leverage on the 28%+ revenue base compounds and infrastructure cost per request declines",
+        "FY2026 revenue lands at $2.81B with large customers growing 22%+ YoY and RPO sustaining 30%+ growth through contracted multi-year SASE and AI Gateway deals",
+        "FCF margin expands to 18–20% by Q4 2026 as the 1,100-person reduction (~$140M annualised cost base) compounds with operating leverage on a 30% revenue base",
         "Workers AI and AI Gateway establish Cloudflare as default edge inference infrastructure for AI agent traffic, contributing $150M+ incremental ARR by year-end 2026",
-        "DBNRR holds at 118–120% as existing enterprise customers expand from CDN-only to full SASE and Zero Trust suites"
+        "DBNRR re-anchors at 118–120% by Q4 2026 as the AI-first sales motion displaces seat-based CRM/security workflows with agent-driven upsell"
       ]
     },
     "bull": {
       "priceTarget": "$380",
-      "description": "AI agent traffic creates a new internet infrastructure cycle — Cloudflare becomes the default runtime for autonomous agents, re-accelerating revenue toward 35%+ and expanding the addressable market beyond its current $181B TAM estimate.",
+      "description": "AI agent traffic creates a new internet infrastructure cycle — Cloudflare's agentic-AI-first pivot lands the company as the default runtime for autonomous agents, re-accelerating revenue toward 35%+ and pushing FCF margin to 25%+ ahead of schedule.",
       "points": [
         "AI agent traffic on Workers exceeds 20% of Cloudflare's total request volume by end of 2026, driving a new consumption-based revenue layer on top of the subscription base and pushing ARR growth toward 40%",
         "Cloudflare wins 3+ sovereign government cloud contracts in Europe under EU Data Act/NIS-2 compliance, establishing a government revenue stream and locking in decade-long regulatory relationships",
         "SASE displacement of Zscaler at 3–4 Fortune 100 accounts adds >$100M ACV, validating Cloudflare's ability to compete in the largest enterprise security deals",
-        "FCF margin reaches 25%+ ahead of schedule, triggering a re-rating toward 35× NTM P/S on $3.3B+ 2026–27 blended revenue"
+        "FCF margin reaches 25%+ by Q4 2026 as the AI-first cost base compounds with revenue scale, triggering a re-rating toward 30× NTM P/S on $3.3B+ 2026–27 blended revenue"
       ]
     }
   },
@@ -183,12 +186,12 @@
       "note": "CDN + DDoS + SASE + Zero Trust + DNS + R2 + Workers + AI Gateway from a single platform. Enterprises expanding from CDN to Zero Trust to Workers create deep multi-product lock-in that AI point-solutions cannot easily replicate — the integration value is emergent."
     },
     "proprietaryData": {
-      "status": "strong",
-      "note": "215 billion threats blocked daily across 332,000+ customers and 38% of the Fortune 500. This threat intelligence dataset is continuously updated, contractually exclusive, and central to every security product Cloudflare ships — no competitor can acquire equivalent coverage without first building Cloudflare's network scale."
+      "status": "intact",
+      "note": "215 billion threats blocked daily across 332,000+ customers is operationally valuable, but AWS WAF, Akamai, and Google Cloud Armor see comparable global traffic and generate equivalent threat intelligence from their own networks. The dataset improves Cloudflare's products but is not 'proprietary' in the FICO/Evidence.com sense — competitors have functional equivalents."
     },
     "regulatoryLockIn": {
-      "status": "intact",
-      "note": "FedRAMP authorised, compliant with GDPR/CCPA/NIS-2; R2's zero-egress-fee model positions Cloudflare as the natural winner from EU Data Act compliance requirements. Multi-year government and critical infrastructure contracts create durable switching barriers."
+      "status": "weakened",
+      "note": "FedRAMP authorisation and GDPR/CCPA/NIS-2 compliance are table-stakes for any enterprise edge/security vendor — AWS, Azure, and Akamai have the same certifications. R2's zero-egress positioning is a commercial advantage rather than a regulatory barrier. Cloudflare cleared the compliance bar; it does not hold exclusive licensure that bars competitors."
     },
     "networkEffects": {
       "status": "strong",

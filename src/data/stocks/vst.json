@@ -5,13 +5,13 @@
   "titleColor": "#E8401C",
   "headerStats": [
     { "label": "Ticker", "value": "VST" },
-    { "label": "Market Cap", "value": "~$55B" }
+    { "label": "Market Cap", "value": "~$54B" },
+    { "label": "Price", "value": "~$160" }
   ],
   "chips": [
     { "label": "Energy | Integrated Power", "color": "primary" },
     { "label": "AI Power Duopoly", "color": "success" }
   ],
-  "recommendation": "Accumulate",
   "metrics": [
     {
       "title": "Nuclear Fleet",
@@ -21,9 +21,9 @@
       "color": "#E8401C"
     },
     {
-      "title": "2026 Adj. EBITDA Guidance",
-      "value": "$7.2B",
-      "label": "Midpoint +22% YoY — FCF Yield ~8% at Current Price",
+      "title": "Q1 2026 Adj. EBITDA",
+      "value": "$1.49B",
+      "label": "Record Q1, +20% YoY; FY26 guide reaffirmed $6.8–7.6B; Fitch upgrade to investment grade (2nd agency)",
       "icon": "TrendingUp",
       "color": "#00a650"
     },
@@ -55,23 +55,35 @@
     ]
   },
   "growth": {
-    "score": 78,
-    "description": "Vistra issued 2026 adj. EBITDA guidance of $6.8B–$7.6B (midpoint $7.2B, +22%–29% YoY from FY2025's record $5.9B) with adj. FCF before growth of $3.9B–$4.7B (midpoint $4.3B, yield ~8% at current price); the Meta nuclear PPA begins revenue delivery in late 2026, the Amazon Comanche Peak PPA ramps from Q4 2027 through 2032, and the pending Cogentrix acquisition ($4B, ~5,500 MW) is expected to add $0.9B+ incremental EBITDA — supporting a 15–18% EBITDA CAGR through 2028.",
+    "description": "Q1 2026 (reported May 7) delivered record Q1 Ongoing Operations Adjusted EBITDA of $1.494B (+20% YoY) on $5.64B revenue and $1.03B net income, with East ($801M) and Texas ($586M) strong while Retail ($68M) lagged on one of Texas's mildest winters. Vistra reaffirmed (did not raise) 2026 adj. EBITDA guidance of $6.8B–$7.6B (midpoint $7.2B) and adj. FCFbG of $3.9B–$4.7B, and guided a 2027 EBITDA midpoint opportunity of $7.4B–$7.8B — both of which exclude the pending Cogentrix acquisition and the new Meta/Amazon PPAs, whose contributions begin landing in 2027. Fitch upgraded VST to investment grade (the second major agency after S&P). Hedge coverage is ~98% for 2026 / ~89% for 2027.",
+    "growthAnalysis": {
+      "cagrEstimate": "8-13%",
+      "scoreDerivation": "Base 65 + 10 (2026 EBITDA guide +22-29% YoY and 3.8 GW of contracted nuclear PPAs) + 5 (Cogentrix accretion and ERCOT scarcity tailwind) - 2 (leverage and hedge-loss optical noise) = 78",
+      "drivers": [
+        { "name": "Hyperscaler Nuclear PPA Ramp", "metric": "Meta 2,609 MW (deliveries late 2026) + Amazon 1,200 MW (Q4 2027) at premium contracted pricing", "trend": "accelerating" },
+        { "name": "Cogentrix Accretion", "metric": "~5,500 MW closing mid-2026 at ~$730/kW; $0.9B+ incremental EBITDA", "trend": "accelerating" },
+        { "name": "ERCOT Demand Growth", "metric": "50+ GW potential data center load through 2030; Q1 2026 record $1.49B EBITDA; FY26 midpoint $7.2B reaffirmed", "trend": "accelerating" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "ERCOT renewable overbuild compresses scarcity pricing while Cogentrix integration absorbs unexpected capex; combined with sustained 5%+ rates, leverage above 4x could crowd out buybacks within 12-18 months.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "expanding"
+    },
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
         "Nuclear PPA ramp: Meta's 2,609 MW PPA begins delivering late 2026 with full capacity online by 2034 (including 433 MW of uprates Meta is funding); Amazon's 1,200 MW Comanche Peak PPA starts Q4 2027 ramping to full by 2032 — both at premium above-market pricing, adding high-margin contracted revenue as each MW comes online",
         "Cogentrix acquisition (pending mid-2026): ~5,500 MW of modern combined-cycle and combustion turbine gas assets across PJM, ISO-NE, and ERCOT acquired at ~$730/kW — highly competitive with replacement cost; expected to be meaningfully EBITDA accretive from day one and positions Vistra to offer gas-backed firm power to data center co-location customers",
         "ERCOT demand acceleration: Texas is adding 50+ GW of potential data center load through 2030 as hyperscalers and AI infrastructure companies build mega-campuses; reserve margins are structurally tightening, boosting uncontracted generation margins and creating demand for Vistra's battery storage for ancillary services revenue",
-        "Capital return flywheel: $3B earmarked for shareholders via buybacks and dividends in 2026–2027 at ~$163/share, reducing share count toward ~320M; 2027 guided FCF per share of ~$16 implies the stock trades at roughly 10x 2027 FCF if no re-rating occurs — creating a powerful per-share growth engine independent of multiple expansion"
+        "Capital return flywheel: ~$1.5B remains under buyback authorization (>$6.3B repurchased since Nov 2021), with management targeting ≥$1B annual buybacks plus ~$300M dividends through 2027; at ~$160/share the continued share-count reduction is a powerful per-share growth engine independent of multiple expansion, and the Fitch investment-grade upgrade lowers the cost of funding the Cogentrix close"
       ]
     }
   },
   "valuation": {
     "score": 76,
-    "description": "At ~$163, Vistra trades at just 8–9x forward 2026 EV/EBITDA — a steep discount to Constellation Energy's ~18x — despite comparably strategic nuclear PPA commitments, a superior FCF yield (~8% vs CEG's ~3.5%), and EBITDA growing 22–29% in 2026; the stock sits 26% below the $220 base case and offers 84% upside to the bull case.",
+    "description": "At ~$160 — near its 52-week low of ~$133 and ~27% below the 52-week high of $219.81 — Vistra trades at just ~9x forward 2026 EV/EBITDA, a steep discount to Constellation Energy's ~18x despite comparably strategic nuclear PPA commitments and a superior FCF yield. Despite the record Q1 beat and a second investment-grade upgrade, the stock has de-rated on GAAP hedge-mark noise and Cogentrix-integration/leverage concerns. It sits ~27% below the $220 base case; the analyst consensus target is ~$225 (Morgan Stanley $212, TD Cowen $230).",
     "valuationNote": {
-      "text": "Vistra's conventional utility multiples (P/E, EV/EBITDA) understate its quality — the appropriate frame is contracted infrastructure with growth: 20-year fixed-price nuclear PPAs with hyperscalers deserve the same valuation treatment as toll-road concessions or long-term regulated utility assets. On that basis, 12–15x 2027E EBITDA of $8.5B+ implies an enterprise value of $100–125B and equity value of $80–105B — $250–$330/share on ~330M shares. The current 8–9x 2026E multiple reflects the market's residual uncertainty about the Cogentrix integration, GAAP hedge-loss noise (Q4 2025 EPS miss), and VST's higher leverage vs CEG. As the 2027 guidance materializes and PPA ramp execution is confirmed, a re-rating toward 12x+ becomes the base case.",
+      "text": "Vistra's conventional utility multiples (P/E, EV/EBITDA) understate its quality — the appropriate frame is contracted infrastructure with growth: 20-year fixed-price nuclear PPAs with hyperscalers deserve the same valuation treatment as toll-road concessions or long-term regulated utility assets. On that basis, 12–15x a 2027 EBITDA opportunity of $7.4–7.8B (before Cogentrix and the new PPAs) implies an enterprise value of $90–115B and a materially higher equity value than today's ~$54B market cap. The current ~9x 2026E multiple reflects the market's residual uncertainty about the Cogentrix integration, GAAP hedge-mark noise, and VST's higher leverage vs CEG — even as the Q1 beat and the second investment-grade upgrade reduce balance-sheet risk. As the 2027 guidance materializes and PPA ramp execution is confirmed, a re-rating toward 12x+ becomes the base case.",
       "fairValue": "$220"
     }
   },
@@ -145,8 +157,7 @@
       "status": "destroyed",
       "note": "N/A — Vistra is not a system of record for any information function; this moat category does not apply to power generation or retail electricity."
     },
-    "aiResilienceScore": 76,
     "verdict": "Vistra is a net beneficiary of AI adoption: the hyperscaler data centre buildout directly drives demand for its nuclear baseload and dispatchable gas generation, while its 20-year PPAs with Amazon and Meta structurally embed it into the AI power infrastructure for the next two decades. The core nuclear and regulatory moats (physical plant ownership, NRC licences, talent scarcity) are entirely AI-immune — AI cannot operate a reactor, obtain an NRC licence, or build a power plant."
   },
-  "lastAnalyzed": "April 2026"
+  "lastAnalyzed": "May 2026"
 }

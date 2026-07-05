@@ -9,7 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$57.6B"
+      "value": "$35.4B"
+    },
+    {
+      "label": "Current Price",
+      "value": "$100.77"
     }
   ],
   "chips": [
@@ -22,123 +26,122 @@
       "color": "danger"
     }
   ],
-  "recommendation": "Avoid",
   "metrics": [
     {
       "title": "Bitcoin Holdings",
-      "value": "815,061 BTC",
-      "label": "~$62.9B at $77.1K BTC; avg cost $75,577 (+2% above cost)",
+      "value": "847,363 BTC",
+      "label": "~3.9% of circulating supply; avg cost $75,646/BTC (~$64.1B total spent)",
       "icon": "DollarSign",
       "color": "#f7931a"
     },
     {
-      "title": "Software Revenue",
-      "value": "$477M",
-      "label": "FY2025 (+3% YoY); subscription +62% YoY Q4",
-      "icon": "BarChart3",
-      "color": "#3b82f6"
-    },
-    {
-      "title": "Total Liabilities",
-      "value": "$10.6B",
-      "label": "$8.2B convertible notes + preferred; $42B ATM programs ($21B equity + $21B preferred STRC)",
+      "title": "Bitcoin Price",
+      "value": "~$62,000",
+      "label": "~18% below Strategy's $75,646 avg cost basis; down from ~$77.1K in April 2026",
       "icon": "TrendingDown",
       "color": "#f31260"
+    },
+    {
+      "title": "mNAV / BTC Yield",
+      "value": "~1.08x enterprise",
+      "label": "Basic mNAV ~0.67x; fell below 1.0x enterprise for the first time (Jun 2026); BTC Yield slowed to 9.4% YTD 2026 vs 22.8% FY2025",
+      "icon": "BarChart3",
+      "color": "#3b82f6"
     }
   ],
   "moat": {
-    "description": "Strategy's moat rests almost entirely on its first-mover status as the world's largest public Bitcoin treasury and its regulated access structure for institutional BTC exposure. The legacy BI software (Strategy ONE) provides minimal moat and is ceding ground to AI-native analytics. After trading below its Bitcoin NAV for most of Q1 2026, BTC has recovered to ~$77,100 — narrowly above the $75,577 average acquisition cost — putting the treasury marginally in profit. The basic mNAV of ~0.92x (EV-adjusted ~1.2x) remains far below the 4x peak of late 2024. The April 2026 announcement of $42B in new ATM programs ($21B equity + $21B preferred STRC) signals ongoing aggressive BTC accumulation at the cost of substantial continuing shareholder dilution.",
+    "description": "Strategy's moat rests almost entirely on its first-mover status as the world's largest public Bitcoin treasury and its regulated access structure for institutional BTC exposure. The legacy BI software (Strategy ONE) provides minimal moat and is ceding ground to AI-native analytics, though total revenue growth reaccelerated to +11.9% YoY in Q1 2026. Bitcoin has fallen sharply since April 2026 — from ~$77,100 to ~$62,000, briefly touching the low $60,000s — pushing the treasury's $75,646 average cost basis into an ~18% unrealized loss for the first time since mid-2024, and driving a $14.46B non-cash fair-value write-down (ASU 2023-08) that produced a $12.54B GAAP net loss (EPS −$38.25) in Q1 2026. Enterprise mNAV briefly fell below 1.0x in June 2026 — the first time in Strategy's history the market valued the company below its own Bitcoin holdings — before a partial recovery to ~1.08x as both BTC and MSTR rallied off their lows. In direct response, Strategy adopted a new Digital Credit Capital Framework (June 29, 2026) that formally ends the 'never sell' policy: it authorizes up to $1.25B of Bitcoin monetization sales, up to $2B of stock/preferred buybacks, and raised the STRC preferred dividend to 12% — an implicit admission that the capital markets flywheel (issuing equity above NAV to buy more BTC) is currently unusable, and Strategy must instead sell Bitcoin to help service ~$1.76B/year in preferred dividend and interest obligations.",
     "analysisTitle": "The Leveraged Bitcoin Vehicle",
     "analysisSummary": "Strategy's investable thesis is built on **Bitcoin leverage, regulated access, and capital markets flywheel** — not software moats:",
     "analysisPoints": [
       {
         "title": "Regulated BTC Exposure for Institutions",
-        "text": "Strategy is an SEC-regulated, Nasdaq-listed equity. Institutional investors (pension funds, insurance companies, 401k plans) who cannot directly hold Bitcoin can access leveraged BTC exposure through MSTR. This regulatory arbitrage was the core mNAV premium driver from 2020–2024."
+        "text": "Strategy is an SEC-regulated, Nasdaq-listed equity. Institutional investors (pension funds, insurance companies, 401k plans) who cannot directly hold Bitcoin can access leveraged BTC exposure through MSTR. This regulatory arbitrage was the core mNAV premium driver from 2020–2024, and remains the one durable, AI-neutral advantage in the current drawdown."
       },
       {
-        "title": "Capital Markets Flywheel (Partially Reactivated)",
-        "text": "At peak mNAV of 4x, Strategy could issue equity at 4x the NAV of Bitcoin it received — creating immediate BTC yield per share. After collapsing to below 1.0x basic in Q1 2026, the EV-adjusted mNAV has recovered to ~1.2x as BTC climbed above the $75,577 average cost basis. New equity raises at ~1.2x EV-mNAV are modestly accretive again. However, with $42B in outstanding ATM authorizations ($21B equity + $21B preferred STRC), the dilution runway is enormous. The software business still generates negative FCF (−$75.5M FY2025), so preferred dividend obligations must still be funded by further equity issuance."
+        "title": "Capital Markets Flywheel (Reversed)",
+        "text": "At peak mNAV of 4x, Strategy could issue equity at 4x the NAV of Bitcoin it received — creating immediate BTC yield per share. That flywheel requires an mNAV premium to work; with enterprise mNAV oscillating near or below 1.0x since June 2026 (briefly the first sub-1.0x reading in company history), new equity issuance is no longer meaningfully accretive. Strategy's June 29, 2026 Digital Credit Capital Framework formally reversed the model: it now authorizes selling up to $1.25B of Bitcoin — ending the 'never sell' pledge — to fund ~$1.76B/year in preferred dividend and interest obligations, alongside up to $2B of stock/preferred buybacks. BTC Yield, the KPI tracking bitcoin-per-share growth, has decelerated to 9.4% year-to-date 2026 from 22.8% for full-year 2025."
       },
       {
         "title": "First-Mover Bitcoin Treasury Brand",
-        "text": "Michael Saylor's public advocacy and conviction since August 2020 created enormous brand recognition for the Bitcoin treasury strategy. But as Metaplanet (Japan), MARA Holdings, Semler Scientific, and dozens of other companies have adopted similar playbooks, the uniqueness premium has largely evaporated."
+        "text": "Michael Saylor's public advocacy and conviction since August 2020 created enormous brand recognition for the Bitcoin treasury strategy. But as Metaplanet (Japan), MARA Holdings, Semler Scientific, and dozens of other companies adopted similar playbooks, the uniqueness premium had already evaporated by April 2026 — and the June 2026 stress test (mNAV briefly sub-1.0x, forced policy reversal) has further undercut the brand's aura of infallibility."
       },
       {
         "title": "Strategy ONE — Legacy BI Software",
-        "text": "The original business intelligence software platform generates ~$477M annually with subscription services transitioning to cloud (+62% YoY). However, the total software business is nearly flat (+3% YoY) and faces direct AI-driven commoditization from Microsoft Copilot, Google Gemini, Databricks, and Snowflake."
+        "text": "The original business intelligence platform generated $124.3M in Q1 2026 revenue (+11.9% YoY), the fastest growth in several years, as the Strategy ONE cloud transition continues to displace legacy on-premise licenses. Still, the software business remains sub-scale (roughly $500M annualized) relative to the ~$52B Bitcoin treasury, and faces direct AI-driven commoditization from Microsoft Copilot, Google Gemini, Databricks, and Snowflake."
       }
     ]
   },
   "growth": {
-    "score": 42,
-    "description": "Strategy ONE subscription services grew 62% YoY in Q4 2025, but total software revenue is nearly flat at $477M (+3% YoY FY2025) as legacy product revenue declines offset cloud growth. The real driver of equity value — BTC price appreciation — is not a revenue metric. BTC Yield was 22.8% in FY2025, and holdings have grown to 815,061 BTC (+10.3% since year-end) as Strategy deployed capital from Q1 2026 raises. Bitcoin is now marginally above the $75,577 average cost basis for the first time since mid-2024. The software gross margin fell to 66% in Q4 2025 from 73% YoY, with cost of sales rising 22% as the cloud transition ramps costs.",
+    "description": "Software revenue growth reaccelerated to +11.9% YoY in Q1 2026 ($124.3M), the strongest pace in several years, as the Strategy ONE cloud transition continues. But the real driver of equity value — Bitcoin — has moved sharply against Strategy since April 2026: BTC fell from ~$77,100 to as low as the ~$60,000s in late June before recovering to ~$62,000, pushing the treasury's $75,646 average cost basis into an ~18% unrealized loss. BTC Yield (bitcoin-per-share growth) decelerated to 9.4% year-to-date 2026 from 22.8% for full-year 2025, as Strategy slowed accumulation and pivoted to the new Digital Credit Capital Framework, which authorizes Bitcoin sales (up to $1.25B) rather than pure accumulation for the first time since 2020. Holdings still grew to 847,363 BTC (roughly +16% YTD) largely from purchases made before the framework shift. Q1 2026 GAAP results showed a $12.54B net loss (EPS −$38.25) after a $14.46B non-cash bitcoin fair-value write-down under ASU 2023-08.",
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
-        "Strategy ONE cloud subscription: +62% YoY in Q4 2025, transitioning from legacy on-premise BI to cloud-native analytics; the cloud cohort likely has NRR >110% but starts from a small base within the $477M total",
-        "Bitcoin accumulation: 815,061 BTC at avg cost ~$75,577/BTC (~$61.5B total spent); BTC Yield of 22.8% in FY2025 (101,873 BTC added); treasury marginally in-profit with BTC at ~$77,100; ongoing accumulation via $42B ATM programs ($21B equity + $21B preferred STRC) authorized April 2026",
-        "Preferred equity capital raises: STRK/STRC preferred stock issuance funds ongoing BTC purchases, but growing preferred dividend obligations (~$904M+/yr) create a fixed cash obligation that the software business (FCF: −$75.5M) cannot cover — requiring perpetual equity dilution"
+        "Strategy ONE cloud/software: total revenue +11.9% YoY in Q1 2026 ($124.3M) — the fastest pace in several years — as cloud-native analytics displaces legacy on-premise BI, though the segment remains sub-scale next to the Bitcoin balance sheet",
+        "Bitcoin accumulation (decelerating): 847,363 BTC at avg cost $75,646/BTC (~$64.1B total spent); BTC Yield slowed to 9.4% YTD 2026 (vs 22.8% FY2025) as the Digital Credit Capital Framework (June 29, 2026) shifts posture from pure accumulation toward selective monetization (up to $1.25B in authorized BTC sales)",
+        "Preferred equity obligations: STRK/STRC/STRF/STRD/STRE preferred stock carries ~$1.76B/year in dividend and interest obligations; STRC's dividend was raised to 12% (effective July 1, 2026) and the company disclosed a $2.55B USD reserve covering ~17.4 months of obligations — but with mNAV near 1.0x, further preferred issuance is dilutive rather than NAV-accretive"
       ]
     },
     "growthAnalysis": {
-      "cagrEstimate": "5–8%",
-      "scoreDerivation": "Base 52 (5–8% software CAGR as subscription offsets legacy decline) + 5 cloud subscription acceleration (NRR >110% for cloud cohort) − 10 massive share dilution headwind (44% YoY shares outstanding growth) − 5 software gross margin compression (cost of sales +22% YoY, gross margin 73%→66%) = 42",
+      "cagrEstimate": "3–6%",
+      "scoreDerivation": "Base 61 (3–6% blended CAGR as BTC Yield decelerates and software growth partially offsets) − 1 net driver deceleration (2 of 3 drivers decelerating) − 4 compressing margins − 15 severe risk (treasury underwater vs cost basis; forced BTC monetization under new framework) = ~41",
       "drivers": [
         {
-          "name": "Strategy ONE Cloud",
-          "metric": "+62% YoY Q4 2025; subscription within $477M total revenue",
+          "name": "Strategy ONE Cloud/Software",
+          "metric": "+11.9% YoY Q1 2026 total revenue ($124.3M) — fastest pace in several years",
           "trend": "accelerating"
         },
         {
           "name": "Legacy Software/Services",
-          "metric": "Declining; offsetting cloud growth; total rev +1.9% Q4 YoY",
+          "metric": "Continues to decline as cloud mix shifts; drags blended software growth",
           "trend": "decelerating"
         },
         {
-          "name": "BTC Treasury (NAV)",
-          "metric": "815,061 BTC; BTC Yield 22.8% FY2025; +10.3% since year-end 2025",
-          "trend": "stable"
+          "name": "BTC Treasury (BTC Yield)",
+          "metric": "847,363 BTC; BTC Yield decelerated to 9.4% YTD 2026 vs 22.8% FY2025; new framework authorizes BTC sales",
+          "trend": "decelerating"
         }
       ],
       "primaryType": "market share",
-      "keyRisk": "With 815,061 BTC at avg cost $75,577 and BTC now at ~$77,100, the treasury is barely in-profit ($1.2B unrealized gain). If Bitcoin falls below $70,000 before year-end 2026, the treasury returns underwater and Strategy must fund growing preferred dividend obligations (~$904M+/yr) through its $42B ATM programs at sub-NAV economics — accelerating per-share dilution. Even in a stable BTC environment, ongoing ATM issuance (~$21B equity + ~$21B preferred authorized) will dilute existing shareholders significantly.",
+      "keyRisk": "With BTC at ~$62,000 versus Strategy's $75,646 average cost, the treasury is now underwater by roughly $11.6B (~18% below cost) — the downside risk flagged in April 2026 has materialized. Q1 2026 GAAP net loss was $12.54B (EPS −$38.25), largely from a $14.46B bitcoin fair-value write-down. The new Digital Credit Capital Framework (June 29, 2026) ended Strategy's 'never sell' policy, authorizing up to $1.25B of BTC sales to help fund ~$1.76B/year in preferred dividend and interest obligations (STRC dividend raised to 12% effective July 1, 2026) — a tacit admission that the capital markets flywheel is currently unusable with mNAV near/below 1.0x. If BTC does not recover well above $75,646, Strategy will likely keep selling BTC or issuing dilutive preferred/equity, eroding per-share BTC density for the first time since 2020.",
+      "keyRiskSeverity": "severe",
       "marginTrend": "compressing"
     }
   },
   "valuation": {
-    "score": 73,
-    "description": "At $166.52, MSTR's market cap ($57.6B) remains below its gross BTC value ($62.9B at $77,100 BTC) — mNAV of ~0.92x on a basic share-count basis, with EV-adjusted mNAV closer to 1.2x once the $8.2B in convertible notes and preferred stock are included. After trading as low as $104.17 in the 52-week range, BTC has recovered above Strategy's $75,577 average cost basis for the first time since mid-2024, putting the treasury marginally in profit. The capital markets flywheel is partially reactivated. Current price sits between the updated bear case ($55) and base case ($215), representing a mid-range entry. For pure BTC exposure, ETFs (IBIT, FBTC) remain superior instruments without leverage, dilution, or growing preferred dividend obligations.",
+    "score": 75,
+    "description": "At $100.77, MSTR trades at a basic mNAV of ~0.67x (market cap $35.4B vs BTC value ~$52.5B for 847,363 BTC at ~$62,000) and an enterprise mNAV of ~1.08x once ~$21B of convertible notes and preferred stock are added back — having briefly traded below 1.0x enterprise mNAV in June 2026 for the first time in the company's history. Bitcoin sits well below Strategy's $75,646 average cost basis (~18% underwater), reversing the marginal profitability seen in April 2026. After bottoming near $82 in late June, MSTR has rallied off the crypto-market lows alongside BTC's bounce off the ~$60,000 level. The current price sits meaningfully below the revised base case ($150) and well above the revised bear case ($20), reflecting a market that has partially repriced the end of the 'never sell' capital markets flywheel. For pure BTC exposure, ETFs (IBIT, FBTC) remain structurally superior — no leverage, no dilution, no growing preferred dividend burden, and no risk of forced monetization sales.",
     "valuationNote": {
-      "text": "Strategy's fair value derives from BTC NAV: 815,061 BTC × BTC price, less ~$11.5B total liabilities, divided by ~360M diluted shares. At $77,100 BTC the net BTC NAV per share is approximately",
-      "fairValue": "$143/share (net of liabilities)"
+      "text": "Strategy's fair value derives from BTC NAV: 847,363 BTC × BTC price, less ~$21B in total obligations (convertible notes + preferred stock), divided by ~352M basic shares. At ~$62,000 BTC the net BTC NAV per share is approximately",
+      "fairValue": "$90/share (net of liabilities)"
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$55",
-      "description": "Bitcoin falls to ~$40,000 on macro risk-off; leverage amplifies the decline and $42B ATM programs trigger dilutive issuance at depressed prices.",
+      "priceTarget": "$20",
+      "description": "Bitcoin falls further to ~$35,000 on continued macro risk-off and crypto-market capitulation; distressed mNAV forces Strategy to monetize Bitcoin and issue dilutive securities near trough valuations.",
       "points": [
-        "BTC at $40K → BTC value $32.6B; minus ~$11.5B liabilities = $21.1B / ~360M shares ≈ $59/share; distressed ATM dilution pushes closer to $55",
-        "Treasury falls $29B below cost basis ($75,577 avg); mNAV collapse below 0.5x basic makes new equity raises deeply destructive",
-        "Growing preferred dividend obligations (~$904M+/yr) cannot be funded by software FCF (−$75.5M), forcing perpetual sub-NAV dilution"
+        "BTC at $35K → BTC value $29.7B; minus ~$21B liabilities = $8.7B / ~355M shares ≈ $24/share at 1.0x; a distressed sub-0.85x mNAV pushes the price toward $20",
+        "Treasury falls ~$40,600/BTC below the $75,646 avg cost basis; the Digital Credit Capital Framework's $1.25B BTC-sale authorization is exhausted, forcing further monetization or dilutive preferred/equity issuance",
+        "STRC's 12% dividend and ~$1.76B/yr combined preferred/interest obligations cannot be covered by software FCF, compounding forced BTC sales into the downturn"
       ]
     },
     "base": {
-      "priceTarget": "$215",
-      "description": "Bitcoin reaches ~$100,000; treasury comfortably above avg cost; MSTR re-rates to ~1.1x EV-mNAV as capital markets flywheel resumes.",
+      "priceTarget": "$150",
+      "description": "Bitcoin recovers to ~$85,000 over 12–24 months as rate cuts and ETF/institutional flows resume; enterprise mNAV normalizes to ~1.0x–1.1x as the crisis of confidence fades but the flywheel remains muted.",
       "points": [
-        "BTC at $100K → BTC value $81.5B; minus ~$11.5B liabilities = $70B / ~360M shares ≈ $194 at 1.0x; with 1.1x EV-mNAV ≈ $214",
-        "Treasury $3.7B above avg cost basis ($75,577) enables accretive BTC Yield capital raises; per-share BTC density grows",
-        "Cloud subscription NRR >110% drives software toward 8–10% total revenue growth; preferred dividends funded by modest ATM issuance"
+        "BTC at $85K → BTC value $72.0B; minus ~$21B liabilities = $51.0B / ~355M shares ≈ $144 at 1.0x; with ~1.05x mNAV ≈ $150",
+        "Treasury moves back above the $75,646 avg cost basis, restoring modest BTC Yield growth (well below the 2024–2025 pace) and easing pressure to sell Bitcoin under the Digital Credit Capital Framework",
+        "Strategy ONE software sustains high-single/low-double-digit revenue growth (~8–12%), and preferred dividends are funded by a mix of modest ATM issuance and the $2.55B USD reserve rather than forced BTC sales"
       ]
     },
     "bull": {
-      "priceTarget": "$500",
-      "description": "Bitcoin surges to ~$175,000; mNAV premium recovers to ~1.3x on sovereign/institutional adoption; BTC accumulation target approaches 1M BTC.",
+      "priceTarget": "$370",
+      "description": "Bitcoin surges to ~$150,000 on renewed institutional/sovereign adoption; mNAV premium re-rates to ~1.3x as the capital markets flywheel reactivates and confidence in Strategy's balance-sheet management is restored.",
       "points": [
-        "BTC at $175K → BTC value $142.6B; minus ~$11.5B liabilities = $131.1B / ~380M shares ≈ $345 at 1.0x; with 1.3x mNAV ≈ $449–500",
-        "Ongoing BTC accumulation via $42B ATM programs adds per-share BTC density faster than dilution at 1.3x+ mNAV",
-        "Sovereign wealth funds and pension mandates begin allocating to MSTR as a regulated, leveraged BTC vehicle; S&P 500 inclusion from post-2025 GAAP net income triggers passive forced buying"
+        "BTC at $150K → BTC value $127.1B; minus ~$21B liabilities = $106.1B / ~375M shares ≈ $283 at 1.0x; with 1.3x mNAV ≈ $368–370",
+        "Renewed BTC accumulation (rather than monetization) resumes as the mNAV premium returns, adding per-share BTC density; the Digital Credit Capital Framework's sale authorization goes unused",
+        "Sovereign wealth funds and pension mandates increase allocations to MSTR as a regulated, leveraged BTC vehicle; sustained GAAP profitability (BTC well above cost basis) revives index-inclusion prospects, though large fair-value earnings swings remain a structural headwind to consistent index eligibility"
       ]
     }
   },
@@ -149,7 +152,7 @@
     },
     "businessLogic": {
       "status": "weakened",
-      "note": "Strategy ONE has some enterprise embedding in legacy business intelligence workflows, but the BI market is being commoditized by AI-native tools. An AI agent can increasingly replicate standard analytics workflows. The software is not growing meaningfully."
+      "note": "Strategy ONE has some enterprise embedding in legacy business intelligence workflows, but the BI market is being commoditized by AI-native tools. An AI agent can increasingly replicate standard analytics workflows, even as total revenue growth reaccelerated to +11.9% YoY in Q1 2026."
     },
     "publicDataAccess": {
       "status": "destroyed",
@@ -157,7 +160,7 @@
     },
     "talentScarcity": {
       "status": "weakened",
-      "note": "Michael Saylor's early conviction and capital markets expertise around Bitcoin created a talent scarcity advantage in 2020–2023. As Bitcoin treasury strategies proliferate globally, the strategic expertise has commoditised. AI does not change this dynamic materially."
+      "note": "Michael Saylor's early conviction and capital markets expertise around Bitcoin created a talent scarcity advantage in 2020–2023. As Bitcoin treasury strategies proliferated globally, the strategic expertise has commoditised. AI does not change this dynamic materially."
     },
     "bundling": {
       "status": "destroyed",
@@ -169,11 +172,11 @@
     },
     "regulatoryLockIn": {
       "status": "intact",
-      "note": "Strategy is an SEC-regulated, Nasdaq-listed vehicle. Institutional investors (pension funds, insurance companies) who cannot directly hold Bitcoin or spot BTC ETFs in certain mandates can access leveraged BTC exposure through MSTR equity and convertible bonds. This regulatory structure creates meaningful friction-to-exit for some investor classes, and is AI-neutral."
+      "note": "Strategy is an SEC-regulated, Nasdaq-listed vehicle. Institutional investors (pension funds, insurance companies) who cannot directly hold Bitcoin or spot BTC ETFs in certain mandates can access leveraged BTC exposure through MSTR equity and convertible bonds. This regulatory structure creates meaningful friction-to-exit for some investor classes, is unaffected by the mNAV crash, and is AI-neutral."
     },
     "networkEffects": {
       "status": "weakened",
-      "note": "Strategy's first-mover status created capital-raising advantages at a 4x mNAV premium — more BTC per dollar of equity enabled superior BTC Yield. As Metaplanet, MARA, Semler Scientific, and 190+ other companies adopted Bitcoin treasury strategies through 2025, mNAV collapsed from 4x to ~0.92x basic (EV-adjusted ~1.2x) as of April 2026. The network effect of being the dominant BTC treasury vehicle has been largely competed away — several peers raise capital at higher mNAV multiples. Strategy retains the largest absolute BTC holding (815,061 BTC, ~3.9% of circulating supply), which creates some marginal differentiation, but this is scale, not a true network effect."
+      "note": "Strategy's first-mover status once created a capital-raising advantage at a 4x mNAV premium — more BTC per dollar of equity issued produced superior BTC Yield. That advantage has deteriorated further since April 2026: enterprise mNAV briefly fell below 1.0x in June 2026 for the first time ever, and the June 29, 2026 Digital Credit Capital Framework formally ended the 'never sell' policy, authorizing Bitcoin sales to fund obligations instead of using the flywheel to buy more. Strategy still holds the largest absolute BTC position (847,363 BTC, ~3.9% of circulating supply), which retains some marginal scale advantage, but the capital-raising edge that once differentiated it from Metaplanet, MARA, Semler Scientific, and 190+ other treasury companies is now largely gone."
     },
     "transactionEmbedding": {
       "status": "destroyed",
@@ -183,7 +186,7 @@
       "status": "destroyed",
       "note": "N/A — Strategy is not the system of record for any critical business function. Bitcoin is a decentralized ledger not owned by Strategy."
     },
-    "verdict": "Strategy is AI-neutral at the portfolio level. Bitcoin is structurally agnostic to AI — it neither benefits from AI-driven enterprise demand nor is threatened by AI commoditization in the way software platforms are. The sole AI-resilient moat is the regulatory lock-in (SEC-regulated BTC exposure for institutional mandates), which AI cannot disrupt. However, the BI software segment faces direct AI-driven commoditization from Copilot, Gemini, and AI-native analytics, which is gradually eroding the $477M software revenue base. The permanent compression of the mNAV premium from 4x to ~1.1x is the defining structural deterioration: Strategy can no longer leverage its public equity to accumulate BTC at 4x NAV, meaning the capital markets flywheel — the only durable advantage over simply buying Bitcoin — is largely broken."
+    "verdict": "Strategy is AI-neutral at the portfolio level. Bitcoin is structurally agnostic to AI — it neither benefits from AI-driven enterprise demand nor is threatened by AI commoditization in the way software platforms are. The sole AI-resilient moat is the regulatory lock-in (SEC-regulated BTC exposure for institutional mandates), which AI cannot disrupt. However, the BI software segment faces direct AI-driven commoditization from Copilot, Gemini, and AI-native analytics, even as revenue growth reaccelerated to +11.9% YoY in Q1 2026. The bigger structural deterioration is the collapse of the capital markets flywheel: enterprise mNAV briefly fell below 1.0x in June 2026 for the first time in Strategy's history, and the company's June 29, 2026 Digital Credit Capital Framework formally abandoned its 'never sell' Bitcoin policy — authorizing up to $1.25B of BTC monetization to help fund preferred dividends and buybacks. Strategy can no longer reliably leverage its public equity to accumulate BTC at a premium to NAV; for the first time, it is a potential net seller of Bitcoin, which is why the already-weakened network effects moat has deteriorated further."
   },
-  "lastAnalyzed": "April 2026"
+  "lastAnalyzed": "July 5, 2026"
 }

@@ -10,7 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$175B"
+      "value": "~$197B"
+    },
+    {
+      "label": "Current Price",
+      "value": "~$110"
     }
   ],
   "chips": [
@@ -23,7 +27,6 @@
       "color": "success"
     }
   ],
-  "recommendation": "Hold",
   "metrics": [
     {
       "title": "FY2025 FCF",
@@ -34,15 +37,15 @@
     },
     {
       "title": "DTC Operating Income",
-      "value": "$450M",
-      "label": "Q1 FY2026, +72% YoY",
+      "value": "$582M",
+      "label": "Q2 FY2026, +88% YoY — first double-digit streaming margin (10.6%); DTC revenue +13% to $5.49B",
       "icon": "TrendingUp",
       "color": "#10b981"
     },
     {
-      "title": "Parks Revenue",
-      "value": "$10B",
-      "label": "Q1 FY2026 Record Quarter",
+      "title": "Q2 FY2026 Adj. EPS",
+      "value": "$1.57",
+      "label": "+8% YoY; beat $1.49 est. Q3 segment OI guided ~$5.3B (+16%); FY26 adj. EPS growth ~12%",
       "icon": "Globe",
       "color": "#f59e0b"
     }
@@ -71,8 +74,7 @@
     ]
   },
   "growth": {
-    "score": 60,
-    "description": "Disney is a slow-revenue-growth, fast-earnings-leverage story. FY2025 revenue grew only 3.4% to $94.4B, but FCF expanded 17.7% to $10.1B and streaming turned structurally profitable. Q1 FY2026 DTC operating income grew 72% YoY to $450M. FY2026 guidance calls for double-digit adjusted EPS growth (from ~$5.85 in FY2025), driven primarily by DTC margin expansion, not top-line acceleration.",
+    "description": "Disney is a slow-revenue-growth, fast-earnings-leverage story. FY2025 revenue grew only 3.4% to $94.4B, but FCF expanded 17.7% to $10.1B and streaming turned structurally profitable. Q2 FY2026 (reported May 6 2026) beat: revenue +7% to $25.2B and DTC operating income +88% YoY to $582M — the first quarter streaming margin broke into double digits (10.6%). Adjusted EPS rose 8% to $1.57 (vs $1.49 est.), though GAAP net income fell 31% on a higher tax bill. Management guided Q3 total segment OI to ~$5.3B (+16%) and reaffirmed ~12% FY2026 adjusted EPS growth, driven primarily by DTC margin expansion rather than top-line acceleration.",
     "additionalNote": {
       "title": "DTC Profitability Inflection and ESPN Digital Transition",
       "points": [
@@ -89,7 +91,7 @@
       "drivers": [
         {
           "name": "DTC Streaming (Disney+/Hulu/ESPN+)",
-          "metric": "Revenue +11% Q1 FY2026; OI $450M (+72% YoY)",
+          "metric": "Revenue +13% Q2 FY2026 to $5.49B; OI $582M (+88% YoY); first double-digit margin (10.6%)",
           "trend": "accelerating"
         },
         {
@@ -105,18 +107,19 @@
       ],
       "primaryType": "both",
       "keyRisk": "If US domestic parks attendance declines >10% by end of 2026 due to consumer recession, the Experiences segment (>60% of total segment operating income) reverses, offsetting the DTC profit ramp and causing FY2026 EPS to miss the double-digit growth target — triggering multiple compression on the stocks already-depressed 15x forward P/E",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 79,
-    "description": "At ~$100, Disney trades at approximately 15× FY2026 consensus adjusted EPS of ~$6.50 — cheap relative to the S&P 500 (~21×) and deeply discounted vs. its own 10-year average P/E of ~22×. The current price reflects maximum pessimism on cord cutting and parks concerns. The 52-week low of $80.10 suggests the true bear case is already partially priced in. FCF yield of ~5.8% ($10.1B FCF on $175B market cap) is exceptional for a quality franchise.",
+    "score": 78,
+    "description": "At ~$110 after the Q2 beat (+7% reaction), Disney trades at approximately 17× FY2026 consensus adjusted EPS of ~$6.50 — still cheap relative to the S&P 500 (~21×) and deeply discounted vs. its own 10-year average P/E of ~22×. The Q2 print validated the DTC profitability thesis (OI $582M, +88%; first double-digit streaming margin) and management reaffirmed ~12% FY26 EPS growth. FCF yield remains exceptional for a quality franchise; the stock is still well below the $130 base case.",
     "valuationNote": {
-      "text": "At $100, Disney represents a quality franchise at a distressed-multiple. The DTC profitability story is validating (Q1 FY2026: $450M OI, +72% YoY), FCF is near record, and the buyback program ($7B authorized) provides a floor. The base case of $130 implies only 18-19× FY2026 adjusted EPS — still well below the 22-25× Disney commanded pre-pandemic. The primary risk is not valuation but execution: can ESPN's digital transition work, and can parks sustain record revenue in a softening consumer environment?",
+      "text": "At $103, Disney represents a quality franchise at a distressed multiple. The DTC profitability story is validating (Q1 FY2026: $450M OI, +72% YoY; Q2 guided ~$500M), FCF is near record, and the buyback program ($7B authorized) provides a floor. The base case of $130 implies only 18-19× FY2026 adjusted EPS — still well below the 22-25× Disney commanded pre-pandemic. The primary risk is not valuation but execution: can ESPN's digital transition work, and can parks sustain record revenue in a softening consumer environment?",
       "fairValue": "$130"
     },
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "May 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
@@ -222,5 +225,5 @@
     },
     "verdict": "Disney is a mixed AI story: a partial beneficiary and partial loser. On the beneficiary side, AI is reducing content production costs (reducing animation and VFX expenses), improving ad targeting on Hulu, and strengthening Disney's data advantage through better personalization — helping the DTC profitability inflection. The biggest AI-resilient moats are regulatoryLockIn (ESPN sports rights contracts are AI-proof) and proprietaryData (decades of family entertainment behavior data). The biggest AI threat is that generative AI enables lower-cost competitors to produce compelling streaming content without Disney's capital investment, weakening the talentScarcity and bundling moats over a 5-10 year horizon. Disney's physical parks and exclusive sports rights provide a floor that pure-streaming peers like Netflix lack, making it more AI-durable than it first appears."
   },
-  "lastAnalyzed": "March 2026"
+  "lastAnalyzed": "May 2026"
 }

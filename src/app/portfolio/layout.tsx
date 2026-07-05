@@ -1,27 +1,80 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
+import { stockData } from '../stockData';
+
+const SITE_URL = 'https://investmoat.com';
 
 export const metadata: Metadata = {
-  title: 'Portfolio Distribution',
+  title: 'IM25',
   description:
-    'A high-conviction portfolio of up to 25 stocks selected for moat durability, growth trajectory, and valuation discipline — with live score-weighted allocations.',
+    'The IM25 — a high-conviction portfolio of up to 25 stocks selected for moat durability, growth trajectory, and valuation discipline, with live score-weighted allocations.',
   openGraph: {
-    title: 'Portfolio Distribution | InvestMoat',
+    title: 'The IM25 | InvestMoat',
     description:
       'A high-conviction portfolio of up to 25 stocks selected for moat durability, growth trajectory, and valuation discipline — with live score-weighted allocations.',
-    url: 'https://investmoat.com/portfolio',
+    url: `${SITE_URL}/portfolio`,
     type: 'website',
+    siteName: 'InvestMoat',
+    locale: 'en_US',
   },
   twitter: {
-    title: 'Portfolio Distribution | InvestMoat',
+    card: 'summary_large_image',
+    site: '@investmoat',
+    title: 'The IM25 | InvestMoat',
     description:
-      'Live score-weighted allocations across up to 25 high-conviction moat stocks for the AI era.',
+      'The IM25 — live score-weighted allocations across up to 25 high-conviction moat stocks for the AI era.',
   },
   alternates: {
-    canonical: 'https://investmoat.com/portfolio',
+    canonical: `${SITE_URL}/portfolio`,
   },
 };
 
 export default function PortfolioLayout({ children }: { children: ReactNode }) {
-  return <>{children}</>;
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${SITE_URL}/portfolio#breadcrumb`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+          { '@type': 'ListItem', position: 2, name: 'IM25', item: `${SITE_URL}/portfolio` },
+        ],
+      },
+      {
+        '@type': 'CollectionPage',
+        '@id': `${SITE_URL}/portfolio#page`,
+        url: `${SITE_URL}/portfolio`,
+        name: 'The IM25',
+        description:
+          `${stockData.length}-position high-conviction portfolio scored on moat, growth, and live valuation.`,
+        isPartOf: { '@id': `${SITE_URL}/#website` },
+        breadcrumb: { '@id': `${SITE_URL}/portfolio#breadcrumb` },
+        mainEntity: { '@id': `${SITE_URL}/portfolio#holdings` },
+      },
+      {
+        '@type': 'ItemList',
+        '@id': `${SITE_URL}/portfolio#holdings`,
+        name: 'IM25 Portfolio Holdings',
+        numberOfItems: stockData.length,
+        itemListOrder: 'https://schema.org/ItemListOrderDescending',
+        itemListElement: stockData.map((s, idx) => ({
+          '@type': 'ListItem',
+          position: idx + 1,
+          url: `${SITE_URL}${s.href}`,
+          name: `${s.name} (${s.ticker})`,
+        })),
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {children}
+    </>
+  );
 }

@@ -2,6 +2,7 @@
   "slug": "ethereum",
   "ticker": "ETH",
   "name": "Ethereum",
+  "assetClass": "crypto",
   "titleColor": "#627eea",
   "headerStats": [
     {
@@ -10,7 +11,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$265B"
+      "value": "~$195B"
     },
     {
       "label": "Total Staked",
@@ -27,7 +28,6 @@
       "color": "success"
     }
   ],
-  "recommendation": "Strong Buy",
   "metrics": [
     {
       "title": "Active Validators",
@@ -66,21 +66,20 @@
       },
       {
         "title": "Institutional Infrastructure",
-        "text": "Ethereum holds CFTC commodity classification and BlackRock's ETHB staking ETF launched on Nasdaq in March 2026, with total spot ETH ETF AUM reaching $28.6B. EIP-1559 burn mechanics combined with 37M ETH staked (29% of supply) create a structurally deflationary asset in bull markets. Ethereum now hosts $93.6B in tokenized real-world assets (52% of the $180B total RWA market) with JPMorgan and Fidelity tokenizing assets on Ethereum. The Glamsterdam upgrade (June 2026) targets 10,000 TPS — a 10× throughput increase — resolving the L1 bottleneck and dramatically expanding settlement capacity."
+        "text": "Ethereum holds CFTC commodity classification and BlackRock's ETHB staking ETF launched on Nasdaq in March 2026, with total spot ETH ETF AUM peaking at $28.6B before a record May–June 2026 outflow streak (17 consecutive outflow days, May net -$401M) compressed AUM alongside the price decline. EIP-1559 burn mechanics combined with 37M ETH staked (29% of supply) create a structurally deflationary asset in bull markets. Ethereum now hosts $93.6B in tokenized real-world assets (52% of the $180B total RWA market) with JPMorgan and Fidelity tokenizing assets on Ethereum. The Glamsterdam upgrade — gas limit 60M → 200M, ~10,000 TPS target via ePBS (EIP-7732) and Block Access Lists (EIP-7928) — has slipped from June 2026 to a Q3 2026 mainnet window, delaying but not derailing the L1 throughput catalyst."
       }
     ]
   },
   "growth": {
-    "score": 80,
-    "description": "Ethereum enters April 2026 with five converging catalysts: the Glamsterdam upgrade (June 2026) targeting 10,000 TPS, $28.6B in spot ETF AUM with BlackRock's ETHB staking ETF now paying monthly yield, RWA tokenization surging to $93.6B on Ethereum (52% of the $180B total market), the Ethereum Foundation staking 45,000 ETH in a single day signaling long-term commitment, and 57% dominance of global DeFi TVL despite intense competition from Solana (6.9% share).",
+    "description": "June 2026 marks a sharp sentiment reversal from April: ETH has fallen to ~$1,620 (market cap ~$195B), US spot ETH ETFs posted a record 17 consecutive outflow days through June 5 with May's -$401M the worst month since launch (a modest +$102M stabilization arrived June 8, led by BlackRock), and the Glamsterdam upgrade has slipped from June to Q3 2026 (gas limit 60M → 200M, ~10,000 TPS via ePBS and BALs, ~78% gas fee reduction). The ETH/BTC ratio has compressed to ~0.028 — fresh cycle lows. The structural pillars remain: RWA tokenization ($93.6B on Ethereum, 52% of the total market), majority share of global DeFi TVL, 37M ETH staked, and the dominant developer ecosystem — but flows and the delayed catalyst now set the near-term tone.",
     "growthAnalysis": {
       "cagrEstimate": "30–50%",
-      "scoreDerivation": "Base 90 (30%+ ecosystem CAGR; RWA TVL $12B → $93.6B in 12 months, ETF AUM $13.3B → $28.6B, Glamsterdam 10× throughput) + 5 staking ETF/RWA new TAM − 5 L2 fee race-to-bottom suppressing L1 burn − 5 ETH price underperformance vs BTC (ETH/BTC ratio at 0.030) = 85. Capped at 80 — the L2 cannibalization risk and sustained ETH/BTC ratio compression remain structural headwinds that limit conviction despite strong ecosystem metrics.",
+      "scoreDerivation": "Base 90 (30–50% ecosystem CAGR; RWA TVL $12B → $93.6B in 12 months, Glamsterdam 10× throughput now Q3 2026) + 5 staking ETF/RWA new TAM − 5 L2 fee race-to-bottom suppressing L1 burn − 5 ETF flows flipped to record outflows (17 straight outflow days, May -$401M) with ETH/BTC compressed to ~0.028 cycle lows. The ETF driver has turned from accelerating to decelerating and the severe keyRisk (net-inflationary supply + ETF outflows) is partially materializing — structural headwinds limit conviction despite strong ecosystem metrics.",
       "drivers": [
         {
           "name": "ETF & Institutional Adoption",
-          "metric": "$28.6B ETF AUM; BlackRock ETHB staking ETF on Nasdaq (monthly yield)",
-          "trend": "accelerating"
+          "metric": "Record 17-day ETF outflow streak through June 5 2026; May -$401M worst month since launch; AUM compressed from $28.6B peak; early-June stabilization (+$102M, BlackRock-led)",
+          "trend": "decelerating"
         },
         {
           "name": "RWA Tokenization",
@@ -94,13 +93,14 @@
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If Ethereum L2 fee revenue keeps compressing and mainnet burn rate falls below 100K ETH/year by end of 2026, ETH supply turns net inflationary and the deflationary store-of-value narrative collapses — causing ETH/BTC ratio to fall below 0.02 and triggering ETF outflows",
+      "keyRisk": "This risk is partially materializing: ETF outflows set a 17-day record streak in May–June 2026 and ETH/BTC has compressed from 0.030 to ~0.028, a fresh cycle low. If mainnet burn stays below 100K ETH/year and outflows resume after the early-June pause, ETH supply stays net inflationary, the deflationary store-of-value narrative collapses, and ETH/BTC breaks below 0.02 — invalidating the base case before Glamsterdam (now Q3 2026) can reset the throughput narrative",
+      "keyRiskSeverity": "severe",
       "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 84,
-    "description": "At ~$2,196 — 56% below the August 2025 high of ~$5,000 — ETH sits 60% below the base case ($5,500) with meaningful asymmetry to the upside. The June 2026 Glamsterdam upgrade (10× TPS increase, 78.6% gas fee reduction) is the most significant protocol catalyst since the Merge. Downside risk is anchored at the bear case ($1,200). ETH/BTC ratio at 0.030 is at cycle lows, reflecting institutional preference for BTC's cleaner narrative — this compression is a risk, not yet a reversal."
+    "score": 88,
+    "description": "At ~$1,620 — down ~26% since April amid the record ETF outflow streak — ETH sits 71% below the base case ($5,500) and ~35% above the bear anchor ($1,200), the widest upside asymmetry since the targets were set. The Glamsterdam upgrade (10× TPS, ~78% gas fee reduction) remains the most significant protocol catalyst since the Merge but has slipped to Q3 2026, removing the near-term trigger. ETH/BTC at ~0.028 is making fresh cycle lows — the compression is now actively expressing the bear thesis, so the cheap price comes packaged with a deteriorating flow picture; position sizing should respect that the $1,200 bear case is live."
   },
   "scenarios": {
     "bear": {
@@ -131,48 +131,29 @@
       ]
     }
   },
-  "tenMoats": {
-    "learnedInterfaces": {
-      "status": "strong",
-      "note": "Solidity and the EVM are the default learned interface for smart contract developers — retraining costs are high and tooling is deeply entrenched."
-    },
-    "businessLogic": {
-      "status": "strong",
-      "note": "Billions in DeFi protocol logic runs on Ethereum. Migrating audited, battle-tested contracts to a competing chain is a years-long, high-risk undertaking."
-    },
-    "publicDataAccess": {
-      "status": "weakened",
-      "note": "Ethereum's data is public by design. Competing chains share this trait, so data access is not a differentiating moat."
-    },
-    "talentScarcity": {
-      "status": "strong",
-      "note": "The deepest pool of audited smart contract developers, security researchers, and protocol engineers in crypto remains Ethereum-native."
-    },
-    "bundling": {
-      "status": "strong",
-      "note": "Ethereum bundles settlement, staking yield, DeFi primitives, stablecoins, and NFT infrastructure — a composable stack competitors cannot easily replicate end-to-end."
-    },
-    "proprietaryData": {
-      "status": "weakened",
-      "note": "On-chain data is fully public. Ethereum has no proprietary data advantage over competing L1s."
-    },
-    "regulatoryLockIn": {
-      "status": "strong",
-      "note": "CFTC commodity classification confirmed early 2026; BlackRock's ETHB staking ETF launched on Nasdaq (March 2026) now paying monthly yield; $28.6B in regulated spot ETH ETF AUM; JPMorgan and Fidelity tokenizing assets on Ethereum under the US GENIUS Act. This regulatory moat vs competing L1s (still largely unregistered securities) is widening with each institutional filing."
-    },
+  "cryptoMoats": {
     "networkEffects": {
       "status": "strong",
-      "note": "65%+ developer share, the largest DeFi TVL, and the deepest stablecoin liquidity create compounding Metcalfe-Law network effects."
+      "note": "Largest smart-contract platform by TVL, deepest DeFi ecosystem, most stablecoin issuance, 65%+ smart-contract developer share. Network effects compound across L2s (Base, Arbitrum, OP), which inherit ETH security and settlement."
     },
-    "transactionEmbedding": {
-      "status": "strong",
-      "note": "DeFi protocols, stablecoin settlements, NFT marketplaces, and DAO governance are deeply embedded in Ethereum's transaction fabric."
+    "schellingPoint": {
+      "status": "intact",
+      "note": "Default settlement layer for tokenized assets, stablecoins, and NFTs. Not the digital-gold default (BTC owns that) but the digital-finance default. Solidity and the EVM are the de facto smart-contract standard."
     },
-    "systemOfRecord": {
-      "status": "strong",
-      "note": "Ethereum is the canonical record for DeFi state, NFT ownership, and DAO governance — the highest-value smart contract history spans 9+ years."
+    "credibleNeutrality": {
+      "status": "intact",
+      "note": "More decentralized than SOL, but the Ethereum Foundation and Vitalik retain outsized roadmap influence. The Merge demonstrated leader-driven protocol evolution — a feature for ETH's adaptability, but reduces credible neutrality vs BTC's frozen monetary policy."
     },
-    "verdict": "Ethereum's developer ecosystem and embedded DeFi infrastructure give it strong resilience, but real competition from faster, cheaper L1s (Solana) and modularity trends (Celestia) introduce more disruption risk than Bitcoin faces. The moat is wide but not impenetrable."
+    "regulatoryIncumbency": {
+      "status": "intact",
+      "note": "CFTC commodity classification, spot ETF approved, BlackRock ETHB staking ETF (Mar 2026), GENIUS Act framework. Materially widens institutional access — but no Strategic Reserve eligibility yet, that line is currently BTC-only."
+    },
+    "securityBudget": {
+      "status": "intact",
+      "note": "Top PoS chain by stake (>$50B+ economic security). Less battle-tested than BTC PoW, but the largest validator-secured chain in existence. Slashing economics make 51% attacks prohibitively expensive."
+    },
+    "primaryMoat": "networkEffects",
+    "verdict": "Ethereum's moat is real but more contestable than BTC's. Strong network effects in DeFi and stablecoins; intact on neutrality, regulation, and security but not strong on any of them. The category-leading smart-contract chain — not the category-leading store of value."
   },
-  "lastAnalyzed": "April 2026"
+  "lastAnalyzed": "June 2026"
 }

@@ -1,10 +1,20 @@
-import type { TenMoatsData } from '@/types/stockAnalysis';
+import type {
+  AssetClass,
+  CommodityMoatsData,
+  CryptoMoatPillar,
+  CryptoMoatsData,
+  RecommendationStatus,
+  StockAnalysisData,
+  TenMoatsData,
+} from '@/types/stockAnalysis';
 
-// Status → point scale. Gaps are equal (25 pts each) so a single status
-// step up/down has the same impact regardless of where on the scale it occurs.
-// A floor of 10 for genuinely-destroyed moats avoids a total zero contribution
-// while still pulling the group average down meaningfully.
-const MOAT_POINTS: Record<string, number> = { strong: 100, intact: 75, weakened: 50, destroyed: 10 };
+// Status → point scale. Tightened so "intact" requires demonstrable presence
+// rather than just box-checking: the gap between strong (100) and intact (65)
+// is 35 pts, and weakened (35) genuinely penalises rather than half-credits.
+// A company rated all-intact across a full moat slate now scores ~67 (vs ~79
+// under the previous 100/75/50/10 scale) — below the 75 portfolio threshold,
+// forcing real demonstrated strength to qualify.
+const MOAT_POINTS: Record<string, number> = { strong: 100, intact: 65, weakened: 35, destroyed: 10 };
 
 /** Returns null for N/A moats (excluded from group average), number otherwise. */
 function moatPoints(m: { status: string; note: string }): number | null {
@@ -13,122 +23,305 @@ function moatPoints(m: { status: string; note: string }): number | null {
 }
 
 /**
- * Individual base weights for resilient moats (sum = 60).
- * networkEffects and proprietaryData are historically the most durable moats;
- * regulatoryLockIn and transactionEmbedding carry less weight as they are
- * more susceptible to external (policy/platform) disruption.
+ * Per-moat base weights and default AI-exposure group.
+ *
+ * Resilient moats (default: networkEffects, proprietaryData, systemOfRecord,
+ * regulatoryLockIn, transactionEmbedding) sum to 60. Vulnerable moats default
+ * to 40. The split represents the framework's bias that AI-resilient sources
+ * of durability matter more.
+ *
+ * Weight calibration: networkEffects is the single most durable moat.
+ * transactionEmbedding and regulatoryLockIn are raised vs. earlier calibration
+ * because empirical compounders (V, MA, ICE, SPGI) prove these moats outlast
+ * cycles. proprietaryData is lowered slightly — AI commoditisation of similar-
+ * quality data means most "proprietary" data claims are weaker than a decade ago.
+ *
+ * The `defaultGroup` is overridable per-stock via `aiExposure` on the moat
+ * assessment, letting moats that are AI-strengthened for a specific company
+ * (CUDA, Palantir ontology, MSFT Office surface) route to the resilient
+ * bucket where their economics belong.
  */
-const RESILIENT_WEIGHTS = {
-  networkEffects:       15,
-  proprietaryData:      15,
-  systemOfRecord:       12,
-  regulatoryLockIn:     10,
-  transactionEmbedding:  8,
-} as const;
+type MoatKey =
+  | 'networkEffects' | 'proprietaryData' | 'systemOfRecord'
+  | 'regulatoryLockIn' | 'transactionEmbedding'
+  | 'businessLogic' | 'bundling' | 'learnedInterfaces'
+  | 'talentScarcity' | 'publicDataAccess';
+
+const MOAT_SPEC: Record<MoatKey, { weight: number; defaultGroup: 'resilient' | 'vulnerable' }> = {
+  networkEffects:       { weight: 15, defaultGroup: 'resilient' },
+  proprietaryData:      { weight: 12, defaultGroup: 'resilient' },
+  systemOfRecord:       { weight: 12, defaultGroup: 'resilient' },
+  regulatoryLockIn:     { weight: 11, defaultGroup: 'resilient' },
+  transactionEmbedding: { weight: 10, defaultGroup: 'resilient' },
+  businessLogic:        { weight: 14, defaultGroup: 'vulnerable' },
+  bundling:             { weight: 10, defaultGroup: 'vulnerable' },
+  learnedInterfaces:    { weight:  8, defaultGroup: 'vulnerable' },
+  talentScarcity:       { weight:  5, defaultGroup: 'vulnerable' },
+  publicDataAccess:     { weight:  3, defaultGroup: 'vulnerable' },
+};
+
+const RESILIENT_BASE_TOTAL = 60;
+const VULNERABLE_BASE_TOTAL = 40;
 
 /**
- * Individual base weights for vulnerable moats (sum = 40).
- * businessLogic represents the deepest process expertise and is most at risk
- * from AI; publicDataAccess is nearly commoditised so carries minimal weight.
+ * Quality-gated breadth bonus: +1 pt per moat rated intact-or-better beyond 5,
+ * capped at +4. Diversification only counts when the moats are demonstrably
+ * present — a company with 10 applicable but mostly-weakened moats no longer
+ * receives the breadth bonus, since broad mediocrity is not durability.
+ *   ≤5 intact-or-better → +0
+ *    6 intact-or-better → +1
+ *    7 intact-or-better → +2
+ *    8 intact-or-better → +3
+ *   9–10 intact-or-better → +4
  */
-const VULNERABLE_WEIGHTS = {
-  businessLogic:    14,
-  bundling:         10,
-  learnedInterfaces: 8,
-  talentScarcity:    5,
-  publicDataAccess:  3,
-} as const;
-
-const RESILIENT_TOTAL = Object.values(RESILIENT_WEIGHTS).reduce((a, b) => a + b, 0); // 60
-const VULNERABLE_TOTAL = Object.values(VULNERABLE_WEIGHTS).reduce((a, b) => a + b, 0); // 40
-
-/**
- * Computes a weighted score for one moat group.
- * N/A moats are excluded; their weight redistributes proportionally across
- * remaining applicable moats (preserving the within-group relative ranking).
- * Returns the group's weighted-average score and the sum of applicable weights.
- */
-function weightedGroupScore(
-  moats: Array<[{ status: string; note: string }, number]>
-): { score: number; applicableWeight: number; applicableCount: number; totalWeight: number } {
-  let weightedSum = 0;
-  let applicableWeight = 0;
-  let applicableCount = 0;
-  let totalWeight = 0;
-  for (const [assessment, weight] of moats) {
-    totalWeight += weight;
-    const pts = moatPoints(assessment);
-    if (pts === null) continue;
-    weightedSum += pts * weight;
-    applicableWeight += weight;
-    applicableCount++;
-  }
-  return {
-    score: applicableWeight > 0 ? weightedSum / applicableWeight : 0,
-    applicableWeight,
-    applicableCount,
-    totalWeight,
-  };
-}
-
-/**
- * Breadth bonus: +1 pt per applicable moat beyond 5, capped at +4.
- * A company defended by 8 moats is more resilient than one with 2 equally-
- * rated moats, even if their weighted averages are identical.
- *   ≤5 applicable → +0
- *    6 applicable → +1
- *    7 applicable → +2
- *    8 applicable → +3
- *   9–10 applicable → +4
- */
-function breadthBonus(applicableCount: number): number {
-  return Math.min(4, Math.max(0, applicableCount - 5));
+function qualityGatedBreadthBonus(intactOrBetterCount: number): number {
+  return Math.min(4, Math.max(0, intactOrBetterCount - 5));
 }
 
 /**
  * Compute a 0–100 moat score from the ten moats assessment.
  *
- * AI-resilient moats (networkEffects, proprietaryData, systemOfRecord,
- * regulatoryLockIn, transactionEmbedding) carry differentiated base weights
- * summing to 60. AI-vulnerable moats (businessLogic, bundling, learnedInterfaces,
- * talentScarcity, publicDataAccess) carry differentiated base weights summing to 40.
+ * The framework splits moats into AI-resilient (default weight pool sums to 60)
+ * and AI-vulnerable (default weight pool sums to 40) groups. Each individual
+ * moat assessment may override its default classification via the optional
+ * `aiExposure` field — this lets moats that are *strengthened* by AI for a
+ * specific company (NVDA's CUDA learnedInterfaces, PLTR's businessLogic
+ * ontology) route to the resilient pool where their economics belong, rather
+ * than being demoted into the vulnerable group by default.
  *
- * When all 10 moats apply the effective group split is exactly 60/40. N/A moats
- * are excluded; their base weight is dropped so it redistributes naturally to
- * whichever moats remain applicable within each group.
+ * N/A moats (destroyed status with "N/A" or "Not applicable" note) are excluded
+ * from the score; their weight is dropped so it redistributes naturally.
  *
- * A breadth bonus of +1 to +4 is added for each applicable moat beyond 5,
- * rewarding companies with diversified moat portfolios.
+ * Adjustments applied to the weighted base:
+ *   • Quality-gated breadth bonus: +0 to +4 for moats rated intact-or-better
+ *     beyond 5 (broad mediocrity is not durability).
+ *   • AI-vulnerability discount: −5 when the AI-vulnerable group contributes
+ *     more total score than the resilient group, catching companies whose moat
+ *     is exclusively in the AI-disruption-prone category (e.g., Adobe). The
+ *     `aiExposure` overrides flow through to this calculation so AI-strengthened
+ *     moats don't trigger the discount.
  *
  * Examples:
- *   all 10 apply       → 60% resilient / 40% vulnerable + 4 breadth pts
- *   4 N/A vulnerable   → 60/(60+vApplicable) resilient / rest vulnerable + 1 pt
- *   all vulnerable N/A → 100% resilient / 0% vulnerable + 0 pts
+ *   all 10 apply, all strong, defaults → ~100 + 4 breadth − 0 discount = 100
+ *   all 10 apply, all intact, defaults → ~65 + 4 breadth − 0 discount = 69
+ *   strong vulnerable only, defaults   → ~85 + 0 breadth − 5 discount = 80
+ *   NVDA-style w/ CUDA overrides       → learnedInterfaces+businessLogic
+ *                                         route to resilient bucket; reflects
+ *                                         AI-strengthened ecosystem economics
  */
 export function computeMoatScore(tenMoats: TenMoatsData): number {
-  const resilient = weightedGroupScore([
-    [tenMoats.networkEffects,        RESILIENT_WEIGHTS.networkEffects],
-    [tenMoats.proprietaryData,       RESILIENT_WEIGHTS.proprietaryData],
-    [tenMoats.systemOfRecord,        RESILIENT_WEIGHTS.systemOfRecord],
-    [tenMoats.regulatoryLockIn,      RESILIENT_WEIGHTS.regulatoryLockIn],
-    [tenMoats.transactionEmbedding,  RESILIENT_WEIGHTS.transactionEmbedding],
-  ]);
-  const vulnerable = weightedGroupScore([
-    [tenMoats.businessLogic,     VULNERABLE_WEIGHTS.businessLogic],
-    [tenMoats.bundling,          VULNERABLE_WEIGHTS.bundling],
-    [tenMoats.learnedInterfaces, VULNERABLE_WEIGHTS.learnedInterfaces],
-    [tenMoats.talentScarcity,    VULNERABLE_WEIGHTS.talentScarcity],
-    [tenMoats.publicDataAccess,  VULNERABLE_WEIGHTS.publicDataAccess],
-  ]);
-  // Scale each group's contribution by the fraction of its base weight that applies.
-  const rW = 60 * (resilient.applicableWeight / RESILIENT_TOTAL);
-  const vW = 40 * (vulnerable.applicableWeight / VULNERABLE_TOTAL);
+  let resilientWeightedSum = 0;
+  let resilientApplicableWeight = 0;
+  let vulnerableWeightedSum = 0;
+  let vulnerableApplicableWeight = 0;
+  let intactOrBetterCount = 0;
+
+  for (const key of Object.keys(MOAT_SPEC) as MoatKey[]) {
+    const assessment = tenMoats[key];
+    const { weight, defaultGroup } = MOAT_SPEC[key];
+    const pts = moatPoints(assessment);
+    if (pts === null) continue;
+
+    const effectiveGroup = assessment.aiExposure ?? defaultGroup;
+    if (effectiveGroup === 'resilient') {
+      resilientWeightedSum += pts * weight;
+      resilientApplicableWeight += weight;
+    } else {
+      vulnerableWeightedSum += pts * weight;
+      vulnerableApplicableWeight += weight;
+    }
+    if (pts >= MOAT_POINTS.intact) intactOrBetterCount++;
+  }
+
+  const resilientScore = resilientApplicableWeight > 0
+    ? resilientWeightedSum / resilientApplicableWeight : 0;
+  const vulnerableScore = vulnerableApplicableWeight > 0
+    ? vulnerableWeightedSum / vulnerableApplicableWeight : 0;
+
+  // Scale each group's contribution by the fraction of its base capacity that
+  // applies. Capacity = base total (60 / 40) — when overrides route moats from
+  // vulnerable to resilient, the resilient applicableWeight can exceed 60,
+  // dilating the resilient group's contribution proportionally.
+  const rW = RESILIENT_BASE_TOTAL * (resilientApplicableWeight / RESILIENT_BASE_TOTAL);
+  const vW = VULNERABLE_BASE_TOTAL * (vulnerableApplicableWeight / VULNERABLE_BASE_TOTAL);
   const total = rW + vW;
   if (total === 0) return 0;
-  const base = resilient.score * rW / total + vulnerable.score * vW / total;
-  const applicableCount = resilient.applicableCount + vulnerable.applicableCount;
-  return Math.min(100, Math.round(base + breadthBonus(applicableCount)));
+  const base = resilientScore * rW / total + vulnerableScore * vW / total;
+  const breadth = qualityGatedBreadthBonus(intactOrBetterCount);
+  // AI-vulnerability discount: triggers when the (effective) vulnerable group
+  // is the larger total contributor. AI-strengthened overrides flow through
+  // here because they route to resilient — so a stock like NVDA whose
+  // learnedInterfaces is marked resilient doesn't take the discount.
+  const aiDiscount = vulnerableScore * vW > resilientScore * rW ? -5 : 0;
+  return Math.max(0, Math.min(100, Math.round(base + breadth + aiDiscount)));
 }
+
+// ─── Asset-class-specific moat scoring ────────────────────────────────────────
+//
+// Equities are scored via the 10-moat framework above. Crypto protocols and
+// commodities have categorically different sources of durability — protocol
+// effects, credible neutrality, monetary history, supply inelasticity — that
+// the business-moat framework can't see. Each asset class gets its own
+// pillar set and weights. Outputs are still 0–100 but are NOT directly
+// comparable across asset classes: BTC moat=100 measures protocol durability,
+// not the same thing as AXON moat=92.
+
+// Both commodity and crypto frameworks use dynamic weights via primaryMoat:
+// the declared primary pillar gets 50%, the non-primary pillars split the
+// remaining 50% equally. N/A pillars (destroyed with "N/A"/"Not applicable"
+// note) drop out and their weight redistributes.
+const COMMODITY_PRIMARY_WEIGHT = 50;
+const COMMODITY_OTHER_WEIGHT = 25;
+const CRYPTO_PRIMARY_WEIGHT = 50;
+const CRYPTO_OTHER_WEIGHT = 12.5;
+
+/**
+ * Compute crypto moat score with dynamic weights driven by primaryMoat.
+ * Primary pillar gets 50%; the four other pillars share the remaining 50%
+ * (12.5% each). Lets BTC score on credibleNeutrality, ETH on networkEffects,
+ * SOL on its consumer networkEffects — without averaging through pillars
+ * that don't define what makes each protocol durable.
+ */
+export function computeCryptoMoatScore(data: CryptoMoatsData): number {
+  const pillars: CryptoMoatPillar[] = [
+    'networkEffects', 'schellingPoint', 'credibleNeutrality', 'regulatoryIncumbency', 'securityBudget',
+  ];
+  let sum = 0;
+  let total = 0;
+  for (const p of pillars) {
+    const pts = moatPoints(data[p]);
+    if (pts === null) continue;
+    const weight = p === data.primaryMoat ? CRYPTO_PRIMARY_WEIGHT : CRYPTO_OTHER_WEIGHT;
+    sum += pts * weight;
+    total += weight;
+  }
+  if (total === 0) return 0;
+  return Math.max(0, Math.min(100, Math.round(sum / total)));
+}
+
+/**
+ * Compute commodity moat score with dynamic weights driven by primaryMoat.
+ * Primary pillar gets COMMODITY_PRIMARY_WEIGHT (50); the other two share
+ * COMMODITY_OTHER_WEIGHT (25 each). This lets gold score on its monetary
+ * history without being dragged by tail industrial demand, and copper score
+ * on its industrial utility without being dragged by its weak monetary
+ * history.
+ */
+export function computeCommodityMoatScore(data: CommodityMoatsData): number {
+  const pillars: Array<keyof Omit<CommodityMoatsData, 'verdict' | 'primaryMoat'>> = [
+    'absoluteScarcity', 'monetaryHistory', 'industrialUtility',
+  ];
+  let sum = 0;
+  let total = 0;
+  for (const p of pillars) {
+    const pts = moatPoints(data[p]);
+    if (pts === null) continue;
+    const weight = p === data.primaryMoat ? COMMODITY_PRIMARY_WEIGHT : COMMODITY_OTHER_WEIGHT;
+    sum += pts * weight;
+    total += weight;
+  }
+  if (total === 0) return 0;
+  return Math.max(0, Math.min(100, Math.round(sum / total)));
+}
+
+/**
+ * Dispatcher: compute the moat score using the framework that matches the
+ * asset's class. Defaults to equity / tenMoats when assetClass is unset.
+ * Throws if the matching moats field is missing — schema validation should
+ * have caught that, so a runtime miss is a bug.
+ */
+export function computeAssetMoatScore(data: StockAnalysisData): number {
+  const ac: AssetClass = data.assetClass ?? 'equity';
+  if (ac === 'crypto') {
+    if (!data.cryptoMoats) throw new Error(`${data.slug}: assetClass=crypto but cryptoMoats missing`);
+    return computeCryptoMoatScore(data.cryptoMoats);
+  }
+  if (ac === 'commodity') {
+    if (!data.commodityMoats) throw new Error(`${data.slug}: assetClass=commodity but commodityMoats missing`);
+    return computeCommodityMoatScore(data.commodityMoats);
+  }
+  if (!data.tenMoats) throw new Error(`${data.slug}: assetClass=equity but tenMoats missing`);
+  return computeMoatScore(data.tenMoats);
+}
+
+// ─── Growth score ─────────────────────────────────────────────────────────────
+
+type GrowthDriverTrend = 'accelerating' | 'stable' | 'decelerating';
+type MarginTrend = 'expanding' | 'stable' | 'compressing';
+type PrimaryGrowthType = 'TAM expansion' | 'market share' | 'both';
+type KeyRiskSeverity = 'low' | 'moderate' | 'high' | 'severe';
+
+export interface GrowthAnalysisInput {
+  cagrEstimate: string;
+  drivers: Array<{ name: string; metric: string; trend: GrowthDriverTrend }>;
+  primaryType: PrimaryGrowthType;
+  marginTrend: MarginTrend;
+  keyRisk: string;
+  keyRiskSeverity?: KeyRiskSeverity;
+}
+
+/** Parses cagrEstimate strings like "22-28%", "30%+", "<5%", ">25%" → midpoint number. Returns null if unparseable. */
+export function parseCagrEstimate(s: string): number | null {
+  const t = s.trim().replace(/%/g, '').replace(/\s+/g, '');
+  const range = t.match(/^(-?\d+(?:\.\d+)?)[-–to]+(-?\d+(?:\.\d+)?)$/i);
+  if (range) return (parseFloat(range[1]) + parseFloat(range[2])) / 2;
+  const plus = t.match(/^(-?\d+(?:\.\d+)?)\+$/);
+  if (plus) return parseFloat(plus[1]);
+  const lt = t.match(/^<(-?\d+(?:\.\d+)?)$/);
+  if (lt) return Math.max(0, parseFloat(lt[1]) - 1);
+  const gt = t.match(/^>(-?\d+(?:\.\d+)?)$/);
+  if (gt) return parseFloat(gt[1]);
+  const num = parseFloat(t);
+  return Number.isFinite(num) ? num : null;
+}
+
+/** Piecewise CAGR → base score, calibrated to the existing rubric. */
+function baseFromCagr(cagr: number): number {
+  if (cagr >= 30) return Math.min(95, 90 + (cagr - 30) * 0.25);
+  if (cagr >= 15) return 80 + ((cagr - 15) / 15) * 10;
+  if (cagr >= 8)  return 70 + ((cagr - 8) / 7) * 10;
+  if (cagr >= 4)  return 60 + ((cagr - 4) / 4) * 10;
+  if (cagr >= 0)  return 40 + (cagr / 4) * 20;
+  return 30;
+}
+
+/**
+ * Compute a 0–100 growth score from structured growthAnalysis fields.
+ * Returns null if cagrEstimate is unparseable (caller should fall back to author score).
+ *
+ *   growthScore = baseCAGR(cagrEstimate)        // 30 → 95
+ *               + trajectoryAdj(drivers)         // ±4 (net of accelerating vs decelerating)
+ *               + marginAdj(marginTrend)         // ±4
+ *               + typeAdj(primaryType)           // 0 to +4
+ *               + riskAdj(keyRiskSeverity)       // 0 to −15
+ *
+ * The risk term is treated as 0 when keyRiskSeverity is unset (legacy stocks),
+ * which biases the score upward — call sites should prefer derived only when
+ * keyRiskSeverity is present.
+ */
+export function computeGrowthScore(g: GrowthAnalysisInput): number | null {
+  const cagr = parseCagrEstimate(g.cagrEstimate);
+  if (cagr == null) return null;
+
+  const base = baseFromCagr(cagr);
+
+  const trajectory = (() => {
+    if (!g.drivers?.length) return 0;
+    const accel = g.drivers.filter(d => d.trend === 'accelerating').length;
+    const decel = g.drivers.filter(d => d.trend === 'decelerating').length;
+    return ((accel - decel) / g.drivers.length) * 4;
+  })();
+
+  const margin = ({ expanding: 4, stable: 0, compressing: -4 } as const)[g.marginTrend];
+  const type   = ({ 'TAM expansion': 3, both: 4, 'market share': 0 } as const)[g.primaryType];
+  const risk   = g.keyRiskSeverity
+    ? ({ low: 0, moderate: -5, high: -10, severe: -15 } as const)[g.keyRiskSeverity]
+    : 0;
+
+  return Math.max(0, Math.min(100, Math.round(base + trajectory + margin + type + risk)));
+}
+
+// ─── Valuation score ──────────────────────────────────────────────────────────
 
 /**
  * Compute a 0–100 valuation score from a live price vs. bear/base/bull targets.
@@ -203,4 +396,38 @@ export function valuationDescription(
   }
   const pct = (((price - bull) / bull) * 100).toFixed(0);
   return `Trading ${pct}% above the bull case (${bullStr}) — premium valuation.`;
+}
+
+// Composite: geometric (CES) mean with moat 0.40 · growth 0.30 · valuation 0.30.
+// Single source of truth — getAverageScore in stockData.ts delegates to computeCompositeRaw.
+// Weak pillars drag the score (a strong moat cannot fully offset a rich price);
+// equal pillars produce the arithmetic mean. Raw form returns a float for precise
+// sorting; computeComposite rounds for display and recommendation bands.
+export function computeCompositeRaw(moat: number, growth: number, valuation: number): number {
+  return Math.pow(moat / 100, 0.40)
+    * Math.pow(growth / 100, 0.30)
+    * Math.pow(valuation / 100, 0.30)
+    * 100;
+}
+
+export function computeComposite(moat: number, growth: number, valuation: number): number {
+  return Math.round(computeCompositeRaw(moat, growth, valuation));
+}
+
+// Bands left at the original thresholds. Geometric and arithmetic composites
+// agree on equal-pillar names (top of the universe), so shifting thresholds
+// just promotes those names spuriously. The geometric formula compresses
+// divergent-pillar stocks downward through the same bands — which is the
+// bottleneck discrimination we want.
+export function computeRecommendation(
+  moat: number,
+  growth: number,
+  valuation: number,
+): RecommendationStatus {
+  const composite = computeComposite(moat, growth, valuation);
+  if (composite >= 82) return 'Strong Buy';
+  if (composite >= 75) return 'Accumulate';
+  if (composite >= 68) return 'Hold';
+  if (composite >= 60) return 'Speculative Buy';
+  return 'Avoid';
 }

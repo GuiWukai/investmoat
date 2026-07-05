@@ -2,7 +2,7 @@
   "slug": "panw",
   "ticker": "PANW",
   "name": "Palo Alto Networks",
-  "lastAnalyzed": "March 2026",
+  "lastAnalyzed": "June 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,7 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$130B"
+      "value": "$216B"
+    },
+    {
+      "label": "Current Price",
+      "value": "$265"
     }
   ],
   "chips": [
@@ -23,26 +27,25 @@
       "color": "success"
     }
   ],
-  "recommendation": "Accumulate",
   "metrics": [
     {
       "title": "NGS ARR",
-      "value": "$6.3B",
-      "label": "+33% YoY Q2 FY2026 — the leading indicator of platform transition",
+      "value": "$8.18B",
+      "label": "+60% YoY Q3 FY2026 (incl. CyberArk) — record outperformance vs guidance",
       "icon": "Shield",
       "color": "#e8281b"
     },
     {
       "title": "RPO",
-      "value": "$16.0B",
-      "label": "+23% YoY — 18+ months of revenue visibility from contracted commitments",
+      "value": "$18.4B",
+      "label": "+36% YoY — 18+ months of revenue visibility from contracted commitments",
       "icon": "Zap",
       "color": "#3b82f6"
     },
     {
       "title": "Revenue",
-      "value": "$2.6B",
-      "label": "Q2 FY2026 (+15% YoY); non-GAAP operating margin 30.3% (+3rd consecutive quarter)",
+      "value": "$3.0B",
+      "label": "Q3 FY2026 (+31% YoY); FY26 guide raised to ~$11.42B (+24%), EPS $3.77–3.79",
       "icon": "TrendingUp",
       "color": "#10b981"
     }
@@ -67,97 +70,97 @@
     ]
   },
   "growth": {
-    "score": 82,
-    "description": "Q2 FY2026 delivered $2.6B revenue (+15% YoY) with NGS ARR growing 33% YoY to $6.3B — the NGS ARR is the leading indicator that platform transition is accelerating even as total revenue growth moderates. RPO of $16B (+23% YoY) provides exceptional forward visibility. FY2026 non-GAAP EPS guidance of $3.65–3.70 faces near-term pressure from the $25B CyberArk acquisition integration (Q3 non-GAAP EPS guided at $0.78–0.80 vs $0.92 consensus) — a deliberate investment in identity security that expands the TAM significantly.",
+    "description": "Q3 FY2026 (reported June 2, 2026) was a record beat-and-raise: revenue of $3.0B (+31% YoY) with NGS ARR surging 60% YoY to $8.18B — the largest quarterly outperformance to date — and RPO of $18.4B (+36%). CEO Nikesh Arora cited accelerating organic bookings and CyberArk integration running ahead of schedule. Management raised FY2026 guidance to revenue of $11.415–11.425B (24% growth), NGS ARR of $8.90–8.95B (59–60%), RPO of $20.9–21.0B, and non-GAAP EPS of $3.77–3.79 (above the prior $3.65–3.70). The CyberArk-driven margin digestion the May analysis flagged is resolving faster than feared — though part of the NGS ARR acceleration is inorganic.",
     "growthAnalysis": {
-      "cagrEstimate": "15–20%",
-      "scoreDerivation": "Base 80 (15–30% CAGR; total revenue +15%, NGS ARR +33%) + 5 leading indicator gap (NGS ARR +33% vs total revenue +15% = platform revenue catching up, sustains 20%+ medium-term) + 3 RPO visibility ($16B RPO = 18+ months revenue) − 3 CyberArk integration pressure (Q3 EPS guidance 15% below consensus; margin digestion 2–3 quarters) − 3 total revenue deceleration risk (from 20%+ to 15% = multiple compression catalyst) = 82",
+      "cagrEstimate": "18–24%",
+      "scoreDerivation": "Base 84 (18–24% CAGR; FY2026 revenue guide +24%, organic bookings re-accelerating) + 4 trajectory (NGS ARR +60% YoY, platformization and CyberArk cross-sell all accelerating) + 0 margin (op margin ~30%, stable through CyberArk digestion) + 4 TAM expansion (identity/PAM via CyberArk, AI SecOps) − 5 valuation/inorganic-mix risk (stock re-rated sharply post-earnings, now ~$265; part of NGS ARR growth is inorganic CyberArk) = 87",
       "drivers": [
         {
           "name": "Next-Generation Security ARR",
-          "metric": "+33% YoY to $6.3B in Q2 FY2026; Prisma AI (100+ customers), XSIAM, SASE all contributing",
+          "metric": "+60% YoY to $8.18B in Q3 FY2026 (incl. CyberArk); Prisma AI, XSIAM, SASE all contributing",
           "trend": "accelerating"
         },
         {
           "name": "Platformization (Vendor Consolidation)",
-          "metric": "+35% YoY in platformized customer count; enterprises replacing 5–8 point solutions with PANW",
+          "metric": "Organic bookings re-accelerating; enterprises replacing 5–8 point solutions with PANW's platform",
           "trend": "accelerating"
         },
         {
           "name": "CyberArk Integration (Identity Security)",
-          "metric": "$25B acquisition; identity = fastest-growing attack surface; PANW enters $20B+ IAM/PAM market",
-          "trend": "stable"
+          "metric": "Integration ahead of schedule; identity/PAM cross-sell into 80,000+ accounts; PANW now spans network + identity",
+          "trend": "accelerating"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "If CyberArk integration takes 12+ months longer than guided, driving FY2026 non-GAAP EPS below $3.50 (vs $3.65–3.70 guidance) for two consecutive quarters, investors lose confidence in the platform consolidation ROI thesis and the stock re-rates toward 12× NTM P/S, implying meaningful downside",
+      "keyRisk": "With NGS ARR growth flattered by the inorganic CyberArk contribution and the stock still richly rated at ~$265, if organic bookings decelerate as CyberArk laps or integration costs resurface, FY2027 EPS estimates get cut and the multiple compresses from ~14× toward 10× NTM P/S, implying 25%+ downside",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 73,
-    "description": "PANW has fallen 24% from its October 2025 high of $223.61. At ~$169, the stock trades at ~46× forward non-GAAP P/E on $3.67 FY2026 guidance and ~11.8× NTM P/S — expensive on traditional multiples but consistent with the premium assigned to cybersecurity platformisation leaders. The $16B RPO provides an unusual degree of revenue predictability; the valuation risk is the CyberArk integration EPS dilution, not revenue shortfall. Analyst consensus targets $216 (+28% upside) on a buy rating from 39/39 analysts.",
+    "score": 72,
+    "description": "PANW has eased to ~$265 (June 10, 2026) from the ~$277 post-earnings level, digesting the record Q3 FY2026 beat-and-raise (revenue +31%, NGS ARR +60% YoY, FY26 EPS guide lifted to $3.77–3.79). At ~16.5× NTM P/S and a ~60× forward non-GAAP P/E, the stock sits ~9% below the base case ($290) and well above the bear ($200). The CyberArk integration — the May valuation's principal risk — is running ahead of schedule, shifting the debate from execution to multiple sustainability now that much of the NGS ARR acceleration is inorganic.",
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "June 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~156×",
-          "note": "GAAP net income ~$1.7B TTM (SBC distorts)"
+          "value": "~190×",
+          "note": "GAAP net income depressed by CyberArk deal/SBC charges"
         },
         {
           "label": "Forward P/E (NTM, non-GAAP)",
-          "value": "~46×",
-          "note": "FY2026E non-GAAP EPS $3.67"
+          "value": "~60×",
+          "note": "FY2027E non-GAAP EPS ~$4.40"
         },
         {
           "label": "PEG Ratio",
-          "value": "~2.3×",
-          "note": "fwd P/E ÷ 20% non-GAAP EPS CAGR"
+          "value": "~2.7×",
+          "note": "fwd P/E ÷ ~22% non-GAAP EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~11.8×",
-          "note": "~$11B NTM revenue (FY2026E)"
+          "value": "~16.5×",
+          "note": "~$13B NTM revenue (FY2027E incl. CyberArk)"
         },
         {
           "label": "Price / FCF",
-          "value": "~30×",
-          "note": "~$4.3B FCF (FY2026E)"
+          "value": "~43×",
+          "note": "~$5B FCF (FY2027E)"
         }
       ],
-      "summary": "PANW trades at ~46× forward non-GAAP P/E, a premium to the cybersecurity sector median (~35×) but below CrowdStrike (~72×), reflecting PANW's more mature revenue base and the near-term EPS headwind from CyberArk integration. The PEG of ~2.3× signals premium territory — growth needs to sustain 20%+ for the valuation to be justified. The $16B RPO makes this a very low-risk revenue story; the uncertainty is entirely on the margin side as integration costs are digested over the next 2–3 quarters."
+      "summary": "The ~60% re-rating has lifted PANW to ~16.5× NTM P/S and a ~60× forward non-GAAP P/E — a clear premium to the cybersecurity median and approaching CrowdStrike-like territory. The PEG of ~2.9× signals the stock is now pricing in sustained 20%+ growth and a clean CyberArk integration. The $18.4B RPO keeps revenue low-risk; the open question is multiple sustainability, especially as the headline NGS ARR growth is partly inorganic and will decelerate as CyberArk laps."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$125",
-      "description": "CyberArk integration proves more costly than guided, NGS ARR growth decelerates below 25%, and margin compression extends into FY2027 — multiple compresses to 8× NTM P/S as the platformisation ROI story loses credibility.",
+      "priceTarget": "$200",
+      "description": "Organic bookings decelerate as CyberArk laps and integration costs resurface; ex-acquisition NGS ARR growth normalises below 30% and the multiple compresses toward 9–10× NTM P/S as the premium unwinds.",
       "points": [
-        "CyberArk integration incurs $1B+ in unexpected transition costs, causing FY2026 non-GAAP EPS to miss guidance by 20%+ and FY2027 estimates to be cut, reducing confidence in PANW's M&A capital allocation discipline",
-        "NGS ARR growth decelerates from 33% to below 22% by Q4 FY2026 as platformization complexity slows enterprise decision cycles in an uncertain macro environment",
-        "Microsoft Defender + Sentinel + Intune bundling wins 5%+ of PANW's mid-market NGFW base by leveraging M365 enterprise agreements, creating structural long-term pressure on firewall renewal rates",
-        "Multiple compresses to 8× NTM P/S on $11B revenue: $88B / ~720M shares = $122/share"
+        "Organic NGS ARR growth (ex-CyberArk) proves to be in the high-20s rather than the 60% headline, disappointing investors who extrapolated the inorganic boost",
+        "CyberArk integration costs resurface in FY2027, causing non-GAAP EPS to undershoot estimates and the platformization ROI story to lose credibility",
+        "Microsoft Defender + Sentinel + Intune bundling wins 5%+ of PANW's mid-market NGFW base by leveraging M365 enterprise agreements",
+        "Multiple compresses toward 9–10× NTM P/S as the AI-security premium fades — ~28% downside from current levels"
       ]
     },
     "base": {
-      "priceTarget": "$215",
-      "description": "PANW delivers FY2026 guidance ($3.65–3.70 non-GAAP EPS), NGS ARR crosses $7B by year-end, and CyberArk integration proves accretive in 12 months — multiple holds at ~14× NTM P/S as analyst consensus is confirmed.",
+      "priceTarget": "$290",
+      "description": "PANW delivers the raised FY2026 guidance (revenue ~$11.4B, NGS ARR ~$8.9B, EPS ~$3.78), CyberArk cross-sell scales across 80,000+ accounts, and the multiple holds ~13–14× NTM P/S as the platformization flywheel sustains 20%+ growth into FY2027.",
       "points": [
-        "FY2026 revenue reaches $10.7–11B with NGS ARR crossing $7.5B by Q4 FY2026, confirming platform revenue as the dominant growth engine ahead of hardware firewall renewal cycles",
-        "CyberArk integration completes ahead of schedule by Q3 FY2026 — PANW adds identity security to the platform without needing a dedicated vendor, unlocking cross-sell into existing 80,000+ enterprise accounts",
-        "Platformization count grows 35–40% YoY as enterprises facing budget pressure consolidate 5–8 point-solution vendors onto PANW's platform — improving unit economics while reducing TTM vendor count for security teams",
-        "Non-GAAP operating margin recovers to 30–32% in H2 FY2026 as integration costs wind down — EPS exits the year on a $4.00+/share annualised run rate, supporting the $215 analyst consensus target"
+        "FY2026 revenue lands at ~$11.42B with NGS ARR reaching $8.90–8.95B per raised guidance, confirming platform revenue as the dominant growth engine",
+        "CyberArk integration stays ahead of schedule — identity/PAM cross-sell into the 80,000+ enterprise base unlocks a multi-billion incremental TAM with minimal customer-acquisition cost",
+        "Organic bookings growth sustains 20%+ as enterprises consolidate point-solution vendors onto PANW's platform amid budget pressure",
+        "Non-GAAP operating margin holds ~30% as CyberArk dilution winds down — EPS exits FY2026 near $3.78 and steps toward $4.40+ in FY2027"
       ]
     },
     "bull": {
-      "priceTarget": "$290",
-      "description": "AI-driven attack surface expansion creates a super-cycle for PANW's AI SecOps platform, CyberArk integration proves highly accretive, and PANW becomes the dominant enterprise security OS — re-rating toward 18× NTM P/S.",
+      "priceTarget": "$380",
+      "description": "An AI-security supercycle plus CyberArk identity cross-sell drives NGS ARR toward $12B+ and FY2027 EPS toward $5; PANW re-rates to ~17× NTM P/S as the dominant enterprise security platform of record.",
       "points": [
-        "AI agent proliferation creates a new attack surface explosion (AI-generated phishing, autonomous malware, LLM jailbreaking) that PANW is uniquely positioned to address through Cortex XSIAM + Unit 42 intelligence, driving NGS ARR toward $10B+ by FY2027",
-        "CyberArk integration creates a $2B+ cross-sell opportunity within PANW's 80,000+ enterprise accounts — the combination of network security + identity security creates the most complete enterprise security platform available",
-        "Platformization counts accelerate to 50%+ YoY as government mandates (post-SEC cyber rules, DORA in Europe) force enterprises to demonstrate consolidated security vendor relationships — driving PANW's TAM capture above $20B by FY2027",
-        "Revenue trajectory toward $15B+ by FY2028 and non-GAAP EPS toward $6/share — at 40× forward P/E: $240/share; at 18× P/S: $290/share"
+        "AI agent proliferation (AI-generated phishing, autonomous malware, LLM jailbreaking) drives a new attack-surface explosion that PANW addresses through Cortex XSIAM + Unit 42 intelligence, pushing NGS ARR toward $12B+ by FY2027",
+        "CyberArk identity cross-sell compounds within the 80,000+ enterprise base, making network + identity the most complete enterprise security platform available",
+        "Platformization accelerates as government mandates (post-SEC cyber rules, DORA in Europe) force consolidated security vendor relationships, driving TAM capture above $25B",
+        "Revenue trajectory toward $16B+ and non-GAAP EPS toward $5/share by FY2028 — at ~17× NTM P/S the stock re-rates to ~$380"
       ]
     }
   },

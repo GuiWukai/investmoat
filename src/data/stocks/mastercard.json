@@ -9,7 +9,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$440B"
+      "value": "$430B"
+    },
+    {
+      "label": "Price",
+      "value": "$489.08"
     }
   ],
   "chips": [
@@ -22,12 +26,11 @@
       "color": "success"
     }
   ],
-  "recommendation": "Accumulate",
   "metrics": [
     {
       "title": "GDV Growth",
-      "value": "12%",
-      "label": "Gross Dollar Volume (Q4 2025)",
+      "value": "7%",
+      "label": "Gross Dollar Volume (Q1 2026, local currency)",
       "icon": "CreditCard",
       "color": "#eb001b"
     },
@@ -66,34 +69,34 @@
     ]
   },
   "growth": {
-    "score": 82,
-    "description": "Q4 2025 net revenue grew 18% YoY to $8.81B with adjusted EPS up 25%; 2026 guidance of high-end-of-low-double-digits (currency-neutral) reflects tougher comparisons, while BVNK, agentic commerce, and value-added services provide incremental TAM beyond the core network.",
+    "description": "Q1 2026 net revenue grew 16% YoY to $8.4B (12% currency-neutral) with adjusted EPS up 18% to $4.60; value-added services grew 22% and cross-border volume 13%, while BVNK, agentic commerce, and value-added services continue to provide incremental TAM beyond the core network.",
     "growthAnalysis": {
       "cagrEstimate": "12–15%",
-      "scoreDerivation": "Base 67 (12–15% net revenue CAGR) + 8 recurring (card network fees; >75% of revenue is recurring processing and assessment fees) + 7 TAM expansion (BVNK $1.8B stablecoin acquisition, agentic commerce rollout, B2B emerging market digitisation) = 82",
+      "scoreDerivation": "Base 78 (12–15% net revenue CAGR, midpoint 13.5%) + 0 trajectory (cross-border +13%, GDV +7% and value-added services +22% all growing at steady rates in Q1 2026) + 4 margin expansion (services mix) + 4 dual TAM expansion and share gains (BVNK stablecoin rails, agentic commerce, B2B digitisation) + 0 low risk severity = 86",
       "drivers": [
-        { "name": "Cross-Border Volume", "metric": "~20% YoY Q4 2025, highest-margin revenue stream", "trend": "stable" },
-        { "name": "Value-Added Services", "metric": "~25% YoY, cybersecurity/fraud/analytics expanding margin mix", "trend": "accelerating" },
-        { "name": "GDV Core Growth", "metric": "+12% YoY Q4 2025, consumer and commercial card spend", "trend": "stable" }
+        { "name": "Cross-Border Volume", "metric": "+13% YoY Q1 2026 (vs +14% Q4 2025), highest-margin revenue stream", "trend": "stable" },
+        { "name": "Value-Added Services", "metric": "+22% YoY Q1 2026 (18% currency-neutral), cybersecurity/fraud/analytics expanding margin mix", "trend": "stable" },
+        { "name": "GDV Core Growth", "metric": "+7% YoY Q1 2026 (local currency), purchase volume +9%", "trend": "stable" }
       ],
       "primaryType": "both",
-      "keyRisk": "If Federal Judge Brian Cogan approves the Visa/Mastercard merchant settlement in 2026 with broad surcharging rights and appeals succeed in invalidating honor-all-cards provisions, acceptance economics deteriorate and account-to-account payment rails capture 5%+ of card volume by 2028",
+      "keyRisk": "Judge Brian Cogan granted preliminary approval to the revised $38B Visa/Mastercard merchant settlement in June 2026; if final approval follows with broad surcharging rights adopted at scale by merchants, and account-to-account payment rails capture 5%+ of card volume by 2028, acceptance economics deteriorate",
+      "keyRiskSeverity": "low",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 74,
-    "description": "Trading 10% below the base case ($555) at $498.66 — attractively priced for a durable compounder; the ~26× forward P/E is well below the 10-year median of 37.8×, offering a margin of safety against the modest revenue deceleration implied by 2026 guidance.",
+    "score": 76,
+    "description": "Trading 12% below the base case ($555) at $489.08 — attractively priced for a durable compounder; the ~26× forward P/E is well below the 10-year median of 37.8×, offering a margin of safety, with Q1 2026's 16% revenue growth and 18% adjusted EPS growth running ahead of the moderation the market is pricing.",
     "peAnalysis": {
-      "asOf": "April 2026",
+      "asOf": "June 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "30.5×", "note": "~$16.37 TTM EPS" },
-        { "label": "Forward P/E (NTM)", "value": "~26×", "note": "consensus EPS est. ~$19.03" },
+        { "label": "Trailing P/E (GAAP)", "value": "~29×", "note": "~$17.1 TTM EPS after Q1 2026 ($4.35 GAAP diluted)" },
+        { "label": "Forward P/E (NTM)", "value": "~26×", "note": "consensus EPS est. ~$19" },
         { "label": "PEG Ratio", "value": "~1.5×", "note": "fwd P/E ÷ ~17% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~14×", "note": "~$31.9B NTM revenue" },
-        { "label": "Price / FCF", "value": "~26.8×", "note": "$16.4B FCF (TTM)" }
+        { "label": "Price / Sales (NTM)", "value": "~13×", "note": "~$32B NTM revenue" },
+        { "label": "Price / FCF", "value": "~26×", "note": "$16.4B FCF (TTM)" }
       ],
-      "summary": "At ~26× forward P/E, Mastercard trades at a meaningful discount to its 10-year median of ~37.8×, implying the market is pricing in growth moderation. The PEG of ~1.5× sits in the fairly-priced-for-growth range, with Q4 2025 adjusted EPS growing 25% YoY providing upside optionality to consensus. The trailing-to-forward P/E compression from 30.5× to ~26× signals an earnings acceleration ramp in 2026 that supports the base case."
+      "summary": "At ~26× forward P/E, Mastercard trades at a meaningful discount to its 10-year median of ~37.8×, implying the market is pricing in growth moderation. The PEG of ~1.5× sits in the fairly-priced-for-growth range, with Q1 2026 adjusted EPS growing 18% YoY and $4B of quarterly buybacks supporting the compounding path. The trailing-to-forward P/E compression from ~29× to ~26× supports the base case."
     }
   },
   "scenarios": {
@@ -166,8 +169,7 @@
       "status": "strong",
       "note": "Co-records the global payment ledger with Visa; the authoritative source for cross-border transaction settlement."
     },
-    "aiResilienceScore": 87,
     "verdict": "Mastercard is a net beneficiary of the AI era. Its Large Tabular Model (LTM) trained on billions of transactions actively strengthens the proprietary data moat, while the $1.8B BVNK acquisition extends transaction embedding to stablecoin rails before competitors can establish a foothold. The payment network duopoly means AI enhances fraud detection and agentic commerce capability without threatening the structural network itself. businessLogic and bundling remain modestly weakened by fintech/AI pressure, but these carry low weight against five strong AI-resilient moats."
   },
-  "lastAnalyzed": "April 2026"
+  "lastAnalyzed": "June 2026"
 }

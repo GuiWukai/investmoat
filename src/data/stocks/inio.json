@@ -1,0 +1,214 @@
+{
+  "slug": "inio",
+  "ticker": "INIO",
+  "name": "INNIO N.V.",
+  "lastAnalyzed": "June 18, 2026",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "INIO"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$25B"
+    },
+    {
+      "label": "Current Price",
+      "value": "~$32"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Distributed Energy | Gas Engines (Jenbacher & Waukesha)",
+      "color": "primary"
+    },
+    {
+      "label": "Data Center Power Beneficiary",
+      "color": "success"
+    },
+    {
+      "label": "Recently IPO'd (Jun 4, 2026) | Leveraged 3.6× Net Debt/EBITDA",
+      "color": "warning"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "Revenue",
+      "value": "$2.64B",
+      "label": "FY2025 +22% YoY; Q1 FY2026 $668.6M +35% YoY",
+      "icon": "TrendingUp",
+      "color": "#f97316"
+    },
+    {
+      "title": "Adj. EBITDA",
+      "value": "$549M",
+      "label": "FY2025 ~20.8% margin; Q1'26 $122.5M only +7.5% — margin compressing on equipment mix",
+      "icon": "Zap",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "Data Center Orders",
+      "value": "$1.0B",
+      "label": "Q1'26 DC order intake vs $309M Q1'25; 2023→2025 grew $27M → $2.3B",
+      "icon": "DollarSign",
+      "color": "#10b981"
+    }
+  ],
+  "moat": {
+    "description": "INNIO's durable moat is the razor-and-blade aftermarket on its ~44 GW global installed base of Jenbacher and Waukesha gas engines — not the engines themselves. Long-term service agreements, proprietary parts, and myPlant fleet telematics create high switching costs and recurring high-margin revenue, but the equipment is a competitive industrial product, not a software or network monopoly.",
+    "analysisTitle": "The Installed-Base Aftermarket Moat",
+    "analysisSummary": "INNIO's moat rests on **Aftermarket Lock-in, Proprietary Fleet Data, and Emissions/Fuel Certification**:",
+    "analysisPoints": [
+      {
+        "title": "Razor-and-Blade Aftermarket (Bundling + Switching Costs)",
+        "text": "Each engine sold seeds 15–20+ years of high-margin service revenue via long-term service agreements (LTSAs) and proprietary OEM parts. Services have grown for seven consecutive years and are the profit engine of the business — a customer who buys a Jenbacher unit is effectively locked into INNIO's service ecosystem for the asset's life."
+      },
+      {
+        "title": "myPlant Fleet Telematics (Proprietary Data)",
+        "text": "INNIO's ~44 GW installed base feeds the myPlant digital platform with continuous operational data that competitors cannot replicate, sharpening predictive maintenance and tightening the service relationship. This is a genuine, continuously-updated proprietary dataset — though not as exclusive or central as a software/network moat."
+      },
+      {
+        "title": "Emissions & Alternative-Fuel Certification (Regulatory Lock-in)",
+        "text": "Engines must clear market-specific emissions standards and grid-interconnection requirements; INNIO's hydrogen-blend and alternative-fuel readiness is certified across jurisdictions, raising barriers for new entrants and creating multi-year procurement cycles for replacement decisions."
+      }
+    ]
+  },
+  "growth": {
+    "description": "INNIO is riding a genuine demand super-cycle: FY2025 revenue rose 22% to $2.64B and Q1 FY2026 accelerated to $668.6M (+35% YoY). The story is the order book — FY2025 equipment order intake jumped 188% to $3.88B and Q1'26 added another $1.62B (+148%), driven overwhelmingly by data-center power, where order intake exploded from $27M in 2023 to $2.3B in 2025 and reached $1.0B in Q1'26 alone (vs $309M a year earlier). The caveat: Q1'26 Adjusted EBITDA grew only 7.5% against 35% revenue growth — a clear near-term margin compression as lower-margin equipment outpaces high-margin services in the mix, and the data-center surge concentrates the order book in a handful of hyperscaler buyers.",
+    "growthAnalysis": {
+      "cagrEstimate": "17–22%",
+      "scoreDerivation": "Base 83 (17–22% blended CAGR; near-term Q1'26 +35% moderating as DC order surge laps tough comps) + 3 trajectory (data-center and equipment order intake both accelerating) + 3 TAM expansion (data-center distributed/prime power) − 4 margin compression (Q1'26 Adj EBITDA +7.5% vs revenue +35%) − 10 high risk (hyperscaler order concentration, cyclical order normalization, post-IPO lock-up overhang) = 75",
+      "drivers": [
+        {
+          "name": "Data Center Power",
+          "metric": "Q1'26 order intake $1.0B vs $309M Q1'25 (+225%); 2023→2025 $27M → $2.3B",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Equipment (Jenbacher & Waukesha)",
+          "metric": "FY2025 equipment order intake $3.88B (+188%); Q1'26 $1.62B (+148% YoY)",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Services (Aftermarket)",
+          "metric": "Recurring high-margin; 7 consecutive years of growth, +15% 2023–2025 on ~44 GW base",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "Data-center order intake is highly concentrated in a few hyperscalers; if AI data-center power orders normalize toward the 2024 baseline by end of 2027 — or hyperscalers standardize on grid/utility-scale gas turbines (GE Vernova, Mitsubishi) over reciprocating engines — equipment order intake could halve off the $3.9B 2025 peak, leaving a richly-valued, 3.6×-levered industrial without its growth narrative.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "compressing"
+    }
+  },
+  "valuation": {
+    "score": 63,
+    "description": "At ~$32 (~18% above the $27 June 4 IPO price), INNIO carries an extreme multiple for an industrial: ~56× EV/EBITDA, ~9.5× EV/revenue, and ~175× trailing GAAP P/E on $141.8M FY2025 net income. The market is pricing a sustained data-center power super-cycle and continued aftermarket compounding. That can partly be justified by 35% revenue growth and a record order book, but the stock sits above our base case — the margin of safety is thin given 3.6× net-debt/EBITDA leverage and a post-IPO lock-up overhang (Advent and GE remain large holders of secondary stock that can pressure the float). This is a high-quality demand story attached to a demanding, leveraged, newly-public valuation.",
+    "peAnalysis": {
+      "asOf": "June 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~175×",
+          "note": "~$0.18 TTM EPS"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~110×",
+          "note": "FY26E EPS ~$0.29"
+        },
+        {
+          "label": "EV / EBITDA",
+          "value": "~56×",
+          "note": "$549M FY25 Adj EBITDA"
+        },
+        {
+          "label": "Price / Sales",
+          "value": "~9.5×",
+          "note": "$2.6B FY25 revenue"
+        },
+        {
+          "label": "Net Debt / EBITDA",
+          "value": "3.6×",
+          "note": "leveraged balance sheet"
+        }
+      ],
+      "summary": "INNIO trades at ~56× EV/EBITDA and ~175× trailing P/E — multiples that dwarf distributed-power and industrial peers (Caterpillar ~17× fwd P/E, Eaton ~30×, GE Vernova ~40× EV/EBITDA), pricing the data-center order surge as a permanent step-change rather than a cyclical peak. The PEG is well above 2× even on ~50% near-term EPS growth, so the multiple — not the fundamentals — is the swing factor; a single quarter of order-intake normalization or services-margin slippage could de-rate the stock sharply. The wide trailing-to-forward P/E gap reflects a real earnings ramp, but at 3.6× leverage there is little cushion if the ramp stalls."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$21",
+      "description": "The data-center order surge proves a cyclical peak rather than a step-change: order intake normalizes, margin compression persists, and the premium multiple collapses toward industrial norms — below the $27 IPO price.",
+      "points": [
+        "Data-center equipment order intake falls back toward the 2024 baseline through 2027 as hyperscalers slow distributed-power commitments or shift to utility-scale gas turbines",
+        "Adjusted EBITDA margin stays compressed below 19% as lower-margin equipment dominates the revenue mix",
+        "Post-IPO lock-up expiry brings a wave of Advent/GE secondary selling that pressures the float",
+        "EV/EBITDA de-rates from ~56× toward ~20–25× as the market re-rates INNIO as a cyclical industrial — ~35% downside"
+      ]
+    },
+    "base": {
+      "priceTarget": "$30",
+      "description": "INNIO sustains ~18–20% revenue growth, converts its record backlog, deleverages below 3× net-debt/EBITDA, and the multiple normalizes toward a still-premium ~35–40× EV/EBITDA as the data-center vector proves durable but not infinite.",
+      "points": [
+        "FY2026 revenue grows ~20% to ~$3.1B with the $3.9B+ equipment backlog converting on schedule",
+        "Services revenue compounds high-single-digits as the ~44 GW installed base expands, supporting blended margins",
+        "Net-debt/EBITDA falls below 3× as EBITDA grows and IPO-adjacent deleveraging continues",
+        "Multiple settles at a premium-but-rational ~35–40× EV/EBITDA, leaving the stock near fair value at current levels"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$46",
+      "description": "INNIO becomes the pure-play on AI-driven distributed power: the data-center backlog converts and re-loads, services scale with the installed base, margins recover, and the market sustains a structural-growth premium multiple.",
+      "points": [
+        "Data-center order intake stays above $2B annually as AI power demand and grid constraints make on-site gas generation a multi-year build-out",
+        "Adjusted EBITDA margin recovers toward 22%+ as services mix and operating leverage offset equipment dilution",
+        "Hydrogen-blend and alternative-fuel adoption opens a new equipment replacement cycle across the ~44 GW base",
+        "INNIO sustains a ~45–50× EV/EBITDA growth multiple as a scarce listed distributed-power asset — ~45% upside"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "Operators and service technicians build familiarity with the myPlant platform and Jenbacher/Waukesha controls, but the interface is a thin layer over a physical asset — standardized monitoring and AI-assisted diagnostics erode any operator lock-in."
+    },
+    "businessLogic": {
+      "status": "destroyed",
+      "note": "N/A — INNIO is a physical industrial equipment maker, not a software business embedded in customer processes; there is no proprietary business-logic layer to lock in."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — the company does not control or gate access to a valuable public dataset; its data advantage is private fleet telemetry (see proprietaryData)."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "High-efficiency reciprocating gas-engine engineering — particularly hydrogen-ready combustion — is a scarce, hard-to-hire discipline shared by only a handful of OEMs (Caterpillar, Cummins, Wärtsilä, Rolls-Royce mtu). AI augments but does not replace mechanical engineering and manufacturing scale."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "The equipment + long-term service agreement + proprietary parts + myPlant digital bundle is a genuine razor-and-blade lock-in: services have grown for seven consecutive years and drive the bulk of profit, making the installed engine the entry point to a decades-long revenue annuity."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "The ~44 GW installed base feeds myPlant with continuously-updated operational telemetry — the largest such dataset in its engine class — improving predictive maintenance and tightening service capture, though it is not as exclusive or product-central as a software-network data moat."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "Engines must clear market-specific emissions standards, grid-interconnection rules, and alternative-fuel certifications; INNIO's certified hydrogen-blend capability across jurisdictions creates multi-year procurement cycles and barriers to entry."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "N/A — additional engine buyers do not make the product more valuable to other buyers; there is no network or marketplace flywheel in industrial power equipment."
+    },
+    "transactionEmbedding": {
+      "status": "destroyed",
+      "note": "N/A — INNIO does not sit in a payment or transaction-workflow layer; its embedding is physical (installed power assets), captured under bundling/switching costs rather than transaction embedding."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "As the OEM-of-record for its ~44 GW installed base, INNIO is the authoritative source for each asset's service history, parts, and lifecycle — migrating service away requires forfeiting OEM warranty, proprietary parts, and myPlant analytics."
+    },
+    "verdict": "INNIO is a clear net beneficiary of AI on the demand side — AI-driven data-center electricity demand and grid constraints are the engine behind its order-book explosion — but AI does not strengthen or weaken its underlying moat much, which is physical and aftermarket-based. The AI-resilient sources of durability (aftermarket bundling, proprietary fleet data, emissions/fuel certification, OEM system-of-record) are genuine but moderate, and immune to AI disruption because they sit on a physical installed base. The AI-vulnerable moats (learned interfaces) are thin and largely N/A for a hardware OEM. Net: a moderately durable, AI-demand-advantaged industrial whose moat is real but narrower than a software or network monopoly — durable enough to compound the aftermarket, not wide enough to defend a 56× EV/EBITDA multiple."
+  }
+}

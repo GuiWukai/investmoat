@@ -2,7 +2,7 @@
   "slug": "rddt",
   "ticker": "RDDT",
   "name": "Reddit",
-  "lastAnalyzed": "April 2026",
+  "lastAnalyzed": "July 5, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,7 +10,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "$31.3B"
+      "value": "$37.5B"
+    },
+    {
+      "label": "Current Price",
+      "value": "$194.00"
     }
   ],
   "chips": [
@@ -35,32 +39,31 @@
       "color": "primary"
     }
   ],
-  "recommendation": "Accumulate",
   "metrics": [
     {
-      "title": "Revenue (FY2025)",
-      "value": "$2.2B",
-      "label": "+69% YoY; Q1 2026 guide +52–54%",
+      "title": "Revenue (Q1 2026)",
+      "value": "$663M",
+      "label": "+69% YoY; Q2 2026 guide +43–45%",
       "icon": "TrendingUp",
       "color": "#e8281b"
     },
     {
       "title": "Daily Active Users",
-      "value": "121M",
-      "label": "+19% YoY; WAU 471M",
+      "value": "126.8M",
+      "label": "+17% YoY; Intl DAU +26%",
       "icon": "Users",
       "color": "#3b82f6"
     },
     {
       "title": "Adj EBITDA Margin",
-      "value": "45%",
-      "label": "Q4 2025; 90%+ gross margin",
+      "value": "40%",
+      "label": "Q1 2026; FCF margin 47%",
       "icon": "BarChart3",
       "color": "#10b981"
     }
   ],
   "moat": {
-    "description": "Reddit's irreplaceable archive of 18+ years of authentic human discourse creates durable data licensing and network effect moats that no competitor can synthetically replicate.",
+    "description": "Reddit's irreplaceable archive of 18+ years of authentic human discourse creates durable data licensing and network effect moats that no competitor can synthetically replicate — a position reinforced by Reddit's push to reprice its Google and OpenAI deals toward variable, usage-based terms as AI reliance on its corpus deepens.",
     "analysisTitle": "The Human Discourse Network Moat",
     "analysisSummary": "Reddit's competitive position rests on **Network Effects (Community Density), Proprietary Human Discourse Data (AI Training Infrastructure), and the System of Record for Peer Knowledge**.",
     "analysisPoints": [
@@ -70,106 +73,111 @@
       },
       {
         "title": "Proprietary Data (AI Training Infrastructure)",
-        "text": "Reddit's 18+ year archive of threaded human discussions is irreplaceable as AI training data, capturing authentic reasoning, debate, and domain expertise at a scale no competitor can match. Google and OpenAI are paying structured, multi-year licensing fees to access this data — a revenue stream growing directly with AI model development demand. Synthetic data cannot replicate the authenticity, disagreement patterns, and contextual depth of Reddit's corpus."
+        "text": "Reddit's 18+ year archive of threaded human discussions is irreplaceable as AI training data, capturing authentic reasoning, debate, and domain expertise at a scale no competitor can match. Google (~$60M/year) and OpenAI (~$70M/year) pay structured, multi-year licensing fees to access this data, and in 2026 Reddit blocked most automated crawlers and moved to renegotiate both deals toward variable, usage-based pricing that scales with AI model reliance on its corpus — evidence the data itself commands increasing, not diminishing, pricing power. Synthetic data cannot replicate the authenticity, disagreement patterns, and contextual depth of Reddit's corpus."
       },
       {
         "title": "System of Record for Peer Knowledge",
-        "text": "Reddit has become the de facto reference archive for peer knowledge, with users routinely appending 'site:reddit.com' to Google searches because community answers are trusted as the authoritative peer record. For software recommendations, investment discussions, medical experiences, and technical troubleshooting, Reddit is treated as the informal system of record across millions of topics. This creates structural daily visit habits that AI-generated answers do not currently replace."
+        "text": "Reddit has become the de facto reference archive for peer knowledge, with users routinely appending 'site:reddit.com' to Google searches because community answers are trusted as the authoritative peer record. For software recommendations, investment discussions, medical experiences, and technical troubleshooting, Reddit is treated as the informal system of record across millions of topics. Reddit is now extending this identity into its own AI-native product, Reddit Answers, whose weekly active users grew from 1M to 15M during 2025 — a direct attempt to keep the 'peer knowledge' habit inside Reddit rather than ceding it to third-party AI search."
       }
     ]
   },
   "growth": {
-    "score": 88,
-    "description": "Reddit is growing revenue at 50%+ annually driven by a structural AI data licensing tailwind from Google and OpenAI, combined with an international advertising monetization gap where 85% of DAU are international but contribute only ~15% of advertising revenue.",
+    "description": "Reddit's revenue growth is decelerating off a torrid base — from FY2025's +69% YoY (Q4 +70%) to Q1 2026's +69% YoY ($663M) and a Q2 2026 guide of +43–45% — but remains powered by a structural AI data licensing tailwind now being renegotiated for higher, usage-based terms, plus a widening international user base (73.3M international DAUq, +26% YoY, vs 53.5M US, +7% YoY) whose $2.02 ARPU is still less than a quarter of the US's $9.63.",
     "growthAnalysis": {
-      "cagrEstimate": "28–38%",
-      "scoreDerivation": "Base 80 (28–38% CAGR; FY2025 +69% YoY; Q4 revenue +70%; Q1 2026 guide +52–54%) + 5 AI data licensing (Google/OpenAI multi-year agreements create a structural recurring revenue line that grows with AI model proliferation — uniquely advantaged among social platforms) + 5 international monetization gap (85% of DAU are international but contribute only ~15% of advertising revenue — RPM catch-up to US levels alone implies multi-year growth tailwind) − 2 growth deceleration risk (FY2025 +69% is decelerating to Q1 2026 +52–54%; further normalization to 30–35% expected in full-year 2026 as base effects compound) = 88",
+      "cagrEstimate": "25–35%",
+      "scoreDerivation": "Base 90 (25–35% CAGR, baseFromCagr formula) + 1.3 trajectory (2 of 3 drivers accelerating; advertising decelerating as Q1 +69% YoY steps down to +43–45% Q2 guide) + 4 expanding margins + 4 both TAM/share − 10 high keyRisk severity (Google-referral-traffic dependency plus Meta's May 2026 Forum copycat threaten core DAU before licensing/Answers scale) = 89",
       "drivers": [
         {
           "name": "Advertising Revenue",
-          "metric": "FY2025 +69% YoY; Q1 2026 guided +52–54%",
-          "trend": "stable"
+          "metric": "Q1 2026 ad revenue +74% YoY to $625M; Q2 2026 guided total revenue +43–45%",
+          "trend": "decelerating"
         },
         {
           "name": "AI Data Licensing",
-          "metric": "Google, OpenAI multi-year agreements; structural recurring revenue stream",
+          "metric": "Google (~$60M/yr), OpenAI (~$70M/yr) deals; now being renegotiated for variable, usage-based terms",
           "trend": "accelerating"
         },
         {
           "name": "International Monetization",
-          "metric": "85% of DAU international, ~15% of ad revenue — RPM convergence is multi-year tailwind",
+          "metric": "Intl DAUq 73.3M (+26% YoY) vs US 53.5M (+7% YoY); Intl ARPU $2.02 vs US ARPU $9.63",
           "trend": "accelerating"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "AI chatbots increasingly substitute Reddit visits for information lookup, threatening DAU growth and advertising RPM before AI licensing revenue scales sufficiently to offset the decline",
+      "keyRisk": "Meta's May 2026 launch of Forum (a Facebook Groups-based app replicating Reddit's community format) and continued AI-search substitution of Reddit visits both threaten core traffic and DAU growth before licensing revenue and Reddit Answers scale enough to offset the decline",
+      "keyRiskSeverity": "high",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 72,
-    "description": "At $163.62, Reddit trades between its $95 bear and $190 base scenario — still offering ~16% upside to base targets on 50%+ growth with a $1B buyback underway.",
+    "score": 64,
+    "description": "At $194.00, Reddit trades just above its $190 base scenario and well inside the $95 bear/$290 bull range it round-tripped through over the past year — the market is already pricing in continued 40%+ growth, leaving limited further re-rating upside on fundamentals alone.",
     "peAnalysis": {
-      "asOf": "April 2026",
+      "asOf": "July 2026",
       "rows": [
         {
           "label": "Price / TTM Sales",
-          "value": "~14×",
-          "note": "TTM revenue ~$2.2B at $163.62"
+          "value": "~15×",
+          "note": "TTM revenue ~$2.47B"
         },
         {
           "label": "Price / Forward Sales",
-          "value": "~9×",
-          "note": "$3.5B FY2026 consensus revenue"
+          "value": "~12×",
+          "note": "FY2026 guide ~$3.14B revenue"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~34×",
+          "note": "PEG ~0.75 on 40%+ growth"
+        },
+        {
+          "label": "Price / FCF (TTM)",
+          "value": "~43×",
+          "note": "TTM FCF ~$869M, record Q1 margin"
         },
         {
           "label": "Adj EBITDA Margin",
-          "value": "~45%",
-          "note": "Q4 2025; gross margin 90%+"
-        },
-        {
-          "label": "Share Buyback",
-          "value": "$1B",
-          "note": "Authorized buyback signaling management confidence"
+          "value": "~40%",
+          "note": "Q1 2026, up ~1,100 bps YoY"
         },
         {
           "label": "FY2025 Net Income",
           "value": "$530M",
-          "note": "First full-year GAAP profitability in company history"
+          "note": "First full year of GAAP profit"
         }
       ],
-      "summary": "At $163.62 (~$31.3B market cap), Reddit trades at ~14× TTM P/S and ~9× forward P/S on $3.5B FY2026 consensus revenue. FY2025 marked Reddit's first full-year GAAP profitability ($530M net income on $2.2B revenue), a structural inflection point. The 72-point valuation score reflects premium-but-justified pricing: at ~$95 the stock prices in growth disappointment; at ~$190 it reflects the base case of sustained 25–30% growth with AI licensing scaling. The $1B buyback signals management confidence at current levels."
+      "summary": "At $194.00 (~$37.5B market cap), Reddit trades at ~15× TTM P/S and ~12× forward P/S on FY2026 guidance of ~$3.14B revenue. Its ~34× forward P/E and ~0.75 PEG reflect a still-reasonable multiple for 40%+ growth, and Q1 2026's record 47% FCF margin underscores expanding operating leverage. The 64-point valuation score reflects a stock that swung between $119 and $283 over the past year and now sits just above the $190 base case — offering limited further re-rating upside unless growth reaccelerates or the Google/OpenAI licensing deals are repriced higher."
     }
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$95",
-      "description": "Advertising recession hits social media spend; AI chatbots substitute Reddit visits and DAU growth stalls below 10% annually; AI data licensing deals prove one-time rather than recurring; gross margin compression from infrastructure costs. Revenue decelerates to 15–20% CAGR and the market re-rates to 5–6× P/S.",
+      "description": "Advertising growth decelerates sharply below the Q2 2026 guided +43–45% as Meta's new Forum app peels off community mindshare and AI search cannibalizes referral traffic faster than Reddit Answers (15M WAU) can offset; Google and OpenAI licensing renegotiations stall rather than reprice higher; DAU growth stalls below 10% and margins compress. Revenue growth normalizes to 15–20% CAGR and the market re-rates to 5–6× P/S.",
       "points": [
-        "AI chatbots (ChatGPT, Gemini, Perplexity) substitute Reddit visits for information lookup, stalling DAU growth below 10% annually",
-        "Advertising recession hits social media CPMs and Reddit's ad revenue growth decelerates sharply to 15–20%",
-        "Google and OpenAI data licensing deals prove one-time rather than structurally recurring, eliminating the licensing growth premium",
-        "The market re-rates Reddit to 5–6× P/S as growth normalizes and the AI tailwind narrative breaks"
+        "Meta's Forum app (launched May 2026) and other Reddit-format copycats erode community mindshare, slowing DAU growth below 10% annually",
+        "AI search and chatbots substitute Reddit visits faster than Reddit Answers (15M WAU) converts users into Reddit's own AI experience",
+        "Google and OpenAI licensing renegotiations stall or reprice lower rather than higher, eliminating the anticipated licensing growth premium",
+        "Revenue growth decelerates well below the Q2 2026 guided +43–45%, and the market re-rates Reddit to 5–6× P/S"
       ]
     },
     "base": {
       "priceTarget": "$190",
-      "description": "DAU grows to 150M+ as international markets activate; advertising revenue grows 25–30% annually as international RPM converges toward US levels; AI data licensing expands to additional partners generating $150–250M in annual recurring revenue; adj EBITDA margins sustain 35–40%. Revenue reaches $3.5–4B by FY2026 and the stock re-rates to 9–10× P/S.",
+      "description": "DAU grows toward 150M+ as international activation continues (international DAUq already 73.3M, +26% YoY, vs US 53.5M, +7% YoY); advertising growth normalizes into the 30–40% range as guided; Google and OpenAI licensing renegotiations land at higher, usage-based rates; Reddit Answers scales as a second AI-native surface. Adj EBITDA margin sustains 35–40%, FY2026 revenue reaches $3.0–3.3B, and the stock holds 9–10× P/S.",
       "points": [
-        "DAU grows to 150M+ as international market activation drives user engagement and advertising RPM begins converging toward US levels",
-        "AI data licensing expands to additional partners beyond Google and OpenAI, generating $150–250M in annual recurring revenue",
-        "Advertising revenue grows 25–30% annually as international monetization catches up to domestic levels",
-        "Adj EBITDA margins sustain 35–40% on operating leverage, and the stock re-rates to 9–10× forward P/S"
+        "DAU grows toward 150M+ as international markets (73.3M DAUq, +26% YoY) continue outpacing the US (53.5M, +7% YoY)",
+        "Google and OpenAI licensing renegotiations land at higher, usage-based rates, and Reddit Answers (15M WAU) scales as a second AI-native product",
+        "Advertising revenue growth normalizes into the 30–40% range as the Q2 2026 guided +43–45% gradually decelerates",
+        "Adj EBITDA margin sustains 35–40%, FY2026 revenue reaches $3.0–3.3B, and the stock holds 9–10× forward P/S"
       ]
     },
     "bull": {
       "priceTarget": "$290",
-      "description": "AI data licensing becomes a $500M+ annual revenue stream as every major AI lab requires Reddit's corpus for model training and fine-tuning; DAU exceeds 200M as international markets unlock; Reddit's community platform becomes the authenticated home for human-AI discussion; advertising RPM expands 3–4× in international markets. Revenue reaches $6B+ and the stock re-rates to 12× P/S.",
+      "description": "AI data licensing is repriced to a $500M+ annual run-rate as every major AI lab pays usage-based fees for Reddit's corpus and Reddit Answers becomes a genuine AI search destination; DAU exceeds 200M as international RPM converges toward US levels; advertising growth reaccelerates above the Q2 guide. Revenue exceeds $6B and the stock re-rates to 12× P/S, revisiting the pattern already seen when RDDT touched $283 in March 2026.",
       "points": [
-        "AI data licensing becomes a $500M+ annual revenue stream as every major AI lab pays to access Reddit's authentic human discourse corpus",
-        "DAU exceeds 200M as international markets fully unlock and Reddit becomes the global community platform for human-AI discussion",
-        "International advertising RPM expands 3–4× as programmatic targeting matures in emerging markets",
-        "Revenue reaches $6B+ and the stock re-rates to 12× P/S as Reddit's AI infrastructure identity is recognized by the market"
+        "AI data licensing is repriced to a $500M+ annual run-rate as Reddit's renegotiated, usage-based deals scale with AI model demand",
+        "Reddit Answers (from 15M WAU) becomes a genuine AI search destination, converting the AI-substitution risk into a growth driver",
+        "DAU exceeds 200M as international ARPU converges toward the $9.63 US level from today's $2.02",
+        "Revenue exceeds $6B and the stock re-rates to 12× P/S, revisiting the $283 high set in March 2026"
       ]
     }
   },
@@ -204,7 +212,7 @@
     },
     "networkEffects": {
       "status": "strong",
-      "note": "Reddit's subreddit structure creates extremely dense, topic-specific network effects: more engaged users per subreddit → higher-quality discussion → better answers → more users seeking those answers. Critically, these network effects are community-specific, not platform-wide — r/personalfinance, r/MachineLearning, r/wallstreetbets, and r/AskDocs have achieved critical mass with years of accumulated Q&A that no competing platform has replicated. The 2023 API crisis (user blackouts, mod protests) demonstrated that despite platform-level controversy, subreddit communities did not migrate — the switching cost of relocating an entire community with its history and moderation infrastructure is prohibitive."
+      "note": "Reddit's subreddit structure creates extremely dense, topic-specific network effects: more engaged users per subreddit → higher-quality discussion → better answers → more users seeking those answers. Critically, these network effects are community-specific, not platform-wide — r/personalfinance, r/MachineLearning, r/wallstreetbets, and r/AskDocs have achieved critical mass with years of accumulated Q&A that no competing platform has replicated. The 2023 API crisis (user blackouts, mod protests) demonstrated that despite platform-level controversy, subreddit communities did not migrate — the switching cost of relocating an entire community with its history and moderation infrastructure is prohibitive. Meta's May 2026 launch of Forum, a Facebook Groups-based app explicitly copying Reddit's community format, is an early test of this moat's durability, though it remains embryonic next to Reddit's 126.8M DAUq and accumulated community history."
     },
     "transactionEmbedding": {
       "status": "destroyed",
