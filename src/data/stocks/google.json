@@ -82,7 +82,7 @@
     },
     "growthAnalysis": {
       "cagrEstimate": "17-22%",
-      "scoreDerivation": "Base 80 (17-22% CAGR, blended; Cloud at $80B+ ARR growing 63%) + 5 Cloud re-acceleration ($460B backlog, 63% Q1 growth, margin expanding) + 3 AI Overviews/Search expansion (+19% Q1, AI Mode past 1B MAU, Gemini 3 live) − 2 FCF pressure (TTM FCF down 14% YoY to $64.4B; 2026 capex guidance raised to $180-190B) = 86",
+      "scoreDerivation": "Base 83 (17-22% CAGR, baseFromCagr formula) + 2.7 trajectory (2 of 3 drivers accelerating: Cloud $460B backlog +63%, Search +19%; YouTube stable) + 0 stable margin + 4 both TAM/share − 10 high keyRisk severity (ad-tech antitrust remedy pending, search-remedy appeal, $180-190B capex weighing on FCF −14% YoY) = 80",
       "drivers": [
         {
           "name": "Google Cloud",

@@ -72,7 +72,7 @@
     "description": "Q1 2026 revenue hit $333.4M (+46% YoY), accelerating from +40% in Q4 2025 and +38% in Q3 2025. NDR expanded to 139% — a two-year high — from 136% in Q4. FY2026 guidance was raised to $1.422–1.428B (+~35% YoY) and non-GAAP operating income guidance raised to $125–135M, delivered weeks after Anthropic's Claude Design launch (April 17, 2026) and Google's Vibe design tool. AI credit monetisation (live since March 18, 2026) is contributing to the beat. Key risk: Claude Design and Google Vibe target the zero-to-one design workflow; Q1 results predate most of their competitive impact, so the risk to new-logo acquisition and NDR remains unproven rather than resolved.",
     "growthAnalysis": {
       "cagrEstimate": "30–35%",
-      "scoreDerivation": "Base 85 (30–35% CAGR; FY26 guide raised to $1.425B midpoint post-Claude Design launch) + 8 recurring NDR 139% (2-yr high) + 4 AI credit monetisation live and accretive − 2 Claude Design/Vibe headwind (unconfirmed in data yet) − 5 AI R&D cost drag = 90",
+      "scoreDerivation": "Base 91 (30–35% CAGR, baseFromCagr formula) + 4 trajectory (3 of 3 drivers accelerating) + 4 expanding margins + 4 both TAM/share − 10 high keyRisk severity (Claude Design/Google Vibe AI-native disruption, unconfirmed in data but structural) = 93",
       "drivers": [
         { "name": "Core Design Platform", "metric": "+46% YoY Q1 2026, $333.4M quarterly revenue, accelerating from +40% in Q4", "trend": "accelerating" },
         { "name": "AI Credits (Make, Sites, Weave)", "metric": "Monetisation live since March 2026; contributed to Q1 beat and raised FY26 opinc guide", "trend": "accelerating" },
@@ -80,7 +80,7 @@
       ],
       "primaryType": "both",
       "keyRisk": "Claude Design and Google Vibe both launched after Q1 2026 closed, so the 46% growth and raised guidance do not yet reflect their full impact; if either captures meaningful zero-to-one share by Q3/Q4 2026, NDR could reverse from the current 139% high and growth could decelerate back toward or below the ~35% guided range",
-      "keyRiskSeverity": "moderate",
+      "keyRiskSeverity": "high",
       "marginTrend": "expanding"
     }
   },

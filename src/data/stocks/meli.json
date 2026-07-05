@@ -82,7 +82,7 @@
     },
     "growthAnalysis": {
       "cagrEstimate": "20–26%",
-      "scoreDerivation": "Base 80 (20–26% blended CAGR; Q1 2026 revenue +49% YoY, FY2026E consensus ~$37B, +~30%) + 5 LatAm TAM expansion (e-commerce penetration ~15–18% vs US 25–30%, structural runway intact) + 5 Mercado Pago financial OS scaling (MAU +29% YoY to 82.9M, AUM +77% YoY, credit portfolio $14.6B +87%) + 3 Argentina macro de-risking (IMF $20B program, inflation decelerating from 211% peak, reduces tail risk vs April 2026) − 8 margin compression accelerating (Q1 2026 operating margin 6.9% vs 10.1% Q4 2025 and mid-teens FY2024; net income −16% YoY; fintech NIMAL 17.8% vs 22.7% YoY) − 7 competitive intensity rising (Shopee has overtaken MELI in Brazil order volume and lifted take-rates to ~15%; Amazon-Nubank NuPay tie-up; TikTok Shop entering Brazil) = 78",
+      "scoreDerivation": "Base 85 (20–26% blended CAGR, baseFromCagr formula; Q1 2026 revenue +49% YoY) + 4 trajectory (3 of 3 drivers accelerating: commerce, Mercado Pago, advertising) − 4 compressing margins (Q1 2026 operating margin 6.9% vs 10.1% Q4 2025; net income −16% YoY) + 4 both TAM/share − 10 high keyRisk severity (Shopee overtook MELI in Brazil order volume; Amazon-Nubank NuPay; TikTok Shop entry) = 79",
       "drivers": [
         { "name": "E-Commerce (Marketplace + Envios)", "metric": "+42% GMV YoY Q1 ($19.0B); Brazil +38%, Mexico +28%, Argentina +41%", "trend": "accelerating" },
         { "name": "Mercado Pago (Fintech + Credit)", "metric": "+50% TPV YoY ($87.2B); credit portfolio $14.6B (+87%)", "trend": "accelerating" },

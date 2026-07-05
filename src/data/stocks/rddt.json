@@ -85,7 +85,7 @@
     "description": "Reddit's revenue growth is decelerating off a torrid base — from FY2025's +69% YoY (Q4 +70%) to Q1 2026's +69% YoY ($663M) and a Q2 2026 guide of +43–45% — but remains powered by a structural AI data licensing tailwind now being renegotiated for higher, usage-based terms, plus a widening international user base (73.3M international DAUq, +26% YoY, vs 53.5M US, +7% YoY) whose $2.02 ARPU is still less than a quarter of the US's $9.63.",
     "growthAnalysis": {
       "cagrEstimate": "25–35%",
-      "scoreDerivation": "Base 78 (25–35% CAGR; Q1 2026 +69% YoY to $663M; Q2 2026 guided +43–45%) + 5 AI data licensing (Google/OpenAI multi-year deals now being renegotiated toward variable, usage-based pricing — structural recurring revenue uniquely advantaged among social platforms) + 5 international monetization gap (international DAUq of 73.3M already exceeds US DAUq of 53.5M, yet international ARPU of $2.02 is under a quarter of the $9.63 US ARPU — RPM convergence is a multi-year tailwind) − 3 accelerating growth deceleration (Q1 2026 +69% YoY guided down to +43–45% for Q2, a sharper step-down than prior quarters as easy comps roll off) − 2 competitive threat (Meta's Forum app, a Reddit-format copycat launched May 2026) = 83",
+      "scoreDerivation": "Base 90 (25–35% CAGR, baseFromCagr formula) + 1.3 trajectory (2 of 3 drivers accelerating; advertising decelerating as Q1 +69% YoY steps down to +43–45% Q2 guide) + 4 expanding margins + 4 both TAM/share − 10 high keyRisk severity (Google-referral-traffic dependency plus Meta's May 2026 Forum copycat threaten core DAU before licensing/Answers scale) = 89",
       "drivers": [
         {
           "name": "Advertising Revenue",
@@ -105,7 +105,7 @@
       ],
       "primaryType": "both",
       "keyRisk": "Meta's May 2026 launch of Forum (a Facebook Groups-based app replicating Reddit's community format) and continued AI-search substitution of Reddit visits both threaten core traffic and DAU growth before licensing revenue and Reddit Answers scale enough to offset the decline",
-      "keyRiskSeverity": "moderate",
+      "keyRiskSeverity": "high",
       "marginTrend": "expanding"
     }
   },
