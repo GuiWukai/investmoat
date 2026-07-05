@@ -323,13 +323,10 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/40">
             {data.headerStats.map((stat, i) => (
               <span key={i}>
-                {stat.label}:{' '}
-                {stat.label === 'Price'
-                  ? <LiveHeaderPrice slug={data.slug} />
-                  : <strong className="text-white/80">{stat.value}</strong>
-                }
+                {stat.label}: <strong className="text-white/80">{stat.value}</strong>
               </span>
             ))}
+            <span>Price: <LiveHeaderPrice slug={data.slug} /></span>
             {data.lastAnalyzed && (
               <span>Analysis: <strong className="text-white/50">{data.lastAnalyzed}</strong></span>
             )}
