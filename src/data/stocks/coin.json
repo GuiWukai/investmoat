@@ -2,7 +2,7 @@
   "slug": "coin",
   "ticker": "COIN",
   "name": "Coinbase Global",
-  "lastAnalyzed": "May 2026",
+  "lastAnalyzed": "July 7, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "$48.7B"
+      "value": "$44.5B"
     }
   ],
   "chips": [
@@ -27,21 +27,21 @@
     {
       "title": "Revenue",
       "value": "$7.2B",
-      "label": "FY2025; Subscription & Services $2.8B (+23% YoY) — durable revenue base",
+      "label": "FY2025 total; Q1'26 fell to $1.41B (−31% YoY) as the crypto drawdown cooled trading",
       "icon": "TrendingUp",
       "color": "#1652f0"
     },
     {
-      "title": "Crypto Custody",
-      "value": "~12%",
-      "label": "Of all crypto globally — more than next 4 competitors combined; $11.3B cash",
+      "title": "Trading Share",
+      "value": "8.6%",
+      "label": "All-time-high global crypto trading market share in Q1'26; ~12% of all crypto in custody; $11.3B cash",
       "icon": "Shield",
       "color": "#10b981"
     },
     {
-      "title": "USDC Market Cap",
-      "value": "$76.2B",
-      "label": "Avg balance via Coinbase products; 2nd largest stablecoin; structural interest income",
+      "title": "Stablecoin Revenue",
+      "value": "$305M",
+      "label": "Q1'26 (+11% YoY); USDC held on platform $19B (ATH); Base handled 62% of stablecoin volume",
       "icon": "Zap",
       "color": "#f59e0b"
     }
@@ -66,48 +66,48 @@
     ]
   },
   "growth": {
-    "description": "FY2025 revenue grew 9% to $7.2B despite a challenging Q4 (trading revenue disappointed amid crypto price volatility). Subscription and services revenue — the durable, non-cyclical revenue base — grew 23% to $2.8B. Total trading volume doubled YoY to all-time highs, and crypto market share doubled. FY2026 total revenue could reach $8B+ if crypto markets sustain elevated activity, with subscription/services providing a growing floor. The structural growth driver is institutional crypto adoption (ETF AUM, corporate treasury, sovereign wealth) — a multi-decade trend in its early stages.",
+    "description": "Q1 2026 exposed Coinbase's cyclicality: total revenue fell 31% YoY to $1.41B (a miss vs the ~$1.52B consensus) and the company posted a $394M GAAP net loss as Bitcoin's slide toward the high-$50Ks sapped trading activity — it also disclosed a 14% workforce cut targeting ~$500M in annualised savings. The offset is diversification: subscription & services held at $584M (44% of net revenue) with stablecoin revenue up 11% YoY to $305M, USDC on the platform hit an all-time-high $19B, derivatives volume grew 169% YoY (retail derivatives now >$200M annualised revenue), and global trading market share reached a record 8.6%. The through-cycle growth thesis — institutional adoption, stablecoins/Base, and derivatives compounding the durable S&S base — is intact, but the near term is contracting and management guided Q2 S&S to $565–645M, below the ~$655M consensus.",
     "growthAnalysis": {
-      "cagrEstimate": "15–25%",
-      "scoreDerivation": "Base 80 (15–30% blended CAGR; subscription/services +23% durable; total revenue +9% in challenged year) + 5 TAM expansion (spot ETF AUM growing, USDC stablecoin adoption, Base L2 ecosystem) + 3 market share gains (doubled crypto trading market share in 2025) − 13 cyclicality (crypto revenue can fall 60%+ in a bear market; COIN's revenue is highly correlated with BTC/ETH prices; institutional doesn't fully offset retail volatility) = 75",
+      "cagrEstimate": "12–20%",
+      "scoreDerivation": "Base 81 (12–20% through-cycle blended CAGR; S&S/derivatives/stablecoins compounding, but total revenue −31% YoY in Q1'26) + 4 both-type (TAM expansion + share gains) + 3 trajectory (derivatives +169% YoY, Base 62% of stablecoin volume) − 4 margin compression (Q1'26 GAAP net loss; cost cuts underway) − 10 high cyclicality risk (crypto revenue can halve in a bear market; revenue tightly correlated to BTC/ETH) ≈ 73",
       "drivers": [
         {
           "name": "Subscription & Services (Non-Cyclical)",
-          "metric": "$2.8B FY2025 (+23% YoY); USDC interest income, custody fees, staking, Coinbase One",
+          "metric": "$584M Q1'26 (44% of net revenue); stablecoin revenue $305M (+11% YoY), custody, staking, Coinbase One",
+          "trend": "stable"
+        },
+        {
+          "name": "Derivatives & Institutional Trading",
+          "metric": "Derivatives volume +169% YoY; retail derivatives >$200M annualised; record 8.6% global trading share",
           "trend": "accelerating"
         },
         {
-          "name": "Institutional Crypto (ETF + Prime)",
-          "metric": "All-time high trading volume; 12% of all crypto in custody; ETF custodianship for $50B+",
-          "trend": "accelerating"
-        },
-        {
-          "name": "Base L2 + On-chain Finance",
-          "metric": "Base becomes leading Ethereum L2; infrastructure for on-chain stablecoins, DeFi, NFTs",
+          "name": "USDC / Base On-chain Finance",
+          "metric": "USDC on platform $19B (ATH); Base handled 62% of all stablecoin transaction volume in Q1'26",
           "trend": "accelerating"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "If Bitcoin falls to $40K and crypto market cap contracts 50%+ by end of 2026 — driven by macro tightening or regulatory reversal — Coinbase's transaction revenue collapses from $4B+ toward $1.5B, USDC market cap shrinks as stablecoin demand falls, and total FY2026 revenue misses $8B by $3B+",
+      "keyRisk": "With Bitcoin already near $64K (off October 2025's ~$126K peak and testing 650-day lows), a further leg down to $40K and a 50%+ crypto market-cap contraction by end of 2026 would collapse transaction revenue toward $1.5B, shrink USDC balances and interest income, and push FY2026 total revenue well below $6B",
       "keyRiskSeverity": "high",
-      "marginTrend": "expanding"
+      "marginTrend": "compressing"
     }
   },
   "valuation": {
-    "score": 72,
-    "description": "At $202.99, COIN has recovered ~30% from its February 2026 low of $139.36 but remains 55%+ below its 2025 all-time high of $444.65. The market cap of ~$48.7B on $7.2B FY2025 revenue (P/S ~6.8×) is historically cheap for Coinbase. The cheap valuation reflects bitcoin's drawdown from $126K (October 2025) to ~$76K and Q1 2026 consensus calling for revenue of just $1.5B (down from $1.78B in Q4). Coinbase also announced a 14% workforce reduction in late April. The stock sits between bear ($80) and base ($250), with the May 7 Q1 print as the near-term catalyst.",
+    "score": 73,
+    "description": "At $166.58, COIN has given back its spring bounce and trades ~63% below its 2025 all-time high of $444.65, only ~20% above the 52-week low of $139.18. The ~$44.5B market cap on ~$6.6B TTM revenue (P/S ~6.7× on ~263M shares) is historically cheap for Coinbase, but the discount is warranted: Q1 2026 revenue fell 31% YoY, the company posted a $394M GAAP net loss, lost ~1.5M customers, and Bitcoin has slid to ~$64K after touching the high-$50Ks in early July. Reflecting the weaker earnings trajectory, the base case is trimmed to $210 (from $250) and the bull to $340 (from $380); the stock sits between bear ($80) and base ($210), with the early-August Q2 print the next catalyst.",
     "peAnalysis": {
-      "asOf": "May 2026",
+      "asOf": "July 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~38×",
-          "note": "FY2025 GAAP net income $1.26B"
+          "value": "~62×",
+          "note": "TTM EPS depressed by Q1'26 net loss"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~25×",
-          "note": "est. 2026 GAAP EPS ~$8 (cycle-dependent)"
+          "value": "~30×",
+          "note": "est. 2026 GAAP EPS ~$5.5 (cycle-dependent)"
         },
         {
           "label": "PEG Ratio",
@@ -116,16 +116,16 @@
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~5.5×",
-          "note": "$8B+ NTM revenue (bull-cycle scenario)"
+          "value": "~7×",
+          "note": "~$6B NTM revenue estimate"
         },
         {
           "label": "Price / FCF",
-          "value": "~14×",
-          "note": "$3.38B FCF (Q4 2025 alone)"
+          "value": "~15×",
+          "note": "normalised; single-quarter FCF is volatile"
         }
       ],
-      "summary": "Coinbase's valuation is highly cycle-dependent — at ~6.6× TTM P/S on $7.2B revenue, the stock is cheap relative to the business's institutional maturity, but forward metrics swing widely with crypto prices. The P/FCF of ~14× based on Q4 2025 FCF is extremely attractive, but Q4 was aided by exceptionally high trading volumes that may not persist. The key valuation insight is the subscription/services floor ($2.8B, growing 23%) which is valued at approximately $10–12B at 3.5–4× P/S — implying the market is only paying ~$37B for $4.4B in cyclical transaction revenue, which could be worth $20–50B depending on the crypto cycle."
+      "summary": "Coinbase's valuation is highly cycle-dependent — at ~6.7× TTM P/S the stock looks cheap for its institutional franchise, but the trailing P/E has ballooned to ~62× because the Q1'26 net loss gutted TTM earnings, so the multiple flatters to deceive. The through-cycle case rests on the subscription/services floor (~$2.3B annualised, ~44% of net revenue), reasonably worth $9–12B at 4–5× P/S — implying the market pays ~$33B for the cyclical trading/derivatives franchise, a swing factor worth anywhere from $15B in a winter to $50B+ in a super-cycle. Fair value is genuinely a function of where BTC sits over the next 12 months."
     }
   },
   "scenarios": {
@@ -133,30 +133,30 @@
       "priceTarget": "$80",
       "description": "Bitcoin falls to $40K, crypto winter sets in, transaction revenue collapses to $1.5B, and the subscription/services floor is tested — USDC market cap shrinks and ETF inflows reverse.",
       "points": [
-        "Bitcoin falls to $40K following a macro tightening event or regulatory shock in a major jurisdiction — total crypto market cap falls from $3T to below $1.2T, collapsing Coinbase's transaction revenue 60%+ to ~$1.5B",
+        "Bitcoin falls to $40K following a macro tightening event or regulatory shock in a major jurisdiction — total crypto market cap falls from ~$2.3T to below $1.2T, collapsing Coinbase's transaction revenue 60%+ to ~$1.5B",
         "USDC market cap declines from $76B to below $30B as stablecoin demand falls with crypto market activity — reducing Coinbase's interest income from USDC reserves by ~60%",
         "Spot Bitcoin ETF AUM declines from $50B+ to below $20B as institutional investors reduce risk allocation to crypto in a bear cycle — ETF custody fees decline proportionally",
-        "Multiple compresses to 3× P/S on $4B depressed revenue: $12B / 240M shares = $50/share — rounded to $80 including subscription/services floor value"
+        "Multiple compresses to ~4.5× P/S on ~$4B depressed revenue: ~$21B / 263M shares ≈ $80/share, with the subscription/services floor cushioning the downside"
       ]
     },
     "base": {
-      "priceTarget": "$250",
-      "description": "Crypto market remains constructive, Bitcoin sustains $70–90K, subscription/services grows to $3.5B, and institutional adoption continues — re-rating to 8× P/S on $8B+ revenue.",
+      "priceTarget": "$210",
+      "description": "Bitcoin stabilises in a $60–90K band, FY2026 revenue lands near $6–7B, subscription/services grows toward $2.5B, and the cost cuts restore profitability — supporting ~8× P/S on ~263M shares.",
       "points": [
-        "FY2026 total revenue reaches $8B+ as transaction revenue sustains elevated activity levels (Bitcoin $70–90K) and subscription/services grows 25% to $3.5B",
-        "Base L2 ecosystem reaches $50B+ in total value locked (TVL), establishing Coinbase as a major on-chain infrastructure provider and generating incremental fee revenue beyond exchange trading",
-        "USDC market cap grows to $100B+ as institutional adoption of stablecoins accelerates and Congress passes stablecoin legislation that legitimises USDC as the compliant stablecoin of choice",
-        "Institutional Prime volumes continue growing as sovereign wealth funds and corporate treasuries expand crypto allocations following spot ETF approval normalisation"
+        "FY2026 total revenue lands near $6–7B as trading activity stabilises (Bitcoin $60–90K) off the weak Q1'26 base and subscription/services grows ~15% on stablecoin and derivatives strength",
+        "The 14% workforce cut delivers ~$500M in annualised savings, returning the business to consistent GAAP profitability by late 2026 after the Q1 net loss",
+        "Derivatives keep compounding (volume +169% YoY in Q1'26) and Base sustains its ~60%+ share of stablecoin transaction volume, diversifying revenue away from spot trading",
+        "USDC balances and stablecoin legislation progress support structural interest income even without a full crypto bull cycle — re-rating to ~8× P/S: ~$55B / 263M shares ≈ $210"
       ]
     },
     "bull": {
-      "priceTarget": "$380",
-      "description": "Crypto super-cycle drives Bitcoin to $150K+, institutional ETF AUM reaches $200B+, and Base L2 emerges as the dominant on-chain financial layer — re-rating toward 15× P/S on $12B+ revenue.",
+      "priceTarget": "$340",
+      "description": "A renewed crypto up-cycle drives Bitcoin back above $120K, trading and derivatives revenue surge, and Base emerges as a dominant on-chain settlement layer — re-rating toward ~13× P/S on $10B+ revenue.",
       "points": [
-        "Bitcoin reaches $150K in 2026 super-cycle, driving total crypto market cap above $8T — Coinbase's transaction revenue surges to $7B+ and FY2026 total revenue exceeds $12B",
-        "Base L2 achieves $150B+ TVL, becoming the primary settlement layer for on-chain stablecoins, tokenized assets, and DeFi — generating $500M+ in Base-attributable revenue for Coinbase",
-        "USDC market cap reaches $200B as Congress passes stablecoin framework establishing USDC as the regulated dollar stablecoin standard for global institutional flows — generating $4B+ in annual interest income at 5% rates",
-        "Coinbase becomes the first major US bank-equivalent for digital assets — stock re-rates toward 15× P/S on $12B revenue: $180B / 240M shares = $750/share (capped at $380 for 12-month horizon)"
+        "Bitcoin recovers above $120K in a 2026–27 up-cycle, driving total crypto market cap higher — Coinbase's transaction revenue surges and FY2026 total revenue rebounds past $10B",
+        "Base becomes the primary settlement layer for on-chain stablecoins, tokenized assets, and DeFi — generating meaningful Base-attributable revenue beyond exchange trading",
+        "Congress passes a stablecoin framework establishing USDC as the regulated dollar-stablecoin standard, growing USDC balances and interest income at elevated rates",
+        "Coinbase cements its position as the regulated on-ramp for digital assets — stock re-rates toward ~13× P/S on $10B+ revenue: ~$89B / 263M shares ≈ $340 (12-month horizon)"
       ]
     }
   },
