@@ -2,7 +2,7 @@
   "slug": "axon",
   "ticker": "AXON",
   "name": "Axon Enterprise",
-  "lastAnalyzed": "June 26, 2026",
+  "lastAnalyzed": "July 7, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "$35.5B"
+      "value": "$50B"
     }
   ],
   "chips": [
@@ -69,7 +69,7 @@
     "description": "Q1 2026 delivered $807M revenue (+34% YoY), beating consensus by ~$29M and marking the 9th consecutive quarter of 30%+ growth. ARR reached $1.5B (+35% YoY), future contracted bookings grew 44% to $14.3B, and AI Era Plan revenue (Draft One, Axon Assistant) surged over 700% YoY. International revenue more than doubled (+100%) to 20% of mix. Management raised FY2026 revenue growth guidance to 30–32% (from 27–30%) and reaffirmed FY26 operating cash flow >$600M and free cash flow ~$450M, materially de-risking the path toward the $6B 2028 target.",
     "growthAnalysis": {
       "cagrEstimate": "29–33%",
-      "scoreDerivation": "Base 90 (30%+ CAGR, blended 29–33% through 2028 guided target after FY26 guide raise to 30–32%) + 5 recurring (ARR $1.5B, 80%+ software gross margins, 7–10yr OSP contracts) + 5 TAM expansion (AI Era Plan revenue +700%, international +100%, Axon 911 dispatch, Axon Body Mini commercial) − 5 federal budget risk (DOJ grant cut proposal still in play but partially offset by international and commercial diversification) = 95, capped at 93 to retain a margin-of-safety on the federal exposure tail risk = 93",
+      "scoreDerivation": "Base 90 (30%+ CAGR, blended 29–33% through 2028 guided target after FY26 guide raise to 30–32%) + 5 recurring (ARR $1.5B, 80%+ software gross margins, 7–10yr OSP contracts) + 5 TAM expansion (AI Era Plan revenue +700%, international +100%, Axon 911 dispatch, Axon Body Mini commercial) − 5 federal budget risk (DOJ grant cut proposal still in play, now partially offset by international/commercial diversification AND fresh federal immigration-enforcement demand — the ICE ~$220M TASER 10 solicitation shows federal buying expanding even as DOJ grants face cuts) = 95, capped at 93 to retain a margin-of-safety on federal-concentration and the new political/procurement-scrutiny tail risk = 93",
       "drivers": [
         {
           "name": "Software & Services (ARR)",
@@ -88,52 +88,52 @@
         }
       ],
       "primaryType": "both",
-      "keyRisk": "If U.S. federal DOJ grant funding is cut 15%+ under DOGE-driven budget reviews and 20%+ of agencies delay new OSP contract signings into 2027, bookings growth decelerates below 25% and the $6B 2028 target requires aggressive commercial market penetration not yet validated at scale — though Q1 2026's +100% international growth and +700% AI revenue partially offset this single-geography concentration risk",
+      "keyRisk": "If U.S. federal DOJ grant funding is cut 15%+ under DOGE-driven budget reviews and 20%+ of agencies delay new OSP contract signings into 2027, bookings growth decelerates below 25% and the $6B 2028 target requires aggressive commercial market penetration not yet validated at scale — though Q1 2026's +100% international growth, +700% AI revenue, and expanding federal immigration-enforcement demand (the ICE ~$220M TASER 10 solicitation) partially offset this single-geography concentration risk. A newer, secondary risk is political/procurement scrutiny: the ICE award and disclosures of a presidential Axon stock purchase have drawn congressional and media attention that could complicate future no-bid federal deals or invite conflict-of-interest reviews",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 76,
-    "description": "AXON sits at ~$445 ($35.5B market cap) as of June 25, 2026 — having rebounded off the May lows on the AI drone thesis (Dedrone counter-drone revenue +300% YoY in Q1) and a ~$153M long-term public safety contract win, then easing back ~1.5% on insider sales and range-bound trading — and remains ~50% below the August 2025 all-time high of $886. At ~9.7× NTM P/S on raised $3.65B 2026 guidance and ~56× forward non-GAAP P/E, the post-Q1 discount has partially closed. With the bear at $320 (~28% downside) and base at $540 (~21% upside), risk-reward is more balanced than at the May entry point, though the $14.3B backlog (+44% YoY) still underwrites the base case.",
+    "score": 59,
+    "description": "AXON sits at ~$622 (~$50B market cap) as of July 6, 2026 — having ripped ~40% off the ~$445 late-June level after ICE issued a five-year, ~$220M solicitation for ~17,800 TASER 10-spec conducted-energy weapons (a federal immigration-enforcement demand catalyst), amplified by momentum and headlines around a disclosed presidential Axon stock purchase — and now trades ~30% below the August 2025 all-time high of $886. At ~13.7× NTM P/S on $3.65B 2026 guidance and ~79× forward non-GAAP P/E, June's discount has fully closed and the stock has pushed above our $540 base. With the bear at $320 (~49% downside) and base at $540 (~13% downside) vs ~29% upside to the $800 bull, the valuation asymmetry has turned unfavourable: the $14.3B backlog (+44% YoY) still underwrites the fundamentals, but PEG of ~2.5× now sits above the 2.0× 'expensive' threshold and the shares have run ahead of fair value on a sentiment-driven, single-catalyst spike.",
     "peAnalysis": {
-      "asOf": "June 26, 2026",
+      "asOf": "July 7, 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~285×",
+          "value": "~395×",
           "note": "GAAP heavily distorted by stock-based comp"
         },
         {
           "label": "Forward P/E (NTM, non-GAAP)",
-          "value": "~56×",
+          "value": "~79×",
           "note": "consensus non-GAAP EPS ~$7.90 post-guide raise"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.8×",
-          "note": "fwd P/E ÷ ~31% non-GAAP EPS CAGR"
+          "value": "~2.5×",
+          "note": "fwd P/E ÷ ~31% non-GAAP EPS CAGR — now above the 2.0× 'expensive' threshold"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~9.7×",
+          "value": "~13.7×",
           "note": "$3.65B NTM revenue (raised 2026 guide midpoint)"
         },
         {
           "label": "Price / FCF",
-          "value": "~79×",
+          "value": "~111×",
           "note": "guided FY26 FCF ~$450M; OCF >$600M"
         }
       ],
-      "summary": "AXON trades at ~56× forward non-GAAP P/E and ~9.7× NTM P/S at ~$445 — still below the 2024–25 average multiple but no longer the deep post-print discount available in May. PEG of ~1.8× remains under the 2.0× 'expensive' threshold against an accelerating top line and +700% AI revenue growth. The $14.3B backlog (+44% YoY) ensures floor-level revenue visibility through 2028, and the raised FY26 guide to 30–32% removes the primary deceleration concern. Against the $320 bear / $540 base / $800 bull triangulation, the asymmetry has normalised: ~28% downside to bear vs ~21% upside to base."
+      "summary": "AXON trades at ~79× forward non-GAAP P/E and ~13.7× NTM P/S at ~$622 after a ~40% two-week re-rating on the ICE TASER solicitation and momentum — back above its 2024–25 average multiple and well beyond June's post-print discount. PEG of ~2.5× has crossed the 2.0× 'expensive' line, signalling the multiple now outruns the ~31% non-GAAP EPS growth even before Q2 (reports early August) confirms the trajectory. The $14.3B backlog (+44% YoY) and raised FY26 guide to 30–32% keep the fundamentals intact and floor revenue visibility through 2028, but against the $320 bear / $540 base / $800 bull triangulation the asymmetry has inverted from June: ~49% downside to bear and ~13% downside to base vs only ~29% upside to bull. The re-rating is catalyst- and sentiment-led rather than earnings-led, so the margin of safety that existed at ~$445 has been spent."
     }
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$320",
-      "description": "Federal DOJ grant cuts materially slow new contract signings, antitrust scrutiny stalls Axon 911 expansion, and Draft One faces regulatory backlash — 2026 revenue misses the low end of guidance, re-rating the multiple to 8× NTM revenue.",
+      "description": "Federal DOJ grant cuts materially slow new contract signings and the ICE immigration-enforcement demand tailwind fades, antitrust and political/procurement scrutiny (following the disclosed presidential stock purchase) stalls Axon 911 expansion and no-bid federal awards, and Draft One faces regulatory backlash — 2026 revenue misses the low end of guidance, re-rating the multiple to 8× NTM revenue.",
       "points": [
-        "DOJ federal grant cuts of 15%+ cause 25%+ of agencies to defer new OSP contract renewals into 2027–28, causing bookings growth to decelerate below 20% and consensus 2026 revenue estimates to come down by $300M+ to ~$3.27B",
+        "DOJ federal grant cuts of 15%+ cause 25%+ of agencies to defer new OSP contract renewals into 2027–28 and the ICE ~$220M TASER demand proves one-off rather than a recurring federal channel, causing bookings growth to decelerate below 20% and consensus 2026 revenue estimates to come down by $300M+ to ~$3.27B",
         "FTC or DOJ antitrust action targets Axon's acquisition of Prepared and Carbyne, blocking Axon 911 market entry and removing the emergency dispatch TAM expansion story",
         "A high-profile wrongful arrest linked to a Draft One AI-generated report triggers congressional hearings, a federal moratorium on AI-generated police reports, and a sharp slowdown in software ARR growth to below 20%",
         "Multiple compresses to ~8× NTM P/S on reduced ~$3.27B revenue (≈$26B mkt cap / ~$320), as growth expectations reset and the regulatory risk discount widens"
