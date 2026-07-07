@@ -9,7 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "$430B"
+      "value": "$485B"
     }
   ],
   "chips": [
@@ -81,18 +81,18 @@
     }
   },
   "valuation": {
-    "score": 76,
-    "description": "Trading 12% below the base case ($555) at $489.08 — attractively priced for a durable compounder; the ~26× forward P/E is well below the 10-year median of 37.8×, offering a margin of safety, with Q1 2026's 16% revenue growth and 18% adjusted EPS growth running ahead of the moderation the market is pricing.",
+    "score": 68,
+    "description": "Trading 3% below the base case ($555) at $539.39 — still modestly discounted for a durable compounder, but a ~10% rally since the prior review (from ~$489) has largely closed the margin of safety; the ~28× forward P/E remains below the 10-year median of ~37.8×, with Q1 2026's 16% revenue growth and 18% adjusted EPS growth continuing to run ahead of the moderation the market is pricing.",
     "peAnalysis": {
-      "asOf": "June 2026",
+      "asOf": "July 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~29×", "note": "~$17.1 TTM EPS after Q1 2026 ($4.35 GAAP diluted)" },
-        { "label": "Forward P/E (NTM)", "value": "~26×", "note": "consensus EPS est. ~$19" },
-        { "label": "PEG Ratio", "value": "~1.5×", "note": "fwd P/E ÷ ~17% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~13×", "note": "~$32B NTM revenue" },
-        { "label": "Price / FCF", "value": "~26×", "note": "$16.4B FCF (TTM)" }
+        { "label": "Trailing P/E (GAAP)", "value": "~31×", "note": "~$17.3 TTM EPS after Q1 2026 ($4.35 GAAP diluted)" },
+        { "label": "Forward P/E (NTM)", "value": "~28×", "note": "consensus EPS est. ~$19" },
+        { "label": "PEG Ratio", "value": "~1.6×", "note": "fwd P/E ÷ ~17% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~15×", "note": "~$32B NTM revenue" },
+        { "label": "Price / FCF", "value": "~30×", "note": "$16.4B FCF (TTM)" }
       ],
-      "summary": "At ~26× forward P/E, Mastercard trades at a meaningful discount to its 10-year median of ~37.8×, implying the market is pricing in growth moderation. The PEG of ~1.5× sits in the fairly-priced-for-growth range, with Q1 2026 adjusted EPS growing 18% YoY and $4B of quarterly buybacks supporting the compounding path. The trailing-to-forward P/E compression from ~29× to ~26× supports the base case."
+      "summary": "At ~28× forward P/E, Mastercard still trades at a discount to its 10-year median of ~37.8×, but the recent rally has lifted the multiple from ~26× and thinned the valuation cushion. The PEG of ~1.6× sits in the fairly-priced-for-growth range, with Q1 2026 adjusted EPS growing 18% YoY and $4B of quarterly buybacks supporting the compounding path. The trailing-to-forward P/E compression from ~31× to ~28× still points to an earnings ramp, but at $539 the stock now sits near fair value rather than deeply discounted."
     }
   },
   "scenarios": {
@@ -167,5 +167,5 @@
     },
     "verdict": "Mastercard is a net beneficiary of the AI era. Its Large Tabular Model (LTM) trained on billions of transactions actively strengthens the proprietary data moat, while the $1.8B BVNK acquisition extends transaction embedding to stablecoin rails before competitors can establish a foothold. The payment network duopoly means AI enhances fraud detection and agentic commerce capability without threatening the structural network itself. businessLogic and bundling remain modestly weakened by fintech/AI pressure, but these carry low weight against five strong AI-resilient moats."
   },
-  "lastAnalyzed": "June 2026"
+  "lastAnalyzed": "July 7, 2026"
 }
