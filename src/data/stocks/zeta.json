@@ -1,0 +1,207 @@
+{
+  "slug": "zeta",
+  "ticker": "ZETA",
+  "name": "Zeta Global Holdings",
+  "lastAnalyzed": "July 7, 2026",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "ZETA"
+    },
+    {
+      "label": "Market Cap",
+      "value": "$5.2B"
+    }
+  ],
+  "chips": [
+    {
+      "label": "AdTech / MarTech | AI Marketing Cloud | CDP",
+      "color": "primary"
+    },
+    {
+      "label": "Athena AI Platform",
+      "color": "warning"
+    },
+    {
+      "label": "Data-Sourcing Scrutiny",
+      "color": "danger"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "Revenue",
+      "value": "$1.30B",
+      "label": "FY2025; Q1 2026 $396M (+50% YoY); FY2026 guide $1,785M midpoint (+37%)",
+      "icon": "TrendingUp",
+      "color": "#2563eb"
+    },
+    {
+      "title": "Adj. EBITDA Margin",
+      "value": "~22%",
+      "label": "FY2026 guide $397M adj. EBITDA; FCF guide $235M (~13% margin). GAAP still loss-making on heavy stock comp",
+      "icon": "Zap",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "Forward P/S",
+      "value": "~2.9×",
+      "label": "$5.2B mkt cap ÷ $1.785B FY2026 revenue guide — cheap for 37% growth if the growth (and its accounting) is real",
+      "icon": "TrendingUp",
+      "color": "#ef4444"
+    }
+  ],
+  "moat": {
+    "description": "Zeta pairs a large deterministic identity graph (245M+ profiles, thousands of real-time signals per person) with a native-AI activation stack (Athena), giving it a genuine data-plus-orchestration advantage — but the moat is narrow and contested by Adobe, Salesforce, and Braze, marketing is one of the more AI-disruptable software categories, and a 2024 short-seller report alleging 'consent-farm' revenue round-tripping still overhangs the durability and quality of the underlying data asset.",
+    "analysisTitle": "The Contested Data Cloud",
+    "analysisSummary": "Zeta's competitive position rests on **Proprietary Identity Data, Embedded Activation Workflows, and a Native-AI Orchestration Layer** — each real, each with a visible flank:",
+    "analysisPoints": [
+      {
+        "title": "Zeta Data Cloud & Identity Graph",
+        "text": "Zeta's core asset is a data cloud built around a deterministic identity graph of 245M+ US profiles enriched with thousands of behavioural and intent signals, which lets it target and measure audiences without relying on third-party cookies. The scale of this graph is a real differentiator versus point CDPs. The unresolved question — raised sharply by Culper Research in November 2024 — is how much of that data is sourced through owned 'consent farms' and whether the associated revenue is partly round-tripped, which if true would undercut both the moat's quality and its regulatory durability."
+      },
+      {
+        "title": "Embedded Activation & Bundled Agency",
+        "text": "Zeta is not just a database — it executes email, SMS, and programmatic campaigns and bundles a services/agency layer (Zeta Marketing Platform + Zeta Agency) that embeds it into a customer's day-to-day marketing operations. Super-scaled customers (189, +19% YoY) with $1.7M ARPU (+21% YoY) show real land-and-expand stickiness. This embedding is a moderate switching cost, though marketing spend is discretionary and clients can and do multi-source."
+      },
+      {
+        "title": "Athena AI + OpenAI Partnership",
+        "text": "Athena, made generally available in 2026 and powered in part by a CES-announced OpenAI collaboration, positions Zeta as an AI-native 'agentic marketing' platform rather than a legacy CDP. This is genuinely dual-edged: AI on top of Zeta's proprietary data is a tailwind, but generative AI also lowers the barrier for competitors and walled gardens to automate campaign creation and audience building — the same force that makes Athena compelling erodes interface lock-in across the category."
+      }
+    ]
+  },
+  "growth": {
+    "description": "Zeta has strung together a 19-quarter beat-and-raise streak: Q1 2026 revenue grew ~50% YoY to $396M, and full-year 2026 guidance was lifted to $1,785M at midpoint (+37%), with Q2 2026 guided to $420M (+36%). Growth is broad-based — 189 super-scaled customers (+19% YoY) at $1.7M ARPU (+21% YoY), a sales pipeline up ~40% YoY, and rising RPOs — and adj. EBITDA and FCF are scaling with it. The two caveats: the law of large numbers is bending growth down from the 50s toward the mid-30s, and the unresolved short-seller allegations mean the reported growth carries a non-trivial 'is-it-all-organic' discount that a cleaner-sourced peer would not.",
+    "growthAnalysis": {
+      "cagrEstimate": "25–30%",
+      "scoreDerivation": "Base ~88 (25–30% blended CAGR; FY2026 guide +37% decelerating toward high-20s/low-30s over 3yr) + 3 both TAM-expansion & share gains (AI marketing cloud TAM plus CDP share capture) + 4 margin expanding (adj. EBITDA margin scaling toward ~22%, FCF positive) − 10 high risk (regulatory / data-sourcing overhang from short-seller allegations that could reset growth if substantiated) ≈ 85",
+      "drivers": [
+        {
+          "name": "Super-scaled enterprise expansion",
+          "metric": "189 super-scaled customers (+19% YoY) at $1.7M ARPU (+21% YoY); pipeline +40% YoY",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Athena AI adoption & OpenAI partnership",
+          "metric": "GA of Athena in 2026 driving upsell into agentic/AI marketing use cases",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Political / cyclical ad spend",
+          "metric": "Zeta benefits from election-cycle and event-driven ad surges; base rate normalises off-cycle",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If a regulator (FTC/state privacy AG) or an auditor action substantiates any part of the Culper 'consent-farm' / revenue round-tripping allegations by 2027, Zeta faces a simultaneous data-supply disruption and a downward revenue restatement — collapsing both the growth rate and the multiple at once, a step-change risk rather than a gradual deceleration.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 76,
+    "description": "At ~$20.75 and ~$5.2B market cap, Zeta trades at ~2.9× the $1.785B FY2026 revenue guide — an unusually cheap multiple for a business compounding revenue at 37% with expanding adj. EBITDA and positive free cash flow. That discount is not free: it prices in the short-seller/data-sourcing overhang, GAAP unprofitability from heavy stock-based compensation, and normal ad-tech cyclicality. If the growth proves clean and durable, the current price is a bargain; if the allegations gain regulatory traction, ~2.9× sales is not a floor.",
+    "peAnalysis": {
+      "asOf": "July 2026",
+      "rows": [
+        {
+          "label": "Forward P/S (FY2026)",
+          "value": "~2.9×",
+          "note": "$5.2B mkt cap ÷ $1.785B revenue guide"
+        },
+        {
+          "label": "Forward P/S (FY2027E)",
+          "value": "~2.4×",
+          "note": "~$2.2B revenue at mid-20s% growth"
+        },
+        {
+          "label": "EV / adj. EBITDA (FY2026)",
+          "value": "~13×",
+          "note": "$397M adj. EBITDA guide; add modest net debt"
+        },
+        {
+          "label": "Price / FCF (FY2026)",
+          "value": "~22×",
+          "note": "$235M FCF guide"
+        },
+        {
+          "label": "GAAP P/E",
+          "value": "n/m",
+          "note": "GAAP net loss on heavy stock-based comp; use adj. metrics"
+        }
+      ],
+      "summary": "Zeta screens cheap on every revenue-based metric — ~2.9× forward sales for 37% growth is a fraction of what higher-quality SaaS compounders command, and the EV/EBITDA of ~13× is reasonable. The bull framing is that the market is mispricing a real AI-marketing-cloud franchise; the bear framing is that the discount is rational insurance against the data-sourcing and GAAP-profitability questions. The multiple alone does not resolve which is true — the FY2026 print cadence and any regulatory development do."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$14",
+      "description": "Growth decelerates faster than guided, a regulatory or auditor development gives the data-sourcing allegations teeth, and the multiple compresses to ~2× sales on a lower revenue base.",
+      "points": [
+        "An FTC/state-AG inquiry or auditor qualification touching Zeta's data-sourcing (consent farms) forces disclosure that spooks enterprise customers and pressures a portion of reported revenue",
+        "FY2026 growth decelerates toward the high-20s and FY2027 toward ~20% as super-scaled ARPU expansion slows and off-cycle ad budgets soften",
+        "Multiple compresses to ~2× forward sales on ~$2.0B revenue: ~$4.0B EV / ~285M shares ≈ $14/share"
+      ]
+    },
+    "base": {
+      "priceTarget": "$26",
+      "description": "Zeta delivers the FY2026 guide ($1.785B, +37%), keeps the beat-and-raise cadence into FY2027 (~$2.2B), adj. EBITDA margin holds in the low-20s, and the short-seller overhang fades without a material regulatory event — supporting a modest re-rate toward ~3.3× forward sales.",
+      "points": [
+        "FY2026 revenue lands at or above the $1,785M guide with adj. EBITDA ~$397M and FCF ~$235M, extending the beat-and-raise streak past 20 quarters",
+        "Athena/OpenAI upsell lifts super-scaled ARPU and net revenue retention, keeping FY2027 growth in the mid-20s",
+        "No adverse regulatory action materialises; the multiple re-rates modestly to ~3.3× forward sales on ~$2.2B → ~$7.3B EV ≈ $26/share"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$40",
+      "description": "Athena becomes a category-defining agentic marketing platform, the data-sourcing questions are put to rest, margins inflect, and Zeta re-rates toward ~4.5× forward sales as the market re-underwrites it as a durable AI-cloud compounder.",
+      "points": [
+        "Athena + OpenAI drive a step-change in AI-driven campaign performance that accelerates net new logos and re-accelerates growth back above 35% into FY2027",
+        "Adj. EBITDA margin expands toward the mid-20s and GAAP profitability comes into view as stock-based comp intensity normalises",
+        "Data-sourcing allegations are formally resolved or dismissed, removing the overhang and re-rating the stock to ~4.5× forward sales on ~$2.4B → ~$11B EV ≈ $40/share"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "Marketers configure audiences, journeys, and reporting inside the Zeta Marketing Platform, creating some workflow familiarity — but Athena's natural-language, agentic layer deliberately abstracts the interface, and generative AI broadly reduces the relearning cost of switching marketing tools."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Per-client audience models, suppression/consent rules, attribution logic, and multi-channel orchestration are configured over months; porting that logic to Adobe, Salesforce, or Braze is real work, giving Zeta moderate configuration-based stickiness."
+    },
+    "publicDataAccess": {
+      "status": "intact",
+      "note": "Aggregating and licensing large-scale consumer signal data is central to Zeta's model and hard to assemble from scratch — though the quality and legality of that access is precisely what the short-seller report questions, so this 'moat' doubles as a risk."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Martech and data-science talent is portable across CDP/adtech vendors; Zeta has capable people but no defensible scarcity-of-talent advantage."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Zeta bundles data, a CDP, multi-channel activation, and an in-house agency/services layer, making the whole harder to displace than any single module — the bundle is a meaningful part of super-scaled ARPU expansion."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "The 245M+ deterministic identity graph enriched with thousands of signals per profile is Zeta's flagship asset and its most AI-resilient moat — a data scale competitors cannot cheaply replicate. Marked intact rather than strong because the sourcing quality and regulatory durability of that data are actively contested."
+    },
+    "regulatoryLockIn": {
+      "status": "weakened",
+      "note": "Privacy regulation is a net headwind, not a lock-in, for Zeta: GDPR/CCPA-style consent rules and any consent-sourcing scrutiny raise Zeta's compliance burden rather than erecting barriers that protect it from competitors."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "A data flywheel exists — more clients and more activations feed more signals into the graph, improving targeting for everyone on the platform — but this is a data-scale effect, not a strong two-sided marketplace network, so it reinforces rather than dominates the moat."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Zeta sits in the execution path of a customer's email/SMS/programmatic sends and measurement, so switching means re-plumbing live marketing operations — a moderate embedded-workflow switching cost, weaker than a financial system-of-record but real."
+    },
+    "systemOfRecord": {
+      "status": "weakened",
+      "note": "Zeta is not the authoritative system of record for a customer's data — marketing audiences and campaign history can be exported and rebuilt elsewhere, and the true system of record often remains the client's own CRM/CDP or a Salesforce/Adobe instance."
+    },
+    "verdict": "Zeta is genuinely dual-natured on AI: its proprietary identity graph is an AI-resilient asset that gets more valuable as models get better at using data, and Athena/OpenAI make Zeta a plausible AI-marketing beneficiary. But marketing automation is also one of the categories generative AI most directly commoditises — the same technology erodes interface lock-in and lets walled gardens and rivals automate campaign creation — while the unresolved 'consent-farm' allegations put the quality and regulatory durability of Zeta's core data moat in question. Net: a real but narrow and contested moat, not a fortress."
+  }
+}
