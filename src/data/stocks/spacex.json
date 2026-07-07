@@ -2,19 +2,19 @@
   "slug": "spacex",
   "ticker": "SPCX",
   "name": "Space Exploration Technologies (SpaceX)",
-  "lastAnalyzed": "June 2026",
+  "lastAnalyzed": "July 7, 2026",
   "headerStats": [
     {
       "label": "Ticker",
-      "value": "SPCX (IPO)"
+      "value": "SPCX (Nasdaq)"
     },
     {
-      "label": "Valuation",
-      "value": "~$1.75T"
+      "label": "Market Cap",
+      "value": "~$2.07T"
     },
     {
-      "label": "IPO Price",
-      "value": "$135"
+      "label": "Share Price",
+      "value": "$156"
     }
   ],
   "chips": [
@@ -23,7 +23,7 @@
       "color": "primary"
     },
     {
-      "label": "Pre-IPO → Nasdaq Jun 12 2026",
+      "label": "Nasdaq: SPCX — IPO'd Jun 12 2026 · Nasdaq-100",
       "color": "warning"
     }
   ],
@@ -38,14 +38,14 @@
     {
       "title": "Starlink Engine",
       "value": "$11.4B",
-      "label": "61% of revenue, +48% YoY, $4.4B operating profit — the group's only real profit centre. 10.3M subscribers (Q1 2026) across 160+ markets, but ARPU has fallen $99 (2023) → $81 (2025) → $66 (Q1 2026) as the mix shifts international and consumer.",
+      "label": "61% of revenue, +48% YoY, $4.4B operating profit — the group's only real profit centre. 12M+ subscribers by June 2026 (10.3M in Q1) across 160+ markets. ARPU slid $99 (2023) → $81 (2025) → $66 (Q1 2026), but a May 2026 price increase (up to +$10/mo) reversed the slide, shifting the model from land-grab to monetising the installed base. Q1 2026 Starlink: $3.26B revenue, $1.19B operating income.",
       "icon": "Satellite",
       "color": "#1a8cff"
     },
     {
-      "title": "IPO Terms",
-      "value": "$1.75T",
-      "label": "~$135/share, ~$75B raise, ~13B shares, Nasdaq debut June 12 2026 — the largest IPO in history. ~90× trailing sales. Musk holds ~42% equity but ~85% voting power via 10-vote Class B shares; public Class A holders get one vote.",
+      "title": "IPO → Trading",
+      "value": "~$2.07T",
+      "label": "Priced at $135 (~$1.75T), opened $150 (+11%) on the June 12 2026 Nasdaq debut — the largest IPO in history (~$75B+ raise, ~13B shares) — traded as high as ~$226 before settling near $156 (~$2.07T, ~110× trailing sales). Added to the Nasdaq-100 on July 7 2026, forcing passive buying into a ~3% float. Musk holds ~42% equity but ~85% voting power via 10-vote Class B shares; public Class A holders get one vote.",
       "icon": "DollarSign",
       "color": "#10b981"
     }
@@ -70,14 +70,14 @@
     ]
   },
   "growth": {
-    "description": "FY2025 revenue grew 43% to $18.7B, the third straight year of ~40–50% growth, led by Starlink (+48% to $11.4B, 61% of the total). Subscriber growth is explosive — 2.3M (2023) → 10.3M (Q1 2026) — but ARPU is compressing hard ($99 → $66) as the mix tilts to lower-priced international and consumer plans, so revenue grows slower than the sub count. The next legs are direct-to-cell (carrier partnerships, ~7–8M reachable users by late 2025), Starship-enabled bulk constellation deployment, and a speculative AI-compute/connectivity layer (xAI, orbital data centres). Bulls model a ~$60B annualised run-rate exiting 2026, but that leans heavily on AI-compute contracts that are not yet de-risked; a Starlink-led base is closer to $24–30B for 2026.",
+    "description": "FY2025 revenue grew 43% to $18.7B, the third straight year of ~40–50% growth, led by Starlink (+48% to $11.4B, 61% of the total). Subscriber growth is explosive — 2.3M (2023) → 10.3M (Q1 2026) → 12M+ (June 2026) — and the ARPU story turned in mid-2026: after sliding $99 → $66 as the mix went international/consumer, a May 2026 price hike (up to +$10/mo) reversed the trend, so revenue can now grow with, not lag, the sub count. The next legs are direct-to-cell (carrier partnerships, ~7–8M reachable users), Starship-enabled bulk constellation deployment, and a speculative AI-compute/connectivity layer (xAI, orbital data centres). Bulls model a ~$60B annualised run-rate exiting 2026, but that leans heavily on AI-compute contracts that are not yet de-risked; a Starlink-led base is closer to $28–34B for 2026.",
     "growthAnalysis": {
       "cagrEstimate": "30–40%",
-      "scoreDerivation": "Base 91 (~35% blended CAGR, 30%+ band) + 5 recurring (Starlink subscription base, 10M+ and compounding) + 4 both (direct-to-cell + AI-compute TAM expansion on top of share gains) + ~3 trajectory (Starlink and launch accelerating) − 10 high risk (Starship execution, ARPU compression, FCF burn) = 88. Margin held stable: Starlink operating profit and consolidated EBITDA are expanding, but GAAP remains a loss and ARPU is falling, so no margin credit.",
+      "scoreDerivation": "Base 91 (~35% blended CAGR, 30%+ band) + 5 recurring (Starlink subscription base, 12M+ and compounding) + 4 both (direct-to-cell + AI-compute TAM expansion on top of share gains) + ~3 trajectory (Starlink and launch accelerating) − 10 high risk (Starship execution, FCF burn) = 88. Margin held stable: the May 2026 price hike reversed the ARPU slide and Starlink operating profit is expanding, but GAAP remains a loss group-wide, so no margin credit yet.",
       "drivers": [
         {
           "name": "Starlink Broadband",
-          "metric": "$11.4B (+48% YoY), 10.3M subs (Q1 2026), $4.4B op profit; ARPU $66 and falling",
+          "metric": "$11.4B (+48% YoY); 12M+ subs (Jun 2026, 10.3M Q1); $4.4B op profit; ARPU $66, reversing higher after May 2026 price hike",
           "trend": "accelerating"
         },
         {
@@ -98,39 +98,39 @@
     }
   },
   "valuation": {
-    "score": 60,
-    "description": "At the ~$135 IPO price (~$1.75T) SpaceX lists at roughly 90× trailing sales and ~50–60× 2026E revenue, with a GAAP net loss and deeply negative free cash flow ($6.8B operating cash flow vs. $20.7B capex). That is among the richest large-cap debuts ever — the price embeds flawless Starlink scaling, a Starship turnaround, and AI-compute optionality that has barely begun. Standard earnings multiples are not meaningful pre-profit, so the case rests on price/sales and the credibility of the forward run-rate. There is little margin of safety at issue: the IPO price sits above our base-case fair value and a quarter of the way into the bull case.",
+    "score": 65,
+    "description": "After the June 12 IPO, SPCX trades ~$156 (~$2.07T) — essentially at our base-case fair value and ~110× trailing sales / ~315× EV/EBITDA, among the richest large-caps in the market. The offering cleared far above the pre-listing skeptics' fair value: it opened $150 (+11%), touched ~$226 intraday, and Nasdaq-100 inclusion on July 7 added a wave of forced passive buying against a ~3% float. GAAP losses and deeply negative free cash flow ($6.8B operating cash flow vs. $20.7B capex) make earnings multiples meaningless, so the case rests on price/sales and the credibility of the forward run-rate. There is essentially no margin of safety at the current quote — the market already pays for flawless Starlink monetisation, a Starship turnaround, and AI-compute optionality that has barely begun.",
     "valuationNote": {
-      "text": "P/E is omitted — SpaceX is GAAP loss-making ($4.94B net loss in 2025) and FCF-negative, so earnings multiples are meaningless. Valuation is anchored on price/sales (~90× trailing, ~50–60× 2026E) and EV/EBITDA (~$1.75T vs. $6.6B adjusted EBITDA ≈ 265×). The premium is paid for monopoly cost position, spectrum, and Mars/Starship optionality — not current cash generation.",
-      "fairValue": "$115 (base) — premium for the monopoly and optionality, but below the hyped issue price"
+      "text": "P/E is omitted — SpaceX is GAAP loss-making ($4.94B net loss in 2025) and FCF-negative, so earnings multiples are meaningless. Valuation is anchored on price/sales (~110× trailing, ~70–80× 2026E) and EV/EBITDA (~$2.07T vs. $6.6B adjusted EBITDA ≈ 315×). The premium is paid for monopoly cost position, spectrum, and Mars/Starship optionality — not current cash generation.",
+      "fairValue": "$155 (base) — roughly the current market-clearing price; the monopoly and optionality are largely already in the quote"
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$80",
-      "description": "Growth-stock derating meets execution slips: the market refuses to pay 90× sales for a GAAP-loss, dual-class-controlled company, and Starship/ARPU disappointments compound into a permanent re-rate toward ~$1.0T.",
+      "priceTarget": "$100",
+      "description": "Growth-stock derating meets lock-up supply and execution slips: the market stops paying ~110× sales for a GAAP-loss, dual-class-controlled company, and Starship disappointments compound into a permanent re-rate toward ~$1.3T.",
       "points": [
-        "Starship continues to miss cadence targets through 2027 (as in 2025's 5-of-25), delaying V3 Starlink and the launch-cost step-down",
-        "Starlink ARPU keeps falling below $60 and net adds slow as Amazon Kuiper reaches commercial scale, capping broadband revenue growth below 30%",
-        "Post-lockup supply plus governance discount (Musk ~85% voting control, key-man risk) compress the multiple to ~40–50× sales"
+        "Post-IPO lock-up expiries (2026–27) flood the thin ~3% float with insider supply as the Nasdaq-100 forced-buying bid fades",
+        "Starship keeps missing cadence targets through 2027 (as in 2025's 5-of-25), delaying V3 Starlink and the launch-cost step-down",
+        "Even after the May 2026 hike, Starlink ARPU re-rolls over and net adds slow as Amazon Kuiper reaches commercial scale, capping broadband growth below 30%"
       ]
     },
     "base": {
-      "priceTarget": "$115",
-      "description": "Starlink scales as expected and launch dominance holds, but the AI-compute run-rate stays modest and capex keeps FCF negative — the market settles the stock modestly below its hyped IPO price at ~$1.5T.",
+      "priceTarget": "$155",
+      "description": "Starlink scales and monetises (post-hike ARPU stabilises) and launch dominance holds, but the AI-compute run-rate stays modest and capex keeps FCF negative — the stock holds near its ~$2.0T market-clearing level.",
       "points": [
-        "2026 revenue lands ~$28–32B on Starlink ~$18–22B plus record launch volume, with adjusted EBITDA margin holding ~35%",
-        "Direct-to-cell reaches commercial scale with major carriers but contributes a single-digit-billions revenue layer, not a step-change",
-        "Starship reaches orbital reuse but at a cadence below 15/yr, so the cost-curve and FCF turn arrive later than bulls assume"
+        "2026 revenue lands ~$28–34B on Starlink ~$18–22B (12M+ subs compounding) plus record launch volume, with adjusted EBITDA margin holding ~35%",
+        "The May 2026 price increase sticks, stabilising ARPU in the mid-$60s and lifting Starlink operating margin even as subscribers grow",
+        "Starship reaches orbital reuse but at a cadence below 15/yr, so the full cost-curve and FCF turn arrive later than bulls assume"
       ]
     },
     "bull": {
-      "priceTarget": "$195",
-      "description": "The flywheel inflects on all cylinders: Starship hits cadence, Starlink + D2C compound, and AI-compute contracts materialise toward a ~$60B run-rate, re-rating the company toward ~$2.5T.",
+      "priceTarget": "$245",
+      "description": "The flywheel inflects on all cylinders: Starship hits cadence, Starlink + D2C compound with firming ARPU, and AI-compute contracts materialise toward a ~$60B run-rate, re-rating the company toward ~$3.2T.",
       "points": [
         "Starship reaches ≥15 launches/yr with reliable reuse, collapsing $/kg and enabling V3 Starlink mass deployment",
         "AI-compute/connectivity contracts (xAI, orbital data centres, enterprise/defence) drive the exit-2026 run-rate toward $60B",
-        "Starlink crosses ~20M subscribers with ARPU stabilising, and free cash flow turns positive, validating a premium growth multiple"
+        "Starlink crosses ~20M subscribers with ARPU rising post-hike, and free cash flow turns positive, validating a premium growth multiple"
       ]
     }
   },
