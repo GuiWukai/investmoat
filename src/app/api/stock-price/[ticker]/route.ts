@@ -120,6 +120,7 @@ const YAHOO_SYMBOL_MAP: Record<string, string> = {
   soxx:       'SOXX',
   voo:        'VOO',
   cat:        'CAT',
+  zeta:       'ZETA',
   spacex:     'SPCX',
 };
 
