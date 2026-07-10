@@ -56,7 +56,7 @@
       },
       {
         "title": "Hyperscaler Customer Concentration",
-        "text": "Microsoft accounted for 67% of FY2025 revenue; OpenAI represents ~33% of contracted future revenue under an $11.9B five-year deal; Meta added a $21B contract through 2032. Three customers = bulk of book — both a strength (visibility) and weakness (renewal risk)."
+        "text": "Microsoft accounted for 67% of FY2025 revenue; OpenAI represents ~33% of contracted future revenue under an $11.9B five-year deal; Meta added a $21B contract through 2032. Three customers = bulk of book — both a strength (visibility) and weakness (renewal risk). Notably, Meta is simultaneously a top-3 CoreWeave customer and, as of July 1 2026, a launching competitor: 'Meta Compute' will rent GPU capacity to enterprises at prices 20–30% below AWS/Azure using Meta's own MTIA silicon and excess buildout — the same rental-compute market CoreWeave sells into."
       },
       {
         "title": "Asset-Heavy Capital Model",
@@ -87,7 +87,7 @@
         }
       ],
       "primaryType": "market share",
-      "keyRisk": "If Microsoft accelerates its in-house AI infrastructure buildout (Azure + AMD MI400 + custom Maia ASICs) and lets the CoreWeave contract decay at 2027 renewal — CRWV's revenue trajectory inverts and the $21B+ debt stack triggers covenant pressure as collateralized GPUs depreciate faster than backlog recognition",
+      "keyRisk": "If Microsoft accelerates its in-house AI infrastructure buildout (Azure + AMD MI400 + custom Maia ASICs) and lets the CoreWeave contract decay at 2027 renewal — CRWV's revenue trajectory inverts and the $21B+ debt stack triggers covenant pressure as collateralized GPUs depreciate faster than backlog recognition. A newer variant of the same risk: Meta launched 'Meta Compute' (July 1 2026), a GPU rental service undercutting AWS/Azure by 20–30% on Meta's own silicon — Meta is both a $21B CoreWeave customer and now a rental-compute competitor, and could shift toward monetizing its own excess capacity rather than expanding third-party contracts at renewal.",
       "keyRiskSeverity": "high",
       "marginTrend": "compressing"
     }
@@ -133,6 +133,7 @@
       "description": "Microsoft accelerates in-house Azure AI infrastructure and lets CoreWeave contract decay at renewal; AI capex digestion delays new bookings; debt covenants tighten as GPU depreciation runs faster than backlog recognition.",
       "points": [
         "Microsoft contracts (67% of FY2025 revenue) are not renewed at full scale post-2027 as Azure builds out internal AI capacity with Maia ASICs and AMD MI400 GPUs, removing $8B+ of run-rate revenue",
+        "Meta scales 'Meta Compute' (launched July 2026) faster than expected, redirecting AI infrastructure spend toward its own rental platform instead of expanding its $21B CoreWeave contract at future renewal points",
         "AI capex digestion in H2 2026–H1 2027 stops new hyperscaler bookings; backlog stalls below $100B and the multiple compresses toward 3× forward sales as growth decelerates",
         "Rising interest expense on the $21B+ debt stack combined with GPU depreciation accelerating ahead of revenue recognition triggers covenant renegotiation and equity dilution"
       ]
@@ -199,5 +200,5 @@
     },
     "verdict": "CoreWeave's moat is narrow and time-bounded: NVIDIA preferred-partner status plus operational velocity advantage during AI hypergrowth. Most of the 10 moats are destroyed or weakened — the business is fundamentally a leveraged, concentrated GPU rental operation. The investment case rests on hypergrowth durability (90 score), not moat depth. Suitable as a speculative position sized to risk."
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "July 10, 2026"
 }

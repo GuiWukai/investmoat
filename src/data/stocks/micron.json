@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$842B"
+      "value": "~$1.15T"
     }
   ],
   "chips": [
@@ -66,7 +66,7 @@
     ]
   },
   "growth": {
-    "description": "Micron is in the steepest part of a semiconductor supercycle driven by HBM4 demand from AI infrastructure. Q2 FY2026 delivered record revenue of $23.86B (+196% YoY, +75% sequential) and non-GAAP EPS of $12.20 — beating the $20.1B consensus by ~19%. Management guided Q3 FY2026 to ~$33.5B in revenue and ~$19.15 non-GAAP EPS (+260% YoY). The CY2026 HBM book is fully sold and customers are now signing 3–5 year supply contracts. With HBM TAM growing from $35B (2025) to $100B (2028), Micron's revenue quality is structurally improving, though memory cyclicality remains a tail risk into 2027.",
+    "description": "Micron is in the steepest part of a semiconductor supercycle driven by HBM4 demand from AI infrastructure. Q2 FY2026 delivered record revenue of $23.86B (+196% YoY, +75% sequential) and non-GAAP EPS of $12.20 — beating the $20.1B consensus by ~19%. Management guided Q3 FY2026 to ~$33.5B in revenue and ~$19.15 non-GAAP EPS (+260% YoY). The CY2026 HBM book is fully sold and customers are now signing 3–5 year supply contracts. With HBM TAM growing from $35B (2025) to $100B (2028), Micron's revenue quality is structurally improving, though memory cyclicality remains a tail risk into 2027. Since the prior update, two new developments: (1) SK Hynix completed a $28B Nasdaq IPO (ticker SKHY, priced July 10) to fund its own HBM capacity build — validating the memory supercycle thesis but sharpening investor comparisons across the three-player oligopoly; and (2) Samsung, SK Hynix, and Micron were named in a US class-action lawsuit (filed June 25, N.D. Cal.) alleging DRAM price-fixing since 2022 via a coordinated HBM-driven cutback of DDR3/DDR4 supply — an early-stage suit (no class certified yet) but a new legal overhang on the pricing narrative.",
     "additionalNote": {
       "title": "HBM4 Demand Structural Shift",
       "points": [
@@ -99,48 +99,48 @@
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If AI hyperscaler capex enters a pause cycle in 2H CY2027, Micron's $20B+ FY2026 capex commitment creates overcapacity risk; gross margins compress below 40% and FY2028 EPS reverts toward $25–30, triggering a 2022-style multiple compression even with multi-year HBM contracts cushioning the floor",
+      "keyRisk": "If AI hyperscaler capex enters a pause cycle in 2H CY2027, Micron's $20B+ FY2026 capex commitment creates overcapacity risk; gross margins compress below 40% and FY2028 EPS reverts toward $25–30, triggering a 2022-style multiple compression even with multi-year HBM contracts cushioning the floor. Newly added: a June 2026 DRAM price-fixing class action (Samsung, SK Hynix, Micron) is at an early stage but, if it proceeds, could force pricing-practice changes or damages exposure across all three suppliers — a legal tail risk layered on top of the cyclical one.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 68,
-    "description": "MU has rallied from ~$578 to ~$745 in the weeks since the prior refresh, including a 14% spike on May 8 to a fresh 52-week high of $748. Consensus FY2026 EPS has been re-rated from ~$32 to ~$58 following the Q2 FY2026 blow-out and Q3 guide of ~$33.5B / ~$19.15 EPS. At ~$745, Micron trades at ~13× FY2026 EPS — still optically cheap vs. semiconductor peers, but multi-year HBM contracts (not multiple expansion) are doing most of the work. The price now sits ~7% below the revised base of $800 and ~33% below the new bull of $1,100; meaningful margin of safety has compressed but has not disappeared.",
+    "score": 50,
+    "description": "MU has continued to rally hard since the prior refresh, from ~$745 to ~$1,021 — a further ~37% gain that has pushed the stock to within ~7% of the $1,100 bull case and well above the $800 base case. The rally reflects continued HBM4 execution, the SK Hynix IPO validating memory-supercycle demand, and a broad semiconductor rebound (SMH +2.5% on July 9 with Micron up 4.5% that session), though the stock has also seen sharp single-week pullbacks (reportedly ~25% off a nearer-term intraday peak near its 52-week high of $1,255) as investors debate how much of the AI-memory upcycle is already priced in. At ~$1,021, forward P/E has expanded to ~18× on consensus FY2026 EPS of ~$58 — still reasonable against ~30-40% EPS growth (PEG ~0.5-0.6×), but the margin of safety that existed at $745 has largely closed; this is now a valuation-sensitive hold rather than a clear value entry.",
     "valuationNote": {
-      "text": "At ~$745, Micron trades at ~13× FY2026 consensus EPS of ~$58 — well below software peers at 20–30× and consistent with historical memory peaks at 8–13× peak EPS. The structural shift to 3–5 year HBM supply contracts arguably justifies the upper end of that band; if FY2027 EPS holds above $55–60, base case $800 is reasonable. PEG ~0.4 signals deep growth-adjusted value, but cycle reversion risk into 2H CY2027 caps how aggressively the multiple can re-rate.",
+      "text": "At ~$1,021, Micron trades at ~18× FY2026 consensus EPS of ~$58 — still below software peers at 20–30× and within the historical range for memory-cycle peaks (8–18×), but no longer offering the deep discount it did at $745. The structural shift to 3–5 year HBM supply contracts supports paying up the multiple somewhat, but with price now ~28% above the $800 base case and closing in on the $1,100 bull case, most of the near-term HBM4 upside looks priced in. PEG ~0.5-0.6 still signals growth at a reasonable price, but new legal risk (the DRAM price-fixing suit) and cycle-reversion risk into 2H CY2027 argue for discipline on adding at these levels.",
       "fairValue": "~$800"
     },
     "peAnalysis": {
-      "asOf": "May 2026",
+      "asOf": "July 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~31×",
-          "note": "~$24 TTM EPS (Q3 FY25–Q2 FY26)"
+          "value": "~21×",
+          "note": "TTM EPS ~$47.5, per July 2026 quote data"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~13×",
+          "value": "~18×",
           "note": "consensus FY2026 EPS ~$58"
         },
         {
           "label": "PEG Ratio",
-          "value": "~0.4×",
+          "value": "~0.5-0.6×",
           "note": "fwd P/E ÷ ~30% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~8.5×",
-          "note": "~$100B NTM revenue est."
+          "value": "~11.5×",
+          "note": "~$100B NTM revenue est., scaled for the price move since May"
         },
         {
           "label": "Price / FCF",
-          "value": "~25×",
-          "note": "~$34B FCF (Q2 FY26 annualised)"
+          "value": "~34×",
+          "note": "~$34B FCF (Q2 FY26 annualised), scaled for the price move since May"
         }
       ],
-      "summary": "Forward P/E of ~13× remains deeply cheap vs. semiconductor peers at 25–35×, and PEG ~0.4 signals growth at a heavy discount to its rate. The gap between trailing (~31×) and forward (~13×) reflects an earnings ramp from ~$24 TTM to ~$58 FY26, validated by Q2 FY26's $12.20 non-GAAP print and Q3 guidance of ~$19.15 EPS in a single quarter. The risk is not the FY26 number — it's FY28: if HBM oversupply emerges, EPS could revert toward $25–30 and a 12–13× multiple implies $300–390, so upside from here is contingent on multi-year HBM contracts holding the margin floor."
+      "summary": "Forward P/E has expanded from ~13× to ~18× as the stock outran the EPS re-rate, and PEG ~0.5-0.6 still signals growth at a reasonable (if no longer deeply discounted) rate. The gap between trailing (~21×) and forward (~18×) reflects the ongoing earnings ramp toward ~$58 FY26, validated by Q2 FY26's $12.20 non-GAAP print and Q3 guidance of ~$19.15 EPS in a single quarter. The risk is unchanged in kind but closer in time: if HBM oversupply emerges into FY28, EPS could revert toward $25–30 and a 12–13× multiple implies $300–390 — a much larger drawdown from $1,021 than it would have been from $745."
     }
   },
   "scenarios": {
@@ -218,5 +218,5 @@
     },
     "verdict": "Micron is a clear net beneficiary of AI — the HBM4 supercycle is directly driven by AI infrastructure build-out, talentScarcity and proprietaryData are strengthened by AI's demand for specialised chip design, and the shift to 3–5 year HBM contracts has upgraded transactionEmbedding from weakened to intact. The moat is materially better than a year ago, but Micron still does not own a software layer, a data flywheel, or a network effect that compounds independently of the hardware cycle, so durability remains tied to the HBM margin premium holding through CY2027–2028."
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "July 10, 2026"
 }

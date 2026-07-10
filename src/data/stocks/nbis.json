@@ -60,7 +60,7 @@
       },
       {
         "title": "Mega-Contract Customer Anchor",
-        "text": "$27B Meta contract and $19.4B Microsoft contract provide multi-year revenue visibility (~$50B backlog), but expose Nebius to the same hyperscaler concentration risk as CoreWeave."
+        "text": "$27B Meta contract and $19.4B Microsoft contract provide multi-year revenue visibility (~$50B backlog), but expose Nebius to the same hyperscaler concentration risk as CoreWeave. That risk sharpened on July 1 2026 when Meta announced 'Meta Compute,' its own GPU rental service undercutting AWS/Azure by 20–30% — Meta is Nebius's single largest customer and is now also a direct competitor for the enterprise GPU-rental business Nebius targets."
       }
     ]
   },
@@ -87,7 +87,7 @@
         }
       ],
       "primaryType": "market share",
-      "keyRisk": "If $16–20B FY2026 capex execution slips on power/datacenter availability, NVIDIA Vera Rubin allocation timing, or convertible debt service capacity — Nebius misses the FY2026 $3.0–3.4B revenue guide and the equity story re-rates sharply on dilution risk and broken hypergrowth narrative",
+      "keyRisk": "If $16–20B FY2026 capex execution slips on power/datacenter availability, NVIDIA Vera Rubin allocation timing, or convertible debt service capacity — Nebius misses the FY2026 $3.0–3.4B revenue guide and the equity story re-rates sharply on dilution risk and broken hypergrowth narrative. A newer variant: Meta ($27B contract, Nebius's largest customer) launched its own competing GPU rental service ('Meta Compute,' July 1 2026, priced 20–30% below AWS/Azure) — raising the question of whether Meta expands third-party capacity commitments at future renewal or increasingly serves its own rental ambitions internally.",
       "keyRiskSeverity": "high",
       "marginTrend": "stable"
     }
@@ -134,7 +134,8 @@
       "points": [
         "FY2026 revenue lands below $2.8B as datacenter capacity timing slips and Meta/Microsoft revenue recognition is deferred to FY2027",
         "$4B convertible debt converts at depressed prices and additional equity raises become necessary, diluting existing shareholders 15–25%",
-        "NVIDIA reallocates Vera Rubin capacity preference toward CoreWeave or hyperscalers, weakening the preferred-partner narrative and forcing multiple compression toward 4× forward sales"
+        "NVIDIA reallocates Vera Rubin capacity preference toward CoreWeave or hyperscalers, weakening the preferred-partner narrative and forcing multiple compression toward 4× forward sales",
+        "Meta scales 'Meta Compute' (launched July 2026) faster than expected and directs incremental AI infrastructure spend toward its own rental platform instead of expanding its $27B Nebius contract at renewal"
       ]
     },
     "base": {
@@ -199,5 +200,5 @@
     },
     "verdict": "Nebius's moat is narrow and unproven: NVIDIA equity backing plus inherited Yandex infrastructure heritage provide early advantages, but most of the 10 moats are destroyed or weakened. The business is fundamentally a hypergrowth, leveraged, concentrated GPU cloud with execution risk on a $16–20B capex plan. Investment thesis rests entirely on growth (88 score) and the durability of NVIDIA preferred-partner status. Suitable only as a small speculative position sized to risk; high volatility and thin analyst coverage amplify drawdown potential."
   },
-  "lastAnalyzed": "June 2026"
+  "lastAnalyzed": "July 10, 2026"
 }
