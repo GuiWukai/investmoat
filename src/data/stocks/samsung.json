@@ -1,0 +1,225 @@
+{
+  "slug": "samsung",
+  "ticker": "005930.KS",
+  "name": "Samsung Electronics",
+  "titleColor": "#1428A0",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "005930.KS / SSNLF"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~₩580T (~$420B)"
+    },
+    {
+      "label": "Price",
+      "value": "₩98,000"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Semiconductors | Memory, Foundry & Mobile",
+      "color": "primary"
+    },
+    {
+      "label": "Diversified Conglomerate",
+      "color": "warning"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "Q1 2026 Revenue",
+      "value": "₩84.5T (~$61B)",
+      "label": "+18% YoY; DS division profit surges on memory upcycle",
+      "icon": "TrendingUp",
+      "color": "#1428A0"
+    },
+    {
+      "title": "DS Operating Margin",
+      "value": "~27%",
+      "label": "Recovered from single digits on DRAM/NAND ASP surge + HBM4 ramp",
+      "icon": "Zap",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "HBM4 Qualification",
+      "value": "NVIDIA-Qualified",
+      "label": "Secured Q1 2026, after trailing SK Hynix/Micron through 2025",
+      "icon": "Cpu",
+      "color": "#10b981"
+    }
+  ],
+  "moat": {
+    "description": "The world's largest memory chipmaker and a top-three smartphone OEM, but Samsung's moat is diluted by conglomerate breadth: it trailed SK Hynix and Micron in HBM4 qualification timing, trails TSMC by 1-2 process generations in leading-edge foundry, and its consumer ecosystem lacks the switching-cost intensity of Apple's. The DRAM/NAND oligopoly floor and deep process IP remain genuine advantages, but no single segment is best-in-class the way focused peers are.",
+    "analysisTitle": "The Conglomerate's Dilemma",
+    "analysisSummary": "Samsung's competitive position rests on **Memory Oligopoly Scale, Diversified Reach, and Deep Process IP** — but breadth cuts against focus:",
+    "analysisPoints": [
+      {
+        "title": "Memory Oligopoly, But Not the Pace-Setter",
+        "text": "Samsung, SK Hynix, and Micron control ~95% of global DRAM supply, and Samsung remains the largest single producer by volume. But Samsung trailed SK Hynix and Micron in HBM3E/HBM4 qualification with NVIDIA through 2024-2025, only securing NVIDIA HBM4 qualification in Q1 2026 — a costly delay that ceded share of the highest-margin memory segment to faster-moving rivals."
+      },
+      {
+        "title": "Foundry: Perpetual Number Two (or Three)",
+        "text": "Samsung Foundry's 2nm GAA (SF2) process is ramping with Tesla's AI5/AI6 chips as an anchor customer (a ~$16.5B multi-year deal) and a new IBM partnership, but yields still lag TSMC's N2 by a wide margin and the division has posted cumulative losses for years. Foundry diversifies Samsung's semiconductor exposure but is not yet a moat in its own right."
+      },
+      {
+        "title": "Consumer Ecosystem Without Apple's Lock-In",
+        "text": "Galaxy phones, Watches, Buds, SmartThings, and TVs form a real bundle — SmartThings connects 300M+ devices — but Android's openness means switching to a rival OEM costs little. Galaxy AI (built on Google Gemini) adds feature differentiation but not durable lock-in the way iOS does for Apple."
+      }
+    ]
+  },
+  "growth": {
+    "description": "Samsung's Device Solutions (DS) division is in the steepest part of the AI-driven memory supercycle: Q1 2026 revenue reached ~₩84.5T (+18% YoY) with DS operating profit surging as DRAM and NAND contract prices rose sharply on AI-driven supply tightness across the industry. After trailing SK Hynix and Micron through 2024-2025, Samsung secured NVIDIA HBM4 qualification in Q1 2026, restoring its position in the highest-margin memory segment, though it is still ramping share from a smaller base than its two rivals. Samsung Foundry's SF2 (2nm GAA) is in early high-volume production with Tesla's AI5/AI6 chips as the anchor customer under a ~$16.5B multi-year agreement, plus a new IBM 2nm partnership — narrowing (but not closing) years of foundry losses. Mobile (Galaxy S26, foldables) and Consumer Electronics remain low-single-digit growth, mature businesses that dilute the consolidated growth rate versus pure-play memory peers. Since the prior update, Samsung was named alongside SK Hynix and Micron in a June 25, 2026 US class-action lawsuit (N.D. Cal.) alleging DRAM price-fixing since 2022 via a coordinated HBM-driven cutback of DDR3/DDR4 supply — an early-stage suit (no class certified yet) but a new legal overhang shared across the memory oligopoly.",
+    "additionalNote": {
+      "title": "Memory Supercycle & Foundry Catch-Up",
+      "points": [
+        "NVIDIA HBM4 qualification secured Q1 2026, after trailing SK Hynix and Micron through 2024-2025",
+        "DS division operating margin recovered to ~27% in Q1 2026 as DRAM/NAND ASPs rose sharply on AI-driven supply tightness",
+        "Samsung Foundry SF2 (2nm GAA) anchor customer Tesla (AI5/AI6, ~$16.5B multi-year deal); new IBM 2nm partnership announced",
+        "Foundry division losses narrowing but not yet profitable; still 1-2 process generations behind TSMC N2 on yield",
+        "Named with SK Hynix and Micron in a June 25, 2026 DRAM price-fixing class action (N.D. Cal.); no class certified yet"
+      ]
+    },
+    "growthAnalysis": {
+      "cagrEstimate": "10–16%",
+      "scoreDerivation": "Base 77 (10-16% blended CAGR midpoint — DS division supercycle diluted by mature Mobile/CE segments) + 3 trajectory (2 of 3 drivers accelerating) + 4 margin expansion (DS margin recovery) + 4 TAM/share expansion (memory supercycle + foundry customer diversification) − 5 moderate risk (HBM4 share catch-up execution risk, foundry losses, DRAM price-fixing suit) ≈ 83",
+      "drivers": [
+        {
+          "name": "Memory (DRAM/NAND/HBM4)",
+          "metric": "DS division ASPs up sharply on AI-driven supply tightness; HBM4 NVIDIA-qualified Q1 2026",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Foundry (2nm GAA)",
+          "metric": "Tesla AI5/AI6 anchor customer (~$16.5B deal); new IBM 2nm partnership; SF2 yields still behind TSMC N2",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Mobile & Consumer Electronics",
+          "metric": "Galaxy S26/foldables and TV/appliances; low-single-digit growth, mature markets",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If HBM4 share gains stall against SK Hynix and Micron's multi-year lead, or if the memory cycle reverts in 2H 2027 as hyperscaler capex normalizes, DS division profit could compress sharply — mirroring the 2022-23 downcycle when Samsung's semiconductor division posted large losses. Foundry remains structurally unprofitable outside the Tesla anchor deal, and the June 2026 DRAM price-fixing class action (Samsung, SK Hynix, Micron) is an early-stage but incremental legal overhang shared across the oligopoly.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 69,
+    "description": "At ~₩98,000 (July 2026) — lifted alongside SK Hynix and Micron by the AI memory rally — the stock sits about 83% of the way from the ₩65,000 bear case toward the ₩105,000 base case, yielding a valuation score of 69. Samsung trades at a persistent discount to focused memory and foundry peers (SK Hynix, Micron, TSMC) — the market is still pricing in HBM4 catch-up execution risk, foundry losses, and conglomerate complexity rather than crediting the DS division's margin recovery at face value.",
+    "valuationNote": {
+      "text": "Base-case fair value of ~₩105,000 implies roughly 11-13× a normalized FY2026-27 EPS recovery — a persistent 'conglomerate discount' to SK Hynix and Micron, which trade at higher multiples on cleaner memory-pure-play narratives. That discount could narrow if HBM4 share stabilizes and Foundry demonstrates a second anchor customer beyond Tesla, but a re-rating to peer multiples is not yet underway.",
+      "fairValue": "~₩105,000"
+    },
+    "peAnalysis": {
+      "asOf": "July 2026 (price ~₩98,000)",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~14×",
+          "note": "TTM EPS recovering off 2023-24 memory-downcycle trough"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~10×",
+          "note": "consensus NTM EPS reflects DS division margin recovery"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~0.7×",
+          "note": "fwd P/E ÷ ~13% blended EPS CAGR"
+        },
+        {
+          "label": "Price / Book",
+          "value": "~1.6×",
+          "note": "below SK Hynix (~3×) and Micron (~4×) on the conglomerate discount"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~13×",
+          "note": "reflects heavy DS + Foundry capex cycle"
+        }
+      ],
+      "summary": "At ~10× forward earnings and ~1.6× book, Samsung trades at a wide discount to SK Hynix and Micron despite participating in the same memory supercycle — a discount rooted in HBM4 catch-up risk, persistent Foundry losses, and the market's difficulty valuing a conglomerate spanning memory, foundry, mobile, and consumer electronics. A PEG of ~0.7× suggests the market is not yet crediting the DS division's margin recovery, leaving room for re-rating if HBM4 share stabilizes — but also reflecting genuine uncertainty about whether Samsung can close the gap with faster-moving pure-play peers."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "₩65,000",
+      "description": "Memory cycle reverts sharply in 2H 2027, HBM4 share gains stall permanently behind SK Hynix/Micron, and Foundry losses widen again outside the Tesla contract; conglomerate discount deepens further.",
+      "points": [
+        "AI hyperscaler capex pause in 2H 2027 collapses DRAM/NAND ASPs back toward 2023-24 downcycle levels; DS division reverts to single-digit or negative operating margin",
+        "HBM4 share stalls below 15% as SK Hynix and Micron's multi-year contract lock-in proves durable; Samsung remains the 'third' HBM supplier",
+        "Samsung Foundry fails to win a second major anchor customer beyond Tesla; cumulative Foundry losses widen and SF2 2nm yields stay materially below TSMC N2",
+        "DRAM price-fixing class action (with SK Hynix, Micron) proceeds toward class certification, forcing pricing-practice changes and damages exposure"
+      ]
+    },
+    "base": {
+      "priceTarget": "₩105,000",
+      "description": "Memory supercycle sustains through 2027; HBM4 share stabilizes around 20-25%; Foundry losses continue narrowing on the Tesla ramp; Mobile/CE hold steady low-single-digit growth.",
+      "points": [
+        "DS division operating margin holds in the mid-20s% through FY2026-27 as DRAM/NAND pricing stays elevated on AI-driven demand",
+        "HBM4 share stabilizes at 20-25% as Samsung ramps its NVIDIA-qualified supply through 2026-2027",
+        "Samsung Foundry narrows losses toward breakeven by FY2027 as Tesla AI5/AI6 volume ramps and SF2 yields improve",
+        "Mobile (Galaxy S26/S27, foldables) and Consumer Electronics hold ~2-4% revenue growth on Galaxy AI feature differentiation"
+      ]
+    },
+    "bull": {
+      "priceTarget": "₩150,000",
+      "description": "Samsung closes the HBM4/HBM5 gap with SK Hynix and Micron, Foundry wins a second major customer (Qualcomm or a hyperscaler ASIC), and the conglomerate discount narrows toward peer multiples.",
+      "points": [
+        "HBM4/HBM5 share reaches 30%+ as Samsung's in-house logic die design and advanced packaging close the qualification gap with SK Hynix and Micron",
+        "Samsung Foundry signs a second anchor customer (Qualcomm, a hyperscaler AI ASIC, or an auto OEM) at 2nm, validating SF2 beyond the Tesla relationship",
+        "Foundry reaches sustained profitability by FY2028 as SF2/SF1.4 yields approach TSMC parity on select nodes",
+        "Market re-rates Samsung toward SK Hynix/Micron multiples (P/B toward 3×+) as the conglomerate discount narrows on cleaner segment execution"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "One UI and the Galaxy ecosystem create habitual behavior, but Android's openness means switching to a rival OEM (Google, OnePlus, Xiaomi) costs little — no meaningful data or workflow lock-in the way iOS creates for Apple."
+    },
+    "businessLogic": {
+      "status": "destroyed",
+      "note": "N/A — Samsung is fundamentally a hardware manufacturer; no proprietary business logic moat comparable to a software platform."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — Samsung does not derive competitive advantage from public data access."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Leading-edge DRAM, NAND, and GAA foundry process engineers are among the scarcest technical talent globally, and Samsung's decades-deep Korean R&D bench (Hwaseong, Pyeongtaek) is a genuine advantage — though it competes directly with SK Hynix and TSMC for the same talent pool."
+    },
+    "bundling": {
+      "status": "weakened",
+      "note": "Galaxy phones, Watch, Buds, SmartThings, and TVs form a real cross-device bundle (SmartThings connects 300M+ devices), but attach and lock-in are materially weaker than Apple's ecosystem — most components can be freely mixed with other brands."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Decades of proprietary DRAM/NAND cell-design IP, HBM4 base-die architecture, and GAA transistor process data represent genuine trade secrets that competitors cannot easily replicate."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "South Korean government backing (K-chips Act tax credits) plus US CHIPS Act funding for the Taylor, TX fab, reinforced by the Tesla AI5/AI6 foundry agreement tied to US-based advanced manufacturing, gives Samsung durable government-linked positioning in both Korea and the US."
+    },
+    "networkEffects": {
+      "status": "weakened",
+      "note": "SmartThings connects 300M+ devices, but this reflects installed-base scale rather than true Metcalfe's Law dynamics — Google Home and Apple HomeKit are close substitutes, and the switching cost is modest."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "The industry-wide shift to 3-5 year HBM supply contracts now extends to Samsung's NVIDIA-qualified HBM4 volume, and Samsung Foundry's design-ins with Tesla (AI5/AI6) and IBM (2nm) create multi-year customer roadmap embedding similar to TSMC's and Micron's."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — Samsung is a component and device supplier, not a system of record for any critical business function; customers dual- and triple-source memory and foundry capacity across Samsung, SK Hynix, Micron, and TSMC."
+    },
+    "verdict": "Samsung is a genuine but lagging beneficiary of the AI era: the memory supercycle (DRAM/NAND/HBM4) and Foundry's Tesla AI-chip relationship are direct AI tailwinds, and proprietaryData, regulatoryLockIn, and transactionEmbedding are all intact or strengthening as multi-year HBM contracts and government backing deepen. But Samsung trails SK Hynix and Micron in HBM4 execution and TSMC in foundry yield, and its AI-vulnerable consumer moats (learnedInterfaces, bundling, networkEffects) remain weakened by Android's openness — making Samsung a slower, more diluted AI beneficiary than its focused semiconductor peers."
+  },
+  "lastAnalyzed": "July 10, 2026"
+}
