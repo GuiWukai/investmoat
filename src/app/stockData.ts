@@ -136,6 +136,7 @@ import inioData     from '@/data/stocks/inio.json';
 import rklbData     from '@/data/stocks/rklb.json';
 import amkrData     from '@/data/stocks/amkr.json';
 import zetaData     from '@/data/stocks/zeta.json';
+import samsungData  from '@/data/stocks/samsung.json';
 
 // Delegates to computeCompositeRaw in valuationScore.ts — the single source of
 // truth for the composite formula. Returns a float for precise sorting; callers
@@ -302,6 +303,7 @@ const allCoverageData = [
     { name: "Rocket Lab",        ticker: "RKLB",  slug: "rklb",        scores: [m(rklbData),        g(rklbData),        v(rklbData)],        href: "/stocks/rklb",        category: "Industrials", ...t(rklbData)        },
     { name: "Amkor Technology",  ticker: "AMKR",  slug: "amkr",        scores: [m(amkrData),        g(amkrData),        v(amkrData)],        href: "/stocks/amkr",        category: "Big Tech",    ...t(amkrData)        },
     { name: "Zeta Global",       ticker: "ZETA",  slug: "zeta",        scores: [m(zetaData),        g(zetaData),        v(zetaData)],        href: "/stocks/zeta",        category: "Big Tech",    ...t(zetaData)        },
+    { name: "Samsung Electronics", ticker: "005930.KS", slug: "samsung", scores: [m(samsungData),   g(samsungData),     v(samsungData)],     href: "/stocks/samsung",     category: "Big Tech",    ...t(samsungData)     },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────
