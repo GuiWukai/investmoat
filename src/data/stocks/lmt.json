@@ -2,7 +2,7 @@
   "slug": "lmt",
   "ticker": "LMT",
   "name": "Lockheed Martin Corp.",
-  "lastAnalyzed": "May 2026",
+  "lastAnalyzed": "July 13, 2026",
   "titleColor": "#003087",
   "headerStats": [
     {
@@ -40,10 +40,10 @@
       "color": "#1e5ba8"
     },
     {
-      "title": "ROIC",
-      "value": "23.6%",
-      "label": "Best-in-class for defense primes",
-      "icon": "TrendingUp",
+      "title": "THAAD Award (Jun 2026)",
+      "value": "$35B",
+      "label": "7-yr contract; production 4× to ~400 interceptors/yr",
+      "icon": "Zap",
       "color": "#003087"
     }
   ],
@@ -67,11 +67,11 @@
     ]
   },
   "growth": {
-    "description": "Q1 2026 was a soft start: revenue flat at $18.0B (missed $18.4B est), EPS of $6.44 missed $6.77 estimate, and Q1 FCF swung to -$291M from +$955M as F-16 and C-130 program delays weighed on cash conversion. Management reaffirmed full-year guidance of ~5% revenue growth and 25% operating profit growth, but execution risk has risen. The $194B backlog and structural defense demand keep the long-term story intact.",
+    "description": "Q1 2026 was a soft start (revenue flat at $18.0B, EPS $6.44 missed $6.77 est, Q1 FCF -$291M), but June brought a structural offset: a $35B seven-year THAAD procurement award (June 24) that quadruples interceptor production to ~400/year through 2032 — the largest missile-defense order in LMT history and a down payment on the Golden Dome homeland-defense architecture — plus a $2.2B F-35 sustainment IDIQ. Management reaffirmed FY2026 guidance of ~5% revenue growth and 25% operating profit growth; Q2 results (late July) are the next test of cash-conversion recovery.",
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
-        "Missiles & Fire Control scaling: PAC-3 MSE ramping from 600 to 2,000 units/year under a multi-year framework agreement; HIMARS backlog expanding with NATO commitments; MFC guiding 14% growth in 2026 and double-digit CAGR through end of decade — driven by geopolitical demand that structural defense budgets cannot quickly absorb",
+        "Missiles & Fire Control scaling: the June 2026 $35B seven-year THAAD award quadruples interceptor output from ~96 to ~400/year (with $9B+ of new/modernized munition facilities through 2030); PAC-3 MSE ramping from 600 to 2,000 units/year; HIMARS backlog expanding with NATO commitments — MFC now has multi-year contracted demand rather than budget-cycle-dependent orders",
         "F-35 sustainment acceleration: management guiding double-digit growth in F-35 sustainment revenue in 2026; as the global fleet expands past 1,000 aircraft and ages, the higher-margin ODIN data services and spare parts business becomes the dominant profit driver in Aeronautics",
         "Next-generation classified programs (Skunk Works): X-59 supersonic flight, space-based interceptor (first flight 2028), and next-gen air dominance programs are in early phases that will monetize in the 2027-2032 window; these could represent $10B+ in new long-cycle revenue that is not in current consensus estimates",
         "Capital return compounding: $3.7B in buybacks and $3.1B in dividends in FY2024; share count shrinking ~4% per year amplifies per-share metrics even in modest revenue growth environments; 2026 EPS guidance of $29.35-$30.25 represents ~40% jump from 2025's $21.49 as pension charges roll off"
@@ -83,7 +83,7 @@
       "drivers": [
         {
           "name": "Missiles & Fire Control",
-          "metric": "+14% YoY in 2026; PAC-3 MSE scaling 3× to 2,000 units/yr",
+          "metric": "+14% YoY guided; $35B THAAD award (Jun 2026) quadruples output to ~400/yr; PAC-3 MSE scaling to 2,000 units/yr",
           "trend": "accelerating"
         },
         {
@@ -98,48 +98,48 @@
         }
       ],
       "primaryType": "both",
-      "keyRisk": "If the US defense budget faces sequestration or continuing resolution in FY2027 that cuts procurement by 10%+, MFC ramp delays and F-35 lot deferrals compress the 2027-2028 revenue bridge before the backlog converts — particularly vulnerable if classified program write-downs recur (LMT lost $1.5B after-tax in 2024 alone)",
+      "keyRisk": "If the US defense budget faces sequestration or continuing resolution in FY2027 that cuts procurement by 10%+, F-35 lot deferrals compress the 2027-2028 revenue bridge before the backlog converts — the $35B THAAD award is a UCA (undefinitized contract action), so its full value is not yet obligated and remains exposed to descoping; classified program write-down recurrence (LMT lost $1.5B after-tax in 2024) is the other unresolved execution risk, with Q1 2026's -$291M FCF showing cash conversion is still fragile",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
     "score": 86,
-    "description": "At ~$518, LMT has fallen ~19% from March levels following the Q1 2026 miss and now trades only modestly above its bear case ($480) — implying 39% upside to the base case ($720). The forward P/E of ~17× on 2026 EPS of ~$29.80 is meaningfully below LMT's 5-year average of 18.9×, providing material margin of safety if management's reaffirmed guidance holds.",
+    "description": "At ~$523 (July 2026), LMT trades only modestly above its bear case ($480) — implying ~38% upside to the base case ($720) — and the $35B THAAD award has not moved the stock, with sell-side instead cutting targets (TD Cowen $560, Wells Fargo $575) on broad defense-sector underperformance. The forward P/E of ~17.6× on 2026 EPS of ~$29.80 is below LMT's 5-year average of 18.9×, providing material margin of safety if management's reaffirmed guidance holds.",
     "valuationNote": {
-      "text": "The trailing-to-forward P/E gap (29.7× → 21×) is one of the clearest earnings ramp signals in the defense sector: 2025 EPS was depressed by $1.5B in after-tax classified program losses that management expects will not recur at the same scale. At the base case of $720, investors receive a 13% total return plus LMT's ~2.1% dividend — with downside well-supported by the $194B backlog.",
+      "text": "The trailing-to-forward P/E gap (~24× → ~17.6×) is one of the clearest earnings ramp signals in the defense sector: 2025 EPS was depressed by $1.5B in after-tax classified program losses that management expects will not recur at the same scale. At the base case of $720, investors receive ~38% upside plus LMT's ~2.5% dividend — with downside well-supported by a backlog that the $35B THAAD award pushes well past the prior $194B record as it definitizes.",
       "fairValue": "$720"
     },
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "July 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~29.7×",
-          "note": "$21.49 TTM EPS (2025)"
+          "value": "~24.3×",
+          "note": "~$21.5 TTM EPS (incl. Q1'26 $6.44)"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~21.3×",
+          "value": "~17.6×",
           "note": "consensus EPS est. ~$29.80 (2026)"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.15×",
+          "value": "~0.98×",
           "note": "fwd P/E ÷ ~18% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~1.9×",
-          "note": "$78.75B NTM revenue est."
+          "value": "~1.5×",
+          "note": "$78.75B NTM revenue est., ~$121B mkt cap"
         },
         {
           "label": "Price / FCF",
-          "value": "~21.4×",
+          "value": "~17.5×",
           "note": "$6.9B FCF (TTM 2025)"
         }
       ],
-      "summary": "LMT's forward P/E of ~21× sits at the defense sector median and below its own 5-year average of 18.9× — reflecting current premium pricing driven by geopolitical demand and the record backlog, but not a stretched valuation. The PEG of 1.15× is the most attractive in defense (vs. NOC at 3.6×, GD at 2.4×, RTX at 2.9×), indicating genuine GARP characteristics. The large gap between trailing (29.7×) and forward (21.3×) P/E is a bullish signal — 2025 EPS was distorted by $1.5B in after-tax classified program charges that should not recur at the same scale, setting up a strong earnings rebound in 2026."
+      "summary": "At ~$523, LMT's forward P/E of ~17.6× sits below its own 5-year average of 18.9× and below the defense sector median — the de-rating since March has taken the multiple from premium to discount even as the backlog grew with the $35B THAAD award. The PEG of ~1.0× is the most attractive in defense (vs. NOC at 3.6×, GD at 2.4×, RTX at 2.9×), indicating genuine GARP characteristics. The wide gap between trailing (~24×) and forward (~17.6×) P/E remains the core bullish signal — 2025 EPS was distorted by $1.5B in after-tax classified program charges that should not recur at the same scale — but Q1's EPS miss and negative FCF mean the market wants proof at Q2 earnings (late July) before re-rating."
     }
   },
   "scenarios": {
