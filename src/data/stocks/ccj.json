@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$54B"
+      "value": "~$42B"
     }
   ],
   "chips": [
@@ -32,10 +32,10 @@
       "color": "#7C3AED"
     },
     {
-      "title": "Westinghouse EBITDA",
-      "value": "$690M+",
-      "label": "Cameco's 49% share FY2025 — up from $380M prior-year guidance",
-      "icon": "TrendingUp",
+      "title": "DOE AP1000 Loan",
+      "value": "$17.5B",
+      "label": "Conditional DOE commitment (Jun 2026) financing long-lead items for up to 10 Westinghouse AP1000 reactors; WEC 49%-owned",
+      "icon": "Award",
       "color": "#059669"
     },
     {
@@ -47,7 +47,7 @@
     }
   ],
   "moat": {
-    "description": "Cameco's moat rests on the world's two largest high-grade uranium mines (McArthur River and Cigar Lake), a 49% stake in Westinghouse Electric creating the only Western vertically integrated nuclear fuel cycle, and ~230 million pounds of contracted uranium supply locking in 39 utilities globally through 2035.",
+    "description": "Cameco's moat rests on the world's two largest high-grade uranium mines (McArthur River and Cigar Lake), a 49% stake in Westinghouse Electric creating the only Western vertically integrated nuclear fuel cycle, and ~230 million pounds of contracted uranium supply locking in 39 utilities globally through 2035. The June 2026 U.S. Department of Energy conditional loan commitment of up to $17.5B — financing long-lead items for as many as 10 AP1000 reactors — hard-wires Westinghouse into U.S. energy policy and deepens the regulatory and offtake moat.",
     "analysisTitle": "The Western Nuclear Fuel Monopoly",
     "analysisSummary": "Cameco has built **the only vertically integrated Western nuclear fuel chain** — from Athabasca Basin ore in the ground to Westinghouse reactor fuel assemblies — at a time when energy security has made Western uranium supply a matter of national policy:",
     "analysisPoints": [
@@ -57,7 +57,7 @@
       },
       {
         "title": "Westinghouse: Nuclear Services Oligopoly",
-        "text": "Cameco's 49% stake in Westinghouse Electric — acquired in November 2023 — transforms the company from a commodity miner into a nuclear fuel cycle company with recurring service revenue. Westinghouse services approximately 50% of the world's operating nuclear reactors and is the sole or preferred supplier for AP1000 reactor builds in the U.S., Europe, and Asia. The December 2025 partnership with the U.S. Government — targeting $80B+ in AP1000 deployments globally — cements Westinghouse as the nuclear infrastructure arm of U.S. energy policy, with the Dukovany Czech Republic contract alone generating a $350M milestone payment. Westinghouse's EBITDA contribution reached $690M+ in 2025 (Cameco's 49% share), demonstrating the acquisition's transformative economics."
+        "text": "Cameco's 49% stake in Westinghouse Electric — acquired in November 2023 — transforms the company from a commodity miner into a nuclear fuel cycle company with recurring service revenue. Westinghouse services approximately 50% of the world's operating nuclear reactors and is the sole or preferred supplier for AP1000 reactor builds in the U.S., Europe, and Asia. The December 2025 partnership with the U.S. Government — targeting $80B+ in AP1000 deployments globally — cements Westinghouse as the nuclear infrastructure arm of U.S. energy policy, and on June 23, 2026 the Department of Energy escalated that support with a conditional commitment for a loan package of up to $17.5B to finance long-lead-time components for as many as 10 AP1000 reactors in the United States. The Dukovany Czech Republic contract alone generated a $350M milestone payment, and Westinghouse's EBITDA contribution reached $690M+ in 2025 (Cameco's 49% share), demonstrating the acquisition's transformative economics."
       },
       {
         "title": "Long-Term Contract Structure: Commodity Cycle Insurance",
@@ -66,13 +66,13 @@
     ]
   },
   "growth": {
-    "description": "Q1 2026 EPS $0.46 beat consensus by $0.10 with net earnings +87% YoY to $131M and adjusted EBITDA $509M — uranium realized price climbed to $66.21/lb (vs. $62.55/lb prior-year) and management held 2026 guidance intact, with the India deliveries and Westinghouse AP1000 cadence still ahead.",
+    "description": "Q1 2026 (latest reported; Q2 due July 30, 2026) EPS $0.46 beat consensus by $0.10 with net earnings +87% YoY to $131M and adjusted EBITDA $509M — uranium realized price climbed to US$66.21/lb (vs. $62.55/lb prior-year) and management held 2026 guidance intact. The June 23, 2026 DOE conditional loan of up to $17.5B for up to 10 AP1000 reactors adds a multi-year Westinghouse earnings ramp on top of the India deliveries and long-term uranium contract repricing.",
     "growthAnalysis": {
       "cagrEstimate": "14-18%",
-      "scoreDerivation": "Base 60 + 10 (Westinghouse AP1000 contract pipeline & $80B U.S. Government partnership) + 6 (long-term uranium contract repricing through 2030) + 4 (India deal + Q1 EPS +87% YoY) - 2 (commodity cycle exposure) = 78",
+      "scoreDerivation": "Base 81 (~16% blended CAGR) + 4 (all three drivers accelerating) + 4 (expanding margins) + 3 (TAM expansion) - 10 (high commodity-cycle risk severity) = 82",
       "drivers": [
-        { "name": "Uranium realized price", "metric": "Q1 2026 realized $66.21/lb vs. $62.55/lb YoY (+5.9%); long-term price ~$80-85/lb", "trend": "accelerating" },
-        { "name": "Westinghouse EBITDA contribution", "metric": "FY2025 $690M+ (Cameco's 49% share) vs. $380M prior-year guidance — +80% step-up", "trend": "accelerating" },
+        { "name": "Uranium realized price", "metric": "Q1 2026 realized US$66.21/lb vs. $62.55/lb YoY (+5.9%); long-term price ~$80-85/lb", "trend": "accelerating" },
+        { "name": "Westinghouse AP1000 pipeline", "metric": "$17.5B DOE loan (Jun 2026) funds long-lead items for up to 10 reactors; FY2025 EBITDA $690M+ (Cameco 49%) vs. $380M prior guidance", "trend": "accelerating" },
         { "name": "Contracted volume", "metric": "230M lbs committed across 39 utilities; ~28M lb/yr through 2030, India adds 22M lbs through 2035", "trend": "accelerating" }
       ],
       "primaryType": "TAM expansion",
@@ -82,8 +82,39 @@
     }
   },
   "valuation": {
-    "score": 69,
-    "description": "At ~$120, CCJ trades 8% below the base case of $130 after a 29% YTD rally — the Q1 beat and held guidance support continued grind toward the $160 analyst median target; long-term uranium price trajectory and AP1000 contract wins remain the key levers."
+    "score": 78,
+    "description": "At ~$98 — down ~18% from May highs near $120 as uranium spot cooled — CCJ trades ~25% below the base case of $130 and roughly 47% of the way from the bear ($70) toward base, an attractive entry versus scenarios. The Q1 beat, held guidance, and the June DOE $17.5B AP1000 loan support the grind back toward base; long-term uranium price trajectory and Westinghouse execution remain the key levers.",
+    "peAnalysis": {
+      "asOf": "July 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~93×",
+          "note": "GAAP TTM EPS ~$1.05"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~81×",
+          "note": "consensus '26 EPS ~$1.21"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~3.1×",
+          "note": "fwd P/E ÷ ~26% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~15×",
+          "note": "~$2.8B NTM revenue"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "high / lumpy",
+          "note": "mine capex + WEC equity method distort FCF"
+        }
+      ],
+      "summary": "On headline multiples CCJ looks expensive — ~81× forward P/E and a ~3.1× PEG sit far above the energy-sector median, so the price embeds substantial nuclear-renaissance option value rather than near-term earnings. Reported GAAP EPS is heavily distorted downward: Westinghouse flows through the equity method burdened by acquisition purchase-accounting amortization, so cash earnings power materially exceeds the ~$1.05 TTM EPS the trailing P/E is built on. The multiple only rationalizes if uranium long-term prices hold at $85-95/lb and the AP1000 pipeline converts — this is a scarcity/optionality asset, not a P/E-anchored compounder."
+    }
   },
   "scenarios": {
     "bear": {
@@ -100,7 +131,7 @@
       "description": "Uranium long-term prices stabilize at $85-95/lb, Westinghouse delivers 6-10% EBITDA CAGR, the India deal commences delivery in 2027, and Cameco's contract book rolls forward — adj. EPS reaches $1.60-1.80 USD by FY2027.",
       "points": [
         "Uranium long-term price holds at $85-95/lb through 2026-2027, with Cameco's 28M lb/year delivery commitment pricing at ~$90/lb realized — uranium segment EBITDA grows 12-15% annually from contract repricing as below-market legacy agreements expire",
-        "Westinghouse secures 3-5 new AP1000 reactor contracts in Europe and Southeast Asia under the $80B U.S. Government partnership framework; Cameco's 49% EBITDA share grows toward $800M+ by FY2027, establishing Westinghouse as the dominant earnings driver",
+"Westinghouse converts the June 2026 DOE $17.5B conditional loan into firm long-lead orders and secures 3-5 new AP1000 reactor contracts in Europe and Southeast Asia under the $80B U.S. Government partnership framework; Cameco's 49% EBITDA share grows toward $800M+ by FY2027, establishing Westinghouse as the dominant earnings driver",
         "India uranium deliveries commence in 2027 (22M lbs across 9 years at market-related prices); additional government-to-government contracts follow from Japan, South Korea, and Eastern Europe seeking Western supply security — extending committed revenue to 2040"
       ]
     },
@@ -109,7 +140,7 @@
       "description": "Uranium spot surges past $120/lb as reactor restarts and AI-driven demand outpace supply growth, Westinghouse AP1000 orders accelerate under the $80B U.S. Government mandate, and SMR optionality begins to be priced into the stock.",
       "points": [
         "Uranium spot exceeds $120/lb by late 2026 as global reactor capacity additions outpace mine restarts; Cameco's realized price hits $105-115/lb on market-related contracts; uranium segment FCF more than doubles to $1.5B+ CAD — transforming the earnings profile",
-        "Westinghouse receives binding construction contracts for 10+ AP1000 reactors under the U.S. Government program; Cameco's 49% EBITDA share exceeds $1B by FY2027-2028; Westinghouse alone justifies a $15-20/share valuation premium above current levels",
+        "The DOE $17.5B loan de-risks financing for 10 U.S. AP1000 reactors and Westinghouse receives binding construction contracts for 10+ reactors globally; Cameco's 49% EBITDA share exceeds $1B by FY2027-2028; Westinghouse alone justifies a $15-20/share valuation premium above current levels",
         "SMR technology matures: Westinghouse eVinci and NuScale-adjacent reactor programs receive first commercial orders; the nuclear fuel cycle extends into SMR markets where Cameco's vertically integrated supply chain is the natural vendor — creating a 15-20 year second growth platform not in current consensus"
       ]
     }
@@ -157,5 +188,5 @@
     },
     "verdict": "Cameco is a net beneficiary of AI adoption through the data center nuclear power demand tailwind — AI-driven electricity demand is accelerating utility investment in nuclear capacity, directly expanding demand for Cameco's uranium and Westinghouse's reactor services. The company's core moats (mine geology, regulatory approvals, long-term contract relationships) are physical and regulatory advantages entirely immune to AI-driven disruption."
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "July 13, 2026"
 }
