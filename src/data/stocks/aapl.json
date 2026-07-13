@@ -9,7 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "$4.4T"
+      "value": "$4.7T"
     }
   ],
   "chips": [
@@ -46,7 +46,7 @@
     }
   ],
   "moat": {
-    "description": "The most powerful consumer ecosystem on earth — iPhone lock-in, App Store dominance, and a services flywheel that compounds with every user added. WWDC 2026's Gemini-powered 'Siri AI' resolves the AI overhang on the upgrade cycle but reframes the thesis: Apple is renting frontier intelligence from Google (~$1B/yr) rather than owning it, so the durable moat is the ecosystem and distribution — not a proprietary-AI advantage. Structural moats are unchanged; the score holds at ~89.",
+    "description": "The most powerful consumer ecosystem on earth — iPhone lock-in, App Store dominance, and a services flywheel that compounds with every user added. WWDC 2026's Gemini-powered 'Siri AI' resolves the AI overhang on the upgrade cycle but reframes the thesis: Apple is renting frontier intelligence from Google (~$1B/yr) rather than owning it, so the durable moat is the ecosystem and distribution — not a proprietary-AI advantage. The July 2026 lawsuit Apple filed against OpenAI and Jony Ive's io Products (alleging trade-secret theft to build competing AI hardware) underscores that the emerging threat to the moat is a new AI-native device category, not a better phone — but Apple's 2.5B-device distribution and switching-cost web remain the barrier no rival can shortcut. Structural moats are unchanged; the score holds at ~89.",
     "analysisTitle": "The Ecosystem Flywheel",
     "analysisSummary": "Apple's moat is built on **Ecosystem Lock-In and Emotional Brand Loyalty**:",
     "analysisPoints": [
@@ -79,14 +79,14 @@
         { "name": "Installed Base / Buybacks", "metric": "2.5B+ active devices; new $100B buyback authorization mechanically lifts EPS 3-4% per year", "trend": "stable" }
       ],
       "primaryType": "both",
-      "keyRisk": "If Siri AI (Gemini-powered, Fall 2026) proves undifferentiated and fails to drive a sustained upgrade supercycle through FY2027, while DMA-style App Store regulation spreads to the US and the Google dependency (search-default + Gemini) draws antitrust remedies, Services growth decelerates below 10% and iPhone normalizes to 215–225M units — collapsing the dual-engine narrative the multiple is priced for.",
+      "keyRisk": "If Siri AI (Gemini-powered, Fall 2026) proves undifferentiated and fails to drive a sustained upgrade supercycle through FY2027, while DMA-style App Store regulation spreads to the US and OpenAI/io Products ships a credible AI-native device that opens an off-iPhone computing surface, Services growth decelerates below 10% and iPhone normalizes to 215–225M units — collapsing the dual-engine narrative the multiple is priced for at a record ~$4.7T cap.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 65,
-    "description": "At ~$300, the post-WWDC run has carried the stock to fair value (base $300) — the Q2 beat and the removal of the AI overhang are now priced in. Risk/reward is balanced: ~28% upside to bull ($385) vs ~33% downside to bear ($200), with analyst skepticism on Siri AI differentiation capping near-term upside."
+    "score": 61,
+    "description": "At a record ~$318 (market cap ~$4.7T), the post-WWDC melt-up has pushed the stock ~21% of the way from base ($300) to bull ($385) — the Q2 beat, strong +14–17% Q3 guidance, and the removal of the AI overhang are now more than priced in. Risk/reward has skewed less favourable since the June review: ~21% upside to bull vs ~37% downside to bear ($200). A scenario refresh will follow the Q3 FY2026 print on July 30, 2026; near-term upside is capped by lingering analyst skepticism on Siri AI differentiation and by the strategic overhang of OpenAI entering AI hardware."
   },
   "scenarios": {
     "bear": {
@@ -146,7 +146,7 @@
     },
     "regulatoryLockIn": {
       "status": "weakened",
-      "note": "Historically a non-factor, but the EU DMA is forcing Apple to allow sideloading and third-party app stores on iOS — a meaningful crack in the App Store monopoly. The new ~$1B/yr Gemini-Siri deal stacks on the ~$20B/yr Google search-default arrangement, deepening a Google dependency that sits squarely in antitrust crosshairs (DOJ/EU). Regulation remains the most significant threat to Apple's moat."
+      "note": "Historically a non-factor, but the EU DMA is forcing Apple to allow sideloading and third-party app stores on iOS — a meaningful crack in the App Store monopoly. The new ~$1B/yr Gemini-Siri deal stacks on the ~$20B/yr Google search-default arrangement, deepening a Google dependency that sits squarely in antitrust crosshairs. As of mid-2026 the near-term risk has eased at the margin: the US search-monopoly remedy left the Apple payment untouched and Google's appeal (oral arguments not expected until late 2026/early 2027) pushes any forced unwind further out. Regulation remains the most significant threat to Apple's moat, but the timeline has extended."
     },
     "networkEffects": {
       "status": "strong",
@@ -160,7 +160,7 @@
       "status": "strong",
       "note": "iCloud Photos is the photo library. Contacts, Notes, Reminders, and Calendar are the default PIM stack. Health app is the health record. For hundreds of millions of consumers, Apple is the system of record for their personal data."
     },
-    "verdict": "Apple's consumer ecosystem moat — switching costs, network effects, transaction embedding, and system of record — is structurally untouched by AI and remains gold-standard (~89). But WWDC 2026 reframed the AI narrative: by powering Siri AI with Google Gemini (~$1B/yr) instead of its own foundation model, Apple converted a claimed proprietary-AI moat into a rented capability and deepened a strategic/antitrust dependency on Google (stacking on the ~$20B/yr search-default deal). The honest read is that Apple is AI-resilient by being AI-agnostic — its moat is distribution an LLM can't replicate, not a frontier model — and the near-term win is that shipping a credible assistant removes the 'Apple is behind' overhang, even as analysts flag Siri AI as largely undifferentiated from Gemini on Android."
+    "verdict": "Apple's consumer ecosystem moat — switching costs, network effects, transaction embedding, and system of record — is structurally untouched by AI and remains gold-standard (~89). But WWDC 2026 reframed the AI narrative: by powering Siri AI with Google Gemini (~$1B/yr) instead of its own foundation model, Apple converted a claimed proprietary-AI moat into a rented capability and deepened a strategic/antitrust dependency on Google (stacking on the ~$20B/yr search-default deal). The honest read is that Apple is AI-resilient by being AI-agnostic — its moat is distribution an LLM can't replicate, not a frontier model — and the near-term win is that shipping a credible assistant removes the 'Apple is behind' overhang, even as analysts flag Siri AI as largely undifferentiated from Gemini on Android. The clearest emerging threat is category, not spec: Apple's July 2026 trade-secret suit against OpenAI and Jony Ive's io Products signals that the real contest is over the next AI-native hardware form factor — a fight Apple is defending from a position of overwhelming distribution strength, but one that puts its device primacy in play for the first time in a decade."
   },
-  "lastAnalyzed": "June 2026"
+  "lastAnalyzed": "July 13, 2026"
 }
