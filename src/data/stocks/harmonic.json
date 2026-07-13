@@ -1,0 +1,169 @@
+{
+  "slug": "harmonic",
+  "ticker": "HSYDF",
+  "name": "Harmonic Drive Systems",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "HSYDF (6324.T)"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$4.4B"
+    },
+    {
+      "label": "ADR Price",
+      "value": "~$41"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Industrials | Precision Components",
+      "color": "primary"
+    },
+    {
+      "label": "Humanoid Actuator Monopoly",
+      "color": "success"
+    },
+    {
+      "label": "Rich After +239% Run",
+      "color": "warning"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "High-End Share",
+      "value": "~65%+",
+      "label": "Dominance of the Precision Strain-Wave Reducer Market",
+      "icon": "Cog",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "1-Year Return",
+      "value": "+239%",
+      "label": "Re-Rated on Humanoid-Robot Optionality; Near 52-Wk High",
+      "icon": "TrendingUp",
+      "color": "#f97316"
+    },
+    {
+      "title": "Reducers per Humanoid",
+      "value": "Dozens",
+      "label": "Each Robotic Joint Needs a Precision Harmonic Reducer",
+      "icon": "Bot",
+      "color": "#eab308"
+    }
+  ],
+  "moat": {
+    "description": "Harmonic Drive Systems controls the high-end of the strain-wave (harmonic) reducer market — the compact, zero-backlash precision gear that sits inside every robot joint — a physical-process monopoly that the humanoid-robot wave multiplies because each robot needs dozens of them.",
+    "analysisTitle": "The Gear Inside Every Joint",
+    "analysisSummary": "Harmonic Drive's moat is a **precision-manufacturing bottleneck no software can commoditise and no competitor can quickly replicate**:",
+    "analysisPoints": [
+      {
+        "title": "The Strain-Wave Monopoly",
+        "text": "Harmonic (strain-wave) reducers deliver very high reduction ratios with near-zero backlash in a compact, lightweight package — the exact requirement of a robotic joint. Harmonic Drive Systems has dominated the high-end of this category for decades, holding a majority share of the precision segment. The core patents have long expired, but the moat is the manufacturing process: the metallurgy, flexspline heat-treatment, and sub-micron tolerancing that determine service life are institutional know-how competitors cannot buy off the shelf."
+      },
+      {
+        "title": "Design-In Lock-In",
+        "text": "Robot OEMs design their arms and joints around a specific reducer's torque, stiffness, and fatigue characteristics, then validate the whole machine to it. Swapping to an unproven reducer means re-engineering and re-qualifying the joint — so once Harmonic Drive is designed into a robot platform, it tends to stay for the platform's life. That converts a component sale into a durable, generation-spanning position on every design it wins."
+      },
+      {
+        "title": "The Humanoid Multiplier",
+        "text": "An industrial robot arm uses a handful of reducers; a humanoid robot needs dozens of precision actuators across its limbs, hands, and torso. If humanoids scale into the millions of units the bulls project, the reducer content per robot turns a niche precision-components supplier into a volume beneficiary of the single largest new hardware category in a generation — the purest actuator-level pick-and-shovel on physical AI."
+      }
+    ]
+  },
+  "growth": {
+    "description": "Harmonic Drive is a cyclical precision-components maker whose demand tracks the industrial-robot and semiconductor-equipment capex cycle, now carrying an enormous humanoid-robot option on top. The near-term growth depends on the automation up-cycle; the long-term case is the reducer content in humanoid robots scaling from pilot to volume. The stock has already re-rated +239% over a year to near its 52-week high, which prices a good deal of the humanoid optionality — so the growth trajectory is genuinely high but the risk is that the optionality is realised on a slower timeline than the multiple assumes.",
+    "growthAnalysis": {
+      "cagrEstimate": "10-20%",
+      "scoreDerivation": "Base 82 (mid-teens blended CAGR) + humanoid-content optionality (+4) + strain-wave category monopoly (+2) - semi/robot capex cyclicality (-4) - single-product concentration (-2) = 82",
+      "drivers": [
+        { "name": "Humanoid Optionality", "metric": "Dozens of precision reducers per humanoid vs a handful per industrial arm", "trend": "accelerating" },
+        { "name": "Industrial Robots & Semi Equipment", "metric": "Core demand recovering with the automation and semi-cap up-cycle", "trend": "accelerating" },
+        { "name": "High-End Share", "metric": "Majority share of the precision strain-wave reducer segment", "trend": "stable" }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "Humanoid volumes ramp slower than the +239% re-rating implies while a semiconductor/robot capex down-cycle hits the core business — and, longer term, Chinese reducer makers (e.g. Leaderdrive) close the quality gap and compress high-end pricing.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 48,
+    "description": "After a +239% one-year run to near its 52-week high, the ADR (~$41, versus ¥7,880 on the Tokyo listing) prices a large slice of the humanoid future into a business whose current earnings still ride the cyclical automation market. The moat and the strategic positioning are exceptional, but the entry multiple is demanding and the humanoid ramp is multi-year and uncertain — this is a best-in-class component monopoly that is currently expensive, better bought on a capex-cycle drawdown than at the top of the re-rating."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$24",
+      "description": "The industrial-robot and semiconductor-equipment capex cycle turns down, humanoid orders stay at pilot volumes, and the speculative premium built over the +239% run unwinds as the market re-prices the optionality on a longer timeline.",
+      "points": [
+        "A semi-cap and industrial-automation down-cycle cuts core reducer demand while humanoid volumes remain pre-commercial, exposing the gap between the multiple and current earnings",
+        "Chinese precision-reducer makers close the quality gap and undercut Harmonic Drive on price in the mid-tier, compressing blended ASPs",
+        "The humanoid narrative cools industry-wide, de-rating the entire actuator supply chain that ran up on the same thesis"
+      ]
+    },
+    "base": {
+      "priceTarget": "$44",
+      "description": "The automation up-cycle sustains core reducer demand, Harmonic Drive holds its high-end share, and early humanoid programs move from pilots to small-series production — validating the option without yet delivering mass volume.",
+      "points": [
+        "Industrial-robot and semiconductor-equipment demand keeps the core business growing at a mid-teens rate through the automation up-cycle",
+        "Harmonic Drive wins design-ins on leading humanoid platforms, converting pilot relationships into qualified, generation-spanning positions",
+        "Capacity expansion and mix shift toward higher-value precision actuators support margin expansion as volumes recover"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$72",
+      "description": "Humanoid robots scale from pilots toward volume production, reducer content per robot turns Harmonic Drive into a mass-volume beneficiary, and it defends the high-end against Chinese entrants — re-rating from a cyclical components multiple toward a structural-growth multiple.",
+      "points": [
+        "Humanoid programs (Tesla Optimus, Figure, 1X and Chinese entrants) reach volume production and standardise on high-end strain-wave reducers for their most demanding joints",
+        "Reducer content of dozens per humanoid, multiplied across millions of units, inflects Harmonic Drive's revenue base beyond anything in current estimates",
+        "Harmonic Drive defends the precision high-end on service life and reliability, holding pricing even as lower-tier Chinese supply grows the overall market"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "Not applicable — a strain-wave reducer is a mechanical component with no user interface or workflow to learn."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "The moat is encoded in the manufacturing process — flexspline metallurgy, heat-treatment, and sub-micron tolerancing that determine fatigue life — decades of physical process know-how that cannot be reverse-engineered from the finished part or shortcut by software.",
+      "aiExposure": "resilient"
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Not applicable — Harmonic Drive is a precision-hardware manufacturer with no reliance on public data aggregation as a moat source."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "Precision-gear and mechatronics engineers who can hold sub-micron tolerances at volume are among the rarest manufacturing specialists, and Harmonic Drive's decades of accumulated process talent cannot be assembled quickly by a new entrant."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Harmonic Drive sells reducers, precision actuators, and control devices as an integrated motion package, with the actuator optimised around its own reducer — increasing stickiness for customers that want a validated sub-assembly rather than a bare gear."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Field data on reducer service life and failure modes across decades of deployed robots feeds continuous refinement of the gear design and quality control — a data advantage that compounds with the installed base."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "Once designed into a robot platform and validated for torque, stiffness, and fatigue, the reducer is locked in for that platform's life; switching requires re-engineering and re-qualifying the joint, a customer-qualification barrier that behaves like certification lock-in."
+    },
+    "networkEffects": {
+      "status": "weakened",
+      "note": "There is no true network effect — Harmonic Drive benefits from being the reference standard robot engineers design around, but that is incumbency and reputation rather than a value-compounding user network."
+    },
+    "transactionEmbedding": {
+      "status": "weakened",
+      "note": "Aftermarket and replacement demand provide some recurring revenue on the installed base, but the model is component sales into OEM builds rather than per-transaction embedding."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "Not applicable — a mechanical reducer is not the authoritative record for any business function."
+    },
+    "verdict": "Harmonic Drive is about as AI-resilient as a business gets — it makes a physical precision component whose moat is manufacturing know-how, and the AI/robot boom is a direct, multiplicative demand driver rather than a threat, since every humanoid joint needs a reducer it can supply. The real risks are not AI but cyclicality, single-product concentration, and Chinese competitors climbing the quality curve — all set against a valuation that has already re-rated +239% on the humanoid thesis."
+  },
+  "lastAnalyzed": "July 13, 2026"
+}

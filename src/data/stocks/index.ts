@@ -119,6 +119,9 @@ import rklb from './rklb.json';
 import amkr from './amkr.json';
 import zeta from './zeta.json';
 import samsung from './samsung.json';
+import rok from './rok.json';
+import ter from './ter.json';
+import harmonic from './harmonic.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -240,6 +243,9 @@ const stocksMap: Record<string, StockAnalysisData> = {
   amkr: amkr as StockAnalysisData,
   zeta: zeta as StockAnalysisData,
   samsung: samsung as StockAnalysisData,
+  rok: rok as StockAnalysisData,
+  ter: ter as StockAnalysisData,
+  harmonic: harmonic as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
