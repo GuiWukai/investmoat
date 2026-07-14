@@ -1,0 +1,164 @@
+{
+  "slug": "rok",
+  "ticker": "ROK",
+  "name": "Rockwell Automation",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "ROK"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$51B"
+    },
+    {
+      "label": "Price",
+      "value": "~$454"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Industrials | Factory Automation",
+      "color": "primary"
+    },
+    {
+      "label": "Install-Base Lock-In",
+      "color": "success"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "FY2026 Revenue",
+      "value": "~$8.9B",
+      "label": "Guidance Raised After Q2 Beat; 9th Straight EPS Beat",
+      "icon": "TrendingUp",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "Adjusted EPS",
+      "value": "$12.50–$13.10",
+      "label": "FY2026 Guidance, Lifted ~8% Post Q2",
+      "icon": "DollarSign",
+      "color": "#f97316"
+    },
+    {
+      "title": "Installed Base",
+      "value": "Decades",
+      "label": "Logix Controllers & FactoryTalk Embedded in NA Plants",
+      "icon": "Factory",
+      "color": "#eab308"
+    }
+  ],
+  "moat": {
+    "description": "Rockwell is the largest pure-play industrial automation company, and its moat rests on the Logix control platform and FactoryTalk software being welded into the daily operation of North American factories — where a controls change means requalifying validated production lines rather than swapping a vendor.",
+    "analysisTitle": "The Control-Layer Incumbency",
+    "analysisSummary": "Rockwell's moat is the same species as FANUC's but on the **discrete-automation and process side of the Western factory floor**:",
+    "analysisPoints": [
+      {
+        "title": "Logix & Studio 5000 Lock-In",
+        "text": "A generation of North American controls engineers programs Allen-Bradley PLCs in Studio 5000 ladder logic. The control code that runs a plant is written, tuned, and documented against Rockwell's Logix architecture over years. Migrating to Siemens TIA Portal or Schneider means rewriting that logic, retraining the maintenance workforce, and revalidating every line — a multi-year, multi-million-dollar project that plants defer almost indefinitely."
+      },
+      {
+        "title": "The Connected Enterprise Stack",
+        "text": "Rockwell sells Logix controllers, PowerFlex drives, Kinetix motion, and FactoryTalk software as an integrated stack, increasingly wrapped in recurring ARR. Each layer is optimised for the others, so piecemeal defection degrades performance in ways that are hard to diagnose. The software and recurring-revenue mix keeps rising, converting a hardware relationship into an embedded operating dependency."
+      },
+      {
+        "title": "The Integrator Ecosystem",
+        "text": "Rockwell's PartnerNetwork of certified system integrators is the largest in Western discrete automation. Plants specify Allen-Bradley because their integrators are certified on it; integrators certify on Allen-Bradley because plants demand it. That bilateral flywheel — reinforced in regulated industries like pharma and food & beverage where systems are validated to specific Rockwell revisions — is exactly the kind of incumbency a reshoring capex wave compounds rather than disrupts."
+      }
+    ]
+  },
+  "growth": {
+    "description": "Q2 FY2026 delivered a ninth consecutive EPS beat and an ~8% guidance raise, with double-digit order growth and intelligent-devices sales up 13% YoY across data centers, semiconductors, and energy. Reshoring and supply-chain diversification in North America and Europe are the structural driver, and Rockwell's own autonomous mobile robots are being adopted across automotive, food & beverage, and data-center applications. Growth is real but cyclical — automation capex tracks industrial production, so the trajectory is a mid-to-high-single-digit compounder with software mix lifting margins, not a hypergrowth story.",
+    "growthAnalysis": {
+      "cagrEstimate": "6-9%",
+      "scoreDerivation": "Base 70 + reshoring/nearshoring capex tailwind (+3) + rising software/ARR mix (+2) - industrial-capex cyclicality (-3) = 72",
+      "drivers": [
+        { "name": "Order Intake", "metric": "Double-digit order growth in Q2 FY2026", "trend": "accelerating" },
+        { "name": "Intelligent Devices", "metric": "Segment sales ~$1.0B, +13% YoY", "trend": "accelerating" },
+        { "name": "FY2026 Guidance", "metric": "Revenue ~$8.9B; adj EPS raised to $12.50–$13.10", "trend": "accelerating" }
+      ],
+      "primaryType": "market share",
+      "keyRisk": "A US industrial recession or reshoring-capex air pocket stalls order intake, and Rockwell's high fixed-cost base compresses margins as volumes fall.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 63,
+    "description": "At ~$454 the stock trades within ~1–2% of the average analyst target after a ~54% one-year total return, roughly 3% below the base case ($470) — fairly-to-fully valued rather than cheap. The quality and reshoring optionality are not in dispute; the entry price is the constraint, so this reads as a hold-quality name to accumulate on cyclical weakness rather than a value entry today."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$360",
+      "description": "US manufacturing PMI rolls over into contraction, reshoring projects slip on higher-for-longer rates, and Rockwell's order book flattens as customers defer capex — driving multiple compression from a premium industrial multiple back toward its historical mean.",
+      "points": [
+        "Industrial production contracts and discrete-automation capex enters an air pocket, flattening order intake and forcing the first EPS guidance cut in the current streak",
+        "Chinese and European automation competitors (Siemens, Inovance) press on price in overlapping segments, capping Rockwell's ability to hold pricing through the down-cycle",
+        "Software/ARR transition proves slower than hoped, leaving the margin story dependent on cyclical hardware volumes"
+      ]
+    },
+    "base": {
+      "priceTarget": "$470",
+      "description": "Reshoring capex stays constructive, order growth normalises to high-single digits, and rising software mix lifts margins — Rockwell compounds earnings in line with its raised FY2026 framework and holds a premium automation multiple.",
+      "points": [
+        "North American reshoring and supply-chain diversification sustain a multi-year replacement and greenfield capex cycle for factory controls",
+        "Data-center, semiconductor, and energy end-markets continue to pull intelligent devices and autonomous mobile robots at double-digit rates",
+        "FactoryTalk and recurring ARR keep climbing as a share of revenue, structurally lifting segment margins and earnings quality"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$600",
+      "description": "A physical-AI and reshoring supercycle drives a step-change in automation intensity; Rockwell's control layer becomes the orchestration standard for AI-enabled factories and its mobile-robot and software franchises re-rate the whole company toward a software-like multiple.",
+      "points": [
+        "Humanoid and mobile-robot deployment on factory floors runs through Rockwell's control and orchestration layer, adding a high-margin software attach on top of every automation project",
+        "Reshoring accelerates into a multi-year supercycle as US industrial policy and AI-driven manufacturing pull greenfield capacity, driving sustained double-digit order growth",
+        "Recurring software revenue crosses a threshold that re-rates Rockwell from an industrial multiple toward a hybrid hardware-software multiple"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "strong",
+      "note": "Studio 5000 and the Allen-Bradley ladder-logic dialect are the muscle memory of a generation of North American controls engineers. Retraining a maintenance workforce onto Siemens TIA Portal is a genuine productivity-loss switching cost measured in months, which is why plants standardise on one platform for decades."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "The control programs that run a plant are customised, tuned, and documented against Rockwell's Logix architecture over years of operation. Re-implementing that plant-specific logic on a competitor's controller is a high-risk, revalidation-heavy project that rarely clears an ROI hurdle."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Not applicable — Rockwell is a control-hardware and industrial-software business with no reliance on public data aggregation as a moat source."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Skilled controls and automation engineers are scarce, and the ones a plant employs are trained on Rockwell — reinforcing incumbency, though the scarcity protects the ecosystem more than Rockwell exclusively."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Logix controllers, PowerFlex drives, Kinetix motion, and FactoryTalk software are sold and optimised as an integrated Connected Enterprise stack. Substituting one layer with a third-party part degrades system performance in ways that are hard to attribute, making piecemeal defection rare."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "FactoryTalk and Plex accumulate production, asset, and performance data across the installed base, feeding analytics and predictive-maintenance products that get stickier and more valuable the larger the base grows."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "In regulated industries — pharma, food & beverage, life sciences — production systems are validated to specific Rockwell hardware and software revisions. Any controls change triggers costly requalification, making incumbent displacement a last-resort decision."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "The certified PartnerNetwork of system integrators creates a self-reinforcing adoption loop: plants buy Allen-Bradley because integrators know it, integrators certify because plants demand it. Industrial and bilateral rather than consumer-scale, so intact rather than strong."
+    },
+    "transactionEmbedding": {
+      "status": "weakened",
+      "note": "Rockwell earns recurring revenue from services, spares, and a growing software/ARR base, but the majority of revenue remains project and hardware-driven rather than embedded at the per-transaction level."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "FactoryTalk holds the production parameters, asset registries, and control configurations that constitute the operational system of record for a plant, in Rockwell-proprietary formats that do not export cleanly to competitor platforms."
+    },
+    "verdict": "Rockwell is resilient to AI disruption and is more likely a net beneficiary — AI-driven factory automation, mobile robots, and reshoring all increase the automation intensity that flows through its control layer. The genuine AI risk is longer-term: a software-defined, open-hardware control stack could one day commoditise the PLC, but Rockwell's validated install base, integrator ecosystem, and regulated-industry lock-in make that a slow, multi-cycle displacement rather than a near-term threat."
+  },
+  "lastAnalyzed": "July 13, 2026"
+}

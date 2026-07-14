@@ -1,0 +1,168 @@
+{
+  "slug": "ter",
+  "ticker": "TER",
+  "name": "Teradyne",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "TER"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$56B"
+    },
+    {
+      "label": "Price",
+      "value": "~$359"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Industrials | Test & Robotics",
+      "color": "primary"
+    },
+    {
+      "label": "Picks & Shovels",
+      "color": "success"
+    },
+    {
+      "label": "Cyclical / Rich Multiple",
+      "color": "warning"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "Q1'26 Revenue",
+      "value": "$1.28B",
+      "label": "+87% YoY; ~70% of Revenue AI-Linked",
+      "icon": "TrendingUp",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "Robotics Run-Rate",
+      "value": "$91M/qtr",
+      "label": "Universal Robots + MiR; 4th Straight Quarter of Growth",
+      "icon": "Bot",
+      "color": "#f97316"
+    },
+    {
+      "title": "Trailing P/E",
+      "value": "~66×",
+      "label": "Premium Multiple After AI-Test Re-Rating",
+      "icon": "AlertTriangle",
+      "color": "#eab308"
+    }
+  ],
+  "moat": {
+    "description": "Teradyne is a two-sided play on the robot boom: it owns half of the semiconductor automated-test-equipment duopoly that every AI and robot chip must pass through, and it owns Universal Robots and MiR, the market-leading collaborative-robot and autonomous-mobile-robot franchises.",
+    "analysisTitle": "The Gatekeeper and the Cobot Leader",
+    "analysisSummary": "Teradyne's moat is strongest exactly where the robot boom is most capital-intensive — **at the test gate for silicon and at the cobot standard on the factory floor**:",
+    "analysisPoints": [
+      {
+        "title": "The ATE Duopoly",
+        "text": "In system-on-chip automated test equipment, Teradyne and Advantest form an effective duopoly. A chipmaker develops its test program against a specific Teradyne platform (UltraFLEX/UltraFLEXplus), correlates yield data to it, and qualifies it into high-volume production. Re-porting that test program and re-correlating to a competitor's tester is expensive and risky, so incumbency at a given customer is durable across product generations — and AI accelerators and robot SoCs are among the most test-intensive silicon ever built."
+      },
+      {
+        "title": "Universal Robots — the Cobot Standard",
+        "text": "Universal Robots defined the collaborative-robot category and remains its share leader, with the UR+ ecosystem of certified grippers, vision systems, and application kits acting as a genuine platform network effect. Integrators and end-users trained on UR's interface, and the library of deployed applications, make UR the default cobot spec — the same install-base dynamic that protects the industrial-automation incumbents, at the human-scale end of the market."
+      },
+      {
+        "title": "Wafer-to-AI-Datacenter Positioning",
+        "text": "With roughly 70% of revenue tied to AI-related demand, Teradyne sells into the entire arc from wafer test through to the robots that build and move physical goods. Q1 2026 revenue rose 87% YoY on AI and data-center test demand, while the robotics segment posted its fourth consecutive quarter of growth. Teradyne monetises the boom whether the winning chip is NVIDIA's or a custom accelerator, and whether the robot is a cobot or a humanoid — a picks-and-shovels breadth that individual robot bets lack."
+      }
+    ]
+  },
+  "growth": {
+    "description": "Q1 2026 revenue of $1.28B (+87% YoY) was led by semiconductor test at $1.11B, with robotics at $91M and product test at $80M. Management guided Q2 to $1.15–1.25B revenue and $1.86–2.15 EPS, and analysts model FY2026 revenue of ~$4.32B with ~63% EPS growth on AI-test and robotics ramp. The growth is powerful but genuinely cyclical — ATE demand swings with the semiconductor capex cycle — so the trajectory is high but the amplitude and the rich starting multiple both matter to forward returns.",
+    "growthAnalysis": {
+      "cagrEstimate": "12-18%",
+      "scoreDerivation": "Base 82 (15%+ blended CAGR) + AI-test demand accelerant (+3) + robotics ramp optionality (+2) - ATE cyclicality (-6) = 81",
+      "drivers": [
+        { "name": "Semiconductor Test", "metric": "Q1'26 $1.11B; AI/datacenter test driving +87% total revenue growth", "trend": "accelerating" },
+        { "name": "Robotics", "metric": "$91M in Q1'26, up from $69M a year earlier; 4 straight quarters of growth", "trend": "accelerating" },
+        { "name": "FY2026 Outlook", "metric": "~$4.32B revenue, ~$6.46 EPS consensus (~63% EPS growth)", "trend": "accelerating" }
+      ],
+      "primaryType": "both",
+      "keyRisk": "A semiconductor capex down-cycle cuts ATE orders sharply while the still-small robotics segment cannot offset it, and a ~66× multiple de-rates hard on any growth disappointment.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 52,
+    "description": "At ~$359 with a trailing P/E near 66×, Teradyne prices in a durable AI-test supercycle and a successful robotics ramp with little margin for a cyclical downturn. The business quality and structural positioning are real, but the multiple leaves the risk skewed to the downside if semiconductor capex cools — this is a high-quality name at a demanding price, better accumulated on cyclical weakness than chased at the peak of the AI-test re-rating."
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$220",
+      "description": "The semiconductor test cycle rolls over as AI-accelerator test intensity is pulled forward, ATE orders fall, robotics stays sub-scale, and a ~66× multiple compresses toward the mid-20s on a lower earnings base.",
+      "points": [
+        "AI-accelerator and datacenter test demand normalises after a pull-forward, and Teradyne's ATE revenue falls double digits in a classic semi-cap air pocket",
+        "Advantest presses share in high-performance SoC test, capping Teradyne's pricing and unit gains through the down-cycle",
+        "Robotics remains a low-single-digit-percentage-of-revenue segment, unable to offset semiconductor-test cyclicality when it matters most"
+      ]
+    },
+    "base": {
+      "priceTarget": "$380",
+      "description": "AI-test demand stays structurally elevated through the cycle, Teradyne holds its ATE duopoly position, and robotics keeps compounding — earnings grow into the multiple rather than the multiple re-rating further.",
+      "points": [
+        "AI accelerators, HBM, and custom silicon keep test intensity structurally higher, giving Teradyne a durable step-up in baseline ATE demand",
+        "Universal Robots and MiR sustain double-digit growth as cobots and mobile robots scale on factory and logistics floors",
+        "Margin mix improves as software-enabled test and higher-value robotics applications grow faster than legacy hardware"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$520",
+      "description": "A physical-AI supercycle drives both sides of the business at once — humanoid and mobile-robot SoCs become a major new test-intensive category, and Teradyne's robotics franchises inflect from ramp to scale.",
+      "points": [
+        "Humanoid and edge-robot silicon becomes a large new ATE end-market, extending the test-intensity tailwind well beyond datacenter accelerators",
+        "Universal Robots and MiR inflect from ramp to scale as labor shortages and reshoring pull cobot and AMR adoption into a mass-deployment phase",
+        "Teradyne is recognised as the diversified wafer-to-robot toll-taker on physical AI and holds a premium multiple on a much larger earnings base"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Test engineers develop and maintain device test programs on Teradyne's platform-specific software, and UR's programming interface is the one cobot integrators are trained on — real but not insurmountable switching costs on both sides of the business."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "A production test program is customised and yield-correlated to a specific Teradyne platform over months of qualification. Re-porting and re-correlating it to a competitor's tester is expensive and risky, so incumbency persists across chip generations — encoded process knowledge AI cannot shortcut."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Not applicable — Teradyne is a test-equipment and robotics hardware business with no reliance on public data aggregation as a moat source."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Test-engineering and precision-robotics talent is scarce, and the expertise concentrated around Teradyne's platforms reinforces customer incumbency more than it protects Teradyne exclusively."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Teradyne cross-sells its semiconductor test, product test, and robotics portfolios, and the UR+ ecosystem bundles certified accessories and applications around the core cobot — increasing stickiness without being a hard bundle."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Decades of device-test and yield-correlation data across the installed base inform test-program development and hardware roadmaps, a data advantage that compounds with the qualified base."
+    },
+    "regulatoryLockIn": {
+      "status": "weakened",
+      "note": "There is qualification lock-in — chips and lines are qualified to specific testers — but it is customer-driven correlation rather than external regulatory certification, so it protects incumbency without a formal regulatory barrier."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "The UR+ platform of certified grippers, vision, and application kits, plus the integrator community trained on Universal Robots, creates a genuine two-sided platform effect around the cobot standard — the strongest network dynamic in the portfolio of businesses."
+    },
+    "transactionEmbedding": {
+      "status": "weakened",
+      "note": "Service contracts, spares, and software attach provide recurring revenue on the installed base, but the model remains capital-equipment sales rather than per-transaction embedding."
+    },
+    "systemOfRecord": {
+      "status": "weakened",
+      "note": "Test programs, correlation data, and robot application configurations reside on Teradyne platforms and carry institutional inertia, but Teradyne is not the authoritative system of record for a customer's core business function."
+    },
+    "verdict": "Teradyne is a net beneficiary of both AI and the robot boom — its ATE duopoly is the test gate for the most test-intensive silicon ever built, and Universal Robots is the cobot standard, both of which AI adoption accelerates rather than threatens. The genuine risks are cyclical rather than structural: semiconductor test demand swings with capex, robotics is still sub-scale, and a ~66× multiple leaves little room for disappointment."
+  },
+  "lastAnalyzed": "July 13, 2026"
+}
