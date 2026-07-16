@@ -1,0 +1,181 @@
+{
+  "slug": "rgti",
+  "ticker": "RGTI",
+  "name": "Rigetti Computing, Inc.",
+  "lastAnalyzed": "July 16, 2026",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "RGTI (Nasdaq)"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$5.4B"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Quantum Computing | Superconducting",
+      "color": "primary"
+    },
+    {
+      "label": "Pre-Revenue-Scale · Speculative",
+      "color": "warning"
+    },
+    {
+      "label": "Tiny, Lumpy Revenue",
+      "color": "danger"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "Q1 2026 Revenue",
+      "value": "$4.4M",
+      "label": "Revenue remains tiny and lumpy — FY2025 revenue actually declined to $7.1M (from $10.8M in 2024), with Q4 2025 at just $1.9M. Near-term recovery rests on specific hardware orders: a $5.7M Novera on-prem system and an $8.4M C-DAC (India) 108-qubit deployment (H2 2026). Q1 2026's +$33.1M GAAP net income is a $53.7M non-cash warrant gain masking a $(26.0)M operating loss.",
+      "icon": "TrendingDown",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "Cepheus-1-108Q",
+      "value": "108 qubits",
+      "label": "Superconducting flagship, now generally available via Rigetti QCS and Amazon Braket at ~99.1% median two-qubit fidelity — a step behind IonQ's four-nines. Roadmap: >150 qubits at 99.7% fidelity by late 2026, >1,000 qubits by end-2027, via a multi-chiplet scaling architecture halving error rates every 6–12 months.",
+      "icon": "Cpu",
+      "color": "#a855f7"
+    },
+    {
+      "title": "Cash & Investments",
+      "value": "~$569M",
+      "label": "No debt ($48M cash + $521M Treasuries) after a $350M ATM offering (June 2025), against only ~$16M/quarter operating burn — multi-year runway. A May 2026 US Dept. of Commerce LOI for up to $100M (CHIPS Act) would add funding in exchange for a government equity stake, further diluting holders.",
+      "icon": "DollarSign",
+      "color": "#1a8cff"
+    }
+  ],
+  "moat": {
+    "description": "A narrow, unproven moat from full-stack superconducting expertise, an in-house chip fab, scarce quantum talent, and government relationships — a genuine technical franchise, but one a clear step behind IonQ on fidelity, with revenue that actually shrank in 2025.",
+    "analysisTitle": "The Full-Stack Superconductor",
+    "analysisSummary": "Rigetti's durability is engineering-, fab-, and talent-based — not yet commercial. **Three** early-stage pillars, all behind the frontier:",
+    "analysisPoints": [
+      {
+        "title": "Vertically Integrated Fab & Stack",
+        "text": "Rigetti operates its own superconducting-chip foundry (Fab-1) and a full stack from chip design to the Rigetti QCS cloud and the Novera on-prem QPU. Owning fabrication lets it iterate its multi-chiplet architecture faster than fabless rivals — a real differentiator, but capital-intensive and still producing only single-digit-millions of revenue."
+      },
+      {
+        "title": "Scarce Superconducting Talent",
+        "text": "Rigetti is one of a handful of teams that can design, fabricate, and operate superconducting quantum processors at cadence. This expertise is among the scarcest in the economy and AI-resilient — AI augments but cannot replace it — though it is execution capability, not a structural lock-in, and the team is smaller and less capitalised than IonQ's."
+      },
+      {
+        "title": "Government & Ecosystem Ties",
+        "text": "An AFRL quantum-networking contract, Innovate UK QEC funding, NVIDIA's NVQLink integration, and a US Dept. of Commerce CHIPS Act LOI (up to $100M) give Rigetti scarce government pedigree and cloud reach (Amazon Braket). But it was not initially selected for DARPA QBI Stage B, and its franchise is nascent versus larger, better-funded competitors."
+      }
+    ]
+  },
+  "growth": {
+    "description": "Rigetti is the hardest of the quantum pure-plays to underwrite on growth: FY2025 revenue actually declined to $7.1M (from $10.8M), Q4 2025 was just $1.9M, and management issued no firm 2026 revenue guidance. The recovery case rests on specific, lumpy hardware orders — a $5.7M Novera on-prem system and an $8.4M C-DAC 108-qubit deployment — plus a technical roadmap (>150 qubits at 99.7% fidelity by late 2026, >1,000 by end-2027). The company is well-funded (~$569M, no debt) against a low ~$16M quarterly burn, so survival is not the question; the question is whether tiny, project-based revenue can ever compound into a real commercial business, and on that the near-term trajectory has been negative, not positive.",
+    "growthAnalysis": {
+      "cagrEstimate": "15–25%",
+      "scoreDerivation": "Base 83 (~20% assumed 3–5yr CAGR off a tiny base, 15–30% band) + 0 trajectory (order backlog accelerating but 2025 revenue actually declined) − 4 margin (persistent operating losses, no margin leverage at this scale) + 4 both (chiplet-scaling TAM plus system-sale share) − 15 severe risk (revenue shrank in 2025; growth is order-dependent and unproven) = 68.",
+      "drivers": [
+        {
+          "name": "Hardware Orders & Backlog",
+          "metric": "$5.7M Novera on-prem + $8.4M C-DAC (India) 108-qubit system (H2 2026) — the near-term revenue bridge after a down 2025",
+          "trend": "accelerating"
+        },
+        {
+          "name": "QCS Cloud & Amazon Braket Access",
+          "metric": "Cepheus-1-108Q generally available; recurring but small quantum-compute-as-a-service revenue",
+          "trend": "stable"
+        },
+        {
+          "name": "Reported Revenue Base",
+          "metric": "FY2025 revenue fell to $7.1M from $10.8M; Q4 2025 just $1.9M — the trailing trend was negative",
+          "trend": "decelerating"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "Rigetti's revenue declined in 2025 and remains a handful of lumpy hardware deals, yet the stock carries a ~$5.4B market cap (~750× trailing sales). If chiplet scaling slips, if the >1,000-qubit 2027 roadmap misses, or if orders fail to convert into recurring revenue, the valuation has no fundamental support and the stock de-rates sharply toward its ~$569M cash value.",
+      "keyRiskSeverity": "severe",
+      "marginTrend": "compressing"
+    }
+  },
+  "valuation": {
+    "score": 60,
+    "description": "At ~$16.25 (~$5.4B) Rigetti trades at roughly 750× trailing sales against declining revenue and persistent operating losses — arguably the richest valuation-to-fundamentals ratio of the quantum pure-plays. The price sits above our $12 base case and about a quarter of the way into the $30 bull case, near the average analyst target of ~$29–30 but with essentially no margin of safety. The ~$569M net cash (~$1.70/share) is a genuine floor but a small fraction of the market cap; almost the entire value is a bet on the superconducting roadmap converting into commercial revenue it has not yet demonstrated.",
+    "valuationNote": {
+      "text": "P/E is omitted — Rigetti is deeply loss-making (Q1 2026 operating loss $(26.0)M; the +$33.1M GAAP net income is a non-cash warrant gain) with no profitability in sight. Valuation rests entirely on price/sales (~750× trailing) and roadmap credibility, and revenue actually declined in 2025 — so even the sales-multiple denominator is shrinking. The premium is paid for the fab, the talent, and >1,000-qubit optionality, not any current business.",
+      "fairValue": "$12 (base) — well below the current price; unsupported by fundamentals, with upside entirely roadmap-contingent"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$6",
+      "description": "The market stops paying 750× sales for a shrinking-revenue quantum name: milestones slip, orders stay lumpy, and the stock re-rates toward its cash value as speculative capital exits.",
+      "points": [
+        "The >150-qubit (late 2026) or >1,000-qubit (2027) chiplet milestones slip, undercutting the scaling thesis",
+        "Revenue stays flat-to-down as hardware orders fail to convert into recurring QCaaS revenue",
+        "A 'quantum winter' compresses the multiple toward cash value (~$1.70/share), amplified by continued ATM and CHIPS-related dilution"
+      ]
+    },
+    "base": {
+      "priceTarget": "$12",
+      "description": "Rigetti delivers the near-term orders (Novera, C-DAC) and roughly hits its late-2026 fidelity milestone, but revenue stays small and the market pays a cooling-but-still-speculative multiple, leaving the stock range-bound below its highs.",
+      "points": [
+        "The $5.7M Novera and $8.4M C-DAC orders convert on schedule, returning revenue to modest year-on-year growth",
+        "Cepheus-class systems reach >150 qubits at ~99.7% fidelity by late 2026, keeping Rigetti technically credible",
+        "Forward price/sales compresses as the market waits for the >1,000-qubit 2027 milestone to prove the scaling curve"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$30",
+      "description": "The chiplet flywheel inflects: Rigetti hits >1,000 qubits with improving fidelity, orders accelerate into recurring revenue, and the market re-rates it as a credible superconducting scaler alongside the mega-cap efforts.",
+      "points": [
+        "The multi-chiplet architecture reaches >1,000 qubits near the end-2027 target with error rates halving on schedule",
+        "Government funding (CHIPS Act LOI, AFRL) and NVIDIA NVQLink integration convert into a durable, growing contract book",
+        "Operating losses narrow as system sales and QCaaS scale, letting the market underwrite a platform premium rather than pure optionality"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — Rigetti's processors are accessed via open SDKs and cloud (QCS, Amazon Braket); there is no high-switching-cost interface customers master over years."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "Rigetti ships a full software stack, but quantum toolchains are largely portable across backends and standards are unsettled — it is not a proprietary business-logic lock-in embedded in customer operations."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — Rigetti does not monetise gated access to a public dataset."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "Designing, fabricating, and operating superconducting quantum processors at cadence requires some of the scarcest engineering talent in existence, and Rigetti is one of the few teams that can. AI augments rather than replaces this expertise, so it is AI-resilient — routed to the resilient bucket accordingly.",
+      "aiExposure": "resilient"
+    },
+    "bundling": {
+      "status": "weakened",
+      "note": "Rigetti bundles fabrication, cloud (QCS), and the Novera on-prem QPU, but each layer is early and substitutable — vertical integration is a real direction, not yet a lock-in."
+    },
+    "proprietaryData": {
+      "status": "weakened",
+      "note": "In-house fabrication (Fab-1) and multi-chiplet iteration generate proprietary process and calibration data, but the deployed base and dataset are small and improve Rigetti's own machines rather than being a monetised product."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "An AFRL contract, Innovate UK funding, and a US Dept. of Commerce CHIPS Act LOI are scarce, slow-to-earn government assets that are AI-resilient — but the franchise is nascent, and Rigetti was not initially selected for DARPA QBI Stage B."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "N/A — an additional quantum-hardware customer does not yet make the platform more valuable to others; there is no meaningful network dynamic at this stage."
+    },
+    "transactionEmbedding": {
+      "status": "destroyed",
+      "note": "N/A — Rigetti does not sit in a payment or transaction layer of customers' daily operations."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — it is not the authoritative record for any external business function."
+    },
+    "verdict": "Rigetti's applicable moats — full-stack superconducting engineering, an in-house fab, scarce talent, and government ties — are AI-resilient because AI cannot replicate the underlying hardware physics or fabrication know-how. It carries none of the AI-vulnerable software moats (no learned interface, business-logic, data, transaction, or system-of-record lock-in), so AI cannot erode what durability it has. The blunt limitation is that the moat is narrow and unproven, and unlike IonQ the near-term evidence is negative: revenue shrank in 2025, most moat categories are N/A or weakened, and a ~$5.4B market cap rests almost entirely on a scaling roadmap that has yet to convert into a real business. A credible superconducting effort, but a speculative, second-tier bet within an already-speculative group."
+  }
+}

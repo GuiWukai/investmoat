@@ -1,0 +1,181 @@
+{
+  "slug": "qubt",
+  "ticker": "QUBT",
+  "name": "Quantum Computing Inc.",
+  "lastAnalyzed": "July 16, 2026",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "QUBT (Nasdaq)"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$1.8B"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Quantum Computing | Photonic / TFLN",
+      "color": "primary"
+    },
+    {
+      "label": "De Minimis Revenue · Highly Speculative",
+      "color": "warning"
+    },
+    {
+      "label": "Active Short-Seller Report",
+      "color": "danger"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "FY2025 Revenue",
+      "value": "~$682K",
+      "label": "De minimis — the weakest fundamentals of the quantum pure-plays. Q1 2026 revenue jumped to $3.7M (from $39K), but almost entirely from consolidating acquired businesses (Lumina, NuCrypt), not organic sales. A ~$1.8B market cap rests on ~$682K of trailing revenue — a ~2,700× sales multiple.",
+      "icon": "TrendingDown",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "Photonic / TFLN Foundry",
+      "value": "Fab-1 (Tempe, AZ)",
+      "label": "Thin-film lithium niobate photonic chips plus foundry services, Dirac entropy-computing machines, the EmuCore reservoir-computing device, and quantum cybersecurity/QKD. Opened Fab-1 in Tempe, AZ (2025) with a larger Fab-2 planned. The foundry pivot is the core thesis — and the core of the short-seller dispute.",
+      "icon": "Cpu",
+      "color": "#a855f7"
+    },
+    {
+      "title": "Cash & Investments",
+      "value": "~$1.4B",
+      "label": "The largest balance sheet among quantum pure-plays relative to size, raised via a $500M oversubscribed placement (Sep 2025) and repeated equity sales (~$900M gross since Nov 2024). The story is deploying that cash into acquisitions and foundry capex, not survival — but dilution has been severe, with shares ballooning to ~225.5M.",
+      "icon": "DollarSign",
+      "color": "#1a8cff"
+    }
+  ],
+  "moat": {
+    "description": "The weakest and most contested moat of the quantum pure-plays — a photonic/TFLN foundry thesis backed by ~$1.4B of cash but almost no organic revenue, acquisition-manufactured growth, and an active short-seller report alleging the foundry business is 'phantom.' A cash-rich option on photonic quantum, not yet a demonstrated business.",
+    "analysisTitle": "The Contested Foundry Bet",
+    "analysisSummary": "QUBT's case is a cash pile and a technology claim more than a proven franchise — and one pillar is publicly disputed. **Three** early, unproven pillars:",
+    "analysisPoints": [
+      {
+        "title": "Photonic / TFLN Technology",
+        "text": "QUBT's bet is thin-film lithium niobate photonics — chips and foundry services, Dirac entropy-computing machines, the EmuCore reservoir-computing device, and quantum cybersecurity. Photonics is a legitimate quantum modality, but QUBT's specific claims are early-stage and, unlike IonQ or D-Wave, are not yet backed by material revenue or independent, at-scale validation."
+      },
+      {
+        "title": "Cash-Funded Acquisitions",
+        "text": "With ~$1.4B raised, QUBT has bought Lumina Semiconductor (~$110M), NuCrypt (~$5M), and NHanced Semiconductors (~$73M + earnout) to assemble a photonics/packaging stack. This is buying capability, not compounding a moat — the acquisitions inflate reported revenue but the organic business remains de minimis, and integrating disparate assets is itself a risk."
+      },
+      {
+        "title": "Early Customer & Government Touchpoints",
+        "text": "A NASA subcontract (~$406K), a first quantum-cybersecurity sale to a top-5 US bank, an EmuCore sale to an automotive OEM, and a vibrometer sale to TU Delft are cited as validation. These are small, one-off touchpoints rather than a recurring book — and short-seller Iceberg Research has publicly questioned the reality and timing of some announced orders."
+      }
+    ]
+  },
+  "growth": {
+    "description": "QUBT is the hardest quantum pure-play to underwrite honestly: FY2025 revenue was roughly $682K, and the Q1 2026 jump to $3.7M came almost entirely from consolidating acquired businesses rather than organic demand. The company is cash-rich (~$1.4B) and has opened a TFLN foundry (Fab-1) with a Fab-2 planned, so the thesis is that photonic-chip fabrication and foundry services eventually generate real revenue — but that has not yet happened at any meaningful scale, and short-seller Iceberg Research has publicly alleged the foundry business 'will amount to nothing' and that some announced orders are exaggerated. Given de minimis organic revenue against a ~$1.8B market cap, growth here is a claim and an option on cash deployment, not a demonstrated trajectory.",
+    "growthAnalysis": {
+      "cagrEstimate": "5–15%",
+      "scoreDerivation": "Base 73 (~10% assumed durable organic CAGR off a near-nil base, 8–15% band) + 0 trajectory (headline revenue up on acquisitions, but organic demand near-nil/decelerating) − 4 margin (persistent operating losses, no organic margin) + 3 TAM expansion (foundry/photonics optionality) − 15 severe risk (de minimis organic revenue plus an active short report) = 57.",
+      "drivers": [
+        {
+          "name": "Acquired Revenue (Lumina / NuCrypt / NHanced)",
+          "metric": "Q1 2026 revenue of $3.7M vs $39K YoY — almost entirely from consolidating acquisitions, not organic sales",
+          "trend": "accelerating"
+        },
+        {
+          "name": "TFLN Foundry Services (Fab-1 / Fab-2)",
+          "metric": "Tempe, AZ foundry opened 2025; the core revenue thesis — but unproven at scale and disputed by short-sellers",
+          "trend": "stable"
+        },
+        {
+          "name": "Organic Product Sales",
+          "metric": "FY2025 organic revenue ~$682K across Dirac, EmuCore, vibrometer, and QKD — de minimis and not yet recurring",
+          "trend": "decelerating"
+        }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "QUBT carries specific, unresolved credibility risk: short-seller Iceberg Research has alleged in its 'Phantom Chip Foundry' reports that the TFLN foundry pivot is a rebrand of a long-running 'perma-scam' and that certain announced orders are false or exaggerated and timed around capital raises. Even setting the allegations aside, organic revenue remains ~$682K against a ~$1.8B market cap — so if the foundry fails to generate real, verifiable revenue, there is essentially no fundamental support beneath the stock.",
+      "keyRiskSeverity": "severe",
+      "marginTrend": "compressing"
+    }
+  },
+  "valuation": {
+    "score": 63,
+    "description": "At ~$8 (~$1.8B) QUBT trades at roughly 2,700× trailing revenue — the most extreme valuation-to-fundamentals ratio in the group — but with ~$1.4B of cash (~$6.2/share) providing an unusually large partial floor. The price sits just above our $7 base case and only a fraction of the way into an $18 bull case (near the thin ~$18 average target from ~6 analysts). The cash is real; almost everything above it is a bet that the disputed photonic-foundry thesis becomes a genuine business. Given the active short report and near-nil organic revenue, treat this as the lowest-conviction name of the four.",
+    "valuationNote": {
+      "text": "P/E is omitted — QUBT is loss-making (Q1 2026 net loss $4.1M; a prior-year 'profit' was a non-cash warrant gain) with de minimis revenue. Conventional sales multiples are almost meaningless at ~2,700× trailing; the more relevant frame is price-to-cash (~$1.8B cap vs ~$1.4B cash), which implies the market ascribes only a modest premium to the operating business itself. That premium, however, is exactly what short-sellers dispute.",
+      "fairValue": "$7 (base) — near the ~$6.2/share cash value; the operating business carries little demonstrable worth until the foundry produces verifiable revenue"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$3",
+      "description": "The foundry thesis fails to produce verifiable revenue, short-seller allegations gain traction, and the stock compresses toward — or through — its cash value as dilution continues and confidence erodes.",
+      "points": [
+        "Fab-1/Fab-2 foundry revenue fails to materialise at scale, validating the 'phantom foundry' critique",
+        "Further scrutiny of announced orders and continued equity issuance pressures the stock toward its ~$6/share cash value and below on lost confidence",
+        "Acquisition integration disappoints, and headline revenue growth is revealed as purely inorganic"
+      ]
+    },
+    "base": {
+      "priceTarget": "$7",
+      "description": "QUBT deploys its cash into the foundry and acquisitions, generates modest but real revenue, and the market values it at roughly its cash plus a small operating premium — the stock drifts near current levels amid persistent skepticism.",
+      "points": [
+        "The TFLN foundry and acquired businesses produce some verifiable, recurring revenue, partially answering the credibility questions",
+        "The ~$1.4B cash balance anchors the valuation while the operating business is slowly built out",
+        "No major adverse resolution of the short-seller allegations, but no decisive vindication either"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$18",
+      "description": "The photonic-foundry bet is vindicated: Fab-1/Fab-2 win real foundry customers, the acquisitions integrate into a coherent photonics stack, and the market re-rates QUBT as a legitimate photonic-quantum and TFLN play toward the thin analyst target.",
+      "points": [
+        "TFLN foundry services sign verifiable, recurring commercial customers at meaningful volume",
+        "Lumina, NuCrypt, and NHanced integrate into a credible end-to-end photonics/packaging platform",
+        "Independent validation and audited revenue growth decisively rebut the short-seller thesis, unlocking a re-rating"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — QUBT sells hardware, foundry services, and devices; there is no complex, high-switching-cost software interface customers master over years."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "QUBT's software/algorithms (e.g. Dirac, EmuCore tooling) are early and not embedded as proprietary business logic in customers' core workflows — no meaningful lock-in demonstrated."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — QUBT does not monetise gated access to a public dataset."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Photonics and TFLN engineering is genuinely scarce and AI-resilient, and QUBT has acquired teams (Lumina, NuCrypt) to build it — but depth and retention are unproven versus better-capitalised peers, so this is present rather than a strong, demonstrated advantage.",
+      "aiExposure": "resilient"
+    },
+    "bundling": {
+      "status": "weakened",
+      "note": "QUBT is assembling a photonics/packaging stack via acquisitions, but the pieces are not yet integrated into a sticky bundle — this is capability-buying, not an emergent lock-in."
+    },
+    "proprietaryData": {
+      "status": "weakened",
+      "note": "TFLN foundry process IP is claimed as proprietary, but with de minimis production and disputed order history there is little evidence of a compounding, monetised data or process advantage."
+    },
+    "regulatoryLockIn": {
+      "status": "weakened",
+      "note": "A small NASA subcontract and early government touchpoints exist, but QUBT lacks the DARPA/DOE/CHIPS-scale federal pedigree of its peers — government lock-in is minimal at this stage."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "N/A — an additional foundry or device customer does not make the platform more valuable to others; there is no network dynamic."
+    },
+    "transactionEmbedding": {
+      "status": "destroyed",
+      "note": "N/A — QUBT does not sit in a payment or transaction layer of customers' daily operations."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — it is not the authoritative record for any external business function."
+    },
+    "verdict": "What durability QUBT can claim — scarce photonics/TFLN talent and any genuine foundry process IP — is AI-resilient, since AI cannot replicate the underlying fabrication physics. But the honest picture is that QUBT has the thinnest moat of the quantum pure-plays: most categories are N/A or weakened, organic revenue is de minimis (~$682K FY2025), headline growth is acquisition-manufactured, and an active Iceberg Research short report specifically disputes the reality of the foundry business and some announced orders. The ~$1.4B cash balance is real and provides a partial floor, but the operating thesis is unproven and contested. This is a cash-rich, high-risk option on photonic quantum — the lowest-conviction name of the four and one where the credibility questions must be resolved before the business can be underwritten."
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "slug": "ionq",
+  "ticker": "IONQ",
+  "name": "IonQ, Inc.",
+  "lastAnalyzed": "July 16, 2026",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "IONQ (NYSE)"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$16.7B"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Quantum Computing | Trapped-Ion",
+      "color": "primary"
+    },
+    {
+      "label": "Pre-Profit · Speculative",
+      "color": "warning"
+    },
+    {
+      "label": "Fault-Tolerance = Swing Factor",
+      "color": "danger"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "Q1 2026 Revenue",
+      "value": "$64.7M",
+      "label": "+755% YoY and ~30% above guidance midpoint, with FY2025 revenue of $130M (+202%). Q2 2026 guided to $65–68M and full-year 2026 to $260–270M (>100% organic growth). The reported GAAP net income of +$805M is a mirage — a $1.06B non-cash warrant-revaluation gain masks a $(271.5)M loss from operations.",
+      "icon": "TrendingUp",
+      "color": "#10b981"
+    },
+    {
+      "title": "Gate Fidelity",
+      "value": "99.99%",
+      "label": "\"Four nines\" two-qubit gate fidelity on the Tempo system (Oct 2025) — a world record (~8.4×10⁻⁵ error rate), reaching an #AQ 64 benchmark. Trapped-ion's low physical-to-logical overhead (~13:1 cited vs 500–1000:1 for superconducting) is the core technical bet.",
+      "icon": "Atom",
+      "color": "#a855f7"
+    },
+    {
+      "title": "Cash & Investments",
+      "value": "~$3.1B",
+      "label": "Fortress balance sheet after a $2.0B equity offering (Oct 2025) — the strongest war chest of any quantum pure-play. Funds the roadmap (256 physical qubits in 2026 → 2M physical / 80k logical by 2030) and an M&A spree: Oxford Ionics ($1.075B), Lightsynq, and Capella. Multi-year runway against a ~$100M/quarter operating burn.",
+      "icon": "DollarSign",
+      "color": "#1a8cff"
+    }
+  ],
+  "moat": {
+    "description": "A narrow, early-stage moat resting on a genuine trapped-ion fidelity lead, one of the deepest quantum IP portfolios (deepened by the Oxford Ionics and Lightsynq acquisitions), scarce physics talent, and government relationships — real technical leadership, but durability is unproven until fault-tolerant machines deliver commercial ROI.",
+    "analysisTitle": "The Trapped-Ion Lead",
+    "analysisSummary": "IonQ's durability is technical, IP-based, and talent-based — not yet economic. **Three** reinforcing pillars, all still pre-commercial-scale:",
+    "analysisPoints": [
+      {
+        "title": "Fidelity & Architecture Lead",
+        "text": "Trapped-ion qubits are natively identical and offer all-to-all connectivity, and IonQ's 99.99% two-qubit gate fidelity is the best publicly demonstrated of any gate-model platform. The bet is that a far lower physical-to-logical qubit overhead lets IonQ reach useful fault tolerance with thousands rather than millions of physical qubits — a real architectural edge, but one still years from commercial validation."
+      },
+      {
+        "title": "IP & Talent Concentration",
+        "text": "The $1.075B Oxford Ionics acquisition folded in a leading electronic-qubit-control team and its patent estate, and Lightsynq added Harvard-pedigree quantum-memory and photonic-interconnect IP. Quantum physicists and ion-trap engineers are among the scarcest talent in the economy, and AI augments rather than replaces them — so this concentration is AI-resilient, though it is leadership, not a structural lock-in."
+      },
+      {
+        "title": "Government & Ecosystem Position",
+        "text": "IonQ holds DARPA (Quantum Benchmarking Initiative Stage A; the HARQ quantum-memory program) and DOE / Oak Ridge relationships, plus multi-cloud availability across AWS, Azure, and Google Cloud. Export-controlled quantum hardware and government pedigree are slow-to-earn assets that gate entry, but IonQ's franchise is nascent and not yet a certified, sole-source national-security pipeline."
+      }
+    ]
+  },
+  "growth": {
+    "description": "IonQ is the revenue leader of the quantum pure-plays: FY2025 revenue of $130M (+202%) and Q1 2026 of $64.7M (+755% YoY) put it on track for the $260–270M FY2026 guide (>100% organic growth). The trajectory is genuinely inflecting on system sales, cloud access, and government contracts, and the balance sheet ($3.1B cash) removes financing risk from the equation. The honest caveat is that this is not self-funding growth — Adjusted EBITDA loss is guided to $(330)M–$(310)M for 2026, and the entire long-run thesis depends on fault-tolerant quantum computers delivering commercial ROI on a roadmap (2M physical / 80k logical qubits by 2030) that no one has yet proven is achievable or economically useful.",
+    "growthAnalysis": {
+      "cagrEstimate": "35–50%",
+      "scoreDerivation": "Base 93 (~42.5% blended 3–5yr CAGR, 30%+ band) + 4 trajectory (system sales, cloud, and government contracts all accelerating) − 4 margin (Adj. EBITDA losses widening toward $(330)M) + 4 both (fault-tolerant TAM expansion on top of near-term share capture) − 15 severe risk (commercial ROI hinges on unproven fault-tolerance) = 82.",
+      "drivers": [
+        {
+          "name": "Quantum Systems & Cloud Access",
+          "metric": "$64.7M Q1 2026 revenue (+755% YoY); Tempo developer systems, plus AQ-benchmarked access via AWS/Azure/Google Cloud",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Government & Research Contracts",
+          "metric": "DARPA QBI Stage A + HARQ; DOE / Oak Ridge; a broadening federal and national-lab book underwriting near-term revenue",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Networking & Quantum Memory (Lightsynq / Oxford Ionics)",
+          "metric": "Pre-revenue optionality — photonic interconnect and quantum memory targeting the multi-node scaling that unlocks fault tolerance",
+          "trend": "accelerating"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "The valuation and the roadmap both assume fault-tolerant, commercially useful quantum computers arrive on IonQ's 2027–2030 timeline. If logical-qubit scaling stalls, if error-correction overhead proves worse than the trapped-ion thesis assumes, or if enterprise ROI fails to materialise beyond pilots and grants, revenue growth decelerates hard and a stock trading at ~60× forward sales de-rates violently toward its cash value.",
+      "keyRiskSeverity": "severe",
+      "marginTrend": "compressing"
+    }
+  },
+  "valuation": {
+    "score": 60,
+    "description": "At ~$37 (~$16.7B) IonQ trades near 60–65× FY2026E revenue and ~130× trailing sales against a widening Adjusted EBITDA loss — an extreme multiple that already discounts years of successful fault-tolerance execution. The price sits above our $30 base case and roughly a quarter of the way into the $60 bull case, so there is little margin of safety despite an average analyst target near $65. The $3.1B cash hoard (~$8/share) provides a partial floor, but the vast majority of the market cap is optionality on a technology that is not yet commercially proven — this is a momentum/optionality holding, not a value one.",
+    "valuationNote": {
+      "text": "P/E is omitted — IonQ is deeply loss-making on an operating basis (Q1 2026 loss from operations $(271.5)M; the +$805M GAAP net income is a non-cash warrant-revaluation artifact) with no path to profitability modeled this decade. Valuation rests on price/sales (~60× FY2026E) and the credibility of the fault-tolerance roadmap. The premium is paid for the fidelity lead, the IP estate, and the balance sheet — not current cash generation.",
+      "fairValue": "$30 (base) — well below the current price; rich on every sales metric, with the upside entirely fault-tolerance-contingent"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$16",
+      "description": "The quantum trade cools: the market stops paying 60× forward sales for pre-fault-tolerant hardware, and the stock re-rates toward its cash value as milestones slip and enterprise revenue stays pilot-scale.",
+      "points": [
+        "Logical-qubit and error-correction milestones slip past their 2027–2028 targets, undercutting the low-overhead trapped-ion thesis",
+        "A broad 'quantum winter' compresses forward price/sales from ~60× toward ~15–20× as speculative capital rotates out",
+        "Revenue growth decelerates below the FY2026 guide as system sales and government grants prove lumpy and hard to compound"
+      ]
+    },
+    "base": {
+      "priceTarget": "$30",
+      "description": "IonQ hits roughly the $260–270M FY2026 guide, keeps its fidelity and IP lead, and the market pays a premium-but-cooling multiple — the stock consolidates below its recent highs while revenue catches up to the valuation.",
+      "points": [
+        "FY2026 revenue lands in the $260–270M guided range (>100% growth) on system sales, cloud, and government contracts",
+        "The 256-physical-qubit 2026 milestone and continued fidelity gains keep IonQ ahead of superconducting rivals on the benchmark race",
+        "Forward price/sales drifts from ~60× toward ~40× as revenue compounds, keeping the stock range-bound around the low-$30s"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$60",
+      "description": "The roadmap converts: IonQ demonstrates a credible logical-qubit advantage, enterprise workloads move from pilots to production, and the market re-rates it as the clear fault-tolerance frontrunner toward and beyond analyst targets.",
+      "points": [
+        "A demonstrated logical-qubit / early-fault-tolerance result validates the low-overhead trapped-ion architecture ahead of schedule",
+        "Enterprise and government revenue inflects beyond the $260–270M guide as pilots convert into multi-year production contracts",
+        "Networking and quantum-memory IP (Lightsynq, Oxford Ionics) proves out multi-node scaling, extending the lead and underwriting a durable-platform premium"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — quantum hardware is accessed as cloud capacity and via open SDKs; there is no complex, high-switching-cost interface customers invest years mastering."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "IonQ ships a full-stack compiler and software layer, but algorithms and toolchains are largely portable across cloud backends and standards are still forming — it is not yet a proprietary business-logic lock-in embedded in customer workflows."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — IonQ does not monetise gated access to a public dataset."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "Quantum physicists and ion-trap engineers are among the scarcest talent in the economy, and IonQ deepened its concentration with the Oxford Ionics and Lightsynq teams. AI augments rather than replaces this expertise, so the scarcity is AI-resilient — routed to the resilient bucket accordingly.",
+      "aiExposure": "resilient"
+    },
+    "bundling": {
+      "status": "weakened",
+      "note": "IonQ bundles hardware, cloud access, quantum-networking, and applications into a stack, but it is early and each layer is still substitutable — a real direction, not yet an emergent lock-in."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Years of trapped-ion calibration, error, and fidelity data plus the largest trapped-ion patent estate (extended by Oxford Ionics) compound operational advantage, though the data improves IonQ's own machines rather than being a directly-monetised product."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "DARPA (QBI, HARQ), DOE / Oak Ridge relationships and export-controlled quantum hardware are scarce, slow-to-earn assets that gate entry and are AI-resilient — but the franchise is nascent, not yet a certified sole-source national-security pipeline."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "N/A — an additional quantum-hardware customer does not yet make the platform meaningfully more valuable to other users; there is no Metcalfe dynamic at this stage."
+    },
+    "transactionEmbedding": {
+      "status": "destroyed",
+      "note": "N/A — IonQ does not sit in a payment or transaction layer of customers' daily operations."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — it is not the authoritative record for any external business function."
+    },
+    "verdict": "IonQ is a net AI beneficiary on the demand side — the compute-hunger driving AI also drives interest in post-classical acceleration — while its applicable moats (fidelity lead, trapped-ion IP, scarce physics talent, government pedigree) are AI-resilient because AI cannot replicate the underlying physics or hardware. It carries none of the AI-vulnerable software moats (no learned interface, no business-logic or data lock-in, no transaction or system-of-record exposure), so AI cannot erode the durability it has. The honest limitation is that the moat is narrow, unproven, and technology-dependent: most categories are N/A or weakened, and the entire thesis rests on fault-tolerant quantum computing becoming commercially real on schedule. The clear quality leader of the quantum pure-plays, but still a pre-commercial bet, not a durable franchise."
+  }
+}
