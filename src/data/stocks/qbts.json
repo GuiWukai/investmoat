@@ -1,0 +1,181 @@
+{
+  "slug": "qbts",
+  "ticker": "QBTS",
+  "name": "D-Wave Quantum Inc.",
+  "lastAnalyzed": "July 16, 2026",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "QBTS (Nasdaq)"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$6B"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Quantum Computing | Annealing + Gate-Model",
+      "color": "primary"
+    },
+    {
+      "label": "Pre-Profit · Speculative",
+      "color": "warning"
+    },
+    {
+      "label": "Lumpy System-Sale Revenue",
+      "color": "danger"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "FY2025 Revenue",
+      "value": "$24.6M",
+      "label": "+179% YoY, the most real revenue of the quantum pure-plays, driven by higher-margin quantum-system sales. Q1 2026 revenue of $2.9M was down 81% YoY against a distorted prior-year comp (a one-time Advantage system sale to Jülich), but record bookings of $33.4M (+~2,000%) and $42.4M of remaining performance obligations point to demand — watch bookings, not GAAP revenue.",
+      "icon": "TrendingUp",
+      "color": "#10b981"
+    },
+    {
+      "title": "Dual Platform",
+      "value": "Advantage2 + Gate",
+      "label": "D-Wave leads quantum annealing (Advantage2, 1,200+ qubits) and claims quantum supremacy on a useful problem. In Feb 2026 it acquired Quantum Circuits Inc. (~$550M) to add an error-corrected superconducting gate-model platform — becoming a dual-platform provider and hedging annealing's niche against the gate-model future.",
+      "icon": "Atom",
+      "color": "#a855f7"
+    },
+    {
+      "title": "Cash & Investments",
+      "value": "~$588M",
+      "label": "Down from $884M at YE2025 after the Quantum Circuits cash outlay, funded through 2025–26 by ATM equity ($400M at ~$15.18 in mid-2025; $150M at ~$6.10 in Jan 2026). Very well capitalised against a low burn — no near-term runway risk, but heavy dilution is the funding model.",
+      "icon": "DollarSign",
+      "color": "#1a8cff"
+    }
+  ],
+  "moat": {
+    "description": "The broadest commercial footprint of the quantum pure-plays — real enterprise and government customers, an owned HPC deployment at Jülich, a QCaaS cloud, and now a second (gate-model) platform — but built on annealing, a niche whose long-run relevance versus universal gate-model machines is the central open question.",
+    "analysisTitle": "The Commercial Annealer",
+    "analysisSummary": "D-Wave's durability is deployment-, ecosystem-, and government-based — the most commercial of the group, but architecturally hedged. **Three** pillars, all still early:",
+    "analysisPoints": [
+      {
+        "title": "Deployed Base & Customer Book",
+        "text": "D-Wave has the deepest real-world footprint of the pure-plays: named customers include Volkswagen, Mastercard, BBVA, and Davidson Technologies across 100+ organisations, plus marquee contracts ($20M Florida Atlantic University, a $10M Fortune-100 QCaaS deal). Forschungszentrum Jülich became the first HPC centre to own a D-Wave system, connecting it to the JUPITER exascale supercomputer — a genuine, sticky institutional anchor."
+      },
+      {
+        "title": "Leap Cloud & Ocean Ecosystem",
+        "text": "The Leap real-time QCaaS platform and open-source Ocean SDK embed D-Wave's hybrid solvers into customers' optimisation workflows, creating early switching costs and a developer ecosystem competitors must rebuild. It is a mild network/ecosystem effect rather than a strong one, but it is further along the commercialisation curve than any rival's."
+      },
+      {
+        "title": "Government Position & Dual Platform",
+        "text": "A new US-Government business unit, a Carahsoft distribution partnership, a non-binding $100M Dept. of Commerce CHIPS Act LOI, and an NSF grant give D-Wave scarce federal pedigree, while the ~$550M Quantum Circuits acquisition adds an error-corrected gate-model roadmap. Owning both annealing and gate-model hedges the architecture bet — but also stretches a single company across two hard problems."
+      }
+    ]
+  },
+  "growth": {
+    "description": "D-Wave has the most tangible revenue story of the quantum pure-plays — FY2025 revenue of $24.6M (+179%) on higher-margin system sales — but the shape is lumpy: Q1 2026 revenue fell 81% YoY against a one-time prior-year Advantage sale to Jülich, even as bookings surged ~2,000% to a record $33.4M. Growth is real but system-sale-driven and hard to model quarter to quarter; the forward case rests on converting record bookings and an eight-figure enterprise QCaaS deal into recurring revenue, and on the ~$550M Quantum Circuits gate-model acquisition eventually contributing. With ~$588M cash against a modest burn, D-Wave can fund the transition — the open question is whether annealing plus a nascent gate-model platform can compound into a durable, growing business rather than a series of one-off system sales.",
+    "growthAnalysis": {
+      "cagrEstimate": "15–30%",
+      "scoreDerivation": "Base 85 (~22.5% blended 3–5yr CAGR, 15–30% band) + 3 trajectory (bookings +2,000% and a new government unit accelerating; enterprise QCaaS stable) − 4 margin (net loss widening; gross margin fell to 63.6%) + 4 both (gate-model TAM expansion plus annealing share) − 10 high risk (lumpy system-sale revenue and annealing's long-run relevance) = 78.",
+      "drivers": [
+        {
+          "name": "Bookings & Backlog",
+          "metric": "Record Q1 2026 bookings of $33.4M (+~2,000% YoY); $42.4M remaining performance obligations — the forward demand signal",
+          "trend": "accelerating"
+        },
+        {
+          "name": "US Government Business Unit",
+          "metric": "New federal unit, Carahsoft distribution, $100M Dept. of Commerce CHIPS Act LOI, NSF ERASE grant",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Enterprise QCaaS (Leap)",
+          "metric": "Volkswagen, Mastercard, BBVA and 100+ orgs; an eight-figure enterprise QCaaS deal — recurring but still small",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "D-Wave's revenue is dominated by lumpy quantum-system sales, so GAAP revenue can swing violently (Q1 2026 down 81% YoY) and may not compound smoothly. More fundamentally, if the industry converges on universal gate-model machines and annealing remains a niche, D-Wave's commercial lead could erode faster than its ~$550M-acquired gate-model platform can scale — leaving a ~$6B market cap resting on a narrower franchise than it appears.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "compressing"
+    }
+  },
+  "valuation": {
+    "score": 63,
+    "description": "At ~$18.27 (~$6B) D-Wave trades near 200× FY2025 revenue — expensive, but on the most real revenue and customer book of the pure-plays. The price sits just above our $16 base case and only a tenth of the way into the $38 bull case, near the ~$37 average analyst target (Strong Buy, ~14 analysts) yet with little margin of safety. The ~$588M net cash is a partial floor; the balance of the value is a bet that record bookings convert to recurring revenue and that the dual annealing/gate-model platform compounds — plausible, but far from de-risked.",
+    "valuationNote": {
+      "text": "P/E is omitted — D-Wave is loss-making (Q1 2026 net loss $18.4M) with profitability not modeled near-term. Valuation rests on price/sales (~200× FY2025) and bookings momentum; because revenue is lumpy system sales, the trailing multiple is noisy and bookings ($33.4M in Q1 2026) are the better forward gauge. The premium is paid for the deployed base, the Jülich anchor, and the gate-model optionality.",
+      "fairValue": "$16 (base) — modestly below the current price; rich on sales but backed by the group's most tangible commercial traction"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$8",
+      "description": "Lumpy system-sale revenue disappoints, annealing is increasingly seen as a niche, and the market re-rates D-Wave toward its cash value as the gate-model integration proves slow and dilutive.",
+      "points": [
+        "Bookings fail to convert into recurring revenue and GAAP revenue stays volatile and below the FY2025 level",
+        "The industry narrative tilts decisively toward universal gate-model machines, compressing annealing's perceived TAM",
+        "Quantum Circuits integration runs slow while continued ATM issuance dilutes holders toward the ~$588M cash floor"
+      ]
+    },
+    "base": {
+      "priceTarget": "$16",
+      "description": "D-Wave converts a chunk of its record bookings into revenue, keeps its commercial and government lead, and the market pays a premium-but-cooling multiple — the stock consolidates near current levels as gate-model work advances quietly.",
+      "points": [
+        "Record bookings ($33.4M) and $42.4M of RPO convert into renewed year-on-year revenue growth off the $24.6M FY2025 base",
+        "The Jülich anchor and US-Government unit deepen the recurring, sticky portion of the book",
+        "Quantum Circuits' gate-model roadmap shows early technical progress without yet contributing material revenue"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$38",
+      "description": "The dual-platform bet pays off: annealing revenue compounds on government and enterprise demand while the gate-model platform reaches credible milestones, and the market re-rates D-Wave as the most commercially proven quantum company toward analyst targets.",
+      "points": [
+        "Bookings momentum sustains, turning D-Wave's revenue from lumpy system sales into a growing recurring QCaaS base",
+        "The Quantum Circuits error-corrected gate-model platform hits early milestones, validating the dual-architecture hedge",
+        "Government demand (CHIPS LOI, federal unit, Carahsoft) scales into a durable, multi-year contract pipeline"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — access is via the Leap cloud and open-source Ocean SDK; there is no complex, high-switching-cost interface customers spend years mastering."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "Hybrid solvers embed into customers' optimisation workflows, which is real, but the integrations are early and largely portable — not yet a proprietary business-logic lock-in on the scale of an entrenched enterprise-software vendor."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — D-Wave does not monetise gated access to a public dataset."
+    },
+    "talentScarcity": {
+      "status": "strong",
+      "note": "Building and operating annealing and now gate-model quantum processors requires some of the scarcest engineering and physics talent in existence. AI augments rather than replaces it, so the scarcity is AI-resilient — routed to the resilient bucket accordingly.",
+      "aiExposure": "resilient"
+    },
+    "bundling": {
+      "status": "weakened",
+      "note": "D-Wave bundles hardware, the Leap cloud, hybrid solvers, and now a gate-model platform, but the stack is early and each layer is substitutable — a real direction, not yet an emergent lock-in."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "The largest deployed base of operating quantum systems generates years of proprietary annealing performance, calibration, and application data — an operational advantage, though it improves D-Wave's own machines rather than being a directly-monetised product."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "A US-Government business unit, Carahsoft distribution, a $100M Dept. of Commerce CHIPS Act LOI, and an NSF grant are scarce, slow-to-earn federal assets that are AI-resilient — present and growing, but the franchise is still nascent."
+    },
+    "networkEffects": {
+      "status": "weakened",
+      "note": "The Leap cloud and Ocean developer ecosystem create a mild network/ecosystem effect — more developers and solvers make the platform incrementally stickier — but it is early and far from a self-reinforcing Metcalfe dynamic."
+    },
+    "transactionEmbedding": {
+      "status": "destroyed",
+      "note": "N/A — D-Wave does not sit in a payment or transaction layer of customers' daily operations."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — it is not the authoritative record for any external business function."
+    },
+    "verdict": "D-Wave's applicable moats — a real deployed base, the Leap/Ocean ecosystem, scarce talent, proprietary operating data, and government ties — are AI-resilient because AI cannot replicate the underlying hardware or the accumulated deployment experience. It carries little AI-vulnerable software-moat exposure (no learned interface, transaction, or system-of-record lock-in), so AI cannot erode the durability it has, and it is the most commercially proven of the pure-plays. The central limitation is architectural: the moat is built on annealing, a niche whose long-run relevance against universal gate-model machines is unresolved, and the ~$550M Quantum Circuits acquisition is a hedge that stretches one company across two hard problems. The commercial leader of the group, but its durability hinges on winning — or surviving — the annealing-versus-gate-model question."
+  }
+}

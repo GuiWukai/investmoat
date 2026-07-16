@@ -140,6 +140,10 @@ import samsungData  from '@/data/stocks/samsung.json';
 import rokData      from '@/data/stocks/rok.json';
 import terData      from '@/data/stocks/ter.json';
 import harmonicData from '@/data/stocks/harmonic.json';
+import ionqData     from '@/data/stocks/ionq.json';
+import rgtiData     from '@/data/stocks/rgti.json';
+import qbtsData     from '@/data/stocks/qbts.json';
+import qubtData     from '@/data/stocks/qubt.json';
 
 // Delegates to computeCompositeRaw in valuationScore.ts — the single source of
 // truth for the composite formula. Returns a float for precise sorting; callers
@@ -310,6 +314,10 @@ const allCoverageData = [
     { name: "Rockwell Automation", ticker: "ROK",   slug: "rok",         scores: [m(rokData),         g(rokData),         v(rokData)],         href: "/stocks/rok",         category: "Industrials", ...t(rokData)         },
     { name: "Teradyne",          ticker: "TER",   slug: "ter",         scores: [m(terData),         g(terData),         v(terData)],         href: "/stocks/ter",         category: "Industrials", ...t(terData)         },
     { name: "Harmonic Drive",    ticker: "HSYDF", slug: "harmonic",    scores: [m(harmonicData),    g(harmonicData),    v(harmonicData)],    href: "/stocks/harmonic",    category: "Industrials", ...t(harmonicData)    },
+    { name: "IonQ",              ticker: "IONQ",  slug: "ionq",        scores: [m(ionqData),        g(ionqData),        v(ionqData)],        href: "/stocks/ionq",        category: "Big Tech",    ...t(ionqData)        },
+    { name: "D-Wave Quantum",    ticker: "QBTS",  slug: "qbts",        scores: [m(qbtsData),        g(qbtsData),        v(qbtsData)],        href: "/stocks/qbts",        category: "Big Tech",    ...t(qbtsData)        },
+    { name: "Rigetti Computing", ticker: "RGTI",  slug: "rgti",        scores: [m(rgtiData),        g(rgtiData),        v(rgtiData)],        href: "/stocks/rgti",        category: "Big Tech",    ...t(rgtiData)        },
+    { name: "Quantum Computing Inc.", ticker: "QUBT", slug: "qubt",    scores: [m(qubtData),        g(qubtData),        v(qubtData)],        href: "/stocks/qubt",        category: "Big Tech",    ...t(qubtData)        },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────

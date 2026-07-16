@@ -122,6 +122,10 @@ import samsung from './samsung.json';
 import rok from './rok.json';
 import ter from './ter.json';
 import harmonic from './harmonic.json';
+import ionq from './ionq.json';
+import rgti from './rgti.json';
+import qbts from './qbts.json';
+import qubt from './qubt.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -246,6 +250,10 @@ const stocksMap: Record<string, StockAnalysisData> = {
   rok: rok as StockAnalysisData,
   ter: ter as StockAnalysisData,
   harmonic: harmonic as StockAnalysisData,
+  ionq: ionq as StockAnalysisData,
+  rgti: rgti as StockAnalysisData,
+  qbts: qbts as StockAnalysisData,
+  qubt: qubt as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
