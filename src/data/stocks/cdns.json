@@ -9,7 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$96.5B"
+      "value": "~$102.7B"
     }
   ],
   "chips": [
@@ -26,14 +26,14 @@
     {
       "title": "Q1 2026 Revenue",
       "value": "$1.47B",
-      "label": "+18.7% YoY — adj. EPS $1.96; double-digit growth across IP, EDA, and System Analysis",
+      "label": "+19% YoY — non-GAAP EPS $1.96; all three segments grew double-digit (reported Apr 27; Q2 due Jul 27)",
       "icon": "Cpu",
       "color": "#3b82f6"
     },
     {
-      "title": "Backlog",
+      "title": "Backlog / FY26 Guide",
       "value": "~$8B",
-      "label": "Record backlog; FY2026 guidance raised to ~$6.18B (~17% YoY)",
+      "label": "Record backlog ($4B converts <12mo); FY2026 guide $6.13–6.23B (~16–18% YoY), non-GAAP EPS $7.85–7.95",
       "icon": "BarChart",
       "color": "#10b981"
     },
@@ -55,104 +55,104 @@
         "text": "Cadence dominates analog/custom design (Virtuoso) and verification (Palladium emulation, Protium prototyping). Hardware emulation systems sell for $10–50M each and lock customers into multi-year refresh cycles."
       },
       {
-        "title": "Cleaner AI-Era Story (No Mega-M&A)",
-        "text": "Unlike Synopsys's $35B Ansys integration, Cadence has executed smaller bolt-ons (Beta CAE, Future Facilities, Invecas) and delivered consistent organic growth — 18.7% YoY in Q1 2026 with all three segments growing double-digit."
+        "title": "Disciplined Bolt-On M&A vs Synopsys's Mega-Deal",
+        "text": "Where Synopsys is digesting its ~$35B Ansys acquisition (closed July 2025), Cadence has bought focused, integratable assets — Hexagon's Design & Engineering business (~$3.16B, closed Feb 2026) for multiphysics, Secure-IC (Nov 2025) for embedded security IP, plus BETA CAE — while still compounding organically at ~19% YoY in Q1 2026 with all three segments up double-digit."
       },
       {
-        "title": "Cadence.AI Generative Design Suite",
-        "text": "Cadence Cerebrus, Verisium, and Allegro X AI agents apply ML to physical design, verification, and PCB layout — driving tool intensity and ASP per design as AI chip complexity escalates."
+        "title": "Cadence.AI Agentic Design Suite",
+        "text": "Cerebrus AI Studio (agentic, multi-block SoC design), Verisium, and Allegro X AI apply ML across physical design, verification, and PCB layout — trained on telemetry from thousands of tape-outs, driving tool intensity and ASP per design as AI-chip complexity escalates."
       }
     ]
   },
   "growth": {
-    "description": "Q1 2026 revenue of $1.47B (+18.7% YoY) beat estimates, with management raising FY2026 guidance to ~$6.18B (~17% YoY) and a record $8B backlog providing strong visibility. All three segments — Core EDA, IP, and System Design & Analysis — grew double-digit, signaling broad-based demand from AI silicon programs. EPS CAGR of ~18–20% through 2027 is supported by mix shift toward higher-margin AI tools and emulation hardware refresh cycles.",
+    "description": "Q1 2026 revenue of $1.474B (+19% YoY) beat estimates, with all three segments — Core EDA, IP, and System Design & Analysis — growing double-digit on broad-based AI-silicon demand. Management raised FY2026 guidance to $6.13–6.23B (~16–18% YoY) and non-GAAP EPS of $7.85–7.95, flagging the 'Rule of 60' (growth + margin) for the first time. A record $8B backlog ($4B converting within 12 months) underwrites visibility; Q2 2026 (June quarter) is due July 27, 2026. EPS CAGR of ~18–19% through 2027 is supported by mix shift toward higher-margin AI tools, IP, and emulation hardware refresh cycles.",
     "growthAnalysis": {
-      "cagrEstimate": "14–18%",
-      "scoreDerivation": "Base 82 (~17% revenue growth, ~19% EPS CAGR — top of 15–30% strong bracket) + 4 backlog visibility ($8B record backlog and broad-based double-digit segment growth) − 2 China EDA export-control overhang = 84",
+      "cagrEstimate": "15–18%",
+      "scoreDerivation": "Base 82 (~16–18% revenue growth, ~18–19% EPS CAGR — mid-to-top of 15–30% strong bracket) + 4 all-segment accelerating trajectory + 4 margin expansion (Rule of 60) + 3 TAM expansion − 5 China re-restriction risk = 87",
       "drivers": [
         {
           "name": "Core EDA (digital + analog)",
-          "metric": "Double-digit growth Q1 2026; AI chip design intensity expanding tool wallet per customer",
+          "metric": "Double-digit growth Q1 2026; AI-chip design intensity expanding tool wallet per customer, Cerebrus AI Studio adoption rising",
           "trend": "accelerating"
         },
         {
           "name": "IP",
-          "metric": "Double-digit growth; HBM, PCIe, UCIe controllers in high demand for AI accelerators",
+          "metric": "Double-digit growth; HBM, PCIe, UCIe, and Secure-IC security controllers in high demand for AI accelerators",
           "trend": "accelerating"
         },
         {
           "name": "System Design & Analysis",
-          "metric": "Double-digit growth; multiphysics + 3D-IC analysis competing directly with Synopsys/Ansys stack",
+          "metric": "Double-digit growth; Hexagon D&E + BETA CAE deepen multiphysics/3D-IC stack competing with Synopsys/Ansys",
           "trend": "accelerating"
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If U.S. EDA export restrictions expand to all advanced-node Chinese designers (currently only the Entity List), Cadence loses ~10–12% of revenue with limited near-term offset, pressuring FY2027 growth toward 12% and forcing multiple compression",
+      "keyRisk": "The US rescinded its May 2025 China EDA export curbs in July 2025, but re-imposition amid trade tensions remains live — a renewed ban on advanced-node Chinese designers would cut ~10–12% of Cadence revenue (China is ~12% of sales) with limited near-term offset, pressuring FY2027 growth toward 12% and compressing the multiple.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 60,
-    "description": "At ~$349, CDNS trades at ~38× forward P/E on FY2026 consensus EPS of ~$9.20 — a premium to its 5-year average of ~35× and reflecting the strong Q1 beat and raised guidance. The stock sits ~7% below the consensus 12-month target of $375. Margin of safety is thin at current levels; the duopoly moat, recurring license model (~85% recurring revenue), and record backlog underwrite the multiple, but better entry points likely require macro-driven semi pullbacks.",
+    "score": 70,
+    "description": "At ~$365, CDNS trades at ~46× forward P/E on FY2026 non-GAAP EPS guidance of ~$7.90 — a premium to large-cap software peers and reflecting the strong Q1 beat, raised guidance, and record backlog. The stock sits ~6% below the consensus 12-month target of ~$389 (range $275–$450) and near the middle of its $263–$417 52-week range. Margin of safety is thin; the EDA duopoly, ~85% recurring revenue, and Rule-of-60 margin trajectory underwrite the multiple, but the best entry points still require AI-capex-digestion or macro-driven semi pullbacks.",
     "peAnalysis": {
-      "asOf": "May 2026",
+      "asOf": "July 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~80×",
-          "note": "TTM GAAP EPS reflects investment in Cadence.AI and emulation R&D"
+          "value": "~82×",
+          "note": "TTM GAAP EPS depressed by SBC + Cadence.AI R&D"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~38×",
-          "note": "consensus FY2026 non-GAAP EPS ~$9.20"
+          "value": "~46×",
+          "note": "FY2026 non-GAAP EPS guide ~$7.90"
         },
         {
           "label": "PEG Ratio",
-          "value": "~2.0×",
+          "value": "~2.4×",
           "note": "fwd P/E ÷ ~19% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~15×",
-          "note": "$96.5B mkt cap / ~$6.2B FY2026 revenue"
+          "value": "~16.5×",
+          "note": "~$102.7B cap / ~$6.2B FY26 revenue"
         },
         {
           "label": "Price / FCF",
-          "value": "~45×",
-          "note": "high-margin recurring license + emulation hardware"
+          "value": "~50×",
+          "note": "high-margin recurring license + emulation HW"
         }
       ],
-      "summary": "At ~38× forward P/E, CDNS trades at a modest premium to its 5-year average of ~35× and a meaningful premium to large-cap software peers — justified by the EDA duopoly's structural moat, ~85% recurring revenue, and AI silicon demand tailwind. PEG of ~2.0× is full but supported by record $8B backlog visibility. Valuation score is held below the moat/growth scores because current entry leaves limited cushion against multiple compression in any AI capex digestion phase."
+      "summary": "At ~46× forward P/E, CDNS trades at a clear premium to both its own history and large-cap software peers — justified by the EDA duopoly's structural moat, ~85% recurring revenue, and the AI-silicon demand tailwind. PEG of ~2.4× is full but supported by the record $8B backlog and Rule-of-60 margin ramp. The wide gap between the ~82× trailing and ~46× forward P/E reflects a genuine non-GAAP earnings ramp, not distress; the valuation score is held below moat/growth because current entry leaves limited cushion against multiple compression in any AI-capex digestion phase."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$255",
-      "description": "U.S. export controls expand to all advanced-node Chinese designers; AI capex digestion slows hyperscaler in-house silicon programs; emulation hardware refresh delays push out revenue.",
+      "priceTarget": "$270",
+      "description": "US re-imposes China EDA curbs; AI-capex digestion slows hyperscaler in-house silicon programs; emulation hardware refresh delays push out revenue and the multiple de-rates toward the low-30s.",
       "points": [
-        "U.S. BIS expands EDA export restrictions to cover all China advanced-node designers in 2026, eliminating ~10–12% of Cadence revenue with limited 12-month geographic offset",
-        "AI hyperscaler capex digestion slows custom silicon programs (Google TPU v7, Meta MTIA v3, AWS Trainium4), deferring Palladium and Protium emulation hardware orders",
-        "FY2026 revenue lands at $5.95B (below $6.18B guide) and the multiple compresses to ~30× forward as growth reverts toward 12%"
+        "US BIS reinstates the export restrictions it lifted in July 2025 and extends them to all China advanced-node designers, eliminating ~10–12% of Cadence revenue with limited 12-month geographic offset",
+        "AI hyperscaler capex digestion slows custom-silicon programs (Google TPU, Meta MTIA, AWS Trainium), deferring Palladium and Protium emulation-hardware orders",
+        "FY2026 revenue lands near the low end (~$6.05B) and the forward multiple compresses to ~34× on FY2026 EPS ~$7.90 as growth reverts toward 12%, taking the stock back near its 52-week low"
       ]
     },
     "base": {
-      "priceTarget": "$385",
-      "description": "FY2026 lands at $6.18B as guided; backlog grows to $8.5B+ on AI silicon demand; all segments sustain double-digit growth; Cadence.AI products gain wallet share as AI tool intensity rises.",
+      "priceTarget": "$390",
+      "description": "FY2026 lands within the $6.13–6.23B guide; backlog holds near $8B; all segments sustain double-digit growth; Cadence.AI and multiphysics (Hexagon/BETA CAE) gain wallet share as AI-tool intensity rises.",
       "points": [
-        "FY2026 revenue hits $6.18B with non-GAAP operating margin reaching ~44%, supporting EPS of ~$9.20 and validating the raised guidance trajectory",
-        "Record $8B backlog grows to $8.5–9B by year-end as new AI accelerator programs (NVIDIA Vera Rubin partners, AMD MI400, hyperscaler ASICs) sign multi-year tool licenses",
-        "FY2027 revenue guidance of $7.0–7.2B issued at year-end, supported by Cadence.AI generative design adoption and 3D-IC analysis demand"
+        "FY2026 revenue hits ~$6.18B with non-GAAP operating margin near 44–45% (Rule of 60), delivering non-GAAP EPS of ~$7.90 and validating the raised guide",
+        "Record $8B backlog is sustained as new AI-accelerator programs (NVIDIA Rubin ecosystem, AMD MI400, hyperscaler ASICs) sign multi-year tool and IP licenses",
+        "FY2027 revenue guidance of ~$7.1–7.3B with EPS ~$9.30 issued at year-end, supported by Cerebrus AI Studio adoption and 3D-IC analysis demand, holding the multiple near ~42× forward"
       ]
     },
     "bull": {
-      "priceTarget": "$520",
-      "description": "AI silicon proliferation drives EDA tool intensity 2× per design; Cadence wins share at 2nm/1.4nm verification; emulation hardware cycle extends; multiple expands to 42× forward.",
+      "priceTarget": "$500",
+      "description": "AI-silicon proliferation drives EDA tool intensity ~2× per design; Cadence wins share at 2nm/1.4nm verification during Synopsys's Ansys integration; emulation cycle extends and the multiple expands toward ~54× forward.",
       "points": [
-        "3D-IC packaging and chiplet adoption drive Cadence.AI and System Design & Analysis revenue toward 25%+ growth as multiphysics + silicon integration becomes a standard requirement",
-        "Cadence captures share from Synopsys at advanced-node verification during the Ansys integration distraction window, lifting organic Core EDA growth above 18%",
-        "Operating margin expands toward 47% by FY2027 as recurring revenue mix and Cadence.AI productivity tools lift gross margin and re-rate the multiple toward best-in-class software peers"
+        "3D-IC packaging and chiplet adoption push Cadence.AI and System Design & Analysis toward 25%+ growth as multiphysics + silicon integration becomes a standard tape-out requirement",
+        "Cadence captures advanced-node verification share from Synopsys during the multi-year Ansys integration window, lifting organic Core EDA growth above 18%",
+        "Operating margin expands toward 47% by FY2027 as recurring-revenue mix and agentic-AI productivity tools re-rate the multiple toward best-in-class software peers"
       ]
     }
   },
@@ -183,7 +183,7 @@
     },
     "regulatoryLockIn": {
       "status": "weakened",
-      "note": "U.S. BIS export controls restrict EDA tool sales to Entity-List Chinese customers; risk of broader expansion to all China advanced-node designers remains a structural overhang."
+      "note": "EDA has no positive regulatory moat and faces regulatory risk: the US imposed China EDA export curbs in May 2025 and rescinded them in July 2025 under a trade truce. The whipsaw leaves re-imposition as a live overhang on ~12% of revenue."
     },
     "networkEffects": {
       "status": "intact",
@@ -197,7 +197,7 @@
       "status": "strong",
       "note": "Cadence is the de facto system of record for analog/custom design databases (Virtuoso) and verification environments — toolchain IS the design history."
     },
-    "verdict": "Cadence's moat is highly AI-resilient: AI silicon proliferation increases EDA tool intensity rather than disrupting it. The duopoly with Synopsys is structurally protected by tape-out risk aversion, foundry certification cycles, and decades of accumulated methodology IP. Cadence.AI generative design tools and emulation hardware ASP expansion provide additional growth levers as AI chip complexity escalates."
+    "verdict": "Cadence's moat is highly AI-resilient: AI-silicon proliferation increases EDA tool intensity rather than disrupting it, and Cerebrus AI Studio turns Cadence's tape-out data advantage into an agentic-design product. The duopoly with Synopsys is structurally protected by tape-out risk aversion, foundry certification cycles, and decades of accumulated methodology IP. The main non-AI risk is geopolitical — the on/off China EDA export controls — which caps regulatory lock-in rather than the underlying design moat."
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "July 18, 2026"
 }
