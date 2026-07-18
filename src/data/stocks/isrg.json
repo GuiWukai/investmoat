@@ -9,7 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$168B"
+      "value": "~$123B"
     }
   ],
   "chips": [
@@ -24,23 +24,23 @@
   ],
   "metrics": [
     {
-      "title": "Q1 2026 Revenue",
-      "value": "$2.77B",
-      "label": "+23% YoY — Beat Street by 6%",
+      "title": "Q2 2026 Revenue",
+      "value": "$2.89B",
+      "label": "+19% YoY — Beat, but guidance disappointed",
       "icon": "Cpu",
       "color": "#009688"
     },
     {
-      "title": "Q1 da Vinci Procedures",
-      "value": "~847,000",
-      "label": "+16% YoY; Ion Procedures +39% to ~43,000",
+      "title": "Q2 Procedures",
+      "value": "+16% YoY",
+      "label": "da Vinci +15%, Ion +36%; installed base 11,710 (+12%)",
       "icon": "TrendingUp",
       "color": "#00796b"
     },
     {
-      "title": "Q1 Operating Income",
-      "value": "$1.08B",
-      "label": "+40% YoY — Margin Expansion Despite dV5 Mix",
+      "title": "Q2 Non-GAAP EPS",
+      "value": "$2.80",
+      "label": "+28% YoY; op margin 42% — 468 systems placed (246 dV5)",
       "icon": "Database",
       "color": "#4db6ac"
     }
@@ -69,54 +69,65 @@
     ]
   },
   "growth": {
-    "description": "Q1 2026 revenue of $2.77B grew 23% YoY (beating consensus by 6%), with da Vinci procedures +16% to ~847k and Ion procedures +39% to ~43k. Operating income jumped 40% to $1.08B as margin expansion arrived faster than feared. Management raised 2026 procedure guidance after the print, and the analyst mean target sits at $577 (above current ~$469). Intuitive placed 431 systems in Q1 2026 and completed the acquisition of its Southern Europe distributors (ab medica, Abex, Excelencia Robótica — March 2026), bringing Italy, Spain, and Portugal under direct operations. dV5 placement momentum and Ion's pulmonology platform underwrite multi-year double-digit growth.",
+    "description": "Q2 2026 revenue of $2.89B grew 19% YoY, with worldwide procedures +16% (da Vinci +15%, Ion +36%) and non-GAAP EPS of $2.80 up 28% on a 42% non-GAAP operating margin. Intuitive placed 468 da Vinci systems (246 dV5) and grew its installed base to 11,710 (+12%). The print beat on revenue and EPS, but management's full-year da Vinci procedure guidance of 13.5–15.5% — below the 17–20% pace of FY2025 — signaled deceleration, with US procedure growth moderating to ~12% as benign categories are deferred amid macro pressure. Shares fell ~14% to ~$345 (July 17). dV5 upgrade momentum and Ion's pulmonology platform still underwrite low-to-mid-teens growth, but the ~20% procedure-growth era is moderating.",
     "growthAnalysis": {
-      "cagrEstimate": "12-18%",
-      "scoreDerivation": "Base 74 + dV5 upgrade cycle (+4) + Ion platform second growth vector (+3) + razor-and-blades recurring economics (+3) - Medtronic Hugo / J&J Ottava competitive risk (-0) = 84",
+      "cagrEstimate": "13-17%",
+      "scoreDerivation": "Base 80 (15% blended CAGR) + trajectory (-1: da Vinci decelerating) + margin expanding (+4) + TAM/share both (+4) - competitive/deceleration risk moderate (-5) = 82",
       "drivers": [
-        { "name": "da Vinci Procedures", "metric": "Q1 2026 procedures +16% YoY (~847k)", "trend": "stable" },
-        { "name": "Ion Platform", "metric": "Q1 2026 Ion procedures +39% YoY (~43k)", "trend": "accelerating" },
-        { "name": "Operating Income", "metric": "Q1 2026 op income +40% YoY ($1.08B)", "trend": "accelerating" }
+        { "name": "da Vinci Procedures", "metric": "Q2 2026 procedures +15% YoY; US moderating to ~12%", "trend": "decelerating" },
+        { "name": "Ion Platform", "metric": "Q2 2026 Ion procedures +36% YoY; 55 systems placed", "trend": "stable" },
+        { "name": "Non-GAAP EPS", "metric": "Q2 2026 EPS $2.80 +28% YoY; 42% op margin", "trend": "stable" }
       ],
       "primaryType": "both",
-      "keyRisk": "Medtronic Hugo and J&J Ottava gain meaningful general-surgery share over 3-5 years, pressuring da Vinci ASPs and placement growth.",
+      "keyRisk": "US benign-procedure deferrals persist and full-year procedure growth settles below 13.5%, or Medtronic Hugo (US urology cleared Dec 2025) and J&J Ottava take general-surgery share, compressing ISRG's premium multiple further through 2027.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 70,
-    "description": "At ~$469 (June 10, 2026), ISRG trades ~10% below the base case ($520), having recovered modestly from the spring medtech de-rating that followed the Q1 2026 beat. Analyst mean target $577 implies ~23% upside; targets range $532–$651. Bear ($280) reflects multiple compression on competitive disruption — Medtronic's Hugo (FDA-approved for urology, December 2025) is the first credible US challenger but remains limited to urologic indications while Intuitive placed 431 systems in Q1 alone; base ($520) is fair value at normalized multiples — current level still offers a discount with the moat compounding."
+    "score": 77,
+    "description": "At ~$345 (July 17, 2026), ISRG has de-rated ~26% from ~$469 in June after Q2 procedure guidance disappointed, and now trades between the revised bear ($270) and base ($415) cases — roughly 17% below base. Forward P/E has compressed to ~31× (NTM), near multi-year lows versus its historical 40–55× range. Bear ($270) reflects sustained deceleration and share loss to Medtronic Hugo / J&J Ottava; base ($415) assumes 13–15% procedure growth with margins holding ~42%; the pullback restores a margin of safety that was absent at June levels while the moat keeps compounding.",
+    "peAnalysis": {
+      "asOf": "July 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~42×", "note": "$8.25 TTM EPS" },
+        { "label": "Forward P/E (NTM)", "value": "~31×", "note": "~$11 NTM EPS est." },
+        { "label": "PEG Ratio", "value": "~2.2×", "note": "31× ÷ ~14% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~10×", "note": "~$12B NTM revenue" },
+        { "label": "Price / FCF", "value": "~44×", "note": "~$2.8B TTM FCF" }
+      ],
+      "summary": "Forward P/E ~31× sits well below ISRG's historical 40–55× band and near a multi-year low after the ~26% de-rating — cheap versus its own history, still rich versus the medtech median. PEG ~2.2× remains full for mid-teens growth, so the multiple is not a bargain on growth alone. The trailing-to-forward compression (42×→31×) reflects continued double-digit EPS growth rather than an earnings stumble."
+    }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$280",
-      "description": "Competitive robotic platforms gain meaningful hospital share, procedure growth decelerates, and multiple compresses from peak as AI disrupts surgical training economics.",
+      "priceTarget": "$270",
+      "description": "Procedure deceleration deepens, competitive platforms take general-surgery share, and the premium multiple compresses toward the market as growth normalizes to double digits.",
       "points": [
-        "Medtronic Hugo and J&J Ottava gain traction in general surgery, pressuring da Vinci ASPs and slowing new system placements in Europe and US",
-        "Procedure volume growth decelerates to high single digits as hospital capital budgets tighten amid reimbursement pressure",
-        "China regulatory headwinds persist — import restrictions or reimbursement caps limit da Vinci expansion in a key growth market",
-        "Multiple compresses from 65x to 40x earnings as growth moderates, erasing the valuation premium"
+        "US benign-procedure deferrals persist and full-year da Vinci procedure growth settles below 13.5% as elective volumes stay macro-sensitive",
+        "Medtronic Hugo (US urology cleared Dec 2025) and J&J Ottava gain traction in general surgery, pressuring da Vinci ASPs and slowing placements",
+        "dV5 gross-margin mix plus tariff exposure caps operating-margin expansion, and rising R&D spend compresses earnings leverage",
+        "Forward multiple de-rates toward ~23× on 2027 EPS as the ~20% procedure-growth premium is repriced out"
       ]
     },
     "base": {
-      "priceTarget": "$520",
-      "description": "Procedure volume grows 15% annually through 2027 as international markets scale and da Vinci 5 drives the upgrade cycle; Ion platform establishes a second growth vector.",
+      "priceTarget": "$415",
+      "description": "Procedure volume grows 13–15% through 2027 as the dV5 upgrade cycle continues and Ion scales, with non-GAAP operating margin holding near 42%.",
       "points": [
-        "International procedure growth accelerates to 20%+ as Japan, Germany, and India expand robotic surgery reimbursement coverage",
-        "da Vinci 5 upgrade cycle drives 1,200+ new system placements annually through 2026, maintaining 15%+ capital revenue growth",
-        "Ion lung biopsy platform reaches 2,000+ system installations, establishing Intuitive in the fast-growing early lung cancer detection market",
-        "Operating leverage drives non-GAAP operating margin expansion from 38% to 42%+ by FY2026"
+        "Full-year da Vinci procedure growth lands in the guided 13.5–15.5% range; international placements offset softer US benign volumes",
+        "dV5 upgrade cycle sustains 1,700+ system placements annually, keeping the installed base compounding above 12%",
+        "Ion procedures continue mid-30s% growth, establishing interventional pulmonology as a durable second vector",
+        "Non-GAAP EPS reaches ~$11.70 in 2027 at a ~35× forward multiple as the multiple partially recovers from the July lows"
       ]
     },
     "bull": {
-      "priceTarget": "$750",
-      "description": "da Vinci 5's AI-guided surgery becomes the standard of care for 80%+ of soft-tissue procedures globally; Ion disrupts interventional pulmonology; Intuitive enters new anatomical markets.",
+      "priceTarget": "$560",
+      "description": "Procedure growth reaccelerates as benign deferrals reverse, dV5 AI-guided surgery gains clinical traction, and the premium multiple re-rates back toward its historical band.",
       "points": [
-        "AI-assisted surgical guidance on da Vinci 5 achieves FDA De Novo clearance as a clinical decision support tool, creating a new SaaS-like revenue layer on top of instruments",
-        "Procedure volume compounds at 20%+ for 5 years as robotic surgery penetration in general surgery reaches 30% (from ~10% today)",
-        "Ion platform captures 40%+ of the lung biopsy market, contributing $1B+ in revenue with 75%+ gross margins",
-        "Intuitive enters orthopedic or cardiovascular robotic surgery, opening a TAM 3x current addressable market"
+        "US elective volumes recover and worldwide procedure growth reaccelerates toward 17%+ as deferred benign cases return",
+        "AI-assisted guidance on da Vinci 5 gains FDA clearance as a clinical decision-support layer, adding a SaaS-like revenue stream on top of instruments",
+        "Ion captures a growing share of the lung-biopsy market, contributing $1B+ in high-margin recurring revenue",
+        "Forward multiple re-rates back toward ~48× on 2027 EPS as double-digit-plus growth durability is re-established"
       ]
     }
   },
@@ -163,5 +174,5 @@
     },
     "verdict": "AI is a net tailwind for Intuitive Surgical. Unlike software companies where AI threatens to commoditize the product, AI strengthens Intuitive's moat by adding guided surgery intelligence on top of the installed base — creating a new monetization layer without displacing the physical lock-in. The primary competitive risk is not AI but well-funded platform challengers (Medtronic, J&J) in the next 5-10 years."
   },
-  "lastAnalyzed": "June 2026"
+  "lastAnalyzed": "July 18, 2026"
 }
