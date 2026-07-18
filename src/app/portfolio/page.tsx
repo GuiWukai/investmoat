@@ -584,12 +584,11 @@ export default function PortfolioPage() {
 
           {/* Data rows */}
           <div className="divide-y divide-white/[0.04]">
-            {portfolioWithScores.map((stock, idx) => (
+            {portfolioWithScores.map((stock) => (
               <button
                 key={stock.ticker}
                 onClick={() => router.push(stock.href)}
-                className="w-full flex items-center gap-3 md:gap-4 px-4 md:px-5 py-3.5 hover:bg-white/[0.04] transition-colors group text-left animate-slide-in-left stagger-fill-both"
-                style={{ animationDelay: `${0.3 + idx * 0.035}s` }}
+                className="w-full flex items-center gap-3 md:gap-4 px-4 md:px-5 py-3.5 hover:bg-white/[0.04] transition-colors group text-left"
               >
                 {/* Color accent */}
                 <div className="w-0.5 self-stretch rounded-full shrink-0" style={{ background: stock.color }} />
