@@ -65,6 +65,8 @@ import rddt from './rddt.json';
 import sea from './sea.json';
 import ttd from './ttd.json';
 import ice from './ice.json';
+import disney from './disney.json';
+import okta from './okta.json';
 import duolingo from './duolingo.json';
 import hood from './hood.json';
 import vst from './vst.json';
@@ -189,6 +191,8 @@ const stocksMap: Record<string, StockAnalysisData> = {
   sea: sea as StockAnalysisData,
   ttd: ttd as StockAnalysisData,
   ice: ice as StockAnalysisData,
+  disney: disney as StockAnalysisData,
+  okta: okta as StockAnalysisData,
   duolingo: duolingo as StockAnalysisData,
   hood: hood as StockAnalysisData,
   vst: vst as StockAnalysisData,

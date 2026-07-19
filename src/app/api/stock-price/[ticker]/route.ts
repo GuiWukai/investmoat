@@ -122,6 +122,18 @@ const YAHOO_SYMBOL_MAP: Record<string, string> = {
   cat:        'CAT',
   zeta:       'ZETA',
   spacex:     'SPCX',
+  // Coverage that lacked price mapping
+  amkr:       'AMKR',
+  harmonic:   'HSYDF',
+  inio:       'INIO',
+  ionq:       'IONQ',
+  qbts:       'QBTS',
+  qubt:       'QUBT',
+  rgti:       'RGTI',
+  rklb:       'RKLB',
+  rok:        'ROK',
+  samsung:    '005930.KS',
+  ter:        'TER',
 };
 
 export async function GET(
