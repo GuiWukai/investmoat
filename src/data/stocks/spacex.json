@@ -2,7 +2,7 @@
   "slug": "spacex",
   "ticker": "SPCX",
   "name": "Space Exploration Technologies (SpaceX)",
-  "lastAnalyzed": "July 13, 2026",
+  "lastAnalyzed": "July 19, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -164,8 +164,8 @@
       "note": "FCC spectrum grants, ITU orbital-slot priority, FAA launch licences, and NASA/DoD national-security launch certification are scarce, slow, first-mover-advantaged assets. Switching launch providers requires re-certification, and spectrum/slots cannot be out-spent past the regulatory queue. This is the hardest moat to replicate and is AI-irrelevant."
     },
     "networkEffects": {
-      "status": "weakened",
-      "note": "Starlink's edge is primarily economies of scale and the self-funding launch flywheel, not classic network effects — added users on a cell congest capacity rather than improve it. A genuine two-sided effect is only now emerging in direct-to-cell (more carriers → more reach → more attractive to carriers). Marked weakened to reflect that the durability is scale/spectrum-driven, with D2C as the upside path to a real network effect."
+      "status": "intact",
+      "note": "Upgraded from weakened (Jul 19 2026 review). Added users on a Starlink cell still congest shared capacity rather than improve it — the classic per-user effect is absent — but two ecosystem-level effects are demonstrably present: the self-funding launch↔Starlink flywheel (every Falcon flight lowers constellation deployment cost, every Starlink dollar funds more launch, and third-party rideshare demand deepens the same cost curve), and the direct-to-cell two-sided network now signing carriers (~7–8M reachable users; more carriers → more coverage → more attractive to the next carrier). Coverage precedent rates comparable ecosystem flywheels intact (LMT's F-35 coalition, ASML's co-development partnerships), and SpaceX's is at least as binding. Not strong: D2C is early and the per-user effect never arrives."
     },
     "transactionEmbedding": {
       "status": "destroyed",
@@ -175,6 +175,6 @@
       "status": "destroyed",
       "note": "N/A — it is not the authoritative record for any external business function."
     },
-    "verdict": "SpaceX is a net AI beneficiary on the demand side — AI buildout drives launch demand, satellite connectivity, and, since the xAI merger, an in-house frontier-model and compute franchise (Grok 4.5, Colossus) with a ~$27.8B/yr contracted book — while its core moats (regulatory spectrum/slots, scarce aerospace talent, reusable-launch cost position) are essentially AI-irrelevant and therefore AI-resilient. The Grok/AI leg is the exception: it is a genuine growth and cash driver but the single AI-vulnerable part of the business — frontier weights commoditise, Grok competes on price, and the segment is deeply loss-making — so it lifts growth optionality without deepening the moat, which is why the moat score is unchanged. It still carries almost none of the AI-vulnerable software moats (no learned interface, business-logic, public-data, transaction, or system-of-record exposure), so AI cannot erode the physical/regulatory durability it has. The honest limitation is that much of the moat slate is N/A and the heaviest-weighted resilient moat — network effects — is only scale-deep, capping the score. Durable physical/regulatory monopoly, but not a software-style compounder."
+    "verdict": "SpaceX is a net AI beneficiary on the demand side — AI buildout drives launch demand, satellite connectivity, and, since the xAI merger, an in-house frontier-model and compute franchise (Grok 4.5, Colossus) with a ~$27.8B/yr contracted book — while its core moats (regulatory spectrum/slots, scarce aerospace talent, reusable-launch cost position) are essentially AI-irrelevant and therefore AI-resilient. The Grok/AI leg is the exception: it is a genuine growth and cash driver but the single AI-vulnerable part of the business — frontier weights commoditise, Grok competes on price, and the segment is deeply loss-making — so it lifts growth optionality without deepening the moat, which is why the moat score is unchanged. It still carries almost none of the AI-vulnerable software moats (no learned interface, business-logic, public-data, transaction, or system-of-record exposure), so AI cannot erode the physical/regulatory durability it has. The honest limitation is that half the moat slate is N/A — the framework's heavyweight software categories (system of record, transaction embedding) structurally don't apply — and network effects, though upgraded to intact on the launch↔Starlink flywheel and the emerging direct-to-cell two-sided network, are ecosystem-deep rather than classic per-user effects. Durable physical/regulatory monopoly, but not a software-style compounder."
   }
 }
