@@ -58,6 +58,9 @@ export async function generateMetadata(
     ],
     alternates: {
       canonical: canonicalUrl,
+      types: {
+        'text/markdown': `${canonicalUrl}/llms.txt`,
+      },
     },
     openGraph: {
       title: `${title} — InvestMoat Analysis`,
