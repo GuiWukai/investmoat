@@ -398,27 +398,123 @@ export function valuationDescription(
   return `Trading ${pct}% above the bull case (${bullStr}) — premium valuation.`;
 }
 
-// Composite: geometric (CES) mean with moat 0.40 · growth 0.30 · valuation 0.30.
+// ─── Composite ────────────────────────────────────────────────────────────────
+//
+// Composite: standardised geometric mean, moat 0.40 · growth 0.30 · valuation 0.30.
 // Single source of truth — getAverageScore in stockData.ts delegates to computeCompositeRaw.
-// Weak pillars drag the score (a strong moat cannot fully offset a rich price);
-// equal pillars produce the arithmetic mean. Raw form returns a float for precise
-// sorting; computeComposite rounds for display and recommendation bands.
+//
+// WHY STANDARDISE. Weights only govern influence when the pillars they weight
+// vary by comparable amounts. They don't: across the coverage universe the three
+// rubrics produce very different spreads, because each was calibrated on its own
+// terms rather than against the others.
+//
+//   pillar      range     sd of ln(score/100)
+//   moat        22–98     0.266
+//   growth      41–97     0.155
+//   valuation   45–89     0.144   ← saturates at 100 below 0.8×bear, 20 above 1.2×bull
+//
+// Feeding those straight into a weighted geometric mean made the declared 40/30/30
+// a fiction: moat moved the ranking roughly 4× as much per typical move as either
+// other pillar, and drove ~71% of composite dispersion. The most subjective pillar
+// (author-assigned moat status labels) was silently outvoting the one pillar that
+// responds to price.
+//
+// So each pillar is converted to a z-score against the universe's own distribution
+// before weighting. Post-standardisation a 1-sd move in any pillar shifts the
+// composite in exact proportion to that pillar's weight — 40 : 30 : 30.
+//
+// This corrects the *weighting*; it cannot manufacture resolution a rubric doesn't
+// have. The valuation curve still saturates at both ends, so names beyond 1.2×bull
+// remain indistinguishable from each other — they are now merely punished as much
+// as a 30%-weight pillar should punish them.
+
+type PillarKey = 'moat' | 'growth' | 'valuation';
+interface PillarCalibration {
+  /** Mean of ln(score/100) across the coverage universe. */
+  logMean: number;
+  /** Standard deviation of ln(score/100) across the coverage universe. */
+  logSd: number;
+}
+
+export const COMPOSITE_WEIGHTS: Record<PillarKey, number> = {
+  moat: 0.40,
+  growth: 0.30,
+  valuation: 0.30,
+};
+
+/**
+ * Per-pillar centre and spread, baked from the coverage universe rather than
+ * recomputed at render time — a stock's published score must not move because
+ * unrelated coverage was added. Re-derive with `npx tsx scripts/calibrate-pillars.ts`,
+ * which also reports drift. Re-baking moves every score, so it is a deliberate
+ * recalibration, not routine maintenance.
+ *
+ * Derived from 128 assets, July 2026.
+ */
+export const PILLAR_CALIBRATION: Record<PillarKey, PillarCalibration> = {
+  moat:       { logMean: -0.3697, logSd: 0.2657 },
+  growth:     { logMean: -0.2578, logSd: 0.1553 },
+  valuation:  { logMean: -0.3541, logSd: 0.1444 },
+};
+
+/**
+ * Maps the weighted z-blend back onto the 0–100 scale.
+ *
+ * `logMean` / `logSd` reproduce the location and spread the un-standardised
+ * formula produced over the same universe, so the recommendation bands and
+ * MIN_AVG_SCORE keep the meaning they were tuned for — standardisation
+ * redistributes where dispersion comes from without inflating or shrinking it.
+ *
+ * `blendedZSd` is the spread of Σ wₚ·zₚ itself, which is below 1 because the
+ * weights sum to 1 over three only mildly-correlated pillars (pairwise ρ ≈ 0.15,
+ * 0.13, −0.08). Dividing by it restores unit scale before applying `logSd`.
+ */
+export const COMPOSITE_CALIBRATION = {
+  logMean: -0.3315,
+  logSd: 0.1333,
+  blendedZSd: 0.6281,
+};
+
+/**
+ * Standardise one pillar score against the universe. Exported so the derivation
+ * is inspectable: a returned z of 0 means "typical for this pillar", +1 means
+ * one standard deviation better than the coverage universe.
+ */
+export function pillarZScore(pillar: PillarKey, score: number): number {
+  const { logMean, logSd } = PILLAR_CALIBRATION[pillar];
+  return (Math.log(Math.max(score, 1) / 100) - logMean) / logSd;
+}
+
+/**
+ * Composite score, 0–100. Raw form returns a float for precise sorting;
+ * computeComposite rounds for display and recommendation bands.
+ *
+ * Still a geometric mean — the blend happens in log space, so a weak pillar
+ * genuinely drags the result rather than being averaged away by a strong one.
+ * What standardisation changes is that "weak" is now measured against how much
+ * that pillar actually varies, instead of against a rubric-specific scale.
+ */
 export function computeCompositeRaw(moat: number, growth: number, valuation: number): number {
-  return Math.pow(moat / 100, 0.40)
-    * Math.pow(growth / 100, 0.30)
-    * Math.pow(valuation / 100, 0.30)
-    * 100;
+  const blended =
+    COMPOSITE_WEIGHTS.moat * pillarZScore('moat', moat) +
+    COMPOSITE_WEIGHTS.growth * pillarZScore('growth', growth) +
+    COMPOSITE_WEIGHTS.valuation * pillarZScore('valuation', valuation);
+
+  const logComposite =
+    COMPOSITE_CALIBRATION.logMean +
+    COMPOSITE_CALIBRATION.logSd * (blended / COMPOSITE_CALIBRATION.blendedZSd);
+
+  return Math.max(0, Math.min(100, Math.exp(logComposite) * 100));
 }
 
 export function computeComposite(moat: number, growth: number, valuation: number): number {
   return Math.round(computeCompositeRaw(moat, growth, valuation));
 }
 
-// Bands left at the original thresholds. Geometric and arithmetic composites
-// agree on equal-pillar names (top of the universe), so shifting thresholds
-// just promotes those names spuriously. The geometric formula compresses
-// divergent-pillar stocks downward through the same bands — which is the
-// bottleneck discrimination we want.
+// Bands left where they were. Standardisation preserves the composite's location
+// and spread by construction (see COMPOSITE_CALIBRATION), so the thresholds keep
+// discriminating at the same population shares — what changes is which names land
+// in which band, which is the point.
 export function computeRecommendation(
   moat: number,
   growth: number,

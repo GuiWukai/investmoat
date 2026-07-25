@@ -104,13 +104,49 @@ Cheaper than bear → richly scored; above bull → penalised. Before a live pri
 
 ## 4. Composite & recommendation
 
-The composite is a **weighted geometric mean** — `moat 0.40 · growth 0.30 · valuation 0.30`:
+The composite is a **standardised weighted geometric mean** — `moat 0.40 · growth 0.30 · valuation 0.30`.
+
+Geometric (rather than arithmetic) means a weak pillar genuinely drags the score: a wide moat can't fully offset a rich price.
+
+### Why the pillars are standardised first
+
+A weight only governs influence if the thing it weights actually varies. The three rubrics were each calibrated on their own terms, so they don't vary comparably:
+
+| Pillar | Observed range | sd of `ln(score/100)` |
+|---|---|---|
+| Moat | 22–98 | 0.266 |
+| Growth | 41–97 | 0.155 |
+| Valuation | 45–89 | 0.144 |
+
+Fed straight into the weighted mean, that made `40/30/30` a fiction. A typical move in moat shifted the composite about **4× as much** as a typical move in valuation, and moat drove **~71%** of composite dispersion. The most subjective pillar — author-assigned moat status labels — was quietly outvoting the only pillar that responds to price.
+
+So each pillar is converted to a **z-score against the coverage universe** before weighting:
 
 ```
-composite = (moat/100)^0.40 · (growth/100)^0.30 · (valuation/100)^0.30 · 100
+zₚ         = (ln(score/100) − logMeanₚ) / logSdₚ
+blended    = 0.40·z_moat + 0.30·z_growth + 0.30·z_valuation
+composite  = exp(logMean + logSd · blended / blendedZSd) · 100
 ```
 
-Geometric (rather than arithmetic) means a weak pillar genuinely drags the score: a wide moat can't fully offset a rich price. Equal pillars reproduce the arithmetic mean. `computeCompositeRaw` returns a float for precise sorting; `computeComposite` rounds for display.
+After standardisation a 1-sd move in any pillar shifts the composite in exact proportion to its weight — **40 : 30 : 30**, verified against the universe. (The *variance* share lands at 49/25/25 rather than 40/30/30; that gap is just the arithmetic of squaring weights and is unavoidable under any weighting scheme.)
+
+The final `logMean` / `logSd` reproduce the location and spread the un-standardised formula produced over the same universe, so **the recommendation bands and the portfolio threshold keep the meaning they were tuned for**. Standardisation redistributes where dispersion comes from without inflating or shrinking it.
+
+What this does *not* do: it corrects the weighting, but it cannot manufacture resolution a rubric doesn't have. The valuation curve still saturates (100 below `0.8 × bear`, 20 above `1.2 × bull`), so names beyond the bull case remain indistinguishable from one another — they are now merely penalised as much as a 30%-weight pillar should penalise them. In practice a business with a perfect moat and perfect growth trading 20%+ above its own bull case scores 52 (*Avoid*), where the un-standardised formula gave it 62 (*Speculative Buy*).
+
+### Calibration constants
+
+`PILLAR_CALIBRATION` and `COMPOSITE_CALIBRATION` in [`src/lib/valuationScore.ts`](../src/lib/valuationScore.ts) are **baked from the universe, not recomputed at render time** — a stock's published score must not move because unrelated coverage was added. They were derived from 128 assets in July 2026.
+
+Re-derive them with:
+
+```
+npx tsx scripts/calibrate-pillars.ts
+```
+
+which prints the observed statistics, flags any pillar whose spread has drifted more than 10% from the baked value, and emits a ready-to-paste block. Re-baking moves every published score, so treat it as a deliberate recalibration rather than routine maintenance.
+
+`computeCompositeRaw` returns a float for precise sorting; `computeComposite` rounds for display. `pillarZScore` is exported so the derivation is inspectable — a z of 0 means "typical for this pillar", +1 means one standard deviation better than the universe.
 
 **Recommendation bands** (`computeRecommendation`):
 
