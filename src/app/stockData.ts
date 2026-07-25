@@ -1,14 +1,14 @@
 // All three scores and the bear/base/bull targets are derived from each
 // stock's JSON file — single source of truth, no manual sync required.
 //
-//   m(json)  →  moat score      computed from tenMoats via Ten Moats formula
+//   m(json)  →  moat score      dispatched on assetClass (10-moat / crypto / commodity)
 //   g(json)  →  growth score    derived from json.growth.growthAnalysis
 //   v(json)  →  valuation score read from json.valuation.score
 //   t(json)  →  { bearTarget, baseTarget, bullTarget } from json.scenarios
 //
-// RULES (enforced dynamically below):
+// RULES (enforced dynamically below — see MAX_PORTFOLIO / MIN_AVG_SCORE):
 //   • Maximum 25 stocks in the portfolio
-//   • Minimum average score of 75 required for inclusion
+//   • Minimum composite score of 80 required for inclusion
 //
 // To add a new stock: import its JSON, add an entry to allCoverageData.
 // All scores and targets will be derived automatically.

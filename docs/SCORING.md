@@ -2,7 +2,7 @@
 
 Every asset is scored 0–100 on three pillars — **Moat**, **Growth**, **Valuation** — which combine into a single **composite** that drives ranking, portfolio inclusion, and the recommendation band.
 
-> **Single source of truth:** all formulas live in [`src/lib/valuationScore.ts`](../src/lib/valuationScore.ts). This document describes that code; if they ever disagree, the code wins. (Some marketing copy on the home page describes an earlier calibration — the figures below reflect the current implementation.)
+> **Single source of truth:** all formulas live in [`src/lib/valuationScore.ts`](../src/lib/valuationScore.ts). This document describes that code; if they ever disagree, the code wins. The home page (`src/app/page.tsx`) restates the same figures for a general audience and must be updated alongside any recalibration.
 
 ---
 
