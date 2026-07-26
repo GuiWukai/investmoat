@@ -1,67 +1,11 @@
 'use client';
 
 import { useRouter } from "next/navigation";
-import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { PieChart, ShieldCheck, ChevronRight, TrendingUp, TrendingDown, Eye } from "lucide-react";
 import { Spinner } from "@heroui/react";
 import { allCoverageData, getAverageScore } from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
-
-function DynamicScore({
-  slug,
-  moat,
-  growth,
-  fallbackVal,
-  bearTarget,
-  baseTarget,
-  bullTarget,
-  children,
-}: {
-  slug: string;
-  moat: number;
-  growth: number;
-  fallbackVal: number;
-  bearTarget: string;
-  baseTarget: string;
-  bullTarget: string;
-  children: (avg: number, loading: boolean) => ReactNode;
-}) {
-  const [avg, setAvg] = useState(() =>
-    Math.round(getAverageScore([moat, growth, fallbackVal]))
-  );
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const bear = parseScenarioPrice(bearTarget);
-    const base = parseScenarioPrice(baseTarget);
-    const bull = parseScenarioPrice(bullTarget);
-    const fallbackAvg = Math.round(getAverageScore([moat, growth, fallbackVal]));
-    if (!bear || !base || !bull) {
-      setLoading(false);
-      return;
-    }
-
-    let cancelled = false;
-    fetch(`/api/stock-price/${slug}`)
-      .then(r => (r.ok ? r.json() : null))
-      .then(d => {
-        if (cancelled) return;
-        if (d?.price != null) {
-          const liveVal = computeValuationScore(d.price, bear, base, bull);
-          setAvg(Math.round(getAverageScore([moat, growth, liveVal])));
-        } else {
-          setAvg(fallbackAvg);
-        }
-        setLoading(false);
-      })
-      .catch(() => {
-        if (!cancelled) { setAvg(fallbackAvg); setLoading(false); }
-      });
-    return () => { cancelled = true; };
-  }, [slug, moat, growth, fallbackVal, bearTarget, baseTarget, bullTarget]);
-
-  return <>{children(avg, loading)}</>;
-}
 
 // ─── Portfolio threshold ──────────────────────────────────────────────────────
 // 80 = "near Strong Buy" floor. Currently 29 names clear it (under the geometric
@@ -252,8 +196,16 @@ export default function PortfolioPage() {
     return ranked.filter(r => !inPortfolio.has(r.ticker)).slice(0, NEAR_TOP_COUNT);
   }, [ranked, portfolio]);
 
+  // Live composite score per ticker, already computed in `ranked` from the
+  // prices fetched once on mount. Covers both the portfolio and the watchlist,
+  // so rows read from here instead of each re-fetching the same price.
+  const scoreByTicker = useMemo(
+    () => Object.fromEntries(ranked.map(r => [r.ticker, Math.round(r.composite)])),
+    [ranked]
+  );
+
   const liveScores: Record<string, number> = {};
-  portfolio.forEach(p => { liveScores[p.ticker] = Math.round(p.composite); });
+  portfolio.forEach(p => { liveScores[p.ticker] = scoreByTicker[p.ticker]; });
 
   const [hoveredPie, setHoveredPie] = useState<string | null>(null);
   const [scoreColumn, setScoreColumn] = useState<'score' | 'change'>('score');
@@ -641,24 +593,12 @@ export default function PortfolioPage() {
                 </div>
 
                 {/* Score — always on desktop, toggle-gated on mobile */}
-                <DynamicScore
-                  slug={stock.stock.slug}
-                  moat={stock.stock.scores[0]}
-                  growth={stock.stock.scores[1]}
-                  fallbackVal={stock.stock.scores[2]}
-                  bearTarget={stock.stock.bearTarget}
-                  baseTarget={stock.stock.baseTarget}
-                  bullTarget={stock.stock.bullTarget}
-                >
-                  {(avg, loading) => (
-                    <div className={`text-right shrink-0 w-12 ${scoreColumn !== 'score' ? 'hidden lg:block' : ''}`}>
-                      {loading
-                        ? <Spinner size="sm" color="default" />
-                        : <span className={`text-sm font-black ${getScoreColor(avg)}`}>{avg}</span>
-                      }
-                    </div>
-                  )}
-                </DynamicScore>
+                <div className={`text-right shrink-0 w-12 ${scoreColumn !== 'score' ? 'hidden lg:block' : ''}`}>
+                  {scoresLoading
+                    ? <Spinner size="sm" color="default" />
+                    : <span className={`text-sm font-black ${getScoreColor(scoreByTicker[stock.ticker] ?? 0)}`}>{scoreByTicker[stock.ticker] ?? 0}</span>
+                  }
+                </div>
 
                 {/* 1D% — always on desktop, toggle-gated on mobile */}
                 <div className={`text-right shrink-0 w-14 ${scoreColumn !== 'change' ? 'hidden lg:block' : ''}`}>
@@ -796,24 +736,12 @@ export default function PortfolioPage() {
                   </div>
 
                   {/* Score */}
-                  <DynamicScore
-                    slug={stock.stock.slug}
-                    moat={stock.stock.scores[0]}
-                    growth={stock.stock.scores[1]}
-                    fallbackVal={stock.stock.scores[2]}
-                    bearTarget={stock.stock.bearTarget}
-                    baseTarget={stock.stock.baseTarget}
-                    bullTarget={stock.stock.bullTarget}
-                  >
-                    {(avg, loading) => (
-                      <div className={`text-right shrink-0 w-12 ${scoreColumn !== 'score' ? 'hidden lg:block' : ''}`}>
-                        {loading
-                          ? <Spinner size="sm" color="default" />
-                          : <span className={`text-sm font-black ${getScoreColor(avg)}`}>{avg}</span>
-                        }
-                      </div>
-                    )}
-                  </DynamicScore>
+                  <div className={`text-right shrink-0 w-12 ${scoreColumn !== 'score' ? 'hidden lg:block' : ''}`}>
+                    {scoresLoading
+                      ? <Spinner size="sm" color="default" />
+                      : <span className={`text-sm font-black ${getScoreColor(scoreByTicker[stock.ticker] ?? 0)}`}>{scoreByTicker[stock.ticker] ?? 0}</span>
+                    }
+                  </div>
 
                   {/* 1D% */}
                   <div className={`text-right shrink-0 w-14 ${scoreColumn !== 'change' ? 'hidden lg:block' : ''}`}>
