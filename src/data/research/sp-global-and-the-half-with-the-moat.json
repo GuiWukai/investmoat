@@ -1,0 +1,284 @@
+{
+  "slug": "sp-global-and-the-half-with-the-moat",
+  "title": "S&P Global and the Half With the Moat",
+  "dek": "The market marked S&P Global down on a comparison with a company that no longer exists. The print underneath says something more useful: in financial infrastructure the growth sits in the half of the business that owns a benchmark, not the half that sells data.",
+  "published": "July 28, 2026",
+  "lastReviewed": "July 28, 2026",
+  "tickers": ["SPGI", "MCO", "MSCI", "ICE", "FICO"],
+  "tags": ["Financial Infrastructure", "Spin-offs", "Business Models", "Capital Allocation"],
+  "summary": "S&P Global reported Q2 2026 on July 28 with revenue up 10% to $4.15B, adjusted operating margin up 200bps to 54.3% and adjusted diluted EPS up 23% to $4.83 — and the stock fell around 5%, because the headline read as an EPS miss and a 9.7% guidance cut. It was neither: the Mobility Global spin-off distributed on July 1, and the new $17.50–17.75 full-year range covers continuing operations only, a base the company states is not comparable to the prior whole-company guide. What the quarter does show is a split that repeats across financial infrastructure. Segments that own a benchmark — Ratings, Indices, Moody's Investors Service, the MSCI Index franchise — grew 13% to 25% at roughly 70% margins in the same quarter that the data and analytics segments alongside them grew 3% to 7%. Company-level scores average across that divide, which is why the whole cohort scores alike while only one half of each business carries the moat that produces the growth.",
+  "falsifiableBy": "S&P Global's Ratings and Indices growth converging down toward the Market Intelligence and Commodity Insights rate — call it mid-single digits — for two consecutive quarters, which would mark the split as an artifact of the 2026 issuance surge rather than a structural feature of where the moat sits. A second trip: Moody's Analytics or the MSCI Analytics segment sustaining growth above their benchmark segments for a full year. A third, nearer: ICE reporting Q2 on July 30 and FICO on July 29 with the spread inverted.",
+  "blocks": [
+    {
+      "type": "stat-strip",
+      "stats": [
+        { "label": "SPGI Price", "live": { "ticker": "SPGI", "field": "price" }, "note": "live" },
+        { "label": "Composite", "live": { "ticker": "SPGI", "field": "composite" }, "note": "recomputed against post-spin targets" },
+        { "label": "Moat", "live": { "ticker": "SPGI", "field": "moat" }, "note": "scored on the company, not the segment" },
+        { "label": "Growth", "live": { "ticker": "SPGI", "field": "growth" }, "note": "blended across four segments growing 3% to 20%" }
+      ]
+    },
+    {
+      "type": "prose",
+      "body": "S&P Global reported the second quarter of 2026 before the open on July 28 and the stock fell around 5%. The wires had their reason ready: adjusted earnings came in below consensus, and full-year guidance appeared to have been cut by close to 10%. Both statements are, in the narrow sense, things that happened. Neither describes the company."
+    },
+    {
+      "type": "prose",
+      "body": "**The guidance was not cut — the company got smaller, on a scheduled date, and the guide followed it.** Mobility Global separated from S&P Global on July 1, 2026. The new full-year range covers continuing operations only, measured against a pro forma 2025 base the company published on July 6, and S&P Global states plainly that the two ranges are not comparable. The reported reduction in the guide is the same order of magnitude as the earnings that walked out the door with the spin. Consensus, meanwhile, was not struck on one company at all: the Q2 estimate the stock was marked against appeared in the press as $4.75, $4.95 and $5.02 depending on the vendor."
+    },
+    {
+      "type": "heading",
+      "eyebrow": "The evidence",
+      "text": "The cut is the separation, to roughly the decimal"
+    },
+    {
+      "type": "table",
+      "asOf": "July 28, 2026 — S&P Global Q2 2026 results and full-year guidance",
+      "caption": "Reconciling the reported \"miss\" against the basis change.",
+      "columns": ["Measure", "Whole company (prior basis)", "Continuing operations (now)", "What it tests"],
+      "highlightColumn": 2,
+      "rows": [
+        [
+          "FY2026 adjusted diluted EPS guidance",
+          "$19.40–19.65",
+          "$17.50–17.75",
+          "Midpoint falls about 9.7% — the order of magnitude of the business that left"
+        ],
+        [
+          "Basis of the guide",
+          "Includes a full year of Mobility",
+          "Excludes Mobility; measured against pro forma 2025 published July 6, 2026",
+          "The company states the two ranges are not comparable"
+        ],
+        [
+          "Q2 2026 revenue",
+          "—",
+          "$4.15B, +10% YoY (+11% organic constant-currency)",
+          "Ahead of the roughly $4.12B consensus — the top line was not the problem"
+        ],
+        [
+          "Q2 2026 adjusted operating margin",
+          "—",
+          "54.3%, +200 bps YoY",
+          "Margin expansion, not cost relief, funded the earnings growth"
+        ],
+        [
+          "Q2 2026 adjusted diluted EPS",
+          "—",
+          "$4.83, +23% YoY",
+          "Growth against the reported prior-year base, not a decline"
+        ],
+        [
+          "Q2 2026 consensus adjusted EPS, as reported",
+          "$4.75 to $5.02 across sources",
+          "actual $4.83",
+          "The spread between vendors is the tell — the estimates were not all on one company"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "body": "A separation is one of the few corporate events that breaks year-over-year comparison at the level of arithmetic rather than judgement. For one or two quarters the guide, the consensus and the prior-year base can each describe a different entity, and the difference between them is reported as performance. That is worth knowing, but it is not an investment thesis — it is a scheduling artifact that resolves itself by the next print."
+    },
+    {
+      "type": "callout",
+      "tone": "insight",
+      "title": "The only comparison that survives a separation",
+      "body": "When the entity changes, consolidated growth rates stop carrying information and segment growth rates start carrying all of it. Segments are reported on a consistent basis through a spin because they are the same segments before and after. So read the quarter at the segment line — and in S&P Global's case the segment line says something the consolidated line cannot."
+    },
+    {
+      "type": "heading",
+      "eyebrow": "The signal",
+      "text": "Two segments, three-quarters of the growth"
+    },
+    {
+      "type": "table",
+      "asOf": "July 28, 2026 — S&P Global Q2 2026 segment results",
+      "caption": "The four continuing segments, ranked by what they own.",
+      "columns": ["Segment", "Q2 2026 revenue", "YoY", "Adjusted operating margin", "What it sells"],
+      "highlightColumn": 2,
+      "rows": [
+        [
+          "Indices",
+          "$534M",
+          "+20%",
+          "71.5% (+90 bps)",
+          "A mark other people's products are named after; ETF-linked AUM of $6.35T, +34% YoY"
+        ],
+        [
+          "Ratings",
+          "~$1.3B",
+          "+13%",
+          "68.5% (+310 bps)",
+          "An opinion written into covenants and mandates; transaction revenue +25%"
+        ],
+        [
+          "Market Intelligence",
+          "$1,235M",
+          "+6%",
+          "36.0%",
+          "Data and workflow sold to buyers who have alternatives"
+        ],
+        [
+          "Commodity Insights",
+          "$623M",
+          "+3%",
+          "47.5%",
+          "Platts benchmarks, attached to a much larger non-benchmark data business"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "body": "**Ratings and Indices supplied roughly three-quarters of the four segments' revenue growth in the quarter, at margins near 70%, while the two larger-headcount data businesses grew 6% and 3%.** This is not a story about a good quarter and a bad quarter. It is the same split S&P Global has been running for years, made legible because the spin-off removed a segment and forced everyone to look at the parts."
+    },
+    {
+      "type": "heading",
+      "eyebrow": "The cross-read",
+      "text": "Every one of these companies has the same two halves"
+    },
+    {
+      "type": "prose",
+      "body": "If the split were specific to S&P Global it would be a stock note. It is not. Three of the five names in this cohort reported the same quarter within a week of each other, and each one shows a benchmark-owning segment growing at multiples of the data segment sitting next to it."
+    },
+    {
+      "type": "table",
+      "asOf": "July 28, 2026 — most recent reported quarter for each company",
+      "caption": "The spread between the two halves, same quarter, five companies.",
+      "columns": ["Company", "Benchmark-owning segment", "Data / analytics segment", "What the split says"],
+      "rows": [
+        [
+          "S&P Global (SPGI)",
+          "Ratings +13%, Indices +20% (Q2 2026)",
+          "Market Intelligence +6%, Commodity Insights +3% (Q2 2026)",
+          "A 10 to 17 point spread inside one company"
+        ],
+        [
+          "Moody's (MCO)",
+          "Investors Service +25% to $1.3B (Q2 2026)",
+          "Analytics +4% to $925M; ARR $3.7B, +9% (Q2 2026)",
+          "The widest spread in the cohort, in the same quarter"
+        ],
+        [
+          "MSCI",
+          "Index +17.5% to $511.0M; asset-based fees +26.6% (Q2 2026)",
+          "Analytics +6.6%, Sustainability & Climate +3.4% (Q2 2026)",
+          "Same shape at the company whose benchmark is the whole franchise"
+        ],
+        [
+          "Intercontinental Exchange (ICE)",
+          "Exchanges: record energy volumes, roughly 80% segment margin (Q1 2026)",
+          "Fixed Income & Data Services: recurring revenue guided to mid-single digits (FY2026)",
+          "Same shape on older data; Q2 lands July 30"
+        ],
+        [
+          "Fair Isaac (FICO)",
+          "Scores: exclusivity withdrawn across every major federal mortgage programme since July 2025",
+          "Platform ARR +49% to $349M (Q2 FY2026)",
+          "Inverted — the counter-case; Q3 lands July 29"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "body": "Now apply the framework to the same five names and watch it fail to sort them."
+    },
+    {
+      "type": "scorecard",
+      "tickers": ["MSCI", "SPGI", "MCO", "ICE", "FICO"],
+      "caption": "Live scores, grouped by where the benchmark sits inside the company.",
+      "sort": "given",
+      "groups": [
+        { "label": "The benchmark is the company", "tickers": ["MSCI"] },
+        { "label": "The benchmark half carries the growth", "tickers": ["SPGI", "MCO", "ICE"] },
+        { "label": "The benchmark half is the one under attack", "tickers": ["FICO"] }
+      ],
+      "notes": {
+        "MSCI": "Index segment +17.5% in Q2 2026; asset-based fee run rate $948M, +25%",
+        "SPGI": "Q2 2026 rebased to continuing operations after the July 1 Mobility separation",
+        "MCO": "Investors Service +25% against Analytics +4% in Q2 2026",
+        "ICE": "Reports Q2 on July 30; figures here are Q1 2026",
+        "FICO": "Scores lost federal mortgage exclusivity; Platform ARR +49% in Q2 FY2026"
+      }
+    },
+    {
+      "type": "prose",
+      "body": "The scores cluster. They should — these are five of the most durable franchises in financial services, and a framework that separated them sharply would be telling you something false. But the clustering is also the point: **a company-level score is an average across segments whose economics have almost nothing in common, and averaging is exactly the operation that destroys the information you need here.** The moat pillars land the same way."
+    },
+    {
+      "type": "moat-matrix",
+      "tickers": ["MSCI", "SPGI", "MCO", "ICE", "FICO"],
+      "moats": ["regulatoryLockIn", "networkEffects", "systemOfRecord", "transactionEmbedding", "proprietaryData"],
+      "caption": "The five pillars that carry a benchmark franchise — assessed, as always, at the company level.",
+      "groups": [
+        { "label": "The benchmark is the company", "tickers": ["MSCI"] },
+        { "label": "The benchmark half carries the growth", "tickers": ["SPGI", "MCO", "ICE"] },
+        { "label": "The benchmark half is the one under attack", "tickers": ["FICO"] }
+      ]
+    },
+    {
+      "type": "prose",
+      "body": "Read the grid honestly and it says the cohort is uniformly well defended. That assessment is accurate about each company as a whole and nearly useless for deciding which one to own, because the pillars are earned by one part of each business and credited to all of it. S&P Global's regulatory lock-in is a property of Ratings. Its network effects are a property of Indices. Neither pillar has much to say about a Capital IQ seat or a commodity data subscription — and those two lines are the majority of the company's revenue."
+    },
+    {
+      "type": "heading",
+      "eyebrow": "The mechanism",
+      "text": "What a benchmark owns that a database does not"
+    },
+    {
+      "type": "prose",
+      "body": "The distinction is not data quality, headcount, or how much AI a segment has shipped. It is who has to change their own documents in order to stop paying you."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**The mark is written into third-party paper.** An S&P rating is named in bond covenants, fund mandates and capital rules; an MSCI index is named in prospectuses. Switching is not a procurement decision, it is an amendment — and the counterparty who must agree to it is not the vendor.",
+        "**The fee is levied on someone else's asset base.** Index licensing and asset-based fees scale with AUM the licensee raised, not with headcount at the licensee. Revenue grows without a renewal conversation, which is why $6.35T of ETF-linked AUM converts into a 71.5% segment margin.",
+        "**There is no comparison shop.** A buyer evaluating a data terminal can price three of them against each other. A buyer who needs the S&P 500 cannot buy an equivalent from anyone, because equivalence is the one property the product does not have.",
+        "**The data half fails all three.** Market Intelligence, Moody's Analytics and MSCI Analytics sell genuinely good products into markets with substitutes, annual renewals, and buyers whose budgets are negotiated line by line. That is a decent business. It is not the same business, and it grows at a third of the rate."
+      ]
+    },
+    {
+      "type": "heading",
+      "eyebrow": "The counter-case",
+      "text": "FICO shows the benchmark half can be the fragile one"
+    },
+    {
+      "type": "prose",
+      "body": "The cohort contains a name where this argument inverts, and it inverts hard. FICO's Scores business was the purest benchmark in the group — a single number written into mortgage underwriting across the American housing finance system. Since July 2025 the FHFA has approved a competing score for conforming loans, Fannie Mae has eliminated minimum score requirements outright, and the VA, FHA and USDA have accepted verified rent and utility histories as primary evidence of creditworthiness. The benchmark half is the one under pressure. The growth is coming from the platform half, where Platform ARR grew 49% year over year in Q2 FY2026 — precisely the inversion of the pattern everywhere else in this table."
+    },
+    {
+      "type": "prose",
+      "body": "**That does not break the thesis; it bounds it, and the bound is the most useful thing in this article.** A benchmark embedded in private contracts — bond covenants, ISDA masters, fund prospectuses, investment mandates — can only be dislodged by persuading thousands of counterparties to amend their own documents one at a time. A benchmark embedded in a federal programme's rulebook can be dislodged by one agency changing the rulebook. Both look like regulatory lock-in on a moat matrix. Only one of them is durable against a change of administration, and FICO is the demonstration that the difference is not academic. ICE sits partway along that spectrum: its energy benchmarks are private-contract embedded, while MERS is closer to public infrastructure."
+    },
+    {
+      "type": "heading",
+      "eyebrow": "Positioning",
+      "text": "The mix improved and the price already knows"
+    },
+    {
+      "type": "prose",
+      "body": "For S&P Global the separation is a genuine improvement in mix: what remains is more weighted toward the two segments that own something, and the buyback guided above $7B for 2026 compounds that on a shrinking share count. The complication is that the market worked this out three weeks ago. The stub separated on July 1 from a cum-distribution close of $424.42 on June 26, with Mobility then estimated at $25–33 per share, and it has traded up since — even after today's drop. The re-rating this article argues for has substantially happened."
+    },
+    {
+      "type": "prose",
+      "body": "So the framework's caution on SPGI now sits in the valuation pillar rather than the moat or growth pillars, and its scenario targets have been rebased to continuing operations — the old ones were struck against earnings that no longer exist. Within the cohort, the names where the scorecard still shows room are the ones whose benchmark half has not yet been re-rated for the same reason. Click through to any of the five to see where each sits today."
+    },
+    {
+      "type": "callout",
+      "tone": "risk",
+      "title": "What would break this",
+      "body": "First, cyclicality masquerading as structure: Ratings transaction revenue grew 25% in Q2 2026 on a hyperscaler and infrastructure issuance wave that will not repeat forever, and Indices fees compound off an AUM base that falls with the market rather than off a contracted one. A simultaneous issuance freeze and equity drawdown would compress both halves of the benchmark franchise at once, and the Mobility separation removed a block of non-cyclical subscription revenue that used to cushion exactly that. Second, the FICO failure mode arriving somewhere else: the SEC has periodically explored de-referencing ratings from capital rules, and every such move converts private-contract embedding back into rulebook embedding. Third, the simplest one — the data halves re-accelerating. If Market Intelligence and Moody's Analytics return to double digits, the spread this article is built on closes, and the case for reading these companies segment by segment closes with it."
+    },
+    {
+      "type": "prose",
+      "body": "The generalisable lesson is smaller than the thesis and more portable. Any company that reports segments with a 15-point growth spread and a 30-point margin spread is two companies wearing one ticker, and both the market's multiple and our own composite score are averages over that difference. Spin-offs are useful mainly because they force the average apart for a quarter and let you see what was inside it. The mistake on July 28 was not mispricing S&P Global. It was reading a consolidated line on a company that had just told everyone the consolidated line changed."
+    },
+    {
+      "type": "callout",
+      "tone": "method",
+      "title": "How to read this page",
+      "body": "The stat strip, the scorecard and the moat matrix are live: they resolve against the same stock data as /stocks and /portfolio every time this page renders, with valuation recomputed from the current price. Nothing in the prose transcribes them. Every static figure sits in a table with its reporting period stamped — S&P Global and Moody's Q2 2026 (reported July 28 and July 22), MSCI Q2 2026 (July 21), ICE Q1 2026 and FICO Q2 FY2026, the latter two because ICE reports Q2 on July 30 and FICO reports Q3 on July 29, both after publication. Those two prints are the nearest available test of the argument."
+    }
+  ]
+}

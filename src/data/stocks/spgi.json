@@ -9,7 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "$120.5B"
+      "value": "$122B"
     }
   ],
   "chips": [
@@ -24,23 +24,23 @@
   ],
   "metrics": [
     {
-      "title": "Q1 2026 Revenue",
-      "value": "$4.17B",
-      "label": "+10% YoY (beat consensus)",
+      "title": "Q2 2026 Revenue",
+      "value": "$4.15B",
+      "label": "+10% YoY, +11% organic CC",
       "icon": "Landmark",
       "color": "#cf102d"
     },
     {
       "title": "Indices Growth",
-      "value": "+17%",
-      "label": "Q1 2026 fastest segment",
+      "value": "+20%",
+      "label": "13th straight record quarter",
       "icon": "TrendingUp",
       "color": "#3b82f6"
     },
     {
       "title": "FY26 EPS Guidance",
-      "value": "$19.40-19.65",
-      "label": "Narrowed and reaffirmed",
+      "value": "$17.50-17.75",
+      "label": "Post-spin basis, +10-12% YoY",
       "icon": "Shield",
       "color": "#10b981"
     }
@@ -65,51 +65,52 @@
     ]
   },
   "growth": {
-    "description": "Q1 2026 total revenue +10% YoY ($4.17B), above the 6-8% organic guidance midpoint. Indices led at +17% (ETF AUM tailwind); Ratings +13% as the refinancing wall drives issuance. Adjusted EPS +13.7%, and FY26 adjusted-EPS guidance was reaffirmed at $19.40-19.65. Energy (Platts/Commodity Insights) organic guidance was trimmed ~1pp (to 4.5-6%) on Iran-conflict energy disruption. From July 1, 2026 the Mobility segment departs in the MBGL spin-off, leaving a faster-growing ratings/indices/market-intelligence RemainCo.",
+    "description": "Q2 2026 (reported July 28, 2026) grew revenue 10% YoY to $4.15B — 11% organic constant-currency — with adjusted operating margin +200bps to 54.3% and adjusted diluted EPS +23% to $4.83. The growth is heavily concentrated in two segments: Indices +20% to $534M at a 71.5% margin (13th consecutive record quarter, ETF-linked AUM $6.35T, +34% YoY, over $600B of net inflows) and Ratings +13% to ~$1.3B at a 68.5% margin (+310bps) on transaction revenue +25%, driven by hyperscaler and infrastructure issuance plus M&A. The other half grew far slower: Market Intelligence +6% to $1,235M at a 36.0% margin, Commodity Insights +3% to $623M. Following the Mobility Global spin-off (distributed July 1, 2026), FY2026 guidance is struck on continuing operations only — adjusted diluted EPS of $17.50-17.75, +10-12% against the pro forma 2025 base published July 6, 2026 — and is explicitly not comparable to the prior whole-company range of $19.40-19.65. Buybacks are guided above $7B for 2026.",
     "growthAnalysis": {
       "cagrEstimate": "8-12%",
-      "scoreDerivation": "Base 72 + duopoly ratings position (+4) + indices ETF AUM tailwind (+3) + Platts commodities optionality (+2) - issuance cyclicality risk (-1) = 80",
+      "scoreDerivation": "Base 73 (8-12% CAGR midpoint) + net trajectory of four drivers (+1) + expanding margin (+4) + growth from both TAM and share (+4) - moderate issuance/AUM cyclicality risk (-5) = 77",
       "drivers": [
-        { "name": "Ratings", "metric": "Q1 2026 Ratings revenue +13% YoY on refinancing wall; private credit ratings revenue +25% YoY", "trend": "stable" },
-        { "name": "Indices", "metric": "Q1 2026 Indices revenue +17% YoY ($519M)", "trend": "accelerating" },
-        { "name": "Operating Margin", "metric": "Q1 2026 op margin 51.8%, +100bps YoY", "trend": "accelerating" }
+        { "name": "Ratings", "metric": "Q2 2026 Ratings revenue +13% YoY to ~$1.3B with transaction revenue +25%; adjusted operating margin 68.5% (+310bps)", "trend": "stable" },
+        { "name": "Indices", "metric": "Q2 2026 Indices revenue +20% YoY to $534M, 13th consecutive record quarter; ETF-linked AUM $6.35T (+34% YoY)", "trend": "accelerating" },
+        { "name": "Operating Margin", "metric": "Q2 2026 adjusted operating margin 54.3%, +200bps YoY", "trend": "accelerating" },
+        { "name": "Market Intelligence & Commodity Insights", "metric": "Q2 2026 Market Intelligence +6% YoY to $1,235M (36.0% margin); Commodity Insights +3% to $623M", "trend": "decelerating" }
       ],
       "primaryType": "both",
-      "keyRisk": "Tariff-driven debt capital markets freeze in 2026 could halt new bond issuance for 6-12 months and compress MIS revenue.",
+      "keyRisk": "The two segments now carrying nearly all the growth are the two most cyclical: Ratings transaction revenue (+25% in Q2 2026) is levered directly to debt issuance volumes, and Indices asset-linked fees fall with equity market levels. The Mobility separation removed a block of non-cyclical subscription revenue, so a simultaneous issuance freeze and equity drawdown now hits RemainCo harder than it would have hit the pre-spin company.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 84,
-    "description": "At $424.42 (June 26, 2026) the stock trades ~6% above the bear-case target ($400) and ~24% of the way from bear ($400) to base ($500) — most of the cyclical uncertainty already appears discounted, with Q1 2026 beating guidance and Ratings private-credit revenue +25% YoY. Spin-off timing: the Mobility Global (MBGL) spin-off distributes July 1, 2026 (record date June 15; $2B of Mobility notes priced in May). June 26 is the last regular-way cum-distribution session, so from July 1 the SPGI stub re-prices mechanically lower as MBGL (estimated ~$25-33/share) separates. These bear/base/bull targets are struck on the pre-spin whole company and must be rebased to RemainCo after the distribution. Post-spin, SPGI becomes a purer ratings/indices/data compounder, which has historically supported a higher multiple."
+    "score": 75,
+    "description": "All three scenario targets have been rebased to post-spin RemainCo. The Mobility Global distribution completed July 1, 2026, and FY2026 guidance is now struck on continuing operations at $17.50-17.75 adjusted diluted EPS — roughly 10% below the prior whole-company range purely because Mobility is gone. The previous targets ($385/$500/$610) were struck on the pre-spin company against $19.40-19.65 of EPS and are no longer meaningful. At ~$425 (July 28, 2026, after a ~5% drop on the Q2 print) the stock trades at ~24x the midpoint of post-spin guidance, roughly 20% above the rebased bear case and ~11% below base. Worth noting that the stub has risen since the July 1 distribution: it separated from a $424.42 cum-distribution close on June 26 with MBGL then estimated at $25-33/share, so RemainCo has already been re-rated upward on the cleaner mix, which is what removes most of the margin of safety here. The Q2 print supports that re-rating — Indices and Ratings, the two highest-margin segments, delivered nearly all the growth — but the price now requires it to continue."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$385",
-      "description": "Tariff-driven uncertainty freezes debt capital markets activity, ESG backlash reduces data segment revenue, and the multiple compresses toward ~20x — consistent with the demonstrated 52-week low near $361.",
+      "priceTarget": "$355",
+      "description": "Issuance rolls over and equity markets fall together, hitting the two segments that now carry the growth, and RemainCo de-rates to ~20x post-spin earnings.",
       "points": [
-        "Tariff and geopolitical uncertainty freezes new corporate bond issuance for 6-12 months",
-        "ESG/sustainability data revenue faces continued political and institutional backlash in US market",
-        "Financial sector consolidation reduces Market Intelligence terminal and data subscription counts"
+        "Debt issuance normalises after the 2026 refinancing surge, unwinding the +25% Ratings transaction revenue growth reported in Q2 2026",
+        "An equity drawdown cuts asset-linked Indices fees, which compound off the $6.35T ETF-linked AUM base rather than a contracted one",
+        "Market Intelligence stays at the +6% pace and Commodity Insights at +3%, leaving no ballast when the cyclical half turns"
       ]
     },
     "base": {
-      "priceTarget": "$500",
-      "description": "The refinancing wall drives sustained ratings demand through 2026-2027, with index licensing and private markets expanding the revenue mix.",
+      "priceTarget": "$475",
+      "description": "RemainCo delivers the guided $17.50-17.75 and holds a multiple in line with Moody's as the post-spin mix shifts revenue toward the two highest-margin, most defensible segments.",
       "points": [
-        "Refinancing wall of $10T+ in corporate debt drives steady ratings demand through 2027",
-        "Index licensing grows 12-15% annually as ETF AUM expansion continues globally",
-        "Private credit ratings become a standard requirement as the $1.5T+ market matures"
+        "FY2026 adjusted diluted EPS lands in the guided $17.50-17.75 range, +10-12% on the pro forma 2025 base",
+        "Indices sustains high-teens growth as ETF-linked AUM compounds off $6.35T and net inflows exceed $600B annually",
+        "Over $7B of 2026 buybacks compounds per-share earnings on a shrinking count"
       ]
     },
     "bull": {
-      "priceTarget": "$610",
-      "description": "Private market data becomes a category-defining business, and AI-powered market intelligence creates a new high-growth revenue stream.",
+      "priceTarget": "$565",
+      "description": "The mix shift is recognised in the multiple: a company where Ratings and Indices supply nearly all the growth at ~70% segment margins is priced as an index-and-benchmark franchise rather than a diversified data conglomerate.",
       "points": [
-        "Private credit and private equity data analytics become a $1B+ revenue segment",
-        "AI-powered Market Intelligence platform commands significant pricing power premium",
-        "Dividend growth re-accelerates to 15%+ as FCF generation exceeds $5B annually"
+        "Private credit ratings scale into a standing requirement as insurer and NAIC frameworks mature, extending Ratings growth past the refinancing wall",
+        "Market Intelligence re-accelerates out of the post-realignment trough, removing the drag on blended growth",
+        "The market re-rates RemainCo toward the index-franchise multiple, closing the gap to MSCI on a comparable mix"
       ]
     }
   },
@@ -124,7 +125,7 @@
     },
     "publicDataAccess": {
       "status": "strong",
-      "note": "S&P aggregates decades of public filings, Platts commodity assessments, and ESG disclosures into proprietary datasets that took 20+ years and multiple acquisitions (IHS Markit, Kensho, Panjiva) to assemble. The mobility/auto dataset departs with the Mobility Global spin-off (distribution July 1, 2026), but the core ratings history, Platts benchmarks, and Capital IQ corpus — now also being licensed into enterprise AI platforms (Cohere North collaboration, June 2026) — remain unique and non-replicable on a near-term horizon."
+      "note": "S&P aggregates decades of public filings, Platts commodity assessments, and ESG disclosures into proprietary datasets that took 20+ years and multiple acquisitions (IHS Markit, Kensho, Panjiva) to assemble. The mobility/auto dataset left with the Mobility Global spin-off on July 1, 2026, but the core ratings history, Platts benchmarks, and Capital IQ corpus — now also being licensed into enterprise AI platforms (Cohere North collaboration, June 2026) — remain unique and non-replicable on a near-term horizon."
     },
     "talentScarcity": {
       "status": "intact",
@@ -132,7 +133,7 @@
     },
     "bundling": {
       "status": "strong",
-      "note": "Credit Ratings + Market Intelligence (Capital IQ) + Platts commodity assessments + Mobility data + Indices form a deeply integrated bundle — institutional users who rely on multiple S&P products face compounding switching costs because replacing the bundle requires sourcing each component from different vendors offering inferior standalone products."
+      "note": "Credit Ratings + Market Intelligence (Capital IQ) + Platts commodity assessments + Indices form a deeply integrated bundle — institutional users who rely on multiple S&P products face compounding switching costs because replacing the bundle requires sourcing each component from different vendors offering inferior standalone products. The Mobility data component left the bundle in the July 1, 2026 spin-off, a narrowing that trims cross-sell surface without touching the ratings-and-indices core."
     },
     "proprietaryData": {
       "status": "strong",
@@ -156,5 +157,5 @@
     },
     "verdict": "S&P Global's regulatory moat (NRSRO status) and role as the definitive system of record for credit risk makes them uniquely AI-resilient. AI disrupts analysis, not the legal requirement to use S&P ratings."
   },
-  "lastAnalyzed": "June 26, 2026"
+  "lastAnalyzed": "July 28, 2026"
 }
