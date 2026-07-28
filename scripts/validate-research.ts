@@ -17,6 +17,7 @@ import { fileURLToPath } from 'node:url';
 import { researchArticleSchema } from '../src/lib/researchSchema';
 import { allCoverageData } from '../src/app/stockData';
 import { getStockData } from '../src/data/stocks';
+import { lintArticleProse, type ProseIssue } from './researchProseLint';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const RESEARCH_DIR = join(__dirname, '..', 'src', 'data', 'research');
@@ -30,8 +31,16 @@ const RESET = '\x1b[0m';
 const slugForTicker = new Map(allCoverageData.map((s) => [s.ticker, s.slug]));
 
 type Failure = { file: string; message: string };
+type ProseFinding = ProseIssue & { file: string };
 
-function validateFile(file: string): Failure[] {
+/**
+ * Structural failures fail the build; prose findings are graded by the lint
+ * itself (only its `error` severity is fatal). A file that fails to parse or
+ * fails the schema is never linted — there is nothing coherent to read.
+ */
+type FileReport = { failures: Failure[]; prose: ProseFinding[] };
+
+function validateFile(file: string): FileReport {
   const fullPath = join(RESEARCH_DIR, file);
   const slug = basename(file, '.json');
 
@@ -39,15 +48,21 @@ function validateFile(file: string): Failure[] {
   try {
     raw = JSON.parse(readFileSync(fullPath, 'utf-8'));
   } catch (err) {
-    return [{ file, message: `JSON parse error: ${(err as Error).message}` }];
+    return {
+      failures: [{ file, message: `JSON parse error: ${(err as Error).message}` }],
+      prose: [],
+    };
   }
 
   const result = researchArticleSchema.safeParse(raw);
   if (!result.success) {
-    return result.error.issues.map((issue) => ({
-      file,
-      message: `${issue.path.join('.') || '<root>'}: ${issue.message}`,
-    }));
+    return {
+      failures: result.error.issues.map((issue) => ({
+        file,
+        message: `${issue.path.join('.') || '<root>'}: ${issue.message}`,
+      })),
+      prose: [],
+    };
   }
 
   const article = result.data;
@@ -116,7 +131,42 @@ function validateFile(file: string): Failure[] {
     }
   }
 
-  return failures;
+  return {
+    failures,
+    prose: lintArticleProse(article).map((issue) => ({ file, ...issue })),
+  };
+}
+
+/**
+ * Print the non-fatal half of the prose lint.
+ *
+ * Warnings are avoidable drift. Notes are the re-verify list: a cross-read
+ * argument legitimately has to say "all four pillars strong", and that claim
+ * needs a human eye whenever the article's `lastReviewed` is bumped.
+ */
+function reportProse(issues: ProseFinding[]): void {
+  if (issues.length === 0) return;
+
+  const warnings = issues.filter((i) => i.severity === 'warning');
+  const notes = issues.filter((i) => i.severity === 'note');
+
+  for (const [label, group, colour] of [
+    ['drift warning', warnings, YELLOW],
+    ['re-verify at lastReviewed', notes, DIM],
+  ] as const) {
+    if (group.length === 0) continue;
+    console.log(`\n${colour}${group.length} ${label}(s)${RESET}`);
+    let currentFile = '';
+    for (const { file, where, message, excerpt } of group) {
+      if (file !== currentFile) {
+        console.log(`${DIM}${file}${RESET}`);
+        currentFile = file;
+      }
+      console.log(`  ${DIM}•${RESET} ${where}: ${message}`);
+      console.log(`    ${DIM}"${excerpt}"${RESET}`);
+    }
+  }
+  console.log('');
 }
 
 function main(): void {
@@ -133,7 +183,22 @@ function main(): void {
     return;
   }
 
-  const failures = files.flatMap(validateFile);
+  const reports = files.map(validateFile);
+  const failures = reports.flatMap((r) => r.failures);
+  const prose = reports.flatMap((r) => r.prose);
+
+  // Prose errors are structural failures in every sense that matters: a score
+  // transcribed into text is drift the build should refuse to ship.
+  failures.push(
+    ...prose
+      .filter((p) => p.severity === 'error')
+      .map(({ file, where, message, excerpt }) => ({
+        file,
+        message: `${where}: ${message}\n    ${DIM}"${excerpt}"${RESET}`,
+      })),
+  );
+
+  reportProse(prose.filter((p) => p.severity !== 'error'));
 
   if (failures.length > 0) {
     const failedFiles = new Set(failures.map((f) => f.file));
@@ -149,7 +214,8 @@ function main(): void {
       console.error(`  ${DIM}•${RESET} ${message}`);
     }
     console.error(
-      `\n${DIM}Schema: src/lib/researchSchema.ts — update both schema and src/types/research.ts when fields change.${RESET}`,
+      `\n${DIM}Schema: src/lib/researchSchema.ts — update both schema and src/types/research.ts when fields change.` +
+        `\nProse rules: scripts/researchProseLint.ts — an article carries tickers, never numbers.${RESET}`,
     );
     process.exit(1);
   }

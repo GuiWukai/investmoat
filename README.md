@@ -48,7 +48,7 @@ Detailed docs live in [`docs/`](./docs):
 | [Design system](./docs/DESIGN-SYSTEM.md) | "Institutional Gold" identity — colours, fonts, tokens, utilities, OG images |
 | [Research articles](./docs/RESEARCH.md) | Cross-cutting analysis at `/research` — block model, live scorecards, validation |
 
-Authoring helpers also exist as Claude Code slash commands in [`.claude/commands/`](./.claude/commands): `/add-stock`, `/analyse-stock`, `/update-stock`.
+Authoring helpers also exist for Claude Code: slash commands in [`.claude/commands/`](./.claude/commands) for stocks (`/add-stock`, `/analyse-stock`, `/update-stock`), and skills in [`.claude/skills/`](./.claude/skills) for research articles (`write-research` for structure and registration, `research-style` for the editorial rules).
 
 ## Tech stack
 
