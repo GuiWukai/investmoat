@@ -16,19 +16,50 @@ export interface ResearchSummary {
   minutes: number;
 }
 
+/**
+ * A phone shows one card at a time, so anything past the first line of chips is
+ * scroll cost rather than signal. Both limits render; the overflow is dropped in
+ * CSS at the breakpoint, which keeps the markup identical on server and client.
+ */
+const MOBILE_TICKERS = 4;
+const MOBILE_TAGS = 1;
+
+const TAG_CLASS =
+  'text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded bg-[#c9a96a]/10 text-[#c9a96a] border border-[#c9a96a]/20';
+
+function TagChips({ tags }: { tags: string[] }) {
+  return (
+    <>
+      {tags.map((tag, i) => (
+        <span key={tag} className={`${TAG_CLASS}${i >= MOBILE_TAGS ? ' hidden sm:inline-block' : ''}`}>
+          {tag}
+        </span>
+      ))}
+    </>
+  );
+}
+
 function TickerChips({ tickers, limit }: { tickers: string[]; limit: number }) {
+  const overflowMobile = tickers.length - MOBILE_TICKERS;
+  const overflowDesktop = tickers.length - limit;
+
   return (
     <div className="flex flex-wrap items-center gap-1.5">
-      {tickers.slice(0, limit).map((ticker) => (
+      {tickers.slice(0, limit).map((ticker, i) => (
         <span
           key={ticker}
-          className="text-[10px] font-black tracking-wider text-white/45 px-1.5 py-0.5 rounded bg-white/[0.04] border border-white/[0.06]"
+          className={`text-[10px] font-black tracking-wider text-white/45 px-1.5 py-0.5 rounded bg-white/[0.04] border border-white/[0.06]${
+            i >= MOBILE_TICKERS ? ' hidden sm:inline-block' : ''
+          }`}
         >
           {ticker}
         </span>
       ))}
-      {tickers.length > limit && (
-        <span className="text-[10px] text-white/30">+{tickers.length - limit} more</span>
+      {overflowMobile > 0 && (
+        <span className="text-[10px] text-white/30 sm:hidden">+{overflowMobile} more</span>
+      )}
+      {overflowDesktop > 0 && (
+        <span className="hidden text-[10px] text-white/30 sm:inline">+{overflowDesktop} more</span>
       )}
     </div>
   );
@@ -43,8 +74,11 @@ function Meta({ article }: { article: ResearchSummary }) {
         <Clock size={11} className="text-white/25" />
         {article.minutes} min
       </span>
-      <span className="text-white/10 mx-2">·</span>
-      {article.tickers.length} names
+      {/* The chip rail already carries the coverage count on a phone. */}
+      <span className="hidden sm:inline">
+        <span className="text-white/10 mx-2">·</span>
+        {article.tickers.length} names
+      </span>
     </span>
   );
 }
@@ -54,37 +88,31 @@ function FeaturedCard({ article }: { article: ResearchSummary }) {
   return (
     <Link
       href={`/research/${article.slug}`}
-      className="group block rounded-2xl border border-[#c9a96a]/20 bg-gradient-to-br from-[#c9a96a]/[0.055] to-white/[0.015] p-6 md:p-8 hover:border-[#c9a96a]/40 transition-colors"
+      className="group block rounded-2xl border border-[#c9a96a]/20 bg-gradient-to-br from-[#c9a96a]/[0.055] to-white/[0.015] p-5 sm:p-6 md:p-8 hover:border-[#c9a96a]/40 transition-colors"
     >
-      <div className="flex flex-wrap items-center gap-2 mb-3.5">
+      <div className="flex flex-wrap items-center gap-2 mb-3">
         <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded bg-[#c9a96a] text-[#0a0b0d]">
           Latest
         </span>
-        {article.tags.map((tag) => (
-          <span
-            key={tag}
-            className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded bg-[#c9a96a]/10 text-[#c9a96a] border border-[#c9a96a]/20"
-          >
-            {tag}
-          </span>
-        ))}
+        <TagChips tags={article.tags} />
       </div>
 
-      <h2 className="text-2xl md:text-[34px] font-bold text-white/90 group-hover:text-white transition-colors leading-[1.15]">
+      <h2 className="text-[22px] sm:text-2xl md:text-[34px] font-bold text-white/90 group-hover:text-white transition-colors leading-[1.15]">
         {article.title}
       </h2>
 
-      <p className="research-prose mt-3.5 text-[16px] md:text-[17px] text-white/55 leading-relaxed max-w-2xl">
+      <p className="research-prose mt-3 sm:mt-3.5 text-[15.5px] md:text-[17px] text-white/55 leading-relaxed max-w-2xl line-clamp-3 sm:line-clamp-none">
         {article.dek}
       </p>
 
-      <div className="mt-5">
+      <div className="mt-4 sm:mt-5">
         <TickerChips tickers={article.tickers} limit={10} />
       </div>
 
-      <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
+      <div className="mt-4 sm:mt-6 flex flex-wrap items-center justify-between gap-4">
         <Meta article={article} />
-        <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-[#c9a96a] group-hover:text-[#e4c98a] transition-colors">
+        {/* The whole card is the tap target on a phone, so the CTA is desktop-only. */}
+        <span className="hidden sm:inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-[#c9a96a] group-hover:text-[#e4c98a] transition-colors">
           Read the piece
           <ArrowRight size={13} className="transition-transform group-hover:translate-x-0.5" />
         </span>
@@ -99,32 +127,25 @@ function ArticleCard({ article }: { article: ResearchSummary }) {
       href={`/research/${article.slug}`}
       className="group block rounded-2xl border border-white/[0.07] bg-white/[0.02] p-5 md:p-7 hover:bg-white/[0.04] hover:border-white/15 transition-colors"
     >
-      <div className="flex flex-wrap items-center gap-2 mb-3">
-        {article.tags.map((tag) => (
-          <span
-            key={tag}
-            className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded bg-[#c9a96a]/10 text-[#c9a96a] border border-[#c9a96a]/20"
-          >
-            {tag}
-          </span>
-        ))}
+      <div className="flex flex-wrap items-center gap-2 mb-2.5 sm:mb-3">
+        <TagChips tags={article.tags} />
       </div>
 
       <h2 className="text-xl md:text-2xl font-bold text-white/90 group-hover:text-white transition-colors leading-snug">
         {article.title}
       </h2>
 
-      <p className="research-prose mt-2.5 text-[15.5px] text-white/50 leading-relaxed">
+      <p className="research-prose mt-2.5 text-[15px] sm:text-[15.5px] text-white/50 leading-relaxed line-clamp-2 sm:line-clamp-none">
         {article.dek}
       </p>
 
-      <div className="mt-4">
+      <div className="mt-3.5 sm:mt-4">
         <TickerChips tickers={article.tickers} limit={8} />
       </div>
 
-      <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
+      <div className="mt-3.5 sm:mt-5 flex flex-wrap items-center justify-between gap-3">
         <Meta article={article} />
-        <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-white/30 group-hover:text-[#e4c98a] transition-colors">
+        <span className="hidden sm:inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-white/30 group-hover:text-[#e4c98a] transition-colors">
           Read
           <ArrowRight size={13} className="transition-transform group-hover:translate-x-0.5" />
         </span>
@@ -172,7 +193,7 @@ export default function ResearchIndexList({ articles }: { articles: ResearchSumm
     <>
       {/* Controls — only worth the space once there's more than one piece. */}
       {articles.length > 1 && (
-        <div className="mb-8 flex flex-col gap-3.5">
+        <div className="mb-6 sm:mb-8 flex flex-col gap-3 sm:gap-3.5">
           <div className="relative flex items-center max-w-md">
             <Search className="absolute left-3 w-3.5 h-3.5 text-white/25 pointer-events-none" />
             <input
@@ -195,13 +216,15 @@ export default function ResearchIndexList({ articles }: { articles: ResearchSumm
             )}
           </div>
 
+          {/* A dozen themes wrap into a wall of pills on a phone, so below sm the
+              row stays one line deep and scrolls sideways, bleeding to the edge. */}
           {tags.length > 1 && (
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="research-scroll -mx-4 flex items-center gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-x-visible sm:px-0 sm:pb-0">
               <button
                 type="button"
                 onClick={() => setTag(null)}
                 aria-pressed={tag === null}
-                className={`text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md border transition-colors ${
+                className={`shrink-0 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md border transition-colors ${
                   tag === null
                     ? 'bg-[#c9a96a]/15 text-[#e4c98a] border-[#c9a96a]/35'
                     : 'bg-white/[0.02] text-white/35 border-white/[0.07] hover:text-white/70 hover:border-white/15'
@@ -215,7 +238,7 @@ export default function ResearchIndexList({ articles }: { articles: ResearchSumm
                   type="button"
                   onClick={() => setTag(tag === name ? null : name)}
                   aria-pressed={tag === name}
-                  className={`text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md border transition-colors ${
+                  className={`shrink-0 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md border transition-colors ${
                     tag === name
                       ? 'bg-[#c9a96a]/15 text-[#e4c98a] border-[#c9a96a]/35'
                       : 'bg-white/[0.02] text-white/35 border-white/[0.07] hover:text-white/70 hover:border-white/15'
@@ -244,7 +267,7 @@ export default function ResearchIndexList({ articles }: { articles: ResearchSumm
           </button>
         </div>
       ) : (
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {filtering ? (
             filtered.map((a) => <ArticleCard key={a.slug} article={a} />)
           ) : (
