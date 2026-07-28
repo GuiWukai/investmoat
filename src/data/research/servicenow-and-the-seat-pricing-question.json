@@ -15,7 +15,7 @@
         { "label": "NOW Composite", "live": { "ticker": "NOW", "field": "composite" }, "note": "live, recomputed from price" },
         { "label": "Moat", "live": { "ticker": "NOW", "field": "moat" }, "note": "all four AI-resilient pillars strong" },
         { "label": "Growth", "live": { "ticker": "NOW", "field": "growth" }, "note": "19–22% blended CAGR" },
-        { "label": "Valuation", "live": { "ticker": "NOW", "field": "valuation" }, "note": "vs. $155 base case" }
+        { "label": "Valuation", "live": { "ticker": "NOW", "field": "valuation" }, "note": "live price against the base-case scenario" }
       ]
     },
     {
@@ -148,7 +148,7 @@
     },
     {
       "type": "prose",
-      "body": "The gap between narrative and evidence is where this framework tries to earn its keep. ServiceNow was de-rated on a category-level story about billing models, and its own quarter contradicts that story on the specific metrics the story predicted would break. The valuation reflects only a partial correction: the stock bounced roughly 7% off its pre-print level, still leaving it far below the $155 base case, at around 21× price-to-free-cash-flow on ~$4.6B of annual FCF — a ~4.7% FCF yield for a business compounding subscription revenue above 20%, with a $5B buyback authorization it can execute into the weakness."
+      "body": "The gap between narrative and evidence is where this framework tries to earn its keep. ServiceNow was de-rated on a category-level story about billing models, and its own quarter contradicts that story on the specific metrics the story predicted would break. The valuation reflects only a partial correction: the stock bounced roughly 7% off its pre-print level and still trades well below the base case carried on its [analysis page](/stocks/now), at around 21× price-to-free-cash-flow on ~$4.6B of annual FCF — a ~4.7% FCF yield for a business compounding subscription revenue above 20%, with a $5B buyback authorization it can execute into the weakness."
     },
     {
       "type": "callout",
@@ -164,7 +164,7 @@
       "type": "callout",
       "tone": "method",
       "title": "How to read the numbers on this page",
-      "body": "Every score and moat status above is computed from the underlying stock JSON at render time — the same data and the same formulas that drive /stocks and /portfolio, with valuation recomputed against the live price. Nothing is transcribed by hand, so the scorecard and the matrix cannot drift from the analyses they cite. Company figures quoted in prose (revenue, ACV, cRPO) are as of each name's last review date, shown on its analysis page."
+      "body": "Every score and moat status above is computed from the underlying stock JSON at render time — the same data and the same formulas that drive /stocks and /portfolio, with valuation recomputed against the live price. Nothing is transcribed by hand, so the scorecard and the matrix cannot drift from the analyses they cite. Company figures quoted in prose (revenue, ACV, cRPO) and any price-derived multiple are as of each name's last review date, shown on its analysis page."
     }
   ]
 }
