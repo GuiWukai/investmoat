@@ -62,7 +62,10 @@ h1, h2, h3, h4 {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow-x: hidden;
+  /* `clip`, not `hidden`: `overflow-x: hidden` turns this into a scroll
+     container, which silently kills `position: sticky` for everything inside
+     it — the mobile nav bar and the research contents rail included. */
+  overflow-x: clip;
   background:
     radial-gradient(ellipse 70% 38% at 12% 0%, rgba(201, 169, 106, 0.055) 0%, transparent 60%),
     radial-gradient(ellipse 55% 40% at 90% 100%, rgba(201, 169, 106, 0.03) 0%, transparent 60%),
@@ -248,6 +251,52 @@ h1, h2, h3, h4 {
 .fund-rule {
   height: 1px;
   background: linear-gradient(90deg, rgba(201, 169, 106, 0.35), rgba(201, 169, 106, 0.04));
+}
+
+/* ── Research long-form reading ──────────────────────────────────────────── */
+
+/* Serif body for article prose — the same voice as the headlines, and easier
+   on the eye over a 10-minute read than the UI sans. */
+.research-prose {
+  font-family: var(--font-serif);
+  font-optical-sizing: auto;
+  font-feature-settings: 'liga' 1, 'kern' 1, 'onum' 0;
+  text-wrap: pretty;
+}
+
+/* Slim scrollbar for the horizontal scrollers on wide research tables. */
+.research-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(201, 169, 106, 0.22) transparent;
+}
+.research-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+/* Hash navigation eases instead of jumping — undone under reduced motion. */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Keyboard focus has to be visible on a near-black canvas — the UA default
+   outline all but disappears against it. */
+:focus-visible {
+  outline: 2px solid rgba(228, 201, 138, 0.7);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* HeroUI overrides */
