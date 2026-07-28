@@ -919,7 +919,7 @@ export default function ResearchArticle({
       <ReadingProgress />
       <BackToTop />
 
-      <div className="mx-auto max-w-3xl xl:max-w-[62rem] xl:grid xl:grid-cols-[minmax(0,1fr)_12rem] xl:gap-10 2xl:gap-14 px-5 sm:px-6 py-8 md:py-14">
+      <div className="research-page mx-auto max-w-3xl xl:max-w-[62rem] xl:grid xl:grid-cols-[minmax(0,1fr)_12rem] xl:gap-10 2xl:gap-14 px-4 sm:px-6 py-8 md:py-14">
         <article className="min-w-0">
           <header>
             <div className="flex items-center justify-between gap-4">
@@ -984,7 +984,7 @@ export default function ResearchArticle({
           {covered.length > 0 && (
             <div className="mt-8 not-prose">
               <div className="section-label mb-3">Names covered</div>
-              <div className="flex gap-2 overflow-x-auto research-scroll pb-1 -mx-5 px-5 sm:mx-0 sm:px-0 sm:flex-wrap sm:overflow-visible">
+              <div className="flex gap-2 overflow-x-auto research-scroll pb-1 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap sm:overflow-visible">
                 {covered.map((c) => (
                   <Link
                     key={c.ticker}

@@ -46,7 +46,7 @@ export default function ResearchIndexPage() {
   const names = new Set(articles.flatMap((a) => a.tickers));
 
   return (
-    <div className="max-w-4xl mx-auto px-5 sm:px-6 py-8 md:py-16">
+    <div className="research-page max-w-4xl mx-auto px-4 sm:px-6 py-8 md:py-16">
       <header>
         <div className="section-label mb-3">Research</div>
         <h1 className="text-[32px] md:text-5xl font-bold leading-[1.1] gradient-text">
