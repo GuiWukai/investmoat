@@ -12,10 +12,12 @@
 
 import type { ResearchArticleData } from '@/types/research';
 
+import alphabetAiBuild from './the-odds-on-alphabets-ai-build.json';
 import seatPricing from './servicenow-and-the-seat-pricing-question.json';
 
 const researchArticles: Record<string, ResearchArticleData> = {
   'servicenow-and-the-seat-pricing-question': seatPricing as ResearchArticleData,
+  'the-odds-on-alphabets-ai-build': alphabetAiBuild as ResearchArticleData,
 };
 
 /** All slugs, newest first by published date. */
