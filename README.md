@@ -33,7 +33,8 @@ Live prices come from Yahoo Finance (`query1.finance.yahoo.com`); no API key is 
 | `npm run build` | Production build (runs `validate:stocks` first via `prebuild`) |
 | `npm run start` | Serve the production build |
 | `npm run lint` | Run ESLint |
-| `npm run validate:stocks` | Validate every stock JSON against the Zod schema |
+| `npm run validate:stocks` | Validate every stock JSON against the Zod schema and cross-check the two registries |
+| `npm run validate:research` | Validate every research article JSON and its ticker references |
 
 ## Documentation
 
@@ -45,6 +46,7 @@ Detailed docs live in [`docs/`](./docs):
 | [Scoring methodology](./docs/SCORING.md) | How moat / growth / valuation / composite scores and portfolio selection work |
 | [Data model](./docs/DATA-MODEL.md) | Stock JSON schema, the two-registry system, validation, adding & updating stocks |
 | [Design system](./docs/DESIGN-SYSTEM.md) | "Institutional Gold" identity — colours, fonts, tokens, utilities, OG images |
+| [Research articles](./docs/RESEARCH.md) | Cross-cutting analysis at `/research` — block model, live scorecards, validation |
 
 Authoring helpers also exist as Claude Code slash commands in [`.claude/commands/`](./.claude/commands): `/add-stock`, `/analyse-stock`, `/update-stock`.
 

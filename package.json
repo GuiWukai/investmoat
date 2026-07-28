@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "npm run validate:stocks",
+    "prebuild": "npm run validate:stocks && npm run validate:research",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "validate:stocks": "tsx scripts/validate-stocks.ts"
+    "validate:stocks": "tsx scripts/validate-stocks.ts",
+    "validate:research": "tsx scripts/validate-research.ts"
   },
   "dependencies": {
     "@heroui/react": "^2.8.9",

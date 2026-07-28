@@ -38,14 +38,23 @@ src/
 │   │       └── opengraph-image.tsx
 │   └── api/stock-price/[ticker]/route.ts   # Live price proxy → Yahoo Finance
 ├── components/                 # NavBar, MoatMark, analysis/gauge/chart components
+│   └── research/
+│       ├── page.tsx            # Research index
+│       └── [slug]/             # Article page, OG image, llms.txt mirror
 ├── data/stocks/
 │   ├── *.json                  # ★ One file per asset — the source of truth
 │   └── index.ts                # ★ Registry for the /stocks/[ticker] route
+├── data/research/
+│   ├── *.json                  # One file per article — tickers, never numbers
+│   └── index.ts                # Registry for the /research routes
 ├── lib/
 │   ├── valuationScore.ts       # ★ All scoring formulas (single source of truth)
-│   └── stockSchema.ts          # Zod schema for stock JSON
+│   ├── stockSchema.ts          # Zod schema for stock JSON
+│   ├── researchSchema.ts       # Zod schema for research JSON
+│   └── researchMarkdown.ts     # Article → Markdown for the llms.txt mirror
 └── types/stockAnalysis.ts      # TypeScript types for stock data
-scripts/validate-stocks.ts      # Validates every JSON against the schema (prebuild)
+scripts/validate-stocks.ts      # Validates JSON + registry agreement (prebuild)
+scripts/validate-research.ts    # Validates articles + ticker references (prebuild)
 ```
 
 The four ★ files are where most changes happen. See [DATA-MODEL.md](./DATA-MODEL.md).
@@ -58,6 +67,9 @@ The four ★ files are where most changes happen. See [DATA-MODEL.md](./DATA-MOD
 | `/portfolio` | Static (client-hydrated) | Allocation, position weights, weighted scenario returns |
 | `/stocks` | Static (client-hydrated) | Coverage universe — search, category filter, column sort |
 | `/stocks/[ticker]` | SSG (`generateStaticParams`) | Full per-asset analysis |
+| `/research` | Static | Index of cross-cutting research articles |
+| `/research/[slug]` | SSG (`generateStaticParams`) | A research article — see [RESEARCH.md](./RESEARCH.md) |
+| `/llms.txt`, `/stocks/[ticker]/llms.txt`, `/research/[slug]/llms.txt` | Static | Markdown mirrors for LLM/agent consumption |
 | `/api/stock-price/[ticker]` | Dynamic (route handler) | Live price proxy to Yahoo Finance |
 | `/opengraph-image`, `/stocks/[ticker]/opengraph-image` | Edge (`next/og`) | Social share images |
 | `/sitemap.xml` | Static | Generated from the coverage registry |

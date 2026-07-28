@@ -16,9 +16,11 @@ import { DynamicValuationGauge } from '@/components/DynamicValuationGauge';
 import { ScenarioPriceBar } from '@/components/ScenarioPriceBar';
 import { stockData, getAverageScore } from '@/app/stockData';
 import { getStockData } from '@/data/stocks';
+import { getResearchForTicker } from '@/data/research';
 import { computeAssetMoatScore, computeGrowthScore } from '@/lib/valuationScore';
 import type { StockAnalysisData } from '@/types/stockAnalysis';
-import { TrendingUp, TrendingDown, Minus } from 'lucide-react';
+import Link from 'next/link';
+import { TrendingUp, TrendingDown, Minus, ArrowRight } from 'lucide-react';
 
 // ─── Lucide icon registry ────────────────────────────────────────────────────
 import {
@@ -198,6 +200,46 @@ function GridCardsSection({ section }: { section: NonNullable<StockAnalysisData[
             ))}
           </div>
         )}
+      </div>
+    </AnalysisSection>
+  );
+}
+
+/**
+ * Cross-cutting research that covers this ticker. Resolved from the research
+ * registry, so publishing an article automatically surfaces it on every stock
+ * page it references — no per-stock wiring.
+ */
+function ResearchSection({ ticker }: { ticker: string }) {
+  const articles = getResearchForTicker(ticker);
+  if (articles.length === 0) return null;
+
+  return (
+    <AnalysisSection title="Research Covering This Name">
+      <div className="space-y-3">
+        {articles.map((article) => (
+          <Link
+            key={article.slug}
+            href={`/research/${article.slug}`}
+            className="group block rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 hover:bg-white/[0.04] hover:border-white/12 transition-colors"
+          >
+            <div className="flex items-start justify-between gap-4">
+              <div className="min-w-0">
+                <h4 className="text-base font-bold text-white/85 group-hover:text-white transition-colors leading-snug">
+                  {article.title}
+                </h4>
+                <p className="text-sm text-white/45 leading-relaxed mt-1.5">{article.dek}</p>
+                <div className="text-[10px] uppercase tracking-widest text-white/25 mt-3">
+                  Reviewed {article.lastReviewed}
+                </div>
+              </div>
+              <ArrowRight
+                size={16}
+                className="shrink-0 mt-1 text-white/20 group-hover:text-[#e4c98a] transition-all group-hover:translate-x-0.5"
+              />
+            </div>
+          </Link>
+        ))}
       </div>
     </AnalysisSection>
   );
@@ -500,6 +542,9 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
           {section.type === 'production-timeline' && <ProductionTimelineSection section={section} />}
         </React.Fragment>
       ))}
+
+      {/* ── Cross-cutting research covering this name ── */}
+      <ResearchSection ticker={data.ticker} />
 
       {/* ── Desktop: Price scenarios ── */}
       <div className="hidden md:block">

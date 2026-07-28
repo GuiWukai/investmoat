@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { getAllSlugs, getStockData } from '@/data/stocks';
+import { getAllResearchArticles, parseArticleDate } from '@/data/research';
 
 const MONTHS: Record<string, number> = {
   january: 0, february: 1, march: 2, april: 3, may: 4, june: 5,
@@ -32,6 +33,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
+  const articles = getAllResearchArticles();
+  const researchPages: MetadataRoute.Sitemap = articles.map((article) => ({
+    url: `https://investmoat.com/research/${article.slug}`,
+    lastModified: parseArticleDate(article.lastReviewed) ?? now,
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  const latestResearchUpdate = researchPages.reduce<Date>((acc, p) => {
+    const d = p.lastModified instanceof Date ? p.lastModified : new Date(p.lastModified ?? now);
+    return d > acc ? d : acc;
+  }, new Date(0));
+
   const latestStockUpdate = stockPages.reduce<Date>((acc, p) => {
     const d = p.lastModified instanceof Date ? p.lastModified : new Date(p.lastModified ?? now);
     return d > acc ? d : acc;
@@ -56,6 +70,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily',
       priority: 0.9,
     },
+    ...(researchPages.length > 0
+      ? [
+          {
+            url: 'https://investmoat.com/research',
+            lastModified: latestResearchUpdate,
+            changeFrequency: 'weekly' as const,
+            priority: 0.8,
+          },
+        ]
+      : []),
+    ...researchPages,
     ...stockPages,
   ];
 }

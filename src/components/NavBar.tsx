@@ -3,13 +3,14 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
-import { Search, X, BarChart2, TrendingUp, Menu } from 'lucide-react';
+import { Search, X, BarChart2, TrendingUp, Menu, FileText } from 'lucide-react';
 import { allCoverageData } from '@/app/stockData';
 import { MoatMark } from '@/components/MoatMark';
 
 const navLinks = [
   { name: 'IM25', href: '/portfolio', icon: BarChart2 },
   { name: 'Stocks', href: '/stocks', icon: TrendingUp },
+  { name: 'Research', href: '/research', icon: FileText },
 ];
 
 type StockResult = { name: string; ticker: string; href: string };

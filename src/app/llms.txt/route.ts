@@ -1,5 +1,6 @@
 import { getAllSlugs, getStockData } from '@/data/stocks';
 import { computeStockScores } from '@/lib/stockMarkdown';
+import { getAllResearchArticles } from '@/data/research';
 
 const SITE_URL = 'https://investmoat.com';
 
@@ -30,6 +31,23 @@ function buildLlmsTxt(): string {
     .filter((row): row is string => row !== null)
     .sort();
 
+  const researchRows = getAllResearchArticles().map((article) => {
+    const summary = `${article.dek} Covers: ${article.tickers.join(', ')}. Reviewed ${article.lastReviewed}.`;
+    return `- [${article.title}](${SITE_URL}/research/${article.slug}/llms.txt): ${summary}`;
+  });
+
+  const researchSection = researchRows.length
+    ? `## Research
+
+Cross-cutting analysis that reads across the coverage universe rather than a
+single name. Every score cited inside an article is computed from the same
+stock data, so the articles cannot drift from the analyses they reference.
+
+${researchRows.join('\n')}
+
+`
+    : '';
+
   return `# InvestMoat
 
 > Open-source equity-research framework that scores stocks, crypto, and
@@ -53,9 +71,10 @@ analysis below links to a clean Markdown mirror (append \`/llms.txt\` to any
 
 - [Portfolio overview](${SITE_URL}/portfolio): the concentrated, score-selected portfolio.
 - [All analyses](${SITE_URL}/stocks): the full ranked universe.
+- [Research](${SITE_URL}/research): cross-cutting analysis across the universe.
 - [Sitemap](${SITE_URL}/sitemap.xml)
 
-## Analyses
+${researchSection}## Analyses
 
 ${rows.join('\n')}
 

@@ -126,6 +126,8 @@ import ionq from './ionq.json';
 import rgti from './rgti.json';
 import qbts from './qbts.json';
 import qubt from './qubt.json';
+import disney from './disney.json';
+import okta from './okta.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -254,6 +256,8 @@ const stocksMap: Record<string, StockAnalysisData> = {
   rgti: rgti as StockAnalysisData,
   qbts: qbts as StockAnalysisData,
   qubt: qubt as StockAnalysisData,
+  disney: disney as StockAnalysisData,
+  okta: okta as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
