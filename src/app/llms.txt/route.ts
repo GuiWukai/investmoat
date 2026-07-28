@@ -62,7 +62,7 @@ analysis below links to a clean Markdown mirror (append \`/llms.txt\` to any
 
 ## Methodology
 
-- Composite = geometric blend of Moat^0.40 × Growth^0.30 × Valuation^0.30, scaled to 0–100.
+- Composite = geometric blend of Moat 0.40 · Growth 0.30 · Valuation 0.30, each pillar standardised against the coverage universe before weighting so the declared weights govern actual influence, then scaled to 0–100.
 - Recommendation bands: Strong Buy ≥ 82, Accumulate ≥ 75, Hold ≥ 68, Speculative Buy ≥ 60, otherwise Avoid.
 - Moat scoring is asset-class aware: equities use a 10-moat business framework, crypto a 5-pillar monetary framework, commodities a 3-pillar framework. Scores are NOT comparable across asset classes.
 - Live prices are fetched from Yahoo Finance; if unavailable, valuation falls back to the static estimate.

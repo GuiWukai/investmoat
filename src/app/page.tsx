@@ -41,15 +41,15 @@ const FAQS = [
   },
   {
     q: "Why not just buy the Magnificent 7?",
-    a: "The Mag-7 are not equally moat-durable. We own Microsoft, Amazon, NVIDIA, and Alphabet — the four with the strongest AI-resilient moats from that group. Apple faces AI-era commoditisation risk as on-device intelligence shifts value to model providers. Meta has strong network effects but severe regulatory drag and no system-of-record moat. Tesla is an automotive manufacturer with execution dependency, not a compounding software business.",
+    a: "The Mag-7 are not equally moat-durable, and the framework doesn't treat them as a bloc. Microsoft, Amazon, Meta, and NVIDIA all clear the inclusion threshold and are held. Alphabet is the near miss — a composite of 79.9 against an 80-point threshold, ranked 27th — so it sits in coverage rather than the portfolio. Apple scores 72: its moat is genuinely strong at 89, but a valuation score of 61 says the price already reflects that, and on-device intelligence shifts value toward model providers. Tesla scores 71 — an automotive manufacturer with execution dependency, not a compounding software business.",
   },
   {
     q: "Why is there crypto in the portfolio?",
-    a: "Bitcoin, Ethereum, and Solana are scored on the same 10-moat framework as equities. Bitcoin scores on regulatory lock-in (Basel III Tier 1 recognition, spot ETF approval across 22+ jurisdictions), network effects (deepest liquidity in digital assets), and system-of-record status (immutable settlement layer). These are not speculative positions — they are network-effect assets evaluated the same rigorous way we evaluate Visa or Mastercard.",
+    a: "Bitcoin and Ethereum are both top-10 holdings, but they are deliberately not scored on the equity moat framework — a monetary protocol's durability doesn't come from the same places a business's does. Crypto is scored on five protocol pillars: network effects, Schelling-point status, credible neutrality, regulatory incumbency, and security budget. Each protocol declares which pillar is its actual moat and that one carries 50% of the score, so Bitcoin scores on credible neutrality and Ethereum on network effects rather than being averaged through pillars that don't define them. Growth and valuation are scored exactly as they are for any other asset. Moat scores are not comparable across asset classes: Bitcoin's 96 measures protocol durability, which is not the same thing as an equity moat of 96.",
   },
   {
     q: "Why no gold?",
-    a: "Gold is fully analyzed and scores 62/100 — below the 75-point portfolio minimum. The constraint is its growth score of 50: gold produces no earnings, revenue, or cash flow and cannot compound. Bitcoin fulfills the same hard-money and inflation-hedge thesis with additional network effects, digital divisibility, and a stronger growth trajectory. Gold stays in our coverage universe and earns a portfolio position the moment its composite score clears 75.",
+    a: "Gold is fully analyzed and scores a composite of 75 — respectable, but 59th in the universe and short of the 80-point inclusion threshold. Commodities are scored on three pillars — absolute scarcity, monetary history, industrial utility — with the declared primary pillar carrying 50%, so gold scores on its monetary history rather than being dragged down by thin industrial demand. Its moat comes out at 75. What keeps it out is growth of 71: gold produces no earnings, revenue, or cash flow and cannot compound. Bitcoin carries the same hard-money and inflation-hedge thesis with network effects, digital divisibility, and a stronger growth trajectory, and scores 91. Gold stays in the coverage universe and earns a position the moment its composite clears the threshold and outranks the weakest holding.",
   },
   {
     q: "Why only 25 positions?",
@@ -57,7 +57,7 @@ const FAQS = [
   },
   {
     q: "How is each stock scored?",
-    a: "Three pillars, each scored 0-100. Moat (40%): fully computed from 10 individually-weighted moat types — each rated strong/intact/weakened/destroyed mapping to 100/75/50/10 points. Resilient moats (networkEffects w=15, proprietaryData w=15, systemOfRecord w=12, regulatoryLockIn w=10, transactionEmbedding w=8) total 60% of the moat score; vulnerable moats (businessLogic w=14, bundling w=10, learnedInterfaces w=8, talentScarcity w=5, publicDataAccess w=3) total 40%. A breadth bonus of +1 to +4 rewards moat diversification. Growth (35%): estimated 3-5 year revenue CAGR with named adjustments for margin trend, TAM expansion, and driver acceleration. Valuation (25%): live price vs. bear/base/bull scenario targets on a piecewise scale. Composite = Moat×40% + Growth×35% + Valuation×25%. Stocks scoring ≥75 are portfolio-eligible; the top 25 are included.",
+    a: "Three pillars, each scored 0-100, all computed from a structured data file — there are no hand-typed ratings. Moat (40%): for equities, 10 individually-weighted moat types, each rated strong/intact/weakened/destroyed mapping to 100/65/35/0 points, so a moat score of 0 means all ten applicable moats are destroyed and 100 means all ten are strong. AI-resilient moats (networkEffects w=15, proprietaryData w=12, systemOfRecord w=12, regulatoryLockIn w=11, transactionEmbedding w=10) carry 60% of the weight; AI-vulnerable moats (businessLogic w=14, bundling w=10, learnedInterfaces w=8, talentScarcity w=5, publicDataAccess w=3) carry 40%. A quality-gated breadth bonus of +1 to +4 rewards moats rated intact-or-better beyond the fifth, and a -5 discount applies where the vulnerable group outscores the resilient one. Crypto and commodities use their own pillar frameworks. Growth (30%): a blended 3-5 year revenue CAGR sets the base, adjusted for driver trajectory (±4), margin trend (±4), growth type (up to +4), and key-risk severity (down to -15). Valuation (30%): live price against bear/base/bull scenario targets on a piecewise scale — 100 points at 20% below the bear case, 90 at bear, 65 at base, 45 at bull, and 0 at double the bull case. The composite is a geometric blend, so a weak pillar genuinely drags the score rather than being averaged away. Each pillar is standardised against the coverage universe before weighting, so the declared 40/30/30 governs actual influence instead of whichever rubric happens to vary most. A composite of ≥80 makes an asset portfolio-eligible; the top 25 are held.",
   },
   {
     q: "What makes a moat 'AI-resilient'?",
@@ -115,7 +115,7 @@ export default function HomePage() {
           </h1>
 
           <p className="text-white/50 text-base md:text-lg max-w-xl leading-relaxed mb-10">
-            A high-conviction portfolio of 25 businesses, each underwritten on moat durability,
+            A high-conviction portfolio of 25 positions, each underwritten on moat durability,
             growth trajectory, and live valuation. Disciplined, transparent, and built to
             compound through the AI era.
           </p>
@@ -143,7 +143,7 @@ export default function HomePage() {
         >
           {[
             { value: "25", label: "Conviction Holdings" },
-            { value: "60+", label: "Under Coverage" },
+            { value: "128", label: "Under Coverage" },
             { value: "≥ 80", label: "Inclusion Threshold" },
             { value: "10%", label: "Max Position Weight" },
           ].map(({ value, label }, i) => (
@@ -190,7 +190,7 @@ export default function HomePage() {
               iconBg: 'bg-blue-500/10',
               border: 'border-blue-500/[0.12]',
               title: 'AI Rewrites the Playbook',
-              text: 'Most competitive advantages are AI-vulnerable. We weight proprietary data, regulatory lock-in, and network effects 60% more heavily — the moats AI cannot replicate or destroy.',
+              text: 'Most competitive advantages are AI-vulnerable. Network effects, proprietary data, and regulatory lock-in carry 60% of the moat score — the advantages AI cannot replicate or destroy.',
             },
             {
               num: '03',
@@ -199,7 +199,7 @@ export default function HomePage() {
               iconBg: 'bg-emerald-500/10',
               border: 'border-emerald-500/[0.12]',
               title: 'Concentration Beats Diversification',
-              text: 'Owning 500 companies means funding mediocrity at scale. 25 high-conviction positions, each earning its place by scoring ≥75/100, concentrate capital where it compounds fastest.',
+              text: 'Owning 500 companies means funding mediocrity at scale. 25 high-conviction positions, each earning its place by scoring ≥80/100, concentrate capital where it compounds fastest.',
             },
           ].map(({ num, icon, accent, iconBg, border, title, text }) => (
             <div
@@ -245,15 +245,15 @@ export default function HomePage() {
             </div>
             <div>
               <p className="text-white/35 text-xs leading-relaxed mb-3">
-                10 weighted moat types. Resilient moats 60%, vulnerable 40%. Breadth bonus up to +4 pts.
+                10 weighted moat types. Resilient moats 60%, vulnerable 40%. Quality-gated breadth bonus up to +4 pts.
               </p>
               <div className="space-y-2">
                 {[
                   { label: "Network Effects", w: 15 },
-                  { label: "Proprietary Data", w: 15 },
+                  { label: "Proprietary Data", w: 12 },
                   { label: "System of Record", w: 12 },
-                  { label: "Regulatory Lock-in", w: 10 },
-                  { label: "Transaction Embedding", w: 8 },
+                  { label: "Regulatory Lock-in", w: 11 },
+                  { label: "Transaction Embedding", w: 10 },
                 ].map(({ label, w }) => (
                   <div key={label} className="flex items-center justify-between gap-2">
                     <div className="flex items-center gap-2">
@@ -274,22 +274,22 @@ export default function HomePage() {
                 <TrendingUp size={17} className="text-emerald-400" />
                 <span className="font-bold text-sm text-white/85">Growth Trajectory</span>
               </div>
-              <span className="text-2xl font-black text-emerald-400 leading-none">35%</span>
+              <span className="text-2xl font-black text-emerald-400 leading-none">30%</span>
             </div>
             <div className="h-[3px] bg-white/[0.04] rounded-full overflow-hidden">
-              <div className="h-full w-[35%] bg-emerald-500 rounded-full" />
+              <div className="h-full w-[30%] bg-emerald-500 rounded-full" />
             </div>
             <div>
               <p className="text-white/35 text-xs leading-relaxed mb-3">
-                Estimated 3-5 year revenue CAGR with named adjustments:
+                Blended 3-5 year revenue CAGR with named adjustments:
               </p>
               <div className="space-y-2">
                 {[
                   "≥30% CAGR → 90 base points",
                   "15-30% CAGR → 80 base points",
                   "8-15% CAGR → 70 base points",
-                  "+5-10 pts for NRR > 110%",
-                  "-5-10 pts for cyclicality",
+                  "±4 pts driver trajectory & margin trend",
+                  "0 to -15 pts for key-risk severity",
                 ].map(m => (
                   <div key={m} className="flex items-center gap-2">
                     <div className="w-1 h-1 rounded-full bg-emerald-400/50 shrink-0" />
@@ -307,10 +307,10 @@ export default function HomePage() {
                 <BarChart3 size={17} className="text-amber-400" />
                 <span className="font-bold text-sm text-white/85">Live Valuation</span>
               </div>
-              <span className="text-2xl font-black text-amber-400 leading-none">25%</span>
+              <span className="text-2xl font-black text-amber-400 leading-none">30%</span>
             </div>
             <div className="h-[3px] bg-white/[0.04] rounded-full overflow-hidden">
-              <div className="h-full w-[25%] bg-amber-500 rounded-full" />
+              <div className="h-full w-[30%] bg-amber-500 rounded-full" />
             </div>
             <div>
               <p className="text-white/35 text-xs leading-relaxed mb-3">
@@ -321,8 +321,8 @@ export default function HomePage() {
                   "At Bear target → 90 pts",
                   "At Base (fair value) → 65 pts",
                   "At Bull target → 45 pts",
-                  "Live price per stock",
-                  "Scenarios refreshed quarterly",
+                  "100 pts at 0.8x bear, 0 pts at 2x bull",
+                  "Live price per stock, scenarios refreshed quarterly",
                 ].map(m => (
                   <div key={m} className="flex items-center gap-2">
                     <div className="w-1 h-1 rounded-full bg-amber-400/50 shrink-0" />
@@ -343,7 +343,8 @@ export default function HomePage() {
                 { range: "≥ 82", label: "Strong Buy", dot: "bg-emerald-400" },
                 { range: "75 – 81", label: "Accumulate", dot: "bg-blue-400" },
                 { range: "68 – 74", label: "Hold", dot: "bg-amber-400" },
-                { range: "< 68", label: "Excluded", dot: "bg-red-400" },
+                { range: "60 – 67", label: "Speculative Buy", dot: "bg-orange-400" },
+                { range: "< 60", label: "Avoid", dot: "bg-red-400" },
               ].map(({ range, label, dot }) => (
                 <div key={label} className="flex items-center gap-2">
                   <div className={`w-1.5 h-1.5 rounded-full ${dot}`} />
@@ -353,6 +354,13 @@ export default function HomePage() {
               ))}
             </div>
           </div>
+          <p className="text-white/25 text-xs leading-relaxed mt-4 pt-4 border-t border-white/[0.04]">
+            The bands rate an asset on its own merits; portfolio inclusion is separate and stricter.
+            Each pillar is standardised against the coverage universe before weighting, so a 1-sd move
+            in any pillar shifts the composite in proportion to its stated weight. A composite of{" "}
+            <span className="text-white/45 font-medium">≥ 80</span> makes an asset eligible, and the
+            top 25 by composite are held.
+          </p>
         </div>
       </section>
 
@@ -369,7 +377,9 @@ export default function HomePage() {
             AI cannot replicate them; five are{" "}
             <span className="text-amber-400 font-semibold">AI-vulnerable</span> (40%) because intelligent
             agents can increasingly substitute for them. Each moat is rated{" "}
-            <span className="text-white/60 font-medium">strong (100) · intact (75) · weakened (50) · destroyed (10)</span>.
+            <span className="text-white/60 font-medium">strong (100) · intact (65) · weakened (35) · destroyed (0)</span>.
+            Individual moats can be reclassified per company where AI strengthens rather than erodes them —
+            NVIDIA&apos;s CUDA, Palantir&apos;s ontology.
           </p>
         </div>
 
@@ -380,7 +390,7 @@ export default function HomePage() {
               <Zap size={13} className="text-blue-400" />
               <span className="text-blue-400 text-[11px] font-bold uppercase tracking-wider">AI-Resilient Moats</span>
             </div>
-            <span className="text-white/20 text-xs">60% of moat score · weights: 15 / 15 / 12 / 10 / 8</span>
+            <span className="text-white/20 text-xs">60% of moat score · weights: 15 / 12 / 12 / 11 / 10</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -397,7 +407,7 @@ export default function HomePage() {
               {
                 icon: <Database size={17} className="text-blue-400" />,
                 name: "Proprietary Data",
-                weight: 15,
+                weight: 12,
                 tagline: "Private, compounding data flywheels",
                 description:
                   "Data that accumulates privately over time and cannot be purchased or replicated. The longer the company operates, the harder it becomes to catch up. Think HealthKit biometrics, Palantir's classified datasets, or Visa's transaction graph.",
@@ -415,7 +425,7 @@ export default function HomePage() {
               {
                 icon: <Lock size={17} className="text-blue-400" />,
                 name: "Regulatory Lock-In",
-                weight: 10,
+                weight: 11,
                 tagline: "Government licences, certifications & mandates",
                 description:
                   "Advantages granted by law: FDA approvals, financial licences, index inclusion, spectrum rights. These cannot be automated away; the certification process itself is the moat.",
@@ -424,7 +434,7 @@ export default function HomePage() {
               {
                 icon: <CreditCard size={17} className="text-blue-400" />,
                 name: "Transaction Embedding",
-                weight: 8,
+                weight: 10,
                 tagline: "Sitting inside the payment layer",
                 description:
                   "The business is embedded directly in the financial flow of every transaction. Removing it requires rebuilding critical infrastructure — not just switching a preference.",
@@ -550,10 +560,12 @@ export default function HomePage() {
             </div>
             <p className="text-white/30 text-xs leading-relaxed">
               Each moat is rated{" "}
-              <span className="text-white/50 font-medium">strong (100) · intact (75) · weakened (50) · destroyed (10)</span>.
-              N/A moats are excluded and weight redistributed within the group. A{" "}
-              <span className="text-white/50 font-medium">breadth bonus of +1 to +4</span> rewards businesses
-              with more applicable moats, producing the{" "}
+              <span className="text-white/50 font-medium">strong (100) · intact (65) · weakened (35) · destroyed (0)</span>.
+              N/A moats are excluded and their weight redistributed. A{" "}
+              <span className="text-white/50 font-medium">quality-gated breadth bonus of +1 to +4</span> rewards
+              each moat rated intact-or-better beyond the fifth — broad mediocrity earns nothing — and a{" "}
+              <span className="text-white/50 font-medium">-5 discount</span> applies where the AI-vulnerable
+              group outscores the resilient one. That produces the{" "}
               <span className="text-blue-400 font-semibold">Moat Score (40% of composite)</span>.
             </p>
           </div>
@@ -592,7 +604,7 @@ export default function HomePage() {
               View the IM25
             </h3>
             <p className="text-white/45 max-w-md mx-auto text-sm leading-relaxed mb-8">
-              Explore the current 25-stock allocation, browse all 60+ analyzed assets,
+              Explore the current 25-position allocation, browse all 128 analyzed assets,
               or dive into individual company reports with moat scores, scenarios, and live valuations.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
