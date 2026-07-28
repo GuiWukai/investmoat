@@ -8,13 +8,19 @@ import type {
   TenMoatsData,
 } from '@/types/stockAnalysis';
 
-// Status → point scale. Tightened so "intact" requires demonstrable presence
-// rather than just box-checking: the gap between strong (100) and intact (65)
-// is 35 pts, and weakened (35) genuinely penalises rather than half-credits.
-// A company rated all-intact across a full moat slate now scores ~67 (vs ~79
-// under the previous 100/75/50/10 scale) — below the 75 portfolio threshold,
-// forcing real demonstrated strength to qualify.
-const MOAT_POINTS: Record<string, number> = { strong: 100, intact: 65, weakened: 35, destroyed: 10 };
+// Status → point scale. "intact" requires demonstrable presence rather than
+// just box-checking: the gap between strong (100) and intact (65) is 35 pts,
+// and weakened (35) genuinely penalises rather than half-credits. A company
+// rated all-intact across a full moat slate scores ~69 — below the portfolio
+// threshold, forcing real demonstrated strength to qualify.
+//
+// `destroyed` is 0, not a token 10, so the ends of the scale mean something
+// literal: a moat score of 0 says all ten applicable moats are destroyed, and
+// 100 says all ten are strong. This also sharpens the distinction from N/A —
+// an N/A moat is dropped and its weight redistributed (the moat never applied),
+// whereas a destroyed moat keeps its weight and scores nothing (it applied and
+// is gone). Under the old floor those two cases were only 10 points apart.
+const MOAT_POINTS: Record<string, number> = { strong: 100, intact: 65, weakened: 35, destroyed: 0 };
 
 /** Returns null for N/A moats (excluded from group average), number otherwise. */
 function moatPoints(m: { status: string; note: string }): number | null {
@@ -275,14 +281,21 @@ export function parseCagrEstimate(s: string): number | null {
   return Number.isFinite(num) ? num : null;
 }
 
-/** Piecewise CAGR → base score, calibrated to the existing rubric. */
+/**
+ * Piecewise CAGR → base score.
+ *
+ * Below zero the curve keeps descending to 0 at −20% CAGR (revenue roughly
+ * halving across the forecast window) rather than resting on a flat floor, so
+ * the bottom of the growth scale is a reachable statement about the business
+ * instead of an arbitrary stop.
+ */
 function baseFromCagr(cagr: number): number {
   if (cagr >= 30) return Math.min(95, 90 + (cagr - 30) * 0.25);
   if (cagr >= 15) return 80 + ((cagr - 15) / 15) * 10;
   if (cagr >= 8)  return 70 + ((cagr - 8) / 7) * 10;
   if (cagr >= 4)  return 60 + ((cagr - 4) / 4) * 10;
   if (cagr >= 0)  return 40 + (cagr / 4) * 20;
-  return 30;
+  return Math.max(0, 40 + cagr * 2);
 }
 
 /**
@@ -327,11 +340,18 @@ export function computeGrowthScore(g: GrowthAnalysisInput): number | null {
  * Compute a 0–100 valuation score from a live price vs. bear/base/bull targets.
  *
  * Anchor points (piecewise linear between them):
- *   price ≤ 0.8 × bear  → 100   (deeply below bear case)
+ *   price ≤ 0.8 × bear  → 100   (20% below the bear case)
  *   price = bear         →  90
  *   price = base         →  65
  *   price = bull         →  45
- *   price ≥ 1.2 × bull  →  20   (well above bull case)
+ *   price = 1.2 × bull   →  20
+ *   price ≥ 2.0 × bull  →   0   (double the bull case)
+ *
+ * The curve descends all the way to 0 rather than resting at 20, so both ends
+ * of the scale are reachable and mean something specific about the price. It
+ * still saturates — every price at or beyond 2× bull scores 0, just as every
+ * price at or below 0.8× bear scores 100 — but the dead zone now begins where
+ * further overvaluation genuinely stops carrying information.
  */
 export function computeValuationScore(
   price: number,
@@ -361,7 +381,12 @@ export function computeValuationScore(
     return Math.round(45 - t * 25); // 45 → 20
   }
 
-  return 20;
+  if (price <= 2.0 * bull) {
+    const t = (price - 1.2 * bull) / (0.8 * bull);
+    return Math.round(20 - t * 20); // 20 → 0
+  }
+
+  return 0;
 }
 
 /** Parse a price string like "$1,200", "€950.80", "~$2,900/oz" into a number. */
@@ -452,7 +477,7 @@ export const COMPOSITE_WEIGHTS: Record<PillarKey, number> = {
  * Derived from 128 assets, July 2026.
  */
 export const PILLAR_CALIBRATION: Record<PillarKey, PillarCalibration> = {
-  moat:       { logMean: -0.3697, logSd: 0.2657 },
+  moat:       { logMean: -0.3726, logSd: 0.2762 },
   growth:     { logMean: -0.2578, logSd: 0.1553 },
   valuation:  { logMean: -0.3541, logSd: 0.1444 },
 };
@@ -472,7 +497,7 @@ export const PILLAR_CALIBRATION: Record<PillarKey, PillarCalibration> = {
 export const COMPOSITE_CALIBRATION = {
   logMean: -0.3315,
   logSd: 0.1333,
-  blendedZSd: 0.6281,
+  blendedZSd: 0.6259,
 };
 
 /**

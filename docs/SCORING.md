@@ -23,7 +23,9 @@ Each moat/pillar is rated and converted to points:
 | `strong` | 100 |
 | `intact` | 65 |
 | `weakened` | 35 |
-| `destroyed` | 10 |
+| `destroyed` | 0 |
+
+`destroyed` scores 0 rather than a token floor, so both ends of the moat scale are literal: **0 means all ten applicable moats are destroyed, 100 means all ten are strong.** This also sharpens the distinction from N/A — an N/A moat is dropped entirely and its weight redistributes (the moat never applied), whereas a destroyed moat keeps its weight and scores nothing (it applied and is gone).
 
 A moat marked `destroyed` whose note starts with `N/A` / `Not applicable` is **excluded** from the score and its weight redistributes.
 
@@ -82,7 +84,10 @@ growth = baseCAGR(cagrEstimate)   // piecewise, see below
 | 8–15% | 70 → 80 |
 | 4–8% | 60 → 70 |
 | 0–4% | 40 → 60 |
-| < 0% | 30 |
+| −20–0% | 0 → 40 |
+| ≤ −20% | 0 |
+
+Below zero the curve keeps descending to 0 at −20% CAGR — revenue roughly halving across the forecast window — rather than resting on a flat floor, so the bottom of the growth scale is a reachable statement about the business.
 
 ---
 
@@ -96,9 +101,10 @@ growth = baseCAGR(cagrEstimate)   // piecewise, see below
 | = bear | 90 |
 | = base | 65 |
 | = bull | 45 |
-| ≥ 1.2 × bull | 20 |
+| = 1.2 × bull | 20 |
+| ≥ 2.0 × bull | 0 |
 
-Cheaper than bear → richly scored; above bull → penalised. Before a live price loads (or if the fetch fails), the static `valuation.score` authored in the JSON is used instead.
+Cheaper than bear → richly scored; above bull → penalised. Both ends are reachable and specific: **100 means the price is 20% below the bear case, 0 means it is double the bull case.** The curve still saturates beyond those points — further overvaluation past 2× bull carries no extra information — but the dead zone now starts where it genuinely stops discriminating rather than at an arbitrary floor of 20. Before a live price loads (or if the fetch fails), the static `valuation.score` authored in the JSON is used instead.
 
 ---
 
@@ -132,7 +138,19 @@ After standardisation a 1-sd move in any pillar shifts the composite in exact pr
 
 The final `logMean` / `logSd` reproduce the location and spread the un-standardised formula produced over the same universe, so **the recommendation bands and the portfolio threshold keep the meaning they were tuned for**. Standardisation redistributes where dispersion comes from without inflating or shrinking it.
 
-What this does *not* do: it corrects the weighting, but it cannot manufacture resolution a rubric doesn't have. The valuation curve still saturates (100 below `0.8 × bear`, 20 above `1.2 × bull`), so names beyond the bull case remain indistinguishable from one another — they are now merely penalised as much as a 30%-weight pillar should penalise them. In practice a business with a perfect moat and perfect growth trading 20%+ above its own bull case scores 52 (*Avoid*), where the un-standardised formula gave it 62 (*Speculative Buy*).
+What this does *not* do: it corrects the weighting, but it cannot manufacture resolution a rubric doesn't have. Each pillar still saturates at its endpoints, so assets past `2.0 × bull` (or below `0.8 × bear`) remain indistinguishable from one another — they are now merely penalised as much as a 30%-weight pillar should penalise them.
+
+Worked examples of where the ends of the scale land:
+
+| Case | Composite |
+|---|---|
+| Perfect moat and growth, 20% above its own bull case | 51 (*Avoid*) |
+| Perfect moat and growth, at double its bull case | 14 (*Avoid*) |
+| Perfect moat and growth, priced at the bull case | 72 (*Hold*) |
+| Mediocre business (70/70) at a deep discount | 81 (*Accumulate*) |
+| All ten moats destroyed, strong growth and price | 21 (*Avoid*) |
+
+Under the un-standardised formula the first of those scored 62 — a *Speculative Buy* for a business trading past its own bull case.
 
 ### Calibration constants
 
