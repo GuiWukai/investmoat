@@ -68,6 +68,29 @@ Wired into `prebuild`, so a malformed article fails the build. Beyond the Zod sc
 
 That ticker check is the important one. An article citing a ticker the site doesn't cover would render a blank row and a dead link — precisely the silent rot the live-scores design exists to prevent.
 
+### The prose lint
+
+Structure is only half the problem. The rule at the top of this page — *never hard-code a score, a moat status, or a price* — is an editorial rule the schema cannot see, so [`scripts/researchProseLint.ts`](../scripts/researchProseLint.ts) reads the article's text and grades what it finds:
+
+| Grade | Meaning | Build |
+|---|---|---|
+| `error` | A framework output transcribed into text, or a static number where a live lookup belongs — `"NOW scores 83"`, a `"Strong Buy"` label, a `stat-strip` stat labelled *Composite* carrying a static `value`. | Fails |
+| `warning` | A scenario price target written into prose. It moves on the next review of that stock; the sentence won't. | Passes |
+| `note` | A moat status named in prose. Not a defect — a cross-read argument has to interpret the matrix — but it is the list to re-verify when `lastReviewed` is bumped. | Passes |
+
+Company-reported figures (revenue, ACV, NRR, guidance) are never flagged. They aren't framework outputs, and the `table` block's mandatory `asOf` is what keeps them honest.
+
+## Authoring skills
+
+Two Claude Code skills in [`.claude/skills/`](../.claude/skills) carry this document's rules into the editor, and load automatically when an article is being written or reviewed:
+
+| Skill | Covers |
+|---|---|
+| `write-research` | Thesis tests, cohort selection, the block plan and article arc, the JSON shape, registration, validation. Its `references/block-playbook.md` is the per-block guide. |
+| `research-style` | The "tickers, never numbers" invariant, what belongs in prose vs. a live block, how to fix each lint grade, and the house voice. |
+
+Stock authoring has the equivalent slash commands in [`.claude/commands/`](../.claude/commands): `/add-stock`, `/analyse-stock`, `/update-stock`.
+
 ## Agent surfaces
 
 Research is wired into the same agent-readability layer as the stock pages:
