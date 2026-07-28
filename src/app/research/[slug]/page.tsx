@@ -1,8 +1,13 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getResearchArticle, getAllResearchSlugs, parseArticleDate } from '@/data/research';
-import ResearchArticleView from '@/components/ResearchArticle';
+import {
+  getResearchArticle,
+  getAllResearchArticles,
+  getAllResearchSlugs,
+  parseArticleDate,
+} from '@/data/research';
+import ResearchArticleView, { type RelatedArticle } from '@/components/ResearchArticle';
 
 const SITE_URL = 'https://investmoat.com';
 
@@ -49,6 +54,34 @@ export async function generateMetadata({
   };
 }
 
+/**
+ * Up to two sibling pieces for the end-of-article rail, ranked by shared
+ * tickers then shared tags — a reader who finished this argument is most
+ * likely to want the next one about the same names.
+ */
+function relatedArticles(slug: string): RelatedArticle[] {
+  const current = getResearchArticle(slug);
+  if (!current) return [];
+
+  return getAllResearchArticles()
+    .filter((a) => a.slug !== slug)
+    .map((a) => ({
+      article: a,
+      overlap:
+        a.tickers.filter((t) => current.tickers.includes(t)).length * 2 +
+        a.tags.filter((t) => current.tags.includes(t)).length,
+    }))
+    .sort((a, b) => b.overlap - a.overlap)
+    .slice(0, 2)
+    .map(({ article }) => ({
+      slug: article.slug,
+      title: article.title,
+      dek: article.dek,
+      tags: article.tags,
+      published: article.published,
+    }));
+}
+
 export default async function ResearchArticlePage({
   params,
 }: {
@@ -93,7 +126,7 @@ export default async function ResearchArticlePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
-      <ResearchArticleView article={article} />
+      <ResearchArticleView article={article} related={relatedArticles(slug)} />
     </>
   );
 }

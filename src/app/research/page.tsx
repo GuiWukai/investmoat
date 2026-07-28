@@ -1,8 +1,9 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 import { getAllResearchArticles } from '@/data/research';
+import { readingMinutes } from '@/lib/researchMeta';
+import ResearchIndexList, { type ResearchSummary } from '@/components/ResearchIndexList';
 
 const SITE_URL = 'https://investmoat.com';
 
@@ -29,86 +30,101 @@ export const metadata: Metadata = {
 };
 
 export default function ResearchIndexPage() {
-  const articles = getAllResearchArticles();
+  // Reading time is derived from the blocks, so the card can promise a length
+  // without an author having to keep a number in sync.
+  const articles: ResearchSummary[] = getAllResearchArticles().map((a) => ({
+    slug: a.slug,
+    title: a.title,
+    dek: a.dek,
+    tags: a.tags,
+    tickers: a.tickers,
+    published: a.published,
+    lastReviewed: a.lastReviewed,
+    minutes: readingMinutes(a),
+  }));
+
+  const names = new Set(articles.flatMap((a) => a.tickers));
 
   return (
-    <div className="max-w-4xl mx-auto px-5 sm:px-6 py-10 md:py-16">
+    <div className="max-w-4xl mx-auto px-5 sm:px-6 py-8 md:py-16">
       <header>
         <div className="section-label mb-3">Research</div>
-        <h1 className="text-3xl md:text-5xl font-bold leading-[1.1] gradient-text">
+        <h1 className="text-[32px] md:text-5xl font-bold leading-[1.1] gradient-text">
           Cross-cutting analysis
         </h1>
-        <p className="mt-5 text-base md:text-lg text-white/45 leading-relaxed max-w-2xl">
+        <p className="research-prose mt-5 text-[17px] md:text-lg text-white/55 leading-relaxed max-w-2xl">
           The stock pages underwrite one name at a time. These pieces read across the
           universe — cohorts, category-wide narratives, and the places where the market&apos;s
           story and the framework&apos;s scores disagree. Every score cited is computed live
           from the same data, so nothing here goes stale quietly.
         </p>
+
+        {articles.length > 0 && (
+          <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[11px] uppercase tracking-widest text-white/30">
+            <span>
+              {articles.length} {articles.length === 1 ? 'piece' : 'pieces'} published
+            </span>
+            <span className="text-white/10">·</span>
+            <span>{names.size} names covered</span>
+            <span className="text-white/10">·</span>
+            <span>Scores recomputed live</span>
+          </div>
+        )}
       </header>
 
       <div className="fund-rule my-9" />
 
       {articles.length === 0 ? (
-        <p className="text-white/30 text-sm">No research published yet.</p>
+        <div className="rounded-2xl border border-white/[0.07] bg-white/[0.02] p-8 text-center">
+          <p className="text-white/45 text-sm">No research published yet.</p>
+          <p className="text-white/25 text-xs mt-1.5">
+            Cross-cutting pieces land here as the coverage universe grows.
+          </p>
+        </div>
       ) : (
-        <div className="space-y-4">
-          {articles.map((article) => (
-            <Link
-              key={article.slug}
-              href={`/research/${article.slug}`}
-              className="group block rounded-2xl border border-white/[0.07] bg-white/[0.02] p-5 md:p-7 hover:bg-white/[0.04] hover:border-white/15 transition-colors"
+        <ResearchIndexList articles={articles} />
+      )}
+
+      {/* How to read these pieces — the promises that make them different from
+          a blog post, stated once here instead of in every article. */}
+      <section className="mt-12">
+        <div className="section-label mb-4">How this research works</div>
+        <div className="grid gap-3 sm:grid-cols-3">
+          {METHOD_NOTES.map((note) => (
+            <div
+              key={note.title}
+              className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5"
             >
-              <div className="flex flex-wrap items-center gap-2 mb-3">
-                {article.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded bg-[#c9a96a]/10 text-[#c9a96a] border border-[#c9a96a]/20"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
-              <h2 className="text-xl md:text-2xl font-bold text-white/90 group-hover:text-white transition-colors leading-snug">
-                {article.title}
-              </h2>
-
-              <p className="mt-2.5 text-[15px] text-white/45 leading-relaxed">{article.dek}</p>
-
-              <div className="mt-4 flex flex-wrap items-center gap-1.5">
-                {article.tickers.slice(0, 8).map((ticker) => (
-                  <span
-                    key={ticker}
-                    className="text-[10px] font-black tracking-wider text-white/40 px-1.5 py-0.5 rounded bg-white/[0.04] border border-white/[0.06]"
-                  >
-                    {ticker}
-                  </span>
-                ))}
-                {article.tickers.length > 8 && (
-                  <span className="text-[10px] text-white/25">
-                    +{article.tickers.length - 8} more
-                  </span>
-                )}
-              </div>
-
-              <div className="mt-5 flex items-center justify-between gap-4">
-                <span className="text-[11px] uppercase tracking-widest text-white/25">
-                  {article.published}
-                  <span className="text-white/10 mx-2">·</span>
-                  Reviewed {article.lastReviewed}
-                </span>
-                <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-white/30 group-hover:text-[#e4c98a] transition-colors">
-                  Read
-                  <ArrowRight
-                    size={13}
-                    className="transition-transform group-hover:translate-x-0.5"
-                  />
-                </span>
-              </div>
-            </Link>
+              <h3 className="text-[13px] font-bold text-white/80 tracking-wide">{note.title}</h3>
+              <p className="mt-2 text-[13px] text-white/40 leading-relaxed">{note.body}</p>
+            </div>
           ))}
         </div>
-      )}
+        <p className="mt-5 text-xs text-white/30 leading-relaxed">
+          Every piece has a Markdown mirror at{' '}
+          <code className="font-mono text-white/45">/research/[slug]/llms.txt</code> for agents and
+          readers who prefer plain text. Start from{' '}
+          <Link href="/stocks" className="text-white/45 hover:text-[#e4c98a] transition-colors">
+            the coverage universe
+          </Link>{' '}
+          to see the underwriting each argument is built on.
+        </p>
+      </section>
     </div>
   );
 }
+
+const METHOD_NOTES = [
+  {
+    title: 'Numbers stay live',
+    body: 'Articles carry tickers, never scores. Every moat, growth and valuation figure resolves against the coverage registry at render time, with valuation recomputed from the current price.',
+  },
+  {
+    title: 'Every thesis is falsifiable',
+    body: 'Each piece states, in one sentence, the observation that would prove it wrong — and carries the date it was last checked against the underlying data.',
+  },
+  {
+    title: 'Cross-cutting by design',
+    body: 'A stock page underwrites one name. These read across four or more, where the comparison itself is the argument and the market has a story the data disputes.',
+  },
+];
