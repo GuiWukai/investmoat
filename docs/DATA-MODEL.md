@@ -13,6 +13,8 @@ A stock must be registered in **two** places. Missing either one is the most com
 
 The `slug` must match in four places: the filename (`{slug}.json`), the `slug` field inside the JSON, the key in `index.ts`, and the `href` (`/stocks/{slug}`).
 
+`npm run validate:stocks` cross-checks the two registries and fails the build if they disagree, so this mistake can no longer ship silently.
+
 ## Schema
 
 The JSON is validated by the Zod schema in [`src/lib/stockSchema.ts`](../src/lib/stockSchema.ts); the matching TypeScript type is `StockAnalysisData` in [`src/types/stockAnalysis.ts`](../src/types/stockAnalysis.ts). **Keep the schema and the type in sync when fields change.**
