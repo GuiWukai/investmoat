@@ -521,6 +521,7 @@ export default function PortfolioPage() {
           {/* Table header */}
           <div className="flex items-center gap-3 md:gap-4 px-4 md:px-5 py-2.5 border-b border-white/[0.05] bg-white/[0.02]">
             <div className="w-0.5 shrink-0" />
+            <div className="section-label w-6 md:w-7 text-right shrink-0">#</div>
             <div className="section-label min-w-[110px] md:min-w-[140px]">Holding</div>
             <div className="section-label hidden sm:block shrink-0 w-24">Category</div>
             <div className="flex-1" />
@@ -544,6 +545,11 @@ export default function PortfolioPage() {
               >
                 {/* Color accent */}
                 <div className="w-0.5 self-stretch rounded-full shrink-0" style={{ background: stock.color }} />
+
+                {/* Rank */}
+                <div className="w-6 md:w-7 text-right shrink-0">
+                  <span className="text-xs font-black text-white/35 tabular-nums">{stock.rank}</span>
+                </div>
 
                 {/* Name + ticker */}
                 <div className="min-w-[110px] md:min-w-[140px]">
