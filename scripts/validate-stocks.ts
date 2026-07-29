@@ -16,6 +16,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname } from 'node:path';
 
 import { stockAnalysisSchema } from '../src/lib/stockSchema';
+import { parseScenarioPrice } from '../src/lib/valuationScore';
 import { getAllSlugs } from '../src/data/stocks';
 import { allCoverageData } from '../src/app/stockData';
 
@@ -29,6 +30,28 @@ const DIM = '\x1b[2m';
 const RESET = '\x1b[0m';
 
 type Failure = { file: string; message: string };
+type Warning = { file: string; message: string };
+
+/**
+ * Widest base/bear corridor that reads as a fair-value base case.
+ *
+ * The base target is meant to be 12–24 month expected value; the bull target
+ * carries the cycle peak. Nothing enforces that, and crypto drifted: BTC's base
+ * was literally described as a "post-halving cycle peak" at a new all-time
+ * high, and ETH's ladder was set to the same multiples of spot as the BTC and
+ * SOL ladders rather than to anything about Ethereum. Because
+ * computeValuationScore reads position within the corridor, a base set at the
+ * cycle peak parks spot near the bear end and pays out a high score for it —
+ * crypto averaged 85.3 on valuation with a standard deviation of 0.9, against
+ * an equity mean of 70.3 with a spread of 9.5. A pillar that returns the same
+ * answer for every asset in a class is not measuring that class.
+ *
+ * A ratio can't see whether the base is fair value, but it is a good proxy: at
+ * 3.0 every equity in coverage passes except MSTR, whose corridor is wide
+ * because it is a leveraged BTC proxy. So this warns rather than fails —
+ * a wide corridor is a smell, not proof of an error.
+ */
+const MAX_BASE_BEAR_RATIO = 3.0;
 
 function validateFile(file: string): Failure[] {
   const fullPath = join(STOCKS_DIR, file);
@@ -59,6 +82,36 @@ function validateFile(file: string): Failure[] {
   }
 
   return [];
+}
+
+/**
+ * Flag scenario ladders whose base sits implausibly far above the bear case —
+ * the signature of a cycle-peak number occupying the base slot. See
+ * MAX_BASE_BEAR_RATIO.
+ */
+function checkScenarioCorridors(files: string[]): Warning[] {
+  const warnings: Warning[] = [];
+  for (const file of files) {
+    let data: { scenarios?: { bear?: { priceTarget?: string }; base?: { priceTarget?: string } } };
+    try {
+      data = JSON.parse(readFileSync(join(STOCKS_DIR, file), 'utf-8'));
+    } catch {
+      continue; // parse errors are already a hard failure
+    }
+    const bear = parseScenarioPrice(data.scenarios?.bear?.priceTarget ?? '');
+    const base = parseScenarioPrice(data.scenarios?.base?.priceTarget ?? '');
+    if (!bear || !base) continue;
+    const ratio = base / bear;
+    if (ratio > MAX_BASE_BEAR_RATIO) {
+      warnings.push({
+        file,
+        message:
+          `base is ${ratio.toFixed(1)}× the bear target (limit ${MAX_BASE_BEAR_RATIO}×) — check that the base case is ` +
+          '12–24 month expected value and not a cycle peak; the cycle peak belongs in the bull slot',
+      });
+    }
+  }
+  return warnings;
 }
 
 /**
@@ -137,6 +190,15 @@ function main(): void {
       `\n${DIM}Schema: src/lib/stockSchema.ts — update both schema and src/types/stockAnalysis.ts when fields change.${RESET}`,
     );
     process.exit(1);
+  }
+
+  const warnings = checkScenarioCorridors(files);
+  if (warnings.length > 0) {
+    console.log(`${YELLOW}Scenario corridor notes (${warnings.length}) — advisory, not failures:${RESET}`);
+    for (const { file, message } of warnings) {
+      console.log(`  ${DIM}•${RESET} ${YELLOW}${file}${RESET} ${message}`);
+    }
+    console.log('');
   }
 
   console.log(`${GREEN}✓ Validated ${files.length} stock file(s)${RESET}`);

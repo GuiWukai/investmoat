@@ -108,6 +108,22 @@ Below zero the curve keeps descending to 0 at −20% CAGR — revenue roughly ha
 
 Cheaper than bear → richly scored; above bull → penalised. Both ends are reachable and specific: **100 means the price is 20% below the bear case, 0 means it is double the bull case.** The curve still saturates beyond those points — further overvaluation past 2× bull carries no extra information — but the dead zone now starts where it genuinely stops discriminating rather than at an arbitrary floor of 20. Before a live price loads (or if the fetch fails), the static `valuation.score` authored in the JSON is used instead.
 
+### What each scenario rung means
+
+The curve reads *position within the corridor*, so the score is only comparable across assets if the rungs mean the same thing everywhere:
+
+| Rung | Meaning |
+|---|---|
+| **bear** | Realistic downside if the key risk materialises |
+| **base** | **12–24 month expected value** — the central case |
+| **bull** | Cycle peak, re-rating, or the upside case paying off |
+
+**The base is not the cycle peak.** This drifted once and it is worth stating plainly, because the failure is invisible: crypto base targets were written as cycle peaks at new all-time highs while equity bases were 12–24 month fair value. `computeValuationScore` cannot tell the two apart, so parking the base at the cycle peak leaves spot near the bear end of the corridor and collects a high score for it. Before this was corrected in July 2026, crypto averaged **85.3 on valuation with a standard deviation of 0.9** against an equity mean of **70.3 with a spread of 9.5** — the pillar returned essentially the same answer for every crypto asset, which is a pillar that has stopped measuring. Worth roughly +7 composite points, purely from a convention.
+
+A scenario ladder should also be anchored to the *asset*. ETH's was set to the same multiples of spot as the BTC and SOL ladders, which guarantees a similar valuation score no matter what is true about Ethereum. Anchor to something asset-specific and falsifiable — for ETH, staking yield on staked supply and share of tokenized settlement; for an equity, earnings and a multiple.
+
+`npm run validate:stocks` prints an advisory note when `base / bear` exceeds **3.0×**, the shape a cycle-peak base produces. It warns rather than fails: a wide corridor is a smell, not proof of an error (MSTR's 7.5× is legitimate — it is a leveraged BTC proxy).
+
 ---
 
 ## 4. Composite & recommendation

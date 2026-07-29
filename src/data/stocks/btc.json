@@ -99,8 +99,8 @@
     }
   },
   "valuation": {
-    "score": 86,
-    "description": "At ~$63,400 — 50% below the October 2025 ATH of $126,080 — BTC has spent seven weeks going sideways low in the bear-base corridor, up ~3% from the June low despite a flow recovery that added ~$1B over seven sessions. It sits 41% above the bear target ($45K, −29% downside) and 60% below the base case ($160K, +152% upside), with the bull ($350K) a +452% tail. The binary this file was waiting on has resolved to the unfavourable side: no Strategic Reserve architecture arrived, and the reserve is deadlocked between Treasury and Commerce with no purchase authority — the forfeiture-only outcome the bear case contemplated. What has not happened is the second half of that bear case, an accompanying flow cascade; ETF demand instead stabilised. That split is why the score holds rather than falls — price is doing the de-rating work while the sovereign catalyst that justified the base case slips right. Skew remains favourable on arithmetic (−29% to bear vs +152% to base), but the base case now needs a 2027 window rather than a mid-2026 one."
+    "score": 81,
+    "description": "At ~$63,400 — 50% below the October 2025 ATH of $126,080 — BTC has spent seven weeks going sideways, up ~3% from the June low despite a flow recovery that added ~$1B over seven sessions. The binary this file was waiting on resolved to the unfavourable side: no Strategic Reserve architecture arrived, and the reserve is deadlocked between Treasury and Commerce with no purchase authority — the forfeiture-only outcome the bear case contemplated. What has not happened is the second half of that bear case, an accompanying flow cascade; ETF demand instead stabilised. The scenario ladder was rebuilt in July to put the right number in the base slot: $160,000 was explicitly a post-halving cycle peak and a new all-time high, which is a bull outcome, not the 12–24 month expected value the framework asks the base case for. The cycle peak is now the bull at $175,000, and the base is $95,000 — above the roughly $58K–$109K consensus band for 2027 on the strength of the moat and the intact adoption base, but no longer requiring a new ATH to be the central case. BTC sits 41% above the bear ($45K, −29%) and 33% below the base (+50%). The re-anchoring, not the price, is why the score moves from 86 to 81; the $350,000 sovereign-adoption case survives as the tail beyond the bull rather than as a scenario rung."
   },
   "scenarios": {
     "bear": {
@@ -113,21 +113,21 @@
       ]
     },
     "base": {
-      "priceTarget": "$160,000",
-      "description": "The cycle peak slips to 2027 — the mid-2026 window has passed with BTC at ~$63K — as ETF inflows re-accelerate off the July base and the US Strategic Bitcoin Reserve is finally formalized, driving BTC to a new ATH above the October 2025 high.",
+      "priceTarget": "$95,000",
+      "description": "Twelve-to-twenty-four month expected value with the adoption base intact but the sovereign catalyst stalled — BTC recovers toward the pre-drawdown consolidation zone without needing a new all-time high.",
       "points": [
-        "Spot ETF AUM surpasses $200B from the ~$78B July base as the halving-driven supply squeeze combines with steady institutional inflows from pension funds and endowments adding 1–2% BTC allocations",
-        "The Treasury–Commerce control dispute resolves with statutory purchase authority attached, and the US Strategic Bitcoin Reserve begins active accumulation — confirmed purchases removing supply overhang and signaling sovereign legitimacy that triggers BRICS+ central bank interest",
-        "Morgan Stanley's MSBT launched April 8 (cheapest BTC ETF at 0.14%) — unlocking $3.5T wealth management client base — and Goldman Sachs Bitcoin Income ETF files for SEC approval, bringing two more Wall Street giants into the category"
+        "ETF demand holds the July stabilisation and grinds back toward the $104B AUM peak from the ~$78B base, with wealth-platform distribution — Morgan Stanley's MSBT at 0.14% unlocking a $3.5T client base — continuing to widen even in a flat tape",
+        "The corporate treasury bid stays roughly flat rather than reversing: Strategy funds its preferred dividends from equity issuance as it did on July 20 instead of selling BTC, and the 1,000+ adopter base neither compounds nor unwinds",
+        "The Strategic Reserve stays forfeiture-only and the halving-cycle bottom passes without a new low, leaving price to recover on the demand base alone — this is above the roughly $58K–$109K consensus band for 2027, which the moat and the intact adoption layer justify without a sovereign bid"
       ]
     },
     "bull": {
-      "priceTarget": "$350,000+",
-      "description": "Sovereign wealth fund adoption and a G7 currency crisis trigger a generational flight to Bitcoin as the world's reserve-quality decentralized hard asset.",
+      "priceTarget": "$175,000",
+      "description": "The post-halving cycle peak arrives in 2027 — the mid-2026 window having passed with BTC at ~$63K — as ETF inflows re-accelerate and the US Strategic Bitcoin Reserve is finally formalized, driving BTC to a new ATH above the October 2025 high.",
       "points": [
-        "Multiple G20 sovereign wealth funds formally add BTC to reserve portfolios — following the US Strategic Reserve precedent — creating a nation-state accumulation cycle with no precedent in financial history",
-        "US dollar loses reserve currency status at the margin as BRICS+ gold/BTC settlement framework captures 25%+ of global trade volume, triggering USD diversification at scale",
-        "Corporate treasury adoption surpasses 1,000 companies globally following Strategy Inc.'s playbook; combined corporate holdings exceed 3% of circulating supply"
+        "Spot ETF AUM surpasses $200B from the ~$78B July base as the halving-driven supply squeeze combines with steady institutional inflows from pension funds and endowments adding 1–2% BTC allocations",
+        "The Treasury–Commerce control dispute resolves with statutory purchase authority attached, and the US Strategic Bitcoin Reserve begins active accumulation — confirmed purchases removing supply overhang and signaling sovereign legitimacy that triggers BRICS+ central bank interest",
+        "Beyond this target sits the tail case that used to carry a $350,000 number: multiple G20 sovereign wealth funds formally adding BTC to reserve portfolios, a BRICS+ gold/BTC settlement framework capturing 25%+ of global trade, and combined corporate holdings passing 3% of circulating supply — a generational re-rating rather than a cycle peak, and priced as a tail rather than a scenario rung"
       ]
     }
   },

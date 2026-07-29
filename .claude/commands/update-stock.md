@@ -94,6 +94,12 @@ Update `valuation.description` to reflect the current price position relative to
 - Base target: should represent 12–24 month fair value at consensus earnings estimates
 - Bull target: should be plausible with 1–2 upside catalysts — typically 40–80% above base for growth stocks
 
+**The base target is not the cycle peak.** `computeValuationScore` reads where the price sits *within* the bear-to-base-to-bull corridor, so it cannot tell a fair-value base from an aspirational one — putting a cycle peak or a new all-time high in the base slot parks spot near the bear end and collects a high score for it. That belongs in the bull slot. This drifted for the crypto assets until July 2026 and was worth roughly +7 composite points; see `docs/SCORING.md`.
+
+For assets with no earnings to anchor on (crypto, commodities), anchor the ladder to something **specific to that asset and falsifiable** — staking yield on staked supply, share of a settlement market, cost of production, official-sector holdings. Do not set the targets at the same multiples of spot as a sibling asset: that guarantees a similar valuation score regardless of what is true about the asset, which is how the crypto ladders ended up interchangeable.
+
+`npm run validate:stocks` prints an advisory note when `base / bear` exceeds 3.0×, the shape a cycle-peak base produces. It is a smell, not proof of an error — investigate it rather than tuning the number until the note disappears.
+
 **Update `scenarios` in both:**
 1. `src/data/stocks/{slug}.json` — full scenario objects with priceTarget, description, and points
 2. `src/app/stockData.ts` — the `bearTarget`, `baseTarget`, `bullTarget` shorthand strings
