@@ -11,6 +11,7 @@ import {
   Input,
   ListBox,
   ListBoxItem,
+  SearchField,
   Separator,
 } from '@heroui/react';
 import { allCoverageData } from '@/app/stockData';
@@ -25,31 +26,14 @@ const navLinks = [
 type StockResult = { name: string; ticker: string; href: string };
 
 /**
- * Stock search.
+ * Name-or-ticker match, shared by the desktop and mobile search surfaces.
  *
- * This used to be a hand-rolled input plus an absolutely-positioned results
- * panel, with its own outside-click listener and keyboard handling. HeroUI's
- * ComboBox is the same interaction done properly — it brings focus management,
- * arrow-key navigation, type-ahead and the correct ARIA combobox roles, none of
- * which the original had.
- *
- * Filtering stays manual rather than using the built-in text filter because a
- * ticker match ("NOW") should rank alongside a name match ("ServiceNow"), and
- * the list is capped so the popover never becomes a scroll trap.
+ * Filtering is manual rather than using a built-in text filter because a ticker
+ * match ("NOW") should rank alongside a name match ("ServiceNow"), and the list
+ * is capped so the results never become a scroll trap.
  */
-function StockSearch({
-  limit = 6,
-  autoFocus = false,
-  onNavigate,
-}: {
-  limit?: number;
-  autoFocus?: boolean;
-  onNavigate?: () => void;
-}) {
-  const [query, setQuery] = useState('');
-  const router = useRouter();
-
-  const results = useMemo<StockResult[]>(() => {
+function useStockResults(query: string, limit: number): StockResult[] {
+  return useMemo<StockResult[]>(() => {
     const trimmed = query.trim().toLowerCase();
     if (!trimmed) return [];
     return allCoverageData
@@ -60,6 +44,19 @@ function StockSearch({
       )
       .slice(0, limit);
   }, [query, limit]);
+}
+
+/**
+ * Desktop stock search — a ComboBox in the sidebar.
+ *
+ * The popover pattern works here because there is a pointer, a hover state and
+ * an Escape key. On touch it does not, which is why mobile gets its own surface
+ * below rather than this component inside a drawer.
+ */
+function StockSearch() {
+  const [query, setQuery] = useState('');
+  const router = useRouter();
+  const results = useStockResults(query, 6);
 
   return (
     <ComboBox
@@ -73,14 +70,13 @@ function StockSearch({
       onSelectionChange={(key) => {
         if (key == null) return;
         setQuery('');
-        onNavigate?.();
         router.push(String(key));
       }}
       selectedKey={null}
     >
       <ComboBox.InputGroup>
         <Search className="pointer-events-none size-4 shrink-0 text-muted" />
-        <Input autoFocus={autoFocus} placeholder="Search stocks…" />
+        <Input placeholder="Search stocks…" />
       </ComboBox.InputGroup>
 
       <ComboBox.Popover>
@@ -108,6 +104,130 @@ function StockSearch({
         </ListBox>
       </ComboBox.Popover>
     </ComboBox>
+  );
+}
+
+/**
+ * Mobile stock search — a full-width sheet, results inline.
+ *
+ * This used to be the desktop ComboBox dropped into a drawer, which stacked a
+ * popover on top of a dialog: the first tap outside dismissed the popover
+ * rather than the sheet, and the sheet itself had no exit at all on touch (no
+ * backdrop dismiss, no close button, and no Escape key to fall back on).
+ *
+ * So: results render inline in the sheet body instead of in a popover, and the
+ * sheet gets the three exits a touch user expects — Cancel, tap the backdrop,
+ * or drag it back up by the handle.
+ */
+function MobileSearchSheet({
+  isOpen,
+  onOpenChange,
+}: {
+  isOpen: boolean;
+  onOpenChange: (open: boolean) => void;
+}) {
+  const [query, setQuery] = useState('');
+  const results = useStockResults(query, 8);
+  const router = useRouter();
+  const trimmed = query.trim();
+
+  const close = () => {
+    setQuery('');
+    onOpenChange(false);
+  };
+
+  return (
+    <Drawer
+      isOpen={isOpen}
+      onOpenChange={(open) => {
+        // Start clean on the next open rather than reopening onto stale results.
+        if (!open) setQuery('');
+        onOpenChange(open);
+      }}
+    >
+      {/* Drawer.Backdrop is what makes a tap outside close the sheet — a bare
+          Drawer.Content renders a non-dismissable overlay, which on touch means
+          no way out at all. */}
+      <Drawer.Backdrop variant="blur">
+        <Drawer.Content placement="top">
+          <Drawer.Dialog
+            aria-label="Search stocks"
+            // The dialog caps itself at 85vh, which counts the space the
+            // on-screen keyboard covers. The backdrop tracks the visual
+            // viewport, so cap against that instead and let the body scroll.
+            // (touch-action is restated because it is set inline upstream.)
+            style={{ maxHeight: '100%', touchAction: 'none' }}
+          >
+            <Drawer.Header>
+              <div className="flex items-center gap-2">
+                <SearchField
+                  aria-label="Search stocks"
+                  className="min-w-0 flex-1"
+                  fullWidth
+                  onChange={setQuery}
+                  // The keyboard's Search key goes to the top hit, so a
+                  // one-hander never has to reach back up to the list.
+                  onSubmit={() => {
+                    const top = results[0];
+                    if (!top) return;
+                    close();
+                    router.push(top.href);
+                  }}
+                  value={query}
+                >
+                  {/* Touch-sized: a 44px field, and hit slop around the clear
+                      chip so it can be cleared without aiming. */}
+                  <SearchField.Group className="h-11">
+                    <SearchField.SearchIcon />
+                    <SearchField.Input
+                      autoFocus
+                      enterKeyHint="search"
+                      placeholder="Search by name or ticker…"
+                    />
+                    <SearchField.ClearButton className="mr-2 size-5 before:absolute before:-inset-2 before:content-['']" />
+                  </SearchField.Group>
+                </SearchField>
+                <Button className="shrink-0" onPress={close} size="sm" variant="ghost">
+                  Cancel
+                </Button>
+              </div>
+            </Drawer.Header>
+
+            <Drawer.Body>
+              {results.length > 0 ? (
+                <ul className="flex flex-col py-1">
+                  {results.map((item) => (
+                    <li key={item.href}>
+                      {/* A plain link, not a ListBoxItem: tapping navigates on
+                          the first touch, with no roving focus to fight the
+                          keyboard for. */}
+                      <Link
+                        className="flex min-h-12 items-center gap-3 rounded-xl px-3 no-underline transition-colors active:bg-default"
+                        href={item.href}
+                        onClick={close}
+                      >
+                        <span className="truncate text-sm text-foreground">{item.name}</span>
+                        <span className="ml-auto shrink-0 font-mono text-xs font-bold text-muted">
+                          {item.ticker}
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="px-3 py-6 text-center text-sm text-muted">
+                  {trimmed ? `No stocks match “${trimmed}”` : 'Search by name or ticker'}
+                </p>
+              )}
+            </Drawer.Body>
+
+            {/* Bottom edge on a top sheet: this is the grab target you flick
+                upward to dismiss. */}
+            <Drawer.Handle />
+          </Drawer.Dialog>
+        </Drawer.Content>
+      </Drawer.Backdrop>
+    </Drawer>
   );
 }
 
@@ -230,44 +350,34 @@ export function NavBar() {
         </Button>
       </div>
 
-      {/* Mobile navigation drawer */}
+      {/* Mobile navigation drawer — Backdrop so a tap outside closes it */}
       <Drawer isOpen={isMenuOpen} onOpenChange={setIsMenuOpen}>
-        <Drawer.Content className="w-[min(20rem,85vw)]" placement="left">
-          <Drawer.Dialog className="flex h-full flex-col">
-            <Drawer.Header>
-              <BrandMark onClick={() => setIsMenuOpen(false)} />
-            </Drawer.Header>
-            <Drawer.Body className="flex flex-col gap-1">
-              <p className="section-label mb-2 px-3">Menu</p>
-              {navLinks.map((item) => (
-                <NavLink
-                  key={item.href}
-                  href={item.href}
-                  icon={item.icon}
-                  name={item.name}
-                  onClick={() => setIsMenuOpen(false)}
-                />
-              ))}
-              <DeskFooter />
-            </Drawer.Body>
-          </Drawer.Dialog>
-        </Drawer.Content>
+        <Drawer.Backdrop variant="blur">
+          <Drawer.Content className="w-[min(20rem,85vw)]" placement="left">
+            <Drawer.Dialog aria-label="Menu" className="flex h-full flex-col">
+              <Drawer.Header>
+                <BrandMark onClick={() => setIsMenuOpen(false)} />
+              </Drawer.Header>
+              <Drawer.Body className="flex flex-col gap-1">
+                <p className="section-label mb-2 px-3">Menu</p>
+                {navLinks.map((item) => (
+                  <NavLink
+                    key={item.href}
+                    href={item.href}
+                    icon={item.icon}
+                    name={item.name}
+                    onClick={() => setIsMenuOpen(false)}
+                  />
+                ))}
+                <DeskFooter />
+              </Drawer.Body>
+            </Drawer.Dialog>
+          </Drawer.Content>
+        </Drawer.Backdrop>
       </Drawer>
 
       {/* Mobile search sheet — full-width so results have room to breathe */}
-      <Drawer isOpen={isSearchOpen} onOpenChange={setIsSearchOpen}>
-        <Drawer.Content placement="top">
-          <Drawer.Dialog>
-            <Drawer.Body className="pt-4">
-              <StockSearch
-                autoFocus
-                limit={8}
-                onNavigate={() => setIsSearchOpen(false)}
-              />
-            </Drawer.Body>
-          </Drawer.Dialog>
-        </Drawer.Content>
-      </Drawer>
+      <MobileSearchSheet isOpen={isSearchOpen} onOpenChange={setIsSearchOpen} />
 
       {/* Desktop sidebar */}
       <aside className="sidebar hidden lg:flex">
