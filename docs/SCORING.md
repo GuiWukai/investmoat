@@ -55,11 +55,13 @@ The score is a weighted average within each group, the two groups blended by the
 
 ### Crypto: 5-pillar monetary framework
 
-Pillars: `networkEffects`, `schellingPoint`, `credibleNeutrality`, `regulatoryIncumbency`, `securityBudget`. The declared `primaryMoat` gets **50%**; the other four split the remaining 50% (**12.5%** each). So BTC scores on credible neutrality, ETH on network effects — without averaging through pillars that don't define them.
+Pillars: `networkEffects`, `schellingPoint`, `credibleNeutrality`, `regulatoryIncumbency`, `securityBudget`. The declared `primaryMoat` gets **30%**; the other four split the remaining 70% (**17.5%** each). So BTC scores on credible neutrality, ETH on network effects — without averaging through pillars that don't define them.
+
+The primary weight was cut from 50% in July 2026. Unlike the equity weights, which the framework fixes, `primaryMoat` is declared per asset — and every crypto and commodity asset in coverage declares one at or tied to its maximum-scoring option. At 50% that was a free option rather than an analytical claim: ETH, which has one strong pillar and four merely intact, gained 14 points of moat from the declaration alone. The primary remains the heaviest single pillar; it no longer outweighs the other four combined.
 
 ### Commodity: 3-pillar framework
 
-Pillars: `absoluteScarcity`, `monetaryHistory`, `industrialUtility`. The `primaryMoat` gets **50%**; the other two get **25%** each. Gold scores on monetary history; copper on industrial utility.
+Pillars: `absoluteScarcity`, `monetaryHistory`, `industrialUtility`. The `primaryMoat` gets **40%**; the other two get **30%** each. Gold scores on monetary history; copper on industrial utility. Cut from 50/25/25 in July 2026 for the reason given above.
 
 ---
 

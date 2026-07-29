@@ -173,20 +173,44 @@ export function computeMoatScore(tenMoats: TenMoatsData): number {
 // not the same thing as AXON moat=92.
 
 // Both commodity and crypto frameworks use dynamic weights via primaryMoat:
-// the declared primary pillar gets 50%, the non-primary pillars split the
-// remaining 50% equally. N/A pillars (destroyed with "N/A"/"Not applicable"
+// the declared primary pillar carries the most weight, the non-primary pillars
+// split the rest equally. N/A pillars (destroyed with "N/A"/"Not applicable"
 // note) drop out and their weight redistributes.
-const COMMODITY_PRIMARY_WEIGHT = 50;
-const COMMODITY_OTHER_WEIGHT = 25;
-const CRYPTO_PRIMARY_WEIGHT = 50;
-const CRYPTO_OTHER_WEIGHT = 12.5;
+//
+// WHY THE PRIMARY WEIGHT IS NO LONGER 50%. Unlike MOAT_SPEC, where the
+// framework fixes every weight, primaryMoat is declared per asset — so the
+// author chooses which pillar counts most. That choice has never once resolved
+// downward: every crypto and commodity asset in coverage declares a primaryMoat
+// at or tied to its maximum-scoring option. At 50% it was a large free option
+// rather than an analytical statement, and it grew as the pillar set shrank —
+// one label decided half of a five-pillar score.
+//
+// ETH showed the cost. It has exactly one strong pillar (networkEffects) and
+// four merely intact; declaring that pillar primary was worth 14 points of moat
+// (83 vs 69 for any other choice) and carried it to rank 3 in the portfolio. No
+// equity can do that: MOAT_SPEC caps the heaviest single moat at 15, so the
+// largest swing one label can produce is ~6 points.
+//
+// Cutting crypto to 30/17.5 and commodity to 40/30 keeps the intent — BTC still
+// scores on credible neutrality, gold on monetary history — while requiring the
+// rest of the pillar set to corroborate it. The primary stays the single
+// heaviest pillar; it just stops outvoting everything else combined. Affected
+// assets: BTC 96→94, ETH 83→76, SOL 58→55, U 88→85, XAU 75→70, HG 50→47, XAG
+// unchanged. Portfolio membership is unchanged — this reorders the top of the
+// table (BTC 1→2, ETH 3→6), it does not move anyone in or out.
+const COMMODITY_PRIMARY_WEIGHT = 40;
+const COMMODITY_OTHER_WEIGHT = 30;
+const CRYPTO_PRIMARY_WEIGHT = 30;
+const CRYPTO_OTHER_WEIGHT = 17.5;
 
 /**
  * Compute crypto moat score with dynamic weights driven by primaryMoat.
- * Primary pillar gets 50%; the four other pillars share the remaining 50%
- * (12.5% each). Lets BTC score on credibleNeutrality, ETH on networkEffects,
+ * Primary pillar gets 30%; the four other pillars share the remaining 70%
+ * (17.5% each). Lets BTC score on credibleNeutrality, ETH on networkEffects,
  * SOL on its consumer networkEffects — without averaging through pillars
- * that don't define what makes each protocol durable.
+ * that don't define what makes each protocol durable, and without letting
+ * one declared label decide the score on its own (see the note on
+ * CRYPTO_PRIMARY_WEIGHT above).
  */
 export function computeCryptoMoatScore(data: CryptoMoatsData): number {
   const pillars: CryptoMoatPillar[] = [
@@ -207,8 +231,8 @@ export function computeCryptoMoatScore(data: CryptoMoatsData): number {
 
 /**
  * Compute commodity moat score with dynamic weights driven by primaryMoat.
- * Primary pillar gets COMMODITY_PRIMARY_WEIGHT (50); the other two share
- * COMMODITY_OTHER_WEIGHT (25 each). This lets gold score on its monetary
+ * Primary pillar gets COMMODITY_PRIMARY_WEIGHT (40); the other two share
+ * COMMODITY_OTHER_WEIGHT (30 each). This lets gold score on its monetary
  * history without being dragged by tail industrial demand, and copper score
  * on its industrial utility without being dragged by its weak monetary
  * history.
