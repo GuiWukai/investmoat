@@ -3,11 +3,63 @@
   "title": "S&P Global and the Half With the Moat",
   "dek": "The market marked S&P Global down on a comparison with a company that no longer exists. The print underneath says something more useful: in financial infrastructure the growth sits in the half of the business that owns a benchmark, not the half that sells data.",
   "published": "July 28, 2026",
-  "lastReviewed": "July 28, 2026",
+  "lastReviewed": "July 29, 2026",
   "tickers": ["SPGI", "MCO", "MSCI", "ICE", "FICO"],
   "tags": ["Financial Infrastructure", "Spin-offs", "Business Models", "Capital Allocation"],
   "summary": "S&P Global reported Q2 2026 on July 28 with revenue up 10% to $4.15B, adjusted operating margin up 200bps to 54.3% and adjusted diluted EPS up 23% to $4.83 — and the stock fell around 5%, because the headline read as an EPS miss and a 9.7% guidance cut. It was neither: the Mobility Global spin-off distributed on July 1, and the new $17.50–17.75 full-year range covers continuing operations only, a base the company states is not comparable to the prior whole-company guide. What the quarter does show is a split that repeats across financial infrastructure. Segments that own a benchmark — Ratings, Indices, Moody's Investors Service, the MSCI Index franchise — grew 13% to 25% at roughly 70% margins in the same quarter that the data and analytics segments alongside them grew 3% to 7%. Company-level scores average across that divide, which is why the whole cohort scores alike while only one half of each business carries the moat that produces the growth.",
-  "falsifiableBy": "S&P Global's Ratings and Indices growth converging down toward the Market Intelligence and Commodity Insights rate — call it mid-single digits — for two consecutive quarters, which would mark the split as an artifact of the 2026 issuance surge rather than a structural feature of where the moat sits. A second trip: Moody's Analytics or the MSCI Analytics segment sustaining growth above their benchmark segments for a full year. A third, nearer: ICE reporting Q2 on July 30 and FICO on July 29 with the spread inverted.",
+  "falsifiableBy": {
+    "claim": "S&P Global's Ratings and Indices growth converging down toward the Market Intelligence and Commodity Insights rate — call it mid-single digits — for two consecutive quarters, which would mark the split as an artifact of the 2026 issuance surge rather than a structural feature of where the moat sits. A second trip: Moody's Analytics or the MSCI Analytics segment sustaining growth above their benchmark segments for a full year. A third, nearer: ICE reporting Q2 on July 30 and FICO on July 29 with the spread inverted.",
+    "status": "holding",
+    "note": "The two nearest tests named in the claim had not reported at the time of this review: FICO's Q3 FY2026 lands after the close on July 29 and ICE's Q2 on July 30. Nothing in the S&P Global segment data has moved since publication."
+  },
+  "sources": [
+    {
+      "id": "spgi-q2-2026",
+      "label": "S&P Global Reports Second Quarter Results",
+      "publisher": "S&P Global",
+      "date": "July 28, 2026",
+      "url": "https://press.spglobal.com/2026-07-28-S-P-Global-Reports-Second-Quarter-Results",
+      "kind": "press-release"
+    },
+    {
+      "id": "mco-q2-2026",
+      "label": "Moody's Corporation Delivers Exceptional Results For Second Quarter 2026",
+      "publisher": "Moody's Corporation",
+      "date": "July 22, 2026",
+      "url": "https://ir.moodys.com/press-releases/news-details/2026/Moodys-Corporation-Delivers-Exceptional-Results-For-Second-Quarter-2026/default.aspx",
+      "kind": "press-release"
+    },
+    {
+      "id": "msci-q2-2026",
+      "label": "MSCI Reports Financial Results for Second Quarter and Six Months 2026",
+      "publisher": "MSCI Inc.",
+      "date": "July 21, 2026",
+      "url": "https://ir.msci.com/news-releases/news-release-details/msci-reports-financial-results-second-quarter-and-six-months-10",
+      "kind": "press-release"
+    },
+    {
+      "id": "ice-q1-2026",
+      "label": "Intercontinental Exchange Reports Record First Quarter 2026",
+      "publisher": "Intercontinental Exchange",
+      "date": "April 30, 2026",
+      "url": "https://ir.theice.com/press/news-details/2026/Intercontinental-Exchange-Reports-Record-First-Quarter-2026/default.aspx",
+      "kind": "press-release"
+    },
+    {
+      "id": "fico-q2-fy2026",
+      "label": "FICO Announces Earnings of $11.14 per Share for Second Quarter Fiscal 2026",
+      "publisher": "Fair Isaac Corporation",
+      "date": "April 28, 2026",
+      "url": "https://fico.gcs-web.com/news-releases/news-release-details/fico-announces-earnings-1114-share-second-quarter-fiscal-2026",
+      "kind": "press-release"
+    }
+  ],
+  "revisions": [
+    {
+      "date": "July 29, 2026",
+      "note": "First review. Cited the primary release behind every table — the five-company cohort table now carries Moody's, MSCI, ICE and FICO alongside S&P Global rather than resting on the one company that had been checked. No figure required correction. The article's own nearest test is 24 hours out and unresolved."
+    }
+  ],
   "blocks": [
     {
       "type": "stat-strip",
@@ -34,6 +86,7 @@
     {
       "type": "table",
       "asOf": "July 28, 2026 — S&P Global Q2 2026 results and full-year guidance",
+      "sources": ["spgi-q2-2026"],
       "caption": "Reconciling the reported \"miss\" against the basis change.",
       "columns": ["Measure", "Whole company (prior basis)", "Continuing operations (now)", "What it tests"],
       "highlightColumn": 2,
@@ -94,6 +147,7 @@
     {
       "type": "table",
       "asOf": "July 28, 2026 — S&P Global Q2 2026 segment results",
+      "sources": ["spgi-q2-2026"],
       "caption": "The four continuing segments, ranked by what they own.",
       "columns": ["Segment", "Q2 2026 revenue", "YoY", "Adjusted operating margin", "What it sells"],
       "highlightColumn": 2,
@@ -144,6 +198,7 @@
     {
       "type": "table",
       "asOf": "July 28, 2026 — most recent reported quarter for each company",
+      "sources": ["spgi-q2-2026", "mco-q2-2026", "msci-q2-2026", "ice-q1-2026", "fico-q2-fy2026"],
       "caption": "The spread between the two halves, same quarter, five companies.",
       "columns": ["Company", "Benchmark-owning segment", "Data / analytics segment", "What the split says"],
       "rows": [
@@ -273,12 +328,6 @@
     {
       "type": "prose",
       "body": "The generalisable lesson is smaller than the thesis and more portable. Any company that reports segments with a 15-point growth spread and a 30-point margin spread is two companies wearing one ticker, and both the market's multiple and our own composite score are averages over that difference. Spin-offs are useful mainly because they force the average apart for a quarter and let you see what was inside it. The mistake on July 28 was not mispricing S&P Global. It was reading a consolidated line on a company that had just told everyone the consolidated line changed."
-    },
-    {
-      "type": "callout",
-      "tone": "method",
-      "title": "How to read this page",
-      "body": "The stat strip, the scorecard and the moat matrix are live: they resolve against the same stock data as /stocks and /portfolio every time this page renders, with valuation recomputed from the current price. Nothing in the prose transcribes them. Every static figure sits in a table with its reporting period stamped — S&P Global and Moody's Q2 2026 (reported July 28 and July 22), MSCI Q2 2026 (July 21), ICE Q1 2026 and FICO Q2 FY2026, the latter two because ICE reports Q2 on July 30 and FICO reports Q3 on July 29, both after publication. Those two prints are the nearest available test of the argument."
     }
   ]
 }

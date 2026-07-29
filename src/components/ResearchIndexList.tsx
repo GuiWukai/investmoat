@@ -2,7 +2,14 @@
 
 import React, { useMemo, useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Clock, Search, X } from 'lucide-react';
+import { ArrowRight, Clock } from 'lucide-react';
+import {
+  Button,
+  Card,
+  SearchField,
+  ToggleButton,
+  ToggleButtonGroup,
+} from '@heroui/react';
 
 /** One card's worth of article, flattened on the server. */
 export interface ResearchSummary {
@@ -25,7 +32,14 @@ const MOBILE_TICKERS = 4;
 const MOBILE_TAGS = 1;
 
 const TAG_CLASS =
-  'text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded bg-[#c9a96a]/10 text-[#c9a96a] border border-[#c9a96a]/20';
+  'text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded bg-accent/10 text-accent border border-accent/20';
+
+/** Sentinel id for the "no theme selected" pill — ToggleButton ids can't be null. */
+const ALL_TAGS = '__all__';
+
+/** The theme pills keep the house eyebrow type rather than HeroUI's button text. */
+const TAG_PILL =
+  'pill-toggle shrink-0 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1';
 
 function TagChips({ tags }: { tags: string[] }) {
   return (
@@ -48,7 +62,7 @@ function TickerChips({ tickers, limit }: { tickers: string[]; limit: number }) {
       {tickers.slice(0, limit).map((ticker, i) => (
         <span
           key={ticker}
-          className={`text-[10px] font-black tracking-wider text-white/45 px-1.5 py-0.5 rounded bg-white/[0.04] border border-white/[0.06]${
+          className={`text-[10px] font-black tracking-wider text-foreground/45 px-1.5 py-0.5 rounded bg-foreground/[0.04] border border-foreground/[0.06]${
             i >= MOBILE_TICKERS ? ' hidden sm:inline-block' : ''
           }`}
         >
@@ -56,10 +70,10 @@ function TickerChips({ tickers, limit }: { tickers: string[]; limit: number }) {
         </span>
       ))}
       {overflowMobile > 0 && (
-        <span className="text-[10px] text-white/30 sm:hidden">+{overflowMobile} more</span>
+        <span className="text-[10px] text-foreground/30 sm:hidden">+{overflowMobile} more</span>
       )}
       {overflowDesktop > 0 && (
-        <span className="hidden text-[10px] text-white/30 sm:inline">+{overflowDesktop} more</span>
+        <span className="hidden text-[10px] text-foreground/30 sm:inline">+{overflowDesktop} more</span>
       )}
     </div>
   );
@@ -67,16 +81,16 @@ function TickerChips({ tickers, limit }: { tickers: string[]; limit: number }) {
 
 function Meta({ article }: { article: ResearchSummary }) {
   return (
-    <span className="text-[11px] uppercase tracking-widest text-white/30">
+    <span className="text-[11px] uppercase tracking-widest text-foreground/30">
       {article.published}
-      <span className="text-white/10 mx-2">·</span>
+      <span className="text-foreground/10 mx-2">·</span>
       <span className="inline-flex items-center gap-1.5 align-middle">
-        <Clock size={11} className="text-white/25" />
+        <Clock size={11} className="text-foreground/25" />
         {article.minutes} min
       </span>
       {/* The chip rail already carries the coverage count on a phone. */}
       <span className="hidden sm:inline">
-        <span className="text-white/10 mx-2">·</span>
+        <span className="text-foreground/10 mx-2">·</span>
         {article.tickers.length} names
       </span>
     </span>
@@ -88,20 +102,20 @@ function FeaturedCard({ article }: { article: ResearchSummary }) {
   return (
     <Link
       href={`/research/${article.slug}`}
-      className="group block rounded-2xl border border-[#c9a96a]/20 bg-gradient-to-br from-[#c9a96a]/[0.055] to-white/[0.015] p-5 sm:p-6 md:p-8 hover:border-[#c9a96a]/40 transition-colors"
+      className="group block rounded-2xl border border-accent/20 bg-gradient-to-br from-accent/[0.055] to-foreground/[0.015] p-5 sm:p-6 md:p-8 hover:border-accent/40 transition-colors"
     >
       <div className="flex flex-wrap items-center gap-2 mb-3">
-        <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded bg-[#c9a96a] text-[#0a0b0d]">
+        <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded bg-accent text-[#0a0b0d]">
           Latest
         </span>
         <TagChips tags={article.tags} />
       </div>
 
-      <h2 className="text-[22px] sm:text-2xl md:text-[34px] font-bold text-white/90 group-hover:text-white transition-colors leading-[1.15]">
+      <h2 className="text-[22px] sm:text-2xl md:text-[34px] font-bold text-foreground/90 group-hover:text-foreground transition-colors leading-[1.15]">
         {article.title}
       </h2>
 
-      <p className="research-prose mt-3 sm:mt-3.5 text-[15.5px] md:text-[17px] text-white/55 leading-relaxed max-w-2xl line-clamp-3 sm:line-clamp-none">
+      <p className="research-prose mt-3 sm:mt-3.5 text-[15.5px] md:text-[17px] text-foreground/55 leading-relaxed max-w-2xl line-clamp-3 sm:line-clamp-none">
         {article.dek}
       </p>
 
@@ -112,7 +126,7 @@ function FeaturedCard({ article }: { article: ResearchSummary }) {
       <div className="mt-4 sm:mt-6 flex flex-wrap items-center justify-between gap-4">
         <Meta article={article} />
         {/* The whole card is the tap target on a phone, so the CTA is desktop-only. */}
-        <span className="hidden sm:inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-[#c9a96a] group-hover:text-[#e4c98a] transition-colors">
+        <span className="hidden sm:inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-accent group-hover:text-gold-bright transition-colors">
           Read the piece
           <ArrowRight size={13} className="transition-transform group-hover:translate-x-0.5" />
         </span>
@@ -125,17 +139,17 @@ function ArticleCard({ article }: { article: ResearchSummary }) {
   return (
     <Link
       href={`/research/${article.slug}`}
-      className="group block rounded-2xl border border-white/[0.07] bg-white/[0.02] p-5 md:p-7 hover:bg-white/[0.04] hover:border-white/15 transition-colors"
+      className="group block rounded-2xl border border-foreground/[0.07] bg-foreground/[0.02] p-5 md:p-7 hover:bg-foreground/[0.04] hover:border-foreground/15 transition-colors"
     >
       <div className="flex flex-wrap items-center gap-2 mb-2.5 sm:mb-3">
         <TagChips tags={article.tags} />
       </div>
 
-      <h2 className="text-xl md:text-2xl font-bold text-white/90 group-hover:text-white transition-colors leading-snug">
+      <h2 className="text-xl md:text-2xl font-bold text-foreground/90 group-hover:text-foreground transition-colors leading-snug">
         {article.title}
       </h2>
 
-      <p className="research-prose mt-2.5 text-[15px] sm:text-[15.5px] text-white/50 leading-relaxed line-clamp-2 sm:line-clamp-none">
+      <p className="research-prose mt-2.5 text-[15px] sm:text-[15.5px] text-foreground/50 leading-relaxed line-clamp-2 sm:line-clamp-none">
         {article.dek}
       </p>
 
@@ -145,7 +159,7 @@ function ArticleCard({ article }: { article: ResearchSummary }) {
 
       <div className="mt-3.5 sm:mt-5 flex flex-wrap items-center justify-between gap-3">
         <Meta article={article} />
-        <span className="hidden sm:inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-white/30 group-hover:text-[#e4c98a] transition-colors">
+        <span className="hidden sm:inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-foreground/30 group-hover:text-gold-bright transition-colors">
           Read
           <ArrowRight size={13} className="transition-transform group-hover:translate-x-0.5" />
         </span>
@@ -194,78 +208,65 @@ export default function ResearchIndexList({ articles }: { articles: ResearchSumm
       {/* Controls — only worth the space once there's more than one piece. */}
       {articles.length > 1 && (
         <div className="mb-6 sm:mb-8 flex flex-col gap-3 sm:gap-3.5">
-          <div className="relative flex items-center max-w-md">
-            <Search className="absolute left-3 w-3.5 h-3.5 text-white/25 pointer-events-none" />
-            <input
-              type="search"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search research by title, theme or ticker…"
-              aria-label="Search research"
-              className="w-full pl-9 pr-8 py-2.5 rounded-xl text-sm bg-white/[0.03] border border-white/[0.08] text-white placeholder:text-white/25 focus:outline-none focus:border-[#c9a96a]/40 focus:bg-white/[0.05] transition-colors"
-            />
-            {query && (
-              <button
-                type="button"
-                onClick={() => setQuery('')}
-                aria-label="Clear search"
-                className="absolute right-3 text-white/25 hover:text-white/60 transition-colors"
-              >
-                <X className="w-3.5 h-3.5" />
-              </button>
-            )}
-          </div>
+          <SearchField
+            aria-label="Search research"
+            className="max-w-md"
+            fullWidth
+            onChange={setQuery}
+            value={query}
+          >
+            <SearchField.Group>
+              <SearchField.SearchIcon />
+              <SearchField.Input placeholder="Search research by title, theme or ticker…" />
+              <SearchField.ClearButton />
+            </SearchField.Group>
+          </SearchField>
 
           {/* A dozen themes wrap into a wall of pills on a phone, so below sm the
-              row stays one line deep and scrolls sideways, bleeding to the edge. */}
+              row stays one line deep and scrolls sideways, bleeding to the edge.
+              The group is detached so the pills keep their individual outlines
+              rather than fusing into a segmented control. */}
           {tags.length > 1 && (
-            <div className="research-scroll -mx-4 flex items-center gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-x-visible sm:px-0 sm:pb-0">
-              <button
-                type="button"
-                onClick={() => setTag(null)}
-                aria-pressed={tag === null}
-                className={`shrink-0 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md border transition-colors ${
-                  tag === null
-                    ? 'bg-[#c9a96a]/15 text-[#e4c98a] border-[#c9a96a]/35'
-                    : 'bg-white/[0.02] text-white/35 border-white/[0.07] hover:text-white/70 hover:border-white/15'
-                }`}
-              >
+            <ToggleButtonGroup
+              aria-label="Filter research by theme"
+              className="research-scroll -mx-4 flex items-center gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-x-visible sm:px-0 sm:pb-0"
+              isDetached
+              onSelectionChange={(keys) => {
+                const next = [...keys][0];
+                setTag(next == null || next === ALL_TAGS ? null : String(next));
+              }}
+              selectedKeys={new Set([tag ?? ALL_TAGS])}
+              selectionMode="single"
+              size="sm"
+            >
+              <ToggleButton className={TAG_PILL} id={ALL_TAGS}>
                 All ({articles.length})
-              </button>
+              </ToggleButton>
               {tags.map(([name, count]) => (
-                <button
-                  key={name}
-                  type="button"
-                  onClick={() => setTag(tag === name ? null : name)}
-                  aria-pressed={tag === name}
-                  className={`shrink-0 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md border transition-colors ${
-                    tag === name
-                      ? 'bg-[#c9a96a]/15 text-[#e4c98a] border-[#c9a96a]/35'
-                      : 'bg-white/[0.02] text-white/35 border-white/[0.07] hover:text-white/70 hover:border-white/15'
-                  }`}
-                >
+                <ToggleButton key={name} className={TAG_PILL} id={name}>
                   {name} ({count})
-                </button>
+                </ToggleButton>
               ))}
-            </div>
+            </ToggleButtonGroup>
           )}
         </div>
       )}
 
       {filtered.length === 0 ? (
-        <div className="rounded-2xl border border-white/[0.07] bg-white/[0.02] p-8 text-center">
-          <p className="text-white/50 text-sm">No research matches that filter.</p>
-          <button
-            type="button"
-            onClick={() => {
+        <Card className="p-8 text-center">
+          <p className="text-muted text-sm">No research matches that filter.</p>
+          <Button
+            className="mx-auto mt-3 text-[11px] font-bold uppercase tracking-widest text-accent"
+            onPress={() => {
               setQuery('');
               setTag(null);
             }}
-            className="mt-3 text-[11px] font-bold uppercase tracking-widest text-[#c9a96a] hover:text-[#e4c98a] transition-colors"
+            size="sm"
+            variant="ghost"
           >
             Clear filters
-          </button>
-        </div>
+          </Button>
+        </Card>
       ) : (
         <div className="space-y-3 sm:space-y-4">
           {filtering ? (

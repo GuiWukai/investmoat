@@ -17,6 +17,7 @@ import { fileURLToPath } from 'node:url';
 import { researchArticleSchema } from '../src/lib/researchSchema';
 import { allCoverageData } from '../src/app/stockData';
 import { getStockData } from '../src/data/stocks';
+import { parseArticleDate } from '../src/data/research';
 import { lintArticleProse, type ProseIssue } from './researchProseLint';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -129,6 +130,63 @@ function validateFile(file: string): FileReport {
         });
       }
     }
+  }
+
+  // Source ids are the article's own footnote numbering: a duplicate makes two
+  // different documents share a number, a dangling reference renders nothing.
+  const sourceIds = new Set<string>();
+  for (const source of article.sources ?? []) {
+    if (sourceIds.has(source.id)) {
+      failures.push({ file, message: `duplicate source id "${source.id}"` });
+    }
+    sourceIds.add(source.id);
+  }
+
+  for (const [i, block] of article.blocks.entries()) {
+    if (block.type !== 'table' && block.type !== 'chart') continue;
+    for (const id of block.sources ?? []) {
+      if (sourceIds.has(id)) continue;
+      failures.push({
+        file,
+        message: `blocks[${i}] (${block.type}): cites source "${id}", which is not in \`sources\``,
+      });
+    }
+  }
+
+  // The revision log is the article's own history — it cannot run ahead of the
+  // review that produced it, or behind the day it was published.
+  const published = parseArticleDate(article.published)?.getTime();
+  const reviewed = parseArticleDate(article.lastReviewed)?.getTime();
+  if (published !== undefined && reviewed !== undefined && reviewed < published) {
+    failures.push({
+      file,
+      message: `lastReviewed (${article.lastReviewed}) is before published (${article.published})`,
+    });
+  }
+
+  let previous: number | undefined;
+  for (const [i, revision] of (article.revisions ?? []).entries()) {
+    const at = parseArticleDate(revision.date)?.getTime();
+    if (at === undefined) continue;
+    if (published !== undefined && at < published) {
+      failures.push({
+        file,
+        message: `revisions[${i}]: dated ${revision.date}, before the article was published`,
+      });
+    }
+    if (reviewed !== undefined && at > reviewed) {
+      failures.push({
+        file,
+        message: `revisions[${i}]: dated ${revision.date}, after lastReviewed (${article.lastReviewed}) — bump lastReviewed`,
+      });
+    }
+    if (previous !== undefined && at > previous) {
+      failures.push({
+        file,
+        message: `revisions[${i}]: out of order — the log reads newest first`,
+      });
+    }
+    previous = at;
   }
 
   return {

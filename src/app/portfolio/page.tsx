@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { PieChart, ShieldCheck, ChevronRight, TrendingUp, TrendingDown, Eye } from "lucide-react";
-import { Spinner } from "@heroui/react";
+import { Card, Spinner } from "@heroui/react";
 import { allCoverageData, getAverageScore } from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
 
@@ -119,7 +119,7 @@ const CATEGORY_STYLES: Record<string, string> = {
 };
 
 function CategoryBadge({ category }: { category: string }) {
-  const cls = CATEGORY_STYLES[category] ?? "bg-white/5 text-white/40 border-white/10";
+  const cls = CATEGORY_STYLES[category] ?? "bg-foreground/5 text-foreground/40 border-foreground/10";
   return (
     <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${cls}`}>
       {category}
@@ -136,7 +136,7 @@ const RANK_BADGE_STYLES: Record<number, string> = {
   2: "bg-[#c0c0c0]/[0.16] border-[#c0c0c0]/50 text-[#e2e8e8]",
   3: "bg-[#b87333]/[0.14] border-[#b87333]/40 text-[#d18a4d]",
 };
-const NEUTRAL_RANK_BADGE = "bg-white/[0.05] border-white/[0.07] text-white/45";
+const NEUTRAL_RANK_BADGE = "bg-foreground/[0.05] border-foreground/[0.07] text-foreground/45";
 
 function RankBadge({ rank }: { rank: number }) {
   return (
@@ -337,7 +337,7 @@ export default function PortfolioPage() {
         <h1 className="text-4xl md:text-6xl font-extrabold gradient-text-animated leading-tight mb-4">
           The IM25
         </h1>
-        <p className="text-white/45 text-base md:text-lg max-w-2xl leading-relaxed">
+        <p className="text-foreground/45 text-base md:text-lg max-w-2xl leading-relaxed">
           {portfolio.length} high-conviction positions selected for moat durability, growth scaling,
           and valuation discipline. Higher-scoring positions receive proportionally larger allocations
           (max 10% per position).
@@ -348,10 +348,10 @@ export default function PortfolioPage() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5 animate-fade-up stagger-fill-both" style={{ animationDelay: '0.15s' }}>
 
         {/* Visual Allocation */}
-        <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6">
+        <Card className="p-6">
           <div className="flex items-center gap-2.5 mb-6">
-            <PieChart size={16} className="text-[#c9a96a]" />
-            <h3 className="font-bold text-white/85">Visual Allocation</h3>
+            <PieChart size={16} className="text-accent" />
+            <h3 className="font-bold text-foreground/85">Visual Allocation</h3>
           </div>
 
           <div className="flex justify-center mb-6">
@@ -416,44 +416,44 @@ export default function PortfolioPage() {
             {[...portfolio].sort((a, b) => (dynamicWeights[b.ticker] ?? 0) - (dynamicWeights[a.ticker] ?? 0)).map((stock) => (
               <div key={stock.ticker} className="flex items-center gap-2 min-w-0">
                 <div className="w-2 h-2 rounded-full shrink-0" style={{ background: stock.color }} />
-                <span className="text-xs font-bold text-white/70 truncate">{stock.ticker}</span>
+                <span className="text-xs font-bold text-foreground/70 truncate">{stock.ticker}</span>
                 {scoresLoading
-                  ? <Spinner size="sm" color="default" classNames={{ wrapper: "w-3 h-3" }} />
-                  : <span className="text-xs text-white/30 ml-auto">{dynamicWeights[stock.ticker] ?? 0}%</span>
+                  ? <Spinner size="sm" color="current" />
+                  : <span className="text-xs text-foreground/30 ml-auto">{dynamicWeights[stock.ticker] ?? 0}%</span>
                 }
               </div>
             ))}
           </div>
-        </div>
+        </Card>
 
         {/* Strategy Summary */}
-        <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 flex flex-col gap-6">
+        <Card className="p-6 gap-6">
           <div className="flex items-center gap-2.5">
             <ShieldCheck size={16} className="text-emerald-400" />
-            <h3 className="font-bold text-white/85">Strategy Summary</h3>
+            <h3 className="font-bold text-foreground/85">Strategy Summary</h3>
           </div>
 
           {/* Key metrics */}
           <div className="grid grid-cols-2 gap-3">
-            <div className="rounded-xl border border-white/[0.05] bg-white/[0.02] p-4">
+            <Card className="p-4">
               <p className="section-label mb-1.5">Positions</p>
-              <p className="text-2xl font-black text-white">{portfolio.length}</p>
-              <p className="text-white/28 text-[10px] mt-0.5">High-conviction holdings</p>
-            </div>
-            <div className="rounded-xl border border-white/[0.05] bg-white/[0.02] p-4">
+              <p className="text-2xl font-black text-foreground">{portfolio.length}</p>
+              <p className="text-foreground/28 text-[10px] mt-0.5">High-conviction holdings</p>
+            </Card>
+            <Card className="p-4">
               <p className="section-label mb-1.5">Threshold</p>
-              <p className="text-2xl font-black text-white">≥ {PORTFOLIO_THRESHOLD}</p>
-              <p className="text-white/28 text-[10px] mt-0.5">Score required / 100</p>
-            </div>
+              <p className="text-2xl font-black text-foreground">≥ {PORTFOLIO_THRESHOLD}</p>
+              <p className="text-foreground/28 text-[10px] mt-0.5">Score required / 100</p>
+            </Card>
           </div>
 
           {/* Today's change */}
-          <div className="rounded-xl border border-white/[0.05] bg-white/[0.02] p-4">
+          <Card className="p-4">
             <p className="section-label mb-2">Today&apos;s Portfolio Change</p>
             {!allPricesLoaded ? (
-              <Spinner size="sm" color="default" />
+              <Spinner size="sm" color="current" />
             ) : weightedDailyChange == null ? (
-              <p className="text-3xl font-black text-white/20">—</p>
+              <p className="text-3xl font-black text-foreground/20">—</p>
             ) : (
               <div className={`flex items-center gap-2 ${weightedDailyChange >= 0 ? "text-emerald-400" : "text-rose-400"}`}>
                 {weightedDailyChange >= 0 ? <TrendingUp size={22} /> : <TrendingDown size={22} />}
@@ -462,14 +462,14 @@ export default function PortfolioPage() {
                 </span>
               </div>
             )}
-            <p className="text-white/25 text-[10px] mt-1.5">Position-weighted · {portfolio.length} holdings</p>
-          </div>
+            <p className="text-foreground/25 text-[10px] mt-1.5">Position-weighted · {portfolio.length} holdings</p>
+          </Card>
 
           {/* Est. 1-year returns */}
           <div>
             <p className="section-label mb-3">Est. 1-Year Return</p>
             {!allPricesLoaded ? (
-              <Spinner size="sm" color="default" />
+              <Spinner size="sm" color="current" />
             ) : (
               <div className="grid grid-cols-3 gap-2">
                 {([
@@ -477,20 +477,20 @@ export default function PortfolioPage() {
                   { label: "Base", value: weightedScenarioReturns.base, border: "border-blue-500/15" },
                   { label: "Bull", value: weightedScenarioReturns.bull, border: "border-emerald-500/15" },
                 ] as const).map(({ label, value, border }) => (
-                  <div key={label} className={`rounded-xl border ${border} bg-white/[0.02] py-3 px-2 text-center`}>
+                  <div key={label} className={`rounded-xl border ${border} bg-foreground/[0.02] py-3 px-2 text-center`}>
                     <p className="section-label mb-1.5">{label}</p>
                     {value != null ? (
                       <p className={`text-lg font-black ${value >= 0 ? "text-emerald-400" : "text-rose-400"}`}>
                         {value >= 0 ? "+" : ""}{value.toFixed(1)}%
                       </p>
                     ) : (
-                      <p className="text-lg font-black text-white/20">—</p>
+                      <p className="text-lg font-black text-foreground/20">—</p>
                     )}
                   </div>
                 ))}
               </div>
             )}
-            <p className="text-white/22 text-[10px] mt-2">Weighted avg · allocation-adjusted</p>
+            <p className="text-foreground/22 text-[10px] mt-2">Weighted avg · allocation-adjusted</p>
           </div>
 
           {/* Concentration bars */}
@@ -503,17 +503,17 @@ export default function PortfolioPage() {
               ].map(({ label, value, color }) => (
                 <div key={label}>
                   <div className="flex justify-between mb-1.5">
-                    <span className="text-white/45 text-xs font-medium">{label}</span>
-                    <span className="text-white/45 text-xs font-mono">{Math.round(value)}%</span>
+                    <span className="text-foreground/45 text-xs font-medium">{label}</span>
+                    <span className="text-foreground/45 text-xs font-mono">{Math.round(value)}%</span>
                   </div>
-                  <div className="h-[3px] bg-white/[0.05] rounded-full overflow-hidden">
+                  <div className="h-[3px] bg-foreground/[0.05] rounded-full overflow-hidden">
                     <div className={`h-full ${color} rounded-full transition-all duration-700`} style={{ width: `${value}%` }} />
                   </div>
                 </div>
               ))}
             </div>
           </div>
-        </div>
+        </Card>
       </div>
 
       {/* ── Allocation Breakdown ──────────────────────────────────────────── */}
@@ -521,17 +521,17 @@ export default function PortfolioPage() {
         <div className="flex items-center gap-4 mb-5">
           <div>
             <p className="section-label mb-1">Holdings</p>
-            <h2 className="text-xl font-bold text-white/85">Allocation Breakdown</h2>
+            <h2 className="text-xl font-bold text-foreground/85">Allocation Breakdown</h2>
           </div>
-          <div className="h-px flex-1 bg-white/[0.05]" />
+          <div className="h-px flex-1 bg-foreground/[0.05]" />
           {/* Toggle only visible on mobile — desktop shows both columns */}
-          <div className="flex lg:hidden items-center gap-1 bg-white/[0.04] border border-white/[0.06] rounded-lg p-1 shrink-0">
+          <div className="flex lg:hidden items-center gap-1 bg-foreground/[0.04] border border-foreground/[0.06] rounded-lg p-1 shrink-0">
             {([['score', 'Score'], ['change', '1D %']] as const).map(([val, label]) => (
               <button
                 key={val}
                 onClick={() => setScoreColumn(val)}
                 className={`text-[11px] font-bold px-2.5 py-1 rounded-md transition-colors ${
-                  scoreColumn === val ? 'bg-white/[0.12] text-white' : 'text-white/30 hover:text-white/60'
+                  scoreColumn === val ? 'bg-foreground/[0.12] text-foreground' : 'text-foreground/30 hover:text-foreground/60'
                 }`}
               >
                 {label}
@@ -540,9 +540,9 @@ export default function PortfolioPage() {
           </div>
         </div>
 
-        <div className="rounded-2xl overflow-hidden border border-white/[0.05] bg-white/[0.02]">
+        <Card className="overflow-hidden">
           {/* Table header */}
-          <div className="flex items-center gap-3 md:gap-4 px-4 md:px-5 py-2.5 border-b border-white/[0.05] bg-white/[0.02]">
+          <div className="flex items-center gap-3 md:gap-4 px-4 md:px-5 py-2.5 border-b border-foreground/[0.05] bg-foreground/[0.02]">
             <div className="section-label w-6 md:w-7 text-center shrink-0">#</div>
             <div className="w-0.5 shrink-0" />
             <div className="section-label min-w-[110px] md:min-w-[140px]">Holding</div>
@@ -559,12 +559,12 @@ export default function PortfolioPage() {
           </div>
 
           {/* Data rows */}
-          <div className="divide-y divide-white/[0.04]">
+          <div className="divide-y divide-foreground/[0.04]">
             {portfolioWithScores.map((stock) => (
               <button
                 key={stock.ticker}
                 onClick={() => router.push(stock.href)}
-                className="w-full flex items-center gap-3 md:gap-4 px-4 md:px-5 py-3.5 hover:bg-white/[0.04] transition-colors group text-left"
+                className="w-full flex items-center gap-3 md:gap-4 px-4 md:px-5 py-3.5 hover:bg-foreground/[0.04] transition-colors group text-left"
               >
                 {/* Rank */}
                 <RankBadge rank={stock.rank} />
@@ -574,8 +574,8 @@ export default function PortfolioPage() {
 
                 {/* Name + ticker */}
                 <div className="min-w-[110px] md:min-w-[140px]">
-                  <div className="font-bold text-sm text-white/90 leading-tight">{stock.name}</div>
-                  <div className="text-[10px] text-white/28 tracking-[0.12em] font-black uppercase mt-0.5">{stock.ticker}</div>
+                  <div className="font-bold text-sm text-foreground/90 leading-tight">{stock.name}</div>
+                  <div className="text-[10px] text-foreground/28 tracking-[0.12em] font-black uppercase mt-0.5">{stock.ticker}</div>
                 </div>
 
                 {/* Category badge */}
@@ -588,14 +588,14 @@ export default function PortfolioPage() {
                 {/* Per-stock bear/base/bull */}
                 <div className="hidden lg:flex items-center justify-end shrink-0 w-36">
                   {!allPricesLoaded
-                    ? <Spinner size="sm" color="default" />
+                    ? <Spinner size="sm" color="current" />
                     : (() => {
                         const price = allPrices[stock.ticker];
                         const bear  = parseScenarioPrice(stock.stock.bearTarget);
                         const base  = parseScenarioPrice(stock.stock.baseTarget);
                         const bull  = parseScenarioPrice(stock.stock.bullTarget);
                         if (price == null || !bear || !base || !bull || price <= 0)
-                          return <span className="text-xs text-white/25">—</span>;
+                          return <span className="text-xs text-foreground/25">—</span>;
                         const fmt = (t: number) => {
                           const r = ((t - price) / price) * 100;
                           return { r, str: `${r >= 0 ? "+" : ""}${r.toFixed(0)}%`, pos: r >= 0 };
@@ -609,7 +609,7 @@ export default function PortfolioPage() {
                               { label: "Bull", ...u },
                             ].map(({ label, str, pos }) => (
                               <div key={label}>
-                                <div className="text-[9px] text-white/20 uppercase">{label}</div>
+                                <div className="text-[9px] text-foreground/20 uppercase">{label}</div>
                                 <div className={`text-xs font-black ${pos ? "text-emerald-400" : "text-rose-400"}`}>{str}</div>
                               </div>
                             ))}
@@ -622,7 +622,7 @@ export default function PortfolioPage() {
                 {/* Score — always on desktop, toggle-gated on mobile */}
                 <div className={`text-right shrink-0 w-12 ${scoreColumn !== 'score' ? 'hidden lg:block' : ''}`}>
                   {scoresLoading
-                    ? <Spinner size="sm" color="default" />
+                    ? <Spinner size="sm" color="current" />
                     : <span className={`text-sm font-black ${getScoreColor(scoreByTicker[stock.ticker] ?? 0)}`}>{scoreByTicker[stock.ticker] ?? 0}</span>
                   }
                 </div>
@@ -630,10 +630,10 @@ export default function PortfolioPage() {
                 {/* 1D% — always on desktop, toggle-gated on mobile */}
                 <div className={`text-right shrink-0 w-14 ${scoreColumn !== 'change' ? 'hidden lg:block' : ''}`}>
                   {!allPricesLoaded
-                    ? <Spinner size="sm" color="default" />
+                    ? <Spinner size="sm" color="current" />
                     : (() => {
                         const cp = allChangePercents[stock.ticker];
-                        if (cp == null) return <span className="text-xs text-white/25">—</span>;
+                        if (cp == null) return <span className="text-xs text-foreground/25">—</span>;
                         const pos = cp >= 0;
                         return (
                           <div className={`flex items-center justify-end gap-0.5 ${pos ? "text-emerald-400" : "text-rose-400"}`}>
@@ -648,19 +648,19 @@ export default function PortfolioPage() {
                 {/* Weight */}
                 <div className="tabular-nums w-9 text-right shrink-0">
                   {scoresLoading
-                    ? <Spinner size="sm" color="default" />
-                    : <span className="text-base font-black text-white">{dynamicWeights[stock.ticker] ?? 0}%</span>
+                    ? <Spinner size="sm" color="current" />
+                    : <span className="text-base font-black text-foreground">{dynamicWeights[stock.ticker] ?? 0}%</span>
                   }
                 </div>
 
                 <ChevronRight
                   size={15}
-                  className="text-white/15 group-hover:text-white/50 transition-colors shrink-0"
+                  className="text-foreground/15 group-hover:text-foreground/50 transition-colors shrink-0"
                 />
               </button>
             ))}
           </div>
-        </div>
+        </Card>
       </section>
 
       {/* ── Watchlist (next-best, not in portfolio) ──────────────────────── */}
@@ -669,24 +669,24 @@ export default function PortfolioPage() {
           <div className="flex items-center gap-4 mb-5">
             <div>
               <p className="section-label mb-1">Watchlist</p>
-              <h2 className="text-xl font-bold text-white/85">Near the Top {MAX_PORTFOLIO}</h2>
+              <h2 className="text-xl font-bold text-foreground/85">Near the Top {MAX_PORTFOLIO}</h2>
             </div>
-            <div className="h-px flex-1 bg-white/[0.05]" />
-            <div className="flex items-center gap-1.5 text-white/30 shrink-0">
+            <div className="h-px flex-1 bg-foreground/[0.05]" />
+            <div className="flex items-center gap-1.5 text-foreground/30 shrink-0">
               <Eye size={13} />
               <span className="text-[11px] font-bold uppercase tracking-wider">{nearTop.length}</span>
             </div>
           </div>
 
-          <p className="text-white/40 text-xs md:text-sm mb-4 max-w-2xl leading-relaxed">
+          <p className="text-foreground/40 text-xs md:text-sm mb-4 max-w-2xl leading-relaxed">
             The next {nearTop.length} highest-ranked names that fell outside the {MAX_PORTFOLIO}-position
             portfolio. Worth tracking — a moat upgrade, growth re-acceleration, or valuation reset could
             promote them.
           </p>
 
-          <div className="rounded-2xl overflow-hidden border border-white/[0.05] bg-white/[0.02]">
+          <Card className="overflow-hidden">
             {/* Table header */}
-            <div className="flex items-center gap-3 md:gap-4 px-4 md:px-5 py-2.5 border-b border-white/[0.05] bg-white/[0.02]">
+            <div className="flex items-center gap-3 md:gap-4 px-4 md:px-5 py-2.5 border-b border-foreground/[0.05] bg-foreground/[0.02]">
               <div className="section-label w-6 md:w-7 text-center shrink-0">#</div>
               <div className="w-0.5 shrink-0" />
               <div className="section-label min-w-[110px] md:min-w-[140px]">Holding</div>
@@ -699,12 +699,12 @@ export default function PortfolioPage() {
             </div>
 
             {/* Data rows */}
-            <div className="divide-y divide-white/[0.04]">
+            <div className="divide-y divide-foreground/[0.04]">
               {nearTop.map((stock, idx) => (
                 <button
                   key={stock.ticker}
                   onClick={() => router.push(stock.href)}
-                  className="w-full flex items-center gap-3 md:gap-4 px-4 md:px-5 py-3.5 hover:bg-white/[0.04] transition-colors group text-left animate-slide-in-left stagger-fill-both"
+                  className="w-full flex items-center gap-3 md:gap-4 px-4 md:px-5 py-3.5 hover:bg-foreground/[0.04] transition-colors group text-left animate-slide-in-left stagger-fill-both"
                   style={{ animationDelay: `${0.5 + idx * 0.035}s` }}
                 >
                   {/* Rank */}
@@ -715,8 +715,8 @@ export default function PortfolioPage() {
 
                   {/* Name + ticker */}
                   <div className="min-w-[110px] md:min-w-[140px]">
-                    <div className="font-bold text-sm text-white/90 leading-tight">{stock.name}</div>
-                    <div className="text-[10px] text-white/28 tracking-[0.12em] font-black uppercase mt-0.5">{stock.ticker}</div>
+                    <div className="font-bold text-sm text-foreground/90 leading-tight">{stock.name}</div>
+                    <div className="text-[10px] text-foreground/28 tracking-[0.12em] font-black uppercase mt-0.5">{stock.ticker}</div>
                   </div>
 
                   {/* Category badge */}
@@ -729,14 +729,14 @@ export default function PortfolioPage() {
                   {/* Per-stock bear/base/bull */}
                   <div className="hidden lg:flex items-center justify-end shrink-0 w-36">
                     {!allPricesLoaded
-                      ? <Spinner size="sm" color="default" />
+                      ? <Spinner size="sm" color="current" />
                       : (() => {
                           const price = allPrices[stock.ticker];
                           const bear  = parseScenarioPrice(stock.stock.bearTarget);
                           const base  = parseScenarioPrice(stock.stock.baseTarget);
                           const bull  = parseScenarioPrice(stock.stock.bullTarget);
                           if (price == null || !bear || !base || !bull || price <= 0)
-                            return <span className="text-xs text-white/25">—</span>;
+                            return <span className="text-xs text-foreground/25">—</span>;
                           const fmt = (t: number) => {
                             const r = ((t - price) / price) * 100;
                             return { r, str: `${r >= 0 ? "+" : ""}${r.toFixed(0)}%`, pos: r >= 0 };
@@ -750,7 +750,7 @@ export default function PortfolioPage() {
                                 { label: "Bull", ...u },
                               ].map(({ label, str, pos }) => (
                                 <div key={label}>
-                                  <div className="text-[9px] text-white/20 uppercase">{label}</div>
+                                  <div className="text-[9px] text-foreground/20 uppercase">{label}</div>
                                   <div className={`text-xs font-black ${pos ? "text-emerald-400" : "text-rose-400"}`}>{str}</div>
                                 </div>
                               ))}
@@ -763,7 +763,7 @@ export default function PortfolioPage() {
                   {/* Score */}
                   <div className={`text-right shrink-0 w-12 ${scoreColumn !== 'score' ? 'hidden lg:block' : ''}`}>
                     {scoresLoading
-                      ? <Spinner size="sm" color="default" />
+                      ? <Spinner size="sm" color="current" />
                       : <span className={`text-sm font-black ${getScoreColor(scoreByTicker[stock.ticker] ?? 0)}`}>{scoreByTicker[stock.ticker] ?? 0}</span>
                     }
                   </div>
@@ -771,10 +771,10 @@ export default function PortfolioPage() {
                   {/* 1D% */}
                   <div className={`text-right shrink-0 w-14 ${scoreColumn !== 'change' ? 'hidden lg:block' : ''}`}>
                     {!allPricesLoaded
-                      ? <Spinner size="sm" color="default" />
+                      ? <Spinner size="sm" color="current" />
                       : (() => {
                           const cp = allChangePercents[stock.ticker];
-                          if (cp == null) return <span className="text-xs text-white/25">—</span>;
+                          if (cp == null) return <span className="text-xs text-foreground/25">—</span>;
                           const pos = cp >= 0;
                           return (
                             <div className={`flex items-center justify-end gap-0.5 ${pos ? "text-emerald-400" : "text-rose-400"}`}>
@@ -788,12 +788,12 @@ export default function PortfolioPage() {
 
                   <ChevronRight
                     size={15}
-                    className="text-white/15 group-hover:text-white/50 transition-colors shrink-0"
+                    className="text-foreground/15 group-hover:text-foreground/50 transition-colors shrink-0"
                   />
                 </button>
               ))}
             </div>
-          </div>
+          </Card>
         </section>
       )}
 

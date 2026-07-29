@@ -47,10 +47,33 @@ export interface TableBlock {
   type: 'table';
   caption?: string;
   asOf: string;
+  /** Ids into the article's `sources` — where these figures came from. */
+  sources?: string[];
   columns: string[];
   rows: string[][];
   /** Index of the column to emphasise (0-based). */
   highlightColumn?: number;
+}
+
+/**
+ * Static time series of company-reported figures. Use it when the shape over
+ * time is the argument; a single period is a `table`.
+ */
+export interface ChartBlock {
+  type: 'chart';
+  variant: 'line' | 'bar';
+  caption?: string;
+  asOf: string;
+  sources?: string[];
+  /** X-axis labels, usually reporting periods. */
+  categories: string[];
+  /** Up to four series, each with one value per category (`null` = not reported). */
+  series: { name: string; values: (number | null)[] }[];
+  /** Unit suffix, e.g. "%" or "B". */
+  unit?: string;
+  /** Value prefix, e.g. "$". */
+  prefix?: string;
+  note?: string;
 }
 
 /** Pull-out note. */
@@ -115,9 +138,41 @@ export type ResearchBlock =
   | ScorecardBlock
   | MoatMatrixBlock
   | TableBlock
+  | ChartBlock
   | CalloutBlock
   | StatStripBlock
   | ListBlock;
+
+/**
+ * A primary document behind a static figure. Live blocks correct themselves;
+ * company-reported numbers can only be checked against the document they came
+ * from, so the article carries it.
+ */
+export interface ArticleSource {
+  /** Kebab-case id, referenced from a `table` or `chart`. */
+  id: string;
+  label: string;
+  publisher?: string;
+  date: string;
+  url: string;
+  kind: 'filing' | 'press-release' | 'transcript' | 'company-site' | 'regulator' | 'third-party';
+}
+
+/** Where the article's falsifiable claim currently stands. */
+export type FalsifiableStatus = 'holding' | 'watch' | 'tripped' | 'retired';
+
+export interface FalsifiableClaim {
+  claim: string;
+  status: FalsifiableStatus;
+  /** What the latest data says. Required once the status leaves `holding`. */
+  note?: string;
+}
+
+/** One entry in the visible revision log. */
+export interface ArticleRevision {
+  date: string;
+  note: string;
+}
 
 export interface ResearchArticleData {
   /** URL slug matching the /research/[slug] route and the filename. */
@@ -139,7 +194,11 @@ export interface ResearchArticleData {
   tags: string[];
   /** 2–5 sentence thesis summary. Reused for metadata and the Markdown mirror. */
   summary: string;
-  /** The falsifiable claim the piece rests on — what would prove it wrong. */
-  falsifiableBy?: string;
+  /** The falsifiable claim the piece rests on, and whether it still stands. */
+  falsifiableBy?: FalsifiableClaim;
+  /** Primary documents behind the article's static figures. */
+  sources?: ArticleSource[];
+  /** What changed and when, newest first. Appended by a review. */
+  revisions?: ArticleRevision[];
   blocks: ResearchBlock[];
 }
