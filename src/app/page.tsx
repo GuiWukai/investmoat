@@ -5,7 +5,7 @@ import Link from "next/link";
 import {
   ShieldCheck, TrendingUp, BarChart3, ChevronDown, ArrowRight,
   Brain, Target, Database, Lock, Network, CreditCard, BookMarked,
-  MonitorSmartphone, Code2, Globe, GraduationCap, Layers, Zap,
+  MonitorSmartphone, Code2, Globe, GraduationCap, Layers, Zap, FileText,
 } from "lucide-react";
 
 // ─── FAQ Accordion ────────────────────────────────────────────────────────────
@@ -132,6 +132,12 @@ export default function HomePage() {
               className="flex items-center gap-2 px-6 py-3 bg-white/[0.04] hover:bg-white/[0.07] border border-[#c9a96a]/20 rounded-lg font-bold text-white/80 text-sm transition-colors"
             >
               Explore Coverage
+            </Link>
+            <Link
+              href="/research"
+              className="flex items-center gap-2 px-6 py-3 bg-white/[0.04] hover:bg-white/[0.07] border border-[#c9a96a]/20 rounded-lg font-bold text-white/80 text-sm transition-colors"
+            >
+              <FileText size={16} /> Read Research
             </Link>
           </div>
         </div>
@@ -605,7 +611,8 @@ export default function HomePage() {
             </h3>
             <p className="text-white/45 max-w-md mx-auto text-sm leading-relaxed mb-8">
               Explore the current 25-position allocation, browse all 128 analyzed assets,
-              or dive into individual company reports with moat scores, scenarios, and live valuations.
+              read the cross-cutting research, or dive into individual company reports with
+              moat scores, scenarios, and live valuations.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Link
@@ -619,6 +626,12 @@ export default function HomePage() {
                 className="flex items-center gap-2 px-6 py-3 bg-white/[0.04] hover:bg-white/[0.07] border border-[#c9a96a]/20 rounded-lg font-bold text-white/75 text-sm transition-colors"
               >
                 All Coverage
+              </Link>
+              <Link
+                href="/research"
+                className="flex items-center gap-2 px-6 py-3 bg-white/[0.04] hover:bg-white/[0.07] border border-[#c9a96a]/20 rounded-lg font-bold text-white/75 text-sm transition-colors"
+              >
+                <FileText size={16} /> Read Research
               </Link>
             </div>
           </div>
