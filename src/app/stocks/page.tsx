@@ -1,9 +1,18 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { useRouter } from "next/navigation";
-import { ChevronRight, Search, X, SlidersHorizontal, ArrowUp, ArrowDown, ArrowUpDown, ChevronDown } from "lucide-react";
-import { Card, Spinner } from "@heroui/react";
+import { ChevronRight, SlidersHorizontal, ArrowUp, ArrowDown, ArrowUpDown } from "lucide-react";
+import {
+  Card,
+  ListBox,
+  ListBoxItem,
+  SearchField,
+  Select,
+  Spinner,
+  ToggleButton,
+  ToggleButtonGroup,
+} from "@heroui/react";
 import { allCoverageData, getAverageScore } from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
 
@@ -161,88 +170,48 @@ function StockRow({
   );
 }
 
-function CategoryPill({
-  label, count, active, onClick,
-}: { label: string; count?: number; active: boolean; onClick: () => void }) {
-  return (
-    <button
-      onClick={onClick}
-      className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
-        active
-          ? 'bg-accent/15 border border-accent/40 text-gold-bright'
-          : 'bg-foreground/[0.04] border border-foreground/10 text-foreground/40 hover:text-foreground/70 hover:bg-foreground/[0.07]'
-      }`}
-    >
-      {label}
-      {count !== undefined && (
-        <span className={`text-[10px] font-bold ${active ? 'text-accent/70' : 'text-foreground/20'}`}>
-          {count}
-        </span>
-      )}
-    </button>
-  );
-}
+/** The category pills keep the house rounded-full look on top of ToggleButton. */
+const CATEGORY_PILL =
+  'pill-toggle flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-semibold whitespace-nowrap';
 
-// ─── Mobile dropdown shell ──────────────────────────────────────────────────────
-function MobileDropdown({
-  label, value, icon, children,
+/**
+ * Mobile filter/sort control.
+ *
+ * This replaces a hand-rolled dropdown that managed its own open state and
+ * document-level mousedown listener, and rendered its options as plain buttons
+ * with no listbox semantics. HeroUI's Select portals the popover, traps and
+ * restores focus, supports type-ahead and arrow keys, and closes on Escape.
+ */
+function MobileSelect({
+  label, icon, selectedKey, onSelectionChange, children,
 }: {
   label: string;
-  value: string;
   icon: ReactNode;
-  children: (close: () => void) => ReactNode;
+  selectedKey: string;
+  onSelectionChange: (key: string) => void;
+  children: ReactNode;
 }) {
-  const [open, setOpen] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    function handleClick(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
-    }
-    document.addEventListener("mousedown", handleClick);
-    return () => document.removeEventListener("mousedown", handleClick);
-  }, []);
-
   return (
-    <div ref={ref} className="relative">
-      <button
-        onClick={() => setOpen(o => !o)}
-        className="w-full flex items-center gap-2 px-3 py-2 rounded-xl bg-foreground/[0.04] border border-foreground/10 text-left transition-colors hover:bg-foreground/[0.06]"
-      >
-        <span className="text-foreground/30 shrink-0">{icon}</span>
-        <span className="flex flex-col min-w-0 leading-tight">
-          <span className="text-[9px] font-bold uppercase tracking-widest text-foreground/25">{label}</span>
-          <span className="text-xs font-semibold text-foreground/85 truncate">{value}</span>
-        </span>
-        <ChevronDown
-          size={14}
-          className={`ml-auto shrink-0 text-foreground/30 transition-transform ${open ? "rotate-180" : ""}`}
-        />
-      </button>
-      {open && (
-        <div
-          className="absolute z-50 top-full left-0 right-0 mt-1.5 rounded-xl border border-foreground/10 shadow-2xl overflow-hidden max-h-72 overflow-y-auto"
-          style={{ backgroundColor: '#0c0e13' }}
-        >
-          {children(() => setOpen(false))}
-        </div>
-      )}
-    </div>
-  );
-}
-
-function DropdownItem({
-  active, onClick, children,
-}: { active: boolean; onClick: () => void; children: ReactNode }) {
-  return (
-    <button
-      onClick={onClick}
-      className={`w-full flex items-center justify-between gap-2 px-3 py-2.5 text-left text-sm transition-colors border-b border-foreground/[0.04] last:border-0 ${
-        active ? "bg-accent/10 text-gold-bright" : "text-foreground/65 hover:bg-foreground/[0.04]"
-      }`}
+    <Select
+      aria-label={label}
+      fullWidth
+      onSelectionChange={(key) => onSelectionChange(String(key))}
+      selectedKey={selectedKey}
     >
-      {children}
-    </button>
+      <Select.Trigger className="items-center gap-2 text-left">
+        <span className="shrink-0 text-muted">{icon}</span>
+        <span className="flex min-w-0 flex-col leading-tight">
+          <span className="text-[9px] font-bold uppercase tracking-widest text-muted">
+            {label}
+          </span>
+          <Select.Value className="truncate text-xs font-semibold text-foreground/85" />
+        </span>
+        <Select.Indicator className="ml-auto shrink-0" />
+      </Select.Trigger>
+      <Select.Popover>
+        <ListBox className="max-h-72 overflow-y-auto">{children}</ListBox>
+      </Select.Popover>
+    </Select>
   );
 }
 
@@ -251,7 +220,6 @@ export default function StocksPage() {
   const [activeCategory, setActiveCategory] = useState("all");
   const [sortKey, setSortKey] = useState<SortKey>("score");
   const [sortDir, setSortDir] = useState<SortDir>("desc");
-  const inputRef = useRef<HTMLInputElement>(null);
 
   // Live prices fetched once at the page level so the Score column can be sorted
   // against price-adjusted valuations (not just the static fallback).
@@ -365,85 +333,91 @@ export default function StocksPage() {
 
       {/* Controls */}
       <div className="relative z-30 animate-fade-up stagger-fill-both space-y-3" style={{ animationDelay: '0.08s' }}>
-        <div className="relative max-w-sm">
-          <Search size={14} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-foreground/25 pointer-events-none" />
-          <input
-            ref={inputRef}
-            type="text"
-            value={query}
-            onChange={e => setQuery(e.target.value)}
-            placeholder="Search by name or ticker…"
-            className="w-full bg-foreground/[0.04] border border-foreground/10 rounded-xl pl-9 pr-9 py-2 text-sm text-foreground placeholder:text-foreground/20 focus:outline-none focus:border-accent/30 focus:bg-foreground/[0.06] transition-all"
-          />
-          {query && (
-            <button
-              onClick={() => { setQuery(""); inputRef.current?.focus(); }}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground/25 hover:text-foreground/50 transition-colors"
-              aria-label="Clear"
-            >
-              <X size={13} />
-            </button>
-          )}
-        </div>
+        <SearchField
+          aria-label="Search coverage by name or ticker"
+          className="max-w-sm"
+          fullWidth
+          onChange={setQuery}
+          value={query}
+        >
+          <SearchField.Group>
+            <SearchField.SearchIcon />
+            <SearchField.Input placeholder="Search by name or ticker…" />
+            <SearchField.ClearButton />
+          </SearchField.Group>
+        </SearchField>
 
         {/* Desktop: category pills (sorting is handled by column headers) */}
         <div className="hidden md:flex items-center gap-2 flex-wrap">
-          <SlidersHorizontal size={12} className="text-foreground/20 shrink-0" />
-          {visibleCategories.map(cat => (
-            <CategoryPill
-              key={cat.key}
-              label={cat.label}
-              count={cat.key !== "all" ? categoryCount(cat.key) : undefined}
-              active={activeCategory === cat.key}
-              onClick={() => setActiveCategory(cat.key)}
-            />
-          ))}
+          <SlidersHorizontal size={12} className="text-muted shrink-0" />
+          <ToggleButtonGroup
+            aria-label="Filter coverage by category"
+            className="flex flex-wrap items-center gap-2"
+            isDetached
+            onSelectionChange={(keys) => {
+              const next = [...keys][0];
+              if (next != null) setActiveCategory(String(next));
+            }}
+            selectedKeys={new Set([activeCategory])}
+            selectionMode="single"
+            size="sm"
+          >
+            {visibleCategories.map(cat => (
+              <ToggleButton key={cat.key} className={CATEGORY_PILL} id={cat.key}>
+                {cat.label}
+                {cat.key !== "all" && (
+                  <span className="text-[10px] font-bold opacity-60">
+                    {categoryCount(cat.key)}
+                  </span>
+                )}
+              </ToggleButton>
+            ))}
+          </ToggleButtonGroup>
         </div>
 
-        {/* Mobile: filter + sort dropdowns (pills/headers are hidden below md) */}
+        {/* Mobile: filter + sort selects (pills/headers are hidden below md) */}
         <div className="grid grid-cols-2 gap-2 md:hidden">
-          <MobileDropdown
-            label="Filter"
-            value={CATEGORIES.find(c => c.key === activeCategory)?.label ?? "All"}
+          <MobileSelect
             icon={<SlidersHorizontal size={14} />}
+            label="Filter"
+            onSelectionChange={setActiveCategory}
+            selectedKey={activeCategory}
           >
-            {(close) =>
-              visibleCategories.map(cat => (
-                <DropdownItem
-                  key={cat.key}
-                  active={activeCategory === cat.key}
-                  onClick={() => { setActiveCategory(cat.key); close(); }}
-                >
-                  <span>{cat.label}</span>
-                  {cat.key !== "all" && (
-                    <span className="text-[11px] font-bold text-foreground/25">{categoryCount(cat.key)}</span>
-                  )}
-                </DropdownItem>
-              ))
-            }
-          </MobileDropdown>
+            {visibleCategories.map(cat => (
+              <ListBoxItem
+                key={cat.key}
+                className="flex items-center justify-between gap-2"
+                id={cat.key}
+                textValue={cat.label}
+              >
+                <span>{cat.label}</span>
+                {cat.key !== "all" && (
+                  <span className="text-[11px] font-bold text-muted">
+                    {categoryCount(cat.key)}
+                  </span>
+                )}
+              </ListBoxItem>
+            ))}
+          </MobileSelect>
 
-          <MobileDropdown
-            label="Sort by"
-            value={`${SORT_OPTIONS.find(o => o.key === sortKey)?.label ?? "Score"} · ${sortDir === "asc" ? "Asc" : "Desc"}`}
+          <MobileSelect
             icon={<ArrowUpDown size={14} />}
+            label="Sort by"
+            onSelectionChange={(key) => handleSort(key as SortKey)}
+            selectedKey={sortKey}
           >
-            {(close) =>
-              SORT_OPTIONS.map(opt => {
-                const active = sortKey === opt.key;
-                return (
-                  <DropdownItem
-                    key={opt.key}
-                    active={active}
-                    onClick={() => { const wasActive = active; handleSort(opt.key); if (!wasActive) close(); }}
-                  >
-                    <span>{opt.label}</span>
-                    <SortIndicator active={active} dir={sortDir} />
-                  </DropdownItem>
-                );
-              })
-            }
-          </MobileDropdown>
+            {SORT_OPTIONS.map(opt => (
+              <ListBoxItem
+                key={opt.key}
+                className="flex items-center justify-between gap-2"
+                id={opt.key}
+                textValue={opt.label}
+              >
+                <span>{opt.label}</span>
+                <SortIndicator active={sortKey === opt.key} dir={sortDir} />
+              </ListBoxItem>
+            ))}
+          </MobileSelect>
         </div>
       </div>
 

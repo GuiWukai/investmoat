@@ -184,6 +184,27 @@ a.card:hover,
   letter-spacing: -0.01em;
 }
 
+/* Filter pills (research themes, coverage categories).
+   HeroUI's ToggleButton exposes its own token contract rather than reacting to
+   `selected:` utilities, so the house treatment is set here: a hairline outline
+   at rest and a gold-filled, gold-lettered state once chosen. The default
+   --accent-soft fill alone is too quiet to show which filter is active. */
+.pill-toggle {
+  --toggle-button-bg: transparent;
+  --toggle-button-bg-hover: color-mix(in oklab, var(--foreground) 6%, transparent);
+  --toggle-button-fg: var(--muted);
+  --toggle-button-bg-selected: color-mix(in oklab, var(--gold) 15%, transparent);
+  --toggle-button-bg-selected-hover: color-mix(in oklab, var(--gold) 22%, transparent);
+  --toggle-button-bg-selected-pressed: var(--toggle-button-bg-selected-hover);
+  --toggle-button-fg-selected: var(--gold-bright);
+
+  border: var(--border-width) solid var(--border);
+}
+
+.pill-toggle[data-selected="true"] {
+  border-color: color-mix(in oklab, var(--gold) 40%, transparent);
+}
+
 /* HeroUI renders overlays into a container that paints its own background;
    left alone it washes the canvas out behind modals and popovers. */
 [data-overlay-container="true"] {

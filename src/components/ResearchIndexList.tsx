@@ -39,8 +39,7 @@ const ALL_TAGS = '__all__';
 
 /** The theme pills keep the house eyebrow type rather than HeroUI's button text. */
 const TAG_PILL =
-  'shrink-0 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 ' +
-  'selected:bg-accent/15 selected:text-gold-bright selected:border-accent/35';
+  'pill-toggle shrink-0 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1';
 
 function TagChips({ tags }: { tags: string[] }) {
   return (
