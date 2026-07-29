@@ -61,7 +61,7 @@ Nothing below is authored — the renderer derives it from the blocks, so it can
 - **Contents.** Every `heading` becomes an anchor (`#the-heading-text`) and an entry in the contents list: a sticky rail in the gutter on wide screens, a collapsible panel below it. The active section tracks the scroll position.
 - **Reading time.** Computed in [`src/lib/researchMeta.ts`](../src/lib/researchMeta.ts) from word count plus a scanning allowance per data block. Shown on the article and on the index card.
 - **Thesis in brief.** `summary` is surfaced above the body, so a reader who bounces still leaves with the argument.
-- **Phone layout.** `scorecard` rows render as cards below `sm` rather than a clipped table; the wider tables keep a horizontal scroller with edge fades.
+- **Phone layout.** `scorecard` rows render as cards below `sm` rather than a clipped table; the wider tables keep a horizontal scroller with edge fades. The `/research` index trims itself the same way: below `sm` a card shows one tag, a two- or three-line dek and four tickers with a `+N more` tail, the "Read" affordance drops (the card is the tap target), and the theme filter becomes a one-line horizontal scroller. Nothing is removed above `sm` — the trimming is CSS on identical markup, so server and client render the same tree.
 - **Scorecard sorting.** `sort` sets the initial order; column headers re-sort client-side, and "Reset order" restores the article's own.
 
 ## Validation
