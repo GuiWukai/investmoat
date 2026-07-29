@@ -32,7 +32,9 @@ Ask of every figure: *would this change when a stock is re-reviewed?*
 | Company-reported metric (revenue, ACV, NRR, guidance) | `table` with `asOf`, or prose naming the reporting period |
 
 Company figures are *not* framework outputs and are never the problem. Quote
-them freely — the `asOf` stamp is what keeps them honest.
+them freely — the `asOf` stamp and a citation are what keep them honest. Every
+`table` and `chart` names the document its figures came from; see the
+`source-research` skill.
 
 A useful gut check on a finished draft: **if every live number moved ten points
 tomorrow, would any sentence become false?** If yes, that sentence is
@@ -71,6 +73,18 @@ exactly the rot that turns a good article into a wrong one.
 Errors are never "fixed" by rephrasing to dodge the regex. If the number is a
 framework output, it belongs in a live block, whatever the wording.
 
+The lint also reads the article as a whole and reports what an editor would
+notice on a read-through:
+
+- **unsourced `table` or `chart`** (`warning`) — company figures a reader can't
+  check. Fix with the `source-research` skill.
+- **a source nothing cites** (`warning`) — cite it or drop it.
+- **a trailing `method` callout** (`warning`) — the method footer is rendered
+  by the article template now. Delete the authored copy.
+- **no counter-case section, or one under 10% of the article** (`note`) — see
+  below.
+- **no `falsifiableBy`** (`note`) — nothing for `/review-research` to test.
+
 ## House voice
 
 **Argue, don't summarise.** Every article contests something — a market
@@ -80,10 +94,17 @@ the piece agrees with consensus throughout, it has no reason to exist.
 **Evidence before interpretation.** Show the data, then say what it means.
 The `table` and the `scorecard` come before the paragraph that reads them.
 
-**Steelman the other side, in its own section.** The strongest article names
-the cohort member where the bear case is *correct* and explains why, before
-positioning. Adobe plays that role in the ServiceNow piece. An article that
-never reaches its counter-case is advocacy.
+**Steelman the other side, in its own section, at length.** The strongest
+article names the cohort member where the bear case is *correct* and explains
+why, before positioning. Adobe plays that role in the ServiceNow piece. An
+article that never reaches its counter-case is advocacy; one that reaches it in
+two sentences is advocacy with a disclaimer.
+
+The lint measures this — a counter-case under 10% of the article's words is a
+`note`. Treat 10% as the floor, not the target. The test that matters is
+whether a reader who *holds* the opposite view would recognise their own
+argument in the section, stated at its strongest rather than at its most
+convenient.
 
 **State the mechanism.** Not "these companies are better positioned" but the
 specific structural reason — what an agent must route through, what an
@@ -105,14 +126,15 @@ anything static that isn't in a `table` still names its date in the sentence.
 
 ## Reviewing an existing article
 
-When re-reading an article against current data:
+Use the `review-research` skill — it carries the full loop, including the
+`falsifiableBy` status, the revision log and what to do with an article whose
+thesis has been tripped. In short:
 
 1. Run `npm run validate:research` and work the notes — every moat status named
    in prose, checked against the stock JSON.
-2. Check whether `falsifiableBy` has been tripped. If it has, the article needs
+2. Test `falsifiableBy` and set its status. If it has tripped, the article needs
    a correction, not a date bump.
-3. Check every `table`'s `asOf` — a figure more than a couple of quarters stale
-   should be refreshed or removed.
-4. Bump `lastReviewed` even if the prose didn't change. It drives the sitemap's
-   `lastModified` and is the site's only visible answer to "has anyone checked
-   this lately".
+3. Check every `table` and `chart` — `asOf` current, citations still resolving.
+4. Append a revision entry and bump `lastReviewed` even if the prose didn't
+   change. It drives the sitemap's `lastModified` and is the site's only visible
+   answer to "has anyone checked this lately".

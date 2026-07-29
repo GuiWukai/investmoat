@@ -131,8 +131,16 @@ function collectSegments(article: ResearchArticleSchema): Segment[] {
   ];
 
   if (article.falsifiableBy) {
-    segments.push({ where: 'falsifiableBy', text: article.falsifiableBy, dated: false });
+    segments.push({
+      where: 'falsifiableBy',
+      text: [article.falsifiableBy.claim, article.falsifiableBy.note].filter(Boolean).join(' '),
+      dated: false,
+    });
   }
+
+  article.revisions?.forEach((revision, i) => {
+    segments.push({ where: `revisions[${i}]`, text: revision.note, dated: false });
+  });
 
   article.blocks.forEach((block, i) => {
     const at = `blocks[${i}] (${block.type})`;
@@ -194,6 +202,17 @@ function collectSegments(article: ResearchArticleSchema): Segment[] {
           segments.push({ where: `${at}.rows[${j}]`, text: row.join(' — '), dated: true });
         });
         break;
+
+      case 'chart':
+        segments.push({
+          where: at,
+          text: [block.caption, block.note].filter(Boolean).join(' '),
+          dated: true,
+        });
+        block.series.forEach((series, j) => {
+          segments.push({ where: `${at}.series[${j}]`, text: series.name, dated: true });
+        });
+        break;
     }
   });
 
@@ -228,6 +247,22 @@ function structuralIssues(article: ResearchArticleSchema): ProseIssue[] {
       });
     }
 
+    // Same rule as a table row: a chart plots company-reported figures. A
+    // series called "Composite" would freeze scores into a picture.
+    if (block.type === 'chart') {
+      block.series.forEach((series, j) => {
+        if (!/^\s*(composite|moat|growth|valuation)\b/i.test(series.name)) return;
+        issues.push({
+          severity: 'error',
+          where: `${at}.series[${j}]`,
+          message:
+            `series "${series.name}" plots a framework output — scores are recomputed on ` +
+            'every render, so a static chart of them is drift by construction',
+          excerpt: series.name,
+        });
+      });
+    }
+
     if (block.type === 'table') {
       block.rows.forEach((row, j) => {
         const label = row[0] ?? '';
@@ -249,9 +284,135 @@ function structuralIssues(article: ResearchArticleSchema): ProseIssue[] {
   return issues;
 }
 
+/** A heading that reads as the article's counter-case section. */
+const COUNTER_CASE = /counter[- ]case|counter[- ]argument|steelman|the bear|bear case|objection|where (?:the |it |they )?\w+ (?:is|are) (?:right|correct|justified)|against the thesis/i;
+
+function wordCount(text: string): number {
+  const trimmed = text.trim();
+  return trimmed ? trimmed.split(/\s+/).length : 0;
+}
+
+/** Author-written words in a block — the denominator for the counter-case check. */
+function blockWords(block: ResearchArticleSchema['blocks'][number]): number {
+  switch (block.type) {
+    case 'prose':
+      return wordCount(block.body);
+    case 'callout':
+      return wordCount(block.body);
+    case 'list':
+      return block.items.reduce((sum, item) => sum + wordCount(item), 0);
+    case 'heading':
+      return wordCount(block.text);
+    default:
+      return 0;
+  }
+}
+
+/**
+ * Editorial checks that read the article as a whole rather than sentence by
+ * sentence: is a static figure attributable, does the argument reach its own
+ * counter-case, is the thesis still carrying a falsifiable claim.
+ *
+ * None of these fail the build. They are the things a careful editor would
+ * notice on a read-through, surfaced so they are noticed every time instead of
+ * whenever someone happens to look.
+ */
+function editorialIssues(article: ResearchArticleSchema): ProseIssue[] {
+  const issues: ProseIssue[] = [];
+  const sources = article.sources ?? [];
+  const referenced = new Set<string>();
+
+  article.blocks.forEach((block, i) => {
+    if (block.type !== 'table' && block.type !== 'chart') return;
+    block.sources?.forEach((id) => referenced.add(id));
+    if (block.sources?.length) return;
+    issues.push({
+      severity: 'warning',
+      where: `blocks[${i}] (${block.type})`,
+      message:
+        'static figures with no `sources` — a reader cannot check a company-reported ' +
+        'number against anything. Cite the filing, release or transcript it came from',
+      excerpt: block.caption ?? `as of ${block.asOf}`,
+    });
+  });
+
+  for (const source of sources) {
+    if (referenced.has(source.id)) continue;
+    issues.push({
+      severity: 'warning',
+      where: `sources.${source.id}`,
+      message: 'source is listed but never cited by a table or chart — cite it or drop it',
+      excerpt: source.label,
+    });
+  }
+
+  // The method note is rendered by the article template now, so an authored
+  // copy is duplication that can drift away from what the site actually does.
+  const last = article.blocks[article.blocks.length - 1];
+  if (last?.type === 'callout' && last.tone === 'method') {
+    issues.push({
+      severity: 'warning',
+      where: `blocks[${article.blocks.length - 1}] (callout)`,
+      message:
+        'trailing `method` callout duplicates the method footer the renderer emits for ' +
+        'every article with a live block — delete it',
+      excerpt: last.title ?? last.body,
+    });
+  }
+
+  if (!article.falsifiableBy) {
+    issues.push({
+      severity: 'note',
+      where: 'falsifiableBy',
+      message:
+        'no falsifiable claim — nothing here can be checked at the next review, which is ' +
+        'how an article rots without anyone noticing',
+      excerpt: article.title,
+    });
+  }
+
+  // "Steelman the other side, in its own section." An article that never
+  // reaches its counter-case is advocacy; one that reaches it in two sentences
+  // is advocacy with a disclaimer.
+  const counterIndex = article.blocks.findIndex(
+    (b) => b.type === 'heading' && COUNTER_CASE.test([b.eyebrow, b.text].filter(Boolean).join(' ')),
+  );
+  const bodyWords = article.blocks.reduce((sum, b) => sum + blockWords(b), 0);
+
+  if (counterIndex === -1) {
+    issues.push({
+      severity: 'note',
+      where: 'blocks',
+      message:
+        'no counter-case section — name the cohort member where the other side is right, ' +
+        'and say why, before positioning',
+      excerpt: article.title,
+    });
+  } else if (bodyWords > 0) {
+    const nextHeading = article.blocks.findIndex((b, i) => i > counterIndex && b.type === 'heading');
+    const end = nextHeading === -1 ? article.blocks.length : nextHeading;
+    const counterWords = article.blocks
+      .slice(counterIndex, end)
+      .reduce((sum, b) => sum + blockWords(b), 0);
+    const share = counterWords / bodyWords;
+    if (share < 0.1) {
+      issues.push({
+        severity: 'note',
+        where: `blocks[${counterIndex}] (heading)`,
+        message:
+          `counter-case is ${Math.round(share * 100)}% of the article (${counterWords} of ` +
+          `${bodyWords} words) — thin enough that the other side is being noted rather than argued`,
+        excerpt: (article.blocks[counterIndex] as { text: string }).text,
+      });
+    }
+  }
+
+  return issues;
+}
+
 /** Run every prose rule over one article. */
 export function lintArticleProse(article: ResearchArticleSchema): ProseIssue[] {
-  const issues: ProseIssue[] = [...structuralIssues(article)];
+  const issues: ProseIssue[] = [...structuralIssues(article), ...editorialIssues(article)];
 
   for (const segment of collectSegments(article)) {
     for (const sentence of sentences(segment.text)) {

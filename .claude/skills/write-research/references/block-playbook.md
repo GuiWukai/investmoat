@@ -98,16 +98,73 @@ before the prose starts arguing. If a stat is labelled "Composite" and carries
 a static `value`, that's an error — it must be `live`.
 
 ### `table` — static
-Requires `asOf`. Rows must match the column count. `highlightColumn` optional.
+Requires `asOf` and, in practice, `sources`. Rows must match the column count.
+`highlightColumn` optional.
 
-The only sanctioned home for company-reported figures. The strongest use adds a
-column explaining *what each row tests* — turning a data dump into evidence
-about the thesis, as the ServiceNow Q2 table does with its "What it tests"
-column.
+The sanctioned home for company-reported figures at a point in time. The
+strongest use adds a column explaining *what each row tests* — turning a data
+dump into evidence about the thesis, as the ServiceNow Q2 table does with its
+"What it tests" column.
 
 Wrong choice when: any cell is a framework score. That fails the build.
 
-## The arc
+### `chart` — static
+A series, not a snapshot. `variant` is `line` | `bar`; `categories` are the
+x-axis labels (usually reporting periods), `series` up to four named lines or
+bar groups with one value per category — `null` where a company didn't report.
+Optional `unit` ("%") and `prefix` ("$"). Same rules as `table`: `asOf` required,
+`sources` expected, framework outputs forbidden (a series named "Composite"
+fails the build).
+
+Reach for it when the **shape over time** is the argument and a table would
+make the reader do the differencing themselves:
+
+- Two rates diverging or converging — the S&P Global piece's core claim.
+- A quantity outrunning another — backlog against capex.
+- An inflection: the quarter something turned.
+
+Wrong choice when: one period (that's a `table`), two data points (that's a
+sentence), or a series where each point comes from a different definition —
+label drift inside a chart is invisible in a way it isn't in a table.
+
+Renders as inline SVG with a screen-reader table carrying the same numbers, and
+degrades to a Markdown table in the `/llms.txt` mirror. Nulls break the line
+rather than interpolating across them.
+
+## Choosing an arc
+
+Four shapes. Pick the one the argument actually has — a piece forced into the
+wrong arc reads as a template being filled, and a site where every article has
+the same spine teaches the reader to skim it.
+
+**1. The cross-read** (below). A category-wide narrative meets the cohort data
+and doesn't survive it. The default, and the one all three published articles
+use — which is the reason to consider the others first.
+
+**2. The screen.** Starts from the data, not a narrative: a `scorecard` or
+`moat-matrix` opens the piece, and the argument is what the sorting reveals.
+Arc: matrix → what it shows → the names that break the pattern → mechanism →
+what it means for positioning. Best when the finding came out of
+`npm run screen:research` rather than a print.
+
+**3. The post-mortem.** Re-reads a thesis the site already published — its own
+or the market's — against what actually happened. Arc: the claim as it stood →
+what was predicted → `chart` or `table` of what occurred → what the framework
+got right and wrong → the corrected view. Requires a `falsifiableBy` that has
+been tested. The most credible thing the site can publish, and currently the
+one shape it has never used.
+
+**4. The framework note.** The subject is the framework itself: why a pillar is
+weighted as it is, where the composite misleads, what a moat status does and
+doesn't claim. Arc: the objection → how the framework actually computes it →
+worked example across 3–4 names → the honest limitation. No positioning
+section; it isn't about a trade.
+
+Whichever arc you pick, three things are load-bearing: evidence before
+interpretation, the cohort read before the conclusion, and the counter-case
+*before* positioning rather than after it.
+
+## The cross-read arc in full
 
 The existing article
 (`src/data/research/servicenow-and-the-seat-pricing-question.json`) follows a
@@ -127,9 +184,11 @@ sequence worth reusing:
 9. `heading` "Positioning" → `prose` → `callout` risk — what the framework
    concludes, then what would break it.
 10. `prose` — the lesson that generalises past this cohort.
-11. `callout` method — how to read the numbers on the page.
 
-Not a template to fill mechanically. The load-bearing parts are: evidence
-before interpretation, the cohort read before the conclusion, and the
-counter-case *before* positioning rather than after it. An article that never
-reaches step 8 is advocacy.
+The article ends there. The method note ("how to read the numbers on this
+page") is rendered by the template for every article with a live block — do not
+author one.
+
+Not a template to fill mechanically. An article that never reaches step 8 is
+advocacy; one that reaches it for two sentences is advocacy with a disclaimer,
+and the lint says so below 10% of the body.

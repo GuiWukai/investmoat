@@ -98,6 +98,8 @@ function blockWords(block: ResearchBlock): number {
         (sum, row) => sum + row.reduce((s, cell) => s + words(cell), 0),
         words(block.caption ?? ''),
       );
+    case 'chart':
+      return words(block.caption ?? '') + words(block.note ?? '');
     case 'scorecard':
       return Object.values(block.notes ?? {}).reduce((sum, n) => sum + words(n), 0);
     case 'moat-matrix':
@@ -107,7 +109,7 @@ function blockWords(block: ResearchBlock): number {
   }
 }
 
-const DATA_BLOCKS = new Set(['table', 'scorecard', 'moat-matrix', 'stat-strip']);
+const DATA_BLOCKS = new Set(['table', 'chart', 'scorecard', 'moat-matrix', 'stat-strip']);
 
 /** Estimated reading time in whole minutes (never less than 1). */
 export function readingMinutes(article: ResearchArticleData): number {

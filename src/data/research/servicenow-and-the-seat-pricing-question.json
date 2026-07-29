@@ -7,7 +7,20 @@
   "tickers": ["NOW", "CRM", "ADBE", "INTU", "OKTA", "FIG", "DDOG", "SNOW", "MDB", "NET"],
   "tags": ["Enterprise Software", "AI Monetization", "Business Models"],
   "summary": "Enterprise software de-rated through H1 2026 on the thesis that AI agents destroy per-seat pricing faster than task-based pricing can replace it. ServiceNow is the cleanest test case: it fell roughly 30% YTD on that fear, then reported Q2 2026 with subscription revenue re-accelerating to +24.5% YoY and AI ACV crossing $1B. Read across the ten names in our coverage that bill by seat or by consumption, the billing model turns out to be a poor predictor of AI exposure. What separates the winners is whether the vendor owns the system of record and the transaction layer that agents must act through — which is why ServiceNow, priced by seat, is better positioned than Snowflake and MongoDB, which are priced by consumption.",
-  "falsifiableBy": "ServiceNow AI ACV stalling short of the $1.5B FY2026 target, or subscription growth decelerating below 18% while AI ACV still grows — the combination that would show task-based revenue arriving as a substitute for seat revenue rather than as an addition to it.",
+  "falsifiableBy": {
+    "claim": "ServiceNow AI ACV stalling short of the $1.5B FY2026 target, or subscription growth decelerating below 18% while AI ACV still grows — the combination that would show task-based revenue arriving as a substitute for seat revenue rather than as an addition to it.",
+    "status": "holding"
+  },
+  "sources": [
+    {
+      "id": "now-q2-2026",
+      "label": "ServiceNow Reports Second Quarter 2026 Financial Results",
+      "publisher": "ServiceNow",
+      "date": "July 22, 2026",
+      "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-Second-Quarter-2026-Financial-Results/default.aspx",
+      "kind": "press-release"
+    }
+  ],
   "blocks": [
     {
       "type": "stat-strip",
@@ -35,6 +48,7 @@
       "type": "table",
       "caption": "ServiceNow Q2 2026 — the metrics that speak directly to the seat-pricing question",
       "asOf": "July 2026",
+      "sources": ["now-q2-2026"],
       "columns": ["Metric", "Q2 2026", "What it tests"],
       "highlightColumn": 1,
       "rows": [
@@ -159,12 +173,6 @@
     {
       "type": "prose",
       "body": "None of that is settled by one print. But the seat-pricing question now has an actual answer for at least one company, and it is not the answer the market spent six months pricing in. The lesson generalises past ServiceNow: **when a category-wide narrative re-prices ten companies identically, the framework's job is to find the ones where the narrative does not fit the moat.** On this cohort, the billing model told you almost nothing. The four resilient pillars told you almost everything."
-    },
-    {
-      "type": "callout",
-      "tone": "method",
-      "title": "How to read the numbers on this page",
-      "body": "Every score and moat status above is computed from the underlying stock JSON at render time — the same data and the same formulas that drive /stocks and /portfolio, with valuation recomputed against the live price. Nothing is transcribed by hand, so the scorecard and the matrix cannot drift from the analyses they cite. Company figures quoted in prose (revenue, ACV, cRPO) and any price-derived multiple are as of each name's last review date, shown on its analysis page."
     }
   ]
 }

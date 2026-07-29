@@ -1,4 +1,9 @@
-import type { ResearchArticleData, ResearchBlock, TenMoatKey } from '@/types/research';
+import type {
+  ArticleSource,
+  ResearchArticleData,
+  ResearchBlock,
+  TenMoatKey,
+} from '@/types/research';
 import type { StockAnalysisData } from '@/types/stockAnalysis';
 import { getStockData } from '@/data/stocks';
 import { allCoverageData } from '@/app/stockData';
@@ -37,7 +42,17 @@ function separator(count: number): string {
   return `|${' --- |'.repeat(count)}`;
 }
 
-function renderBlock(block: ResearchBlock, lines: string[]): void {
+/** Trailing citation for a static block, resolved against the article's sources. */
+function sourceNote(ids: string[] | undefined, sources: ArticleSource[]): string {
+  if (!ids?.length) return '';
+  const cited = ids
+    .map((id) => sources.find((s) => s.id === id))
+    .filter((s): s is ArticleSource => Boolean(s))
+    .map((s) => `[${s.label}](${s.url})`);
+  return cited.length ? ` Source: ${cited.join('; ')}.` : '';
+}
+
+function renderBlock(block: ResearchBlock, lines: string[], sources: ArticleSource[]): void {
   switch (block.type) {
     case 'heading':
       lines.push(`## ${block.text}`, '');
@@ -62,8 +77,30 @@ function renderBlock(block: ResearchBlock, lines: string[]): void {
       if (block.caption) lines.push(`**${block.caption}**`, '');
       lines.push(row(block.columns), separator(block.columns.length));
       block.rows.forEach((r) => lines.push(row(r)));
-      lines.push('', `_Figures as of ${block.asOf}._`, '');
+      lines.push('', `_Figures as of ${block.asOf}.${sourceNote(block.sources, sources)}_`, '');
       break;
+
+    // A chart is a table an agent can read without pixels — same numbers, no SVG.
+    case 'chart': {
+      if (block.caption) lines.push(`**${block.caption}**`, '');
+      const columns = ['Period', ...block.series.map((s) => s.name)];
+      lines.push(row(columns), separator(columns.length));
+      block.categories.forEach((category, i) => {
+        lines.push(
+          row([
+            category,
+            ...block.series.map((s) => {
+              const v = s.values[i];
+              return v === null ? '—' : `${block.prefix ?? ''}${v}${block.unit ?? ''}`;
+            }),
+          ]),
+        );
+      });
+      lines.push('');
+      if (block.note) lines.push(block.note, '');
+      lines.push(`_Figures as of ${block.asOf}.${sourceNote(block.sources, sources)}_`, '');
+      break;
+    }
 
     case 'stat-strip': {
       const parts = block.stats.map((stat) => {
@@ -179,15 +216,40 @@ export function researchToMarkdown(article: ResearchArticleData): string {
   if (article.falsifiableBy) {
     lines.push('## What would prove this wrong');
     lines.push('');
-    lines.push(article.falsifiableBy);
+    lines.push(article.falsifiableBy.claim);
+    lines.push('');
+    lines.push(
+      `_Status as of ${article.lastReviewed}: **${article.falsifiableBy.status}**.` +
+        `${article.falsifiableBy.note ? ` ${article.falsifiableBy.note}` : ''}_`,
+    );
     lines.push('');
   }
 
   lines.push('---');
   lines.push('');
 
+  const sources = article.sources ?? [];
   for (const block of article.blocks) {
-    renderBlock(block, lines);
+    renderBlock(block, lines, sources);
+  }
+
+  if (sources.length > 0) {
+    lines.push('## Sources');
+    lines.push('');
+    sources.forEach((s, i) => {
+      lines.push(
+        `${i + 1}. [${s.label}](${s.url}) — ${s.publisher ? `${s.publisher}, ` : ''}${s.date} (${s.kind})`,
+      );
+    });
+    lines.push('');
+  }
+
+  if (article.revisions?.length) {
+    lines.push('## Revisions');
+    lines.push('');
+    article.revisions.forEach((r) => lines.push(`- **${r.date}** — ${r.note}`));
+    lines.push(`- **${article.published}** — Published.`);
+    lines.push('');
   }
 
   lines.push('---');

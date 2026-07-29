@@ -34,7 +34,8 @@ Live prices come from Yahoo Finance (`query1.finance.yahoo.com`); no API key is 
 | `npm run start` | Serve the production build |
 | `npm run lint` | Run ESLint |
 | `npm run validate:stocks` | Validate every stock JSON against the Zod schema and cross-check the two registries |
-| `npm run validate:research` | Validate every research article JSON and its ticker references |
+| `npm run validate:research` | Validate every research article JSON, its ticker references, citations and prose rules |
+| `npm run screen:research` | Screen the coverage universe for research article ideas (`-- pillars \| divergence \| category \| uncovered \| stale`) |
 
 ## Documentation
 
@@ -48,7 +49,7 @@ Detailed docs live in [`docs/`](./docs):
 | [Design system](./docs/DESIGN-SYSTEM.md) | "Institutional Gold" identity — colours, fonts, tokens, utilities, OG images |
 | [Research articles](./docs/RESEARCH.md) | Cross-cutting analysis at `/research` — block model, live scorecards, validation |
 
-Authoring helpers also exist for Claude Code: slash commands in [`.claude/commands/`](./.claude/commands) for stocks (`/add-stock`, `/analyse-stock`, `/update-stock`), and skills in [`.claude/skills/`](./.claude/skills) for research articles (`write-research` for structure and registration, `research-style` for the editorial rules).
+Authoring helpers also exist for Claude Code: slash commands in [`.claude/commands/`](./.claude/commands) for stocks (`/add-stock`, `/analyse-stock`, `/update-stock`), and skills in [`.claude/skills/`](./.claude/skills) covering the research article lifecycle — `research-ideas` (what to write next), `write-research` (structure and registration), `research-style` (editorial rules), `source-research` (citing company figures), `review-research` (re-reading a published piece against current data).
 
 ## Tech stack
 

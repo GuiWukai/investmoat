@@ -33,14 +33,17 @@ import {
   ReadingProgress,
 } from '@/components/ResearchChrome';
 import type {
+  ArticleSource,
   ResearchArticleData,
   ResearchBlock,
   ScorecardBlock,
   MoatMatrixBlock,
   TableBlock,
+  ChartBlock,
   CalloutBlock,
   StatStripBlock,
   ListBlock,
+  FalsifiableStatus,
   TenMoatKey,
 } from '@/types/research';
 
@@ -255,6 +258,89 @@ function ScrollArea({ children }: { children: ReactNode }) {
 function FigureCaption({ children }: { children: ReactNode }) {
   return (
     <figcaption className="mt-3 text-[12.5px] text-white/35 leading-relaxed">{children}</figcaption>
+  );
+}
+
+// ─── Sourcing ─────────────────────────────────────────────────────────────────
+// Live blocks correct themselves; a company-reported figure can only be checked
+// against the document it came from. Every static figure block cites one, and
+// the citation is a link the reader can actually open.
+
+const SOURCES_ID = 'sources';
+
+/**
+ * The citation line under a `table` or `chart`. Numbers match the Sources
+ * section at the foot of the article, so a reader can go either direction.
+ */
+function SourceRefs({ ids, sources }: { ids?: string[]; sources: ArticleSource[] }) {
+  if (!ids?.length || sources.length === 0) return null;
+
+  const cited = ids
+    .map((id) => ({ source: sources.find((s) => s.id === id), n: sources.findIndex((s) => s.id === id) + 1 }))
+    .filter((c): c is { source: ArticleSource; n: number } => Boolean(c.source));
+
+  if (cited.length === 0) return null;
+
+  return (
+    <span className="text-white/30">
+      {' '}
+      {cited.length === 1 ? 'Source' : 'Sources'}:{' '}
+      {cited.map(({ source, n }, i) => (
+        <React.Fragment key={source.id}>
+          {i > 0 && ', '}
+          <a
+            href={source.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/45 hover:text-[#e4c98a] transition-colors underline decoration-white/15 underline-offset-2"
+          >
+            [{n}] {source.label}
+          </a>
+        </React.Fragment>
+      ))}
+      .
+    </span>
+  );
+}
+
+const SOURCE_KIND_LABELS: Record<ArticleSource['kind'], string> = {
+  filing: 'Filing',
+  'press-release': 'Press release',
+  transcript: 'Transcript',
+  'company-site': 'Company',
+  regulator: 'Regulator',
+  'third-party': 'Third party',
+};
+
+function SourcesSection({ sources }: { sources: ArticleSource[] }) {
+  return (
+    <section id={SOURCES_ID} className="mt-14 scroll-mt-24">
+      <div className="section-label mb-4">Sources</div>
+      <ol className="space-y-2.5 not-prose">
+        {sources.map((source, i) => (
+          <li key={source.id} className="flex gap-3 text-[13px] leading-relaxed">
+            <span className="shrink-0 tabular-nums text-white/25 font-bold">[{i + 1}]</span>
+            <span className="min-w-0">
+              <a
+                href={source.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-[#e4c98a] transition-colors break-words"
+              >
+                {source.label}
+              </a>
+              <span className="text-white/30">
+                {' — '}
+                {source.publisher ? `${source.publisher}, ` : ''}
+                {source.date}
+                {' · '}
+                {SOURCE_KIND_LABELS[source.kind]}
+              </span>
+            </span>
+          </li>
+        ))}
+      </ol>
+    </section>
   );
 }
 
@@ -639,7 +725,7 @@ function MoatMatrix({ block }: { block: MoatMatrixBlock }) {
 
 // ─── Static blocks ────────────────────────────────────────────────────────────
 
-function StaticTable({ block }: { block: TableBlock }) {
+function StaticTable({ block, sources }: { block: TableBlock; sources: ArticleSource[] }) {
   return (
     <figure className="my-9 not-prose">
       <div className="rounded-2xl border border-white/[0.07] bg-white/[0.02] overflow-hidden">
@@ -689,6 +775,225 @@ function StaticTable({ block }: { block: TableBlock }) {
       <FigureCaption>
         {block.caption && <span>{block.caption} </span>}
         <span className="text-white/25">Figures as of {block.asOf}.</span>
+        <SourceRefs ids={block.sources} sources={sources} />
+      </FigureCaption>
+    </figure>
+  );
+}
+
+// ─── Chart ────────────────────────────────────────────────────────────────────
+// Static, company-reported series. Rendered as inline SVG so it needs no
+// client-side charting library and reads identically on the server, in the
+// Markdown mirror's fallback table, and to a screen reader.
+
+const SERIES_COLORS = ['#e4c98a', '#3b82f6', '#fb7185', '#34d399'] as const;
+
+const CHART_W = 760;
+const CHART_H = 300;
+const PAD = { top: 18, right: 18, bottom: 46, left: 58 };
+
+/** Round a domain out to readable gridline steps. */
+function niceScale(min: number, max: number): { lo: number; hi: number; step: number } {
+  if (min === max) {
+    const pad = Math.abs(min) || 1;
+    min -= pad / 2;
+    max += pad / 2;
+  }
+  const rawStep = (max - min) / 4;
+  const magnitude = 10 ** Math.floor(Math.log10(Math.abs(rawStep) || 1));
+  const step = [1, 2, 2.5, 5, 10].map((m) => m * magnitude).find((s) => s >= rawStep) ?? magnitude * 10;
+  return { lo: Math.floor(min / step) * step, hi: Math.ceil(max / step) * step, step };
+}
+
+function formatValue(value: number, block: ChartBlock): string {
+  const abs = Math.abs(value);
+  const digits = abs >= 100 ? 0 : abs >= 10 ? 1 : 2;
+  const trimmed = Number(value.toFixed(digits)).toString();
+  return `${block.prefix ?? ''}${trimmed}${block.unit ?? ''}`;
+}
+
+function Chart({ block, sources }: { block: ChartBlock; sources: ArticleSource[] }) {
+  const values = block.series.flatMap((s) => s.values).filter((v): v is number => v !== null);
+  const rawMin = Math.min(...values);
+  const rawMax = Math.max(...values);
+  // Bars are read against zero; a bar chart with a floating baseline lies.
+  const { lo, hi, step } = niceScale(
+    block.variant === 'bar' ? Math.min(0, rawMin) : rawMin,
+    Math.max(0, rawMax),
+  );
+
+  const innerW = CHART_W - PAD.left - PAD.right;
+  const innerH = CHART_H - PAD.top - PAD.bottom;
+  const y = (v: number) => PAD.top + innerH - ((v - lo) / (hi - lo)) * innerH;
+  const bandW = innerW / block.categories.length;
+  // Lines sit on the category boundary; bars sit inside the band.
+  const x = (i: number) =>
+    block.variant === 'line'
+      ? PAD.left + (block.categories.length === 1 ? innerW / 2 : (i / (block.categories.length - 1)) * innerW)
+      : PAD.left + bandW * i + bandW / 2;
+
+  const ticks: number[] = [];
+  for (let v = lo; v <= hi + step / 2; v += step) ticks.push(Number(v.toFixed(6)));
+
+  // Show every label when they fit; otherwise thin them out rather than overlap.
+  const labelEvery = block.categories.length > 9 ? Math.ceil(block.categories.length / 8) : 1;
+  const titleId = `chart-${block.categories.length}-${block.series[0].name.replace(/\W+/g, '')}`;
+
+  return (
+    <figure className="my-9 not-prose">
+      <div className="rounded-2xl border border-white/[0.07] bg-white/[0.02] p-4 md:p-5">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 mb-3">
+          {block.series.map((s, i) => (
+            <span key={s.name} className="inline-flex items-center gap-1.5">
+              <span
+                className="w-2.5 h-2.5 rounded-sm"
+                style={{ background: SERIES_COLORS[i % SERIES_COLORS.length] }}
+              />
+              <span className="text-[11px] font-bold uppercase tracking-wider text-white/45">
+                {s.name}
+              </span>
+            </span>
+          ))}
+        </div>
+
+        <ScrollArea>
+          <svg
+            viewBox={`0 0 ${CHART_W} ${CHART_H}`}
+            className="w-full min-w-[520px] h-auto"
+            role="img"
+            aria-labelledby={titleId}
+          >
+            <title id={titleId}>
+              {block.caption ?? `${block.series.map((s) => s.name).join(' and ')} by period`}
+            </title>
+
+            {ticks.map((t) => (
+              <g key={t}>
+                <line
+                  x1={PAD.left}
+                  x2={CHART_W - PAD.right}
+                  y1={y(t)}
+                  y2={y(t)}
+                  stroke={t === 0 && lo < 0 ? 'rgba(255,255,255,0.18)' : 'rgba(255,255,255,0.06)'}
+                />
+                <text
+                  x={PAD.left - 10}
+                  y={y(t) + 4}
+                  textAnchor="end"
+                  className="fill-white/30"
+                  style={{ fontSize: 12 }}
+                >
+                  {formatValue(t, block)}
+                </text>
+              </g>
+            ))}
+
+            {block.categories.map((c, i) =>
+              i % labelEvery === 0 ? (
+                <text
+                  key={c + i}
+                  x={x(i)}
+                  y={CHART_H - PAD.bottom + 22}
+                  textAnchor="middle"
+                  className="fill-white/30"
+                  style={{ fontSize: 12 }}
+                >
+                  {c}
+                </text>
+              ) : null,
+            )}
+
+            {block.series.map((s, si) => {
+              const color = SERIES_COLORS[si % SERIES_COLORS.length];
+
+              if (block.variant === 'bar') {
+                const groupW = (bandW * 0.62) / block.series.length;
+                return s.values.map((v, i) =>
+                  v === null ? null : (
+                    <rect
+                      key={`${s.name}-${i}`}
+                      x={x(i) - (groupW * block.series.length) / 2 + groupW * si}
+                      y={Math.min(y(v), y(Math.max(lo, 0)))}
+                      width={Math.max(groupW - 2, 1)}
+                      height={Math.max(Math.abs(y(v) - y(Math.max(lo, 0))), 1)}
+                      fill={color}
+                      opacity={0.85}
+                      rx={2}
+                    />
+                  ),
+                );
+              }
+
+              // A gap in the data is a gap in the line — never interpolated.
+              const segments: string[] = [];
+              let current: string[] = [];
+              s.values.forEach((v, i) => {
+                if (v === null) {
+                  if (current.length > 1) segments.push(current.join(' '));
+                  current = [];
+                  return;
+                }
+                current.push(`${current.length === 0 ? 'M' : 'L'}${x(i)} ${y(v)}`);
+              });
+              if (current.length > 1) segments.push(current.join(' '));
+
+              return (
+                <g key={s.name}>
+                  {segments.map((d) => (
+                    <path
+                      key={d.slice(0, 24)}
+                      d={d}
+                      fill="none"
+                      stroke={color}
+                      strokeWidth={2.25}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  ))}
+                  {s.values.map((v, i) =>
+                    v === null ? null : (
+                      <circle key={i} cx={x(i)} cy={y(v)} r={3.25} fill={color} />
+                    ),
+                  )}
+                </g>
+              );
+            })}
+          </svg>
+        </ScrollArea>
+
+        {/* The same numbers, for screen readers and anyone copying the data out. */}
+        <table className="sr-only">
+          <caption>{block.caption ?? 'Chart data'}</caption>
+          <thead>
+            <tr>
+              <th scope="col">Period</th>
+              {block.series.map((s) => (
+                <th key={s.name} scope="col">
+                  {s.name}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {block.categories.map((c, i) => (
+              <tr key={c + i}>
+                <th scope="row">{c}</th>
+                {block.series.map((s) => (
+                  <td key={s.name}>
+                    {s.values[i] === null ? 'not reported' : formatValue(s.values[i] as number, block)}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <FigureCaption>
+        {block.caption && <span>{block.caption} </span>}
+        {block.note && <span>{block.note} </span>}
+        <span className="text-white/25">Figures as of {block.asOf}.</span>
+        <SourceRefs ids={block.sources} sources={sources} />
       </FigureCaption>
     </figure>
   );
@@ -825,6 +1130,7 @@ function Block({
   loaded,
   headingId,
   lead,
+  sources,
 }: {
   block: ResearchBlock;
   index: number;
@@ -832,6 +1138,7 @@ function Block({
   loaded: boolean;
   headingId?: string;
   lead?: boolean;
+  sources: ArticleSource[];
 }) {
   switch (block.type) {
     case 'heading':
@@ -862,7 +1169,9 @@ function Block({
     case 'moat-matrix':
       return <MoatMatrix block={block} />;
     case 'table':
-      return <StaticTable block={block} />;
+      return <StaticTable block={block} sources={sources} />;
+    case 'chart':
+      return <Chart block={block} sources={sources} />;
     case 'callout':
       return <Callout block={block} index={index} />;
     case 'stat-strip':
@@ -870,6 +1179,110 @@ function Block({
     case 'list':
       return <BulletList block={block} index={index} />;
   }
+}
+
+// ─── Standing sections ────────────────────────────────────────────────────────
+// Authored once, in code. The method note used to be copied into every article
+// as a `method` callout, which meant three articles carrying three slightly
+// different accounts of the same mechanism. It is a property of the site, not
+// of any one piece.
+
+function MethodFooter({ slug }: { slug: string }) {
+  const { color, Icon } = CALLOUT_STYLE.method;
+  return (
+    <aside
+      className="my-9 rounded-2xl p-5 md:p-6 not-prose"
+      style={{
+        background: `linear-gradient(180deg, ${color}0d 0%, rgba(255,255,255,0.015) 60%)`,
+        border: '1px solid rgba(255,255,255,0.06)',
+        borderLeft: `3px solid ${color}`,
+      }}
+    >
+      <div className="flex items-center gap-2 mb-2.5">
+        <Icon size={14} style={{ color }} />
+        <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color }}>
+          How to read the numbers on this page
+        </span>
+      </div>
+      <p className="research-prose text-[15.5px] text-white/70 leading-[1.7]">
+        Every score, moat status and recommendation above is computed from the underlying stock JSON
+        at render time — the same data and the same formulas that drive{' '}
+        <Link href="/stocks" className="text-white/80 hover:text-[#e4c98a] transition-colors">
+          /stocks
+        </Link>{' '}
+        and{' '}
+        <Link href="/portfolio" className="text-white/80 hover:text-[#e4c98a] transition-colors">
+          /portfolio
+        </Link>
+        , with the valuation pillar recomputed against the live price. Nothing is transcribed by
+        hand, so the tables here cannot drift from the analyses they cite. Company-reported figures
+        are static: each one carries the period it was reported for and a link to the document it
+        came from. The Markdown mirror at{' '}
+        <Link
+          href={`/research/${slug}/llms.txt`}
+          className="font-mono text-white/70 hover:text-[#e4c98a] transition-colors"
+        >
+          /llms.txt
+        </Link>{' '}
+        resolves the same way.
+      </p>
+    </aside>
+  );
+}
+
+const FALSIFIABLE_STYLE: Record<FalsifiableStatus, { color: string; label: string }> = {
+  holding: { color: 'rgba(52, 211, 153, 0.55)', label: 'Holding' },
+  watch: { color: 'rgba(245, 158, 11, 0.6)', label: 'On watch' },
+  tripped: { color: 'rgba(251, 113, 133, 0.7)', label: 'Tripped' },
+  retired: { color: 'rgba(255, 255, 255, 0.25)', label: 'Retired' },
+};
+
+function StatusBadge({ status }: { status: FalsifiableStatus }) {
+  const { color, label } = FALSIFIABLE_STYLE[status];
+  return (
+    <span
+      className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-md border"
+      style={{ color, borderColor: color, background: 'rgba(255,255,255,0.02)' }}
+    >
+      {label}
+    </span>
+  );
+}
+
+/**
+ * The visible answer to "has anything changed since this was published".
+ * `lastReviewed` says someone looked; this says what they found.
+ */
+function RevisionLog({
+  revisions,
+  published,
+}: {
+  revisions: { date: string; note: string }[];
+  published: string;
+}) {
+  return (
+    <section className="mt-14">
+      <div className="section-label mb-4">Revisions</div>
+      <ol className="not-prose space-y-3">
+        {revisions.map((r, i) => (
+          <li key={`${r.date}-${i}`} className="flex flex-col sm:flex-row sm:gap-4">
+            <span className="shrink-0 sm:w-36 text-[11px] uppercase tracking-widest text-white/30 pt-0.5">
+              {r.date}
+            </span>
+            <span className="research-prose text-[14.5px] text-white/60 leading-[1.7]">
+              {renderInline(r.note, `rev${i}`)}
+            </span>
+          </li>
+        ))}
+        <li className="flex flex-col sm:flex-row sm:gap-4">
+          <span className="shrink-0 sm:w-36 text-[11px] uppercase tracking-widest text-white/30 pt-0.5">
+            {published}
+          </span>
+          <span className="text-[14.5px] text-white/35 leading-[1.7]">Published.</span>
+        </li>
+      </ol>
+    </section>
+  );
 }
 
 /** A sibling article, passed in from the server page. */
@@ -913,6 +1326,15 @@ export default function ResearchArticle({
     .map((t) => resolveScores(t, prices[t] ?? null))
     .filter((r): r is ResolvedScores => r !== null)
     .sort((a, b) => b.composite - a.composite);
+
+  // The method note only makes a claim worth making if something on the page
+  // actually resolves live.
+  const hasLiveBlock = article.blocks.some(
+    (b) =>
+      b.type === 'scorecard' ||
+      b.type === 'moat-matrix' ||
+      (b.type === 'stat-strip' && b.stats.some((s) => s.live)),
+  );
 
   return (
     <>
@@ -1027,20 +1449,42 @@ export default function ResearchArticle({
               loaded={loaded}
               headingId={headingIds.get(i)}
               lead={i === firstProse}
+              sources={article.sources ?? []}
             />
           ))}
+
+          {hasLiveBlock && <MethodFooter slug={article.slug} />}
 
           {article.falsifiableBy && (
             <div
               id={FALSIFIABLE_ID}
               className="mt-14 scroll-mt-24 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 md:p-6"
-              style={{ borderLeft: '3px solid rgba(251, 113, 133, 0.5)' }}
+              style={{
+                borderLeft: `3px solid ${FALSIFIABLE_STYLE[article.falsifiableBy.status].color}`,
+              }}
             >
-              <div className="section-label mb-2.5">What would prove this wrong</div>
+              <div className="flex flex-wrap items-center gap-3 mb-2.5">
+                <div className="section-label">What would prove this wrong</div>
+                <StatusBadge status={article.falsifiableBy.status} />
+              </div>
               <p className="research-prose text-[15.5px] md:text-base text-white/70 leading-[1.7]">
-                {article.falsifiableBy}
+                {article.falsifiableBy.claim}
               </p>
+              {article.falsifiableBy.note && (
+                <p className="research-prose mt-3 text-[14.5px] text-white/45 leading-[1.7]">
+                  <span className="text-white/30">Checked {article.lastReviewed}: </span>
+                  {renderInline(article.falsifiableBy.note, 'fnote')}
+                </p>
+              )}
             </div>
+          )}
+
+          {article.sources && article.sources.length > 0 && (
+            <SourcesSection sources={article.sources} />
+          )}
+
+          {article.revisions && article.revisions.length > 0 && (
+            <RevisionLog revisions={article.revisions} published={article.published} />
           )}
 
           {related.length > 0 && (

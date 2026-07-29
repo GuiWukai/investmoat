@@ -7,7 +7,20 @@
   "tickers": ["GOOGL", "MSFT", "AMZN", "ORCL", "META", "CRWV", "NBIS"],
   "tags": ["AI Capex", "Hyperscalers", "Capital Allocation", "Big Tech"],
   "summary": "Alphabet reported Q2 2026 on July 22 with revenue +24% to $119.8B, Google Cloud +82% to $24.8B, Cloud operating margin tripled year-over-year to 35.6% and contracted backlog at $514B — and the stock fell about 5%, because full-year capex guidance rose to $195–205B and free cash flow turned negative at −$5.9B. The market is now sorting the hyperscalers by how much they spend. Read across the seven names in our coverage that are building AI infrastructure, spend size predicts almost nothing. What predicts a payoff is how much of the build is contracted before it is poured, who absorbs the loss if those contracts do not convert, and whether the builder owns the silicon that sets its own cost floor. On that test Alphabet cleared three of four gates in the same quarter it was de-rated, and the gate still open — free cash flow inflection — resolves on a 2027 schedule rather than on the size of the guide.",
-  "falsifiableBy": "Google Cloud's contracted backlog failing to grow beyond $514B for two consecutive quarters while capex holds at the $195–205B pace, or Cloud operating margin falling back below 25% as record-capex depreciation lands in the P&L — either would show capacity being built ahead of contracts rather than against them. A third trip: free cash flow still negative on a full-year basis when 2027 closes.",
+  "falsifiableBy": {
+    "claim": "Google Cloud's contracted backlog failing to grow beyond $514B for two consecutive quarters while capex holds at the $195–205B pace, or Cloud operating margin falling back below 25% as record-capex depreciation lands in the P&L — either would show capacity being built ahead of contracts rather than against them. A third trip: free cash flow still negative on a full-year basis when 2027 closes.",
+    "status": "holding"
+  },
+  "sources": [
+    {
+      "id": "googl-q2-2026",
+      "label": "Alphabet Announces Second Quarter 2026 Results",
+      "publisher": "Alphabet",
+      "date": "July 22, 2026",
+      "url": "https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Second-Quarter-2026-Results-2026-Y3uQ6H4ZJa/default.aspx",
+      "kind": "press-release"
+    }
+  ],
   "blocks": [
     {
       "type": "stat-strip",
@@ -35,6 +48,7 @@
       "type": "table",
       "caption": "Alphabet Q2 2026 — the lines that speak to whether the build converts, not to whether it is large.",
       "asOf": "July 2026 (Q2 2026, reported July 22)",
+      "sources": ["googl-q2-2026"],
       "columns": ["Line", "Q2 2026", "What it tests"],
       "highlightColumn": 1,
       "rows": [
@@ -201,12 +215,6 @@
     {
       "type": "prose",
       "body": "The generalisable point outlives this quarter and this company. When a category re-prices on a single visible variable — capex in 2026, per-seat billing six months ago — the framework's job is to ask whether that variable actually predicts the outcome it is being used to predict. **Spend size does not predict payoff; contracted coverage, loss absorption, cost-floor ownership and prior-vintage conversion do.** On this cohort, the capex line told you almost nothing. The four gates told you most of what is knowable, and they told you which of the seven builds is levered, which is captive, and which is being sold before it is poured."
-    },
-    {
-      "type": "callout",
-      "tone": "method",
-      "title": "How to read the numbers on this page",
-      "body": "Every score and moat status above is computed from the underlying stock JSON at render time — the same data and the same formulas that drive /stocks and /portfolio, with valuation recomputed against the live price. Nothing is transcribed by hand, so the scorecard and the matrix cannot drift from the analyses they cite. Company figures in the tables and in prose (revenue, capex guidance, backlog, RPO, margin) are company-reported as of each name's most recent print, dated in each table's asOf stamp. Backlog definitions are not uniform across these companies and are not duration-matched; the coverage ratio is a comparison of orders of magnitude, not a like-for-like metric."
     }
   ]
 }
