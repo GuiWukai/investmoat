@@ -67,29 +67,44 @@ Pillars: `absoluteScarcity`, `monetaryHistory`, `industrialUtility`. The `primar
 
 ## 2. Growth score
 
-`computeGrowthScore(growthAnalysis)` derives a 0–100 score from structured fields (returns `null` if `cagrEstimate` can't be parsed):
+`computeGrowthScore(growthAnalysis, assetClass)` derives a 0–100 score from structured fields (returns `null` if `cagrEstimate` can't be parsed):
 
 ```
 growth = baseCAGR(cagrEstimate)   // piecewise, see below
        + trajectory(drivers)       // ±4, net of accelerating vs decelerating
-       + margin(marginTrend)       // expanding +4 · stable 0 · compressing −4
-       + type(primaryType)         // TAM expansion +3 · both +4 · market share 0
+       + margin(marginTrend)       // expanding +4 · stable 0 · compressing −4 · equities only
        + risk(keyRiskSeverity)     // low 0 · moderate −5 · high −10 · severe −15
 ```
 
 **Base from CAGR** (midpoint of strings like `"22-28%"`, `"30%+"`, `"<5%"`):
 
-| Blended CAGR | Base score |
-|---|---|
-| ≥ 30% | 90 → 95 |
-| 15–30% | 80 → 90 |
-| 8–15% | 70 → 80 |
-| 4–8% | 60 → 70 |
-| 0–4% | 40 → 60 |
-| −20–0% | 0 → 40 |
-| ≤ −20% | 0 |
+| Blended CAGR | Base score | slope |
+|---|---|---|
+| ≥ 30% | 90 → 95 | 0.25 /pp |
+| 15–30% | 80 → 90 | 0.67 /pp |
+| 8–15% | 70 → 80 | 1.43 /pp |
+| 4–8% | 60 → 70 | 2.5 /pp |
+| 0–4% | 50 → 60 | 2.5 /pp |
+| −20–0% | 0 → 50 | 2.5 /pp |
+| ≤ −20% | 0 | |
 
 Below zero the curve keeps descending to 0 at −20% CAGR — revenue roughly halving across the forecast window — rather than resting on a flat floor, so the bottom of the growth scale is a reachable statement about the business.
+
+The slope is monotone non-increasing, which it was not before July 2026. The old curve anchored 0% at 40, making 0–4% the steepest segment on the whole curve at 5 points per percentage point — steeper than the distressed region beneath it. It claimed more precision about a 1% versus a 3% grower than about a −10% versus a −5% one, which is backwards.
+
+### Known limits of this pillar
+
+Worth stating, because the pillar reads as more decomposed than it is.
+
+**The CAGR base drives ~78% of the score's variance** across the 128-asset book (sd 8.81 against a total of 11.0). The adjustments share the rest: risk 3.06, margin 3.04, trajectory 1.44. So `growth ≈ f(one authored number)`, where moat is genuinely built from ten weighted sub-assessments. `cagrBasis` exists to make that number checkable — it records the measured series the estimate is answerable to, and `validate:stocks` reports how much of the book still lacks one.
+
+**`primaryType` no longer scores.** It paid +3 for TAM expansion, +4 for both, 0 for market share — and 111 of 128 assets collected +3 or +4, so it shifted the whole distribution up while discriminating between almost nobody. Deleting it outright moved mean rank by 1.2 places. The ordering it asserted was also never argued: taking share in a large market can be more durable than riding an expanding TAM. The field remains in the schema and still renders as a chip, as description rather than score.
+
+**`marginTrend` is equity-only.** Bitcoin has no margins. All seven crypto and commodity assets carried `"stable"` — a field filled to satisfy the schema. Moat already dispatches on `assetClass`; growth now does too.
+
+**Saturation above 30% is deliberate.** Twenty-one assets compress into base 90–95, so NBIS at 175% and AVGO at 40% differ by 2.5 points. Spreading them on rate alone would assert that the faster grower is better, when the real difference is how long either rate survives — and the pillar has no persistence input. `validate:stocks` flags estimates above a 60% midpoint rather than absorbing them silently.
+
+**The score's arithmetic is rendered from the formula, not from prose.** `scoreDerivation` is authored text and was never mechanically faithful — ORCL narrates "+5 TAM expansion" where the term was worth 3 — which is why 43 of 128 files disagreed with their own computed score before any of this changed. The stock page now shows a breakdown computed by `growthScoreBreakdown()`, so the displayed sum is correct by construction, and `scoreDerivation` is the author's commentary on why the inputs are what they are. `validate:stocks` reports how far each file's narration has drifted.
 
 ---
 

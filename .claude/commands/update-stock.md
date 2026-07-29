@@ -61,11 +61,12 @@ Review the growth score if:
 - Reflect any management guidance changes for the next 2–4 quarters
 - If `growthAnalysis` is missing, add it (see Step 5 in `analyse-stock.md` for the required format)
 - If `growthAnalysis` is present, update:
-  - `cagrEstimate` if the blended CAGR has shifted materially (>3pp)
+  - `cagrEstimate` if the blended CAGR has shifted materially (>3pp). This single number drives ~78% of the growth score's variance, so treat it as the main event, not a header. Anchor it to a **measured series** and decay toward terminal, the way every equity in coverage does (MSFT 15–17% against a reported +40%; PLTR 25–35% decel-adjusted from ~71%) — then record that series in `cagrBasis`. An estimate no series supports is how BTC carried 30–60% while its own drivers were shrinking.
+  - `cagrBasis` — the measured series and observed rate the estimate answers to. Optional in the schema; `validate:stocks` reports book-wide coverage
   - `drivers[].metric` with the latest YoY figures from the most recent quarter
   - `drivers[].trend` if the last 2 quarters show a directional change
   - `keyRisk` if a new specific, falsifiable risk has emerged or the prior risk has been resolved
-  - `marginTrend` if operating margin direction has reversed
+  - `marginTrend` if operating margin direction has reversed (scored for equities only — crypto and commodities have no margins)
   - `scoreDerivation` to match any score change, showing the updated base + adjustments
 
 ### 5. Valuation Score
@@ -119,6 +120,10 @@ Review each moat status if any of the following have occurred since the last upd
 - Do not move a status more than one level per update unless a catastrophic event occurred
 
 Update the `verdict` if 2+ moat statuses have changed.
+
+**`primaryType` is descriptive, not scored.** It still renders as a chip and belongs in the JSON, but it no longer adds points — it paid +3/+4 to 111 of 128 assets and discriminated between almost none of them.
+
+**`scoreDerivation` is commentary.** The page renders the authoritative arithmetic from `growthScoreBreakdown()`, so this string is where you explain *why* the inputs are what they are. Keep any total you write in it consistent with the computed score — `validate:stocks` reports drift.
 
 ### 8. Recommendation (derived — do not set in JSON)
 

@@ -283,6 +283,23 @@ type KeyRiskSeverity = 'low' | 'moderate' | 'high' | 'severe';
 
 export interface GrowthAnalysisInput {
   cagrEstimate: string;
+  /**
+   * The measured series `cagrEstimate` is answerable to, and its observed rate.
+   * Not scored — it exists so the pillar's dominant input is a claim with a
+   * citation rather than an assertion.
+   *
+   * The CAGR base drives ~78% of the growth score's variance across the book;
+   * the four adjustment terms share the rest. That makes cagrEstimate the single
+   * most load-bearing number in the pillar, and until now it was free text with
+   * nothing to check it against. BTC's said 30–60% while every series it named
+   * as a driver — holders +8.3% YoY, addresses ~9%/yr, institutional capital
+   * outright shrinking — said something else entirely, and nothing in the
+   * rubric noticed.
+   *
+   * Optional so existing coverage stays valid; validate-stocks reports how much
+   * of the book still lacks one.
+   */
+  cagrBasis?: string;
   drivers: Array<{ name: string; metric: string; trend: GrowthDriverTrend }>;
   primaryType: PrimaryGrowthType;
   marginTrend: MarginTrend;
@@ -312,14 +329,33 @@ export function parseCagrEstimate(s: string): number | null {
  * halving across the forecast window) rather than resting on a flat floor, so
  * the bottom of the growth scale is a reachable statement about the business
  * instead of an arbitrary stop.
+ *
+ * SLOPE IS MONOTONE NON-INCREASING, which it was not before. The old curve
+ * anchored 0% at 40 and 4% at 60 — 5 points per percentage point, the steepest
+ * segment anywhere on the curve, and steeper than the distressed region beneath
+ * it (2 pts/pp). It claimed more precision about the difference between a 1%
+ * and a 3% grower than about the difference between a −10% and a −5% one, which
+ * is backwards: forecasts are least reliable exactly where a business is
+ * struggling. Anchoring 0% at 50 makes the slope decay properly —
+ *
+ *   ≤0%: 2.5 · 0–4%: 2.5 · 4–8%: 2.5 · 8–15%: 1.43 · 15–30%: 0.67 · 30%+: 0.25
+ *
+ * SATURATION ABOVE 30% IS DELIBERATE. Twenty-one assets sit at or above a 30%
+ * midpoint and compress into base 90–95, so NBIS at 175% and AVGO at 40% differ
+ * by 2.5 points. That looks like lost resolution, and it is — but spreading them
+ * out on rate alone would assert that a 175% grower is meaningfully better than
+ * a 40% one, when the real difference is how long either rate survives. The
+ * pillar has no persistence input yet, so saturating is the honest choice;
+ * validate-stocks flags implausibly high estimates instead of quietly absorbing
+ * them.
  */
 function baseFromCagr(cagr: number): number {
   if (cagr >= 30) return Math.min(95, 90 + (cagr - 30) * 0.25);
   if (cagr >= 15) return 80 + ((cagr - 15) / 15) * 10;
   if (cagr >= 8)  return 70 + ((cagr - 8) / 7) * 10;
   if (cagr >= 4)  return 60 + ((cagr - 4) / 4) * 10;
-  if (cagr >= 0)  return 40 + (cagr / 4) * 20;
-  return Math.max(0, 40 + cagr * 2);
+  if (cagr >= 0)  return 50 + (cagr / 4) * 10;
+  return Math.max(0, 50 + cagr * 2.5);
 }
 
 /**
@@ -328,15 +364,59 @@ function baseFromCagr(cagr: number): number {
  *
  *   growthScore = baseCAGR(cagrEstimate)        // 30 → 95
  *               + trajectoryAdj(drivers)         // ±4 (net of accelerating vs decelerating)
- *               + marginAdj(marginTrend)         // ±4
- *               + typeAdj(primaryType)           // 0 to +4
+ *               + marginAdj(marginTrend)         // ±4, equities only
  *               + riskAdj(keyRiskSeverity)       // 0 to −15
  *
  * The risk term is treated as 0 when keyRiskSeverity is unset (legacy stocks),
  * which biases the score upward — call sites should prefer derived only when
  * keyRiskSeverity is present.
+ *
+ * WHY primaryType NO LONGER SCORES. It used to add +3 for TAM expansion, +4 for
+ * both, 0 for market share. Across the 128-asset book that made it a near
+ * constant — 111 assets collected +3 or +4 — so it shifted the whole
+ * distribution up and discriminated between almost nobody. Deleting it outright
+ * moved mean rank by 1.2 places, which is the signature of a term that is not
+ * doing work. It was also never a defensible claim in the first place: taking
+ * share in a large market can be far more durable than riding an expanding TAM,
+ * so the ordering it asserted was assumed rather than argued. The field stays in
+ * the schema and still renders as a chip on the stock page, because describing
+ * where growth comes from is useful — it just no longer pays points it cannot
+ * justify.
+ *
+ * WHY marginTrend IS EQUITY-ONLY. Bitcoin has no margins. All seven crypto and
+ * commodity assets carried marginTrend: "stable" — a field filled to satisfy the
+ * schema, contributing 0 by coincidence rather than by analysis. Scoring it for
+ * those classes was a modelling lie that a future editor could have turned into
+ * a free +4 by typing "expanding". Moat already dispatches on assetClass; growth
+ * now does too. Numerically this changes nothing today (every affected asset was
+ * "stable"); it removes the trap.
  */
-export function computeGrowthScore(g: GrowthAnalysisInput): number | null {
+export interface GrowthBreakdown {
+  base: number;
+  trajectory: number;
+  margin: number | null;
+  risk: number;
+  total: number;
+}
+
+/**
+ * The growth score with its terms exposed, so the arithmetic can be *rendered*
+ * from the formula rather than retyped by an author.
+ *
+ * `scoreDerivation` is prose and always has been — across the book it is only
+ * loosely coupled to the formula it claims to describe (ORCL narrates
+ * "+5 TAM expansion" where the term was worth 3), which is why 43 of 128 files
+ * disagreed with their own computed score before this pillar was touched at all.
+ * That string is shown directly beneath the score on every stock page, so the
+ * site was explaining a third of its numbers with arithmetic that does not add
+ * up. Deriving the breakdown here makes the displayed sum correct by
+ * construction and demotes `scoreDerivation` to what it actually is: the
+ * author's commentary on why the inputs are what they are.
+ */
+export function growthScoreBreakdown(
+  g: GrowthAnalysisInput,
+  assetClass: AssetClass = 'equity',
+): GrowthBreakdown | null {
   const cagr = parseCagrEstimate(g.cagrEstimate);
   if (cagr == null) return null;
 
@@ -349,13 +429,22 @@ export function computeGrowthScore(g: GrowthAnalysisInput): number | null {
     return ((accel - decel) / g.drivers.length) * 4;
   })();
 
-  const margin = ({ expanding: 4, stable: 0, compressing: -4 } as const)[g.marginTrend];
-  const type   = ({ 'TAM expansion': 3, both: 4, 'market share': 0 } as const)[g.primaryType];
-  const risk   = g.keyRiskSeverity
+  const margin = assetClass === 'equity'
+    ? ({ expanding: 4, stable: 0, compressing: -4 } as const)[g.marginTrend]
+    : null;
+  const risk = g.keyRiskSeverity
     ? ({ low: 0, moderate: -5, high: -10, severe: -15 } as const)[g.keyRiskSeverity]
     : 0;
 
-  return Math.max(0, Math.min(100, Math.round(base + trajectory + margin + type + risk)));
+  const total = Math.max(0, Math.min(100, Math.round(base + trajectory + (margin ?? 0) + risk)));
+  return { base, trajectory, margin, risk, total };
+}
+
+export function computeGrowthScore(
+  g: GrowthAnalysisInput,
+  assetClass: AssetClass = 'equity',
+): number | null {
+  return growthScoreBreakdown(g, assetClass)?.total ?? null;
 }
 
 // ─── Valuation score ──────────────────────────────────────────────────────────
@@ -498,12 +587,18 @@ export const COMPOSITE_WEIGHTS: Record<PillarKey, number> = {
  * which also reports drift. Re-baking moves every score, so it is a deliberate
  * recalibration, not routine maintenance.
  *
- * Derived from 128 assets, July 2026.
+ * Derived from 128 assets, July 2026. Re-baked when primaryType was retired
+ * from computeGrowthScore: that term paid +3 or +4 to 111 of 128 assets, so
+ * dropping it moved growth's logMean from −0.2578 to −0.2976 — a level shift,
+ * not a change in what the pillar discriminates. Left un-re-baked it would have
+ * pushed every asset's growth z-score down ~0.26 and dragged all 128 composites
+ * with it, turning "remove a term that does nothing" into a book-wide markdown.
+ * Re-baking keeps the change about discrimination, which was the point.
  */
 export const PILLAR_CALIBRATION: Record<PillarKey, PillarCalibration> = {
-  moat:       { logMean: -0.3726, logSd: 0.2762 },
-  growth:     { logMean: -0.2578, logSd: 0.1553 },
-  valuation:  { logMean: -0.3541, logSd: 0.1444 },
+  moat:       { logMean: -0.3752, logSd: 0.2762 },
+  growth:     { logMean: -0.2976, logSd: 0.1499 },
+  valuation:  { logMean: -0.3563, logSd: 0.1420 },
 };
 
 /**
@@ -521,7 +616,7 @@ export const PILLAR_CALIBRATION: Record<PillarKey, PillarCalibration> = {
 export const COMPOSITE_CALIBRATION = {
   logMean: -0.3315,
   logSd: 0.1333,
-  blendedZSd: 0.6259,
+  blendedZSd: 0.6129,
 };
 
 /**

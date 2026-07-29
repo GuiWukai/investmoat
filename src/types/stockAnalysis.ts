@@ -184,13 +184,21 @@ export interface StockAnalysisData {
         metric: string;
         trend: 'accelerating' | 'stable' | 'decelerating';
       }>;
-      /** Whether this is a TAM expansion story, market share capture, or both. */
+      /**
+       * Whether this is a TAM expansion story, market share capture, or both.
+       * Descriptive only — it no longer contributes to computeGrowthScore.
+       */
       primaryType: 'TAM expansion' | 'market share' | 'both';
+      /**
+       * The measured series cagrEstimate is answerable to, and its observed
+       * rate. Not scored; it makes the pillar's dominant input checkable.
+       */
+      cagrBasis?: string;
       /** Specific, falsifiable risk with a named time horizon. */
       keyRisk: string;
       /** Severity of keyRisk — feeds the risk-discount term in computeGrowthScore. */
       keyRiskSeverity: 'low' | 'moderate' | 'high' | 'severe';
-      /** Operating margin direction — feeds the −5 margin compression adjustment. */
+      /** Operating margin direction — scored for equities only (see computeGrowthScore). */
       marginTrend: 'expanding' | 'stable' | 'compressing';
     };
   };

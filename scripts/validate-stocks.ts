@@ -16,7 +16,12 @@ import { fileURLToPath } from 'node:url';
 import { dirname } from 'node:path';
 
 import { stockAnalysisSchema } from '../src/lib/stockSchema';
-import { parseScenarioPrice, computeGrowthScore, type GrowthAnalysisInput } from '../src/lib/valuationScore';
+import {
+  parseScenarioPrice,
+  parseCagrEstimate,
+  computeGrowthScore,
+  type GrowthAnalysisInput,
+} from '../src/lib/valuationScore';
 import { getAllSlugs } from '../src/data/stocks';
 import { allCoverageData } from '../src/app/stockData';
 
@@ -127,6 +132,46 @@ function checkScenarioCorridors(files: string[]): Warning[] {
     }
   }
   return warnings;
+}
+
+/**
+ * Highest cagrEstimate midpoint that reads as a forecast rather than an
+ * extrapolation. Above 30% the base curve saturates, so an implausible number
+ * is absorbed silently instead of being challenged — NBIS at 175% and AVGO at
+ * 40% score 95 and 92.5. Saturation is deliberate (see baseFromCagr), but it
+ * means the rubric cannot object to a number no business sustains, so the
+ * validator does the objecting.
+ */
+const MAX_PLAUSIBLE_CAGR = 60;
+
+/**
+ * Report the two growth-input hygiene checks: how much of the book still lacks
+ * a cagrBasis, and any cagrEstimate too high to be a forecast.
+ */
+function checkGrowthInputs(files: string[]): { warnings: Warning[]; missingBasis: number } {
+  const warnings: Warning[] = [];
+  let missingBasis = 0;
+  for (const file of files) {
+    let data: { growth?: { growthAnalysis?: { cagrEstimate?: string; cagrBasis?: string } } };
+    try {
+      data = JSON.parse(readFileSync(join(STOCKS_DIR, file), 'utf-8'));
+    } catch {
+      continue;
+    }
+    const ga = data.growth?.growthAnalysis;
+    if (!ga) continue;
+    if (!ga.cagrBasis) missingBasis++;
+    const mid = parseCagrEstimate(ga.cagrEstimate ?? '');
+    if (mid != null && mid > MAX_PLAUSIBLE_CAGR) {
+      warnings.push({
+        file,
+        message:
+          `cagrEstimate midpoint is ${mid}% (limit ${MAX_PLAUSIBLE_CAGR}%) — above 30% the base curve saturates, so ` +
+          'this scores the same as a 50% estimate. State the rate the business can sustain, not its current one',
+      });
+    }
+  }
+  return { warnings, missingBasis };
 }
 
 /**
@@ -248,6 +293,22 @@ function main(): void {
       console.log(`  ${DIM}•${RESET} ${YELLOW}${file}${RESET} ${message}`);
     }
     console.log('');
+  }
+
+  const { warnings: inputWarnings, missingBasis } = checkGrowthInputs(files);
+  if (inputWarnings.length > 0) {
+    console.log(`${YELLOW}Implausible CAGR estimates (${inputWarnings.length}) — advisory, not failures:${RESET}`);
+    for (const { file, message } of inputWarnings) {
+      console.log(`  ${DIM}•${RESET} ${YELLOW}${file}${RESET} ${message}`);
+    }
+    console.log('');
+  }
+  if (missingBasis > 0) {
+    console.log(
+      `${YELLOW}cagrBasis coverage:${RESET} ${files.length - missingBasis}/${files.length} files cite the measured ` +
+        `series behind their cagrEstimate. ${DIM}The CAGR base drives ~78% of the growth score; a basis makes it ` +
+        `checkable.${RESET}\n`,
+    );
   }
 
   const derivationWarnings = checkGrowthDerivations(files);

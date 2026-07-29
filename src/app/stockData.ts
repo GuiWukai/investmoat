@@ -168,8 +168,11 @@ const m = (json: unknown) => computeAssetMoatScore(json as StockAnalysisData);
  * malformed data and we surface it loudly.
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const g = (json: { slug: string; growth: { growthAnalysis: any } }): number => {
-  const derived = computeGrowthScore(json.growth.growthAnalysis as GrowthAnalysisInput);
+const g = (json: { slug: string; assetClass?: any; growth: { growthAnalysis: any } }): number => {
+  const derived = computeGrowthScore(
+    json.growth.growthAnalysis as GrowthAnalysisInput,
+    json.assetClass ?? 'equity',
+  );
   if (derived == null) {
     throw new Error(`computeGrowthScore returned null for ${json.slug} — check cagrEstimate parseability`);
   }
