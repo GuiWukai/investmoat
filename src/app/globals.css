@@ -1,43 +1,186 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Libre+Caslon+Display&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* HeroUI v3 pulls in Tailwind v4 itself, plus its base layer, unstyled
+   component structures, the default theme and its utilities/variants. It has
+   to come after the font import — CSS requires all @import at the top. */
+@import "@heroui/styles";
 
-:root {
-  /* Institutional palette — deep slate canvas with a champagne-gold signature */
+/* Tailwind v4 is CSS-first: no tailwind.config.js. Point it at the app source
+   (this file lives in src/app, so ".." is src). */
+@source "..";
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Design tokens
+
+   Everything below re-skins HeroUI's default theme into the InvestMoat house
+   style: a deep slate canvas with a champagne-gold signature. HeroUI v3 styles
+   every component off these CSS variables, and its `@theme inline` block
+   re-exports each one as a Tailwind colour utility (bg-surface, text-muted,
+   border-border, bg-accent-soft, …). So overriding the variables here rebrands
+   the components and the utility classes in one pass — there is no per-component
+   restyling anywhere in this codebase.
+
+   These rules are deliberately unlayered: HeroUI declares its variables inside
+   `@layer base`, and unlayered rules win over layered ones regardless of order.
+   ───────────────────────────────────────────────────────────────────────────── */
+
+:root,
+.dark,
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Canvas */
   --background: #080a0e;
   --foreground: #f4f1ea;
 
-  /* Brand: champagne gold */
+  /* Brand: champagne gold. `--accent` is what HeroUI drives every interactive
+     accent off — buttons, focus rings, selected states, links. */
   --gold: #c9a96a;
   --gold-bright: #e4c98a;
   --gold-deep: #9c7f44;
 
-  /* Retained semantic accents (data meaning: up / neutral / down) */
-  --primary: #c9a96a;   /* brand → gold */
-  --secondary: #9c7f44; /* deep gold */
-  --accent: #34d399;    /* gains */
-  --positive: #34d399;
-  --negative: #fb7185;
+  --accent: var(--gold);
+  --accent-foreground: #0a0b0d;
 
-  --glass-bg: rgba(14, 17, 23, 0.55);
-  --glass-border: rgba(201, 169, 106, 0.12);
-  --glass-blur: blur(20px);
+  /* Surfaces. Cards sit a touch above the canvas and stay slightly translucent
+     so the canvas gradients read through the backdrop blur applied below. */
+  --surface: rgba(14, 17, 23, 0.55);
+  --surface-foreground: var(--foreground);
+  --surface-secondary: rgba(18, 22, 30, 0.62);
+  --surface-secondary-foreground: var(--foreground);
+  --surface-tertiary: rgba(23, 28, 37, 0.68);
+  --surface-tertiary-foreground: var(--foreground);
 
+  /* Overlays (menus, popovers, tooltips, modals) must stay opaque — they float
+     over arbitrary content and translucency makes them unreadable. */
+  --overlay: #0c1016;
+  --overlay-foreground: var(--foreground);
+
+  --muted: #8b93a3;
+
+  --default: rgba(255, 255, 255, 0.06);
+  --default-foreground: var(--foreground);
+
+  /* Data semantics: gains / losses. Kept distinct from the brand gold so a
+     price move is never confused with an accent. */
+  --success: #34d399;
+  --success-foreground: #05140d;
+  --danger: #fb7185;
+  --danger-foreground: #1a0509;
+  --warning: var(--gold-bright);
+  --warning-foreground: #140f04;
+
+  /* Hairlines carry the gold tint — this is most of the "fund document" feel. */
+  --border: rgba(201, 169, 106, 0.14);
+  --separator: rgba(201, 169, 106, 0.1);
+  --focus: var(--gold-bright);
+  --link: var(--gold);
+
+  /* Form fields */
+  --field-background: rgba(255, 255, 255, 0.035);
+  --field-foreground: var(--foreground);
+  --field-placeholder: rgba(244, 241, 234, 0.25);
+  --field-border: rgba(201, 169, 106, 0.14);
+  --field-border-width: 1px;
+
+  --segment: rgba(255, 255, 255, 0.06);
+  --segment-foreground: var(--foreground);
+
+  --backdrop: rgba(4, 6, 8, 0.72);
+
+  --scrollbar-thumb: rgba(201, 169, 106, 0.22);
+  --scrollbar-track: transparent;
+
+  /* Geometry */
+  --radius: 0.75rem;
+  --field-radius: 0.75rem;
+
+  /* Shadows. The default dark theme drops shadows entirely; on this canvas a
+     soft lift plus a gold inner hairline reads better than a flat card. */
+  --surface-shadow:
+    0 1px 0 0 rgba(201, 169, 106, 0.06) inset,
+    0 8px 24px -12px rgba(0, 0, 0, 0.8);
+  --overlay-shadow:
+    0 0 0 1px rgba(201, 169, 106, 0.12),
+    0 24px 48px -12px rgba(0, 0, 0, 0.85);
+
+  --tooltip-delay: 400ms;
+  --tooltip-close-delay: 150ms;
+}
+
+/* Type scale and motion — the Tailwind v3 config used to hold these. */
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-serif: 'Newsreader', 'Times New Roman', serif;
-  --font-brand: 'Libre Caslon Display', 'Newsreader', Georgia, serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-brand: 'Libre Caslon Display', 'Newsreader', Georgia, serif;
+
+  --animate-fade-in: fade-in 0.5s ease-out both;
+  --animate-fade-up: fade-up 0.5s ease-out both;
+  --animate-fade-in-scale: fade-in-scale 0.4s ease-out both;
+  --animate-slide-in-left: slide-in-left 0.4s ease-out both;
+  --animate-shimmer: shimmer 3s linear infinite;
+
+  @keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes fade-up {
+    0% { opacity: 0; transform: translateY(24px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fade-in-scale {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  @keyframes slide-in-left {
+    0% { opacity: 0; transform: translateX(-16px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
 }
 
-* {
-  box-sizing: border-box;
+/* ─────────────────────────────────────────────────────────────────────────────
+   HeroUI component tuning
+
+   A handful of places where the house style needs more than a token change.
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* Cards and surfaces get the glass treatment the old hand-rolled .glass-card
+   had: translucent fill over a blurred backdrop, gold hairline, gentle lift. */
+.card,
+.surface {
+  backdrop-filter: blur(20px);
+  border-color: var(--border);
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
+/* Headings inside cards inherit the editorial serif rather than the UI sans. */
+.card__title {
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+}
+
+/* HeroUI renders overlays into a container that paints its own background;
+   left alone it washes the canvas out behind modals and popovers. */
+[data-overlay-container="true"] {
+  background-color: transparent !important;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Base elements
+   ───────────────────────────────────────────────────────────────────────────── */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
@@ -54,9 +197,28 @@ h1, h2, h3, h4 {
 .font-mono {
   font-variant-numeric: tabular-nums;
 }
-.font-mono {
-  font-family: var(--font-mono);
+
+::selection {
+  background: rgba(201, 169, 106, 0.25);
+  color: #fff;
 }
+
+/* Keyboard focus has to be visible on a near-black canvas — the UA default
+   outline all but disappears against it. */
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Hash navigation eases instead of jumping — undone under reduced motion. */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Layout shell
+   ───────────────────────────────────────────────────────────────────────────── */
 
 .main-container {
   display: flex;
@@ -72,6 +234,12 @@ h1, h2, h3, h4 {
     var(--background);
 }
 
+@media (min-width: 1024px) {
+  .main-container {
+    flex-direction: row;
+  }
+}
+
 /* Fine engraved grid — reads "terminal / research desk" */
 .dot-pattern {
   background-image:
@@ -79,12 +247,6 @@ h1, h2, h3, h4 {
     linear-gradient(90deg, rgba(201, 169, 106, 0.022) 1px, transparent 1px);
   background-size: 30px 30px;
   background-position: -1px -1px;
-}
-
-@media (min-width: 1024px) {
-  .main-container {
-    flex-direction: row;
-  }
 }
 
 .sidebar {
@@ -102,8 +264,8 @@ h1, h2, h3, h4 {
     background:
       linear-gradient(180deg, rgba(201, 169, 106, 0.03) 0%, transparent 22%),
       rgba(9, 11, 16, 0.72);
-    backdrop-filter: var(--glass-blur);
-    border-right: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+    border-right: 1px solid var(--border);
     padding: 2.5rem 1.5rem;
     z-index: 50;
     flex-direction: column;
@@ -125,22 +287,6 @@ h1, h2, h3, h4 {
   }
 }
 
-.nav-item {
-  padding: 0.75rem 1rem;
-  border-radius: 12px;
-  color: #94a3b8;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  display: block;
-}
-
-.nav-item:hover {
-  background: rgba(201, 169, 106, 0.06);
-  color: white;
-  transform: translateX(4px);
-}
-
 .metric-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
@@ -153,6 +299,10 @@ h1, h2, h3, h4 {
   }
 }
 
+/* ─────────────────────────────────────────────────────────────────────────────
+   Brand helpers
+   ───────────────────────────────────────────────────────────────────────────── */
+
 /* Refined off-white → gold display sheen */
 .gradient-text {
   background: linear-gradient(135deg, #f6f2e8 0%, var(--gold) 100%);
@@ -161,60 +311,7 @@ h1, h2, h3, h4 {
   -webkit-text-fill-color: transparent;
 }
 
-.primary-gradient {
-  background: linear-gradient(135deg, var(--gold-bright) 0%, var(--gold-deep) 100%);
-}
-
-.glass-card {
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
-  border-radius: 16px;
-  padding: 1.5rem;
-  transition: all 0.3s ease;
-}
-
-.glass-card:hover {
-  border-color: rgba(201, 169, 106, 0.28);
-  transform: translateY(-2px);
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: var(--background);
-}
-::-webkit-scrollbar-thumb {
-  background: rgba(201, 169, 106, 0.22);
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(201, 169, 106, 0.4);
-}
-
-::selection {
-  background: rgba(201, 169, 106, 0.25);
-  color: #fff;
-}
-
-/* Stagger delay utilities */
-.stagger-1  { animation-delay: 0.05s; }
-.stagger-2  { animation-delay: 0.10s; }
-.stagger-3  { animation-delay: 0.15s; }
-.stagger-4  { animation-delay: 0.20s; }
-.stagger-5  { animation-delay: 0.25s; }
-.stagger-6  { animation-delay: 0.30s; }
-.stagger-7  { animation-delay: 0.35s; }
-.stagger-8  { animation-delay: 0.40s; }
-.stagger-9  { animation-delay: 0.45s; }
-.stagger-10 { animation-delay: 0.50s; }
-.stagger-11 { animation-delay: 0.55s; }
-.stagger-12 { animation-delay: 0.60s; }
-.stagger-fill-both { animation-fill-mode: both; }
-
-/* Champagne sheen for display headlines (was rainbow shimmer) */
+/* Champagne sheen for display headlines */
 .gradient-text-animated {
   background: linear-gradient(
     90deg,
@@ -231,11 +328,9 @@ h1, h2, h3, h4 {
   animation: shimmer 6s linear infinite;
 }
 
-/* Brand accent helpers */
-.text-gold { color: var(--gold); }
-.text-gold-bright { color: var(--gold-bright); }
-.border-gold { border-color: rgba(201, 169, 106, 0.3); }
-.bg-gold-soft { background: rgba(201, 169, 106, 0.08); }
+.primary-gradient {
+  background: linear-gradient(135deg, var(--gold-bright) 0%, var(--gold-deep) 100%);
+}
 
 /* Section label — institutional eyebrow (gold, wide tracking) */
 .section-label {
@@ -253,7 +348,24 @@ h1, h2, h3, h4 {
   background: linear-gradient(90deg, rgba(201, 169, 106, 0.35), rgba(201, 169, 106, 0.04));
 }
 
-/* ── Research long-form reading ──────────────────────────────────────────── */
+/* Stagger delay utilities */
+.stagger-1  { animation-delay: 0.05s; }
+.stagger-2  { animation-delay: 0.10s; }
+.stagger-3  { animation-delay: 0.15s; }
+.stagger-4  { animation-delay: 0.20s; }
+.stagger-5  { animation-delay: 0.25s; }
+.stagger-6  { animation-delay: 0.30s; }
+.stagger-7  { animation-delay: 0.35s; }
+.stagger-8  { animation-delay: 0.40s; }
+.stagger-9  { animation-delay: 0.45s; }
+.stagger-10 { animation-delay: 0.50s; }
+.stagger-11 { animation-delay: 0.55s; }
+.stagger-12 { animation-delay: 0.60s; }
+.stagger-fill-both { animation-fill-mode: both; }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Research long-form reading
+   ───────────────────────────────────────────────────────────────────────────── */
 
 /* Serif body for article prose — the same voice as the headlines, and easier
    on the eye over a 10-minute read than the UI sans. */
@@ -284,19 +396,6 @@ h1, h2, h3, h4 {
   height: 6px;
 }
 
-/* Hash navigation eases instead of jumping — undone under reduced motion. */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Keyboard focus has to be visible on a near-black canvas — the UA default
-   outline all but disappears against it. */
-:focus-visible {
-  outline: 2px solid rgba(228, 201, 138, 0.7);
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -308,9 +407,4 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-/* HeroUI overrides */
-[data-overlay-container="true"] {
-  background-color: transparent !important;
 }

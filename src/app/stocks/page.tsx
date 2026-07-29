@@ -148,7 +148,7 @@ function StockRow({
       {/* Overall score */}
       <div className="shrink-0">
         {loading
-          ? <Spinner size="sm" color="default" classNames={{ wrapper: "w-7 h-7" }} />
+          ? <Spinner size="sm" color="current" />
           : <ScorePill value={liveScore} />
         }
       </div>

@@ -418,7 +418,7 @@ export default function PortfolioPage() {
                 <div className="w-2 h-2 rounded-full shrink-0" style={{ background: stock.color }} />
                 <span className="text-xs font-bold text-white/70 truncate">{stock.ticker}</span>
                 {scoresLoading
-                  ? <Spinner size="sm" color="default" classNames={{ wrapper: "w-3 h-3" }} />
+                  ? <Spinner size="sm" color="current" />
                   : <span className="text-xs text-white/30 ml-auto">{dynamicWeights[stock.ticker] ?? 0}%</span>
                 }
               </div>
@@ -451,7 +451,7 @@ export default function PortfolioPage() {
           <div className="rounded-xl border border-white/[0.05] bg-white/[0.02] p-4">
             <p className="section-label mb-2">Today&apos;s Portfolio Change</p>
             {!allPricesLoaded ? (
-              <Spinner size="sm" color="default" />
+              <Spinner size="sm" color="current" />
             ) : weightedDailyChange == null ? (
               <p className="text-3xl font-black text-white/20">—</p>
             ) : (
@@ -469,7 +469,7 @@ export default function PortfolioPage() {
           <div>
             <p className="section-label mb-3">Est. 1-Year Return</p>
             {!allPricesLoaded ? (
-              <Spinner size="sm" color="default" />
+              <Spinner size="sm" color="current" />
             ) : (
               <div className="grid grid-cols-3 gap-2">
                 {([
@@ -588,7 +588,7 @@ export default function PortfolioPage() {
                 {/* Per-stock bear/base/bull */}
                 <div className="hidden lg:flex items-center justify-end shrink-0 w-36">
                   {!allPricesLoaded
-                    ? <Spinner size="sm" color="default" />
+                    ? <Spinner size="sm" color="current" />
                     : (() => {
                         const price = allPrices[stock.ticker];
                         const bear  = parseScenarioPrice(stock.stock.bearTarget);
@@ -622,7 +622,7 @@ export default function PortfolioPage() {
                 {/* Score — always on desktop, toggle-gated on mobile */}
                 <div className={`text-right shrink-0 w-12 ${scoreColumn !== 'score' ? 'hidden lg:block' : ''}`}>
                   {scoresLoading
-                    ? <Spinner size="sm" color="default" />
+                    ? <Spinner size="sm" color="current" />
                     : <span className={`text-sm font-black ${getScoreColor(scoreByTicker[stock.ticker] ?? 0)}`}>{scoreByTicker[stock.ticker] ?? 0}</span>
                   }
                 </div>
@@ -630,7 +630,7 @@ export default function PortfolioPage() {
                 {/* 1D% — always on desktop, toggle-gated on mobile */}
                 <div className={`text-right shrink-0 w-14 ${scoreColumn !== 'change' ? 'hidden lg:block' : ''}`}>
                   {!allPricesLoaded
-                    ? <Spinner size="sm" color="default" />
+                    ? <Spinner size="sm" color="current" />
                     : (() => {
                         const cp = allChangePercents[stock.ticker];
                         if (cp == null) return <span className="text-xs text-white/25">—</span>;
@@ -648,7 +648,7 @@ export default function PortfolioPage() {
                 {/* Weight */}
                 <div className="tabular-nums w-9 text-right shrink-0">
                   {scoresLoading
-                    ? <Spinner size="sm" color="default" />
+                    ? <Spinner size="sm" color="current" />
                     : <span className="text-base font-black text-white">{dynamicWeights[stock.ticker] ?? 0}%</span>
                   }
                 </div>
@@ -729,7 +729,7 @@ export default function PortfolioPage() {
                   {/* Per-stock bear/base/bull */}
                   <div className="hidden lg:flex items-center justify-end shrink-0 w-36">
                     {!allPricesLoaded
-                      ? <Spinner size="sm" color="default" />
+                      ? <Spinner size="sm" color="current" />
                       : (() => {
                           const price = allPrices[stock.ticker];
                           const bear  = parseScenarioPrice(stock.stock.bearTarget);
@@ -763,7 +763,7 @@ export default function PortfolioPage() {
                   {/* Score */}
                   <div className={`text-right shrink-0 w-12 ${scoreColumn !== 'score' ? 'hidden lg:block' : ''}`}>
                     {scoresLoading
-                      ? <Spinner size="sm" color="default" />
+                      ? <Spinner size="sm" color="current" />
                       : <span className={`text-sm font-black ${getScoreColor(scoreByTicker[stock.ticker] ?? 0)}`}>{scoreByTicker[stock.ticker] ?? 0}</span>
                     }
                   </div>
@@ -771,7 +771,7 @@ export default function PortfolioPage() {
                   {/* 1D% */}
                   <div className={`text-right shrink-0 w-14 ${scoreColumn !== 'change' ? 'hidden lg:block' : ''}`}>
                     {!allPricesLoaded
-                      ? <Spinner size="sm" color="default" />
+                      ? <Spinner size="sm" color="current" />
                       : (() => {
                           const cp = allChangePercents[stock.ticker];
                           if (cp == null) return <span className="text-xs text-white/25">—</span>;

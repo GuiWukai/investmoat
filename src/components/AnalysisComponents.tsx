@@ -132,7 +132,7 @@ export function OverallScoreCard({ score, loading }: { score: number; loading?: 
         <div className="flex items-center gap-2">
           <div className="w-1.5 h-5 rounded-full shrink-0" style={{ background: hex }} />
           <span className="section-label">Composite Score</span>
-          {loading && <Spinner size="sm" color="default" classNames={{ circle1: "border-b-white/30", circle2: "border-b-white/30" }} />}
+          {loading && <Spinner size="sm" color="current" />}
         </div>
         <span className="text-[11px] font-black px-2.5 py-1 rounded-lg border"
           style={{ color: hex, borderColor: `${hex}30`, background: `${hex}12` }}>
