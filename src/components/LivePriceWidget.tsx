@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { TrendingUp, TrendingDown, RefreshCw } from 'lucide-react';
+import { Card } from "@heroui/react";
 
 interface LivePriceData {
   symbol: string;
@@ -55,10 +56,10 @@ export function LivePriceWidget({ slug, fairValue }: LivePriceWidgetProps) {
 
   if (loading) {
     return (
-      <div className="rounded-2xl border border-white/[0.05] bg-white/[0.02] p-4 flex items-center gap-2">
-        <RefreshCw size={13} className="animate-spin text-white/30" />
-        <span className="text-sm text-white/35">Fetching live price…</span>
-      </div>
+      <Card className="p-4 flex items-center gap-2">
+        <RefreshCw size={13} className="animate-spin text-foreground/30" />
+        <span className="text-sm text-foreground/35">Fetching live price…</span>
+      </Card>
     );
   }
 
@@ -73,17 +74,17 @@ export function LivePriceWidget({ slug, fairValue }: LivePriceWidgetProps) {
     : null;
 
   return (
-    <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 md:p-6">
+    <Card className="p-5 md:p-6">
       {/* Header */}
       <div className="flex items-center gap-2 mb-4">
         <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
         <span className="section-label">Live Market Price</span>
-        {timeStr && <span className="text-[10px] text-white/22 ml-auto">as of {timeStr}</span>}
+        {timeStr && <span className="text-[10px] text-foreground/22 ml-auto">as of {timeStr}</span>}
       </div>
 
       {/* Price + change */}
       <div className="flex items-baseline gap-3 flex-wrap">
-        <span className="text-3xl font-black text-white">{priceStr}</span>
+        <span className="text-3xl font-black text-foreground">{priceStr}</span>
         {data.change != null && data.changePercent != null && (
           <span className={`flex items-center gap-1 text-sm font-semibold ${isPositive ? 'text-emerald-400' : 'text-rose-400'}`}>
             {isPositive ? <TrendingUp size={14} /> : <TrendingDown size={14} />}
@@ -96,7 +97,7 @@ export function LivePriceWidget({ slug, fairValue }: LivePriceWidgetProps) {
       {/* Live margin of safety */}
       {liveMoS !== null && (
         <>
-          <div className="h-px bg-white/[0.05] my-4" />
+          <div className="h-px bg-foreground/[0.05] my-4" />
           <div className="flex justify-between items-center">
             <span className="section-label">Live Margin of Safety</span>
             <span className="text-xs font-bold px-2.5 py-1 rounded-lg border"
@@ -110,9 +111,9 @@ export function LivePriceWidget({ slug, fairValue }: LivePriceWidgetProps) {
               {liveMoS >= 0 ? `${liveMoS.toFixed(1)}% discount` : `${Math.abs(liveMoS).toFixed(1)}% premium`}
             </span>
           </div>
-          <p className="text-[10px] text-white/25 mt-1.5">vs. fair value of {fairValue}</p>
+          <p className="text-[10px] text-foreground/25 mt-1.5">vs. fair value of {fairValue}</p>
         </>
       )}
-    </div>
+    </Card>
   );
 }

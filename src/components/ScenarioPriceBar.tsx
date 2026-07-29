@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { parseScenarioPrice } from '@/lib/valuationScore';
+import { Card } from "@heroui/react";
 
 interface ScenarioPriceBarProps {
   slug: string;
@@ -94,13 +95,13 @@ export function ScenarioPriceBar({
   }
 
   return (
-    <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 md:p-6">
+    <Card className="p-5 md:p-6">
       <div className="flex items-baseline justify-between mb-2">
-        <h4 className="text-base font-bold text-white/85">Where We Are vs Targets</h4>
+        <h4 className="text-base font-bold text-foreground/85">Where We Are vs Targets</h4>
         {price != null && (
-          <span className="text-sm text-white/50">
+          <span className="text-sm text-foreground/50">
             Current:{' '}
-            <strong className="text-white">
+            <strong className="text-foreground">
               {sym}
               {fmt(price)}
             </strong>
@@ -121,7 +122,7 @@ export function ScenarioPriceBar({
               }}
             >
               <span
-                className="text-[11px] font-bold text-white whitespace-nowrap rounded-md px-2 py-1 border backdrop-blur"
+                className="text-[11px] font-bold text-foreground whitespace-nowrap rounded-md px-2 py-1 border backdrop-blur"
                 style={{
                   background: 'rgba(255,255,255,0.06)',
                   borderColor: 'rgba(255,255,255,0.15)',
@@ -130,7 +131,7 @@ export function ScenarioPriceBar({
                 {sym}
                 {fmt(price)}
               </span>
-              <div className="w-px h-2 bg-white/50" />
+              <div className="w-px h-2 bg-foreground/50" />
             </div>
 
             {/* Dot sits ON the bar */}
@@ -144,7 +145,7 @@ export function ScenarioPriceBar({
               }}
             >
               <div
-                className="w-3.5 h-3.5 rounded-full bg-white"
+                className="w-3.5 h-3.5 rounded-full bg-foreground"
                 style={{
                   boxShadow:
                     '0 0 0 3px rgba(15,23,42,0.95), 0 0 12px rgba(255,255,255,0.45)',
@@ -188,7 +189,7 @@ export function ScenarioPriceBar({
             >
               {t.label}
             </div>
-            <div className="text-[11px] text-white/70 mt-0.5 whitespace-nowrap">
+            <div className="text-[11px] text-foreground/70 mt-0.5 whitespace-nowrap">
               {t.valStr}
             </div>
           </div>
@@ -204,11 +205,11 @@ export function ScenarioPriceBar({
         </p>
       )}
       {loading && price == null && (
-        <p className="text-xs text-white/40 mt-3">Loading live price…</p>
+        <p className="text-xs text-foreground/40 mt-3">Loading live price…</p>
       )}
       {!loading && price == null && (
-        <p className="text-xs text-white/40 mt-3">Live price unavailable — bar shows scenario range only.</p>
+        <p className="text-xs text-foreground/40 mt-3">Live price unavailable — bar shows scenario range only.</p>
       )}
-    </div>
+    </Card>
   );
 }

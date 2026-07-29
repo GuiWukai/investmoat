@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { TrendingUp, PlusCircle, Minus, Zap, ShieldCheck, ShieldX, RefreshCw } from "lucide-react";
 import { motion, AnimatePresence, type PanInfo } from "framer-motion";
-import { Spinner } from "@heroui/react";
+import { Card, Chip, Meter, Spinner, Tabs } from "@heroui/react";
 import type { TenMoatsAssessment, MoatStatus } from "@/app/tenMoatsData";
 import type { CommodityMoatsData, CryptoMoatsData, StockAnalysisData } from "@/types/stockAnalysis";
 
@@ -79,18 +79,18 @@ interface MetricCardProps {
 
 export function MetricCard({ title, value, label, icon, color = 'var(--primary)' }: MetricCardProps) {
   return (
-    <div className="flex-1 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4 md:p-5 flex flex-col gap-4">
+    <Card className="flex-1 p-4 md:p-5 gap-4">
       <div className="flex items-center gap-3">
         <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style={{ background: `${color}22` }}>
           <div style={{ color }}>{icon}</div>
         </div>
-        <span className="text-xs font-medium text-white/50">{title}</span>
+        <span className="text-xs font-medium text-foreground/50">{title}</span>
       </div>
       <div>
-        <div className="text-2xl md:text-3xl font-black text-white">{value}</div>
-        <div className="text-[10px] text-white/35 mt-0.5">{label}</div>
+        <div className="text-2xl md:text-3xl font-black text-foreground">{value}</div>
+        <div className="text-[10px] text-foreground/35 mt-0.5">{label}</div>
       </div>
-    </div>
+    </Card>
   );
 }
 
@@ -104,11 +104,11 @@ interface ScoreGaugeProps {
 export function ScoreGauge({ score, label, description }: ScoreGaugeProps) {
   const hex = scoreHex(score);
   return (
-    <div className="w-full lg:min-w-[200px] flex-1 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 flex flex-col items-center gap-4 text-center animate-fade-in-scale stagger-fill-both" style={{ animationDelay: '0.1s' }}>
+    <Card className="w-full lg:min-w-[200px] flex-1 p-5 items-center gap-4 text-center animate-fade-in-scale stagger-fill-both" style={{ animationDelay: '0.1s' }}>
       <p className="section-label">{label}</p>
       <ArcGauge score={score} />
-      <p className="text-xs text-white/40 leading-relaxed">{description}</p>
-    </div>
+      <p className="text-xs text-foreground/40 leading-relaxed">{description}</p>
+    </Card>
   );
 }
 
@@ -127,44 +127,58 @@ export function OverallScoreCard({ score, loading }: { score: number; loading?: 
   const { label, hex } = getTier(score);
 
   return (
-    <div className="w-full flex-1 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 md:p-6 flex flex-col gap-5 animate-fade-in-scale stagger-fill-both" style={{ animationDelay: '0s' }}>
+    <Card className="w-full flex-1 p-5 md:p-6 gap-5 animate-fade-in-scale stagger-fill-both" style={{ animationDelay: '0s' }}>
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="w-1.5 h-5 rounded-full shrink-0" style={{ background: hex }} />
           <span className="section-label">Composite Score</span>
-          {loading && <Spinner size="sm" color="default" classNames={{ circle1: "border-b-white/30", circle2: "border-b-white/30" }} />}
+          {loading && <Spinner size="sm" color="current" />}
         </div>
-        <span className="text-[11px] font-black px-2.5 py-1 rounded-lg border"
-          style={{ color: hex, borderColor: `${hex}30`, background: `${hex}12` }}>
+        <Chip
+          className="text-[11px] font-black"
+          style={{ color: hex, borderColor: `${hex}30`, background: `${hex}12` }}
+          variant="soft"
+        >
           {label}
-        </span>
+        </Chip>
       </div>
 
       <div className="flex items-baseline gap-2">
         <span className="text-6xl md:text-7xl font-black leading-none tabular-nums" style={{ color: hex }}>
           {animatedScore}
         </span>
-        <span className="text-white/20 font-bold text-2xl">/100</span>
+        <span className="text-foreground/20 font-bold text-2xl">/100</span>
       </div>
 
+      {/* A real <Meter>: the score is now exposed to assistive tech with its
+          value and range instead of being three anonymous divs. The banded
+          track and the glowing marker are kept as fills inside it. */}
       <div className="space-y-1.5">
-        <div className="relative h-2.5 rounded-full overflow-hidden bg-white/[0.06]">
-          <div className="absolute inset-0 opacity-15"
-            style={{ background: 'linear-gradient(to right, #fb7185 0% 25%, #fbbf24 25% 60%, #60a5fa 60% 80%, #34d399 80% 100%)' }} />
-          <div className="absolute left-0 top-0 h-full rounded-full transition-all duration-1000 ease-out"
-            style={{ width: `${animatedScore}%`, background: `linear-gradient(to right, ${hex}66, ${hex})` }} />
-          <div className="absolute top-1/2 -translate-y-1/2 w-[3px] h-4 rounded-full transition-all duration-1000 ease-out"
-            style={{ left: `calc(${animatedScore}% - 1.5px)`, background: hex, boxShadow: `0 0 8px ${hex}` }} />
-        </div>
-        <div className="flex justify-between px-0.5 text-[9px] text-white/18 font-bold select-none">
+        <Meter aria-label="Composite score out of 100" value={score}>
+          <Meter.Track className="relative h-2.5 overflow-hidden rounded-full bg-foreground/[0.06]">
+            <div
+              className="absolute inset-0 opacity-15"
+              style={{ background: 'linear-gradient(to right, #fb7185 0% 25%, #fbbf24 25% 60%, #60a5fa 60% 80%, #34d399 80% 100%)' }}
+            />
+            <Meter.Fill
+              className="absolute left-0 top-0 h-full rounded-full transition-all duration-1000 ease-out"
+              style={{ width: `${animatedScore}%`, background: `linear-gradient(to right, ${hex}66, ${hex})` }}
+            />
+            <div
+              className="absolute top-1/2 h-4 w-[3px] -translate-y-1/2 rounded-full transition-all duration-1000 ease-out"
+              style={{ left: `calc(${animatedScore}% - 1.5px)`, background: hex, boxShadow: `0 0 8px ${hex}` }}
+            />
+          </Meter.Track>
+        </Meter>
+        <div className="flex justify-between px-0.5 text-[9px] text-foreground/18 font-bold select-none">
           <span>0</span><span>25</span><span>50</span><span>75</span><span>100</span>
         </div>
       </div>
 
-      <p className="text-xs text-white/35 leading-relaxed">
+      <p className="text-xs text-foreground/35 leading-relaxed">
         Combined average of Moat (AI Resilience), Growth, and Valuation scores.
       </p>
-    </div>
+    </Card>
   );
 }
 
@@ -205,50 +219,54 @@ export function ScoreTabsRow({ tabs, overallScore, overallLoading }: { tabs: Sco
 
   return (
     <>
-      {/* Mobile */}
+      {/* Mobile — a real tablist, so the scores are reachable by keyboard and
+          announced as tabs. The swipe gesture stays: HeroUI drives selection,
+          framer-motion animates the panel between selections. */}
       <div className="md:hidden">
         {hasOverall && (
           <div className="mb-4">
             <OverallScoreCard score={overallScore!} loading={overallLoading} />
           </div>
         )}
-        <div className="flex rounded-xl bg-white/[0.04] border border-white/[0.06] p-1 mb-4 gap-1">
+        <Tabs
+          aria-label="Score breakdown"
+          onSelectionChange={(key) => handleTabClick(Number(key))}
+          selectedKey={String(active)}
+        >
+          <Tabs.List className="mb-4">
+            {tabs.map((tab, i) => (
+              <Tabs.Tab key={tab.label} className="flex-1 font-bold" id={String(i)}>
+                {tab.label}
+              </Tabs.Tab>
+            ))}
+          </Tabs.List>
           {tabs.map((tab, i) => (
-            <button
-              key={i}
-              onClick={() => handleTabClick(i)}
-              className={`flex-1 py-1.5 text-sm font-bold rounded-lg transition-all ${
-                active === i ? 'bg-white/[0.12] text-white' : 'text-white/35 hover:text-white/60'
-              }`}
-            >
-              {tab.label}
-            </button>
+            <Tabs.Panel key={tab.label} className="overflow-hidden" id={String(i)}>
+              <AnimatePresence mode="wait" custom={direction} initial={false}>
+                <motion.div
+                  key={active}
+                  custom={direction}
+                  variants={slideVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{ type: "tween", duration: 0.25, ease: "easeOut" }}
+                  drag="x"
+                  dragConstraints={{ left: 0, right: 0 }}
+                  dragDirectionLock
+                  dragElastic={0.12}
+                  onDragEnd={handleDragEnd}
+                  style={{ touchAction: 'pan-y' }}
+                >
+                  {tab.gauge}
+                  {tab.detail && (
+                    <div className="mt-5 space-y-4">{tab.detail}</div>
+                  )}
+                </motion.div>
+              </AnimatePresence>
+            </Tabs.Panel>
           ))}
-        </div>
-        <div className="overflow-hidden">
-          <AnimatePresence mode="wait" custom={direction} initial={false}>
-            <motion.div
-              key={active}
-              custom={direction}
-              variants={slideVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{ type: "tween", duration: 0.25, ease: "easeOut" }}
-              drag="x"
-              dragConstraints={{ left: 0, right: 0 }}
-              dragDirectionLock
-              dragElastic={0.12}
-              onDragEnd={handleDragEnd}
-              style={{ touchAction: 'pan-y' }}
-            >
-              {tabs[active].gauge}
-              {tabs[active].detail && (
-                <div className="mt-5 space-y-4">{tabs[active].detail}</div>
-              )}
-            </motion.div>
-          </AnimatePresence>
-        </div>
+        </Tabs>
       </div>
 
       {/* Desktop: side by side */}
@@ -271,8 +289,8 @@ export function AnalysisSection({ title, children }: { title: string, children: 
   return (
     <section className="mt-10 md:mt-14">
       <div className="flex items-center gap-4 mb-6">
-        <h2 className="text-lg md:text-xl font-bold text-white/85 shrink-0">{title}</h2>
-        <div className="h-px flex-1 bg-white/[0.05]" />
+        <h2 className="text-lg md:text-xl font-bold text-foreground/85 shrink-0">{title}</h2>
+        <div className="h-px flex-1 bg-foreground/[0.05]" />
       </div>
       {children}
     </section>
@@ -303,14 +321,14 @@ export function ScenarioCard({
           style={{ color: hex, background: `${hex}18`, border: `1px solid ${hex}25` }}>
           {type} Case
         </span>
-        <span className="text-xl font-black text-white">{priceTarget}</span>
+        <span className="text-xl font-black text-foreground">{priceTarget}</span>
       </div>
-      <p className="text-sm font-semibold text-white/80">{description}</p>
+      <p className="text-sm font-semibold text-foreground/80">{description}</p>
       <ul className="space-y-1.5">
         {points.map((point, i) => (
           <li key={i} className="flex items-start gap-2">
             <div className="w-1 h-1 rounded-full mt-1.5 shrink-0" style={{ background: hex }} />
-            <span className="text-xs text-white/50">{point}</span>
+            <span className="text-xs text-foreground/50">{point}</span>
           </li>
         ))}
       </ul>
@@ -361,10 +379,10 @@ export function RecommendationBadge({ status, loading }: { status: 'Strong Buy' 
       <div>
         <div className="flex items-center gap-1.5 mb-0.5">
           <p className="section-label">Rating</p>
-          {loading && <RefreshCw size={9} className="text-white/30 animate-spin" />}
+          {loading && <RefreshCw size={9} className="text-foreground/30 animate-spin" />}
         </div>
         <p className="font-black uppercase text-sm leading-none" style={{ color: cfg.hex }}>{status}</p>
-        <p className="text-[11px] text-white/35 mt-1">{cfg.label}</p>
+        <p className="text-[11px] text-foreground/35 mt-1">{cfg.label}</p>
       </div>
       <div className="shrink-0 ml-2" style={{ color: cfg.hex }}>
         {cfg.icon}
@@ -384,17 +402,17 @@ const moatStatusConfig: Record<MoatStatus, { label: string; color: string; bgCol
 function MoatRow({ label, status, note }: { label: string; status: MoatStatus; note: string }) {
   const cfg = moatStatusConfig[status];
   return (
-    <div className="flex items-start gap-3 py-2.5 border-b border-white/[0.04] last:border-none">
+    <div className="flex items-start gap-3 py-2.5 border-b border-foreground/[0.04] last:border-none">
       <div className="w-1.5 h-1.5 rounded-full shrink-0 mt-1.5" style={{ background: cfg.color }} />
       <div className="flex-1 min-w-0">
         <div className="flex flex-wrap items-center gap-2 mb-0.5">
-          <span className="text-sm font-semibold text-white/85">{label}</span>
+          <span className="text-sm font-semibold text-foreground/85">{label}</span>
           <span className="text-[9px] font-black uppercase tracking-widest px-1.5 py-0.5 rounded"
             style={{ color: cfg.color, background: cfg.bgColor }}>
             {cfg.label}
           </span>
         </div>
-        <p className="text-xs text-white/40 leading-relaxed">{note}</p>
+        <p className="text-xs text-foreground/40 leading-relaxed">{note}</p>
       </div>
     </div>
   );
@@ -420,10 +438,10 @@ export function TenMoatsCard({ data }: { data: TenMoatsAssessment }) {
   return (
     <div className="space-y-4">
       {/* Verdict */}
-      <div className="rounded-2xl border border-white/[0.05] bg-white/[0.02] p-5">
+      <Card className="p-5">
         <p className="section-label mb-2">Ten Moats Verdict</p>
-        <p className="text-sm text-white/60 leading-relaxed">{data.verdict}</p>
-      </div>
+        <p className="text-sm text-foreground/60 leading-relaxed">{data.verdict}</p>
+      </Card>
 
       {/* Moat grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -433,7 +451,7 @@ export function TenMoatsCard({ data }: { data: TenMoatsAssessment }) {
             <div className="w-6 h-6 rounded-lg bg-rose-500/10 flex items-center justify-center shrink-0">
               <ShieldX size={13} color="#fb7185" />
             </div>
-            <span className="text-[10px] font-black uppercase tracking-widest text-white/40">AI-Vulnerable Moats</span>
+            <span className="text-[10px] font-black uppercase tracking-widest text-foreground/40">AI-Vulnerable Moats</span>
           </div>
           {vulnerableMoats.map(({ label, key }) => {
             const item = data[key] as { status: MoatStatus; note: string };
@@ -447,7 +465,7 @@ export function TenMoatsCard({ data }: { data: TenMoatsAssessment }) {
             <div className="w-6 h-6 rounded-lg bg-emerald-500/10 flex items-center justify-center shrink-0">
               <ShieldCheck size={13} color="#34d399" />
             </div>
-            <span className="text-[10px] font-black uppercase tracking-widest text-white/40">AI-Resilient Moats</span>
+            <span className="text-[10px] font-black uppercase tracking-widest text-foreground/40">AI-Resilient Moats</span>
           </div>
           {resilientMoats.map(({ label, key }) => {
             const item = data[key] as { status: MoatStatus; note: string };
@@ -474,16 +492,16 @@ export function CryptoMoatsCard({ data }: { data: CryptoMoatsData }) {
 
   return (
     <div className="space-y-4">
-      <div className="rounded-2xl border border-white/[0.05] bg-white/[0.02] p-5">
+      <Card className="p-5">
         <p className="section-label mb-2">Crypto Moat Verdict</p>
-        <p className="text-sm text-white/60 leading-relaxed">{data.verdict}</p>
-      </div>
+        <p className="text-sm text-foreground/60 leading-relaxed">{data.verdict}</p>
+      </Card>
       <div className="rounded-2xl border border-emerald-500/[0.1] bg-emerald-500/[0.02] p-5">
         <div className="flex items-center gap-2 mb-4">
           <div className="w-6 h-6 rounded-lg bg-emerald-500/10 flex items-center justify-center shrink-0">
             <ShieldCheck size={13} color="#34d399" />
           </div>
-          <span className="text-[10px] font-black uppercase tracking-widest text-white/40">Monetary Protocol Moats</span>
+          <span className="text-[10px] font-black uppercase tracking-widest text-foreground/40">Monetary Protocol Moats</span>
         </div>
         {pillars.map(({ label, key }) => {
           const item = data[key];
@@ -504,16 +522,16 @@ export function CommodityMoatsCard({ data }: { data: CommodityMoatsData }) {
 
   return (
     <div className="space-y-4">
-      <div className="rounded-2xl border border-white/[0.05] bg-white/[0.02] p-5">
+      <Card className="p-5">
         <p className="section-label mb-2">Commodity Moat Verdict</p>
-        <p className="text-sm text-white/60 leading-relaxed">{data.verdict}</p>
-      </div>
+        <p className="text-sm text-foreground/60 leading-relaxed">{data.verdict}</p>
+      </Card>
       <div className="rounded-2xl border border-emerald-500/[0.1] bg-emerald-500/[0.02] p-5">
         <div className="flex items-center gap-2 mb-4">
           <div className="w-6 h-6 rounded-lg bg-emerald-500/10 flex items-center justify-center shrink-0">
             <ShieldCheck size={13} color="#34d399" />
           </div>
-          <span className="text-[10px] font-black uppercase tracking-widest text-white/40">Physical Asset Moats</span>
+          <span className="text-[10px] font-black uppercase tracking-widest text-foreground/40">Physical Asset Moats</span>
         </div>
         {pillars.map(({ label, key }) => {
           const item = data[key];
