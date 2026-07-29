@@ -3,6 +3,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { ArrowUp, Check, Link2, List } from 'lucide-react';
 import type { ArticleSection } from '@/lib/researchMeta';
+import { Card } from "@heroui/react";
 
 /**
  * Reader scaffolding for a research article: scroll progress, the contents
@@ -78,7 +79,7 @@ export function ReadingProgress() {
       aria-hidden="true"
     >
       <div
-        className="h-full origin-left bg-gradient-to-r from-[#9c7f44] via-[#c9a96a] to-[#e4c98a]"
+        className="h-full origin-left bg-gradient-to-r from-gold-deep via-accent to-gold-bright"
         style={{ transform: `scaleX(${progress})`, transition: 'transform 90ms linear' }}
       />
     </div>
@@ -108,7 +109,7 @@ export function ContentsRail({ sections }: { sections: ArticleSection[] }) {
   return (
     <nav aria-label="Article contents" className="sticky top-8 max-h-[calc(100vh-6rem)] overflow-y-auto pb-6">
       <div className="section-label mb-3">Contents</div>
-      <ul className="space-y-0.5 border-l border-white/[0.07]">
+      <ul className="space-y-0.5 border-l border-foreground/[0.07]">
         {sections.map((s, i) => {
           const isActive = active === s.id;
           return (
@@ -122,13 +123,13 @@ export function ContentsRail({ sections }: { sections: ArticleSection[] }) {
                 aria-current={isActive ? 'true' : undefined}
                 className={`group flex gap-2.5 py-1.5 pl-3 -ml-px border-l text-[12.5px] leading-snug transition-colors ${
                   isActive
-                    ? 'border-[#c9a96a] text-white/85'
-                    : 'border-transparent text-white/35 hover:text-white/70 hover:border-white/20'
+                    ? 'border-accent text-foreground/85'
+                    : 'border-transparent text-foreground/35 hover:text-foreground/70 hover:border-foreground/20'
                 }`}
               >
                 <span
                   className={`font-mono text-[10px] pt-[3px] tabular-nums ${
-                    isActive ? 'text-[#c9a96a]' : 'text-white/20 group-hover:text-white/35'
+                    isActive ? 'text-accent' : 'text-foreground/20 group-hover:text-foreground/35'
                   }`}
                 >
                   {String(i + 1).padStart(2, '0')}
@@ -149,21 +150,21 @@ export function ContentsDisclosure({ sections }: { sections: ArticleSection[] })
   if (sections.length < 2) return null;
 
   return (
-    <div className="xl:hidden mb-8 rounded-2xl border border-white/[0.07] bg-white/[0.02] overflow-hidden">
+    <Card className="xl:hidden mb-8 overflow-hidden">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="w-full flex items-center gap-2.5 px-4 py-3 text-left hover:bg-white/[0.02] transition-colors"
+        className="w-full flex items-center gap-2.5 px-4 py-3 text-left hover:bg-foreground/[0.02] transition-colors"
       >
-        <List size={14} className="text-[#c9a96a]" />
+        <List size={14} className="text-accent" />
         <span className="section-label">Contents</span>
-        <span className="ml-auto text-[11px] text-white/30 font-mono">
+        <span className="ml-auto text-[11px] text-foreground/30 font-mono">
           {open ? 'Hide' : `${sections.length} sections`}
         </span>
       </button>
       {open && (
-        <ol className="px-4 pb-3 space-y-0.5 border-t border-white/[0.05] pt-2">
+        <ol className="px-4 pb-3 space-y-0.5 border-t border-foreground/[0.05] pt-2">
           {sections.map((s, i) => (
             <li key={s.id}>
               <a
@@ -173,9 +174,9 @@ export function ContentsDisclosure({ sections }: { sections: ArticleSection[] })
                   setOpen(false);
                   scrollToSection(s.id);
                 }}
-                className="flex gap-2.5 py-1.5 text-[13.5px] text-white/50 hover:text-white transition-colors"
+                className="flex gap-2.5 py-1.5 text-[13.5px] text-foreground/50 hover:text-foreground transition-colors"
               >
-                <span className="font-mono text-[10px] pt-[3px] text-white/20 tabular-nums">
+                <span className="font-mono text-[10px] pt-[3px] text-foreground/20 tabular-nums">
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <span>{s.label}</span>
@@ -184,7 +185,7 @@ export function ContentsDisclosure({ sections }: { sections: ArticleSection[] })
           ))}
         </ol>
       )}
-    </div>
+    </Card>
   );
 }
 
@@ -208,8 +209,8 @@ export function CopyLinkButton({ className = '' }: { className?: string }) {
     <button
       type="button"
       onClick={copy}
-      className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-white/[0.08] bg-white/[0.02] text-[11px] font-bold uppercase tracking-widest transition-colors ${
-        copied ? 'text-[#34d399] border-[#34d399]/30' : 'text-white/35 hover:text-white/80 hover:border-white/20'
+      className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-foreground/[0.08] bg-foreground/[0.02] text-[11px] font-bold uppercase tracking-widest transition-colors ${
+        copied ? 'text-[#34d399] border-[#34d399]/30' : 'text-foreground/35 hover:text-foreground/80 hover:border-foreground/20'
       } ${className}`}
     >
       {copied ? <Check size={12} /> : <Link2 size={12} />}
@@ -228,7 +229,7 @@ export function HeadingAnchor({ id }: { id: string }) {
         scrollToSection(id);
       }}
       aria-label="Link to this section"
-      className="hidden md:inline ml-2 align-middle text-white/0 group-hover:text-white/25 hover:!text-[#e4c98a] focus-visible:text-[#e4c98a] transition-colors"
+      className="hidden md:inline ml-2 align-middle text-foreground/0 group-hover:text-foreground/25 hover:!text-gold-bright focus-visible:text-gold-bright transition-colors"
     >
       <Link2 size={16} className="inline" />
     </a>
@@ -257,7 +258,7 @@ export function BackToTop() {
         window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? 'auto' : 'smooth' })
       }
       aria-label="Back to top"
-      className="fixed bottom-5 right-5 z-[110] w-10 h-10 rounded-full border border-[#c9a96a]/25 bg-[#0b0e13]/90 backdrop-blur text-[#c9a96a]/70 hover:text-[#e4c98a] hover:border-[#c9a96a]/50 flex items-center justify-center shadow-lg shadow-black/40 transition-colors"
+      className="fixed bottom-5 right-5 z-[110] w-10 h-10 rounded-full border border-accent/25 bg-[#0b0e13]/90 backdrop-blur text-accent/70 hover:text-gold-bright hover:border-accent/50 flex items-center justify-center shadow-lg shadow-black/40 transition-colors"
     >
       <ArrowUp size={16} />
     </button>

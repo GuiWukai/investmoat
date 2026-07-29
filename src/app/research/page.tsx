@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { getAllResearchArticles } from '@/data/research';
 import { readingMinutes } from '@/lib/researchMeta';
 import ResearchIndexList, { type ResearchSummary } from '@/components/ResearchIndexList';
+import { Card } from "@heroui/react";
 
 const SITE_URL = 'https://investmoat.com';
 
@@ -52,7 +53,7 @@ export default function ResearchIndexPage() {
         <h1 className="text-[32px] md:text-5xl font-bold leading-[1.1] gradient-text">
           Cross-cutting analysis
         </h1>
-        <p className="research-prose mt-5 text-[17px] md:text-lg text-white/55 leading-relaxed max-w-2xl">
+        <p className="research-prose mt-5 text-[17px] md:text-lg text-foreground/55 leading-relaxed max-w-2xl">
           The stock pages underwrite one name at a time. These pieces read across the
           universe — cohorts, category-wide narratives, and the places where the market&apos;s
           story and the framework&apos;s scores disagree. Every score cited is computed live
@@ -60,13 +61,13 @@ export default function ResearchIndexPage() {
         </p>
 
         {articles.length > 0 && (
-          <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[11px] uppercase tracking-widest text-white/30">
+          <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[11px] uppercase tracking-widest text-foreground/30">
             <span>
               {articles.length} {articles.length === 1 ? 'piece' : 'pieces'} published
             </span>
-            <span className="text-white/10">·</span>
+            <span className="text-foreground/10">·</span>
             <span>{names.size} names covered</span>
-            <span className="text-white/10">·</span>
+            <span className="text-foreground/10">·</span>
             <span>Scores recomputed live</span>
           </div>
         )}
@@ -75,12 +76,12 @@ export default function ResearchIndexPage() {
       <div className="fund-rule my-9" />
 
       {articles.length === 0 ? (
-        <div className="rounded-2xl border border-white/[0.07] bg-white/[0.02] p-8 text-center">
-          <p className="text-white/45 text-sm">No research published yet.</p>
-          <p className="text-white/25 text-xs mt-1.5">
+        <Card className="p-8 text-center">
+          <p className="text-foreground/45 text-sm">No research published yet.</p>
+          <p className="text-foreground/25 text-xs mt-1.5">
             Cross-cutting pieces land here as the coverage universe grows.
           </p>
-        </div>
+        </Card>
       ) : (
         <ResearchIndexList articles={articles} />
       )}
@@ -93,18 +94,18 @@ export default function ResearchIndexPage() {
           {METHOD_NOTES.map((note) => (
             <div
               key={note.title}
-              className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5"
+              className="rounded-2xl border border-foreground/[0.06] bg-foreground/[0.02] p-5"
             >
-              <h3 className="text-[13px] font-bold text-white/80 tracking-wide">{note.title}</h3>
-              <p className="mt-2 text-[13px] text-white/40 leading-relaxed">{note.body}</p>
+              <h3 className="text-[13px] font-bold text-foreground/80 tracking-wide">{note.title}</h3>
+              <p className="mt-2 text-[13px] text-foreground/40 leading-relaxed">{note.body}</p>
             </div>
           ))}
         </div>
-        <p className="mt-5 text-xs text-white/30 leading-relaxed">
+        <p className="mt-5 text-xs text-foreground/30 leading-relaxed">
           Every piece has a Markdown mirror at{' '}
-          <code className="font-mono text-white/45">/research/[slug]/llms.txt</code> for agents and
+          <code className="font-mono text-foreground/45">/research/[slug]/llms.txt</code> for agents and
           readers who prefer plain text. Start from{' '}
-          <Link href="/stocks" className="text-white/45 hover:text-[#e4c98a] transition-colors">
+          <Link href="/stocks" className="text-foreground/45 hover:text-gold-bright transition-colors">
             the coverage universe
           </Link>{' '}
           to see the underwriting each argument is built on.

@@ -1,9 +1,18 @@
 'use client';
 
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
-import { Search, X, BarChart2, TrendingUp, Menu, FileText } from 'lucide-react';
+import { Search, BarChart2, TrendingUp, Menu, FileText } from 'lucide-react';
+import {
+  Button,
+  ComboBox,
+  Drawer,
+  Input,
+  ListBox,
+  ListBoxItem,
+  Separator,
+} from '@heroui/react';
 import { allCoverageData } from '@/app/stockData';
 import { MoatMark } from '@/components/MoatMark';
 
@@ -15,302 +24,271 @@ const navLinks = [
 
 type StockResult = { name: string; ticker: string; href: string };
 
-function NavSearch({ onNavigate }: { onNavigate?: () => void }) {
-  const [query, setQuery] = useState('');
-  const [open, setOpen] = useState(false);
-  const router = useRouter();
-  const containerRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
-
-  const trimmed = query.trim().toLowerCase();
-  const results: StockResult[] = trimmed
-    ? allCoverageData
-        .filter(
-          (s) =>
-            s.name.toLowerCase().includes(trimmed) ||
-            s.ticker.toLowerCase().includes(trimmed)
-        )
-        .slice(0, 6)
-    : [];
-
-  useEffect(() => {
-    function handleClick(e: MouseEvent) {
-      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
-        setOpen(false);
-      }
-    }
-    document.addEventListener('mousedown', handleClick);
-    return () => document.removeEventListener('mousedown', handleClick);
-  }, []);
-
-  function handleSelect(href: string) {
-    setQuery('');
-    setOpen(false);
-    onNavigate?.();
-    router.push(href);
-  }
-
-  function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
-    if (e.key === 'Escape') {
-      setQuery('');
-      setOpen(false);
-      inputRef.current?.blur();
-    }
-    if (e.key === 'Enter' && results.length > 0) {
-      handleSelect(results[0].href);
-    }
-  }
-
-  return (
-    <div ref={containerRef} className="relative w-full">
-      <div className="relative flex items-center">
-        <Search className="absolute left-3 w-3.5 h-3.5 text-white/25 pointer-events-none" />
-        <input
-          ref={inputRef}
-          type="text"
-          value={query}
-          onChange={(e) => { setQuery(e.target.value); setOpen(true); }}
-          onFocus={() => setOpen(true)}
-          onKeyDown={handleKeyDown}
-          placeholder="Search stocks…"
-          className="w-full pl-8 pr-7 py-2 rounded-lg text-sm bg-white/[0.04] border border-white/8 text-white placeholder:text-white/20 focus:outline-none focus:border-white/15 focus:bg-white/[0.06] transition-all"
-        />
-        {query && (
-          <button
-            onClick={() => { setQuery(''); setOpen(false); inputRef.current?.focus(); }}
-            className="absolute right-2 text-white/25 hover:text-white/50 transition-colors"
-            aria-label="Clear"
-          >
-            <X className="w-3.5 h-3.5" />
-          </button>
-        )}
-      </div>
-
-      {open && trimmed && (
-        <div className="absolute top-full left-0 right-0 mt-1.5 rounded-xl border border-white/10 bg-[#080c14] shadow-2xl z-[200] overflow-hidden">
-          {results.length > 0 ? (
-            results.map((s) => (
-              <button
-                key={s.href}
-                onMouseDown={(e) => { e.preventDefault(); handleSelect(s.href); }}
-                className="w-full flex items-center justify-between px-3 py-2.5 text-left hover:bg-white/5 transition-colors group border-b border-white/[0.04] last:border-0"
-              >
-                <span className="text-sm text-white/70 group-hover:text-white transition-colors">{s.name}</span>
-                <span className="text-xs font-bold text-white/25 group-hover:text-white/50 transition-colors ml-2 font-mono">{s.ticker}</span>
-              </button>
-            ))
-          ) : (
-            <div className="px-3 py-3 text-sm text-white/25">No stocks found</div>
-          )}
-        </div>
-      )}
-    </div>
-  );
-}
-
-function MobileSearchPopup({ onClose }: { onClose: () => void }) {
+/**
+ * Stock search.
+ *
+ * This used to be a hand-rolled input plus an absolutely-positioned results
+ * panel, with its own outside-click listener and keyboard handling. HeroUI's
+ * ComboBox is the same interaction done properly — it brings focus management,
+ * arrow-key navigation, type-ahead and the correct ARIA combobox roles, none of
+ * which the original had.
+ *
+ * Filtering stays manual rather than using the built-in text filter because a
+ * ticker match ("NOW") should rank alongside a name match ("ServiceNow"), and
+ * the list is capped so the popover never becomes a scroll trap.
+ */
+function StockSearch({
+  limit = 6,
+  autoFocus = false,
+  onNavigate,
+}: {
+  limit?: number;
+  autoFocus?: boolean;
+  onNavigate?: () => void;
+}) {
   const [query, setQuery] = useState('');
   const router = useRouter();
-  const inputRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => {
-    inputRef.current?.focus();
-  }, []);
-
-  const trimmed = query.trim().toLowerCase();
-  const results: StockResult[] = trimmed
-    ? allCoverageData
-        .filter(
-          (s) =>
-            s.name.toLowerCase().includes(trimmed) ||
-            s.ticker.toLowerCase().includes(trimmed)
-        )
-        .slice(0, 8)
-    : [];
-
-  function handleSelect(href: string) {
-    onClose();
-    router.push(href);
-  }
-
-  function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
-    if (e.key === 'Escape') onClose();
-    if (e.key === 'Enter' && results.length > 0) handleSelect(results[0].href);
-  }
+  const results = useMemo<StockResult[]>(() => {
+    const trimmed = query.trim().toLowerCase();
+    if (!trimmed) return [];
+    return allCoverageData
+      .filter(
+        (s) =>
+          s.name.toLowerCase().includes(trimmed) ||
+          s.ticker.toLowerCase().includes(trimmed)
+      )
+      .slice(0, limit);
+  }, [query, limit]);
 
   return (
-    <div
-      className="lg:hidden fixed inset-0 z-[200] flex flex-col"
-      style={{ background: 'rgba(4, 6, 8, 0.98)', backdropFilter: 'blur(20px)' }}
+    <ComboBox
+      aria-label="Search stocks"
+      allowsEmptyCollection
+      fullWidth
+      inputValue={query}
+      items={results}
+      menuTrigger="input"
+      onInputChange={setQuery}
+      onSelectionChange={(key) => {
+        if (key == null) return;
+        setQuery('');
+        onNavigate?.();
+        router.push(String(key));
+      }}
+      selectedKey={null}
     >
-      <div className="flex items-center gap-3 px-4 h-16 border-b border-white/[0.06]">
-        <Search className="w-4 h-4 text-white/35 flex-shrink-0" />
-        <input
-          ref={inputRef}
-          type="text"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          onKeyDown={handleKeyDown}
-          placeholder="Search stocks…"
-          className="flex-1 bg-transparent text-white placeholder:text-white/25 text-base focus:outline-none"
-        />
-        <button
-          onClick={onClose}
-          className="p-2 rounded-lg hover:bg-white/5 transition-colors text-white/40 hover:text-white"
-          aria-label="Close search"
-        >
-          <X className="w-5 h-5" />
-        </button>
-      </div>
+      <ComboBox.InputGroup>
+        <Search className="pointer-events-none size-4 shrink-0 text-muted" />
+        <Input autoFocus={autoFocus} placeholder="Search stocks…" />
+      </ComboBox.InputGroup>
 
-      <div className="flex-1 overflow-y-auto">
-        {trimmed ? (
-          results.length > 0 ? (
-            results.map((s) => (
-              <button
-                key={s.href}
-                onClick={() => handleSelect(s.href)}
-                className="w-full flex items-center justify-between px-5 py-4 border-b border-white/[0.04] text-left hover:bg-white/[0.04] transition-colors group"
-              >
-                <span className="text-base text-white/75 group-hover:text-white transition-colors">{s.name}</span>
-                <span className="text-sm font-bold text-white/25 group-hover:text-white/50 transition-colors ml-3 font-mono">{s.ticker}</span>
-              </button>
-            ))
-          ) : (
-            <div className="px-5 py-8 text-sm text-white/25">No stocks found</div>
-          )
-        ) : (
-          <div className="px-5 py-8 text-sm text-white/25">Type to search by name or ticker…</div>
-        )}
-      </div>
-    </div>
+      <ComboBox.Popover>
+        <ListBox
+          items={results}
+          renderEmptyState={() => (
+            <p className="px-3 py-3 text-sm text-muted">
+              {query.trim() ? 'No stocks found' : 'Type to search by name or ticker…'}
+            </p>
+          )}
+        >
+          {(item: StockResult) => (
+            <ListBoxItem
+              key={item.href}
+              className="group flex items-center justify-between gap-3"
+              id={item.href}
+              textValue={item.name}
+            >
+              <span className="truncate text-sm">{item.name}</span>
+              <span className="ml-auto font-mono text-xs font-bold text-muted">
+                {item.ticker}
+              </span>
+            </ListBoxItem>
+          )}
+        </ListBox>
+      </ComboBox.Popover>
+    </ComboBox>
   );
 }
 
-function NavLink({ href, name, icon: Icon, onClick }: { href: string; name: string; icon: React.ElementType; onClick?: () => void }) {
-  const pathname = usePathname();
-  const isActive = pathname === href || pathname.startsWith(href + '/');
-
+function BrandMark({ compact = false, onClick }: { compact?: boolean; onClick?: () => void }) {
   return (
     <Link
-      href={href}
+      className="group flex items-center gap-2.5 no-underline"
+      href="/"
       onClick={onClick}
-      className={`group flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 relative ${
-        isActive
-          ? 'text-white'
-          : 'text-white/40 hover:text-white/80 hover:bg-white/[0.04]'
-      }`}
     >
-      {isActive && (
-        <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#c9a96a]/15 to-[#9c7f44]/10 border border-[#c9a96a]/25" />
-      )}
-      <Icon
-        className={`w-4 h-4 relative z-10 flex-shrink-0 transition-colors ${
-          isActive ? 'text-[#e4c98a]' : 'text-white/30 group-hover:text-white/60'
+      <span
+        className={`primary-gradient flex items-center justify-center rounded-lg text-[#0a0b0d] shadow-lg shadow-accent/20 transition-shadow group-hover:shadow-accent/40 ${
+          compact ? 'size-7 rounded-md' : 'size-9'
         }`}
-      />
-      <span className="relative z-10">{name}</span>
-      {isActive && (
-        <span className="ml-auto relative z-10 w-1.5 h-1.5 rounded-full bg-[#e4c98a]" />
+      >
+        <MoatMark className={compact ? 'size-4' : 'size-5'} strokeWidth={compact ? 1.9 : 1.8} />
+      </span>
+      {compact ? (
+        <span className="font-brand text-[19px] tracking-tight">InvestMoat</span>
+      ) : (
+        <span>
+          <span className="font-brand block text-[21px] leading-none tracking-tight">
+            InvestMoat
+          </span>
+          <span className="mt-1 block font-mono text-[9px] font-bold uppercase leading-none tracking-[0.18em] text-accent/65">
+            Systematic Equity Research
+          </span>
+        </span>
       )}
     </Link>
   );
 }
 
+function NavLink({
+  href,
+  name,
+  icon: Icon,
+  onClick,
+}: {
+  href: string;
+  name: string;
+  icon: React.ElementType;
+  onClick?: () => void;
+}) {
+  const pathname = usePathname();
+  const isActive = pathname === href || pathname.startsWith(href + '/');
+
+  return (
+    <Link
+      aria-current={isActive ? 'page' : undefined}
+      className={`group relative flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium no-underline transition-all duration-200 ${
+        isActive ? 'text-foreground' : 'text-muted hover:bg-default hover:text-foreground'
+      }`}
+      href={href}
+      onClick={onClick}
+    >
+      {isActive && (
+        <span className="absolute inset-0 rounded-xl border border-accent/25 bg-accent-soft" />
+      )}
+      <Icon
+        className={`relative z-10 size-4 shrink-0 transition-colors ${
+          isActive ? 'text-gold-bright' : 'text-muted group-hover:text-foreground'
+        }`}
+      />
+      <span className="relative z-10">{name}</span>
+      {isActive && (
+        <span className="relative z-10 ml-auto size-1.5 rounded-full bg-gold-bright" />
+      )}
+    </Link>
+  );
+}
+
+function DeskFooter() {
+  return (
+    <div className="mt-auto pt-5">
+      <Separator className="mb-4" />
+      <div className="mb-2 flex items-center gap-1.5">
+        <span className="size-1.5 animate-pulse rounded-full bg-success" />
+        <span className="font-mono text-[9px] font-bold uppercase tracking-[0.18em] text-muted">
+          Markets · Live Data
+        </span>
+      </div>
+      <p className="font-mono text-[10px] leading-relaxed text-muted">
+        Independent moat-driven equity research.
+      </p>
+      <p className="mt-1.5 font-mono text-[10px] text-muted/60">&copy; 2026 InvestMoat</p>
+    </div>
+  );
+}
+
 export function NavBar() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [isSearchOpen, setIsSearchOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
     <>
-      {/* Mobile Top Bar */}
-      <div className="lg:hidden sticky top-0 z-50 flex items-center px-4 h-14 border-b border-white/[0.06]" style={{ background: 'rgba(4, 6, 8, 0.85)', backdropFilter: 'blur(20px)' }}>
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          className="p-2 mr-2 rounded-lg hover:bg-white/5 transition-colors text-white/60 hover:text-white"
+      {/* Mobile top bar */}
+      <div className="sticky top-0 z-50 flex h-14 items-center gap-2 border-b border-border bg-background/85 px-4 backdrop-blur-xl lg:hidden">
+        <Button
+          aria-label="Open menu"
+          isIconOnly
+          onPress={() => setIsMenuOpen(true)}
+          size="sm"
+          variant="ghost"
         >
-          {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
+          <Menu className="size-5" />
+        </Button>
 
-        <Link href="/" className="flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
-          <span className="primary-gradient w-7 h-7 rounded-md flex items-center justify-center text-[#0a0b0d] shadow-lg shadow-[#c9a96a]/20">
-            <MoatMark className="w-4 h-4" strokeWidth={1.9} />
-          </span>
-          <span className="font-normal text-white text-[19px] tracking-tight" style={{ fontFamily: 'var(--font-brand)' }}>InvestMoat</span>
-        </Link>
+        <BrandMark compact />
 
-        <button
-          onClick={() => { setIsMenuOpen(false); setIsSearchOpen(true); }}
-          aria-label="Open search"
-          className="ml-auto p-2 rounded-lg hover:bg-white/5 transition-colors text-white/40 hover:text-white"
+        <Button
+          aria-label="Search stocks"
+          className="ml-auto"
+          isIconOnly
+          onPress={() => setIsSearchOpen(true)}
+          size="sm"
+          variant="ghost"
         >
-          <Search className="w-[18px] h-[18px]" />
-        </button>
+          <Search className="size-[18px]" />
+        </Button>
       </div>
 
-      {isSearchOpen && (
-        <MobileSearchPopup onClose={() => setIsSearchOpen(false)} />
-      )}
+      {/* Mobile navigation drawer */}
+      <Drawer isOpen={isMenuOpen} onOpenChange={setIsMenuOpen}>
+        <Drawer.Content className="w-[min(20rem,85vw)]" placement="left">
+          <Drawer.Dialog className="flex h-full flex-col">
+            <Drawer.Header>
+              <BrandMark onClick={() => setIsMenuOpen(false)} />
+            </Drawer.Header>
+            <Drawer.Body className="flex flex-col gap-1">
+              <p className="section-label mb-2 px-3">Menu</p>
+              {navLinks.map((item) => (
+                <NavLink
+                  key={item.href}
+                  href={item.href}
+                  icon={item.icon}
+                  name={item.name}
+                  onClick={() => setIsMenuOpen(false)}
+                />
+              ))}
+              <DeskFooter />
+            </Drawer.Body>
+          </Drawer.Dialog>
+        </Drawer.Content>
+      </Drawer>
 
-      {/* Mobile Menu Overlay */}
-      {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-14 z-[100] overflow-y-auto" style={{ background: 'rgba(4, 6, 8, 0.97)', backdropFilter: 'blur(20px)' }}>
-          <div className="flex flex-col p-3 gap-1 pb-safe">
-            {navLinks.map((item) => (
-              <NavLink
-                key={item.href}
-                href={item.href}
-                name={item.name}
-                icon={item.icon}
-                onClick={() => setIsMenuOpen(false)}
+      {/* Mobile search sheet — full-width so results have room to breathe */}
+      <Drawer isOpen={isSearchOpen} onOpenChange={setIsSearchOpen}>
+        <Drawer.Content placement="top">
+          <Drawer.Dialog>
+            <Drawer.Body className="pt-4">
+              <StockSearch
+                autoFocus
+                limit={8}
+                onNavigate={() => setIsSearchOpen(false)}
               />
-            ))}
-          </div>
-        </div>
-      )}
+            </Drawer.Body>
+          </Drawer.Dialog>
+        </Drawer.Content>
+      </Drawer>
 
-      {/* Desktop Sidebar */}
-      <aside className="sidebar glass hidden lg:flex">
-        {/* Logo */}
+      {/* Desktop sidebar */}
+      <aside className="sidebar hidden lg:flex">
         <div className="mb-8">
-          <Link href="/" className="flex items-center gap-2.5 group" style={{ textDecoration: 'none' }}>
-            <span className="primary-gradient w-9 h-9 rounded-lg flex items-center justify-center text-[#0a0b0d] shadow-lg shadow-[#c9a96a]/20 group-hover:shadow-[#c9a96a]/40 transition-shadow">
-              <MoatMark className="w-5 h-5" strokeWidth={1.8} />
-            </span>
-            <div>
-              <div className="text-[21px] font-normal text-white leading-none tracking-tight" style={{ fontFamily: 'var(--font-brand)' }}>InvestMoat</div>
-              <div className="text-[9px] text-[#c9a96a]/65 font-bold mt-1 leading-none uppercase tracking-[0.18em] font-mono">Systematic Equity Research</div>
-            </div>
-          </Link>
+          <BrandMark />
         </div>
 
-        {/* Search */}
         <div className="mb-6">
-          <NavSearch />
+          <StockSearch />
         </div>
 
-        {/* Nav links */}
         <div>
           <p className="section-label mb-2 px-3">Menu</p>
           <nav className="flex flex-col gap-0.5">
             {navLinks.map((item) => (
-              <NavLink key={item.href} href={item.href} name={item.name} icon={item.icon} />
+              <NavLink key={item.href} href={item.href} icon={item.icon} name={item.name} />
             ))}
           </nav>
         </div>
 
-        {/* Footer — fund credential */}
-        <div className="mt-auto pt-5 border-t border-[#c9a96a]/10">
-          <div className="flex items-center gap-1.5 mb-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-[9px] font-bold uppercase tracking-[0.18em] text-white/35 font-mono">Markets · Live Data</span>
-          </div>
-          <p className="text-[10px] text-white/25 leading-relaxed font-mono">
-            Independent moat-driven equity research.
-          </p>
-          <p className="text-[10px] text-white/15 font-mono mt-1.5">&copy; 2026 InvestMoat</p>
-        </div>
+        <DeskFooter />
       </aside>
     </>
   );

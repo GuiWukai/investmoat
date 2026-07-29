@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { useRouter } from "next/navigation";
 import { ChevronRight, Search, X, SlidersHorizontal, ArrowUp, ArrowDown, ArrowUpDown, ChevronDown } from "lucide-react";
-import { Spinner } from "@heroui/react";
+import { Card, Spinner } from "@heroui/react";
 import { allCoverageData, getAverageScore } from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
 
@@ -62,7 +62,7 @@ function ScorePill({ value }: { value: number }) {
 function SubScore({ label, value }: { label: string; value: number }) {
   return (
     <div className="flex flex-col items-center gap-0.5 min-w-[40px]">
-      <span className="text-[9px] font-bold uppercase tracking-widest text-white/25">{label}</span>
+      <span className="text-[9px] font-bold uppercase tracking-widest text-foreground/25">{label}</span>
       <span className="text-sm font-bold tabular-nums" style={{ color: scoreColor(value) }}>{value}</span>
     </div>
   );
@@ -70,10 +70,10 @@ function SubScore({ label, value }: { label: string; value: number }) {
 
 // ─── Sort affordances ──────────────────────────────────────────────────────────
 function SortIndicator({ active, dir }: { active: boolean; dir: SortDir }) {
-  if (!active) return <ArrowUpDown size={11} className="text-white/15" />;
+  if (!active) return <ArrowUpDown size={11} className="text-foreground/15" />;
   return dir === "asc"
-    ? <ArrowUp size={11} className="text-[#e4c98a]" />
-    : <ArrowDown size={11} className="text-[#e4c98a]" />;
+    ? <ArrowUp size={11} className="text-gold-bright" />
+    : <ArrowDown size={11} className="text-gold-bright" />;
 }
 
 function SortHeader({
@@ -86,7 +86,7 @@ function SortHeader({
     <button
       onClick={() => onSort(sortKey)}
       className={`flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest transition-colors ${
-        active ? "text-[#e4c98a]" : "text-white/20 hover:text-white/45"
+        active ? "text-gold-bright" : "text-foreground/20 hover:text-foreground/45"
       } ${justify === "center" ? "justify-center" : ""} ${className ?? ""}`}
     >
       <span>{label}</span>
@@ -106,11 +106,11 @@ function StockRow({
   return (
     <button
       onClick={() => router.push(stock.href)}
-      className="group w-full flex items-center gap-3 sm:gap-4 px-4 sm:px-5 py-3.5 hover:bg-white/[0.04] transition-colors text-left"
+      className="group w-full flex items-center gap-3 sm:gap-4 px-4 sm:px-5 py-3.5 hover:bg-foreground/[0.04] transition-colors text-left"
     >
       {/* Rank */}
       {rank !== undefined && (
-        <span className="hidden sm:block text-[11px] font-bold text-white/15 tabular-nums w-5 shrink-0 text-right">
+        <span className="hidden sm:block text-[11px] font-bold text-foreground/15 tabular-nums w-5 shrink-0 text-right">
           {rank}
         </span>
       )}
@@ -130,7 +130,7 @@ function StockRow({
 
       {/* Name */}
       <div className="flex-1 min-w-0">
-        <div className="font-semibold text-sm text-white/90 group-hover:text-white transition-colors truncate leading-tight">
+        <div className="font-semibold text-sm text-foreground/90 group-hover:text-foreground transition-colors truncate leading-tight">
           {stock.name}
         </div>
       </div>
@@ -143,7 +143,7 @@ function StockRow({
       </div>
 
       {/* Divider */}
-      <div className="hidden md:block w-px h-6 bg-white/[0.07] shrink-0" />
+      <div className="hidden md:block w-px h-6 bg-foreground/[0.07] shrink-0" />
 
       {/* Overall score */}
       <div className="shrink-0">
@@ -155,7 +155,7 @@ function StockRow({
 
       <ChevronRight
         size={14}
-        className="shrink-0 text-white/15 group-hover:text-white/50 transition-colors"
+        className="shrink-0 text-foreground/15 group-hover:text-foreground/50 transition-colors"
       />
     </button>
   );
@@ -169,13 +169,13 @@ function CategoryPill({
       onClick={onClick}
       className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
         active
-          ? 'bg-[#c9a96a]/15 border border-[#c9a96a]/40 text-[#e4c98a]'
-          : 'bg-white/[0.04] border border-white/10 text-white/40 hover:text-white/70 hover:bg-white/[0.07]'
+          ? 'bg-accent/15 border border-accent/40 text-gold-bright'
+          : 'bg-foreground/[0.04] border border-foreground/10 text-foreground/40 hover:text-foreground/70 hover:bg-foreground/[0.07]'
       }`}
     >
       {label}
       {count !== undefined && (
-        <span className={`text-[10px] font-bold ${active ? 'text-[#c9a96a]/70' : 'text-white/20'}`}>
+        <span className={`text-[10px] font-bold ${active ? 'text-accent/70' : 'text-foreground/20'}`}>
           {count}
         </span>
       )}
@@ -207,21 +207,21 @@ function MobileDropdown({
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(o => !o)}
-        className="w-full flex items-center gap-2 px-3 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-left transition-colors hover:bg-white/[0.06]"
+        className="w-full flex items-center gap-2 px-3 py-2 rounded-xl bg-foreground/[0.04] border border-foreground/10 text-left transition-colors hover:bg-foreground/[0.06]"
       >
-        <span className="text-white/30 shrink-0">{icon}</span>
+        <span className="text-foreground/30 shrink-0">{icon}</span>
         <span className="flex flex-col min-w-0 leading-tight">
-          <span className="text-[9px] font-bold uppercase tracking-widest text-white/25">{label}</span>
-          <span className="text-xs font-semibold text-white/85 truncate">{value}</span>
+          <span className="text-[9px] font-bold uppercase tracking-widest text-foreground/25">{label}</span>
+          <span className="text-xs font-semibold text-foreground/85 truncate">{value}</span>
         </span>
         <ChevronDown
           size={14}
-          className={`ml-auto shrink-0 text-white/30 transition-transform ${open ? "rotate-180" : ""}`}
+          className={`ml-auto shrink-0 text-foreground/30 transition-transform ${open ? "rotate-180" : ""}`}
         />
       </button>
       {open && (
         <div
-          className="absolute z-50 top-full left-0 right-0 mt-1.5 rounded-xl border border-white/10 shadow-2xl overflow-hidden max-h-72 overflow-y-auto"
+          className="absolute z-50 top-full left-0 right-0 mt-1.5 rounded-xl border border-foreground/10 shadow-2xl overflow-hidden max-h-72 overflow-y-auto"
           style={{ backgroundColor: '#0c0e13' }}
         >
           {children(() => setOpen(false))}
@@ -237,8 +237,8 @@ function DropdownItem({
   return (
     <button
       onClick={onClick}
-      className={`w-full flex items-center justify-between gap-2 px-3 py-2.5 text-left text-sm transition-colors border-b border-white/[0.04] last:border-0 ${
-        active ? "bg-[#c9a96a]/10 text-[#e4c98a]" : "text-white/65 hover:bg-white/[0.04]"
+      className={`w-full flex items-center justify-between gap-2 px-3 py-2.5 text-left text-sm transition-colors border-b border-foreground/[0.04] last:border-0 ${
+        active ? "bg-accent/10 text-gold-bright" : "text-foreground/65 hover:bg-foreground/[0.04]"
       }`}
     >
       {children}
@@ -344,7 +344,7 @@ export default function StocksPage() {
         <h1 className="text-3xl md:text-4xl font-extrabold gradient-text-animated mb-3">
           Stock Coverage
         </h1>
-        <p className="text-white/40 text-sm md:text-base max-w-xl">
+        <p className="text-foreground/40 text-sm md:text-base max-w-xl">
           {allCoverageData.length} stocks scored on moat durability, growth trajectory, and live valuation.
         </p>
 
@@ -356,8 +356,8 @@ export default function StocksPage() {
             { label: "Categories", value: visibleCategories.length - 1 },
           ].map(stat => (
             <div key={stat.label} className="flex items-baseline gap-1.5">
-              <span className="text-2xl font-black text-white tabular-nums">{stat.value}</span>
-              <span className="text-[11px] text-white/25 font-medium">{stat.label}</span>
+              <span className="text-2xl font-black text-foreground tabular-nums">{stat.value}</span>
+              <span className="text-[11px] text-foreground/25 font-medium">{stat.label}</span>
             </div>
           ))}
         </div>
@@ -366,19 +366,19 @@ export default function StocksPage() {
       {/* Controls */}
       <div className="relative z-30 animate-fade-up stagger-fill-both space-y-3" style={{ animationDelay: '0.08s' }}>
         <div className="relative max-w-sm">
-          <Search size={14} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-white/25 pointer-events-none" />
+          <Search size={14} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-foreground/25 pointer-events-none" />
           <input
             ref={inputRef}
             type="text"
             value={query}
             onChange={e => setQuery(e.target.value)}
             placeholder="Search by name or ticker…"
-            className="w-full bg-white/[0.04] border border-white/10 rounded-xl pl-9 pr-9 py-2 text-sm text-white placeholder:text-white/20 focus:outline-none focus:border-[#c9a96a]/30 focus:bg-white/[0.06] transition-all"
+            className="w-full bg-foreground/[0.04] border border-foreground/10 rounded-xl pl-9 pr-9 py-2 text-sm text-foreground placeholder:text-foreground/20 focus:outline-none focus:border-accent/30 focus:bg-foreground/[0.06] transition-all"
           />
           {query && (
             <button
               onClick={() => { setQuery(""); inputRef.current?.focus(); }}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-white/25 hover:text-white/50 transition-colors"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground/25 hover:text-foreground/50 transition-colors"
               aria-label="Clear"
             >
               <X size={13} />
@@ -388,7 +388,7 @@ export default function StocksPage() {
 
         {/* Desktop: category pills (sorting is handled by column headers) */}
         <div className="hidden md:flex items-center gap-2 flex-wrap">
-          <SlidersHorizontal size={12} className="text-white/20 shrink-0" />
+          <SlidersHorizontal size={12} className="text-foreground/20 shrink-0" />
           {visibleCategories.map(cat => (
             <CategoryPill
               key={cat.key}
@@ -416,7 +416,7 @@ export default function StocksPage() {
                 >
                   <span>{cat.label}</span>
                   {cat.key !== "all" && (
-                    <span className="text-[11px] font-bold text-white/25">{categoryCount(cat.key)}</span>
+                    <span className="text-[11px] font-bold text-foreground/25">{categoryCount(cat.key)}</span>
                   )}
                 </DropdownItem>
               ))
@@ -472,13 +472,13 @@ export default function StocksPage() {
         </div>
 
         {sorted.length === 0 ? (
-          <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] px-6 py-16 text-center">
-            <p className="text-white/30 text-sm">
+          <Card className="px-6 py-16 text-center">
+            <p className="text-foreground/30 text-sm">
               {trimmed ? `No stocks match "${query.trim()}"` : "No stocks in this category"}
             </p>
-          </div>
+          </Card>
         ) : (
-          <div className="rounded-2xl overflow-hidden border border-white/[0.07] bg-white/[0.025] divide-y divide-white/[0.04]">
+          <Card className="overflow-hidden divide-y divide-foreground/[0.04]">
             {sorted.map((stock, idx) => (
               <StockRow
                 key={stock.ticker}
@@ -488,11 +488,11 @@ export default function StocksPage() {
                 loading={!pricesLoaded}
               />
             ))}
-          </div>
+          </Card>
         )}
 
         {sorted.length > 0 && (
-          <p className="text-center text-[11px] text-white/15 font-medium mt-3">
+          <p className="text-center text-[11px] text-foreground/15 font-medium mt-3">
             {sorted.length} stock{sorted.length !== 1 ? 's' : ''}
             {activeCategory !== "all" ? ` · ${CATEGORIES.find(c => c.key === activeCategory)?.label}` : ' · All Categories'}
             {trimmed ? ` matching "${trimmed}"` : ''}

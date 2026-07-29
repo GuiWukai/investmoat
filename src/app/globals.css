@@ -108,6 +108,15 @@
   --tooltip-close-delay: 150ms;
 }
 
+/* The champagne ramp as real colour utilities (text-gold, border-gold-bright,
+   bg-gold-deep/20 …). `inline` so they compile to var() references and keep
+   tracking the values above rather than being frozen at build time. */
+@theme inline {
+  --color-gold: var(--gold);
+  --color-gold-bright: var(--gold-bright);
+  --color-gold-deep: var(--gold-deep);
+}
+
 /* Type scale and motion — the Tailwind v3 config used to hold these. */
 @theme {
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
@@ -154,11 +163,19 @@
 .card,
 .surface {
   backdrop-filter: blur(20px);
-  border-color: var(--border);
+  /* The base .card has no border of its own — the gold hairline is what makes
+     these read as fund documents rather than generic dashboard tiles. */
+  border: var(--border-width) solid var(--border);
   transition:
     border-color 0.3s ease,
     transform 0.3s ease,
     box-shadow 0.3s ease;
+}
+
+/* Cards that are themselves links lift on hover, as the old .glass-card did. */
+a.card:hover,
+.card[data-hovered] {
+  border-color: color-mix(in oklab, var(--gold) 38%, transparent);
 }
 
 /* Headings inside cards inherit the editorial serif rather than the UI sans. */

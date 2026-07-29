@@ -21,6 +21,7 @@ import { computeAssetMoatScore, computeGrowthScore } from '@/lib/valuationScore'
 import type { StockAnalysisData } from '@/types/stockAnalysis';
 import Link from 'next/link';
 import { TrendingUp, TrendingDown, Minus, ArrowRight } from 'lucide-react';
+import { Card } from "@heroui/react";
 
 // ─── Lucide icon registry ────────────────────────────────────────────────────
 import {
@@ -78,11 +79,11 @@ function LiveHeaderPrice({ slug }: { slug: string }) {
     return () => { cancelled = true; };
   }, [slug]);
 
-  if (!price) return <strong className="text-white">—</strong>;
+  if (!price) return <strong className="text-foreground">—</strong>;
   const positive = changePercent == null || changePercent >= 0;
   return (
     <>
-      <strong className="text-white">{price}</strong>
+      <strong className="text-foreground">{price}</strong>
       {changePercent != null && (
         <span className={`text-xs ml-1.5 font-semibold ${positive ? 'text-emerald-400' : 'text-rose-400'}`}>
           ({positive ? '+' : ''}{changePercent.toFixed(2)}%)
@@ -97,7 +98,7 @@ function LiveHeaderPrice({ slug }: { slug: string }) {
 function TrendIcon({ trend }: { trend: 'accelerating' | 'stable' | 'decelerating' }) {
   if (trend === 'accelerating') return <TrendingUp size={13} className="text-emerald-400 shrink-0 mt-0.5" />;
   if (trend === 'decelerating') return <TrendingDown size={13} className="text-rose-400 shrink-0 mt-0.5" />;
-  return <Minus size={13} className="text-white/35 shrink-0 mt-0.5" />;
+  return <Minus size={13} className="text-foreground/35 shrink-0 mt-0.5" />;
 }
 
 function GrowthAnalysisCard({ ga }: { ga: NonNullable<StockAnalysisData['growth']['growthAnalysis']> }) {
@@ -107,7 +108,7 @@ function GrowthAnalysisCard({ ga }: { ga: NonNullable<StockAnalysisData['growth'
     { color: '#94a3b8', bg: 'rgba(148,163,184,0.08)', border: 'rgba(148,163,184,0.15)' };
 
   return (
-    <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 md:p-6 space-y-5">
+    <Card className="p-5 md:p-6 space-y-5">
       {/* Chips row */}
       <div className="flex flex-wrap gap-2">
         {[
@@ -130,28 +131,28 @@ function GrowthAnalysisCard({ ga }: { ga: NonNullable<StockAnalysisData['growth'
             <div key={i} className="flex items-start gap-2">
               <TrendIcon trend={d.trend} />
               <div className="min-w-0">
-                <span className="text-sm font-medium text-white/85">{d.name}</span>
-                <span className="text-xs text-white/40 ml-2">{d.metric}</span>
+                <span className="text-sm font-medium text-foreground/85">{d.name}</span>
+                <span className="text-xs text-foreground/40 ml-2">{d.metric}</span>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="h-px bg-white/[0.05]" />
+      <div className="h-px bg-foreground/[0.05]" />
 
       <div>
         <p className="section-label mb-1.5">Key Risk</p>
-        <p className="text-sm text-white/60">{ga.keyRisk}</p>
+        <p className="text-sm text-foreground/60">{ga.keyRisk}</p>
       </div>
 
-      <div className="h-px bg-white/[0.05]" />
+      <div className="h-px bg-foreground/[0.05]" />
 
       <div>
         <p className="section-label mb-1.5">Score Derivation</p>
-        <p className="text-xs text-white/35 font-mono">{ga.scoreDerivation}</p>
+        <p className="text-xs text-foreground/35 font-mono">{ga.scoreDerivation}</p>
       </div>
-    </div>
+    </Card>
   );
 }
 
@@ -159,24 +160,24 @@ function GrowthAnalysisCard({ ga }: { ga: NonNullable<StockAnalysisData['growth'
 
 function ForwardPECard({ data }: { data: NonNullable<StockAnalysisData['valuation']['peAnalysis']> }) {
   return (
-    <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 md:p-6">
-      <h4 className="text-base font-bold text-white/85 mb-4">Valuation Multiples</h4>
+    <Card className="p-5 md:p-6">
+      <h4 className="text-base font-bold text-foreground/85 mb-4">Valuation Multiples</h4>
       <table className="w-full text-sm">
         <tbody>
           {data.rows.map((row, i) => (
-            <tr key={i} className="border-b border-white/[0.04] last:border-0">
-              <td className="py-2.5 text-white/45">{row.label}</td>
-              <td className="py-2.5 font-bold text-white text-right">{row.value}</td>
+            <tr key={i} className="border-b border-foreground/[0.04] last:border-0">
+              <td className="py-2.5 text-foreground/45">{row.label}</td>
+              <td className="py-2.5 font-bold text-foreground text-right">{row.value}</td>
               {row.note && (
-                <td className="py-2.5 text-white/28 text-right text-xs pl-4 hidden sm:table-cell">{row.note}</td>
+                <td className="py-2.5 text-foreground/28 text-right text-xs pl-4 hidden sm:table-cell">{row.note}</td>
               )}
             </tr>
           ))}
         </tbody>
       </table>
-      <p className="text-white/40 text-xs mt-4 leading-relaxed">{data.summary}</p>
-      {data.asOf && <p className="text-white/25 text-xs mt-1">Approximate figures as of {data.asOf}.</p>}
-    </div>
+      <p className="text-foreground/40 text-xs mt-4 leading-relaxed">{data.summary}</p>
+      {data.asOf && <p className="text-foreground/25 text-xs mt-1">Approximate figures as of {data.asOf}.</p>}
+    </Card>
   );
 }
 
@@ -186,21 +187,21 @@ function GridCardsSection({ section }: { section: NonNullable<StockAnalysisData[
   const accent = section.accentColor ?? 'var(--accent)';
   return (
     <AnalysisSection title={section.title}>
-      <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 md:p-6"
+      <Card className="p-5 md:p-6"
         style={{ borderLeftWidth: '3px', borderLeftColor: accent }}>
-        {section.gridHeader && <h4 className="text-base font-bold text-white/85 mb-3">{section.gridHeader}</h4>}
-        <p className="text-white/50 mb-5 text-sm leading-relaxed">{section.intro}</p>
+        {section.gridHeader && <h4 className="text-base font-bold text-foreground/85 mb-3">{section.gridHeader}</h4>}
+        <p className="text-foreground/50 mb-5 text-sm leading-relaxed">{section.intro}</p>
         {section.cards && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {section.cards.map((card, i) => (
-              <div key={i} className="rounded-xl border border-white/[0.04] bg-white/[0.02] p-4">
+              <div key={i} className="rounded-xl border border-foreground/[0.04] bg-foreground/[0.02] p-4">
                 <span className="text-[11px] font-bold" style={{ color: accent }}>{card.label}</span>
-                <div className="text-sm mt-1.5 text-white/60 leading-relaxed">{card.text}</div>
+                <div className="text-sm mt-1.5 text-foreground/60 leading-relaxed">{card.text}</div>
               </div>
             ))}
           </div>
         )}
-      </div>
+      </Card>
     </AnalysisSection>
   );
 }
@@ -221,21 +222,21 @@ function ResearchSection({ ticker }: { ticker: string }) {
           <Link
             key={article.slug}
             href={`/research/${article.slug}`}
-            className="group block rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 hover:bg-white/[0.04] hover:border-white/12 transition-colors"
+            className="group block rounded-2xl border border-foreground/[0.06] bg-foreground/[0.02] p-5 hover:bg-foreground/[0.04] hover:border-foreground/12 transition-colors"
           >
             <div className="flex items-start justify-between gap-4">
               <div className="min-w-0">
-                <h4 className="text-base font-bold text-white/85 group-hover:text-white transition-colors leading-snug">
+                <h4 className="text-base font-bold text-foreground/85 group-hover:text-foreground transition-colors leading-snug">
                   {article.title}
                 </h4>
-                <p className="text-sm text-white/45 leading-relaxed mt-1.5">{article.dek}</p>
-                <div className="text-[10px] uppercase tracking-widest text-white/25 mt-3">
+                <p className="text-sm text-foreground/45 leading-relaxed mt-1.5">{article.dek}</p>
+                <div className="text-[10px] uppercase tracking-widest text-foreground/25 mt-3">
                   Reviewed {article.lastReviewed}
                 </div>
               </div>
               <ArrowRight
                 size={16}
-                className="shrink-0 mt-1 text-white/20 group-hover:text-[#e4c98a] transition-all group-hover:translate-x-0.5"
+                className="shrink-0 mt-1 text-foreground/20 group-hover:text-gold-bright transition-all group-hover:translate-x-0.5"
               />
             </div>
           </Link>
@@ -249,22 +250,22 @@ function ProductionTimelineSection({ section }: { section: NonNullable<StockAnal
   const accent = section.accentColor ?? 'var(--accent)';
   return (
     <AnalysisSection title={section.title}>
-      <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 md:p-6"
+      <Card className="p-5 md:p-6"
         style={{ borderLeftWidth: '3px', borderLeftColor: accent }}>
-        <h4 className="text-base font-bold text-white/85 mb-3">The Transformation Journey</h4>
-        <p className="text-white/50 mb-5 text-sm leading-relaxed">{section.intro}</p>
+        <h4 className="text-base font-bold text-foreground/85 mb-3">The Transformation Journey</h4>
+        <p className="text-foreground/50 mb-5 text-sm leading-relaxed">{section.intro}</p>
         {section.stats && (
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
             {section.stats.map((stat, i) => (
-              <div key={i} className="rounded-xl border border-white/[0.04] bg-white/[0.02] p-4">
+              <div key={i} className="rounded-xl border border-foreground/[0.04] bg-foreground/[0.02] p-4">
                 <span className="text-[11px] font-bold" style={{ color: accent }}>{stat.label}</span>
-                <div className="text-xl font-black text-white mt-1">{stat.value}</div>
+                <div className="text-xl font-black text-foreground mt-1">{stat.value}</div>
               </div>
             ))}
           </div>
         )}
-        {section.closing && <p className="text-white/50 mt-5 text-sm leading-relaxed">{section.closing}</p>}
-      </div>
+        {section.closing && <p className="text-foreground/50 mt-5 text-sm leading-relaxed">{section.closing}</p>}
+      </Card>
     </AnalysisSection>
   );
 }
@@ -292,21 +293,21 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
   const gridCols = metricsCount === 4 ? 'grid-cols-2 md:grid-cols-4' : 'grid-cols-3';
 
   const MoatAnalysisCard = (
-    <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 md:p-6">
-      <p className="text-sm text-white/65 leading-relaxed mb-5">
+    <Card className="p-5 md:p-6">
+      <p className="text-sm text-foreground/65 leading-relaxed mb-5">
         <BoldText text={data.moat.analysisSummary} />
       </p>
       <ul className="space-y-4">
         {data.moat.analysisPoints.map((point, i) => (
           <li key={i} className="flex items-start gap-3">
             <div className="w-1 h-1 rounded-full bg-blue-400/60 shrink-0 mt-2" />
-            <span className="text-sm text-white/55 leading-relaxed">
-              <strong className="text-white/85 font-semibold">{point.title}:</strong>{' '}{point.text}
+            <span className="text-sm text-foreground/55 leading-relaxed">
+              <strong className="text-foreground/85 font-semibold">{point.title}:</strong>{' '}{point.text}
             </span>
           </li>
         ))}
       </ul>
-    </div>
+    </Card>
   );
 
   return (
@@ -362,15 +363,15 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
           </h1>
 
           {/* Header stats strip */}
-          <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/40">
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-foreground/40">
             {data.headerStats.map((stat, i) => (
               <span key={i}>
-                {stat.label}: <strong className="text-white/80">{stat.value}</strong>
+                {stat.label}: <strong className="text-foreground/80">{stat.value}</strong>
               </span>
             ))}
             <span>Price: <LiveHeaderPrice slug={data.slug} /></span>
             {data.lastAnalyzed && (
-              <span>Analysis: <strong className="text-white/50">{data.lastAnalyzed}</strong></span>
+              <span>Analysis: <strong className="text-foreground/50">{data.lastAnalyzed}</strong></span>
             )}
           </div>
         </div>
@@ -441,17 +442,17 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
                   <GrowthAnalysisCard ga={data.growth.growthAnalysis} />
                 )}
                 {data.growth.additionalNote && (
-                  <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 md:p-6">
-                    <h4 className="text-base font-bold text-white/85 mb-4">{data.growth.additionalNote.title}</h4>
+                  <Card className="p-5 md:p-6">
+                    <h4 className="text-base font-bold text-foreground/85 mb-4">{data.growth.additionalNote.title}</h4>
                     <div className="space-y-3">
                       {data.growth.additionalNote.points.map((point, i) => (
                         <div key={i} className="flex items-start gap-3">
                           <div className="w-1 h-1 rounded-full bg-emerald-400/60 shrink-0 mt-2" />
-                          <span className="text-sm text-white/60 leading-relaxed">{point}</span>
+                          <span className="text-sm text-foreground/60 leading-relaxed">{point}</span>
                         </div>
                       ))}
                     </div>
-                  </div>
+                  </Card>
                 )}
               </div>
             ),
@@ -477,13 +478,13 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
                   fairValue={data.valuation.valuationNote?.fairValue}
                 />
                 {data.valuation.valuationNote && (
-                  <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 md:p-6">
-                    <h4 className="text-base font-bold text-white/85 mb-3">Valuation Analysis</h4>
-                    <p className="text-sm text-white/55 leading-relaxed">
+                  <Card className="p-5 md:p-6">
+                    <h4 className="text-base font-bold text-foreground/85 mb-3">Valuation Analysis</h4>
+                    <p className="text-sm text-foreground/55 leading-relaxed">
                       {data.valuation.valuationNote.text}{' '}
-                      <strong className="text-white text-lg">{data.valuation.valuationNote.fairValue}</strong>.
+                      <strong className="text-foreground text-lg">{data.valuation.valuationNote.fairValue}</strong>.
                     </p>
-                  </div>
+                  </Card>
                 )}
                 {data.valuation.peAnalysis && <ForwardPECard data={data.valuation.peAnalysis} />}
                 <ScenarioPriceBar
@@ -518,17 +519,17 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
             <div className="space-y-4">
               {data.growth.growthAnalysis && <GrowthAnalysisCard ga={data.growth.growthAnalysis} />}
               {data.growth.additionalNote && (
-                <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 md:p-6">
-                  <h4 className="text-base font-bold text-white/85 mb-4">{data.growth.additionalNote.title}</h4>
+                <Card className="p-5 md:p-6">
+                  <h4 className="text-base font-bold text-foreground/85 mb-4">{data.growth.additionalNote.title}</h4>
                   <div className="space-y-3">
                     {data.growth.additionalNote.points.map((point, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <div className="w-1 h-1 rounded-full bg-emerald-400/60 shrink-0 mt-2" />
-                        <span className="text-sm text-white/60 leading-relaxed">{point}</span>
+                        <span className="text-sm text-foreground/60 leading-relaxed">{point}</span>
                       </div>
                     ))}
                   </div>
-                </div>
+                </Card>
               )}
             </div>
           </AnalysisSection>
@@ -555,13 +556,13 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
               fairValue={data.valuation.valuationNote?.fairValue}
             />
             {data.valuation.valuationNote && (
-              <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 md:p-6">
-                <h4 className="text-base font-bold text-white/85 mb-3">Valuation Analysis</h4>
-                <p className="text-sm text-white/55 leading-relaxed">
+              <Card className="p-5 md:p-6">
+                <h4 className="text-base font-bold text-foreground/85 mb-3">Valuation Analysis</h4>
+                <p className="text-sm text-foreground/55 leading-relaxed">
                   {data.valuation.valuationNote.text}{' '}
-                  <strong className="text-white text-lg">{data.valuation.valuationNote.fairValue}</strong>.
+                  <strong className="text-foreground text-lg">{data.valuation.valuationNote.fairValue}</strong>.
                 </p>
-              </div>
+              </Card>
             )}
             {data.valuation.peAnalysis && <ForwardPECard data={data.valuation.peAnalysis} />}
             <ScenarioPriceBar
