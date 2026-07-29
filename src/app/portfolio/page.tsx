@@ -127,6 +127,29 @@ function CategoryBadge({ category }: { category: string }) {
   );
 }
 
+// ─── Rank badge styling ───────────────────────────────────────────────────────
+// The top three get podium colours — gold, silver, bronze — matching the metal
+// hues already used for XAU/XAG/HG above. Everything else stays neutral so the
+// podium reads as a distinction rather than decoration.
+const RANK_BADGE_STYLES: Record<number, string> = {
+  1: "bg-[#d4af37]/[0.14] border-[#d4af37]/40 text-[#e3c766]",
+  2: "bg-[#c0c0c0]/[0.16] border-[#c0c0c0]/50 text-[#e2e8e8]",
+  3: "bg-[#b87333]/[0.14] border-[#b87333]/40 text-[#d18a4d]",
+};
+const NEUTRAL_RANK_BADGE = "bg-white/[0.05] border-white/[0.07] text-white/45";
+
+function RankBadge({ rank }: { rank: number }) {
+  return (
+    <div
+      className={`w-6 h-6 md:w-7 md:h-7 rounded-full border flex items-center justify-center shrink-0 ${
+        RANK_BADGE_STYLES[rank] ?? NEUTRAL_RANK_BADGE
+      }`}
+    >
+      <span className="text-[11px] font-black tabular-nums">{rank}</span>
+    </div>
+  );
+}
+
 // ─── Sector sets for concentration display ────────────────────────────────────
 const TECH_CATEGORIES = new Set([
   "Core SaaS", "Enterprise SaaS", "Big Tech",
@@ -520,8 +543,8 @@ export default function PortfolioPage() {
         <div className="rounded-2xl overflow-hidden border border-white/[0.05] bg-white/[0.02]">
           {/* Table header */}
           <div className="flex items-center gap-3 md:gap-4 px-4 md:px-5 py-2.5 border-b border-white/[0.05] bg-white/[0.02]">
+            <div className="section-label w-6 md:w-7 text-center shrink-0">#</div>
             <div className="w-0.5 shrink-0" />
-            <div className="section-label w-6 md:w-7 text-right shrink-0">#</div>
             <div className="section-label min-w-[110px] md:min-w-[140px]">Holding</div>
             <div className="section-label hidden sm:block shrink-0 w-24">Category</div>
             <div className="flex-1" />
@@ -543,13 +566,11 @@ export default function PortfolioPage() {
                 onClick={() => router.push(stock.href)}
                 className="w-full flex items-center gap-3 md:gap-4 px-4 md:px-5 py-3.5 hover:bg-white/[0.04] transition-colors group text-left"
               >
+                {/* Rank */}
+                <RankBadge rank={stock.rank} />
+
                 {/* Color accent */}
                 <div className="w-0.5 self-stretch rounded-full shrink-0" style={{ background: stock.color }} />
-
-                {/* Rank */}
-                <div className="w-6 md:w-7 text-right shrink-0">
-                  <span className="text-xs font-black text-white/35 tabular-nums">{stock.rank}</span>
-                </div>
 
                 {/* Name + ticker */}
                 <div className="min-w-[110px] md:min-w-[140px]">
@@ -666,8 +687,8 @@ export default function PortfolioPage() {
           <div className="rounded-2xl overflow-hidden border border-white/[0.05] bg-white/[0.02]">
             {/* Table header */}
             <div className="flex items-center gap-3 md:gap-4 px-4 md:px-5 py-2.5 border-b border-white/[0.05] bg-white/[0.02]">
+              <div className="section-label w-6 md:w-7 text-center shrink-0">#</div>
               <div className="w-0.5 shrink-0" />
-              <div className="section-label w-9 text-right shrink-0">#</div>
               <div className="section-label min-w-[110px] md:min-w-[140px]">Holding</div>
               <div className="section-label hidden sm:block shrink-0 w-24">Category</div>
               <div className="flex-1" />
@@ -686,13 +707,11 @@ export default function PortfolioPage() {
                   className="w-full flex items-center gap-3 md:gap-4 px-4 md:px-5 py-3.5 hover:bg-white/[0.04] transition-colors group text-left animate-slide-in-left stagger-fill-both"
                   style={{ animationDelay: `${0.5 + idx * 0.035}s` }}
                 >
+                  {/* Rank */}
+                  <RankBadge rank={stock.rank} />
+
                   {/* Color accent */}
                   <div className="w-0.5 self-stretch rounded-full shrink-0" style={{ background: stock.color }} />
-
-                  {/* Rank */}
-                  <div className="w-9 text-right shrink-0">
-                    <span className="text-xs font-black text-white/35 tabular-nums">#{stock.rank}</span>
-                  </div>
 
                   {/* Name + ticker */}
                   <div className="min-w-[110px] md:min-w-[140px]">
