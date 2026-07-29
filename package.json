@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "eslint",
     "validate:stocks": "tsx scripts/validate-stocks.ts",
-    "validate:research": "tsx scripts/validate-research.ts"
+    "validate:research": "tsx scripts/validate-research.ts",
+    "screen:research": "tsx scripts/research-screen.ts"
   },
   "dependencies": {
     "@heroui/react": "^2.8.9",

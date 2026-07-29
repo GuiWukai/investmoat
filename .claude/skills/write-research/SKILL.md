@@ -22,6 +22,10 @@ build rejects violations.
 
 ## Step 1 — Test the idea
 
+If the subject isn't decided yet, start with the `research-ideas` skill — it
+screens the coverage universe for cohorts, rank disagreements and coverage gaps
+rather than waiting for an earnings headline to supply one.
+
 An idea qualifies as an article only if it clears all three:
 
 1. **Cross-cutting.** It reads on 4+ covered names, and the comparison is the
@@ -68,9 +72,17 @@ each block is for, when each one is the wrong choice, and the article arc the
 existing piece follows.
 
 The short version: `scorecard` and `moat-matrix` carry evidence about covered
-names and resolve live. `table` carries company-reported figures and demands an
-`asOf`. `callout` marks the turn in the argument. `prose` connects them. If a
-block isn't doing work the surrounding prose can't, cut it.
+names and resolve live. `table` carries company-reported figures for one period
+and demands an `asOf` and a citation; `chart` does the same for a series, when
+the shape over time *is* the argument. `callout` marks the turn in the
+argument. `prose` connects them. If a block isn't doing work the surrounding
+prose can't, cut it.
+
+**Pick an arc, don't inherit one.** The published set follows a single spine —
+evidence → cross-read → mechanism → counter-case → positioning — and it works,
+which is exactly why it will stop working: at three articles it reads as house
+style, at ten as a template. `references/block-playbook.md` carries four arcs
+and when each one fits. Choose deliberately.
 
 ## Step 4 — Write the JSON
 
@@ -85,9 +97,20 @@ Field rules are tabulated in `docs/RESEARCH.md`. The ones that get fumbled:
 - `summary` — 2–5 sentences, used in the Markdown mirror and JSON-LD
   `abstract`. Must stand alone: a reader who sees only this should get the
   thesis and the mechanism, not a teaser.
-- `falsifiableBy` — technically optional, treat it as required. It renders as
-  its own section and is the review trigger.
+- `falsifiableBy` — technically optional, treat it as required. An object:
+  `{ claim, status }`, with `status: "holding"` on a new article. It renders as
+  its own section with a status badge, and `/review-research` walks it at every
+  re-read. Anything other than `holding` requires a `note`.
+- `sources` — the primary documents behind every static figure. Required in
+  practice: each `table` and `chart` references entries by `id`, and the lint
+  warns on any that doesn't. See the `source-research` skill.
+- `revisions` — omit on a new article. A review appends to it; a rewrite does
+  not.
 - `tags` — 1–6 labels; reuse existing ones where they fit.
+
+Do **not** write a closing "How to read the numbers on this page" callout. The
+renderer emits that footer for every article with a live block, so an authored
+copy is duplication that will drift — the lint warns on it.
 
 Inline markup in prose is `**bold**` and `[text](href)` only. Anything richer
 belongs in a block type — that keeps articles diffable and renderable to clean
@@ -119,11 +142,13 @@ article cites.
 
 - [ ] Thesis is one sentence, and `falsifiableBy` names what would break it.
 - [ ] The cohort includes an honest counter-example, addressed head-on rather
-      than buried.
+      than buried — and the counter-case section is a section, not a sentence.
+- [ ] The arc was chosen, not inherited from the last article.
 - [ ] Every score, moat status and recommendation on the page comes from a
       live block — nothing transcribed. `validate:research` reports no errors.
-- [ ] Every `table` has an `asOf`, and every static figure in it is attributable
-      to a company report.
+- [ ] Every `table` and `chart` has an `asOf` and a `sources` reference, and
+      every cited URL has been opened.
+- [ ] No authored "how to read this page" callout — the renderer emits it.
 - [ ] `slug` matches in filename, `slug` field, and `index.ts` key.
 - [ ] Grouped blocks partition their tickers exactly — every ticker in exactly
       one group.
