@@ -16,7 +16,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname } from 'node:path';
 
 import { stockAnalysisSchema } from '../src/lib/stockSchema';
-import { parseScenarioPrice } from '../src/lib/valuationScore';
+import { parseScenarioPrice, computeGrowthScore, type GrowthAnalysisInput } from '../src/lib/valuationScore';
 import { getAllSlugs } from '../src/data/stocks';
 import { allCoverageData } from '../src/app/stockData';
 
@@ -52,6 +52,21 @@ type Warning = { file: string; message: string };
  * a wide corridor is a smell, not proof of an error.
  */
 const MAX_BASE_BEAR_RATIO = 3.0;
+
+/**
+ * How far the arithmetic written into `scoreDerivation` may fall from the score
+ * `computeGrowthScore` actually returns before it is worth flagging. Small gaps
+ * are usually rounding in the prose; large ones mean the derivation describes a
+ * superseded calculation.
+ *
+ * This does NOT affect any published score — computeGrowthScore reads the
+ * structured fields (cagrEstimate, drivers, marginTrend, primaryType,
+ * keyRiskSeverity), never the prose. But the prose is what a reader is shown as
+ * the explanation for the number next to it, so drift makes the site explain
+ * its scores incorrectly. Gold is the worst case: its derivation still narrates
+ * an old hand-rolled "Base 50 ... = 50" method against a computed 71.
+ */
+const MAX_DERIVATION_DRIFT = 2;
 
 function validateFile(file: string): Failure[] {
   const fullPath = join(STOCKS_DIR, file);
@@ -108,6 +123,40 @@ function checkScenarioCorridors(files: string[]): Warning[] {
         message:
           `base is ${ratio.toFixed(1)}× the bear target (limit ${MAX_BASE_BEAR_RATIO}×) — check that the base case is ` +
           '12–24 month expected value and not a cycle peak; the cycle peak belongs in the bull slot',
+      });
+    }
+  }
+  return warnings;
+}
+
+/**
+ * Flag growth derivations whose written arithmetic no longer lands on the score
+ * the formula produces. See MAX_DERIVATION_DRIFT.
+ */
+function checkGrowthDerivations(files: string[]): Warning[] {
+  const warnings: Warning[] = [];
+  for (const file of files) {
+    let data: { growth?: { growthAnalysis?: GrowthAnalysisInput & { scoreDerivation?: string } } };
+    try {
+      data = JSON.parse(readFileSync(join(STOCKS_DIR, file), 'utf-8'));
+    } catch {
+      continue;
+    }
+    const ga = data.growth?.growthAnalysis;
+    if (!ga?.scoreDerivation) continue;
+    const computed = computeGrowthScore(ga);
+    if (computed == null) continue;
+    // The derivation reads "base + adj − adj = NN"; take the last such total.
+    const match = ga.scoreDerivation.match(/=\s*(\d{1,3})(?![\s\S]*=\s*\d)/);
+    if (!match) continue; // not every derivation is written as an equation
+    const stated = Number(match[1]);
+    if (Math.abs(stated - computed) > MAX_DERIVATION_DRIFT) {
+      warnings.push({
+        file,
+        message:
+          `growth derivation states ${stated} but computeGrowthScore returns ${computed} — the prose describes a ` +
+          'superseded calculation. The score is unaffected (it is derived from the structured fields), but the ' +
+          'explanation shown next to it is wrong',
       });
     }
   }
@@ -192,10 +241,21 @@ function main(): void {
     process.exit(1);
   }
 
-  const warnings = checkScenarioCorridors(files);
-  if (warnings.length > 0) {
-    console.log(`${YELLOW}Scenario corridor notes (${warnings.length}) — advisory, not failures:${RESET}`);
-    for (const { file, message } of warnings) {
+  const corridorWarnings = checkScenarioCorridors(files);
+  if (corridorWarnings.length > 0) {
+    console.log(`${YELLOW}Scenario corridor notes (${corridorWarnings.length}) — advisory, not failures:${RESET}`);
+    for (const { file, message } of corridorWarnings) {
+      console.log(`  ${DIM}•${RESET} ${YELLOW}${file}${RESET} ${message}`);
+    }
+    console.log('');
+  }
+
+  const derivationWarnings = checkGrowthDerivations(files);
+  if (derivationWarnings.length > 0) {
+    console.log(
+      `${YELLOW}Growth derivation drift (${derivationWarnings.length} of ${files.length}) — advisory, not failures:${RESET}`,
+    );
+    for (const { file, message } of derivationWarnings) {
       console.log(`  ${DIM}•${RESET} ${YELLOW}${file}${RESET} ${message}`);
     }
     console.log('');
