@@ -11,7 +11,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$1.23T"
+      "value": "~$1.27T"
     },
     {
       "label": "Circulating Supply",
@@ -31,22 +31,22 @@
   "metrics": [
     {
       "title": "Hash Rate",
-      "value": "~970 EH/s",
-      "label": "New All-Time High Network Security",
+      "value": "~917 EH/s",
+      "label": "Off the ~970 EH/s peak — 30-day average 938 EH/s as miners divert capital to AI infrastructure",
       "icon": "Lock",
       "color": "#f7931a"
     },
     {
       "title": "Spot ETF AUM",
-      "value": "~$80.4B",
-      "label": "Down from $104.3B — record 13-day, $4.33B outflow streak (May 15–Jun 3); cumulative inflows ~$55B",
+      "value": "~$77.7B",
+      "label": "1.214M BTC held (Jul 24), recovered from $74.4B on Jul 1 — seven straight inflow days to Jul 22 (~$1B, longest run in 11 weeks), then a $310M outflow day; 2026 YTD still −$4.84B",
       "icon": "Shield",
       "color": "#3b82f6"
     },
     {
-      "title": "Exchange Reserves",
-      "value": "~3.0M BTC",
-      "label": "Still Near 2018 Lows — but ETF flows flipped negative; ETF holdings 1.277M BTC (−7.2% from Oct peak)",
+      "title": "US Government BTC",
+      "value": "328,372",
+      "label": "Entirely forfeiture-sourced — reserve architecture stalled in a Treasury–Commerce control dispute, no purchase authority, unapproved by Congress for over a year",
       "icon": "Globe",
       "color": "#10b981"
     }
@@ -71,53 +71,53 @@
     ]
   },
   "growth": {
-    "description": "BTC broke down to ~$61,500 by June 10, 2026 — 51% below the October 2025 ATH of $126,080 — as the early-May recovery reversed into the longest spot-ETF outflow streak since launch: 13 consecutive trading days (May 15–June 3) with $4.33B exiting, dropping ETF AUM from $104.3B to $80.4B and cumulative inflows to ~$55B. The 10:1 ETF-demand-vs-mining-issuance ratio that anchored the supply-squeeze thesis has flipped negative for now. Strategy's first-ever BTC sale (32 BTC for $2.5M, May 26–31, to fund its STRC preferred dividend — framed by CEO Phong Le as market 'inoculation') added to the deleveraging before the firm resumed buying 1,550 BTC June 1–7 (holdings: 843,706 BTC). On the catalyst side, Strategic Bitcoin Reserve executive director Bo Hines says the reserve architecture will be unveiled 'in short order', ahead of the July 22, 2026 regulatory report deadline; the BITCOIN Act still awaits the late-2026 NDAA window. The halving-cycle October 2026 bottom thesis is now actively playing out.",
+    "description": "July resolved the demand question and the policy question in opposite directions, leaving BTC at ~$63,400 — barely above the June low and still 50% below the October 2025 ATH of $126,080. Flows recovered: the ten-day outflow streak ended July 1 after draining $2.73B, and US spot ETFs then ran seven consecutive inflow sessions to July 22 (~$1B, the longest positive run in 11 weeks), lifting complex AUM from $74.4B to ~$77.7B on 1.214M BTC — before a $310M outflow day on July 24 broke the streak. Net-net 2026 remains −$4.84B, with cumulative since-launch inflows down to ~$51.8B. Policy went the other way: the Strategic Bitcoin Reserve architecture promised 'in short order' did not arrive, and the reserve is instead stalled in a Treasury–Commerce dispute over who controls it, with legal-authority questions unresolved and the 328,372 BTC holding still entirely forfeiture-sourced. The CLARITY Act has not reached the Senate floor and its 2026 window effectively closes when the Senate leaves around August 10; Galaxy puts the odds of it being signed this year at roughly 50-50 or lower. Strategy's dividend-funded selling scaled up from May's symbolic 32 BTC to 3,588 BTC ($216M, June 29–July 5), though the firm then chose to raise $225M through at-the-market share sales on July 20 rather than sell more, leaving holdings at 843,775 BTC — the corporate bid is now roughly flat rather than accumulating. Hash rate has eased to ~917 EH/s from the ~970 EH/s peak as miners divert capital to AI infrastructure.",
     "growthAnalysis": {
       "cagrEstimate": "30–60%",
-      "scoreDerivation": "Base 94 (30–60% long-run institutional adoption CAGR, midpoint 45%) − 1 driver trajectory (lead ETF driver flipped accelerating → decelerating on the record 13-day, $4.33B outflow streak; sovereign and corporate drivers stable) + 3 TAM expansion (sovereign/SWF demand layer: SBR architecture due 'in short order' before the July 22 report deadline; NH, AZ, MA state reserves) − 10 key risk now high (price 51% below ATH, ETF AUM −23% from peak, halving-cycle October 2026 bottom thesis actively playing out, retail still disengaged) = 85 (was 93 in May; severity raised moderate → high because the bear-case outflow trigger has partially materialised)",
+      "scoreDerivation": "Base 94 (30–60% long-run institutional adoption CAGR, midpoint 45%) − 2.7 driver trajectory (ETF driver recovered decelerating → stable on the seven-session July inflow run; sovereign driver cut stable → decelerating because the promised reserve architecture did not arrive and the SBR is stalled in a Treasury–Commerce control dispute; corporate driver cut stable → decelerating as Strategy's dividend-funded selling scaled 32 BTC → 3,588 BTC and holdings went flat) + 3 TAM expansion (state reserves in NH, AZ, MA; wealth-platform distribution still widening) − 10 key risk high (policy leg of the bear case has now partially materialised; halving-cycle October 2026 bottom thesis still live) = 84 (was 85 in June; severity held at high — the flow half of the risk stepped back, the policy half confirmed)",
       "drivers": [
         {
           "name": "Spot ETF / Institutional Adoption",
-          "metric": "AUM $80.4B, down from $104.3B; record 13-day outflow streak −$4.33B (May 15–Jun 3); cumulative inflows ~$55B; ETF holdings 1.277M BTC (−7.2% from Oct 2025 peak)",
-          "trend": "decelerating"
+          "metric": "AUM ~$77.7B on 1.214M BTC (Jul 24), up from $74.4B on Jul 1; seven straight inflow days to Jul 22 (~$1B, longest run in 11 weeks) after the ten-day, $2.73B outflow streak ended Jul 1; broken by a $310M outflow day Jul 24; 2026 YTD −$4.84B, cumulative since launch ~$51.8B",
+          "trend": "stable"
         },
         {
           "name": "Sovereign Treasury / Strategic Reserve",
-          "metric": "US holds 328K BTC (forfeiture-funded); SBR architecture to be unveiled 'in short order' per executive director Bo Hines, ahead of July 22, 2026 regulatory report deadline; BITCOIN Act awaits late-2026 NDAA window",
-          "trend": "stable"
+          "metric": "US holds 328,372 BTC, still entirely forfeiture-sourced; the architecture promised 'in short order' did not arrive — the reserve is stalled in a Treasury–Commerce dispute over control with legal authority unresolved, and Congress has not approved it in over a year; CLARITY Act has not reached the Senate floor with the 2026 window closing ~Aug 10 (Galaxy: ~50-50 or lower); BITCOIN Act still awaits the late-2026 NDAA window",
+          "trend": "decelerating"
         },
         {
           "name": "Corporate Treasury Adoption",
-          "metric": "Strategy holds 843,706 BTC; first-ever sale (32 BTC, $2.5M, May 26–31) to fund STRC preferred dividend, then resumed buying 1,550 BTC June 1–7; 1,000+ corporate adopters globally",
-          "trend": "stable"
+          "metric": "Strategy holds 843,775 BTC — roughly flat since June; dividend-funded selling scaled from May's symbolic 32 BTC to 3,588 BTC ($216M, Jun 29–Jul 5), though the firm raised $225M via at-the-market share sales on Jul 20 rather than sell further; 1,000+ corporate adopters globally",
+          "trend": "decelerating"
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "The May–June ETF outflow cascade ($4.33B over 13 days — the bear case's demand-reversal trigger, partially materialised) extends through summer: if the Strategic Reserve architecture due before the July 22 report disappoints (forfeiture-only, no active accumulation) and the BITCOIN Act misses the NDAA late-2026 window, the halving-cycle pattern completes with an October 2026 bottom in the $45K–$55K range — Strategy's preferred-dividend-funded sale, however symbolic, showed the corporate-treasury bid can also reverse",
+      "keyRisk": "The policy leg of the bear case has now partially materialised: the Strategic Reserve architecture did not arrive on schedule and is deadlocked between Treasury and Commerce with no purchase authority, while the CLARITY Act's 2026 window effectively closes around August 10 and the BITCOIN Act still depends on the late-2026 NDAA. If the deadlock persists into the autumn and the July flow recovery — already broken once on July 24 and still net-negative for the year — rolls back over, the halving-cycle pattern completes with an October 2026 bottom in the $45K–$55K range, with nothing left to absorb it: Strategy's dividend-funded selling has scaled 100-fold since May and the corporate bid has gone flat, so the demand side would rest on ETF flows alone",
       "keyRiskSeverity": "high",
       "marginTrend": "stable"
     }
   },
   "valuation": {
     "score": 86,
-    "description": "At ~$61,500 — 51% below the October 2025 ATH of $126,080 — BTC has retraced deep into the bear-base corridor after the longest ETF outflow streak since launch ($4.33B over 13 days, AUM $104.3B → $80.4B). The supply-squeeze mechanics that defined the May setup have inverted for now, but the price has done most of the de-rating work: BTC sits just 37% above the bear target ($45K, −27% downside) and 62% below the base case ($160K, +160% upside), with the bull ($350K) a +469% tail. The July 22 Strategic Reserve architecture deadline is the binary catalyst — a credible active-accumulation framework likely marks the cycle low, while a forfeiture-only disappointment opens the door to the $45K–$55K October bottom scenario already contemplated by the bear case. Skew has improved with the drawdown: −27% downside vs +160% to base."
+    "description": "At ~$63,400 — 50% below the October 2025 ATH of $126,080 — BTC has spent seven weeks going sideways low in the bear-base corridor, up ~3% from the June low despite a flow recovery that added ~$1B over seven sessions. It sits 41% above the bear target ($45K, −29% downside) and 60% below the base case ($160K, +152% upside), with the bull ($350K) a +452% tail. The binary this file was waiting on has resolved to the unfavourable side: no Strategic Reserve architecture arrived, and the reserve is deadlocked between Treasury and Commerce with no purchase authority — the forfeiture-only outcome the bear case contemplated. What has not happened is the second half of that bear case, an accompanying flow cascade; ETF demand instead stabilised. That split is why the score holds rather than falls — price is doing the de-rating work while the sovereign catalyst that justified the base case slips right. Skew remains favourable on arithmetic (−29% to bear vs +152% to base), but the base case now needs a 2027 window rather than a mid-2026 one."
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$45,000",
       "description": "Sovereign demand catalyst fails to materialize while a US dollar liquidity shock forces broad risk-asset deleveraging — driving BTC through the prior cycle low and toward 2024 breakout support.",
       "points": [
-        "BITCOIN Act fails to clear NDAA late-2026 markup AND the Strategic Reserve framework remains forfeiture-only with no active accumulation — removing the sovereign demand thesis and triggering an ETF outflow cascade",
+        "The Treasury–Commerce deadlock persists so the Strategic Reserve stays forfeiture-only with no purchase authority (already the case as of late July 2026), the CLARITY Act misses its ~August 10 window, and the BITCOIN Act fails to clear NDAA late-2026 markup — removing the sovereign demand thesis entirely and triggering a renewed ETF outflow cascade",
         "Dollar liquidity crunch (DXY > 110, Fed forced to pause cuts in a credit event) forces leveraged crypto positions to unwind; ETF weekly outflows exceed $1B for 4+ consecutive weeks, breaking the 10:1 ETF/mining demand-supply ratio",
         "Historical halving-cycle bottom pattern reasserts in October 2026 as miner capitulation accelerates sub-$55K; on-chain active addresses stay at multi-year lows, signaling no retail re-engagement to absorb the institutional unwind"
       ]
     },
     "base": {
       "priceTarget": "$160,000",
-      "description": "Post-halving cycle peak arrives in mid-2026 as ETF inflows re-accelerate and the US Strategic Bitcoin Reserve formalizes, driving BTC to a new ATH above the October 2025 high.",
+      "description": "The cycle peak slips to 2027 — the mid-2026 window has passed with BTC at ~$63K — as ETF inflows re-accelerate off the July base and the US Strategic Bitcoin Reserve is finally formalized, driving BTC to a new ATH above the October 2025 high.",
       "points": [
-        "Spot ETF AUM surpasses $200B as the halving-driven supply squeeze combines with steady institutional inflows from pension funds and endowments adding 1–2% BTC allocations",
-        "US Strategic Bitcoin Reserve begins active accumulation — confirmed purchases removing supply overhang and signaling sovereign legitimacy that triggers BRICS+ central bank interest",
+        "Spot ETF AUM surpasses $200B from the ~$78B July base as the halving-driven supply squeeze combines with steady institutional inflows from pension funds and endowments adding 1–2% BTC allocations",
+        "The Treasury–Commerce control dispute resolves with statutory purchase authority attached, and the US Strategic Bitcoin Reserve begins active accumulation — confirmed purchases removing supply overhang and signaling sovereign legitimacy that triggers BRICS+ central bank interest",
         "Morgan Stanley's MSBT launched April 8 (cheapest BTC ETF at 0.14%) — unlocking $3.5T wealth management client base — and Goldman Sachs Bitcoin Income ETF files for SEC approval, bringing two more Wall Street giants into the category"
       ]
     },
@@ -146,7 +146,7 @@
     },
     "regulatoryIncumbency": {
       "status": "intact",
-      "note": "First spot ETF (Jan 2024), first CFTC commodity classification, US Strategic Bitcoin Reserve operational (2025), BITCOIN Act advancing in Congress, FASB accounting treatment first applied to BTC, state-level reserve laws (NH, AZ, MA). Real and BTC-exclusive — but one US administration deep and politically reversible. Compare gold's Basel III Tier 1 status (30+ year multilateral central-banking treaty): BTC's regulatory standing is intact with strong momentum, not yet the durable lock-in that would justify a strong rating."
+      "note": "First spot ETF (Jan 2024), first CFTC commodity classification, FASB accounting treatment first applied to BTC, state-level reserve laws (NH, AZ, MA) — all real, all BTC-exclusive, and none of it has been rolled back. What has stalled is the advance: the Strategic Bitcoin Reserve exists on paper but remains forfeiture-only and deadlocked between Treasury and Commerce over control, the CLARITY Act has not reached the Senate floor with its 2026 window closing, and the BITCOIN Act still awaits the late-2026 NDAA. Rated intact rather than weakened because the standing already won is untouched — but the July 2026 deadlock is a direct demonstration of the reversibility this note has always flagged. Compare gold's Basel III Tier 1 status (30+ year multilateral central-banking treaty): BTC's regulatory standing is intact, and the momentum that once looked like a path to durable lock-in has stopped compounding."
     },
     "securityBudget": {
       "status": "strong",
@@ -155,5 +155,5 @@
     "primaryMoat": "credibleNeutrality",
     "verdict": "Bitcoin's moat is monetary, not corporate. Four pillars rate strong — network Lindy, Schelling-point status, credible neutrality (primary), and security budget — combining into the strongest monetary moat ever built outside of fiat. Regulatory incumbency rates intact: real and BTC-exclusive, but one US administration deep and politically reversible vs gold's multilateral Basel III Tier 1 standing. The framework's way of saying 'uniquely uncopyable on what matters most, with regulatory momentum that still needs to compound into durable standing.'"
   },
-  "lastAnalyzed": "June 2026"
+  "lastAnalyzed": "July 29, 2026"
 }
