@@ -520,8 +520,8 @@ export default function PortfolioPage() {
         <div className="rounded-2xl overflow-hidden border border-white/[0.05] bg-white/[0.02]">
           {/* Table header */}
           <div className="flex items-center gap-3 md:gap-4 px-4 md:px-5 py-2.5 border-b border-white/[0.05] bg-white/[0.02]">
+            <div className="section-label w-6 md:w-7 text-center shrink-0">#</div>
             <div className="w-0.5 shrink-0" />
-            <div className="section-label w-6 md:w-7 text-right shrink-0">#</div>
             <div className="section-label min-w-[110px] md:min-w-[140px]">Holding</div>
             <div className="section-label hidden sm:block shrink-0 w-24">Category</div>
             <div className="flex-1" />
@@ -543,13 +543,13 @@ export default function PortfolioPage() {
                 onClick={() => router.push(stock.href)}
                 className="w-full flex items-center gap-3 md:gap-4 px-4 md:px-5 py-3.5 hover:bg-white/[0.04] transition-colors group text-left"
               >
+                {/* Rank */}
+                <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-white/[0.05] border border-white/[0.07] flex items-center justify-center shrink-0">
+                  <span className="text-[11px] font-black text-white/45 tabular-nums">{stock.rank}</span>
+                </div>
+
                 {/* Color accent */}
                 <div className="w-0.5 self-stretch rounded-full shrink-0" style={{ background: stock.color }} />
-
-                {/* Rank */}
-                <div className="w-6 md:w-7 text-right shrink-0">
-                  <span className="text-xs font-black text-white/35 tabular-nums">{stock.rank}</span>
-                </div>
 
                 {/* Name + ticker */}
                 <div className="min-w-[110px] md:min-w-[140px]">
@@ -666,8 +666,8 @@ export default function PortfolioPage() {
           <div className="rounded-2xl overflow-hidden border border-white/[0.05] bg-white/[0.02]">
             {/* Table header */}
             <div className="flex items-center gap-3 md:gap-4 px-4 md:px-5 py-2.5 border-b border-white/[0.05] bg-white/[0.02]">
+              <div className="section-label w-6 md:w-7 text-center shrink-0">#</div>
               <div className="w-0.5 shrink-0" />
-              <div className="section-label w-9 text-right shrink-0">#</div>
               <div className="section-label min-w-[110px] md:min-w-[140px]">Holding</div>
               <div className="section-label hidden sm:block shrink-0 w-24">Category</div>
               <div className="flex-1" />
@@ -686,13 +686,13 @@ export default function PortfolioPage() {
                   className="w-full flex items-center gap-3 md:gap-4 px-4 md:px-5 py-3.5 hover:bg-white/[0.04] transition-colors group text-left animate-slide-in-left stagger-fill-both"
                   style={{ animationDelay: `${0.5 + idx * 0.035}s` }}
                 >
+                  {/* Rank */}
+                  <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-white/[0.05] border border-white/[0.07] flex items-center justify-center shrink-0">
+                    <span className="text-[11px] font-black text-white/45 tabular-nums">{stock.rank}</span>
+                  </div>
+
                   {/* Color accent */}
                   <div className="w-0.5 self-stretch rounded-full shrink-0" style={{ background: stock.color }} />
-
-                  {/* Rank */}
-                  <div className="w-9 text-right shrink-0">
-                    <span className="text-xs font-black text-white/35 tabular-nums">#{stock.rank}</span>
-                  </div>
 
                   {/* Name + ticker */}
                   <div className="min-w-[110px] md:min-w-[140px]">
