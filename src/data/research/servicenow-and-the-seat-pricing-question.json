@@ -3,13 +3,14 @@
   "title": "ServiceNow and the Seat-Pricing Question",
   "dek": "The market spent the first half of 2026 pricing enterprise software for the collapse of per-seat billing. ServiceNow's Q2 is the first hard read on that fear — and it suggests the market indexed on the wrong variable.",
   "published": "July 28, 2026",
-  "lastReviewed": "July 28, 2026",
+  "lastReviewed": "July 29, 2026",
   "tickers": ["NOW", "CRM", "ADBE", "INTU", "OKTA", "FIG", "DDOG", "SNOW", "MDB", "NET"],
   "tags": ["Enterprise Software", "AI Monetization", "Business Models"],
   "summary": "Enterprise software de-rated through H1 2026 on the thesis that AI agents destroy per-seat pricing faster than task-based pricing can replace it. ServiceNow is the cleanest test case: it fell roughly 30% YTD on that fear, then reported Q2 2026 with subscription revenue re-accelerating to +24.5% YoY and AI ACV crossing $1B. Read across the ten names in our coverage that bill by seat or by consumption, the billing model turns out to be a poor predictor of AI exposure. What separates the winners is whether the vendor owns the system of record and the transaction layer that agents must act through — which is why ServiceNow, priced by seat, is better positioned than Snowflake and MongoDB, which are priced by consumption.",
   "falsifiableBy": {
     "claim": "ServiceNow AI ACV stalling short of the $1.5B FY2026 target, or subscription growth decelerating below 18% while AI ACV still grows — the combination that would show task-based revenue arriving as a substitute for seat revenue rather than as an addition to it.",
-    "status": "holding"
+    "status": "holding",
+    "note": "Not yet testable on new data — ServiceNow next reports in October. What this review could check, it did: every moat status the piece names still matches the underlying stock analyses, so the cohort sorting the argument rests on is unchanged."
   },
   "sources": [
     {
@@ -19,6 +20,12 @@
       "date": "July 22, 2026",
       "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-Second-Quarter-2026-Financial-Results/default.aspx",
       "kind": "press-release"
+    }
+  ],
+  "revisions": [
+    {
+      "date": "July 29, 2026",
+      "note": "First review. Verified all eleven moat statuses the prose asserts against the stock JSONs — every one still matches, including Adobe's system-of-record, transaction-embedding and regulatory-lock-in pillars sitting below strong, which is what the counter-case rests on, and Salesforce's weakened business-logic pillar. Cited the Q2 2026 release behind the metrics table. Flagged for the next review: the Adobe, Salesforce, Snowflake and MongoDB analyses carry month-precision \"May 2026\" dates, which makes the counter-case the part of this article standing on the oldest data."
     }
   ],
   "blocks": [

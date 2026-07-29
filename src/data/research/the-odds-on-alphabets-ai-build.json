@@ -3,13 +3,14 @@
   "title": "The Odds on Alphabet's $200B AI Build",
   "dek": "Alphabet beat on revenue, on Cloud and on margin, then fell about 5% because capex went up. The market is sorting hyperscalers by how much they spend. The variable that decides whether a build pays off is how much of it was sold before it was poured.",
   "published": "July 28, 2026",
-  "lastReviewed": "July 28, 2026",
+  "lastReviewed": "July 29, 2026",
   "tickers": ["GOOGL", "MSFT", "AMZN", "ORCL", "META", "CRWV", "NBIS"],
   "tags": ["AI Capex", "Hyperscalers", "Capital Allocation", "Big Tech"],
   "summary": "Alphabet reported Q2 2026 on July 22 with revenue +24% to $119.8B, Google Cloud +82% to $24.8B, Cloud operating margin tripled year-over-year to 35.6% and contracted backlog at $514B — and the stock fell about 5%, because full-year capex guidance rose to $195–205B and free cash flow turned negative at −$5.9B. The market is now sorting the hyperscalers by how much they spend. Read across the seven names in our coverage that are building AI infrastructure, spend size predicts almost nothing. What predicts a payoff is how much of the build is contracted before it is poured, who absorbs the loss if those contracts do not convert, and whether the builder owns the silicon that sets its own cost floor. On that test Alphabet cleared three of four gates in the same quarter it was de-rated, and the gate still open — free cash flow inflection — resolves on a 2027 schedule rather than on the size of the guide.",
   "falsifiableBy": {
     "claim": "Google Cloud's contracted backlog failing to grow beyond $514B for two consecutive quarters while capex holds at the $195–205B pace, or Cloud operating margin falling back below 25% as record-capex depreciation lands in the P&L — either would show capacity being built ahead of contracts rather than against them. A third trip: free cash flow still negative on a full-year basis when 2027 closes.",
-    "status": "holding"
+    "status": "holding",
+    "note": "Alphabet's own figures are one week old and unmoved. The cohort around them is not: Microsoft, Amazon and Meta all report within days of this review, which will refresh three of the seven rows in the capex table."
   },
   "sources": [
     {
@@ -19,6 +20,60 @@
       "date": "July 22, 2026",
       "url": "https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Second-Quarter-2026-Results-2026-Y3uQ6H4ZJa/default.aspx",
       "kind": "press-release"
+    },
+    {
+      "id": "msft-fy26-q3",
+      "label": "Microsoft FY26 Q3 earnings release and outlook",
+      "publisher": "Microsoft",
+      "date": "April 29, 2026",
+      "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q3/press-release-webcast",
+      "kind": "press-release"
+    },
+    {
+      "id": "amzn-q1-2026",
+      "label": "Amazon.com Announces First Quarter 2026 Results",
+      "publisher": "Amazon",
+      "date": "April 29, 2026",
+      "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-First-Quarter-Results/default.aspx",
+      "kind": "press-release"
+    },
+    {
+      "id": "orcl-q4-fy2026",
+      "label": "Oracle Announces Record Q4 and FY 2026 Results Driven by Cloud Infrastructure & Cloud Applications",
+      "publisher": "Oracle",
+      "date": "June 10, 2026",
+      "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Record-Q4-and-FY-2026-Results-Driven-by-Cloud-Infrastructure--Cloud-Applications/default.aspx",
+      "kind": "press-release"
+    },
+    {
+      "id": "meta-q1-2026",
+      "label": "Meta Reports First Quarter 2026 Results",
+      "publisher": "Meta Platforms (SEC EDGAR, 8-K exhibit 99.1)",
+      "date": "April 29, 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028364/meta-03312026xexhibit991.htm",
+      "kind": "filing"
+    },
+    {
+      "id": "crwv-q1-2026",
+      "label": "CoreWeave Reports Strong First Quarter 2026 Results",
+      "publisher": "CoreWeave",
+      "date": "May 7, 2026",
+      "url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-First-Quarter-2026-Results/",
+      "kind": "press-release"
+    },
+    {
+      "id": "nbis-q1-2026",
+      "label": "Nebius reports first quarter 2026 financial results",
+      "publisher": "Nebius Group",
+      "date": "May 13, 2026",
+      "url": "https://nebius.com/newsroom/nebius-reports-first-quarter-2026-financial-results",
+      "kind": "press-release"
+    }
+  ],
+  "revisions": [
+    {
+      "date": "July 29, 2026",
+      "note": "First review, and it found an error. **Nebius's 2026 capex guide was stated as $16–20B; the company raised it to $20–25B at its Q1 print on May 13**, so the article was carrying superseded guidance. Backlog-to-capex for Nebius falls from ~2.8× to ~2.2×, which puts it below Alphabet's rather than between Alphabet's and Microsoft's — the sentence making that comparison has been corrected, not softened. The funding line now names the $2B NVIDIA equity alongside the convertible notes. Separately, every row of the capex table is now stamped with the print it came from and cited to it: the rows were never the same quarter, and that was invisible."
     }
   ],
   "blocks": [
@@ -98,7 +153,7 @@
         "ORCL": "$638B RPO, +363% YoY, on the narrowest revenue base of the four",
         "META": "$125–145B captive build; Meta Compute is the first third-party revenue signal",
         "CRWV": "$99.4B backlog, but Microsoft was 67% of FY2025 revenue",
-        "NBIS": "~$50B backlog on a $16–20B capex plan part-funded by convertible debt"
+        "NBIS": "~$50B backlog on a $20–25B capex plan part-funded by convertible debt and NVIDIA equity"
       }
     },
     {
@@ -107,18 +162,19 @@
     },
     {
       "type": "table",
-      "caption": "Capex against what underwrites it. Backlog definitions differ by company (RPO, contracted backlog, revenue backlog) and are not duration-matched — the ratio is a first cut, not a like-for-like.",
-      "asOf": "July 2026 — company-reported guidance and backlog as of each name's most recent print",
+      "caption": "Capex against what underwrites it. Backlog definitions differ by company (RPO, contracted backlog, revenue backlog) and are not duration-matched — the ratio is a first cut, not a like-for-like. The rows are also not the same quarter: each name carries the print it last reported, and Microsoft, Amazon and Meta all report again within days of publication.",
+      "asOf": "July 2026 — each row stamped with the print it came from",
+      "sources": ["googl-q2-2026", "msft-fy26-q3", "amzn-q1-2026", "orcl-q4-fy2026", "meta-q1-2026", "crwv-q1-2026", "nbis-q1-2026"],
       "columns": ["Company", "2026 capex guide", "Contracted backlog", "Backlog ÷ capex", "Who absorbs the loss if it does not convert"],
       "highlightColumn": 3,
       "rows": [
-        ["Alphabet (GOOGL)", "$195–205B (raised from $180–190B)", "$514B, up from $460B in Q1", "~2.6×", "Search and ads operating cash; capacity is redeployable to internal inference"],
-        ["Microsoft (MSFT)", "~$190B calendar 2026 (up ~61% YoY)", "$627B commercial RPO, +99% YoY, ~2.5yr duration", "~3.3×", "M365 and Azure operating cash; concentrated in OpenAI commitments"],
-        ["Amazon (AMZN)", "~$200B", "$244B+ AWS backlog, +40%+ YoY", "~1.2×", "AWS, retail and ads cash; thinnest cover of the four sellers"],
-        ["Oracle (ORCL)", "$55.7B FY2026", "$638B RPO, +363% YoY", "~11.5×", "Debt-assisted, negative FCF through the build, narrowest revenue base"],
-        ["Meta (META)", "$125–145B (raised from $115–135B)", "None contracted — captive build; Meta Compute is early", "—", "Advertising cash; the return must appear as engagement and ad pricing"],
-        ["CoreWeave (CRWV)", "$31–35B", "$99.4B; >$40B signed in Q1", "~3.0×", "Debt and equity against the backlog; no cash engine to retreat to"],
-        ["Nebius (NBIS)", "$16–20B", "~$50B (Meta up to $27B, Microsoft $19.4B)", "~2.8×", "$4B convertible debt; two counterparties are most of the backlog"]
+        ["Alphabet (GOOGL) — Q2 2026, July 22", "$195–205B (raised from $180–190B)", "$514B, up from $460B in Q1", "~2.6×", "Search and ads operating cash; capacity is redeployable to internal inference"],
+        ["Microsoft (MSFT) — FY26 Q3, April 29", "~$190B calendar 2026 (up ~61% YoY)", "$627B commercial RPO, +99% YoY, ~2.5yr duration", "~3.3×", "M365 and Azure operating cash; concentrated in OpenAI commitments"],
+        ["Amazon (AMZN) — Q1 2026, April 29", "~$200B", "$244B+ AWS backlog, +40%+ YoY", "~1.2×", "AWS, retail and ads cash; thinnest cover of the four sellers"],
+        ["Oracle (ORCL) — Q4 FY2026, June 10", "$55.7B FY2026", "$638B RPO, +363% YoY", "~11.5×", "Debt-assisted, negative FCF through the build, narrowest revenue base"],
+        ["Meta (META) — Q1 2026, April 29", "$125–145B (raised from $115–135B)", "None contracted — captive build; Meta Compute is early", "—", "Advertising cash; the return must appear as engagement and ad pricing"],
+        ["CoreWeave (CRWV) — Q1 2026, May 7", "$31–35B", "$99.4B; >$40B signed in Q1", "~3.0×", "Debt and equity against the backlog; no cash engine to retreat to"],
+        ["Nebius (NBIS) — Q1 2026, May 13", "$20–25B (raised from $16–20B)", "~$50B (Meta up to $27B, Microsoft $19.4B)", "~2.2×", "$4.3B convertible notes plus $2B NVIDIA equity; two counterparties are most of the backlog"]
       ]
     },
     {
@@ -142,7 +198,7 @@
     },
     {
       "type": "prose",
-      "body": "The grid does two things the capex table could not. First, it collapses the neoclouds: across all five pillars CoreWeave and Nebius reach strong on none, and are rated destroyed on most — which is the framework saying, without sentiment, that renting someone else's chips against borrowed money is not a moat, however large the backlog attached to it. Their coverage ratios sit between Alphabet's and Microsoft's. Their durability does not sit anywhere near them. Second, it shows why Meta's captive build is a different instrument entirely rather than a worse one: its proprietary-data, bundling and network-effects pillars are strong, but there is no contracted third-party revenue for those pillars to defend, so the return has to arrive indirectly, through ad pricing and engagement, and cannot be underwritten in advance at all."
+      "body": "The grid does two things the capex table could not. First, it collapses the neoclouds: across all five pillars CoreWeave and Nebius reach strong on none, and are rated destroyed on most — which is the framework saying, without sentiment, that renting someone else's chips against borrowed money is not a moat, however large the backlog attached to it. Their coverage ratios sit in the same band as the hyperscalers' — CoreWeave's above Alphabet's, Nebius's just below it. Their durability does not sit anywhere near them. Second, it shows why Meta's captive build is a different instrument entirely rather than a worse one: its proprietary-data, bundling and network-effects pillars are strong, but there is no contracted third-party revenue for those pillars to defend, so the return has to arrive indirectly, through ad pricing and engagement, and cannot be underwritten in advance at all."
     },
     {
       "type": "heading",
