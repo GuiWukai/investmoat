@@ -1,128 +1,34 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { getStockData } from '@/data/stocks';
 
-// Maps internal page slugs to Yahoo Finance symbols
-const YAHOO_SYMBOL_MAP: Record<string, string> = {
-  amazon:     'AMZN',
-  msft:       'MSFT',
-  nvda:       'NVDA',
-  meta:       'META',
-  asml:       'ASML',
-  amd:        'AMD',
-  nflx:       'NFLX',
-  tesla:      'TSLA',
-  visa:       'V',
-  mastercard: 'MA',
-  crm:        'CRM',
-  adbe:       'ADBE',
-  spgi:       'SPGI',
-  intuit:     'INTU',
-  gold:       'GC=F',
-  copper:     'HG=F',
-  silver:     'SI=F',
-  uranium:    'URA',
-  btc:        'BTC-USD',
-  k92:        'KNT.TO',
-  pltr:       'PLTR',
-  // Previously missing
-  google:     'GOOGL',
-  orcl:       'ORCL',
-  now:        'NOW',
-  avgo:       'AVGO',
-  coin:       'COIN',
-  tsm:        'TSM',
-  crowdstrike:'CRWD',
-  ethereum:   'ETH-USD',
-  solana:     'SOL-USD',
-  aapl:       'AAPL',
-  costco:     'COST',
-  micron:     'MU',
-  mstr:       'MSTR',
-  mco:        'MCO',
-  msci:       'MSCI',
-  meli:       'MELI',
-  lly:        'LLY',
-  lmt:        'LMT',
-  unh:        'UNH',
-  nee:        'NEE',
-  isrg:       'ISRG',
-  fcx:        'FCX',
-  ccj:        'CCJ',
-  leu:        'LEU',
-  ceg:        'CEG',
-  gev:        'GEV',
-  tdg:        'TDG',
-  race:       'RACE',
-  shop:       'SHOP',
-  net:        'NET',
-  axon:       'AXON',
-  applovin:   'APP',
-  fico:       'FICO',
-  ttd:        'TTD',
-  panw:       'PANW',
-  arm:        'ARM',
-  anet:       'ANET',
-  rddt:       'RDDT',
-  sea:        'SE',
-  sofi:       'SOFI',
-  fig:        'FIG',
-  disney:     'DIS',
-  fanuc:      'FANUY',
-  ice:        'ICE',
-  okta:       'OKTA',
-  duolingo:   'DUOL',
-  hood:       'HOOD',
-  vst:        'VST',
-  tmo:        'TMO',
-  klac:       'KLAC',
-  lng:        'LNG',
-  // Pre-existing coverage that lacked price mapping
-  abnb:       'ABNB',
-  baba:       'BABA',
-  bidu:       'BIDU',
-  crdo:       'CRDO',
-  de:         'DE',
-  dell:       'DELL',
-  el:         'EL',
-  etn:        'ETN',
-  hims:       'HIMS',
-  keyence:    '6861.T',
-  keys:       'KEYS',
-  lulu:       'LULU',
-  nvo:        'NVO',
-  pdd:        'PDD',
-  smci:       'SMCI',
-  spot:       'SPOT',
-  nke:        'NKE',
-  uber:       'UBER',
-  vrt:        'VRT',
-  // Added with the 21-stock expansion
-  snow:       'SNOW',
-  ddog:       'DDOG',
-  mdb:        'MDB',
-  snps:       'SNPS',
-  cdns:       'CDNS',
-  crwv:       'CRWV',
-  nbis:       'NBIS',
-  jpm:        'JPM',
-  bx:         'BX',
-  kkr:        'KKR',
-  gs:         'GS',
-  ms:         'MS',
-  pwr:        'PWR',
-  tt:         'TT',
-  hon:        'HON',
-  qcom:       'QCOM',
-  elv:        'ELV',
-  vrtx:       'VRTX',
-  regn:       'REGN',
-  dash:       'DASH',
-  rblx:       'RBLX',
-  soxx:       'SOXX',
-  voo:        'VOO',
-  cat:        'CAT',
-  zeta:       'ZETA',
-  spacex:     'SPCX',
+// Yahoo Finance symbol overrides, for the slugs where the Yahoo symbol differs
+// from the `ticker` field in src/data/stocks/<slug>.json: commodities quoted as
+// futures contracts, crypto quoted as pairs, and non-US listings.
+//
+// Every other slug resolves straight from the stock registry (see
+// resolveSymbol below), so adding a stock needs no edit here — this file used
+// to carry a hand-maintained entry per slug, and any stock added without one
+// silently served 404 instead of a price.
+const YAHOO_SYMBOL_OVERRIDES: Record<string, string> = {
+  gold:     'GC=F',    // json ticker XAU — gold futures
+  silver:   'SI=F',    // json ticker XAG — silver futures
+  copper:   'HG=F',    // json ticker HG  — copper futures
+  uranium:  'URA',     // json ticker U   — ETF proxy, no spot feed on Yahoo
+  btc:      'BTC-USD',
+  ethereum: 'ETH-USD',
+  solana:   'SOL-USD',
+  k92:      'KNT.TO',  // Toronto listing
 };
+
+// Resolves a page slug to the Yahoo Finance symbol to quote, preferring an
+// explicit override and otherwise using the ticker the coverage data declares.
+function resolveSymbol(slug: string): string | null {
+  const override = YAHOO_SYMBOL_OVERRIDES[slug];
+  if (override) return override;
+
+  const ticker = getStockData(slug)?.ticker.trim();
+  return ticker ? ticker.toUpperCase() : null;
+}
 
 export async function GET(
   _req: NextRequest,
@@ -130,7 +36,7 @@ export async function GET(
 ) {
   const { ticker } = await params;
   const slug = ticker.toLowerCase();
-  const symbol = YAHOO_SYMBOL_MAP[slug];
+  const symbol = resolveSymbol(slug);
 
   if (!symbol) {
     return NextResponse.json({ error: 'Unknown ticker' }, { status: 404 });
