@@ -62,10 +62,15 @@ Review the growth score if:
 - If `growthAnalysis` is missing, add it (see Step 5 in `analyse-stock.md` for the required format)
 - If `growthAnalysis` is present, update:
   - `cagrEstimate` if the blended CAGR has shifted materially (>3pp). This single number drives ~78% of the growth score's variance, so treat it as the main event, not a header. Anchor it to a **measured series** and decay toward terminal, the way every equity in coverage does (MSFT 15–17% against a reported +40%; PLTR 25–35% decel-adjusted from ~71%) — then record that series in `cagrBasis`. An estimate no series supports is how BTC carried 30–60% while its own drivers were shrinking.
-  - `cagrBasis` — the measured series and observed rate the estimate answers to. Optional in the schema; `validate:stocks` reports book-wide coverage
+  - `cagrBasis` — the measured series and observed rate the estimate answers to. Required for `assetClass: crypto` and `commodity`, where there is no revenue line to fall back on; `validate:stocks` reports book-wide coverage. The series must **accrue to the asset** and be **unbounded**:
+    - Not a bounded ratio. A market share or a percent-of-supply is capped at 100% and cannot compound at its cited rate — "65% of tokenized value", "33.6% of supply staked" describe position, not a rate.
+    - Not third-party growth. Activity on the platform supports the estimate only through the channel that reaches the asset. If tokenized-RWA volume grows 315% but L1 fees fall from $23M/day to $227K/day, the accrual rate is the second number.
+    - With no revenue line, use adoption — holders, addresses, physical demand — and mark up from it explicitly, as BTC does from +8.3% YoY holders to 12–20%.
+  - If a measured series points *against* the estimate, charge it in `cagrEstimate`, not in `keyRisk` — the base is ~78% of the variance and `keyRisk` caps at −15, so risk-only treatment understates it
   - `drivers[].metric` with the latest YoY figures from the most recent quarter
   - `drivers[].trend` if the last 2 quarters show a directional change
   - `keyRisk` if a new specific, falsifiable risk has emerged or the prior risk has been resolved
+  - `keyRiskSeverity` — carries only *unmaterialised* downside. When a risk becomes an observed fact it is charged in `cagrEstimate` or `drivers[].trend`; leaving severity where it was then charges it twice. Cut severity as the risk resolves in either direction
   - `marginTrend` if operating margin direction has reversed (scored for equities only — crypto and commodities have no margins)
   - `scoreDerivation` to match any score change, showing the updated base + adjustments
 
