@@ -68,8 +68,9 @@ Runs [`scripts/validate-stocks.ts`](../scripts/validate-stocks.ts), which checks
 1. Research the company and decide the moat statuses, growth fields, and bear/base/bull targets.
 2. Create `src/data/stocks/{slug}.json` following the schema.
 3. Register it in **both** `src/data/stocks/index.ts` and `src/app/stockData.ts`.
-4. Add the Yahoo Finance symbol mapping in `src/app/api/stock-price/[ticker]/route.ts` so live prices resolve.
-5. Run `npm run validate:stocks` and `npm run lint`, then `npm run build`.
+4. Run `npm run validate:stocks` and `npm run lint`, then `npm run build`.
+
+Live prices need no extra wiring: `/api/stock-price/[ticker]` resolves the Yahoo Finance symbol from the `ticker` field in the JSON. Only add an entry to `YAHOO_SYMBOL_OVERRIDES` in [`src/app/api/stock-price/[ticker]/route.ts`](../src/app/api/stock-price/[ticker]/route.ts) when the Yahoo symbol differs from that ticker — commodities quoted as futures (`XAU` → `GC=F`), crypto quoted as pairs (`BTC` → `BTC-USD`), or a non-US listing (`KNT` → `KNT.TO`).
 
 The Claude Code slash command [`/add-stock`](../.claude/commands/add-stock.md) walks through this end to end; [`/analyse-stock`](../.claude/commands/analyse-stock.md) and [`/update-stock`](../.claude/commands/update-stock.md) help research and refresh existing entries.
 
