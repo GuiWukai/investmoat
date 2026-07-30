@@ -9,7 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$270B"
+      "value": "~$295B"
     }
   ],
   "chips": [
@@ -56,34 +56,46 @@
       },
       {
         "title": "AIP (Artificial Intelligence Platform)",
-        "text": "AIP Boot Camps turn prospects into customers within days by demonstrating real ROI on their own data. This compressed sales cycle is creating a commercial moat with extraordinary velocity."
+        "text": "AIP Boot Camps turn prospects into customers within days by demonstrating real ROI on their own data. This compressed sales cycle is creating a commercial moat with extraordinary velocity. The June 2026 NVIDIA alliance extends AIP downward into the model layer: the Sovereign AI Operating System runs Nemotron open models inside air-gapped environments, with Foundry handling data integration and Apollo the model orchestration — a layer competitors cannot reach without the accreditations."
       },
       {
         "title": "Government Lock-In",
-        "text": "15+ year relationships with US DoD, CIA, and allied intelligence agencies embed Palantir at the mission-critical layer. Switching costs are measured in years, not months."
+        "text": "15+ year relationships with US DoD, CIA, and allied intelligence agencies embed Palantir at the mission-critical layer. Switching costs are measured in years, not months. In July 2026 the US Army standardised its Next Generation Command and Control (NGC2) cloud data layer on Foundry as that programme moved from prototype to wide deployment — the Army's highest-priority modernisation effort now runs on Palantir's schema."
       }
     ]
   },
   "growth": {
-    "description": "Q1 2026 (reported May 4) revenue $1.63B (+85% YoY) beat $1.54B consensus; US commercial $595M (+133% YoY); US government +84% YoY. FY26 guide raised to $7.65–$7.66B (+71% YoY) and US commercial guide raised to >$3.224B (+120%+); Q2 guide $1.8B vs $1.68B consensus; adj FCF FY26 raised to $4.2–$4.4B. Stock fell ~7% post-print on valuation skepticism despite the beat.",
+    "description": "Q1 2026 (reported May 4) revenue $1.63B (+85% YoY) beat $1.54B consensus; US commercial $595M (+133% YoY); US government +84% YoY; GAAP net income $871M ($0.34 diluted), adj FCF $925M (57% margin), adj operating margin 60%, Rule of 40 at 145%. FY26 guide raised to $7.65–$7.66B (+71% YoY) and US commercial guide raised to >$3.224B (+120%+); adj FCF FY26 raised to $4.2–$4.4B. No new quarter since: Q2 2026 prints August 3 (after close) against company guidance of $1.797–$1.801B versus ~$1.81B consensus — a guide that already sits marginally below the street, so the bar is the FY26 raise rather than the quarter. Street FY27 revenue consensus is $11.22B (+46%).",
     "growthAnalysis": {
       "cagrEstimate": "25-35%",
-      "scoreDerivation": "Base 90 (30% CAGR mid-band of 25-35%, decel-adjusted from current ~71% to terminal mid-20s) + ~3 trajectory (2 of 3 drivers accelerating, government stable) + 4 expanding margins + 3 TAM expansion - 5 moderate premium-multiple compression risk ≈ 95. Near-term growth is well above the band (Q1 2026 +85% YoY, FY26 guide +71%), but a 5-year forward midpoint of 30% is more defensible than 37% given law-of-large-numbers decel and the >40x revenue multiple's sensitivity to growth durability.",
+      "scoreDerivation": "Base 90 (30% CAGR midpoint of the 25-35% band, decel-adjusted from FY26's guided +71%) + 2.7 trajectory (2 of 3 drivers accelerating, government stable) + 4 expanding margins (60% adj operating margin, Rule of 40 at 145%) - 5 moderate key-risk severity = 92. Near-term growth is far above the band (Q1 2026 +85% YoY, FY26 guide +71%, FY27 consensus +46%), but a 5-year forward midpoint of 30% is more defensible than 40% given law-of-large-numbers decel and the ~38x revenue multiple's sensitivity to growth durability. primaryType is descriptive and no longer scores.",
+      "cagrBasis": "Reported/guided revenue series: FY25 ~$4.48B → FY26 guided $7.65-$7.66B (+71%) → FY27 street consensus $11.22B (+46%), with Q1 2026 at +85% YoY. The 25-35% estimate decays that observed path toward the mid-20s by FY29-30 rather than extrapolating the current rate.",
       "drivers": [
-        { "name": "US Commercial / AIP", "metric": "Q1 2026 US commercial revenue $595M (+133% YoY); 1,007 commercial customers (+31% YoY); 139 US commercial deals over $1M; FY26 US commercial guide raised to >$3.224B (+120% YoY)", "trend": "accelerating" },
-        { "name": "Total Revenue Growth", "metric": "Q1 2026 revenue $1.63B (+85% YoY) vs $1.54B consensus; Q2 2026 guide $1.8B vs $1.68B; FY26 guide raised to $7.65-7.66B (+71% YoY)", "trend": "accelerating" },
-        { "name": "Government / Defense", "metric": "Q1 2026 US government +84% YoY; DoD AI mission-critical pipeline >$1B; Maven, TITAN, NATO/Five Eyes expansion sustaining 30%+ growth", "trend": "stable" }
+        { "name": "US Commercial / AIP", "metric": "Q1 2026 US commercial revenue $595M (+133% YoY); 1,007 commercial customers (+31% YoY); 139 US commercial deals over $1M; FY26 US commercial guide raised to >$3.224B (+120% YoY); July 2026 additions include Zeta Global re-architecting its Data Cloud on Foundry and the expanded Surf Air SurfOS build", "trend": "accelerating" },
+        { "name": "Total Revenue Growth", "metric": "Q1 2026 revenue $1.63B (+85% YoY) vs $1.54B consensus; Q2 2026 guide $1.797-$1.801B vs ~$1.81B consensus; FY26 guide raised to $7.65-7.66B (+71% YoY); FY27 consensus $11.22B (+46%)", "trend": "accelerating" },
+        { "name": "Government / Defense", "metric": "Q1 2026 US government +84% YoY; DoD AI mission-critical pipeline >$1B; July 2026 US Army NGC2 standardised on Foundry as its cloud data layer, plus a $99.8M DEVCOM Army Research Laboratory award and the NVIDIA sovereign-AI engine; Maven, TITAN and NATO/Five Eyes expansion sustaining 30%+ growth", "trend": "stable" }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "Palantir trades at one of the richest software multiples ever (>70x revenue). If US commercial growth decelerates from 130%+ toward 60% by late 2026 as AIP boot-camp pipeline matures and Microsoft Fabric/Databricks close the ontology gap, the multiple could compress 40-50% even on continued execution — a valuation-driven drawdown rather than a fundamentals failure.",
+      "keyRisk": "Two compression channels, both testable by the Q4 2026 print. (1) Pipeline maturity: if US commercial growth guides below 70% for FY27 as the AIP boot-camp funnel saturates, the ~38x FY26 guided revenue multiple loses its growth cover and can compress 40-50% on continued execution. (2) Substitution, newly visible in 2026: frontier-lab agent tooling from Anthropic and OpenAI plus Microsoft Fabric bundling AI orchestration into existing Azure agreements drove the enterprise-software rotation that took PLTR down ~30% YTD. That is a sentiment de-rating today; it becomes a fundamentals failure if Fabric or Databricks Unity Catalog/Mosaic AI displaces the ontology at two or more disclosed Fortune 500 accounts.",
       "keyRiskSeverity": "moderate",
       "riskFactors": ["ai-capex", "defense-budget"],
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 82,
-    "description": "At $112.15 (June 27, 2026) the stock sits ~34% of the way from bear ($85) to base ($165) — trading ~32% below the base case after sliding ~15% since the June 10 review. The drawdown is a market-wide AI-sector de-rating, not company-specific: PLTR set fresh 52-week lows (down ~40% YTD) on valuation skepticism while the Q1 2026 beat (+85% YoY) and raised FY26 guide ($7.65–$7.66B) remain fully intact. This is the multiple-compression the bear/keyRisk thesis flagged, now partially realized, which improves the entry: at ~$112 the >40x revenue multiple has reset toward the low-30s on forward sales. Thesis still hinges on US commercial clearing the >$3.224B FY26 guide. Next catalyst: Q2 2026 earnings in early August."
+    "score": 78,
+    "description": "At $123.00 (July 29, 2026 close) the stock sits ~48% of the way from bear ($85) to base ($165) — still ~25% below the base case, but a worse entry than the ~$112 of the June 27 review. Price action since then has been round-trip, not trend: off the ~$106 June low, up ~11% into July to ~$134 on the NVIDIA sovereign-AI engine and the Army's NGC2 selection of Foundry, then −7.1% in the week to July 24 and back to $123 as the enterprise-software rotation resumed. Down ~30% YTD. The multiple has genuinely de-rated — ~38x FY26 guided revenue and ~32x NTM sales against >40x in the spring — so the compression the keyRisk flagged is now roughly half-delivered, but at ~77x forward earnings none of this is cheap and the score reflects a discount to fair value rather than a bargain. The scenario ladder is unchanged and internally consistent (bear ~27x, base ~35x, bull ~59x FY27 consensus revenue of $11.22B); base $165 sits deliberately below the ~$182 street average target. Thesis still hinges on US commercial clearing the >$3.224B FY26 guide. Next catalyst: Q2 2026 earnings August 3, where company guidance ($1.797–$1.801B) is already marginally below the ~$1.81B consensus.",
+    "peAnalysis": {
+      "asOf": "July 2026",
+      "rows": [
+        { "label": "Trailing P/E (GAAP)", "value": "~128×", "note": "TTM GAAP EPS $0.96 (Mar 2026)" },
+        { "label": "Forward P/E (NTM)", "value": "~77×", "note": "consensus NTM EPS ~$1.60" },
+        { "label": "PEG Ratio", "value": "~1.5×", "note": "fwd P/E ÷ ~50% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~32×", "note": "~$9.3B NTM revenue est." },
+        { "label": "Price / FCF", "value": "~69×", "note": "$4.2–4.4B FY26 guided adj FCF" }
+      ],
+      "summary": "A forward P/E of ~77× is roughly 3.5× the S&P 500 (~21×) and more than double the growth-tech band (28–35×), so nothing here is cheap on earnings — the case rests entirely on the PEG. At ~1.5× against a ~50% EPS CAGR that lands in the \"premium, requires execution\" bracket rather than the unmoored one, and the gap from ~128× trailing to ~77× forward is the earnings ramp the FY26 guide implies rather than a deceleration signal. The same ramp pulls Price/FCF from ~110× TTM to ~69× on the guided $4.2–$4.4B, but at ~32× NTM sales the multiple still prices sustained 40%+ growth well past FY27, which is the single assumption the whole valuation rests on."
+    }
   },
   "scenarios": {
     "bear": {
@@ -92,7 +104,7 @@
       "points": [
         "US commercial growth slows below 50% by late 2026 as AIP boot camp pipeline saturates",
         "DOGE budget cuts or continuing resolution reduce government contract renewals",
-        "Multiple compresses from ~45x revenue toward 25-30x as Microsoft Fabric/Databricks close the ontology gap at lower cost"
+        "Multiple compresses from ~38x FY26 guided revenue toward 25-30x as Microsoft Fabric bundles AI orchestration into existing Azure agreements and Databricks Unity Catalog/Mosaic AI close the ontology-governance gap at lower cost"
       ]
     },
     "base": {
@@ -122,7 +134,7 @@
     "businessLogic": {
       "status": "strong",
       "aiExposure": "resilient",
-      "note": "Palantir encodes customer-specific workflows, decision trees, and ontologies directly into the platform — making it nearly impossible to replicate in a competitor tool. AIP strengthens this moat: every additional AI agent on Foundry deepens the ontology coupling, since the LLM needs the customer's bespoke business logic to reason. Routed to resilient via aiExposure override — AI consumption of the ontology compounds the moat rather than eroding it."
+      "note": "Palantir encodes customer-specific workflows, decision trees, and ontologies directly into the platform — making it nearly impossible to replicate in a competitor tool. AIP strengthens this moat: every additional AI agent on Foundry deepens the ontology coupling, since the LLM needs the customer's bespoke business logic to reason. Routed to resilient via aiExposure override — AI consumption of the ontology compounds the moat rather than eroding it. Tested in 2026 by frontier-lab agent tooling from Anthropic and OpenAI, which drove a broad enterprise-software de-rating on the thesis that models subsume the application layer. Held at strong because the substitution has not shown up in the numbers: the models still need somewhere to read the customer's business logic from, and no disclosed Fortune 500 account has replaced the ontology. Downgrade trigger, not yet met — two or more named ontology displacements."
     },
     "publicDataAccess": {
       "status": "weakened",
@@ -134,7 +146,7 @@
     },
     "bundling": {
       "status": "intact",
-      "note": "Foundry + AIP + Gotham + Apollo creates an integrated stack that is increasingly difficult to unbundle once adopted enterprise-wide."
+      "note": "Foundry + AIP + Gotham + Apollo creates an integrated stack that is increasingly difficult to unbundle once adopted enterprise-wide. Two offsetting 2026 developments leave this at intact rather than moving it. Deepening: the June 2026 NVIDIA alliance adds a model layer to the bundle, with Apollo orchestrating Nemotron open models inside sovereign, air-gapped environments. Eroding: Microsoft Fabric is the more dangerous commercial attack precisely because it is also a bundle — AI orchestration priced into Azure agreements the customer has already signed, which is where Palantir loses commercial deals on cost rather than capability."
     },
     "proprietaryData": {
       "status": "strong",
@@ -142,7 +154,7 @@
     },
     "regulatoryLockIn": {
       "status": "strong",
-      "note": "FedRAMP, IL4/IL5, and classified environment certifications create significant regulatory moats that take years for competitors to replicate."
+      "note": "FedRAMP, IL4/IL5, and classified environment certifications create significant regulatory moats that take years for competitors to replicate. Two July 2026 data points on the procurement channel itself: the Defense Intelligence Agency withdrew a military-intelligence system solicitation after a formal Palantir protest, and the NVIDIA sovereign-AI engine is accredited to run open models inside air-gapped government environments — a deployment surface a competitor cannot buy its way onto."
     },
     "networkEffects": {
       "status": "weakened",
@@ -150,13 +162,13 @@
     },
     "transactionEmbedding": {
       "status": "strong",
-      "note": "Palantir's Ontology is embedded at the operational transaction layer — logistics decisions, targeting workflows, and supply chain actions run through the platform daily."
+      "note": "Palantir's Ontology is embedded at the operational transaction layer — logistics decisions, targeting workflows, and supply chain actions run through the platform daily. NGC2's move from prototype to wide deployment in July 2026 pushes Foundry from an analysis layer into the Army's live command-and-control path, where the cost of removal is measured in operational risk rather than migration effort."
     },
     "systemOfRecord": {
       "status": "strong",
-      "note": "For defense and intelligence clients, Palantir IS the system of record for operational AI — there is no competing alternative at the same security clearance level."
+      "note": "For defense and intelligence clients, Palantir IS the system of record for operational AI — there is no competing alternative at the same security clearance level. Reinforced in July 2026: the US Army standardised the NGC2 cloud data layer on Foundry, making Palantir's schema the authoritative one for its highest-priority modernisation programme."
     },
     "verdict": "Palantir's moat is highly AI-resilient because AI is the product, not a threat to it. The Ontology platform deepens in value as more AI models are layered on top, making Palantir the connective tissue of enterprise AI operations."
   },
-  "lastAnalyzed": "June 27, 2026"
+  "lastAnalyzed": "July 30, 2026"
 }

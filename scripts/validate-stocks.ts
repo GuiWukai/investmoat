@@ -27,6 +27,7 @@ import {
   valuationCredibility,
   REVIEW_OVERDUE_DAYS,
 } from '../src/lib/reviewFreshness';
+import type { AssetClass } from '../src/types/stockAnalysis';
 import { getAllSlugs } from '../src/data/stocks';
 import { allCoverageData } from '../src/app/stockData';
 
@@ -251,7 +252,10 @@ function checkGrowthInputs(files: string[]): { warnings: Warning[]; missingBasis
 function checkGrowthDerivations(files: string[]): Warning[] {
   const warnings: Warning[] = [];
   for (const file of files) {
-    let data: { growth?: { growthAnalysis?: GrowthAnalysisInput & { scoreDerivation?: string } } };
+    let data: {
+      assetClass?: AssetClass;
+      growth?: { growthAnalysis?: GrowthAnalysisInput & { scoreDerivation?: string } };
+    };
     try {
       data = JSON.parse(readFileSync(join(STOCKS_DIR, file), 'utf-8'));
     } catch {
@@ -259,10 +263,19 @@ function checkGrowthDerivations(files: string[]): Warning[] {
     }
     const ga = data.growth?.growthAnalysis;
     if (!ga?.scoreDerivation) continue;
-    const computed = computeGrowthScore(ga);
+    // Must pass assetClass: growth dispatches on it (marginTrend is equity-only),
+    // so omitting it compares the prose against a score the site never renders.
+    // Every crypto/commodity asset currently carries marginTrend "stable", which
+    // contributes 0 either way, so this changes no warning today — it stops the
+    // check going wrong the first time one of them is set to expanding.
+    const computed = computeGrowthScore(ga, data.assetClass ?? 'equity');
     if (computed == null) continue;
     // The derivation reads "base + adj − adj = NN"; take the last such total.
-    const match = ga.scoreDerivation.match(/=\s*(\d{1,3})(?![\s\S]*=\s*\d)/);
+    // Authors write the total after either "=" or "≈", so accept both — matching
+    // only "=" silently skipped 5 files, 4 of which had drifted 3-4 points. The
+    // last-occurrence guard covers both symbols, so a file that already parsed on
+    // "=" cannot be re-read as a stray "≈ 30%" later in the prose.
+    const match = ga.scoreDerivation.match(/[=≈]\s*(\d{1,3})(?![\s\S]*[=≈]\s*\d)/);
     if (!match) continue; // not every derivation is written as an equation
     const stated = Number(match[1]);
     if (Math.abs(stated - computed) > MAX_DERIVATION_DRIFT) {
