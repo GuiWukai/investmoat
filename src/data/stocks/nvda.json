@@ -89,6 +89,7 @@
       "primaryType": "TAM expansion",
       "keyRisk": "The stock fell ~21% from ~$250 to ~$198 between the May 20 print and this update despite the beat-and-raise quarter — driven by GPU cloud rental rates (B200) falling ~31% over three weeks (May 30–June 21), Huang's China-to-Huawei concession, macro risk-off, and ~$410M of insider selling, not a change in reported fundamentals. The Q2 FY27 print ($91B guide) has not yet happened (due Aug 26, 2026) and is now the first real test since the pullback. Falsifiable test: if the Q2 FY27 print misses the $91B guide by more than 5%, or GPU rental-rate deflation continues into Q3 signalling actual demand softening rather than sentiment, or any top-3 hyperscaler cuts FY2027 AI capex guidance by >10% on a single earnings print before then, the demand-durability thesis weakens materially.",
       "keyRiskSeverity": "high",
+      "riskFactors": ["ai-capex", "semiconductor-cycle"],
       "marginTrend": "stable"
     }
   },

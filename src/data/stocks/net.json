@@ -90,6 +90,7 @@
       "primaryType": "both",
       "keyRisk": "Two converging risks: (1) the 20% workforce reduction announced May 2026 disrupts go-to-market and product velocity for 2–3 quarters, dragging DBNRR below 116% by Q4 2026; (2) hyperscaler-managed AI agent platforms (AWS Bedrock Agents, Anthropic Managed Agents on AWS/Azure) capture >20% of enterprise agent infrastructure by end of 2026, leaving Cloudflare dependent on the more contested CDN/SASE market where Palo Alto and Zscaler are accelerating bundled offers and RPO growth decelerates below 25%",
       "keyRiskSeverity": "moderate",
+      "riskFactors": ["software-displacement"],
       "marginTrend": "expanding"
     }
   },

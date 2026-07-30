@@ -49,9 +49,12 @@ Each moat is `{ status, note, aiExposure? }` where `status` is `strong | intact 
   "cagrBasis": "...",                 // optional: measured series behind cagrEstimate
   "keyRisk": "Specific, falsifiable risk with a horizon",
   "keyRiskSeverity": "moderate",      // low | moderate | high | severe
+  "riskFactors": ["ai-capex"],        // shared drivers behind keyRisk; [] is valid
   "marginTrend": "expanding"          // expanding | stable | compressing
 }
 ```
+
+`riskFactors` is required and drawn from the vocabulary in [`src/lib/riskFactors.ts`](../src/lib/riskFactors.ts). It is **not scored** — it feeds the per-factor position cap in [SCORING.md](./SCORING.md#51-position-weights), so two holdings that fail for the same reason cannot be sized as independent bets. An empty array is a real answer meaning "no shared driver in this vocabulary"; the field is required precisely so that saying so is deliberate rather than an omission. Inventing a label to avoid an empty array fabricates the correlation the mechanism exists to measure.
 
 These fields feed `computeGrowthScore` directly — see [SCORING.md](./SCORING.md#2-growth-score).
 

@@ -1,5 +1,7 @@
 import { z } from 'zod';
 
+import { RISK_FACTOR_KEYS, type RiskFactor } from './riskFactors';
+
 // Runtime schema for stock JSON files in src/data/stocks/*.json.
 // Kept in sync with src/types/stockAnalysis.ts — when one changes, update the other.
 
@@ -120,6 +122,15 @@ const growthAnalysisSchema = z.strictObject({
   keyRisk: z.string().min(1),
   /** Severity of keyRisk — feeds the risk-discount term in computeGrowthScore. */
   keyRiskSeverity: z.enum(['low', 'moderate', 'high', 'severe']),
+  /**
+   * Shared drivers behind keyRisk, from the vocabulary in src/lib/riskFactors.ts.
+   * Required but allowed to be empty — see the note there on why `[]` is a real
+   * answer and not a missing one. Unique, so a factor cannot be double-counted
+   * into a heavier haircut than it earns.
+   */
+  riskFactors: z
+    .array(z.enum(RISK_FACTOR_KEYS as [RiskFactor, ...RiskFactor[]]))
+    .refine((f) => new Set(f).size === f.length, { message: 'riskFactors must not repeat a factor' }),
   marginTrend: z.enum(['expanding', 'stable', 'compressing']),
 });
 

@@ -22,6 +22,11 @@ import {
   computeGrowthScore,
   type GrowthAnalysisInput,
 } from '../src/lib/valuationScore';
+import {
+  reviewAgeDays,
+  valuationCredibility,
+  REVIEW_OVERDUE_DAYS,
+} from '../src/lib/reviewFreshness';
 import { getAllSlugs } from '../src/data/stocks';
 import { allCoverageData } from '../src/app/stockData';
 
@@ -209,6 +214,102 @@ function checkGrowthDerivations(files: string[]): Warning[] {
 }
 
 /**
+ * Report reviews old enough that the composite has stopped trusting them.
+ *
+ * Past REVIEW_OVERDUE_DAYS the freshness curve has bottomed out: the valuation
+ * pillar's divergence from its review-date anchor is being discounted as far as
+ * it will go, and no further modelling can compensate for moat and growth
+ * scores nobody has looked at in four months. The answer at that point is a
+ * re-read, so this says so rather than letting the damping quietly stand in for
+ * one.
+ *
+ * Advisory, not a failure: a stale review is a stale opinion, not broken data,
+ * and failing the build over it would block unrelated work on any file that
+ * happened to age past the line.
+ */
+function checkReviewFreshness(files: string[]): { warnings: Warning[]; dampedCount: number } {
+  const warnings: Warning[] = [];
+  const now = new Date();
+  let dampedCount = 0;
+
+  for (const file of files) {
+    let data: { lastAnalyzed?: string };
+    try {
+      data = JSON.parse(readFileSync(join(STOCKS_DIR, file), 'utf-8'));
+    } catch {
+      continue;
+    }
+
+    const age = reviewAgeDays(data.lastAnalyzed, now);
+    if (age == null) {
+      warnings.push({
+        file,
+        message:
+          'no readable lastAnalyzed — review age is unknown, so the composite treats this file as maximally ' +
+          'stale and credits only the floor share of any price move since the analysis',
+      });
+      continue;
+    }
+    if (valuationCredibility(age) < 1) dampedCount++;
+    if (age >= REVIEW_OVERDUE_DAYS) {
+      warnings.push({
+        file,
+        message:
+          `last reviewed ${age} days ago (limit ${REVIEW_OVERDUE_DAYS}) — valuation credibility is at its floor, ` +
+          'so the composite is discounting this name\'s price moves as far as it will go. Re-read it rather ' +
+          'than relying on the damping',
+      });
+    }
+  }
+
+  return { warnings, dampedCount };
+}
+
+/**
+ * Report how the risk-factor labels are distributed across the book.
+ *
+ * The labels are what makes the per-factor position cap mean anything, and they
+ * fail quietly in both directions. Label nothing and every name looks
+ * uncorrelated, so the cap never binds and the portfolio is sized exactly as it
+ * was before. Label everything with the same factor and the cap binds
+ * constantly on a correlation nobody argued for. Neither shows up as an error,
+ * so the distribution is printed and left to a human.
+ */
+function reportRiskFactors(files: string[]): void {
+  const counts = new Map<string, string[]>();
+  let unlabelled = 0;
+  let total = 0;
+
+  for (const file of files) {
+    let data: { ticker?: string; growth?: { growthAnalysis?: { riskFactors?: string[] } } };
+    try {
+      data = JSON.parse(readFileSync(join(STOCKS_DIR, file), 'utf-8'));
+    } catch {
+      continue;
+    }
+    const factors = data.growth?.growthAnalysis?.riskFactors;
+    if (!factors) continue;
+    total++;
+    if (factors.length === 0) unlabelled++;
+    for (const f of factors) {
+      if (!counts.has(f)) counts.set(f, []);
+      counts.get(f)!.push(data.ticker ?? file);
+    }
+  }
+
+  const ranked = [...counts.entries()].sort((a, b) => b[1].length - a[1].length);
+  console.log(`${YELLOW}Risk-factor coverage:${RESET} ${total - unlabelled}/${total} files carry at least one shared factor.`);
+  for (const [factor, tickers] of ranked.slice(0, 6)) {
+    console.log(`  ${DIM}•${RESET} ${factor} ${DIM}${tickers.length} names — ${tickers.slice(0, 12).join(' ')}${tickers.length > 12 ? ' …' : ''}${RESET}`);
+  }
+  if (ranked.length > 6) console.log(`  ${DIM}… and ${ranked.length - 6} further factors${RESET}`);
+  console.log(
+    `  ${DIM}${unlabelled} file(s) declare no shared driver. That is a real answer, but a large number here ` +
+      `means the per-factor cap has nothing to bind on.${RESET}\n`,
+  );
+}
+
+/**
  * Cross-check the two registries against each other and against the JSON files
  * on disk. A stock in src/app/stockData.ts but not src/data/stocks/index.ts is
  * listed on /stocks with a link to a 404 — the failure this catches.
@@ -321,6 +422,26 @@ function main(): void {
     }
     console.log('');
   }
+
+  const { warnings: freshnessWarnings, dampedCount } = checkReviewFreshness(files);
+  if (freshnessWarnings.length > 0) {
+    console.log(
+      `${YELLOW}Reviews needing a re-read (${freshnessWarnings.length}) — advisory, not failures:${RESET}`,
+    );
+    for (const { file, message } of freshnessWarnings) {
+      console.log(`  ${DIM}•${RESET} ${YELLOW}${file}${RESET} ${message}`);
+    }
+    console.log('');
+  }
+  if (dampedCount > 0) {
+    console.log(
+      `${YELLOW}Valuation damping:${RESET} ${dampedCount}/${files.length} files are past full credibility, so a ` +
+        `price move since the review is only partly credited to the composite. ${DIM}See ` +
+        `src/lib/reviewFreshness.ts.${RESET}\n`,
+    );
+  }
+
+  reportRiskFactors(files);
 
   console.log(`${GREEN}✓ Validated ${files.length} stock file(s)${RESET}`);
 }

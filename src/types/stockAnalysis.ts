@@ -1,3 +1,5 @@
+import type { RiskFactor } from '@/lib/riskFactors';
+
 export type MoatStatus = 'strong' | 'intact' | 'weakened' | 'destroyed';
 export type RecommendationStatus = 'Strong Buy' | 'Accumulate' | 'Hold' | 'Speculative Buy' | 'Avoid';
 export type ChipColor = 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
@@ -198,6 +200,15 @@ export interface StockAnalysisData {
       keyRisk: string;
       /** Severity of keyRisk — feeds the risk-discount term in computeGrowthScore. */
       keyRiskSeverity: 'low' | 'moderate' | 'high' | 'severe';
+      /**
+       * Shared drivers behind keyRisk, from the controlled vocabulary in
+       * src/lib/riskFactors.ts. Not scored — it feeds correlation-aware
+       * position sizing (see src/lib/portfolioWeights.ts), so two names that
+       * fail for the same reason cannot be sized as independent bets.
+       *
+       * `[]` is a valid and meaningful answer: this risk has no shared driver.
+       */
+      riskFactors: RiskFactor[];
       /** Operating margin direction — scored for equities only (see computeGrowthScore). */
       marginTrend: 'expanding' | 'stable' | 'compressing';
     };

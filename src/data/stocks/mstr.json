@@ -101,6 +101,7 @@
       "primaryType": "market share",
       "keyRisk": "With BTC at ~$62,000 versus Strategy's $75,646 average cost, the treasury is now underwater by roughly $11.6B (~18% below cost) — the downside risk flagged in April 2026 has materialized. Q1 2026 GAAP net loss was $12.54B (EPS −$38.25), largely from a $14.46B bitcoin fair-value write-down. The new Digital Credit Capital Framework (June 29, 2026) ended Strategy's 'never sell' policy, authorizing up to $1.25B of BTC sales to help fund ~$1.76B/year in preferred dividend and interest obligations (STRC dividend raised to 12% effective July 1, 2026) — a tacit admission that the capital markets flywheel is currently unusable with mNAV near/below 1.0x. If BTC does not recover well above $75,646, Strategy will likely keep selling BTC or issuing dilutive preferred/equity, eroding per-share BTC density for the first time since 2020.",
       "keyRiskSeverity": "severe",
+      "riskFactors": ["crypto-cycle"],
       "marginTrend": "compressing"
     }
   },

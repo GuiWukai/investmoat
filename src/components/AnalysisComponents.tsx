@@ -6,6 +6,7 @@ import { motion, AnimatePresence, type PanInfo } from "framer-motion";
 import { Card, Chip, Meter, Spinner, Tabs } from "@heroui/react";
 import type { TenMoatsAssessment, MoatStatus } from "@/app/tenMoatsData";
 import type { CommodityMoatsData, CryptoMoatsData, StockAnalysisData } from "@/types/stockAnalysis";
+import type { DampedValuation } from "@/lib/reviewFreshness";
 
 // ─── Count-up animation ────────────────────────────────────────────────────────
 function useCountUp(target: number, duration = 900): number {
@@ -113,7 +114,15 @@ export function ScoreGauge({ score, label, description }: ScoreGaugeProps) {
 }
 
 // ─── OverallScoreCard ──────────────────────────────────────────────────────────
-export function OverallScoreCard({ score, loading }: { score: number; loading?: boolean }) {
+export function OverallScoreCard({
+  score,
+  loading,
+  freshness,
+}: {
+  score: number;
+  loading?: boolean;
+  freshness?: DampedValuation | null;
+}) {
   const animatedScore = useCountUp(score, 1000);
 
   const getTier = (s: number): { label: string; hex: string } => {
@@ -178,6 +187,19 @@ export function OverallScoreCard({ score, loading }: { score: number; loading?: 
       <p className="text-xs text-foreground/35 leading-relaxed">
         Combined average of Moat (AI Resilience), Growth, and Valuation scores.
       </p>
+
+      {/* The valuation gauge beside this card shows the live pillar raw — where
+          the price sits in the ladder is a fact. This note covers the composite
+          only, where that pillar is shrunk toward the price the analysis was
+          written at because moat and growth are frozen at the review date. */}
+      {freshness && Math.abs(freshness.damped) >= 0.5 && (
+        <p className="text-[11px] text-amber-400/60 leading-relaxed">
+          Valuation {freshness.liveScore} counted as {freshness.score.toFixed(0)} here
+          {freshness.ageDays != null && <> — the review behind Moat and Growth is {freshness.ageDays} days old</>},
+          so {Math.round(freshness.credibility * 100)}% of the move away from the review-date
+          price is credited to the composite.
+        </p>
+      )}
     </Card>
   );
 }
@@ -189,7 +211,7 @@ interface ScoreTab {
   detail?: React.ReactNode;
 }
 
-export function ScoreTabsRow({ tabs, overallScore, overallLoading }: { tabs: ScoreTab[], overallScore?: number, overallLoading?: boolean }) {
+export function ScoreTabsRow({ tabs, overallScore, overallLoading, overallFreshness }: { tabs: ScoreTab[], overallScore?: number, overallLoading?: boolean, overallFreshness?: DampedValuation | null }) {
   const hasOverall = overallScore !== undefined;
   const [active, setActive] = React.useState(0);
   const [direction, setDirection] = React.useState(0);
@@ -225,7 +247,7 @@ export function ScoreTabsRow({ tabs, overallScore, overallLoading }: { tabs: Sco
       <div className="md:hidden">
         {hasOverall && (
           <div className="mb-4">
-            <OverallScoreCard score={overallScore!} loading={overallLoading} />
+            <OverallScoreCard score={overallScore!} loading={overallLoading} freshness={overallFreshness} />
           </div>
         )}
         <Tabs
@@ -273,7 +295,7 @@ export function ScoreTabsRow({ tabs, overallScore, overallLoading }: { tabs: Sco
       <div className="hidden md:flex gap-4">
         {hasOverall && (
           <div className="flex-1 lg:min-w-[220px]">
-            <OverallScoreCard score={overallScore!} loading={overallLoading} />
+            <OverallScoreCard score={overallScore!} loading={overallLoading} freshness={overallFreshness} />
           </div>
         )}
         {tabs.map(tab => (

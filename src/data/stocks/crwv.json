@@ -89,6 +89,7 @@
       "primaryType": "market share",
       "keyRisk": "The financing loop breaks before the backlog converts. CoreWeave is guiding to $31–35B of 2026 capex against ~$6.2B of trailing-twelve-month revenue — roughly 5× — funded by collateralized debt whose net interest cost is already stepping $388M → $536M → a guided $650–730M per quarter. That only works while capital stays available and contracts are signed faster than GPUs depreciate. Two things could break it: Microsoft (67% of FY2025 revenue) letting its contract decay at 2027 renewal, having already declined a $12B expansion option in March 2026 and signed with a competing neocloud; or Meta — the largest customer at $35B — throttling third-party commitments in favour of its own 'Meta Compute' rental business, launched July 1 2026. Either would invert the revenue trajectory while the debt stack and its interest burden stay fixed.",
       "keyRiskSeverity": "high",
+      "riskFactors": ["ai-capex"],
       "marginTrend": "compressing"
     }
   },

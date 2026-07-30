@@ -11,13 +11,12 @@ import {
   ArrowUpDown,
   Clock,
 } from 'lucide-react';
-import { allCoverageData, getAverageScore } from '@/app/stockData';
+import { allCoverageData } from '@/app/stockData';
 import { getStockData } from '@/data/stocks';
 import { Card } from "@heroui/react";
 import {
-  computeValuationScore,
+  computeLiveComposite,
   computeRecommendation,
-  parseScenarioPrice,
 } from '@/lib/valuationScore';
 import {
   buildHeadingIds,
@@ -90,16 +89,20 @@ function resolveScores(ticker: string, price: number | null): ResolvedScores | n
   const s = byTicker[ticker];
   if (!s) return null;
 
-  const [moat, growth, staticVal] = s.scores;
-  const bear = parseScenarioPrice(s.bearTarget);
-  const base = parseScenarioPrice(s.baseTarget);
-  const bull = parseScenarioPrice(s.bullTarget);
+  const [moat, growth, authoredVal] = s.scores;
 
-  // Live price recomputes the valuation pillar; otherwise fall back to static.
-  const valuation =
-    price != null && bear && base && bull
-      ? computeValuationScore(price, bear, base, bull)
-      : staticVal;
+  // Live price recomputes the valuation pillar, damped by how stale the review
+  // behind the frozen moat and growth pillars is. See computeLiveComposite.
+  const { composite, valuation } = computeLiveComposite({
+    moat,
+    growth,
+    authoredValuation: authoredVal,
+    price,
+    bearTarget: s.bearTarget,
+    baseTarget: s.baseTarget,
+    bullTarget: s.bullTarget,
+    lastAnalyzed: s.lastAnalyzed,
+  });
 
   return {
     ticker: s.ticker,
@@ -108,7 +111,7 @@ function resolveScores(ticker: string, price: number | null): ResolvedScores | n
     moat: Math.round(moat),
     growth: Math.round(growth),
     valuation: Math.round(valuation),
-    composite: Math.round(getAverageScore([moat, growth, valuation])),
+    composite: Math.round(composite),
     recommendation: computeRecommendation(moat, growth, valuation),
     price,
   };

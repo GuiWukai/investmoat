@@ -94,6 +94,7 @@
       "primaryType": "both",
       "keyRisk": "The valuation and the roadmap both assume fault-tolerant, commercially useful quantum computers arrive on IonQ's 2027–2030 timeline. If logical-qubit scaling stalls, if error-correction overhead proves worse than the trapped-ion thesis assumes, or if enterprise ROI fails to materialise beyond pilots and grants, revenue growth decelerates hard and a stock trading at ~60× forward sales de-rates violently toward its cash value.",
       "keyRiskSeverity": "severe",
+      "riskFactors": ["quantum-commercialisation"],
       "marginTrend": "compressing"
     }
   },

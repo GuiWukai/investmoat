@@ -99,6 +99,7 @@
       "primaryType": "TAM expansion",
       "keyRisk": "The prior forced-diversification risk has been substantially de-risked: the April 2026 US-Taiwan tariff framework reduced import tariffs to 15% in exchange for scaling TSMC's US investment to ~$465B/11 fabs, and NVIDIA has reaffirmed TSMC exclusivity for its next-gen 'Rubin' architecture citing the CoWoS advantage, with Intel 18A yields still stuck at 50–55% versus TSMC N2's 70%+. Residual risk: if Intel 18A yields reach parity (>65%) by end of 2027 and a major AI ASIC customer (Google TPU, Amazon Trainium) shifts >15% of leading-edge wafer volume away from TSMC, the AI ASIC anchor thesis weakens — but this is now a 2027+ risk rather than a near-term one.",
       "keyRiskSeverity": "moderate",
+      "riskFactors": ["ai-capex", "semiconductor-cycle", "china-demand"],
       "marginTrend": "expanding"
     }
   },

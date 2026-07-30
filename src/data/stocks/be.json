@@ -100,6 +100,7 @@
       "primaryType": "both",
       "keyRisk": "The ramp is capped by scandium supply, not by demand. Hunterbrook's July 8 2026 report argues Bloom's 5 GW/year ambition would require roughly 220 tonnes of scandium oxide against roughly 240 tonnes of projected global supply, and names Hunan Oriental Scandium as Bloom's largest supplier; Bloom responded that the report is false and misleading and that its scandium supply covers current production and the existing backlog and is not dependent on China. The falsifiable test is throughput rather than rhetoric: if Bloom cannot demonstrate shipments consistent with a greater-than-2 GW/year run-rate by the Q4 2026 print, or discloses a scandium-linked cost or capacity constraint, the 30–40% CAGR is unreachable no matter how large the ~$20B backlog gets. The second-order version is worse than the first: reducing scandium loading to stretch supply trades directly against stack life, which is precisely the variable the 10–15 year service contracts and warranty reserves are priced against.",
       "keyRiskSeverity": "high",
+      "riskFactors": ["ai-capex", "industrial-capex"],
       "marginTrend": "expanding"
     }
   },

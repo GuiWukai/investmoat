@@ -4,8 +4,11 @@ import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { PieChart, ShieldCheck, ChevronRight, TrendingUp, TrendingDown, Eye } from "lucide-react";
 import { Card, Spinner } from "@heroui/react";
-import { allCoverageData, getAverageScore } from "../stockData";
-import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
+import { allCoverageData } from "../stockData";
+import { computeLiveComposite, parseScenarioPrice } from "@/lib/valuationScore";
+import { computePortfolioWeights, MAX_WEIGHT_PCT, MAX_FACTOR_PCT } from "@/lib/portfolioWeights";
+import { riskFactorLabel } from "@/lib/riskFactors";
+import type { DampedValuation } from "@/lib/reviewFreshness";
 
 // ─── Portfolio threshold ──────────────────────────────────────────────────────
 // 80 = "near Strong Buy" floor. Currently 29 names clear it (under the geometric
@@ -152,13 +155,42 @@ function RankBadge({ rank }: { rank: number }) {
   );
 }
 
-// ─── Sector sets for concentration display ────────────────────────────────────
-const TECH_CATEGORIES = new Set([
-  "Core SaaS", "Enterprise SaaS", "Big Tech",
-  "AI Infrastructure", "Lithography", "AI Analytics",
-  "Clean Tech", "Eco-System", "Cybersecurity", "Digital Assets", "Foundry", "Memory", "Semiconductors", "E-Commerce", "Enterprise Software",
-]);
-const FIN_CATEGORIES = new Set(["Payments", "Financials", "FinTech", "Financial Data"]);
+/**
+ * Marks a score whose live valuation pillar was pulled back toward the price its
+ * analysis was written at, because the moat and growth pillars beside it are
+ * frozen and cannot answer a price move. See src/lib/reviewFreshness.ts.
+ *
+ * Only rendered when the correction is at least half a point — below that it
+ * cannot change the number it sits next to, and a glyph explaining an invisible
+ * adjustment is just noise.
+ */
+function FreshnessMark({ freshness }: { freshness: DampedValuation | null }) {
+  if (!freshness || Math.abs(freshness.damped) < 0.5) return null;
+
+  const points = Math.abs(freshness.damped).toFixed(1);
+  const direction = freshness.damped < 0 ? 'down' : 'up';
+  const age = freshness.ageDays == null ? 'an undated review' : `a ${freshness.ageDays}-day-old review`;
+
+  return (
+    <span
+      className="text-amber-400/70 text-[10px] align-super ml-px cursor-help"
+      title={
+        `Valuation ${freshness.liveScore} → ${freshness.score.toFixed(0)}: pulled ${direction} ${points} pts. ` +
+        `Against ${age}, ${Math.round(freshness.credibility * 100)}% of the move from the review-date ` +
+        `price (${freshness.authoredScore}) is credited — moat and growth are frozen at that review and ` +
+        `cannot respond to the same news.`
+      }
+    >
+      *
+    </span>
+  );
+}
+
+// Concentration is now reported by risk factor rather than by these hand-kept
+// sector sets. The sets were display labels, not exposures: "Big Tech" put
+// Microsoft and Apple in one bucket while their actual shared driver — the AI
+// capex cycle — was something only one of them carried, and "Lithography" made
+// ASML its own sector when it moves with TSMC and KLA. See src/lib/riskFactors.ts.
 
 export default function PortfolioPage() {
   const router = useRouter();
@@ -188,17 +220,20 @@ export default function PortfolioPage() {
   const ranked = useMemo(() => {
     return [...allCoverageData]
       .map(s => {
-        const price = allPrices[s.ticker];
-        const bear = parseScenarioPrice(s.bearTarget);
-        const base = parseScenarioPrice(s.baseTarget);
-        const bull = parseScenarioPrice(s.bullTarget);
-        const composite = (price != null && bear && base && bull)
-          ? getAverageScore([s.scores[0], s.scores[1], computeValuationScore(price, bear, base, bull)])
-          : getAverageScore(s.scores);
-        return { s, composite };
+        const { composite, freshness } = computeLiveComposite({
+          moat: s.scores[0],
+          growth: s.scores[1],
+          authoredValuation: s.scores[2],
+          price: allPrices[s.ticker],
+          bearTarget: s.bearTarget,
+          baseTarget: s.baseTarget,
+          bullTarget: s.bullTarget,
+          lastAnalyzed: s.lastAnalyzed,
+        });
+        return { s, composite, freshness };
       })
       .sort((a, b) => b.composite - a.composite)
-      .map(({ s, composite }, idx) => ({
+      .map(({ s, composite, freshness }, idx) => ({
         ticker:   s.ticker,
         name:     s.name,
         slug:     s.slug,
@@ -207,6 +242,7 @@ export default function PortfolioPage() {
         category: stockMeta[s.ticker]?.category ?? "Other",
         stock:    s,
         composite,
+        freshness,
         rank:     idx + 1,
       }));
   }, [allPrices]);
@@ -229,52 +265,29 @@ export default function PortfolioPage() {
     [ranked]
   );
 
-  const liveScores: Record<string, number> = {};
-  portfolio.forEach(p => { liveScores[p.ticker] = scoreByTicker[p.ticker]; });
+  const liveScores = useMemo(
+    () => Object.fromEntries(portfolio.map(p => [p.ticker, scoreByTicker[p.ticker]])) as Record<string, number>,
+    [portfolio, scoreByTicker],
+  );
 
   const [hoveredPie, setHoveredPie] = useState<string | null>(null);
   const [scoreColumn, setScoreColumn] = useState<'score' | 'change'>('score');
   const scoresLoading = !allPricesLoaded;
 
-  const SCORE_BASELINE = 70;
-  const MAX_WEIGHT_PCT = 10;
-
-  const adjusted = Object.fromEntries(
-    portfolio.map((p) => [p.ticker, Math.max((liveScores[p.ticker] ?? 0) - SCORE_BASELINE, 1)])
+  // Weights are score-proportional under two caps: MAX_WEIGHT_PCT per holding
+  // and MAX_FACTOR_PCT per shared risk factor. The second one is why this is a
+  // module rather than a loop here — see src/lib/portfolioWeights.ts for why a
+  // per-name cap alone does not constrain a book whose names move together.
+  const { weights: dynamicWeights, exposures, cappedFactors } = useMemo(
+    () => computePortfolioWeights(
+      portfolio.map(p => ({
+        ticker: p.ticker,
+        score: liveScores[p.ticker] ?? 0,
+        riskFactors: p.stock.riskFactors,
+      })),
+    ),
+    [portfolio, liveScores],
   );
-
-  const rawWeights: Record<string, number> = {};
-  const capped = new Set<string>();
-  let uncappedTickers = portfolio.map((p) => p.ticker);
-  let budget = 100;
-
-  while (uncappedTickers.length > 0) {
-    const poolScore = uncappedTickers.reduce((s, t) => s + adjusted[t], 0);
-    let anyCapped = false;
-    for (const t of uncappedTickers) {
-      const w = poolScore > 0 ? (adjusted[t] / poolScore) * budget : 0;
-      if (w > MAX_WEIGHT_PCT) {
-        rawWeights[t] = MAX_WEIGHT_PCT;
-        capped.add(t);
-        budget -= MAX_WEIGHT_PCT;
-        anyCapped = true;
-      }
-    }
-    if (!anyCapped) {
-      const poolTotal = uncappedTickers.reduce((s, t) => s + adjusted[t], 0);
-      for (const t of uncappedTickers) {
-        rawWeights[t] = poolTotal > 0 ? (adjusted[t] / poolTotal) * budget : 0;
-      }
-      break;
-    }
-    uncappedTickers = uncappedTickers.filter((t) => !capped.has(t));
-  }
-
-  const floors = Object.fromEntries(portfolio.map((p) => [p.ticker, Math.floor(rawWeights[p.ticker])]));
-  const remainder = 100 - Object.values(floors).reduce((a, b) => a + b, 0);
-  const sorted = [...portfolio].sort((a, b) => (rawWeights[b.ticker] % 1) - (rawWeights[a.ticker] % 1));
-  sorted.slice(0, remainder).forEach((p) => { floors[p.ticker]++; });
-  const dynamicWeights = floors;
 
 
   const weightedDailyChange: number | null = (() => {
@@ -312,13 +325,6 @@ export default function PortfolioPage() {
     return { bear: acc.bear / acc.w, base: acc.base / acc.w, bull: acc.bull / acc.w };
   })();
 
-  const techWeight = portfolio.reduce(
-    (s, p) => TECH_CATEGORIES.has(p.category) ? s + (dynamicWeights[p.ticker] ?? 0) : s, 0
-  );
-  const finWeight = portfolio.reduce(
-    (s, p) => FIN_CATEGORIES.has(p.category) ? s + (dynamicWeights[p.ticker] ?? 0) : s, 0
-  );
-
   const portfolioWithScores = [...portfolio].sort(
     (a, b) => (liveScores[b.ticker] ?? 0) - (liveScores[a.ticker] ?? 0)
   );
@@ -341,8 +347,9 @@ export default function PortfolioPage() {
         </h1>
         <p className="text-foreground/45 text-base md:text-lg max-w-2xl leading-relaxed">
           {portfolio.length} high-conviction positions selected for moat durability, growth scaling,
-          and valuation discipline. Higher-scoring positions receive proportionally larger allocations
-          (max 10% per position).
+          and valuation discipline. Higher-scoring positions receive proportionally larger allocations,
+          capped at {MAX_WEIGHT_PCT}% per position and {MAX_FACTOR_PCT}% per shared risk factor — so
+          several holdings that fail for the same reason cannot be sized as independent bets.
         </p>
       </header>
 
@@ -495,25 +502,53 @@ export default function PortfolioPage() {
             <p className="text-foreground/22 text-[10px] mt-2">Weighted avg · allocation-adjusted</p>
           </div>
 
-          {/* Concentration bars */}
+          {/* Risk-factor exposure — bars are scaled to the cap, not to 100%, so
+              a bar reaching the end is a factor at its limit rather than a
+              factor that happens to be large. */}
           <div>
-            <p className="section-label mb-3">Sector Concentration</p>
+            <div className="flex items-baseline justify-between mb-3">
+              <p className="section-label">Risk Factor Exposure</p>
+              <span className="text-foreground/22 text-[10px] font-mono">cap {MAX_FACTOR_PCT}%</span>
+            </div>
             <div className="space-y-3">
-              {[
-                { label: "Tech & SaaS", value: techWeight, color: "bg-blue-500" },
-                { label: "Financials & Payments", value: finWeight, color: "bg-emerald-500" },
-              ].map(({ label, value, color }) => (
-                <div key={label}>
-                  <div className="flex justify-between mb-1.5">
-                    <span className="text-foreground/45 text-xs font-medium">{label}</span>
-                    <span className="text-foreground/45 text-xs font-mono">{Math.round(value)}%</span>
+              {exposures.slice(0, 6).map((e) => (
+                <div key={e.factor}>
+                  <div className="flex justify-between mb-1.5 gap-2">
+                    <span className="text-foreground/45 text-xs font-medium truncate">
+                      {riskFactorLabel(e.factor)}
+                      <span className="text-foreground/22 ml-1.5">{e.tickers.length}</span>
+                    </span>
+                    <span className={`text-xs font-mono shrink-0 ${e.capped ? "text-amber-400/80" : "text-foreground/45"}`}>
+                      {e.capped && <span className="text-foreground/25 line-through mr-1">{e.uncappedPct}%</span>}
+                      {e.pct}%
+                    </span>
                   </div>
                   <div className="h-[3px] bg-foreground/[0.05] rounded-full overflow-hidden">
-                    <div className={`h-full ${color} rounded-full transition-all duration-700`} style={{ width: `${value}%` }} />
+                    <div
+                      className={`h-full rounded-full transition-all duration-700 ${e.capped ? "bg-amber-500" : "bg-blue-500"}`}
+                      style={{ width: `${Math.min(100, (e.pct / MAX_FACTOR_PCT) * 100)}%` }}
+                    />
                   </div>
                 </div>
               ))}
             </div>
+            <p className="text-foreground/22 text-[10px] mt-3 leading-relaxed">
+              {cappedFactors.length > 0 ? (
+                <>
+                  {cappedFactors.map(f => riskFactorLabel(f.factor)).join(", ")} exceeded the cap
+                  unconstrained; weight was moved to holdings that do not carry it.
+                </>
+              ) : (
+                <>No factor exceeds the {MAX_FACTOR_PCT}% cap — weights are score-proportional throughout.</>
+              )}
+            </p>
+            {cappedFactors.some(f => f.unsatisfiable) && (
+              <p className="text-amber-400/70 text-[10px] mt-2 leading-relaxed">
+                {cappedFactors.filter(f => f.unsatisfiable).map(f => riskFactorLabel(f.factor)).join(", ")} could
+                not be brought under the cap — every remaining holding carries it too. Only a different
+                holding fixes that, not a different weight.
+              </p>
+            )}
           </div>
         </Card>
       </div>
@@ -625,7 +660,12 @@ export default function PortfolioPage() {
                 <div className={`text-right shrink-0 w-12 ${scoreColumn !== 'score' ? 'hidden lg:block' : ''}`}>
                   {scoresLoading
                     ? <Spinner size="sm" color="current" />
-                    : <span className={`text-sm font-black ${getScoreColor(scoreByTicker[stock.ticker] ?? 0)}`}>{scoreByTicker[stock.ticker] ?? 0}</span>
+                    : (
+                      <span className={`text-sm font-black ${getScoreColor(scoreByTicker[stock.ticker] ?? 0)}`}>
+                        {scoreByTicker[stock.ticker] ?? 0}
+                        <FreshnessMark freshness={stock.freshness} />
+                      </span>
+                    )
                   }
                 </div>
 
@@ -766,7 +806,12 @@ export default function PortfolioPage() {
                   <div className={`text-right shrink-0 w-12 ${scoreColumn !== 'score' ? 'hidden lg:block' : ''}`}>
                     {scoresLoading
                       ? <Spinner size="sm" color="current" />
-                      : <span className={`text-sm font-black ${getScoreColor(scoreByTicker[stock.ticker] ?? 0)}`}>{scoreByTicker[stock.ticker] ?? 0}</span>
+                      : (
+                        <span className={`text-sm font-black ${getScoreColor(scoreByTicker[stock.ticker] ?? 0)}`}>
+                          {scoreByTicker[stock.ticker] ?? 0}
+                          <FreshnessMark freshness={stock.freshness} />
+                        </span>
+                      )
                     }
                   </div>
 

@@ -99,6 +99,7 @@
       "primaryType": "both",
       "keyRisk": "The dominant near-term risk is now capital intensity: Q2 2026 free cash flow turned negative at −$5.9B on a record $44.9B of quarterly capex, and management raised full-year 2026 capex guidance to $195–205B (from $180–190B) while guiding 2027 to increase 'significantly' — the stock fell ~5% after hours as this overshadowed the revenue and Cloud beats. If Cloud growth or backlog conversion slows before this capex cycle moderates, the FCF drawdown deepens rather than reverses. Layered on top are two live regulatory overhangs: the DOJ/states' DC Circuit appeal (oral arguments expected late 2026/2027) could force search data-sharing with rivals and compress the CPC premium; and Judge Brinkema's ad-tech remedies ruling remains pending as of July 2026 and could force AdX/DFP divestiture. A secondary risk is model competitiveness: Gemini 3.6 Flash (July 21, 2026) landed flat on intelligence benchmarks and Google's flagship now trails Claude and GPT, which could slow Vertex AI enterprise adoption and consumer-Gemini monetisation if the teased Gemini 4 does not re-establish a frontier lead",
       "keyRiskSeverity": "high",
+      "riskFactors": ["ai-capex", "digital-advertising", "platform-regulation"],
       "marginTrend": "stable"
     }
   },

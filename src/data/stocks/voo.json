@@ -94,6 +94,7 @@
       "primaryType": "market share",
       "keyRisk": "If forward P/E reverts toward the 17× long-term average over the next 24 months — driven by AI capex digestion, Mag 7 margin compression, or a recession — the index derates 20–25% on multiples alone, even with EPS holding flat. Bull-case requires multiples to stay elevated, which is a bet on AI productivity translating to permanent margin expansion",
       "keyRiskSeverity": "moderate",
+      "riskFactors": ["equity-market-level", "ai-capex"],
       "marginTrend": "stable"
     }
   },

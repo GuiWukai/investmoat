@@ -78,6 +78,7 @@
       "primaryType": "both",
       "keyRisk": "The two segments now carrying nearly all the growth are the two most cyclical: Ratings transaction revenue (+25% in Q2 2026) is levered directly to debt issuance volumes, and Indices asset-linked fees fall with equity market levels. The Mobility separation removed a block of non-cyclical subscription revenue, so a simultaneous issuance freeze and equity drawdown now hits RemainCo harder than it would have hit the pre-spin company.",
       "keyRiskSeverity": "moderate",
+      "riskFactors": ["credit-cycle", "interest-rates", "equity-market-level"],
       "marginTrend": "expanding"
     }
   },
