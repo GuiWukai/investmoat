@@ -9,7 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$2.77T"
+      "value": "~$3.36T"
     }
   ],
   "chips": [
@@ -25,22 +25,22 @@
   "metrics": [
     {
       "title": "Azure Growth",
-      "value": "40%",
-      "label": "40% USD / 39% CC Q3 FY26 — beat guided 37–38% CC; re-acceleration",
+      "value": "43%",
+      "label": "Q4 FY26 — accelerated from 40%; Azure crossed $100B annual revenue (+41% FY26); guided ~45% CC for Q1 FY27",
       "icon": "Cloud",
       "color": "#00a4ef"
     },
     {
       "title": "Copilot Seats",
-      "value": "20M",
-      "label": "Q3 FY26 — +33% QoQ from 15M; seat adds +250% YoY, fastest since launch",
+      "value": "30M+",
+      "label": "Q4 FY26 — ~10M added in the quarter, net seat adds more than doubled QoQ; 50K+ seat customers up 7× YoY",
       "icon": "Laptop",
       "color": "#ffb900"
     },
     {
       "title": "Operating Margin",
-      "value": "46.3%",
-      "label": "Q3 FY26 op. margin +60bp YoY; gross margin 67.6% (narrowest since 2022 on data-center depreciation)",
+      "value": "45.1%",
+      "label": "Q4 FY26 — flat YoY (revenue and operating income both +18%); gross margin 67% on Azure mix and AI infrastructure; FY27 guided down <1pt",
       "icon": "Database",
       "color": "#7fba00"
     }
@@ -56,7 +56,7 @@
       },
       {
         "title": "Commercial Switching Costs",
-        "text": "Migrating a global enterprise away from Active Directory, Office 365, and Azure is an IT operation that takes years and carries immense risk. The $627B commercial RPO (up 99% YoY, ~2.5yr weighted duration) reflects deep enterprise commitment — though a large share derives from OpenAI's Azure compute commitments. The April 2026 partnership restructuring formalises OpenAI's multi-cloud freedom, meaning future Azure commitments from OpenAI may grow more slowly as OpenAI diversifies compute across AWS, GCP, and Oracle. Excluding OpenAI, the underlying RPO still grew ~26% YoY, confirming broad enterprise demand."
+        "text": "Migrating a global enterprise away from Active Directory, Office 365, and Azure is an IT operation that takes years and carries immense risk. Commercial RPO reached $678B in Q4 FY26 (+84% YoY), roughly twice Microsoft's entire FY26 revenue, with about 30% recognisable within twelve months. That headline overstates the breadth of the commitment, however: commercial bookings grew 10% (11% CC) including OpenAI's Azure commitments but 18% excluding them, so the backlog's growth rate is weighted toward one counterparty's forward compute purchase while the broad annuity motion is the steadier 18%. The April 2026 partnership restructuring formalised OpenAI's multi-cloud freedom, so future Azure commitments from that source may grow more slowly as OpenAI diversifies across AWS, GCP, and Oracle — which makes the ex-OpenAI bookings figure the more durable read on switching costs."
       },
       {
         "title": "AI Supermarket Strategy",
@@ -65,82 +65,83 @@
     ]
   },
   "growth": {
-    "description": "Q3 FY26 revenue of $82.9B (+18% YoY) beat the $81.4B consensus. Azure delivered 40% USD / 39% CC growth — beating the guided 37–38% CC and ending concerns about structural deceleration. Intelligent Cloud reached $34.68B (beat $34.27B consensus); Productivity & Business Processes $35.01B (+17% YoY). EPS came in at $4.27 adjusted vs $4.06 expected. Despite the across-the-board beat, the stock slipped ~3% after hours, likely reflecting the market selling the pre-earnings run-up (+20% in the prior month). M365 Copilot seats reached 20M (+33% QoQ from 15M; seat adds +250% YoY, the fastest since launch), with Accenture committing 740,000+ seats — the largest Copilot win to date; monetisation remains in early innings. The AI business surpassed a $37B annual revenue run rate (+123% YoY). Q4 FY26 guidance calls for $86.7–87.8B revenue and 39–40% CC Azure growth, confirming the re-acceleration is durable. The dominant overhang is capex: Microsoft guided to ~$190B of calendar-2026 capital expenditure (up ~61% YoY, ~$25B of it from higher memory/component pricing), which has compressed gross margin to 67.6% (narrowest since 2022) and pressured free cash flow — this, not the earnings beat, drove the ~30% pullback from October 2025 highs. The April 2026 OpenAI partnership restructuring eliminates the revenue share Microsoft paid to OpenAI — a partial operating-margin offset. Q3 FY26 operating margin was 46.3% (+60bp YoY).",
+    "description": "Q4 FY26 (reported July 29, 2026) was the strongest print of the AI cycle so far. Revenue of $90.0B (+18% YoY, +17% CC) beat the ~$87.4B consensus; non-GAAP EPS of $4.74 (+23%) beat ~$4.24, and GAAP EPS was $4.81 (+32%) — GAAP exceeded non-GAAP because net gains on the OpenAI investment added $480M / $0.07 in the quarter and $4,963M / $0.67 across FY26, a swing from the prior-year losses. Azure accelerated again to 43% (from 40% in Q3) and crossed $100B of annual revenue for the first time, growing 41% across FY26. Intelligent Cloud reached $39.3B (+32%); Productivity & Business Processes $37.8B (+14%); More Personal Computing $12.9B (−4%). Microsoft Cloud was $59.3B (+27%). M365 Copilot passed 30M paid seats with roughly 10M added in the quarter — net seat adds more than doubled sequentially — and customers with 50,000+ seats grew seven-fold YoY. Commercial RPO reached $678B (+84%), about 30% of it recognisable within twelve months; commercial bookings grew 10% (11% CC) including OpenAI's Azure commitments and 18% excluding them, so the backlog headline is OpenAI-weighted while the underlying annuity motion is the healthier number. FY26 closed at $331.8B revenue (+18%) and $155.2B operating income (+21%), GAAP EPS $17.95 (+32%), non-GAAP $17.28 (+22%). Q1 FY27 guidance is $89.85–90.95B (+16–17%) with Azure guided to ~45% CC — a third consecutive step up. The stock, which had fallen to an intra-year low near $349 in late June on capex fear, closed at $390.54 the day of the print and jumped ~16% the following session, its largest single-day gain since 2008. The capex question is not resolved so much as reframed: Q4 capex was $35.8B ($41B including finance leases, +69%), Q4 free cash flow was $19.6B, FY26 free cash flow was ~$67.0B on $182.9B of operating cash flow, and Q1 FY27 capex alone will exceed $50B. Effective FY27 Microsoft extended the estimated useful life of data centres and office buildings from 15 to 25 years; management says this changes only the timing of depreciation, carries minimal FY27 operating-income benefit, and reclassifies future data-centre leases from finance to operating — which is why the calendar-2026 reported capex figure fell from ~$190B to ~$175B while, in Hood's words, the underlying investment expectation is unchanged. FY27 operating margin is guided down less than a point, and management committed only to remaining free-cash-flow positive.",
     "growthAnalysis": {
-      "cagrEstimate": "15–17%",
-      "scoreDerivation": "Base 80 (15–30% CAGR) + 5 recurring subscription (M365 NRR >110%, 450M seats) + 5 TAM expansion (enterprise AI inference, Copilot ARPU ramp) − 1 post-beat sell-off (stock -3% AH despite beat; market priced in perfection) = 89",
+      "cagrEstimate": "16–18%",
+      "cagrBasis": "Consolidated revenue: FY26 $331.8B against FY25 $281.7B, +18% YoY, with Q1 FY27 guided to $89.85–90.95B, +16–17% YoY. Within that, Azure grew +41% YoY across FY26 to pass $100B and accelerated to +43% YoY in Q4 with ~45% CC guided for Q1 FY27, while Productivity & Business Processes decelerated to +14% YoY and is guided to +11–12% YoY, and More Personal Computing shrank −4% YoY. The 16–18% blend holds the current ~18% consolidated rate roughly flat near term — Azure's acceleration offsetting the annuity and PC drag — then decays toward the mid-teens as Azure's own base compounds past $100B. Commercial RPO of $678B (+84%, ~30% recognisable within twelve months) supports the near-term end of the range, but is discounted here rather than taken at face value: bookings grew only 10% including OpenAI's Azure commitments against 18% excluding them, so the backlog rate reflects a single counterparty's forward compute commitment more than broad enterprise accrual.",
+      "scoreDerivation": "Base ~81 anchored on a 16–18% blended CAGR (FY26 actual +18%, Q1 FY27 guided +16–17%) + trajectory (Azure and Copilot accelerating against a decelerating Productivity segment) + margin held flat rather than expanding (Q4 operating margin 45.1%, exactly flat YoY; FY27 guided down under a point) − moderate risk (FY27 capital intensity against ~$67B of FY26 free cash flow, plus a depreciation schedule just lengthened to 25 years). The prior derivation narrated a superseded calculation; this one reflects the fields actually scored.",
       "drivers": [
-        { "name": "Intelligent Cloud / Azure", "metric": "+40% USD / +39% CC Q3 FY26, $34.68B — beat guided 37–38% CC; re-acceleration confirmed", "trend": "accelerating" },
-        { "name": "M365 Copilot Monetisation", "metric": "20M paid seats Q3 FY26 (+33% QoQ from 15M; seat adds +250% YoY); 50K+ seat customers quadrupled; Accenture 740K-seat win", "trend": "accelerating" },
-        { "name": "Productivity & Business Processes", "metric": "+17% YoY, $35.01B Q3 FY26 (beat $34.43B consensus); 450M commercial seats", "trend": "stable" }
+        { "name": "Intelligent Cloud / Azure", "metric": "Azure +43% Q4 FY26 (from 40% in Q3), first year above $100B annual revenue (+41% FY26); segment $39.3B (+32%); guided ~45% CC for Q1 FY27", "trend": "accelerating" },
+        { "name": "M365 Copilot Monetisation", "metric": "30M+ paid seats Q4 FY26, ~10M added in the quarter with net adds more than doubling QoQ; customers with 50K+ seats up 7× YoY", "trend": "accelerating" },
+        { "name": "Productivity & Business Processes", "metric": "+14% YoY, $37.8B Q4 FY26 — down from +17% in Q3 and guided to +11–12% for Q1 FY27", "trend": "decelerating" }
       ],
       "primaryType": "both",
-      "keyRisk": "The ~$190B calendar-2026 capex ramp (up ~61% YoY) compresses free cash flow and gross margin (67.6%, narrowest since 2022); if Azure growth decelerates below 32% in FY2027 while this spend persists — with Google Cloud (+63% Q1 2026) and AWS (+28%) taking share of new enterprise AI inference — ROIC on AI infrastructure disappoints, the premium multiple compresses, and the $475 base case collapses. The Q3 FY26 re-acceleration to 40% and 39–40% Q4 guide reduce the demand-side risk but not the capital-intensity risk",
+      "keyRisk": "Capital intensity is now the whole debate, and the demand half of the old bear case has resolved against it: Azure accelerated to 43% and is guided to ~45% CC, so a deceleration below 32% in FY2027 is no longer the live question. What remains unmaterialised is the return on the spend. Q1 FY27 capex alone exceeds $50B against FY26 free cash flow of ~$67.0B, and management guided only to staying free-cash-flow positive in FY27 rather than to a free-cash-flow figure. Compounding it, the useful life of data centres and office buildings was extended from 15 to 25 years effective FY27 — if the AI-serving assets inside those buildings do not in fact earn over a 25-year life, reported operating income is flattered by a depreciation schedule that will need to be shortened later, and the FY27 'operating margin down less than a point' guide is softer than it reads. Falsifiable within four quarters: FY27 free cash flow materially below FY26's ~$67B, or any revision to the useful-life assumption, would confirm it",
       "keyRiskSeverity": "moderate",
-      "marginTrend": "expanding"
+      "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 80,
-    "description": "At ~$373 (June 27, 2026) — down ~30% from the October 2025 high of ~$539 on capex/free-cash-flow fears rather than any operational miss — MSFT sits ~21% below the base case of $475 and only ~24% above the $300 bear. The selloff has improved the entry point materially: Azure re-accelerated to 40% (beat guided 37–38%), Q4 is guided to 39–40% CC, Copilot is at 20M seats and the AI run rate is $37B (+123%). At ~20.5× NTM earnings the multiple has de-rated to a level rarely seen for Microsoft this decade; the key debate is whether ~$190B of 2026 capex earns an adequate return, but the risk/reward now favours long-term holders.",
+    "score": 74,
+    "description": "The Q4 FY26 print re-rated the stock in a single session: MSFT closed at $390.54 on July 29 and traded up ~16% to roughly $453 the next day, its largest one-day gain since 2008, having bottomed near $349 in late June. At ~$453 the entry point is materially worse than it was a month ago — the shares sit around 63% of the way from the $340 bear to the $520 base, so most of the discount the capex panic created has now been paid back. What justifies the higher scenario ladder is that the earnings trajectory genuinely improved: Azure accelerated to 43% and is guided to ~45% CC, FY26 non-GAAP EPS landed at $17.28 (+22%), and the Q1 FY27 revenue guide implies 16–17% consolidated growth. At roughly 22× forward earnings Microsoft is still not expensive against that growth rate. The unresolved question is no longer demand but conversion: FY26 free cash flow of ~$67.0B against a Q1 FY27 capex run rate above $50B, on a depreciation schedule just lengthened to 25 years, is why this is a position to hold and add to on weakness rather than to chase at $453.",
     "peAnalysis": {
-      "asOf": "June 2026 (Q3 FY2026 actuals; price ~$373)",
+      "asOf": "July 2026 (FY2026 actuals; price ~$453)",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
           "value": "~25×",
-          "note": "TTM GAAP EPS ~$15 (OpenAI equity drag now negligible)"
+          "note": "FY26 GAAP EPS $17.95 — includes $0.67 of net OpenAI investment gains"
+        },
+        {
+          "label": "Trailing P/E (non-GAAP)",
+          "value": "~26×",
+          "note": "FY26 non-GAAP EPS $17.28 (+22%)"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~20.5×",
-          "note": "NTM EPS ~$18 (raised on Q3 beat, EPS $4.27)"
+          "value": "~22×",
+          "note": "NTM EPS ~$20.5 on the FY27 guide"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.3×",
-          "note": "fwd P/E ÷ ~16% EPS CAGR"
-        },
-        {
-          "label": "Price / Sales (NTM)",
-          "value": "~8.0×",
-          "note": "~$345B NTM revenue est."
+          "value": "~1.1×",
+          "note": "fwd P/E ÷ ~20% EPS growth"
         },
         {
           "label": "Price / Free Cash Flow",
-          "value": "~34.5×",
-          "note": "~$80B NTM FCF (capex-compressed)"
+          "value": "~50×",
+          "note": "FY26 FCF ~$67.0B ($182.9B operating cash flow − $115.9B capex); FY27 compresses further"
         }
       ],
-      "summary": "At ~20.5× forward earnings, MSFT now trades near the low end of its post-2019 range and roughly in line with the S&P 500 despite faster growth, after a ~30% capex-driven de-rating. The ~1.3× PEG against a 16% EPS CAGR keeps Microsoft in GARP territory. The wide trailing-to-forward gap (~25× → ~20.5×) signals a real earnings ramp; the one cautionary multiple is Price/FCF (~34.5×), inflated because the $190B capex cycle is suppressing near-term free cash flow."
+      "summary": "At ~22× forward earnings after a 16% single-session move, Microsoft still trades below its five-year average multiple and at roughly a 1.1× PEG against ~20% EPS growth — cheap relative to the growth rate, which is the case for owning it. The multiple that should temper enthusiasm is Price/Free Cash Flow at ~50× on FY26's ~$67.0B, and that denominator gets worse before it gets better: Q1 FY27 capex alone exceeds $50B and management guided only to remaining free-cash-flow positive. The gap between a ~22× earnings multiple and a ~50× cash multiple is the entire Microsoft debate in two numbers — earnings are being reported on a 25-year depreciation schedule while cash is going out the door on a much shorter one."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$300",
-      "description": "The ~$190B capex cycle fails to earn its cost of capital as Azure growth decelerates below 25%, OpenAI diversifies compute to competing clouds, free cash flow stays compressed, and macro recession pulls multiples to 18–20×.",
+      "priceTarget": "$340",
+      "description": "The capex cycle fails to earn its cost of capital: FY27 free cash flow falls sharply against ~$67B in FY26, the 25-year depreciation assumption is questioned, and Microsoft re-rates to ~17× as a capital-intensive infrastructure provider rather than a software compounder.",
       "points": [
-        "The $190B 2026 capex (up ~61% YoY) proves premature: depreciation outruns revenue, gross margin slips below 66%, free cash flow stagnates, and the market re-rates Microsoft as a capital-intensive infrastructure provider rather than a software compounder",
-        "Azure growth falls back below 25% as Google Cloud and AWS absorb the majority of new enterprise AI inference workloads; the Q3 FY26 re-acceleration to 40% proves a single-quarter event driven by backlog recognition, and OpenAI's multi-cloud expansion shifts compute spend visibly away from Azure",
-        "Copilot plateaus below 25M seats due to governance and data-security concerns; M365 price increases (July 2026) drive churn rather than ARPU expansion; FTC antitrust probe produces structural remedies on cloud licensing and AI bundling"
+        "FY27 free cash flow drops materially below FY26's ~$67.0B as Q1's $50B+ capex run rate persists; the market concludes the ~$190B-equivalent calendar-2026 investment was pulled forward, and the stock revisits the ~$349 intra-year low set in late June 2026",
+        "The extension of data-centre useful life from 15 to 25 years is challenged by investors or auditors as AI-serving hardware refresh cycles prove shorter than the buildings housing them; a partial reversal reduces reported operating income and confirms that the FY27 'down less than a point' margin guide understated the true depreciation burden",
+        "Azure's 43%-and-accelerating print proves backlog-driven rather than demand-driven — commercial bookings grew only 10% including OpenAI against 18% excluding it, and as OpenAI exercises the multi-cloud freedom granted in April 2026, the $678B RPO converts more slowly than its ~30%-within-twelve-months profile implies; Productivity & Business Processes continues decelerating past the guided +11–12%"
       ]
     },
     "base": {
-      "priceTarget": "$475",
-      "description": "Azure sustains 38–40% growth through FY2027 as Q3 FY26 re-acceleration proves durable, Copilot scales to 30M+ seats, and M365 price increases expand ARPU without material churn.",
+      "priceTarget": "$520",
+      "description": "Azure holds 38–45% through FY2027, consolidated growth settles in the mid-to-high teens, Copilot compounds past 40M seats, and the market pays ~25× a rising forward EPS once free cash flow stabilises.",
       "points": [
-        "Azure sustains 38–40% growth driven by $625B+ commercial RPO and continued enterprise AI migration to Azure; supply constraint relief in mid-2026 allows demand to convert faster",
-        "Copilot scales to 30M+ paid commercial seats; M365 price increases (July 2026, +5–33% by SKU) expand ARPU without material churn; EPS ramp to $20+ by FY2027",
-        "Microsoft's AI supermarket strategy (1,900+ models including MAI in-house family) proves resilient and margin-accretive as the OpenAI revenue share that MSFT paid is now eliminated"
+        "Consolidated revenue grows 16–18% in FY27 in line with the Q1 guide, Azure sustains high-30s to mid-40s growth off its new $100B base, and non-GAAP EPS ramps toward the low-$20s from FY26's $17.28",
+        "Copilot compounds past 40M paid seats as net adds hold near the Q4 pace, and the seven-fold growth in 50,000+ seat customers converts into ARPU expansion rather than discounting",
+        "FY27 operating margin declines under a point as guided, free cash flow stays positive and stabilises, and the multiple settles around 25× forward earnings — a premium to the market that Microsoft's growth rate supports without requiring the AI-infrastructure return to be proven yet"
       ]
     },
     "bull": {
-      "priceTarget": "$590",
-      "description": "Azure becomes the undisputed AI backbone, Copilot hits 50M+ seats, the $190B capex cycle visibly converts to high-ROIC inference revenue, and Microsoft's own MAI models on Maia 200 silicon establish a franchise independent of OpenAI.",
+      "priceTarget": "$660",
+      "description": "Azure becomes the undisputed AI backbone, the capex cycle visibly converts to high-ROIC inference revenue with free cash flow inflecting upward, Copilot penetration passes 15% of the commercial base, and the multiple returns to 30×+.",
       "points": [
-        "Azure sustains 40%+ growth through FY2027 as sovereign AI wins proliferate across Europe, Middle East, and Asia Pacific; $625B+ commercial RPO converts with accelerating pace",
-        "Copilot penetration exceeds 40% of 450M+ commercial seats at expanding ARPU; MAI model family (Transcribe, Voice, Image) wins key enterprise contracts, restoring the AI-first multiple of 33–35×",
-        "Operating margins expand to 50%+ as OpenAI revenue-share elimination flows through and Copilot gross margins normalise above 70%; buybacks accelerate"
+        "Azure sustains 45%+ through FY2027 as sovereign AI wins proliferate and supply constraints ease; the $678B commercial RPO converts faster than its stated profile and consolidated growth holds above 18%",
+        "Free cash flow inflects upward in FY27 despite the capex ramp, resolving the central bear objection directly rather than by guidance — the market re-rates the AI infrastructure spend from a cost to an earning asset",
+        "Copilot penetration passes 15% of the commercial seat base at expanding ARPU, the in-house MAI model family on Maia silicon reduces merchant-GPU dependency and lifts Azure AI gross margin, and the eliminated OpenAI revenue share flows through to operating margin expansion rather than being absorbed by depreciation"
       ]
     }
   },
@@ -177,7 +178,7 @@
     },
     "networkEffects": {
       "status": "strong",
-      "note": "450M+ paid commercial Microsoft 365 seats (up from 400M) and the Azure developer ecosystem enhanced by an AI model marketplace of 1,900+ models — more models attract more workloads. GitHub Copilot reached 4.7M paid subscribers (+75% YoY), reinforcing developer flywheel."
+      "note": "450M+ paid commercial Microsoft 365 seats and the Azure developer ecosystem enhanced by an AI model marketplace of 1,900+ models — more models attract more workloads. Azure crossed $100B of annual revenue in FY26 (+41%), a scale threshold that compounds the ecosystem effect. M365 Copilot passed 30M paid seats in Q4 FY26 with customers running 50,000+ seats up seven-fold YoY, so the AI layer is now propagating through the largest accounts rather than seeding small pilots."
     },
     "transactionEmbedding": {
       "status": "strong",
@@ -189,5 +190,5 @@
     },
     "verdict": "Microsoft's AI-vulnerable moats face moderate pressure (interfaces, talent scarcity), but its AI-resilient fortress — system of record, regulatory lock-in, transaction embedding, and the Azure proprietary data flywheel — is actively strengthened by AI. The businessLogic moat is rated intact: Azure AI remains a major enterprise re-platforming destination, but Claude managed agents and external agentic platforms create genuine competition for the enterprise automation layer that Copilot targets. The April 2026 OpenAI partnership restructuring formalises an arms-length commercial relationship — non-exclusive license through 2032, revenue share eliminated (margin-accretive), OpenAI multi-cloud freedom granted — reducing the catastrophic-fracture tail risk while introducing a more gradual structural risk: Azure's share of OpenAI compute may erode over time as OpenAI diversifies infrastructure. Net moat impact is marginally negative on businessLogic and already-destroyed publicDataAccess; the fortress moats are unaffected."
   },
-  "lastAnalyzed": "June 27, 2026"
+  "lastAnalyzed": "July 30, 2026"
 }
