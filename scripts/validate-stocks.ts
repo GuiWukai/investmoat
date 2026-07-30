@@ -150,14 +150,41 @@ function checkScenarioCorridors(files: string[]): Warning[] {
 const MAX_PLAUSIBLE_CAGR = 60;
 
 /**
- * Report the two growth-input hygiene checks: how much of the book still lacks
- * a cagrBasis, and any cagrEstimate too high to be a forecast.
+ * Phrases that mark a cited figure as a bounded ratio rather than a rate. A
+ * market share or a percent-of-supply is capped at 100%, so it cannot compound
+ * at its cited value over a forecast window — it describes position, not growth.
+ * Flagged because such a figure reads as a citation and satisfies a naive
+ * "is there a basis?" check while being structurally unable to carry the
+ * estimate attached to it (ETH: "~65% of tokenized value", "33.6% of supply").
+ */
+const BOUNDED_RATIO_PATTERNS: RegExp[] = [
+  /\d+(?:\.\d+)?%\s*of\s+(?:supply|all|total|the\s+market|tokenized|circulating)/i,
+  /(?:share|dominance)\s+(?:of|at)\s+~?\d+(?:\.\d+)?%/i,
+  /~?\d+(?:\.\d+)?%\s*(?:market\s+)?share/i,
+  /at\s+~?\d+(?:\.\d+)?%\s+of\b/i,
+];
+
+/** An unbounded rate: "+8.3% YoY", "~9%/yr", "+315% YoY", "up 44% YTD". */
+const RATE_PATTERN =
+  /[+\-]?\d+(?:\.\d+)?%\s*(?:\/\s*(?:yr|year)|\s*(?:YoY|YTD|CAGR|per\s+year|a\s+year|annual))/i;
+
+/**
+ * Growth-input hygiene. Four checks, all advisory:
+ *   • cagrEstimate too high to read as a forecast (MAX_PLAUSIBLE_CAGR)
+ *   • cagrBasis missing on crypto/commodity, where there is no revenue line to
+ *     fall back on and the estimate is otherwise unfalsifiable
+ *   • cagrBasis citing only bounded ratios — capped figures cannot anchor a rate
+ *   • cagrBasis citing no unbounded rate at all
+ * Plus book-wide cagrBasis coverage, reported by the caller.
  */
 function checkGrowthInputs(files: string[]): { warnings: Warning[]; missingBasis: number } {
   const warnings: Warning[] = [];
   let missingBasis = 0;
   for (const file of files) {
-    let data: { growth?: { growthAnalysis?: { cagrEstimate?: string; cagrBasis?: string } } };
+    let data: {
+      assetClass?: string;
+      growth?: { growthAnalysis?: { cagrEstimate?: string; cagrBasis?: string } };
+    };
     try {
       data = JSON.parse(readFileSync(join(STOCKS_DIR, file), 'utf-8'));
     } catch {
@@ -174,6 +201,44 @@ function checkGrowthInputs(files: string[]): { warnings: Warning[]; missingBasis
           `cagrEstimate midpoint is ${mid}% (limit ${MAX_PLAUSIBLE_CAGR}%) — above 30% the base curve saturates, so ` +
           'this scores the same as a 50% estimate. State the rate the business can sustain, not its current one',
       });
+    }
+
+    const needsBasis = data.assetClass === 'crypto' || data.assetClass === 'commodity';
+    if (needsBasis && !ga.cagrBasis) {
+      warnings.push({
+        file,
+        message:
+          `assetClass=${data.assetClass} has no cagrBasis — with no revenue line, the CAGR base (~78% of the growth ` +
+          'score) rests on an unfalsifiable number. Anchor it on an adoption series and record the rate',
+      });
+    }
+
+    if (ga.cagrBasis) {
+      const bounded = BOUNDED_RATIO_PATTERNS.filter(p => p.test(ga.cagrBasis!));
+      const hasRate = RATE_PATTERN.test(ga.cagrBasis);
+      if (bounded.length > 0 && !hasRate) {
+        warnings.push({
+          file,
+          message:
+            'cagrBasis cites only bounded ratios (market share / percent-of-supply) and no unbounded rate. A figure ' +
+            'capped at 100% cannot compound at its cited value — it describes position, not growth. Cite the rate of ' +
+            'the channel that accrues to the asset',
+        });
+      } else if (!hasRate) {
+        warnings.push({
+          file,
+          message:
+            'cagrBasis cites no unbounded rate (expected something like "+8.3% YoY" or "~9%/yr"). The estimate needs ' +
+            'a measured rate it is answerable to, not only levels',
+        });
+      } else if (bounded.length > 0 && mid != null) {
+        warnings.push({
+          file,
+          message:
+            `cagrBasis mixes bounded ratios with rates behind a ${mid}% midpoint — check that the estimate rests on ` +
+            'the unbounded accrual series and not on the capped ones, which cannot support a multi-year rate',
+        });
+      }
     }
   }
   return { warnings, missingBasis };
@@ -398,7 +463,7 @@ function main(): void {
 
   const { warnings: inputWarnings, missingBasis } = checkGrowthInputs(files);
   if (inputWarnings.length > 0) {
-    console.log(`${YELLOW}Implausible CAGR estimates (${inputWarnings.length}) — advisory, not failures:${RESET}`);
+    console.log(`${YELLOW}Growth input hygiene (${inputWarnings.length}) — advisory, not failures:${RESET}`);
     for (const { file, message } of inputWarnings) {
       console.log(`  ${DIM}•${RESET} ${YELLOW}${file}${RESET} ${message}`);
     }

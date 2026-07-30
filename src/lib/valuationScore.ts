@@ -188,17 +188,24 @@ export function computeMoatScore(tenMoats: TenMoatsData): number {
 //
 // ETH showed the cost. It has exactly one strong pillar (networkEffects) and
 // four merely intact; declaring that pillar primary was worth 14 points of moat
-// (83 vs 69 for any other choice) and carried it to rank 3 in the portfolio. No
-// equity can do that: MOAT_SPEC caps the heaviest single moat at 15, so the
-// largest swing one label can produce is ~6 points.
+// (83 vs 69 for any other choice) and carried it into the top of the portfolio
+// on that label alone. No equity can do that: MOAT_SPEC caps the heaviest single
+// moat at 15, so the largest swing one label can produce is ~6 points.
 //
 // Cutting crypto to 30/17.5 and commodity to 40/30 keeps the intent — BTC still
 // scores on credible neutrality, gold on monetary history — while requiring the
 // rest of the pillar set to corroborate it. The primary stays the single
 // heaviest pillar; it just stops outvoting everything else combined. Affected
 // assets: BTC 96→94, ETH 83→76, SOL 58→55, U 88→85, XAU 75→70, HG 50→47, XAG
-// unchanged. Portfolio membership is unchanged — this reorders the top of the
-// table (BTC 1→2, ETH 3→6), it does not move anyone in or out.
+// unchanged. Portfolio membership was unchanged; the effect was a reordering of
+// the top of the table.
+//
+// COMPOSITE RANKS ARE DELIBERATELY NOT QUOTED HERE. They were, and the numbers
+// went stale inside this same branch: the original note claimed "BTC 1→2, ETH
+// 3→6", which two commits later was wrong in both directions once BTC's CAGR was
+// re-based and ETH was re-reviewed. A rank is a fact about the whole book, so any
+// unrelated coverage change invalidates it. State the pillar deltas a change
+// causes — those are attributable to it — and let the table report ranks.
 const COMMODITY_PRIMARY_WEIGHT = 40;
 const COMMODITY_OTHER_WEIGHT = 30;
 const CRYPTO_PRIMARY_WEIGHT = 30;
@@ -297,8 +304,26 @@ export interface GrowthAnalysisInput {
    * outright shrinking — said something else entirely, and nothing in the
    * rubric noticed.
    *
-   * Optional so existing coverage stays valid; validate-stocks reports how much
-   * of the book still lacks one.
+   * THE SERIES MUST ACCRUE TO THE ASSET AND BE UNBOUNDED. Recording *a* series
+   * is not the check — carrying the estimate is. Two ways a basis can be true,
+   * checkable, and still incapable of supporting the number it is attached to:
+   *
+   *   • A bounded ratio. Market share and percent-of-supply are capped at 100%,
+   *     so they cannot compound at their cited rate over a forecast. ETH cites
+   *     "~65% of tokenized value" and "33.6% of supply staked" behind a 40%
+   *     midpoint; both describe position, neither is a rate.
+   *   • Third-party growth. Activity on a platform reaches the asset only
+   *     through an accrual channel. Tokenized-RWA volume +315% YoY accrues to
+   *     ETH via L1 fees, which fell from a ~$23M/day peak to ~$227K/day — the
+   *     accrual rate is the second number, not the first.
+   *
+   * Where there is no revenue line (crypto, commodity) the accrual series is
+   * adoption, and marking up from it is legitimate if stated: BTC anchors on
+   * holders +8.3% YoY and marks up to 12–20% for institutional capital
+   * intensity and the sovereign channel.
+   *
+   * Optional in the type so existing coverage stays valid; validate-stocks
+   * requires it for crypto and commodity and reports coverage for the rest.
    */
   cagrBasis?: string;
   drivers: Array<{ name: string; metric: string; trend: GrowthDriverTrend }>;
@@ -371,6 +396,23 @@ function baseFromCagr(cagr: number): number {
  * The risk term is treated as 0 when keyRiskSeverity is unset (legacy stocks),
  * which biases the score upward — call sites should prefer derived only when
  * keyRiskSeverity is present.
+ *
+ * THE RISK TERM CARRIES UNMATERIALISED DOWNSIDE ONLY. It caps at −15 while the
+ * base spans ~70 points, so it cannot be where a structural fact is charged: a
+ * measured series pointing against the estimate belongs in cagrEstimate, and an
+ * observed change in a driver belongs in that driver's trend. Once a risk
+ * becomes fact it is already charged in one of those two places, and leaving
+ * severity where it was charges it twice.
+ *
+ * BTC is the worked example in both directions. Its July 2026 file marked the
+ * sovereign driver decelerating for the Treasury–Commerce deadlock and *also*
+ * held keyRiskSeverity at high for the same deadlock, while noting in its own
+ * derivation that "the flow half of the risk stepped back, the policy half
+ * confirmed" — both halves had moved toward less residual risk, and severity
+ * did not move. Corrected to moderate: growth 68 → 73. ETH is the mirror image
+ * and is not corrected here — it routes its fee collapse to keyRisk alone,
+ * explicitly "charged there rather than twice", which under this rule is the
+ * wrong term for it. See the cagrBasis note above.
  *
  * WHY primaryType NO LONGER SCORES. It used to add +3 for TAM expansion, +4 for
  * both, 0 for market share. Across the 128-asset book that made it a near

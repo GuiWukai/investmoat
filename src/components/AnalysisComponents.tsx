@@ -255,13 +255,20 @@ export function ScoreTabsRow({ tabs, overallScore, overallLoading, overallFreshn
           onSelectionChange={(key) => handleTabClick(Number(key))}
           selectedKey={String(active)}
         >
-          <Tabs.List className="mb-4">
-            {tabs.map((tab, i) => (
-              <Tabs.Tab key={tab.label} className="flex-1 font-bold" id={String(i)}>
-                {tab.label}
-              </Tabs.Tab>
-            ))}
-          </Tabs.List>
+          {/* The tab strip pins under the mobile top bar (h-14) once the page
+              scrolls past it, so Moat / Growth / Valuation stay switchable deep
+              inside a long panel. Bled out to the viewport edges — `.content`
+              carries 1.5rem of gutter on mobile — so nothing scrolls through
+              beside it, and kept under the nav's z-50. */}
+          <div className="sticky top-14 z-30 -mx-6 mb-4 flex border-b border-border/60 bg-background/95 px-6 py-2 backdrop-blur-xl">
+            <Tabs.List className="flex-1">
+              {tabs.map((tab, i) => (
+                <Tabs.Tab key={tab.label} className="flex-1 font-bold" id={String(i)}>
+                  {tab.label}
+                </Tabs.Tab>
+              ))}
+            </Tabs.List>
+          </div>
           {tabs.map((tab, i) => (
             <Tabs.Panel key={tab.label} className="overflow-hidden" id={String(i)}>
               <AnimatePresence mode="wait" custom={direction} initial={false}>
