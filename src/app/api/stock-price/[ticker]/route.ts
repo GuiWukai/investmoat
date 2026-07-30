@@ -19,7 +19,6 @@ const YAHOO_SYMBOL_MAP: Record<string, string> = {
   gold:       'GC=F',
   copper:     'HG=F',
   silver:     'SI=F',
-  uranium:    'URA',
   btc:        'BTC-USD',
   k92:        'KNT.TO',
   pltr:       'PLTR',
@@ -48,6 +47,11 @@ const YAHOO_SYMBOL_MAP: Record<string, string> = {
   fcx:        'FCX',
   ccj:        'CCJ',
   leu:        'LEU',
+  nxe:        'NXE',
+  uec:        'UEC',
+  // Kazatomprom trades as USD-denominated GDRs on the LSE International Order
+  // Book; KAP.IL is that line. Not the Kazakh ordinary share, which is KZT.
+  kap:        'KAP.IL',
   ceg:        'CEG',
   gev:        'GEV',
   tdg:        'TDG',

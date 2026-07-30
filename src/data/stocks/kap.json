@@ -1,0 +1,193 @@
+{
+  "slug": "kap",
+  "ticker": "KAP",
+  "name": "NAC Kazatomprom JSC",
+  "titleColor": "#00a3b4",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "KAP"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$16B"
+    },
+    {
+      "label": "Listing",
+      "value": "GDRs — LSE / AIX"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Hard Assets | Uranium Mining",
+      "color": "primary"
+    },
+    {
+      "label": "Lowest-Cost Producer",
+      "color": "success"
+    },
+    {
+      "label": "State-Controlled | Sovereign Risk",
+      "color": "danger"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "2026 Attributable Production",
+      "value": "14,500-15,500 tU",
+      "label": "Guidance on an attributable basis — roughly a quarter of global primary supply; 27,500-29,000 tU on a 100% basis",
+      "icon": "Globe",
+      "color": "#00a3b4"
+    },
+    {
+      "title": "Realized Price vs Spot",
+      "value": "$61.33/lb",
+      "label": "Q1 2026 average realized price, up 12% YoY, against an $88.49/lb average month-end spot — a discount of roughly 31%",
+      "icon": "Coins",
+      "color": "#ef4444"
+    },
+    {
+      "title": "2026 Revenue Guidance",
+      "value": "KZT 2.2-2.3T",
+      "label": "Consolidated; group sales guided to 19,500-20,500 tU (50.7-53.3M lbs), of which KAP sales 13,100-14,100 tU",
+      "icon": "BarChart3",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "State Ownership",
+      "value": "75%",
+      "label": "Samruk-Kazyna holds 75%; the 25% free float trades as global depositary receipts on the London Stock Exchange and AIX",
+      "icon": "Landmark",
+      "color": "#8b5cf6"
+    }
+  ],
+  "moat": {
+    "description": "Kazatomprom is the world's largest uranium producer and its lowest-cost one, mining shallow, permeable sandstone in the Chu-Sarysu and Syrdarya basins by in-situ recovery under subsoil use agreements granted by the Kazakh state, which owns 75% of the company through Samruk-Kazyna. That combination — the best ISR orebodies on earth held by an entity the state controls — is the hardest regulatory lock-in in the industry and simultaneously its central risk. The moat also demonstrably fails to convert into price: KAP realized $61.33/lb in Q1 2026 while average month-end spot ran at $88.49/lb, so the largest producer in the market captures roughly 69% of the price it sets.",
+    "analysisTitle": "The Best Orebodies, Owned by a State",
+    "analysisSummary": "Kazatomprom's position rests on **geology and sovereign grant, and it stops precisely where pricing power would begin**:",
+    "analysisPoints": [
+      {
+        "title": "Subsoil Rights No Competitor Can Obtain",
+        "text": "Kazatomprom's deposits are granted by the Republic of Kazakhstan under subsoil use agreements to a company the state owns three-quarters of. There is no commercial process by which a rival acquires the Chu-Sarysu or Syrdarya assets — they are not for sale, and the counterparty issuing the rights is also the controlling shareholder. Layered on top is the geology itself: shallow, permeable, well-understood roll-front mineralisation that makes in-situ recovery cheaper here than anywhere else, giving KAP the lowest cash cost position in the industry and the ability to remain profitable at prices that shut Western mines. Q1 2026 production rose 9% to 6,144 tU on a 100% basis and 10% to 3,247 tU attributable."
+      },
+      {
+        "title": "Scale That Sets the Market — Which Is Not the Same as Pricing Power",
+        "text": "At 27,500-29,000 tU of 2026 guided production on a 100% basis and 14,500-15,500 tU attributable, Kazatomprom is the marginal decision-maker for global supply: its choice to trim 2026 output after a 13% increase in 2025 moves the world balance in a way no other producer's does. But the contract book converts almost none of that influence into realized price. Q1 2026's realized $61.33/lb — up 12% year-on-year — landed roughly 31% below the $88.49/lb average month-end spot, because sales are struck on spot-linked formulas with discounts and lags rather than on the floor-and-ceiling structures Cameco uses. The company that most influences the price captures the least of it."
+      },
+      {
+        "title": "The Control That Protects the Assets Also Claims the Cash Flow",
+        "text": "The 75% Samruk-Kazyna stake is the reason the moat exists and the reason a minority holder cannot rely on it. Capital allocation, production policy and the dividend — recommended at KZT 1,292.27 per ordinary share — are set by a controlling shareholder whose objectives are fiscal and strategic before they are per-share. Sales volumes illustrate how little a minority holder controls: group and KAP volumes fell 40% to 1,535 tU in Q1 2026 purely on the timing of customer delivery requests. Add the routing dependence for exporting product out of a landlocked country, sulphuric acid supply as a recurring physical constraint on wellfield development, and tenge translation on every reported figure, and the equity carries sovereign risk that no orebody quality offsets."
+      }
+    ]
+  },
+  "growth": {
+    "description": "Growth here is a price story, not a volume story — and management has made that explicit by guiding 2026 production down to 27,500-29,000 tU on a 100% basis after 2025 output rose 13%. Volume restraint is the strategy: hold back pounds, let the deficit tighten, and let realized price catch up. The catch-up is what matters, because it is large and measurable. Q1 2026 realized $61.33/lb against $88.49/lb average month-end spot and a term price now at $91.50/lb, an eighteen-year high; closing even half of that 31% gap as legacy contracts roll off is worth more than any plausible increase in tonnes. Consolidated 2026 revenue is guided to KZT 2,200-2,300bn on group sales of 19,500-20,500 tU.",
+    "growthAnalysis": {
+      "cagrEstimate": "8-13%",
+      "cagrBasis": "Anchored on realized price convergence rather than volume, since volume is guided down: Q1 2026 realized price rose 12% YoY to $61.33/lb against an $88.49/lb average month-end spot and a $91.50/lb term price, leaving a ~31% gap that closes as spot-linked legacy contracts roll. Applied to broadly flat guided sales volumes of 19,500-20,500 tU, partial convergence over three to five years implies high-single to low-double-digit USD revenue growth. Reported KZT revenue growth will run above this on tenge translation.",
+      "scoreDerivation": "Base 74 (10.5% midpoint, from realized-price convergence against flat-to-lower guided volumes) + 0 trajectory (price catch-up accelerating, production volume decelerating on the 2026 cut, contracting stable — the terms cancel) + 0 margin (lowest cash costs in the industry, but sulphuric acid constraints and the volume cut offset the realized-price gain; not demonstrably expanding) − 10 high risk (state control, sovereign and export-routing exposure, tenge translation) = 64",
+      "drivers": [
+        {
+          "name": "Realized price convergence",
+          "metric": "Q1 2026 realized $61.33/lb, +12% YoY, against $88.49/lb average month-end spot (+34%) and a $91.50/lb term price at an 18-year high — roughly a 31% gap still to close",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Production volume",
+          "metric": "2026 guidance cut to 27,500-29,000 tU on a 100% basis and 14,500-15,500 tU attributable, following a 13% increase in 2025 — deliberate supply restraint, not capacity loss",
+          "trend": "decelerating"
+        },
+        {
+          "name": "Contracted sales book",
+          "metric": "2026 group sales guided to 19,500-20,500 tU (50.7-53.3M lbs) with KAP sales of 13,100-14,100 tU; Q1 volumes fell 40% to 1,535 tU purely on customer delivery timing",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "market share",
+      "keyRisk": "Kazatomprom is a 75% state-owned company operating in a landlocked country whose export routing has historically depended on Russian infrastructure. A change in subsoil use terms, an export tax, a state-directed diversion of production or cash flow, a tenge devaluation, or a disruption to trans-Caspian logistics would each hit minority holders directly and none of them is priced by looking at the orebody. The recurring sulphuric acid shortages that have already constrained wellfield development are the operational version of the same dependence.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 74,
+    "description": "At $63.20 per GDR the company is worth roughly $16B against 2026 consolidated revenue guidance of KZT 2,200-2,300bn — a mid-teens multiple of earnings for the largest and lowest-cost producer in the industry, with a recommended KZT 1,292.27 per share dividend providing a real yield while waiting. That is not expensive, and the $63.20 price sits roughly two-thirds of the way from the $42 bear case to the $75 base. The reason it is not cheaper is legible: a controlling state shareholder, export routing through a difficult neighbourhood, and a contract book that hands roughly 31% of the spot price back to customers. The uranium exposure is the cheapest available anywhere in the sector; the discount is the price of the jurisdiction.",
+    "valuationNote": {
+      "text": "The single most important line to watch is realized price per pound versus spot. Everything bullish in this case is contained in the gap between Q1 2026's $61.33/lb and the $88.49/lb spot it was earned against — if that gap narrows as contracts roll, earnings rise without a single additional tonne mined; if it persists, KAP remains a high-volume, low-capture producer regardless of where uranium trades. Note also that the GDRs are the 25% free float of a state-controlled company, so liquidity and governance are structurally limited.",
+      "fairValue": "$75"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$42.00",
+      "description": "Sovereign risk crystallises — a change in fiscal or subsoil terms, an export disruption, or a tenge devaluation — while uranium slips toward the $65 range and the realized-price discount to spot stays where it is.",
+      "points": [
+        "The state changes the terms of the bargain: higher mineral extraction tax, an export levy, mandated domestic supply to Kazakhstan's own nuclear programme, or a dividend policy redirected toward the budget — each reduces cash flow to the 25% free float without any change in production or price",
+        "Export routing is disrupted, whether through Russian transit or a trans-Caspian bottleneck, and deliveries are deferred the way Q1 2026's 40% volume decline showed they can be; combined with sulphuric acid shortages constraining wellfield development, output falls below the low end of guidance",
+        "Uranium spot retreats toward $65/lb while KAP's realized price stays anchored near $60/lb by spot-linked formulas with lags and discounts — the discount that costs the company 31% of spot on the way up provides almost no protection on the way down"
+      ]
+    },
+    "base": {
+      "priceTarget": "$75.00",
+      "description": "Realized price converges partway toward spot as legacy contracts roll, volumes hold within guidance, the dividend is sustained, and the equity re-rates modestly without any change in the jurisdictional discount.",
+      "points": [
+        "Realized price climbs from $61.33/lb toward $70-75/lb over 2026-2027 as older spot-linked contracts expire and are replaced at terms struck against a term price now at $91.50/lb; on flat guided volumes of 19,500-20,500 tU that alone lifts revenue and earnings materially",
+        "Production lands within the 27,500-29,000 tU (100% basis) guidance band and the deliberate restraint holds, keeping the global deficit intact rather than flooding a market Kazatomprom is large enough to move on its own",
+        "The KZT 1,292.27 per share dividend recommendation is approved and sustained, and Kazakhstan's fiscal and political settings remain unchanged, so the jurisdictional discount neither widens nor narrows"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$115.00",
+      "description": "Uranium breaks above $120/lb, the contract book reprices toward spot rather than at a discount to it, and Western supply-security demand plus de-risked trans-Caspian logistics compress the jurisdictional discount.",
+      "points": [
+        "Uranium spot exceeds $120/lb and Kazatomprom's contract book reprices toward it — realized price above $95/lb against the industry's lowest cash costs produces operating leverage no Western producer can match, since KAP starts from the lowest cost base and the largest volume",
+        "Trans-Caspian export routing is fully established and Western utilities contract directly for Kazakh pounds as a diversification away from Russian conversion and enrichment; the jurisdiction that currently earns a discount begins to earn a scarcity premium instead",
+        "Kazatomprom lifts production back toward and beyond the upper end of its subsoil use agreement levels into a market bidding for pounds, converting its position as the marginal supplier into both volume and price at the same time — the one configuration in which its scale and its realized price finally point the same way"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — Kazatomprom sells uranium concentrate and fuel-cycle products with no customer-facing interface or workflow to learn; this moat category does not apply."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Five decades of in-situ recovery operating experience across the Chu-Sarysu and Syrdarya basins is real and deep, but the cost advantage originates in the orebodies — shallow, permeable, well-behaved sandstone — rather than in proprietary engineering, and ISR is deliberately the simplest extraction route in uranium, which is why it is the cheapest."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — Kazatomprom controls no unique public data source; this moat category does not apply to a uranium miner."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "The company holds the deepest ISR technical bench in the world by volume of operating experience, and it faces no domestic competition for that labour pool — but the same state control that secures the workforce also means senior appointments follow shareholder policy rather than market competition for talent."
+    },
+    "bundling": {
+      "status": "destroyed",
+      "note": "N/A — Kazatomprom's fuel-cycle activities are vertical extensions rather than a bundle sold to a common buyer, and its core product is fungible U3O8; this moat category does not apply."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Fifty years of wellfield hydrogeology, recovery and resource data across the world's largest ISR uranium district is a substantial private dataset, but it describes deposits the company already holds under exclusive title — it defends existing operations rather than compounding into any new advantage."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "Subsoil use agreements granted by the Republic of Kazakhstan to a company Samruk-Kazyna owns 75% of are the hardest form of lock-in available: the assets cannot be bought, licensed around or competed for, because the entity awarding the rights is also the controlling shareholder — the same fact that makes this moat unassailable is what makes it a sovereign risk."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "N/A — uranium is fungible and every utility relationship is bilateral; Kazatomprom's product does not become more valuable as more buyers use it, so this moat category does not apply."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Multi-year contracts covering guided 2026 group sales of 19,500-20,500 tU embed Kazatomprom as a default supplier to utilities across China, Europe and North America, and switching away from the largest and cheapest source is not casual — but the embedding produces volume rather than price, as the Q1 2026 realized $61.33/lb against $88.49/lb spot demonstrates."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — Kazatomprom is not the authoritative record for any business function; this moat category does not apply to a uranium miner."
+    },
+    "verdict": "Every one of Kazatomprom's moats is geological, regulatory or contractual, so AI presents no disruption path, and the company is a volume beneficiary of data centre electricity demand tightening the market it supplies. The exposures that actually govern the equity are entirely political: a controlling state shareholder, subsoil rights that the same shareholder grants, export routing through contested infrastructure, and a contract book that converts market-setting scale into roughly 69% of the spot price."
+  },
+  "lastAnalyzed": "July 30, 2026"
+}
