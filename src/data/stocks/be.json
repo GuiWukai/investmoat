@@ -1,0 +1,220 @@
+{
+  "slug": "be",
+  "ticker": "BE",
+  "name": "Bloom Energy Corporation",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "BE"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$48B"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Industrials | On-Site Power",
+      "color": "primary"
+    },
+    {
+      "label": "Narrow Technical Moat",
+      "color": "warning"
+    },
+    {
+      "label": "Supply-Chain Risk",
+      "color": "danger"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "Q2 2026 Revenue",
+      "value": "$1.07B",
+      "label": "+165.5% YoY vs. $401.2M — first billion-dollar quarter, against ~$827M consensus; product revenue $935.4M, +215.4%",
+      "icon": "Zap",
+      "color": "#10b981"
+    },
+    {
+      "title": "Total Backlog",
+      "value": "~$20B",
+      "label": "~$6B product (up ~2.5× YoY) + ~$14B service under 10–15 year contracts; management says backlog is now growing faster than revenue, with visibility on 25 GW of deployments",
+      "icon": "BarChart",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "Margin Inflection",
+      "value": "33.4%",
+      "label": "GAAP gross margin, +668bps from 26.7%; GAAP operating income $239.6M vs. $28.6M; FY26 non-GAAP operating income guided to $800–900M (~21%)",
+      "icon": "TrendingUp",
+      "color": "#8b5cf6"
+    },
+    {
+      "title": "Scandium Constraint",
+      "value": "~240t",
+      "label": "Hunterbrook (July 8 2026) argues a 5 GW/yr ramp needs ~220t of scandium oxide against ~240t of projected global supply, and names a Chinese supplier as Bloom's largest; Bloom calls the report false and misleading and says supply is sufficient and not China-dependent",
+      "icon": "Layers",
+      "color": "#ef4444"
+    }
+  ],
+  "moat": {
+    "description": "The only commercial-scale solid-oxide fuel cell manufacturer, monetising a permitting and time-to-power advantage over gas turbines plus an exclusive 10–15 year service annuity on every unit it installs — a real but narrow moat resting on process IP in a physical supply chain rather than on network or data effects.",
+    "analysisTitle": "The Speed-to-Power Moat",
+    "analysisSummary": "Bloom's durability comes from **being the fastest legally-permittable way to put firm power on a data centre site**, not from anything a customer would find hard to leave once the contract is up:",
+    "analysisPoints": [
+      {
+        "title": "Non-Combustion Permitting",
+        "text": "Bloom's Energy Servers convert natural gas, RNG or hydrogen electrochemically rather than by combustion, so they emit no NOx, SOx or particulates and can be air-permitted in districts where a gas turbine cannot be sited at all. Combined with factory-built modularity, that compresses time-to-power to months against grid interconnection queues measured in years and gas turbine lead times of roughly three years as of spring 2026. This is regulatory arbitrage rather than a patent, and it is the moat most exposed to policy: it narrows if turbine permitting is fast-tracked for data centres, and it inverts if the natural-gas feedstock itself draws carbon rules."
+      },
+      {
+        "title": "Exclusive Service Annuity",
+        "text": "Only Bloom can service Bloom stacks, and every system ships under a 10–15 year service agreement — which is why ~$14B of the ~$20B backlog is service rather than product. Mid-contract switching means rebuilding a site's entire power plant, so the installed base compounds into a genuine annuity. The qualifier is that the annuity's economics are priced off Bloom's own estimates of stack useful life, a variable the company names as a risk factor in its own filings and against which warranty reserves are set."
+      },
+      {
+        "title": "Only Commercial-Scale SOFC Manufacturer",
+        "text": "Twenty-five years and billions in R&D have left Bloom as the only company shipping solid-oxide fuel cells at gigawatt scale — GE Vernova classified SOFC/SOEC as a 'beyond-2028' project at its December 2025 investor update, and Bloom's own developer survey ranks SOFC first among on-site options at 47% adoption versus 38% for reciprocating gas engines. But this is manufacturing process IP inside a physical supply chain, not a compounding data or network asset: a well-capitalised entrant can replicate it given roughly five years, and the scandium question demonstrates that the process depends on a materials input Bloom does not control."
+      }
+    ]
+  },
+  "growth": {
+    "description": "Q2 2026 (reported July 28 2026) was the inflection the bull case needed: revenue of $1,065.4M, up 165.5% from $401.2M, the first billion-dollar quarter and roughly $240M ahead of the ~$827M consensus. Product revenue drove it at $935.4M (+215.4%), GAAP gross margin expanded 668bps to 33.4%, GAAP operating income went from $28.6M to $239.6M, non-GAAP EPS came in at $0.78 against ~$0.41 expected, and free cash flow was $175M. Management raised FY2026 revenue guidance to $3.9–4.2B from $3.4–3.8B — roughly 100% growth on FY2025's $2.02B — with non-GAAP operating income of $800–900M and non-GAAP EPS of $2.55–2.85, and stated the guide does not depend on any single project. The demand side is now financed rather than aspirational: Brookfield expanded its framework fivefold to up to $25B in June 2026, an IDF/Oaktree/MUFG/Morgan Stanley consortium committed $2.6B, AEP contracted $2.65B for up to 1 GW, and Oracle expanded to up to 2.8 GW. Management claims visibility on 25 GW of deployments and says it is not capacity-constrained. That last claim is the one the market is not paying for, and the next test of it is the Q3 2026 print.",
+    "growthAnalysis": {
+      "cagrEstimate": "30–40%",
+      "scoreDerivation": "Base 91 (35% midpoint 3–5 year CAGR off a ~$4.05B FY2026 base) + 3 two of three drivers accelerating + 4 margins expanding (GAAP gross margin 26.7% → 33.4% YoY, operating margin 7% → 22%) + 4 both TAM expansion and share capture − 10 high key-risk severity (scandium ceiling on the ramp plus AI-capex lumpiness) = 92",
+      "drivers": [
+        {
+          "name": "AI Data Center On-Site Power",
+          "metric": "Q2 product revenue $935.4M (+215.4% YoY); product backlog ~$6B, up ~2.5× YoY; all major US hyperscalers plus more than a dozen neoclouds, AI labs and colocation operators validated",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Third-Party Financed Deployment",
+          "metric": "Brookfield framework expanded 5× to up to $25B (June 2026, from $5B in October 2025); $2.6B consortium commitment from IDF, Oaktree, MUFG and Morgan Stanley; AEP $2.65B for up to 1 GW; Oracle expanded to up to 2.8 GW",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Service Annuity",
+          "metric": "~$14B service backlog under 10–15 year contracts against a growing installed base; service revenue $69M in Q2 vs. $54.4M a year earlier (+27%), lagging installs by design",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "The ramp is capped by scandium supply, not by demand. Hunterbrook's July 8 2026 report argues Bloom's 5 GW/year ambition would require roughly 220 tonnes of scandium oxide against roughly 240 tonnes of projected global supply, and names Hunan Oriental Scandium as Bloom's largest supplier; Bloom responded that the report is false and misleading and that its scandium supply covers current production and the existing backlog and is not dependent on China. The falsifiable test is throughput rather than rhetoric: if Bloom cannot demonstrate shipments consistent with a greater-than-2 GW/year run-rate by the Q4 2026 print, or discloses a scandium-linked cost or capacity constraint, the 30–40% CAGR is unreachable no matter how large the ~$20B backlog gets. The second-order version is worse than the first: reducing scandium loading to stretch supply trades directly against stack life, which is precisely the variable the 10–15 year service contracts and warranty reserves are priced against.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 73,
+    "description": "At the $163.75 close on July 29 2026 the stock sits less than halfway through a violent round trip — it traded as high as $351.28 within the last 52 weeks and in the $290s earlier in July, against a 52-week low of $32.52. The Q2 beat and guidance raise did not arrest it: shares opened ~11% higher and closed down ~2% on the day, which is the market repricing the multiple rather than the numbers. On the raised guide BE trades at ~11.9× FY2026 sales and ~61× FY2026 non-GAAP EPS with a roughly net-cash balance sheet ($2.67B cash against ~$2.48B recourse debt) — expensive in absolute terms, but the cheapest it has been on forward earnings all year because guidance rose while the price fell. Price sits ~18% below the $200 base case and ~105% above the $80 bear case, which puts the static valuation score at 73. The framing to keep: this is no longer a cash-burning venture — Q2 delivered $175M of free cash flow and $239.6M of GAAP operating income — so the bear case is a growth-rate and multiple story, not a solvency one. What it is not yet is a moat story, and the scandium question means the ramp underwriting the base case is not fully de-risked.",
+    "peAnalysis": {
+      "asOf": "July 30, 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "N/M",
+          "note": "GAAP earnings only inflected positive during 2026 — Q2 GAAP EPS $0.62 vs. $(0.18) a year earlier"
+        },
+        {
+          "label": "Forward P/E (FY26 non-GAAP)",
+          "value": "~61×",
+          "note": "$163.75 / $2.70 midpoint of the $2.55–2.85 FY2026 non-GAAP EPS guide"
+        },
+        {
+          "label": "Price / Sales (FY26)",
+          "value": "~11.9×",
+          "note": "~$48B market cap / $4.05B midpoint of the $3.9–4.2B FY2026 revenue guide"
+        },
+        {
+          "label": "EV / Sales (FY26)",
+          "value": "~11.8×",
+          "note": "$2.67B cash roughly offsets ~$2.48B recourse debt at June 30 2026, so EV ≈ market cap"
+        },
+        {
+          "label": "Price / FY26 op. income",
+          "value": "~57×",
+          "note": "~$48B / $850M midpoint of the $800–900M non-GAAP operating income guide"
+        },
+        {
+          "label": "EV / Total Backlog",
+          "value": "~2.4×",
+          "note": "a weak anchor — roughly $14B of the ~$20B is service revenue spread across 10–15 year contracts"
+        }
+      ],
+      "summary": "Every multiple here is a growth multiple, and the honest reading is that BE is priced for the ramp to continue rather than for the business as it stands. ~61× forward non-GAAP earnings and ~11.9× forward sales only work if FY2027 revenue lands near $6B; at a flat $5B the same multiples imply a share price closer to the bear case. Two things separate this from the usual AI-adjacent speculation. First, the balance sheet is roughly net cash and Q2 generated $175M of free cash flow, so dilution and covenant risk — the reasons leveraged AI-infrastructure names derate hardest — are largely absent. Second, the margin structure is genuinely inflecting rather than promised: 668bps of GAAP gross margin expansion and a 7%→22% operating margin move in a single year. What the multiple does not compensate for is moat quality. A composite moat score of 72 against a growth score of 92 says the market is paying an infrastructure multiple for what is still a single-product hardware manufacturer whose principal advantages — permitting speed and a service annuity — are competitive rather than structural. EV/backlog looks reassuring at ~2.4× until you note that most of the backlog is service revenue recognised over 15 years, priced off Bloom's own stack-life assumptions."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$80",
+      "description": "AI data centre power procurement digests through 2027 as interconnection queues and turbine lead times shorten; product backlog converts more slowly than the 2026 exit rate implies; the AI-power complex derates and BE compresses to a mid-single-digit forward sales multiple.",
+      "points": [
+        "Hyperscalers pause incremental on-site power commitments in 2027 as grid interconnection timelines and GE Vernova / Siemens / Mitsubishi turbine lead times shorten, and the ~$6B product backlog converts at a pace that leaves FY2027 revenue near $5B instead of $6B+",
+        "A scandium-linked constraint surfaces in the ramp — either shipments stall below a 2 GW/year run-rate, or Bloom qualifies a lower-loading chemistry and revises stack-life assumptions down, forcing higher warranty reserves against the ~$14B service backlog and compressing service margin",
+        "The multiple compresses to ~5–6× forward sales as investors stop paying infrastructure multiples for single-product hardware; on ~$5B FY2027 revenue that is a ~$25–30B market cap even with revenue still growing 20%+",
+        "Competitive encroachment arrives from two sides at once: Caterpillar and Cummins undercut on capex with natural-gas gensets for latency-tolerant load, while GE Vernova pulls its SOFC/SOEC programme forward from 'beyond-2028' and validates the category without Bloom capturing it"
+      ]
+    },
+    "base": {
+      "priceTarget": "$200",
+      "description": "FY2026 lands inside the raised $3.9–4.2B guide with non-GAAP operating income of $800–900M; the AEP and Oracle commitments convert on schedule through 2027; the scandium question resolves benignly and the stock holds a mid-40s forward multiple.",
+      "points": [
+        "FY2026 revenue lands in the $3.9–4.2B guided range with non-GAAP EPS of $2.55–2.85, and FY2027 revenue reaches roughly $6B as the AEP 1 GW and Oracle up-to-2.8 GW commitments convert alongside the Brookfield-financed pipeline",
+        "Gross margin holds in the low-to-mid 30s and operating margin in the low 20s as the manufacturing ramp absorbs fixed cost, taking FY2027 non-GAAP EPS to roughly $4.25 with free cash flow positive every quarter",
+        "Bloom resolves the supply-chain overhang on the record — disclosing diversified non-Chinese scandium sourcing or a qualified lower-loading chemistry with stack-life guidance intact — and the stock settles at ~45× forward earnings rather than the ~61× it carried into the Q2 print"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$320",
+      "description": "Bloom converts the 25 GW pipeline faster than the backlog implies as 30–40 GW of AI data centre capacity comes online in 2027; the financing partnerships remove the customer balance-sheet constraint entirely; the market re-rates BE as power infrastructure rather than a fuel-cell venture.",
+      "points": [
+        "Deployments accelerate ahead of the backlog schedule as the 30–40 GW of new AI data centre capacity management expects to energise in 2027 hits a grid that cannot serve it, taking FY2027 revenue above $7B on a run-rate approaching 3 GW/year",
+        "The $25B Brookfield framework and the $2.6B IDF/Oaktree/MUFG/Morgan Stanley consortium remove the customer balance-sheet constraint outright, letting Bloom sell firm power to neoclouds and AI labs that could never fund their own generation — the buyer pool widens well beyond the hyperscalers",
+        "Operating margin pushes toward the mid-20s on scale while the service annuity compounds off a much larger installed base, lifting non-GAAP EPS above $5.50 and supporting a ~55× multiple as the market reclassifies BE from fuel-cell equipment to power infrastructure"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "Not applicable — Bloom sells industrial power hardware to data centre developers and utilities; there is no trained user interface or workflow to relearn."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Twenty-five years of solid-oxide electrolyte chemistry, stack design and manufacturing process IP make Bloom the only company shipping SOFC at gigawatt scale, but this is physical process know-how a well-capitalised entrant could replicate over roughly five years — not software logic that compounds."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Not applicable — Bloom derives no advantage from access to or aggregation of a public data source."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Bloom's engineering team is the only one anywhere with experience manufacturing and operating solid-oxide fuel cells at gigawatt scale, though turbine incumbents and well-funded entrants are now competing for the same ceramics and stack engineers."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Bloom sells the Energy Server together with installation, a 10–15 year service agreement and — via Brookfield and the $2.6B financing consortium — the project capital, so the customer buys an outcome rather than a box; it is one product line plus wrappers, not a genuine multi-product suite."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Fifteen-plus years of fleet degradation and operating data across the installed base is what lets Bloom price stack life, warranty reserves and long-term service contracts at all — a real asset, and one no competitor can shortcut, but modest in scale next to the data moats this framework was built to measure."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "Because the Energy Server does not combust fuel it emits no NOx, SOx or particulates, so it clears air permits in districts where gas turbines cannot be sited — a genuine regulatory advantage, but a two-edged one that narrows if turbine permitting is fast-tracked for data centres and inverts if the natural-gas feedstock draws carbon rules."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "Not applicable — a Bloom installation at one site creates no value for any other customer; electrons are fungible and there is no cross-customer effect."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Once commissioned, a Bloom Server is the site's power plant under a 10–15 year exclusive service contract that only Bloom can perform; switching mid-life means rebuilding the generation asset, which is why the service backlog (~$14B) is more than twice the product backlog."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "Not applicable — Bloom is not the authoritative record for any critical customer business function."
+    },
+    "verdict": "The AI-resilient side carries this moat: transaction embedding is strong (a 10–15 year exclusive service contract on a physical power plant is about as AI-proof as a switching cost gets), and the fleet degradation data and non-combustion permitting position are both intact and largely indifferent to what models can do. The AI-vulnerable side is where the fragility sits — Bloom's process IP, engineering scarcity and bundle are all replicable by a determined entrant with capital and five years, and none of them strengthen as AI improves. The result is a moat score of 72 against a growth score of 92: the investment case is a demand-and-execution case, not a durability case, and it is properly sized as such."
+  },
+  "lastAnalyzed": "July 30, 2026"
+}

@@ -128,6 +128,7 @@ import qbts from './qbts.json';
 import qubt from './qubt.json';
 import disney from './disney.json';
 import okta from './okta.json';
+import be from './be.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -258,6 +259,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   qubt: qubt as StockAnalysisData,
   disney: disney as StockAnalysisData,
   okta: okta as StockAnalysisData,
+  be: be as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
