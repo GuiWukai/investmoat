@@ -1,0 +1,193 @@
+{
+  "slug": "uec",
+  "ticker": "UEC",
+  "name": "Uranium Energy Corp",
+  "titleColor": "#2f8f4e",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "UEC"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$4.9B"
+    },
+    {
+      "label": "Fiscal Year End",
+      "value": "July 31"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Hard Assets | US ISR Uranium",
+      "color": "primary"
+    },
+    {
+      "label": "Domestic Supply Policy",
+      "color": "success"
+    },
+    {
+      "label": "Early Ramp | Nil Revenue",
+      "color": "warning"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "Licensed Capacity",
+      "value": "~12M lbs/yr",
+      "label": "Across the Wyoming hub (Irigaray CPP, Christensen Ranch) and South Texas (Hobson, Burke Hollow, Palangana)",
+      "icon": "Layers",
+      "color": "#2f8f4e"
+    },
+    {
+      "title": "Q3 FY2026 Production",
+      "value": "32,195 lbs",
+      "label": "Christensen Ranch, at $54.61/lb total cost including $46.69/lb cash cost — around 1% of licensed capacity on an annualised basis",
+      "icon": "Pickaxe",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "Uranium Inventory",
+      "value": "1.46M lbs",
+      "label": "Valued at $127M at market prices as of April 30, 2026, excluding 276,516 lbs of precipitated and drummed U3O8 at the Irigaray CPP",
+      "icon": "Coins",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "Liquid Assets",
+      "value": "$794M",
+      "label": "No debt; Q3 FY2026 revenue was nil as the company held product back rather than selling into the spot market",
+      "icon": "DollarSign",
+      "color": "#8b5cf6"
+    }
+  ],
+  "moat": {
+    "description": "Uranium Energy Corp's moat is a stack of US in-situ recovery licences — roughly 12 million pounds a year of permitted capacity across the Wyoming hub-and-spoke system at Irigaray and Christensen Ranch and the South Texas system at Hobson, Burke Hollow and Palangana — held at a moment when US policy is actively displacing Russian and Kazakh supply. It is a real barrier to a new entrant and almost no barrier at all against the peers who hold equivalent licences on equivalent sandstone. ISR is the cheapest and most replicable way to produce uranium; the assets are ordinary-grade roll-front deposits, not Athabasca orebodies, and the company deliberately sells little of what it makes.",
+    "analysisTitle": "Permitted Capacity, Not Scarce Geology",
+    "analysisSummary": "UEC's durability comes from **licences and a processing hub rather than from the rock or the customer**:",
+    "analysisPoints": [
+      {
+        "title": "The Licence Stack Is the Barrier",
+        "text": "NRC and state authorisations for in-situ recovery wellfields and central processing plants take years to obtain and are the binding constraint on US uranium supply, not the resource. UEC holds roughly 12 million pounds per year of licensed capacity across two fully permitted hub-and-spoke systems — Irigaray as the Wyoming central plant with Christensen Ranch feeding it, and Hobson in South Texas with Burke Hollow and Palangana as satellites. The hub structure matters: once a central plant is licensed, adding a satellite wellfield is a materially shorter approval than greenfielding a new facility. Against a would-be new entrant, this is a five-to-ten year head start."
+      },
+      {
+        "title": "But Every ISR Peer Holds the Same Kind of Barrier",
+        "text": "The moat does not discriminate against the companies UEC actually competes with. enCore, Ur-Energy and Peninsula hold licensed ISR capacity on the same Wyoming and Texas roll-front trends, running the same wellfield chemistry into the same kind of central plant. ISR is the lowest-capital, lowest-complexity extraction route in uranium, which is exactly why it is the most replicable — there is no equivalent of Arrow's 2.37% grade or Cameco's Athabasca operating know-how to defend. What UEC has is a good position in a crowded structural niche, and the resource-quality moat that would make it a differentiated producer is absent."
+      },
+      {
+        "title": "Deliberately Unembedded in Customer Fuel Plans",
+        "text": "UEC has chosen to stay largely uncontracted to keep exposure to a rising spot price, and Q3 FY2026 shows what that means: revenue of nil, no pounds sold, 1,456,000 lbs of inventory carried at $127M of market value and a $52.3M net loss. As a market call it may prove correct — spot at roughly $86/lb against a $46.69/lb quarterly cash cost is a real margin. As a moat it is the opposite of one: the company is embedded in no utility's fuel plan, has no contract book to price off, and carries full spot exposure in both directions. Cameco's ~230 million pounds of committed supply is the structural advantage UEC has explicitly declined to build."
+      }
+    ]
+  },
+  "growth": {
+    "description": "The ramp is real and it is very early. Q3 FY2026 (quarter ended April 30, 2026) produced 32,195 lbs at Christensen Ranch at a $54.61/lb total cost, taking cumulative production there to roughly 277,000 lbs at a $39.30/lb total cost — up from about 199,000 lbs six months earlier. Burke Hollow entered production during the period, the largest greenfield ISR project to start up in the United States in over a decade. Set against roughly 12 million pounds a year of licensed capacity, a quarterly rate of 32,195 lbs is approximately 1% utilisation, and Q3 revenue was nil because the company sold nothing. The growth case is the distance between 1% and anything approaching nameplate; the risk is that the gap has been priced as though it were already closed.",
+    "growthAnalysis": {
+      "cagrEstimate": "25-35%",
+      "cagrBasis": "Measured on produced pounds, the only series currently moving: cumulative Christensen Ranch output went from ~199,000 lbs at October 31, 2025 to ~277,000 lbs at April 30, 2026, with Burke Hollow added as a second producing system during Q3 FY2026. Revenue is not usable as a basis — it was nil in Q3 FY2026 by choice. The stated range is well below the arithmetic ramp rate off a ~0.13 Mlb/yr annualised base toward multi-million-pound capacity, because that arithmetic describes a start-up rather than a rate the business can sustain.",
+      "scoreDerivation": "Base 90 (ramp off a near-zero production base; the curve saturates above 30% and cannot distinguish a start-up from a compounder) + 3 trajectory (Wyoming wellfields and Burke Hollow both accelerating; sales flat at zero) − 4 margin (Q3 total cost of $54.61/lb sits above the $39.30/lb cumulative average — unit costs are rising on the ramp, not falling) − 10 high risk (nil revenue, ~1% capacity utilisation, valuation carrying the gap) = 79",
+      "drivers": [
+        {
+          "name": "Wyoming hub ramp",
+          "metric": "Christensen Ranch cumulative production ~277,000 lbs at April 30, 2026 (from ~199,000 lbs at October 31, 2025) at a $39.30/lb cumulative total cost; additional header houses in wellfield 11 approved and operating",
+          "trend": "accelerating"
+        },
+        {
+          "name": "South Texas start-up",
+          "metric": "Burke Hollow commenced production — the largest US greenfield ISR project to enter production in more than a decade — feeding the Hobson central plant alongside Palangana",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Sales and revenue",
+          "metric": "Nil revenue and no pounds sold in Q3 FY2026; 1.46M lbs of inventory held at $127M market value against a $52.3M quarterly net loss and $794M of liquid assets with no debt",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "The equity capitalises roughly 12 million pounds a year of licensed capacity while the company delivers about 1% of it and sells none of it. If wellfield ramp rates, head grades or recovery at Christensen Ranch and Burke Hollow hold output in the hundreds of thousands of pounds rather than the millions — and Q3's $54.61/lb total cost against a $39.30/lb cumulative average is evidence that scaling is getting more expensive, not less — then a uranium price that stops rising removes the only remaining support for the valuation.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "compressing"
+    }
+  },
+  "valuation": {
+    "score": 64,
+    "description": "At ~$9.44 the equity is worth about $4.9B on roughly 495M shares, against tangible backing of about $920M — $794M of liquid assets plus $127M of inventory at market. That leaves roughly $4B of value attributed to licensed capacity that is currently producing at around 1% of nameplate and generating no revenue at all. The position is genuinely well funded and carries no debt, and the unit economics work whenever pounds are actually sold: a $46.69/lb quarterly cash cost against roughly $86/lb spot is a wide margin. But the price already assumes the ramp succeeds, so a $9.44 quote sitting just above the $9.00 base case is the accurate reading — there is no discount here to compensate for the execution still outstanding.",
+    "valuationNote": {
+      "text": "Earnings multiples are meaningless for UEC in FY2026 — revenue was nil in Q3 and the net loss was $52.3M — so the valuation reduces to two questions: what the licensed capacity is worth per pound of eventual annual output, and how long the market will keep paying for capacity that is not yet converting. The metric to track quarterly is pounds produced against the ~12M lbs/yr licensed figure, and whether cost per pound falls back toward the $39.30/lb cumulative average or keeps drifting up toward the $54.61/lb reported in Q3.",
+      "fairValue": "$9.00"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$4.50",
+      "description": "The ramp stays measured in hundreds of thousands of pounds, uranium slips back toward the $65-70 range, and the roughly $4B of capacity option value above tangible backing deflates toward asset value.",
+      "points": [
+        "Wellfield performance at Christensen Ranch and Burke Hollow disappoints on head grade or recovery and annual output stalls below 1M lbs through FY2027-2028; cost per pound stays near or above the $54.61/lb recorded in Q3 FY2026 rather than reverting to the $39.30/lb cumulative average",
+        "Uranium spot retreats to $65-70/lb as Kazakh volumes normalise; the 1.46M lb inventory that carried $127M of market value is marked down, the decision to hold rather than sell reads as a mistake, and the spot-exposed strategy that has no contract book to fall back on becomes the liability it always risked being",
+        "The market stops capitalising licensed capacity at all and prices UEC near the ~$920M of liquid assets and inventory plus a modest premium — roughly the $4.50 level — as US policy support proves insufficient to accelerate physical delivery"
+      ]
+    },
+    "base": {
+      "priceTarget": "$9.00",
+      "description": "Production scales to a few million pounds a year across the two hubs over FY2027-2028, uranium holds the mid-$80s, and the market keeps paying roughly today's capacity premium — validated but not expanded.",
+      "points": [
+        "Combined Wyoming and South Texas output reaches 1.5-2.5M lbs/yr by FY2028 as additional header houses come online at Christensen Ranch and Burke Hollow ramps toward design rate; cost per pound settles back into the $35-45 band as fixed plant costs spread over more volume",
+        "UEC begins converting inventory and production into sales at spot-linked prices in the $80s, turning a nil-revenue quarter into a genuine revenue line and validating the decision to hold product through the ramp; the $794M liquid position funds the build-out without dilution or debt",
+        "The Roughrider pre-feasibility study in Saskatchewan — supported by the 34,000 m core drilling programme started in October 2025 — lands with economics that give the company a second, higher-grade leg outside the US ISR base"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$18.00",
+      "description": "Uranium breaks above $120/lb while UEC converts a meaningful share of its licensed capacity into delivered pounds, and an uncontracted spot-exposed producer becomes the highest-torque way to own the price.",
+      "points": [
+        "Output scales to 4-6M lbs/yr across the Wyoming and South Texas hubs by FY2029 against roughly 12M lbs/yr of licensed capacity; at $120/lb spot and cash costs in the $35-45 range the uncontracted position that looks like a weakness at $86/lb becomes the single largest source of upside per pound in the US producer group",
+        "US policy hardens from preference into procurement — strategic uranium reserve purchases, domestic-content requirements for utility fuel, or federal offtake — and UEC's status as the largest holder of permitted US ISR capacity converts directly into contracted volume at premium domestic pricing",
+        "Roughrider's pre-feasibility study establishes an Athabasca-grade development asset alongside the ISR platform, and the market re-rates UEC from a US ISR ramp story to a diversified producer-developer with both a spot-levered production base and a high-grade growth project"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — UEC sells U3O8 concentrate with no product interface or customer workflow to learn; this moat category does not apply to a uranium producer."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "In-situ recovery wellfield design, lixiviant chemistry and the hub-and-spoke central-processing model at Irigaray and Hobson are demonstrated operating capability — UEC has restarted production and brought Burke Hollow online — but ISR is deliberately the simplest and lowest-capital extraction route in uranium, and enCore, Ur-Energy and Peninsula run materially the same playbook on the same trends."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — UEC controls no unique public data source; this moat category does not apply to a uranium producer."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "ISR hydrogeologists, wellfield engineers and NRC- and state-licensed radiation safety staff are a thin domestic pool and UEC has assembled enough of one to restart two systems, but the entire US ISR sector is hiring from the same bench during the same ramp."
+    },
+    "bundling": {
+      "status": "destroyed",
+      "note": "N/A — UEC sells a single fungible commodity with no adjacent products or services to bundle; this moat category does not apply."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Decades of resource delineation and hydrogeological data across the Wyoming and South Texas roll-front districts, plus the Roughrider drill database now being extended by a 34,000 m core programme, constitute a substantial private dataset — but it describes ordinary-grade sandstone deposits of a type that is well mapped across the Western US, not a uniquely irreplicable orebody."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "NRC and state licences covering roughly 12M lbs/yr of ISR capacity across two permitted hub-and-spoke systems take years to obtain and are the real constraint on US supply, so the barrier against a new entrant is genuine — but it is not a barrier against the peer group, several of whom hold equivalent authorisations, so it protects the niche rather than UEC's position within it."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "N/A — uranium concentrate is fungible and every utility relationship is bilateral; UEC's product does not become more valuable as more buyers use it, so this moat category does not apply."
+    },
+    "transactionEmbedding": {
+      "status": "weakened",
+      "note": "UEC has deliberately stayed largely uncontracted to retain spot exposure, and Q3 FY2026 recorded nil revenue with no pounds sold — the company is embedded in no utility's fuel plan, holds no material contract book, and has explicitly traded the switching-cost advantage that Cameco's ~230M lbs of committed supply represents for price optionality."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — UEC is not the authoritative record for any business function; this moat category does not apply to a uranium producer."
+    },
+    "verdict": "UEC's moats are regulatory and physical, so AI cannot erode them, and the company benefits at one remove from data centre electricity demand tightening the uranium market it sells into. The binding exposures are entirely non-technological: a licence stack that its direct peers can and do match, and a deliberately empty contract book that leaves the equity with no floor other than the spot price."
+  },
+  "lastAnalyzed": "July 30, 2026"
+}

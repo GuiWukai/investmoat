@@ -1,0 +1,193 @@
+{
+  "slug": "nxe",
+  "ticker": "NXE",
+  "name": "NexGen Energy Ltd.",
+  "titleColor": "#0f9b8e",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "NXE"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$6.1B"
+    },
+    {
+      "label": "Stage",
+      "value": "Pre-production"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Hard Assets | Uranium Development",
+      "color": "primary"
+    },
+    {
+      "label": "Fully Permitted",
+      "color": "success"
+    },
+    {
+      "label": "Single Asset | No Revenue",
+      "color": "warning"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "Arrow Probable Reserves",
+      "value": "240M lbs",
+      "label": "4.57 Mt at 2.37% U3O8 — roughly two orders of magnitude above the global average grade",
+      "icon": "Gem",
+      "color": "#0f9b8e"
+    },
+    {
+      "title": "Federal Licence",
+      "value": "Mar 2026",
+      "label": "CNSC environmental assessment approval and Licence to Prepare Site and Construct — first greenfield Saskatchewan uranium project fully approved in over two decades",
+      "icon": "CheckCircle",
+      "color": "#059669"
+    },
+    {
+      "title": "Rook I Pre-production Capex",
+      "value": "C$2.2B",
+      "label": "Construction from summer 2026 on a four-year build; LOM cash operating cost C$13.86/lb (US$9.98/lb)",
+      "icon": "Pickaxe",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "Cash Position",
+      "value": ">$1.1B",
+      "label": "After a C$950M global equity raise — the largest in uranium sector history — construction is funded without a financing gap",
+      "icon": "Coins",
+      "color": "#3b82f6"
+    }
+  ],
+  "moat": {
+    "description": "NexGen's moat is a permit and an orebody, not a business. The Arrow deposit at Rook I carries 240 million pounds of probable reserves at 2.37% U3O8 — a grade no undeveloped uranium project on earth matches — and in March 2026 the Canadian Nuclear Safety Commission issued the environmental assessment approval and Licence to Prepare Site and Construct, making Rook I the first greenfield uranium mine and mill in Saskatchewan to clear both provincial and federal review in more than twenty years. What NexGen does not yet have is an operating record, a revenue line, or a contract book: 10 million pounds of committed offtake covers roughly 7% of the first five years of nameplate output.",
+    "analysisTitle": "A Permit and an Orebody",
+    "analysisSummary": "NexGen's durability rests on **two assets that cannot be copied and one capability that has never been demonstrated**:",
+    "analysisPoints": [
+      {
+        "title": "The Grade Is the Cost Advantage",
+        "text": "Arrow's 4.57 million tonnes of probable reserves grade 2.37% U3O8, against a global average measured in hundredths of a percent. Grade is what turns into cost: the life-of-mine cash operating estimate is C$13.86/lb (US$9.98/lb), which sits below every meaningful cost curve in the industry and roughly an eighth of the term contract price. The deposit is basement-hosted in the southwestern Athabasca Basin, a district where no discovery of comparable scale and grade has been made since — and where NexGen also holds South Arrow, Harpoon, Bow, Patterson Corridor East and the Cannon area on the same 100%-owned property. A competitor cannot buy this; it would have to find it."
+      },
+      {
+        "title": "The Permit Is a Twenty-Year Barrier",
+        "text": "On March 5, 2026 the CNSC approved the environmental assessment and issued the Licence to Prepare Site and Construct, completing a federal process that followed Saskatchewan's provincial approval. That sequence took over a decade and made NexGen the first company in more than twenty years to hold full provincial and federal authorization for a greenfield uranium mine and mill in the province. This is the hardest barrier in the uranium business and the one that cannot be shortened with capital: a rival starting today would be in hearings into the late 2030s. NexGen then took Final Investment Decision, with construction commencing in summer 2026 — the point past which the project is committed."
+      },
+      {
+        "title": "Nothing Has Been Operated, and Almost Nothing Is Sold",
+        "text": "Against those two assets sits the honest gap. NexGen has never built or run a mine; the C$2.2 billion capital estimate and four-year schedule are engineering studies, not track record, and mine construction is where uranium developers historically destroy value. Commercial commitments are thin: sales agreements total 10 million pounds — 2 million pounds per year across the first five production years, including a five-million-pound offtake with a major U.S. utility — against a facility designed for up to 30 million pounds annually. The remaining ~93% of early output will be sold into whatever market exists in 2030, which means the equity is a leveraged bet on the uranium price as much as on the asset."
+      }
+    ]
+  },
+  "growth": {
+    "description": "There is no revenue to grow. NexGen took Final Investment Decision after the March 2026 federal licence and begins construction in summer 2026 on a four-year build, putting first production in 2030 and the first full year of output in 2031. The published economics — updated at a US$95/lb uranium price — carry an after-tax NPV of C$6.32 billion, a 45% IRR, average annual free cash flow near US$1.93 billion over the first five years and a payback measured at roughly twelve months. Every one of those numbers is conditional on a schedule that has not yet been executed and a uranium price four years out; the term price at US$91.50/lb (an eighteen-year high) is the closest thing to corroboration currently available.",
+    "growthAnalysis": {
+      "cagrEstimate": "30%+",
+      "cagrBasis": "Not a revenue series — NexGen's revenue is nil and stays nil until first production in 2030. The measurable series is the build: C$2.2B of committed pre-production capital against 240 Mlbs of probable reserves and up to 30 Mlbs/yr of nameplate capacity, taking revenue from zero to the ~US$1.93B average annual free cash flow the updated economics model for the first five years. Any rate fitted to a zero base saturates the curve, so the CAGR term is not doing analytical work here — the severe risk discount below is what carries the score.",
+      "scoreDerivation": "Base 90 (step-change from zero revenue to a modelled ~US$1.93B annual FCF; the curve saturates above 30% and cannot resolve a pre-revenue developer) + 3 trajectory (licence granted and construction committed; offtake book doubling — production volume flat at zero until 2030) + 0 margin (no margins exist to trend) − 15 severe risk (single asset, four-year build, no operating history, no revenue, ~93% of early output uncontracted) = 78",
+      "drivers": [
+        {
+          "name": "Rook I construction",
+          "metric": "CNSC licence granted March 5, 2026; FID taken; construction commencing summer 2026 on a four-year build to first production in 2030; C$2.2B (US$1.58B) pre-production capex",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Committed offtake book",
+          "metric": "Doubled to 10M lbs — 2M lbs/yr across the first five production years — including a new 5M lb agreement with a major U.S. utility; covers ~7% of five-year nameplate output",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Production volume",
+          "metric": "Zero pounds produced and zero revenue recognised through FY2029; nameplate capability up to 30M lbs/yr thereafter",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "Rook I is the entire company. A capital overrun or schedule slip on the four-year build — the base case for greenfield mine construction rather than the exception — pushes first production past 2030 and forces a dilutive raise into a weaker market, while ~93% of early output remains exposed to whatever uranium price exists at start-up. There is no second asset, no revenue line and no operating history to absorb any of it.",
+      "keyRiskSeverity": "severe",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 73,
+    "description": "At ~$9.16 the equity is worth roughly $6.1B, against a project NPV of C$6.32B (~US$4.6B at the updated US$95/lb deck) plus over $1.1B of post-raise cash — so the market is already paying approximately full risked NAV four years before first pound. Developers historically trade at 0.5–0.7× NAV through construction and re-rate toward 1.0× as the schedule is proven, which means the usual de-risking premium has been paid up front rather than earned. That is what caps the valuation score despite a $9.16 price sitting well below the $11 base case: the discount to base exists, but it is a discount to a target that already assumes the build goes right.",
+    "valuationNote": {
+      "text": "Standard developer multiples do not apply here — there are no earnings, no revenue and no cash flow until 2030, so every valuation anchor is the project NPV discounted for execution. The single most useful number to watch is not the share price but the capital and schedule variance reported each quarter against the C$2.2B, four-year plan: NAV multiples for uranium developers compress violently on the first missed milestone and expand as commissioning approaches.",
+      "fairValue": "$11"
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$5.00",
+      "description": "Construction runs over budget or behind schedule while uranium slips back toward the $60s, and the market re-prices a pre-revenue single-asset developer from full NAV down to the 0.5× that historically applies through a build.",
+      "points": [
+        "Capital costs on the C$2.2B estimate inflate 30-40% on Athabasca labour, freeze-wall and contractor pricing — the norm for greenfield builds in the district — forcing an equity raise into a falling tape and diluting the >$1.1B cash position that currently makes the project self-funded",
+        "Uranium spot retreats from the mid-$80s toward $60-65/lb as Kazakh volumes normalise and Russian enrichment supply partly returns; the updated economics were struck at US$95/lb, so the NPV supporting today's price compresses materially and the ~93% of uncontracted early output loses its assumed price",
+        "First production slips from 2030 into 2031-2032; with no revenue to bridge, the equity carries four-plus more years of financing and schedule risk and trades on 0.5× risked NAV rather than the ~1.0× embedded today"
+      ]
+    },
+    "base": {
+      "priceTarget": "$11.00",
+      "description": "Construction proceeds broadly on the four-year plan, uranium holds the mid-$80s spot and low-$90s term price, and the market pays a modest premium to NAV as each construction milestone removes risk rather than adds it.",
+      "points": [
+        "Site preparation and early works through 2026-2027 track the C$2.2B budget within a normal contingency band; the >$1.1B post-raise cash position plus project debt covers the build without further equity issuance, and the market's NAV multiple drifts from ~1.0× toward ~1.2× as commissioning becomes visible",
+        "Uranium term price holds at or above the current US$91.50/lb eighteen-year high while spot consolidates in the $80s; NexGen converts a further 10-20M lbs of offtake at market-related pricing with floors, lifting contracted coverage from ~7% toward a quarter of first-five-year output",
+        "Exploration on the 100%-owned Rook I property — Patterson Corridor East, South Arrow, Harpoon — adds resource ounces that extend mine life beyond the current 240M lb reserve without additional permitting, since the site licence already covers the property"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$18.00",
+      "description": "Uranium breaks above $120/lb into the construction window, NexGen contracts the bulk of early output at those prices, and the market capitalises a 30 Mlb/yr producer with the industry's lowest cash cost well ahead of first pound.",
+      "points": [
+        "Uranium spot exceeds $120/lb as reactor restarts, new builds and hyperscaler nuclear demand outrun mine supply; at that price Arrow's US$9.98/lb life-of-mine cash cost implies free cash flow well above the US$1.93B modelled at US$95/lb, and the market prices the 2030 cash flow forward",
+        "Utilities compete for the only large new Western pound available this decade and NexGen contracts 40-60M lbs at market-related pricing with high floors, converting the uncontracted-output risk that caps today's valuation into locked-in economics",
+        "Construction hits milestones early and Western governments formalise uranium as a critical mineral with financing or offtake support for Saskatchewan supply; the market applies a producer multiple rather than a developer NAV discount, and exploration success at Patterson Corridor East adds a second deposit to the licensed footprint"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "N/A — NexGen is a pre-production uranium miner with no product interface or user workflow; there is nothing for a customer to learn and therefore no switching cost, so this moat category does not apply."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "The feasibility engineering for a basement-hosted, high-grade deposit at depth is genuinely specialised work, but NexGen has never built or operated a mine — the C$2.2B capital estimate, the four-year schedule and the ground-freezing and water-management design are studies rather than demonstrated capability, and greenfield mine construction is precisely where uranium developers have historically destroyed capital."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "N/A — NexGen controls no unique public data source; this moat category does not apply to a mine developer."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Athabasca Basin mine builders, CNSC licensing specialists and radiation-safety engineers are a genuinely thin talent pool, and NexGen assembled a team capable of carrying a project through full federal review — but every uranium developer and Cameco itself are bidding for the same people through the construction window."
+    },
+    "bundling": {
+      "status": "destroyed",
+      "note": "N/A — NexGen will sell a single fungible product, U3O8 concentrate, with no adjacent services to bundle; this moat category does not apply."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Over a decade of drilling across the 100%-owned Rook I property produced the definitive geological dataset on Arrow and the surrounding Patterson Corridor East, South Arrow, Harpoon, Bow and Cannon targets, together with the full environmental impact statement and feasibility database that the CNSC licence was granted against — a body of information no competitor can obtain without spending a decade and hundreds of millions of dollars on the same ground."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "The March 2026 CNSC environmental assessment approval and Licence to Prepare Site and Construct, stacked on Saskatchewan's provincial approval, make Rook I the first greenfield uranium mine and mill fully authorized in the province in over twenty years; the process cannot be shortened with capital, so a competitor beginning today would remain in review into the late 2030s."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "N/A — uranium concentrate is a fungible commodity and each utility relationship is bilateral; NexGen's product does not become more valuable as more buyers use it, so this moat category does not apply."
+    },
+    "transactionEmbedding": {
+      "status": "weakened",
+      "note": "Sales commitments total 10M lbs — 2M lbs/yr across the first five production years, including a 5M lb agreement with a major U.S. utility — against up to 30M lbs/yr of nameplate capacity, so roughly 93% of early output has no buyer and NexGen is embedded in no utility's fuel plan at scale."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "N/A — NexGen is not the authoritative record for any business function; this moat category does not apply to a mine developer."
+    },
+    "verdict": "NexGen's moats are physical and regulatory — a 2.37% U3O8 orebody and a federal construction licence — which makes them entirely indifferent to AI disruption, and the company is a second-order beneficiary of AI power demand insofar as data centre nuclear contracting tightens the uranium market it will sell into. The exposure that matters is not AI but execution: the two categories that would normally carry a producer's durability, demonstrated operating capability and an embedded contract book, are the two rated weakest here."
+  },
+  "lastAnalyzed": "July 30, 2026"
+}

@@ -27,6 +27,9 @@ import cegData     from '@/data/stocks/ceg.json';
 import gevData     from '@/data/stocks/gev.json';
 import ccjData     from '@/data/stocks/ccj.json';
 import leuData     from '@/data/stocks/leu.json';
+import nxeData     from '@/data/stocks/nxe.json';
+import uecData     from '@/data/stocks/uec.json';
+import kapData     from '@/data/stocks/kap.json';
 import costcoData  from '@/data/stocks/costco.json';
 import disneyData  from '@/data/stocks/disney.json';
 import crmData     from '@/data/stocks/crm.json';
@@ -36,7 +39,6 @@ import fcxData     from '@/data/stocks/fcx.json';
 import goldData    from '@/data/stocks/gold.json';
 import copperData  from '@/data/stocks/copper.json';
 import silverData  from '@/data/stocks/silver.json';
-import uraniumData from '@/data/stocks/uranium.json';
 import spacexData  from '@/data/stocks/spacex.json';
 import googleData  from '@/data/stocks/google.json';
 import intuitData  from '@/data/stocks/intuit.json';
@@ -237,8 +239,10 @@ const allCoverageData = [
     { name: "Gold",              ticker: "XAU",   slug: "gold",        scores: [m(goldData),        g(goldData),        v(goldData)],        href: "/stocks/gold",        category: "Hard Assets", ...t(goldData)        },
     { name: "Copper",            ticker: "HG",    slug: "copper",      scores: [m(copperData),      g(copperData),      v(copperData)],      href: "/stocks/copper",      category: "Hard Assets", ...t(copperData)      },
     { name: "Silver",            ticker: "XAG",   slug: "silver",      scores: [m(silverData),      g(silverData),      v(silverData)],      href: "/stocks/silver",      category: "Hard Assets", ...t(silverData)      },
-    { name: "Uranium",           ticker: "U",     slug: "uranium",     scores: [m(uraniumData),     g(uraniumData),     v(uraniumData)],     href: "/stocks/uranium",     category: "Hard Assets", ...t(uraniumData)     },
     { name: "Centrus Energy",    ticker: "LEU",   slug: "leu",         scores: [m(leuData),         g(leuData),         v(leuData)],         href: "/stocks/leu",         category: "Hard Assets", ...t(leuData)         },
+    { name: "NexGen Energy",     ticker: "NXE",   slug: "nxe",         scores: [m(nxeData),         g(nxeData),         v(nxeData)],         href: "/stocks/nxe",         category: "Hard Assets", ...t(nxeData)         },
+    { name: "Kazatomprom",       ticker: "KAP",   slug: "kap",         scores: [m(kapData),         g(kapData),         v(kapData)],         href: "/stocks/kap",         category: "Hard Assets", ...t(kapData)         },
+    { name: "Uranium Energy",    ticker: "UEC",   slug: "uec",         scores: [m(uecData),         g(uecData),         v(uecData)],         href: "/stocks/uec",         category: "Hard Assets", ...t(uecData)         },
     { name: "Costco",            ticker: "COST",  slug: "costco",      scores: [m(costcoData),      g(costcoData),      v(costcoData)],      href: "/stocks/costco",      category: "Financials",  ...t(costcoData)      },
     { name: "Walt Disney",       ticker: "DIS",   slug: "disney",      scores: [m(disneyData),      g(disneyData),      v(disneyData)],      href: "/stocks/disney",      category: "Other",       ...t(disneyData)      },
     { name: "ServiceNow",        ticker: "NOW",   slug: "now",         scores: [m(nowData),         g(nowData),         v(nowData)],         href: "/stocks/now",         category: "Big Tech",    ...t(nowData)         },
