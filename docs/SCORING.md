@@ -55,39 +55,56 @@ The score is a weighted average within each group, the two groups blended by the
 
 ### Crypto: 5-pillar monetary framework
 
-Pillars: `networkEffects`, `schellingPoint`, `credibleNeutrality`, `regulatoryIncumbency`, `securityBudget`. The declared `primaryMoat` gets **50%**; the other four split the remaining 50% (**12.5%** each). So BTC scores on credible neutrality, ETH on network effects — without averaging through pillars that don't define them.
+Pillars: `networkEffects`, `schellingPoint`, `credibleNeutrality`, `regulatoryIncumbency`, `securityBudget`. The declared `primaryMoat` gets **30%**; the other four split the remaining 70% (**17.5%** each). So BTC scores on credible neutrality, ETH on network effects — without averaging through pillars that don't define them.
+
+The primary weight was cut from 50% in July 2026. Unlike the equity weights, which the framework fixes, `primaryMoat` is declared per asset — and every crypto and commodity asset in coverage declares one at or tied to its maximum-scoring option. At 50% that was a free option rather than an analytical claim: ETH, which has one strong pillar and four merely intact, gained 14 points of moat from the declaration alone. The primary remains the heaviest single pillar; it no longer outweighs the other four combined.
 
 ### Commodity: 3-pillar framework
 
-Pillars: `absoluteScarcity`, `monetaryHistory`, `industrialUtility`. The `primaryMoat` gets **50%**; the other two get **25%** each. Gold scores on monetary history; copper on industrial utility.
+Pillars: `absoluteScarcity`, `monetaryHistory`, `industrialUtility`. The `primaryMoat` gets **40%**; the other two get **30%** each. Gold scores on monetary history; copper on industrial utility. Cut from 50/25/25 in July 2026 for the reason given above.
 
 ---
 
 ## 2. Growth score
 
-`computeGrowthScore(growthAnalysis)` derives a 0–100 score from structured fields (returns `null` if `cagrEstimate` can't be parsed):
+`computeGrowthScore(growthAnalysis, assetClass)` derives a 0–100 score from structured fields (returns `null` if `cagrEstimate` can't be parsed):
 
 ```
 growth = baseCAGR(cagrEstimate)   // piecewise, see below
        + trajectory(drivers)       // ±4, net of accelerating vs decelerating
-       + margin(marginTrend)       // expanding +4 · stable 0 · compressing −4
-       + type(primaryType)         // TAM expansion +3 · both +4 · market share 0
+       + margin(marginTrend)       // expanding +4 · stable 0 · compressing −4 · equities only
        + risk(keyRiskSeverity)     // low 0 · moderate −5 · high −10 · severe −15
 ```
 
 **Base from CAGR** (midpoint of strings like `"22-28%"`, `"30%+"`, `"<5%"`):
 
-| Blended CAGR | Base score |
-|---|---|
-| ≥ 30% | 90 → 95 |
-| 15–30% | 80 → 90 |
-| 8–15% | 70 → 80 |
-| 4–8% | 60 → 70 |
-| 0–4% | 40 → 60 |
-| −20–0% | 0 → 40 |
-| ≤ −20% | 0 |
+| Blended CAGR | Base score | slope |
+|---|---|---|
+| ≥ 30% | 90 → 95 | 0.25 /pp |
+| 15–30% | 80 → 90 | 0.67 /pp |
+| 8–15% | 70 → 80 | 1.43 /pp |
+| 4–8% | 60 → 70 | 2.5 /pp |
+| 0–4% | 50 → 60 | 2.5 /pp |
+| −20–0% | 0 → 50 | 2.5 /pp |
+| ≤ −20% | 0 | |
 
 Below zero the curve keeps descending to 0 at −20% CAGR — revenue roughly halving across the forecast window — rather than resting on a flat floor, so the bottom of the growth scale is a reachable statement about the business.
+
+The slope is monotone non-increasing, which it was not before July 2026. The old curve anchored 0% at 40, making 0–4% the steepest segment on the whole curve at 5 points per percentage point — steeper than the distressed region beneath it. It claimed more precision about a 1% versus a 3% grower than about a −10% versus a −5% one, which is backwards.
+
+### Known limits of this pillar
+
+Worth stating, because the pillar reads as more decomposed than it is.
+
+**The CAGR base drives ~78% of the score's variance** across the 128-asset book (sd 8.81 against a total of 11.0). The adjustments share the rest: risk 3.06, margin 3.04, trajectory 1.44. So `growth ≈ f(one authored number)`, where moat is genuinely built from ten weighted sub-assessments. `cagrBasis` exists to make that number checkable — it records the measured series the estimate is answerable to, and `validate:stocks` reports how much of the book still lacks one.
+
+**`primaryType` no longer scores.** It paid +3 for TAM expansion, +4 for both, 0 for market share — and 111 of 128 assets collected +3 or +4, so it shifted the whole distribution up while discriminating between almost nobody. Deleting it outright moved mean rank by 1.2 places. The ordering it asserted was also never argued: taking share in a large market can be more durable than riding an expanding TAM. The field remains in the schema and still renders as a chip, as description rather than score.
+
+**`marginTrend` is equity-only.** Bitcoin has no margins. All seven crypto and commodity assets carried `"stable"` — a field filled to satisfy the schema. Moat already dispatches on `assetClass`; growth now does too.
+
+**Saturation above 30% is deliberate.** Twenty-one assets compress into base 90–95, so NBIS at 175% and AVGO at 40% differ by 2.5 points. Spreading them on rate alone would assert that the faster grower is better, when the real difference is how long either rate survives — and the pillar has no persistence input. `validate:stocks` flags estimates above a 60% midpoint rather than absorbing them silently.
+
+**The score's arithmetic is rendered from the formula, not from prose.** `scoreDerivation` is authored text and was never mechanically faithful — ORCL narrates "+5 TAM expansion" where the term was worth 3 — which is why 43 of 128 files disagreed with their own computed score before any of this changed. The stock page now shows a breakdown computed by `growthScoreBreakdown()`, so the displayed sum is correct by construction, and `scoreDerivation` is the author's commentary on why the inputs are what they are. `validate:stocks` reports how far each file's narration has drifted.
 
 ---
 
@@ -105,6 +122,22 @@ Below zero the curve keeps descending to 0 at −20% CAGR — revenue roughly ha
 | ≥ 2.0 × bull | 0 |
 
 Cheaper than bear → richly scored; above bull → penalised. Both ends are reachable and specific: **100 means the price is 20% below the bear case, 0 means it is double the bull case.** The curve still saturates beyond those points — further overvaluation past 2× bull carries no extra information — but the dead zone now starts where it genuinely stops discriminating rather than at an arbitrary floor of 20. Before a live price loads (or if the fetch fails), the static `valuation.score` authored in the JSON is used instead.
+
+### What each scenario rung means
+
+The curve reads *position within the corridor*, so the score is only comparable across assets if the rungs mean the same thing everywhere:
+
+| Rung | Meaning |
+|---|---|
+| **bear** | Realistic downside if the key risk materialises |
+| **base** | **12–24 month expected value** — the central case |
+| **bull** | Cycle peak, re-rating, or the upside case paying off |
+
+**The base is not the cycle peak.** This drifted once and it is worth stating plainly, because the failure is invisible: crypto base targets were written as cycle peaks at new all-time highs while equity bases were 12–24 month fair value. `computeValuationScore` cannot tell the two apart, so parking the base at the cycle peak leaves spot near the bear end of the corridor and collects a high score for it. Before this was corrected in July 2026, crypto averaged **85.3 on valuation with a standard deviation of 0.9** against an equity mean of **70.3 with a spread of 9.5** — the pillar returned essentially the same answer for every crypto asset, which is a pillar that has stopped measuring. Worth roughly +7 composite points, purely from a convention.
+
+A scenario ladder should also be anchored to the *asset*. ETH's was set to the same multiples of spot as the BTC and SOL ladders, which guarantees a similar valuation score no matter what is true about Ethereum. Anchor to something asset-specific and falsifiable — for ETH, staking yield on staked supply and share of tokenized settlement; for an equity, earnings and a multiple.
+
+`npm run validate:stocks` prints an advisory note when `base / bear` exceeds **3.0×**, the shape a cycle-peak base produces. It warns rather than fails: a wide corridor is a smell, not proof of an error (MSTR's 7.5× is legitimate — it is a leveraged BTC proxy).
 
 ---
 

@@ -17,7 +17,7 @@ import { ScenarioPriceBar } from '@/components/ScenarioPriceBar';
 import { stockData, getAverageScore } from '@/app/stockData';
 import { getStockData } from '@/data/stocks';
 import { getResearchForTicker } from '@/data/research';
-import { computeAssetMoatScore, computeGrowthScore } from '@/lib/valuationScore';
+import { computeAssetMoatScore, computeGrowthScore, growthScoreBreakdown } from '@/lib/valuationScore';
 import type { StockAnalysisData } from '@/types/stockAnalysis';
 import Link from 'next/link';
 import { TrendingUp, TrendingDown, Minus, ArrowRight } from 'lucide-react';
@@ -101,7 +101,11 @@ function TrendIcon({ trend }: { trend: 'accelerating' | 'stable' | 'decelerating
   return <Minus size={13} className="text-foreground/35 shrink-0 mt-0.5" />;
 }
 
-function GrowthAnalysisCard({ ga }: { ga: NonNullable<StockAnalysisData['growth']['growthAnalysis']> }) {
+function GrowthAnalysisCard({ ga, assetClass }: {
+  ga: NonNullable<StockAnalysisData['growth']['growthAnalysis']>;
+  assetClass?: StockAnalysisData['assetClass'];
+}) {
+  const breakdown = growthScoreBreakdown(ga, assetClass ?? 'equity');
   const marginColor =
     ga.marginTrend === 'expanding' ? { color: '#34d399', bg: 'rgba(52,211,153,0.1)', border: 'rgba(52,211,153,0.2)' } :
     ga.marginTrend === 'compressing' ? { color: '#fb7185', bg: 'rgba(251,113,133,0.1)', border: 'rgba(251,113,133,0.2)' } :
@@ -150,6 +154,15 @@ function GrowthAnalysisCard({ ga }: { ga: NonNullable<StockAnalysisData['growth'
 
       <div>
         <p className="section-label mb-1.5">Score Derivation</p>
+        {breakdown && (
+          <p className="text-xs text-foreground/55 font-mono mb-2">
+            {breakdown.base.toFixed(1)} base
+            {breakdown.trajectory !== 0 && ` ${breakdown.trajectory > 0 ? '+' : '\u2212'} ${Math.abs(breakdown.trajectory).toFixed(1)} trajectory`}
+            {breakdown.margin != null && breakdown.margin !== 0 && ` ${breakdown.margin > 0 ? '+' : '\u2212'} ${Math.abs(breakdown.margin)} margin`}
+            {breakdown.risk !== 0 && ` \u2212 ${Math.abs(breakdown.risk)} risk`}
+            {` = ${breakdown.total}`}
+          </p>
+        )}
         <p className="text-xs text-foreground/35 font-mono">{ga.scoreDerivation}</p>
       </div>
     </Card>
@@ -280,7 +293,7 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
   const [liveValScore, setLiveValScore] = useState<number>(data.valuation.score);
   const [valLoading, setValLoading] = useState(true);
   const liveMoatScore = computeAssetMoatScore(data);
-  const growthScore = computeGrowthScore(data.growth.growthAnalysis) ?? 0;
+  const growthScore = computeGrowthScore(data.growth.growthAnalysis, data.assetClass ?? 'equity') ?? 0;
   const dynamicOverallScore = Math.round(getAverageScore([liveMoatScore, growthScore, liveValScore]));
 
   const dynamicRecommendation: 'Strong Buy' | 'Accumulate' | 'Hold' | 'Speculative Buy' =
@@ -439,7 +452,7 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
                   />
                 ))}
                 {data.growth.growthAnalysis && (
-                  <GrowthAnalysisCard ga={data.growth.growthAnalysis} />
+                  <GrowthAnalysisCard ga={data.growth.growthAnalysis} assetClass={data.assetClass} />
                 )}
                 {data.growth.additionalNote && (
                   <Card className="p-5 md:p-6">
@@ -517,7 +530,7 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
         {(data.growth.growthAnalysis || data.growth.additionalNote) && (
           <AnalysisSection title="Growth Analysis">
             <div className="space-y-4">
-              {data.growth.growthAnalysis && <GrowthAnalysisCard ga={data.growth.growthAnalysis} />}
+              {data.growth.growthAnalysis && <GrowthAnalysisCard ga={data.growth.growthAnalysis} assetClass={data.assetClass} />}
               {data.growth.additionalNote && (
                 <Card className="p-5 md:p-6">
                   <h4 className="text-base font-bold text-foreground/85 mb-4">{data.growth.additionalNote.title}</h4>

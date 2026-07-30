@@ -74,7 +74,8 @@
     "description": "July 2026 reverses June's flow picture without settling the supply question underneath it. ETH has recovered to ~$1,914 (market cap ~$230B), about 18% off the June low, as US spot ETH ETFs strung together three consecutive positive weeks — ~$338M net month-to-date, the strongest run since April — before a $70.6M redemption day on July 24 ended the streak. ETH/BTC has retraced from its 0.0284 May low back to ~0.030 and closed above its 200-day moving average for the first time since January. Staking is the standout: 41M ETH is now staked (33.6% of supply, up from 37M in June), the validator exit queue hit zero for the first time in Ethereum's proof-of-stake history, and 2.48M ETH waits in a 43–45 day entry queue. Corporate treasuries are a new structural bid — BitMine holds 5.79M ETH (~4.8% of supply, 4.9M of it staked) and SharpLink 888.5K. Glamsterdam has cleared final devnet (gas limit 60M → 200M, ~10,000 TPS via ePBS and BALs, ~78% gas fee reduction) but still carries no locked mainnet date inside H2 2026.",
     "growthAnalysis": {
       "cagrEstimate": "30–50%",
-      "scoreDerivation": "Base 92.5 (30–50% ecosystem CAGR, midpoint 40%) + 2.7 trajectory (staking flipped stable → accelerating on 41M ETH staked and a zero exit queue; ETF flows recovered decelerating → stable on three positive July weeks) + 3 TAM expansion (RWA settlement, staking ETFs, corporate ETH treasuries) − 10 keyRisk high = 88 (was 81 in June). Severity cut severe → high: the ETF-outflow and ETH/BTC-breakdown half of the risk has stepped back from May–June's cycle lows, while the net-inflationary-supply half is unchanged and still unresolved.",
+      "cagrBasis": "Tokenized RWA +315% YoY and +44% YTD with Ethereum at ~65% of tokenized value; mainnet stablecoin supply >$175B into a market projected $308B → $500B by end-2026; staked ETH 37M → 41M (33.6% of supply). Estimate sits well below all three measured rates and decays toward terminal.",
+      "scoreDerivation": "Base 92.5 (30–50% ecosystem CAGR, midpoint 40% — anchored on measured series and held after the July 2026 re-basing that cut BTC's: tokenized RWA up ~315% YoY and +44% year-to-date with Ethereum holding ~65% of tokenized value, stablecoin supply on mainnet above $175B against a market projected $308B → $500B by end-2026, and staked ETH 37M → 41M. As with every equity in coverage, the estimate sits well below the measured rates and decays toward terminal. The one series pointing the other way is monetisation — L1 fees have collapsed to roughly $227K/day from a ~$23M/day peak as blobs moved activity to L2s — which is precisely the keyRisk below and is charged there rather than twice) + 2.7 trajectory (staking flipped stable → accelerating on 41M ETH staked and a zero exit queue; ETF flows recovered decelerating → stable on three positive July weeks) − 10 keyRisk high = 85 (was 81 in June, then 88 before the primaryType bonus was retired book-wide). Severity cut severe → high: the ETF-outflow and ETH/BTC-breakdown half of the risk has stepped back from May–June's cycle lows, while the net-inflationary-supply half is unchanged and still unresolved.",
       "drivers": [
         {
           "name": "ETF & Institutional Adoption",
@@ -93,14 +94,14 @@
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "ETH supply remains net inflationary at ~0.23%/year because L2s absorb the activity that would burn base fees on mainnet — the ETF-outflow half of this risk reversed in July, the deflation half did not. If Glamsterdam ships in H2 2026 without lifting mainnet burn above issuance, and ETH/BTC fails to hold 0.030 into year-end, the store-of-value case stays unfunded and the ratio retests the 0.0284 May low — leaving ETH a high-beta ecosystem bet rather than the monetary asset the base case prices",
+      "keyRisk": "ETH supply remains net inflationary at ~0.23%/year because L2s absorb the activity that would burn base fees on mainnet — the ETF-outflow half of this risk reversed in July, the deflation half did not. If Glamsterdam ships in H2 2026 without lifting mainnet burn above issuance, and ETH/BTC fails to hold 0.030 into year-end, the store-of-value case stays unfunded and the ratio retests the 0.0284 May low — leaving ETH a high-beta ecosystem bet rather than the monetary asset the bull case prices, and capping it at the staking-plus-settlement value the base case already assumes",
       "keyRiskSeverity": "high",
       "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 86,
-    "description": "At ~$1,914 — recovered ~18% off the June low but still 61% below the $4,946 all-time high — ETH sits 65% below the base case ($5,500) and ~60% above the bear anchor ($1,200), low in the bear-to-base corridor. The July reversal took the acute pressure off the bear thesis without closing it: ETF flows turned positive, ETH/BTC reclaimed its 200-day average, and the validator exit queue emptied, but supply is still net inflationary and Glamsterdam still has no locked mainnet date. The June targets stand unchanged — the price has moved inside the corridor, not through it, and they sit at the same multiples of spot as the BTC and SOL scenario sets."
+    "score": 79,
+    "description": "At ~$1,914 — recovered ~18% off the June low but still 61% below the $4,946 all-time high — ETH sits 32% below the base case ($2,800) and ~60% above the bear anchor ($1,200), a little under half way up the bear-to-base corridor. The scenario ladder was rebuilt in July on ETH-specific anchors rather than carried over: the previous set had a $5,500 base at 2.9× spot, which was a new-ATH cycle-peak number occupying the slot the framework reserves for 12–24 month expected value, and it matched the BTC and SOL ladders multiple-for-multiple rather than measuring Ethereum. The $5,500 case is now the bull, where a new ATH belongs, and the base is anchored on what ETH earns without the deflation thesis resolving — a ~2.8% staking yield on 33.6% of supply and ~65% of the ex-stablecoin RWA settlement market — which lines up with 2027 consensus of roughly $2,200–$3,050. That re-anchoring, not any change in the price, is why the score moves from 86 to 79."
   },
   "scenarios": {
     "bear": {
@@ -113,21 +114,21 @@
       ]
     },
     "base": {
-      "priceTarget": "$5,500",
-      "description": "Layer 2 ecosystem matures and staking ETF inflows drive a re-rating toward Ethereum's role as decentralized settlement layer.",
+      "priceTarget": "$2,800",
+      "description": "Twelve-to-twenty-four month expected value on what Ethereum already earns — a staking yield on a third of supply and a dominant share of tokenized settlement — without requiring the burn to exceed issuance.",
       "points": [
-        "Spot ETH ETF AUM grows to $30B+ as wealth platforms enable staking features",
-        "EIP-1559 burn rate accelerates with L2 activity, making ETH supply deflationary during bull markets",
-        "Institutional DeFi on Ethereum (tokenized RWAs, on-chain bonds) surpasses $500B in TVL"
+        "Staking holds above a third of supply at a ~2.8% APR with the exit queue empty, establishing ETH as a yield-bearing asset that institutions can underwrite on cash flow rather than narrative — the staking-ETF wrapper turns that yield into a distributable product",
+        "Ethereum keeps ~65% of the ex-stablecoin RWA settlement market as tokenized funds and on-chain bonds scale, so L1 captures the settlement layer's economics even while execution migrates to L2s",
+        "Corporate ETH treasuries (BitMine 5.79M ETH, SharpLink 888.5K) and spot ETF AUM grind higher from the ~$16.1B ETHA base without needing a supply-side re-rating; consensus 2027 estimates cluster at roughly $2,200–$3,050"
       ]
     },
     "bull": {
-      "priceTarget": "$12,000",
-      "description": "Ethereum becomes the global settlement layer for tokenized real-world assets and programmable finance.",
+      "priceTarget": "$5,500",
+      "description": "The deflation thesis finally funds itself — Glamsterdam lifts mainnet burn above issuance — and ETH re-rates through its $4,946 all-time high as a monetary asset rather than a high-beta ecosystem bet.",
       "points": [
-        "Major banks tokenize government bonds and money markets natively on Ethereum L2s",
-        "ETH formally enters sovereign wealth fund allocations alongside BTC",
-        "Regulatory clarity on staking income transforms ETH into a yield-bearing reserve asset for institutional treasuries"
+        "Glamsterdam ships with a locked mainnet date and the gas-limit rise (60M → 200M) drives enough L1 settlement volume to push burn above issuance, closing the ~0.23%/year net-inflationary gap that the base case does not assume away",
+        "Major banks tokenize government bonds and money markets natively on Ethereum L2s, and regulatory clarity on staking income turns ETH into a yield-bearing reserve asset for institutional treasuries",
+        "Spot ETH ETF AUM grows to $30B+ as wealth platforms enable staking features; beyond this target, formal sovereign wealth fund allocations alongside BTC are the tail case that would take ETH toward the $12,000 settlement-layer scenario"
       ]
     }
   },

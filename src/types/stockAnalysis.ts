@@ -68,8 +68,8 @@ export interface TenMoatsData {
  *  - securityBudget: economic security from hashrate or staked capital
  *
  * primaryMoat declares which pillar is this protocol's *actual* moat. The
- * scoring function up-weights the primary pillar (50%) and down-weights the
- * other four (12.5% each) — so BTC scores on its credible neutrality, ETH on
+ * scoring function up-weights the primary pillar (30%) and down-weights the
+ * other four (17.5% each) — so BTC scores on its credible neutrality, ETH on
  * its network effects, without being averaged through pillars that aren't
  * what makes each protocol durable.
  */
@@ -98,8 +98,8 @@ export interface CryptoMoatsData {
  *  - industrialUtility: real-world demand floor outside monetary use
  *
  * primaryMoat declares which pillar is this commodity's *actual* moat. The
- * scoring function up-weights the primary pillar (50%) and down-weights the
- * other two (25% each) — so gold scores on its monetary history without
+ * scoring function up-weights the primary pillar (40%) and down-weights the
+ * other two (30% each) — so gold scores on its monetary history without
  * being dragged by industrial demand, and copper scores on its industrial
  * utility without being dragged by its weak monetary history.
  */
@@ -184,13 +184,21 @@ export interface StockAnalysisData {
         metric: string;
         trend: 'accelerating' | 'stable' | 'decelerating';
       }>;
-      /** Whether this is a TAM expansion story, market share capture, or both. */
+      /**
+       * Whether this is a TAM expansion story, market share capture, or both.
+       * Descriptive only — it no longer contributes to computeGrowthScore.
+       */
       primaryType: 'TAM expansion' | 'market share' | 'both';
+      /**
+       * The measured series cagrEstimate is answerable to, and its observed
+       * rate. Not scored; it makes the pillar's dominant input checkable.
+       */
+      cagrBasis?: string;
       /** Specific, falsifiable risk with a named time horizon. */
       keyRisk: string;
       /** Severity of keyRisk — feeds the risk-discount term in computeGrowthScore. */
       keyRiskSeverity: 'low' | 'moderate' | 'high' | 'severe';
-      /** Operating margin direction — feeds the −5 margin compression adjustment. */
+      /** Operating margin direction — scored for equities only (see computeGrowthScore). */
       marginTrend: 'expanding' | 'stable' | 'compressing';
     };
   };

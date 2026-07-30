@@ -61,11 +61,12 @@ Review the growth score if:
 - Reflect any management guidance changes for the next 2–4 quarters
 - If `growthAnalysis` is missing, add it (see Step 5 in `analyse-stock.md` for the required format)
 - If `growthAnalysis` is present, update:
-  - `cagrEstimate` if the blended CAGR has shifted materially (>3pp)
+  - `cagrEstimate` if the blended CAGR has shifted materially (>3pp). This single number drives ~78% of the growth score's variance, so treat it as the main event, not a header. Anchor it to a **measured series** and decay toward terminal, the way every equity in coverage does (MSFT 15–17% against a reported +40%; PLTR 25–35% decel-adjusted from ~71%) — then record that series in `cagrBasis`. An estimate no series supports is how BTC carried 30–60% while its own drivers were shrinking.
+  - `cagrBasis` — the measured series and observed rate the estimate answers to. Optional in the schema; `validate:stocks` reports book-wide coverage
   - `drivers[].metric` with the latest YoY figures from the most recent quarter
   - `drivers[].trend` if the last 2 quarters show a directional change
   - `keyRisk` if a new specific, falsifiable risk has emerged or the prior risk has been resolved
-  - `marginTrend` if operating margin direction has reversed
+  - `marginTrend` if operating margin direction has reversed (scored for equities only — crypto and commodities have no margins)
   - `scoreDerivation` to match any score change, showing the updated base + adjustments
 
 ### 5. Valuation Score
@@ -94,6 +95,12 @@ Update `valuation.description` to reflect the current price position relative to
 - Base target: should represent 12–24 month fair value at consensus earnings estimates
 - Bull target: should be plausible with 1–2 upside catalysts — typically 40–80% above base for growth stocks
 
+**The base target is not the cycle peak.** `computeValuationScore` reads where the price sits *within* the bear-to-base-to-bull corridor, so it cannot tell a fair-value base from an aspirational one — putting a cycle peak or a new all-time high in the base slot parks spot near the bear end and collects a high score for it. That belongs in the bull slot. This drifted for the crypto assets until July 2026 and was worth roughly +7 composite points; see `docs/SCORING.md`.
+
+For assets with no earnings to anchor on (crypto, commodities), anchor the ladder to something **specific to that asset and falsifiable** — staking yield on staked supply, share of a settlement market, cost of production, official-sector holdings. Do not set the targets at the same multiples of spot as a sibling asset: that guarantees a similar valuation score regardless of what is true about the asset, which is how the crypto ladders ended up interchangeable.
+
+`npm run validate:stocks` prints an advisory note when `base / bear` exceeds 3.0×, the shape a cycle-peak base produces. It is a smell, not proof of an error — investigate it rather than tuning the number until the note disappears.
+
 **Update `scenarios` in both:**
 1. `src/data/stocks/{slug}.json` — full scenario objects with priceTarget, description, and points
 2. `src/app/stockData.ts` — the `bearTarget`, `baseTarget`, `bullTarget` shorthand strings
@@ -113,6 +120,10 @@ Review each moat status if any of the following have occurred since the last upd
 - Do not move a status more than one level per update unless a catastrophic event occurred
 
 Update the `verdict` if 2+ moat statuses have changed.
+
+**`primaryType` is descriptive, not scored.** It still renders as a chip and belongs in the JSON, but it no longer adds points — it paid +3/+4 to 111 of 128 assets and discriminated between almost none of them.
+
+**`scoreDerivation` is commentary.** The page renders the authoritative arithmetic from `growthScoreBreakdown()`, so this string is where you explain *why* the inputs are what they are. Keep any total you write in it consistent with the computed score — `validate:stocks` reports drift.
 
 ### 8. Recommendation (derived — do not set in JSON)
 

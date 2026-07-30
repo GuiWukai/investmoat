@@ -45,7 +45,8 @@ Each moat is `{ status, note, aiExposure? }` where `status` is `strong | intact 
   "cagrEstimate": "15–20%",          // blended 3–5yr revenue CAGR; anchors the score
   "scoreDerivation": "base 85 + ...", // human-readable derivation
   "drivers": [{ "name": "...", "metric": "...", "trend": "accelerating" }],
-  "primaryType": "both",              // "TAM expansion" | "market share" | "both"
+  "primaryType": "both",              // "TAM expansion" | "market share" | "both" — descriptive, not scored
+  "cagrBasis": "...",                 // optional: measured series behind cagrEstimate
   "keyRisk": "Specific, falsifiable risk with a horizon",
   "keyRiskSeverity": "moderate",      // low | moderate | high | severe
   "marginTrend": "expanding"          // expanding | stable | compressing

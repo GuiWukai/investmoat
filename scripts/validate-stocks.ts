@@ -16,6 +16,12 @@ import { fileURLToPath } from 'node:url';
 import { dirname } from 'node:path';
 
 import { stockAnalysisSchema } from '../src/lib/stockSchema';
+import {
+  parseScenarioPrice,
+  parseCagrEstimate,
+  computeGrowthScore,
+  type GrowthAnalysisInput,
+} from '../src/lib/valuationScore';
 import { getAllSlugs } from '../src/data/stocks';
 import { allCoverageData } from '../src/app/stockData';
 
@@ -29,6 +35,43 @@ const DIM = '\x1b[2m';
 const RESET = '\x1b[0m';
 
 type Failure = { file: string; message: string };
+type Warning = { file: string; message: string };
+
+/**
+ * Widest base/bear corridor that reads as a fair-value base case.
+ *
+ * The base target is meant to be 12–24 month expected value; the bull target
+ * carries the cycle peak. Nothing enforces that, and crypto drifted: BTC's base
+ * was literally described as a "post-halving cycle peak" at a new all-time
+ * high, and ETH's ladder was set to the same multiples of spot as the BTC and
+ * SOL ladders rather than to anything about Ethereum. Because
+ * computeValuationScore reads position within the corridor, a base set at the
+ * cycle peak parks spot near the bear end and pays out a high score for it —
+ * crypto averaged 85.3 on valuation with a standard deviation of 0.9, against
+ * an equity mean of 70.3 with a spread of 9.5. A pillar that returns the same
+ * answer for every asset in a class is not measuring that class.
+ *
+ * A ratio can't see whether the base is fair value, but it is a good proxy: at
+ * 3.0 every equity in coverage passes except MSTR, whose corridor is wide
+ * because it is a leveraged BTC proxy. So this warns rather than fails —
+ * a wide corridor is a smell, not proof of an error.
+ */
+const MAX_BASE_BEAR_RATIO = 3.0;
+
+/**
+ * How far the arithmetic written into `scoreDerivation` may fall from the score
+ * `computeGrowthScore` actually returns before it is worth flagging. Small gaps
+ * are usually rounding in the prose; large ones mean the derivation describes a
+ * superseded calculation.
+ *
+ * This does NOT affect any published score — computeGrowthScore reads the
+ * structured fields (cagrEstimate, drivers, marginTrend, primaryType,
+ * keyRiskSeverity), never the prose. But the prose is what a reader is shown as
+ * the explanation for the number next to it, so drift makes the site explain
+ * its scores incorrectly. Gold is the worst case: its derivation still narrates
+ * an old hand-rolled "Base 50 ... = 50" method against a computed 71.
+ */
+const MAX_DERIVATION_DRIFT = 2;
 
 function validateFile(file: string): Failure[] {
   const fullPath = join(STOCKS_DIR, file);
@@ -59,6 +102,110 @@ function validateFile(file: string): Failure[] {
   }
 
   return [];
+}
+
+/**
+ * Flag scenario ladders whose base sits implausibly far above the bear case —
+ * the signature of a cycle-peak number occupying the base slot. See
+ * MAX_BASE_BEAR_RATIO.
+ */
+function checkScenarioCorridors(files: string[]): Warning[] {
+  const warnings: Warning[] = [];
+  for (const file of files) {
+    let data: { scenarios?: { bear?: { priceTarget?: string }; base?: { priceTarget?: string } } };
+    try {
+      data = JSON.parse(readFileSync(join(STOCKS_DIR, file), 'utf-8'));
+    } catch {
+      continue; // parse errors are already a hard failure
+    }
+    const bear = parseScenarioPrice(data.scenarios?.bear?.priceTarget ?? '');
+    const base = parseScenarioPrice(data.scenarios?.base?.priceTarget ?? '');
+    if (!bear || !base) continue;
+    const ratio = base / bear;
+    if (ratio > MAX_BASE_BEAR_RATIO) {
+      warnings.push({
+        file,
+        message:
+          `base is ${ratio.toFixed(1)}× the bear target (limit ${MAX_BASE_BEAR_RATIO}×) — check that the base case is ` +
+          '12–24 month expected value and not a cycle peak; the cycle peak belongs in the bull slot',
+      });
+    }
+  }
+  return warnings;
+}
+
+/**
+ * Highest cagrEstimate midpoint that reads as a forecast rather than an
+ * extrapolation. Above 30% the base curve saturates, so an implausible number
+ * is absorbed silently instead of being challenged — NBIS at 175% and AVGO at
+ * 40% score 95 and 92.5. Saturation is deliberate (see baseFromCagr), but it
+ * means the rubric cannot object to a number no business sustains, so the
+ * validator does the objecting.
+ */
+const MAX_PLAUSIBLE_CAGR = 60;
+
+/**
+ * Report the two growth-input hygiene checks: how much of the book still lacks
+ * a cagrBasis, and any cagrEstimate too high to be a forecast.
+ */
+function checkGrowthInputs(files: string[]): { warnings: Warning[]; missingBasis: number } {
+  const warnings: Warning[] = [];
+  let missingBasis = 0;
+  for (const file of files) {
+    let data: { growth?: { growthAnalysis?: { cagrEstimate?: string; cagrBasis?: string } } };
+    try {
+      data = JSON.parse(readFileSync(join(STOCKS_DIR, file), 'utf-8'));
+    } catch {
+      continue;
+    }
+    const ga = data.growth?.growthAnalysis;
+    if (!ga) continue;
+    if (!ga.cagrBasis) missingBasis++;
+    const mid = parseCagrEstimate(ga.cagrEstimate ?? '');
+    if (mid != null && mid > MAX_PLAUSIBLE_CAGR) {
+      warnings.push({
+        file,
+        message:
+          `cagrEstimate midpoint is ${mid}% (limit ${MAX_PLAUSIBLE_CAGR}%) — above 30% the base curve saturates, so ` +
+          'this scores the same as a 50% estimate. State the rate the business can sustain, not its current one',
+      });
+    }
+  }
+  return { warnings, missingBasis };
+}
+
+/**
+ * Flag growth derivations whose written arithmetic no longer lands on the score
+ * the formula produces. See MAX_DERIVATION_DRIFT.
+ */
+function checkGrowthDerivations(files: string[]): Warning[] {
+  const warnings: Warning[] = [];
+  for (const file of files) {
+    let data: { growth?: { growthAnalysis?: GrowthAnalysisInput & { scoreDerivation?: string } } };
+    try {
+      data = JSON.parse(readFileSync(join(STOCKS_DIR, file), 'utf-8'));
+    } catch {
+      continue;
+    }
+    const ga = data.growth?.growthAnalysis;
+    if (!ga?.scoreDerivation) continue;
+    const computed = computeGrowthScore(ga);
+    if (computed == null) continue;
+    // The derivation reads "base + adj − adj = NN"; take the last such total.
+    const match = ga.scoreDerivation.match(/=\s*(\d{1,3})(?![\s\S]*=\s*\d)/);
+    if (!match) continue; // not every derivation is written as an equation
+    const stated = Number(match[1]);
+    if (Math.abs(stated - computed) > MAX_DERIVATION_DRIFT) {
+      warnings.push({
+        file,
+        message:
+          `growth derivation states ${stated} but computeGrowthScore returns ${computed} — the prose describes a ` +
+          'superseded calculation. The score is unaffected (it is derived from the structured fields), but the ' +
+          'explanation shown next to it is wrong',
+      });
+    }
+  }
+  return warnings;
 }
 
 /**
@@ -137,6 +284,42 @@ function main(): void {
       `\n${DIM}Schema: src/lib/stockSchema.ts — update both schema and src/types/stockAnalysis.ts when fields change.${RESET}`,
     );
     process.exit(1);
+  }
+
+  const corridorWarnings = checkScenarioCorridors(files);
+  if (corridorWarnings.length > 0) {
+    console.log(`${YELLOW}Scenario corridor notes (${corridorWarnings.length}) — advisory, not failures:${RESET}`);
+    for (const { file, message } of corridorWarnings) {
+      console.log(`  ${DIM}•${RESET} ${YELLOW}${file}${RESET} ${message}`);
+    }
+    console.log('');
+  }
+
+  const { warnings: inputWarnings, missingBasis } = checkGrowthInputs(files);
+  if (inputWarnings.length > 0) {
+    console.log(`${YELLOW}Implausible CAGR estimates (${inputWarnings.length}) — advisory, not failures:${RESET}`);
+    for (const { file, message } of inputWarnings) {
+      console.log(`  ${DIM}•${RESET} ${YELLOW}${file}${RESET} ${message}`);
+    }
+    console.log('');
+  }
+  if (missingBasis > 0) {
+    console.log(
+      `${YELLOW}cagrBasis coverage:${RESET} ${files.length - missingBasis}/${files.length} files cite the measured ` +
+        `series behind their cagrEstimate. ${DIM}The CAGR base drives ~78% of the growth score; a basis makes it ` +
+        `checkable.${RESET}\n`,
+    );
+  }
+
+  const derivationWarnings = checkGrowthDerivations(files);
+  if (derivationWarnings.length > 0) {
+    console.log(
+      `${YELLOW}Growth derivation drift (${derivationWarnings.length} of ${files.length}) — advisory, not failures:${RESET}`,
+    );
+    for (const { file, message } of derivationWarnings) {
+      console.log(`  ${DIM}•${RESET} ${YELLOW}${file}${RESET} ${message}`);
+    }
+    console.log('');
   }
 
   console.log(`${GREEN}✓ Validated ${files.length} stock file(s)${RESET}`);

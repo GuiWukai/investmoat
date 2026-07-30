@@ -252,7 +252,9 @@ Is the operating margin expanding, stable, or compressing? Apply the −5 adjust
 }
 ```
 
-**`primaryType` values:** `"TAM expansion"` | `"market share"` | `"both"`
+**`primaryType` values:** `"TAM expansion"` | `"market share"` | `"both"` — descriptive only; it renders as a chip but no longer contributes to the growth score.
+
+**`cagrBasis`** (optional but strongly preferred): the measured series `cagrEstimate` is answerable to, with its observed rate. The CAGR base drives ~78% of the growth score, so this is what turns the pillar's dominant input from an assertion into a claim you can check.
 **`trend` values:** `"accelerating"` | `"stable"` | `"decelerating"`
 **`marginTrend` values:** `"expanding"` | `"stable"` | `"compressing"`
 

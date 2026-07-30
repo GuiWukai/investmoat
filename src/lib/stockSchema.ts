@@ -113,7 +113,10 @@ const growthAnalysisSchema = z.strictObject({
       }),
     )
     .min(1),
+  /** Descriptive only — no longer scored. See computeGrowthScore. */
   primaryType: z.enum(['TAM expansion', 'market share', 'both']),
+  /** Measured series cagrEstimate is answerable to. Optional; advisory in validate-stocks. */
+  cagrBasis: z.string().min(1).optional(),
   keyRisk: z.string().min(1),
   /** Severity of keyRisk — feeds the risk-discount term in computeGrowthScore. */
   keyRiskSeverity: z.enum(['low', 'moderate', 'high', 'severe']),

@@ -74,7 +74,7 @@ function main(): void {
 
   for (const file of files) {
     const data = JSON.parse(readFileSync(join(STOCKS_DIR, file), 'utf-8')) as StockAnalysisData;
-    const g = computeGrowthScore(data.growth.growthAnalysis as GrowthAnalysisInput);
+    const g = computeGrowthScore(data.growth.growthAnalysis as GrowthAnalysisInput, data.assetClass ?? 'equity');
     if (g == null) throw new Error(`${file}: computeGrowthScore returned null`);
     moat.push(computeAssetMoatScore(data));
     growth.push(g);
