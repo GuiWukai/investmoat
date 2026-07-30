@@ -242,11 +242,19 @@ h1, h2, h3, h4 {
 }
 
 /* Keyboard focus has to be visible on a near-black canvas — the UA default
-   outline all but disappears against it. */
-:focus-visible {
+   outline all but disappears against it. This is only for elements nothing
+   else focuses: every HeroUI component already draws its own gold ring and
+   clears this outline, but the rules here are unlayered and would win, so the
+   `[data-rac]` opt-out (react-aria stamps it on every component element) hands
+   those back to the component. Without it the search field drew two rings —
+   the group's, plus a squared-off one around the inset input inside it.
+
+   No `border-radius` either: it would round the element itself, not just the
+   outline, squaring off whatever corners it already had. Browsers curve an
+   outline to match the element's own radius. */
+:focus-visible:not([data-rac]) {
   outline: 2px solid var(--focus);
   outline-offset: 2px;
-  border-radius: 4px;
 }
 
 /* Hash navigation eases instead of jumping — undone under reduced motion. */
