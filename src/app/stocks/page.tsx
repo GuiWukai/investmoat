@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { useRouter } from "next/navigation";
 import { ChevronRight, SlidersHorizontal, ArrowUp, ArrowDown, ArrowUpDown } from "lucide-react";
 import {
@@ -183,12 +183,14 @@ const CATEGORY_PILL =
  * restores focus, supports type-ahead and arrow keys, and closes on Escape.
  */
 function MobileSelect({
-  label, icon, selectedKey, onSelectionChange, children,
+  label, icon, selectedKey, onSelectionChange, trailing, children,
 }: {
   label: string;
   icon: ReactNode;
   selectedKey: string;
   onSelectionChange: (key: string) => void;
+  /** Sits beside the selected value — the sort direction arrow, for Sort by. */
+  trailing?: ReactNode;
   children: ReactNode;
 }) {
   return (
@@ -204,7 +206,18 @@ function MobileSelect({
           <span className="text-[9px] font-bold uppercase tracking-widest text-muted">
             {label}
           </span>
-          <Select.Value className="truncate text-xs font-semibold text-foreground/85" />
+          <span className="flex min-w-0 items-center gap-1">
+            {/* Text only. Rendering the option's full children here dragged the
+                sort arrow in with them, and it wrapped onto a second line —
+                which left the Sort trigger taller than the Filter one beside
+                it. `trailing` puts that arrow back on the same row. */}
+            <Select.Value className="truncate text-xs font-semibold text-foreground/85">
+              {({ isPlaceholder, selectedText, defaultChildren }) =>
+                isPlaceholder ? defaultChildren : selectedText
+              }
+            </Select.Value>
+            {trailing}
+          </span>
         </span>
         <Select.Indicator className="ml-auto shrink-0" />
       </Select.Trigger>
@@ -220,6 +233,7 @@ export default function StocksPage() {
   const [activeCategory, setActiveCategory] = useState("all");
   const [sortKey, setSortKey] = useState<SortKey>("score");
   const [sortDir, setSortDir] = useState<SortDir>("desc");
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
   // Live prices fetched once at the page level so the Score column can be sorted
   // against price-adjusted valuations (not just the static fallback).
@@ -338,12 +352,24 @@ export default function StocksPage() {
           className="max-w-sm"
           fullWidth
           onChange={setQuery}
+          // On touch the on-screen keyboard covers most of the filtered list,
+          // and nothing here submits, so the keyboard had no reason to go away.
+          // The keyboard's Search key now dismisses it and puts the list back
+          // in view. Escape (handled by SearchField) still clears the query.
+          onSubmit={() => searchInputRef.current?.blur()}
           value={query}
         >
-          <SearchField.Group>
+          <SearchField.Group className="h-11 md:h-9">
             <SearchField.SearchIcon />
-            <SearchField.Input placeholder="Search by name or ticker…" />
-            <SearchField.ClearButton />
+            <SearchField.Input
+              ref={searchInputRef}
+              enterKeyHint="search"
+              placeholder="Search by name or ticker…"
+            />
+            {/* The 20px chip is a fiddly thing to hit with a thumb, but scaling
+                it up turns it into a blob. Grow the hit area instead and leave
+                the chip alone. */}
+            <SearchField.ClearButton className="mr-2 size-5 before:absolute before:-inset-2 before:content-['']" />
           </SearchField.Group>
         </SearchField>
 
@@ -405,6 +431,7 @@ export default function StocksPage() {
             label="Sort by"
             onSelectionChange={(key) => handleSort(key as SortKey)}
             selectedKey={sortKey}
+            trailing={<SortIndicator active dir={sortDir} />}
           >
             {SORT_OPTIONS.map(opt => (
               <ListBoxItem
