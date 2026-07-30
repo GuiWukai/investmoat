@@ -144,6 +144,7 @@ import ionqData     from '@/data/stocks/ionq.json';
 import rgtiData     from '@/data/stocks/rgti.json';
 import qbtsData     from '@/data/stocks/qbts.json';
 import qubtData     from '@/data/stocks/qubt.json';
+import beData       from '@/data/stocks/be.json';
 
 // Delegates to computeCompositeRaw in valuationScore.ts — the single source of
 // truth for the composite formula. Returns a float for precise sorting; callers
@@ -287,6 +288,7 @@ const allCoverageData = [
     { name: "MongoDB",           ticker: "MDB",   slug: "mdb",         scores: [m(mdbData),         g(mdbData),         v(mdbData)],         href: "/stocks/mdb",         category: "Big Tech",    ...t(mdbData)         },
     { name: "Synopsys",          ticker: "SNPS",  slug: "snps",        scores: [m(snpsData),        g(snpsData),        v(snpsData)],        href: "/stocks/snps",        category: "Big Tech",    ...t(snpsData)        },
     { name: "Cadence Design Systems", ticker: "CDNS", slug: "cdns",   scores: [m(cdnsData),        g(cdnsData),        v(cdnsData)],        href: "/stocks/cdns",        category: "Big Tech",    ...t(cdnsData)        },
+    { name: "Bloom Energy",      ticker: "BE",    slug: "be",          scores: [m(beData),          g(beData),          v(beData)],          href: "/stocks/be",          category: "Industrials", ...t(beData)          },
     { name: "CoreWeave",         ticker: "CRWV",  slug: "crwv",        scores: [m(crwvData),        g(crwvData),        v(crwvData)],        href: "/stocks/crwv",        category: "Big Tech",    ...t(crwvData)        },
     { name: "Nebius Group",      ticker: "NBIS",  slug: "nbis",        scores: [m(nbisData),        g(nbisData),        v(nbisData)],        href: "/stocks/nbis",        category: "Big Tech",    ...t(nbisData)        },
     { name: "JPMorgan Chase",    ticker: "JPM",   slug: "jpm",         scores: [m(jpmData),         g(jpmData),         v(jpmData)],         href: "/stocks/jpm",         category: "Financials",  ...t(jpmData)         },
