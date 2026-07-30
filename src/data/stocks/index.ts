@@ -20,7 +20,6 @@ import intuit from './intuit.json';
 import gold from './gold.json';
 import copper from './copper.json';
 import silver from './silver.json';
-import uranium from './uranium.json';
 import spacex from './spacex.json';
 import btc from './btc.json';
 import ethereum from './ethereum.json';
@@ -44,6 +43,9 @@ import ceg from './ceg.json';
 import gev from './gev.json';
 import ccj from './ccj.json';
 import leu from './leu.json';
+import nxe from './nxe.json';
+import uec from './uec.json';
+import kap from './kap.json';
 import unh from './unh.json';
 import mco from './mco.json';
 import sofi from './sofi.json';
@@ -171,6 +173,9 @@ const stocksMap: Record<string, StockAnalysisData> = {
   gev: gev as StockAnalysisData,
   ccj: ccj as StockAnalysisData,
   leu: leu as StockAnalysisData,
+  nxe: nxe as StockAnalysisData,
+  uec: uec as StockAnalysisData,
+  kap: kap as StockAnalysisData,
   unh: unh as StockAnalysisData,
   mco: mco as StockAnalysisData,
   sofi: sofi as StockAnalysisData,
@@ -243,7 +248,6 @@ const stocksMap: Record<string, StockAnalysisData> = {
   voo: voo as StockAnalysisData,
   copper: copper as StockAnalysisData,
   silver: silver as StockAnalysisData,
-  uranium: uranium as StockAnalysisData,
   spacex: spacex as StockAnalysisData,
   inio: inio as StockAnalysisData,
   rklb: rklb as StockAnalysisData,

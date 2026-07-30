@@ -13,11 +13,13 @@ const YAHOO_SYMBOL_OVERRIDES: Record<string, string> = {
   gold:     'GC=F',    // json ticker XAU — gold futures
   silver:   'SI=F',    // json ticker XAG — silver futures
   copper:   'HG=F',    // json ticker HG  — copper futures
-  uranium:  'URA',     // json ticker U   — ETF proxy, no spot feed on Yahoo
   btc:      'BTC-USD',
   ethereum: 'ETH-USD',
   solana:   'SOL-USD',
-  k92:      'KNT.TO',  // Toronto listing
+  k92:      'KNT.TO',  // json ticker KNT — Toronto listing
+  // Kazatomprom trades as USD-denominated GDRs on the LSE International Order
+  // Book; KAP.IL is that line. Not the Kazakh ordinary share, which is KZT.
+  kap:      'KAP.IL',
 };
 
 // Resolves a page slug to the Yahoo Finance symbol to quote, preferring an
