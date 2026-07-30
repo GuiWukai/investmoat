@@ -2,7 +2,7 @@
   "slug": "applovin",
   "ticker": "APP",
   "name": "AppLovin",
-  "lastAnalyzed": "May 2026",
+  "lastAnalyzed": "July 30, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "$160B"
+      "value": "$134B"
     }
   ],
   "chips": [
@@ -26,22 +26,22 @@
   "metrics": [
     {
       "title": "Revenue",
-      "value": "$1.66B",
-      "label": "Q4 2025 +66% YoY; Q1 2026 consensus ~$1.78B (+53% YoY) reporting May 6",
+      "value": "$1.84B",
+      "label": "Q1 2026 +59% YoY, beat the $1.745–1.775B guide; Q2 guided $1.915–1.945B (+54%), reports Aug 5",
       "icon": "TrendingUp",
       "color": "#6366f1"
     },
     {
       "title": "EBITDA Margin",
-      "value": "84%",
-      "label": "Q4 2025 adj. EBITDA margin — pure-play software platform",
+      "value": "85%",
+      "label": "Q1 2026 adj. EBITDA $1.56B (+66% YoY); Q2 guided 84–85%",
       "icon": "Zap",
       "color": "#f59e0b"
     },
     {
       "title": "FCF",
-      "value": "$3.95B",
-      "label": "+91% YoY FY2025; FCF conversion >100% of EBITDA",
+      "value": "$1.29B",
+      "label": "Q1 2026; management guides FY2026 conversion down to ~75% of adj. EBITDA after Q1 timing benefits",
       "icon": "TrendingUp",
       "color": "#10b981"
     }
@@ -57,7 +57,7 @@
       },
       {
         "title": "AXON AI Engine — Self-Reinforcing Flywheel",
-        "text": "More ad spend on AXON → more conversion signal → better AXON predictions → better ROAS for advertisers → more ad spend. Since AXON 2.0 launched in Q2 2023, gaming advertiser spend on AppLovin has quadrupled to an estimated $10B annual run rate. AXON 3.0 adds generative AI for real-time creative generation, extending the flywheel into ad production. No competitor has replicated this virtuous cycle despite substantial resources — Meta, Google, and Unity all have more data in absolute terms but lack AppLovin's focus on the in-app behavioral signal."
+        "text": "More ad spend on AXON → more conversion signal → better AXON predictions → better ROAS for advertisers → more ad spend. Since AXON 2.0 launched in Q2 2023, gaming advertiser spend on AppLovin has quadrupled to an estimated $10B annual run rate. In June 2026 the engine was opened to any advertiser as a self-serve product (branded AppLovin Ads), and the generative creative layer — an interactive end-card generator piloting with 100+ customers and a video generator behind it — extends the flywheel into ad production. No competitor has replicated this virtuous cycle despite substantial resources — Meta, Google, and Unity all have more data in absolute terms but lack AppLovin's focus on the in-app behavioral signal."
       },
       {
         "title": "Platform Bundle (MAX + AXON + Adjust)",
@@ -66,97 +66,103 @@
     ]
   },
   "growth": {
-    "description": "FY2025 delivered $5.48B revenue (+70% YoY) and $3.95B FCF (+91% YoY) with 84% Adj. EBITDA margins — one of the most profitable growth profiles in software history. Q1 2026 is guided at $1.745–1.775B (+38% YoY) with 84% EBITDA margins sustained. 2026 consensus expects $7.9B revenue (+44% YoY) and $14.75 EPS. AXON 3.0 and e-commerce advertising expansion (Axon Ads Manager launching globally mid-2026) represent the next major growth vectors beyond mobile gaming.",
+    "description": "Q1 2026 delivered $1.84B revenue (+59% YoY), $1.56B adj. EBITDA (85% margin) and $1.29B FCF, beating the $1.745–1.775B guide; Q2 is guided to $1.915–1.945B (+54%) at 84–85% margins and reports Aug 5. FY2026 consensus sits at ~$8.24B revenue (+42%) and ~$16.12 EPS, with 2027 consensus at ~$20.89 EPS (+31%). The self-serve opening of the ad platform to all advertisers in June 2026 is the growth vector beyond gaming — and the first read on it was negative: Bank of America flagged cooling e-commerce sign-ups in June, which took a third off the share price through July.",
     "growthAnalysis": {
-      "cagrEstimate": "35–44%",
-      "scoreDerivation": "Base 90 (30%+ CAGR; consensus 44% YoY in 2026 on $7.9B) + 5 TAM expansion (e-commerce advertising, AXON 3.0 self-serve platform launch) − 5 deceleration risk (each AXON iteration shows diminishing marginal returns; growth from 70% to 44% already moderating) − 2 SEC investigation risk (regulatory overhang) = 88",
+      "cagrEstimate": "27–34%",
+      "scoreDerivation": "Base ~90 on a 30.5% midpoint — the 3–5yr blended rate, decayed from the +59% Q1 print and +42% FY2026 consensus toward the ~25% 2027 consensus implies, in line with how every equity in coverage decays a current rate toward terminal. + 1.3 trajectory (one accelerating driver of three; e-commerce cut from accelerating to stable on the June sign-up cooling) + 0 margin (stable at 84–85%) − 5 key risk (moderate) = 86. The June cooling is charged in the base and in the driver trend rather than in keyRisk, which carries only the unmaterialised part.",
+      "cagrBasis": "Revenue: $1.84B in Q1 2026, +59% YoY off $1.16B, following +66% in Q4 2025 — a decelerating but unbounded accrual series (AppLovin books the ad spend). Q2 2026 guidance of $1.915–1.945B is +54%. FY2026 consensus $8.24B (+42%); 2027 consensus EBITDA of ~$8.8B implies ~$10.3B revenue (+25%). The estimate is the 3-year blend of that decay path, not the current rate.",
       "drivers": [
         {
-          "name": "Software Platform (AXON Advertising)",
-          "metric": "+66% YoY Q4 2025; adj. EBITDA $1.4B at 84% margin; gaming run rate ~$10B annual ad spend",
+          "name": "Core Ad Platform (AXON — gaming and apps)",
+          "metric": "Q1 2026 revenue $1.84B, +59% YoY (+11% QoQ); adj. EBITDA $1.56B at 85% margin; gaming run rate ~$10B annual ad spend",
           "trend": "stable"
         },
         {
-          "name": "E-Commerce Advertising Expansion",
-          "metric": "Axon Ads Manager launched Oct 2025; global rollout mid-2026; moves beyond gaming into $200B+ e-comm ad TAM",
-          "trend": "accelerating"
+          "name": "E-Commerce / Consumer Vertical",
+          "metric": "Self-serve opened to all advertisers June 2026 after a year of referral-only access; consumer vertical growing faster than gaming, but BofA flagged June sign-ups cooling and ~57% of qualified leads convert to live spend",
+          "trend": "stable"
         },
         {
-          "name": "AXON 3.0 (Generative AI Creative)",
-          "metric": "Generates ads in real-time; reduces advertiser creative production barrier; expands addressable campaigns",
+          "name": "Generative Creative Tooling",
+          "metric": "Interactive end-card generator piloting with 100+ customers, video ad generator behind it; targets one-click campaign creation for advertisers without creative teams",
           "trend": "accelerating"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "If Google's Privacy Sandbox and Meta's Advantage+ AI close the behavioral targeting gap by mid-2026 — reducing AXON's ROAS advantage from the current 30–40% premium to below 15% — advertisers begin reallocating e-commerce budgets back to Meta/Google before Axon Ads Manager reaches critical mass",
+      "keyRisk": "If the self-serve cohort signed up after the June opening does not convert into durable spend — sign-ups already cooled in June, and only ~57% of qualified leads reach live spend — the consumer vertical stalls near its ~$2B 2026 run rate and FY2027 revenue lands closer to +20% than the ~25% consensus carries, by the Q4 2026 print in February 2027",
       "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 72,
-    "description": "APP has rebounded to $475 ahead of the May 6 Q1 print and remains 35% below its December 2025 all-time high of $733. At ~32× 2026 consensus EPS of $14.75 and ~20× forward P/S, the stock sits between bear ($290) and base ($540) — analyst average target of ~$639 implies ~35% upside if Q1 confirms 50%+ revenue growth.",
+    "score": 78,
+    "description": "APP trades at ~$399 after a 13% single-day drop on July 13 when BofA flagged cooling e-commerce sign-ups, leaving it ~46% below its December 2025 high near $746 despite a Q1 that beat guidance. At ~25× 2026 consensus EPS of $16.12 and ~19× 2027's $20.89, the price sits below the base case ($520) and roughly 38% above the bear ($290) — the ~$648 average analyst target implies ~60% upside, which is the market pricing the e-commerce ramp as unproven rather than as guided.",
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "July 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~44×",
-          "note": "TTM EPS $10.04 (GAAP profitable)"
+          "value": "~34×",
+          "note": "TTM diluted EPS $11.64 through Q1 2026"
         },
         {
-          "label": "Forward P/E (NTM)",
-          "value": "~30×",
-          "note": "consensus EPS est. $14.75 (2026)"
+          "label": "Forward P/E (2026E)",
+          "value": "~25×",
+          "note": "consensus EPS $16.12"
+        },
+        {
+          "label": "Forward P/E (2027E)",
+          "value": "~19×",
+          "note": "consensus EPS $20.89"
         },
         {
           "label": "PEG Ratio",
-          "value": "~0.7×",
-          "note": "fwd P/E ÷ 44% EPS CAGR"
+          "value": "~0.8×",
+          "note": "2026 fwd P/E ÷ 31% 2027 EPS growth"
         },
         {
-          "label": "Price / Sales (NTM)",
-          "value": "~19×",
-          "note": "$7.9B NTM revenue (2026 consensus)"
+          "label": "Price / Sales (2026E)",
+          "value": "~16×",
+          "note": "$8.24B consensus revenue on a ~$134B cap"
         },
         {
-          "label": "Price / FCF",
-          "value": "~38×",
-          "note": "$3.95B FCF (FY2025 TTM)"
+          "label": "Price / FCF (2026E)",
+          "value": "~26×",
+          "note": "~$5.2B FCF at the guided ~75% conversion of ~$7.0B adj. EBITDA"
         }
       ],
-      "summary": "APP trades at ~30× 2026 forward P/E, only modestly above the growth-tech sector median (~30–35×), which is remarkable for a company projecting 44% revenue growth and 84% EBITDA margins. The PEG of ~0.7× signals genuine GARP territory — investors are not currently paying a growth premium relative to the earnings trajectory. The trailing vs forward P/E gap (44× vs 30×) reflects an ongoing earnings ramp as margins expand; if AXON sustains performance and e-commerce expansion validates, this multiple could look very conservative in retrospect."
+      "summary": "The July de-rating has taken APP from ~32× forward earnings in May to ~25× on 2026 and ~19× on 2027, against a business that grew 59% last quarter at an 85% EBITDA margin. The PEG of ~0.8× is GARP territory on consensus arithmetic — but consensus itself rests on the consumer vertical scaling, and the June sign-up cooling is the first evidence against it. The right reading is that the multiple is no longer demanding; the earnings line under it is what remains in question, and the Aug 5 Q2 print is the next test of it."
     }
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$290",
-      "description": "AXON improvements plateau as Google/Meta close the behavioral targeting gap, e-commerce expansion stalls, and SEC investigation creates material regulatory headwinds — revenue growth decelerates to 20–25% and margins compress.",
+      "description": "The self-serve cohort churns rather than compounds, gaming decelerates into tougher comps, and the SEC probe produces an enforcement action — 2027 growth lands near 15–20% and the multiple compresses to the mid-teens on forward earnings.",
       "points": [
-        "Google's Privacy Sandbox + Meta Advantage+ AI converge on AXON's ROAS performance by Q3 2026, reducing AppLovin's premium from 35% to below 15% and triggering e-commerce advertiser budget reallocation back to Meta/Google",
-        "Axon Ads Manager global launch underperforms — e-commerce advertiser adoption falls short of 500 clients by end of 2026, removing the TAM expansion narrative before it generates meaningful revenue",
-        "SEC investigation results in a formal enforcement action or material fine, creating regulatory overhang that compresses the multiple to 15× 2026 NTM P/S",
-        "Revenue growth decelerates to 22–25% for FY2026, missing the $7.9B consensus by $800M+, and FCF margins compress to 75–77% as AXON 3.0 R&D spend accelerates"
+        "The June sign-up cooling proves to be the shape of the launch rather than a wobble — self-serve advertisers churn after their first campaigns and the consumer vertical stalls near a ~$2B run rate, taking FY2027 revenue to ~$9.5B (+15%) against ~$10.3B consensus",
+        "Google's Privacy Sandbox and Meta's Advantage+ close the behavioral targeting gap through 2027, cutting AXON's ROAS premium below 15% and returning e-commerce budgets to Meta and Google",
+        "The SEC investigation, active since late 2025, produces a formal enforcement action over data-collection practices, and the state attorneys-general inquiries the company has denied turn into filed matters — a regulatory overhang that holds the multiple at ~15× forward earnings",
+        "FCF conversion settles below the guided ~75% of adj. EBITDA as creative-generation compute scales, so 2027 FCF lands near $5B rather than the $7B the bull case needs"
       ]
     },
     "base": {
-      "priceTarget": "$540",
-      "description": "AppLovin delivers $7.9B 2026 revenue (+44%) with 84% EBITDA margins sustained, AXON 3.0 launches on schedule, and Axon Ads Manager secures initial e-commerce traction — re-rating the stock toward 22× NTM P/S.",
+      "priceTarget": "$520",
+      "description": "AppLovin delivers the ~$8.24B 2026 consensus at 84–85% EBITDA margins, the self-serve cohort converts at roughly the ~57% qualified-lead rate management describes, and 2027 earnings arrive near the $20.89 consensus — a 25× multiple on that, in line with where the stock has traded through the de-rating.",
       "points": [
-        "FY2026 revenue reaches $7.8–7.9B, with the Software Platform growing 40%+ YoY as AXON 2.0 sustains advertiser ROAS advantage and AXON 3.0 adds new creative automation layer",
-        "Axon Ads Manager global rollout by mid-2026 signs 300+ e-commerce advertisers, establishing initial validation of the beyond-gaming TAM expansion thesis",
-        "Adj. EBITDA margins sustain at 82–84%, FCF reaches $4.8–5.0B for FY2026, and buybacks continue to reduce share count by 1–2% annually",
-        "SEC investigation resolves without material enforcement action, removing the regulatory overhang from the investment thesis"
+        "FY2026 revenue lands at $8.2–8.4B (+42%) with the second half carrying the first full quarters of self-serve spend; FY2027 reaches ~$10.3B (+25%), the level 2027 EBITDA consensus of ~$8.8B implies",
+        "The consumer vertical exits 2026 near a $2B annual run rate and keeps growing faster than gaming, validating the beyond-gaming expansion without requiring the bull case's cohort economics",
+        "Adj. EBITDA margins hold at 84–85% and FCF conversion settles at the guided ~75%, giving ~$5.2B of 2026 FCF; buybacks continue at the Q1 pace of $1B a quarter against the $2.3B remaining authorisation, retiring 1–2% of shares annually",
+        "The SEC investigation resolves without material enforcement action, removing the regulatory discount that has sat on the multiple since late 2025"
       ]
     },
     "bull": {
       "priceTarget": "$800",
-      "description": "AXON 3.0 becomes the default ad creation platform for mid-market e-commerce, AppLovin captures 5–8% of the global digital advertising market, and FCF accelerates toward $8B — re-rating toward 20× FCF.",
+      "description": "Self-serve becomes the default ad-buying surface for mid-market e-commerce, the long tail of advertisers arrives at roughly the volume management frames, and 2027 earnings clear consensus by a wide margin — supporting ~30× on 2027 EPS well above $20.89.",
       "points": [
-        "Axon Ads Manager reaches 5,000+ e-commerce advertisers by end of 2026, with average spend of $2M+, generating $2B+ in incremental 2026 revenue not in current consensus estimates",
-        "AXON 3.0 generative AI creative achieves 50%+ better ROAS than static creatives, creating a new performance benchmark that forces e-commerce brands to shift 20%+ of Meta/Google budgets to AppLovin",
-        "International expansion into Southeast Asia and Latin America (historically undermonetized mobile markets) adds an incremental growth vector, pushing 2027 revenue toward $14B",
-        "FCF reaches $7–8B in 2027 on $12B+ revenue, making the current $149B market cap look cheap at ~20× FCF on a self-funding, buyback-compounding capital-light business"
+        "Self-serve sign-ups compound toward management's 100,000-customer frame at the ~$70K first-year spend it cites — ~$7B of incremental annual auction demand phasing in through 2028, roughly doubling the 2026 revenue base and sitting outside consensus",
+        "Generative creative removes the production bottleneck that caps small-advertiser spend: the interactive end-card and video generators graduate from pilot to default, lifting both the share of qualified leads that reach live spend and the spend per advertiser",
+        "The ROAS advantage on contextual, non-identifier signal holds against Privacy Sandbox and Advantage+, forcing e-commerce brands to move a structural share of Meta and Google budgets rather than testing at the margin",
+        "FY2027 revenue reaches $12B+ at 85% EBITDA margins, and even at the guided ~75% conversion FCF clears $7B — a ~$134B cap today paying ~19× that, with buybacks compounding the per-share effect"
       ]
     }
   },
@@ -187,7 +193,7 @@
     },
     "regulatoryLockIn": {
       "status": "weakened",
-      "note": "Privacy regulations (Apple ATT, GDPR) accidentally created a moat for AppLovin's privacy-first behavioral approach — but this is not traditional regulatory lock-in. The SEC investigation represents regulatory risk, not a lock-in advantage."
+      "note": "Privacy regulations (Apple ATT, GDPR) accidentally created a moat for AppLovin's privacy-first behavioral approach — but this is not traditional regulatory lock-in. The SEC investigation into data-collection practices remains active as of mid-2026, and preliminary state attorney-general interest has been reported and denied by the company: regulatory risk, not a lock-in advantage."
     },
     "networkEffects": {
       "status": "strong",
@@ -201,6 +207,6 @@
       "status": "weakened",
       "note": "Adjust serves as a system of record for mobile attribution events, but this is a narrower system of record than financial or legal data. AppLovin's ad server records are not authoritative for external reporting purposes."
     },
-    "verdict": "AppLovin is an AI-native business — AXON is its product, not a feature — making it a direct beneficiary of AI capability improvements. AXON 3.0 generative ad creation and AXON 2.0's continued optimization cycles demonstrate that better AI directly translates to better advertiser ROAS and higher platform value. The key AI risk is that the Big Three (Google, Meta, Amazon) use their larger data assets to close the ROAS gap with AXON; AppLovin's proprietary in-app behavioral data is currently the moat, but that moat is narrower than the structural lock-ins of Cloudflare, Axon, or Microsoft. Overall, AppLovin's AI-era positioning is strong within ad-tech but more competitively exposed than platform businesses with regulatory or physical switching costs."
+    "verdict": "AppLovin is an AI-native business — AXON is its product, not a feature — making it a direct beneficiary of AI capability improvements. The June 2026 self-serve opening and the generative creative tooling behind it demonstrate that better AI directly translates to better advertiser ROAS and higher platform value; what it has not yet demonstrated is that the long tail of advertisers it now admits will keep spending. The key AI risk is that the Big Three (Google, Meta, Amazon) use their larger data assets to close the ROAS gap with AXON; AppLovin's proprietary in-app behavioral data is currently the moat, but that moat is narrower than the structural lock-ins of Cloudflare, Axon, or Microsoft. Overall, AppLovin's AI-era positioning is strong within ad-tech but more competitively exposed than platform businesses with regulatory or physical switching costs."
   }
 }
