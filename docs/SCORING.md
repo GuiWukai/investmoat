@@ -2,7 +2,7 @@
 
 Every asset is scored 0–100 on three pillars — **Moat**, **Growth**, **Valuation** — which combine into a single **composite** that drives ranking, portfolio inclusion, and the recommendation band.
 
-> **Single source of truth:** all formulas live in [`src/lib/valuationScore.ts`](../src/lib/valuationScore.ts). This document describes that code; if they ever disagree, the code wins. The home page (`src/app/page.tsx`) restates the same figures for a general audience and must be updated alongside any recalibration.
+> **Single source of truth:** the pillar and composite formulas live in [`src/lib/valuationScore.ts`](../src/lib/valuationScore.ts); the two portfolio-level controls live beside it in [`src/lib/reviewFreshness.ts`](../src/lib/reviewFreshness.ts) (§6) and [`src/lib/portfolioWeights.ts`](../src/lib/portfolioWeights.ts) (§5.1). This document describes that code; if they ever disagree, the code wins. The home page (`src/app/page.tsx`) restates the same figures for a general audience and must be updated alongside any recalibration.
 
 ---
 
@@ -227,4 +227,43 @@ In [`src/app/stockData.ts`](../src/app/stockData.ts):
 - `MIN_AVG_SCORE = 80` — minimum composite to be eligible.
 - `MAX_PORTFOLIO = 25` — hard cap on positions.
 
-The coverage universe is sorted by composite (descending), filtered to those clearing the threshold, and the top 25 form the portfolio. The `/portfolio` page recomputes this live (using current prices) and assigns position weights from each holding's score, capped at 10% per name. Because the threshold and the 25-cap both bind, the portfolio shrinks rather than dilutes if coverage thins or valuations get rich.
+The coverage universe is sorted by composite (descending), filtered to those clearing the threshold, and the top 25 form the portfolio. The `/portfolio` page recomputes this live (using current prices). Because the threshold and the 25-cap both bind, the portfolio shrinks rather than dilutes if coverage thins or valuations get rich.
+
+### 5.1 Position weights
+
+In [`src/lib/portfolioWeights.ts`](../src/lib/portfolioWeights.ts). Weights are proportional to `composite − 70` under two caps:
+
+- `MAX_WEIGHT_PCT = 10` — no single holding exceeds 10% of the book.
+- `MAX_FACTOR_PCT = 35` — no single **risk factor** exceeds 35%.
+
+The second cap exists because the first one does not do the job it appears to do. It bounds how much of the book any one *ticker* is, not how much of it is any one *bet*. In the July 2026 book eight of the ten largest holdings named the AI capital-expenditure cycle as their key risk, and TSMC, KLA and ASML were the same leading-edge-equipment trade wearing three tickers — sized at 4% each, reporting as three independent positions and behaving as one 12% position. Splitting a bet across more tickers made every number smaller without making the portfolio less concentrated.
+
+Factors come from `growth.growthAnalysis.riskFactors` in each stock JSON, drawn from the controlled vocabulary in [`src/lib/riskFactors.ts`](../src/lib/riskFactors.ts). A factor must be a **common driver** whose realisation hits every member at once — not a common *shape*. Two single-asset miners both carrying binary project risk are uncorrelated; two semicap names both levered to hyperscaler capex are not.
+
+The solver water-fills: allocate proportionally, pin the holdings bound by the most-overshot constraint at exactly their allowance, re-allocate the rest. Where a cap cannot be met — every remaining holding carries the same factor, so there is nowhere uncorrelated to move weight to — the portfolio page says so rather than silently reporting a compliant-looking number. That state is fixed by a different holding, not a different weight.
+
+This is not a covariance model and does not claim to be. It encodes one assertion — names that fail for the same stated reason should not be sized as independent bets — and enforces it as a constraint.
+
+---
+
+## 6. Review freshness
+
+In [`src/lib/reviewFreshness.ts`](../src/lib/reviewFreshness.ts).
+
+Two of the three pillars are frozen at `lastAnalyzed`; only valuation reads a live price. So between reviews the composite can travel a long way on one input while the other two sit still. This was not a rounding effect in the July 2026 book: KLA's composite read **74.0** against the price its own analysis was written at and **86** against the live price. Four of the ten largest holdings — KLAC, ORCL, SPCX, ASML — would not have cleared the ≥80 inclusion threshold at the prices their analyses were written against. Nothing had been re-analysed. They fell, and the composite read the fall as quality.
+
+The live price is never in doubt — it is a fact. What is in doubt is the *inference* the composite draws from it: a large drawdown usually carries news, and news is exactly what would have re-rated moat and growth had anyone looked. So the divergence between the live valuation score and the **authored** one (which is, by construction, the valuation score at the review-date price) is shrunk by a credibility factor:
+
+| Review age | Credibility |
+|---|---|
+| ≤ 14 days | 1.00 — full credit |
+| 14 → 120 days | linear decay |
+| ≥ 120 days | 0.35 — floor |
+
+A name whose price has not moved since its review is untouched at any age; divergence is zero, so there is nothing to shrink. Damping is **symmetric** — a rally is discounted exactly as much as a drawdown, because the stale pillars cannot respond to good news either, and an asymmetric rule would be a momentum tilt disguised as a data-quality correction.
+
+Past `REVIEW_OVERDUE_DAYS` (120, deliberately equal to the floor point) `validate:stocks` asks for a re-read. The model stops extrapolating exactly where it starts asking for a human.
+
+The stock page shows the valuation gauge **raw** and damps only the composite: where a price sits in the scenario ladder is a fact, and is not up for discounting.
+
+Inspect both mechanisms against the current book with `npm run preview:clusters`.

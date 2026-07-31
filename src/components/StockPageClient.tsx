@@ -18,6 +18,7 @@ import { stockData, getAverageScore } from '@/app/stockData';
 import { getStockData } from '@/data/stocks';
 import { getResearchForTicker } from '@/data/research';
 import { computeAssetMoatScore, computeGrowthScore, growthScoreBreakdown } from '@/lib/valuationScore';
+import { dampValuationScore, reviewAgeDays } from '@/lib/reviewFreshness';
 import type { StockAnalysisData } from '@/types/stockAnalysis';
 import Link from 'next/link';
 import { TrendingUp, TrendingDown, Minus, ArrowRight } from 'lucide-react';
@@ -294,7 +295,22 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
   const [valLoading, setValLoading] = useState(true);
   const liveMoatScore = computeAssetMoatScore(data);
   const growthScore = computeGrowthScore(data.growth.growthAnalysis, data.assetClass ?? 'equity') ?? 0;
-  const dynamicOverallScore = Math.round(getAverageScore([liveMoatScore, growthScore, liveValScore]));
+
+  // The gauge below keeps showing `liveValScore` raw — where the price sits in
+  // the scenario ladder is a fact and is not up for discounting. What gets
+  // damped is the inference the composite draws from it, because the moat and
+  // growth pillars beside it are frozen at `lastAnalyzed` and cannot answer a
+  // price move. See src/lib/reviewFreshness.ts.
+  //
+  // No hydration hazard: before the price fetch resolves, liveValScore is the
+  // authored score, the divergence is zero, and the damping is the identity —
+  // so server and first client render agree whatever the review age.
+  const freshness = dampValuationScore(
+    liveValScore,
+    data.valuation.score,
+    reviewAgeDays(data.lastAnalyzed),
+  );
+  const dynamicOverallScore = Math.round(getAverageScore([liveMoatScore, growthScore, freshness.score]));
 
   const dynamicRecommendation: 'Strong Buy' | 'Accumulate' | 'Hold' | 'Speculative Buy' =
     dynamicOverallScore >= 85 ? 'Strong Buy' :
@@ -413,6 +429,7 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
       <ScoreTabsRow
         overallScore={dynamicOverallScore}
         overallLoading={valLoading}
+        overallFreshness={freshness}
         tabs={[
           {
             label: 'Moat',

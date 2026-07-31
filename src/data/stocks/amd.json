@@ -77,6 +77,7 @@
       "primaryType": "both",
       "keyRisk": "If NVIDIA's Rubin Ultra widens the performance gap on flagship training workloads through 2027 and ROCm fails to close the developer-ecosystem gap to CUDA, AMD's AI GPU share stalls below 15% of TAM and the 28-38% CAGR collapses toward 15-20% — invalidating the consensus upgrade cycle priced in after the OpenAI deal and the ~144% YTD re-rating.",
       "keyRiskSeverity": "high",
+      "riskFactors": ["ai-capex", "semiconductor-cycle"],
       "marginTrend": "expanding"
     }
   },

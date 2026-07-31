@@ -14,7 +14,7 @@ import {
   ToggleButtonGroup,
 } from "@heroui/react";
 import { allCoverageData, getAverageScore } from "../stockData";
-import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
+import { computeLiveComposite } from "@/lib/valuationScore";
 
 const TICKER_COLORS: Record<string, string> = {
   MSFT: "#00a4ef", AMZN: "#f59e0b", ASML: "#0071c5", V:    "#1a1f71",
@@ -260,13 +260,16 @@ export default function StocksPage() {
   const liveScores = useMemo(() => {
     const m: Record<string, number> = {};
     for (const s of allCoverageData) {
-      const price = prices[s.ticker];
-      const bear = parseScenarioPrice(s.bearTarget);
-      const base = parseScenarioPrice(s.baseTarget);
-      const bull = parseScenarioPrice(s.bullTarget);
-      m[s.ticker] = (price != null && bear && base && bull)
-        ? Math.round(getAverageScore([s.scores[0], s.scores[1], computeValuationScore(price, bear, base, bull)]))
-        : Math.round(getAverageScore(s.scores));
+      m[s.ticker] = Math.round(computeLiveComposite({
+        moat: s.scores[0],
+        growth: s.scores[1],
+        authoredValuation: s.scores[2],
+        price: prices[s.ticker],
+        bearTarget: s.bearTarget,
+        baseTarget: s.baseTarget,
+        bullTarget: s.bullTarget,
+        lastAnalyzed: s.lastAnalyzed,
+      }).composite);
     }
     return m;
   }, [prices]);

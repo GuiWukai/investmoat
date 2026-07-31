@@ -1,3 +1,4 @@
+import { dampValuationScore, reviewAgeDays, type DampedValuation } from './reviewFreshness';
 import type {
   AssetClass,
   CommodityMoatsData,
@@ -695,6 +696,72 @@ export function computeCompositeRaw(moat: number, growth: number, valuation: num
 
 export function computeComposite(moat: number, growth: number, valuation: number): number {
   return Math.round(computeCompositeRaw(moat, growth, valuation));
+}
+
+export interface LiveCompositeInput {
+  moat: number;
+  growth: number;
+  /** The valuation score in the JSON — written at the review-date price. */
+  authoredValuation: number;
+  /** Live price, or null/undefined when the quote is unavailable. */
+  price?: number | null;
+  bearTarget: string;
+  baseTarget: string;
+  bullTarget: string;
+  lastAnalyzed?: string;
+  /** Defaults to now. Injectable so previews and tests can pin the clock. */
+  asOf?: Date;
+}
+
+export interface LiveComposite {
+  /** Composite, unrounded, for precise sorting. */
+  composite: number;
+  /** The valuation pillar actually fed to the composite. */
+  valuation: number;
+  /**
+   * Freshness workings, or null when there is no live price — in which case
+   * the authored valuation is used verbatim and there is nothing to damp.
+   */
+  freshness: DampedValuation | null;
+}
+
+/**
+ * The composite as the site displays it: live price where available, damped by
+ * how stale the review behind the other two pillars is.
+ *
+ * SINGLE SOURCE OF TRUTH, ON PURPOSE. Four call sites — /portfolio, /stocks,
+ * the stock page client, and ResearchArticle — each rebuilt this expression by
+ * hand, and adding the freshness term to four hand-rolled copies is how three
+ * of them end up disagreeing with the fourth. They now all call this.
+ *
+ * Falls back to the authored valuation when the quote is missing or the
+ * scenario ladder is unparseable, which is the same behaviour those call sites
+ * already had: a missing price degrades to the last published score rather
+ * than blanking the row.
+ */
+export function computeLiveComposite(input: LiveCompositeInput): LiveComposite {
+  const { moat, growth, authoredValuation, price, lastAnalyzed, asOf } = input;
+
+  const bear = parseScenarioPrice(input.bearTarget);
+  const base = parseScenarioPrice(input.baseTarget);
+  const bull = parseScenarioPrice(input.bullTarget);
+
+  if (price == null || !bear || !base || !bull) {
+    return {
+      composite: computeCompositeRaw(moat, growth, authoredValuation),
+      valuation: authoredValuation,
+      freshness: null,
+    };
+  }
+
+  const live = computeValuationScore(price, bear, base, bull);
+  const freshness = dampValuationScore(live, authoredValuation, reviewAgeDays(lastAnalyzed, asOf));
+
+  return {
+    composite: computeCompositeRaw(moat, growth, freshness.score),
+    valuation: freshness.score,
+    freshness,
+  };
 }
 
 // Bands left where they were. Standardisation preserves the composite's location

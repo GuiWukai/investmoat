@@ -90,6 +90,7 @@
       "primaryType": "market share",
       "keyRisk": "The FY2026 adjusted EPS guide of ~$0.60 was held flat while the revenue guide went up, so roughly 60% of the full-year EPS now has to arrive in H2 while the incremental spend is already committed. What has to hold for that is third-party appetite for SoFi's paper: the Loan Platform Business placed $3.1B of personal loans for others in Q2 and fee-based revenue is now 39% of total. If capital partners step back or origination volume normalises off record levels through 2027, the fee line contracts against a fixed cost base and the ~$825M adjusted net income target misses. Technology Platform cannot cushion it — at $84.5M and −23% YoY it is 7% of revenue and still below its own prior-year level. The consumer credit leg of this risk has moved the other way and is not counted here: charge-offs improved 80bps YoY and delinquencies 7bps sequentially.",
       "keyRiskSeverity": "moderate",
+      "riskFactors": ["credit-cycle", "interest-rates", "consumer-spending"],
       "marginTrend": "expanding"
     }
   },

@@ -10,7 +10,8 @@
     "lint": "eslint",
     "validate:stocks": "tsx scripts/validate-stocks.ts",
     "validate:research": "tsx scripts/validate-research.ts",
-    "screen:research": "tsx scripts/research-screen.ts"
+    "screen:research": "tsx scripts/research-screen.ts",
+    "preview:clusters": "tsx scripts/preview-risk-clusters.ts"
   },
   "dependencies": {
     "@heroui/react": "^3.2.2",
