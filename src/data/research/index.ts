@@ -14,9 +14,11 @@ import type { ResearchArticleData } from '@/types/research';
 
 import alphabetAiBuild from './the-odds-on-alphabets-ai-build.json';
 import halfWithTheMoat from './sp-global-and-the-half-with-the-moat.json';
+import oneReceipt from './metas-capex-has-one-receipt.json';
 import seatPricing from './servicenow-and-the-seat-pricing-question.json';
 
 const researchArticles: Record<string, ResearchArticleData> = {
+  'metas-capex-has-one-receipt': oneReceipt as ResearchArticleData,
   'servicenow-and-the-seat-pricing-question': seatPricing as ResearchArticleData,
   'sp-global-and-the-half-with-the-moat': halfWithTheMoat as ResearchArticleData,
   'the-odds-on-alphabets-ai-build': alphabetAiBuild as ResearchArticleData,
