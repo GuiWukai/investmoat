@@ -2,7 +2,7 @@
   "slug": "fico",
   "ticker": "FICO",
   "name": "Fair Isaac Corporation",
-  "lastAnalyzed": "June 28, 2026",
+  "lastAnalyzed": "July 31, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -19,144 +19,145 @@
       "color": "primary"
     },
     {
-      "label": "All Major Federal Mortgage Programmes Now Accept Alternatives",
+      "label": "Mortgage Score Repriced to $0.99/Pull + $65/Funded Loan",
       "color": "warning"
     }
   ],
   "metrics": [
     {
-      "title": "Q2 FY2026 Revenue",
-      "value": "$692M",
-      "label": "+39% YoY; Scores +60% ($475M), B2B +72%; FY2026 guide raised to $2.45B",
+      "title": "Q3 FY2026 Revenue",
+      "value": "$674M",
+      "label": "+26% YoY but ~$5M short of consensus; Scores +41% to $459M (B2B +49%, mortgage originations +97%), Software +2% to $215M",
       "icon": "TrendingUp",
       "color": "#2563eb"
     },
     {
-      "title": "Q2 FY2026 GAAP EPS",
-      "value": "$11.14",
-      "label": "vs $6.59 prior year (+69%); FY2026 guide raised to $35.60 GAAP / $40.45 non-GAAP",
+      "title": "Q3 FY2026 Non-GAAP EPS",
+      "value": "$12.18",
+      "label": "+42% YoY, $0.21 ahead; GAAP $10.45 (+41%). FY2026 guide raised to $2.53B revenue / $42.43 non-GAAP EPS — below the ~$43.09 consensus",
       "icon": "Zap",
       "color": "#16a34a"
     },
     {
       "title": "Platform ARR",
-      "value": "$349M",
-      "label": "Q2 FY2026; +49% YoY (mid-30s% ex-migrations); Platform NRR 136%; $126M TTM ACV bookings (+36% YoY)",
+      "value": "$413M",
+      "label": "+62% YoY, past non-platform ($403M, −17%) for the first time; total Software ARR $816M (+10%), blended NRR 109% (Platform 148%, non-Platform 82%)",
       "icon": "Shield",
       "color": "#9333ea"
     }
   ],
   "moat": {
-    "description": "FICO remains the dominant credit scoring standard in the U.S., but the regulatory architecture that supported its monopoly has now been comprehensively dismantled across all major federal mortgage programmes. The FHFA's July 2025 approval of VantageScore 4.0 for GSE conforming loans was followed by Fannie Mae eliminating minimum credit score requirements entirely (November 2025), and VA and FHA updating underwriting guidelines to allow 24 months of verified rent and utility payment history as a primary creditworthiness indicator — removing FICO from the decision entirely for eligible borrowers. USDA participates in the same alternative credit framework. FICO still commands ~90% of B2B credit score pulls via institutional inertia, network effects, and a compounding platform moat — but exclusivity across every major federal mortgage channel is gone. The competitive threat is backed by bureau-subsidised VantageScore pricing ($0.99 vs FICO's $10.00 per mortgage origination score), creating mounting financial pressure on lenders to invest in alternative pipeline integration.",
-    "analysisTitle": "The Toll Collector Under Competitive Pressure",
-    "analysisSummary": "FICO's moat has three layers — the first is under genuine competitive pressure for the first time in 30 years, while the second and third remain intact and compounding:",
+    "description": "FICO remains the dominant credit scoring standard in the U.S., but two things have changed the character of the moat since the last review. First, the regulatory architecture is fully dismantled: FHFA approved VantageScore 4.0 for GSE loans (July 2025), Fannie Mae eliminated minimum credit score requirements entirely (November 2025), and VA, FHA and USDA all now permit 24 months of verified rent and utility history as primary creditworthiness evidence. Second — and this is the new fact — FICO stopped defending the price. In April 2026 it re-cut the FICO Score 10T mortgage direct licence from $4.95 per score plus $33 per funded loan to $0.99 per score plus $65 per funded loan, matching VantageScore's headline price after TransUnion and the other bureaus moved to 99¢. The 10× price gap that framed last quarter's analysis no longer exists in either direction. What that buys FICO is price parity at the pull — the cost argument for building a VantageScore pipeline is gone — and what it costs is the per-pull royalty model itself: mortgage economics now sit in a success fee collected only when a loan closes, which makes the most profitable franchise cyclical in a way it has never been. FICO still commands roughly 90% of B2B score pulls, and management says it has seen no volume loss to lenders adding VantageScore. But on the Q3 call the CEO described the emerging market as one of 'score shopping', where lenders pull more than one score per file — the first management acknowledgment that the reference standard is becoming bilateral.",
+    "analysisTitle": "The Toll Collector Gave Up the Toll",
+    "analysisSummary": "FICO's moat has three layers. The first has now absorbed both a regulatory breach and a self-inflicted price reset; the second and third remain intact but are no longer compounding as cleanly as the ARR headline suggests:",
     "analysisPoints": [
       {
-        "title": "GSE Mandate — Exclusivity Breached, Dominance Intact",
-        "text": "On July 8, 2025, FHFA Director Bill Pulte approved VantageScore 4.0 as a lender-choice alternative to Classic FICO for Fannie Mae and Freddie Mac mortgage underwriting — ending FICO's exclusive GSE mandate after nearly three decades. The breach has since widened to encompass all major federal mortgage channels: Fannie Mae eliminated its minimum credit score requirement entirely in November 2025, stating it would ensure risk analysis is 'agnostic of third-party credit scores'; VA and FHA updated underwriting guidelines to permit 24 months of verified on-time rent and utility payments as a primary creditworthiness indicator, making FICO scores optional for a meaningful cohort of VA and FHA loan applicants; and USDA participates in the same alternative credit framework. Combined, Fannie, Freddie, FHA, VA, and USDA cover the large majority of U.S. government-backed mortgage originations. 'Approved' ≠ 'adopted': as of Q1 2026, Classic FICO still represents ~90% of mortgage score pulls due to the operational cost of reconfiguring automated underwriting engines — but Experian's VantageScore 4.0 at $0.99 per origination score (vs FICO's $10.00) creates a 10× price differential that strengthens the business case for lenders to invest in integration. Senator Hawley formally launched a Senate investigation on March 24, 2026 and referred the matter to the FTC, citing FICO's 16× price increase in five years ($0.60 → $10.00/score) as monopoly pricing evidence. FICO's direct licence programme launched October 1, 2025 — projecting $300M+ in incremental CY2026 revenue — but deepens the pricing controversy."
+        "title": "GSE Mandate — Exclusivity Gone, and the Price Defence Withdrawn",
+        "text": "On July 8, 2025, FHFA Director Bill Pulte approved VantageScore 4.0 as a lender-choice alternative to Classic FICO, ending FICO's exclusive GSE mandate after nearly three decades. The breach has since widened to every major federal mortgage channel: Fannie Mae eliminated its minimum credit score requirement in November 2025, stating it would make risk analysis 'agnostic of third-party credit scores'; VA and FHA now permit 24 months of verified on-time rent and utility payments as a primary creditworthiness indicator; USDA participates in the same framework. Senator Hawley opened a Senate investigation on March 24, 2026 and referred FICO to the FTC, citing the doubling of the per-score price from $4.95 to $10.00 for 2026 — a change he estimated would add roughly $500M to industry credit-score costs. FICO's answer in April 2026 was to reprice rather than litigate: FICO Score 10T under the mortgage direct licence moved to $0.99 per score plus a $65 fee collected only on funded loans. That defuses much of the pricing complaint and removes the lender's financial incentive to integrate an alternative, but it also concedes the $10 price point that produced the +97% YoY mortgage origination revenue reported in Q3 FY2026. The pricing lever that drove the last four quarters has been spent, and the FY2027 comparison laps it."
       },
       {
-        "title": "Transaction Embedding — Direct Licence Expands Margin",
-        "text": "FICO's Mortgage Direct Licence program (launched October 1, 2025) licences scores directly to tri-merge resellers, bypassing the credit bureau markup that historically doubled the end cost to lenders. FICO offers two pricing options: a standard $10/score or a performance model at $4.95/score plus $33/funded loan. The programme projected at least $300M in incremental CY2026 revenue and is tracking ahead: B2B Scores grew 72% YoY in Q2 FY2026 (Scores segment +60% to $475M), driven by direct licence mortgage pricing and volume. FICO Score 10T adopters now represent $377B in annual originations and $1.6T in eligible servicing volume — nearly doubling in the past year since the late-2025 historical data release unblocked lender adoption."
+        "title": "Transaction Embedding — Intact, but Now Levered to Closings",
+        "text": "FICO's Mortgage Direct Licence programme (launched October 1, 2025) licences scores directly to tri-merge resellers, bypassing the bureau markup that historically doubled the end cost to lenders. The embedding itself is undamaged — FICO is still in the transaction layer of essentially every consumer credit decision in the U.S., and Q3 FY2026 mortgage origination revenue grew 97% YoY to 71% of B2B and 62% of total Scores revenue. But the April 2026 repricing changed what FICO earns on. Under $0.99 + $65, the pull is close to free and the economics arrive at funding, so mortgage revenue now tracks closings rather than inquiries. Management said originations and volumes have run ahead of the original FY2026 guide, which is why the guide went up — but that is a rate-and-affordability call, not a royalty. A franchise that used to monetise shopping activity now monetises completed transactions, and the concentration is extreme: a single line item is 62% of the segment that carries the company."
       },
       {
-        "title": "FICO Platform — The Second Moat, Independent of GSE Politics",
-        "text": "The FICO Platform is a cloud-based decision management system with $349M ARR growing 49% YoY (mid-30s% excluding migrations) as of Q2 FY2026. Banks that migrate origination, account management, and collections to the Platform face multi-year re-implementation costs to switch — entirely independent of whether they use FICO or VantageScore for their credit pulls. ACV bookings continue at a 6-year high ($126M trailing 12-month, +36% YoY). Gartner recognised FICO as a Magic Quadrant leader for decision intelligence. The FICO/Plaid UltraFICO partnership targeting thin-file borrowers with cash flow data is in active launch for 2026. Platform NRR remains above 120%, and the transition from legacy on-premise software (non-Platform ARR declining 8% YoY) to the cloud Platform creates a multi-year revenue acceleration runway regardless of score mandate outcomes."
+        "title": "FICO Platform — Real, and Still Being Eaten by the Legacy Book",
+        "text": "The FICO Platform is a cloud decision-management system with $413M ARR growing 62% YoY as of Q3 FY2026 — it passed non-platform ARR for the first time this quarter and is now 51% of software ARR. Platform net retention is 148%. Banks that migrate origination, account management and collections onto it face multi-year re-implementation costs to leave, entirely independent of which score they pull. Trailing-twelve-month ACV bookings reached $128M, up 39%. The qualification is that none of this is showing up in reported software growth yet: Software segment revenue grew 2% YoY to $215.3M in Q3, because non-platform ARR fell 17% to $403M (net retention 82%), on-premises revenue declined 16% and professional services declined 24%. Blended software net retention is 109%. The legacy runoff is now a smaller share of the base each quarter, so the drag mechanically fades — but for the moment the 'second engine independent of GSE politics' is contributing roughly nothing to consolidated growth."
       }
     ]
   },
   "growth": {
-    "description": "Q2 FY2026 (reported April 28, 2026) was a blowout: revenue $692M (+39% YoY), Scores revenue +60% to $475M with B2B +72% on direct licence mortgage pricing and volume, and GAAP EPS $11.14 vs $6.59 prior year. FY2026 guidance was raised from $2.35B to $2.45B revenue (+23% YoY) with non-GAAP EPS of $40.45. The direct licence programme is delivering ahead of the $300M+ incremental thesis. Platform ARR reached $349M (+49% YoY, mid-30s% excluding migrations) with Platform NRR of 136% and $126M TTM ACV bookings (+36% YoY). Growth score remains tempered by the VantageScore pricing war and Senate/FTC regulatory overhang, which introduce tail risk on the Scores segment pricing-power thesis.",
+    "description": "Q3 FY2026 (reported July 29, 2026) was a good quarter that the market read as a bad one. Revenue was $674.2M, +26% YoY, roughly $5M below consensus — the first top-line miss in several quarters. Non-GAAP EPS of $12.18 (+42%) beat by $0.21 and GAAP EPS of $10.45 rose 41% on net income of $237M. Scores grew 41% to $458.9M, with B2B +49% and B2C +5%; mortgage origination revenue grew 97% and now accounts for 71% of B2B and 62% of Scores. Software grew 2% to $215.3M: Platform ARR $413M (+62%) overtook non-platform ARR ($403M, −17%) for the first time, but blended software ARR growth was only 10% and blended net retention 109%. Free cash flow was $370M in the quarter and $961M over the trailing four quarters (+28%). FY2026 guidance was raised to $2.53B revenue (+27% on FY2025's $1.991B), $850M GAAP net income and $979M non-GAAP net income, or $42.43 non-GAAP EPS — a raise, but below the ~$43.09 the Street carried. The implied Q4 of roughly $652M is +26% YoY, so the guide itself is not the problem. The problem is FY2027: the mortgage price increase that produced the +97% comp was reversed in April 2026 to $0.99 per pull plus $65 per funded loan, and management has not yet named the pricing lever that replaces it — only that it is examining auto, card and personal loans.",
     "growthAnalysis": {
-      "cagrEstimate": "15–18%",
-      "scoreDerivation": "Base 80 (15–22% revenue CAGR; FY2026 guide raised to $2.45B, +23% YoY) + 5 recurring (Platform ARR $349M +49% YoY, mid-30s% organic; Platform NRR 136%; direct licence economics) + 3 TAM expansion (FICO 10T direct licensing; UltraFICO/Plaid; FICO Platform new verticals) + 2 earnings trajectory (Q2 FY2026 GAAP EPS +69% YoY; FY2026 non-GAAP EPS guide raised to $40.45, ~40% YoY growth) − 7 regulatory headwind (VA/FHA/USDA now join FHFA in accepting alternatives; Fannie Mae eliminated minimum credit score requirement; Senate/FTC investigation ongoing; Experian $0.99 vs FICO $10.00 pricing war) = 83",
+      "cagrEstimate": "13–17%",
+      "cagrBasis": "Revenue: FY2024 $1.72B → FY2025 $1.991B (+16%) → FY2026 guide $2.53B (+27%). The +27% is price-led — mortgage origination revenue grew 97% YoY in Q3 FY2026 off the $4.95→$10.00 per-score increase — and that price was cut back to $0.99 per pull plus $65 per funded loan in April 2026, so the rate does not repeat. Decaying the reported series for a spent pricing lever, a Software segment growing 2% (blended ARR +10%, NRR 109%), and B2C at +5% leaves a mid-teens blend: Scores at high-teens on volume and the auto/card/personal price ladder, Software converging up toward Platform's rate as the −17% non-platform book runs off. The estimate is the 3–5 year blend of that path, not the +27% currently on the tape.",
+      "scoreDerivation": "Base 80 on a 15% midpoint — decayed from the measured FY2026 +27% because that rate is a price increase FICO has since reversed, and the replacement lever (auto, card, personal loan pricing) is stated but unquantified. + 0 trajectory (one accelerating driver, one stable, one decelerating: B2B Scores went +72% in Q2 to +49% in Q3, and the Platform engine nets to +10% blended software ARR) + 4 margin (expanding: Q3 GAAP net income +30% on revenue +26%; FY2026 non-GAAP margin ~38.7% vs ~36.9% in FY2025) − 5 key risk (moderate) = 79. Unchanged in total from the June review, but rebuilt: the pricing war and the regulatory dismantling have now largely happened, so they are charged in the base and in the driver trends rather than sitting in keyRisk at high severity, where they were being counted against an estimate that had not yet absorbed them.",
       "drivers": [
         {
-          "name": "B2B Scores — Direct Licence Programme",
-          "metric": "+72% YoY Q2 FY2026 (Scores segment +60% to $475M); direct licence mortgage pricing/volume driving the surge, ahead of the $300M+ incremental CY2026 thesis",
-          "trend": "accelerating"
+          "name": "B2B Scores — Mortgage Direct Licence",
+          "metric": "+49% YoY in Q3 FY2026, down from +72% in Q2; mortgage origination revenue +97% YoY but now 62% of all Scores revenue, and priced at $0.99/pull + $65/funded loan since April 2026 versus the $10.00 that produced the comp",
+          "trend": "decelerating"
         },
         {
           "name": "FICO Platform (Decision Management SaaS)",
-          "metric": "Platform ARR $349M (+49% YoY, mid-30s% ex-migrations); ACV bookings $126M TTM (+36% YoY); Platform NRR 136%",
-          "trend": "accelerating"
+          "metric": "Platform ARR $413M (+62% YoY), 51% of software ARR and past non-platform for the first time; Platform NRR 148%; TTM ACV bookings $128M (+39%). Nets to Software segment revenue +2% and blended software ARR +10% after non-platform ARR −17% and NRR 82%",
+          "trend": "stable"
         },
         {
           "name": "FICO Score 10T Adoption",
-          "metric": "Lenders representing $377B annual originations + $1.6T eligible servicing volume; adopters nearly doubled in past year",
+          "metric": "Fannie Mae and Freddie Mac released FICO Score 10T performance datasets covering April 2013–September 2025 on July 1, 2026, unblocking lender validation of trended and rental data; the $0.99 upfront price is explicitly structured to drive 10T conversion. Adopters represented $377B in annual originations and $1.6T in eligible servicing volume as of Q2 FY2026",
           "trend": "accelerating"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "With VA, FHA, USDA, Fannie, and Freddie all now formally permitting FICO alternatives, if Experian's $0.99/score VantageScore pricing prompts 15%+ of top-50 lenders to complete alternative pipeline integration across multiple federal channels by end of 2027, and the Senate/FTC investigation results in a consent decree capping direct licence fees at or below $5/score, the Scores segment growth rate decelerates from 30%+ to below 10% and the $300M direct licence thesis unwinds — a more probable scenario today than when the risk was confined to GSEs alone",
-      "keyRiskSeverity": "high",
+      "keyRisk": "Mortgage now carries the company — 62% of Scores revenue — and it is monetised at $0.99 per pull with the economics deferred to a $65 fee collected only when a loan funds. Two unmaterialised things break it. If 'score shopping' converts from parallel pulls into displacement, with VantageScore taking the primary-pull slot on more than 10% of conforming files by FY2028, FICO loses volume it has so far retained. If originations stay depressed on rates and affordability, the funded-loan fee simply does not scale, and there is no per-pull price left to raise — the $10.00 price point has already been given back, and the Hawley/FTC file makes re-raising it politically expensive. Either path takes Scores growth from +41% toward single digits with the pricing lever spent.",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 80,
-    "description": "FICO has given back most of its post-Q2 rally, slipping to ~$1,150 (from ~$1,239 in early June) as the regulatory overhang re-asserts itself — now ~11% above the April 2026 lows (~$1,037) and ~52% below the November 2024 all-time high of $2,382. The discount reflects the regulatory overhangs: VantageScore 4.0's FHFA approval, Fannie Mae eliminating minimum credit score requirements, VA/FHA/USDA accepting non-FICO creditworthiness evidence, and Senator Hawley's Senate investigation plus FTC referral. At ~28× FY2026 guided non-GAAP EPS ($40.45) with EPS growing ~40% this year, the PEG sits near 0.9×. The stock trades ~64% above the bear target ($700) and ~36% below the base ($1,800) — the pullback has restored part of the margin of safety the April-to-June rally had consumed, while the market continues to price a materially adverse regulatory outcome.",
+    "score": 76,
+    "description": "FICO fell about 16% on July 30 — its worst session in six years — to roughly $1,145, giving back a July rally that had carried it from the ~$1,150 of the last review to the mid-$1,300s on the July 1 release of Fannie/Freddie 10T performance data. The round trip means the price is close to unchanged since June while the picture underneath it has moved: the mortgage price lever is spent, the Software segment is flat, and the sell-side has abandoned the $2,000+ targets it carried into the print (RBC cut from $2,400 to $1,525, JPMorgan $1,325 to $1,225, BofA $1,550 to $1,400; Wells Fargo raised to $1,450; the 21-analyst average sits near $1,500). At ~27× the raised FY2026 non-GAAP EPS guide of $42.43, FICO trades below S&P Global on forward earnings and at roughly 27× trailing free cash flow of $961M. Against the revised ladder the stock sits ~64% above the bear case ($700) and ~24% below the base ($1,500) — a genuine discount, but a narrower one than the old $1,800 base implied, because that base assumed a re-rate to 40–45× forward, a multiple that belonged to the mandate era.",
     "peAnalysis": {
-      "asOf": "June 2026",
+      "asOf": "July 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~36×",
-          "note": "TTM GAAP EPS ~$32 (incl. Q2 FY2026 $11.14)"
+          "value": "~33×",
+          "note": "TTM GAAP EPS ~$34.62 (Q4 FY25 $6.42 + Q1 $6.61 + Q2 $11.14 + Q3 $10.45)"
         },
         {
           "label": "Forward P/E (FY2026 non-GAAP)",
-          "value": "~28×",
-          "note": "FY2026 non-GAAP EPS guide $40.45"
+          "value": "~27×",
+          "note": "FY2026 non-GAAP EPS guide raised to $42.43"
         },
         {
           "label": "PEG Ratio",
-          "value": "~0.9×",
-          "note": "fwd P/E ÷ ~30% blended EPS CAGR"
+          "value": "~1.3×",
+          "note": "fwd P/E ÷ ~20% blended forward EPS CAGR — down from ~30% before the mortgage price reset"
         },
         {
           "label": "Price / Sales (NTM)",
           "value": "~10×",
-          "note": "~$2.45–2.55B NTM revenue"
+          "note": "~$2.7B NTM revenue off the $2.53B FY2026 guide"
         },
         {
           "label": "Price / FCF",
-          "value": "~33×",
-          "note": "~$800M TTM FCF (vs $739M FY2025)"
+          "value": "~27×",
+          "note": "$961M TTM free cash flow (+28% YoY); $370M in Q3 alone"
         }
       ],
-      "summary": "The June pullback to ~$1,150 has re-widened the regulatory-risk discount: FICO's forward P/E has eased from ~31× in early June to ~28×, below financial data peers (MSCI ~40×, Moody's ~30×, S&P Global ~33×) and well under FICO's own pre-2025 premium. A PEG near 0.9× on ~30% blended EPS growth is attractive for an 82%-gross-margin royalty model. The Q2 FY2026 print (+39% revenue, B2B Scores +72%) validated the direct licence ramp ahead of the $300M thesis — the remaining discount is almost entirely attributable to the unresolved Senate/FTC investigation, which would close bullishly if no binding pricing cap emerges."
+      "summary": "The multiple did most of the damage. FICO went into the print at roughly 32× forward on a franchise whose pricing power had just been voluntarily reset, and a ~$5M revenue miss plus a guidance raise that landed $0.66 below consensus was enough to break it. At ~27× forward the stock is cheaper than S&P Global (~33×) and MSCI (~40×) and in line with Moody's (~30×) — but the PEG has moved from ~0.9× to ~1.3× because the blended EPS growth rate behind it is no longer 30%. The remaining discount is no longer purely a regulatory-overhang discount, as it was in June; part of it is now an honest reassessment of what a per-funded-loan royalty on a cyclical mortgage market is worth."
     }
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$700",
-      "description": "Senate/FTC action caps B2B score pricing; VA/FHA/USDA acceptance of alternatives accelerates lender migration beyond GSEs; VantageScore adoption exceeds 15% of federally-backed originations; direct licence falls far below the $300M projection.",
+      "description": "'Score shopping' converts into displacement, mortgage originations stay depressed so the $65 funded-loan fee does not scale, and the Software segment fails to convert Platform ARR into reported revenue growth.",
       "points": [
-        "Senate investigation (Hawley) or FTC action results in a consent decree capping FICO direct licence fees at $4–5/score (vs. $10 current), immediately cutting Scores segment growth from 30%+ to below 8% and erasing the direct licence $300M thesis",
-        "VA/FHA/USDA acceptance of alternative credit evidence (rent/utility history) combined with Experian's $0.99 VantageScore pricing prompts 15%+ of top-50 lenders to build alternative pipelines across all federal channels by end of 2027 — establishing a multi-programme co-standard that structurally caps FICO pricing power across ~85% of government-backed mortgage volume",
-        "FICO Platform transition stalls as banks defer credit infrastructure investment amid comprehensive regulatory uncertainty across all federal mortgage agencies, causing Platform NRR to decline from 120%+ to below 110% and ACV bookings to reverse",
-        "Multiple compresses to 20–22× forward P/E on a revised $30–32 FY2027 EPS estimate as the regulatory premium, pricing-power thesis, and direct licence ramp all collapse simultaneously"
+        "VantageScore 4.0 moves from a parallel pull to the primary-pull slot on more than 10% of conforming files by FY2028 — FICO retains the reference role but loses the unit economics on a growing share of the 62% of Scores revenue that mortgage now represents",
+        "Rates and affordability keep originations below historical levels through FY2028. Under $0.99 + $65 the pull is nearly free and the revenue arrives only at closing, so a flat origination market translates directly into flat Scores revenue — with no per-pull price left to raise after the $10.00 point was given back",
+        "Non-platform ARR keeps declining faster than Platform ARR converts to revenue: Software segment growth stays near zero beyond FY2027, blended net retention slips below 105%, and the 'second engine' thesis fails on timing rather than on product",
+        "Multiple compresses to 17–19× on a flat-to-down FY2028 non-GAAP EPS of ~$40 as the growth premium unwinds entirely: ~$700/share, roughly 17× the current $961M free cash flow run-rate"
       ]
     },
     "base": {
-      "priceTarget": "$1,800",
-      "description": "Investigations produce no binding price restrictions, direct licence delivers $280–320M in incremental CY2026 revenue, and VantageScore adoption stays below 5% of GSE originations through integration friction — re-rating to 40–45× forward P/E.",
+      "priceTarget": "$1,500",
+      "description": "No binding regulatory outcome, FICO keeps ~90% of pulls under price parity, the auto/card/personal-loan pricing ladder partially replaces the mortgage lever, and Software growth re-accelerates as the legacy book finishes running off — a mid-teens compounder at a data-franchise multiple rather than a mandate multiple.",
       "points": [
-        "Senate investigation and FTC referral produce no consent decree — FICO's direct licence programme generates $280–320M in incremental CY2026 revenue, sustaining Scores segment growth above 20% through FY2027",
-        "VantageScore 4.0 integration at major lenders proves operationally costly; adoption stays below 5% of GSE originations by end of 2026 as system integration timelines extend 18–24 months beyond FHFA's July 2025 authorisation",
-        "FICO Platform ARR reaches $400–430M by end of FY2026 with ACV bookings accelerating — demonstrating a durable second revenue engine independent of GSE score mandate politics",
-        "Market re-rates to 40× FY2027 EPS of ~$43/share: $43 × 40 = ~$1,720–1,800/share, consistent with post-Hawley analyst targets (JPMorgan $1,325, Baird $1,547, pre-investigation consensus ~$1,888)"
+        "The Hawley investigation and FTC referral close without a consent decree — largely defused by FICO's own April 2026 cut to $0.99 per pull, which removed the price increase that prompted the referral",
+        "Price parity holds the line on volume: lenders pull both scores but FICO stays the primary on the large majority of conforming files, and the $65 funded-loan fee scales with a gradually normalising origination market",
+        "Non-platform ARR falls below a third of software ARR during FY2027, so Platform's 62% growth and 148% net retention finally show up in reported Software revenue — segment growth returns to double digits",
+        "FY2027 non-GAAP EPS of ~$48–50 at 30–32×, in line with Moody's and below S&P Global: ~$1,450–1,600/share, bracketing the post-print sell-side cluster (RBC $1,525, Clear Street $1,600, Wells Fargo $1,450, BofA $1,400)"
       ]
     },
     "bull": {
-      "priceTarget": "$2,400",
-      "description": "Regulatory investigations fizzle, direct licence exceeds $400M in CY2026, FICO 10T achieves GSE adoption timeline clarity, and Platform ARR compounds toward $700M — restoring near all-time-high multiples.",
+      "priceTarget": "$2,050",
+      "description": "The $0.99 price converts the market to FICO Score 10T, mortgage volumes recover, the auto/card/personal-loan pricing ladder delivers, and Platform ARR compounds past $700M — restoring a premium multiple on a broader base.",
       "points": [
-        "Direct licence programme signs 30+ lenders representing 30% of U.S. mortgage volume at $10/score, exceeding $400M in incremental CY2026 revenue and driving Scores segment operating margin above 90%",
-        "FICO Score 10T achieves GSE adoption timeline clarity (Fannie/Freddie commit to 10T as primary score by FY2028), creating a multi-year upgrade cycle that locks in a new royalty rate tier above Classic FICO pricing",
-        "FICO Platform becomes the decision management backbone for 12+ major banks during AI-driven technology refresh, driving Platform ARR toward $700M by FY2028 — transforming revenue mix toward higher-multiple SaaS and reducing dependence on per-score royalties",
-        "UltraFICO/Plaid partnership scores 15M+ new consumers; EPS reaches $58–60/share by FY2028; at 40× = $2,300–2,400/share"
+        "The $0.99 upfront price does what it was designed to do: 10T displaces Classic FICO as the mortgage standard on the back of the July 2026 Fannie/Freddie performance datasets, and the $65 funded-loan fee proves worth more per closed loan than the old per-pull royalty",
+        "FICO executes the auto, card and personal loan pricing ladder that management flagged on the Q3 call, restoring a Scores pricing lever independent of mortgage and independent of the FHFA-supervised channels",
+        "FICO Platform becomes the decision-management backbone for 12+ major banks during the AI-driven refresh cycle, ARR passes $700M by FY2028 and the non-platform drag is fully lapped — shifting the revenue mix toward higher-multiple recurring software",
+        "Originations normalise alongside; FY2029 non-GAAP EPS reaches ~$62 and the market pays 33× for a franchise with restored pricing power and a genuine software engine: ~$2,050/share"
       ]
     }
   },
@@ -167,11 +168,11 @@
     },
     "businessLogic": {
       "status": "strong",
-      "note": "FICO Platform customers configure years of credit decisioning rules, fraud detection policies, and compliance workflows into the system. Banks that have migrated origination, account management, and collections to FICO Platform face multi-year re-implementation costs to switch — entirely independent of whether they adopt VantageScore 4.0 for their score pulls."
+      "note": "FICO Platform customers configure years of credit decisioning rules, fraud detection policies, and compliance workflows into the system. Banks that have migrated origination, account management, and collections to FICO Platform face multi-year re-implementation costs to switch — entirely independent of whether they adopt VantageScore 4.0 for their score pulls. Platform net retention of 148% in Q3 FY2026 is the direct measurement of that lock: migrated accounts expand rather than churn."
     },
     "publicDataAccess": {
       "status": "intact",
-      "note": "FICO's Score 10T model incorporates trended 24-month credit data from all three bureaus. The late-2025 release of FICO 10T historical data (previously blocked, unblocking lender adoption) strengthens this position. Competitors cannot replicate Score 10T's predictive accuracy without equivalent bureau contractual access and decades of model calibration against real default outcomes."
+      "note": "FICO's Score 10T model incorporates trended 24-month credit data from all three bureaus. On July 1, 2026 Fannie Mae and Freddie Mac released 10T performance datasets spanning April 2013 to September 2025, including trended credit and rental payment history — the second major unblocking of lender validation after the late-2025 historical data release, and the reason the stock rose 11% that day. Competitors cannot replicate Score 10T's predictive accuracy without equivalent bureau contractual access and decades of model calibration against real default outcomes."
     },
     "talentScarcity": {
       "status": "intact",
@@ -179,7 +180,7 @@
     },
     "bundling": {
       "status": "intact",
-      "note": "FICO Scores + FICO Platform + FICO Siron (compliance) + FICO Blaze Advisor (rules management) create a suite addressing the full credit lifecycle. Banks adopting the Platform bundle face deep integration switching costs across multiple processes simultaneously. The direct licence programme adds a new bundling dynamic: lenders contracting directly with FICO for scores are more likely to expand into the software suite."
+      "note": "FICO Scores + FICO Platform + FICO Siron (compliance) + FICO Blaze Advisor (rules management) address the full credit lifecycle, and banks adopting the Platform bundle face deep integration switching costs across multiple processes at once. The bundle is not currently converting into segment growth: Software revenue grew 2% YoY in Q3 FY2026 as on-premises fell 16% and professional services fell 24%, so the legacy half of the suite is shrinking faster than the Platform half is being cross-sold. Status held at intact rather than raised, because the direct licence relationship gives FICO a commercial channel into the software suite that it did not have under bureau pass-through."
     },
     "proprietaryData": {
       "status": "strong",
@@ -187,20 +188,20 @@
     },
     "regulatoryLockIn": {
       "status": "weakened",
-      "note": "The regulatory moat has been structurally dismantled across all major federal mortgage channels. The FHFA's July 2025 approval of VantageScore 4.0 for GSE loans was the first breach; Fannie Mae then eliminated minimum credit score requirements entirely (November 2025); VA and FHA updated underwriting guidelines to allow 24 months of rent/utility payment history as a primary creditworthiness indicator, removing FICO from the scoring step for eligible borrowers; and USDA participates in the same framework. There is no longer any major government-backed mortgage programme that mandates FICO exclusively. FICO's institutional dominance remains (~90% of pulls) due to integration inertia, but the exclusive regulatory tailwind that sustained 30 years of pricing power has become a comprehensive regulatory headwind spanning every federal housing agency. Senator Hawley's Senate investigation and FTC referral (March 24, 2026) target the direct licence pricing structure ($10/score, up from $0.60 five years ago). Status remains 'weakened' rather than 'destroyed' because institutional adoption lags regulatory permission by 18–36 months and FICO's network and system-of-record moats continue to generate the vast majority of score pulls."
+      "note": "The regulatory moat is fully dismantled across every major federal mortgage channel. FHFA approved VantageScore 4.0 for GSE loans in July 2025; Fannie Mae eliminated minimum credit score requirements in November 2025; VA and FHA now accept 24 months of rent and utility history as primary creditworthiness evidence; USDA participates in the same framework. No major government-backed programme mandates FICO exclusively. Senator Hawley's investigation and FTC referral (March 24, 2026) targeted the $4.95→$10.00 per-score increase, and FICO answered in April 2026 by cutting the mortgage direct licence to $0.99 per score plus $65 per funded loan — which largely removes the pricing complaint but also removes FICO's ability to re-raise the per-pull price without reopening the file. Status stays weakened rather than destroyed: institutional adoption lags regulatory permission by 18–36 months, FICO still takes roughly 90% of B2B pulls, and management reported no volume loss to lenders that have added VantageScore."
     },
     "networkEffects": {
-      "status": "strong",
-      "note": "The bilateral network lock remains structurally dominant: lenders require FICO because all decisions are calibrated against it → borrowers build FICO histories → lenders face high switching costs → the standard self-perpetuates. Despite VantageScore 4.0's FHFA approval, 50M+ consumers monitor FICO via myFICO, decades of regulatory precedent references FICO score tiers, and automated underwriting systems are configured around FICO thresholds. However, the FHFA approval creates the first formal pathway for network fragmentation: if early-adopter lenders build VS4.0 pipelines at $0.99/score, the co-reference standard could gradually bifurcate over a 5–10 year horizon."
+      "status": "intact",
+      "note": "Downgraded from strong this quarter. The bilateral lock is still the dominant fact — 50M+ consumers monitor FICO via myFICO, decades of regulatory precedent reference FICO score tiers, and automated underwriting systems are configured around FICO thresholds — and FICO has lost no measured volume. But two things that were prospective in June are now real. On the Q3 FY2026 call the CEO described the emerging environment as one of 'score shopping', with lenders pulling more than one score per file to find the most favourable consumer outcome: that is management confirming parallel pulls, which is precisely the mechanism by which a single reference standard becomes a bilateral one. And FICO's own April 2026 cut to $0.99 removed the cost barrier that had been discouraging lenders from maintaining a second pipeline. A network whose competitor now costs the same to pull, and whose customers are pulling both, is dominant but no longer self-reinforcing in the way 'strong' asserts. It would return to strong on evidence that dual-pull files are not growing, and fall to weakened on evidence that VantageScore is taking the primary slot."
     },
     "transactionEmbedding": {
       "status": "strong",
-      "note": "FICO is embedded in the transaction layer of every consumer credit decision in the U.S. The October 2025 Mortgage Direct Licence programme deepens this embedding by establishing direct commercial relationships with lenders — replacing bureau pass-through economics with FICO-controlled royalty contracts. B2B Scores grew 36% YoY in Q1 FY2026; B2B mortgage originations grew ~53%. The per-pull royalty model means FICO earns on every credit check without bearing lending risk, regardless of score version (Classic, 8, 9, 10T)."
+      "note": "FICO remains embedded in the transaction layer of essentially every consumer credit decision in the U.S. Mortgage origination revenue grew 97% YoY in Q3 FY2026 and now represents 71% of B2B and 62% of total Scores revenue. What changed in April 2026 is what the embedding earns: the mortgage direct licence moved from $4.95/score + $33/funded loan to $0.99/score + $65/funded loan, so the pull is close to free and the economics arrive at closing. The embedding itself is undiminished — FICO is still in the decision path and still bears no lending risk — but the revenue it produces is now levered to funded-loan volume rather than to shopping activity, which imports housing-cycle beta that the per-pull royalty never had."
     },
     "systemOfRecord": {
       "status": "strong",
-      "note": "The FICO Score is the definitive numerical representation of consumer creditworthiness in the U.S. legal and financial system. Courts reference FICO scores in bankruptcy proceedings. Regulators reference them in fair lending analyses. Marketing materials, loan disclosures, and consumer communications industry-wide are built around FICO score tiers (620, 680, 740, 760). Even with VantageScore 4.0's GSE approval, replacing the system-of-record function requires coordinated institutional transition far beyond the mortgage underwriting layer alone — a decades-long process."
+      "note": "The FICO Score is the definitive numerical representation of consumer creditworthiness in the U.S. legal and financial system. Courts reference FICO scores in bankruptcy proceedings. Regulators reference them in fair lending analyses. Marketing materials, loan disclosures, and consumer communications industry-wide are built around FICO score tiers (620, 680, 740, 760). Even with VantageScore 4.0's GSE approval and price parity, replacing the system-of-record function requires coordinated institutional transition far beyond the mortgage underwriting layer alone — a decades-long process."
     },
-    "verdict": "FICO is a net AI beneficiary in its Platform segment — AI-driven credit decisioning, fraud detection, and alternative data integration (UltraFICO/Plaid) all compound Platform ARR growth — but the Scores segment faces a secular competitive threat from VantageScore that is regulatory and pricing-driven, not technological. The strongest AI-resilient moats — proprietary 70-year dataset (grows more valuable as AI models require rich longitudinal training data), transaction embedding (real-time AI decisioning increases per-pull volume), and system-of-record status (regulatory and legal frameworks do not update at AI speed) — all hold firmly. The primary risk has escalated from a GSE-specific lender-choice framework to a comprehensive federal dismantling: VA, FHA, USDA, Fannie, and Freddie all now formally permit FICO alternatives, and Fannie Mae has gone further by eliminating minimum credit score requirements entirely. FICO's AI-era durability is strong for the Platform and defensible for Scores near-term, but the 30-year regulatory monopoly has been comprehensively dismantled — moat durability now depends entirely on institutional inertia, network effects, and Platform compounding rather than any mandate exclusivity."
+    "verdict": "FICO is still a net AI beneficiary in Platform — AI-driven decisioning, fraud detection and alternative-data integration all compound Platform ARR, which grew 62% to $413M and passed the legacy book for the first time in Q3 FY2026. The AI-resilient moats hold: the 70-year proprietary dataset grows more valuable as models require longitudinal training data, transaction embedding survives the pricing change, and system-of-record status does not update at AI speed. What changed this quarter is not AI, it is economics. FICO answered the VantageScore price war by matching it — $0.99 per pull plus $65 per funded loan since April 2026 — which protects volume and defuses the Hawley/FTC pricing complaint, but converts the most profitable franchise in the company from a royalty on shopping activity into a success fee on closings, and forfeits the per-pull price as a growth lever. Management's own description of 'score shopping' is the reason networkEffects moves from strong to intact: the reference standard is going bilateral, even though no volume has been lost yet. The durable read is that FICO is now a mid-teens compounder with a strong but no longer exclusive standard, a genuine software engine still masked by legacy runoff, and a mortgage line that has traded pricing power for price parity."
   }
 }
