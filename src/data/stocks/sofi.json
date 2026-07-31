@@ -9,7 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$20B"
+      "value": "~$21B"
     }
   ],
   "chips": [
@@ -18,140 +18,153 @@
       "color": "primary"
     },
     {
-      "label": "Bank Charter Moat",
-      "color": "success"
+      "label": "Charter Edge Narrowing — OCC De Novo Boom",
+      "color": "warning"
     }
   ],
   "metrics": [
     {
-      "title": "Q1 Revenue",
-      "value": "$1.09B",
-      "label": "+41% YoY (Q1 2026) — Record loan originations $12.2B",
+      "title": "Q2 2026 Revenue",
+      "value": "$1.2B",
+      "label": "+40% YoY adjusted — record $14.8B originations; fee-based revenue $472.3M, 39% of total",
       "icon": "TrendingUp",
       "color": "#22c55e"
     },
     {
       "title": "Net Income",
-      "value": "$166.7M",
-      "label": "Q1 2026 — More than 2× YoY ($71.1M)",
+      "value": "$157M",
+      "label": "Q2 2026 — +61% YoY, 11th straight profitable quarter; adj. EBITDA $358M (+44%) at a 30% margin",
       "icon": "BarChart2",
       "color": "#f59e0b"
     },
     {
-      "title": "Deposits",
-      "value": "$40.2B",
-      "label": "Q1 2026 — Personal loans +51%, student +119% YoY",
+      "title": "Members",
+      "value": "15.8M",
+      "label": "+35% YoY on a record 1.1M adds; 24.4M products (+42%); deposits $45.5B, NIM 5.98%",
       "icon": "Users",
       "color": "#6366f1"
     }
   ],
   "moat": {
-    "description": "National bank charter + Galileo infrastructure moat creates structural advantages that non-bank fintechs cannot easily replicate.",
+    "description": "The national bank charter and the Galileo/Technisys infrastructure still give SoFi structural advantages over the neobank field, but the scarcity half of the charter argument has been overtaken by events. Through 2026 the OCC has run a de novo charter boom — roughly two dozen fintech charter applications or approvals against 14 in all of 2025, with Comptroller Jonathan Gould targeting a 120-day turnaround and largely hitting it. Upstart was conditionally approved for a branchless full-service national bank four months after applying; Mercury and Nubank's U.S. unit were conditionally approved; the FDIC has conditionally approved industrial bank bids from Ford, GM, Stellantis and Edward Jones. What SoFi spent years and a large regulatory investment to obtain is now a roughly one-year process for a well-capitalised applicant. The charter remains a real advantage — it funds a $45.5B deposit book at a 5.98% net interest margin and it is what let SoFi become the first U.S. national bank to issue a stablecoin to retail — but it is an advantage of possession and scale, not of exclusivity.",
     "analysisTitle": "The Charter & Infrastructure Moat",
-    "analysisSummary": "SoFi's competitive position rests on **three compounding structural advantages** that separate it from the crowded neobank field:",
+    "analysisSummary": "SoFi's competitive position rests on **three structural advantages**. The first has just lost its scarcity, the second is still absorbing the loss of its largest client, and the third is compounding faster than either:",
     "analysisPoints": [
       {
-        "title": "The National Bank Charter",
-        "text": "Obtaining an OCC national bank charter in January 2022 was a watershed moment. It gives SoFi access to low-cost FDIC-insured deposit funding — generating an estimated $515 million in annualized interest expense savings vs. the pre-charter wholesale funding model. As the FDIC and OCC tightened scrutiny on sponsor-bank arrangements in 2024-25, non-chartered competitors like Chime face increasing regulatory headwinds. The charter is simultaneously a moat and a barrier to entry that took SoFi years and significant regulatory investment to achieve."
+        "title": "The National Bank Charter — Real, No Longer Rare",
+        "text": "Obtaining an OCC national bank charter in January 2022 was a watershed moment, and the economics it bought are undiminished: $45.5B of deposits at quarter-end, a 5.98% net interest margin, and tangible book value of $9.5B (+80% YoY). It is also what made SoFiUSD possible — launched 27 May 2026 as the first stablecoin issued by a U.S. national bank to reach a consumer banking platform, live on Ethereum and Solana, backed 1:1 by 85% short-term Treasuries and 15% cash at FDIC-insured institutions, with monthly Deloitte verification. What has changed is the barrier behind SoFi. The OCC's 2026 posture is openly permissive: ~24 fintech charter applications or approvals this year versus 14 in all of 2025, a stated 120-day turnaround, conditional approval for Upstart's branchless full-service national bank four months after filing, and conditional approvals for Mercury and Nubank's U.S. unit — alongside FDIC industrial-bank approvals for Ford, GM, Stellantis and Edward Jones. Chime's CEO has said a charter is 'a when, not if'. None of these are operating deposit competitors yet; several are non-insured trust charters that cannot take retail deposits at all. But the claim that a non-chartered fintech faces a multi-year regulatory process it cannot realistically clear is no longer true, and that claim was the load-bearing part of the moat."
       },
       {
-        "title": "Galileo & Technisys — 'The AWS of Fintech'",
-        "text": "SoFi is the only company that owns a consumer bank, a payment processing infrastructure (Galileo, 160M enabled accounts), and a cloud-native core banking platform (Technisys/Cyberbank). Galileo was selected as the U.S. Treasury Direct Express processing partner (3.4M users); it also powers Southwest Airlines and Wyndham Hotels' rewards financial products and is expanding into Latin America and the Middle East. This B2B infrastructure generates 32% contribution margins and is targeting $1B revenue by 2026 — a capital-light recurring fee engine that transcends SoFi's own consumer business."
+        "title": "SoFi Tech Solutions — Still Below the High-Water Mark",
+        "text": "SoFi remains the only company that owns a consumer bank, a payment processor (Galileo) and a cloud-native core banking platform (Technisys/Cyberbank), now unified under the SoFi Tech Solutions brand. The segment has not yet recovered from the exit of Chime, which fully transitioned off before 31 December 2025. Q2 2026 net revenue was $84.5M — down 23% YoY, though up 13% sequentially and improving from Q1's −27%, with contribution profit of $11.8M at a 14% margin against the 32% contribution margins the segment used to carry. Management points to roughly ten new revenue-contributing clients signed ahead of 2026 and expansion into travel and hospitality co-branded cards, and the Chime comparison laps in Q4 2026. The strategic logic still holds — Galileo was chosen as the U.S. Treasury Direct Express processor for 3.4M users and powers Southwest and Wyndham rewards products — but at 7% of consolidated revenue and shrinking year-over-year, this is a repair job rather than the capital-light growth engine the $1B-by-2026 target described."
       },
       {
-        "title": "The One-Stop-Shop Flywheel",
-        "text": "SoFi's members average 1.5 products; its target is to become the financial services equivalent of an Amazon Prime membership. Cross-sell is accelerating: 32% of new products in Q1 2025 came from existing members, and multi-product members retain at significantly higher rates. This creates a self-reinforcing acquisition efficiency loop — better retention lowers CAC, which funds better rates, which attracts more members. The 10M member base at 34% YoY growth is the raw material for compounding ARPU."
+        "title": "The One-Stop-Shop Flywheel — The Part That Is Working",
+        "text": "This is where the compounding actually shows up. Members reached 15.8M in Q2 2026 (+35% YoY) on a record 1.1M additions, and products reached 24.4M (+42%) on 2.2M additions — products growing faster than members is the cross-sell thesis showing in the data rather than in the narrative. Management credits SoFi Plus and the crypto offering with driving organic products-per-member growth, and Big Business Banking, built around API-driven fiat and crypto banking, is being positioned to pull SoFiUSD into commercial use. Better retention on multi-product members lowers CAC, which funds better rates, which attracts more members. The flywheel is the reason Financial Services revenue reached $466.3M in Q2 (+29% YoY) with net interest income up 29% on consumer deposit growth — although that growth rate has come down from +41% in Q1, so the segment is compounding off a larger base at a slower rate."
       }
     ]
   },
   "growth": {
-    "description": "Q1 2026 revenue of $1.09B grew 41% YoY with record loan originations of $12.2B, personal loans +51% and student loans +119% YoY. Net income of $166.7M more than doubled YoY. Galileo platform revenue fell 27% on the Chime exit and credit metrics softened, driving a ~9% post-earnings selloff despite the top-line beat. The lending engine remains strong; the fee-based platform business needs new wins to offset Chime.",
+    "description": "Q2 2026 (reported 29 July 2026) was a beat-and-raise the market sold. Adjusted net revenue was $1.2B, +40% YoY, ahead of consensus by ~8%; adjusted EPS of $0.12 beat by a cent; GAAP net income of $157M rose 61% YoY in an 11th consecutive profitable quarter; adjusted EBITDA of $358M rose 44% at a 30% margin. Lending adjusted net revenue was $711.7M (+59%) with contribution profit of $399.0M (+63%) at a 56% margin on record $14.8B originations, of which the Loan Platform Business placed $3.1B of personal loans on behalf of third parties for $140.9M of the segment's $143.3M consolidated contribution. Credit improved rather than deteriorated: the all-in annualised personal loan net charge-off rate was ~3.7%, 70bps better sequentially and 80bps better YoY, and 90-day on-balance-sheet delinquencies fell 7bps to 40bps. FY2026 adjusted net revenue guidance rose to $4.75–4.85B (+32–35%). The stock fell 9% to a 52-week low on the print and recovered 8% the next day, and the reason is in what did not move: management held adjusted EBITDA at ~$1.6B, adjusted net income at ~$825M and adjusted EPS at ~$0.60, choosing to reinvest the revenue upside rather than let it drop through.",
     "growthAnalysis": {
-      "cagrEstimate": "25-35%",
-      "scoreDerivation": "Base 70 + 12 for revenue +41% YoY and net income doubling + 5 for record originations - 5 for Galileo softness and credit metric watch = 82",
+      "cagrEstimate": "24-30%",
+      "cagrBasis": "Adjusted net revenue: FY2024 $2.61B → FY2025 ~$3.6B (+37%) → FY2026 guide $4.75–4.85B (+32–35%). Management's own medium-term plan is at least 30% compounded adjusted net revenue growth from 2025 to 2028 with 38–42% compounded adjusted EPS growth. The estimate decays that measured series rather than adopting the target: the segment mix says the blended rate is below the headline. Lending, at +59%, is riding a record origination cycle and the ramp of the Loan Platform Business from near zero — a step change that laps. Financial Services decelerated from +41% YoY in Q1 to +29% in Q2. Technology Platform is at $84.5M and −23% YoY. A 3–5 year blend that starts near the guided 33% and converges on the mid-20s as the origination cycle normalises and the LPB ramp anniversaries lands at 24–30%, which brackets management's 30% target at the top rather than sitting on it.",
+      "scoreDerivation": "Base 88 on a 27% midpoint — decayed from the +32–35% currently guided because that rate depends on an origination cycle at record levels and on the Loan Platform Business ramping from near zero, neither of which repeats at the same rate. + 0 trajectory (Lending/LPB accelerating, Financial Services decelerating from +41% to +29% YoY, Technology Platform stabilising) + 4 margin (expanding: adjusted EBITDA +44% on revenue +40%, 30% margin vs 29% a year ago, GAAP net income +61%) − 5 key risk (moderate) = 87. Down from 90: the consumer credit risk that was the standing concern has resolved in SoFi's favour and is no longer charged, but the Financial Services deceleration is now measured, and the CAGR estimate no longer sits at management's own three-year target with zero decay.",
       "drivers": [
-        { "name": "Lending engine", "metric": "Record $12.2B originations; personal loans +51%, student loans +119% YoY", "trend": "accelerating" },
-        { "name": "Total revenue growth", "metric": "Q1 2026 revenue +41% YoY to $1.09B", "trend": "accelerating" },
-        { "name": "Galileo platform", "metric": "Platform revenue -27% on Chime exit; needs new wins", "trend": "decelerating" }
+        {
+          "name": "Lending & the Loan Platform Business",
+          "metric": "Q2 2026 adjusted net revenue $711.7M (+59% YoY); contribution profit $399.0M (+63%) at a 56% margin; record $14.8B originations, including $3.1B of personal loans placed for third parties generating $140.9M of fee revenue",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Financial Services & member flywheel",
+          "metric": "Q2 2026 segment revenue $466.3M, +29% YoY — down from +41% in Q1; members 15.8M (+35%), products 24.4M (+42%), deposits $45.5B, NIM 5.98%",
+          "trend": "decelerating"
+        },
+        {
+          "name": "Technology Platform (SoFi Tech Solutions)",
+          "metric": "Q2 2026 revenue $84.5M, −23% YoY on the Chime exit but +13% sequentially and improving from −27% in Q1; contribution margin 14% against a historical 32%; the comparison laps in Q4 2026",
+          "trend": "stable"
+        }
       ],
       "primaryType": "market share",
-      "keyRisk": "Consumer credit cycle in 2026-2027 lifts charge-offs and forces reserve builds, slowing originations while Galileo struggles to replace Chime.",
+      "keyRisk": "The FY2026 adjusted EPS guide of ~$0.60 was held flat while the revenue guide went up, so roughly 60% of the full-year EPS now has to arrive in H2 while the incremental spend is already committed. What has to hold for that is third-party appetite for SoFi's paper: the Loan Platform Business placed $3.1B of personal loans for others in Q2 and fee-based revenue is now 39% of total. If capital partners step back or origination volume normalises off record levels through 2027, the fee line contracts against a fixed cost base and the ~$825M adjusted net income target misses. Technology Platform cannot cushion it — at $84.5M and −23% YoY it is 7% of revenue and still below its own prior-year level. The consumer credit leg of this risk has moved the other way and is not counted here: charge-offs improved 80bps YoY and delinquencies 7bps sequentially.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 84,
-    "description": "At ~$16 — 38% below the base case of $26 and ~30% YTD drawdown — SoFi offers an attractive margin of safety after the post-Q1 selloff. Revenue grew 41% YoY in Q1 2026 and net income more than doubled, but investor concerns over Galileo (Chime exit) and credit quality have compressed the multiple even as fundamentals strengthened.",
+    "score": 79,
+    "description": "At ~$16.5 SoFi is roughly where it was at the last review while the business has put two beat-and-raise quarters behind it — the stock fell 9% to a 52-week low of $14.88 on the Q2 print and recovered 8% the next session to close 30 July at $16.47, against a 52-week high of $32.73. The de-rating is about earnings quality, not the top line: revenue guidance went up and EPS guidance did not, so the market is being asked to fund reinvestment on management's word. The scenario ladder has been rebuilt on anchors specific to a chartered lender rather than on the member-count and Galileo milestones the old one used, all of which have since been settled in one direction or the other. At ~27× the FY2026 adjusted EPS guide of ~$0.60 against a 38–42% targeted EPS CAGR, the PEG is ~0.7×; at 2.2× the $9.5B tangible book it is not obviously cheap on the asset side. The price sits ~50% above the bear case ($11) and ~31% below the base ($24) — a real discount, but a narrower corridor than the old $13/$26 implied.",
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "July 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "49.9×",
-          "note": "$498.7M net income FY2024"
+          "value": "~35×",
+          "note": "TTM GAAP net income ~$637M (Q3 2025–Q2 2026)"
         },
         {
-          "label": "Forward P/E (NTM)",
+          "label": "Forward P/E (FY2026 adjusted)",
           "value": "~27×",
-          "note": "consensus EPS est. ~$0.70 2025E"
+          "note": "FY2026 adj. EPS guide ~$0.60, held flat on the revenue raise"
         },
         {
           "label": "PEG Ratio",
-          "value": "~0.8×",
-          "note": "fwd P/E ÷ 35% revenue CAGR"
+          "value": "~0.7×",
+          "note": "fwd P/E ÷ management's 38–42% adj. EPS CAGR target to 2028"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~6.6×",
-          "note": "$3.6B 2025E revenue"
+          "value": "~3.8×",
+          "note": "~$5.5B NTM adjusted net revenue off the $4.75–4.85B FY2026 guide"
         },
         {
-          "label": "Price / Book",
-          "value": "~2.1×",
-          "note": "bank charter premium"
+          "label": "Price / Tangible Book",
+          "value": "~2.2×",
+          "note": "tangible book value $9.5B, +80% YoY"
         }
       ],
-      "summary": "At ~27× forward earnings alongside 35%+ revenue growth, SoFi trades at a sub-1.0 PEG — rare for a profitable fintech. The elevated trailing P/E overstates true expensiveness: Q4 2024 run-rate annualises to ~$1.3B net income, implying a sub-20× P/E on current earnings power. Price/book of 2.1× is modest for a bank with 5.8% NIM and $26B in deposits."
+      "summary": "The two multiples disagree, and the disagreement is the whole valuation question. On earnings SoFi looks cheap: ~27× a guided FY2026 adjusted EPS that management intends to compound at 38–42% through 2028 is a sub-1.0 PEG, rare for a profitable fintech, and the trailing GAAP multiple of ~35× overstates the expense because Q2's $157M annualises well below the run-rate the business is exiting the year on. On assets it looks fair rather than cheap: 2.2× tangible book for a bank earning a 5.98% NIM is a premium that has to be earned by the fee businesses, and the largest of those — Technology Platform — is smaller than it was a year ago. The bridge between the two is share count. Tangible book grew 80% YoY partly through issuance, and the ~$825M adjusted net income guide against a ~$0.60 EPS guide implies roughly 1.375B diluted shares against 1.28B outstanding. Per-share compounding is running behind the business's compounding, and that gap is what the price has been discounting."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$13",
-      "description": "Credit cycle turns: personal loan charge-offs spike above 4%, NIM compresses, and growth-stock multiple compression rerates SoFi back toward distressed fintech valuations as macro headwinds compound.",
+      "priceTarget": "$11",
+      "description": "The credit cycle turns and takes the fee engine with it: third-party appetite for SoFi's paper thins, the Loan Platform Business stalls, reserves build, and a lender growing into a downturn rerates toward book.",
       "points": [
-        "Personal loan net charge-off rates climb above 4% (from current 2.83%) as consumer credit deteriorates; SoFi's 69% personal loan book concentration forces provision increases that wipe out adjusted EBITDA gains and reignite GAAP loss fears",
-        "Interest rates remain elevated through 2026, compressing NIM below 5% on the $26B deposit book while making SoFi's rates uncompetitive vs. money-market funds; member growth decelerates below 15% YoY as new member acquisition economics deteriorate",
-        "Galileo client churn accelerates as hyperscalers (Google, AWS) launch competing payment-processing APIs at cost; Technology Platform revenue growth stalls below 5%, removing the key capital-light growth narrative that justified the premium valuation"
+        "Third-party capital demand for personal loans contracts, and the Loan Platform Business — $3.1B placed and $140.9M of fee revenue in Q2 alone — cannot be replaced on balance sheet without consuming the capital that funds origination growth; fee-based revenue falls from 39% of total and the ~$825M adjusted net income guide misses badly",
+        "Personal loan all-in net charge-offs reverse the current improvement and climb back through 4.5% while 90-day delinquencies rise from 40bps, forcing provision builds that eat the operating leverage; the market stops paying a growth multiple for a consumer lender and marks SoFi toward 1.4–1.5× the $9.5B tangible book",
+        "The OCC charter boom converts from approvals into operating competitors — Upstart, Mercury, Nubank's U.S. unit and a chartered Chime bidding for the same deposits — compressing the 5.98% NIM below 5% on a $45.5B book at the same time Technology Platform is still below its prior-year revenue"
       ]
     },
     "base": {
-      "priceTarget": "$26",
-      "description": "Continued 20-25% revenue growth: Lending recovers with rate cuts, Financial Services reaches profitability, Galileo approaches $1B revenue milestone, and GAAP EPS expands to $0.30-0.40.",
+      "priceTarget": "$24",
+      "description": "The plan roughly lands: adjusted net revenue compounds in the high-20s, the reinvestment converts to earnings on schedule, and SoFi holds a growth multiple on a 2027 adjusted EPS in the low-$0.80s.",
       "points": [
-        "Member count reaches 13-14M by end of 2026 as SoFi's rates, rewards, and one-stop-shop advantage sustain 25-28% YoY member growth; multi-product penetration lifts ARPU 10-15%",
-        "Galileo/Technisys revenue crosses $500M in 2026 on new client wins (10+ incremental revenue-contributing clients in 2026 already signed) and expansion into international markets; 32% segment margins hold",
-        "Rate cuts in 2025-26 reduce deposit cost pressure, expanding NIM and enabling SoFi to originate home loans at scale — adding a third major lending vertical alongside personal loans and student refinancing"
+        "FY2026 adjusted net revenue finishes in the guided $4.75–4.85B range and 2027 compounds in the mid-to-high 20s, putting adjusted EPS near $0.80–0.85 as the FY2026 reinvestment year gives way to operating leverage; ~29× that is $24",
+        "The member flywheel holds its shape — products (+42% YoY) keep outgrowing members (+35%), with SoFi Plus, crypto and SoFiUSD lifting products per member — so Financial Services stabilises in the high-20s rather than continuing to decelerate from the +41% it posted in Q1 2026",
+        "Technology Platform laps the Chime exit in Q4 2026 and returns to growth in 2027 on the ~10 new clients signed and the travel and hospitality card verticals, restoring a modest capital-light contribution without needing to reach the abandoned $1B milestone"
       ]
     },
     "bull": {
-      "priceTarget": "$45",
-      "description": "SoFi establishes itself as the dominant fintech infrastructure provider ('AWS of Fintech'), reaching 20M members and $5B+ revenue with operating leverage driving GAAP EPS of $0.80+, warranting a premium SaaS-like multiple.",
+      "priceTarget": "$40",
+      "description": "SoFi hits its own 2028 plan — at least 30% compounded adjusted net revenue growth to 2028 with 38–42% compounded adjusted EPS growth — and the market pays a durable-compounder multiple for a chartered bank with a fee engine attached.",
       "points": [
-        "Galileo becomes a $1B revenue business by 2026 with 35%+ contribution margins as major international bank wins (Middle East, LatAm) scale; multiple SaaS platforms include SoFi's Cyberbank as the core banking standard",
-        "SoFi's 20M member target is achieved by 2027 as it expands into business banking, insurance, and wealth management — product revenue per member doubles from current $270 to $500+",
-        "Credit quality holds through the cycle as SoFi's AI-driven underwriting models (trained on 10M+ member profiles) generate loss rates materially below industry averages, validating a premium P/B multiple and attracting institutional investors who previously avoided high-beta fintech"
+        "Adjusted EPS reaches the $1.02–1.12 that management's 38–42% CAGR target implies for 2028, and the stock holds ~36× it as the reinvestment year is vindicated and per-share growth catches up with revenue growth",
+        "SoFiUSD becomes infrastructure rather than a feature: Big Business Banking converts API-driven fiat and crypto banking demand into commercial balances, and being the first stablecoin issued by a U.S. national bank turns the charter from a funding advantage into a distribution one that trust-chartered crypto entrants cannot match",
+        "The Loan Platform Business scales into a genuine capital-light annuity — SoFi originating and servicing at fee margins on other people's balance sheets — lifting fee-based revenue well above 39% of total and earning the multiple re-rate that a lower-capital-intensity mix deserves"
       ]
     }
   },
   "tenMoats": {
     "learnedInterfaces": {
       "status": "weakened",
-      "note": "SoFi's app design is award-winning but banking apps are increasingly commoditized; consumers can transfer accounts digitally in minutes, limiting interface lock-in to behavioral inertia rather than structural friction."
+      "note": "SoFi's app design is award-winning and SoFi Plus gives members a reason to consolidate, but banking apps are increasingly commoditized; consumers can transfer accounts digitally in minutes, limiting interface lock-in to behavioral inertia rather than structural friction."
     },
     "businessLogic": {
       "status": "intact",
-      "note": "Proprietary credit underwriting models trained on 10M+ member profiles, income-verified lending, and the Galileo/Technisys payment processing and core banking logic represent genuinely complex, non-trivially replicable business logic."
+      "note": "Proprietary credit underwriting trained on 15.8M member profiles, income-verified lending, and the Galileo/Technisys payment processing and core banking logic represent genuinely complex, non-trivially replicable business logic. Q2 2026 gave it a direct read: all-in personal loan net charge-offs improved 80bps YoY to ~3.7% and 90-day delinquencies fell to 40bps while originations hit a record $14.8B — growth and credit quality moving in the same direction is the underwriting claim showing up in the numbers."
     },
     "publicDataAccess": {
       "status": "destroyed",
@@ -163,29 +176,29 @@
     },
     "bundling": {
       "status": "intact",
-      "note": "The one-stop-shop strategy is delivering: 32% of new products in Q1 2025 came from existing members, and members with 3+ products churn at materially lower rates — the bundle creates real switching cost."
+      "note": "The one-stop-shop strategy is delivering and the evidence is in the ratio: products grew 42% YoY in Q2 2026 to 24.4M against members up 35% to 15.8M, so products per member is rising rather than being held flat by new-member dilution. Management attributes the organic lift to SoFi Plus and crypto. Members with 3+ products churn at materially lower rates — the bundle creates real switching cost."
     },
     "proprietaryData": {
       "status": "intact",
-      "note": "10M+ member profiles with income-verified financial behavior across loans, deposits, investments, and credit cards create a compounding underwriting dataset that smaller fintechs and even large banks lack in this specific demographic segment."
+      "note": "15.8M member profiles with income-verified financial behavior across loans, deposits, investments, crypto and credit cards create a compounding underwriting dataset that smaller fintechs and even large banks lack in this specific demographic segment."
     },
     "regulatoryLockIn": {
-      "status": "strong",
-      "note": "The national bank charter (OCC, 2022) is an extraordinarily difficult regulatory achievement that took SoFi years to obtain; combined with the U.S. Treasury Direct Express contract and FDIC-insured deposit infrastructure, this creates a regulatory moat that non-bank fintechs (Chime, Robinhood) cannot replicate without multi-year regulatory process."
+      "status": "intact",
+      "note": "Downgraded from strong in July 2026. The charter itself is undiminished — it funds $45.5B of deposits at a 5.98% NIM and made SoFi the first U.S. national bank to issue a stablecoin onto a consumer platform (SoFiUSD, 27 May 2026) — but the scarcity is gone. The OCC has taken in or approved roughly two dozen fintech charter filings in 2026 against 14 in all of 2025, with Comptroller Gould targeting and largely meeting a 120-day turnaround: Upstart was conditionally approved for a branchless full-service national bank four months after applying, and Mercury and Nubank's U.S. unit were also conditionally approved, alongside FDIC industrial-bank approvals for Ford, GM, Stellantis and Edward Jones. Chime's CEO calls a charter 'a when, not if'. Status stops at intact rather than weakened because none of these is yet an operating deposit competitor and several are non-insured trust charters that cannot take retail deposits at all — but the multi-year barrier that made this SoFi's strongest moat no longer exists."
     },
     "networkEffects": {
       "status": "weakened",
-      "note": "Indirect network effects exist — more members generate richer underwriting data and lower CAC — but classic Metcalfe's Law does not apply to banking; a new SoFi member doesn't make the product more valuable for existing members directly."
+      "note": "Indirect network effects exist — more members generate richer underwriting data and lower CAC — but classic Metcalfe's Law does not apply to banking; a new SoFi member doesn't make the product more valuable for existing members directly. SoFiUSD could eventually change this if it circulates between SoFi accounts and Big Business Banking counterparties, but that is a 2027+ question with no volume behind it yet."
     },
     "transactionEmbedding": {
       "status": "intact",
-      "note": "Members who route their direct deposit through SoFi (earning the premium 4.5%+ APY) have their financial center-of-gravity anchored to SoFi; moving direct deposit is a deliberate multi-step process that most members avoid once established."
+      "note": "Members who route direct deposit through SoFi have their financial center-of-gravity anchored there, and the $45.5B deposit base at a 5.98% net interest margin is the proof that the anchoring holds — moving direct deposit is a deliberate multi-step process that most members avoid once established. Fee-based revenue of $472.3M in Q2 2026, 39% of total, shows the same embedding monetised beyond spread."
     },
     "systemOfRecord": {
       "status": "intact",
-      "note": "For members with SoFi checking, savings, invest, credit card, and loans, SoFi becomes the system of record for their full financial life — though this is limited to members with 3+ products and doesn't yet reach the institutional depth of a Fiserv or FIS."
+      "note": "For members with SoFi checking, savings, invest, crypto, credit card and loans, SoFi becomes the system of record for their full financial life — 24.4M products across 15.8M members implies the multi-product cohort is growing. It remains limited to members with 3+ products and doesn't yet reach the institutional depth of a Fiserv or FIS, and the B2B side of the claim got weaker this year: Technology Platform revenue is 23% below its prior-year level after the Chime exit."
     },
-    "verdict": "SoFi's bank charter (regulatoryLockIn: strong) is a genuine AI-era moat — it cannot be disrupted by a language model — and the Galileo/Technisys infrastructure creates a system-of-record and transaction-embedding position in the B2B fintech stack. However, AI threatens the interface layer and could compress the underwriting advantage as competitors access similar models, keeping the AI resilience score in the solid-but-not-exceptional range."
+    "verdict": "The charter is still the centre of the SoFi case, but 2026 changed what kind of asset it is. When the OCC was slow-walking applications, the charter was scarcity; now that it is approving fintech banks in four months, the charter is scale — $45.5B of deposits at a 5.98% NIM, a tangible book of $9.5B, and the regulatory standing to put the first U.S. national bank stablecoin in front of 15.8M members. Scale is a real advantage and it is one AI cannot write away, but it is defended by execution rather than by a gate. Meanwhile the two moats that were supposed to compound alongside it have split: the consumer bundle is working, with products growing faster than members and credit improving through a record origination quarter, while the B2B infrastructure moat is smaller than it was a year ago and has not yet replaced Chime. That combination — a strong flywheel, a narrowing gate, and an unrepaired second engine — keeps the AI-resilience score solid rather than exceptional."
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "July 31, 2026"
 }
