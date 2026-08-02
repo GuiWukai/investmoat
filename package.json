@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "npm run validate:stocks && npm run validate:research",
+    "prebuild": "npm run validate:stocks && npm run validate:research && npm run validate:skills",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "validate:stocks": "tsx scripts/validate-stocks.ts",
     "validate:research": "tsx scripts/validate-research.ts",
+    "validate:skills": "tsx scripts/validate-skills.ts",
     "screen:research": "tsx scripts/research-screen.ts"
   },
   "dependencies": {
