@@ -107,7 +107,7 @@ The counter-case check measures it: a counter-case section under 10% of the arti
 
 ## Authoring skills
 
-Five Claude Code skills in [`.claude/skills/`](../.claude/skills) carry this document's rules into the editor, and load automatically at the point in the lifecycle they belong to:
+Five skills in [`.agents/skills/`](../.agents/skills) carry this document's rules into the editor, and load automatically at the point in the lifecycle they belong to:
 
 | Skill | Covers |
 |---|---|
@@ -117,7 +117,9 @@ Five Claude Code skills in [`.claude/skills/`](../.claude/skills) carry this doc
 | `source-research` | Citing company figures: what counts as primary, the `sources` wiring, cross-company tables, fixing the unsourced-block warning. |
 | `review-research` | The re-read loop — testing `falsifiableBy`, re-verifying moat statuses named in prose, age-checking tables, writing a revision entry, bumping `lastReviewed`. |
 
-Stock authoring has the equivalent slash commands in [`.claude/commands/`](../.claude/commands): `/add-stock`, `/analyse-stock`, `/update-stock`.
+Each skill is a directory holding a `SKILL.md` with `name` and `description` frontmatter, per the [Agent Skills](https://agentskills.io) spec. `.agents/skills/` is the vendor-neutral location, read directly by Cursor, GitHub Copilot and other compliant clients. Claude Code scans only `.claude/skills/`, so that directory holds a symlink per skill pointing back at `.agents/skills/` — the files themselves live in one place, and adding a skill means creating it under `.agents/skills/` and adding the matching symlink.
+
+Stock authoring has the equivalent slash commands in [`.claude/commands/`](../.claude/commands): `/add-stock`, `/analyse-stock`, `/update-stock`. Slash commands have no cross-agent standard, so these stay Claude Code specific.
 
 ## The idea pipeline
 

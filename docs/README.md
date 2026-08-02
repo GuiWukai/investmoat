@@ -8,4 +8,4 @@
 | [DESIGN-SYSTEM.md](./DESIGN-SYSTEM.md) | "Institutional Gold" identity — colours, fonts, tokens, utilities, OG images |
 | [hyperscalers-analysis.md](./hyperscalers-analysis.md) | Research note: hyperscaler / AI-infrastructure analysis |
 
-See also the project [README](../README.md), [AGENTS.md](../AGENTS.md) (environment notes), and the authoring slash commands in [`.claude/commands/`](../.claude/commands).
+See also the project [README](../README.md), [AGENTS.md](../AGENTS.md) (environment notes), the agent skills in [`.agents/skills/`](../.agents/skills), and the authoring slash commands in [`.claude/commands/`](../.claude/commands).
