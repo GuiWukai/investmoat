@@ -2,7 +2,7 @@
   "slug": "ice",
   "ticker": "ICE",
   "name": "Intercontinental Exchange, Inc.",
-  "lastAnalyzed": "June 16, 2026",
+  "lastAnalyzed": "August 2, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$80B"
+      "value": "~$86B"
     }
   ],
   "chips": [
@@ -29,35 +29,35 @@
   ],
   "metrics": [
     {
-      "title": "Q1 2026 Net Revenue",
-      "value": "$2.98B",
-      "label": "+18% YoY record quarter — beat consensus by ~3.4%; 56% operating margin",
+      "title": "Q2 2026 Net Revenue",
+      "value": "$2.67B",
+      "label": "+5% YoY — recurring +8%, transaction +2%; energy revenue −13%",
       "icon": "TrendingUp",
       "color": "#003087"
     },
     {
-      "title": "Q1 2026 Adj. EPS",
-      "value": "$2.35",
-      "label": "+37% YoY — record adjusted FCF of $1.2B; $848M returned to holders",
+      "title": "Q2 2026 Adj. EPS",
+      "value": "$1.90",
+      "label": "+5% YoY, $0.06 ahead of consensus — 61% adj. operating margin",
       "icon": "DollarSign",
       "color": "#2563eb"
     },
     {
-      "title": "Mar 2026 Contracts",
-      "value": "428.9M",
-      "label": "All-time record — ADV +88% YoY; Exchanges segment at 80% adj. operating margin",
-      "icon": "BarChart",
+      "title": "MarketAxess Acquisition",
+      "value": "$6.0B",
+      "label": "All-cash at $167/share, closing H1 2027 — ~3.4× gross leverage at close",
+      "icon": "Share2",
       "color": "#0cceaf"
     }
   ],
   "moat": {
-    "description": "ICE owns the global pricing benchmarks for energy derivatives (Brent crude, natural gas), the electronic system of record for U.S. mortgage ownership (MERS), and the authoritative pricing data for the $130T global bond market — three natural monopolies in financial infrastructure that cannot be replicated.",
+    "description": "ICE owns the global pricing benchmarks for energy derivatives (Brent crude, natural gas), the electronic system of record for U.S. mortgage ownership (MERS), and the authoritative pricing data for the $130T global bond market — three natural monopolies in financial infrastructure that cannot be replicated. The pending $6.0B acquisition of MarketAxess would add the leading institutional credit RFQ network to the pricing franchise, but it does not close until H1 2027 and is not credited in the moat statuses below.",
     "analysisTitle": "The Financial Infrastructure Monopoly",
     "analysisSummary": "Intercontinental Exchange has quietly assembled **three interlocking natural monopolies** in the financial system:",
     "analysisPoints": [
       {
         "title": "The Global Energy Benchmark: Brent Crude and Natural Gas",
-        "text": "ICE's futures markets are the global reference price for oil (Brent crude), European natural gas, and U.S. power. These are not simply popular trading venues — they ARE the benchmark. Every physical oil contract, bank hedging program, and sovereign energy fund references ICE's Brent price. The network effect is self-reinforcing: Brent is the benchmark because all the liquidity is there, and all the liquidity is there because it's the benchmark. No competitor has unseated an established derivatives benchmark in 40 years."
+        "text": "ICE's futures markets are the global reference price for oil (Brent crude), European natural gas, and U.S. power. These are not simply popular trading venues — they ARE the benchmark. Every physical oil contract, bank hedging program, and sovereign energy fund references ICE's Brent price. The network effect is self-reinforcing: Brent is the benchmark because all the liquidity is there, and all the liquidity is there because it's the benchmark. No competitor has unseated an established derivatives benchmark in 40 years. Energy *revenue* is nonetheless cyclical — it fell 13% YoY in Q2 2026 against the volatility-driven prior-year comparison — while the franchise itself kept growing: total futures and options open interest stood at a record, up 18% YoY as of July 28, 2026."
       },
       {
         "title": "MERS: The Electronic Registry for 70M U.S. Mortgages",
@@ -65,99 +65,100 @@
       },
       {
         "title": "The Bond Pricing Monopoly: ICE Data Services",
-        "text": "ICE Data Services prices approximately 2.5 million securities daily, including millions of OTC bonds that have no liquid market and require model-based pricing. Banks, asset managers, and insurance companies use ICE's evaluated pricing for balance sheet valuation and regulatory reporting. This is not optional: under mark-to-market accounting rules, firms must use independent, verifiable pricing data. ICE's database of historical bond prices, credit spreads, and real estate analytics cannot be replicated by a startup — it is the product of decades of market participation and proprietary data acquisition."
+        "text": "ICE Data Services prices approximately 2.5 million securities daily, including millions of OTC bonds that have no liquid market and require model-based pricing. Banks, asset managers, and insurance companies use ICE's evaluated pricing for balance sheet valuation and regulatory reporting. This is not optional: under mark-to-market accounting rules, firms must use independent, verifiable pricing data. ICE's database of historical bond prices, credit spreads, and real estate analytics cannot be replicated by a startup — it is the product of decades of market participation and proprietary data acquisition. The MarketAxess deal announced July 30, 2026 is the attempt to convert that pricing authority into execution share: it would put ~2,100 institutional credit clients directly onto ICE's data, index and clearing stack."
       }
     ]
   },
   "growth": {
-    "description": "Q1 2026 (reported April 30, 2026) was a record: net revenue $3.0B (+18% YoY, beating the ~$2.84B consensus) with adjusted EPS of $2.35 (+37% YoY), record adjusted operating income of $1.9B (+26%), and record adjusted FCF of $1.2B. Exchanges delivered $1.78B net revenue at an 80% adjusted operating margin on record energy volumes (March ADV +88% YoY), Fixed Income & Data Services $657M, and Mortgage Technology $539M. The cyclical volume surge sits on top of a structural 8–10% revenue CAGR (12–15% EPS CAGR) base. June 2026 added fresh data-moat catalysts — the ICE Compass AI fixed-income trading/analytics platform, new GBP and EUR inflation-swap benchmarks, and the ICE Fraud Monitor mortgage solution — extending ICE's authoritative-data franchise into AI-native products. ICE also deepened its prediction-markets/data optionality with a further $600M Polymarket investment in March 2026 (~$2B total).",
+    "description": "Q2 2026 (reported July 30, 2026) ended the record run: net revenue $2.67B (+5% YoY) and adjusted EPS $1.90 (+5%, $0.06 ahead of consensus), against Q1's +18% revenue and +37% EPS. The swing factor is energy, where revenue fell 13% to $518M as the volatility-driven prior-year comparison rolled off and Q1's volume spike reversed — Exchanges decelerated from roughly +30% YoY in Q1 to +3% in Q2. What is left underneath is the recurring franchise, and it held: recurring revenue $1.35B (+8%, now 51% of net revenue), Fixed Income & Data Services $645M (+8%) with recurring +10%, and Mortgage Technology $557M (+5%). Management guided 2026 exchange recurring revenue to high-single-digit growth and FI&DS recurring revenue to 7–8%, while raising 2026 adjusted operating expenses to $4.19–4.23B. On the same day ICE agreed to buy MarketAxess for $6.0B in cash ($167/share, a 33% premium), fully debt-financed at ~3.4× gross leverage at close, targeting $100M of run-rate synergies and closing in H1 2027.",
     "growthAnalysis": {
-      "cagrEstimate": "8–10%",
-      "scoreDerivation": "Base 71 (~9% blended revenue CAGR) + 4 trajectory (all three segments accelerating) + 4 margin (expanding, 56% consolidated op. margin) + 4 type (TAM expansion + share gains) − 0 risk (low severity, mortgage rates easing) = 83",
+      "cagrEstimate": "7–9%",
+      "cagrBasis": "ICE consolidated net revenue: $7.99B (2023) → $9.28B (2024) → $9.93B (2025, +7%) → ~$10.9B (2026E) → ~$11.5B (2027E), a ~7.8% CAGR on 2025–2027 consensus. The estimate is anchored on the recurring line rather than the 2026 headline: recurring revenue is 51% of net revenue and grew 8% in Q2 2026, with management guiding exchange recurring to high-single digits and FI&DS recurring to 7–8%, while transaction revenue grew 2%. It is marked *down* from the +12% H1 2026 print because that print was an energy-volume spike that reversed inside the same half (Exchanges ~+30% in Q1 to +3% in Q2, energy −13%), and marked *up* for the MarketAxess consolidation (~$0.85B of annualised revenue joining the FI&DS line on close in H1 2027).",
+      "scoreDerivation": "Base 70 (7–9% blended revenue CAGR, midpoint 8%) − 1.3 trajectory (Exchanges decelerating; FI&DS and Mortgage steady) + 4 margin (adjusted operating margin 60% in 2025 to ~61.5% implied by 2026 revenue consensus against the raised $4.19–4.23B expense guide) − 5 moderate risk (the unclosed, wholly debt-funded MarketAxess acquisition) = 68. The energy normalisation is charged in the base and in the Exchanges trend, where it is now an observed fact, not in the risk term.",
       "drivers": [
         {
-          "name": "Fixed Income & Data Services",
-          "metric": "$657M Q1 2026 revenue at 47% adj. operating margin; +mid-to-high-single-digit guided 2026; CDS clearing up from $22T to $28T notional; new ICE Compass AI platform + inflation-swap benchmarks launched June 2026",
-          "trend": "accelerating"
+          "name": "Exchanges",
+          "metric": "$1.46B Q2 2026 net revenue (+3% YoY) at a 75% adj. operating margin, down from roughly +30% in Q1 as energy fell 13% to $518M; ags and metals +35%, financials +21%, cash equities and options +15%, data and connectivity +12%; recurring revenue +10% and open interest at a record, +18% YoY",
+          "trend": "decelerating"
         },
         {
-          "name": "Exchange Recurring Revenue",
-          "metric": "Exchanges $1.78B Q1 2026 net revenue at 80% adj. margin; record quarter with March ADV +88% YoY at 428.9M contracts; double-digit energy and financial futures growth",
-          "trend": "accelerating"
+          "name": "Fixed Income & Data Services",
+          "metric": "$645M Q2 2026 revenue (+8% YoY) at a 46% adj. operating margin, up from 44%; fixed income data and analytics +9%, data and network technology +11%, recurring revenue +10% and guided to 7–8% for 2026; MarketAxess adds ~$0.85B of annualised revenue on close",
+          "trend": "stable"
         },
         {
           "name": "Mortgage Technology",
-          "metric": "$539M Q1 2026 revenue at 39% adj. margin; +low-to-mid-single-digit guided 2026; recovery continuing from Q4 2025's strongest quarter since 2022",
-          "trend": "accelerating"
+          "metric": "$557M Q2 2026 revenue (+5% YoY) at a 43% adj. operating margin; closing solutions +14% and transaction revenue +11%, but servicing software +2% and recurring revenue +3% — the origination recovery is still not the driver",
+          "trend": "stable"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "If the spring 2026 dip toward 6.5% reverses and 30-year mortgage rates climb back above 7% through end of 2026, Black Knight origination platform volumes stay 40–50% below peak, and ICE Mortgage technology revenue growth falls below 3% — failing to generate adequate return on the $13.1B Black Knight investment",
-      "keyRiskSeverity": "low",
+      "keyRisk": "MarketAxess is a decelerating asset bought with debt: its Q2 2026 U.S. credit commission revenue fell 9% YoY as it ceded incremental U.S. investment-grade share to Tradeweb, and ICE is paying a 33% premium in cash funded entirely by new issuance. If U.S. credit commission revenue is still shrinking at close in H1 2027, ICE will carry ~3.4× gross leverage into 2028 against $100M of run-rate synergies that only reach full rate in year three — and the deal fails to cover its cost of capital, repeating the Black Knight pattern. Antitrust review is the second leg: ICE owes a $327.4M reverse termination fee if the deal is blocked on competition grounds.",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 83,
-    "description": "At ~$141 — down ~14% since the April review despite a record Q1 2026 (net revenue +18%, adj. EPS +37%, both well ahead of consensus) — ICE now trades at ~18× forward P/E on 2026 EPS estimates of ~$7.65, with a PEG near 1.3× on a 14% EPS CAGR. The price sits only ~18% above the bear target ($120) and ~28% below the base ($195) — the latter matching the ~$195 Wall Street median price target — an unusually wide margin of safety for a triple-monopoly infrastructure asset: the market is discounting energy-volume normalisation and a slow mortgage recovery even as fundamentals accelerate and 30-year mortgage rates ease toward 6.5%.",
+    "score": 78,
+    "description": "At $152.48 — up ~8% since the June review even as Q2 2026 growth slowed to +5% — ICE trades at ~18× forward earnings on consensus NTM EPS of roughly $8.40, with a PEG near 1.6× on an ~11% EPS CAGR. The scenario ladder has been reset around the post-Q2 estimate base: base moves from $195 to $185 (~21× 2027 consensus EPS of $8.82, close to the ~$182 Wall Street median target), bear holds at $120 (just under the $121.79 52-week low) and bull holds at $250. The price sits ~27% above the bear case and ~18% below the base — a narrower margin of safety than in June, because the shares rose while the base came down.",
     "peAnalysis": {
-      "asOf": "June 16, 2026",
+      "asOf": "August 2, 2026",
       "rows": [
         {
           "label": "Trailing P/E (adjusted)",
-          "value": "~19×",
-          "note": "TTM adj. EPS ~$7.50 (incl. Q1 2026 $2.35, +37% YoY)"
+          "value": "~20×",
+          "note": "TTM adj. EPS $7.67"
         },
         {
           "label": "Forward P/E (NTM)",
           "value": "~18×",
-          "note": "consensus 2026 EPS est. ~$7.65"
+          "note": "consensus NTM EPS ~$8.40"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.3×",
-          "note": "fwd P/E ÷ ~14% EPS CAGR"
+          "value": "~1.6×",
+          "note": "fwd P/E ÷ ~11% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~7.3×",
-          "note": "~$11B NTM net revenue"
+          "value": "~7.6×",
+          "note": "~$11.3B NTM net revenue"
         },
         {
           "label": "Price / FCF",
-          "value": "~23×",
-          "note": "~$3.5B NTM FCF est. (record $1.2B adj. FCF in Q1 2026)"
+          "value": "~18×",
+          "note": "~$4.8B 2026E adj. FCF"
         }
       ],
-      "summary": "The de-rating to ~18× forward P/E — still a wide discount to the financial data peer group (MCO ~27×, MSCI ~27×, SPGI ~24×) — has occurred while earnings accelerate (Q1 2026 adj. EPS +37% YoY) and all three segments post records. A PEG of ~1.3× is cheap for a business with ICE's moat quality, and the falling price against a steady ~$195 analyst median target has improved the risk/reward materially since April: the stock now prices in volume normalisation and a stalled mortgage recovery, leaving the $2B Polymarket prediction-markets/data option, the new ICE Compass AI franchise, and any rate-driven origination rebound (rates now easing toward 6.5%) as largely free upside."
+      "summary": "At ~18× forward earnings ICE is cheap against the financial-data peer group (SPGI ~23× forward; MCO and MSCI carry trailing multiples in the low 30s) and roughly level with the pure exchange operators (CME ~18× forward, CBOE ~21×) — which is the right read of what ICE now is, a two-thirds transaction-and-listings business with a data franchise attached, not a pure subscription compounder. The PEG of ~1.6× is the honest cost of that mix: forward EPS growth has been re-based from the ~14% assumed in June to roughly 9% for 2027 on consensus, so the multiple is no longer being bought at a discount to growth. The trailing-to-forward gap (~20× to ~18×) still signals earnings progression, but far less of it than the Q1 print implied, and the $6.0B all-debt MarketAxess purchase spends the balance-sheet optionality that previously sat behind the valuation."
     }
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$120",
-      "description": "Mortgage rates reverse the spring dip and climb back above 7% through 2027, Black Knight synergy realization stalls, and fixed income data revenue growth disappoints — causing a multiple compression to ~15× forward P/E.",
+      "description": "Energy volumes stay normalised rather than rebounding, the mortgage recovery does not arrive, and MarketAxess closes into a still-shrinking credit franchise — compressing the multiple to ~15× on trimmed 2027 earnings.",
       "points": [
-        "Mortgage origination volumes stay 40–50% below 2022 peak as 30-year rates rebound above 7% from the current ~6.5%, delaying ICE Mortgage's path to target profitability and forcing write-downs of Black Knight goodwill",
-        "Fixed income data services revenue grows below 4% as passive investing saturation limits new subscribers and enterprise budget pressure suppresses price increase acceptance",
-        "Energy derivatives volumes normalize from record 2025–2026 levels as geopolitical tensions ease; exchange recurring revenue decelerates to 2–3%, compressing the growth multiple"
+        "Energy revenue stays below the 2025–2026 peak after the 13% YoY decline in Q2 2026, and exchange transaction revenue growth holds near the +1% posted in the quarter, leaving consolidated growth in the low single digits",
+        "MarketAxess U.S. credit commission revenue keeps falling at the 9% YoY rate posted in Q2 2026 through the H1 2027 close, and ICE carries ~3.4× gross leverage without the offsetting growth — or antitrust review blocks the deal and ICE pays the $327.4M reverse termination fee",
+        "Mortgage technology recurring revenue stays near the +3% posted in Q2 2026 as origination volumes remain well below the 2021 peak, forcing another look at the carrying value of the $13.1B Black Knight investment"
       ]
     },
     "base": {
-      "priceTarget": "$195",
-      "description": "Revenue achieves guidance (mid-to-high-single-digit across segments), EPS grows 12–14% to $8+, and mortgage market shows early recovery — supporting a re-rating to ~24× forward P/E.",
+      "priceTarget": "$185",
+      "description": "Recurring revenue delivers the guided high-single-digit growth, 2027 EPS reaches the $8.82 consensus, and MarketAxess closes on schedule — supporting ~21× forward earnings, in line with the ~$182 analyst median target.",
       "points": [
-        "Mortgage rates decline toward 6% by end of 2026, triggering a 20–30% increase in origination volumes and accelerating Black Knight/Encompass platform adoption toward $2B+ annual revenue",
-        "Fixed income data services achieve high-single-digit growth as AI-ready bond analytics win new institutional mandates; ICE's OTC pricing data becomes a required input for AI portfolio management platforms",
-        "Exchange recurring revenues grow mid-single-digit with continued energy volatility; $230M Black Knight synergies fully realized with incremental cross-sell revenue from mortgage-exchange data bundle"
+        "Exchange recurring revenue grows high-single-digit and FI&DS recurring revenue 7–8% as guided, with record open interest (+18% YoY) converting back into transaction revenue growth as energy laps its comparison",
+        "MarketAxess closes in H1 2027 and is accretive to adjusted EPS in the first full year, with a third of the $100M run-rate synergies realised by year one and gross leverage back toward 3.0× within 18–24 months",
+        "Adjusted operating margin holds above 61% against the raised $4.19–4.23B expense guide, and the raised $4.0B repurchase authorisation funds $400M of quarterly buybacks, shrinking the share count from the current ~566M"
       ]
     },
     "bull": {
       "priceTarget": "$250",
-      "description": "Mortgage market fully recovers, AI-native data products add a new high-margin revenue stream, and record exchange volumes sustain — re-rating ICE to a premium multiple consistent with its monopoly quality.",
+      "description": "The mortgage market recovers, MarketAxess re-accelerates inside ICE's data and clearing stack, and energy volatility returns — re-rating ICE to ~25× on 2028 earnings, a premium consistent with its monopoly quality.",
       "points": [
-        "Mortgage origination recovers to $3T+ by 2027 (2021 levels) as rates decline to 5.5%, unlocking the full value of the $13.1B Black Knight investment with mortgage tech revenue growing 25%+ annually",
-        "ICE launches AI-native fixed income analytics and real estate data platforms leveraging MERS + bond pricing datasets, winning 50+ asset manager mandates and adding $500M+ in high-margin recurring revenue",
-        "Carbon and voluntary emissions futures grow to a $2B+ annual revenue segment by 2028 as EU carbon prices recover and corporate net-zero commitments drive institutional hedging demand"
+        "Mortgage origination recovers toward $3T as rates fall, unlocking the full value of the $13.1B Black Knight investment with mortgage technology growing well above the +5% posted in Q2 2026",
+        "MarketAxess reverses its U.S. investment-grade share loss to Tradeweb once cross-sold into ICE's evaluated pricing, indices and clearing, and the combined credit network turns the $100M synergy target into revenue synergies ICE has not underwritten",
+        "Energy and environmental volumes re-accelerate off record open interest as global gas and carbon hedging demand grows, restoring double-digit exchange transaction revenue growth"
       ]
     }
   },
@@ -180,7 +181,7 @@
     },
     "bundling": {
       "status": "intact",
-      "note": "ICE bundles exchange access + clearing + data services + analytics + mortgage technology; the integration between energy exchange data and ICE Data Services, and between Encompass LOS + MERS + closing data, creates cross-sell value that standalone competitors cannot easily replicate."
+      "note": "ICE bundles exchange access + clearing + data services + analytics + mortgage technology; the integration between energy exchange data and ICE Data Services, and between Encompass LOS + MERS + closing data, creates cross-sell value that standalone competitors cannot easily replicate. The MarketAxess acquisition is an explicit bid to deepen this — selling ICE data and analytics into ~2,100 institutional credit clients — but it does not close until H1 2027, so the status is held at intact rather than credited in advance."
     },
     "proprietaryData": {
       "status": "strong",
@@ -192,7 +193,7 @@
     },
     "networkEffects": {
       "status": "strong",
-      "note": "ICE's Brent crude and natural gas futures markets are the global energy price benchmarks due to classic exchange liquidity network effects — more participants create tighter spreads, attracting more participants; this self-reinforcing dynamic has sustained ICE's pricing benchmark status for 20+ years with zero successful competitive displacement."
+      "note": "ICE's Brent crude and natural gas futures markets are the global energy price benchmarks due to classic exchange liquidity network effects — more participants create tighter spreads, attracting more participants; this self-reinforcing dynamic has sustained ICE's pricing benchmark status for 20+ years with zero successful competitive displacement. Q2 2026 separated the cycle from the moat: energy revenue fell 13% YoY on volume and volatility normalisation while total futures and options open interest hit a record, up 18% YoY — participants left positions on the exchange, not the exchange."
     },
     "transactionEmbedding": {
       "status": "strong",
