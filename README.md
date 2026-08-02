@@ -49,7 +49,7 @@ Detailed docs live in [`docs/`](./docs):
 | [Design system](./docs/DESIGN-SYSTEM.md) | "Institutional Gold" identity — colours, fonts, tokens, utilities, OG images |
 | [Research articles](./docs/RESEARCH.md) | Cross-cutting analysis at `/research` — block model, live scorecards, validation |
 
-Authoring helpers also exist for Claude Code: slash commands in [`.claude/commands/`](./.claude/commands) for stocks (`/add-stock`, `/analyse-stock`, `/update-stock`), and skills in [`.claude/skills/`](./.claude/skills) covering the research article lifecycle — `research-ideas` (what to write next), `write-research` (structure and registration), `research-style` (editorial rules), `source-research` (citing company figures), `review-research` (re-reading a published piece against current data).
+Authoring helpers for AI coding agents also live in the repo. Skills in [`.agents/skills/`](./.agents/skills) cover the research article lifecycle — `research-ideas` (what to write next), `write-research` (structure and registration), `research-style` (editorial rules), `source-research` (citing company figures), `review-research` (re-reading a published piece against current data). They follow the [Agent Skills](https://agentskills.io) spec, so any compliant agent picks them up; `.claude/skills/` holds symlinks for Claude Code, which scans only its own directory. Stock authoring additionally has Claude Code slash commands in [`.claude/commands/`](./.claude/commands): `/add-stock`, `/analyse-stock`, `/update-stock`.
 
 ## Tech stack
 
