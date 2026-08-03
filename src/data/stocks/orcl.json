@@ -9,7 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$580B"
+      "value": "~$374B"
     }
   ],
   "chips": [
@@ -44,13 +44,13 @@
     {
       "title": "Remaining Perf. Obligations",
       "value": "$638B",
-      "label": "Q4 FY2026, +363% YoY (+$85B QoQ)",
+      "label": "Q4 FY2026, +363% YoY; ~½ OpenAI (S&P)",
       "icon": "Lock",
       "color": "#3b82f6"
     }
   ],
   "moat": {
-    "description": "Decades of mission-critical database embedding at the world's largest enterprises create switching costs so high that migration is measured in years, not months.",
+    "description": "Decades of mission-critical database embedding at the world's largest enterprises create switching costs so high that migration is measured in years, not months. The July 2026 credit and concentration scare does not touch that core — it is a financing question about OCI's AI build, not a competitive displacement of the database franchise.",
     "analysisTitle": "The Database Hostage Moat",
     "analysisSummary": "Oracle operates a **Mission-Critical Lock-In Machine** built on four interlocking advantages:",
     "analysisPoints": [
@@ -60,7 +60,7 @@
       },
       {
         "title": "OCI as the AI Cloud Challenger",
-        "text": "Oracle Cloud Infrastructure (OCI) grew 93% YoY to $5.8B in Q4 FY2026 (accelerating from 84% in Q3) and is winning hyperscale AI workloads from OpenAI, xAI, Meta, NVIDIA, and AMD due to superior GPU cluster networking and pricing. The $638B remaining performance obligations backlog — up 363% YoY and +$85B sequentially — signals that OCI has become a genuine tier-2 cloud with tier-1 AI infrastructure ambitions, though management notes most of the Q3/Q4 RPO additions are large-scale AI contracts where customers prepaid for GPUs or supplied GPUs to Oracle. Oracle has secured 10+ gigawatts of power and data center capacity."
+        "text": "Oracle Cloud Infrastructure (OCI) grew 93% YoY to $5.8B in Q4 FY2026 (accelerating from 84% in Q3) and is winning hyperscale AI workloads from OpenAI, xAI, Meta, NVIDIA, and AMD due to superior GPU cluster networking and pricing. The $638B remaining performance obligations backlog — up 363% YoY and +$85B sequentially — signals that OCI has become a genuine tier-2 cloud with tier-1 AI infrastructure ambitions, though management notes most of the Q3/Q4 RPO additions are large-scale AI contracts where customers prepaid for GPUs or supplied GPUs to Oracle. S&P estimates roughly half of that RPO is tied to OpenAI alone — demand concentration, not a weaker product. Oracle has secured 10+ gigawatts of power and data center capacity."
       },
       {
         "title": "Autonomous Database Extends the Moat",
@@ -73,18 +73,19 @@
     ]
   },
   "growth": {
-    "description": "Q4 FY2026 (reported June 10, 2026) was a record close to the fiscal year: total revenue $19.2B (+21% YoY), total cloud revenue $9.9B (+47%), OCI infrastructure $5.8B (+93%, accelerating from +84% in Q3), and RPO of $638B (+363% YoY, +$85B sequentially). FY2026 finished at $67.4B (+17%) with cloud revenue of $34.0B (+39%); non-GAAP Q4 EPS $2.11 (+24%) beat estimates. FY2027 revenue guidance of $90B (+34% CC) was reaffirmed/raised, with Q1 FY27 cloud revenue guided +58–64%. The stock fell after hours as FY2026 capex reached $55.7B, reigniting the FCF debate. A 30,000-person restructuring (March 31, 2026) is expected to yield $8-10B in incremental annual FCF. AI training workload demand remains the primary acceleration vector; note most recent RPO additions are GPU-prepaid or customer-supplied-GPU AI contracts.",
+    "description": "Q4 FY2026 (reported June 10, 2026) remains the latest print: total revenue $19.2B (+21% YoY), total cloud revenue $9.9B (+47%), OCI infrastructure $5.8B (+93%, accelerating from +84% in Q3), and RPO of $638B (+363% YoY, +$85B sequentially). FY2026 finished at $67.4B (+17%) with cloud revenue of $34.0B (+39%); non-GAAP Q4 EPS $2.11 (+24%) beat estimates. FY2027 revenue guidance of $90B (+34% CC) stands, with Q1 FY27 cloud revenue guided +58–64% and non-GAAP EPS guided to $8.05. What changed after the print is the funding side: FY2027 capex is $90–95B (project net cash outlay ~$70B plus $20–25B component prepayments), S&P cut the credit rating to BBB− on July 9 (one notch above junk) citing a ~$42B FOCF deficit and OpenAI concentration at roughly half of RPO, and a $20B at-the-market equity issuance is planned. The operating trajectory is intact; the capital structure is the live debate. Q1 FY2027 prints around September 9.",
     "growthAnalysis": {
       "cagrEstimate": "22-26%",
-      "scoreDerivation": "Base 80 (15-30% CAGR: FY2026 $67.4B actual → FY2027 $90B guided = +34% CC; FY2025→FY2027 ~25% 2-yr CAGR) + 5 recurring (OCI subscriptions + ERP NRR >110%) + 5 TAM expansion (AI training cloud $200B+ TAM by 2027) − 2 FCF profile (negative FCF during $55.7B FY2026 capex cycle) = 88",
+      "cagrBasis": "Measured on total revenue: FY2025 → FY2026 $67.4B (+17% YoY), with Q4 FY2026 at +21% YoY and FY2027 guided to $90B (+34% CC / ~+34% YoY). The two-year path FY2025→FY2027 compounds near ~25% CAGR. The 22–26% band decays that measured print toward a mid-teens terminal as the legacy software base dilutes OCI's contribution even if OCI holds 50%+ growth — it is not the +34% FY27 guide parked as a multi-year rate.",
+      "scoreDerivation": "Base 86 (22–26% blended CAGR; midpoint ~24% on the 15–30% segment) + 0 trajectory (OCI accelerating, Cloud Apps stable, legacy decelerating) + 0 margin stable − 15 severe key risk (OpenAI ~½ of $638B RPO, BBB−, $42B FOCF deficit still unmaterialised as conversion failure) = 71. The CAGR band is unchanged from the June print; severity rises because the financing and concentration facts S&P published in July make the unmaterialised downside (OpenAI funding gap, junk downgrade, stranded AI capacity) larger than the prior high-severity charge assumed.",
       "drivers": [
         { "name": "OCI / Cloud Infrastructure", "metric": "+93% YoY, $5.8B Q4 FY2026 (accelerating from +84% Q3); $638B RPO +363% YoY; Q1 FY27 cloud guided +58–64%", "trend": "accelerating" },
         { "name": "Cloud Applications (Fusion + NetSuite ERP)", "metric": "SaaS +10% YoY, $4.1B Q4 FY2026; steady mid-market and ERP migration demand", "trend": "stable" },
         { "name": "Legacy Software (on-prem)", "metric": "Low-single-digit YoY in Q4 FY2026; stabilising as cloud migration matures", "trend": "decelerating" }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "The $90B FY27 target depends on AI training demand staying durable through a multi-year $55B+/year capex cycle (FY2026 capex $55.7B) funded against a rising debt load ($30B of a planned $50B financing package already raised). Most Q3/Q4 RPO additions are GPU-prepaid or customer-supplied-GPU AI contracts, so the $638B headline overstates organic, margin-rich backlog. If hyperscaler AI capex digestion arrives sooner than the OCI backlog converts, or if OCI AI infrastructure gross margins remain below 35% through FY2028, the FCF inflection thesis fails and the valuation re-rates against an over-levered cyclical balance sheet rather than a compounder.",
-      "keyRiskSeverity": "high",
+      "keyRisk": "Observed and already in the price: FY2026 FCF of −$23.7B on $55.7B capex, FY2027 capex guided $90–95B, S&P's July 9 cut to BBB−, and S&P's estimate that OpenAI is roughly half of the $638B RPO. Those are facts, not the severity charge. What remains unmaterialised — and is now severe — is conversion failure: OpenAI's commitments stop being fundable, a second agency follows S&P into junk, or OCI AI infrastructure gross margins stay below 35% through FY2028 while the $20B ATM equity and further debt dilute and lever a backlog that never earns its cost of capital. If that path hits, the $90B FY27 print can still land while equity value is written down against a stranded, over-levered AI landlord rather than a database compounder.",
+      "keyRiskSeverity": "severe",
       "marginTrend": "stable"
     },
     "additionalNote": {
@@ -96,58 +97,58 @@
         "NetSuite growing in the mid-market ERP segment with low churn",
         "Cerner powering Oracle Health's expansion into AI-assisted clinical workflows; next-gen OCI-native EHR in development",
         "Multi-cloud database demand rising as enterprises run Oracle DB on AWS and Azure simultaneously (+531% YoY in multicloud database services)",
-        "30,000-person restructuring (March 2026) projected to generate $8-10B incremental annual FCF (TD Cowen); new CFO Hilary Maxson (April 2026) brings industrial capital allocation discipline"
+        "30,000-person restructuring (March 2026) projected to generate $8-10B incremental annual FCF (TD Cowen); CFO Hilary Maxson (April 2026) reframed FY2027 funding as ~$70B project net cash outlay plus $20–25B component prepayments"
       ]
     }
   },
   "valuation": {
-    "score": 67,
-    "description": "At ~$192 (June 10, 2026 session; shares slipped after hours post-Q4 on the $55.7B capex print), Oracle has rallied ~37% from the ~$140 April level and now sits just 4% below the base case ($200) — the accumulation window below $150 has closed. Q4 FY2026 validated the thesis (OCI +93%, RPO $638B +363%, FY27 guided to $90B / +34% CC), but the price has largely caught up to the base scenario; further upside requires bull-case execution (Stargate acceleration, 20%+ AI training share). FCF remains negative due to the $55.7B FY2026 capex cycle.",
+    "score": 81,
+    "description": "At $129.87 (July 31, 2026 close; market cap ~$374B), Oracle has fallen ~37% from the ~$205 level just ahead of the June 10 Q4 print and ~63% from the $345.72 52-week high. The July 9 S&P cut to BBB− and the OpenAI concentration disclosure drove a fresh 52-week low at $114.50 on July 24. Against a revised ladder of $90 / $200 / $300, spot sits ~35% below base and ~44% above bear — the accumulation window the June write-up said had closed at $192 has reopened. At ~16× the $8.05 FY2027 non-GAAP EPS guide and ~4.2× FY2027 sales, the multiple prices a slow-growth software company, not a +34% revenue guide; the debate is whether that discount compensates for junk-adjacent leverage and a backlog half-tied to one lab.",
     "valuationNote": {
-      "text": "Oracle's contracted RPO backlog of $638B — up 363% YoY — provides extraordinary earnings visibility, though most recent additions are GPU-prepaid or customer-supplied-GPU AI contracts. The $55.7B FY2026 capex cycle is depressing near-term FCF, but Guggenheim and other analysts see a 'free cash flow waterfall' materializing in FY2029-2030. FY2027 revenue guidance of $90B implies +34% CC growth from FY2026's $67.4B actual. A new CFO (Hilary Maxson, appointed April 6, 2026) brings industrial capital allocation experience suited to managing the AI infrastructure buildout.",
+      "text": "Oracle's $638B RPO — up 363% YoY — still provides extraordinary contracted visibility, but S&P's estimate that roughly half is OpenAI, and that most recent additions are GPU-prepaid or customer-supplied-GPU deals, means the headline is not a diversified annuity. FY2027 capex of $90–95B and a projected ~$42B FOCF deficit keep FCF negative through the build; the 'free cash flow waterfall' thesis (Guggenheim and others) is now a FY2029–2030 question, not a FY2027 one. Fair value stays at $200 — the price that clears if the $90B guide delivers and credit stabilises — and is no longer a near-term target the stock has already tagged.",
       "fairValue": "$200"
     },
     "peAnalysis": {
-      "asOf": "June 2026 (post-Q4 FY2026, price ~$192)",
+      "asOf": "August 2026 (post-BBB−; price $129.87 on July 31)",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~34×", "note": "~$5.7 FY2026 GAAP EPS (Q4 $1.45, +21%)" },
-        { "label": "Forward P/E (NTM)", "value": "~24×", "note": "consensus FY2027 EPS ~$8.07" },
-        { "label": "PEG Ratio", "value": "~1.3×", "note": "fwd P/E ÷ ~18% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~6.4×", "note": "$90B FY2027 revenue guidance" },
-        { "label": "Price / FCF", "value": "N/A", "note": "FCF negative ($55.7B FY2026 capex)" }
+        { "label": "Trailing P/E (GAAP)", "value": "~22×", "note": "FY2026 GAAP EPS $5.83" },
+        { "label": "Forward P/E (NTM)", "value": "~16×", "note": "FY2027 non-GAAP EPS guide $8.05" },
+        { "label": "PEG Ratio", "value": "~0.9×", "note": "fwd P/E ÷ ~18% EPS CAGR (ex one-time FY26 gains)" },
+        { "label": "Price / Sales (NTM)", "value": "~4.2×", "note": "$90B FY2027 revenue guidance on ~$374B mkt cap" },
+        { "label": "Price / FCF", "value": "N/A", "note": "FCF negative; S&P sees ~$42B FOCF deficit in FY2027" }
       ],
-      "summary": "At ~$192, ORCL trades at ~24× FY2027 forward earnings — now roughly in line with the enterprise software peer median (~25×) after the 37% rally from April. The growth-at-a-discount setup (PEG ~0.94 at $140) has normalised to a fair ~1.3× PEG; the market is now paying for the $638B RPO conversion rather than discounting execution risk. The gap between trailing (~34×) and forward (~24×) still reflects the substantial earnings ramp expected in FY2027 as OCI revenues scale (+93% in Q4 FY26, Q1 FY27 cloud guided +58–64%) and restructuring savings flow through."
+      "summary": "At ~$130, ORCL trades at ~16× FY2027 guided non-GAAP earnings — a multiple more often attached to mature enterprise software than to a business guiding +34% revenue growth. The June setup at ~24× / ~1.3× PEG has fully reversed: the market is again discounting RPO conversion and balance-sheet risk rather than paying for it. Trailing ~22× on $5.83 GAAP EPS still embeds the FY2026 earnings base; the gap to forward ~16× is the OCI ramp plus the market's refusal to capitalise it until funding and concentration risk clear."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$110",
-      "description": "OCI loses AI infrastructure share to AWS and Azure, the $553B RPO proves overcommitted, and the $50B capex cycle produces stranded assets rather than revenue.",
+      "priceTarget": "$90",
+      "description": "OpenAI funding stress impairs roughly half the $638B RPO, a second agency follows S&P into junk, and the $90–95B FY2027 capex cycle produces stranded AI capacity rather than convertible revenue.",
       "points": [
-        "AWS Trainium and Azure custom silicon erode OCI's GPU networking advantage; RPO contracts include customer-supplied GPU provisions that inflate headline backlog",
-        "Oracle Fusion ERP implementations underperform expectations, triggering high-profile churn",
-        "Legacy database support revenue declines 5%+ annually as AWS Aurora and PostgreSQL migrations accelerate",
-        "Cerner integration costs and healthcare IT complexity drag margins below 25%"
+        "OpenAI or another frontier-lab counterparty delays or renegotiates multi-year GPU commitments; S&P's ~50% OpenAI share of RPO becomes a write-down rather than a backlog",
+        "Credit slides from BBB− to junk, debt costs jump, and the $20B ATM equity prints into a falling stock — leverage and dilution compound",
+        "AWS Trainium and Azure custom silicon erode OCI's GPU networking advantage; customer-supplied-GPU contracts leave Oracle with buildings and power but thin incremental margin",
+        "Legacy database support declines 5%+ annually as Aurora/PostgreSQL migrations accelerate while Fusion ERP and Cerner fail to offset"
       ]
     },
     "base": {
       "priceTarget": "$200",
-      "description": "OCI sustains 50%+ growth as a primary AI training cloud, Fusion ERP and NetSuite compound steadily, and revenue reaches $90B in FY2027 as guided.",
+      "description": "FY2027 revenue reaches the guided $90B, OCI sustains 50%+ growth as a primary AI training cloud, credit stabilises at BBB−, and the multiple re-rates from panic levels toward a mid-20s earnings multiple on growing OCI profits.",
       "points": [
-        "OCI grows toward $18B annual revenue in FY2026 (guided 77% growth), then $32B and beyond through FY2028-2030",
-        "Oracle Fusion Cloud ERP achieves $10B+ in annual revenue with industry-leading NRR",
-        "Autonomous Database adoption increases renewal rates and reduces churn in the installed base",
-        "Cerner becomes a $10B+ revenue segment as AI clinical applications roll out across 1,000+ hospitals"
+        "OCI scales from the $5.8B Q4 FY2026 run rate toward ~$30B+ annual revenue through FY2028–2030 as the $638B RPO converts on schedule",
+        "OpenAI and other AI counterparties keep funding commitments; concentration risk remains but does not crystallise into impairment",
+        "Oracle Fusion Cloud ERP and NetSuite compound in the mid-teens with industry-leading NRR; Autonomous Database lifts installed-base renewal rates",
+        "FOCF deficit narrows versus the ~$42B S&P FY2027 path as restructuring savings and prepaid-GPU structures reduce net cash outlay"
       ]
     },
     "bull": {
-      "priceTarget": "$320",
-      "description": "OCI emerges as the dominant AI training cloud serving Stargate and sovereign AI deployments, Oracle Health transforms clinical workflows, and $553B RPO converts to revenue faster than expected.",
+      "priceTarget": "$300",
+      "description": "OCI takes durable share of AI training infrastructure via Stargate and sovereign deployments, RPO converts faster than the $90B FY2027 guide implies, and the FCF waterfall arrives early enough to repair the balance sheet.",
       "points": [
-        "OCI wins 20%+ of the AI training infrastructure market, rivaling AWS and Azure in GPU density; 10+ GW of secured capacity comes online ahead of schedule",
-        "Stargate buildout accelerates OCI revenue well beyond the $90B FY2027 guidance",
-        "Oracle Health AI platform becomes standard across US hospital systems, unlocking $20B+ revenue potential",
-        "SAP migration wave to Oracle Fusion ERP accelerates post-SAP S/4HANA end-of-life cycle"
+        "OCI wins 20%+ of the AI training infrastructure market; 10+ GW of secured capacity comes online ahead of schedule without stranded assets",
+        "Stargate and multi-cloud database demand (+531% YoY at the Q4 print) push revenue well beyond the $90B FY2027 guide",
+        "Credit outlook stabilises or upgrades as FOCF turns; the $20B equity raise is the last major dilution event of the cycle",
+        "Oracle Health AI and Fusion ERP migrations accelerate, adding a second growth engine less tied to frontier-lab capex"
       ]
     }
   },
@@ -192,7 +193,7 @@
       "status": "strong",
       "note": "Oracle is the definitive system of record for enterprise finance, HR, and operations at thousands of the world's largest organizations. No other software vendor occupies this position at comparable scale."
     },
-    "verdict": "Oracle is highly AI-resilient and is itself becoming an AI infrastructure hyperscaler. Its deepest moat — database embedding — is structural and physical, not software-replicable. OCI's rise as AI training infrastructure is additive rather than disruptive to the core. The $638B RPO backlog (Q4 FY2026, +363% YoY), 93% OCI growth, Stargate partnership, and expanding federal government entrenchment (Top Secret/SCI, DISA IL5/IL6) position Oracle as one of the most extraordinary growth-plus-moat combinations in enterprise technology. The near-term FCF drag from $55.7B FY2026 capex and Oracle Health market share erosion vs Epic are the primary risks; the 30,000-person restructuring announced March 2026 should materially improve the FCF profile from FY2028 onward."
+    "verdict": "Oracle's AI-resilient core — database embedding, system of record, transaction embedding, bundling, and regulatory lock-in — is unchanged by the July 2026 financing scare. The competitive position of OCI as a tier-2 AI cloud with a $638B RPO is also unchanged; what changed is the cost of holding that position. S&P's BBB− cut, the ~$42B FY2027 FOCF deficit path, and the disclosure that OpenAI is roughly half of RPO are balance-sheet and counterparty facts, not moat erosion — the database franchise does not weaken because the AI landlord is levered. Ten-moat statuses are therefore unchanged. The live question for equity holders is whether RPO converts before leverage and dilution do the damage the credit market is pricing; that is scored in growth severity and in the widened scenario ladder, not as a moat downgrade."
   },
-  "lastAnalyzed": "June 2026"
+  "lastAnalyzed": "August 2, 2026"
 }
