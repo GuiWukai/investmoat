@@ -3,7 +3,7 @@
   "title": "Meta's Capex Has One Receipt, and It Is Price Per Ad",
   "dek": "Meta spent $31.1B in a quarter and printed $784M of free cash flow, and the tape traded the capex line. The line that tests the build is the other one: price per ad up 12% for a second straight quarter while impressions decelerated. Only the outcome owner can charge for a better match.",
   "published": "July 31, 2026",
-  "lastReviewed": "July 31, 2026",
+  "lastReviewed": "August 3, 2026",
   "tickers": ["META", "GOOGL", "AMZN", "APP", "ZETA", "TTD", "RDDT", "SPOT", "NFLX"],
   "tags": ["Advertising", "AI Capex", "Big Tech", "Ad Tech"],
   "summary": "Three days before Meta reported, this site published a four-gate test for AI infrastructure builds and concluded that Meta's captive build — no third-party contracts, no backlog — could not be underwritten in advance at all. Meta's Q2 2026, reported July 29, shows that conclusion was half wrong. A captive advertising build has no backlog, but it does have a receipt: the price of its own inventory. Meta's ad revenue grew 27% on impressions decelerating to +14% from +19%, against a user base compounding at +3%, while average price per ad held at +12% for a second consecutive quarter — the volume term decaying on schedule and the price term carrying the difference. Read across the nine advertising names in coverage, the price term only moves for companies that observe the outcome an ad produces. AppLovin grew revenue 59% in Q1 2026 while install volume fell 18%; The Trade Desk, which sees the bid and not the sale, guided Q2 to roughly 8% growth with margins compressing. The sorting variable is not who owns the audience. It is who owns the conversion signal the model trains on.",
@@ -11,6 +11,12 @@
     "claim": "Meta's average price per ad growing below 8% year-over-year in two consecutive quarters while ad impression growth falls into single digits — the price term failing to take over as the volume term decays — would show the build buying reach Meta cannot charge for. A second trip, on the mechanism rather than the name: AppLovin's revenue per install reverting while install volume keeps falling, which would place the 2026 pricing gains in the ad cycle rather than in the models.",
     "status": "holding"
   },
+  "revisions": [
+    {
+      "date": "August 3, 2026",
+      "note": "Re-checked after the stock analysis was re-read with the one-time costs stripped from Q2 EPS. GAAP diluted EPS of $6.18 embedded roughly $1.17 per share of after-tax legal-proceedings charges ($2.4B) and severance ($1.18B); ex both, EPS was about $7.35 — a beat of the roughly $7.20 consensus and up about 3% year-over-year — and operating income ex the charges was about $22.4B (+9% YoY). The thesis does not turn on the earnings print: price per ad held at +12% for a second quarter while impressions decelerated to +14%, so the falsifiable claim stays holding. What the re-read changes is the framing of the cost of the build — free cash flow of $784M and operating margin at roughly 37% even ex the one-offs, not the GAAP EPS miss. Verified the moat statuses the prose asserts: proprietary data still strong across the named cohort members, transaction embedding still strong for Meta/Alphabet/Amazon and intact for AppLovin and Zeta, destroyed for Reddit."
+    }
+  ],
   "sources": [
     {
       "id": "meta-q2-2026",
@@ -67,13 +73,13 @@
       "stats": [
         { "label": "META Composite", "live": { "ticker": "META", "field": "composite" }, "note": "live, recomputed from the current price" },
         { "label": "Moat", "live": { "ticker": "META", "field": "moat" }, "note": "unchanged through the Q2 print — the objection was returns, not durability" },
-        { "label": "Growth", "live": { "ticker": "META", "field": "growth" }, "note": "cut on the print: margin compression charged against an 18–22% blended CAGR" },
+        { "label": "Growth", "live": { "ticker": "META", "field": "growth" }, "note": "cut on the print for FCF and structural margin (~37% ex one-offs), not the GAAP EPS miss" },
         { "label": "Valuation", "live": { "ticker": "META", "field": "valuation" }, "note": "live price against the scenario band on the analysis page" }
       ]
     },
     {
       "type": "prose",
-      "body": "Meta reported the second quarter of 2026 on July 29. Revenue grew 28% to $60.8B, advertising revenue 27% to $59.4B, and the stock fell about 8.6% the following day — as much as 10.4% intraday. The lines the tape traded are not in dispute. Total costs and expenses rose 55% to $42B, operating margin fell to 31% from 43% a year earlier, capital expenditure reached $31.1B against $17.0B, and free cash flow came in at $784M against roughly $8.5B. Diluted EPS of $6.18 fell 13% year-over-year and missed consensus by about a dollar. Full-year capex guidance was narrowed to $130–145B against $72.2B actually spent in 2025, and 2027 capex was not guided at all."
+      "body": "Meta reported the second quarter of 2026 on July 29. Revenue grew 28% to $60.8B, advertising revenue 27% to $59.4B, and the stock fell about 8.6% the following day — as much as 10.4% intraday. The lines the tape traded are not in dispute. Total costs and expenses rose 55% to $42B, operating margin fell to 31% from 43% a year earlier, capital expenditure reached $31.1B against $17.0B, and free cash flow came in at $784M against roughly $8.5B. Diluted EPS of $6.18 fell 13% year-over-year and missed consensus by about a dollar — but that miss was almost entirely one-time: $2.4B of legal-proceedings charges and $1.18B of severance, roughly $1.17 per diluted share after tax. Ex both, EPS was about $7.35, a beat and up roughly 3% from $7.14 a year earlier, and operating margin was roughly 37%. Full-year capex guidance was narrowed to $130–145B against $72.2B actually spent in 2025, and 2027 capex was not guided at all."
     },
     {
       "type": "prose",
@@ -102,6 +108,7 @@
         ["Family daily active people", "3.60B for June 2026, +3% YoY", "The ceiling under the volume term; a second quarter of deceleration"],
         ["Family of Apps Other revenue", "+73% YoY", "Whether business messaging is becoming a second priced surface"],
         ["Total costs and expenses", "$42B, +55% YoY", "Includes $2.4B of legal-proceedings charges and $1.18B of severance"],
+        ["Diluted EPS", "$6.18, −13% YoY", "Ex the two charges ≈$7.35 — a beat of ~$7.20 consensus, +3% YoY"],
         ["Operating margin", "31%, from 43% a year earlier", "Roughly 37% excluding both one-off charges — the cost of holding the seat"],
         ["Capital expenditure", "$31.1B, from $17.0B", "The build, in the quarter"],
         ["Free cash flow", "$784M, from roughly $8.5B", "The line the market actually traded"],
@@ -235,7 +242,7 @@
     },
     {
       "type": "prose",
-      "body": "It cannot conclude that Meta's build will pay back. Two quarters of a flat price term is not a payback and nobody should price it as one, least of all while 2027 capex is unguided, the FY2026 expense guide of $165–169B implies second-half quarterly costs above a Q2 that already carried $3.6B of one-off charges, and Reality Labs consumes roughly $19B a year against $431M of quarterly revenue. Free cash flow of $784M on $31.9B of operating cash flow is a real fact about this year, and the growth pillar was cut on this print for exactly that reason. What the framework can conclude is narrower and more useful: **the observation that would tell you whether the build is working exists, it is published quarterly, and it is not the one the market moved on.** Meta's moat pillars came through Q2 unchanged — the durability question was never what the print was about. The [analysis page](/stocks/meta) carries the current read on whether the price compensates for the open questions; the scorecard above resolves it live."
+      "body": "It cannot conclude that Meta's build will pay back. Two quarters of a flat price term is not a payback and nobody should price it as one, least of all while 2027 capex is unguided, the FY2026 expense guide of $165–169B implies second-half quarterly costs above a Q2 that already carried $3.6B of one-off charges, and Reality Labs consumes roughly $19B a year against $431M of quarterly revenue. Free cash flow of $784M on $31.9B of operating cash flow is a real fact about this year, and the growth pillar was cut on this print for that reason — not for the GAAP EPS miss, which the one-offs almost entirely explain. What the framework can conclude is narrower and more useful: **the observation that would tell you whether the build is working exists, it is published quarterly, and it is not the one the market moved on.** Meta's moat pillars came through Q2 unchanged — the durability question was never what the print was about. The [analysis page](/stocks/meta) carries the current read on whether the price compensates for the open questions; the scorecard above resolves it live."
     },
     {
       "type": "callout",
