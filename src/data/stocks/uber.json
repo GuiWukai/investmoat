@@ -2,10 +2,10 @@
   "slug": "uber",
   "ticker": "UBER",
   "name": "Uber Technologies",
-  "lastAnalyzed": "June 24, 2026",
+  "lastAnalyzed": "August 3, 2026",
   "headerStats": [
     { "label": "Ticker", "value": "UBER" },
-    { "label": "Market Cap", "value": "~$145B" }
+    { "label": "Market Cap", "value": "~$143B" }
   ],
   "chips": [
     { "label": "Mobility | Delivery | Network", "color": "primary" },
@@ -35,9 +35,9 @@
     }
   ],
   "moat": {
-    "description": "Global two-sided network in mobility and delivery with rider-driver liquidity that no rival can replicate at the same density — moat is real, autonomy is the existential question.",
+    "description": "Global two-sided network in mobility and delivery with rider-driver liquidity that no rival can replicate at the same density — moat is real, autonomy is the existential question, and the Waymo relationship is the clearest crack since the June review.",
     "analysisTitle": "The Two-Sided Liquidity Moat",
-    "analysisSummary": "Uber's moat is **network density across mobility and delivery in 70+ countries** — durable in the human-driven era, and probably durable into autonomy as the demand-aggregation layer:",
+    "analysisSummary": "Uber's moat is **network density across mobility and delivery in 70+ countries** — durable in the human-driven era, and still the default demand-aggregation layer into autonomy, though the partnership path is no longer one-sided:",
     "analysisPoints": [
       {
         "title": "Liquidity Network Effects",
@@ -45,71 +45,71 @@
       },
       {
         "title": "Cross-App Bundling and Membership",
-        "text": "Uber One bundles mobility + delivery + grocery + ad-supported value, creating cross-category retention. Uber One reached 50M members in Q1 2026 and now drives roughly half of total Mobility and Delivery gross bookings. The bundle compounds the network advantage with subscription stickiness."
+        "text": "Uber One bundles mobility + delivery + grocery + ad-supported value, creating cross-category retention. Uber One reached 50M members in Q1 2026 and now drives roughly half of total Mobility and Delivery gross bookings. The July 2026 Delivery Hero takeover offer (€41.50/share, ~$14.8B equity value, close targeted H2 2027) would nearly double dual mobility+delivery markets from 34 to 58 and extend the bundle into Korea, MENA, LatAm, and foodpanda Asia — pending regulatory clearance and the SSW carve-out of 14 overlapping markets."
       },
       {
-        "title": "Autonomous-Ready Demand Layer",
-        "text": "As Waymo, Tesla Robotaxi, and Aurora deploy autonomy, Uber positions itself as the consumer demand and dispatch layer. Waymo and Wayve partnerships, exclusive market deals (e.g., Waymo on Uber in Austin and Atlanta), and the NVIDIA partnership targeting a 100,000-vehicle autonomous network from 2027 validate the thesis that operators want Uber's demand network rather than rebuild app distribution. The risk materialising: Tesla began Cybercab volume production at Giga Texas in April 2026 and is expanding its own ride-hailing network in Austin, Dallas, and Houston, while Waymo now delivers 500K+ paid robotaxi rides weekly."
+        "title": "Autonomous Demand Layer — Partnership Thesis Under Stress",
+        "text": "Uber still positions itself as the consumer demand and dispatch layer for autonomy (Wayve, NVIDIA 100k-vehicle network targeting 2027, other AV partners). But the flagship Waymo relationship has frayed: the Phoenix pilot ended at its contracted term in May 2026 (confirmed late June), and a July 2026 FT report said Waymo has told Uber it intends to enter Austin and Atlanta on its own from January 2028 when the current exclusivity allows, with Uber expecting Waymo rides on its app through May 2028 agreement expiry. Tesla continues Cybercab production at Giga Texas and its own ride-hailing expansion in Austin, Dallas, and Houston, while Waymo delivers 500K+ paid robotaxi rides weekly on its own app. The demand-aggregator thesis is intact as a strategy; exclusivity with the leading US robotaxi operator is no longer the base case."
       }
     ]
   },
   "growth": {
-    "description": "Q1 2026 (reported May 2026): gross bookings $53.7B, +25% YoY (+21% constant currency), beating the guided range. Mobility +25% (+20% cc), Delivery +28% (+23% cc). Adj EBITDA $2.5B, +33% YoY, with margin at 4.6% of gross bookings (up from 4.4%). FCF a record $9.8B TTM; $3B buyback in Q1. Q2 2026 guide: 18-22% constant-currency bookings growth.",
+    "description": "Latest print remains Q1 2026 (reported May 2026); Q2 prints August 5. Gross bookings $53.7B, +25% YoY (+21% constant currency). Mobility +25% (+20% cc), Delivery +28% (+23% cc). Adj EBITDA $2.5B, +33% YoY, margin 4.6% of gross bookings. FCF a record $9.8B TTM; $3B buyback in Q1. Q2 guide was 18–22% constant-currency bookings growth and adj EBITDA $2.70–$2.80B. Post-print: Delivery Hero cash offer announced 16 July (99 combined markets, pro-forma 2025 gross bookings $236B, Non-GAAP EPS accretion targeted on close in H2 2027); Waymo partnership stress (Phoenix ended, Austin/Atlanta exclusivity set to lapse into own-app competition from 2028) is the new overhang into the print.",
     "growthAnalysis": {
       "cagrEstimate": "15-20%",
-      "scoreDerivation": "Base 82 (15-20% CAGR, midpoint 17.5%) + 4 trajectory (all three drivers accelerating in Q1 2026: Mobility +25%, Delivery +28%, Uber One 50M members) + 4 margin expansion (adj EBITDA +33%, 4.6% of bookings) + 4 dual TAM expansion and share gains - 10 high autonomy risk (Tesla Cybercab production, Waymo scale) = 84",
+      "scoreDerivation": "Base ~82 on a 17.5% midpoint of the 15–20% bookings CAGR — anchored to Q1's +21% constant-currency print and the guided 18–22% Q2 range, decayed for autonomy and Delivery Hero integration drag rather than extrapolated. +4 trajectory (all three drivers accelerating on the latest print) +4 margin (adj EBITDA +33%, 4.6% of bookings) −10 high autonomy risk (Waymo own-app path now dated to 2028 in Austin/Atlanta; Tesla Cybercab production continuing) = 80. The dual-TAM / Delivery Hero story is real but unpaid here — primaryType no longer scores, and the deal does not close until H2 2027.",
       "drivers": [
         { "name": "Mobility Bookings", "metric": "+25% YoY reported (+20% cc) Q1 2026; price + frequency growth across geographies", "trend": "accelerating" },
-        { "name": "Delivery Bookings", "metric": "+28% YoY reported (+23% cc) Q1 2026, up from ~15%; grocery and convenience extending TAM", "trend": "accelerating" },
+        { "name": "Delivery Bookings", "metric": "+28% YoY reported (+23% cc) Q1 2026; Delivery Hero offer would add ~$42B of 2025 gross bookings in 50 markets on close (H2 2027)", "trend": "accelerating" },
         { "name": "Uber One + Advertising", "metric": "Uber One reached 50M members in Q1 2026 (from ~30M), now ~half of total bookings", "trend": "accelerating" }
       ],
       "primaryType": "both",
-      "keyRisk": "Tesla began Cybercab volume production at Giga Texas in April 2026 and is expanding its own consumer ride-hailing network in Austin, Dallas, and Houston, while Waymo operates 500K+ paid robotaxi rides weekly. If Tesla scales direct-to-consumer demand aggregation or Waymo expands its own app outside Uber-partnered cities, Uber loses pricing power on the highest-margin urban routes by 2028-29.",
+      "keyRisk": "Waymo has ended the Phoenix Uber pilot and, per a July 2026 FT report, has informed Uber it will enter Austin and Atlanta independently from January 2028; Tesla continues Cybercab volume production and its own consumer ride-hailing network in Texas metros. If Tesla scales direct-to-consumer demand aggregation or Waymo's own app displaces Uber on the densest US robotaxi routes, Uber loses pricing power on the highest-margin urban trips by 2028–29. Separately, the Delivery Hero offer (~$14.8B equity value, €14B bridge facility, close H2 2027) adds merger-control and leverage execution risk before any accretion lands.",
       "keyRiskSeverity": "high",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
     "score": 82,
-    "description": "At ~$70 Uber trades ~26% below the base case ($95) and ~33% below the ~$105 Wall Street average target (Strong Buy consensus, 26 analysts), at ~24× FY26 EPS and ~7% FCF yield, after robotaxi fears compressed the multiple ~30% from the October 2025 peak even as Q1 2026 bookings accelerated to +25% YoY and TTM FCF hit a record $9.8B. The market is pricing meaningful autonomy disruption; fundamentals are not yet showing it.",
+    "description": "At ~$70 Uber trades ~26% below the base case ($95) and ~33% below the ~$104 Wall Street average target (Strong Buy / Moderate Buy consensus), at ~21× consensus FY26 EPS (~$3.30) and ~7% FCF yield on record TTM FCF of ~$9.8B. The stock has been range-bound in the high-$60s to low-$70s since the June review — slid ~5% on the 24 July Waymo-walkaway report, supported on the 16 July Delivery Hero announcement — still ~31% below the $101.99 52-week high. Robotaxi fears remain the multiple compressor; Q1 fundamentals and the Delivery Hero optionality are not yet showing through in the price. Q2 prints 5 August.",
     "peAnalysis": {
-      "asOf": "June 2026",
+      "asOf": "August 2026",
       "rows": [
-        { "label": "Forward P/E (FY26)", "value": "~24×", "note": "EPS ~$2.85; multiple compressed by AV competition fears" },
-        { "label": "Forward P/E (FY27)", "value": "~19×", "note": "Assumes ~25% EPS growth on operating leverage" },
-        { "label": "FCF Yield", "value": "~7%", "note": "Record TTM FCF $9.8B; $3B Q1 buyback, $16B authorization remaining" },
-        { "label": "PEG Ratio", "value": "~1.2×", "note": "Cheap on growth if the demand-aggregator thesis holds" },
+        { "label": "Forward P/E (FY26)", "value": "~21×", "note": "Consensus EPS ~$3.30; multiple still compressed by AV competition fears" },
+        { "label": "Forward P/E (FY27)", "value": "~17×", "note": "Assumes mid-20% EPS growth on operating leverage before Delivery Hero close" },
+        { "label": "FCF Yield", "value": "~7%", "note": "Record TTM FCF ~$9.8B; buyback framework unchanged alongside Delivery Hero bridge financing" },
+        { "label": "PEG Ratio", "value": "~1.2×", "note": "Cheap on growth if the demand-aggregator thesis holds through the Waymo transition" },
         { "label": "EV / EBITDA (NTM)", "value": "~13×", "note": "Premium to Lyft, discount to high-growth platforms" }
       ],
-      "summary": "Uber is a free-cash compounder with network durability trading at a fear-discounted multiple. The valuation question remains autonomy disruption risk vs partnership upside — Q1 2026 acceleration suggests the disruption is not yet visible in the numbers."
+      "summary": "Uber remains a free-cash compounder with network durability trading at a fear-discounted multiple. Since June the two new facts are Delivery Hero (optionality, H2 2027 close) and a clearer Waymo own-app path in Austin/Atlanta from 2028 — opposite forces on the same autonomy/platform question, neither yet visible in Q1's numbers."
     }
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$58",
-      "description": "Tesla Robotaxi launches at scale on its own app, autonomy disrupts urban mobility margin, Uber's pricing power compresses, multiple falls to 20×.",
+      "description": "Waymo runs Austin/Atlanta on its own app from 2028, Tesla Robotaxi scales direct-to-consumer, autonomy disrupts urban mobility margin, Uber's pricing power compresses, multiple falls toward 18×.",
       "points": [
-        "Tesla Robotaxi launches direct-to-consumer in 2026-27 in 5+ major US markets at materially lower prices",
-        "Waymo expands rapidly in own-app outside Uber-exclusive cities",
-        "Mobility take-rate compresses below 24% as autonomy operators capture margin"
+        "Waymo launches independent robotaxi service in Austin and Atlanta from January 2028 and withholds renewal of Uber exclusivity",
+        "Tesla Robotaxi scales direct-to-consumer in 5+ major US markets at materially lower prices through 2027",
+        "Mobility take-rate compresses below 24% as autonomy operators capture margin; Delivery Hero clearance slips or is blocked"
       ]
     },
     "base": {
       "priceTarget": "$95",
-      "description": "Uber sustains 15-18% bookings growth, autonomy partnerships validate the demand-aggregator thesis, FCF compounds to $11B by FY27, multiple holds at 25-28×.",
+      "description": "Uber sustains 15–18% bookings growth, diversifies AV supply beyond Waymo, Delivery Hero closes in H2 2027 on the offered terms, FCF compounds toward $11B by FY27, multiple holds at 25–28×.",
       "points": [
-        "Waymo, Wayve, and Tesla all integrate with Uber in a meaningful subset of markets",
-        "Uber One reaches 50M members; mobility frequency grows 8-10% annually",
-        "Buyback + dividend program returns 50%+ of FCF"
+        "Wayve, NVIDIA-network, and at least one other Tier-1 AV partner keep Uber's app as a primary demand surface even as Waymo dual-apps Austin/Atlanta",
+        "Uber One holds above 50M members; mobility frequency grows 8–10% annually; Delivery Hero acceptance threshold clears",
+        "Buyback program continues returning excess FCF alongside investment-grade leverage below 2× through the Delivery Hero bridge"
       ]
     },
     "bull": {
       "priceTarget": "$130",
-      "description": "Uber becomes the consumer demand layer for global autonomous mobility, multiple expands to 30× on durable platform economics, FCF reaches $14B+ by FY27.",
+      "description": "Uber becomes the consumer demand layer for global autonomous mobility, Delivery Hero compounds cross-platform density across 50+ new markets, multiple expands to 30×, FCF reaches $14B+ by FY27.",
       "points": [
-        "Uber secures multi-year exclusivity with at least 2 of the top-3 autonomy operators",
-        "Robotaxi Tier-1 city dispatch dominantly routes through Uber",
-        "International TAM (Asia ex-China, EMEA) accelerates as autonomy reaches more cities"
+        "Uber secures multi-year dispatch economics with at least 2 of the top-3 autonomy operators outside Waymo-contested cities",
+        "Robotaxi Tier-1 city dispatch still routes a majority of third-party AV trips through Uber",
+        "Delivery Hero closes and cross-platform users in new dual markets approach the existing ~3× gross-bookings uplift vs single-product users"
       ]
     }
   },
@@ -124,7 +124,7 @@
     },
     "publicDataAccess": {
       "status": "destroyed",
-      "note": "N/A."
+      "note": "N/A — Uber is not a public-data access business."
     },
     "talentScarcity": {
       "status": "weakened",
@@ -132,7 +132,7 @@
     },
     "bundling": {
       "status": "strong",
-      "note": "Uber One mobility + delivery + grocery + advertising bundle is genuinely differentiated; only DoorDash + Lyft attempt anything similar at much smaller scale."
+      "note": "Uber One mobility + delivery + grocery + advertising bundle is genuinely differentiated; Delivery Hero would extend the dual-product footprint from 34 to 58 markets if the H2 2027 close lands — only DoorDash + Lyft attempt anything similar at much smaller scale today."
     },
     "proprietaryData": {
       "status": "strong",
@@ -144,7 +144,7 @@
     },
     "networkEffects": {
       "status": "strong",
-      "note": "Two-sided rider-driver liquidity in major cities is the textbook example of network effects; rivals struggle to replicate density without years of subsidy."
+      "note": "Two-sided rider-driver liquidity in major cities is the textbook example of network effects; rivals struggle to replicate density without years of subsidy. Autonomy operators with their own apps (Waymo, Tesla) are the structural test of whether that liquidity still compounds on Uber's surface."
     },
     "transactionEmbedding": {
       "status": "strong",
@@ -154,6 +154,6 @@
       "status": "intact",
       "note": "Uber is the system of record for mobility identity and history for ~150M+ active monthly riders globally."
     },
-    "verdict": "Uber's network, bundling, and transaction-embedding moats are AI-resilient — language models do not erode rider-driver liquidity. The one AI-era structural threat is autonomy: robotaxis (Tesla Cybercab, Waymo) attack the human-driven mobility network that anchors the moat, which tempers AI resilience a notch below the raw moat strength. The thesis question is whether Uber retains the consumer demand layer as autonomy operators commercialise; current partnerships (Waymo, Wayve, NVIDIA 100k-vehicle network) and trip-level data scale support a durable demand-aggregator role, with Tesla vertical-integration the primary tail risk."
+    "verdict": "Uber's network, bundling, and transaction-embedding moats remain AI-resilient — language models do not erode rider-driver liquidity. The Delivery Hero offer would deepen the bundling moat geographically if it clears. The AI-era structural threat is still autonomy: robotaxis (Waymo, Tesla Cybercab) attack the human-driven mobility network that anchors the moat. Since June that threat has become more specific — Waymo's Phoenix pilot ended, and Austin/Atlanta exclusivity now has a dated end (own-app entry from January 2028). The thesis question is unchanged: whether Uber retains the consumer demand layer as autonomy commercialises. Diversified partners (Wayve, NVIDIA network) and trip-level data still support a durable aggregator role; Tesla vertical integration and Waymo's own-app expansion are the primary tail risks."
   }
 }
