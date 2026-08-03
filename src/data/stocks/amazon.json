@@ -9,7 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "$2.80T"
+      "value": "$3.09T"
     }
   ],
   "chips": [
@@ -113,42 +113,42 @@
     }
   },
   "valuation": {
-    "score": 79,
-    "description": "Q2 2026 (July 30) beat on every operating line — revenue $200.6B (+20%), operating income $27.5B (+43%), AWS $42.2B (+37%) at a 39.4% margin — and the contracted backlog roughly doubled in two quarters to $496B. The stock closed at $235.50 on July 30 and traded to ~$258 after the print. The ladder is raised for the first time since May: bear $195 → $205, base $310 → $330, bull $395 → $420, reflecting an AWS run rate nine points faster than the last revision assumed and a backlog that now underwrites several years of that growth. The raise is deliberately smaller than the beat, because the same quarter took TTM free cash flow to −$7.6B from +$18.2B and pushed 2026 capex to ~$220B: the earnings power is being bought, not compounded, until the depreciation cycle turns. At ~$258 the stock sits about a fifth below base, in the lower-middle of the corridor. Two things in the price are not operating income — the Anthropic stake, marked at roughly $145–200B (15–21% of a ~$965B June round) against a $2.80T market cap and heading for an IPO as early as October, and the reported $5.75 EPS, of which $53.4B of pre-tax gains is a mark, not a run rate.",
+    "score": 74,
+    "description": "Q2 2026 (July 30) beat on every operating line — revenue $200.6B (+20%), operating income $27.5B (+43%), AWS $42.2B (+37%) at a 39.4% margin — and the contracted backlog roughly doubled in two quarters to $496B. The stock closed at $235.50 on July 30, traded through ~$258 into the following session, and by August 3 sits near $287 on a ~$3.09T market cap — a further ~11% above the immediate post-print level and ~22% above the July 30 close. The ladder raised after the print still holds: bear $205, base $330, bull $420. At ~$287 the stock has closed roughly half the gap to base that was open at ~$258, and sits about 13% below fair value rather than a fifth — still the lower-middle of the corridor, but no longer the cheap end of it. The raise remains deliberately smaller than the beat, because the same quarter took TTM free cash flow to −$7.6B from +$18.2B and pushed 2026 capex to ~$220B: the earnings power is being bought, not compounded, until the depreciation cycle turns. Two things in the price are still not operating income — the Anthropic stake, marked at roughly $145–200B (15–21% of a ~$965B June round) against a $3.09T market cap (~5–6.5%) and heading for an IPO as early as October, and the reported $5.75 EPS, of which $53.4B of pre-tax gains is a mark, not a run rate.",
     "valuationNote": {
       "text": "Using a 10-year DCF with a 9% WACC and a 3.5% terminal growth rate, incorporating Q2 2026 actuals (AWS +37% at a 39.4% margin, operating income $27.5B, backlog $496B), Q3 guidance ($197–202B, ~13–17% ex Prime Day timing and FX), ~$220B of 2026 capex with the depreciation drag landing in 2027–2028, and the Anthropic stake carried separately at a discount to its private mark, our fair value estimate for AMZN is",
       "fairValue": "$330/share"
     },
     "peAnalysis": {
-      "asOf": "July 2026",
+      "asOf": "August 3, 2026 (Q2 2026 actuals; price ~$287)",
       "rows": [
         {
           "label": "Forward P/E (2026E)",
-          "value": "~33×",
-          "note": "~$7.73 consensus 2026 EPS, pre Q2 revisions"
+          "value": "~29–37×",
+          "note": "~29× on post-print NTM/forward consensus (~$9.8); ~37× on the pre-revision ~$7.73 2026E that still embeds the depreciation step-up"
         },
         {
           "label": "Forward P/E (2027E)",
-          "value": "~27×",
-          "note": "~$9.40 consensus 2027 EPS, pre Q2 revisions"
+          "value": "~30×",
+          "note": "~$9.40 pre-revision 2027E at ~$287; denominator still catching up to the AWS beat"
         },
         {
-          "label": "PEG (2027E)",
-          "value": "~1.9×",
-          "note": "fwd P/E ÷ ~14.5% 2025–27 EPS CAGR"
+          "label": "PEG (forward)",
+          "value": "~1.5–1.9×",
+          "note": "~1.5× on the revised forward multiple ÷ ~14.5–20% EPS growth; ~1.9× on the slower pre-revision 2025–27 CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
           "value": "~3.3×",
-          "note": "~$860B NTM revenue"
+          "note": "~$3.09T / ~$930B NTM revenue after the post-print estimate lift"
         },
         {
           "label": "Anthropic stake",
           "value": "~$145–200B",
-          "note": "15–21% of a ~$965B June 2026 round; ~5–7% of market cap"
+          "note": "15–21% of a ~$965B June 2026 round; ~5–6.5% of market cap at $3.09T"
         }
       ],
-      "summary": "Trailing GAAP P/E is not usable this quarter: the $53.4B non-operating gain that produced $5.75 of Q2 EPS is a mark on the Anthropic stake, not earnings. On consensus struck before the Q2 beat, AMZN trades at ~33× 2026E and ~27× 2027E — a real premium to the S&P 500 (~21×), and the PEG of ~1.9× is worse than it looked a quarter ago because 2026 EPS carries the depreciation from a capex base that grew 64%. The offsetting point is that both estimates predate a quarter in which AWS grew 37% against 31% expected and the backlog reached $496B, so the denominator is more likely to be revised up than the multiple is to compress. The Anthropic stake at ~5–7% of market cap is real but is not free — it is the same balance sheet funding $220B of capex, and an IPO would convert a mark into a price the market sets rather than a round does."
+      "summary": "Trailing GAAP P/E is not usable this quarter: the $53.4B non-operating gain that produced $5.75 of Q2 EPS is a mark on the Anthropic stake, not earnings. At ~$287 the multiple has moved with the price — roughly 29× on the revised forward/NTM consensus and closer to 37× on the pre-revision 2026E of ~$7.73 — still a real premium to the S&P 500 (~21×). The PEG band of ~1.5–1.9× is the honest range while the denominator is mid-revision: AWS grew 37% against 31% expected and the backlog reached $496B, so estimates are being rewritten upward, but 2026–27 EPS still has to absorb depreciation from a capex base that grew 64%. The Anthropic stake at ~5–6.5% of market cap is real but is not free — it is the same balance sheet funding $220B of capex, and an IPO would convert a mark into a price the market sets rather than a round does. Street price targets average ~$323, within a few percent of the $330 base."
     }
   },
   "scenarios": {
@@ -229,5 +229,5 @@
     },
     "verdict": "Amazon's moats are overwhelmingly AI-resilient, and Q2 2026 deepened the strongest one rather than the newest: the AWS backlog doubled to $496B in two quarters, custom silicon and the AI line each passed a $25B run rate growing triple digits, and both frontier labs are now contractually and financially bound to AWS. No moat status changes this quarter — the evidence under proprietaryData and systemOfRecord is materially stronger, but statuses were already strong. The ASCS thesis is unchanged and unconfirmed: three months after launch Amazon quantified none of it in its first opportunity to do so, so the logistics platform stays in the moat description as a durable structural argument and out of the growth drivers as a measured one. The live question is no longer whether the moats hold but what they cost — ~$220B of 2026 capex against TTM free cash flow of −$7.6B is the price being paid to keep them."
   },
-  "lastAnalyzed": "July 31, 2026"
+  "lastAnalyzed": "August 3, 2026"
 }
