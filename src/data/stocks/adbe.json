@@ -9,7 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "$108B"
+      "value": "$101B"
     }
   ],
   "chips": [
@@ -24,29 +24,29 @@
   ],
   "metrics": [
     {
-      "title": "Q1 FY26 Revenue",
-      "value": "$6.4B",
-      "label": "+12% YoY, beat consensus",
+      "title": "Q2 FY26 Revenue",
+      "value": "$6.62B",
+      "label": "+13% YoY, raised FY26 guide",
       "icon": "TrendingUp",
       "color": "#ff0000"
     },
     {
       "title": "Firefly ARR",
-      "value": "$250M",
-      "label": "AI-first ARR tripled YoY",
+      "value": "~$300M",
+      "label": "+50% QoQ; AI-first ARR >$500M",
       "icon": "Zap",
       "color": "#f7b600"
     },
     {
-      "title": "Monthly Active Users",
-      "value": "850M+",
-      "label": "+17% YoY across portfolio",
+      "title": "Creative Freemium MAU",
+      "value": "90M",
+      "label": "+70% YoY across Firefly/Express/CC web",
       "icon": "Users",
       "color": "#3b82f6"
     }
   ],
   "moat": {
-    "description": "The Creative Cloud is the global industry standard for design, photo, and video. The AI-disruption thesis is now materializing — Adobe's aggressive freemium pivot (redirecting buyers into free Acrobat/Express/Firefly and cancelling planned price increases) cut organic ARR growth guidance to ~8.3%, a concession on low-end pricing power — but the resilient core (PDF/Acrobat system-of-record and Firefly's commercially-safe proprietary training data) remains intact.",
+    "description": "The Creative Cloud is the global industry standard for design, photo, and video. The AI-disruption thesis is still materializing — Q2 FY26 confirmed Adobe is doubling down on freemium (deferring planned Creative Cloud price increases and accepting a near-term ARR headwind to chase MAU) — but the resilient core (PDF/Acrobat system-of-record, Firefly's commercially-safe proprietary training data, now approaching ~$300M ARR) remains intact, and the Semrush close adds discoverability to the CX stack.",
     "analysisTitle": "The Creative Standard Moat",
     "analysisSummary": "Adobe's moat is built on **Network Effects and Professional Reliance**:",
     "analysisPoints": [
@@ -56,67 +56,68 @@
       },
       {
         "title": "Firefly AI Advantage",
-        "text": "Adobe's AI is trained on licensed content (Adobe Stock), making it safe for commercial use — a critical differentiator for enterprise clients. Q1 FY26 evidence: Firefly ARR ~$250M, AI-first ARR >3x YoY, gen-credit usage +45% QoQ — the commercial-safety differentiation is monetizing."
+        "text": "Adobe's AI is trained on licensed content (Adobe Stock), making it safe for commercial use — a critical differentiator for enterprise clients. Q2 FY26 evidence: Firefly ARR approaching ~$300M (+50% QoQ via apps and credit packs), AI-first ARR >$500M (>3x YoY), Creative Agent beta launched inside Creative Cloud/Firefly — commercial-safety differentiation is monetizing, even as freemium is prioritized over near-term ARR."
       },
       {
         "title": "Document Cloud",
-        "text": "Acrobat and PDF standards create a separate, massive moat in professional and business workflows."
+        "text": "Acrobat and PDF standards create a separate, massive moat in professional and business workflows. Business Professionals & Consumers subscription revenue grew 16% YoY in Q2, with Acrobat AI Assistant ARR roughly 3x YoY."
       }
     ]
   },
   "growth": {
-    "description": "Q1 FY26 revenue +12% YoY ($6.4B, beat). AI-first ARR more than tripled YoY; Firefly ended quarter at ~$250M ARR with generative-credit consumption +45% QoQ — AI monetization is now visibly working, not just pitched.",
+    "description": "Q2 FY26 revenue +13% YoY ($6.62B, record). Total ending ARR $27.1B (+12.5% YoY, including ~$480M Semrush). AI-first ARR >$500M (>3x YoY); Firefly ARR approaching ~$300M (+50% QoQ). FY2026 revenue guide raised to $26.50–$26.60B and non-GAAP EPS to $24.35–$24.45, but management explicitly accepted lower H2 ARR growth from individuals to accelerate freemium MAU — ending ARR book-of-business growth guided to 10.2%.",
     "growthAnalysis": {
       "cagrEstimate": "9-12%",
-      "scoreDerivation": "Base 73 (9-12% CAGR mid-band) + 7 AI-first ARR tripling + 5 Firefly Enterprise +50% new-logo growth + 3 expanding non-GAAP margin - 5 AI-native displacement risk = 83",
+      "cagrBasis": "Q2 FY26 total revenue +13% YoY ($6.62B); ending ARR $27.1B (+12.5% YoY incl. ~$480M Semrush); FY26 ending ARR book-of-business growth guided to 10.2% after the freemium reweighting. Blended 3–5yr estimate decays from that high-single/low-double-digit print toward a high-single-digit terminal as freemium conversion, not list-price, has to carry the compounding.",
+      "scoreDerivation": "Base ~74 (9–12% CAGR mid-band ~10.5%) + 4 trajectory (3/3 drivers accelerating) + 4 expanding non-GAAP margins − 10 high freemium-conversion / AI-native displacement risk = 72",
       "drivers": [
-        { "name": "Digital Media ARR", "metric": "Q1 FY26 revenue $6.40B (+11% YoY); Digital Media segment +12% YoY with ARR re-acceleration", "trend": "accelerating" },
-        { "name": "Firefly / AI-First Apps", "metric": "Firefly ARR ~$250M; AI-first ARR >3x YoY; Firefly Enterprise new customer acquisition +50% YoY", "trend": "accelerating" },
-        { "name": "Creative Freemium Funnel", "metric": "Creative freemium MAU crossed 80M (+50% YoY) across Express, Photoshop web/mobile, Lightroom, Premiere", "trend": "accelerating" }
+        { "name": "Creative & Marketing ARR", "metric": "Q2 FY26 Creative & Marketing Pros subscription $4.54B (+13% YoY); total Adobe ending ARR $27.1B (+12.5% YoY incl. Semrush)", "trend": "accelerating" },
+        { "name": "Firefly / AI-First Apps", "metric": "Firefly ARR approaching ~$300M (+50% QoQ); AI-first ARR >$500M (>3x YoY); Creative Agent beta in CC/Firefly", "trend": "accelerating" },
+        { "name": "Creative Freemium Funnel", "metric": "Creative freemium MAU crossed 90M (+70% YoY) across Firefly, Express, Photoshop/Premiere/Lightroom web & mobile", "trend": "accelerating" }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If Figma's IPO-fueled enterprise expansion, Canva AI, and OS-native generative tools (Apple Intelligence, Google Imagen, Microsoft Copilot Designer) compress Creative Cloud net-revenue retention below 105% through FY2027, the AI-monetization re-acceleration story breaks and the multiple compresses further toward legacy-software peers.",
+      "keyRisk": "If the Q2 freemium reweighting (deferred Creative Cloud price increases + friction-free Firefly/Acrobat onboarding) fails to convert free MAU into paid ARR by FY2027 — while Figma, Canva AI, and OS-native generative tools keep compressing Creative Cloud net-revenue retention below 105% — the AI-monetization story breaks and the multiple stays pinned near legacy-software peers.",
       "keyRiskSeverity": "high",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 79,
-    "description": "Stock has fallen ~46% from 52-week high ($422.95) to $250.71 — only 25% above the bear-case target. Multiple compression has gone well past the fundamental deceleration; Q1 FY26 results show acceleration, not erosion."
+    "score": 74,
+    "description": "At ~$250 (July 31 close), Adobe sits ~32% below the $290 base case and ~43% above the $175 bear — roughly 10× the raised FY2026 non-GAAP EPS midpoint (~$24.40). The multiple still prices persistent AI-displacement and freemium-conversion risk even after Q2's beat-and-raise; the stock is ~32% below the 52-week high of $370.86."
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$175",
-      "description": "The freemium pivot cannibalizes paid ARR faster than it converts free users, AI-native tools keep eroding the low end, and EPS growth stalls — the multiple compresses toward ~7x on flat earnings.",
+      "description": "Freemium cannibalizes paid ARR faster than it converts, AI-native tools keep eroding the low end, and EPS growth stalls — the multiple compresses toward ~7× on flattish earnings.",
       "points": [
-        "Organic ARR growth slips toward zero as free-tier redirection outpaces conversion",
+        "Organic ARR growth slips toward zero as free-tier redirection outpaces conversion through FY2027",
         "Firefly credit monetization fails to offset churn from Canva AI and native OS creative tools",
-        "Non-GAAP EPS growth stalls, leaving no catalyst to re-rate the depressed multiple"
+        "Non-GAAP EPS growth stalls near the mid-$20s, leaving no catalyst to re-rate the depressed multiple"
       ]
     },
     "base": {
       "priceTarget": "$290",
-      "description": "ARR growth stabilizes in the high single digits as the freemium funnel begins converting, revenue tracks the raised ~$20.6B FY2026 guide, and the multiple re-rates modestly to ~11-12x forward EPS.",
+      "description": "ARR growth stabilizes near the guided ~10% as the freemium funnel begins converting, revenue tracks the raised ~$26.55B FY2026 guide, and the multiple re-rates modestly to ~11–12× forward EPS.",
       "points": [
-        "Organic Digital Media ARR growth stabilizes near 8-10% as free users convert to paid",
-        "Document Cloud (Acrobat/Sign) keeps compounding at high single digits",
-        "Non-GAAP EPS reaches ~$26-27 with operating margins holding above 45%"
+        "Organic Digital Media ARR growth stabilizes near 8–10% as free users convert to paid through FY2027",
+        "Document Cloud (Acrobat/Sign) and Semrush-augmented CX keep compounding at high single to low double digits",
+        "Non-GAAP EPS reaches the mid-$25s with operating margins holding near the ~45% guide"
       ]
     },
     "bull": {
       "priceTarget": "$420",
-      "description": "The freemium AI strategy proves out, Firefly monetization re-accelerates ARR, and the multiple recovers toward the mid-teens as the AI-disruption fear reverses.",
+      "description": "The freemium AI strategy proves out, Firefly monetization re-accelerates ARR into the teens, and the multiple recovers toward the mid-teens as the AI-disruption fear reverses.",
       "points": [
-        "Free-tier onboarding drives a large paid-conversion cohort, re-accelerating ARR to double digits",
+        "Free-tier onboarding drives a large paid-conversion cohort, re-accelerating ARR to double digits organically",
         "AI credit consumption becomes a material, high-margin revenue stream across Acrobat, Express and Firefly",
-        "Multiple re-rates to ~15-16x forward EPS as Adobe re-establishes durable AI-era growth"
+        "Multiple re-rates to ~15–16× forward EPS as Adobe re-establishes durable AI-era growth"
       ]
     }
   },
   "tenMoats": {
     "learnedInterfaces": {
       "status": "weakened",
-      "note": "Generative AI tools (Midjourney, DALL-E, Canva AI) are democratizing design — Adobe's UI complexity was once a barrier now eroding."
+      "note": "Generative AI tools (Midjourney, DALL-E, Canva AI) are democratizing design — Adobe's UI complexity was once a barrier now eroding. Creative Agent beta is Adobe's answer, but it has not yet restored switching costs."
     },
     "businessLogic": {
       "status": "weakened",
@@ -132,11 +133,11 @@
     },
     "bundling": {
       "status": "weakened",
-      "note": "Creative Cloud bundle faces pressure from AI-native point solutions (Figma AI, Canva AI) that are simpler and cheaper."
+      "note": "Creative Cloud bundle faces pressure from AI-native point solutions (Figma AI, Canva AI) that are simpler and cheaper; deferring H2 price increases concedes near-term pricing power inside the bundle."
     },
     "proprietaryData": {
       "status": "strong",
-      "note": "Adobe Firefly trained exclusively on licensed Adobe Stock = ethically sourced, legally protected generative AI training data."
+      "note": "Adobe Firefly trained exclusively on licensed Adobe Stock = ethically sourced, legally protected generative AI training data; Firefly ARR approaching ~$300M and Firefly Foundry custom models deepen the enterprise data moat."
     },
     "regulatoryLockIn": {
       "status": "intact",
@@ -148,13 +149,13 @@
     },
     "transactionEmbedding": {
       "status": "intact",
-      "note": "Monthly Creative Cloud subscriptions deeply embedded in creative professional and enterprise marketing workflows."
+      "note": "Monthly Creative Cloud subscriptions deeply embedded in creative professional and enterprise marketing workflows; freemium expands the top of funnel without yet breaking paid embedding at the core."
     },
     "systemOfRecord": {
       "status": "intact",
       "note": "PDF/Acrobat is the global document standard; the immovable system of record for contracts, reports, and official documents."
     },
-    "verdict": "Adobe faces the most direct AI threat to AI-vulnerable moats in the portfolio. Its survival thesis rests on Firefly's proprietary training data and the PDF/document system-of-record — both genuinely durable."
+    "verdict": "Adobe faces the most direct AI threat to AI-vulnerable moats in the portfolio. Q2's freemium doubling-down is a concession on near-term pricing power, not a moat repair. The survival thesis still rests on Firefly's proprietary training data and the PDF/document system-of-record — both genuinely durable."
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "August 3, 2026"
 }
