@@ -2,7 +2,7 @@
   "slug": "net",
   "ticker": "NET",
   "name": "Cloudflare",
-  "lastAnalyzed": "July 21, 2026",
+  "lastAnalyzed": "August 3, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "$95.7B"
+      "value": "$100.9B"
     }
   ],
   "chips": [
@@ -66,38 +66,39 @@
     ]
   },
   "growth": {
-    "description": "Q1 2026 delivered $639.8M revenue (+34% YoY), beating consensus of $622M and matching Q4's accelerated pace. FY2026 guidance was raised to $2.805–2.813B and non-GAAP EPS to $1.19–1.20 (from $1.11–1.12), and Q2 was guided to $664–665M. RPO grew to $2.54B (+36% YoY, decelerating from +48% in Q4) and DBNRR slipped 2pp sequentially to 118% — a yellow flag worth watching. Alongside earnings, Cloudflare announced a 20% workforce reduction (~1,100 roles, $140–150M charges) to pivot to an agentic-AI-first operating model, simultaneously a long-term margin catalyst and a near-term execution risk that drove the stock down ~18% on the print.",
+    "description": "Q1 2026 — still the most recent reported quarter — delivered $639.8M revenue (+34% YoY) against a $620.8M consensus. FY2026 guidance was raised to $2.805–2.813B, non-GAAP operating income to $418–421M (from $378–382M guided in February) and EPS to $1.19–1.20, with Q2 guided to $664–665M (+30%). At the June 9 Investor Day management raised the long-term operating margin target to 30%+ (from 20%+) and the FCF margin target to 30–35% (from ~25%), committed to Rule of 50 by FY2027 and GAAP profitability by 2028 at the latest, and disclosed segment ARR growth for the first time: Cloudflare One +43% and Developer +137% in 2025. The counterweight is that the margin inflection has not begun — Q1 operating margin was 11.4%, 30bp lower YoY, Q2 is guided to 13.6% against 14.1% a year ago, and gross margin fell 210bp sequentially to 72.8% as free traffic converts to paid and lower-margin Workers volume scales, which is why the long-term gross margin floor was widened from 75% to 70%. RPO grew 36% YoY (from +48% in Q4) and DBNRR slipped 2pp to 118%. The 20% workforce reduction (~1,100 roles, $140–150M of charges) is both the source of the guided H2 leverage and the main execution risk; the Q2 print on August 6 is its first test.",
     "growthAnalysis": {
       "cagrEstimate": "26–30%",
-      "scoreDerivation": "Base 80 (15–30% CAGR, blended 26–30%) + 5 recurring (subscription model, NRR 118%) + 5 TAM expansion (AI agents as new internet users, TAM grows $181B→$231B by 2028) − 2 DBNRR deceleration (120 → 118 QoQ) − 1 restructuring execution risk = 87",
+      "cagrBasis": "Reported revenue +33.5% YoY in Q1 2026 ($639.8M) against a +30% FY2026 guide ($2.805–2.813B); total RPO $2.543B +36% YoY (down from +48% in Q4 2025) with current RPO +34%; segment ARR +43% (Cloudflare One) and +137% (Developer) for 2025. The 26–30% estimate decays the guided ~30% toward the mid-20s as the base compounds. It is deliberately anchored on revenue, RPO and ARR rather than on the +1,700% agent-request figure: request volume is platform activity that reaches Cloudflare only through those three lines, so their rate is the accrual rate.",
+      "scoreDerivation": "Base 88.7 (26–30% CAGR, midpoint 28) + 1.3 trajectory (Workers and agent infrastructure accelerating; Cloudflare One and large-customer expansion stable) + 0 margin (stable) − 5 moderate key risk = 85. Three inputs were re-rated in the August 2026 review and each costs points. Margin moves from expanding to stable because the direction is guided, not observed: the FY2026 operating income guide does imply 14.9% against 14.0% in FY2025, but Q1 printed 11.4% (−30bp YoY), Q2 is guided 50bp lower YoY, and gross margin is falling with its own long-term floor cut from 75% to 70% — the entire expansion sits in an H2 the restructuring has not yet delivered. Restore expanding on the first quarter that prints YoY operating margin expansion. Large-customer expansion moves to stable because its measures disagree: count growth +23% → +23% → +25% but large-customer revenue growth +42% (Q3 2025) → +38% (Q1 2026) and DBNRR 119 → 120 → 118. Cloudflare One is stable rather than accelerating because +43% ARR growth for 2025 is the only rate Cloudflare has disclosed for it — one point cannot establish a direction. Severity stays moderate: the deceleration already visible in RPO and DBNRR is charged in the drivers and the base, so the risk term carries only the unmaterialised half — that the restructuring costs more velocity than it buys, and that hyperscalers match the agent-infrastructure products before Cloudflare monetises them.",
       "drivers": [
         {
-          "name": "Zero Trust & SASE",
-          "metric": "~35% of Cloudflare One platform; multi-year enterprise contracts including $12.7M/yr 7-yr deal",
-          "trend": "accelerating"
+          "name": "Cloudflare One (Zero Trust & SASE)",
+          "metric": "ARR +43% YoY in 2025, first disclosed at the June 2026 Investor Day; 5-year $5.1M EMEA insurance deal displaced six legacy vendors at signing with 10 more underway",
+          "trend": "stable"
         },
         {
           "name": "Large Customer Expansion",
-          "metric": "4,416 customers >$100K (+25% YoY); contributing 72% of revenue",
-          "trend": "accelerating"
+          "metric": "4,416 customers >$100K (+25% YoY) at 72% of revenue; large-customer revenue +38% YoY vs +42% in Q3 2025; DBNRR 118% after peaking at 120% in Q4 2025; $5M+ cohort +50% YoY",
+          "trend": "stable"
         },
         {
-          "name": "AI Agent Infrastructure (Workers AI, AI Gateway, Agent Cloud)",
-          "metric": "AI agent requests on Cloudflare's network +1,700% June 2025→May 2026; Cloudflare Environments for Claude Managed Agents launched with Anthropic; agentic-AI-first restructuring redirects ~$140M cost base toward edge AI roadmap",
+          "name": "AI Agent Infrastructure (Workers, AI Gateway, Monetization Gateway)",
+          "metric": "Developer ARR +137% YoY in 2025; 5.5M developers after adding 1M in Q1 2026 alone versus 1.5M in all of 2025; agent requests on the network +1,700% in 11 months",
           "trend": "accelerating"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "Two converging risks: (1) the 20% workforce reduction announced May 2026 disrupts go-to-market and product velocity for 2–3 quarters, dragging DBNRR below 116% by Q4 2026; (2) hyperscaler-managed AI agent platforms (AWS Bedrock Agents, Anthropic Managed Agents on AWS/Azure) capture >20% of enterprise agent infrastructure by end of 2026, leaving Cloudflare dependent on the more contested CDN/SASE market where Palo Alto and Zscaler are accelerating bundled offers and RPO growth decelerates below 25%",
+      "keyRisk": "Two converging risks: (1) the 20% workforce reduction disrupts go-to-market and product velocity for 2–3 quarters so the guided H2 operating leverage never appears — FY2026 non-GAAP operating income lands below the $418–421M guide and DBNRR slips under 116% by Q4 2026; (2) hyperscalers match Cloudflare's agent-infrastructure products at their own edge before Cloudflare monetises them — AWS shipped x402 agent payments GA in CloudFront and WAF in June 2026, two weeks before Cloudflare's Monetization Gateway opened a waitlist with no pricing or launch date — leaving Cloudflare to compete for agent workloads on the contested CDN/SASE ground where Palo Alto and Zscaler bundle aggressively and RPO growth decelerates below 25%",
       "keyRiskSeverity": "moderate",
-      "marginTrend": "expanding"
+      "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 62,
-    "description": "At ~$272, NET has pushed ~9% above its $250 base target and now sits ~17% of the way from base to the $380 bull case — the June AI-agent rally has continued into July (Citizens raised its PT to $330 on July 17), leaving the stock ~110% above the bear ($130). The margin of safety that existed at the May ~$150 low and the June ~$234 level is gone: NTM P/S has re-expanded to ~34× and forward non-GAAP P/E to ~228×, pricing in flawless execution of the agentic-AI thesis through the 2–3 quarter restructuring — with Q2 results (due July 30) the next catalyst that must validate the multiple. Valuation is now full rather than attractive.",
+    "score": 60,
+    "description": "At ~$284 NET trades ~14% above its $250 base target, ~26% of the way from base to the $380 bull case and ~119% above the $130 bear. The June–July AI-agent re-rating carried it to a 52-week high of $293.80 on July 30 as Bank of America ($330 from $255), Oppenheimer ($330) and Morgan Stanley ($305) raised targets into the print, well through the ~$251 consensus. NTM P/S has re-expanded to ~36× and forward non-GAAP P/E to ~238×, which prices the June 9 Investor Day framework — 30%+ long-term operating margin, 30–35% FCF margin, Rule of 50 by FY2027 — as delivered rather than as a target, through a restructuring whose first evidence arrives with Q2 results on August 6. The margin of safety that existed at the May ~$150 low and the June ~$234 level is gone.",
     "peAnalysis": {
-      "asOf": "July 2026",
+      "asOf": "August 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
@@ -106,7 +107,7 @@
         },
         {
           "label": "Forward P/E (NTM, non-GAAP)",
-          "value": "~228×",
+          "value": "~238×",
           "note": "raised FY26 EPS guide $1.19–1.20"
         },
         {
@@ -116,27 +117,27 @@
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~34×",
+          "value": "~36×",
           "note": "$2.81B NTM revenue (raised guide)"
         },
         {
           "label": "Price / FCF",
-          "value": "~285×",
-          "note": "Q1 FCF $84M (13% margin)"
+          "value": "~346×",
+          "note": "TTM FCF $292M (12% margin)"
         }
       ],
-      "summary": "NET now trades at ~34× NTM P/S after the AI-agent rally extended from June into July — the multiple has not just round-tripped the May restructuring selloff but pushed past its ~27× March level to a cycle high. The premium to cybersecurity peers (CrowdStrike ~16×, Palo Alto ~11×) is now the widest of the cycle; the market is paying for the agentic-internet thesis (AI agent requests +1,700% YoY, Anthropic managed-agent environments, Citizens PT raised to $330 on July 17) rather than the current 30%+ revenue growth alone. At ~228× forward non-GAAP P/E, the FCF-margin path is the swing factor: only if the 1,100-person reduction delivers 18–20% FCF margin by Q4 2026 does the multiple compress to a defensible level for a 30%+ grower — and with the stock now above its base target ahead of the July 30 Q2 print, the risk/reward has shifted from patience-rewarded to execution-priced-in."
+      "summary": "NET trades at ~36× NTM P/S after the AI-agent rally extended from June into a late-July run to a 52-week high — the multiple has not just round-tripped the May restructuring selloff but pushed well past its ~27× March level to a cycle high. It is the widest premium in the security book, though by less than this file previously claimed: coverage carries CrowdStrike at ~27× and Palo Alto at ~16.5×, not the ~16× and ~11× cited in July. The market is paying for the agentic-internet thesis — agent requests +1,700%, Developer ARR +137%, the July 1 Monetization Gateway — rather than for the 30% revenue growth alone. At ~238× forward non-GAAP P/E and ~346× TTM FCF, the cash-margin path is the swing factor: only if the 1,100-person reduction converts into the guided H2 operating leverage and a 30–35% long-term FCF margin does the multiple compress to a defensible level for a 30% grower. With the stock above its base target going into the August 6 Q2 print, the risk/reward is execution-priced-in rather than patience-rewarded."
     }
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$130",
-      "description": "The 20% workforce reduction disrupts go-to-market velocity and product execution for 2–3 quarters while hyperscaler bundling erodes CDN/SASE share, compressing P/S to ~14× on $2.81B 2026 revenue.",
+      "description": "The 20% workforce reduction disrupts go-to-market velocity and product execution for 2–3 quarters while hyperscaler bundling erodes CDN/SASE share, compressing P/S to ~16× on $2.81B 2026 revenue.",
       "points": [
         "Agentic-AI-first restructuring removes too much sales capacity too fast — large-customer ACV growth stalls below 18% YoY through Q4 2026 as deal cycles slow and the 7-year SASE momentum cools",
         "DBNRR slips further from 118% to 114–116% for two consecutive quarters as enterprises pause SASE expansion amid macro uncertainty and AWS CloudFront + Security Hub bundling displaces Cloudflare's CDN layer at 5%+ of Fortune 500 accounts",
         "Gross margin compresses below 73% as edge infrastructure CapEx to support AI inference workloads exceeds revenue contribution from Workers AI through 2026",
-        "Multiple re-rates to ~14× NTM P/S as growth decelerates toward 24% and FCF margin expansion stalls at 14–15% despite the cost actions"
+        "Multiple re-rates to ~16× NTM P/S as growth decelerates toward 24% and FCF margin expansion stalls at 14–15% despite the cost actions"
       ]
     },
     "base": {
@@ -156,7 +157,7 @@
         "AI agent traffic on Workers exceeds 20% of Cloudflare's total request volume by end of 2026, driving a new consumption-based revenue layer on top of the subscription base and pushing ARR growth toward 40%",
         "Cloudflare wins 3+ sovereign government cloud contracts in Europe under EU Data Act/NIS-2 compliance, establishing a government revenue stream and locking in decade-long regulatory relationships",
         "SASE displacement of Zscaler at 3–4 Fortune 100 accounts adds >$100M ACV, validating Cloudflare's ability to compete in the largest enterprise security deals",
-        "FCF margin reaches 25%+ by Q4 2026 as the AI-first cost base compounds with revenue scale, triggering a re-rating toward 30× NTM P/S on $3.3B+ 2026–27 blended revenue"
+        "FCF margin reaches 25%+ by Q4 2026 — inside the 30–35% long-term target set at the June Investor Day — as the AI-first cost base compounds with revenue scale, supporting ~37× NTM P/S on ~$3.65B FY2027 revenue"
       ]
     }
   },
@@ -195,7 +196,7 @@
     },
     "transactionEmbedding": {
       "status": "strong",
-      "note": "Every HTTP request from a Cloudflare customer transits Cloudflare's network — embedded in the critical path of web traffic. Claude managed agents and agentic AI workloads deepen this embedding significantly: Cloudflare AI Gateway is the canonical rate-limiting, caching, and observability layer for managed agent API calls, meaning enterprises configure their entire agent infrastructure pipeline through Cloudflare. The shift from human HTTP traffic to AI agent HTTP traffic structurally upgrades Cloudflare's transaction embedding from infrastructure-level to agent-orchestration-level — every agent tool call is a Cloudflare-embedded transaction."
+      "note": "Every HTTP request from a Cloudflare customer transits Cloudflare's network — embedded in the critical path of web traffic. Claude managed agents and agentic AI workloads deepen this embedding significantly: Cloudflare AI Gateway is the canonical rate-limiting, caching, and observability layer for managed agent API calls, meaning enterprises configure their entire agent infrastructure pipeline through Cloudflare. The shift from human HTTP traffic to AI agent HTTP traffic structurally upgrades Cloudflare's transaction embedding from infrastructure-level to agent-orchestration-level — every agent tool call is a Cloudflare-embedded transaction. The position is not exclusive, though: AWS shipped the same x402 agent-payment protocol GA in CloudFront and WAF in June 2026, two weeks before Cloudflare's Monetization Gateway opened a waitlist. Status holds at strong on the installed request path Cloudflare already owns, not on being the only edge that can bill an agent."
     },
     "systemOfRecord": {
       "status": "intact",
