@@ -3,7 +3,7 @@
   "title": "ServiceNow and the Seat-Pricing Question",
   "dek": "The market spent the first half of 2026 pricing enterprise software for the collapse of per-seat billing. ServiceNow's Q2 is the first hard read on that fear — and it suggests the market indexed on the wrong variable.",
   "published": "July 28, 2026",
-  "lastReviewed": "July 29, 2026",
+  "lastReviewed": "August 3, 2026",
   "tickers": ["NOW", "CRM", "ADBE", "INTU", "OKTA", "FIG", "DDOG", "SNOW", "MDB", "NET"],
   "tags": ["Enterprise Software", "AI Monetization", "Business Models"],
   "summary": "Enterprise software de-rated through H1 2026 on the thesis that AI agents destroy per-seat pricing faster than task-based pricing can replace it. ServiceNow is the cleanest test case: it fell roughly 30% YTD on that fear, then reported Q2 2026 with subscription revenue re-accelerating to +24.5% YoY and AI ACV crossing $1B. Read across the ten names in our coverage that bill by seat or by consumption, the billing model turns out to be a poor predictor of AI exposure. What separates the winners is whether the vendor owns the system of record and the transaction layer that agents must act through — which is why ServiceNow, priced by seat, is better positioned than Snowflake and MongoDB, which are priced by consumption.",
@@ -23,6 +23,10 @@
     }
   ],
   "revisions": [
+    {
+      "date": "August 3, 2026",
+      "note": "Adobe MGV refreshed to Q2 FY2026 (beat-and-raise, Firefly ARR ~$300M, freemium doubled down with deferred Creative Cloud price increases). Re-verified every moat status the prose names — Adobe's system-of-record, transaction-embedding and regulatory-lock-in still sit below strong with proprietaryData the only strong AI-resilient pillar, so the counter-case holds. Updated the ADBE scorecard note and counter-case prose off the stale ~8.3% organic ARR guide to the Q2 freemium/ARR framing. Salesforce, Snowflake and MongoDB still carry May 2026 analyses."
+    },
     {
       "date": "July 29, 2026",
       "note": "First review. Verified all eleven moat statuses the prose asserts against the stock JSONs — every one still matches, including Adobe's system-of-record, transaction-embedding and regulatory-lock-in pillars sitting below strong, which is what the counter-case rests on, and Salesforce's weakened business-logic pillar. Cited the Q2 2026 release behind the metrics table. Flagged for the next review: the Adobe, Salesforce, Snowflake and MongoDB analyses carry month-precision \"May 2026\" dates, which makes the counter-case the part of this article standing on the oldest data."
@@ -99,7 +103,7 @@
       "notes": {
         "NOW": "Seat-billed, adding task-based Agentic ACV alongside it",
         "CRM": "Agentforce + Data 360 ARR $3.4B, +200%",
-        "ADBE": "Freemium pivot cut organic ARR guide to ~8.3%",
+        "ADBE": "Q2 freemium double-down; ending ARR guide 10.2% incl. Semrush",
         "INTU": "QuickBooks system of record; TurboTax exposed",
         "OKTA": "NRR inflected to 107%; identity for AI agents",
         "FIG": "NDR 139%, but AI-native competition is months old",
@@ -156,7 +160,7 @@
     },
     {
       "type": "prose",
-      "body": "The argument is not that seat-pricing fear is always misplaced. Adobe is the cohort's honest counter-example, and the matrix shows why: none of its system-of-record, transaction-embedding or regulatory-lock-in pillars reaches strong, leaving Firefly's licensed, commercially-safe training data as the one pillar carrying full weight. Adobe's exposure is real because generative AI attacks the *output* — the image, the layout, the video — rather than the record of who approved it. The company's response has been a concession, not a rebuttal: a freemium pivot redirecting buyers into free Acrobat, Express and Firefly, cancelled price increases, and organic ARR growth guidance cut to roughly 8.3%. That is what the seat-pricing thesis looks like when it is correct."
+      "body": "The argument is not that seat-pricing fear is always misplaced. Adobe is the cohort's honest counter-example, and the matrix shows why: none of its system-of-record, transaction-embedding or regulatory-lock-in pillars reaches strong, leaving Firefly's licensed, commercially-safe training data as the one pillar carrying full weight. Adobe's exposure is real because generative AI attacks the *output* — the image, the layout, the video — rather than the record of who approved it. The company's response has been a concession, not a rebuttal: Q2 FY2026 doubled down on freemium — friction-free Acrobat, Express and Firefly onboarding, deferred Creative Cloud price increases, and an explicit near-term ARR headwind accepted in exchange for MAU growth — even as Firefly ARR approached roughly $300 million. That is what the seat-pricing thesis looks like when it is correct."
     },
     {
       "type": "prose",
