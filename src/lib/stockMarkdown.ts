@@ -5,6 +5,7 @@ import {
   computeComposite,
   computeRecommendation,
 } from '@/lib/valuationScore';
+import { buildPeerComparison, notableMoatGaps, ordinal } from '@/lib/peerComparison';
 
 const SITE_URL = 'https://investmoat.com';
 
@@ -28,6 +29,63 @@ export function computeStockScores(data: StockAnalysisData): StockScores {
     composite: computeComposite(moat, growth, valuation),
     recommendation: computeRecommendation(moat, growth, valuation),
   };
+}
+
+/**
+ * The peer-group section, mirroring the Industry Comparison on the page.
+ *
+ * Scores here are the static ones — this document is cacheable and has no live
+ * prices — so the valuation column is the JSON figure for every name in the
+ * group, which keeps the comparison internally consistent even though the page
+ * will show fresher numbers.
+ */
+function peerSection(data: StockAnalysisData): string[] {
+  const model = buildPeerComparison(data.ticker, {});
+  if (!model) return [];
+
+  const composite = model.standings[0];
+  const lines: string[] = [];
+
+  lines.push(`## Peer group — ${model.group.label}`);
+  lines.push('');
+  lines.push(model.group.basis);
+  lines.push('');
+  lines.push(
+    `${data.ticker} ranks **${ordinal(composite.rank)} of ${composite.count}** in this group on composite ` +
+      `score, against a group median of ${composite.median}.`,
+  );
+  lines.push('');
+
+  lines.push('| Ticker | Name | Moat | Growth | Valuation | Composite | Recommendation |');
+  lines.push('| --- | --- | --- | --- | --- | --- | --- |');
+  for (const r of model.rows) {
+    const mark = r.ticker === data.ticker ? '**' : '';
+    lines.push(
+      `| ${mark}${r.ticker}${mark} | ${r.name} | ${r.moat} | ${r.growth} | ${r.valuation} | ${r.composite} | ${r.recommendation} |`,
+    );
+  }
+  lines.push('');
+
+  const { stronger, weaker } = notableMoatGaps(model.moatGaps);
+  if (stronger.length || weaker.length) {
+    lines.push('Moat pillars where this asset is assessed differently from most of its group:');
+    lines.push('');
+    for (const gap of stronger) {
+      lines.push(`- **Ahead — ${gap.label}:** ${gap.status} (${gap.peersBelow} peer(s) rate it lower).`);
+    }
+    for (const gap of weaker) {
+      lines.push(`- **Behind — ${gap.label}:** ${gap.status} (${gap.peersAbove} peer(s) rate it higher).`);
+    }
+    lines.push('');
+  }
+
+  lines.push(
+    'Peer groups are defined in src/data/peerGroups.ts. Every member shares one asset class, so the ' +
+      'scores in this table rank against each other.',
+  );
+  lines.push('');
+
+  return lines;
 }
 
 function moatVerdict(data: StockAnalysisData): string | undefined {
@@ -72,6 +130,8 @@ export function stockToMarkdown(data: StockAnalysisData): string {
       'Scores are not directly comparable across asset classes.',
   );
   lines.push('');
+
+  lines.push(...peerSection(data));
 
   if (data.headerStats?.length) {
     lines.push('## Key stats');
