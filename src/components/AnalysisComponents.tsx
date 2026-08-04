@@ -31,7 +31,8 @@ function useCountUp(target: number, duration = 900): number {
 }
 
 // ─── Score colour helpers ──────────────────────────────────────────────────────
-function scoreHex(s: number): string {
+/** Score → tier colour. Exported so every score on a stock page reads alike. */
+export function scoreHex(s: number): string {
   if (s >= 90) return '#34d399'; // emerald-400
   if (s >= 75) return '#60a5fa'; // blue-400
   if (s >= 60) return '#fbbf24'; // amber-400

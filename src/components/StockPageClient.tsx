@@ -13,6 +13,7 @@ import {
 } from '@/components/AnalysisComponents';
 import { LivePriceWidget } from '@/components/LivePriceWidget';
 import { DynamicValuationGauge } from '@/components/DynamicValuationGauge';
+import { PeerComparison } from '@/components/PeerComparison';
 import { ScenarioPriceBar } from '@/components/ScenarioPriceBar';
 import { stockData, getAverageScore } from '@/app/stockData';
 import { getStockData } from '@/data/stocks';
@@ -548,6 +549,9 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
           </AnalysisSection>
         )}
       </div>
+
+      {/* ── How the scores read against the peer group ── */}
+      <PeerComparison ticker={data.ticker} subjectValuation={liveValScore} />
 
       {/* ── Extra sections ── */}
       {data.extraSections?.map((section, i) => (
