@@ -1,0 +1,186 @@
+{
+  "slug": "snap",
+  "ticker": "SNAP",
+  "name": "Snap Inc.",
+  "lastAnalyzed": "August 4, 2026",
+  "headerStats": [
+    { "label": "Ticker",     "value": "SNAP"   },
+    { "label": "Market Cap", "value": "~$9.7B" }
+  ],
+  "chips": [
+    { "label": "Social Advertising | Camera & Messaging", "color": "primary"   },
+    { "label": "Bidirectional Friend Graph",              "color": "success"   },
+    { "label": "Subscription Inflection",                 "color": "secondary" },
+    { "label": "Declining US & EU Users",                 "color": "danger"    },
+    { "label": "AR Glasses Optionality",                  "color": "warning"   }
+  ],
+  "metrics": [
+    {
+      "title": "Revenue (Q2 2026)",
+      "value": "$1.60B",
+      "label": "+19% YoY; Q3 2026 guide $1.70–1.74B",
+      "icon": "TrendingUp",
+      "color": "#FFC800"
+    },
+    {
+      "title": "Daily Active Users",
+      "value": "493M",
+      "label": "+5% YoY; North America 92M, −7%",
+      "icon": "Users",
+      "color": "#3b82f6"
+    },
+    {
+      "title": "Direct Revenue",
+      "value": "$317M",
+      "label": "+85% YoY; 25M+ subscribers, <3% of MAU",
+      "icon": "CreditCard",
+      "color": "#7c3aed"
+    },
+    {
+      "title": "Adj EBITDA Margin",
+      "value": "16%",
+      "label": "Q2 2026 vs 3% a year ago; TTM $1.02B",
+      "icon": "BarChart3",
+      "color": "#10b981"
+    }
+  ],
+  "moat": {
+    "description": "Snap's durability rests on one asset — the bidirectional friend graph that makes Snapchat a private communication utility for 493M daily users rather than a content feed — and that graph has so far failed to convert into advertising pricing power, with Q2 2026 ad revenue growing 9% in the same quarter Meta grew 27% and Reddit 64%.",
+    "analysisTitle": "The Friend Graph and Where It Stops",
+    "analysisSummary": "Snap's competitive position rests on **a mutual-consent friend graph, camera-first default behaviour in the 13–34 cohort, and a personal Memories archive users now pay to keep** — three habits that hold users in place without giving Snap leverage over advertisers.",
+    "analysisPoints": [
+      {
+        "title": "The Bidirectional Friend Graph",
+        "text": "Snapchat's graph is built on mutual-consent friendships rather than one-way follows, which makes the app a two-sided messaging utility instead of a broadcast feed. A user cannot leave unilaterally without leaving conversations behind, and that asymmetry is visible in the numbers: after several quarters of decline, North American DAU held flat quarter-over-quarter at 92M in Q2 2026 even though Snap had deliberately cut community growth marketing. The graph is also why the erosion is slow rather than sudden — Europe shed 2% of daily users over a year, not a cohort at a time."
+      },
+      {
+        "title": "Camera-First Default in the 13–34 Cohort",
+        "text": "Snapchat reaches over 75% of 13–34 year-olds in more than 25 countries and reported 971M monthly and 493M daily active users in Q2 2026, with Rest of World up 12% to 303M. Opening to the camera rather than a feed produces a distinct daily habit that has survived a decade of TikTok and Instagram Reels competition. The habit does not price, though: Rest of World ARPU is $1.00 against $10.26 in North America, so the region carrying Snap's user growth contributes roughly a tenth of the revenue per user that the shrinking region does."
+      },
+      {
+        "title": "Where the Moat Stops — Advertising Pricing Power",
+        "text": "Q2 2026 advertising revenue of $1,282.5M grew 9% year-over-year, and the 10-Q attributes the entire increase to a roughly 10% rise in the average cost per impression during a World Cup quarter rather than to more inventory sold. In the same quarter Meta grew advertising 27% and Reddit 64%. Snap's answer is measured lower-funnel performance — cost per purchase down 18%, platform conversions up 56% — which is the argument of a platform competing on proof of outcome rather than on a position advertisers cannot route around. The one attempt to sell access to the chat surface itself, Perplexity's $400M agreement, ended in Q1 2026 with no revenue recognised."
+      }
+    ]
+  },
+  "growth": {
+    "description": "Q2 2026 revenue grew 19% to $1,599M, but the composition matters more than the headline: advertising, four-fifths of the top line, grew 9% on higher impression pricing in a World Cup quarter, while direct revenue — Snapchat+, Lens+ and Memories Storage — grew 85% to $316.5M and supplied the majority of the incremental dollars. Snap crossed 25M subscribers in July 2026 at under 3% penetration of 971M monthly users, against the 7–12% Spiegel cites as the long-run norm for app subscriptions, so the smaller line has the longer runway. Meanwhile the users are moving the wrong way in the regions that pay: North American DAU is 92M, down 7% year-over-year and worth $10.26 in quarterly ARPU, while Rest of World added 33M users at $1.00. The April 2026 restructuring — 16% of full-time staff, ~$500M of annualised savings — turned that mix into margin anyway: gross margin 58% (+7pp), Adjusted EBITDA $250M against $41M, and TTM Free Cash Flow of $706M across eight consecutive positive quarters.",
+    "growthAnalysis": {
+      "cagrEstimate": "9–13%",
+      "scoreDerivation": "Base 74 (9–13% blended CAGR, baseFromCagr formula) + 0 trajectory (1 of 3 drivers accelerating, 1 decelerating — direct revenue compounding against Rest of World monetisation rolling over) + 4 expanding margins (gross margin +7pp to 58%, Adjusted EBITDA margin 16% vs 3%, adjusted cost base +4% on revenue +19%) − 10 high keyRisk severity (an October 2026 to August 2027 litigation calendar and an open EU DSA proceeding aimed at the teen experience that carries the $10.26-ARPU region) = 68",
+      "drivers": [
+        {
+          "name": "Advertising Revenue",
+          "metric": "Q2 2026 $1,282.5M, +9% YoY, entirely from ~10% higher cost per impression; Q3 guide $1.70–1.74B assumes World Cup demand normalises",
+          "trend": "stable"
+        },
+        {
+          "name": "Direct Revenue (Snapchat+, Lens+, Memories Storage)",
+          "metric": "Q2 2026 $316.5M, +85% YoY; 25M+ subscribers at <3% of 971M MAU vs a 7–12% category norm",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Rest of World Monetisation",
+          "metric": "303M DAU (+12% YoY) but ARPU back to $1.00 from $1.20 in Q1 2026, +4% YoY, against $10.26 in North America",
+          "trend": "decelerating"
+        }
+      ],
+      "primaryType": "market share",
+      "cagrBasis": "TTM revenue of $6.35B grew 19% YoY in Q2 2026 but 12% YoY in Q1 2026, and Q3 2026 guidance of $1.70–1.74B implies roughly 14% YoY. The advertising line, four-fifths of the total, grew 9% YoY on pricing rather than volume, while direct revenue grew 85% YoY off a fifth of the mix. The estimate marks the blend down toward the advertising rate as the subscription base compounds against a widening denominator and the World Cup comparison reverses in Q3.",
+      "keyRisk": "The litigation and regulatory calendar aimed squarely at the teen experience — JCCP bellwether trials from October 2026, school-district trials in February 2027, Nevada and New Mexico attorney-general trials in August 2027, and the EU Digital Services Act proceeding opened on 26 March 2026 into minor protection — forces product changes or age-assurance friction that resumes the North American DAU decline, taking down the region that supplies 59% of revenue at $10.26 ARPU while growth stays concentrated in $1.00 users",
+      "keyRiskSeverity": "high",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 74,
+    "description": "At $5.75, Snap trades between the $3.50 bear and $7.00 base cases, on roughly 1.7× EV to TTM revenue and 10× TTM Adjusted EBITDA of $1.02B — a price that pays for the cash flow already on the page and almost nothing for advertising reacceleration, Specs, or subscription penetration past 3% of monthly users.",
+    "peAnalysis": {
+      "asOf": "August 2026",
+      "rows": [
+        { "label": "EV / TTM Revenue",       "value": "~1.7×",   "note": "TTM revenue $6.35B; EV ~$10.5B" },
+        { "label": "EV / TTM Adj EBITDA",     "value": "~10×",    "note": "TTM Adjusted EBITDA $1.02B" },
+        { "label": "Price / TTM FCF",         "value": "~14×",    "note": "TTM FCF $706M — 7.3% FCF yield" },
+        { "label": "Trailing P/E (GAAP)",     "value": "n/a",     "note": "TTM net loss; positive net income targeted from 2027" },
+        { "label": "Gross Margin",            "value": "58%",     "note": "Q2 2026, up ~700bps YoY" },
+        { "label": "Net Debt",                "value": "~$0.9B",  "note": "$3.53B debt vs $2.66B cash and securities" }
+      ],
+      "summary": "At $5.75 (~$9.7B market cap, ~$10.5B enterprise value) Snap trades at roughly 1.7× EV to TTM revenue and 10× TTM Adjusted EBITDA, against a 7.3% trailing Free Cash Flow yield built on eight consecutive positive quarters. There is no meaningful GAAP earnings multiple — the TTM net loss is real, and management's stated goal is sustained positive net income from 2027. The 74-point valuation score reflects a price sitting closer to the bear case than the base case within a 52-week range of $3.81 to $9.55: the cost cuts and the subscription line are already visible in the multiple, while the two things that would re-rate the stock — advertising growth above the high single digits and North American users that stop shrinking — are not, and neither is the roughly $0.9B of net debt that a leveraged small cap carries into a litigation calendar."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$3.50",
+      "description": "World Cup pricing reverses and advertising falls back to the Q1 2026 pattern of 3% growth on supply outrunning demand; age-assurance rules and the October 2026 trial calendar force changes to the teen experience that resume the North American DAU decline; subscription penetration stalls near 3% of monthly users and Specs consumes R&D without a revenue line. Adjusted EBITDA flattens near $1.0B and the market pays roughly 7× for it.",
+      "points": [
+        "Advertising growth returns to the Q1 2026 rate of 3% as the ~10% Q2 increase in cost per impression proves tournament-linked, with no offsetting impression volume",
+        "North American DAU resumes sequential decline from 92M after the JCCP bellwether trials begin in October 2026 and age-assurance requirements take effect, taking down the $10.26-ARPU region",
+        "Direct revenue decelerates sharply as subscription penetration stalls below 3% of 971M monthly users and Memories Storage attach saturates",
+        "Adjusted EBITDA flattens near $1.0B, the market applies ~7× EV/EBITDA, and ~$0.9B of net debt leaves roughly $3.50 a share"
+      ]
+    },
+    "base": {
+      "priceTarget": "$7.00",
+      "description": "Advertising grows high single digits as Smart Campaign Solutions and measured lower-funnel outcomes hold budget share; North American DAU stays near 92M as it did sequentially in Q2 2026; the $500M annualised cost reduction fully lands and subscriptions compound toward 4% penetration. FY2027 Adjusted EBITDA reaches roughly $1.6B and the stock holds ~8× EV/EBITDA.",
+      "points": [
+        "FY2026 revenue lands near $6.7–6.8B (+14%) with Adjusted EBITDA around $1.3B, in line with the Q3 guide of $1.70–1.74B revenue and $300–350M Adjusted EBITDA",
+        "The April 2026 restructuring's ~$500M of annualised savings is fully reflected from Q3 2026, holding adjusted operating expenses near $2.75B while revenue compounds",
+        "Subscribers reach 35–40M — about 4% of monthly users — keeping direct revenue growing several times faster than advertising",
+        "FY2027 Adjusted EBITDA reaches ~$1.6B with sustained positive GAAP net income; ~8× EV/EBITDA less net debt leaves roughly $7.00 a share"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$12.00",
+      "description": "The measured performance gains convert into budget share and advertising reaccelerates to double digits; subscription penetration climbs toward the 7% low end of the app-subscription norm; the dilution-management programme starts in 2027 against genuine net income, and Specs gives Snap a hardware narrative it has not had since 2016. FY2028 Adjusted EBITDA approaches $2.3B on a ~9.5× multiple.",
+      "points": [
+        "Advertising reaccelerates into double digits as the 56% year-over-year rise in platform conversions and 18% lower cost per purchase pull budget from Meta and TikTok on measured outcome rather than reach",
+        "Subscribers pass 60M — roughly 7% of monthly users, the low end of the 7–12% app-subscription benchmark — making direct revenue a third of the business at software-like margins",
+        "North American DAU inflects back to growth as Snap Map, Sponsored Snaps and the 35-and-over advertiser cohort broaden the app beyond its teen base",
+        "Specs ship from the September 2026 launch event and establish a credible eyewear roadmap; FY2028 Adjusted EBITDA approaches $2.3B at ~9.5× EV/EBITDA, leaving roughly $12.00 a share"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "weakened",
+      "note": "Snapchat's camera-first launch, swipe navigation and streaks produce genuine cohort fluency — a teen user navigates the app faster than an adult can learn it. But this is consumer muscle memory, not a professional workflow: nothing is re-certified or rebuilt when a user switches, Instagram and TikTok are one download away, and the 7% year-over-year decline in North American daily users is direct evidence that the interface does not hold people who decide to leave."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "Snap's ad stack — Smart Campaign Solutions, conversion modelling, the Sponsored Snaps and AI Sponsored Snaps formats — is real machine-learning work that produced a 56% year-over-year rise in platform conversions and an 18% lower cost per purchase. It is also replicable and demonstrably behind: Q2 2026 advertising revenue grew 9% while Meta's grew 27% and Reddit's 64% off the same demand pool, and advertiser campaign logic ports to those platforms with no migration project."
+    },
+    "publicDataAccess": {
+      "status": "weakened",
+      "note": "Snap gates a developer surface — Camera Kit, Snap Kit, Lens Studio, Snap Map Places — but Snapchat's content is private and ephemeral by design, so there is no licensable corpus of the kind Reddit sells to AI labs. The one attempt to monetise access to the chat surface, Perplexity's $400M cash-and-equity agreement, was ended in Q1 2026 before global rollout with no revenue recognised, which is the clearest available evidence of how little pricing power this asset carries."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Snap's display-optics team is genuinely specialised — the Specs waveguide, LCoS display, 51-degree field of view and 7ms motion-to-photon latency in a 132g standalone frame put it in a group of four or five companies worldwide, backed by 7,000+ filings and roughly a decade of AR spending. That capability has not produced a commercial product in ten years, Meta shipped a competing display product at a fraction of the $2,195 price, and the April 2026 restructuring cut 16% of full-time staff with $48.5M of the charge falling in R&D."
+    },
+    "bundling": {
+      "status": "weakened",
+      "note": "Snapchat+, Lens+ and Memories Storage now form a real direct-revenue business — $316.5M in Q2 2026, up 85%, with 25M+ subscribers — but the bundle is thin and shallow. Each tier is individually cancellable, there is no commerce, payments or productivity layer creating cross-product switching cost, penetration is under 3% of monthly users, and the billing relationship runs through the Apple and Google app stores rather than through Snap."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "Snap holds data no competitor can buy: a mutual-consent friend graph across 971M monthly users, the Snap Map location and Places graph where friend data drives 65% of new visits, Bitmoji identity, and Memories as a personal media archive. It is non-public and compounds with use. It has not converted into ranking parity, though — the same quarter's 9% advertising growth against Meta's 27% is the measure of how much less this data set is worth per user than the one across the street."
+    },
+    "regulatoryLockIn": {
+      "status": "destroyed",
+      "note": "Regulation runs against Snap rather than for it, and creates no switching barrier for anyone. Section 230 protects every platform equally, while Snap carries an open EU Digital Services Act proceeding into minor protection (26 March 2026), JCCP bellwether trials from October 2026, school-district trials in February 2027, and Nevada and New Mexico attorney-general trials in August 2027. Age-assurance and online-safety compliance is a fixed cost that favours Meta's and Google's scale over a $9.7B company's."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "The mutual-friend graph is Snap's real moat: 493M daily and 971M monthly users, over 75% of 13–34 year-olds in more than 25 countries, and a messaging relationship a user cannot exit unilaterally. It is intact rather than strong because it is measurably leaking at the top of the ARPU curve — North American daily users are down 7% year-over-year to 92M and Europe down 2% to 98M, with all net growth in Rest of World at $1.00 ARPU. A strong network effect does not shed 7% of its most valuable cohort in a year, however slowly."
+    },
+    "transactionEmbedding": {
+      "status": "destroyed",
+      "note": "N/A — Snap is a messaging and advertising platform, not a payment or settlement processor, and is embedded in no customer's transaction rails. If anything the flow runs the other way: subscription billing for Snapchat+ and Lens+ is collected through the Apple and Google app stores, so Snap pays the toll rather than charging it. This moat category does not apply."
+    },
+    "systemOfRecord": {
+      "status": "weakened",
+      "note": "Memories is a partial personal system of record — a decade of a user's saved photos and videos that Snap now charges to store, which is part of why direct revenue grew 85% — and Snap Map is the record of where friends are. Neither is authoritative for anything outside the app: Memories competes directly with iCloud and Google Photos, the underlying content is ephemeral by product design, and no business function depends on Snap as its source of truth."
+    },
+    "verdict": "Snap is a net loser from AI in the dimension that matters most to it. Its resilient moats are the friend graph and the proprietary data around it, both intact but not strengthening — while AI-driven ad ranking rewards the platforms with the largest signal and budget pools, which is why Snap grew advertising 9% in a quarter Meta grew 27%. Its own AI spending is defensive, with full-year infrastructure guidance raised $50M to $1.65–1.70B to keep pace rather than to open a new revenue line, and the one deal that would have monetised Snapchat as an AI distribution surface collapsed before rollout. The offsets are real but small relative to advertising: subscriptions, which AI does not threaten, and a cost base 16% lighter after April 2026."
+  }
+}
