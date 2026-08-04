@@ -22,9 +22,19 @@ import type {
 // is gone). Under the old floor those two cases were only 10 points apart.
 const MOAT_POINTS: Record<string, number> = { strong: 100, intact: 65, weakened: 35, destroyed: 0 };
 
+/**
+ * A moat marked as never having applied to this business, by convention
+ * `destroyed` plus a note opening "N/A". Scoring drops it and redistributes its
+ * weight; anything that compares moats across companies has to drop it too, or
+ * a moat that was never in play reads as one that was lost.
+ */
+export function isMoatNotApplicable(m: { status: string; note: string }): boolean {
+  return m.status === 'destroyed' && (m.note.startsWith('N/A') || m.note.startsWith('Not applicable'));
+}
+
 /** Returns null for N/A moats (excluded from group average), number otherwise. */
 function moatPoints(m: { status: string; note: string }): number | null {
-  if (m.status === 'destroyed' && (m.note.startsWith('N/A') || m.note.startsWith('Not applicable'))) return null;
+  if (isMoatNotApplicable(m)) return null;
   return MOAT_POINTS[m.status] ?? 0;
 }
 

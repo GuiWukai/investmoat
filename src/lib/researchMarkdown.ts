@@ -2,27 +2,14 @@ import type {
   ArticleSource,
   ResearchArticleData,
   ResearchBlock,
-  TenMoatKey,
 } from '@/types/research';
 import type { StockAnalysisData } from '@/types/stockAnalysis';
 import { getStockData } from '@/data/stocks';
 import { allCoverageData } from '@/app/stockData';
 import { computeStockScores } from '@/lib/stockMarkdown';
+import { TEN_MOAT_LABELS } from '@/lib/moatPillars';
 
 const SITE_URL = 'https://investmoat.com';
-
-const MOAT_LABELS: Record<TenMoatKey, string> = {
-  learnedInterfaces: 'Learned Interfaces',
-  businessLogic: 'Business Logic',
-  publicDataAccess: 'Public Data',
-  talentScarcity: 'Talent Scarcity',
-  bundling: 'Bundling',
-  proprietaryData: 'Proprietary Data',
-  regulatoryLockIn: 'Regulatory Lock-In',
-  networkEffects: 'Network Effects',
-  transactionEmbedding: 'Transaction Embedding',
-  systemOfRecord: 'System of Record',
-};
 
 const slugForTicker: Record<string, string> = Object.fromEntries(
   allCoverageData.map((s) => [s.ticker, s.slug]),
@@ -163,7 +150,7 @@ function renderBlock(block: ResearchBlock, lines: string[], sources: ArticleSour
 
     case 'moat-matrix': {
       if (block.caption) lines.push(`**${block.caption}**`, '');
-      const columns = ['Ticker', ...block.moats.map((m) => MOAT_LABELS[m])];
+      const columns = ['Ticker', ...block.moats.map((m) => TEN_MOAT_LABELS[m])];
       lines.push(row(columns), separator(columns.length));
 
       const groups = block.groups ?? [{ label: '', tickers: block.tickers }];
