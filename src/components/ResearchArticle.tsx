@@ -11,14 +11,15 @@ import {
   ArrowUpDown,
   Clock,
 } from 'lucide-react';
-import { allCoverageData, getAverageScore } from '@/app/stockData';
 import { getStockData } from '@/data/stocks';
 import { Card } from "@heroui/react";
 import {
-  computeValuationScore,
-  computeRecommendation,
-  parseScenarioPrice,
-} from '@/lib/valuationScore';
+  coverageByTicker as byTicker,
+  resolveScores,
+  type ResolvedScores,
+} from '@/lib/coverageScores';
+import { useLivePrices } from '@/lib/useLivePrices';
+import { TEN_MOAT_LABELS } from '@/lib/moatPillars';
 import {
   buildHeadingIds,
   getArticleSections,
@@ -50,13 +51,8 @@ import type {
 
 // ─── Ticker resolution ────────────────────────────────────────────────────────
 // Articles ship tickers, never scores. Everything numeric on the page resolves
-// through the same registry that drives /stocks and /portfolio.
-
-type Coverage = (typeof allCoverageData)[number];
-
-const byTicker: Record<string, Coverage> = Object.fromEntries(
-  allCoverageData.map((s) => [s.ticker, s]),
-);
+// through @/lib/coverageScores — the same registry and formulas that drive
+// /stocks, /portfolio and the stock page's industry comparison.
 
 function scoreColor(score: number) {
   if (score >= 90) return '#10b981';
@@ -73,77 +69,6 @@ const REC_COLORS: Record<string, string> = {
   'Speculative Buy': '#a78bfa',
   Avoid: '#ef4444',
 };
-
-interface ResolvedScores {
-  ticker: string;
-  name: string;
-  href: string;
-  moat: number;
-  growth: number;
-  valuation: number;
-  composite: number;
-  recommendation: string;
-  price: number | null;
-}
-
-function resolveScores(ticker: string, price: number | null): ResolvedScores | null {
-  const s = byTicker[ticker];
-  if (!s) return null;
-
-  const [moat, growth, staticVal] = s.scores;
-  const bear = parseScenarioPrice(s.bearTarget);
-  const base = parseScenarioPrice(s.baseTarget);
-  const bull = parseScenarioPrice(s.bullTarget);
-
-  // Live price recomputes the valuation pillar; otherwise fall back to static.
-  const valuation =
-    price != null && bear && base && bull
-      ? computeValuationScore(price, bear, base, bull)
-      : staticVal;
-
-  return {
-    ticker: s.ticker,
-    name: s.name,
-    href: s.href,
-    moat: Math.round(moat),
-    growth: Math.round(growth),
-    valuation: Math.round(valuation),
-    composite: Math.round(getAverageScore([moat, growth, valuation])),
-    recommendation: computeRecommendation(moat, growth, valuation),
-    price,
-  };
-}
-
-/** Fetch live prices for the tickers an article references. */
-function useLivePrices(tickers: string[]) {
-  const key = tickers.join(',');
-  const [prices, setPrices] = useState<Record<string, number | null>>({});
-  const [loaded, setLoaded] = useState(false);
-
-  useEffect(() => {
-    let cancelled = false;
-    const list = key ? key.split(',') : [];
-    Promise.all(
-      list.map((ticker) => {
-        const entry = byTicker[ticker];
-        if (!entry) return Promise.resolve([ticker, null] as const);
-        return fetch(`/api/stock-price/${entry.slug}`)
-          .then((r) => (r.ok ? r.json() : null))
-          .then((d) => [ticker, d?.price ?? null] as const)
-          .catch(() => [ticker, null] as const);
-      }),
-    ).then((entries) => {
-      if (cancelled) return;
-      setPrices(Object.fromEntries(entries));
-      setLoaded(true);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, [key]);
-
-  return { prices, loaded };
-}
 
 // ─── Inline markup ────────────────────────────────────────────────────────────
 // Deliberately tiny: **bold**, *emphasis* and [text](href) — the same three the
@@ -591,19 +516,6 @@ function Scorecard({
 
 // ─── Moat matrix ──────────────────────────────────────────────────────────────
 
-const MOAT_LABELS: Record<TenMoatKey, string> = {
-  learnedInterfaces: 'Learned Interfaces',
-  businessLogic: 'Business Logic',
-  publicDataAccess: 'Public Data',
-  talentScarcity: 'Talent Scarcity',
-  bundling: 'Bundling',
-  proprietaryData: 'Proprietary Data',
-  regulatoryLockIn: 'Regulatory Lock-In',
-  networkEffects: 'Network Effects',
-  transactionEmbedding: 'Transaction Embedding',
-  systemOfRecord: 'System of Record',
-};
-
 const STATUS_STYLE: Record<string, { label: string; color: string }> = {
   strong: { label: 'Strong', color: '#10b981' },
   intact: { label: 'Intact', color: '#3b82f6' },
@@ -645,7 +557,7 @@ function MoatMatrix({ block }: { block: MoatMatrixBlock }) {
                 </th>
                 {block.moats.map((m) => (
                   <th key={m} scope="col" className="py-3 px-2 text-center font-bold">
-                    {MOAT_LABELS[m]}
+                    {TEN_MOAT_LABELS[m]}
                   </th>
                 ))}
               </tr>
