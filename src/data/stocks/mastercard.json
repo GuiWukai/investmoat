@@ -9,7 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "$485B"
+      "value": "$505B"
     }
   ],
   "chips": [
@@ -25,102 +25,103 @@
   "metrics": [
     {
       "title": "GDV Growth",
-      "value": "7%",
-      "label": "Gross Dollar Volume (Q1 2026, local currency)",
+      "value": "8%",
+      "label": "Gross dollar volume, Q2 2026 (local currency)",
       "icon": "CreditCard",
       "color": "#eb001b"
     },
     {
-      "title": "Net Margin",
-      "value": "46.1%",
-      "label": "Consistent Profitability",
+      "title": "Operating Margin",
+      "value": "60.2%",
+      "label": "Q2 2026 GAAP, up 1.5 ppt YoY",
       "icon": "ShieldCheck",
       "color": "#ff5f00"
     },
     {
-      "title": "EPS CAGR",
-      "value": "18%",
-      "label": "5-Year Historical Average",
+      "title": "Adjusted EPS",
+      "value": "$5.04",
+      "label": "Q2 2026, +21% YoY",
       "icon": "TrendingUp",
       "color": "#10b981"
     }
   ],
   "moat": {
-    "description": "Critical global infrastructure with deep brand trust, proprietary AI models, and expanding on-chain payment rails.",
+    "description": "Critical global infrastructure with deep brand trust, proprietary AI models, and — since the BVNK close on 3 August 2026 — owned rather than rented stablecoin settlement rails.",
     "analysisTitle": "The Services Moat",
     "analysisSummary": "Mastercard is more than a network; it's a **Data & Services Powerhouse**:",
     "analysisPoints": [
       {
         "title": "AI-Powered Data Advantage",
-        "text": "Mastercard's Large Tabular Model (LTM), trained on billions of anonymised transactions, creates a proprietary AI moat that deepens SpendingPulse and fraud intelligence — data competitors cannot replicate."
+        "text": "Mastercard's Large Tabular Model (LTM), trained on billions of anonymised transactions, creates a proprietary AI moat that deepens SpendingPulse and fraud intelligence — data competitors cannot replicate. It is monetised through value-added services, which grew 18% currency-neutral in Q2 2026 against the payment network's 8%."
       },
       {
         "title": "On-Chain Payment Expansion",
-        "text": "The $1.8B BVNK acquisition (March 2026) extends Mastercard's transaction embedding to stablecoin settlement and blockchain rails, positioning it at the intersection of traditional finance and on-chain payments."
+        "text": "The $1.8B BVNK acquisition closed on 3 August 2026 — five months ahead of the guided year-end date — bringing roughly $30B of annualised stablecoin volume in-house and making Mastercard the first listed card network to own, rather than partner for, on-chain settlement infrastructure."
       },
       {
         "title": "Emerging Markets & Agentic Commerce",
-        "text": "Partnership with Ericsson for digital wallets in Middle East and Africa, plus leadership in authenticated agentic transactions across ASEAN, capture the next billion users and the AI-agent commerce wave."
+        "text": "Agent Pay for Machines, launched in June 2026 with more than 30 backers including Coinbase, Ripple and the Solana Foundation, extends authorisation and settlement control to autonomous agents. The exclusive Alipay+ partnership in Mexico and the UAE domestic switching project add incremental volume in markets where the network is not the incumbent rail."
       }
     ]
   },
   "growth": {
-    "description": "Q1 2026 net revenue grew 16% YoY to $8.4B (12% currency-neutral) with adjusted EPS up 18% to $4.60; value-added services grew 22% and cross-border volume 13%, while BVNK, agentic commerce, and value-added services continue to provide incremental TAM beyond the core network.",
+    "description": "Q2 2026 (reported 30 July) net revenue grew 14% YoY to $9.28B (12% currency-neutral) with adjusted EPS up 21% to $5.04 and GAAP operating margin up 1.5 ppt to 60.2%. Value-added services grew 20% reported (18% currency-neutral) against payment network revenue at 10% (8%), and management nudged the full-year currency-neutral outlook to the top of the low-double-digit range. Cross-border volume slowed to 12% — a third consecutive step down from 14% in Q4 2025 — and payment network rebates and incentives grew 22%, faster than any revenue line.",
     "growthAnalysis": {
       "cagrEstimate": "12–15%",
-      "scoreDerivation": "Base 78 (12–15% net revenue CAGR, midpoint 13.5%) + 0 trajectory (cross-border +13%, GDV +7% and value-added services +22% all growing at steady rates in Q1 2026) + 4 margin expansion (services mix) + 4 dual TAM expansion and share gains (BVNK stablecoin rails, agentic commerce, B2B digitisation) + 0 low risk severity = 86",
+      "cagrBasis": "Currency-neutral net revenue +12% YoY in Q2 2026 and +12% YoY year-to-date (reported +14% YoY and +15% YoY), on gross dollar volume +8% YoY, cross-border volume +12% YoY and switched transactions +9% YoY. Consensus revenue growth is +13.1% YoY for 2026 and +12.5% YoY for 2027. The band sits on the currency-neutral series with services mix carrying the upper half — value-added services at +18% YoY currency-neutral versus the payment network at +8% YoY — and is decayed toward the lower half because rebates and incentives are growing at +20% YoY currency-neutral, faster than the volume they buy.",
+      "scoreDerivation": "Base 78 (12–15% net revenue CAGR, midpoint 13.5%) − 1 trajectory (cross-border volume is the one driver that moved: +12% in Q2 2026 after +13% in Q1 and +14% in Q4 2025) + 4 margin expansion (GAAP operating margin 60.2%, +1.5 ppt YoY; adjusted 61.1%, +1.2 ppt) + 0 risk severity (low) = 81",
       "drivers": [
-        { "name": "Cross-Border Volume", "metric": "+13% YoY Q1 2026 (vs +14% Q4 2025), highest-margin revenue stream", "trend": "stable" },
-        { "name": "Value-Added Services", "metric": "+22% YoY Q1 2026 (18% currency-neutral), cybersecurity/fraud/analytics expanding margin mix", "trend": "stable" },
-        { "name": "GDV Core Growth", "metric": "+7% YoY Q1 2026 (local currency), purchase volume +9%", "trend": "stable" }
+        { "name": "Cross-Border Volume", "metric": "+12% YoY Q2 2026 local currency (vs +13% Q1 2026, +14% Q4 2025), highest-margin revenue stream", "trend": "decelerating" },
+        { "name": "Value-Added Services", "metric": "+20% YoY Q2 2026 reported, +18% currency-neutral — the same currency-neutral rate as Q1 2026", "trend": "stable" },
+        { "name": "GDV Core Growth", "metric": "+8% YoY Q2 2026 local currency to $2.9T (vs +7% in both Q1 2026 and Q4 2025), purchase volume +10%", "trend": "stable" }
       ],
       "primaryType": "both",
-      "keyRisk": "Judge Brian Cogan granted preliminary approval to the revised $38B Visa/Mastercard merchant settlement in June 2026; if final approval follows with broad surcharging rights adopted at scale by merchants, and account-to-account payment rails capture 5%+ of card volume by 2028, acceptance economics deteriorate",
+      "keyRisk": "Judge Brian Cogan granted preliminary approval to the revised $38B Visa/Mastercard merchant settlement on 9 June 2026, with the final approval hearing set for 16 November 2026. If final approval holds and merchants adopt surcharging and card-type steering at scale once the rules take effect, and account-to-account or stablecoin rails capture 5%+ of card purchase volume by 2028, the premium-card mix that carries the network yield deteriorates. The NRF and NACS have signalled a Second Circuit appeal that could delay implementation to 2029, so the mechanism is real but sits beyond the forecast window.",
       "keyRiskSeverity": "low",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 68,
-    "description": "Trading 3% below the base case ($555) at $539.39 — still modestly discounted for a durable compounder, but a ~10% rally since the prior review (from ~$489) has largely closed the margin of safety; the ~28× forward P/E remains below the 10-year median of ~37.8×, with Q1 2026's 16% revenue growth and 18% adjusted EPS growth continuing to run ahead of the moderation the market is pricing.",
+    "score": 74,
+    "description": "Trading at $572.04, 11% below the rebuilt base case ($640) and inside the upper half of the bear-to-base corridor. The ladder was re-anchored after Q2 2026: the July targets were set against roughly $19 of next-twelve-month EPS, and consensus has since rolled to ~$21.6, so the base moves up on earnings while the fair multiple behind it comes down from ~29× to ~26×. At ~26× forward earnings — below the ~35× five-year average — the stock is priced for the deceleration that has begun in cross-border volume but not for the 21% adjusted EPS growth still being printed.",
     "peAnalysis": {
-      "asOf": "July 2026",
+      "asOf": "August 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~31×", "note": "~$17.3 TTM EPS after Q1 2026 ($4.35 GAAP diluted)" },
-        { "label": "Forward P/E (NTM)", "value": "~28×", "note": "consensus EPS est. ~$19" },
-        { "label": "PEG Ratio", "value": "~1.6×", "note": "fwd P/E ÷ ~17% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~15×", "note": "~$32B NTM revenue" },
-        { "label": "Price / FCF", "value": "~30×", "note": "$16.4B FCF (TTM)" }
+        { "label": "Trailing P/E (GAAP)", "value": "~31×", "note": "~$18.2 TTM EPS after Q2 2026" },
+        { "label": "Forward P/E (NTM)", "value": "~26×", "note": "consensus EPS est. ~$21.6" },
+        { "label": "PEG Ratio", "value": "~1.7×", "note": "fwd P/E ÷ ~16% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~13×", "note": "~$40B NTM revenue" },
+        { "label": "Price / FCF", "value": "~30×", "note": "$16.7B FCF (TTM)" }
       ],
-      "summary": "At ~28× forward P/E, Mastercard still trades at a discount to its 10-year median of ~37.8×, but the recent rally has lifted the multiple from ~26× and thinned the valuation cushion. The PEG of ~1.6× sits in the fairly-priced-for-growth range, with Q1 2026 adjusted EPS growing 18% YoY and $4B of quarterly buybacks supporting the compounding path. The trailing-to-forward P/E compression from ~31× to ~28× still points to an earnings ramp, but at $539 the stock now sits near fair value rather than deeply discounted."
+      "summary": "The forward multiple compressed from ~28× to ~26× across the quarter even as the stock rose 6%, because consensus EPS rolled forward faster than the price: the Q2 beat ($5.04 vs $4.77) lifted the 2026 and 2027 estimates and pushed the next-twelve-month base to roughly $21.6. That leaves MA a full turn cheaper than its ~35× five-year average and roughly in line with Visa. The PEG of ~1.7× is the honest caveat — this is a fair price for a mid-teens compounder rather than a discount, and the trailing-to-forward compression from ~31× to ~26× is the earnings ramp doing the work, not multiple expansion."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$400",
-      "description": "Multiple contraction from macro slowdown, regulatory interchange headwinds, and slower-than-expected commercial payments growth.",
+      "priceTarget": "$450",
+      "description": "The multiple de-rates to ~20× the 2027 consensus (~$22.80) as cross-border deceleration continues and settlement relief reaches merchant statements.",
       "points": [
-        "P/E compresses to 25× as growth fears reduce premium vs. Visa",
-        "EU interchange fee regulation extends to new payment categories, compressing take rates",
-        "Cross-border travel volume recovery stalls in key high-yield corridors"
+        "Cross-border volume growth continues its step-down from 14% → 13% → 12% into single digits as Middle East disruption and travel normalisation persist",
+        "Surcharging and card-type steering are adopted at scale after final approval, shifting mix away from premium credit",
+        "Rebates and incentives keep compounding above 20% as issuer renewals reprice, capping net revenue below the volume it is written on"
       ]
     },
     "base": {
-      "priceTarget": "$555",
-      "description": "Double-digit top and bottom line growth continues, driven by data services and emerging market digitization.",
+      "priceTarget": "$640",
+      "description": "Today's ~26× forward multiple holds flat while the earnings base rolls to the mid-2027 twelve-month consensus of roughly $24.60.",
       "points": [
-        "Cross-border volume grows 12–15% as global travel normalizes post-tariff uncertainty",
-        "Cybersecurity and data analytics services grow 25%+, expanding margins beyond core network",
-        "Share buybacks retire 3–4% of float annually, compounding EPS growth"
+        "Currency-neutral net revenue lands at the top of the low-double-digit guided range, then compounds at 12–13% on volume plus services mix",
+        "Value-added services keep growing ~18% currency-neutral, sustaining the 1.0–1.5 ppt of annual operating-margin expansion",
+        "$7.8B of remaining authorisation plus ~$4–5B of quarterly repurchase keeps adding 2–3 points to EPS growth"
       ]
     },
     "bull": {
-      "priceTarget": "$700",
-      "description": "Mastercard's data services and B2B infrastructure become the dominant layer for global commercial and on-chain payments.",
+      "priceTarget": "$780",
+      "description": "The multiple re-rates toward ~31× — still short of the five-year average — as owned stablecoin rails and agentic commerce are credited as growth rather than as a defensive hedge.",
       "points": [
-        "BVNK stablecoin infrastructure captures meaningful share of on-chain settlement volume by 2027",
-        "Multi-rail strategy captures significant share of real-time account-to-account payments",
-        "AI-powered fraud and analytics services double as a percentage of total revenue"
+        "BVNK's ~$30B annualised stablecoin volume scales inside the Multi-Token Network and converts on-chain settlement from a threat into a revenue line",
+        "Agent Pay for Machines becomes the authorisation standard for agent-initiated commerce, extending the network's take to machine-to-machine flows",
+        "Value-added services pass half of net revenue, re-rating Mastercard from a payment network toward a data and security franchise"
       ]
     }
   },
@@ -143,7 +144,7 @@
     },
     "bundling": {
       "status": "weakened",
-      "note": "Similar to Visa — card product bundles face fintech pressure, though Mastercard's data services add differentiation."
+      "note": "Value-added services grew 18% currency-neutral in Q2 2026 against the payment network's 8%, and issuers keep renewing the whole bundle (JPMorgan Chase, Banamex, Capital One), which argues the attach is holding. Held at weakened because the bundle is being bought: payment network rebates and incentives grew 22% (20% currency-neutral), faster than any revenue line, which is what retention pricing under fintech pressure looks like. Upgrade to intact when services growth stays above the network's for two more quarters with incentive growth back below net revenue growth."
     },
     "proprietaryData": {
       "status": "strong",
@@ -151,21 +152,21 @@
     },
     "regulatoryLockIn": {
       "status": "strong",
-      "note": "Global compliance infrastructure across 210+ countries, central bank relationships, and card association memberships."
+      "note": "Global compliance infrastructure across 210+ countries, central bank relationships, and card association memberships. The BVNK licences add regulated stablecoin permissions in ~40 territories under GENIUS Act and MiCA definitions."
     },
     "networkEffects": {
       "status": "strong",
-      "note": "Near-duopoly with Visa: 3.3B Mastercard cards × 100M+ merchants. The network is self-reinforcing at global scale."
+      "note": "Near-duopoly with Visa: 3.7B Mastercard and Maestro cards as of 30 June 2026 against 100M+ merchant locations, with over $230M of net new cards added in the last twelve months. The network is self-reinforcing at global scale."
     },
     "transactionEmbedding": {
       "status": "strong",
-      "note": "Mastercard processes 120B+ transactions annually and is extending to on-chain payments via the $1.8B BVNK acquisition (March 2026), embedding MA at the intersection of traditional card rails and stablecoin settlement."
+      "note": "Switched transactions grew 9% YoY in Q2 2026 on $2.9T of quarterly gross dollar volume. The BVNK close on 3 August 2026 extends that embedding to stablecoin settlement, putting MA on both the card rail and the on-chain rail rather than defending one against the other."
     },
     "systemOfRecord": {
       "status": "strong",
       "note": "Co-records the global payment ledger with Visa; the authoritative source for cross-border transaction settlement."
     },
-    "verdict": "Mastercard is a net beneficiary of the AI era. Its Large Tabular Model (LTM) trained on billions of transactions actively strengthens the proprietary data moat, while the $1.8B BVNK acquisition extends transaction embedding to stablecoin rails before competitors can establish a foothold. The payment network duopoly means AI enhances fraud detection and agentic commerce capability without threatening the structural network itself. businessLogic and bundling remain modestly weakened by fintech/AI pressure, but these carry low weight against five strong AI-resilient moats."
+    "verdict": "Mastercard is a net beneficiary of the AI era. Its Large Tabular Model trained on billions of transactions actively strengthens the proprietary data moat, and the closed BVNK acquisition converts stablecoin settlement from the most-cited threat to the network into infrastructure Mastercard owns. The payment network duopoly means AI enhances fraud detection and agentic commerce capability without threatening the structural network itself. businessLogic and bundling remain weakened — the incentive line is growing faster than the revenue it defends — but these carry low weight against five strong AI-resilient moats."
   },
-  "lastAnalyzed": "July 7, 2026"
+  "lastAnalyzed": "August 4, 2026"
 }
