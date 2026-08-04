@@ -147,6 +147,7 @@ import rgtiData     from '@/data/stocks/rgti.json';
 import qbtsData     from '@/data/stocks/qbts.json';
 import qubtData     from '@/data/stocks/qubt.json';
 import beData       from '@/data/stocks/be.json';
+import snapData     from '@/data/stocks/snap.json';
 
 // Delegates to computeCompositeRaw in valuationScore.ts — the single source of
 // truth for the composite formula. Returns a float for precise sorting; callers
@@ -327,6 +328,7 @@ const allCoverageData = [
     { name: "D-Wave Quantum",    ticker: "QBTS",  slug: "qbts",        scores: [m(qbtsData),        g(qbtsData),        v(qbtsData)],        href: "/stocks/qbts",        category: "Big Tech",    ...t(qbtsData)        },
     { name: "Rigetti Computing", ticker: "RGTI",  slug: "rgti",        scores: [m(rgtiData),        g(rgtiData),        v(rgtiData)],        href: "/stocks/rgti",        category: "Big Tech",    ...t(rgtiData)        },
     { name: "Quantum Computing Inc.", ticker: "QUBT", slug: "qubt",    scores: [m(qubtData),        g(qubtData),        v(qubtData)],        href: "/stocks/qubt",        category: "Big Tech",    ...t(qubtData)        },
+    { name: "Snap Inc.",         ticker: "SNAP",  slug: "snap",        scores: [m(snapData),        g(snapData),        v(snapData)],        href: "/stocks/snap",        category: "Big Tech",    ...t(snapData)        },
 ];
 
 // ─── All coverage (exported for the stocks list page) ────────────────────────
