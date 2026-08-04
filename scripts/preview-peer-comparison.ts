@@ -2,7 +2,7 @@
  * Prints the industry comparison a stock page would render, using static
  * valuation scores (no live prices). Run: npx tsx scripts/preview-peer-comparison.ts NVDA
  */
-import { buildPeerComparison, ordinal } from '../src/lib/peerComparison';
+import { buildPeerComparison, rankLabel } from '../src/lib/peerComparison';
 
 const ticker = (process.argv[2] ?? 'NVDA').toUpperCase();
 const model = buildPeerComparison(ticker, {});
@@ -15,7 +15,7 @@ console.log(`\n${model.group.label} — ${model.group.tickers.length} names`);
 console.log(model.group.basis + '\n');
 for (const s of model.standings) {
   console.log(
-    `${s.label.padEnd(10)} ${String(s.value).padStart(3)}  ${ordinal(s.rank)} of ${s.count}  ` +
+    `${s.label.padEnd(10)} ${String(s.value).padStart(3)}  ${rankLabel(s).padEnd(16)}  ` +
       `median ${s.median}  range ${s.min}–${s.max}`,
   );
 }

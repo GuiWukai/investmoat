@@ -44,11 +44,15 @@ src/
 ├── data/stocks/
 │   ├── *.json                  # ★ One file per asset — the source of truth
 │   └── index.ts                # ★ Registry for the /stocks/[ticker] route
+├── data/peerGroups.ts          # ★ Which names each asset's scores are compared against
 ├── data/research/
 │   ├── *.json                  # One file per article — tickers, never numbers
 │   └── index.ts                # Registry for the /research routes
 ├── lib/
 │   ├── valuationScore.ts       # ★ All scoring formulas (single source of truth)
+│   ├── coverageScores.ts       # Ticker → four scores, shared by every cross-ticker block
+│   ├── peerComparison.ts       # Rank, median distance and moat gaps within a peer group
+│   ├── moatPillars.ts          # Pillar labels + walking whichever moat framework applies
 │   ├── stockSchema.ts          # Zod schema for stock JSON
 │   ├── researchSchema.ts       # Zod schema for research JSON
 │   └── researchMarkdown.ts     # Article → Markdown for the llms.txt mirror
@@ -91,7 +95,10 @@ The portfolio is then derived: sort by composite, keep names clearing the minimu
 Pages that show live data fetch `/api/stock-price/[ticker]`, which proxies Yahoo Finance and is cached (`revalidate: 3600` + `s-maxage`). The client then recomputes the **valuation** pillar from the live price against the bear/base/bull targets (`computeValuationScore`) and blends it back into the composite, so scores reflect the current price.
 
 - `/portfolio` and `/stocks` fetch prices for the whole coverage list in parallel and recompute composites for ranking, weighting, and sorting.
-- `/stocks/[ticker]` fetches a single price for the live widget, valuation gauge, and scenario bar.
+- `/stocks/[ticker]` fetches a single price for the live widget, valuation gauge, and scenario bar, plus one per peer for the industry comparison.
+- `/research/[slug]` fetches one price per ticker the article references.
+
+Cross-ticker blocks — the research scorecard and the stock page's industry comparison — resolve every peer's scores through `lib/coverageScores.ts` rather than holding their own copy, so a peer's row always agrees with that peer's own page.
 
 If a fetch fails, the UI falls back to the static valuation score and shows `—` for price.
 

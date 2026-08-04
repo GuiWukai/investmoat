@@ -5,7 +5,7 @@ import {
   computeComposite,
   computeRecommendation,
 } from '@/lib/valuationScore';
-import { buildPeerComparison, notableMoatGaps, ordinal } from '@/lib/peerComparison';
+import { buildPeerComparison, notableMoatGaps, rankLabel } from '@/lib/peerComparison';
 
 const SITE_URL = 'https://investmoat.com';
 
@@ -51,8 +51,8 @@ function peerSection(data: StockAnalysisData): string[] {
   lines.push(model.group.basis);
   lines.push('');
   lines.push(
-    `${data.ticker} ranks **${ordinal(composite.rank)} of ${composite.count}** in this group on composite ` +
-      `score, against a group median of ${composite.median}.`,
+    `${data.ticker} ranks **${rankLabel(composite)}** in this group on composite score, against a group ` +
+      `median of ${composite.median}.`,
   );
   lines.push('');
 

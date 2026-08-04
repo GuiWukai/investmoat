@@ -31,6 +31,8 @@ export interface PeerStanding {
   max: number;
   /** 1 = best in group. Ties share the better rank. */
   rank: number;
+  /** Another member scores exactly the same, so the rank is shared. */
+  tied: boolean;
   count: number;
 }
 
@@ -92,6 +94,7 @@ function standingFor(key: StandingKey, rows: ResolvedScores[], subject: Resolved
     min: values[0],
     max: values[values.length - 1],
     rank: 1 + rows.filter((r) => r[key] > subject[key]).length,
+    tied: rows.filter((r) => r[key] === subject[key]).length > 1,
     count: rows.length,
   };
 }
@@ -216,6 +219,11 @@ export function notableMoatGaps(
     stronger: notable.filter((g) => g.direction === 'stronger').slice(0, limitPerDirection),
     weaker: notable.filter((g) => g.direction === 'weaker').slice(0, limitPerDirection),
   };
+}
+
+/** "1st of 6", or "joint 1st of 6" when somebody else scores the same. */
+export function rankLabel(standing: PeerStanding): string {
+  return `${standing.tied ? 'joint ' : ''}${ordinal(standing.rank)} of ${standing.count}`;
 }
 
 /** "1st", "2nd", "3rd", "4th" … for the rank line. */

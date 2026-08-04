@@ -220,7 +220,17 @@ which prints the observed statistics, flags any pillar whose spread has drifted 
 
 ---
 
-## 5. Portfolio selection
+## 5. Reading a score against its peers
+
+Every constant above is calibrated against the whole coverage universe, so a pillar score answers "how does this rank among 131 assets?" — not "is this the better chipmaker?". The two questions have different answers often enough to matter: a moat of 74 that is the best any semicap vendor can earn means something a 74 in enterprise software does not.
+
+The Industry Comparison section on each stock page supplies the missing denominator. It takes the group the asset belongs to in [`src/data/peerGroups.ts`](../src/data/peerGroups.ts) and reports, for each of the four scores, the asset's rank in the group, the group median, and where it sits on the group's range. It then names the moat pillars where the asset is assessed differently from most of its peers, dropping pillars marked N/A on either side — a moat that never applied is not one that was lost.
+
+**No new scoring happens there.** [`src/lib/peerComparison.ts`](../src/lib/peerComparison.ts) only sorts, ranks and subtracts; every number is resolved through `lib/coverageScores.ts`, which is the same registry and the same formulas that drive `/stocks` and `/portfolio`. Groups never mix asset classes, so the comparison never ranks a protocol's monetary moat against a company's pricing power.
+
+---
+
+## 6. Portfolio selection
 
 In [`src/app/stockData.ts`](../src/app/stockData.ts):
 

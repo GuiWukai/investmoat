@@ -235,9 +235,9 @@ Create `src/data/stocks/{slug}.json` using the schema below. Replace all placeho
 
 ---
 
-## Step 6 — Register in Both Data Files
+## Step 6 — Register in All Three Data Files
 
-There are **two** files that must be updated. Missing either one causes a 404 on the stock page.
+There are **three** files that must be updated. Missing either of the first two causes a 404 on the stock page.
 
 ### Step 6a — Register in `src/data/stocks/index.ts` (required for page routing)
 
@@ -275,14 +275,26 @@ Add the stock to the `allCoverageData` array:
 
 Place it in the array sorted approximately by composite score (highest first). The portfolio/excluded split is automatic — stocks with average score ≥ 75 and within the top 20 enter the portfolio.
 
+### Step 6c — Assign a peer group in `src/data/peerGroups.ts`
+
+This is the set of names the stock page's Industry Comparison ranks the new stock against. Add its ticker to the existing group whose `basis` genuinely describes it — same customers, same substitution threat, or same commodity. Do not reach for the loosest fit: a group that does not hold together produces a rank that means nothing.
+
+If no group fits, add a new one with at least three members and a `basis` sentence stating what they have in common. Every member must share one `assetClass`; scores from the equity, crypto and commodity frameworks do not rank against each other.
+
+Check the result with:
+
+```bash
+npx tsx scripts/preview-peer-comparison.ts {TICKER}
+```
+
 ---
 
 ## Step 7 — Verify
 
 1. Check the JSON is valid (no trailing commas, all required fields present)
 2. Confirm the slug matches: the filename (`{slug}.json`), the `slug` key in `index.ts`, the `slug` field in `stockData.ts`, and the `href` (`/stocks/{slug}`)
-3. Confirm **both** `src/data/stocks/index.ts` and `src/app/stockData.ts` have been updated — skipping `index.ts` causes a 404
-4. Run `npm run lint` to catch any TypeScript errors
+3. Confirm **all three** of `src/data/stocks/index.ts`, `src/app/stockData.ts` and `src/data/peerGroups.ts` have been updated — skipping `index.ts` causes a 404
+4. Run `npm run validate:stocks` (registry and peer-group agreement) and `npm run lint` to catch any TypeScript errors
 5. If the stock qualifies for the portfolio, verify it appears on the main page by checking that its average score ≥ 75
 
 ---

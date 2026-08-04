@@ -33,7 +33,7 @@ Live prices come from Yahoo Finance (`query1.finance.yahoo.com`); no API key is 
 | `npm run build` | Production build (runs `validate:stocks` first via `prebuild`) |
 | `npm run start` | Serve the production build |
 | `npm run lint` | Run ESLint |
-| `npm run validate:stocks` | Validate every stock JSON against the Zod schema and cross-check the two registries |
+| `npm run validate:stocks` | Validate every stock JSON against the Zod schema and cross-check the three registries |
 | `npm run validate:research` | Validate every research article JSON, its ticker references, citations and prose rules |
 | `npm run screen:research` | Screen the coverage universe for research article ideas (`-- pillars \| divergence \| category \| uncovered \| stale`) |
 

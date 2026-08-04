@@ -21,7 +21,7 @@ import { getPeerGroup } from '@/data/peerGroups';
 import {
   buildPeerComparison,
   notableMoatGaps,
-  ordinal,
+  rankLabel,
   type PeerMoatGap,
   type PeerStanding,
 } from '@/lib/peerComparison';
@@ -77,7 +77,11 @@ function DistributionBar({
   const hex = scoreHex(standing.value);
 
   return (
-    <div className="relative h-6" role="img" aria-label={`${standing.label}: ${standing.value}, ${ordinal(standing.rank)} of ${standing.count}, group median ${standing.median}`}>
+    <div
+      className="relative h-6"
+      role="img"
+      aria-label={`${standing.label}: ${standing.value}, ${rankLabel(standing)} in the group, median ${standing.median}`}
+    >
       <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-1.5 rounded-full bg-foreground/[0.05]" />
 
       {/* Group median — the reference the delta is quoted against. */}
@@ -124,7 +128,10 @@ function StandingRow({
         <div className="flex items-baseline gap-2 min-w-0">
           <span className="section-label">{standing.label}</span>
           <span className="text-[11px] text-foreground/45 whitespace-nowrap">
-            {ordinal(standing.rank)} of {standing.count}
+            {rankLabel(standing)}
+          </span>
+          <span className="text-[11px] text-foreground/25 whitespace-nowrap hidden sm:inline">
+            group {standing.min}–{standing.max}
           </span>
         </div>
         <div className="flex items-baseline gap-2 shrink-0">
@@ -344,8 +351,8 @@ export function PeerComparison({
             <p className="text-sm text-foreground/50 leading-relaxed">{model.group.basis}</p>
             <p className="text-sm text-foreground/65 leading-relaxed mt-3">
               <strong className="text-foreground/85">{ticker}</strong> ranks{' '}
-              <strong className="text-foreground/85">{ordinal(composite.rank)} of {composite.count}</strong>{' '}
-              in this group on composite score, against a group median of {composite.median}.
+              <strong className="text-foreground/85">{rankLabel(composite)}</strong> in this group on composite
+              score, against a group median of {composite.median}.
             </p>
           </div>
 
