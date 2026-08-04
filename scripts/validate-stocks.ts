@@ -23,8 +23,9 @@ import {
   type GrowthAnalysisInput,
 } from '../src/lib/valuationScore';
 import type { AssetClass } from '../src/types/stockAnalysis';
-import { getAllSlugs } from '../src/data/stocks';
+import { getAllSlugs, getStockData } from '../src/data/stocks';
 import { allCoverageData } from '../src/app/stockData';
+import { peerGroups, MIN_PEER_GROUP_SIZE } from '../src/data/peerGroups';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const STOCKS_DIR = join(__dirname, '..', 'src', 'data', 'stocks');
@@ -330,6 +331,80 @@ function checkRegistries(files: string[]): Failure[] {
   return failures;
 }
 
+/**
+ * Cross-check the peer-group taxonomy in src/data/peerGroups.ts against
+ * coverage. The Industry Comparison section on every stock page reads from it,
+ * so an unassigned ticker silently loses the section and a stale ticker
+ * silently shrinks somebody else's comparison set — both invisible at build
+ * time. The rules themselves are documented in peerGroups.ts.
+ */
+function checkPeerGroups(): Failure[] {
+  const failures: Failure[] = [];
+  const coverage = new Map(allCoverageData.map((s) => [s.ticker, s]));
+  const seen = new Map<string, string[]>();
+
+  const ids = new Set<string>();
+  for (const group of peerGroups) {
+    if (ids.has(group.id)) {
+      failures.push({ file: 'peerGroups.ts', message: `duplicate group id "${group.id}"` });
+    }
+    ids.add(group.id);
+
+    if (group.tickers.length < MIN_PEER_GROUP_SIZE) {
+      failures.push({
+        file: 'peerGroups.ts',
+        message:
+          `group "${group.id}" has ${group.tickers.length} member(s), below the minimum of ${MIN_PEER_GROUP_SIZE} — ` +
+          'a rank and a median need a distribution, not a pair',
+      });
+    }
+
+    const assetClasses = new Set<AssetClass>();
+    for (const ticker of group.tickers) {
+      seen.set(ticker, [...(seen.get(ticker) ?? []), group.id]);
+
+      const entry = coverage.get(ticker);
+      if (!entry) {
+        failures.push({
+          file: 'peerGroups.ts',
+          message: `group "${group.id}" lists ${ticker}, which is not in allCoverageData`,
+        });
+        continue;
+      }
+      assetClasses.add(getStockData(entry.slug)?.assetClass ?? 'equity');
+    }
+
+    if (assetClasses.size > 1) {
+      failures.push({
+        file: 'peerGroups.ts',
+        message:
+          `group "${group.id}" mixes asset classes (${[...assetClasses].sort().join(', ')}) — the moat frameworks ` +
+          'are different rubrics, so their scores do not rank against each other',
+      });
+    }
+  }
+
+  for (const [ticker, groupIds] of seen) {
+    if (groupIds.length > 1) {
+      failures.push({
+        file: 'peerGroups.ts',
+        message: `${ticker} is in ${groupIds.length} groups (${groupIds.join(', ')}) — a ticker belongs to exactly one`,
+      });
+    }
+  }
+
+  for (const ticker of coverage.keys()) {
+    if (!seen.has(ticker)) {
+      failures.push({
+        file: 'peerGroups.ts',
+        message: `${ticker} is in coverage but belongs to no peer group — its stock page loses the industry comparison`,
+      });
+    }
+  }
+
+  return failures;
+}
+
 function main(): void {
   const files = readdirSync(STOCKS_DIR).filter((f) => extname(f) === '.json');
   if (files.length === 0) {
@@ -344,6 +419,7 @@ function main(): void {
   }
 
   failures.push(...checkRegistries(files));
+  failures.push(...checkPeerGroups());
 
   if (failures.length > 0) {
     const failedFiles = new Set(failures.map((f) => f.file));
