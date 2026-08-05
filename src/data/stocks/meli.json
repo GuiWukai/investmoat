@@ -80,9 +80,21 @@
       "cagrEstimate": "20–26%",
       "scoreDerivation": "Base 85 (20–26% blended CAGR, baseFromCagr formula; Q1 2026 revenue +49% YoY) + 4 trajectory (3 of 3 drivers accelerating: commerce, Mercado Pago, advertising) − 4 compressing margins (Q1 2026 operating margin 6.9% vs 10.1% Q4 2025; net income −16% YoY) + 4 both TAM/share − 10 high keyRisk severity (Shopee overtook MELI in Brazil order volume; Amazon-Nubank NuPay; TikTok Shop entry) = 79",
       "drivers": [
-        { "name": "E-Commerce (Marketplace + Envios)", "metric": "+42% GMV YoY Q1 ($19.0B); Brazil +38%, Mexico +28%, Argentina +41%", "trend": "accelerating" },
-        { "name": "Mercado Pago (Fintech + Credit)", "metric": "+50% TPV YoY ($87.2B); credit portfolio $14.6B (+87%)", "trend": "accelerating" },
-        { "name": "Advertising", "metric": "+73% YoY (USD) / +63% FX-neutral; ~4x regional ad-market growth rate", "trend": "accelerating" }
+        {
+          "name": "E-Commerce (Marketplace + Envios)",
+          "metric": "+42% GMV YoY Q1 ($19.0B); Brazil +38%, Mexico +28%, Argentina +41%",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Mercado Pago (Fintech + Credit)",
+          "metric": "+50% TPV YoY ($87.2B); credit portfolio $14.6B (+87%)",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Advertising",
+          "metric": "+73% YoY (USD) / +63% FX-neutral; ~4x regional ad-market growth rate",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "both",
       "keyRisk": "Intensifying competition from Shopee (which has overtaken MELI in Brazil order volume and raised take-rates toward MELI's ~15%) and Amazon's Nubank/NuPay financing tie-up could force MELI to sustain heavy logistics and marketing investment well beyond 2026, keeping operating margins pinned near Q1 2026's 6.9% (vs mid-teens in FY2024) longer than the market is pricing in",
@@ -100,11 +112,31 @@
     "peAnalysis": {
       "asOf": "July 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~46×", "note": "~$37.91 TTM EPS, net income $1.92B" },
-        { "label": "Forward P/E (NTM)", "value": "~38×", "note": "consensus NTM EPS ~$46" },
-        { "label": "PEG Ratio", "value": "~1.16×", "note": "fwd P/E ÷ ~33% EPS growth est." },
-        { "label": "Price / Sales (NTM)", "value": "~2.4×", "note": "FY2026E revenue ~$37B consensus" },
-        { "label": "Price / FCF", "value": "complex", "note": "credit book, seasonality distort FCF" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~46×",
+          "note": "~$37.91 TTM EPS, net income $1.92B"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~38×",
+          "note": "consensus NTM EPS ~$46"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.16×",
+          "note": "fwd P/E ÷ ~33% EPS growth est."
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~2.4×",
+          "note": "FY2026E revenue ~$37B consensus"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "complex",
+          "note": "credit book, seasonality distort FCF"
+        }
       ],
       "summary": "At ~38× forward P/E, MELI trades above its own historical range and toward the high end of consumer internet peers, but still at a fraction of Shopify's multiple — justified by the embedded fintech flywheel, though less cheaply than in April as net income growth turned negative (−16% YoY in Q1 2026) on deliberate investment. A PEG near ~1.16× is fair-to-slightly-rich rather than clearly cheap, and the 46× trailing vs 38× forward gap still reflects the market's expectation that Brazil/Mexico logistics investments convert to operating leverage — but that convergence trade now has to overcome Shopee's Brazil volume gains, not just macro noise."
     }
@@ -148,7 +180,7 @@
       "note": "MELI's platform encodes deeply complex, region-specific business logic: tax collection across 18 jurisdictions (Brazil's nota fiscal, Argentina's AFIP requirements), localized shipping rules, customs clearance for cross-border trade, and currency management across volatile LatAm economies — complexity that competitors must replicate country by country."
     },
     "publicDataAccess": {
-      "status": "weakened",
+      "status": "na",
       "note": "MELI does not control a unique public data source; its data advantage comes from proprietary transaction and payment behavior data aggregated internally — the publicDataAccess moat is effectively N/A to MELI's business model."
     },
     "talentScarcity": {

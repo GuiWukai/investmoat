@@ -112,11 +112,31 @@
     "peAnalysis": {
       "asOf": "August 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~95×", "note": "GAAP noisy from equity marks; net income ex-equity $439M in Q2" },
-        { "label": "Forward P/E (NTM)", "value": "~58×", "note": "consensus EPS est. ~$2.60 post-beat" },
-        { "label": "PEG Ratio", "value": "~2.0×", "note": "fwd P/E ÷ ~29% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~10.5×", "note": "~$18.5B NTM revenue est." },
-        { "label": "Price / FCF", "value": "~85×", "note": "$2.3B FCF (TTM est.)" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~95×",
+          "note": "GAAP noisy from equity marks; net income ex-equity $439M in Q2"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~58×",
+          "note": "consensus EPS est. ~$2.60 post-beat"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~2.0×",
+          "note": "fwd P/E ÷ ~29% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~10.5×",
+          "note": "~$18.5B NTM revenue est."
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~85×",
+          "note": "$2.3B FCF (TTM est.)"
+        }
       ],
       "summary": "At ~58× forward earnings post-beat, SHOP has re-rated toward the upper end of growth-tech peers (~28–35× sector median) but still below its mid-2025 peak multiple. The PEG of ~2.0× is more tolerable for a 28–31% compounder after the deceleration fear resolved. The post-earnings rally closed most of the gap to the base case — further upside requires Q3 to confirm the low-thirties guide and FCF margin expansion toward the low-twenties."
     }
@@ -160,7 +180,7 @@
       "note": "Years of configured shipping rules, tax logic, discount structures, checkout flows, and app integrations encode complex business logic that is painful to migrate — a merchant leaving Shopify must rebuild this entire operational layer from scratch on a new platform."
     },
     "publicDataAccess": {
-      "status": "weakened",
+      "status": "na",
       "note": "Shopify does not control a unique public data source; its data advantage comes from proprietary cross-merchant transaction data aggregated internally — the publicDataAccess moat is effectively N/A to Shopify's business model."
     },
     "talentScarcity": {
