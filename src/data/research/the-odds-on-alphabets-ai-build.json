@@ -3,14 +3,14 @@
   "title": "The Odds on Alphabet's $200B AI Build",
   "dek": "Alphabet beat on revenue, on Cloud and on margin, then fell about 5% because capex went up. The market is sorting hyperscalers by how much they spend. The variable that decides whether a build pays off is how much of it was sold before it was poured.",
   "published": "July 28, 2026",
-  "lastReviewed": "August 2, 2026",
+  "lastReviewed": "August 5, 2026",
   "tickers": ["GOOGL", "MSFT", "AMZN", "ORCL", "META", "CRWV", "NBIS"],
   "tags": ["AI Capex", "Hyperscalers", "Capital Allocation", "Big Tech"],
   "summary": "Alphabet reported Q2 2026 on July 22 with revenue +24% to $119.8B, Google Cloud +82% to $24.8B, Cloud operating margin tripled year-over-year to 35.6% and contracted backlog at $514B — and the stock fell about 5%, because full-year capex guidance rose to $195–205B and free cash flow turned negative at −$5.9B. The market is now sorting the hyperscalers by how much they spend. Read across the seven names in our coverage that are building AI infrastructure, spend size predicts almost nothing. What predicts a payoff is how much of the build is contracted before it is poured, who absorbs the loss if those contracts do not convert, and whether the builder owns the silicon that sets its own cost floor. On that test Alphabet cleared three of four gates in the same quarter it was de-rated, and the gate still open — free cash flow inflection — resolves on a 2027 schedule rather than on the size of the guide.",
   "falsifiableBy": {
     "claim": "Google Cloud's contracted backlog failing to grow beyond $514B for two consecutive quarters while capex holds at the $195–205B pace, or Cloud operating margin falling back below 25% as record-capex depreciation lands in the P&L — either would show capacity being built ahead of contracts rather than against them. A third trip: free cash flow still negative on a full-year basis when 2027 closes.",
     "status": "holding",
-    "note": "Alphabet's own figures are still the July 22 print and unmoved. Amazon and Meta have since reported Q2; Oracle was re-analysed after S&P's BBB− cut. None of those prints trip the Alphabet-specific claim."
+    "note": "Alphabet's own figures are still the July 22 print and unmoved. Microsoft's Q4 FY26 print refreshed the cohort table's MSFT row and sharpened the OpenAI concentration read; Amazon, Meta and Oracle prints from the prior review still stand. None of those prints trip the Alphabet-specific claim."
   },
   "sources": [
     {
@@ -22,11 +22,19 @@
       "kind": "press-release"
     },
     {
-      "id": "msft-fy26-q3",
-      "label": "Microsoft FY26 Q3 earnings release and outlook",
+      "id": "msft-fy26-q4",
+      "label": "Microsoft Cloud and AI strength fuels fourth quarter results",
       "publisher": "Microsoft",
-      "date": "April 29, 2026",
-      "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q3/press-release-webcast",
+      "date": "July 29, 2026",
+      "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q4/press-release-webcast",
+      "kind": "press-release"
+    },
+    {
+      "id": "msft-fy26-q2",
+      "label": "Microsoft FY26 Q2 earnings — commercial RPO OpenAI share disclosure",
+      "publisher": "Microsoft",
+      "date": "January 28, 2026",
+      "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q2/press-release-webcast",
       "kind": "press-release"
     },
     {
@@ -71,6 +79,10 @@
     }
   ],
   "revisions": [
+    {
+      "date": "August 5, 2026",
+      "note": "Microsoft Q4 FY26 re-check after the stock analysis was revised for OpenAI RPO concentration. The MSFT table row still carried the April Q3 print ($627B RPO, ~$190B calendar-2026 capex, ~3.3×); that is replaced with the July 29 figures — $678B commercial RPO (+84% YoY), ~$175B calendar-2026 capex after the useful-life reclassification, ~3.9× coverage — and the loss-absorption cell now names the company-disclosed Q2 fact that ~45% of commercial RPO was OpenAI, still roughly two-fifths of the Q4 book even though every sequential add was non-frontier. Scorecard note and the circularity prose updated to match. Alphabet's falsifiable claim remains holding."
+    },
     {
       "date": "August 2, 2026",
       "note": "Oracle re-analysis after the July 9 S&P cut to BBB−. The capex table's Oracle row was still carrying FY2026's $55.7B spend and an ~11.5× coverage ratio; that is replaced with the FY2027 $90–95B guide (~6.9×), and the loss-absorption cell now names the OpenAI concentration S&P estimated at roughly half of the $638B RPO. The prose that already argued Oracle's ratio was the wrong read now has the specific counterparty fact. Amazon and Meta Q2 prints refresh their rows (AWS backlog $496B / ~$220B capex; Meta $130–145B and Meta Compute walked back). Oracle's ten-moat statuses are unchanged — the financing scare is not a competitive-displacement event. Alphabet's falsifiable claim remains holding."
@@ -152,7 +164,7 @@
       "tickers": ["GOOGL", "MSFT", "AMZN", "ORCL", "META", "CRWV", "NBIS"],
       "notes": {
         "GOOGL": "$514B backlog, +$54B QoQ; Cloud margin 35.6%; TPU sets its own cost floor",
-        "MSFT": "$627B commercial RPO, +99% YoY, but a large share is OpenAI compute",
+        "MSFT": "$678B commercial RPO, +84% YoY; ~45% was OpenAI in Q2, still ~two-fifths of the Q4 book",
         "AMZN": "$496B AWS backlog; AWS +37% — fastest in 18 quarters",
         "ORCL": "$638B RPO, +363% YoY; S&P estimates ~½ is OpenAI; BBB−",
         "META": "$130–145B captive build; Meta Compute walked back on the Q2 call",
@@ -168,12 +180,12 @@
       "type": "table",
       "caption": "Capex against what underwrites it. Backlog definitions differ by company (RPO, contracted backlog, revenue backlog) and are not duration-matched — the ratio is a first cut, not a like-for-like. The rows are also not the same quarter: each name carries the print it last reported.",
       "asOf": "August 2026 — each row stamped with the print it came from",
-      "sources": ["googl-q2-2026", "msft-fy26-q3", "amzn-q2-2026", "orcl-q4-fy2026", "meta-q2-2026", "crwv-q1-2026", "nbis-q1-2026"],
+      "sources": ["googl-q2-2026", "msft-fy26-q4", "msft-fy26-q2", "amzn-q2-2026", "orcl-q4-fy2026", "meta-q2-2026", "crwv-q1-2026", "nbis-q1-2026"],
       "columns": ["Company", "2026 capex guide", "Contracted backlog", "Backlog ÷ capex", "Who absorbs the loss if it does not convert"],
       "highlightColumn": 3,
       "rows": [
         ["Alphabet (GOOGL) — Q2 2026, July 22", "$195–205B (raised from $180–190B)", "$514B, up from $460B in Q1", "~2.6×", "Search and ads operating cash; capacity is redeployable to internal inference"],
-        ["Microsoft (MSFT) — FY26 Q3, April 29", "~$190B calendar 2026 (up ~61% YoY)", "$627B commercial RPO, +99% YoY, ~2.5yr duration", "~3.3×", "M365 and Azure operating cash; concentrated in OpenAI commitments"],
+        ["Microsoft (MSFT) — FY26 Q4, July 29", "~$175B calendar 2026 (reclassified; investment unchanged)", "$678B commercial RPO, +84% YoY, ~2.3yr duration; ~45% was OpenAI in Q2, still ~two-fifths", "~3.9×", "M365 and Azure operating cash; OpenAI still ~two-fifths of commercial RPO"],
         ["Amazon (AMZN) — Q2 2026, July 30", "~$220B (raised from ~$200B)", "$496B AWS backlog, roughly double end-2025", "~2.3×", "AWS, retail and ads cash; TTM FCF −$7.6B but self-funded"],
         ["Oracle (ORCL) — Q4 FY2026, June 10", "$90–95B FY2027 (vs $55.7B FY2026)", "$638B RPO, +363% YoY; ~½ OpenAI per S&P", "~6.9×", "Debt and equity; BBB− as of July 9; no ads/cash-cow retreat"],
         ["Meta (META) — Q2 2026, July 29", "$130–145B (narrowed from $125–145B)", "None contracted — captive; Meta Compute walked back", "—", "Advertising cash; return must appear as engagement and ad pricing"],
@@ -183,7 +195,7 @@
     },
     {
       "type": "prose",
-      "body": "Read the ratio column alone and you would conclude that Oracle has the safest build in the cohort and that CoreWeave's is safer than Alphabet's. That conclusion is wrong, and the reason it is wrong is the whole argument: **contract coverage tells you the demand was booked, not that it will be honoured, and not who eats the asset if it isn't.** Oracle's ratio is still the highest even after replacing the completed-year $55.7B spend with the $90–95B FY2027 guide, and July made the counterparty point concrete: S&P cut Oracle to BBB− and estimated that roughly half of the $638B RPO is OpenAI alone, financed through a negative-free-cash-flow window with no Search-or-ads cash cow to retreat to. CoreWeave's $99.4B backlog was 67% Microsoft by FY2025 revenue — a counterparty that is simultaneously spending ~$190B building the same capacity in-house. Nebius's roughly $50B is mostly two names, Meta and Microsoft, both of whom are also their own suppliers. A backlog owed to your competitor's spare capacity decision is not the same asset as a backlog owed to eight thousand enterprises."
+      "body": "Read the ratio column alone and you would conclude that Oracle has the safest build in the cohort and that CoreWeave's is safer than Alphabet's. That conclusion is wrong, and the reason it is wrong is the whole argument: **contract coverage tells you the demand was booked, not that it will be honoured, and not who eats the asset if it isn't.** Oracle's ratio is still the highest even after replacing the completed-year $55.7B spend with the $90–95B FY2027 guide, and July made the counterparty point concrete: S&P cut Oracle to BBB− and estimated that roughly half of the $638B RPO is OpenAI alone, financed through a negative-free-cash-flow window with no Search-or-ads cash cow to retreat to. Microsoft clears the cash-cow test Oracle fails — M365 and Azure operating cash fund the build — but it does not clear the counterparty test: the company disclosed in Q2 that roughly 45% of commercial RPO was OpenAI, and after a Q4 in which every sequential add came from outside frontier labs that share is still roughly two-fifths of the $678B book. CoreWeave's $99.4B backlog was 67% Microsoft by FY2025 revenue — a counterparty that is simultaneously spending ~$175B building the same capacity in-house. Nebius's roughly $50B is mostly two names, Meta and Microsoft, both of whom are also their own suppliers. A backlog owed to your competitor's spare capacity decision is not the same asset as a backlog owed to eight thousand enterprises."
     },
     {
       "type": "prose",
@@ -237,7 +249,7 @@
     },
     {
       "type": "prose",
-      "body": "The second concession is that the coverage ratios in the table above are not clean. Some share of the demand underwriting every hyperscaler commitment in this cohort is circular — model labs capitalised by hyperscalers who then contract to buy that hyperscaler's compute. Amazon's $33B into Anthropic against Anthropic's $100B+ AWS commitment is the most explicit case, Microsoft's OpenAI-heavy RPO the largest, and Alphabet holds an Anthropic minority position of its own. None of these companies disclose enough to strip the circularity out of a backlog figure. Treat every ratio in that column as an upper bound, Alphabet's included."
+      "body": "The second concession is that the coverage ratios in the table above are not clean. Some share of the demand underwriting every hyperscaler commitment in this cohort is circular — model labs capitalised by hyperscalers who then contract to buy that hyperscaler's compute. Amazon's $33B into Anthropic against Anthropic's $100B+ AWS commitment is the most explicit case, Microsoft's OpenAI book — company-disclosed at roughly 45% of commercial RPO in Q2 and still about two-fifths of the $678B Q4 balance — the largest, and Alphabet holds an Anthropic minority position of its own. None of these companies disclose enough to strip the circularity out of a backlog figure. Treat every ratio in that column as an upper bound, Alphabet's included."
     },
     {
       "type": "prose",
