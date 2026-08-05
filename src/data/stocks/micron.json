@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$1.15T"
+      "value": "~$1.01T"
     }
   ],
   "chips": [
@@ -25,153 +25,154 @@
   ],
   "metrics": [
     {
-      "title": "Q2 FY26 Revenue",
-      "value": "$23.9B",
-      "label": "Record, +196% YoY (vs $20.1B est.)",
+      "title": "Q3 FY26 Revenue",
+      "value": "$41.5B",
+      "label": "Record, +346% YoY / +74% QoQ (vs ~$35.8B est.)",
       "icon": "Cpu",
       "color": "#0099cc"
     },
     {
-      "title": "Q3 FY26 Guidance",
-      "value": "~$33.5B",
-      "label": "Non-GAAP EPS guide ~$19.15",
+      "title": "Q4 FY26 Guidance",
+      "value": "~$50.0B",
+      "label": "Non-GAAP EPS ~$31.00; gross margin ~86%",
       "icon": "TrendingUp",
       "color": "#3b82f6"
     },
     {
-      "title": "HBM Pipeline",
-      "value": "Multi-Year Locked",
-      "label": "3–5yr supply contracts; $100B TAM by 2028",
+      "title": "Strategic SCAs",
+      "value": "~$100B RPO",
+      "label": "16 take-or-pay multi-year deals; $22B customer commitments",
       "icon": "Zap",
       "color": "#10b981"
     }
   ],
   "moat": {
-    "description": "An oligopoly of three (Samsung, SK Hynix, Micron) with high capital barriers to entry, but commodity memory pricing limits true moat durability. HBM4 — already in high-volume production a quarter ahead of plan — has shifted from differentiation in theory to validated execution, and the move from spot pricing to 3–5-year HBM supply agreements meaningfully dampens cyclicality and entrenches Micron with named hyperscalers.",
-    "analysisTitle": "Oligopoly with Thickening Walls",
-    "analysisSummary": "Micron's competitive position rests on **Oligopoly Structure, HBM4 Execution, and Multi-Year Supply Lock-In** — the last two have strengthened materially this cycle:",
+    "description": "An oligopoly of three (Samsung, SK Hynix, Micron) with high capital barriers to entry, but commodity memory pricing has historically limited moat durability. That constraint is now being rewritten: sixteen Strategic Customer Agreements (SCAs) — take-or-pay, typically five years through 2030, with ~$100B of disclosed RPO at minimum contract pricing and $22B of projected customer cash deposits — convert a meaningful share of Micron's book from quarterly spot negotiation into contracted volume and floor pricing. HBM4 is in high-volume shipment for the lead customer platform, and non-GAAP gross margin printed 84.9% in Q3 FY2026 with Q4 guided to ~86%.",
+    "analysisTitle": "Oligopoly with Contracted Walls",
+    "analysisSummary": "Micron's competitive position rests on **Oligopoly Structure, HBM4 Execution, and SCA Lock-In** — the last of these crossed from narrative to contracted fact in the June 24 print:",
     "analysisPoints": [
       {
         "title": "Three-Player Oligopoly",
         "text": "With Samsung, SK Hynix, and Micron controlling ~95% of DRAM supply, the market is structurally oligopolistic. New entrants face $30B+ capex requirements and decade-long learning curves that effectively preclude competition. Micron is the only US-based survivor of what was once a much larger industry."
       },
       {
-        "title": "HBM4 in Volume — One Quarter Early",
-        "text": "Micron's HBM4 — pin speeds above 11 Gb/s with in-house CMOS and advanced metallization on the base logic die — entered high-volume production in Q1 CY2026, a full quarter ahead of management's prior guidance. Q2 FY2026 revenue of $23.9B (+196% YoY) and Q3 guidance of ~$33.5B confirm the ramp is yielding well at scale, the riskiest unknown a quarter ago."
+        "title": "HBM4 Shipping — Margin Proof at Scale",
+        "text": "HBM4 on 1β DRAM is in high-volume shipment for the lead customer's platform, with qualification samples at multiple end-customers and HBM4E (1γ) volume production expected in calendar 2027. Q3 FY2026 revenue of $41.46B (+346% YoY) and non-GAAP gross margin of 84.9% — with Q4 guided to ~$50B and ~86% — confirm that the HBM mix is delivering peak-cycle economics at scale, not just design-win headlines."
       },
       {
-        "title": "From Spot Pricing to 3–5 Year Contracts",
-        "text": "The 2026 HBM book is fully sold out and customers are now signing three- to five-year supply agreements — a structural shift from the historical quarterly negotiation pattern that permanently improves Micron's revenue visibility. Outside HBM, standard DRAM and NAND remain commodity products vulnerable to oversupply (Micron posted $5.8B in net losses in 2022–23), and the $20B+ FY2026 capex commitment still creates execution risk if AI capex normalises."
+        "title": "Strategic Customer Agreements",
+        "text": "Sixteen SCAs spanning data center, consumer, and automotive — roughly 20% of DRAM volume and a third of NAND over the term — carry take-or-pay volume commitments, price floors/ceilings, and non-cancellation terms. Fourteen of them alone disclose ~$100B of cumulative minimum-price RPO, with $22B of projected customer financial commitments (~$18B cash deposits). Management targets half or more of company revenue under SCAs when the program is complete. Outside the contracted book, standard DRAM and NAND remain cyclical, and the elevated capex run-rate still creates overcapacity risk if AI demand normalises beyond the SCA floor."
       }
     ]
   },
   "growth": {
-    "description": "Micron is in the steepest part of a semiconductor supercycle driven by HBM4 demand from AI infrastructure. Q2 FY2026 delivered record revenue of $23.86B (+196% YoY, +75% sequential) and non-GAAP EPS of $12.20 — beating the $20.1B consensus by ~19%. Management guided Q3 FY2026 to ~$33.5B in revenue and ~$19.15 non-GAAP EPS (+260% YoY). The CY2026 HBM book is fully sold and customers are now signing 3–5 year supply contracts. With HBM TAM growing from $35B (2025) to $100B (2028), Micron's revenue quality is structurally improving, though memory cyclicality remains a tail risk into 2027. Since the prior update, two new developments: (1) SK Hynix completed a $28B Nasdaq IPO (ticker SKHY, priced July 10) to fund its own HBM capacity build — validating the memory supercycle thesis but sharpening investor comparisons across the three-player oligopoly; and (2) Samsung, SK Hynix, and Micron were named in a US class-action lawsuit (filed June 25, N.D. Cal.) alleging DRAM price-fixing since 2022 via a coordinated HBM-driven cutback of DDR3/DDR4 supply — an early-stage suit (no class certified yet) but a new legal overhang on the pricing narrative.",
+    "description": "Micron is in the steepest part of a semiconductor supercycle driven by AI memory demand. Q3 FY2026 (ended May 28, reported June 24) delivered record revenue of $41.46B (+346% YoY, +74% sequential) and non-GAAP EPS of $25.11 — crushing the prior ~$33.5B / ~$19.15 guide and ~$35.8B / ~$20.7 Street. Non-GAAP gross margin reached 84.9%. Management guided Q4 FY2026 to ~$50.0B revenue, ~86% gross margin, and ~$31.00 non-GAAP EPS, which puts the FY2026 non-GAAP EPS trajectory at roughly $73 (Q1 $4.78 + Q2 $12.20 + Q3 $25.11 + Q4 ~$31) on ~$129B of revenue. The structural disclosure was the SCA program: 16 take-or-pay multi-year agreements with ~$100B RPO and $22B of customer commitments, and HBM TAM now expected to cross $100B in fiscal 2027 (pulled forward from 2028). Since the prior July 10 refresh — which still carried stale Q2 metrics and the obsolete $33.5B Q3 guide — the stock ran above $1,200 post-print, sold off ~29% in July on profit-taking and China memory-competition fears, and has recovered to ~$893. SK Hynix's Nasdaq listing and the June DRAM price-fixing class action remain secondary overlays on a thesis now dominated by contracted AI-memory demand.",
     "additionalNote": {
-      "title": "HBM4 Demand Structural Shift",
+      "title": "HBM + SCA Demand Structural Shift",
       "points": [
-        "HBM4 entered high-volume production in Q1 CY2026 — one quarter ahead of management's prior guidance",
-        "Customers now signing 3–5 year HBM supply contracts (vs. historical quarterly negotiations) — a permanent visibility upgrade",
-        "HBM TAM projected to reach $100B by 2028 (40% CAGR) — two years earlier than prior guidance",
-        "Each HBM generation has a 3:1 trade ratio with DDR5, tightening overall DRAM supply structurally",
-        "Q3 FY2026 guidance of ~$33.5B revenue / ~$19.15 non-GAAP EPS implies ~70%+ gross margin and >+260% YoY",
+        "HBM4 in high-volume shipment for the lead customer; HBM4E volume production expected CY2027",
+        "16 Strategic Customer Agreements — take-or-pay, typically through 2030 — with ~$100B RPO at minimum pricing",
+        "$22B projected customer financial commitments (~$18B cash deposits) under signed SCAs",
+        "HBM TAM now expected to cross $100B in fiscal 2027 — one year earlier than prior guidance",
+        "Q4 FY2026 guidance of ~$50B revenue / ~$31 non-GAAP EPS / ~86% gross margin",
         "CHIPS Act $6.4B in total grants supports Idaho/New York fab expansion, reducing capex burden"
       ]
     },
     "growthAnalysis": {
-      "cagrEstimate": "30–40%",
-      "scoreDerivation": "Base 91 (30–40% blended CAGR midpoint from HBM4 ramp + AI data center DRAM) + 3 trajectory (2 of 3 drivers accelerating) + 4 margin expansion + 3 TAM expansion (HBM TAM $35B→$100B by 2028) − 5 moderate cyclical risk (commodity DRAM/NAND exposure; $20B+ capex creates overcapacity risk into 2H CY2027) ≈ 96",
+      "cagrEstimate": "25–35%",
+      "cagrBasis": "Measured series is Q3 FY2026 revenue +346% YoY and the Q4 guide to ~$50B (~+$20% QoQ). The 25–35% blended estimate decays that peak print toward an SCA-supported mid-cycle rate: HBM TAM crossing $100B in FY2027 plus contracted volume (~20% of DRAM / ~⅓ of NAND under signed SCAs, targeting ≥50% of revenue) sustain above-historical compounding, while the elevated FY2026 earnings base (~$73 non-GAAP EPS / ~$129B revenue) means the forward multi-year CAGR cannot match the trailing YoY print.",
+      "scoreDerivation": "Base 90 (25–35% blended CAGR midpoint, decayed from the +346% Q3 print toward SCA-supported mid-cycle) + ~3 trajectory (2 of 3 drivers accelerating) + 4 margin expansion (non-GAAP GM 84.9% → ~86% guided) − 5 moderate cyclical/legal risk ≈ 92",
       "drivers": [
         {
           "name": "HBM (High Bandwidth Memory)",
-          "metric": "HBM4 in HVM Q1 CY2026; CY2026 sold out; 3–5 yr contracts",
+          "metric": "HBM4 HVM for lead customer; HBM TAM → $100B in FY2027; HBM4E vol. prod. CY2027",
           "trend": "accelerating"
         },
         {
           "name": "Cloud / Data Center DRAM",
-          "metric": "Drove Q2 FY2026 to $23.86B (+196% YoY); Q3 guide ~$33.5B",
+          "metric": "Cloud Memory BU $13.8B + Core DC $11.5B in Q3; Q4 company guide ~$50B",
           "trend": "accelerating"
         },
         {
           "name": "Mobile & Client",
-          "metric": "Recovering as PC/handset DRAM tightens behind HBM trade ratios",
+          "metric": "Mobile/Client BU $11.5B in Q3 (+49% QoQ) as HBM trade ratios tighten DRAM",
           "trend": "stable"
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If AI hyperscaler capex enters a pause cycle in 2H CY2027, Micron's $20B+ FY2026 capex commitment creates overcapacity risk; gross margins compress below 40% and FY2028 EPS reverts toward $25–30, triggering a 2022-style multiple compression even with multi-year HBM contracts cushioning the floor. Newly added: a June 2026 DRAM price-fixing class action (Samsung, SK Hynix, Micron) is at an early stage but, if it proceeds, could force pricing-practice changes or damages exposure across all three suppliers — a legal tail risk layered on top of the cyclical one.",
+      "keyRisk": "If AI hyperscaler capex enters a pause cycle in 2H CY2027–FY2028, Micron's elevated capex run-rate still creates overcapacity risk outside the SCA book. SCAs cushion the floor — take-or-pay volume at price bands management says keep gross margin well above prior-cycle peaks — but they cover only ~20% of DRAM and ~⅓ of NAND so far, and renegotiation pressure in a deep downcycle is untested. Falsifiable: FY2028 non-GAAP EPS reverting below $35, or gross margin compressing below 50% for two consecutive quarters, would break the 'contracts rewrite cyclicality' claim. Secondary: the June 2026 DRAM price-fixing class action (Samsung, SK Hynix, Micron) remains early-stage with no class certified.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 50,
-    "description": "MU has continued to rally hard since the prior refresh, from ~$745 to ~$1,021 — a further ~37% gain that has pushed the stock to within ~7% of the $1,100 bull case and well above the $800 base case. The rally reflects continued HBM4 execution, the SK Hynix IPO validating memory-supercycle demand, and a broad semiconductor rebound (SMH +2.5% on July 9 with Micron up 4.5% that session), though the stock has also seen sharp single-week pullbacks (reportedly ~25% off a nearer-term intraday peak near its 52-week high of $1,255) as investors debate how much of the AI-memory upcycle is already priced in. At ~$1,021, forward P/E has expanded to ~18× on consensus FY2026 EPS of ~$58 — still reasonable against ~30-40% EPS growth (PEG ~0.5-0.6×), but the margin of safety that existed at $745 has largely closed; this is now a valuation-sensitive hold rather than a clear value entry.",
+    "score": 68,
+    "description": "At ~$893 (market cap ~$1.01T), MU has given back the post-Q3 spike above $1,200 — including a ~29% July drawdown — and now sits just below the revised $950 base case. On the FY2026 non-GAAP EPS trajectory of ~$73, forward P/E is ~12×; on TTM non-GAAP EPS of ~$45 the trailing multiple is ~20×. That is a material re-rating of the earnings power versus the July 10 file (which still priced ~$58 FY26 EPS at ~$1,021 / ~18×), and the SCA disclosure is why the scenario ladder moved up with it. PEG ~0.4× on a 25–35% blended CAGR still signals growth at a reasonable price, but memory-cycle history and the incomplete SCA coverage (~20% of DRAM) argue against treating ~$73 of peak-cycle EPS as the permanent base.",
     "valuationNote": {
-      "text": "At ~$1,021, Micron trades at ~18× FY2026 consensus EPS of ~$58 — still below software peers at 20–30× and within the historical range for memory-cycle peaks (8–18×), but no longer offering the deep discount it did at $745. The structural shift to 3–5 year HBM supply contracts supports paying up the multiple somewhat, but with price now ~28% above the $800 base case and closing in on the $1,100 bull case, most of the near-term HBM4 upside looks priced in. PEG ~0.5-0.6 still signals growth at a reasonable price, but new legal risk (the DRAM price-fixing suit) and cycle-reversion risk into 2H CY2027 argue for discipline on adding at these levels.",
-      "fairValue": "~$800"
+      "text": "At ~$893, Micron trades at ~12× the ~$73 FY2026 non-GAAP EPS trajectory and ~20× TTM — inside the historical memory-peak band (8–18× forward) and well below software peers. The SCA floor (price bands that management says protect gross margin above prior-cycle peaks, plus $22B of customer commitments) supports paying a higher trough multiple than 2022's wipeout implied, which is why the bear case moved to $450 rather than a sub-$300 revisit. With spot roughly at the $950 base, this is a fair-value hold on mid-cycle assumptions rather than a deep-value entry — add on weakness toward the mid-$700s, not chase a re-test of $1,200 without another guide raise.",
+      "fairValue": "~$950"
     },
     "peAnalysis": {
-      "asOf": "July 2026",
+      "asOf": "August 2026",
       "rows": [
         {
-          "label": "Trailing P/E (GAAP)",
-          "value": "~21×",
-          "note": "TTM EPS ~$47.5, per July 2026 quote data"
+          "label": "Trailing P/E (non-GAAP)",
+          "value": "~20×",
+          "note": "TTM non-GAAP EPS ~$45 (Q4 FY25–Q3 FY26)"
         },
         {
-          "label": "Forward P/E (NTM)",
-          "value": "~18×",
-          "note": "consensus FY2026 EPS ~$58"
+          "label": "Forward P/E (FY26)",
+          "value": "~12×",
+          "note": "FY2026 non-GAAP EPS trajectory ~$73 (Q1–Q3 actual + Q4 guide)"
         },
         {
           "label": "PEG Ratio",
-          "value": "~0.5-0.6×",
-          "note": "fwd P/E ÷ ~30% EPS CAGR"
+          "value": "~0.4×",
+          "note": "fwd P/E ÷ ~30% blended EPS CAGR midpoint"
         },
         {
-          "label": "Price / Sales (NTM)",
-          "value": "~11.5×",
-          "note": "~$100B NTM revenue est., scaled for the price move since May"
+          "label": "Price / Sales (FY26)",
+          "value": "~7.8×",
+          "note": "~$129B FY2026 revenue trajectory at ~$1.01T mcap"
         },
         {
           "label": "Price / FCF",
-          "value": "~34×",
-          "note": "~$34B FCF (Q2 FY26 annualised), scaled for the price move since May"
+          "value": "~14×",
+          "note": "Q3 FY26 adjusted FCF $18.3B annualised (~$73B)"
         }
       ],
-      "summary": "Forward P/E has expanded from ~13× to ~18× as the stock outran the EPS re-rate, and PEG ~0.5-0.6 still signals growth at a reasonable (if no longer deeply discounted) rate. The gap between trailing (~21×) and forward (~18×) reflects the ongoing earnings ramp toward ~$58 FY26, validated by Q2 FY26's $12.20 non-GAAP print and Q3 guidance of ~$19.15 EPS in a single quarter. The risk is unchanged in kind but closer in time: if HBM oversupply emerges into FY28, EPS could revert toward $25–30 and a 12–13× multiple implies $300–390 — a much larger drawdown from $1,021 than it would have been from $745."
+      "summary": "Forward P/E has compressed to ~12× as the June 24 beat-and-raise re-rated FY2026 EPS from the old ~$58 path to ~$73, while the stock itself retreated from ~$1,021 / ~$1,255 peaks to ~$893. PEG ~0.4 still signals growth at a reasonable rate. The risk is unchanged in kind: if HBM oversupply emerges into FY28 outside the SCA floor, EPS could revert toward $30–35 and a 13× trough multiple implies $390–455 — which is why the bear case sits there rather than at the old cycle-trough multiples on unprotected spot pricing."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$400",
-      "description": "Memory cycle reversion: AI hyperscaler capex pauses in 2H CY2027, Samsung and SK Hynix flood HBM4 capacity, and the multi-year contracts cushion but do not prevent a 2022-style downcycle.",
+      "priceTarget": "$450",
+      "description": "Memory cycle reversion: AI hyperscaler capex pauses in 2H CY2027, Samsung and SK Hynix flood HBM capacity, and SCAs cushion but do not prevent a sharp downcycle outside the contracted book.",
       "points": [
-        "AI hyperscaler capex pause in 2H CY2027 reduces incremental HBM demand; renegotiated pricing on existing contracts",
+        "AI hyperscaler capex pause in 2H CY2027 reduces incremental HBM demand; non-SCA pricing collapses",
         "Samsung and SK Hynix close the HBM4 yield gap; Micron's CY2027–28 share advantage erodes",
-        "Standard DRAM and NAND prices fall 30%+ as PC/server demand disappoints; FY28 EPS reverts toward $25–30",
-        "Multiple compresses to ~13–15× trough earnings → ~$400 implies $30 EPS at 13×"
+        "Standard DRAM and NAND prices fall 30%+ outside take-or-pay floors; FY28 EPS reverts toward $30–35",
+        "Multiple compresses to ~13× trough earnings → ~$450 implies ~$35 EPS at 13×, with SCAs preventing a 2022-style sub-$20 EPS wipeout"
       ]
     },
     "base": {
-      "priceTarget": "$800",
-      "description": "HBM4 supercycle sustains through CY2027; Micron delivers FY2026 EPS of ~$58 (Q2 actual + Q3 guide already imply ~$31 in 1H), and 3–5 year contracts hold gross margins above 55% into FY2027.",
+      "priceTarget": "$950",
+      "description": "HBM supercycle and SCA coverage sustain through CY2027; Micron delivers FY2026 EPS of ~$73, and contracted floors hold mid-cycle gross margins well above prior peaks into FY2027–28.",
       "points": [
-        "FY2026 revenue tracks toward ~$95–100B as Q3 ($33.5B) and Q4 (~$30–35B) guidance materialises",
-        "HBM4 maintains ~50–55% Micron market share through CY2027 with multi-year contracts in place",
-        "FY2027 EPS holds at $55–60 as HBM trade ratios keep standard DRAM tight; gross margin above 55%",
-        "Stock trades at ~13× FY2027 EPS — consistent with historical memory peaks but with structurally better visibility"
+        "FY2026 revenue tracks toward ~$129B as the ~$50B Q4 guide materialises",
+        "SCA program expands toward management's ≥50%-of-revenue target; HBM maintains competitive share through CY2027",
+        "FY2027–28 EPS settles in a $55–70 mid-cycle band as HBM trade ratios and SCA floors limit the amplitude of the next down-leg",
+        "Stock trades at ~14–15× mid-cycle EPS (~$950 on ~$65) — a premium to unprotected memory peaks justified by contracted visibility"
       ]
     },
     "bull": {
-      "priceTarget": "$1100",
-      "description": "HBM becomes the dominant AI inference architecture, multi-year contracts entrench Micron with NVIDIA and the hyperscalers, and gross margins permanently re-rate above 60%.",
+      "priceTarget": "$1400",
+      "description": "SCAs reach ≥50% of revenue, HBM becomes the dominant AI inference memory, and gross margins permanently re-rate above 70% even off-peak.",
       "points": [
-        "HBM4E and HBM5 commitments extend supply contracts to 5+ years; Micron captures 30%+ HBM share",
-        "AI inference at scale creates a second demand wave beyond training — HBM TAM exceeds $100B estimate by 2028",
+        "HBM4E/HBM5 commitments and completed SCA program entrench Micron with NVIDIA and the hyperscalers through 2030",
+        "AI inference at scale creates a second demand wave — HBM TAM exceeds the $100B FY2027 mark and keeps growing",
         "Near-memory compute integration (PIM/CXL) opens adjacent TAM, further differentiating Micron from commodity DRAM",
-        "FY2027 EPS reaches $70–75; stock re-rates to ~15× as HBM is treated less like memory, more like accelerator content"
+        "FY2027 EPS reaches $90–100; stock re-rates to ~14–15× as contracted HBM is treated less like memory, more like accelerator content"
       ]
     }
   },
@@ -190,15 +191,15 @@
     },
     "talentScarcity": {
       "status": "intact",
-      "note": "Leading-edge DRAM and HBM process engineers (sub-1β node specialists, HBM4 base-die architects, advanced metallization specialists) are among the scarcest technical talent globally. Micron's Boise R&D center is a decade-deep talent cluster that competitors cannot quickly replicate. AI strengthens this moat — designing HBM4 base logic dies in-house requires irreplaceable human expertise."
+      "note": "Leading-edge DRAM and HBM process engineers (sub-1β/1γ node specialists, HBM4 base-die architects, advanced metallization specialists) are among the scarcest technical talent globally. Micron's Boise R&D center is a decade-deep talent cluster that competitors cannot quickly replicate. AI strengthens this moat — designing HBM4/HBM4E base logic dies in-house requires irreplaceable human expertise."
     },
     "bundling": {
       "status": "weakened",
-      "note": "Micron sells DRAM, NAND, and HBM as distinct products with limited bundling; some system-level memory solutions exist but don't create meaningful lock-in vs. Samsung or SK Hynix."
+      "note": "Micron sells DRAM, NAND, and HBM as distinct products with limited bundling; some system-level memory solutions exist but don't create meaningful lock-in vs. Samsung or SK Hynix. SCAs span the portfolio for some customers, but that is contractual embedding rather than product-suite bundling."
     },
     "proprietaryData": {
       "status": "intact",
-      "note": "Proprietary DRAM cell designs (1-gamma node), HBM4 base-die CMOS architecture, advanced metallization processes, and yield-learning data from high-volume HBM production represent genuine IP. In-house logic die design (vs. competitors outsourcing) is a defensible advantage AI cannot easily replicate."
+      "note": "Proprietary DRAM cell designs (1β/1γ nodes), HBM4 base-die CMOS architecture, advanced metallization processes, and yield-learning data from high-volume HBM production represent genuine IP. In-house logic die design (vs. competitors outsourcing) is a defensible advantage AI cannot easily replicate."
     },
     "regulatoryLockIn": {
       "status": "intact",
@@ -209,14 +210,14 @@
       "note": "N/A — no network effects exist in commodity memory; customers buy on price, availability, and quality specifications, not ecosystem lock-in."
     },
     "transactionEmbedding": {
-      "status": "intact",
-      "note": "HBM qualification is specific per GPU generation, and the industry has shifted from quarterly DRAM negotiations to 3–5 year HBM supply contracts with named hyperscalers — a structural change that materially deepens Micron's embedding in customer roadmaps. CY2026 HBM is fully booked and CY2027–2028 capacity is increasingly committed. Samsung and SK Hynix remain qualified alternatives, but multi-year contracts now create meaningful cross-generation switching cost."
+      "status": "strong",
+      "note": "Upgraded intact → strong on the June 24 SCA disclosure. Sixteen take-or-pay Strategic Customer Agreements — typically five years through 2030, non-cancellable, with volume commitments and price floors/ceilings — disclose ~$100B of cumulative minimum-price RPO and $22B of projected customer financial commitments (~$18B cash deposits). That is concrete, named switching cost: walking away means forfeiting deposits and still paying for committed volume. Coverage is still partial (~20% of DRAM, ~⅓ of NAND; management targets ≥50% of revenue), so this is deepening rather than a completed fortress, but it is no longer a soft 'multi-year LOI' claim."
     },
     "systemOfRecord": {
       "status": "destroyed",
       "note": "N/A — memory is a commodity input; Micron is not a system of record for any business function; customers source from all three suppliers simultaneously."
     },
-    "verdict": "Micron is a clear net beneficiary of AI — the HBM4 supercycle is directly driven by AI infrastructure build-out, talentScarcity and proprietaryData are strengthened by AI's demand for specialised chip design, and the shift to 3–5 year HBM contracts has upgraded transactionEmbedding from weakened to intact. The moat is materially better than a year ago, but Micron still does not own a software layer, a data flywheel, or a network effect that compounds independently of the hardware cycle, so durability remains tied to the HBM margin premium holding through CY2027–2028."
+    "verdict": "Micron is a clear net beneficiary of AI — the HBM4 supercycle is directly driven by AI infrastructure build-out, talentScarcity and proprietaryData are strengthened by AI's demand for specialised chip design, and the SCA program has upgraded transactionEmbedding from intact to strong with ~$100B of contracted RPO and $22B of customer deposits. The moat is materially better than a year ago and better than the July 10 file captured. Durability still hinges on SCA coverage expanding toward the ≥50%-of-revenue target and on the HBM margin premium holding through CY2027–2028; Micron does not own a software layer, a data flywheel, or a network effect that compounds independently of the hardware cycle."
   },
-  "lastAnalyzed": "July 10, 2026"
+  "lastAnalyzed": "August 5, 2026"
 }
