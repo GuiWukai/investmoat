@@ -78,9 +78,21 @@
       "cagrEstimate": "10-20%",
       "scoreDerivation": "Base 82 (mid-teens blended CAGR) + humanoid-content optionality (+4) + strain-wave category monopoly (+2) - semi/robot capex cyclicality (-4) - single-product concentration (-2) = 82",
       "drivers": [
-        { "name": "Humanoid Optionality", "metric": "Dozens of precision reducers per humanoid vs a handful per industrial arm", "trend": "accelerating" },
-        { "name": "Industrial Robots & Semi Equipment", "metric": "Core demand recovering with the automation and semi-cap up-cycle", "trend": "accelerating" },
-        { "name": "High-End Share", "metric": "Majority share of the precision strain-wave reducer segment", "trend": "stable" }
+        {
+          "name": "Humanoid Optionality",
+          "metric": "Dozens of precision reducers per humanoid vs a handful per industrial arm",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Industrial Robots & Semi Equipment",
+          "metric": "Core demand recovering with the automation and semi-cap up-cycle",
+          "trend": "accelerating"
+        },
+        {
+          "name": "High-End Share",
+          "metric": "Majority share of the precision strain-wave reducer segment",
+          "trend": "stable"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "Humanoid volumes ramp slower than the +239% re-rating implies while a semiconductor/robot capex down-cycle hits the core business — and, longer term, Chinese reducer makers (e.g. Leaderdrive) close the quality gap and compress high-end pricing.",
@@ -123,8 +135,8 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "Not applicable — a strain-wave reducer is a mechanical component with no user interface or workflow to learn."
+      "status": "na",
+      "note": "a strain-wave reducer is a mechanical component with no user interface or workflow to learn."
     },
     "businessLogic": {
       "status": "strong",
@@ -132,8 +144,8 @@
       "aiExposure": "resilient"
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "Not applicable — Harmonic Drive is a precision-hardware manufacturer with no reliance on public data aggregation as a moat source."
+      "status": "na",
+      "note": "Harmonic Drive is a precision-hardware manufacturer with no reliance on public data aggregation as a moat source."
     },
     "talentScarcity": {
       "status": "strong",
@@ -160,8 +172,8 @@
       "note": "Aftermarket and replacement demand provide some recurring revenue on the installed base, but the model is component sales into OEM builds rather than per-transaction embedding."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "Not applicable — a mechanical reducer is not the authoritative record for any business function."
+      "status": "na",
+      "note": "a mechanical reducer is not the authoritative record for any business function."
     },
     "verdict": "Harmonic Drive is about as AI-resilient as a business gets — it makes a physical precision component whose moat is manufacturing know-how, and the AI/robot boom is a direct, multiplicative demand driver rather than a threat, since every humanoid joint needs a reducer it can supply. The real risks are not AI but cyclicality, single-product concentration, and Chinese competitors climbing the quality curve — all set against a valuation that has already re-rated +239% on the humanoid thesis."
   },

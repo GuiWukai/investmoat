@@ -170,12 +170,12 @@
       "note": "Operators and service technicians build familiarity with the myPlant platform and Jenbacher/Waukesha controls, but the interface is a thin layer over a physical asset — standardized monitoring and AI-assisted diagnostics erode any operator lock-in."
     },
     "businessLogic": {
-      "status": "destroyed",
-      "note": "N/A — INNIO is a physical industrial equipment maker, not a software business embedded in customer processes; there is no proprietary business-logic layer to lock in."
+      "status": "na",
+      "note": "INNIO is a physical industrial equipment maker, not a software business embedded in customer processes; there is no proprietary business-logic layer to lock in."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — the company does not control or gate access to a valuable public dataset; its data advantage is private fleet telemetry (see proprietaryData)."
+      "status": "na",
+      "note": "the company does not control or gate access to a valuable public dataset; its data advantage is private fleet telemetry (see proprietaryData)."
     },
     "talentScarcity": {
       "status": "intact",
@@ -194,12 +194,12 @@
       "note": "Engines must clear market-specific emissions standards, grid-interconnection rules, and alternative-fuel certifications; INNIO's certified hydrogen-blend capability across jurisdictions creates multi-year procurement cycles and barriers to entry."
     },
     "networkEffects": {
-      "status": "destroyed",
-      "note": "N/A — additional engine buyers do not make the product more valuable to other buyers; there is no network or marketplace flywheel in industrial power equipment."
+      "status": "na",
+      "note": "additional engine buyers do not make the product more valuable to other buyers; there is no network or marketplace flywheel in industrial power equipment."
     },
     "transactionEmbedding": {
-      "status": "destroyed",
-      "note": "N/A — INNIO does not sit in a payment or transaction-workflow layer; its embedding is physical (installed power assets), captured under bundling/switching costs rather than transaction embedding."
+      "status": "na",
+      "note": "INNIO does not sit in a payment or transaction-workflow layer; its embedding is physical (installed power assets), captured under bundling/switching costs rather than transaction embedding."
     },
     "systemOfRecord": {
       "status": "intact",

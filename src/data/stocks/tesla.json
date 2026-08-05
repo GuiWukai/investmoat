@@ -70,9 +70,21 @@
       "cagrEstimate": "15-20%",
       "scoreDerivation": "Base 81.7 (15-20% CAGR, 17.5% midpoint) + 2.7 trajectory (2 of 3 drivers accelerating — deliveries and energy — with autonomy stable) − 4 margin compression (Q2 gross margin 16.8% vs 21.1% Q1; op margin 1.4% vs 4.1% YoY) + 3 TAM expansion (Robotaxi/Optimus/Energy) − 10 high keyRisk severity = 73",
       "drivers": [
-        { "name": "Auto Deliveries", "metric": "Q2 2026 deliveries 480,126 (+25% YoY), auto revenue a record $28.24B total (+26% YoY) and reversed the Q1 inventory build — but ASPs and margins fell: gross margin 16.8%, op margin 1.4%", "trend": "accelerating" },
-        { "name": "Energy Storage", "metric": "Q2 2026 deployments a near-record 13.5 GWh (+40% YoY, +53% QoQ), beating the ~11.8 GWh consensus; Megafactory Shanghai ramping — highest-margin, fastest-growing segment", "trend": "accelerating" },
-        { "name": "FSD / Robotaxi / Optimus", "metric": "Austin Robotaxi network expanding; Optimus limited Fremont production starts Jul/Aug 2026 but high-volume slipped to 2027 (Musk tempered guidance); FY26 capex >$25B weighted to autonomy", "trend": "stable" }
+        {
+          "name": "Auto Deliveries",
+          "metric": "Q2 2026 deliveries 480,126 (+25% YoY), auto revenue a record $28.24B total (+26% YoY) and reversed the Q1 inventory build — but ASPs and margins fell: gross margin 16.8%, op margin 1.4%",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Energy Storage",
+          "metric": "Q2 2026 deployments a near-record 13.5 GWh (+40% YoY, +53% QoQ), beating the ~11.8 GWh consensus; Megafactory Shanghai ramping — highest-margin, fastest-growing segment",
+          "trend": "accelerating"
+        },
+        {
+          "name": "FSD / Robotaxi / Optimus",
+          "metric": "Austin Robotaxi network expanding; Optimus limited Fremont production starts Jul/Aug 2026 but high-volume slipped to 2027 (Musk tempered guidance); FY26 capex >$25B weighted to autonomy",
+          "trend": "stable"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "Q2 confirmed the core risk rather than resolving it: the delivery and energy beats did not translate to profit — operating margin fell to 1.4% and free cash flow turned −$1.09B. If margins stay compressed through 2026 (regulatory-credit revenue is structurally fading toward zero), the sub-$30K vehicle dilutes ASPs further, Robotaxi stays sub-scale outside Texas without NHTSA federal approval, and Optimus slips past its 2027 volume target, the multiple compresses from autonomy-option levels toward premium-auto (15-20x), implying further downside even on record revenue.",
@@ -139,12 +151,12 @@
       "note": "EV touchscreen interfaces are being replicated by BYD, Rivian, and legacy OEMs — no longer a differentiating moat."
     },
     "businessLogic": {
-      "status": "destroyed",
-      "note": "Not applicable as a primary competitive moat in automotive manufacturing."
+      "status": "na",
+      "note": "as a primary competitive moat in automotive manufacturing."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "Not applicable to Tesla's competitive advantage framework."
+      "status": "na",
+      "note": "to Tesla's competitive advantage framework."
     },
     "talentScarcity": {
       "status": "intact",

@@ -136,16 +136,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — Rigetti's processors are accessed via open SDKs and cloud (QCS, Amazon Braket); there is no high-switching-cost interface customers master over years."
+      "status": "na",
+      "note": "Rigetti's processors are accessed via open SDKs and cloud (QCS, Amazon Braket); there is no high-switching-cost interface customers master over years."
     },
     "businessLogic": {
       "status": "weakened",
       "note": "Rigetti ships a full software stack, but quantum toolchains are largely portable across backends and standards are unsettled — it is not a proprietary business-logic lock-in embedded in customer operations."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — Rigetti does not monetise gated access to a public dataset."
+      "status": "na",
+      "note": "Rigetti does not monetise gated access to a public dataset."
     },
     "talentScarcity": {
       "status": "strong",
@@ -165,16 +165,16 @@
       "note": "An AFRL contract, Innovate UK funding, and a US Dept. of Commerce CHIPS Act LOI are scarce, slow-to-earn government assets that are AI-resilient — but the franchise is nascent, and Rigetti was not initially selected for DARPA QBI Stage B."
     },
     "networkEffects": {
-      "status": "destroyed",
-      "note": "N/A — an additional quantum-hardware customer does not yet make the platform more valuable to others; there is no meaningful network dynamic at this stage."
+      "status": "na",
+      "note": "an additional quantum-hardware customer does not yet make the platform more valuable to others; there is no meaningful network dynamic at this stage."
     },
     "transactionEmbedding": {
-      "status": "destroyed",
-      "note": "N/A — Rigetti does not sit in a payment or transaction layer of customers' daily operations."
+      "status": "na",
+      "note": "Rigetti does not sit in a payment or transaction layer of customers' daily operations."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — it is not the authoritative record for any external business function."
+      "status": "na",
+      "note": "it is not the authoritative record for any external business function."
     },
     "verdict": "Rigetti's applicable moats — full-stack superconducting engineering, an in-house fab, scarce talent, and government ties — are AI-resilient because AI cannot replicate the underlying hardware physics or fabrication know-how. It carries none of the AI-vulnerable software moats (no learned interface, business-logic, data, transaction, or system-of-record lock-in), so AI cannot erode what durability it has. The blunt limitation is that the moat is narrow and unproven, and unlike IonQ the near-term evidence is negative: revenue shrank in 2025, most moat categories are N/A or weakened, and a ~$5.4B market cap rests almost entirely on a scaling roadmap that has yet to convert into a real business. A credible superconducting effort, but a speculative, second-tier bet within an already-speculative group."
   }

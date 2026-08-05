@@ -164,16 +164,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "Not applicable — CoreWeave sells raw GPU cloud capacity to AI labs and hyperscalers, not consumer UI experiences."
+      "status": "na",
+      "note": "CoreWeave sells raw GPU cloud capacity to AI labs and hyperscalers, not consumer UI experiences."
     },
     "businessLogic": {
-      "status": "destroyed",
-      "note": "Not applicable — CoreWeave's stack runs CUDA workloads on NVIDIA hardware; no proprietary business-logic moat."
+      "status": "na",
+      "note": "CoreWeave's stack runs CUDA workloads on NVIDIA hardware; no proprietary business-logic moat."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "Not applicable — CoreWeave does not derive moat from public data access."
+      "status": "na",
+      "note": "CoreWeave does not derive moat from public data access."
     },
     "talentScarcity": {
       "status": "weakened",
@@ -184,24 +184,24 @@
       "note": "CoreWeave bundles GPU compute + networking + managed Kubernetes for AI workloads, but customers can replicate the stack on AWS/Azure/GCP or build in-house — the bundle is convenience, not lock-in."
     },
     "proprietaryData": {
-      "status": "destroyed",
+      "status": "na",
       "note": "Customer workloads are private; CoreWeave does not derive proprietary data moat from the compute it sells."
     },
     "regulatoryLockIn": {
-      "status": "destroyed",
-      "note": "Not applicable — no regulatory protection; in fact, CoreWeave faces export-control exposure on GPU re-rentals to restricted geographies."
+      "status": "na",
+      "note": "no regulatory protection; in fact, CoreWeave faces export-control exposure on GPU re-rentals to restricted geographies."
     },
     "networkEffects": {
-      "status": "destroyed",
-      "note": "Not applicable — GPU compute is fungible across providers; no network effect between CoreWeave customers."
+      "status": "na",
+      "note": "GPU compute is fungible across providers; no network effect between CoreWeave customers."
     },
     "transactionEmbedding": {
       "status": "weakened",
       "note": "Multi-year capacity contracts ($99.4B backlog) embed CoreWeave operationally for the contract life, but renewal is open competition with hyperscalers and other GPU clouds — and Microsoft declining its $12B expansion option in March 2026 for a competing neocloud shows the embedding does not survive the contract term."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "Not applicable — CoreWeave is not the system of record for any customer's AI workload metadata or training history."
+      "status": "na",
+      "note": "CoreWeave is not the system of record for any customer's AI workload metadata or training history."
     },
     "verdict": "CoreWeave's moat is narrow and time-bounded: NVIDIA preferred-partner status plus operational velocity advantage during AI hypergrowth. Most of the 10 moats are destroyed or weakened — the business is fundamentally a leveraged, concentrated GPU rental operation. The investment case rests on hypergrowth durability (90 score), not moat depth. Suitable as a speculative position sized to risk."
   },

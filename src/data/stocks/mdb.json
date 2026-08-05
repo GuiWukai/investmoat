@@ -174,8 +174,8 @@
       "note": "Applications encode schema design decisions, aggregation pipelines, and indexing strategies in MongoDB — meaningful migration cost but documents/JSON are increasingly portable to PostgreSQL JSONB and other databases."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "Not applicable — MongoDB hosts customer-private operational data, not public datasets."
+      "status": "na",
+      "note": "MongoDB hosts customer-private operational data, not public datasets."
     },
     "talentScarcity": {
       "status": "weakened",

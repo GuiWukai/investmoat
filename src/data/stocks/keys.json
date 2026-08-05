@@ -4,12 +4,24 @@
   "name": "Keysight Technologies",
   "lastAnalyzed": "May 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "KEYS" },
-    { "label": "Market Cap", "value": "~$30B" }
+    {
+      "label": "Ticker",
+      "value": "KEYS"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$30B"
+    }
   ],
   "chips": [
-    { "label": "Test & Measurement | Electronics", "color": "primary" },
-    { "label": "AI / 6G Infrastructure", "color": "success" }
+    {
+      "label": "Test & Measurement | Electronics",
+      "color": "primary"
+    },
+    {
+      "label": "AI / 6G Infrastructure",
+      "color": "success"
+    }
   ],
   "metrics": [
     {
@@ -59,9 +71,21 @@
       "cagrEstimate": "7-10%",
       "scoreDerivation": "Base 75 (8-15% CAGR low band) + 3 AI/datacom mix (highest-growth segment, 25%+) + 2 Spirent integration (network test capabilities) - 5 cyclicality (test capex follows electronics R&D capex with 12-18 month lag) - 5 mature commercial market growth = 70",
       "drivers": [
-        { "name": "AI / Datacom Test", "metric": "+25% YoY; 800G/1.6T optical and PCIe 6.0 test", "trend": "accelerating" },
-        { "name": "Aerospace & Defence", "metric": "+10% YoY; durable defence + space spend", "trend": "stable" },
-        { "name": "Commercial Communications", "metric": "Mid-single-digits; 5G mature, 6G research early", "trend": "stable" }
+        {
+          "name": "AI / Datacom Test",
+          "metric": "+25% YoY; 800G/1.6T optical and PCIe 6.0 test",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Aerospace & Defence",
+          "metric": "+10% YoY; durable defence + space spend",
+          "trend": "stable"
+        },
+        {
+          "name": "Commercial Communications",
+          "metric": "Mid-single-digits; 5G mature, 6G research early",
+          "trend": "stable"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If AI infrastructure capex digestion arrives in 2027 (as with the 2022-23 5G cycle), the AI/datacom segment growth halves and operating margin recovery stalls — Keysight's cyclicality is real and historically the multiple compresses 25-30% during digestion phases.",
@@ -75,11 +99,31 @@
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
-        { "label": "Forward P/E (FY26)", "value": "~22×", "note": "EPS ~$7.70; mid-cycle multiple" },
-        { "label": "Forward P/E (FY27)", "value": "~19×", "note": "Assumes margin recovery + AI mix tailwind" },
-        { "label": "Price / Sales (FY26)", "value": "~5.5×", "note": "Premium reflecting software embedment" },
-        { "label": "PEG Ratio", "value": "~2.5×", "note": "Premium on quality + AI mix; cyclic adjusted" },
-        { "label": "EV / EBITDA (NTM)", "value": "~16×", "note": "Vs Anritsu ~12×, AMETEK ~17×" }
+        {
+          "label": "Forward P/E (FY26)",
+          "value": "~22×",
+          "note": "EPS ~$7.70; mid-cycle multiple"
+        },
+        {
+          "label": "Forward P/E (FY27)",
+          "value": "~19×",
+          "note": "Assumes margin recovery + AI mix tailwind"
+        },
+        {
+          "label": "Price / Sales (FY26)",
+          "value": "~5.5×",
+          "note": "Premium reflecting software embedment"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~2.5×",
+          "note": "Premium on quality + AI mix; cyclic adjusted"
+        },
+        {
+          "label": "EV / EBITDA (NTM)",
+          "value": "~16×",
+          "note": "Vs Anritsu ~12×, AMETEK ~17×"
+        }
       ],
       "summary": "Valuation is fair-to-modest premium reflecting quality + AI exposure; cyclical risk is to the downside in a 2027 digestion."
     }
@@ -123,7 +167,7 @@
       "note": "PathWave software platforms encode customer-specific test scripts, calibration sequences, and R&D workflow business logic that take years to migrate."
     },
     "publicDataAccess": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "talentScarcity": {
@@ -143,8 +187,8 @@
       "note": "NIST/UKAS/PTB calibration traceability and ITAR-controlled defence test products are real regulatory moats; replacing Keysight in regulated calibration chains takes years."
     },
     "networkEffects": {
-      "status": "destroyed",
-      "note": "N/A — instrument vendor with no network effects."
+      "status": "na",
+      "note": "instrument vendor with no network effects."
     },
     "transactionEmbedding": {
       "status": "strong",

@@ -4,12 +4,24 @@
   "name": "Honeywell International",
   "lastAnalyzed": "May 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "HON" },
-    { "label": "Market Cap", "value": "~$135B" }
+    {
+      "label": "Ticker",
+      "value": "HON"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$135B"
+    }
   ],
   "chips": [
-    { "label": "Diversified Industrial | Automation", "color": "primary" },
-    { "label": "Aerospace Spin June 2026", "color": "warning" }
+    {
+      "label": "Diversified Industrial | Automation",
+      "color": "primary"
+    },
+    {
+      "label": "Aerospace Spin June 2026",
+      "color": "warning"
+    }
   ],
   "metrics": [
     {
@@ -59,9 +71,21 @@
       "cagrEstimate": "5-8%",
       "scoreDerivation": "Base 60 (4-8% CAGR mid-band) + 4 Aerospace pre-spin contribution (high-quality growth backlog) + 2 portfolio simplification thesis - 8 RemainCo growth dilution post-spin (Automation + Materials are slower) = 58",
       "drivers": [
-        { "name": "Aerospace (pre-spin, becomes HONA)", "metric": "Orders +28% LTM, backlog $19B (+20% YoY); spins June 29, 2026", "trend": "accelerating" },
-        { "name": "Building Automation", "metric": "+8% organic in Q1; Forge / Niagara software cross-sell", "trend": "stable" },
-        { "name": "Industrial Automation", "metric": "Soft on warehouse / process capex; divesting Warehouse + Workflow Solutions", "trend": "stable" }
+        {
+          "name": "Aerospace (pre-spin, becomes HONA)",
+          "metric": "Orders +28% LTM, backlog $19B (+20% YoY); spins June 29, 2026",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Building Automation",
+          "metric": "+8% organic in Q1; Forge / Niagara software cross-sell",
+          "trend": "stable"
+        },
+        {
+          "name": "Industrial Automation",
+          "metric": "Soft on warehouse / process capex; divesting Warehouse + Workflow Solutions",
+          "trend": "stable"
+        }
       ],
       "primaryType": "market share",
       "keyRisk": "Post-spin RemainCo (Automation + Materials) faces structural mid-single-digit growth at best, with no clean catalyst. If the spin distribution disappoints on relative re-rating, holders end up with two slower-growing pieces and one premium aerospace name — net total return depends on how the parts trade.",
@@ -75,11 +99,31 @@
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
-        { "label": "Forward P/E (FY26 cont ops)", "value": "~23×", "note": "EPS $9.03 mid; pre-spin blended" },
-        { "label": "Forward P/E (FY27 post-spin RemainCo)", "value": "~20×", "note": "Estimated post-spin Automation + Materials" },
-        { "label": "PEG Ratio", "value": "~3.0×", "note": "High vs growth — reflects spin optionality more than core growth" },
-        { "label": "Sum-of-Parts Fair Value", "value": "~$245", "note": "HONA at 28× + RemainCo at 19×, net of stranded costs" },
-        { "label": "EV / EBITDA (NTM)", "value": "~14×", "note": "In line with diversified industrial peers" }
+        {
+          "label": "Forward P/E (FY26 cont ops)",
+          "value": "~23×",
+          "note": "EPS $9.03 mid; pre-spin blended"
+        },
+        {
+          "label": "Forward P/E (FY27 post-spin RemainCo)",
+          "value": "~20×",
+          "note": "Estimated post-spin Automation + Materials"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~3.0×",
+          "note": "High vs growth — reflects spin optionality more than core growth"
+        },
+        {
+          "label": "Sum-of-Parts Fair Value",
+          "value": "~$245",
+          "note": "HONA at 28× + RemainCo at 19×, net of stranded costs"
+        },
+        {
+          "label": "EV / EBITDA (NTM)",
+          "value": "~14×",
+          "note": "In line with diversified industrial peers"
+        }
       ],
       "summary": "Modestly cheap on sum-of-parts; the aerospace spin is the catalyst. Headline multiple looks fair but the discount to break-up value is the actual investment thesis."
     }
@@ -115,16 +159,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "Not applicable — diversified industrial vendor with no end-user interface."
+      "status": "na",
+      "note": "diversified industrial vendor with no end-user interface."
     },
     "businessLogic": {
       "status": "intact",
       "note": "Experion DCS, Forge, and Niagara are genuinely sticky industrial control and building software platforms; the legacy install base in process automation is one of the franchise's most durable moats."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "Not applicable — no public-data moat."
+      "status": "na",
+      "note": "no public-data moat."
     },
     "talentScarcity": {
       "status": "weakened",
@@ -143,16 +187,16 @@
       "note": "Aerospace FAA / EASA type certifications and process-safety SIL-rated controls create multi-decade switching barriers — these survive the spin and sit primarily in HONA."
     },
     "networkEffects": {
-      "status": "destroyed",
-      "note": "Not applicable — industrial vendor with no network effects."
+      "status": "na",
+      "note": "industrial vendor with no network effects."
     },
     "transactionEmbedding": {
       "status": "strong",
       "note": "Process control DCS, building automation, and aerospace components are embedded in customer assets for 20-30 year service lives; replacement is rare and expensive."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "Not applicable — not a system of record."
+      "status": "na",
+      "note": "not a system of record."
     },
     "verdict": "Honeywell is a high-quality but slow-growing diversified industrial whose investment thesis now hinges on the June 2026 aerospace spin unlocking sum-of-parts value rather than on organic growth. Real moats survive in process automation and aerospace certifications; the integrated-conglomerate moat is being dissolved by management, intentionally."
   }

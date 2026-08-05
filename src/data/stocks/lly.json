@@ -158,24 +158,24 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — physicians prescribe drugs based on clinical evidence and patient outcomes, not UI familiarity; interface learning costs do not apply to pharmaceuticals."
+      "status": "na",
+      "note": "physicians prescribe drugs based on clinical evidence and patient outcomes, not UI familiarity; interface learning costs do not apply to pharmaceuticals."
     },
     "businessLogic": {
       "status": "intact",
       "note": "Lilly's GLP-1 peptide synthesis, formulation IP, and cold-chain manufacturing know-how represent complex proprietary processes that competitors cannot decode from reverse engineering alone."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — Lilly's competitive moat does not rely on controlling access to a public data source; not applicable to the pharmaceutical business model."
+      "status": "na",
+      "note": "Lilly's competitive moat does not rely on controlling access to a public data source; not applicable to the pharmaceutical business model."
     },
     "talentScarcity": {
       "status": "strong",
       "note": "World-class endocrinologists, peptide chemists, and regulatory affairs specialists are scarce globally; Lilly's 140-year reputation and compensation attract the best pharma talent disproportionately."
     },
     "bundling": {
-      "status": "destroyed",
-      "note": "N/A — pharmaceutical drugs are not sold in software-style bundles; individual drug approvals and prescriptions are the unit of sale."
+      "status": "na",
+      "note": "pharmaceutical drugs are not sold in software-style bundles; individual drug approvals and prescriptions are the unit of sale."
     },
     "proprietaryData": {
       "status": "strong",
@@ -194,8 +194,8 @@
       "note": "Mounjaro and Zepbound are embedded in major pharmacy benefit formularies, employer health plans, and Medicare Part D — removing them faces enormous patient, physician, and political resistance."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — Lilly is a drug manufacturer, not a system-of-record platform; this moat type does not apply to the pharmaceutical industry."
+      "status": "na",
+      "note": "Lilly is a drug manufacturer, not a system-of-record platform; this moat type does not apply to the pharmaceutical industry."
     },
     "verdict": "Lilly's core moat — patent-protected biologics with regulatory approval — is structurally immune to AI disruption, and AI drug discovery tools actually accelerate Lilly's pipeline advantage by compressing early-stage discovery timelines. The company is a net beneficiary of AI adoption, using it to identify novel targets and optimize clinical trials faster than underfunded competitors."
   },

@@ -173,16 +173,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — NextEra Energy sells electricity; residential and commercial customers flip a switch, not an interface. There is no user-facing product with learning curves or switching costs at the customer interaction level. This moat category does not apply to a utility or power generator."
+      "status": "na",
+      "note": "NextEra Energy sells electricity; residential and commercial customers flip a switch, not an interface. There is no user-facing product with learning curves or switching costs at the customer interaction level. This moat category does not apply to a utility or power generator."
     },
     "businessLogic": {
       "status": "weakened",
       "note": "NEE's grid management software, renewable project dispatch optimization, and demand forecasting systems represent embedded operational logic — but this creates operational efficiency advantages, not customer lock-in. Grid operators and developers are trained on NEE's systems, but the 'business logic' is not embedded in customers in the way enterprise software is. AI-based grid optimization tools are increasingly available to smaller operators, gradually eroding this advantage."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — NextEra Energy does not control access to any public data source that constitutes a competitive moat; this category does not apply to a power generator or regulated utility."
+      "status": "na",
+      "note": "NextEra Energy does not control access to any public data source that constitutes a competitive moat; this category does not apply to a power generator or regulated utility."
     },
     "talentScarcity": {
       "status": "intact",
@@ -201,7 +201,7 @@
       "note": "FPL operates under an exclusive Florida PSC franchise — the only legal electric utility for its service territory. This franchise cannot be revoked short of extraordinary legislation and creates a permanent regulated monopoly protected by state law. NEER's projects require multi-year FERC interconnection approvals, state environmental permits, and land lease agreements that create substantial barriers to entry in each market. The Duane Arnold nuclear recommissioning is protected by NRC relicensing — an additional regulatory fortress around the nuclear growth strategy."
     },
     "networkEffects": {
-      "status": "weakened",
+      "status": "na",
       "note": "No meaningful network effects exist in electricity generation or regulated distribution — electricity is a commodity when delivered to the grid. NEE's scale creates procurement advantages (solar panels through 2029, battery storage through 2029) that smaller competitors cannot match, but this is a scale economy, not a self-reinforcing network effect. Each additional GW does not make the product more valuable for existing customers."
     },
     "transactionEmbedding": {
@@ -209,8 +209,8 @@
       "note": "FPL is the only electric utility for its 5.9 million customer accounts — residential and commercial customers are physically embedded in NEE's grid infrastructure with no opt-out option. NEER's 15-25 year PPAs embed NEE as the power supplier for hyperscaler data centers for a generation: Google's 25-year Duane Arnold deal is the clearest example. Unwinding these agreements requires PPA renegotiation, finding alternative 24/7 power sources (effectively impossible at scale), and potentially paying termination fees. The data center PPA pipeline creates the deepest long-duration transaction embedding in NEE's history."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — NextEra Energy is not a system of record for any information or data management function; this moat category does not apply to a power generator or regulated utility."
+      "status": "na",
+      "note": "NextEra Energy is not a system of record for any information or data management function; this moat category does not apply to a power generator or regulated utility."
     },
     "verdict": "NextEra Energy is a modest net beneficiary of AI through the data center power demand tailwind — 43% of projected US power demand growth through 2030 is now linked to data centers, directly expanding NEE's addressable market. The most AI-resilient moats are regulatory lock-in (the FPL franchise is legally impervious to technology disruption) and transaction embedding (25-year PPAs cannot be disrupted by AI). The primary AI risk is grid management commoditization: AI-based grid optimization tools are making NEE's operational data advantage easier for smaller competitors to approach, gradually eroding the talent and business logic moats. Overall, NEE's physical infrastructure and regulatory position make it highly durable in the AI era — though the moat is driven by regulatory protection and capital intensity rather than AI-native advantages."
   }

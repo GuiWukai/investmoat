@@ -99,11 +99,31 @@
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~11×", "note": "TTM diluted EPS $24.14" },
-        { "label": "Forward P/E (NTM)", "value": "~18-19×", "note": "consensus reflects Stage 3 ramp dilution" },
-        { "label": "PEG Ratio", "value": "~2.5×", "note": "fwd P/E ÷ ~7-8% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~3×", "note": "~$20B FY revenue base" },
-        { "label": "EV / EBITDA (NTM)", "value": "~12-13×", "note": "vs peer midstream ~10-12×" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~11×",
+          "note": "TTM diluted EPS $24.14"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~18-19×",
+          "note": "consensus reflects Stage 3 ramp dilution"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~2.5×",
+          "note": "fwd P/E ÷ ~7-8% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~3×",
+          "note": "~$20B FY revenue base"
+        },
+        {
+          "label": "EV / EBITDA (NTM)",
+          "value": "~12-13×",
+          "note": "vs peer midstream ~10-12×"
+        }
       ],
       "summary": "Trailing P/E of ~11× understates the quality of contracted cash flows; forward P/E of ~18-19× reflects expected EPS dip as Stage 3 financing depreciates through. PEG ~2.5 is a premium to commodity peers but justified by 95% contracted backlog. EV/EBITDA at ~12-13× is fair-to-modest premium vs midstream peers — paying for the brownfield expansion runway that single-asset peers cannot match."
     }
@@ -139,16 +159,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — B2B physical commodity export business with no end-user interface or UI workflow."
+      "status": "na",
+      "note": "B2B physical commodity export business with no end-user interface or UI workflow."
     },
     "businessLogic": {
-      "status": "destroyed",
-      "note": "N/A — physical infrastructure business; the moat is in permits and contracts, not software-encoded customer business logic."
+      "status": "na",
+      "note": "physical infrastructure business; the moat is in permits and contracts, not software-encoded customer business logic."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — LNG export business does not derive moat from public datasets."
+      "status": "na",
+      "note": "LNG export business does not derive moat from public datasets."
     },
     "talentScarcity": {
       "status": "intact",
@@ -175,8 +195,8 @@
       "note": ">95% of capacity contracted for 10+ years on 20-year SPAs with take-or-pay structure. Buyers (utilities, oil majors, sovereign LNG importers) cannot replace the supply without rebuilding terminals — replacement is measured in years not quarters. Cash flows are bond-like."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — physical infrastructure business; system-of-record moats apply to data systems, not export terminals."
+      "status": "na",
+      "note": "physical infrastructure business; system-of-record moats apply to data systems, not export terminals."
     },
     "verdict": "Cheniere is a moderate AI beneficiary. The strongest moats — regulatoryLockIn, transactionEmbedding, bundling — are AI-neutral or AI-strengthened (AI-driven US gas demand from data centres spills to global export demand). The AI-vulnerable moats are largely N/A because the business is physical infrastructure rather than software-encoded workflow. Sits in the regulated-infrastructure tier alongside ICE/MCO but a notch below because of underlying commodity-price exposure on the lifting margin."
   }

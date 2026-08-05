@@ -4,15 +4,36 @@
   "name": "Snap Inc.",
   "lastAnalyzed": "August 4, 2026",
   "headerStats": [
-    { "label": "Ticker",     "value": "SNAP"   },
-    { "label": "Market Cap", "value": "~$9.7B" }
+    {
+      "label": "Ticker",
+      "value": "SNAP"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$9.7B"
+    }
   ],
   "chips": [
-    { "label": "Social Advertising | Camera & Messaging", "color": "primary"   },
-    { "label": "Bidirectional Friend Graph",              "color": "success"   },
-    { "label": "Subscription Inflection",                 "color": "secondary" },
-    { "label": "Declining US & EU Users",                 "color": "danger"    },
-    { "label": "AR Glasses Optionality",                  "color": "warning"   }
+    {
+      "label": "Social Advertising | Camera & Messaging",
+      "color": "primary"
+    },
+    {
+      "label": "Bidirectional Friend Graph",
+      "color": "success"
+    },
+    {
+      "label": "Subscription Inflection",
+      "color": "secondary"
+    },
+    {
+      "label": "Declining US & EU Users",
+      "color": "danger"
+    },
+    {
+      "label": "AR Glasses Optionality",
+      "color": "warning"
+    }
   ],
   "metrics": [
     {
@@ -98,12 +119,36 @@
     "peAnalysis": {
       "asOf": "August 2026",
       "rows": [
-        { "label": "EV / TTM Revenue",       "value": "~1.7×",   "note": "TTM revenue $6.35B; EV ~$10.5B" },
-        { "label": "EV / TTM Adj EBITDA",     "value": "~10×",    "note": "TTM Adjusted EBITDA $1.02B" },
-        { "label": "Price / TTM FCF",         "value": "~14×",    "note": "TTM FCF $706M — 7.3% FCF yield" },
-        { "label": "Trailing P/E (GAAP)",     "value": "N/A",     "note": "TTM net loss; positive net income targeted from 2027" },
-        { "label": "Gross Margin",            "value": "58%",     "note": "Q2 2026, up ~700bps YoY" },
-        { "label": "Net Debt",                "value": "~$0.9B",  "note": "$3.53B debt vs $2.66B cash and securities" }
+        {
+          "label": "EV / TTM Revenue",
+          "value": "~1.7×",
+          "note": "TTM revenue $6.35B; EV ~$10.5B"
+        },
+        {
+          "label": "EV / TTM Adj EBITDA",
+          "value": "~10×",
+          "note": "TTM Adjusted EBITDA $1.02B"
+        },
+        {
+          "label": "Price / TTM FCF",
+          "value": "~14×",
+          "note": "TTM FCF $706M — 7.3% FCF yield"
+        },
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "N/A",
+          "note": "TTM net loss; positive net income targeted from 2027"
+        },
+        {
+          "label": "Gross Margin",
+          "value": "58%",
+          "note": "Q2 2026, up ~700bps YoY"
+        },
+        {
+          "label": "Net Debt",
+          "value": "~$0.9B",
+          "note": "$3.53B debt vs $2.66B cash and securities"
+        }
       ],
       "summary": "At $5.75 (~$9.7B market cap, ~$10.5B enterprise value) Snap trades at roughly 1.7× EV to TTM revenue and 10× TTM Adjusted EBITDA, against a 7.3% trailing Free Cash Flow yield built on eight consecutive positive quarters. There is no meaningful GAAP earnings multiple — the TTM net loss is real, and management's stated goal is sustained positive net income from 2027. The 74-point valuation score reflects a price sitting closer to the bear case than the base case within a 52-week range of $3.81 to $9.55: the cost cuts and the subscription line are already visible in the multiple, while the two things that would re-rate the stock — advertising growth above the high single digits and North American users that stop shrinking — are not, and neither is the roughly $0.9B of net debt that a leveraged small cap carries into a litigation calendar."
     }
@@ -166,7 +211,7 @@
       "note": "Snap holds data no competitor can buy: a mutual-consent friend graph across 971M monthly users, the Snap Map location and Places graph where friend data drives 65% of new visits, Bitmoji identity, and Memories as a personal media archive. It is non-public and compounds with use. It has not converted into ranking parity, though — the same quarter's 9% advertising growth against Meta's 27% is the measure of how much less this data set is worth per user than the one across the street."
     },
     "regulatoryLockIn": {
-      "status": "destroyed",
+      "status": "na",
       "note": "Regulation runs against Snap rather than for it, and creates no switching barrier for anyone. Section 230 protects every platform equally, while Snap carries an open EU Digital Services Act proceeding into minor protection (26 March 2026), JCCP bellwether trials from October 2026, school-district trials in February 2027, and Nevada and New Mexico attorney-general trials in August 2027. Age-assurance and online-safety compliance is a fixed cost that favours Meta's and Google's scale over a $9.7B company's."
     },
     "networkEffects": {
@@ -174,8 +219,8 @@
       "note": "The mutual-friend graph is Snap's real moat: 493M daily and 971M monthly users, over 75% of 13–34 year-olds in more than 25 countries, and a messaging relationship a user cannot exit unilaterally. It is intact rather than strong because it is measurably leaking at the top of the ARPU curve — North American daily users are down 7% year-over-year to 92M and Europe down 2% to 98M, with all net growth in Rest of World at $1.00 ARPU. A strong network effect does not shed 7% of its most valuable cohort in a year, however slowly."
     },
     "transactionEmbedding": {
-      "status": "destroyed",
-      "note": "N/A — Snap is a messaging and advertising platform, not a payment or settlement processor, and is embedded in no customer's transaction rails. If anything the flow runs the other way: subscription billing for Snapchat+ and Lens+ is collected through the Apple and Google app stores, so Snap pays the toll rather than charging it. This moat category does not apply."
+      "status": "na",
+      "note": "Snap is a messaging and advertising platform, not a payment or settlement processor, and is embedded in no customer's transaction rails. If anything the flow runs the other way: subscription billing for Snapchat+ and Lens+ is collected through the Apple and Google app stores, so Snap pays the toll rather than charging it. This moat category does not apply."
     },
     "systemOfRecord": {
       "status": "weakened",

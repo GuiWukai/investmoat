@@ -4,12 +4,24 @@
   "name": "Nike",
   "lastAnalyzed": "May 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "NKE" },
-    { "label": "Market Cap", "value": "~$62B" }
+    {
+      "label": "Ticker",
+      "value": "NKE"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$62B"
+    }
   ],
   "chips": [
-    { "label": "Athletic Apparel | Footwear", "color": "primary" },
-    { "label": "Turnaround", "color": "warning" }
+    {
+      "label": "Athletic Apparel | Footwear",
+      "color": "primary"
+    },
+    {
+      "label": "Turnaround",
+      "color": "warning"
+    }
   ],
   "metrics": [
     {
@@ -59,9 +71,21 @@
       "cagrEstimate": "2-5%",
       "scoreDerivation": "Base 60 (4-8% CAGR low band) + 3 turnaround optionality (Hill leadership, NA order book) - 7 China deterioration (20% Q4 decline guided) - 3 competition (Hoka/On + Anta share gain) = 53",
       "drivers": [
-        { "name": "North America", "metric": "Strong summer order book; mgmt sees positive sell-through despite Mideast disruption", "trend": "stable" },
-        { "name": "Greater China", "metric": "Q4 FY26 guided ~-20%; Anta capturing basketball/lifestyle share", "trend": "decelerating" },
-        { "name": "Innovation Cadence", "metric": "2026 product cycle reportedly deepest in 5 years; key swing factor", "trend": "accelerating" }
+        {
+          "name": "North America",
+          "metric": "Strong summer order book; mgmt sees positive sell-through despite Mideast disruption",
+          "trend": "stable"
+        },
+        {
+          "name": "Greater China",
+          "metric": "Q4 FY26 guided ~-20%; Anta capturing basketball/lifestyle share",
+          "trend": "decelerating"
+        },
+        {
+          "name": "Innovation Cadence",
+          "metric": "2026 product cycle reportedly deepest in 5 years; key swing factor",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "market share",
       "keyRisk": "If China continues declining 15%+ into FY27 and tariff pass-through fails (class-action over tariff pricing already filed), gross margin recovery stalls below 43% and FY27 EPS comes in below $4, pushing the bear case to <$35.",
@@ -75,11 +99,31 @@
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
-        { "label": "Forward P/E (FY26)", "value": "~13×", "note": "EPS ~$3.30; trough cycle" },
-        { "label": "Forward P/E (FY27)", "value": "~10×", "note": "Assumes EPS recovery to $4.30+" },
-        { "label": "Price / Sales (FY26)", "value": "~1.3×", "note": "Deepest discount to historical median in 10+ years" },
-        { "label": "Dividend Yield", "value": "~3.8%", "note": "Sustained through trough cycle" },
-        { "label": "FCF Yield", "value": "~7%", "note": "FCF compressed; recovers with margin" }
+        {
+          "label": "Forward P/E (FY26)",
+          "value": "~13×",
+          "note": "EPS ~$3.30; trough cycle"
+        },
+        {
+          "label": "Forward P/E (FY27)",
+          "value": "~10×",
+          "note": "Assumes EPS recovery to $4.30+"
+        },
+        {
+          "label": "Price / Sales (FY26)",
+          "value": "~1.3×",
+          "note": "Deepest discount to historical median in 10+ years"
+        },
+        {
+          "label": "Dividend Yield",
+          "value": "~3.8%",
+          "note": "Sustained through trough cycle"
+        },
+        {
+          "label": "FCF Yield",
+          "value": "~7%",
+          "note": "FCF compressed; recovers with margin"
+        }
       ],
       "summary": "Valuation prices in a failed turnaround; any FY27 inflection or China stabilisation drives material upside."
     }
@@ -115,15 +159,15 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — consumer brand, not interface."
+      "status": "na",
+      "note": "consumer brand, not interface."
     },
     "businessLogic": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "publicDataAccess": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "talentScarcity": {
@@ -139,19 +183,19 @@
       "note": "Nike+ membership and DTC data on hundreds of millions of consumers feeds product development and personalised marketing."
     },
     "regulatoryLockIn": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "networkEffects": {
-      "status": "destroyed",
-      "note": "N/A — consumer brand, not network."
+      "status": "na",
+      "note": "consumer brand, not network."
     },
     "transactionEmbedding": {
       "status": "weakened",
       "note": "Subscription not material; embedment is brand affinity, not technical lock-in."
     },
     "systemOfRecord": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "verdict": "Nike's moat is brand + scale + product cadence — AI is largely neutral (improves marketing efficiency, accelerates design but does not threaten the brand). The thesis question is execution-and-China, not technological obsolescence; with stock at $42 (52-week low) and FY27 EPS recovery still intact, the risk/reward has improved despite worsening China — turnaround thesis is now priced as failed."

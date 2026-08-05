@@ -45,16 +45,16 @@ Search for current data before scoring anything. Do not rely on training data fo
 
 ## Step 2 — Ten Moats Assessment
 
-Rate each moat as `strong / intact / weakened / destroyed`. For each, answer: *Is AI making this moat stronger or weaker?*
+Rate each moat as `strong / intact / weakened / destroyed / na`. For each, answer: *Is AI making this moat stronger or weaker?*
 
 **Before scoring, determine the business type:**
 - **Software/platform businesses** (e.g., MSFT, CRM, META): all 10 moats are potentially applicable
-- **Hardware/physical monopolies** (e.g., ASML, TSM): transaction embedding, system of record, learned interfaces are often N/A → set to `"destroyed"` with note explaining N/A
-- **Regulated assets / utilities** (e.g., CEG): interface, data, bundling moats are often N/A → set to `"destroyed"` with N/A note
-- **Luxury/physical goods** (e.g., RACE): business logic, data access, system of record are often N/A → set to `"destroyed"` with N/A note
+- **Hardware/physical monopolies** (e.g., ASML, TSM): transaction embedding, system of record, learned interfaces are often N/A → set status `"na"` with a short reason
+- **Regulated assets / utilities** (e.g., CEG): interface, data, bundling moats are often N/A → set status `"na"` with a short reason
+- **Luxury/physical goods** (e.g., RACE): business logic, data access, system of record are often N/A → set status `"na"` with a short reason
 - **Commodities/crypto** (e.g., BTC, XAU): most software moats are N/A; focus on network effects and regulatory recognition
 
-**N/A rule:** If a moat category genuinely doesn't apply to the business model, mark it `"destroyed"` and write `"N/A — [reason]"` in the note. Do not force-fit inapplicable moats.
+**N/A rule:** If a moat category genuinely doesn't apply to the business model, set `"status": "na"` and explain why in the note. Do not force-fit inapplicable moats, and do not use `"destroyed"` for N/A.
 
 ### AI-Vulnerable Moats
 
@@ -124,7 +124,7 @@ Calculate `moat.score` (0–100) using the following:
 | `strong` | 100 |
 | `intact` | 75 |
 | `weakened` | 40 |
-| `destroyed` (N/A) | excluded from average |
+| `na` | excluded from average |
 | `destroyed` (genuine weakness) | 0 |
 
 **Weighting:**
@@ -354,16 +354,16 @@ Produce a structured report with these sections:
 **Ten Moats Breakdown:**
 | Moat | Status | AI Impact |
 |------|--------|-----------|
-| Learned Interfaces       | strong/intact/weakened/destroyed | strengthened/weakened/neutral/N/A |
-| Business Logic Lock-in   | strong/intact/weakened/destroyed | strengthened/weakened/neutral/N/A |
-| Public Data Access       | strong/intact/weakened/destroyed | strengthened/weakened/neutral/N/A |
-| Talent Scarcity          | strong/intact/weakened/destroyed | strengthened/weakened/neutral/N/A |
-| Bundling                 | strong/intact/weakened/destroyed | strengthened/weakened/neutral/N/A |
-| Proprietary Data         | strong/intact/weakened/destroyed | strengthened/weakened/neutral/N/A |
-| Regulatory Lock-in       | strong/intact/weakened/destroyed | strengthened/weakened/neutral/N/A |
-| Network Effects          | strong/intact/weakened/destroyed | strengthened/weakened/neutral/N/A |
-| Transaction Embedding    | strong/intact/weakened/destroyed | strengthened/weakened/neutral/N/A |
-| System of Record         | strong/intact/weakened/destroyed | strengthened/weakened/neutral/N/A |
+| Learned Interfaces       | strong/intact/weakened/destroyed/na | strengthened/weakened/neutral/N/A |
+| Business Logic Lock-in   | strong/intact/weakened/destroyed/na | strengthened/weakened/neutral/N/A |
+| Public Data Access       | strong/intact/weakened/destroyed/na | strengthened/weakened/neutral/N/A |
+| Talent Scarcity          | strong/intact/weakened/destroyed/na | strengthened/weakened/neutral/N/A |
+| Bundling                 | strong/intact/weakened/destroyed/na | strengthened/weakened/neutral/N/A |
+| Proprietary Data         | strong/intact/weakened/destroyed/na | strengthened/weakened/neutral/N/A |
+| Regulatory Lock-in       | strong/intact/weakened/destroyed/na | strengthened/weakened/neutral/N/A |
+| Network Effects          | strong/intact/weakened/destroyed/na | strengthened/weakened/neutral/N/A |
+| Transaction Embedding    | strong/intact/weakened/destroyed/na | strengthened/weakened/neutral/N/A |
+| System of Record         | strong/intact/weakened/destroyed/na | strengthened/weakened/neutral/N/A |
 
 **Verdict:** [2–4 sentences covering AI beneficiary/loser, strongest moats, biggest AI risks]
 

@@ -4,13 +4,28 @@
   "name": "Qualcomm Incorporated",
   "lastAnalyzed": "May 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "QCOM" },
-    { "label": "Market Cap", "value": "~$197B" }
+    {
+      "label": "Ticker",
+      "value": "QCOM"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$197B"
+    }
   ],
   "chips": [
-    { "label": "Semiconductors | Mobile | Auto | Data Center AI", "color": "primary" },
-    { "label": "Royalty Cash Flow", "color": "success" },
-    { "label": "Mobile Cyclicality", "color": "warning" }
+    {
+      "label": "Semiconductors | Mobile | Auto | Data Center AI",
+      "color": "primary"
+    },
+    {
+      "label": "Royalty Cash Flow",
+      "color": "success"
+    },
+    {
+      "label": "Mobile Cyclicality",
+      "color": "warning"
+    }
   ],
   "metrics": [
     {
@@ -64,10 +79,26 @@
       "cagrEstimate": "5-10%",
       "scoreDerivation": "Base 55 (5-15% CAGR mid-band) + 5 automotive backlog ($45B+ design wins, record Q2) + 5 data center AI optionality (HUMAIN 200MW) - 5 Apple modem displacement (Apple C1/C2 in 2026 iPhones, reducing QCT handset revenue) - 2 Android demand softness (Q3 FY2026 guidance -7% YoY) = 58",
       "drivers": [
-        { "name": "QCT Handsets (Snapdragon)", "metric": "~60% of revenue; -3% YoY in Q2 FY2026; Apple modem loss accelerating", "trend": "decelerating" },
-        { "name": "QCT Automotive", "metric": "Record Q2 FY2026; $45B+ design-win backlog; tracking $10B+ FY2029 run-rate", "trend": "accelerating" },
-        { "name": "QTL Licensing", "metric": "~$1.5B/quarter recurring; cross-license renewals through 2028+", "trend": "stable" },
-        { "name": "Data Center AI (AI200/AI250)", "metric": "HUMAIN 200MW commitment 2026; commercial revenue from H2 FY2026", "trend": "accelerating" }
+        {
+          "name": "QCT Handsets (Snapdragon)",
+          "metric": "~60% of revenue; -3% YoY in Q2 FY2026; Apple modem loss accelerating",
+          "trend": "decelerating"
+        },
+        {
+          "name": "QCT Automotive",
+          "metric": "Record Q2 FY2026; $45B+ design-win backlog; tracking $10B+ FY2029 run-rate",
+          "trend": "accelerating"
+        },
+        {
+          "name": "QTL Licensing",
+          "metric": "~$1.5B/quarter recurring; cross-license renewals through 2028+",
+          "trend": "stable"
+        },
+        {
+          "name": "Data Center AI (AI200/AI250)",
+          "metric": "HUMAIN 200MW commitment 2026; commercial revenue from H2 FY2026",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If Apple completes full modem in-housing across the iPhone lineup by FY2027 AND Samsung shifts Galaxy S27 to Exynos again, QCT handset revenue could decline 15%+ and the diversification narrative (auto + AI) cannot offset the absolute revenue loss before FY2028.",
@@ -81,11 +112,31 @@
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~16×", "note": "TTM EPS ~$11.50" },
-        { "label": "Forward P/E (NTM)", "value": "~14×", "note": "consensus FY2026 EPS ~$13.30" },
-        { "label": "PEG Ratio", "value": "~1.6×", "note": "fwd P/E / ~9% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~4.6×", "note": "~$43B NTM revenue" },
-        { "label": "FCF Yield", "value": "~6%", "note": "~$12B TTM FCF" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~16×",
+          "note": "TTM EPS ~$11.50"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~14×",
+          "note": "consensus FY2026 EPS ~$13.30"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.6×",
+          "note": "fwd P/E / ~9% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~4.6×",
+          "note": "~$43B NTM revenue"
+        },
+        {
+          "label": "FCF Yield",
+          "value": "~6%",
+          "note": "~$12B TTM FCF"
+        }
       ],
       "summary": "QCOM screens cheap on absolute multiples (~14× forward P/E), but the PEG of ~1.6 reflects the market's view that growth is structurally muted by Apple modem loss. The asymmetry comes from auto + AI inference optionality: if either segment accelerates materially, the multiple re-rates from semis-laggard to semis-average. The 6% FCF yield + capital return program provides a real floor."
     }
@@ -132,8 +183,8 @@
       "note": "Qualcomm's modem and RF front-end designs embody decades of accumulated cellular signal processing know-how that competitors cannot reverse-engineer. The Hexagon NPU represents a similar accumulated body of low-power AI inference IP. This is genuinely proprietary technical knowledge."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "Not applicable — Qualcomm is a chip and IP licensing company, not a data platform; controlling access to a public data source is not part of the business model."
+      "status": "na",
+      "note": "Qualcomm is a chip and IP licensing company, not a data platform; controlling access to a public data source is not part of the business model."
     },
     "talentScarcity": {
       "status": "strong",
@@ -160,8 +211,8 @@
       "note": "Snapdragon chips are physically embedded in 70%+ of premium Android handsets and an expanding share of vehicles, but they are not embedded in the financial transaction layer. Some embedding via secure enclave / SE for mobile payments, but this is not a primary moat."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "Not applicable — Qualcomm does not maintain a system-of-record platform; it sells chips and licenses IP."
+      "status": "na",
+      "note": "Qualcomm does not maintain a system-of-record platform; it sells chips and licenses IP."
     },
     "verdict": "Qualcomm's moat structure is led by regulatoryLockIn (essential 5G/6G patents), businessLogic (modem + Hexagon NPU IP), and talentScarcity (RF/standards engineers). These moats are highly AI-resilient — generative AI does not threaten cellular standards, and on-device AI actually plays into Hexagon's strengths. The structural risks are not AI-related: they are (1) Apple's continued modem in-housing, which compresses QCT handset revenue, and (2) execution risk on data center AI inference (AI200/AI250) where NVIDIA and AMD are entrenched. The QTL royalty stream alone justifies a meaningful floor valuation; the question is whether automotive + AI compound on top of a stable handset business or merely backfill against Apple-driven mobile decline."
   }

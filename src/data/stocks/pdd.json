@@ -4,12 +4,24 @@
   "name": "PDD Holdings",
   "lastAnalyzed": "May 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "PDD" },
-    { "label": "Market Cap", "value": "~$170B" }
+    {
+      "label": "Ticker",
+      "value": "PDD"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$170B"
+    }
   ],
   "chips": [
-    { "label": "China E-commerce | Temu", "color": "primary" },
-    { "label": "China + Geopolitical Risk", "color": "warning" }
+    {
+      "label": "China E-commerce | Temu",
+      "color": "primary"
+    },
+    {
+      "label": "China + Geopolitical Risk",
+      "color": "warning"
+    }
   ],
   "metrics": [
     {
@@ -59,9 +71,21 @@
       "cagrEstimate": "20-30%",
       "scoreDerivation": "Base 85 (>30% CAGR mid-band) + 3 international scale (Temu in 70+ markets) - 3 Temu loss / margin compression - 3 US tariff / de minimis regulatory risk = 82",
       "drivers": [
-        { "name": "Pinduoduo (Domestic)", "metric": "+15-20% YoY GMV; mature high-margin core", "trend": "stable" },
-        { "name": "Temu International", "metric": "+50%+ YoY GMV; loss-making but scaling", "trend": "accelerating" },
-        { "name": "Duo Duo Group", "metric": "Agriculture commerce growing on Chinese rural digitisation", "trend": "stable" }
+        {
+          "name": "Pinduoduo (Domestic)",
+          "metric": "+15-20% YoY GMV; mature high-margin core",
+          "trend": "stable"
+        },
+        {
+          "name": "Temu International",
+          "metric": "+50%+ YoY GMV; loss-making but scaling",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Duo Duo Group",
+          "metric": "Agriculture commerce growing on Chinese rural digitisation",
+          "trend": "stable"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If US closes the de minimis loophole on Chinese cross-border parcels and applies broad Section 301 tariffs to Temu, Temu's unit economics flip from loss-leading to unviable in major markets and the international growth thesis collapses, compressing the multiple toward Pinduoduo standalone.",
@@ -75,11 +99,31 @@
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
-        { "label": "Forward P/E (FY26)", "value": "~12×", "note": "EPS ~$10; deep growth discount" },
-        { "label": "Forward P/E ex-cash", "value": "~9×", "note": "Stripping $45B net cash" },
-        { "label": "Price / Sales (FY26)", "value": "~3×", "note": "Discount to global peers" },
-        { "label": "PEG Ratio", "value": "~0.5×", "note": "Cheap on growth, none on regulatory" },
-        { "label": "FCF Yield", "value": "~7%", "note": "FCF strong despite Temu losses" }
+        {
+          "label": "Forward P/E (FY26)",
+          "value": "~12×",
+          "note": "EPS ~$10; deep growth discount"
+        },
+        {
+          "label": "Forward P/E ex-cash",
+          "value": "~9×",
+          "note": "Stripping $45B net cash"
+        },
+        {
+          "label": "Price / Sales (FY26)",
+          "value": "~3×",
+          "note": "Discount to global peers"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~0.5×",
+          "note": "Cheap on growth, none on regulatory"
+        },
+        {
+          "label": "FCF Yield",
+          "value": "~7%",
+          "note": "FCF strong despite Temu losses"
+        }
       ],
       "summary": "Valuation prices in worst-case Temu disruption; cash position alone supports significant downside cushion."
     }
@@ -123,7 +167,7 @@
       "note": "Manufacturer-direct platform + group-buying logic + cross-border fulfilment is real differentiated business logic."
     },
     "publicDataAccess": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "talentScarcity": {

@@ -170,8 +170,8 @@
       "note": "Chip designs built on ARM IP — including custom implementations by Apple (Firestorm, Avalanche cores) and Qualcomm (Oryon) — embed years of silicon engineering on ARM's architecture. The Total License Agreement structure means that licensees configure ARM IP into their custom designs, creating deep technical and contractual embeddedness."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — ARM is an IP licensing company, not a data business. Public data access is not a meaningful moat dimension."
+      "status": "na",
+      "note": "ARM is an IP licensing company, not a data business. Public data access is not a meaningful moat dimension."
     },
     "talentScarcity": {
       "status": "strong",
@@ -194,12 +194,12 @@
       "note": "The ARM software ecosystem is the largest in computing: 325B+ cumulative chips create a base of ARM-compiled software (iOS, Android, macOS, cloud VMs) that makes any new architecture uncompetitive by default. RISC-V has had 20 years and billions in backing but cannot match the software ecosystem — the network effect makes ARM the rational choice for any new chip design that must run existing software."
     },
     "transactionEmbedding": {
-      "status": "destroyed",
-      "note": "N/A — ARM is an IP licensing company. Transaction embedding does not apply."
+      "status": "na",
+      "note": "ARM is an IP licensing company. Transaction embedding does not apply."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — ARM does not operate a system of record for any business function. Not applicable."
+      "status": "na",
+      "note": "ARM does not operate a system of record for any business function. Not applicable."
     },
     "verdict": "ARM is a strong net beneficiary of AI — AI inference is the highest-growth compute workload, and ARM's power-efficiency advantage makes ARM-based chips the economically rational choice for inference at every scale from smartphone to data center. The Armv9 architecture's performance improvements for AI workloads (larger matrix math units, improved memory bandwidth) directly increase ARM's royalty rates as customers upgrade. The primary AI risk is that AI training (not inference) favors NVIDIA's CUDA ecosystem, which could push the AI compute center of gravity toward x86/NVIDIA architectures at the training layer — though inference at the edge and hyperscaler inference (AWS Graviton, Microsoft Cobalt) strongly favors ARM."
   }

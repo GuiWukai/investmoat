@@ -78,9 +78,21 @@
       "cagrEstimate": "12-18%",
       "scoreDerivation": "Base 82 (15%+ blended CAGR) + AI-test demand accelerant (+3) + robotics ramp optionality (+2) - ATE cyclicality (-6) = 81",
       "drivers": [
-        { "name": "Semiconductor Test", "metric": "Q1'26 $1.11B; AI/datacenter test driving +87% total revenue growth", "trend": "accelerating" },
-        { "name": "Robotics", "metric": "$91M in Q1'26, up from $69M a year earlier; 4 straight quarters of growth", "trend": "accelerating" },
-        { "name": "FY2026 Outlook", "metric": "~$4.32B revenue, ~$6.46 EPS consensus (~63% EPS growth)", "trend": "accelerating" }
+        {
+          "name": "Semiconductor Test",
+          "metric": "Q1'26 $1.11B; AI/datacenter test driving +87% total revenue growth",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Robotics",
+          "metric": "$91M in Q1'26, up from $69M a year earlier; 4 straight quarters of growth",
+          "trend": "accelerating"
+        },
+        {
+          "name": "FY2026 Outlook",
+          "metric": "~$4.32B revenue, ~$6.46 EPS consensus (~63% EPS growth)",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "both",
       "keyRisk": "A semiconductor capex down-cycle cuts ATE orders sharply while the still-small robotics segment cannot offset it, and a ~66× multiple de-rates hard on any growth disappointment.",
@@ -131,8 +143,8 @@
       "note": "A production test program is customised and yield-correlated to a specific Teradyne platform over months of qualification. Re-porting and re-correlating it to a competitor's tester is expensive and risky, so incumbency persists across chip generations — encoded process knowledge AI cannot shortcut."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "Not applicable — Teradyne is a test-equipment and robotics hardware business with no reliance on public data aggregation as a moat source."
+      "status": "na",
+      "note": "Teradyne is a test-equipment and robotics hardware business with no reliance on public data aggregation as a moat source."
     },
     "talentScarcity": {
       "status": "intact",

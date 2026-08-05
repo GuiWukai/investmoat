@@ -1,7 +1,7 @@
 // Types and utility for the Ten Moats framework.
 // Moat assessment data now lives in src/data/stocks/*.json
 
-export type MoatStatus = 'strong' | 'intact' | 'weakened' | 'destroyed';
+export type MoatStatus = 'strong' | 'intact' | 'weakened' | 'destroyed' | 'na';
 
 export interface MoatAssessment {
   status: MoatStatus;

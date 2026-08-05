@@ -4,12 +4,24 @@
   "name": "Keyence Corporation",
   "lastAnalyzed": "May 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "6861.T / KYCCF" },
-    { "label": "Market Cap", "value": "~¥18T (~$120B)" }
+    {
+      "label": "Ticker",
+      "value": "6861.T / KYCCF"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~¥18T (~$120B)"
+    }
   ],
   "chips": [
-    { "label": "Factory Automation | Sensors", "color": "primary" },
-    { "label": "Premium Quality Compounder", "color": "success" }
+    {
+      "label": "Factory Automation | Sensors",
+      "color": "primary"
+    },
+    {
+      "label": "Premium Quality Compounder",
+      "color": "success"
+    }
   ],
   "metrics": [
     {
@@ -59,9 +71,21 @@
       "cagrEstimate": "8-12%",
       "scoreDerivation": "Base 75 (8-15% CAGR mid-band) + 3 EV / semi capex tailwind - 3 mature core market - 3 yen FX volatility (when reporting in USD) = 72",
       "drivers": [
-        { "name": "Asia ex-Japan Capex", "metric": "China + SE Asia + India factory automation capex", "trend": "stable" },
-        { "name": "EV Battery and Semis", "metric": "Highest-precision inspection demand for EV battery and semis fab", "trend": "accelerating" },
-        { "name": "Pharma & Medical Manufacturing", "metric": "Inspection + traceability demand growing on regulation", "trend": "accelerating" }
+        {
+          "name": "Asia ex-Japan Capex",
+          "metric": "China + SE Asia + India factory automation capex",
+          "trend": "stable"
+        },
+        {
+          "name": "EV Battery and Semis",
+          "metric": "Highest-precision inspection demand for EV battery and semis fab",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Pharma & Medical Manufacturing",
+          "metric": "Inspection + traceability demand growing on regulation",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If factory automation capex digestion deepens in China through 2026-27 and EV battery capex moderates simultaneously, Keyence revenue growth could compress to low single digits and the multiple — historically held at 30×+ — could compress to 20-22× before stabilising.",
@@ -75,11 +99,31 @@
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
-        { "label": "Forward P/E (FY26)", "value": "~28×", "note": "Quality industrial; lower half of historical range" },
-        { "label": "Forward P/E (FY27)", "value": "~25×", "note": "Assumes 10% EPS growth on capex recovery" },
-        { "label": "Price / Sales (FY26)", "value": "~13×", "note": "Reflects 50% operating margin" },
-        { "label": "PEG Ratio", "value": "~2.5×", "note": "Premium on durability + cash" },
-        { "label": "EV / EBITDA (NTM)", "value": "~17×", "note": "Discount to Cognex ~30× and Fanuc ~20×" }
+        {
+          "label": "Forward P/E (FY26)",
+          "value": "~28×",
+          "note": "Quality industrial; lower half of historical range"
+        },
+        {
+          "label": "Forward P/E (FY27)",
+          "value": "~25×",
+          "note": "Assumes 10% EPS growth on capex recovery"
+        },
+        {
+          "label": "Price / Sales (FY26)",
+          "value": "~13×",
+          "note": "Reflects 50% operating margin"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~2.5×",
+          "note": "Premium on durability + cash"
+        },
+        {
+          "label": "EV / EBITDA (NTM)",
+          "value": "~17×",
+          "note": "Discount to Cognex ~30× and Fanuc ~20×"
+        }
       ],
       "summary": "Valuation is full but defensible by margin and balance-sheet quality; the franchise rarely trades cheap and current levels are an entry point on quality terms."
     }
@@ -123,7 +167,7 @@
       "note": "Application-specific configuration, inspection logic, and inline-process programming embed Keyence in customer manufacturing recipes — replacing this is a multi-quarter qualification exercise."
     },
     "publicDataAccess": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "talentScarcity": {
@@ -143,7 +187,7 @@
       "note": "Once specified into a regulated manufacturing process (pharma, medical, food), Keyence sensors are validated into the process and replacement requires re-qualification."
     },
     "networkEffects": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "transactionEmbedding": {
@@ -151,7 +195,7 @@
       "note": "Sensors and vision systems embed into manufacturing recipes for the production-line lifetime (5-15 years); swap-out is a process re-qualification event."
     },
     "systemOfRecord": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "verdict": "Keyence is one of the highest-quality industrial franchises globally — direct sales + application knowledge + ~50% margins. AI is a net positive (machine-vision deep-learning expands TAM and complexity, favouring Keyence's application-engineering depth). The franchise question is capex cyclicality, not technological obsolescence."

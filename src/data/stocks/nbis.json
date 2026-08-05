@@ -159,16 +159,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "Not applicable — Nebius sells raw GPU cloud capacity and developer tooling to AI labs and hyperscalers, not consumer UI experiences."
+      "status": "na",
+      "note": "Nebius sells raw GPU cloud capacity and developer tooling to AI labs and hyperscalers, not consumer UI experiences."
     },
     "businessLogic": {
-      "status": "destroyed",
-      "note": "Not applicable — Nebius runs CUDA workloads on NVIDIA hardware with a thin orchestration layer; no proprietary business-logic moat."
+      "status": "na",
+      "note": "Nebius runs CUDA workloads on NVIDIA hardware with a thin orchestration layer; no proprietary business-logic moat."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "Not applicable — Nebius does not derive moat from public data access."
+      "status": "na",
+      "note": "Nebius does not derive moat from public data access."
     },
     "talentScarcity": {
       "status": "weakened",
@@ -179,24 +179,24 @@
       "note": "Nebius bundles GPU compute + cloud platform + developer tools (post-Eigen AI), but customers can replicate or migrate to AWS/Azure/GCP — the bundle is convenience-driven, not structural lock-in."
     },
     "proprietaryData": {
-      "status": "destroyed",
+      "status": "na",
       "note": "Customer AI workloads are private; Nebius does not derive proprietary data moat from the compute it sells."
     },
     "regulatoryLockIn": {
-      "status": "destroyed",
-      "note": "Not applicable — Yandex separation in 2024 removed Russian regulatory entanglement; no Western regulatory protection exists."
+      "status": "na",
+      "note": "Yandex separation in 2024 removed Russian regulatory entanglement; no Western regulatory protection exists."
     },
     "networkEffects": {
-      "status": "destroyed",
-      "note": "Not applicable — GPU compute is fungible across providers; no network effect between Nebius customers."
+      "status": "na",
+      "note": "GPU compute is fungible across providers; no network effect between Nebius customers."
     },
     "transactionEmbedding": {
       "status": "weakened",
       "note": "Multi-year capacity contracts (Meta $27B, Microsoft $19.4B) embed Nebius operationally for the contract life, but contract renewal is open competition with CoreWeave and hyperscalers."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "Not applicable — Nebius is not the system of record for any customer's AI workload metadata or training history."
+      "status": "na",
+      "note": "Nebius is not the system of record for any customer's AI workload metadata or training history."
     },
     "verdict": "Nebius's moat is narrow and unproven: NVIDIA equity backing plus inherited Yandex infrastructure heritage provide early advantages, but most of the 10 moats are destroyed or weakened. The business is fundamentally a hypergrowth, leveraged, concentrated GPU cloud with execution risk on a $16–20B capex plan. Investment thesis rests entirely on growth (88 score) and the durability of NVIDIA preferred-partner status. Suitable only as a small speculative position sized to risk; high volatility and thin analyst coverage amplify drawdown potential."
   },

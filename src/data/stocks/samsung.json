@@ -184,12 +184,12 @@
       "note": "One UI and the Galaxy ecosystem create habitual behavior, but Android's openness means switching to a rival OEM (Google, OnePlus, Xiaomi) costs little — no meaningful data or workflow lock-in the way iOS creates for Apple."
     },
     "businessLogic": {
-      "status": "destroyed",
-      "note": "N/A — Samsung is fundamentally a hardware manufacturer; no proprietary business logic moat comparable to a software platform."
+      "status": "na",
+      "note": "Samsung is fundamentally a hardware manufacturer; no proprietary business logic moat comparable to a software platform."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — Samsung does not derive competitive advantage from public data access."
+      "status": "na",
+      "note": "Samsung does not derive competitive advantage from public data access."
     },
     "talentScarcity": {
       "status": "intact",
@@ -216,8 +216,8 @@
       "note": "The industry-wide shift to 3-5 year HBM supply contracts now extends to Samsung's NVIDIA-qualified HBM4 volume, and Samsung Foundry's design-ins with Tesla (AI5/AI6) and IBM (2nm) create multi-year customer roadmap embedding similar to TSMC's and Micron's."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — Samsung is a component and device supplier, not a system of record for any critical business function; customers dual- and triple-source memory and foundry capacity across Samsung, SK Hynix, Micron, and TSMC."
+      "status": "na",
+      "note": "Samsung is a component and device supplier, not a system of record for any critical business function; customers dual- and triple-source memory and foundry capacity across Samsung, SK Hynix, Micron, and TSMC."
     },
     "verdict": "Samsung is a genuine but lagging beneficiary of the AI era: the memory supercycle (DRAM/NAND/HBM4) and Foundry's Tesla AI-chip relationship are direct AI tailwinds, and proprietaryData, regulatoryLockIn, and transactionEmbedding are all intact or strengthening as multi-year HBM contracts and government backing deepen. But Samsung trails SK Hynix and Micron in HBM4 execution and TSMC in foundry yield, and its AI-vulnerable consumer moats (learnedInterfaces, bundling, networkEffects) remain weakened by Android's openness — making Samsung a slower, more diluted AI beneficiary than its focused semiconductor peers."
   },

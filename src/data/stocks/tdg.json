@@ -71,9 +71,21 @@
       "cagrEstimate": "12-18%",
       "scoreDerivation": "Base 70 + 10 (raised FY2026 guide and 18.3% organic+M&A growth) + 5 (NATO defense ramp and aftermarket pricing) - 5 (leverage and rate sensitivity) = 80",
       "drivers": [
-        { "name": "Aftermarket Price Escalation", "metric": "5-8% annual price increases on ~85% sole-source parts", "trend": "stable" },
-        { "name": "M&A Compounding", "metric": "Jet Parts Engineering + Victor Sierra add ~$280M annualized revenue; FY2026 guide raised to $10.3-10.4B", "trend": "accelerating" },
-        { "name": "Defense & MRO Demand", "metric": "Q2 FY2026 revenue +18.3% YoY; EBITDA margin 52.6% (+ ~100bps)", "trend": "accelerating" }
+        {
+          "name": "Aftermarket Price Escalation",
+          "metric": "5-8% annual price increases on ~85% sole-source parts",
+          "trend": "stable"
+        },
+        {
+          "name": "M&A Compounding",
+          "metric": "Jet Parts Engineering + Victor Sierra add ~$280M annualized revenue; FY2026 guide raised to $10.3-10.4B",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Defense & MRO Demand",
+          "metric": "Q2 FY2026 revenue +18.3% YoY; EBITDA margin 52.6% (+ ~100bps)",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "both",
       "keyRisk": "Sustained high interest rates lifting interest expense above $1.5B and a cyclical air-travel shock would simultaneously compress FCF and slow MRO volumes within 12-24 months.",
@@ -140,7 +152,7 @@
       "note": "Not a software company — business logic lock-in does not meaningfully apply. Proprietary engineering specifications are protected, but this moat category is not a primary driver for an aerospace components manufacturer."
     },
     "publicDataAccess": {
-      "status": "weakened",
+      "status": "na",
       "note": "Not applicable in the traditional sense. Flight data is shared with regulators and does not constitute a competitive data moat. TransDigm's edge is in proprietary designs, not data access control."
     },
     "talentScarcity": {
@@ -160,7 +172,7 @@
       "note": "FAA PMA and DOD MIL-SPEC certifications are the core moat. An alternative supplier must spend 5–10 years and tens of millions in certification costs. AI cannot bypass government airworthiness standards — the FAA will not certify AI-designed substitutes without decades of testing data."
     },
     "networkEffects": {
-      "status": "weakened",
+      "status": "na",
       "note": "No meaningful network effects. Each part is effectively a bilateral monopoly between TransDigm and the customer. Scale increases operational leverage and negotiating power in acquisitions, but there is no user-driven network flywheel."
     },
     "transactionEmbedding": {

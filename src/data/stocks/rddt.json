@@ -203,7 +203,7 @@
       "note": "Reddit possesses the most valuable proprietary human discourse dataset in existence: 18+ years of threaded discussion across 100,000+ communities, capturing authentic reasoning, debate, domain expertise, and collective intelligence at a scale that cannot be synthetically generated. Google, OpenAI, and other AI companies pay hundreds of millions for licensing access because their models require authentic human text that reflects real disagreement, uncertainty, and domain-specific jargon. As AI training data demand grows, Reddit's data moat becomes more valuable, not less — and the company has exclusive control over API pricing and licensing terms."
     },
     "regulatoryLockIn": {
-      "status": "destroyed",
+      "status": "na",
       "note": "Reddit has no meaningful regulatory lock-in. Section 230 protections benefit all social platforms equally. No government procurement cycles, industry-specific compliance requirements, or regulatory certifications differentiate Reddit's market position. The 2023 API pricing controversy demonstrated Reddit's vulnerability to community pushback when attempting to enforce commercial terms, suggesting regulatory leverage is limited."
     },
     "networkEffects": {
@@ -211,8 +211,8 @@
       "note": "Reddit's subreddit structure creates extremely dense, topic-specific network effects: more engaged users per subreddit → higher-quality discussion → better answers → more users seeking those answers. Critically, these network effects are community-specific, not platform-wide — r/personalfinance, r/MachineLearning, r/wallstreetbets, and r/AskDocs have achieved critical mass with years of accumulated Q&A that no competing platform has replicated. The 2023 API crisis (user blackouts, mod protests) demonstrated that despite platform-level controversy, subreddit communities did not migrate — the switching cost of relocating an entire community with its history and moderation infrastructure is prohibitive. Meta's May 2026 launch of Forum, a Facebook Groups-based app explicitly copying Reddit's community format, is an early test of this moat's durability, though it remains embryonic next to Reddit's 126.8M DAUq and accumulated community history."
     },
     "transactionEmbedding": {
-      "status": "destroyed",
-      "note": "N/A — Reddit is a social media and content platform, not a financial transaction processor. Reddit is not embedded in payment flows, financial settlements, or commercial transaction infrastructure. This moat category does not apply."
+      "status": "na",
+      "note": "Reddit is a social media and content platform, not a financial transaction processor. Reddit is not embedded in payment flows, financial settlements, or commercial transaction infrastructure. This moat category does not apply."
     },
     "systemOfRecord": {
       "status": "strong",

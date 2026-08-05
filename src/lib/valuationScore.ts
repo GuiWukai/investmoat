@@ -16,15 +16,15 @@ import type {
 //
 // `destroyed` is 0, not a token 10, so the ends of the scale mean something
 // literal: a moat score of 0 says all ten applicable moats are destroyed, and
-// 100 says all ten are strong. This also sharpens the distinction from N/A —
-// an N/A moat is dropped and its weight redistributed (the moat never applied),
-// whereas a destroyed moat keeps its weight and scores nothing (it applied and
-// is gone). Under the old floor those two cases were only 10 points apart.
+// 100 says all ten are strong. N/A is a separate status (`na`) — dropped and
+// its weight redistributed (the moat never applied) — so it cannot be confused
+// with a destroyed moat that keeps its weight and scores nothing. Under an
+// earlier note-prefix convention those two cases were easy to mis-author.
 const MOAT_POINTS: Record<string, number> = { strong: 100, intact: 65, weakened: 35, destroyed: 0 };
 
 /** Returns null for N/A moats (excluded from group average), number otherwise. */
 function moatPoints(m: { status: string; note: string }): number | null {
-  if (m.status === 'destroyed' && (m.note.startsWith('N/A') || m.note.startsWith('Not applicable'))) return null;
+  if (m.status === 'na') return null;
   return MOAT_POINTS[m.status] ?? 0;
 }
 
@@ -95,8 +95,8 @@ function qualityGatedBreadthBonus(intactOrBetterCount: number): number {
  * ontology) route to the resilient pool where their economics belong, rather
  * than being demoted into the vulnerable group by default.
  *
- * N/A moats (destroyed status with "N/A" or "Not applicable" note) are excluded
- * from the score; their weight is dropped so it redistributes naturally.
+ * N/A moats (`status: "na"`) are excluded from the score; their weight is
+ * dropped so it redistributes naturally.
  *
  * Adjustments applied to the weighted base:
  *   • Quality-gated breadth bonus: +0 to +4 for moats rated intact-or-better
@@ -174,8 +174,8 @@ export function computeMoatScore(tenMoats: TenMoatsData): number {
 
 // Both commodity and crypto frameworks use dynamic weights via primaryMoat:
 // the declared primary pillar carries the most weight, the non-primary pillars
-// split the rest equally. N/A pillars (destroyed with "N/A"/"Not applicable"
-// note) drop out and their weight redistributes.
+// split the rest equally. N/A pillars (`status: "na"`) drop out and their
+// weight redistributes.
 //
 // WHY THE PRIMARY WEIGHT IS NO LONGER 50%. Unlike MOAT_SPEC, where the
 // framework fixes every weight, primaryMoat is declared per asset — so the

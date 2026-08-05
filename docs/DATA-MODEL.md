@@ -36,7 +36,7 @@ Key fields:
 
 ### Moat assessment
 
-Each moat is `{ status, note, aiExposure? }` where `status` is `strong | intact | weakened | destroyed`. Use `destroyed` + a note starting with `N/A` for moats that don't apply (they're excluded from scoring). Set `aiExposure: 'resilient'` to mark a normally-vulnerable moat as AI-strengthened for this company. The pillar sets per asset class and their weights are documented in [SCORING.md](./SCORING.md).
+Each moat is `{ status, note, aiExposure? }` where `status` is `strong | intact | weakened | destroyed | na`. Use `na` for moats that don't apply to the business model (they're excluded from scoring; weight redistributes). Use `destroyed` only when the moat once applied and is gone. Set `aiExposure: 'resilient'` to mark a normally-vulnerable moat as AI-strengthened for this company. The pillar sets per asset class and their weights are documented in [SCORING.md](./SCORING.md).
 
 ### Growth analysis (required)
 

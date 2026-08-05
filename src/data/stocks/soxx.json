@@ -132,16 +132,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — SOXX is a passive index ETF wrapper with no user-facing software interface."
+      "status": "na",
+      "note": "SOXX is a passive index ETF wrapper with no user-facing software interface."
     },
     "businessLogic": {
-      "status": "destroyed",
-      "note": "N/A — the fund mechanically tracks the ICE Semiconductor Index; there is no proprietary business logic."
+      "status": "na",
+      "note": "the fund mechanically tracks the ICE Semiconductor Index; there is no proprietary business logic."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — index methodology and constituents are fully public; the wrapper has no data moat of its own."
+      "status": "na",
+      "note": "index methodology and constituents are fully public; the wrapper has no data moat of its own."
     },
     "talentScarcity": {
       "status": "intact",
@@ -168,8 +168,8 @@
       "note": "Semiconductors are embedded in every modern device and workload, but the ETF wrapper itself is not embedded in any customer workflow."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — an index fund is not a system of record for any customer or business function."
+      "status": "na",
+      "note": "an index fund is not a system of record for any customer or business function."
     },
     "verdict": "SOXX inherits the AI-resilient moats of its constituents — TSMC's foundry monopoly, ASML's EUV monopoly, NVIDIA's CUDA network — while diluting single-name risk. The wrapper itself has no moat, but the underlying basket is structurally the AI build-out's most defensible exposure."
   },

@@ -4,13 +4,28 @@
   "name": "Bird Construction Inc.",
   "lastAnalyzed": "August 5, 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "BDT (TSX)" },
-    { "label": "Market Cap", "value": "~C$3.9B" }
+    {
+      "label": "Ticker",
+      "value": "BDT (TSX)"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~C$3.9B"
+    }
   ],
   "chips": [
-    { "label": "Industrials | Canadian Construction", "color": "primary" },
-    { "label": "Backlog Compounder", "color": "success" },
-    { "label": "Cyclical", "color": "warning" }
+    {
+      "label": "Industrials | Canadian Construction",
+      "color": "primary"
+    },
+    {
+      "label": "Backlog Compounder",
+      "color": "success"
+    },
+    {
+      "label": "Cyclical",
+      "color": "warning"
+    }
   ],
   "metrics": [
     {
@@ -89,11 +104,31 @@
     "peAnalysis": {
       "asOf": "August 2026",
       "rows": [
-        { "label": "Trailing P/E (TTM)", "value": "~79×", "note": "Distorted by impairments; TTM GAAP EPS ~C$0.90" },
-        { "label": "Forward P/E (NTM)", "value": "~25×", "note": "~C$70 / ~C$2.77 implied NTM EPS" },
-        { "label": "EV / Sales (TTM)", "value": "~1.2×", "note": "EV ~C$4.05B on ~C$3.46B TTM revenue" },
-        { "label": "EV / Adj. EBITDA", "value": "~18×", "note": "On FY25 Adj. EBITDA C$222M; premium to historical Bird" },
-        { "label": "FCF Yield", "value": "~3.6%", "note": "TTM FCF ~C$141M; monthly dividend ~1.2%" }
+        {
+          "label": "Trailing P/E (TTM)",
+          "value": "~79×",
+          "note": "Distorted by impairments; TTM GAAP EPS ~C$0.90"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~25×",
+          "note": "~C$70 / ~C$2.77 implied NTM EPS"
+        },
+        {
+          "label": "EV / Sales (TTM)",
+          "value": "~1.2×",
+          "note": "EV ~C$4.05B on ~C$3.46B TTM revenue"
+        },
+        {
+          "label": "EV / Adj. EBITDA",
+          "value": "~18×",
+          "note": "On FY25 Adj. EBITDA C$222M; premium to historical Bird"
+        },
+        {
+          "label": "FCF Yield",
+          "value": "~3.6%",
+          "note": "TTM FCF ~C$141M; monthly dividend ~1.2%"
+        }
       ],
       "summary": "The clean valuation lens is forward earnings and backlog, not trailing GAAP. ~25× forward is a full multiple for a Canadian GC — justified only if 2026–27 double-digit growth and the march to 8% Adj. EBITDA land. Versus Quanta-style US specialty contractors the multiple is still lower, but Bird's moat and TAM are narrower, so the asymmetry is limited after the re-rating."
     }
@@ -129,16 +164,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "Not applicable — physical construction and maintenance contractor with no end-user software interface."
+      "status": "na",
+      "note": "physical construction and maintenance contractor with no end-user software interface."
     },
     "businessLogic": {
       "status": "weakened",
       "note": "Internal estimating, project controls, and collaborative-delivery playbooks improve bid accuracy, but they are not an externally defensible software franchise competitors cannot copy."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "Not applicable — no public-data aggregation moat."
+      "status": "na",
+      "note": "no public-data aggregation moat."
     },
     "talentScarcity": {
       "status": "intact",
@@ -157,16 +192,16 @@
       "note": "Surety bonding capacity, safety prequalification, and public-sector/Indigenous partnership frameworks create multi-year gates for large Canadian awards — real barriers for new entrants, contested among incumbents."
     },
     "networkEffects": {
-      "status": "destroyed",
-      "note": "Not applicable — services contractor with no user-network dynamics."
+      "status": "na",
+      "note": "services contractor with no user-network dynamics."
     },
     "transactionEmbedding": {
       "status": "intact",
       "note": "Multi-year MSAs and recurring industrial maintenance relationships embed Bird in customer work programs; pending backlog includes >C$1.5B of MSA/recurring revenue over five years."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "Not applicable — not a system of record for customers."
+      "status": "na",
+      "note": "not a system of record for customers."
     },
     "verdict": "Bird is an AI-resilient physical contractor whose durability comes from bonding capacity, MSA embedding, and diversified self-perform — not from software moats AI could hollow out. The franchise is real but narrow: national Canadian peers can still contest every major package, so this remains a well-run cyclical compounder rather than a wide-moat compounder."
   }

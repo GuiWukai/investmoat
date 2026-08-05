@@ -70,9 +70,21 @@
       "cagrEstimate": "30–35%",
       "scoreDerivation": "Base 91 (30–35% CAGR, baseFromCagr formula) + 4 trajectory (3 of 3 drivers accelerating) + 4 expanding margins + 4 both TAM/share − 10 high keyRisk severity (Claude Design/Google Vibe AI-native disruption, unconfirmed in data but structural) = 93",
       "drivers": [
-        { "name": "Core Design Platform", "metric": "+46% YoY Q1 2026, $333.4M quarterly revenue, accelerating from +40% in Q4", "trend": "accelerating" },
-        { "name": "AI Credits (Make, Sites, Weave)", "metric": "Monetisation live since March 2026; contributed to Q1 beat and raised FY26 opinc guide", "trend": "accelerating" },
-        { "name": "Enterprise Expansion", "metric": "NDR 139% Q1 2026 (2-yr high), $100K+ ARR cohort +48% YoY to 1,525 accounts", "trend": "accelerating" }
+        {
+          "name": "Core Design Platform",
+          "metric": "+46% YoY Q1 2026, $333.4M quarterly revenue, accelerating from +40% in Q4",
+          "trend": "accelerating"
+        },
+        {
+          "name": "AI Credits (Make, Sites, Weave)",
+          "metric": "Monetisation live since March 2026; contributed to Q1 beat and raised FY26 opinc guide",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Enterprise Expansion",
+          "metric": "NDR 139% Q1 2026 (2-yr high), $100K+ ARR cohort +48% YoY to 1,525 accounts",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "both",
       "keyRisk": "Claude Design and Google Vibe both launched after Q1 2026 closed, so the 46% growth and raised guidance do not yet reflect their full impact; if either captures meaningful zero-to-one share by Q3/Q4 2026, NDR could reverse from the current 139% high and growth could decelerate back toward or below the ~35% guided range",
@@ -154,8 +166,8 @@
       "note": "Figma's component/variant architecture, design tokens, and shared library logic encode complex organisational design systems that are expensive to replicate or migrate. Claude Design can read these systems from codebases, but cannot yet replace the depth of multi-year enterprise design-system configuration stored in Figma."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — Figma does not derive competitive advantage from controlling access to public data sources."
+      "status": "na",
+      "note": "Figma does not derive competitive advantage from controlling access to public data sources."
     },
     "talentScarcity": {
       "status": "weakened",
@@ -170,8 +182,8 @@
       "note": "Figma holds vast design data from enterprise teams, but Claude Design can ingest a company's codebase and design files to extract and apply brand-consistent design systems — partially replicating Figma's proprietary-data advantage. Google, Canva, and Anthropic are training AI on comparable design corpora without Figma's data exclusivity."
     },
     "regulatoryLockIn": {
-      "status": "destroyed",
-      "note": "N/A — Figma operates in a commercial SaaS market with no meaningful government certification, compliance mandate, or regulatory moat."
+      "status": "na",
+      "note": "Figma operates in a commercial SaaS market with no meaningful government certification, compliance mandate, or regulatory moat."
     },
     "networkEffects": {
       "status": "strong",

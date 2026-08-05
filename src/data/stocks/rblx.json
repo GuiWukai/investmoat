@@ -4,13 +4,28 @@
   "name": "Roblox Corporation",
   "lastAnalyzed": "August 2, 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "RBLX" },
-    { "label": "Market Cap", "value": "~$24B" }
+    {
+      "label": "Ticker",
+      "value": "RBLX"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$24B"
+    }
   ],
   "chips": [
-    { "label": "UGC Gaming Platform | Creator Economy", "color": "primary" },
-    { "label": "Network Effects", "color": "success" },
-    { "label": "Monetisation Reset | FY Guidance Withdrawn", "color": "warning" }
+    {
+      "label": "UGC Gaming Platform | Creator Economy",
+      "color": "primary"
+    },
+    {
+      "label": "Network Effects",
+      "color": "success"
+    },
+    {
+      "label": "Monetisation Reset | FY Guidance Withdrawn",
+      "color": "warning"
+    }
   ],
   "metrics": [
     {
@@ -65,10 +80,26 @@
       "cagrBasis": "Anchored on the two unbounded series that accrue to Roblox and still compound: DAU +10% YoY to 123M and monthly unique payers +15% YoY to 27M in Q2 2026. Bookings are the product of that audience and take per user, and take is currently negative — bookings per DAU $12.66, down ~2% YoY. The reported bookings rate is unusable in either direction right now because the comparison base is distorted: Q4 2025 bookings grew 63% and DAUs 69% on the 2025 viral cycle, which is what turns +8% in Q2 2026 into a guided -14% to -18% in Q3. Stacked over two years the Q3 2026 guide midpoint of ~$1.61B against Q3 2024's ~$1.13B is ~19%/yr, so the estimate is set between the ~10% the audience alone supports and the ~19% the two-year stack implies, and marked toward the lower half because take per user is falling, not flat.",
       "scoreDerivation": "Base 79 (10-18% CAGR, midpoint 14%) - 2 trajectory (three of four drivers decelerating: DAU, bookings, bookings per DAU; only the US over-18 cohort accelerating) - 4 margin compression (Q3 2026 guides Adjusted EBITDA of $0-41M against $152M in Q2 2026, with explicit fixed-cost deleverage on declining bookings) - 5 keyRisk moderate = 68. The cut from the prior 79 is carried almost entirely in the CAGR base rather than in keyRisk, because the deceleration is observed rather than prospective — the guided Q3 bookings decline is a reported number, and the risk term caps at -15 and would understate it.",
       "drivers": [
-        { "name": "Bookings", "metric": "$1.557B Q2 2026, +8% YoY (low end of guide); Q3 guided -14% to -18% YoY, first guided decline", "trend": "decelerating" },
-        { "name": "Bookings per DAU", "metric": "$12.66 Q2 2026, ~-2% YoY; hours per DAU/day 2.59, -4.7%; per-hour monetisation weakest in US/Canada under-18s", "trend": "decelerating" },
-        { "name": "DAU", "metric": "123M Q2 2026, +10% YoY but down from 132M in Q1; Japan +67%, India +64%, US/Canada +6%", "trend": "decelerating" },
-        { "name": "US over-18 cohort", "metric": "DAUs +32% YoY, hours +27%, 18-34s +42%; monetise >50% above under-18s; 57% of global DAUs age-checked", "trend": "accelerating" }
+        {
+          "name": "Bookings",
+          "metric": "$1.557B Q2 2026, +8% YoY (low end of guide); Q3 guided -14% to -18% YoY, first guided decline",
+          "trend": "decelerating"
+        },
+        {
+          "name": "Bookings per DAU",
+          "metric": "$12.66 Q2 2026, ~-2% YoY; hours per DAU/day 2.59, -4.7%; per-hour monetisation weakest in US/Canada under-18s",
+          "trend": "decelerating"
+        },
+        {
+          "name": "DAU",
+          "metric": "123M Q2 2026, +10% YoY but down from 132M in Q1; Japan +67%, India +64%, US/Canada +6%",
+          "trend": "decelerating"
+        },
+        {
+          "name": "US over-18 cohort",
+          "metric": "DAUs +32% YoY, hours +27%, 18-34s +42%; monetise >50% above under-18s; 57% of global DAUs age-checked",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "both",
       "keyRisk": "If the monetisation reset proves structural rather than a comp-and-algorithm artifact — FY2026 bookings finishing below FY2025's $6.79B and FY2027 failing to regain it, with bookings per DAU still under $12.66 by mid-2027 — then the Recommended-for-You trade has not bought retention, it has repriced platform take, and the correct multiple is a mature-platform one rather than a compounder's. The unresolved part is duration, not direction: management declined to say whether 2026 bookings will exceed 2025 and gave no full-year frame to hold them to.",
@@ -82,12 +113,36 @@
     "peAnalysis": {
       "asOf": "August 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "n/m", "note": "Q2 2026 net loss $185M; not GAAP-profitable" },
-        { "label": "Forward P/E (NTM)", "value": "n/m", "note": "Q3 2026 net loss guided $307-348M; FCF and bookings more relevant" },
-        { "label": "Price / Sales (TTM)", "value": "~4.2×", "note": "TTM revenue ~$5.7B; GAAP revenue lags bookings by a 27-month payer life" },
-        { "label": "Price / Bookings (TTM)", "value": "~3.2×", "note": "TTM bookings ~$7.4B; falling as Q3 is guided -14% to -18%" },
-        { "label": "EV / Bookings (TTM)", "value": "~2.6×", "note": "~$4.3B net cash ($6.1B cash and investments vs ~$1.8B debt)" },
-        { "label": "Price / FCF (TTM)", "value": "~15×", "note": "TTM FCF ~$1.64B, but Q3 2026 guided $(60)M-$5M" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "n/m",
+          "note": "Q2 2026 net loss $185M; not GAAP-profitable"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "n/m",
+          "note": "Q3 2026 net loss guided $307-348M; FCF and bookings more relevant"
+        },
+        {
+          "label": "Price / Sales (TTM)",
+          "value": "~4.2×",
+          "note": "TTM revenue ~$5.7B; GAAP revenue lags bookings by a 27-month payer life"
+        },
+        {
+          "label": "Price / Bookings (TTM)",
+          "value": "~3.2×",
+          "note": "TTM bookings ~$7.4B; falling as Q3 is guided -14% to -18%"
+        },
+        {
+          "label": "EV / Bookings (TTM)",
+          "value": "~2.6×",
+          "note": "~$4.3B net cash ($6.1B cash and investments vs ~$1.8B debt)"
+        },
+        {
+          "label": "Price / FCF (TTM)",
+          "value": "~15×",
+          "note": "TTM FCF ~$1.64B, but Q3 2026 guided $(60)M-$5M"
+        }
       ],
       "summary": "Bookings and free cash flow are the right denominators given GAAP unprofitability, and on trailing numbers both look cheap: ~3.2× bookings, ~2.6× EV/bookings, ~15× FCF. Every one of those multiples is measured against a trailing period inflated by the 2025 viral cycle, and the company has guided the next quarter down on both. Sizing the re-rating therefore turns on FY2027 rather than the current print — a return to low-double-digit bookings growth supports a mid-3× forward multiple, while a second year of declining bookings argues for the ~2× a no-growth platform earns."
     }
@@ -134,8 +189,8 @@
       "note": "Roblox's economy engine (Robux + DevEx + creator payouts), physics engine, avatar system, and matchmaking infrastructure represent 18 years of accumulated proprietary technical work. Replicable in principle but operationally costly and requires equivalent platform scale to monetise."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "Not applicable — Roblox is a closed UGC platform; controlling access to a public data source is not part of the business model."
+      "status": "na",
+      "note": "Roblox is a closed UGC platform; controlling access to a public data source is not part of the business model."
     },
     "talentScarcity": {
       "status": "weakened",
@@ -150,8 +205,8 @@
       "note": "Roblox accumulates session-level behavioral data across hundreds of millions of users and billions of play sessions per year — engagement patterns, social graph, in-experience purchases, friend-network discovery. This is genuinely proprietary and compounds with platform scale; AI strengthens the moat by improving recommendation, moderation, and creator monetisation models trained on the data."
     },
     "regulatoryLockIn": {
-      "status": "destroyed",
-      "note": "Not applicable — Roblox has no government certifications, licensure, or accreditation that creates structural switching costs. Regulatory pressure is an active cost rather than a moat, and it has now materialised in cash: five state settlements totalling roughly $54M (Nevada, Alabama, West Virginia, Mississippi, South Dakota), nine further states suing, and 100+ family claims consolidated into multidistrict litigation in the Northern District of California. The settlements mandate age verification before chat, restricted adult-to-minor contact, unencrypted communications for minors and safe-content defaults under 16. The one ambiguity worth noting is that these obligations apply to any platform serving minors at scale, so they raise the cost of entry as well as the cost of operating."
+      "status": "na",
+      "note": "Roblox has no government certifications, licensure, or accreditation that creates structural switching costs. Regulatory pressure is an active cost rather than a moat, and it has now materialised in cash: five state settlements totalling roughly $54M (Nevada, Alabama, West Virginia, Mississippi, South Dakota), nine further states suing, and 100+ family claims consolidated into multidistrict litigation in the Northern District of California. The settlements mandate age verification before chat, restricted adult-to-minor contact, unencrypted communications for minors and safe-content defaults under 16. The one ambiguity worth noting is that these obligations apply to any platform serving minors at scale, so they raise the cost of entry as well as the cost of operating."
     },
     "networkEffects": {
       "status": "strong",

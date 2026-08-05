@@ -136,16 +136,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — quantum hardware is accessed as cloud capacity and via open SDKs; there is no complex, high-switching-cost interface customers invest years mastering."
+      "status": "na",
+      "note": "quantum hardware is accessed as cloud capacity and via open SDKs; there is no complex, high-switching-cost interface customers invest years mastering."
     },
     "businessLogic": {
       "status": "weakened",
       "note": "IonQ ships a full-stack compiler and software layer, but algorithms and toolchains are largely portable across cloud backends and standards are still forming — it is not yet a proprietary business-logic lock-in embedded in customer workflows."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — IonQ does not monetise gated access to a public dataset."
+      "status": "na",
+      "note": "IonQ does not monetise gated access to a public dataset."
     },
     "talentScarcity": {
       "status": "strong",
@@ -165,16 +165,16 @@
       "note": "DARPA (QBI, HARQ), DOE / Oak Ridge relationships and export-controlled quantum hardware are scarce, slow-to-earn assets that gate entry and are AI-resilient — but the franchise is nascent, not yet a certified sole-source national-security pipeline."
     },
     "networkEffects": {
-      "status": "destroyed",
-      "note": "N/A — an additional quantum-hardware customer does not yet make the platform meaningfully more valuable to other users; there is no Metcalfe dynamic at this stage."
+      "status": "na",
+      "note": "an additional quantum-hardware customer does not yet make the platform meaningfully more valuable to other users; there is no Metcalfe dynamic at this stage."
     },
     "transactionEmbedding": {
-      "status": "destroyed",
-      "note": "N/A — IonQ does not sit in a payment or transaction layer of customers' daily operations."
+      "status": "na",
+      "note": "IonQ does not sit in a payment or transaction layer of customers' daily operations."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — it is not the authoritative record for any external business function."
+      "status": "na",
+      "note": "it is not the authoritative record for any external business function."
     },
     "verdict": "IonQ is a net AI beneficiary on the demand side — the compute-hunger driving AI also drives interest in post-classical acceleration — while its applicable moats (fidelity lead, trapped-ion IP, scarce physics talent, government pedigree) are AI-resilient because AI cannot replicate the underlying physics or hardware. It carries none of the AI-vulnerable software moats (no learned interface, no business-logic or data lock-in, no transaction or system-of-record exposure), so AI cannot erode the durability it has. The honest limitation is that the moat is narrow, unproven, and technology-dependent: most categories are N/A or weakened, and the entire thesis rests on fault-tolerant quantum computing becoming commercially real on schedule. The clear quality leader of the quantum pure-plays, but still a pre-commercial bet, not a durable franchise."
   }

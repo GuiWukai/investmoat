@@ -71,9 +71,21 @@
       "cagrBasis": "Currency-neutral net revenue +12% YoY in Q2 2026 and +12% YoY year-to-date (reported +14% YoY and +15% YoY), on gross dollar volume +8% YoY, cross-border volume +12% YoY and switched transactions +9% YoY. Consensus revenue growth is +13.1% YoY for 2026 and +12.5% YoY for 2027. The band sits on the currency-neutral series with services mix carrying the upper half — value-added services at +18% YoY currency-neutral versus the payment network at +8% YoY — and is decayed toward the lower half because rebates and incentives are growing at +20% YoY currency-neutral, faster than the volume they buy.",
       "scoreDerivation": "Base 78 (12–15% net revenue CAGR, midpoint 13.5%) − 1 trajectory (cross-border volume is the one driver that moved: +12% in Q2 2026 after +13% in Q1 and +14% in Q4 2025) + 4 margin expansion (GAAP operating margin 60.2%, +1.5 ppt YoY; adjusted 61.1%, +1.2 ppt) + 0 risk severity (low) = 81",
       "drivers": [
-        { "name": "Cross-Border Volume", "metric": "+12% YoY Q2 2026 local currency (vs +13% Q1 2026, +14% Q4 2025), highest-margin revenue stream", "trend": "decelerating" },
-        { "name": "Value-Added Services", "metric": "+20% YoY Q2 2026 reported, +18% currency-neutral — the same currency-neutral rate as Q1 2026", "trend": "stable" },
-        { "name": "GDV Core Growth", "metric": "+8% YoY Q2 2026 local currency to $2.9T (vs +7% in both Q1 2026 and Q4 2025), purchase volume +10%", "trend": "stable" }
+        {
+          "name": "Cross-Border Volume",
+          "metric": "+12% YoY Q2 2026 local currency (vs +13% Q1 2026, +14% Q4 2025), highest-margin revenue stream",
+          "trend": "decelerating"
+        },
+        {
+          "name": "Value-Added Services",
+          "metric": "+20% YoY Q2 2026 reported, +18% currency-neutral — the same currency-neutral rate as Q1 2026",
+          "trend": "stable"
+        },
+        {
+          "name": "GDV Core Growth",
+          "metric": "+8% YoY Q2 2026 local currency to $2.9T (vs +7% in both Q1 2026 and Q4 2025), purchase volume +10%",
+          "trend": "stable"
+        }
       ],
       "primaryType": "both",
       "keyRisk": "Judge Brian Cogan granted preliminary approval to the revised $38B Visa/Mastercard merchant settlement on 9 June 2026, with the final approval hearing set for 16 November 2026. If final approval holds and merchants adopt surcharging and card-type steering at scale once the rules take effect, and account-to-account or stablecoin rails capture 5%+ of card purchase volume by 2028, the premium-card mix that carries the network yield deteriorates. The NRF and NACS have signalled a Second Circuit appeal that could delay implementation to 2029, so the mechanism is real but sits beyond the forecast window.",
@@ -87,11 +99,31 @@
     "peAnalysis": {
       "asOf": "August 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~31×", "note": "~$18.2 TTM EPS after Q2 2026" },
-        { "label": "Forward P/E (NTM)", "value": "~26×", "note": "consensus EPS est. ~$21.6" },
-        { "label": "PEG Ratio", "value": "~1.7×", "note": "fwd P/E ÷ ~16% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~13×", "note": "~$40B NTM revenue" },
-        { "label": "Price / FCF", "value": "~30×", "note": "$16.7B FCF (TTM)" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~31×",
+          "note": "~$18.2 TTM EPS after Q2 2026"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~26×",
+          "note": "consensus EPS est. ~$21.6"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.7×",
+          "note": "fwd P/E ÷ ~16% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~13×",
+          "note": "~$40B NTM revenue"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~30×",
+          "note": "$16.7B FCF (TTM)"
+        }
       ],
       "summary": "The forward multiple compressed from ~28× to ~26× across the quarter even as the stock rose 6%, because consensus EPS rolled forward faster than the price: the Q2 beat ($5.04 vs $4.77) lifted the 2026 and 2027 estimates and pushed the next-twelve-month base to roughly $21.6. That leaves MA a full turn cheaper than its ~35× five-year average and roughly in line with Visa. The PEG of ~1.7× is the honest caveat — this is a fair price for a mid-teens compounder rather than a discount, and the trailing-to-forward compression from ~31× to ~26× is the earnings ramp doing the work, not multiple expansion."
     }
@@ -127,20 +159,20 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — payment interfaces are a commodity layer; Mastercard's moat is the network, not the interface."
+      "status": "na",
+      "note": "payment interfaces are a commodity layer; Mastercard's moat is the network, not the interface."
     },
     "businessLogic": {
       "status": "weakened",
       "note": "AI-powered payment optimization and real-time rails could erode some traditional card routing advantages over time."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — not applicable to Mastercard's competitive model; its data advantage is proprietary transaction intelligence, not public data access."
+      "status": "na",
+      "note": "not applicable to Mastercard's competitive model; its data advantage is proprietary transaction intelligence, not public data access."
     },
     "talentScarcity": {
-      "status": "destroyed",
-      "note": "N/A — not a meaningful source of durable competitive advantage for a payment network; moat is structural, not talent-driven."
+      "status": "na",
+      "note": "not a meaningful source of durable competitive advantage for a payment network; moat is structural, not talent-driven."
     },
     "bundling": {
       "status": "weakened",

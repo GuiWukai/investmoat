@@ -58,7 +58,7 @@ const FAQS = [
   },
   {
     q: "How is each stock scored?",
-    a: "Three pillars, each scored 0-100, all computed from a structured data file — there are no hand-typed ratings. Moat (40%): for equities, 10 individually-weighted moat types, each rated strong/intact/weakened/destroyed mapping to 100/65/35/0 points, so a moat score of 0 means all ten applicable moats are destroyed and 100 means all ten are strong. AI-resilient moats (networkEffects w=15, proprietaryData w=12, systemOfRecord w=12, regulatoryLockIn w=11, transactionEmbedding w=10) carry 60% of the weight; AI-vulnerable moats (businessLogic w=14, bundling w=10, learnedInterfaces w=8, talentScarcity w=5, publicDataAccess w=3) carry 40%. A quality-gated breadth bonus of +1 to +4 rewards moats rated intact-or-better beyond the fifth, and a -5 discount applies where the vulnerable group outscores the resilient one. Crypto and commodities use their own pillar frameworks. Growth (30%): a blended 3-5 year revenue CAGR sets the base, adjusted for driver trajectory (±4), margin trend (±4, equities only — Bitcoin has no margins), and key-risk severity (down to -15). That CAGR carries roughly 78% of the pillar's variance, which is why it is expected to cite the measured series it answers to rather than being asserted. Valuation (30%): live price against bear/base/bull scenario targets on a piecewise scale — 100 points at 20% below the bear case, 90 at bear, 65 at base, 45 at bull, and 0 at double the bull case. The composite is a geometric blend, so a weak pillar genuinely drags the score rather than being averaged away. Each pillar is standardised against the coverage universe before weighting, so the declared 40/30/30 governs actual influence instead of whichever rubric happens to vary most. A composite of ≥80 makes an asset portfolio-eligible; the top 25 are held.",
+    a: "Three pillars, each scored 0-100, all computed from a structured data file — there are no hand-typed ratings. Moat (40%): for equities, 10 individually-weighted moat types, each rated strong/intact/weakened/destroyed/na mapping to 100/65/35/0/excluded, so a moat score of 0 means all ten applicable moats are destroyed and 100 means all applicable moats are strong. AI-resilient moats (networkEffects w=15, proprietaryData w=12, systemOfRecord w=12, regulatoryLockIn w=11, transactionEmbedding w=10) carry 60% of the weight; AI-vulnerable moats (businessLogic w=14, bundling w=10, learnedInterfaces w=8, talentScarcity w=5, publicDataAccess w=3) carry 40%. A quality-gated breadth bonus of +1 to +4 rewards moats rated intact-or-better beyond the fifth, and a -5 discount applies where the vulnerable group outscores the resilient one. Crypto and commodities use their own pillar frameworks. Growth (30%): a blended 3-5 year revenue CAGR sets the base, adjusted for driver trajectory (±4), margin trend (±4, equities only — Bitcoin has no margins), and key-risk severity (down to -15). That CAGR carries roughly 78% of the pillar's variance, which is why it is expected to cite the measured series it answers to rather than being asserted. Valuation (30%): live price against bear/base/bull scenario targets on a piecewise scale — 100 points at 20% below the bear case, 90 at bear, 65 at base, 45 at bull, and 0 at double the bull case. The composite is a geometric blend, so a weak pillar genuinely drags the score rather than being averaged away. Each pillar is standardised against the coverage universe before weighting, so the declared 40/30/30 governs actual influence instead of whichever rubric happens to vary most. A composite of ≥80 makes an asset portfolio-eligible; the top 25 are held.",
   },
   {
     q: "What makes a moat 'AI-resilient'?",
@@ -384,7 +384,7 @@ export default function HomePage() {
             AI cannot replicate them; five are{" "}
             <span className="text-amber-400 font-semibold">AI-vulnerable</span> (40%) because intelligent
             agents can increasingly substitute for them. Each moat is rated{" "}
-            <span className="text-foreground/60 font-medium">strong (100) · intact (65) · weakened (35) · destroyed (0)</span>.
+            <span className="text-foreground/60 font-medium">strong (100) · intact (65) · weakened (35) · destroyed (0) · na (excluded)</span>.
             Individual moats can be reclassified per company where AI strengthens rather than erodes them —
             NVIDIA&apos;s CUDA, Palantir&apos;s ontology.
           </p>
@@ -567,8 +567,8 @@ export default function HomePage() {
             </div>
             <p className="text-foreground/30 text-xs leading-relaxed">
               Each moat is rated{" "}
-              <span className="text-foreground/50 font-medium">strong (100) · intact (65) · weakened (35) · destroyed (0)</span>.
-              N/A moats are excluded and their weight redistributed. A{" "}
+              <span className="text-foreground/50 font-medium">strong (100) · intact (65) · weakened (35) · destroyed (0) · na (excluded)</span>.
+              Inapplicable moats use status <span className="text-foreground/50 font-medium">na</span> and their weight redistributes. A{" "}
               <span className="text-foreground/50 font-medium">quality-gated breadth bonus of +1 to +4</span> rewards
               each moat rated intact-or-better beyond the fifth — broad mediocrity earns nothing — and a{" "}
               <span className="text-foreground/50 font-medium">-5 discount</span> applies where the AI-vulnerable

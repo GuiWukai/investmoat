@@ -71,9 +71,21 @@
       "cagrEstimate": "10-15%",
       "scoreDerivation": "Base 65 + 10 (Calpine accretion and 2026 EPS +21%) + 5 (TMI restart and hyperscaler PPA pipeline) - 5 (PPA renegotiation risk post AI executive order) = 75",
       "drivers": [
-        { "name": "Hyperscaler PPA Repricing", "metric": "20-year contracts with Microsoft (835 MW), Meta (1.1 GW), Alphabet (500 MW) at 30-50% premium pricing", "trend": "accelerating" },
-        { "name": "Calpine Integration", "metric": "55 GW combined fleet; 2026 EPS guide $11.37 (+21% YoY); EBITDA margin 21.4%", "trend": "accelerating" },
-        { "name": "Three Mile Island Restart", "metric": "835 MW Crane Clean Energy Center on track for Q4 2027 under Microsoft 20-year PPA", "trend": "stable" }
+        {
+          "name": "Hyperscaler PPA Repricing",
+          "metric": "20-year contracts with Microsoft (835 MW), Meta (1.1 GW), Alphabet (500 MW) at 30-50% premium pricing",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Calpine Integration",
+          "metric": "55 GW combined fleet; 2026 EPS guide $11.37 (+21% YoY); EBITDA margin 21.4%",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Three Mile Island Restart",
+          "metric": "835 MW Crane Clean Energy Center on track for Q4 2027 under Microsoft 20-year PPA",
+          "trend": "stable"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "Hyperscaler PPA renegotiations following the Trump AI executive order, plus NRC delays on the TMI restart, could push major revenue catalysts from 2027 into 2028-2030.",
@@ -129,16 +141,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — Constellation Energy is a power generator; there is no user-facing interface that creates switching costs; this moat category does not apply to a utility business model."
+      "status": "na",
+      "note": "Constellation Energy is a power generator; there is no user-facing interface that creates switching costs; this moat category does not apply to a utility business model."
     },
     "businessLogic": {
       "status": "intact",
       "note": "Constellation's nuclear fleet management — fuel procurement, outage scheduling, NRC regulatory compliance, and power dispatch optimization — represents decades of proprietary operational expertise; replicating this knowledge base at a new nuclear facility would take 15-20 years of operating experience."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — Constellation Energy does not control access to any unique public data source; this moat category does not apply to its business model."
+      "status": "na",
+      "note": "Constellation Energy does not control access to any unique public data source; this moat category does not apply to its business model."
     },
     "talentScarcity": {
       "status": "strong",
@@ -157,7 +169,7 @@
       "note": "NRC licenses require multi-year approvals for each reactor and individual licensed operators for specific plant positions; once granted and staffed, these licenses create near-insurmountable barriers to entry and plant-specific operational rights that cannot be transferred or replicated — nuclear regulatory lock-in is arguably the strongest physical-world regulatory moat in US industry."
     },
     "networkEffects": {
-      "status": "weakened",
+      "status": "na",
       "note": "No meaningful network effects exist in power generation; the product (electrons) is a commodity when delivered to the grid; the value proposition is carbon-free attributes and 24/7 reliability, not network participation."
     },
     "transactionEmbedding": {
@@ -165,8 +177,8 @@
       "note": "20-year PPAs with Microsoft, Meta, and Alphabet embed Constellation as the power infrastructure partner for the next generation of AI data centers — contracts of this duration and strategic importance create deep bilateral dependencies; a hyperscaler replacing CEG would need to find alternative 24/7 carbon-free baseload power that effectively doesn't exist at scale today."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — Constellation Energy is not a system of record for any information function; this moat category does not apply to a power generation business."
+      "status": "na",
+      "note": "Constellation Energy is not a system of record for any information function; this moat category does not apply to a power generation business."
     },
     "verdict": "Constellation Energy is a beneficiary of AI adoption through its data center PPA contracts, but AI cannot meaningfully strengthen or weaken its core nuclear infrastructure moat — the advantages (NRC licensing, physical plant ownership, operational expertise) are independent of AI. The primary risk is AI efficiency improvements reducing data center power demand growth; the primary upside is AI-driven demand accelerating faster than the grid can add capacity."
   },

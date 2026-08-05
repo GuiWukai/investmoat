@@ -177,16 +177,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — Micron is a B2B semiconductor manufacturer with no consumer interface lock-in."
+      "status": "na",
+      "note": "Micron is a B2B semiconductor manufacturer with no consumer interface lock-in."
     },
     "businessLogic": {
-      "status": "destroyed",
-      "note": "N/A — memory chips have no embedded business-logic moat."
+      "status": "na",
+      "note": "memory chips have no embedded business-logic moat."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — Micron does not derive competitive advantage from public data access."
+      "status": "na",
+      "note": "Micron does not derive competitive advantage from public data access."
     },
     "talentScarcity": {
       "status": "intact",
@@ -205,16 +205,16 @@
       "note": "CHIPS Act $6.4B in total grants for Idaho and New York fabs makes Micron a designated US national security asset. The US government has an explicit interest in Micron's success as the only US-based DRAM manufacturer — and export controls on Samsung/SK Hynix to China further entrench Micron's strategic position."
     },
     "networkEffects": {
-      "status": "destroyed",
-      "note": "N/A — no network effects exist in commodity memory; customers buy on price, availability, and quality specifications, not ecosystem lock-in."
+      "status": "na",
+      "note": "no network effects exist in commodity memory; customers buy on price, availability, and quality specifications, not ecosystem lock-in."
     },
     "transactionEmbedding": {
       "status": "intact",
       "note": "HBM qualification is specific per GPU generation, and the industry has shifted from quarterly DRAM negotiations to 3–5 year HBM supply contracts with named hyperscalers — a structural change that materially deepens Micron's embedding in customer roadmaps. CY2026 HBM is fully booked and CY2027–2028 capacity is increasingly committed. Samsung and SK Hynix remain qualified alternatives, but multi-year contracts now create meaningful cross-generation switching cost."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — memory is a commodity input; Micron is not a system of record for any business function; customers source from all three suppliers simultaneously."
+      "status": "na",
+      "note": "memory is a commodity input; Micron is not a system of record for any business function; customers source from all three suppliers simultaneously."
     },
     "verdict": "Micron is a clear net beneficiary of AI — the HBM4 supercycle is directly driven by AI infrastructure build-out, talentScarcity and proprietaryData are strengthened by AI's demand for specialised chip design, and the shift to 3–5 year HBM contracts has upgraded transactionEmbedding from weakened to intact. The moat is materially better than a year ago, but Micron still does not own a software layer, a data flywheel, or a network effect that compounds independently of the hardware cycle, so durability remains tied to the HBM margin premium holding through CY2027–2028."
   },

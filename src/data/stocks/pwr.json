@@ -4,12 +4,24 @@
   "name": "Quanta Services",
   "lastAnalyzed": "May 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "PWR" },
-    { "label": "Market Cap", "value": "~$112B" }
+    {
+      "label": "Ticker",
+      "value": "PWR"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$112B"
+    }
   ],
   "chips": [
-    { "label": "Electrical Infrastructure | EPC", "color": "primary" },
-    { "label": "Grid Build-Out | AI Power Beneficiary", "color": "success" }
+    {
+      "label": "Electrical Infrastructure | EPC",
+      "color": "primary"
+    },
+    {
+      "label": "Grid Build-Out | AI Power Beneficiary",
+      "color": "success"
+    }
   ],
   "metrics": [
     {
@@ -59,9 +71,21 @@
       "cagrEstimate": "15-18%",
       "scoreDerivation": "Base 80 (15-30% CAGR mid-band) + 8 record backlog with 1.6× book-to-bill (multi-year visibility) + 3 guide raise post-Q1 - 6 cyclicality / project execution risk = 85",
       "drivers": [
-        { "name": "Utility Transmission & Distribution", "metric": "Multi-decade up-cycle on AI load growth + grid hardening; MSA backlog +25% YoY", "trend": "accelerating" },
-        { "name": "Renewables Interconnect", "metric": "Solar + storage interconnect queues drive EPC pipeline through 2030", "trend": "accelerating" },
-        { "name": "Pipeline / Industrial", "metric": "LNG export build + industrial reshoring; mid-single-digit growth", "trend": "stable" }
+        {
+          "name": "Utility Transmission & Distribution",
+          "metric": "Multi-decade up-cycle on AI load growth + grid hardening; MSA backlog +25% YoY",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Renewables Interconnect",
+          "metric": "Solar + storage interconnect queues drive EPC pipeline through 2030",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Pipeline / Industrial",
+          "metric": "LNG export build + industrial reshoring; mid-single-digit growth",
+          "trend": "stable"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If utility capex pulls forward and digests in 2028-29 simultaneously with AI data-centre power moderation, backlog growth pauses and the ~50× multiple compresses sharply — Quanta has shown 30%+ drawdowns on cyclical scares historically and the stock is at a record valuation.",
@@ -75,11 +99,31 @@
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
-        { "label": "Forward P/E (FY26 adj)", "value": "~54×", "note": "EPS $13.90 mid; record-high multiple" },
-        { "label": "Forward P/E (FY27 adj)", "value": "~46×", "note": "Assumes ~17% EPS growth on backlog conversion" },
-        { "label": "PEG Ratio", "value": "~3.0×", "note": "Premium even on durable mid-teens growth" },
-        { "label": "Price / Sales (FY26)", "value": "~3.2×", "note": "EPC services premium reflecting AI grid mix" },
-        { "label": "EV / EBITDA (NTM)", "value": "~32×", "note": "Premium to MasTec ~14× and EMCOR ~18×" }
+        {
+          "label": "Forward P/E (FY26 adj)",
+          "value": "~54×",
+          "note": "EPS $13.90 mid; record-high multiple"
+        },
+        {
+          "label": "Forward P/E (FY27 adj)",
+          "value": "~46×",
+          "note": "Assumes ~17% EPS growth on backlog conversion"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~3.0×",
+          "note": "Premium even on durable mid-teens growth"
+        },
+        {
+          "label": "Price / Sales (FY26)",
+          "value": "~3.2×",
+          "note": "EPC services premium reflecting AI grid mix"
+        },
+        {
+          "label": "EV / EBITDA (NTM)",
+          "value": "~32×",
+          "note": "Premium to MasTec ~14× and EMCOR ~18×"
+        }
       ],
       "summary": "Valuation prices in a multi-year AI grid super-cycle without much room for disappointment; the backlog supports the story but the multiple leaves no margin of safety."
     }
@@ -115,16 +159,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "Not applicable — physical EPC services contractor, no end-user interface."
+      "status": "na",
+      "note": "physical EPC services contractor, no end-user interface."
     },
     "businessLogic": {
       "status": "weakened",
       "note": "Proprietary project management, safety, and productivity systems are real internal tooling but not an externally defensible software franchise."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "Not applicable — no public-data moat."
+      "status": "na",
+      "note": "no public-data moat."
     },
     "talentScarcity": {
       "status": "strong",
@@ -143,16 +187,16 @@
       "note": "Utility prequalification, OSHA safety records, and union/IBEW relationships create real new-entrant barriers — clearing them takes years and a clean incident history."
     },
     "networkEffects": {
-      "status": "destroyed",
-      "note": "Not applicable — services contractor with no network effect."
+      "status": "na",
+      "note": "services contractor with no network effect."
     },
     "transactionEmbedding": {
       "status": "strong",
       "note": "Master service agreements and multi-year framework contracts with most US IOUs make Quanta the default first-call contractor for the duration of the program."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "Not applicable — not a system of record."
+      "status": "na",
+      "note": "not a system of record."
     },
     "verdict": "Quanta is the cleanest pure-play on the US grid build-out and AI power demand, with a genuinely scarce moat in skilled craft labour and entrenched utility relationships. The franchise is durable for the cycle's duration; the only meaningful risk is valuation, which already prices in a long super-cycle with little room for disappointment."
   }

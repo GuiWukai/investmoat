@@ -3,7 +3,7 @@ import { z } from 'zod';
 // Runtime schema for stock JSON files in src/data/stocks/*.json.
 // Kept in sync with src/types/stockAnalysis.ts — when one changes, update the other.
 
-const moatStatusSchema = z.enum(['strong', 'intact', 'weakened', 'destroyed']);
+const moatStatusSchema = z.enum(['strong', 'intact', 'weakened', 'destroyed', 'na']);
 
 const recommendationSchema = z.enum([
   'Strong Buy',
@@ -38,14 +38,30 @@ const analysisPointSchema = z.strictObject({
   text: z.string().min(1),
 });
 
-const moatAssessmentSchema = z.strictObject({
-  status: moatStatusSchema,
-  note: z.string().min(1),
-  // Optional per-stock override of AI exposure routing. See
-  // MoatAssessmentData in src/types/stockAnalysis.ts and computeMoatScore
-  // in src/lib/valuationScore.ts for how this is consumed.
-  aiExposure: z.enum(['resilient', 'vulnerable']).optional(),
-});
+const moatAssessmentSchema = z
+  .strictObject({
+    status: moatStatusSchema,
+    note: z.string().min(1),
+    // Optional per-stock override of AI exposure routing. See
+    // MoatAssessmentData in src/types/stockAnalysis.ts and computeMoatScore
+    // in src/lib/valuationScore.ts for how this is consumed.
+    aiExposure: z.enum(['resilient', 'vulnerable']).optional(),
+  })
+  .superRefine((m, ctx) => {
+    // Guard against the old note-prefix convention: N/A must be status "na",
+    // never destroyed + "N/A — …". That mix silently scored zero at full weight.
+    if (
+      m.status === 'destroyed' &&
+      (m.note.startsWith('N/A') || m.note.startsWith('Not applicable'))
+    ) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message:
+          'Use status "na" for inapplicable moats — do not mark destroyed with an N/A note',
+        path: ['status'],
+      });
+    }
+  });
 
 const score0to100 = z.number().int().min(0).max(100);
 
