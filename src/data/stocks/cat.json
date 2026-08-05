@@ -2,34 +2,34 @@
   "slug": "cat",
   "ticker": "CAT",
   "name": "Caterpillar Inc.",
-  "lastAnalyzed": "July 2, 2026",
+  "lastAnalyzed": "August 5, 2026",
   "headerStats": [
     { "label": "Ticker", "value": "CAT" },
-    { "label": "Market Cap", "value": "~$440B" }
+    { "label": "Market Cap", "value": "~$404B" }
   ],
   "chips": [
-    { "label": "Heavy Equipment | Mining | Energy", "color": "primary" },
+    { "label": "Heavy Equipment | Mining | Power & Energy", "color": "primary" },
     { "label": "Autonomous Mining + Data Center Power", "color": "success" }
   ],
   "metrics": [
     {
       "title": "Record Backlog",
-      "value": "$63B",
-      "label": "+22% QoQ, +79% YoY (Q1 2026); data centre + mining led",
+      "value": "$72B",
+      "label": "+$9B QoQ, +92% YoY (Q2 2026); all three primary segments",
       "icon": "Box",
       "color": "#0ea5e9"
     },
     {
-      "title": "Q1 2026 Revenue",
-      "value": "$17.4B",
-      "label": "+22% YoY; beat consensus by $0.9B",
+      "title": "Q2 2026 Revenue",
+      "value": "$20.5B",
+      "label": "+24% YoY; first $20B+ quarter; adj. EPS $8.17",
       "icon": "TrendingUp",
       "color": "#10b981"
     },
     {
-      "title": "ME&T Free Cash Flow",
-      "value": "$9.5B",
-      "label": "FY2025; FY2026 guided higher",
+      "title": "MP&E Free Cash Flow",
+      "value": "$5.1B",
+      "label": "Q2 2026; FY2026 guided top half of $6–15B",
       "icon": "DollarSign",
       "color": "#f59e0b"
     }
@@ -48,8 +48,8 @@
         "text": "Caterpillar's Command autonomous haulage system operates 800+ trucks globally, having moved 11+ billion tonnes without a lost-time injury. Vale is quintupling its autonomous CAT fleet to ~90 units by 2028. At CONEXPO 2026, CAT showcased autonomous excavators for construction, and in 2026 CAT began developing autonomous retrofit kits for third-party trucks (including Komatsu's 930E) — a signal the Command platform is becoming an industry standard rather than a CAT-iron-only feature. The autonomous installed base creates a data flywheel — more autonomous hours generate better algorithms, which attract more mining customers to the platform."
       },
       {
-        "title": "Energy & Transportation — Data Centre Power Tailwind",
-        "text": "CAT's Energy & Transportation segment (~41% of revenue) supplies reciprocating generators, gas turbines, and power systems for data centres. AI infrastructure buildout is driving structural demand growth — Q1 2026 E&T revenue surged, and management raised the 5-year forecast on power and energy. This is a long-duration tailwind tied to global AI capex, not a one-quarter phenomenon."
+        "title": "Power & Energy — Data Centre Power Tailwind",
+        "text": "CAT's Power & Energy segment (~40% of Q2 sales) supplies reciprocating generators, gas turbines, and power systems for data centres. Q2 2026 power generation sales rose 29% and P&E segment sales +17% to $8.2B; gas-prime orders now extend into 2028–29 and some customer forecasts reach 2030. Capacity — not demand — is the binding constraint, with turbine capacity targeted at 2.5× 2024 levels. This is a long-duration tailwind tied to global AI capex, not a one-quarter phenomenon."
       },
       {
         "title": "Services Flywheel — 40% of Revenue, Growing",
@@ -58,62 +58,63 @@
     ]
   },
   "growth": {
-    "description": "Q1 2026 revenue of $17.4B (+22% YoY) beat consensus by $0.9B; adjusted EPS $5.54 (+30% YoY). FY2025 delivered record $67.6B revenue and $9.5B ME&T free cash flow. Management raised FY2026 guidance and the 5-year outlook, driven by data centre power demand and mining autonomy. Tariff headwind of $2.2-2.4B in FY2026 partially offset by pricing and mix.",
+    "description": "Q2 2026 sales of $20.5B (+24% YoY) were the first $20B+ quarter in company history; adjusted EPS $8.17 (+73% YoY) beat consensus by ~$2. Backlog rose $9B sequentially to a record $72B (+92% YoY). Construction Industries led (+35%; North America +50%), Power & Energy grew 17% with power generation +29%, and Resource Industries +20%. Management raised FY2026 sales guidance to mid-to-high teens and narrowed tariff costs to ~$2.2B; MP&E FCF guided to the top half of the $6–15B range.",
     "growthAnalysis": {
       "cagrEstimate": "8-12%",
-      "scoreDerivation": "Base 73 (8-12% CAGR mid-band) + 1 trajectory (E&T accelerating) + 4 margin expansion (services + data centre mix shift) + 4 both (data centre TAM + mining autonomy) - 5 cyclicality risk (tariffs + macro sensitivity) = 77",
+      "cagrBasis": "H1 2026 sales $38.0B (+23% YoY); FY2026 guide mid-to-high teens off FY2025 $67.6B; pre-revision consensus still fades to ~11% revenue growth in 2027. The 8–12% blended 3–5yr estimate sits between the raised 2026 print and a cycle-normal mid-single-digit fade — not the peak quarter annualised. Near-term acceleration is charged in the drivers (Construction flipped accelerating on +35%), not by rebasing the CAGR on one guidance raise.",
+      "scoreDerivation": "Base 73 (8–12% CAGR mid-band) + 2.7 trajectory (Power & Energy and Construction accelerating; Resource Industries stable) + 4 margin expansion (mix + volume leverage) − 5 cyclicality/tariff risk = 75. Kept the CAGR band: mid-teens is a 2026 print, not a new multi-year slope, and raising the base on a single guidance step would ratchet the pillar twice.",
       "drivers": [
-        { "name": "Energy & Transportation", "metric": "Data centre power + gas turbines; +22% Q1 2026 revenue; 5-year forecast raised", "trend": "accelerating" },
-        { "name": "Resource Industries", "metric": "Mining capex recovery + autonomy; 800+ autonomous trucks; Vale fleet 5× expansion", "trend": "stable" },
-        { "name": "Construction Industries", "metric": "Infrastructure spending (IIJA); non-residential construction; modest volume growth", "trend": "stable" }
+        { "name": "Power & Energy", "metric": "Power generation +29% Q2; segment +17% to $8.2B; gas-prime orders into 2028–29; capacity-constrained", "trend": "accelerating" },
+        { "name": "Resource Industries", "metric": "Mining/HC/Q&A +22% Q2; segment +20% to $4.6B; autonomy fleet still expanding", "trend": "stable" },
+        { "name": "Construction Industries", "metric": "Segment +35% to $8.3B; North America +50%; retail +22% — flipped from modest/stable", "trend": "accelerating" }
       ],
       "primaryType": "both",
-      "keyRisk": "If AI data centre capex moderates below 15% growth in 2027 simultaneously with a mining capex downturn, E&T and RI growth halves and the premium multiple compresses from ~40× to 22-25× — CAT already trades at a three-decade-high price/sales ratio, and Michael Burry's July 2026 short disclosure shows sophisticated capital is already positioning for that de-rating. CAT has historically experienced 30-40% drawdowns on cyclical scares.",
+      "keyRisk": "If AI data centre capex moderates below 15% growth in 2027 simultaneously with a mining or construction downturn, P&E and equipment growth halves and the premium multiple compresses from the mid-30s toward 22–25× — CAT still trades at a multi-decade-high price/sales ratio versus history, and Michael Burry's July 2026 short disclosure shows sophisticated capital positioning for that de-rating. CAT has historically experienced 30–40% drawdowns on cyclical scares.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 62,
-    "description": "At ~$955 CAT trades 5% above the base case ($910) and roughly 16% of the way toward the bull case ($1,200) — the AI-infrastructure narrative has pushed price/sales to its highest level in at least three decades. The stock hit an all-time high of ~$1,065 on June 30, 2026 before pulling back after Michael Burry disclosed a short position on July 1 citing overvaluation. Record backlog and the data centre tailwind support elevated demand, but margin of safety is thin and re-rating risk is now visibly in play.",
+    "score": 71,
+    "description": "At ~$877 CAT sits about 10% below the base case ($980) — roughly three-quarters of the way from bear ($580) to base — after recovering part of the July pullback from the June 30 ATH (~$1,073). The Q2 beat and mid-to-high-teens FY2026 raise lift the earnings base under the ladder; the multiple remains a clear premium to industrial peers, so margin of safety is improved versus July but not thick.",
     "peAnalysis": {
-      "asOf": "July 2026",
+      "asOf": "August 2026",
       "rows": [
-        { "label": "Trailing P/E (TTM)", "value": "~48×", "note": "TTM EPS ~$20.00" },
-        { "label": "Forward P/E (NTM)", "value": "~40×", "note": "consensus EPS ~$24.08" },
-        { "label": "PEG Ratio", "value": "~3.3×", "note": "fwd P/E ÷ ~12% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~5.8×", "note": "~$76B NTM revenue; highest in 30+ years" },
-        { "label": "Price / FCF", "value": "~44×", "note": "$10B FCF (FY26E)" }
+        { "label": "Trailing P/E (TTM)", "value": "~44×", "note": "TTM EPS ~$20.1; ~$877 spot" },
+        { "label": "Forward P/E (NTM)", "value": "~32×", "note": "working NTM ~$27–28 after Q2 beat; pre-revision FY26 cons. was ~$24.7" },
+        { "label": "PEG Ratio", "value": "~2.7×", "note": "fwd P/E ÷ ~12% EPS CAGR band" },
+        { "label": "Price / Sales (NTM)", "value": "~5.1×", "note": "~$79B NTM sales at raised mid/high-teens guide; still multi-decade elevated" },
+        { "label": "Price / FCF", "value": "~37×", "note": "~$11B MP&E FCF (top half of $6–15B FY26 guide)" }
       ],
-      "summary": "CAT trades at 40× forward earnings vs. a typical industrial peer median of 22-25× — a premium that has widened further as Wall Street treats CAT as a backdoor AI-infrastructure play (shares roughly doubled over the trailing year). PEG of 3.3× and a 30-year-high price/sales ratio leave little room for execution slips. Michael Burry's July 2026 short disclosure — his first-ever bet against the name — is a visible signal that sophisticated investors view the current multiple as stretched, even though the underlying backlog and guidance remain strong."
+      "summary": "CAT trades around 32× forward earnings versus a typical industrial peer median of 22–25× — still a wide AI-infrastructure premium, even after the pullback from ~40× in early July. PEG near 2.7× and a multi-decade-high price/sales ratio leave limited room for a simultaneous growth miss. The Q2 print and guidance raise support the earnings side of the story; the open question is whether the multiple holds when the backlog eventually stops compounding at 90%+ YoY."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$500",
-      "description": "Cyclical downturn plus tariff escalation compresses earnings and re-rates the multiple from 38× to 25× on depressed EPS.",
+      "priceTarget": "$580",
+      "description": "Cyclical downturn plus tariff stickiness compresses earnings and re-rates the multiple from the mid-30s to ~20–22× on depressed EPS.",
       "points": [
-        "AI data centre capex decelerates below 10% growth in 2027; E&T power revenue plateaus",
-        "Mining capex cycle turns down on commodity price weakness; autonomous fleet expansion slows",
-        "Tariff costs exceed $2.5B annually with no pricing offset; operating margin compresses below 16%"
+        "AI data centre capex decelerates below 10% growth in 2027; power-generation backlog converts then plateaus as lead times normalise",
+        "Mining and/or North American construction turn down; Resource and Construction volumes reverse the H1 surge",
+        "Tariff costs remain ~$2B+ annually with thinner pricing offset; adjusted operating margin slips below the 18–22% target band"
       ]
     },
     "base": {
-      "priceTarget": "$910",
-      "description": "FY2026 EPS lands at consensus ~$23, FY2027 reaches ~$26 as data centre and mining tailwinds sustain, multiple holds at 35×.",
+      "priceTarget": "$980",
+      "description": "FY2026 delivers mid-to-high-teens sales growth; FY2027 EPS reaches ~$32–33 as the $72B backlog converts, and the multiple holds near ~30× — earnings raise, not re-rating.",
       "points": [
-        "E&T continues 15%+ growth on AI data centre buildout and energy transition",
-        "Autonomous mining fleet expands to 1,000+ trucks by end of 2027",
-        "Services revenue grows to 42-45% of total mix, supporting margin expansion"
+        "Power & Energy sustains mid-teens growth as turbine and reciprocating capacity comes online through 2027–28",
+        "Construction Industries normalises from +35% toward high-single/low-double-digit growth as dealer inventories digest",
+        "Services mix holds near 40%+ of sales, supporting margins near the bottom of the 18–22% target range"
       ]
     },
     "bull": {
-      "priceTarget": "$1,200",
-      "description": "AI data centre super-cycle drives E&T to new highs, autonomous mining scales globally, FY2027 EPS exceeds $30 and multiple expands to 40×.",
+      "priceTarget": "$1,280",
+      "description": "AI data centre super-cycle plus construction autonomy keep growth elevated; FY2027 EPS exceeds $35 and the multiple expands toward the high-30s.",
       "points": [
-        "AI infrastructure capex sustains 25%+ growth through 2028; CAT becomes a recognized AI-infrastructure beneficiary",
-        "Autonomous mining achieves commercial deployment at 5+ new major mining customers by end of 2027",
-        "Construction autonomy (autonomous excavators) reaches early commercial deployment, opening a new TAM"
+        "AI infrastructure capex sustains 20%+ growth through 2028; CAT is recognised as a core power-generation beneficiary with orders into 2030",
+        "Autonomous mining scales at multiple majors and construction autonomy reaches early commercial deployment",
+        "MP&E free cash flow sustains at the top of the $6–15B band, funding buybacks that amplify EPS"
       ]
     }
   },
@@ -136,7 +137,7 @@
     },
     "bundling": {
       "status": "strong",
-      "note": "Equipment + parts + service + Cat Financial + digital fleet management + autonomous technology — the most comprehensive bundle in heavy equipment. Competitors (Komatsu, Volvo CE, Hitachi) address subsets."
+      "note": "Equipment + parts + service + Cat Financial + digital fleet management + autonomous technology — the most comprehensive bundle in heavy equipment. Competitors (Komatsu, Volvo CE, Hitachi) address subsets. Q2 confirmed breadth: all three primary segments grew sales and backlog sequentially."
     },
     "proprietaryData": {
       "status": "intact",
@@ -148,16 +149,16 @@
     },
     "networkEffects": {
       "status": "intact",
-      "note": "~160 independent dealers with ~2,700 branches create a density flywheel — more machines in a region attract more dealer investment, attracting more buyers. Strongest in North America and major mining regions."
+      "note": "~160 independent dealers with ~2,700 branches create a density flywheel — more machines in a region attract more dealer investment, attracting more buyers. Strongest in North America and major mining regions; Q2 North America construction sales +50% reinforces the installed-base advantage where dealer density is deepest."
     },
     "transactionEmbedding": {
       "status": "strong",
-      "note": "Cat Financial finances ~30-40% of equipment sales. Parts contracts, multi-year service agreements, and 15-25 year equipment life cycles create deep recurring revenue embedding. Services now ~40% of total revenue."
+      "note": "Cat Financial finances a large share of equipment sales (Financial Products revenues +10% in Q2). Parts contracts, multi-year service agreements, and 15–25 year equipment life cycles create deep recurring revenue embedding. Services still ~40% of total revenue; customer advances rose sharply with the backlog."
     },
     "systemOfRecord": {
       "status": "destroyed",
       "note": "N/A — equipment manufacturer, not a system of record."
     },
-    "verdict": "Caterpillar is a net beneficiary of AI — data centre power demand (E&T segment) and autonomous mining (Resource Industries) are structural tailwinds. The strongest moats are physical: dealer network density, regulatory lock-in, and transaction embedding through Cat Financial and multi-decade service cycles. No moats are meaningfully at risk from AI; the gap between moat score and AI resilience score reflects that CAT's core franchise is physical infrastructure, not software — AI adds to it but doesn't define it."
+    "verdict": "Caterpillar is a net beneficiary of AI — data centre power demand (Power & Energy) and autonomous mining (Resource Industries) are structural tailwinds, and Q2 2026 confirmed the demand is capacity-constrained rather than order-starved. The strongest moats are physical: dealer network density, regulatory lock-in, and transaction embedding through Cat Financial and multi-decade service cycles. No moats moved on this print; the gap between moat score and AI resilience score still reflects that CAT's core franchise is physical infrastructure, not software — AI adds to it but doesn't define it."
   }
 }
