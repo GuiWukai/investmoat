@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$290B"
+      "value": "~$280B"
     }
   ],
   "chips": [
@@ -25,29 +25,29 @@
   ],
   "metrics": [
     {
-      "title": "Q1 2026 Orders",
-      "value": "$18.3B",
-      "label": "+71% YoY — Record AI-Linked Demand",
+      "title": "Q2 2026 Orders",
+      "value": "$24.2B",
+      "label": "+88% organic; backlog $176B (+$13B QoQ)",
       "icon": "BookOpen",
       "color": "#1B4FBA"
     },
     {
-      "title": "Q1 2026 Revenue",
-      "value": "$9.34B",
-      "label": "+7% YoY; Adj EBITDA Margin +390 bps",
+      "title": "Q2 2026 Revenue",
+      "value": "$11.1B",
+      "label": "+22% YoY (+12% organic); Adj EBITDA margin 11.3%",
       "icon": "Zap",
       "color": "#059669"
     },
     {
-      "title": "Q1 2026 EPS",
-      "value": "$17.44",
-      "label": "Vastly Exceeded $1.67 Forecast — Guidance Raised",
-      "icon": "TrendingUp",
+      "title": "FY2026 FCF Guide",
+      "value": "$11.5–12.5B",
+      "label": "Raised from $6.5–7.5B; Q2 FCF alone $5.1B",
+      "icon": "DollarSign",
       "color": "#1B4FBA"
     }
   ],
   "moat": {
-    "description": "GE Vernova's moat is built on the world's largest gas turbine installed base (~7,000 units, generating ~25% of global electricity) locked under long-term service agreements, reinforced by irreplaceable manufacturing expertise and a sold-out turbine backlog through 2029.",
+    "description": "GE Vernova's moat is built on the world's largest gas turbine installed base (~7,000 units, generating ~25% of global electricity) locked under long-term service agreements, reinforced by irreplaceable manufacturing expertise and a sold-out gas equipment backlog (116 GW under contract/slot reservation, targeting ≥125 GW by year-end 2026).",
     "analysisTitle": "The Power Infrastructure Oligopoly",
     "analysisSummary": "GE Vernova has **three reinforcing structural advantages** in a global power infrastructure industry that is simultaneously undersupplied and essential to the AI economy:",
     "analysisPoints": [
@@ -57,60 +57,72 @@
       },
       {
         "title": "Irreplaceable Manufacturing Scale & Engineering Know-How",
-        "text": "Building an HA-class gas turbine — GEV's flagship unit operating at >64% efficiency — requires multi-year precision manufacturing using specialized alloys, ceramic thermal barrier coatings, and cooling channel geometries representing 70+ years of proprietary development. No competitor can replicate GEV's Greenville, SC manufacturing campus or its metallurgical expertise within a decade. Gas turbine slots are sold out through 2029, and GEV is expanding manufacturing capacity from 55 to 70-80 units/year — still insufficient to meet demand. This supply constraint enables pricing power: hyperscalers are signing 5-10 year volume agreements at forward-locked prices, embedding GEV revenues through 2035."
+        "text": "Building an HA-class gas turbine — GEV's flagship unit operating at >64% efficiency — requires multi-year precision manufacturing using specialized alloys, ceramic thermal barrier coatings, and cooling channel geometries representing 70+ years of proprietary development. No competitor can replicate GEV's Greenville, SC manufacturing campus or its metallurgical expertise within a decade. Gas Power equipment backlog and slot reservations reached 116 GW in Q2 2026 (from 100 GW), with management now targeting ≥125 GW by year-end. Capacity is the binding constraint: GEV remains on track for 20 GW of annual gas turbine output in Q3 2026, 24 GW in 2028, and is implementing actions toward 30 GW in 2030 — still insufficient to clear demand. This supply scarcity enables pricing power as hyperscalers sign multi-year volume agreements at forward-locked prices."
       },
       {
         "title": "Integrated 'Generation-to-Grid' Platform for Hyperscalers",
-        "text": "Following the Prolec GE acquisition (closed February 2026, $5.275B), GE Vernova is the only company capable of supplying a hyperscaler with a complete power solution: gas turbines for on-site generation, transformers and switchgear for grid interconnection, and digital software for grid management. This integrated offering cannot be assembled from competitors — Siemens Energy lacks U.S. transformer manufacturing scale, and Mitsubishi Power has minimal U.S. grid equipment presence. AWS's strategic framework agreement for both turbines and turnkey grid substations exemplifies this bundled approach, which commands premium pricing unavailable to single-product competitors."
+        "text": "Following the Prolec GE acquisition (closed February 2026, $5.275B), GE Vernova is the only company capable of supplying a hyperscaler with a complete power solution: gas turbines for on-site generation, transformers and switchgear for grid interconnection, and digital software for grid management. Electrification data-centre orders exceeded $5B year-to-date through Q2 2026 — more than double the full-year 2025 total — confirming the bundled generation-to-grid thesis. Siemens Energy lacks U.S. transformer manufacturing scale, and Mitsubishi Power has minimal U.S. grid equipment presence, so the integrated offering continues to command a premium unavailable to single-product competitors."
       }
     ]
   },
   "growth": {
-    "description": "Q1 2026 was a blowout: orders of $18.3B (+71% YoY), revenue $9.34B (+7%), adjusted EBITDA margin +390 bps, and EPS of $17.44 vs. $1.67 forecast (>900% beat). Management raised guidance and Jefferies took its target to $1,350. AI-data-center power demand, Prolec GE accretion, and grid electrification continue to fill the $150B+ backlog.",
+    "description": "Q2 2026 delivered orders of $24.2B (+88% organic), revenue of $11.1B (+22% reported / +12% organic), adjusted EBITDA margin of 11.3% (+340 bps organic), and free cash flow of $5.1B — more than all of 2025. Total backlog reached $176B. Management raised FY2026 revenue guidance to $45.5–$46.5B (from $44.5–$45.5B) and nearly doubled FCF guidance to $11.5–$12.5B (from $6.5–$7.5B), while holding the 12–14% adjusted EBITDA margin target. Wind remains the drag: segment EBITDA loss widened to $(275)M in Q2 with ~$400M of full-year losses guided.",
     "growthAnalysis": {
       "cagrEstimate": "10-15%",
-      "scoreDerivation": "Base 70 + 12 (Q1 2026 orders +71% and EPS >900% beat) + 8 (turbine slots sold out through 2029, Prolec GE accretion) - 3 (Wind segment losses) = 87",
+      "cagrBasis": "FY2025 revenue $38.1B; FY2026 guide midpoint ~$46B (+21% YoY) after the Q2 raise; Q2 organic revenue +12%. Gas turbine output ramp 20 → 24 → 30 GW (Q3 2026 / 2028 / 2030) caps equipment volume growth even as the $176B backlog and 116 GW gas slot book fill. The 10–15% blended 3–5yr estimate sits between the raised 2026 print and capacity-constrained mid-teens fade plus LTSA/services — not the +88% orders print annualised.",
+      "scoreDerivation": "Base 76 (10–15% CAGR mid-band) + 4 trajectory (orders, capacity ramp, and Electrification all accelerating) + 4 margin expansion − 5 Wind/capacity-execution risk = 79",
       "drivers": [
-        { "name": "AI Data Center Power Orders", "metric": "Q1 2026 orders $18.3B (+71% YoY); $150B+ backlog", "trend": "accelerating" },
-        { "name": "Gas Turbine Capacity Ramp", "metric": "Slots sold out through 2029; expanding from 55 to 70-80 units/year", "trend": "accelerating" },
-        { "name": "Electrification + Prolec GE", "metric": "Adj EBITDA margin +390 bps in Q1 2026; integrated generation-to-grid offering", "trend": "accelerating" }
+        { "name": "AI Data Center Power Orders", "metric": "Q2 2026 orders $24.2B (+88% organic); backlog $176B; Gas Power equipment/slots 116 GW → ≥125 GW YE target", "trend": "accelerating" },
+        { "name": "Gas Turbine Capacity Ramp", "metric": "On track for 20 GW annual output in Q3 2026; 24 GW in 2028; actions toward 30 GW in 2030", "trend": "accelerating" },
+        { "name": "Electrification + Prolec GE", "metric": "Electrification orders $6.3B (+93% org); data-centre orders >$5B YTD (2× FY2025); Adj EBITDA margin +340 bps org", "trend": "accelerating" }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "Greenville manufacturing expansion delays of 12-18 months would cap turbine deliveries and extend backlog conversion into 2028, while continued offshore Wind write-downs ($1B+) could compress group margins through 2027.",
+      "keyRisk": "If Greenville/capacity expansion slips 12–18 months, turbine deliveries miss the 20 GW Q3 2026 and 24 GW 2028 targets and backlog conversion stretches into 2029, while continued offshore Wind write-downs (FY2026 Wind EBITDA losses guided ~$400M) keep compressing group margins — a simultaneous AI-capex digestion year would then de-rate the premium multiple quickly.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 60,
-    "description": "At ~$1,070, GEV trades 27% above the prior base case ($950) and one-quarter of the way toward the bull case ($1,400) after the Q1 2026 beat. The stock has been a generational compounder (>200% trailing 12-month return) — premium valuation now requires continued execution; backlog visibility remains the strongest in the industrial complex, but multiple expansion has front-run several years of fundamental progress."
+    "score": 73,
+    "description": "At ~$1,036 GEV sits roughly 14% below the revised base case ($1,200) — about two-thirds of the way from bear ($700) to base — after pulling back from the ~$1,196 52-week high. The Q2 beat and nearly-doubled FCF guide ($11.5–12.5B) lift the cash earnings base under the ladder; the multiple remains a clear AI-infrastructure premium, so margin of safety is improved versus the May print at ~$1,070 above a stale $950 base, but not thick.",
+    "peAnalysis": {
+      "asOf": "August 5, 2026",
+      "rows": [
+        { "label": "Price / FCF (FY26)", "value": "~23×", "note": "~$280B mkt cap ÷ ~$12B FCF mid-guide" },
+        { "label": "Price / Sales (FY26)", "value": "~6.1×", "note": "~$46B revenue mid-guide; AI-infra premium to industrial peers" },
+        { "label": "EV / Adj EBITDA (FY26)", "value": "~45×", "note": "~$6.0B EBITDA at 13% mid-margin on $46B; rich vs Eaton/Schneider" },
+        { "label": "FCF Yield (FY26)", "value": "~4.3%", "note": "$12B ÷ $280B; supported by $13.1B cash and $3.9B YTD capital return" },
+        { "label": "Street PT Cluster", "value": "~$1,150–1,350", "note": "Jefferies $1,155 / GS $1,268 / MS $1,350; Mizuho Neutral $949" }
+      ],
+      "summary": "On the raised FCF guide GEV looks less stretched than on EBITDA (~45×), but both frames still embed multi-year AI power-demand continuation. Spot below the Street buy-side cluster and the revised $1,200 base improves the asymmetry versus May; the open risk is a simultaneous Wind-loss persistence and 2027 hyperscaler digestion that compresses the multiple toward 15–18× FCF."
+    }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$550",
-      "description": "Manufacturing delays limit turbine deliveries, Wind losses deepen, and hyperscaler demand growth decelerates — EBITDA margins stall at 8-9% and the premium multiple compresses to 25x.",
+      "priceTarget": "$700",
+      "description": "Capacity slips and Wind losses deepen while hyperscaler demand decelerates — FCF fades toward ~$8–9B and the premium multiple compresses to ~18–20×.",
       "points": [
-        "Greenville manufacturing expansion falls 12-18 months behind schedule, capping 2026 Power segment deliveries at ~60 turbines vs. 75+ expected — revenue misses guidance by $3-4B and backlog conversion extends into 2028",
-        "Offshore wind stop-work orders spread to additional projects; GEV is forced to absorb $1B+ in offshore contract write-downs while onshore demand fails to offset; Wind EBITDA losses deepen to $(600M)+",
-        "AI model efficiency breakthroughs (inference-optimised architectures requiring 60% less compute) cause hyperscalers to defer long-term turbine volume agreements; 2027-2028 backlog coverage thins and the market de-rates GEV from 48x to 25x normalized earnings"
+        "Gas turbine output misses the 20 GW Q3 2026 / 24 GW 2028 targets by 12–18 months; Power segment revenue undershoots and backlog conversion stretches into 2029",
+        "Offshore wind stop-work orders and onshore delivery shortfalls push Wind EBITDA losses beyond the ~$400M FY2026 guide, keeping group margins stuck near low-double-digits",
+        "AI model efficiency gains or hyperscaler capex digestion cut long-term turbine volume agreements; the market de-rates GEV from ~23× to ~18× FY26 FCF"
       ]
     },
     "base": {
-      "priceTarget": "$950",
-      "description": "Backlog converts on schedule, Prolec GE integrates smoothly adding $3B revenue at ~25% margin, and EBITDA margin reaches 12-13% — $5B+ FCF funds buybacks and the market re-rates toward 35x earnings.",
+      "priceTarget": "$1,200",
+      "description": "FY2026 delivers the raised $45.5–$46.5B revenue and ~$12B FCF guides; gas slots hit ≥125 GW; the multiple holds near ~25–27× FCF — earnings raise, not re-rating.",
       "points": [
-        "Power segment delivers 17% organic revenue growth with 70+ turbine deliveries; EBITDA margin hits 16-18%, sustaining the installed base LTSA flywheel and locking in another 3 years of high-margin service revenue",
-        "Electrification segment reaches $13.5–14B revenue including Prolec GE; transformer backlog at 2.5x book-to-bill converts efficiently; 17-19% EBITDA margin establishes the segment as a second profit engine alongside Power",
-        "2-3 new AI hyperscaler turbine volume agreements spanning 2027-2030 are announced, extending backlog coverage and confirming the natural gas bridge-power-for-data-centers thesis"
+        "Power and Electrification convert the $176B backlog on schedule; Adj EBITDA margin lands in the 12–14% guided band as Prolec GE and services mix compound",
+        "Gas Power equipment/slots reach ≥125 GW by year-end 2026; 20 GW annual output is delivered in Q3 and the 24 GW 2028 path stays intact",
+        "Electrification data-centre orders sustain above the $5B YTD run-rate into 2027, confirming the generation-to-grid bundle as a second profit engine alongside Power LTSAs"
       ]
     },
     "bull": {
-      "priceTarget": "$1,400",
-      "description": "The $100B SMR MoU converts to binding orders, hyperscaler turbine demand exceeds all forecasts, and EBITDA margins reach 20% a year ahead of plan — GEV re-rates as the defining AI infrastructure pick.",
+      "priceTarget": "$1,600",
+      "description": "Capacity ramps ahead of plan, the $100B SMR MoU converts to binding orders, and margins reach the high teens — GEV re-rates as the defining AI power-infrastructure pick near ~30× growing FCF.",
       "points": [
-        "The $100B SMR MoU (signed during Japan state visit) converts into 10+ binding nuclear construction contracts in 2026-2027; GEV becomes the U.S. government's nuclear manufacturing partner, adding a 15-20 year revenue platform not in any current consensus estimate",
-        "Gas turbine manufacturing capacity ramps to 90+ units/year by end of 2027; backlog surpasses 120 GW; 2028 revenue guidance raised to $60B+ as hyperscaler demand concentration exceeds all prior forecasts",
-        "Group EBITDA margins reach 20% in 2027 — one year ahead of the 2028 target — driven by operating leverage, Prolec GE synergies, and a rising software/services revenue mix; at 30x FCF of $8B+, the market cap exceeds $240B, implying ~$1,400/share"
+        "The $100B SMR MoU converts into binding nuclear construction contracts in 2026–2027; GEV becomes a primary U.S. nuclear manufacturing partner with a 15–20 year revenue platform outside current consensus",
+        "Gas turbine output reaches 24 GW before 2028 and the 30 GW 2030 path is pulled forward; backlog coverage extends through the early 2030s as hyperscaler demand concentrates further",
+        "Group Adj EBITDA margins approach the high teens by 2027 on operating leverage, Prolec synergies, and rising services mix; FCF sustains above $14B and buybacks amplify per-share compounding"
       ]
     }
   },
@@ -133,7 +145,7 @@
     },
     "bundling": {
       "status": "strong",
-      "note": "Post-Prolec GE acquisition, GEV is the only vendor supplying a complete generation-to-grid solution (turbines + transformers + switchgear + digital software) — hyperscalers building captive power infrastructure face far higher complexity sourcing these components separately, creating a bundling premium unavailable to single-product competitors."
+      "note": "Post-Prolec GE acquisition, GEV is the only vendor supplying a complete generation-to-grid solution (turbines + transformers + switchgear + digital software) — hyperscalers building captive power infrastructure face far higher complexity sourcing these components separately, creating a bundling premium unavailable to single-product competitors. Electrification data-centre orders >$5B YTD through Q2 2026 reinforce the bundle's commercial pull."
     },
     "proprietaryData": {
       "status": "strong",
@@ -149,13 +161,13 @@
     },
     "transactionEmbedding": {
       "status": "strong",
-      "note": "Long-Term Service Agreements (LTSAs) of 10-20 years embed GEV engineers and parts supply into the daily operational workflow of ~7,000 power plants; hyperscaler volume agreements now extend to 2030-2035, creating bilateral dependencies where replacing GEV mid-contract would require replanning entire captive power infrastructure buildouts."
+      "note": "Long-Term Service Agreements (LTSAs) of 10-20 years embed GEV engineers and parts supply into the daily operational workflow of ~7,000 power plants; hyperscaler volume agreements and the 116 GW gas equipment/slot book now extend coverage deep into the next decade, creating bilateral dependencies where replacing GEV mid-contract would require replanning entire captive power infrastructure buildouts."
     },
     "systemOfRecord": {
       "status": "intact",
       "note": "GEV's digital APM (Asset Performance Management) software and LTSA management systems increasingly serve as the operational system of record for gas turbine fleets — while not the primary software moat, the digitalization of service relationships creates data lock-in that compounds the physical equipment relationships."
     },
-    "verdict": "GE Vernova is a net beneficiary of AI adoption through the data center power demand supercycle — AI is a direct revenue catalyst rather than a disruption risk, with AI-driven electricity demand filling its sold-out turbine backlog through 2029. The company's core moats (installed base LTSAs, manufacturing expertise, regulatory certifications) are AI-independent physical and contractual advantages that no AI model can automate or replicate."
+    "verdict": "GE Vernova is a net beneficiary of AI adoption through the data center power demand supercycle — AI is a direct revenue catalyst rather than a disruption risk, with AI-driven electricity demand filling its sold-out gas equipment backlog (116 GW and climbing toward ≥125 GW). The company's core moats (installed base LTSAs, manufacturing expertise, regulatory certifications) are AI-independent physical and contractual advantages that no AI model can automate or replicate."
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "August 5, 2026"
 }
