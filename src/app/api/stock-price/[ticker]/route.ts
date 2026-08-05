@@ -17,6 +17,7 @@ const YAHOO_SYMBOL_OVERRIDES: Record<string, string> = {
   ethereum: 'ETH-USD',
   solana:   'SOL-USD',
   k92:      'KNT.TO',  // json ticker KNT — Toronto listing
+  bdt:      'BDT.TO',  // json ticker BDT — Toronto listing
   // Kazatomprom trades as USD-denominated GDRs on the LSE International Order
   // Book; KAP.IL is that line. Not the Kazakh ordinary share, which is KZT.
   kap:      'KAP.IL',
