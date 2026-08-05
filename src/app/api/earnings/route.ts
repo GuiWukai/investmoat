@@ -1,17 +1,15 @@
 import { NextResponse } from 'next/server';
-import {
-  EARNINGS_REVALIDATE_SECONDS,
-  getEarningsCalendar,
-} from '@/lib/earningsCalendar';
+import { getEarningsCalendar } from '@/lib/earningsCalendar';
 
-export const revalidate = EARNINGS_REVALIDATE_SECONDS;
+// Must be a literal — Next.js segment config is statically analyzed.
+export const revalidate = 21600; // 6 hours
 
 export async function GET() {
   try {
     const calendar = await getEarningsCalendar();
     return NextResponse.json(calendar, {
       headers: {
-        'Cache-Control': `public, s-maxage=${EARNINGS_REVALIDATE_SECONDS}, stale-while-revalidate=3600`,
+        'Cache-Control': 'public, s-maxage=21600, stale-while-revalidate=3600',
       },
     });
   } catch {
