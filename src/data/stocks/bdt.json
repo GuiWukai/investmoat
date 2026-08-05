@@ -1,0 +1,173 @@
+{
+  "slug": "bdt",
+  "ticker": "BDT",
+  "name": "Bird Construction Inc.",
+  "lastAnalyzed": "August 5, 2026",
+  "headerStats": [
+    { "label": "Ticker", "value": "BDT (TSX)" },
+    { "label": "Market Cap", "value": "~C$3.9B" }
+  ],
+  "chips": [
+    { "label": "Industrials | Canadian Construction", "color": "primary" },
+    { "label": "Backlog Compounder", "color": "success" },
+    { "label": "Cyclical", "color": "warning" }
+  ],
+  "metrics": [
+    {
+      "title": "Contracted Backlog",
+      "value": "C$5.4B",
+      "label": "Record; +23.8% YoY at Q1'26",
+      "icon": "Layers",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "Combined Pipeline",
+      "value": "~C$11B",
+      "label": "Backlog + C$5.6B pending awards",
+      "icon": "BarChart",
+      "color": "#10b981"
+    },
+    {
+      "title": "FY25 Adj. EBITDA Margin",
+      "value": "6.5%",
+      "label": "Path to 8% by FY27 strategic plan",
+      "icon": "TrendingUp",
+      "color": "#f59e0b"
+    }
+  ],
+  "moat": {
+    "description": "A mid-tier Canadian general contractor with a diversified One Bird platform across industrial, buildings, and infrastructure — durable enough to win collaborative and MSA work, but still a competitive-bid construction franchise without a structural monopoly.",
+    "analysisTitle": "The Diversified Self-Perform Platform",
+    "analysisSummary": "Bird's advantage is **breadth plus bonding capacity in a fragmented Canadian market**, not an impregnable moat — scale, self-perform trades, and recurring maintenance MSAs raise the hurdle for smaller rivals without locking out Aecon, PCL, or EllisDon:",
+    "analysisPoints": [
+      {
+        "title": "One Bird Diversification",
+        "text": "Unlike pure-play industrial or buildings GCs, Bird spans industrial MRO, vertical buildings, and heavy civil/infrastructure coast-to-coast. That mix let Buildings and Infrastructure offset deferred Industrial work in 2025–Q1'26, and the October 2025 Fraser River Pile & Dredge acquisition deepened marine and civil self-perform — useful diversification, not a category lock-in."
+      },
+      {
+        "title": "Collaborative Contracts and MSAs",
+        "text": "Bird has shifted mix toward IPD, alliance, progressive design-build, and multi-year master service agreements. Pending backlog includes over C$1.5B of MSA and recurring revenue to be earned over five years — stickier than lump-sum bid work, and the main reason embedded backlog margins are higher than a year ago."
+      },
+      {
+        "title": "Bonding, Safety, and Public-Sector Prefqualification",
+        "text": "Century-old brand, surety capacity, and clean safety history are real gates for large Canadian public and industrial awards (Alberta schools DBFM, transit hubs, Indigenous partnership frameworks). They raise new-entrant barriers without preventing the handful of national peers from competing head-to-head on every major package."
+      }
+    ]
+  },
+  "growth": {
+    "description": "Q1'26 revenue +9.2% YoY to C$783M with record C$5.4B contracted backlog (+24% YoY) and ~C$11B combined pipeline. 2025–27 plan targets ~10%±2% organic revenue CAGR and 8% Adj. EBITDA margin by 2027 on C$4.6–5.1B revenue — a mid-teens earnings-growth story if margin accretion lands.",
+    "growthAnalysis": {
+      "cagrEstimate": "10-14%",
+      "cagrBasis": "FY25 revenue C$3.40B flat YoY on project timing; Q1'26 construction revenue C$783M (+9.2% YoY); management guides double-digit 2026 growth with 2027 revenue still in the C$4.6–5.1B strategic-plan band (~15–19% 2-yr CAGR from FY25 if midpoint). Analyst 3Y revenue growth forecast ~15%. The 10–14% blended 3–5yr estimate sits between the organic plan (10%±2%) and near-term backlog conversion, not the peak 2-year catch-up annualised.",
+      "scoreDerivation": "Base ~76 (10–14% CAGR mid-band) + ~2.7 trajectory (Infrastructure and Buildings accelerating; Industrial stable on deferred conversion) + 4 margin expansion (6.5% → 8% Adj. EBITDA path) − 5 moderate cyclical/execution risk = 77.",
+      "drivers": [
+        {
+          "name": "Infrastructure & Civil",
+          "metric": "Organic growth + FRPD; transit, marine, utilities, Indigenous partnerships; multi-year public capex",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Buildings",
+          "metric": "Strongest organic Q1 contributor; institutional/education DBFM awards (e.g. Alberta schools ~C$323M)",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Industrial MRO & Projects",
+          "metric": "2025 deferrals converting H2'26; MSA recurring revenue >C$1.5B over five years",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If Canadian public infrastructure and energy/industrial capex cool simultaneously in 2027–28 while Bird is converting peak backlog, revenue growth falls to mid-single digits and the ~25× forward multiple compresses toward the mid-teens — a typical contractor drawdown of 30–40% from cycle highs.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 73,
+    "description": "At ~C$70 BDT sits roughly halfway from the bear case (C$48) toward the base (C$80) after a ~150% 52-week run. Forward P/E ~25× prices in backlog conversion and margin accretion; the stock is no longer cheap versus Canadian contractor history, but still below a full execution of the 2027 plan.",
+    "peAnalysis": {
+      "asOf": "August 2026",
+      "rows": [
+        { "label": "Trailing P/E (TTM)", "value": "~79×", "note": "Distorted by impairments; TTM GAAP EPS ~C$0.90" },
+        { "label": "Forward P/E (NTM)", "value": "~25×", "note": "~C$70 / ~C$2.77 implied NTM EPS" },
+        { "label": "EV / Sales (TTM)", "value": "~1.2×", "note": "EV ~C$4.05B on ~C$3.46B TTM revenue" },
+        { "label": "EV / Adj. EBITDA", "value": "~18×", "note": "On FY25 Adj. EBITDA C$222M; premium to historical Bird" },
+        { "label": "FCF Yield", "value": "~3.6%", "note": "TTM FCF ~C$141M; monthly dividend ~1.2%" }
+      ],
+      "summary": "The clean valuation lens is forward earnings and backlog, not trailing GAAP. ~25× forward is a full multiple for a Canadian GC — justified only if 2026–27 double-digit growth and the march to 8% Adj. EBITDA land. Versus Quanta-style US specialty contractors the multiple is still lower, but Bird's moat and TAM are narrower, so the asymmetry is limited after the re-rating."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "C$48",
+      "description": "Canadian infrastructure and industrial spending cools, margin accretion stalls near 6.5%, and the multiple compresses to ~18× on flattened FY27 Adj. EPS near C$2.60.",
+      "points": [
+        "Federal/provincial infrastructure awards slip and industrial MRO deferrals extend past 2027",
+        "One or two large projects book cost overruns, wiping out planned 150 bps of margin accretion",
+        "Multiple re-rates from ~25× forward toward the mid-teens Canadian contractor trough"
+      ]
+    },
+    "base": {
+      "priceTarget": "C$80",
+      "description": "Backlog converts on plan: FY27 revenue near the C$4.85B midpoint, Adj. EBITDA margin approaches 7.5–8%, Adj. EPS ~C$3.00, and the stock holds ~26–27× on durable mid-teens earnings growth.",
+      "points": [
+        "Combined backlog stays above C$10B through 2026 with book-to-bill ≥1.0×",
+        "Industrial deferred work converts in H2'26 and MSA recurring revenue grows",
+        "FRPD integration and self-perform mix deliver another ~100 bps of Adj. EBITDA margin"
+      ]
+    },
+    "bull": {
+      "priceTarget": "C$115",
+      "description": "Data-centre, LNG-adjacent industrial, and multi-year transit/Indigenous infrastructure awards push FY27 revenue above C$5.1B, margins clear 8%, and the multiple expands toward ~32× on a clearer compounder narrative.",
+      "points": [
+        "Canadian AI/data-centre construction becomes a material Buildings/Industrial bid pipeline",
+        "Adj. EBITDA margin sustains ≥8% with collaborative-contract mix still rising",
+        "Further accretive M&A in specialty civil/marine expands self-perform wallet share"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "destroyed",
+      "note": "Not applicable — physical construction and maintenance contractor with no end-user software interface."
+    },
+    "businessLogic": {
+      "status": "weakened",
+      "note": "Internal estimating, project controls, and collaborative-delivery playbooks improve bid accuracy, but they are not an externally defensible software franchise competitors cannot copy."
+    },
+    "publicDataAccess": {
+      "status": "destroyed",
+      "note": "Not applicable — no public-data aggregation moat."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Canadian skilled-trades shortages and Bird's self-perform crews help win and staff complex work, but Bird lacks a Quanta-scale captive training pipeline and still competes for the same craft pool as national peers."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "One Bird spans industrial, buildings, and infrastructure with growing self-perform (including FRPD marine/civil), letting Bird bid integrated packages smaller specialists cannot cover alone."
+    },
+    "proprietaryData": {
+      "status": "weakened",
+      "note": "Decades of cost history and project-performance data inform bids, but the data stays internal and is not a compounding external asset."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "Surety bonding capacity, safety prequalification, and public-sector/Indigenous partnership frameworks create multi-year gates for large Canadian awards — real barriers for new entrants, contested among incumbents."
+    },
+    "networkEffects": {
+      "status": "destroyed",
+      "note": "Not applicable — services contractor with no user-network dynamics."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Multi-year MSAs and recurring industrial maintenance relationships embed Bird in customer work programs; pending backlog includes >C$1.5B of MSA/recurring revenue over five years."
+    },
+    "systemOfRecord": {
+      "status": "destroyed",
+      "note": "Not applicable — not a system of record for customers."
+    },
+    "verdict": "Bird is an AI-resilient physical contractor whose durability comes from bonding capacity, MSA embedding, and diversified self-perform — not from software moats AI could hollow out. The franchise is real but narrow: national Canadian peers can still contest every major package, so this remains a well-run cyclical compounder rather than a wide-moat compounder."
+  }
+}

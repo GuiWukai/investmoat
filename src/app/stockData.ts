@@ -148,6 +148,7 @@ import qbtsData     from '@/data/stocks/qbts.json';
 import qubtData     from '@/data/stocks/qubt.json';
 import beData       from '@/data/stocks/be.json';
 import snapData     from '@/data/stocks/snap.json';
+import bdtData      from '@/data/stocks/bdt.json';
 
 // Delegates to computeCompositeRaw in valuationScore.ts — the single source of
 // truth for the composite formula. Returns a float for precise sorting; callers
@@ -305,6 +306,7 @@ const allCoverageData = [
     { name: "Goldman Sachs",     ticker: "GS",    slug: "gs",          scores: [m(gsData),          g(gsData),          v(gsData)],          href: "/stocks/gs",          category: "Financials",  ...t(gsData)          },
     { name: "Morgan Stanley",    ticker: "MS",    slug: "ms",          scores: [m(msData),          g(msData),          v(msData)],          href: "/stocks/ms",          category: "Financials",  ...t(msData)          },
     { name: "Quanta Services",   ticker: "PWR",   slug: "pwr",         scores: [m(pwrData),         g(pwrData),         v(pwrData)],         href: "/stocks/pwr",         category: "Industrials", ...t(pwrData)         },
+    { name: "Bird Construction", ticker: "BDT",   slug: "bdt",         scores: [m(bdtData),         g(bdtData),         v(bdtData)],         href: "/stocks/bdt",         category: "Industrials", ...t(bdtData)         },
     { name: "Trane Technologies",ticker: "TT",    slug: "tt",          scores: [m(ttData),          g(ttData),          v(ttData)],          href: "/stocks/tt",          category: "Industrials", ...t(ttData)          },
     { name: "Honeywell",         ticker: "HON",   slug: "hon",         scores: [m(honData),         g(honData),         v(honData)],         href: "/stocks/hon",         category: "Industrials", ...t(honData)         },
     { name: "Qualcomm",          ticker: "QCOM",  slug: "qcom",        scores: [m(qcomData),        g(qcomData),        v(qcomData)],        href: "/stocks/qcom",        category: "Big Tech",    ...t(qcomData)        },
