@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "$156B"
+      "value": "$195B"
     }
   ],
   "chips": [
@@ -26,22 +26,22 @@
   "metrics": [
     {
       "title": "Gross Merchandise Volume",
-      "value": "$101B",
-      "label": "Q1 2026 (+35% YoY); first $100B+ quarter",
+      "value": "$116B",
+      "label": "Q2 2026 (+32% YoY); GMV growth accelerated vs Q1",
       "icon": "ShoppingCart",
       "color": "#96bf48"
     },
     {
       "title": "Free Cash Flow",
-      "value": "$476M",
-      "label": "Q1 2026, 15% margin; FY guide mid-teens",
+      "value": "$654M",
+      "label": "Q2 2026, 18% margin; Q3 guide high-teens to low-twenties",
       "icon": "TrendingUp",
       "color": "#5c6ac4"
     },
     {
-      "title": "Payments Penetration",
-      "value": "67%",
-      "label": "Q1 2026 GMV via Shopify Payments (+3pp YoY)",
+      "title": "Merchant Solutions",
+      "value": "+37%",
+      "label": "Q2 2026 revenue growth; Payments penetration 67% (Q1, +3pp YoY)",
       "icon": "DollarSign",
       "color": "#96bf48"
     }
@@ -57,32 +57,32 @@
       },
       {
         "title": "Transaction Embedding via Shop Pay",
-        "text": "Shopify Payments processed $67B of GMV in Q1 2026 (+41% YoY), reaching 67% of total GMV (+3pp YoY), and Shop Pay continues to exceed 50% of US Gross Payment Volume — meaning Shopify captures a fee on the majority of transactions its merchants process. Shop Pay's consumer-facing wallet creates a cross-merchant network effect — consumers save payment info once and get one-click checkout at any Shopify store, creating a Visa-like flywheel. Every percentage point gain in payments penetration deepens the financial relationship with merchants and expands the high-margin Merchant Solutions segment, which grew 39% in Q1 2026."
+        "text": "Shopify Payments processed $67B of GMV in Q1 2026 (+41% YoY), reaching 67% of total GMV (+3pp YoY), and Shop Pay continues to exceed 50% of US Gross Payment Volume — meaning Shopify captures a fee on the majority of transactions its merchants process. Q2 2026 Merchant Solutions revenue grew 37% to $2.78B, confirming payments and adjacent services remain the primary monetisation engine. Shop Pay's consumer-facing wallet creates a cross-merchant network effect — consumers save payment info once and get one-click checkout at any Shopify store, creating a Visa-like flywheel."
       },
       {
         "title": "Proprietary Commerce Intelligence",
-        "text": "Shopify's cross-merchant purchase data — now exceeding $400B in annualised GMV across 5M+ merchants after Q1 2026's $101B quarter — is unique and non-replicable. Shopify Audiences uses this data to cut merchant customer acquisition costs by up to 50%. Shopify Capital underwrites SMB loans using merchant GMV and sales velocity data unavailable to banks. This proprietary data layer compounds with every new merchant and transaction, creating AI-powered tools no standalone competitor can match."
+        "text": "Shopify's cross-merchant purchase data — now exceeding $450B in annualised GMV across 5M+ merchants after Q2 2026's $116B quarter — is unique and non-replicable. Shopify Audiences uses this data to cut merchant customer acquisition costs by up to 50%. Shopify Capital underwrites SMB loans using merchant GMV and sales velocity data unavailable to banks. This proprietary data layer compounds with every new merchant and transaction, creating AI-powered tools no standalone competitor can match."
       }
     ]
   },
   "growth": {
-    "description": "Q1 2026 revenue rose 34% YoY to $3.17B (beat) on a record $101B GMV quarter (+35% YoY) — the first time merchants cleared $100B in a single quarter. Operating income of $382M and FCF of $476M (15% margin) showed continued operating leverage, while Merchant Solutions revenue grew 39% as Shopify Payments penetration reached 67% (+3pp YoY). However, Q2 2026 guidance for high-twenties revenue growth implies a step-down from 34% in Q1 and triggered a ~7% post-print sell-off; SHOP has since recovered to ~$120 by early July (down ~23% YTD) on a broad SaaS-sector re-rating rather than new company-specific data, with Q2 earnings not due until early August. AI-driven orders accelerated ~13x YoY, and management remains positioned around agentic commerce (Universal Commerce Protocol with Google, Sidekick GA, TikTok Shop integration) and B2B enterprise displacement as the next legs of growth.",
+    "description": "Q2 2026 revenue rose 34% YoY to $3.58B (beat consensus ~$3.45B) on $116B GMV (+32% YoY), matching Q1's growth rate and refuting the high-twenties deceleration the market had priced in after Q1 guidance. Operating income reached $488M (+68% YoY) and FCF hit $654M (18% margin, up from 16% in Q2 2025), with Merchant Solutions up 37% and Subscription Solutions up 22% (MRR $221M). Management guided Q3 revenue to grow at a low-thirties rate — above the ~26% consensus — and FCF margin to the high-teens to low-twenties, signalling the Q1 step-down fear was one-quarter optics. SHOP surged ~25% on the print to ~$150, erasing most of the YTD SaaS-sector de-rating.",
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
         "Enterprise and B2B: B2B GMV continues to grow at multi-double-digit rates (+96% FY2025); Shopify Plus is winning multi-brand enterprise deals (VF Corp, Starbucks, Canada Goose) as legacy platforms like Salesforce Commerce Cloud are displaced for cost and agility advantages",
-        "International expansion: International revenue continued to outpace consolidated growth in Q1 2026; nearly half of merchant base is now outside North America — a large underpenetrated market with product localization and local payment methods accelerating adoption",
-        "Payments penetration: Shopify Payments reached 67% of Q1 2026 GMV (+3pp YoY) processing $67B (+41% YoY); Shop Pay exceeded 50% of US Gross Payment Volume; each percentage point gain drives ~$300–500M in incremental high-margin revenue",
+        "International expansion: GMV growth accelerated across merchant sizes, channels, and geographies in Q2 2026; nearly half of merchant base is now outside North America — a large underpenetrated market with product localization and local payment methods accelerating adoption",
+        "Payments penetration: Shopify Payments reached 67% of Q1 2026 GMV (+3pp YoY) processing $67B (+41% YoY); Q2 Merchant Solutions revenue +37% confirms continued monetisation depth; each percentage point gain drives ~$300–500M in incremental high-margin revenue",
         "Agentic commerce: AI-driven orders up ~13x YoY in Q1 2026; Universal Commerce Protocol (UCP) launched with Google; Sidekick AI generated 4,000 custom apps in weeks — positions Shopify as default checkout infrastructure for AI shopping assistants"
       ]
     },
     "growthAnalysis": {
-      "cagrEstimate": "25–28%",
-      "scoreDerivation": "Base 87.7 (25–28% blended CAGR midpoint) + 1.3 net trajectory (2 accelerating, 1 decelerating drivers) + 4 expanding margin + 4 both TAM/share − 10 high-severity keyRisk (Q2 high-twenties decel + Amazon/TikTok share threats) ≈ 87",
+      "cagrEstimate": "28–31%",
+      "scoreDerivation": "Base 90.0 (28–31% blended CAGR midpoint) + 2.7 net trajectory (2 accelerating, 1 stable driver) + 4 expanding margin + 4 both TAM/share − 5 moderate keyRisk (structural Amazon/TikTok threats persist but near-term decel resolved) ≈ 91",
       "drivers": [
         {
           "name": "Merchant Solutions (Payments + Capital)",
-          "metric": "+39% Q1 2026 YoY; Shopify Payments 67% GMV penetration ($67B processed, +41% YoY)",
+          "metric": "+37% Q2 2026 YoY ($2.78B); Shopify Payments 67% GMV penetration in Q1 ($67B processed, +41% YoY)",
           "trend": "accelerating"
         },
         {
@@ -92,33 +92,33 @@
         },
         {
           "name": "Total Revenue",
-          "metric": "+34% Q1 2026 YoY ($3.17B); Q2 guided to high-twenties — first material decel in 4 quarters",
-          "trend": "decelerating"
+          "metric": "+34% Q2 2026 YoY ($3.58B); Q3 guided low-thirties — deceleration fear resolved",
+          "trend": "stable"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "Total revenue is already explicitly decelerating (Q2 2026 guided to high-twenties vs. 34% Q1). Layered on structural threats: Amazon Buy with Prime is sponsoring direct merchant onboarding away from Shopify checkout, and TikTok Shop is taking SMB social-commerce GMV that would have rolled up under Shopify's funnel. SMB merchant base is high-churn by structure. If Q3 prints below 27% and FCF margin holds at 15% rather than expanding, the re-rating from 50x+ FCF toward 25–30x triggers 30–40% downside to the bear case ($80).",
-      "keyRiskSeverity": "high",
+      "keyRisk": "Structural threats persist: Amazon Buy with Prime sponsoring merchant checkout away from Shopify, and TikTok Shop capturing SMB social-commerce GMV. SMB merchant base remains high-churn by structure. Post-earnings re-rating to ~$150 leaves less margin of safety — if Q4 revenue growth steps below high-twenties while FCF margin stalls at 18%, multiple compression toward 25–30× FCF re-opens 30–40% downside to the bear case ($80).",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 78,
-    "description": "At ~$120 (up from ~$110 in early June, helped by a broad SaaS-sector re-rating — Guggenheim's upgrade of Salesforce and ServiceNow on valuation grounds sparked a sector-wide bid, including a 6–7% single-day pop in SHOP on July 1 — rather than new Shopify-specific data; still down ~23% YTD), SHOP trades $40 below the $160 base case and $40 above the $80 bear. Q2 earnings aren't due until early August, so the thesis is unchanged from Q1: FCF of $476M (15% margin) in line with mid-teens FY guidance, trailing FCF ~$2.1B. The active $2B share repurchase program continues to support the float, and FCF is still tracking toward $3.5B+ by FY2027 as Merchant Solutions and B2B enterprise compound.",
+    "score": 71,
+    "description": "At ~$150 (up ~25% on the Q2 beat to ~$3.58B revenue and low-thirties Q3 guide, from ~$120 pre-print), SHOP trades within ~12% of the $170 base case and well above the $80 bear. Q2 FCF of $654M (18% margin) beat the mid-teens guide and management now targets high-teens to low-twenties FCF margin for Q3. Trailing FCF is tracking ~$2.3B. Shopify repurchased $1.42B of stock in Q2 under the active $2B program, adding a tangible per-share tailwind alongside operating leverage.",
     "valuationNote": {
-      "text": "On FCF multiple, ~$2.1B trailing FCF at a ~$156B market cap implies ~74× FCF — richer than the ~68× at June's lower price, though still de-rated from the ~85×+ peak in mid-2025. At the base case FCF of ~$3.5B (FY2027E), that's ~45× FCF — a real but not unreasonable premium for a 25–28% compounder with payments-driven operating leverage. The bear case ($80) requires Q2's high-twenties guide to bleed into low-twenties by Q4 and FCF margin to stall around 15%; the bull ($240) requires Q2 to mark the floor with re-acceleration into back half on agentic commerce and B2B GMV.",
-      "fairValue": "$160"
+      "text": "On FCF multiple, ~$2.3B trailing FCF at a ~$195B market cap implies ~85× FCF — richer than the ~74× at July's ~$120 price, reflecting the post-earnings re-rating. At the base case FCF of ~$3.5B (FY2027E), that's ~56× FCF — a premium for a 28–31% compounder with payments-driven operating leverage, but no longer deeply discounted. The bear case ($80) requires revenue growth to bleed into low-twenties by Q4 and FCF margin to stall around 18%; the bull ($260) requires sustained low-thirties revenue growth with agentic commerce and B2B GMV re-acceleration into the back half.",
+      "fairValue": "$170"
     },
     "peAnalysis": {
-      "asOf": "July 2026",
+      "asOf": "August 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~119×", "note": "~$1.01 TTM EPS (GAAP noisy from equity marks)" },
-        { "label": "Forward P/E (NTM)", "value": "~66×", "note": "consensus EPS est. ~$1.83" },
-        { "label": "PEG Ratio", "value": "~2.5×", "note": "fwd P/E ÷ ~26% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~9.8×", "note": "~$16B NTM revenue est." },
-        { "label": "Price / FCF", "value": "~74×", "note": "$2.1B FCF (TTM)" }
+        { "label": "Trailing P/E (GAAP)", "value": "~95×", "note": "GAAP noisy from equity marks; net income ex-equity $439M in Q2" },
+        { "label": "Forward P/E (NTM)", "value": "~58×", "note": "consensus EPS est. ~$2.60 post-beat" },
+        { "label": "PEG Ratio", "value": "~2.0×", "note": "fwd P/E ÷ ~29% EPS CAGR" },
+        { "label": "Price / Sales (NTM)", "value": "~10.5×", "note": "~$18.5B NTM revenue est." },
+        { "label": "Price / FCF", "value": "~85×", "note": "$2.3B FCF (TTM est.)" }
       ],
-      "summary": "At ~66× forward earnings, SHOP remains well below its mid-2025 peak multiple but carries a real premium to the software sector median (~28–35×), and the multiple has expanded alongside the July SaaS-sector rally rather than on any Shopify-specific catalyst. The PEG of ~2.5× is at the upper end of tolerable for a 25–28% compounder — Q2's high-twenties revenue guide caps further re-rating until the August print confirms whether the deceleration is one-quarter optics or a new trajectory. The wide trailing-vs-forward P/E gap (~119× vs ~66×) still reflects rapid GAAP earnings normalisation as equity-investment marks anniversary out."
+      "summary": "At ~58× forward earnings post-beat, SHOP has re-rated toward the upper end of growth-tech peers (~28–35× sector median) but still below its mid-2025 peak multiple. The PEG of ~2.0× is more tolerable for a 28–31% compounder after the deceleration fear resolved. The post-earnings rally closed most of the gap to the base case — further upside requires Q3 to confirm the low-thirties guide and FCF margin expansion toward the low-twenties."
     }
   },
   "scenarios": {
@@ -132,21 +132,21 @@
       ]
     },
     "base": {
-      "priceTarget": "$160",
-      "description": "Shopify sustains 22–26% revenue CAGR driven by enterprise wins, international GMV expansion, and payments penetration gains, with FCF margins expanding toward 25% by FY2027.",
+      "priceTarget": "$170",
+      "description": "Shopify sustains 26–30% revenue CAGR driven by enterprise wins, international GMV expansion, and payments penetration gains, with FCF margins expanding toward 22–25% by FY2027.",
       "points": [
         "Enterprise GMV contribution grows from ~10% to 20%+ of total GMV as Shopify Plus displaces legacy platforms at mid-market and large enterprise accounts",
         "International revenue mix expands from 21% to 30%+ of total, with European and APAC GMV growing 35–40% annually on continued localization and local payment method integrations",
-        "FCF margin expands to 23–25% by FY2027, generating $3–3.5B annual FCF and supporting a 45–50x multiple at the base case price target"
+        "FCF margin expands to 22–25% by FY2027, generating $3–3.5B annual FCF and supporting a 50–55× multiple at the base case price target"
       ]
     },
     "bull": {
-      "priceTarget": "$240",
+      "priceTarget": "$260",
       "description": "Agentic commerce establishes Shopify as the default checkout infrastructure for AI shopping assistants, while B2B and enterprise GMV growth accelerates total GMV toward $600B+ by FY2027.",
       "points": [
         "Shopify's 'Commerce for Agents' API becomes the standard integration for major AI assistants (ChatGPT, Perplexity, Google AI Mode), channeling a meaningful share of AI-assisted commerce through Shopify checkout and driving $15–20B in incremental high-margin GMV",
         "B2B GMV growth sustains 80%+ YoY for three years, driven by enterprise adoption replacing legacy EDI and ERP-integrated commerce systems, reaching $50B+ in annual B2B GMV",
-        "FCF margin exceeds 30% as Merchant Solutions reaches operating leverage scale, generating $4.5B+ annual FCF and supporting a 55x multiple at $240"
+        "FCF margin exceeds 30% as Merchant Solutions reaches operating leverage scale, generating $4.5B+ annual FCF and supporting a 55x multiple at $260"
       ]
     }
   },
@@ -173,7 +173,7 @@
     },
     "proprietaryData": {
       "status": "strong",
-      "note": "Cross-merchant purchase data — now exceeding $400B in annualised GMV across 5M+ stores following Q1 2026's $101B quarter — is Shopify's deepest AI-era moat. Shopify Audiences (cutting CAC by 50%), Shopify Capital underwriting, and personalization tools are powered by data no standalone competitor can replicate at this scale."
+      "note": "Cross-merchant purchase data — now exceeding $450B in annualised GMV across 5M+ stores following Q2 2026's $116B quarter — is Shopify's deepest AI-era moat. Shopify Audiences (cutting CAC by 50%), Shopify Capital underwriting, and personalization tools are powered by data no standalone competitor can replicate at this scale."
     },
     "regulatoryLockIn": {
       "status": "weakened",
@@ -185,13 +185,13 @@
     },
     "transactionEmbedding": {
       "status": "strong",
-      "note": "Shopify Payments processed $67B (+41% YoY) in Q1 2026 at 67% penetration of GMV (+3pp YoY); Shop Pay continues to exceed 50% of US Gross Payment Volume. Layered with Shopify Capital, Shopify Balance, Shopify Shipping, and Buy Button, the platform is embedded in every operational and financial workflow of its merchant base."
+      "note": "Q2 2026 Merchant Solutions revenue grew 37% to $2.78B; Shopify Payments processed $67B (+41% YoY) in Q1 2026 at 67% penetration of GMV (+3pp YoY). Shop Pay continues to exceed 50% of US Gross Payment Volume. Layered with Shopify Capital, Shopify Balance, Shopify Shipping, and Buy Button, the platform is embedded in every operational and financial workflow of its merchant base."
     },
     "systemOfRecord": {
       "status": "intact",
       "note": "Shopify is the system of record for inventory, orders, and customer data for millions of SMB and mid-market merchants; for larger enterprises it shares this role with ERPs, but for pure-play DTC and Shopify Plus brands, it is the authoritative operational source of truth."
     },
-    "verdict": "Shopify is a net beneficiary of AI adoption — its proprietary cross-merchant data, transaction embedding, and agentic commerce positioning make AI a structural tailwind rather than a threat. The primary AI vulnerability is that lower development barriers could enable new commerce platform entrants, but Shopify's 5M+ merchant installed base and ecosystem gravity create compounding advantages that are increasingly difficult for AI-powered challengers to replicate quickly."
+    "verdict": "Shopify is a net beneficiary of AI adoption — its proprietary cross-merchant data, transaction embedding, and agentic commerce positioning make AI a structural tailwind rather than a threat. Q2 2026 confirmed the platform compounding at scale: 34% revenue growth, 18% FCF margin, and low-thirties Q3 guidance. The primary AI vulnerability remains that lower development barriers could enable new commerce platform entrants, but Shopify's 5M+ merchant installed base and ecosystem gravity create compounding advantages that are increasingly difficult for AI-powered challengers to replicate quickly."
   },
-  "lastAnalyzed": "July 3, 2026"
+  "lastAnalyzed": "August 5, 2026"
 }
