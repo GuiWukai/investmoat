@@ -70,6 +70,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily',
       priority: 0.9,
     },
+    {
+      url: 'https://investmoat.com/earnings',
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 0.8,
+    },
     ...(researchPages.length > 0
       ? [
           {
