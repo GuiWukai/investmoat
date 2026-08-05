@@ -110,6 +110,7 @@ function screenPillars(only?: string): void {
     const strong = rated.filter((n) => n.moats[key] === 'strong');
     const weakened = rated.filter((n) => n.moats[key] === 'weakened');
     const destroyed = rated.filter((n) => n.moats[key] === 'destroyed');
+    const na = rated.filter((n) => n.moats[key] === 'na');
     const categories = new Set(strong.map((n) => n.category));
 
     heading(
@@ -119,6 +120,7 @@ function screenPillars(only?: string): void {
     if (strong.length) console.log(`  ${GOLD}strong${RESET}    ${tickerList(strong)}`);
     if (weakened.length) console.log(`  ${DIM}weakened${RESET}  ${tickerList(weakened)}`);
     if (destroyed.length) console.log(`  ${DIM}destroyed${RESET} ${tickerList(destroyed)}`);
+    if (na.length) console.log(`  ${DIM}n/a${RESET}       ${tickerList(na)}`);
     if (categories.size >= 3 && strong.length >= 4) {
       console.log(
         `  ${DIM}↳ cross-category cohort — the pillar sorts names the sector labels don't${RESET}`,

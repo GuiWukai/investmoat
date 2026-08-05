@@ -74,9 +74,21 @@
       "cagrEstimate": "6-9%",
       "scoreDerivation": "Base 70 + reshoring/nearshoring capex tailwind (+3) + rising software/ARR mix (+2) - industrial-capex cyclicality (-3) = 72",
       "drivers": [
-        { "name": "Order Intake", "metric": "Double-digit order growth in Q2 FY2026", "trend": "accelerating" },
-        { "name": "Intelligent Devices", "metric": "Segment sales ~$1.0B, +13% YoY", "trend": "accelerating" },
-        { "name": "FY2026 Guidance", "metric": "Revenue ~$8.9B; adj EPS raised to $12.50–$13.10", "trend": "accelerating" }
+        {
+          "name": "Order Intake",
+          "metric": "Double-digit order growth in Q2 FY2026",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Intelligent Devices",
+          "metric": "Segment sales ~$1.0B, +13% YoY",
+          "trend": "accelerating"
+        },
+        {
+          "name": "FY2026 Guidance",
+          "metric": "Revenue ~$8.9B; adj EPS raised to $12.50–$13.10",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "market share",
       "keyRisk": "A US industrial recession or reshoring-capex air pocket stalls order intake, and Rockwell's high fixed-cost base compresses margins as volumes fall.",
@@ -127,8 +139,8 @@
       "note": "The control programs that run a plant are customised, tuned, and documented against Rockwell's Logix architecture over years of operation. Re-implementing that plant-specific logic on a competitor's controller is a high-risk, revalidation-heavy project that rarely clears an ROI hurdle."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "Not applicable — Rockwell is a control-hardware and industrial-software business with no reliance on public data aggregation as a moat source."
+      "status": "na",
+      "note": "Rockwell is a control-hardware and industrial-software business with no reliance on public data aggregation as a moat source."
     },
     "talentScarcity": {
       "status": "intact",

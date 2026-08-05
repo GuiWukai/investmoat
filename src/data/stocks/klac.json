@@ -100,12 +100,36 @@
     "peAnalysis": {
       "asOf": "July 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~50×", "note": "FY2026 GAAP EPS $3.66" },
-        { "label": "Forward P/E (NTM)", "value": "~37×", "note": "consensus FY2027 non-GAAP EPS ~$4.98" },
-        { "label": "PEG Ratio", "value": "~1.8×", "note": "fwd P/E ÷ ~20% multi-year EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~14×", "note": "~$16.9B FY2027 revenue, ~$240B cap" },
-        { "label": "Price / FCF", "value": "~64×", "note": "FY2026 free cash flow $3.77B" },
-        { "label": "Dividend", "value": "$2.30/sh", "note": "17th consecutive annual increase; $7B buyback authorised" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~50×",
+          "note": "FY2026 GAAP EPS $3.66"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~37×",
+          "note": "consensus FY2027 non-GAAP EPS ~$4.98"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.8×",
+          "note": "fwd P/E ÷ ~20% multi-year EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~14×",
+          "note": "~$16.9B FY2027 revenue, ~$240B cap"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~64×",
+          "note": "FY2026 free cash flow $3.77B"
+        },
+        {
+          "label": "Dividend",
+          "value": "$2.30/sh",
+          "note": "17th consecutive annual increase; $7B buyback authorised"
+        }
       ],
       "summary": "The de-rating did the work the earnings did not. Forward P/E fell from ~53× to ~37× while FY2027 estimates rose, so KLA is no longer the outlier it was in June — ASML trades near ~48×, and Lam and Applied sit in the low-to-high 30s on recent data. PEG of ~1.8× is a normal price for a business with this moat. What is still rich is the cash-flow multiple: ~64× FY2026 free cash flow assumes the AI capex cycle keeps running, and FCF conversion has to catch up with reported earnings for the base case to hold."
     }
@@ -149,8 +173,8 @@
       "note": "Yield-management algorithms and defect-signature classifiers are encoded against KLA's specific sensor data over decades. Customer fab-process tuning relies on KLA's proprietary methodologies — replicating in another vendor's tools would restart the learning curve."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — process-control business does not derive moat from public datasets."
+      "status": "na",
+      "note": "process-control business does not derive moat from public datasets."
     },
     "talentScarcity": {
       "status": "intact",

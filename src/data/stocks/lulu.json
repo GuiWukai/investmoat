@@ -4,12 +4,24 @@
   "name": "Lululemon Athletica",
   "lastAnalyzed": "May 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "LULU" },
-    { "label": "Market Cap", "value": "~$32B" }
+    {
+      "label": "Ticker",
+      "value": "LULU"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$32B"
+    }
   ],
   "chips": [
-    { "label": "Premium Athletic Apparel", "color": "primary" },
-    { "label": "Beaten-Down Quality", "color": "warning" }
+    {
+      "label": "Premium Athletic Apparel",
+      "color": "primary"
+    },
+    {
+      "label": "Beaten-Down Quality",
+      "color": "warning"
+    }
   ],
   "metrics": [
     {
@@ -59,9 +71,21 @@
       "cagrEstimate": "6-10%",
       "scoreDerivation": "Base 70 (8-15% CAGR low band) + 5 international optionality (China + EU 25%+ growth) - 7 NA weakness (women's reset overhang) - 6 competition (Alo, Vuori, Athleta, Bandier) = 62",
       "drivers": [
-        { "name": "International (China + EU)", "metric": "+25%+ YoY; multi-year runway", "trend": "accelerating" },
-        { "name": "Men's Category", "metric": "+10-15% YoY; structural under-penetration", "trend": "stable" },
-        { "name": "NA Women's", "metric": "Flat-to-slightly-down; reset in progress", "trend": "decelerating" }
+        {
+          "name": "International (China + EU)",
+          "metric": "+25%+ YoY; multi-year runway",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Men's Category",
+          "metric": "+10-15% YoY; structural under-penetration",
+          "trend": "stable"
+        },
+        {
+          "name": "NA Women's",
+          "metric": "Flat-to-slightly-down; reset in progress",
+          "trend": "decelerating"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If NA women's continues declining through 2027 and international growth moderates simultaneously (China consumer slowdown), the multiple compresses to 16× and the turnaround thesis lengthens to multi-year.",
@@ -75,11 +99,31 @@
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
-        { "label": "Forward P/E (FY26)", "value": "~17×", "note": "EPS ~$15.30; significant discount to historical" },
-        { "label": "Forward P/E (FY27)", "value": "~15×", "note": "Assumes recovery to $17 EPS" },
-        { "label": "Price / Sales (FY26)", "value": "~2.5×", "note": "Discount to historical 4-5×" },
-        { "label": "PEG Ratio", "value": "~1.8×", "note": "Reasonable on growth recovery" },
-        { "label": "FCF Yield", "value": "~6%", "note": "FCF strong even through reset" }
+        {
+          "label": "Forward P/E (FY26)",
+          "value": "~17×",
+          "note": "EPS ~$15.30; significant discount to historical"
+        },
+        {
+          "label": "Forward P/E (FY27)",
+          "value": "~15×",
+          "note": "Assumes recovery to $17 EPS"
+        },
+        {
+          "label": "Price / Sales (FY26)",
+          "value": "~2.5×",
+          "note": "Discount to historical 4-5×"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.8×",
+          "note": "Reasonable on growth recovery"
+        },
+        {
+          "label": "FCF Yield",
+          "value": "~6%",
+          "note": "FCF strong even through reset"
+        }
       ],
       "summary": "Valuation prices in turnaround uncertainty; quality of underlying franchise + international growth supports rerating thesis."
     }
@@ -115,15 +159,15 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — consumer brand."
+      "status": "na",
+      "note": "consumer brand."
     },
     "businessLogic": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "publicDataAccess": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "talentScarcity": {
@@ -139,7 +183,7 @@
       "note": "Loyalty program and store-level transaction data is real but not deeply monetised."
     },
     "regulatoryLockIn": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "networkEffects": {
@@ -151,7 +195,7 @@
       "note": "No subscription; embedment is brand affinity and habit, not technical lock-in."
     },
     "systemOfRecord": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "verdict": "Lululemon's moat is brand + community + premium pricing — AI is largely neutral on the franchise. The thesis question is product execution and international expansion, not technological obsolescence; current valuation provides margin of safety against execution risk."

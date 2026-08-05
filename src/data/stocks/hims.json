@@ -4,12 +4,24 @@
   "name": "Hims & Hers Health",
   "lastAnalyzed": "May 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "HIMS" },
-    { "label": "Market Cap", "value": "~$11B" }
+    {
+      "label": "Ticker",
+      "value": "HIMS"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$11B"
+    }
   ],
   "chips": [
-    { "label": "Telehealth | DTC Subscription", "color": "primary" },
-    { "label": "Speculative Growth", "color": "warning" }
+    {
+      "label": "Telehealth | DTC Subscription",
+      "color": "primary"
+    },
+    {
+      "label": "Speculative Growth",
+      "color": "warning"
+    }
   ],
   "metrics": [
     {
@@ -59,9 +71,21 @@
       "cagrEstimate": "30-45%",
       "scoreDerivation": "Base 90 (>30% CAGR hypergrowth) + 3 platform extension (women's health, testosterone, weight-loss next-gen) - 7 regulatory/category risk (compounded GLP-1 ban, ongoing FTC/state-AG scrutiny) - 6 margin compression (branded GLP-1 lower margin than compounded) = 80",
       "drivers": [
-        { "name": "Weight-Loss Category", "metric": "Branded Wegovy + oral GLP-1; revenue growing but mix margin lower than 2024", "trend": "stable" },
-        { "name": "Subscriber Growth", "metric": "+800K subscribers FY26; CAC payback <12 months in established categories", "trend": "accelerating" },
-        { "name": "New Category Expansion", "metric": "Women's health, testosterone, longevity adding incremental cohorts", "trend": "accelerating" }
+        {
+          "name": "Weight-Loss Category",
+          "metric": "Branded Wegovy + oral GLP-1; revenue growing but mix margin lower than 2024",
+          "trend": "stable"
+        },
+        {
+          "name": "Subscriber Growth",
+          "metric": "+800K subscribers FY26; CAC payback <12 months in established categories",
+          "trend": "accelerating"
+        },
+        {
+          "name": "New Category Expansion",
+          "metric": "Women's health, testosterone, longevity adding incremental cohorts",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If FDA enforcement against personalised compounding tightens further or state regulators impose telehealth-prescription restrictions on GLP-1 in 2026-27, the weight-loss category could decline 30-40% and the margin profile compresses materially.",
@@ -75,11 +99,31 @@
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
-        { "label": "Forward P/E (FY26)", "value": "~50×", "note": "EPS ~$1.00 mid; growth-stock multiple" },
-        { "label": "Forward P/E (FY27)", "value": "~32×", "note": "Assumes 50% EPS growth on subscriber + category" },
-        { "label": "Price / Sales (FY26)", "value": "~4.5×", "note": "Premium vs Tele/DTC peers" },
-        { "label": "PEG Ratio", "value": "~1.1×", "note": "Fair on growth, none on regulatory risk" },
-        { "label": "FCF Yield", "value": "~3%", "note": "FCF building as capex moderates" }
+        {
+          "label": "Forward P/E (FY26)",
+          "value": "~50×",
+          "note": "EPS ~$1.00 mid; growth-stock multiple"
+        },
+        {
+          "label": "Forward P/E (FY27)",
+          "value": "~32×",
+          "note": "Assumes 50% EPS growth on subscriber + category"
+        },
+        {
+          "label": "Price / Sales (FY26)",
+          "value": "~4.5×",
+          "note": "Premium vs Tele/DTC peers"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.1×",
+          "note": "Fair on growth, none on regulatory risk"
+        },
+        {
+          "label": "FCF Yield",
+          "value": "~3%",
+          "note": "FCF building as capex moderates"
+        }
       ],
       "summary": "Valuation discounts none of the regulatory or category-shift risk; the equity is a high-volatility growth-and-execution position rather than a quality compounder."
     }
@@ -123,7 +167,7 @@
       "note": "Telehealth intake-to-prescription workflows are largely commoditised software."
     },
     "publicDataAccess": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "talentScarcity": {
@@ -143,8 +187,8 @@
       "note": "Telehealth and compounding regulation is fluid; the April 2025 GLP-1 compounding ban demonstrated the franchise's regulatory exposure."
     },
     "networkEffects": {
-      "status": "destroyed",
-      "note": "N/A — DTC subscription, not a network-effects business."
+      "status": "na",
+      "note": "DTC subscription, not a network-effects business."
     },
     "transactionEmbedding": {
       "status": "intact",

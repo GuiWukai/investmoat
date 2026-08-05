@@ -188,8 +188,8 @@
       "note": "Content licensing agreements, affiliate deals, and rights contracts are complex, but they are negotiated business relationships rather than embedded software logic. There is no Disney SaaS layer that encodes proprietary customer workflows — the business logic moat is weak."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — Disney's competitive advantage is IP ownership and distribution, not access to unique public datasets. Its data advantage is proprietary (subscriber behavior, box office analytics), not derived from public data access."
+      "status": "na",
+      "note": "Disney's competitive advantage is IP ownership and distribution, not access to unique public datasets. Its data advantage is proprietary (subscriber behavior, box office analytics), not derived from public data access."
     },
     "talentScarcity": {
       "status": "intact",
@@ -216,8 +216,8 @@
       "note": "Disney Vacation Club (DVC) memberships, annual park passes, and cruise bookings create multi-year financial embedding — DVC members effectively prepay for decades of Disney experiences. The Disney Bundle is embedded in millions of households via auto-renewing subscriptions. MVPD/cable operators pay ESPN affiliate fees regardless of viewership trends, with contracts lasting multiple years. This embedding is solid but not as deep as payment networks."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — Disney is not a system of record for any business process in the software sense. Its cultural canon (Marvel/Star Wars lore, Disney IP) functions as a form of irreplaceable reference, but this is better captured in the IP moat narrative than in this framework's definition of authoritative business data records."
+      "status": "na",
+      "note": "Disney is not a system of record for any business process in the software sense. Its cultural canon (Marvel/Star Wars lore, Disney IP) functions as a form of irreplaceable reference, but this is better captured in the IP moat narrative than in this framework's definition of authoritative business data records."
     },
     "verdict": "Disney is a mixed AI story: a partial beneficiary and partial loser. On the beneficiary side, AI is reducing content production costs (reducing animation and VFX expenses), improving ad targeting on Hulu, and strengthening Disney's data advantage through better personalization — helping the DTC profitability inflection. The biggest AI-resilient moats are regulatoryLockIn (ESPN sports rights contracts are AI-proof) and proprietaryData (decades of family entertainment behavior data). The biggest AI threat is that generative AI enables lower-cost competitors to produce compelling streaming content without Disney's capital investment, weakening the talentScarcity and bundling moats over a 5-10 year horizon. Disney's physical parks and exclusive sports rights provide a floor that pure-streaming peers like Netflix lack, making it more AI-durable than it first appears."
   },

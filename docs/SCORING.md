@@ -24,10 +24,9 @@ Each moat/pillar is rated and converted to points:
 | `intact` | 65 |
 | `weakened` | 35 |
 | `destroyed` | 0 |
+| `na` | excluded |
 
-`destroyed` scores 0 rather than a token floor, so both ends of the moat scale are literal: **0 means all ten applicable moats are destroyed, 100 means all ten are strong.** This also sharpens the distinction from N/A — an N/A moat is dropped entirely and its weight redistributes (the moat never applied), whereas a destroyed moat keeps its weight and scores nothing (it applied and is gone).
-
-A moat marked `destroyed` whose note starts with `N/A` / `Not applicable` is **excluded** from the score and its weight redistributes.
+`destroyed` scores 0 rather than a token floor, so both ends of the moat scale are literal: **0 means all ten applicable moats are destroyed, 100 means all ten are strong.** `na` is a separate status for moats that never applied — dropped entirely, weight redistributes. Do not encode N/A as `destroyed` plus a note prefix; that used to silently score zero at full weight.
 
 ### Equity: the 10-moat framework
 

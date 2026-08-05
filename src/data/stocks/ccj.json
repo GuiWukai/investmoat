@@ -71,9 +71,21 @@
       "cagrEstimate": "14-18%",
       "scoreDerivation": "Base 81 (~16% blended CAGR) + 4 (all three drivers accelerating) + 4 (expanding margins) + 3 (TAM expansion) - 10 (high commodity-cycle risk severity) = 82",
       "drivers": [
-        { "name": "Uranium realized price", "metric": "Q1 2026 realized US$66.21/lb vs. $62.55/lb YoY (+5.9%); long-term price ~$80-85/lb", "trend": "accelerating" },
-        { "name": "Westinghouse AP1000 pipeline", "metric": "$17.5B DOE loan (Jun 2026) funds long-lead items for up to 10 reactors; FY2025 EBITDA $690M+ (Cameco 49%) vs. $380M prior guidance", "trend": "accelerating" },
-        { "name": "Contracted volume", "metric": "230M lbs committed across 39 utilities; ~28M lb/yr through 2030, India adds 22M lbs through 2035", "trend": "accelerating" }
+        {
+          "name": "Uranium realized price",
+          "metric": "Q1 2026 realized US$66.21/lb vs. $62.55/lb YoY (+5.9%); long-term price ~$80-85/lb",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Westinghouse AP1000 pipeline",
+          "metric": "$17.5B DOE loan (Jun 2026) funds long-lead items for up to 10 reactors; FY2025 EBITDA $690M+ (Cameco 49%) vs. $380M prior guidance",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Contracted volume",
+          "metric": "230M lbs committed across 39 utilities; ~28M lb/yr through 2030, India adds 22M lbs through 2035",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "Uranium spot reverses if Kazakh/Russian export restrictions resolve and 10-15M lbs/yr re-enter spot market over 2026-2027 — could compress realized prices toward contract floors and de-rate the equity.",
@@ -131,7 +143,7 @@
       "description": "Uranium long-term prices stabilize at $85-95/lb, Westinghouse delivers 6-10% EBITDA CAGR, the India deal commences delivery in 2027, and Cameco's contract book rolls forward — adj. EPS reaches $1.60-1.80 USD by FY2027.",
       "points": [
         "Uranium long-term price holds at $85-95/lb through 2026-2027, with Cameco's 28M lb/year delivery commitment pricing at ~$90/lb realized — uranium segment EBITDA grows 12-15% annually from contract repricing as below-market legacy agreements expire",
-"Westinghouse converts the June 2026 DOE $17.5B conditional loan into firm long-lead orders and secures 3-5 new AP1000 reactor contracts in Europe and Southeast Asia under the $80B U.S. Government partnership framework; Cameco's 49% EBITDA share grows toward $800M+ by FY2027, establishing Westinghouse as the dominant earnings driver",
+        "Westinghouse converts the June 2026 DOE $17.5B conditional loan into firm long-lead orders and secures 3-5 new AP1000 reactor contracts in Europe and Southeast Asia under the $80B U.S. Government partnership framework; Cameco's 49% EBITDA share grows toward $800M+ by FY2027, establishing Westinghouse as the dominant earnings driver",
         "India uranium deliveries commence in 2027 (22M lbs across 9 years at market-related prices); additional government-to-government contracts follow from Japan, South Korea, and Eastern Europe seeking Western supply security — extending committed revenue to 2040"
       ]
     },
@@ -147,16 +159,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — Cameco is a uranium mining and nuclear services company; there is no user-trained interface creating switching costs; this moat category does not apply to its business model."
+      "status": "na",
+      "note": "Cameco is a uranium mining and nuclear services company; there is no user-trained interface creating switching costs; this moat category does not apply to its business model."
     },
     "businessLogic": {
       "status": "strong",
       "note": "Underground uranium mining at 600m+ depths in high-radiation environments requires proprietary water management, ground support engineering, and radiation protection protocols developed over 30+ years at Cigar Lake and McArthur River — operational know-how that cannot be transferred to a greenfield mine without decades of experience and irreplicable geological conditions."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — Cameco does not control access to any unique public data source; this moat category does not apply to a mining and nuclear services business."
+      "status": "na",
+      "note": "Cameco does not control access to any unique public data source; this moat category does not apply to a mining and nuclear services business."
     },
     "talentScarcity": {
       "status": "intact",
@@ -183,8 +195,8 @@
       "note": "Multi-year uranium supply contracts (220M+ lbs committed; ~$2.6B India deal through 2035) embed Cameco as the default Western uranium supplier for 39 utilities across 16 countries — utilities view Cameco as a national security supply partner, and the transaction costs of switching suppliers (re-contracting, government approvals, security vetting) make mid-contract switching prohibitive."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — Cameco is not a system of record for any information function; this moat category does not apply to a mining and nuclear services business."
+      "status": "na",
+      "note": "Cameco is not a system of record for any information function; this moat category does not apply to a mining and nuclear services business."
     },
     "verdict": "Cameco is a net beneficiary of AI adoption through the data center nuclear power demand tailwind — AI-driven electricity demand is accelerating utility investment in nuclear capacity, directly expanding demand for Cameco's uranium and Westinghouse's reactor services. The company's core moats (mine geology, regulatory approvals, long-term contract relationships) are physical and regulatory advantages entirely immune to AI-driven disruption."
   },

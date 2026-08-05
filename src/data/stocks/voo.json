@@ -132,16 +132,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — VOO is a passive index ETF wrapper with no user-facing software interface."
+      "status": "na",
+      "note": "VOO is a passive index ETF wrapper with no user-facing software interface."
     },
     "businessLogic": {
-      "status": "destroyed",
-      "note": "N/A — the fund mechanically tracks the S&P 500 index; there is no proprietary business logic."
+      "status": "na",
+      "note": "the fund mechanically tracks the S&P 500 index; there is no proprietary business logic."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — the S&P 500 methodology and constituents are fully public; the wrapper has no data moat of its own."
+      "status": "na",
+      "note": "the S&P 500 methodology and constituents are fully public; the wrapper has no data moat of its own."
     },
     "talentScarcity": {
       "status": "weakened",
@@ -164,12 +164,12 @@
       "note": "Top constituents (MSFT, NVDA, GOOGL, META) enjoy strong network effects, but at 30–35% basket weight the index-level effect is heavily diluted."
     },
     "transactionEmbedding": {
-      "status": "destroyed",
-      "note": "N/A — an index fund is not embedded in any customer transaction or workflow."
+      "status": "na",
+      "note": "an index fund is not embedded in any customer transaction or workflow."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — VOO is not a system of record for any business function."
+      "status": "na",
+      "note": "VOO is not a system of record for any business function."
     },
     "verdict": "VOO's moat is structural cost (3 bps) and inherent diversification — not stock selection. As a benchmark it's defensible, but the basket-level moat is intentionally diluted versus a curated moat-first portfolio, which is exactly what InvestMoat is built to outperform."
   },

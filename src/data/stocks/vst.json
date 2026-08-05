@@ -4,12 +4,24 @@
   "name": "Vistra Corp.",
   "titleColor": "#E8401C",
   "headerStats": [
-    { "label": "Ticker", "value": "VST" },
-    { "label": "Market Cap", "value": "~$47B" }
+    {
+      "label": "Ticker",
+      "value": "VST"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$47B"
+    }
   ],
   "chips": [
-    { "label": "Energy | Integrated Power", "color": "primary" },
-    { "label": "AI Power Duopoly", "color": "success" }
+    {
+      "label": "Energy | Integrated Power",
+      "color": "primary"
+    },
+    {
+      "label": "AI Power Duopoly",
+      "color": "success"
+    }
   ],
   "metrics": [
     {
@@ -59,9 +71,21 @@
       "cagrEstimate": "8-13%",
       "scoreDerivation": "Base 65 + 10 (2026 EBITDA guide +22-29% YoY and 3.8 GW of contracted nuclear PPAs) + 5 (Cogentrix accretion and ERCOT scarcity tailwind) - 3 (Cogentrix financing/leverage scrutiny into the Aug 7 print; hedge-mark optical noise) = 77",
       "drivers": [
-        { "name": "Hyperscaler Nuclear PPA Ramp", "metric": "Meta 2,609 MW (deliveries late 2026) + Amazon 1,200 MW (Q4 2027) at premium contracted pricing; Meta uprates through 2034", "trend": "accelerating" },
-        { "name": "Cogentrix Accretion", "metric": "~5,500 MW pending H2 2026 close (~$2.3B cash + 5M shares + $1.5B assumed debt); mid-single-digit FCFbG/share accretion guided for 2027", "trend": "accelerating" },
-        { "name": "ERCOT Demand Growth", "metric": "50+ GW potential data center load through 2030; Q1 2026 record $1.49B EBITDA; FY26 midpoint $7.2B intact into Aug 7 Q2", "trend": "accelerating" }
+        {
+          "name": "Hyperscaler Nuclear PPA Ramp",
+          "metric": "Meta 2,609 MW (deliveries late 2026) + Amazon 1,200 MW (Q4 2027) at premium contracted pricing; Meta uprates through 2034",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Cogentrix Accretion",
+          "metric": "~5,500 MW pending H2 2026 close (~$2.3B cash + 5M shares + $1.5B assumed debt); mid-single-digit FCFbG/share accretion guided for 2027",
+          "trend": "accelerating"
+        },
+        {
+          "name": "ERCOT Demand Growth",
+          "metric": "50+ GW potential data center load through 2030; Q1 2026 record $1.49B EBITDA; FY26 midpoint $7.2B intact into Aug 7 Q2",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If the Aug 7 print or Cogentrix financing plan shows interest expense or leverage tracking toward NRG-like coverage rather than the guided ~6× EBITDA-to-interest buffer, buybacks could pause while ERCOT renewable overbuild compresses uncontracted scarcity rents — a 12–18 month path to leverage above 4× and a stalled capital-return flywheel.",
@@ -117,16 +141,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — Vistra is a power generator and retailer; while TXU Energy operates customer-facing billing portals, the Texas deregulated market enables straightforward provider switching and no complex learned workflow creates meaningful interface-based lock-in."
+      "status": "na",
+      "note": "Vistra is a power generator and retailer; while TXU Energy operates customer-facing billing portals, the Texas deregulated market enables straightforward provider switching and no complex learned workflow creates meaningful interface-based lock-in."
     },
     "businessLogic": {
       "status": "intact",
       "note": "Vistra's nuclear plant operations encode decades of plant-specific NRC compliance protocols, fuel cycle management, and outage scheduling; its ERCOT trading desk optimises dispatch across a 44 GW portfolio using proprietary algorithms built on 15+ years of real-time market participation that competitors cannot quickly replicate."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — Vistra does not control access to any unique public data source; this moat category does not apply to its power generation or retail electricity business model."
+      "status": "na",
+      "note": "Vistra does not control access to any unique public data source; this moat category does not apply to its power generation or retail electricity business model."
     },
     "talentScarcity": {
       "status": "strong",
@@ -145,16 +169,16 @@
       "note": "Vistra holds NRC operating licences for 4 nuclear plants with expiry dates spanning 2037–2053 (Perry extended through 2046 in July 2025), retail electricity provider (REP) certification in Texas, and ERCOT qualified scheduling entity status; each nuclear licence is facility-specific and represents decades of regulatory investment that no new entrant can shortcut."
     },
     "networkEffects": {
-      "status": "destroyed",
-      "note": "N/A — no network effects exist in power generation or retail electricity; electrons are a commodity on the grid and additional customers do not increase the value of the service for existing ones, so this moat does not apply structurally to Vistra's business model."
+      "status": "na",
+      "note": "no network effects exist in power generation or retail electricity; electrons are a commodity on the grid and additional customers do not increase the value of the service for existing ones, so this moat does not apply structurally to Vistra's business model."
     },
     "transactionEmbedding": {
       "status": "strong",
       "note": "Vistra's 20-year nuclear PPAs with Amazon (1,200 MW, Comanche Peak) and Meta (2,609 MW, Perry/Davis-Besse/Beaver Valley) create deep bilateral dependencies with two of the world's largest hyperscalers that cannot be unwound without abandoning decade-long infrastructure commitments; 5 million retail customers on automatic billing add a second layer of daily transaction embedding."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — Vistra is not a system of record for any information function; this moat category does not apply to power generation or retail electricity."
+      "status": "na",
+      "note": "Vistra is not a system of record for any information function; this moat category does not apply to power generation or retail electricity."
     },
     "verdict": "Vistra is a net beneficiary of AI adoption: the hyperscaler data centre buildout directly drives demand for its nuclear baseload and dispatchable gas generation, while its 20-year PPAs with Amazon and Meta structurally embed it into the AI power infrastructure for the next two decades. The core nuclear and regulatory moats (physical plant ownership, NRC licences, talent scarcity) are entirely AI-immune — AI cannot operate a reactor, obtain an NRC licence, or build a power plant."
   },

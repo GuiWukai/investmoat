@@ -1,4 +1,4 @@
-export type MoatStatus = 'strong' | 'intact' | 'weakened' | 'destroyed';
+export type MoatStatus = 'strong' | 'intact' | 'weakened' | 'destroyed' | 'na';
 export type RecommendationStatus = 'Strong Buy' | 'Accumulate' | 'Hold' | 'Speculative Buy' | 'Avoid';
 export type ChipColor = 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
 

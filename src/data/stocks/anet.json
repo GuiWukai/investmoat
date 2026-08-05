@@ -170,8 +170,8 @@
       "note": "Customer networks have years of EOS configuration, automation templates, and compliance policies built into CloudVision. Hyperscaler-specific customizations, multi-tenant segmentation policies, and AI cluster networking configurations are deeply embedded business logic that would take years to migrate."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — hardware/networking company. Public data access is not a meaningful moat dimension for a networking switch vendor."
+      "status": "na",
+      "note": "hardware/networking company. Public data access is not a meaningful moat dimension for a networking switch vendor."
     },
     "talentScarcity": {
       "status": "intact",
@@ -194,8 +194,8 @@
       "note": "EOS ecosystem network effects: more enterprises using EOS → more automation scripts and CloudVision integrations developed by the community → easier for new enterprises to adopt → harder for alternatives to catch up. Similar to how Cisco IOS created a generation of CCIE-certified engineers who perpetuated its adoption."
     },
     "transactionEmbedding": {
-      "status": "destroyed",
-      "note": "N/A — hardware/networking company. Transaction embedding is not applicable to a networking switch vendor."
+      "status": "na",
+      "note": "hardware/networking company. Transaction embedding is not applicable to a networking switch vendor."
     },
     "systemOfRecord": {
       "status": "intact",

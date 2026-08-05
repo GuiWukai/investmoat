@@ -175,16 +175,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "Not applicable — Bloom sells industrial power hardware to data centre developers and utilities; there is no trained user interface or workflow to relearn."
+      "status": "na",
+      "note": "Bloom sells industrial power hardware to data centre developers and utilities; there is no trained user interface or workflow to relearn."
     },
     "businessLogic": {
       "status": "intact",
       "note": "Twenty-five years of solid-oxide electrolyte chemistry, stack design and manufacturing process IP make Bloom the only company shipping SOFC at gigawatt scale, but this is physical process know-how a well-capitalised entrant could replicate over roughly five years — not software logic that compounds."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "Not applicable — Bloom derives no advantage from access to or aggregation of a public data source."
+      "status": "na",
+      "note": "Bloom derives no advantage from access to or aggregation of a public data source."
     },
     "talentScarcity": {
       "status": "intact",
@@ -203,16 +203,16 @@
       "note": "Because the Energy Server does not combust fuel it emits no NOx, SOx or particulates, so it clears air permits in districts where gas turbines cannot be sited — a genuine regulatory advantage, but a two-edged one that narrows if turbine permitting is fast-tracked for data centres and inverts if the natural-gas feedstock draws carbon rules."
     },
     "networkEffects": {
-      "status": "destroyed",
-      "note": "Not applicable — a Bloom installation at one site creates no value for any other customer; electrons are fungible and there is no cross-customer effect."
+      "status": "na",
+      "note": "a Bloom installation at one site creates no value for any other customer; electrons are fungible and there is no cross-customer effect."
     },
     "transactionEmbedding": {
       "status": "strong",
       "note": "Once commissioned, a Bloom Server is the site's power plant under a 10–15 year exclusive service contract that only Bloom can perform; switching mid-life means rebuilding the generation asset, which is why the service backlog (~$14B) is more than twice the product backlog."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "Not applicable — Bloom is not the authoritative record for any critical customer business function."
+      "status": "na",
+      "note": "Bloom is not the authoritative record for any critical customer business function."
     },
     "verdict": "The AI-resilient side carries this moat: transaction embedding is strong (a 10–15 year exclusive service contract on a physical power plant is about as AI-proof as a switching cost gets), and the fleet degradation data and non-combustion permitting position are both intact and largely indifferent to what models can do. The AI-vulnerable side is where the fragility sits — Bloom's process IP, engineering scarcity and bundle are all replicable by a determined entrant with capital and five years, and none of them strengthen as AI improves. The result is a moat score of 72 against a growth score of 92: the investment case is a demand-and-execution case, not a durability case, and it is properly sized as such."
   },

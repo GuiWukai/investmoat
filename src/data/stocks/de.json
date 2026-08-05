@@ -4,12 +4,24 @@
   "name": "Deere & Company",
   "lastAnalyzed": "May 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "DE" },
-    { "label": "Market Cap", "value": "~$130B" }
+    {
+      "label": "Ticker",
+      "value": "DE"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$130B"
+    }
   ],
   "chips": [
-    { "label": "Agriculture | Construction", "color": "primary" },
-    { "label": "Cyclical Compounder", "color": "warning" }
+    {
+      "label": "Agriculture | Construction",
+      "color": "primary"
+    },
+    {
+      "label": "Cyclical Compounder",
+      "color": "warning"
+    }
   ],
   "metrics": [
     {
@@ -59,9 +71,21 @@
       "cagrEstimate": "5-8%",
       "scoreDerivation": "Base 65 (4-8% CAGR top of band) + 5 precision ag ARR optionality (30%+ growth) - 5 cyclicality (FY25-26 trough) - 5 farmer balance sheet (grain prices weak) = 60",
       "drivers": [
-        { "name": "Agriculture & Turf", "metric": "Trough cycle FY25-26; recovery dependent on grain prices and farmer income", "trend": "decelerating" },
-        { "name": "Construction & Forestry", "metric": "Tied to non-residential construction cycle; mixed", "trend": "stable" },
-        { "name": "Precision Ag Software ARR", "metric": "$1B run-rate growing 30%+; subscription mix shift in progress", "trend": "accelerating" }
+        {
+          "name": "Agriculture & Turf",
+          "metric": "Trough cycle FY25-26; recovery dependent on grain prices and farmer income",
+          "trend": "decelerating"
+        },
+        {
+          "name": "Construction & Forestry",
+          "metric": "Tied to non-residential construction cycle; mixed",
+          "trend": "stable"
+        },
+        {
+          "name": "Precision Ag Software ARR",
+          "metric": "$1B run-rate growing 30%+; subscription mix shift in progress",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "market share",
       "keyRisk": "If farmer income remains depressed through 2026-27 due to sustained low grain prices and high input costs, the equipment replacement cycle delays further and Deere's earnings power compresses to $20 EPS, triggering a multiple compression to 13-14×.",
@@ -75,11 +99,31 @@
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
-        { "label": "Forward P/E (FY26)", "value": "~21×", "note": "EPS ~$23 mid; trough cycle valuation" },
-        { "label": "Forward P/E (FY27)", "value": "~16×", "note": "Assumes recovery to $30 EPS" },
-        { "label": "Price / Sales (NTM)", "value": "~3×", "note": "Premium reflecting software mix" },
-        { "label": "PEG Ratio", "value": "~3×", "note": "Reflects through-cycle CAGR not trough" },
-        { "label": "FCF Yield", "value": "~3%", "note": "FCF compressed; recovers with cycle" }
+        {
+          "label": "Forward P/E (FY26)",
+          "value": "~21×",
+          "note": "EPS ~$23 mid; trough cycle valuation"
+        },
+        {
+          "label": "Forward P/E (FY27)",
+          "value": "~16×",
+          "note": "Assumes recovery to $30 EPS"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~3×",
+          "note": "Premium reflecting software mix"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~3×",
+          "note": "Reflects through-cycle CAGR not trough"
+        },
+        {
+          "label": "FCF Yield",
+          "value": "~3%",
+          "note": "FCF compressed; recovers with cycle"
+        }
       ],
       "summary": "Valuation prices in cyclical recovery and software optionality. Margin of safety is modest at current levels."
     }
@@ -123,7 +167,7 @@
       "note": "Operations Centre + See & Spray + autonomous tractor software encode farm-level business logic that compounds with installed base."
     },
     "publicDataAccess": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "talentScarcity": {

@@ -136,16 +136,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — launch and satellite components are contracted, engineer-to-spec services. There is no complex interface customers invest years mastering."
+      "status": "na",
+      "note": "launch and satellite components are contracted, engineer-to-spec services. There is no complex interface customers invest years mastering."
     },
     "businessLogic": {
-      "status": "destroyed",
-      "note": "N/A — Rocket Lab does not embed configurable software into customers' proprietary workflows. Launch and hardware are procurement relationships, not business-logic lock-in."
+      "status": "na",
+      "note": "Rocket Lab does not embed configurable software into customers' proprietary workflows. Launch and hardware are procurement relationships, not business-logic lock-in."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — the company does not monetise gated access to a public dataset."
+      "status": "na",
+      "note": "the company does not monetise gated access to a public dataset."
     },
     "talentScarcity": {
       "status": "strong",
@@ -165,16 +165,16 @@
       "note": "FAA launch licences, ITAR clearance, and NASA/Space Force pedigree are scarce, slow-to-earn assets that gate entry. But Neutron is not yet certified for national-security launch and RKLB's government franchise is nascent versus SpaceX/ULA — present and AI-resilient, not yet dominant."
     },
     "networkEffects": {
-      "status": "destroyed",
-      "note": "N/A — launch and satellite manufacturing have no meaningful network effect; an additional customer does not make the service more valuable to others."
+      "status": "na",
+      "note": "launch and satellite manufacturing have no meaningful network effect; an additional customer does not make the service more valuable to others."
     },
     "transactionEmbedding": {
-      "status": "destroyed",
-      "note": "N/A — Rocket Lab does not sit in a payment or transaction layer of customers' daily operations."
+      "status": "na",
+      "note": "Rocket Lab does not sit in a payment or transaction layer of customers' daily operations."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — it is not the authoritative record for any external business function."
+      "status": "na",
+      "note": "it is not the authoritative record for any external business function."
     },
     "verdict": "Rocket Lab is a modest net AI beneficiary on the demand side — AI-driven defense, earth-observation, and connectivity buildouts lift launch and satellite-component demand — while its applicable moats (the regulatory/engineering barrier to orbit, scarce aerospace talent, the vertically integrated stack) are essentially AI-irrelevant and therefore AI-resilient. It carries none of the AI-vulnerable software moats (no learned interface, business-logic, public-data, transaction, or system-of-record exposure), so AI cannot erode the durability it has. The honest limitation is that the moat is narrow and execution-dependent: most categories are N/A, the regulatory and data moats are intact rather than strong, and the whole thesis hinges on Neutron flying. Durable enough to be the credible Western #2, but a clear step below SpaceX."
   }

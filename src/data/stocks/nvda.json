@@ -168,8 +168,8 @@
       "note": "Customer ML training and inference pipelines are deeply embedded against CUDA-specific business logic — Megatron, DeepSpeed, vLLM, NCCL, cuDNN, cuBLAS are not portable abstractions. Every AI lab's production training stack is CUDA-coupled workflow at the code level. AI demand strengthens this lock-in by adding more CUDA-specific framework code to every codebase; routed to resilient via aiExposure override."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "Not applicable — NVIDIA does not derive moat from public data access."
+      "status": "na",
+      "note": "NVIDIA does not derive moat from public data access."
     },
     "talentScarcity": {
       "status": "strong",

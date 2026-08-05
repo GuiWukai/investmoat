@@ -70,9 +70,21 @@
       "cagrEstimate": "28-38%",
       "scoreDerivation": "Base 91 (28-38% CAGR mid-band ~33%) + 2.7 two of three drivers accelerating + 4 expanding gross margin (~56% Q2 guide) + 4 both TAM/share - 10 high keyRisk (NVIDIA Rubin overhang) = 91",
       "drivers": [
-        { "name": "Data Center / Instinct GPUs", "metric": "Q1 2026 Data Center revenue $5.8B (+57% YoY, >50% of total); MI450 sampling, Helios production ships 2H 2026; OpenAI 6 GW + Oracle 50k-GPU commitments", "trend": "accelerating" },
-        { "name": "EPYC Server CPUs", "metric": "Server share compounding past 35% as hyperscalers diversify; management guides toward $120B server-CPU income by 2030", "trend": "accelerating" },
-        { "name": "Client / Ryzen", "metric": "Ryzen retail share ~46% in Q4; client revenue stable with AI-PC mix lift", "trend": "stable" }
+        {
+          "name": "Data Center / Instinct GPUs",
+          "metric": "Q1 2026 Data Center revenue $5.8B (+57% YoY, >50% of total); MI450 sampling, Helios production ships 2H 2026; OpenAI 6 GW + Oracle 50k-GPU commitments",
+          "trend": "accelerating"
+        },
+        {
+          "name": "EPYC Server CPUs",
+          "metric": "Server share compounding past 35% as hyperscalers diversify; management guides toward $120B server-CPU income by 2030",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Client / Ryzen",
+          "metric": "Ryzen retail share ~46% in Q4; client revenue stable with AI-PC mix lift",
+          "trend": "stable"
+        }
       ],
       "primaryType": "both",
       "keyRisk": "If NVIDIA's Rubin Ultra widens the performance gap on flagship training workloads through 2027 and ROCm fails to close the developer-ecosystem gap to CUDA, AMD's AI GPU share stalls below 15% of TAM and the 28-38% CAGR collapses toward 15-20% — invalidating the consensus upgrade cycle priced in after the OpenAI deal and the ~144% YTD re-rating.",
@@ -86,11 +98,31 @@
     "peAnalysis": {
       "asOf": "July 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~185×", "note": "GAAP TTM EPS ~$3, amort-depressed" },
-        { "label": "Forward P/E (NTM)", "value": "~65×", "note": "consensus EPS est. ~$8.5" },
-        { "label": "PEG Ratio", "value": "~1.7×", "note": "fwd P/E ÷ ~38% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~18×", "note": "~$50B NTM revenue" },
-        { "label": "Price / FCF", "value": "~190×", "note": "~$4.8B FCF (TTM)" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~185×",
+          "note": "GAAP TTM EPS ~$3, amort-depressed"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~65×",
+          "note": "consensus EPS est. ~$8.5"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.7×",
+          "note": "fwd P/E ÷ ~38% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~18×",
+          "note": "~$50B NTM revenue"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~190×",
+          "note": "~$4.8B FCF (TTM)"
+        }
       ],
       "summary": "The ~65× forward P/E is expensive versus the semis peer group and the broad market (~21×), pricing a near-flawless MI450 ramp. A PEG of ~1.7× sits in premium-but-defensible territory only if the ~38% EPS CAGR holds. The wide gap between ~185× trailing GAAP and ~65× forward signals a steep 2026-27 earnings ramp — bullish if delivered, but leaving minimal cushion at all-time highs."
     }
@@ -130,12 +162,12 @@
       "note": "GPU programming interfaces are commoditized; ROCm still significantly lags CUDA in developer tooling despite improving inference support."
     },
     "businessLogic": {
-      "status": "destroyed",
-      "note": "Not applicable as a primary competitive moat for semiconductor design."
+      "status": "na",
+      "note": "as a primary competitive moat for semiconductor design."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "Not applicable to AMD's competitive position."
+      "status": "na",
+      "note": "to AMD's competitive position."
     },
     "talentScarcity": {
       "status": "intact",

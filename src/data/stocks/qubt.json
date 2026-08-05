@@ -136,16 +136,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — QUBT sells hardware, foundry services, and devices; there is no complex, high-switching-cost software interface customers master over years."
+      "status": "na",
+      "note": "QUBT sells hardware, foundry services, and devices; there is no complex, high-switching-cost software interface customers master over years."
     },
     "businessLogic": {
       "status": "weakened",
       "note": "QUBT's software/algorithms (e.g. Dirac, EmuCore tooling) are early and not embedded as proprietary business logic in customers' core workflows — no meaningful lock-in demonstrated."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — QUBT does not monetise gated access to a public dataset."
+      "status": "na",
+      "note": "QUBT does not monetise gated access to a public dataset."
     },
     "talentScarcity": {
       "status": "intact",
@@ -165,16 +165,16 @@
       "note": "A small NASA subcontract and early government touchpoints exist, but QUBT lacks the DARPA/DOE/CHIPS-scale federal pedigree of its peers — government lock-in is minimal at this stage."
     },
     "networkEffects": {
-      "status": "destroyed",
-      "note": "N/A — an additional foundry or device customer does not make the platform more valuable to others; there is no network dynamic."
+      "status": "na",
+      "note": "an additional foundry or device customer does not make the platform more valuable to others; there is no network dynamic."
     },
     "transactionEmbedding": {
-      "status": "destroyed",
-      "note": "N/A — QUBT does not sit in a payment or transaction layer of customers' daily operations."
+      "status": "na",
+      "note": "QUBT does not sit in a payment or transaction layer of customers' daily operations."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — it is not the authoritative record for any external business function."
+      "status": "na",
+      "note": "it is not the authoritative record for any external business function."
     },
     "verdict": "What durability QUBT can claim — scarce photonics/TFLN talent and any genuine foundry process IP — is AI-resilient, since AI cannot replicate the underlying fabrication physics. But the honest picture is that QUBT has the thinnest moat of the quantum pure-plays: most categories are N/A or weakened, organic revenue is de minimis (~$682K FY2025), headline growth is acquisition-manufactured, and an active Iceberg Research short report specifically disputes the reality of the foundry business and some announced orders. The ~$1.4B cash balance is real and provides a partial floor, but the operating thesis is unproven and contested. This is a cash-rich, high-risk option on photonic quantum — the lowest-conviction name of the four and one where the credibility questions must be resolved before the business can be underwritten."
   }

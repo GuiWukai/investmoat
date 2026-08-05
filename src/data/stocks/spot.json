@@ -4,12 +4,24 @@
   "name": "Spotify Technology",
   "lastAnalyzed": "July 7, 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "SPOT" },
-    { "label": "Market Cap", "value": "~$100B" }
+    {
+      "label": "Ticker",
+      "value": "SPOT"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$100B"
+    }
   ],
   "chips": [
-    { "label": "Music Streaming | Audio", "color": "primary" },
-    { "label": "Margin Inflection", "color": "success" }
+    {
+      "label": "Music Streaming | Audio",
+      "color": "primary"
+    },
+    {
+      "label": "Margin Inflection",
+      "color": "success"
+    }
   ],
   "metrics": [
     {
@@ -59,9 +71,21 @@
       "cagrEstimate": "13-16%",
       "scoreDerivation": "Base 79 (13-16% CAGR) + 0 trajectory (audiobook acceleration offsets ad-segment deceleration) + 4 margin expansion (gross margin trending toward 35%) + 4 both-type - 5 moderate risk (2027-28 label renewal overhang, NA subscriber softness) = 82",
       "drivers": [
-        { "name": "Premium Subscribers", "metric": "+9% YoY to 293M (+3M net); ARPU rising on US price hikes", "trend": "stable" },
-        { "name": "Audiobook + Podcast", "metric": "Audiobook attach expanding; podcast ad revenue scaling", "trend": "accelerating" },
-        { "name": "Advertising", "metric": "Ad segment softened in Q1'26; supply growing faster than CPMs", "trend": "decelerating" }
+        {
+          "name": "Premium Subscribers",
+          "metric": "+9% YoY to 293M (+3M net); ARPU rising on US price hikes",
+          "trend": "stable"
+        },
+        {
+          "name": "Audiobook + Podcast",
+          "metric": "Audiobook attach expanding; podcast ad revenue scaling",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Advertising",
+          "metric": "Ad segment softened in Q1'26; supply growing faster than CPMs",
+          "trend": "decelerating"
+        }
       ],
       "primaryType": "both",
       "keyRisk": "If 2027-28 major-label renewals raise minimum-guarantee royalties or North America Premium net adds keep decelerating after the US price hikes, the gross-margin expansion thesis stalls and the multiple derates from ~35× toward the mid-20s.",
@@ -75,11 +99,31 @@
     "peAnalysis": {
       "asOf": "July 2026",
       "rows": [
-        { "label": "Forward P/E (FY26)", "value": "~35×", "note": "consensus EPS ~$14" },
-        { "label": "Forward P/E (FY27)", "value": "~29×", "note": "EPS ~$17 on margin leverage" },
-        { "label": "Price / Sales (FY26)", "value": "~5×", "note": "~$20B FY26 revenue" },
-        { "label": "PEG Ratio", "value": "~1.8×", "note": "fwd P/E ÷ ~20% EPS CAGR" },
-        { "label": "Price / FCF", "value": "~29×", "note": "~$3.4B LTM FCF" }
+        {
+          "label": "Forward P/E (FY26)",
+          "value": "~35×",
+          "note": "consensus EPS ~$14"
+        },
+        {
+          "label": "Forward P/E (FY27)",
+          "value": "~29×",
+          "note": "EPS ~$17 on margin leverage"
+        },
+        {
+          "label": "Price / Sales (FY26)",
+          "value": "~5×",
+          "note": "~$20B FY26 revenue"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.8×",
+          "note": "fwd P/E ÷ ~20% EPS CAGR"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~29×",
+          "note": "~$3.4B LTM FCF"
+        }
       ],
       "summary": "At ~35× FY26 EPS SPOT is still expensive vs the S&P 500 (~21×), though the de-rating has compressed the premium; PEG ~1.8× requires near-flawless margin execution. The wide trailing-to-forward P/E gap reflects a genuine EPS ramp on operating leverage — bullish if label economics stay benign, but the strong-EUR drag on reported growth and North America subscriber softness cap the multiple."
     }
@@ -127,7 +171,7 @@
       "note": "Recommendation algorithms are real but increasingly replicable by Apple/Amazon/YouTube on similar scale data; the algorithm advantage is narrowing."
     },
     "publicDataAccess": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "talentScarcity": {
@@ -143,8 +187,8 @@
       "note": "Hundreds of billions of listening events feed personalisation; Spotify's behavioural data depth is genuinely differentiated and compounds with scale."
     },
     "regulatoryLockIn": {
-      "status": "destroyed",
-      "note": "N/A — content licensing is the constraint, not regulatory."
+      "status": "na",
+      "note": "content licensing is the constraint, not regulatory."
     },
     "networkEffects": {
       "status": "intact",

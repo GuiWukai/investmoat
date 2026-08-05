@@ -173,16 +173,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — Lockheed Martin sells to government procurement organizations and program offices, not interface-trained end users; switching costs for end users (pilots, soldiers) do not translate into customer switching decisions at the buyer level. This moat category does not apply to a prime defense contractor."
+      "status": "na",
+      "note": "Lockheed Martin sells to government procurement organizations and program offices, not interface-trained end users; switching costs for end users (pilots, soldiers) do not translate into customer switching decisions at the buyer level. This moat category does not apply to a prime defense contractor."
     },
     "businessLogic": {
       "status": "intact",
       "note": "The F-35 ALIS/ODIN sustainment platform, fire control algorithms, classified electronic warfare systems, and mission planning software represent decades of proprietary defense-specific logic embedded in military operations. This is not generic SaaS — it is classified, mission-critical software configured per platform over 20+ years. AI cannot replicate classified EW algorithms without access to classified threat data, test results, and adversary signatures that LMT exclusively holds."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — Lockheed Martin does not monetize control over public data sources; this moat category does not apply to a defense systems manufacturer."
+      "status": "na",
+      "note": "Lockheed Martin does not monetize control over public data sources; this moat category does not apply to a defense systems manufacturer."
     },
     "talentScarcity": {
       "status": "strong",

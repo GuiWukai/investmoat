@@ -71,9 +71,21 @@
       "cagrEstimate": "5-9%",
       "scoreDerivation": "Base 60 + 10 (pricing power and Tailor Made mix) + 5 (Purosangue/EV launches) - 8 (FX and US tariff overhang capping volume upside) = 67",
       "drivers": [
-        { "name": "Personalization & Mix", "metric": "Tailor Made >20% of revenue on flagships, growing faster than base ASP", "trend": "accelerating" },
-        { "name": "Price/Mix Pricing Power", "metric": "Q1 FY2026 revenue +6% cc on roughly flat volumes; FY2026 guide €7.5B", "trend": "stable" },
-        { "name": "Electrification Premium", "metric": "Ferrari Luce EV unveil 2026 at €350,000+ base price", "trend": "accelerating" }
+        {
+          "name": "Personalization & Mix",
+          "metric": "Tailor Made >20% of revenue on flagships, growing faster than base ASP",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Price/Mix Pricing Power",
+          "metric": "Q1 FY2026 revenue +6% cc on roughly flat volumes; FY2026 guide €7.5B",
+          "trend": "stable"
+        },
+        {
+          "name": "Electrification Premium",
+          "metric": "Ferrari Luce EV unveil 2026 at €350,000+ base price",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "both",
       "keyRisk": "US tariffs (28.8% of sales) and FX headwinds compress 2026-2027 reported growth; cyclical luxury demand in China and Middle East could slow waitlist conversion over 12-24 months.",
@@ -133,12 +145,12 @@
       "note": "N/A for a physical luxury goods company — there is no learned software interface; buyers invest in the Ferrari ownership experience (service centers, owner clubs, track days) but this is a lifestyle moat, not a learned interface in the software sense."
     },
     "businessLogic": {
-      "status": "destroyed",
-      "note": "N/A — Ferrari is a manufacturer of physical luxury goods; there is no proprietary software business logic that competitors could replicate or that creates operational switching costs."
+      "status": "na",
+      "note": "Ferrari is a manufacturer of physical luxury goods; there is no proprietary software business logic that competitors could replicate or that creates operational switching costs."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — Ferrari does not control access to any unique public data source; this moat category does not apply to its business model."
+      "status": "na",
+      "note": "Ferrari does not control access to any unique public data source; this moat category does not apply to its business model."
     },
     "talentScarcity": {
       "status": "intact",
@@ -153,8 +165,8 @@
       "note": "Ferrari maintains detailed buyer preference and personalization data that informs new model development, and F1 telemetry data that improves road car performance — but data is not the primary strategic moat, and this advantage is modest compared to data-driven businesses."
     },
     "regulatoryLockIn": {
-      "status": "destroyed",
-      "note": "N/A — Ferrari has no regulatory protection; it faces actual regulatory risk from emissions standards and tariff exposure, making this moat category not applicable."
+      "status": "na",
+      "note": "Ferrari has no regulatory protection; it faces actual regulatory risk from emissions standards and tariff exposure, making this moat category not applicable."
     },
     "networkEffects": {
       "status": "intact",
@@ -165,8 +177,8 @@
       "note": "Factory-authorized service centers, the Ferrari Approved pre-owned program, and Classiche authentication for classic Ferraris create recurring post-purchase revenue that keeps owners embedded in the Ferrari ecosystem; the Classiche program in particular creates financial incentives (authenticity premium) for owners to remain in the Ferrari service network."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — Ferrari is not a system of record for any business function; this moat category does not apply to a luxury goods manufacturer."
+      "status": "na",
+      "note": "Ferrari is not a system of record for any business function; this moat category does not apply to a luxury goods manufacturer."
     },
     "verdict": "Ferrari's moat is built on physical scarcity, 75-year brand heritage, and collector psychology — dimensions that AI cannot replicate or erode, but also cannot enhance in the way it benefits data-driven businesses. The Ten Moats framework understates Ferrari's competitive position because its advantages (brand, scarcity, pricing power) are traditional luxury moats that predate the digital era and remain immune to AI disruption — AI is simply irrelevant to why a billionaire will wait two years and pay €500,000 for a Ferrari."
   },

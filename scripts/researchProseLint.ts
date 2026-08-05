@@ -106,7 +106,7 @@ const PILLAR_WORDS = [
   'bundling',
 ];
 
-const STATUS_WORDS = /\b(strong|intact|weakened|destroyed)\b/i;
+const STATUS_WORDS = /\b(strong|intact|weakened|destroyed|n\/a|na)\b/i;
 
 /** Fields a `stat-strip` can resolve live — a static value here is a mistake. */
 const LIVE_FIELD_WORDS = /\b(composite|moat|growth|valuation|price)\b/i;

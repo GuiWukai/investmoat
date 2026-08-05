@@ -86,7 +86,7 @@ Define three 12–24 month price scenarios. Each must include:
 
 ## Step 4 — Assess the Ten Moats
 
-Rate each moat as `"strong"`, `"intact"`, `"weakened"`, or `"destroyed"` and write a one-sentence `note` explaining why.
+Rate each moat as `"strong"`, `"intact"`, `"weakened"`, `"destroyed"`, or `"na"` and write a one-sentence `note` explaining why.
 
 ### AI-Vulnerable Moats (frequently weakened by AI)
 | Moat Key | Description |
@@ -106,7 +106,7 @@ Rate each moat as `"strong"`, `"intact"`, `"weakened"`, or `"destroyed"` and wri
 | `transactionEmbedding` | Embedded in the payment/workflow layer of a customer's daily operations |
 | `systemOfRecord` | The authoritative source of truth for a critical business function (identity, financial records, etc.) |
 
-**If a moat is not applicable to this business model, set it to `"destroyed"` and explain it's N/A in the note.**
+**If a moat is not applicable to this business model, set `"status": "na"` and explain why in the note. Do not use `"destroyed"` for N/A.**
 
 ### AI Resilience Verdict
 AI resilience is computed from the moat statuses themselves (the 60/40

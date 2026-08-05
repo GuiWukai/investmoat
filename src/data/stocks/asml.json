@@ -70,10 +70,26 @@
       "cagrEstimate": "13–18%",
       "scoreDerivation": "Base ~80 (2026 revenue +~36% YoY but blended 3–5yr CAGR ~13–18% as the raised guidance pulls the €44–60B 2030 target forward, flattening the out-years off a higher base) + margin now expanding (GM 53%→54%, FY guide 55%, Q3 55–57%, tracking to the 56–60% 2030 target ahead of schedule) + accelerating trajectory (memory system sales >75%; 2027 Low-NA nearly fully booked) − high cyclicality/concentration risk (deeper 2027–28 digestion air-pocket from demand pull-forward; TSMC/Samsung/SK Hynix triopoly; China structurally ~20%)",
       "drivers": [
-        { "name": "EUV / High-NA + Capacity", "metric": "Low-NA nearly fully booked for 2027; +~30% Low-NA capacity in 2026, another ~30% studied for 2028; 4–5 High-NA systems to be recognised in 2026 (Intel 18A milestone)", "trend": "accelerating" },
-        { "name": "Memory / HBM", "metric": "Memory-related system sales guided >75% growth in 2026 as DRAM/HBM customers expand aggressively on firm DDR/HBM pricing", "trend": "accelerating" },
-        { "name": "Installed Base Management", "metric": "€2.8B in Q2 2026; high-margin output upgrades compounding on the 20-year installed base and the main source of the Q2 beat", "trend": "accelerating" },
-        { "name": "Non-China AI Capex", "metric": "Korea 43% of Q2 system sales (memory/HBM ramp); China structurally reset to ~20% of the year under export controls", "trend": "stable" }
+        {
+          "name": "EUV / High-NA + Capacity",
+          "metric": "Low-NA nearly fully booked for 2027; +~30% Low-NA capacity in 2026, another ~30% studied for 2028; 4–5 High-NA systems to be recognised in 2026 (Intel 18A milestone)",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Memory / HBM",
+          "metric": "Memory-related system sales guided >75% growth in 2026 as DRAM/HBM customers expand aggressively on firm DDR/HBM pricing",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Installed Base Management",
+          "metric": "€2.8B in Q2 2026; high-margin output upgrades compounding on the 20-year installed base and the main source of the Q2 beat",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Non-China AI Capex",
+          "metric": "Korea 43% of Q2 system sales (memory/HBM ramp); China structurally reset to ~20% of the year under export controls",
+          "trend": "stable"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "Hyperscaler AI capex digestion, now off a higher base: the two 2026 guidance raises lift the run-rate to a ~€44B/€11–12B-per-quarter pace, so if any two of Microsoft, Meta, Alphabet, Amazon, or Oracle cut FY2027 capex guidance by >15% in their H2 2026 earnings, TSMC and SK Hynix would defer EUV deliveries into 2027–28 against tougher comparisons — a deeper air-pocket than a quarter ago because more 2030 demand has been pulled forward. That would compress the forward multiple from ~40× toward the semi-cyclical norm of ~25×, a scenario made more probable by SOX trading well above its 200-day MA and CAPE at dot-com-peak readings",
@@ -87,11 +103,31 @@
     "peAnalysis": {
       "asOf": "July 2026 (price ~$1,823, post-Q2)",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~62×", "note": "TTM EPS ~€25 (post-Q2 2026)" },
-        { "label": "Forward P/E (NTM)", "value": "~40×", "note": "2026 EPS tracking ~€34–35 on €44B/55% GM" },
-        { "label": "PEG Ratio", "value": "~1.8×", "note": "fwd P/E ÷ ~22% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~14×", "note": "~€620B mkt cap / €44B NTM rev" },
-        { "label": "Price / FCF", "value": "~80×", "note": "~€7.5B FCF (TTM est.)" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~62×",
+          "note": "TTM EPS ~€25 (post-Q2 2026)"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~40×",
+          "note": "2026 EPS tracking ~€34–35 on €44B/55% GM"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.8×",
+          "note": "fwd P/E ÷ ~22% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~14×",
+          "note": "~€620B mkt cap / €44B NTM rev"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~80×",
+          "note": "~€7.5B FCF (TTM est.)"
+        }
       ],
       "summary": "At ~40× forward P/E after the Q2 pop, ASML trades just below its own 5-year average of ~45× and at a premium to the semiconductor sector median of ~25×, reflecting the unmatched EUV monopoly. Because the €38B→€44B guidance raise outpaced the ~5% share move, the forward multiple actually compressed versus June — the PEG of ~1.8× is marginally cheaper than a quarter ago while still requiring ~22% EPS CAGR through 2027 to hold with no multiple compression, which the High-NA ramp, memory (+75%) mix, and a nearly-full 2027 order book make plausible. The gap between trailing (~62×) and forward (~40×) still signals sharp earnings acceleration as High-NA and memory contribute — structurally bullish, but offset by the rising probability of an AI-capex digestion event compressing the whole semi-equipment multiple toward the cyclical norm of ~25×, an air-pocket made deeper by the demand that has been pulled forward."
     }
@@ -127,16 +163,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "Not applicable — ASML sells precision lithography hardware to chip fabricators, not UI-based software."
+      "status": "na",
+      "note": "ASML sells precision lithography hardware to chip fabricators, not UI-based software."
     },
     "businessLogic": {
-      "status": "destroyed",
-      "note": "Not applicable to extreme ultraviolet lithography physics and optics manufacturing."
+      "status": "na",
+      "note": "to extreme ultraviolet lithography physics and optics manufacturing."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "Not applicable to this hardware monopoly business model."
+      "status": "na",
+      "note": "to this hardware monopoly business model."
     },
     "talentScarcity": {
       "status": "strong",

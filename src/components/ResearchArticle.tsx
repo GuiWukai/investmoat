@@ -608,7 +608,8 @@ const STATUS_STYLE: Record<string, { label: string; color: string }> = {
   strong: { label: 'Strong', color: '#10b981' },
   intact: { label: 'Intact', color: '#3b82f6' },
   weakened: { label: 'Weakened', color: '#f59e0b' },
-  destroyed: { label: 'N/A', color: '#6b7280' },
+  destroyed: { label: 'Destroyed', color: '#f87171' },
+  na: { label: 'N/A', color: '#6b7280' },
 };
 
 function moatStatusFor(ticker: string, moat: TenMoatKey): string | null {
@@ -628,7 +629,7 @@ function MoatMatrix({ block }: { block: MoatMatrixBlock }) {
     : [{ label: '', tickers: block.tickers.filter((t) => byTicker[t]) }];
 
   // Legend, so the status colours are readable without hunting for a key.
-  const legend = ['strong', 'intact', 'weakened', 'destroyed'] as const;
+  const legend = ['strong', 'intact', 'weakened', 'destroyed', 'na'] as const;
 
   return (
     <figure className="my-9 not-prose">

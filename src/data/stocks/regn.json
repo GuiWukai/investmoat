@@ -4,13 +4,28 @@
   "name": "Regeneron Pharmaceuticals, Inc.",
   "lastAnalyzed": "May 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "REGN" },
-    { "label": "Market Cap", "value": "~$73B" }
+    {
+      "label": "Ticker",
+      "value": "REGN"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$73B"
+    }
   ],
   "chips": [
-    { "label": "Healthcare | Biologics + Pipeline", "color": "primary" },
-    { "label": "Dupixent + Eylea HD", "color": "success" },
-    { "label": "Eylea Biosimilar Pressure", "color": "warning" }
+    {
+      "label": "Healthcare | Biologics + Pipeline",
+      "color": "primary"
+    },
+    {
+      "label": "Dupixent + Eylea HD",
+      "color": "success"
+    },
+    {
+      "label": "Eylea Biosimilar Pressure",
+      "color": "warning"
+    }
   ],
   "metrics": [
     {
@@ -64,10 +79,26 @@
       "cagrEstimate": "5-10%",
       "scoreDerivation": "Base 60 (5-15% CAGR) + 5 Dupixent expansion (COPD + new indications, $15B+ run-rate, 20% growth) + 3 Eylea HD conversion (52% US growth, January 2027 biosimilar window) - 5 Eylea 2mg biosimilar erosion (Q2 demand decline mid-to-high teens guided) - 3 Linvoseltamab/odronextamab competitive pressure = 60",
       "drivers": [
-        { "name": "Dupixent (Sanofi collaboration revenue)", "metric": "~$15B+ global run-rate; +20% YoY; new indications extending franchise", "trend": "accelerating" },
-        { "name": "Eylea HD (US)", "metric": "$468M Q1 2026 (+52% YoY); patent into late 2030s", "trend": "accelerating" },
-        { "name": "Eylea 2mg (US)", "metric": "Combined HD+2mg US -10% YoY; Q2 demand guided to decline mid-high teens", "trend": "decelerating" },
-        { "name": "Pipeline (Libtayo, Linvoseltamab, Odronextamab, Itepekimab)", "metric": "Multiple Phase 3 readouts through 2026-2027", "trend": "accelerating" }
+        {
+          "name": "Dupixent (Sanofi collaboration revenue)",
+          "metric": "~$15B+ global run-rate; +20% YoY; new indications extending franchise",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Eylea HD (US)",
+          "metric": "$468M Q1 2026 (+52% YoY); patent into late 2030s",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Eylea 2mg (US)",
+          "metric": "Combined HD+2mg US -10% YoY; Q2 demand guided to decline mid-high teens",
+          "trend": "decelerating"
+        },
+        {
+          "name": "Pipeline (Libtayo, Linvoseltamab, Odronextamab, Itepekimab)",
+          "metric": "Multiple Phase 3 readouts through 2026-2027",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If Eylea HD conversion stalls below 60% of US Eylea franchise revenue by end of 2026 AND multiple biosimilars launch simultaneously after January 2027, US Eylea franchise revenue could decline 25%+ in 2027 and meaningfully offset Dupixent growth, pushing FY2027 EPS below $50.",
@@ -81,11 +112,31 @@
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~16×", "note": "TTM EPS ~$43" },
-        { "label": "Forward P/E (NTM)", "value": "~14×", "note": "FY2026 EPS guide ~$48.79" },
-        { "label": "PEG Ratio", "value": "~1.8×", "note": "fwd P/E / ~8% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~4.6×", "note": "$15.75B FY2026 revenue guide" },
-        { "label": "Price / FCF", "value": "~13×", "note": "~$5.5B TTM FCF" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~16×",
+          "note": "TTM EPS ~$43"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~14×",
+          "note": "FY2026 EPS guide ~$48.79"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.8×",
+          "note": "fwd P/E / ~8% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~4.6×",
+          "note": "$15.75B FY2026 revenue guide"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~13×",
+          "note": "~$5.5B TTM FCF"
+        }
       ],
       "summary": "REGN screens cheap on absolute multiples (~14× forward P/E, ~13× FCF) for a high-margin biologics company with a diversified franchise. The discount reflects Eylea 2mg biosimilar fears that are likely overstated — Eylea HD conversion is running well ahead of biosimilar entry, and Dupixent's continued 20%+ growth provides a separate compounding engine. A re-rating to 17-18× forward EPS is plausible if the H2 2026 biosimilar transition proves manageable."
     }
@@ -124,24 +175,24 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "Not applicable — physicians prescribe based on clinical evidence and outcomes, not interface familiarity; learned-interface moats do not apply to biologics."
+      "status": "na",
+      "note": "physicians prescribe based on clinical evidence and outcomes, not interface familiarity; learned-interface moats do not apply to biologics."
     },
     "businessLogic": {
       "status": "intact",
       "note": "Regeneron's VelocImmune humanized-mouse platform, VelociMab antibody discovery technology, and bispecific antibody engineering know-how represent decades of proprietary technical capability that competitors cannot reverse-engineer from the resulting drug labels."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "Not applicable — Regeneron's moat does not rely on controlling access to a public data source; not relevant to the biologics business model."
+      "status": "na",
+      "note": "Regeneron's moat does not rely on controlling access to a public data source; not relevant to the biologics business model."
     },
     "talentScarcity": {
       "status": "strong",
       "note": "Antibody engineering, bispecific design, and clinical trial leadership in immunology and oncology require genuinely scarce expertise. Regeneron is co-founded and led by Yancopoulos, one of the most cited scientists in biopharma, which has historically attracted disproportionate top-tier scientific talent."
     },
     "bundling": {
-      "status": "destroyed",
-      "note": "Not applicable — biologics are sold as individual prescription products, not in bundles; per-drug FDA approvals are the unit of competition."
+      "status": "na",
+      "note": "biologics are sold as individual prescription products, not in bundles; per-drug FDA approvals are the unit of competition."
     },
     "proprietaryData": {
       "status": "strong",
@@ -160,8 +211,8 @@
       "note": "Eylea HD and Dupixent are embedded in retinal-specialist and atopic-disease standard of care, payer formularies, and Medicare Part B reimbursement schedules. Removing them faces enormous patient, physician, and political resistance."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "Not applicable — Regeneron is a drug manufacturer, not a system-of-record platform; this moat type does not apply to biologics."
+      "status": "na",
+      "note": "Regeneron is a drug manufacturer, not a system-of-record platform; this moat type does not apply to biologics."
     },
     "verdict": "Regeneron's moat structure is led by regulatoryLockIn (Dupixent + Eylea HD), proprietaryData (Regeneron Genetics Center exome dataset), businessLogic (VelocImmune platform), and talentScarcity (Yancopoulos-led discovery team). These moats are highly AI-resilient — AI does not disrupt patent-protected biologics; it actually accelerates Regeneron's pipeline targeting through computational protein engineering and patient stratification on the Genetics Center dataset. The structural risks are pipeline-execution risk (itepekimab, bispecifics) and the Eylea 2mg biosimilar transition, neither of which is AI-driven."
   }

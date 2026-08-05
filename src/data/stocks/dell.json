@@ -4,12 +4,24 @@
   "name": "Dell Technologies",
   "lastAnalyzed": "May 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "DELL" },
-    { "label": "Market Cap", "value": "~$95B" }
+    {
+      "label": "Ticker",
+      "value": "DELL"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$95B"
+    }
   ],
   "chips": [
-    { "label": "Enterprise IT | AI Server", "color": "primary" },
-    { "label": "Scale Leader", "color": "success" }
+    {
+      "label": "Enterprise IT | AI Server",
+      "color": "primary"
+    },
+    {
+      "label": "Scale Leader",
+      "color": "success"
+    }
   ],
   "metrics": [
     {
@@ -59,9 +71,21 @@
       "cagrEstimate": "12-18%",
       "scoreDerivation": "Base 80 (15-30% CAGR mid-band; weighted blended) + 3 backlog visibility ($16B AI server backlog) - 4 mix/margin (AI-server gross margin <8%, dilutive to corporate ~22%) - 3 PC cyclicality (CSG ~50% of revenue, flat) = 76",
       "drivers": [
-        { "name": "AI Server / ISG", "metric": "+38% YoY; backlog $16B; primary growth engine", "trend": "accelerating" },
-        { "name": "CSG (PCs)", "metric": "Flat to low-single-digit growth; Windows 11 refresh complete", "trend": "stable" },
-        { "name": "Capital Return", "metric": "~80% of FCF returned via buyback/dividend; share count -3% YoY", "trend": "stable" }
+        {
+          "name": "AI Server / ISG",
+          "metric": "+38% YoY; backlog $16B; primary growth engine",
+          "trend": "accelerating"
+        },
+        {
+          "name": "CSG (PCs)",
+          "metric": "Flat to low-single-digit growth; Windows 11 refresh complete",
+          "trend": "stable"
+        },
+        {
+          "name": "Capital Return",
+          "metric": "~80% of FCF returned via buyback/dividend; share count -3% YoY",
+          "trend": "stable"
+        }
       ],
       "primaryType": "both",
       "keyRisk": "If AI-server gross margin compresses below 6% on hyperscaler bake-offs through 2026-27, ISG operating profit could decline despite revenue growth, breaking the EPS-leverage thesis and triggering a multiple de-rate to single-digit P/E.",
@@ -75,11 +99,31 @@
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
-        { "label": "Forward P/E (FY26)", "value": "~15×", "note": "Adj EPS ~$9.50; discount on margin uncertainty" },
-        { "label": "Forward P/E (FY27)", "value": "~13×", "note": "Assumes 12-15% EPS growth on buyback amplification" },
-        { "label": "FCF Yield", "value": "~6%", "note": "TTM FCF ~$5.5B vs $95B mkt cap" },
-        { "label": "PEG Ratio", "value": "~1.0×", "note": "Reasonable on growth and capital return" },
-        { "label": "EV / EBITDA (NTM)", "value": "~9×", "note": "Discount to HPE ~11× and Cisco ~13×" }
+        {
+          "label": "Forward P/E (FY26)",
+          "value": "~15×",
+          "note": "Adj EPS ~$9.50; discount on margin uncertainty"
+        },
+        {
+          "label": "Forward P/E (FY27)",
+          "value": "~13×",
+          "note": "Assumes 12-15% EPS growth on buyback amplification"
+        },
+        {
+          "label": "FCF Yield",
+          "value": "~6%",
+          "note": "TTM FCF ~$5.5B vs $95B mkt cap"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.0×",
+          "note": "Reasonable on growth and capital return"
+        },
+        {
+          "label": "EV / EBITDA (NTM)",
+          "value": "~9×",
+          "note": "Discount to HPE ~11× and Cisco ~13×"
+        }
       ],
       "summary": "Dell trades like a cyclical with embedded AI-infrastructure exposure. The buyback-driven EPS leverage compounds the upside if AI-server margins hold."
     }
@@ -115,15 +159,15 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — server and PC OEM with limited end-user UI moat."
+      "status": "na",
+      "note": "server and PC OEM with limited end-user UI moat."
     },
     "businessLogic": {
       "status": "weakened",
       "note": "Dell APEX consumption-based IT and storage software (PowerStore, PowerScale) carry some sticky business logic, but most of the franchise is hardware."
     },
     "publicDataAccess": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "talentScarcity": {
@@ -135,23 +179,23 @@
       "note": "AI Factory bundles compute + storage + networking + services co-engineered with NVIDIA — a meaningful enterprise simplification not available from pure-play assemblers."
     },
     "proprietaryData": {
-      "status": "destroyed",
-      "note": "N/A — no proprietary-data moat at scale."
+      "status": "na",
+      "note": "no proprietary-data moat at scale."
     },
     "regulatoryLockIn": {
       "status": "intact",
       "note": "FedRAMP, ITAR, and government cloud certifications + decades of clearance in regulated industries create real switching friction for sensitive workloads."
     },
     "networkEffects": {
-      "status": "destroyed",
-      "note": "N/A — no network effects in hardware sales."
+      "status": "na",
+      "note": "no network effects in hardware sales."
     },
     "transactionEmbedding": {
       "status": "intact",
       "note": "Enterprise procurement integrations, supply-chain APIs, and global support contracts create real friction for swap-out — but procurement strategies cap the depth."
     },
     "systemOfRecord": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "verdict": "Dell is a durable AI-capex beneficiary with genuine enterprise distribution and engineering moats, but the underlying franchise is hardware and the AI-server margin question dominates the multi-year thesis. Buyback amplification and capital discipline make the equity story compelling at current valuation despite the structural margin headwind."

@@ -79,9 +79,21 @@
       "cagrBasis": "Measured on total revenue: FY2025 → FY2026 $67.4B (+17% YoY), with Q4 FY2026 at +21% YoY and FY2027 guided to $90B (+34% CC / ~+34% YoY). The two-year path FY2025→FY2027 compounds near ~25% CAGR. The 22–26% band decays that measured print toward a mid-teens terminal as the legacy software base dilutes OCI's contribution even if OCI holds 50%+ growth — it is not the +34% FY27 guide parked as a multi-year rate.",
       "scoreDerivation": "Base 86 (22–26% blended CAGR; midpoint ~24% on the 15–30% segment) + 0 trajectory (OCI accelerating, Cloud Apps stable, legacy decelerating) + 0 margin stable − 15 severe key risk (OpenAI ~½ of $638B RPO, BBB−, $42B FOCF deficit still unmaterialised as conversion failure) = 71. The CAGR band is unchanged from the June print; severity rises because the financing and concentration facts S&P published in July make the unmaterialised downside (OpenAI funding gap, junk downgrade, stranded AI capacity) larger than the prior high-severity charge assumed.",
       "drivers": [
-        { "name": "OCI / Cloud Infrastructure", "metric": "+93% YoY, $5.8B Q4 FY2026 (accelerating from +84% Q3); $638B RPO +363% YoY; Q1 FY27 cloud guided +58–64%", "trend": "accelerating" },
-        { "name": "Cloud Applications (Fusion + NetSuite ERP)", "metric": "SaaS +10% YoY, $4.1B Q4 FY2026; steady mid-market and ERP migration demand", "trend": "stable" },
-        { "name": "Legacy Software (on-prem)", "metric": "Low-single-digit YoY in Q4 FY2026; stabilising as cloud migration matures", "trend": "decelerating" }
+        {
+          "name": "OCI / Cloud Infrastructure",
+          "metric": "+93% YoY, $5.8B Q4 FY2026 (accelerating from +84% Q3); $638B RPO +363% YoY; Q1 FY27 cloud guided +58–64%",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Cloud Applications (Fusion + NetSuite ERP)",
+          "metric": "SaaS +10% YoY, $4.1B Q4 FY2026; steady mid-market and ERP migration demand",
+          "trend": "stable"
+        },
+        {
+          "name": "Legacy Software (on-prem)",
+          "metric": "Low-single-digit YoY in Q4 FY2026; stabilising as cloud migration matures",
+          "trend": "decelerating"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "Observed and already in the price: FY2026 FCF of −$23.7B on $55.7B capex, FY2027 capex guided $90–95B, S&P's July 9 cut to BBB−, and S&P's estimate that OpenAI is roughly half of the $638B RPO. Those are facts, not the severity charge. What remains unmaterialised — and is now severe — is conversion failure: OpenAI's commitments stop being fundable, a second agency follows S&P into junk, or OCI AI infrastructure gross margins stay below 35% through FY2028 while the $20B ATM equity and further debt dilute and lever a backlog that never earns its cost of capital. If that path hits, the $90B FY27 print can still land while equity value is written down against a stranded, over-levered AI landlord rather than a database compounder.",
@@ -111,11 +123,31 @@
     "peAnalysis": {
       "asOf": "August 2026 (post-BBB−; price $129.87 on July 31)",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~22×", "note": "FY2026 GAAP EPS $5.83" },
-        { "label": "Forward P/E (NTM)", "value": "~16×", "note": "FY2027 non-GAAP EPS guide $8.05" },
-        { "label": "PEG Ratio", "value": "~0.9×", "note": "fwd P/E ÷ ~18% EPS CAGR (ex one-time FY26 gains)" },
-        { "label": "Price / Sales (NTM)", "value": "~4.2×", "note": "$90B FY2027 revenue guidance on ~$374B mkt cap" },
-        { "label": "Price / FCF", "value": "N/A", "note": "FCF negative; S&P sees ~$42B FOCF deficit in FY2027" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~22×",
+          "note": "FY2026 GAAP EPS $5.83"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~16×",
+          "note": "FY2027 non-GAAP EPS guide $8.05"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~0.9×",
+          "note": "fwd P/E ÷ ~18% EPS CAGR (ex one-time FY26 gains)"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~4.2×",
+          "note": "$90B FY2027 revenue guidance on ~$374B mkt cap"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "N/A",
+          "note": "FCF negative; S&P sees ~$42B FOCF deficit in FY2027"
+        }
       ],
       "summary": "At ~$130, ORCL trades at ~16× FY2027 guided non-GAAP earnings — a multiple more often attached to mature enterprise software than to a business guiding +34% revenue growth. The June setup at ~24× / ~1.3× PEG has fully reversed: the market is again discounting RPO conversion and balance-sheet risk rather than paying for it. Trailing ~22× on $5.83 GAAP EPS still embeds the FY2026 earnings base; the gap to forward ~16× is the OCI ramp plus the market's refusal to capitalise it until funding and concentration risk clear."
     }
@@ -162,8 +194,8 @@
       "note": "Oracle databases store decades of enterprise business logic in stored procedures, triggers, and custom PL/SQL — logic that is nearly impossible to fully document or migrate without business disruption. This is one of the most powerful switching costs in software."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — not a source of competitive advantage for Oracle's core business; its data moat is proprietary customer data stored within Oracle systems."
+      "status": "na",
+      "note": "not a source of competitive advantage for Oracle's core business; its data moat is proprietary customer data stored within Oracle systems."
     },
     "talentScarcity": {
       "status": "intact",

@@ -70,9 +70,21 @@
       "cagrEstimate": "5-9%",
       "scoreDerivation": "Base 70 + CNC category monopoly (+4) + semi/EV automation tailwind (+3) + humanoid robot optionality (+2) - China capex cyclicality (-3) = 76",
       "drivers": [
-        { "name": "Factory Automation", "metric": "FY2025 record net sales ¥857B, +8% YoY", "trend": "accelerating" },
-        { "name": "Operating Margin", "metric": "FY2025 op margin 21.4%, +150bps YoY; FY2026 guide 23.3%", "trend": "accelerating" },
-        { "name": "Robot Orders", "metric": "China + Americas robot demand recovering double-digit", "trend": "accelerating" }
+        {
+          "name": "Factory Automation",
+          "metric": "FY2025 record net sales ¥857B, +8% YoY",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Operating Margin",
+          "metric": "FY2025 op margin 21.4%, +150bps YoY; FY2026 guide 23.3%",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Robot Orders",
+          "metric": "China + Americas robot demand recovering double-digit",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "market share",
       "keyRisk": "China capex cycle stalls and Chinese robot OEMs (Estun, Inovance) drive ASP compression in FANUC's robot segment over 2-3 years.",
@@ -123,8 +135,8 @@
       "note": "FANUC CNC firmware encodes four decades of proprietary motion-control algorithms — servo gain scheduling, backlash compensation, thermal expansion correction, and high-speed interpolation logic — that are not reverse-engineerable from the output. Competitors cannot buy or hire their way to this accumulated physics-tuned intelligence quickly."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "Not applicable — FANUC is a precision hardware and motion-control software manufacturer with no reliance on public data aggregation as a moat source."
+      "status": "na",
+      "note": "FANUC is a precision hardware and motion-control software manufacturer with no reliance on public data aggregation as a moat source."
     },
     "talentScarcity": {
       "status": "strong",

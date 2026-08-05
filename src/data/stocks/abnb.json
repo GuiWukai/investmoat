@@ -4,12 +4,24 @@
   "name": "Airbnb",
   "lastAnalyzed": "August 3, 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "ABNB" },
-    { "label": "Market Cap", "value": "~$90B" }
+    {
+      "label": "Ticker",
+      "value": "ABNB"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$90B"
+    }
   ],
   "chips": [
-    { "label": "Marketplace | Travel", "color": "primary" },
-    { "label": "Two-Sided Network", "color": "success" }
+    {
+      "label": "Marketplace | Travel",
+      "color": "primary"
+    },
+    {
+      "label": "Two-Sided Network",
+      "color": "success"
+    }
   ],
   "metrics": [
     {
@@ -60,9 +72,21 @@
       "cagrBasis": "Reported and guided revenue series: Q1 2026 +18% YoY to $2.68B against FY2025 revenue of ~$12.24B; FY2026 guidance raised to low-to-mid teens (street ~$13.7–14.0B, ~12–14%). Unbounded and fully accruing — Airbnb books the service fees. The estimate is the 3–5 year blend of that path decaying toward high-single/low-double digits as core US/EU nights mature, not an extrapolation of the Q1 print or the FY26 guide alone. Take-rate lift (fee simplification + insurance) and expansion-market nights (LatAm/APAC high-teens; India origin ~50%) support the top of the band; Reserve Now, Pay Later anniversary comps and urban regulation cap the bottom.",
       "scoreDerivation": "Base 77 (11–15% CAGR, midpoint 13%) + 2.7 trajectory (Experiences/Services and emerging markets accelerating; nights stable at +9%) + 0 margin (FY26 adj EBITDA ≥35%, reinvestment prioritized) − 5 moderate regulation risk = 75",
       "drivers": [
-        { "name": "Nights and Seats Booked", "metric": "Q1 +9% YoY (156.2M; ~10% ex–ME conflict); Q2 guided slight deceleration on ~100bps ME headwind; North America high-single digits", "trend": "stable" },
-        { "name": "Experiences, Services, Take Rate", "metric": "Summer 2026 expansion; insurance revenue +45% YoY; fee simplification lifting FY26 take rate; hotel pilot scaling", "trend": "accelerating" },
-        { "name": "Emerging Markets", "metric": "LatAm and APAC nights high-teens; Brazil origin +20% third straight quarter; India origin ~50%; first-time bookers +10% globally", "trend": "accelerating" }
+        {
+          "name": "Nights and Seats Booked",
+          "metric": "Q1 +9% YoY (156.2M; ~10% ex–ME conflict); Q2 guided slight deceleration on ~100bps ME headwind; North America high-single digits",
+          "trend": "stable"
+        },
+        {
+          "name": "Experiences, Services, Take Rate",
+          "metric": "Summer 2026 expansion; insurance revenue +45% YoY; fee simplification lifting FY26 take rate; hotel pilot scaling",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Emerging Markets",
+          "metric": "LatAm and APAC nights high-teens; Brazil origin +20% third straight quarter; India origin ~50%; first-time bookers +10% globally",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If urban short-term-rental regulation tightens further across major US/EU cities in 2026-27 (NYC, Barcelona, Berlin precedents extending), supply growth in highest-ADR markets reverses and ADR + bookings growth compresses simultaneously — even as hotels and events partially offset.",
@@ -76,11 +100,31 @@
     "peAnalysis": {
       "asOf": "August 2026",
       "rows": [
-        { "label": "Forward P/E (FY26)", "value": "~30×", "note": "EPS ~$4.95–5.05 consensus; premium to trough after guide raise" },
-        { "label": "Forward P/E (FY27)", "value": "~26×", "note": "EPS ~$5.80; buybacks lift EPS above earnings growth" },
-        { "label": "Price / Sales (FY26)", "value": "~6.5×", "note": "Fair vs capital-light marketplace peers on ~$14B revenue" },
-        { "label": "PEG Ratio", "value": "~2.0×", "note": "On ~15% blended growth; premium for FCF conversion" },
-        { "label": "FCF Yield", "value": "~5%", "note": "TTM FCF ~$4.5B; $1.1B Q1 buyback, $4.5B authorization left" }
+        {
+          "label": "Forward P/E (FY26)",
+          "value": "~30×",
+          "note": "EPS ~$4.95–5.05 consensus; premium to trough after guide raise"
+        },
+        {
+          "label": "Forward P/E (FY27)",
+          "value": "~26×",
+          "note": "EPS ~$5.80; buybacks lift EPS above earnings growth"
+        },
+        {
+          "label": "Price / Sales (FY26)",
+          "value": "~6.5×",
+          "note": "Fair vs capital-light marketplace peers on ~$14B revenue"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~2.0×",
+          "note": "On ~15% blended growth; premium for FCF conversion"
+        },
+        {
+          "label": "FCF Yield",
+          "value": "~5%",
+          "note": "TTM FCF ~$4.5B; $1.1B Q1 buyback, $4.5B authorization left"
+        }
       ],
       "summary": "Valuation has re-rated with the growth re-acceleration; upside is still Experiences/Services contribution, emerging-market nights, and take-rate durability rather than multiple expansion alone."
     }
@@ -124,7 +168,7 @@
       "note": "Search ranking, dynamic pricing, and host trust scoring are real differentiated systems; AI coauthors ~60% of engineering code but does not commoditise the ranking/trust stack."
     },
     "publicDataAccess": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "talentScarcity": {

@@ -4,12 +4,24 @@
   "name": "Novo Nordisk",
   "lastAnalyzed": "August 3, 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "NVO" },
-    { "label": "Market Cap", "value": "~$211B" }
+    {
+      "label": "Ticker",
+      "value": "NVO"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$211B"
+    }
   ],
   "chips": [
-    { "label": "Pharma | GLP-1 | Diabetes / Obesity", "color": "primary" },
-    { "label": "Price Reset Underway", "color": "warning" }
+    {
+      "label": "Pharma | GLP-1 | Diabetes / Obesity",
+      "color": "primary"
+    },
+    {
+      "label": "Price Reset Underway",
+      "color": "warning"
+    }
   ],
   "metrics": [
     {
@@ -88,11 +100,31 @@
     "peAnalysis": {
       "asOf": "August 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~11×", "note": "TTM EPS ~$4.20; 340B reversal inflates" },
-        { "label": "Forward P/E (NTM)", "value": "~15×", "note": "consensus EPS est. ~$3.20–3.40" },
-        { "label": "PEG Ratio", "value": "~5×", "note": "fwd P/E ÷ ~3% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~4.5×", "note": "vs LLY ~13×; GPharma ~3×" },
-        { "label": "Price / FCF", "value": "~20×", "note": "FY26 FCF guide DKK 36–46B" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~11×",
+          "note": "TTM EPS ~$4.20; 340B reversal inflates"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~15×",
+          "note": "consensus EPS est. ~$3.20–3.40"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~5×",
+          "note": "fwd P/E ÷ ~3% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~4.5×",
+          "note": "vs LLY ~13×; GPharma ~3×"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~20×",
+          "note": "FY26 FCF guide DKK 36–46B"
+        }
       ],
       "summary": "Forward P/E in the mid-teens is cheap versus Lilly and versus Novo's history, but fair-to-expensive versus a 1–5% revenue CAGR — the PEG near 5× says the multiple still embeds more growth than the price-reset path currently supports. The trailing-to-forward gap (11× → 15×) is a deceleration signal: 2026–27 earnings are stepping down, not ramping."
     }
@@ -128,16 +160,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — pharmaceutical manufacturer with no end-user UI moat."
+      "status": "na",
+      "note": "pharmaceutical manufacturer with no end-user UI moat."
     },
     "businessLogic": {
-      "status": "destroyed",
-      "note": "N/A — no enterprise workflow or software configuration lock-in."
+      "status": "na",
+      "note": "no enterprise workflow or software configuration lock-in."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — clinical publications are public; no proprietary data-access gate."
+      "status": "na",
+      "note": "clinical publications are public; no proprietary data-access gate."
     },
     "talentScarcity": {
       "status": "intact",
@@ -156,16 +188,16 @@
       "note": "FDA, EMA, and global approvals plus GMP manufacturing certifications remain the practical moat — replicating Novo's regulatory and manufacturing footprint still takes the better part of a decade."
     },
     "networkEffects": {
-      "status": "destroyed",
-      "note": "N/A — prescription pharmaceuticals do not exhibit user-network effects."
+      "status": "na",
+      "note": "prescription pharmaceuticals do not exhibit user-network effects."
     },
     "transactionEmbedding": {
       "status": "weakened",
       "note": "Titration and payer formulary placement create real switching friction for patients already on therapy, but Lilly now wins ~60% of the combined US GLP-1 market and the majority of new starts — embedding no longer protects share."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — not a system of record for clinical or administrative data."
+      "status": "na",
+      "note": "not a system of record for clinical or administrative data."
     },
     "verdict": "Novo's moat is regulatory-and-manufacturing rather than data-and-network, which makes it AI-neutral — neither helped nor materially threatened by AI. The franchise question is competitive versus Lilly and the depth of the 2027 price reset, not technological obsolescence. Current valuation prices in continued share loss and a trough earnings year; manufacturing scale and the oral form-factor are the residual upside, not a restored product-superiority narrative."
   }

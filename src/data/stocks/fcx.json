@@ -74,9 +74,21 @@
       "cagrEstimate": "9-13%",
       "scoreDerivation": "Base 60 + 8 (copper electrification/AI demand structural deficit) + 5 (Grasberg recovery to 1.6B lbs/yr by 2027-2029) + 2 (Indonesia life-of-resource MoU de-risks long-term reserves) - 5 (Grasberg phased ramp delayed; 2026 guidance cut) = 70",
       "drivers": [
-        { "name": "Copper price", "metric": "Q1 2026 realized strength drove 21% adj EPS beat; structural demand from EVs, grid, AI data centers", "trend": "accelerating" },
-        { "name": "Grasberg production ramp", "metric": "2026 ~65% capacity H2, ~80% mid-2027; recovery to 1.6B lbs/yr 2027-2029", "trend": "decelerating" },
-        { "name": "Reserve longevity", "metric": "PT Freeport Indonesia life-of-resource MoU extends 30+ year mine life", "trend": "stable" }
+        {
+          "name": "Copper price",
+          "metric": "Q1 2026 realized strength drove 21% adj EPS beat; structural demand from EVs, grid, AI data centers",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Grasberg production ramp",
+          "metric": "2026 ~65% capacity H2, ~80% mid-2027; recovery to 1.6B lbs/yr 2027-2029",
+          "trend": "decelerating"
+        },
+        {
+          "name": "Reserve longevity",
+          "metric": "PT Freeport Indonesia life-of-resource MoU extends 30+ year mine life",
+          "trend": "stable"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "Grasberg block-cave geomechanical setbacks or further mudslide events delay full ramp into late 2027+, combined with China property weakness pulling copper to $3.50/lb — would compress 2026-2027 EBITDA by 30-40%.",
@@ -119,24 +131,24 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "Not applicable — FCX sells copper and gold as commodities at global spot prices, not software or services with learned user interfaces."
+      "status": "na",
+      "note": "FCX sells copper and gold as commodities at global spot prices, not software or services with learned user interfaces."
     },
     "businessLogic": {
       "status": "weakened",
       "note": "AI is improving mine planning, predictive maintenance, and ore-body modeling across the industry, but these gains are broadly available and do not create durable differentiation for FCX."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "Not applicable to FCX's competitive position in copper and gold mining."
+      "status": "na",
+      "note": "to FCX's competitive position in copper and gold mining."
     },
     "talentScarcity": {
       "status": "intact",
       "note": "Block cave mining engineers with Grasberg-scale underground experience are genuinely scarce. The Grasberg transition required decades of specialized expertise that cannot be hired off the shelf."
     },
     "bundling": {
-      "status": "destroyed",
-      "note": "N/A — copper and gold are globally fungible commodities priced at LME spot; FCX cannot bundle or differentiate its product from competitors."
+      "status": "na",
+      "note": "copper and gold are globally fungible commodities priced at LME spot; FCX cannot bundle or differentiate its product from competitors."
     },
     "proprietaryData": {
       "status": "intact",
@@ -147,16 +159,16 @@
       "note": "The PT Freeport Indonesia special mining agreement, Morenci's Arizona water rights and permits, and Cerro Verde's Peruvian concessions represent regulatory moats that would take decades to replicate from scratch."
     },
     "networkEffects": {
-      "status": "destroyed",
-      "note": "N/A — no network effects exist in copper mining; output is priced by global LME spot markets regardless of production volume."
+      "status": "na",
+      "note": "no network effects exist in copper mining; output is priced by global LME spot markets regardless of production volume."
     },
     "transactionEmbedding": {
       "status": "weakened",
       "note": "FCX has offtake agreements with smelters, but copper is fungible and smelters can switch suppliers. Limited transaction embedding compared to software businesses."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "Not applicable — FCX is a physical commodity producer, not an information system."
+      "status": "na",
+      "note": "FCX is a physical commodity producer, not an information system."
     },
     "verdict": "FCX's AI resilience is limited in the traditional sense — copper mining is a physical commodity business immune to AI disruption of its core product. However, FCX is paradoxically a direct beneficiary of the AI infrastructure build-out, as data centers require massive copper volumes for power and connectivity. AI is a demand driver, not a competitive threat."
   },

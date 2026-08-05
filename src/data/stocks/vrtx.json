@@ -4,13 +4,28 @@
   "name": "Vertex Pharmaceuticals Incorporated",
   "lastAnalyzed": "May 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "VRTX" },
-    { "label": "Market Cap", "value": "~$110B" }
+    {
+      "label": "Ticker",
+      "value": "VRTX"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$110B"
+    }
   ],
   "chips": [
-    { "label": "Healthcare | CF Therapeutics + Pipeline", "color": "primary" },
-    { "label": "CF Monopoly", "color": "success" },
-    { "label": "Pipeline Diversification", "color": "secondary" }
+    {
+      "label": "Healthcare | CF Therapeutics + Pipeline",
+      "color": "primary"
+    },
+    {
+      "label": "CF Monopoly",
+      "color": "success"
+    },
+    {
+      "label": "Pipeline Diversification",
+      "color": "secondary"
+    }
   ],
   "metrics": [
     {
@@ -64,10 +79,26 @@
       "cagrEstimate": "10-15%",
       "scoreDerivation": "Base 75 (10-20% CAGR) + 5 pipeline diversification (Casgevy, Journavx, povetacicept, inaxaplin) + 3 patent runway extension (Alyftrek into late 2030s) - 5 CF saturation drag (Trikafta-eligible population largely treated) - 2 Q1 revenue miss (below $3.09B consensus) = 76",
       "drivers": [
-        { "name": "CF Franchise (Trikafta + Alyftrek)", "metric": "~$2.95B Q1 2026; +7% YoY; durable through late 2030s", "trend": "stable" },
-        { "name": "Casgevy (CRISPR sickle cell + beta thal)", "metric": "$43M Q1; >500 cumulative patients; Germany pricing signed", "trend": "accelerating" },
-        { "name": "Journavx (suzetrigine, acute pain)", "metric": "Launched 2025; non-opioid Nav1.8 inhibitor; $1B+ peak potential", "trend": "accelerating" },
-        { "name": "Povetacicept (IgA nephropathy)", "metric": "Phase 3 readout expected 2026-2027; multi-billion peak potential", "trend": "accelerating" }
+        {
+          "name": "CF Franchise (Trikafta + Alyftrek)",
+          "metric": "~$2.95B Q1 2026; +7% YoY; durable through late 2030s",
+          "trend": "stable"
+        },
+        {
+          "name": "Casgevy (CRISPR sickle cell + beta thal)",
+          "metric": "$43M Q1; >500 cumulative patients; Germany pricing signed",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Journavx (suzetrigine, acute pain)",
+          "metric": "Launched 2025; non-opioid Nav1.8 inhibitor; $1B+ peak potential",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Povetacicept (IgA nephropathy)",
+          "metric": "Phase 3 readout expected 2026-2027; multi-billion peak potential",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If Casgevy uptake remains constrained by infrastructure (only ~50 ATCs globally) and reimbursement complexity through 2027, AND povetacicept Phase 3 disappoints in IgA nephropathy, Vertex's non-CF revenue stalls below $1B and the company is re-rated as a CF-monopoly value stock with a slowing growth profile.",
@@ -81,11 +112,31 @@
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~26×", "note": "TTM EPS ~$16.50" },
-        { "label": "Forward P/E (NTM)", "value": "~22×", "note": "consensus FY2026 adj. EPS ~$19.50" },
-        { "label": "PEG Ratio", "value": "~1.7×", "note": "fwd P/E / ~13% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~8.4×", "note": "~$13B NTM revenue" },
-        { "label": "Price / FCF", "value": "~25×", "note": "~$4.4B TTM FCF" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~26×",
+          "note": "TTM EPS ~$16.50"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~22×",
+          "note": "consensus FY2026 adj. EPS ~$19.50"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.7×",
+          "note": "fwd P/E / ~13% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~8.4×",
+          "note": "~$13B NTM revenue"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~25×",
+          "note": "~$4.4B TTM FCF"
+        }
       ],
       "summary": "Vertex screens reasonable on absolute multiples (~22× forward P/E) for a high-margin specialty pharma compounder with a monopoly CF franchise and credible pipeline optionality. The PEG of ~1.7 is fair for the franchise's stability; the asymmetry comes from Casgevy + povetacicept, which together could add $2-3B of revenue by 2028 but are conservatively modeled in consensus."
     }
@@ -124,24 +175,24 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "Not applicable — physicians prescribe based on clinical evidence, label, and outcomes, not interface familiarity; learned-interface costs do not apply to pharmaceuticals."
+      "status": "na",
+      "note": "physicians prescribe based on clinical evidence, label, and outcomes, not interface familiarity; learned-interface costs do not apply to pharmaceuticals."
     },
     "businessLogic": {
       "status": "intact",
       "note": "Vertex's CFTR modulator chemistry, pharmacokinetics know-how, and gene-editing manufacturing IP (in partnership with CRISPR Therapeutics) represent decades of accumulated proprietary technical knowledge that competitors cannot reverse-engineer from the label alone."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "Not applicable — Vertex's competitive moat does not rely on controlling access to a public data source; not applicable to the pharma business model."
+      "status": "na",
+      "note": "Vertex's competitive moat does not rely on controlling access to a public data source; not applicable to the pharma business model."
     },
     "talentScarcity": {
       "status": "strong",
       "note": "World-class CFTR pharmacology, gene-editing translational science, and pain neuroscience teams are genuinely scarce. Vertex's 25-year track record in CF, plus the integrated CRISPR partnership, attracts disproportionate talent in narrow specialty areas."
     },
     "bundling": {
-      "status": "destroyed",
-      "note": "Not applicable — pharmaceutical drugs are not sold in software-style bundles; individual drug approvals and prescriptions are the unit of sale."
+      "status": "na",
+      "note": "pharmaceutical drugs are not sold in software-style bundles; individual drug approvals and prescriptions are the unit of sale."
     },
     "proprietaryData": {
       "status": "strong",

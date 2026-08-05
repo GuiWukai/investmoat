@@ -400,10 +400,11 @@ export function RecommendationBadge({ status, loading }: { status: 'Strong Buy' 
 
 // ─── TenMoatsCard ──────────────────────────────────────────────────────────────
 const moatStatusConfig: Record<MoatStatus, { label: string; color: string; bgColor: string }> = {
-  strong:    { label: 'STRONG',   color: '#34d399', bgColor: 'rgba(52,211,153,0.1)'  },
-  intact:    { label: 'INTACT',   color: '#60a5fa', bgColor: 'rgba(96,165,250,0.1)'  },
-  weakened:  { label: 'WEAKENED', color: '#fbbf24', bgColor: 'rgba(251,191,36,0.1)'  },
-  destroyed: { label: 'N/A',      color: '#71717a', bgColor: 'rgba(113,113,122,0.08)' },
+  strong:    { label: 'STRONG',    color: '#34d399', bgColor: 'rgba(52,211,153,0.1)'  },
+  intact:    { label: 'INTACT',    color: '#60a5fa', bgColor: 'rgba(96,165,250,0.1)'  },
+  weakened:  { label: 'WEAKENED',  color: '#fbbf24', bgColor: 'rgba(251,191,36,0.1)'  },
+  destroyed: { label: 'DESTROYED', color: '#f87171', bgColor: 'rgba(248,113,113,0.1)'  },
+  na:        { label: 'N/A',       color: '#71717a', bgColor: 'rgba(113,113,122,0.08)' },
 };
 
 function MoatRow({ label, status, note }: { label: string; status: MoatStatus; note: string }) {

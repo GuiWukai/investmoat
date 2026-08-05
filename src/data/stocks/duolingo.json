@@ -4,15 +4,36 @@
   "name": "Duolingo",
   "lastAnalyzed": "July 5, 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "DUOL" },
-    { "label": "Market Cap", "value": "~$5.9B" }
+    {
+      "label": "Ticker",
+      "value": "DUOL"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$5.9B"
+    }
   ],
   "chips": [
-    { "label": "EdTech Leader", "color": "primary" },
-    { "label": "AI-Enhanced Learning", "color": "success" },
-    { "label": "Gamification Moat", "color": "secondary" },
-    { "label": "DAU Investment Cycle", "color": "warning" },
-    { "label": "Multi-Subject Expansion", "color": "primary" }
+    {
+      "label": "EdTech Leader",
+      "color": "primary"
+    },
+    {
+      "label": "AI-Enhanced Learning",
+      "color": "success"
+    },
+    {
+      "label": "Gamification Moat",
+      "color": "secondary"
+    },
+    {
+      "label": "DAU Investment Cycle",
+      "color": "warning"
+    },
+    {
+      "label": "Multi-Subject Expansion",
+      "color": "primary"
+    }
   ],
   "metrics": [
     {
@@ -90,11 +111,31 @@
     "peAnalysis": {
       "asOf": "July 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~13×", "note": "TTM EPS ~$9.60, incl. tax benefit" },
-        { "label": "Forward P/E (NTM)", "value": "~40×", "note": "FY2026 consensus EPS ~$2.95–3.08" },
-        { "label": "PEG Ratio", "value": "~2.5×", "note": "fwd P/E ÷ ~16% guided growth" },
-        { "label": "Price / Sales (NTM)", "value": "~4.8×", "note": "$1.2B FY2026 guided revenue" },
-        { "label": "Price / FCF", "value": "~14×", "note": "$406M TTM free cash flow" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~13×",
+          "note": "TTM EPS ~$9.60, incl. tax benefit"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~40×",
+          "note": "FY2026 consensus EPS ~$2.95–3.08"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~2.5×",
+          "note": "fwd P/E ÷ ~16% guided growth"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~4.8×",
+          "note": "$1.2B FY2026 guided revenue"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~14×",
+          "note": "$406M TTM free cash flow"
+        }
       ],
       "summary": "At ~40× forward P/E on 15–18% guided revenue growth, Duolingo's PEG has risen to ~2.5× — no longer GARP territory — because FY2026 consensus EPS (~$3) normalizes away the one-time $257M tax-valuation-allowance release that flattered FY2025's ~13× trailing P/E. The ~4.8× forward P/S and ~14× P/FCF are the more useful multiples here: both are reasonable for a 73% gross-margin software business with $400M+ of trailing FCF, but neither is as screamingly cheap as the headline trailing P/E suggests. The stock is pricing in continued DAU strength eventually converting to bookings growth — a conversion the weak Q2 2026 guide has not yet confirmed."
     }
@@ -157,16 +198,16 @@
       "note": "Duolingo's 12+ year accumulation of learning behavior data from 500M+ registered users — covering error patterns, engagement drop-off points, exercise completion rates, and retention triggers across 40+ languages and difficulty levels — is genuinely proprietary and continuously updated at scale. This data powers BirdBrain's personalisation and informs product decisions at a granularity no new entrant can match. AI strengthens this moat: Duolingo's behavioral data is the training signal for better AI-powered features, creating a compounding advantage as the user base grows and each interaction generates more signal."
     },
     "regulatoryLockIn": {
-      "status": "destroyed",
-      "note": "N/A — Duolingo is a consumer EdTech app with no government certifications, procurement contracts, or accreditation requirements that create structural switching costs. The Duolingo English Test (DET) has growing institutional recognition at universities as an alternative to TOEFL/IELTS, which creates limited regulatory tailwind, but DET represents a small portion of revenue and is not a structural platform lock-in mechanism."
+      "status": "na",
+      "note": "Duolingo is a consumer EdTech app with no government certifications, procurement contracts, or accreditation requirements that create structural switching costs. The Duolingo English Test (DET) has growing institutional recognition at universities as an alternative to TOEFL/IELTS, which creates limited regulatory tailwind, but DET represents a small portion of revenue and is not a structural platform lock-in mechanism."
     },
     "networkEffects": {
       "status": "weakened",
       "note": "Duolingo's weekly XP leagues create competitive social dynamics — users compete against peers in the same league tier, driving return behavior through social comparison. However, the core language learning value proposition is fundamentally individual: learning Spanish does not get better because more people use Duolingo. Network effects are secondary to the core product and are easily replicable by competitors. Duolingo for Schools creates teacher-student connections but represents a small share of overall engagement."
     },
     "transactionEmbedding": {
-      "status": "destroyed",
-      "note": "N/A — Duolingo is a consumer subscription app, not a payment processor or financial transaction intermediary. No transaction embedding moat applies."
+      "status": "na",
+      "note": "Duolingo is a consumer subscription app, not a payment processor or financial transaction intermediary. No transaction embedding moat applies."
     },
     "systemOfRecord": {
       "status": "weakened",

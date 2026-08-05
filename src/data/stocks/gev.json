@@ -72,9 +72,21 @@
       "cagrBasis": "FY2025 revenue $38.1B; FY2026 guide midpoint ~$46B (+21% YoY) after the Q2 raise; Q2 organic revenue +12%. Gas turbine output ramp 20 → 24 → 30 GW (Q3 2026 / 2028 / 2030) caps equipment volume growth even as the $176B backlog and 116 GW gas slot book fill. The 10–15% blended 3–5yr estimate sits between the raised 2026 print and capacity-constrained mid-teens fade plus LTSA/services — not the +88% orders print annualised.",
       "scoreDerivation": "Base 76 (10–15% CAGR mid-band) + 4 trajectory (orders, capacity ramp, and Electrification all accelerating) + 4 margin expansion − 5 Wind/capacity-execution risk = 79",
       "drivers": [
-        { "name": "AI Data Center Power Orders", "metric": "Q2 2026 orders $24.2B (+88% organic); backlog $176B; Gas Power equipment/slots 116 GW → ≥125 GW YE target", "trend": "accelerating" },
-        { "name": "Gas Turbine Capacity Ramp", "metric": "On track for 20 GW annual output in Q3 2026; 24 GW in 2028; actions toward 30 GW in 2030", "trend": "accelerating" },
-        { "name": "Electrification + Prolec GE", "metric": "Electrification orders $6.3B (+93% org); data-centre orders >$5B YTD (2× FY2025); Adj EBITDA margin +340 bps org", "trend": "accelerating" }
+        {
+          "name": "AI Data Center Power Orders",
+          "metric": "Q2 2026 orders $24.2B (+88% organic); backlog $176B; Gas Power equipment/slots 116 GW → ≥125 GW YE target",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Gas Turbine Capacity Ramp",
+          "metric": "On track for 20 GW annual output in Q3 2026; 24 GW in 2028; actions toward 30 GW in 2030",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Electrification + Prolec GE",
+          "metric": "Electrification orders $6.3B (+93% org); data-centre orders >$5B YTD (2× FY2025); Adj EBITDA margin +340 bps org",
+          "trend": "accelerating"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If Greenville/capacity expansion slips 12–18 months, turbine deliveries miss the 20 GW Q3 2026 and 24 GW 2028 targets and backlog conversion stretches into 2029, while continued offshore Wind write-downs (FY2026 Wind EBITDA losses guided ~$400M) keep compressing group margins — a simultaneous AI-capex digestion year would then de-rate the premium multiple quickly.",
@@ -88,11 +100,31 @@
     "peAnalysis": {
       "asOf": "August 5, 2026",
       "rows": [
-        { "label": "Price / FCF (FY26)", "value": "~23×", "note": "~$280B mkt cap ÷ ~$12B FCF mid-guide" },
-        { "label": "Price / Sales (FY26)", "value": "~6.1×", "note": "~$46B revenue mid-guide; AI-infra premium to industrial peers" },
-        { "label": "EV / Adj EBITDA (FY26)", "value": "~45×", "note": "~$6.0B EBITDA at 13% mid-margin on $46B; rich vs Eaton/Schneider" },
-        { "label": "FCF Yield (FY26)", "value": "~4.3%", "note": "$12B ÷ $280B; supported by $13.1B cash and $3.9B YTD capital return" },
-        { "label": "Street PT Cluster", "value": "~$1,150–1,350", "note": "Jefferies $1,155 / GS $1,268 / MS $1,350; Mizuho Neutral $949" }
+        {
+          "label": "Price / FCF (FY26)",
+          "value": "~23×",
+          "note": "~$280B mkt cap ÷ ~$12B FCF mid-guide"
+        },
+        {
+          "label": "Price / Sales (FY26)",
+          "value": "~6.1×",
+          "note": "~$46B revenue mid-guide; AI-infra premium to industrial peers"
+        },
+        {
+          "label": "EV / Adj EBITDA (FY26)",
+          "value": "~45×",
+          "note": "~$6.0B EBITDA at 13% mid-margin on $46B; rich vs Eaton/Schneider"
+        },
+        {
+          "label": "FCF Yield (FY26)",
+          "value": "~4.3%",
+          "note": "$12B ÷ $280B; supported by $13.1B cash and $3.9B YTD capital return"
+        },
+        {
+          "label": "Street PT Cluster",
+          "value": "~$1,150–1,350",
+          "note": "Jefferies $1,155 / GS $1,268 / MS $1,350; Mizuho Neutral $949"
+        }
       ],
       "summary": "On the raised FCF guide GEV looks less stretched than on EBITDA (~45×), but both frames still embed multi-year AI power-demand continuation. Spot below the Street buy-side cluster and the revised $1,200 base improves the asymmetry versus May; the open risk is a simultaneous Wind-loss persistence and 2027 hyperscaler digestion that compresses the multiple toward 15–18× FCF."
     }
@@ -128,16 +160,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — GE Vernova is a power equipment manufacturer; there is no user-trained interface creating switching costs; this moat category does not apply to an industrial equipment business."
+      "status": "na",
+      "note": "GE Vernova is a power equipment manufacturer; there is no user-trained interface creating switching costs; this moat category does not apply to an industrial equipment business."
     },
     "businessLogic": {
       "status": "strong",
       "note": "70+ years of proprietary gas turbine combustion design, cooling channel engineering, and lifecycle optimization represent deep operational business logic — the metallurgical expertise and manufacturing processes embedded in HA-class turbine production cannot be replicated by a new entrant within a decade."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — GE Vernova does not control access to any unique public data source; this moat category does not apply to its business model."
+      "status": "na",
+      "note": "GE Vernova does not control access to any unique public data source; this moat category does not apply to its business model."
     },
     "talentScarcity": {
       "status": "strong",

@@ -163,16 +163,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — Amkor sells packaging and test services, not a software interface; there is no user-facing UI or workflow that creates relearning cost."
+      "status": "na",
+      "note": "Amkor sells packaging and test services, not a software interface; there is no user-facing UI or workflow that creates relearning cost."
     },
     "businessLogic": {
       "status": "intact",
       "note": "Decades of proprietary packaging process IP (HD Fan-Out, 2.5D, SWIFT, flip-chip) and co-developed customer flows are hard to replicate, though leading foundries and ASE possess comparable capability."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — the business does not derive any moat from access to or aggregation of a public data source."
+      "status": "na",
+      "note": "the business does not derive any moat from access to or aggregation of a public data source."
     },
     "talentScarcity": {
       "status": "weakened",
@@ -191,16 +191,16 @@
       "note": "The 10-year TSMC capacity-reservation agreement, multi-quarter customer qualification barriers, and CHIPS-era US onshoring incentives create genuine multi-year switching and entry barriers for the Arizona advanced-packaging position."
     },
     "networkEffects": {
-      "status": "destroyed",
-      "note": "N/A — adding more customers or packages does not make the service more valuable to other customers; there is no Metcalfe-style network dynamic."
+      "status": "na",
+      "note": "adding more customers or packages does not make the service more valuable to other customers; there is no Metcalfe-style network dynamic."
     },
     "transactionEmbedding": {
       "status": "intact",
       "note": "Once qualified, Amkor is embedded in a customer's supply chain at the package level — co-located with TSMC's Arizona fabs and designed into multi-year product roadmaps — though large customers retain dual-sourcing leverage."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — Amkor is not the authoritative system of record for any critical business function; it is a manufacturing-services supplier."
+      "status": "na",
+      "note": "Amkor is not the authoritative system of record for any critical business function; it is a manufacturing-services supplier."
     },
     "verdict": "Amkor's moat is narrow and AI-adjacent rather than AI-resilient: it benefits enormously from AI demand for advanced packaging, but its durability rests on customer-qualification switching costs and the TSMC/onshoring lock-in, not on a defensible data, network or software advantage. The persistent risk is that foundries and IDMs pull the highest-value AI packaging in-house, leaving Amkor a thin-margin, cyclical capacity provider."
   }

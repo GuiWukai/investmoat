@@ -70,9 +70,21 @@
       "cagrEstimate": "9-12%",
       "scoreDerivation": "Base 73 (9-12% CAGR mid-band) + 6 Agentforce ARR +169% YoY + 4 fastest revenue growth in two years + 3 margin/buyback discipline - 6 Microsoft Copilot competitive pressure = 80",
       "drivers": [
-        { "name": "Agentforce / Data 360", "metric": "Combined ARR $3.4B (+200% YoY); Agentforce alone $1.2B ARR (+205% YoY); >50% of bookings from existing-customer expansion", "trend": "accelerating" },
-        { "name": "Core Multi-Cloud", "metric": "Q1 FY27 revenue $11.13B (+13% YoY); cRPO $33.6B (+14%); FY27 guide raised to $45.9-46.2B (+10-11%)", "trend": "accelerating" },
-        { "name": "Operating Leverage", "metric": "Non-GAAP EPS $3.88 (+50%); $25B accelerated buyback cut share count ~10% YoY", "trend": "stable" }
+        {
+          "name": "Agentforce / Data 360",
+          "metric": "Combined ARR $3.4B (+200% YoY); Agentforce alone $1.2B ARR (+205% YoY); >50% of bookings from existing-customer expansion",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Core Multi-Cloud",
+          "metric": "Q1 FY27 revenue $11.13B (+13% YoY); cRPO $33.6B (+14%); FY27 guide raised to $45.9-46.2B (+10-11%)",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Operating Leverage",
+          "metric": "Non-GAAP EPS $3.88 (+50%); $25B accelerated buyback cut share count ~10% YoY",
+          "trend": "stable"
+        }
       ],
       "primaryType": "market share",
       "keyRisk": "If Agentforce per-conversation pricing fails to translate pilot deployments into durable ARPU expansion by mid-FY2027 and Microsoft Dynamics 365 + Copilot accelerates net-new logo wins at the SMB/mid-market layer, Salesforce's seat-growth-plus-AI-attach narrative breaks and revenue growth re-decelerates below 9%.",
@@ -123,8 +135,8 @@
       "note": "AI agents can now perform many tasks previously requiring complex Salesforce configuration and customization."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — public-facing API data access is not a meaningful moat for Salesforce; its advantage is proprietary customer CRM data, not access to public datasets."
+      "status": "na",
+      "note": "public-facing API data access is not a meaningful moat for Salesforce; its advantage is proprietary customer CRM data, not access to public datasets."
     },
     "talentScarcity": {
       "status": "weakened",

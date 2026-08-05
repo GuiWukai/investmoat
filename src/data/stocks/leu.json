@@ -75,9 +75,21 @@
       "cagrEstimate": "12-18%",
       "scoreDerivation": "Base 80 (12–18% blended revenue CAGR) + 2.7 (2 of 3 drivers accelerating) + 0 (margin trend stable — early HALEU economics unproven) + 3 (TAM expansion: a net-new HALEU market) − 10 (high keyRiskSeverity: revenue cadence is appropriations- and SMR-deployment-dependent) = 76",
       "drivers": [
-        { "name": "HALEU production ramp", "metric": "$900M DOE task order (Jan 2026) to scale Piketon; Technical Solutions revenue +47% YoY", "trend": "accelerating" },
-        { "name": "Contracted backlog", "metric": "~$3.8B across LEU + Technical Solutions, extending to 2040", "trend": "accelerating" },
-        { "name": "Commercial LEU / SWU contracts", "metric": "FY2026 revenue guided $450–500M; SWU pricing recovering as utilities de-risk from Rosatom", "trend": "stable" }
+        {
+          "name": "HALEU production ramp",
+          "metric": "$900M DOE task order (Jan 2026) to scale Piketon; Technical Solutions revenue +47% YoY",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Contracted backlog",
+          "metric": "~$3.8B across LEU + Technical Solutions, extending to 2040",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Commercial LEU / SWU contracts",
+          "metric": "FY2026 revenue guided $450–500M; SWU pricing recovering as utilities de-risk from Rosatom",
+          "trend": "stable"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "HALEU demand beyond the DOE is contingent on SMR developers (Oklo, X-energy, TerraPower) reaching commercial deployment on schedule and on continued Congressional appropriations; a funding lapse or multi-year SMR slip through 2027–2029 would strand the second cascade and de-rate the equity sharply.",
@@ -120,8 +132,8 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — Centrus sells enriched uranium and HALEU as a commodity fuel; there is no user-trained interface or workflow creating switching costs, so this moat category does not apply."
+      "status": "na",
+      "note": "Centrus sells enriched uranium and HALEU as a commodity fuel; there is no user-trained interface or workflow creating switching costs, so this moat category does not apply."
     },
     "businessLogic": {
       "status": "strong",
@@ -129,8 +141,8 @@
       "aiExposure": "resilient"
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — Centrus does not control any unique public data source; this moat category does not apply to a uranium enrichment business."
+      "status": "na",
+      "note": "Centrus does not control any unique public data source; this moat category does not apply to a uranium enrichment business."
     },
     "talentScarcity": {
       "status": "intact",
@@ -157,8 +169,8 @@
       "note": "Multi-year SWU supply contracts and sole-source DOE HALEU task orders embed Centrus as the default Western enrichment supplier with a ~$3.8B backlog to 2040; switching enrichers requires re-contracting, security vetting, and government approvals, making mid-program switching prohibitive for utilities and effectively impossible for the US government, which has no domestic alternative."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — Centrus is not a system of record for any information function; this moat category does not apply to a uranium enrichment business."
+      "status": "na",
+      "note": "Centrus is not a system of record for any information function; this moat category does not apply to a uranium enrichment business."
     },
     "verdict": "Centrus is a net beneficiary of AI adoption through the data-center nuclear-power tailwind — AI-driven electricity demand is accelerating the SMR buildout that HALEU fuels, and Centrus is the only Western supplier of that fuel. Its core moats — classified centrifuge technology, the sole NRC HALEU license, and sole-source government demand — are physical and regulatory advantages entirely immune to AI-driven disruption; the real risk is commercial and political (SMR deployment pace and appropriations), not technological obsolescence."
   },

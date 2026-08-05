@@ -4,12 +4,24 @@
   "name": "Estée Lauder",
   "lastAnalyzed": "May 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "EL" },
-    { "label": "Market Cap", "value": "~$30B" }
+    {
+      "label": "Ticker",
+      "value": "EL"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$30B"
+    }
   ],
   "chips": [
-    { "label": "Beauty | Prestige Cosmetics", "color": "primary" },
-    { "label": "Deep Turnaround", "color": "warning" }
+    {
+      "label": "Beauty | Prestige Cosmetics",
+      "color": "primary"
+    },
+    {
+      "label": "Deep Turnaround",
+      "color": "warning"
+    }
   ],
   "metrics": [
     {
@@ -59,9 +71,21 @@
       "cagrEstimate": "3-6%",
       "scoreDerivation": "Base 60 (4-8% CAGR low band) + 3 margin recovery optionality (PRGM cost program $0.8-1B run-rate savings) - 7 China consumer weakness - 6 competitive pressure (LVMH, L'Oréal, Korean / Chinese brands) = 50",
       "drivers": [
-        { "name": "Asia Travel Retail", "metric": "Stabilising at lower base; recovery dependent on Chinese consumer", "trend": "stable" },
-        { "name": "PRGM Cost Program", "metric": "$0.8-1B run-rate savings; key margin recovery lever", "trend": "accelerating" },
-        { "name": "Brand Portfolio Performance", "metric": "Mixed; Clinique + Tom Ford strong, MAC weak, La Mer stable", "trend": "stable" }
+        {
+          "name": "Asia Travel Retail",
+          "metric": "Stabilising at lower base; recovery dependent on Chinese consumer",
+          "trend": "stable"
+        },
+        {
+          "name": "PRGM Cost Program",
+          "metric": "$0.8-1B run-rate savings; key margin recovery lever",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Brand Portfolio Performance",
+          "metric": "Mixed; Clinique + Tom Ford strong, MAC weak, La Mer stable",
+          "trend": "stable"
+        }
       ],
       "primaryType": "market share",
       "keyRisk": "If Chinese consumer fails to recover through 2027 and Korean/Chinese prestige brands continue gaining share, EL's recovery thesis stalls and the multiple compresses further toward distressed-asset valuation.",
@@ -75,11 +99,31 @@
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
-        { "label": "Forward P/E (FY26)", "value": "~22×", "note": "EPS ~$3.80 trough" },
-        { "label": "Forward P/E (FY28)", "value": "~14×", "note": "Assumes margin recovery to ~14% and EPS to $6+" },
-        { "label": "Price / Sales (FY26)", "value": "~2×", "note": "Significant discount to historical median" },
-        { "label": "Dividend Yield", "value": "~3.2%", "note": "Cut from $0.66 to $0.35 quarterly; sustainable" },
-        { "label": "FCF Yield", "value": "~4%", "note": "Compressed; recovers with margin" }
+        {
+          "label": "Forward P/E (FY26)",
+          "value": "~22×",
+          "note": "EPS ~$3.80 trough"
+        },
+        {
+          "label": "Forward P/E (FY28)",
+          "value": "~14×",
+          "note": "Assumes margin recovery to ~14% and EPS to $6+"
+        },
+        {
+          "label": "Price / Sales (FY26)",
+          "value": "~2×",
+          "note": "Significant discount to historical median"
+        },
+        {
+          "label": "Dividend Yield",
+          "value": "~3.2%",
+          "note": "Cut from $0.66 to $0.35 quarterly; sustainable"
+        },
+        {
+          "label": "FCF Yield",
+          "value": "~4%",
+          "note": "Compressed; recovers with margin"
+        }
       ],
       "summary": "Valuation reflects worst-case turnaround scenario; through-cycle multiple supports material upside if execution holds."
     }
@@ -115,15 +159,15 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — consumer brand."
+      "status": "na",
+      "note": "consumer brand."
     },
     "businessLogic": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "publicDataAccess": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "talentScarcity": {
@@ -139,11 +183,11 @@
       "note": "Loyalty + DTC data exists but is fragmented across brands and not deeply monetised."
     },
     "regulatoryLockIn": {
-      "status": "destroyed",
-      "note": "N/A — beauty regulation is broadly applicable to all market participants."
+      "status": "na",
+      "note": "beauty regulation is broadly applicable to all market participants."
     },
     "networkEffects": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "transactionEmbedding": {
@@ -151,7 +195,7 @@
       "note": "No subscription; embedment is brand affinity and habit, easily disrupted by Korean / Chinese / indie competition."
     },
     "systemOfRecord": {
-      "status": "destroyed",
+      "status": "na",
       "note": "N/A."
     },
     "verdict": "Estée Lauder's moat is brand + distribution scale, AI-neutral but currently strained by competitive and consumer headwinds. The thesis is turnaround execution and Chinese consumer recovery, not technological — current valuation provides material margin of safety with elevated execution risk."

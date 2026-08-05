@@ -136,16 +136,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — access is via the Leap cloud and open-source Ocean SDK; there is no complex, high-switching-cost interface customers spend years mastering."
+      "status": "na",
+      "note": "access is via the Leap cloud and open-source Ocean SDK; there is no complex, high-switching-cost interface customers spend years mastering."
     },
     "businessLogic": {
       "status": "weakened",
       "note": "Hybrid solvers embed into customers' optimisation workflows, which is real, but the integrations are early and largely portable — not yet a proprietary business-logic lock-in on the scale of an entrenched enterprise-software vendor."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — D-Wave does not monetise gated access to a public dataset."
+      "status": "na",
+      "note": "D-Wave does not monetise gated access to a public dataset."
     },
     "talentScarcity": {
       "status": "strong",
@@ -169,12 +169,12 @@
       "note": "The Leap cloud and Ocean developer ecosystem create a mild network/ecosystem effect — more developers and solvers make the platform incrementally stickier — but it is early and far from a self-reinforcing Metcalfe dynamic."
     },
     "transactionEmbedding": {
-      "status": "destroyed",
-      "note": "N/A — D-Wave does not sit in a payment or transaction layer of customers' daily operations."
+      "status": "na",
+      "note": "D-Wave does not sit in a payment or transaction layer of customers' daily operations."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — it is not the authoritative record for any external business function."
+      "status": "na",
+      "note": "it is not the authoritative record for any external business function."
     },
     "verdict": "D-Wave's applicable moats — a real deployed base, the Leap/Ocean ecosystem, scarce talent, proprietary operating data, and government ties — are AI-resilient because AI cannot replicate the underlying hardware or the accumulated deployment experience. It carries little AI-vulnerable software-moat exposure (no learned interface, transaction, or system-of-record lock-in), so AI cannot erode the durability it has, and it is the most commercially proven of the pure-plays. The central limitation is architectural: the moat is built on annealing, a niche whose long-run relevance against universal gate-model machines is unresolved, and the ~$550M Quantum Circuits acquisition is a hedge that stretches one company across two hard problems. The commercial leader of the group, but its durability hinges on winning — or surviving — the annealing-versus-gate-model question."
   }

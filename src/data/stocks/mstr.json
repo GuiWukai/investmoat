@@ -151,20 +151,20 @@
       "note": "Strategy ONE has some enterprise embedding in legacy business intelligence workflows, but the BI market is being commoditized by AI-native tools. An AI agent can increasingly replicate standard analytics workflows, even as total revenue growth reaccelerated to +11.9% YoY in Q1 2026."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — Strategy does not control access to any unique public dataset. Bitcoin on-chain data is publicly accessible on explorers like Mempool and Glassnode."
+      "status": "na",
+      "note": "Strategy does not control access to any unique public dataset. Bitcoin on-chain data is publicly accessible on explorers like Mempool and Glassnode."
     },
     "talentScarcity": {
       "status": "weakened",
       "note": "Michael Saylor's early conviction and capital markets expertise around Bitcoin created a talent scarcity advantage in 2020–2023. As Bitcoin treasury strategies proliferated globally, the strategic expertise has commoditised. AI does not change this dynamic materially."
     },
     "bundling": {
-      "status": "destroyed",
-      "note": "N/A — Strategy does not offer a meaningful product bundle. The combination of BI software and Bitcoin treasury is not a moat-creating bundle; they are structurally unrelated businesses sharing only a balance sheet."
+      "status": "na",
+      "note": "Strategy does not offer a meaningful product bundle. The combination of BI software and Bitcoin treasury is not a moat-creating bundle; they are structurally unrelated businesses sharing only a balance sheet."
     },
     "proprietaryData": {
-      "status": "destroyed",
-      "note": "N/A — Bitcoin is a public blockchain with universally accessible on-chain data. Strategy does not own proprietary datasets that compound in value."
+      "status": "na",
+      "note": "Bitcoin is a public blockchain with universally accessible on-chain data. Strategy does not own proprietary datasets that compound in value."
     },
     "regulatoryLockIn": {
       "status": "intact",
@@ -175,12 +175,12 @@
       "note": "Strategy's first-mover status once created a capital-raising advantage at a 4x mNAV premium — more BTC per dollar of equity issued produced superior BTC Yield. That advantage has deteriorated further since April 2026: enterprise mNAV briefly fell below 1.0x in June 2026 for the first time ever, and the June 29, 2026 Digital Credit Capital Framework formally ended the 'never sell' policy, authorizing Bitcoin sales to fund obligations instead of using the flywheel to buy more. Strategy still holds the largest absolute BTC position (847,363 BTC, ~3.9% of circulating supply), which retains some marginal scale advantage, but the capital-raising edge that once differentiated it from Metaplanet, MARA, Semler Scientific, and 190+ other treasury companies is now largely gone."
     },
     "transactionEmbedding": {
-      "status": "destroyed",
-      "note": "N/A — Strategy is not embedded in any payment or transaction layer. The BI software has no meaningful transaction embedding either."
+      "status": "na",
+      "note": "Strategy is not embedded in any payment or transaction layer. The BI software has no meaningful transaction embedding either."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — Strategy is not the system of record for any critical business function. Bitcoin is a decentralized ledger not owned by Strategy."
+      "status": "na",
+      "note": "Strategy is not the system of record for any critical business function. Bitcoin is a decentralized ledger not owned by Strategy."
     },
     "verdict": "Strategy is AI-neutral at the portfolio level. Bitcoin is structurally agnostic to AI — it neither benefits from AI-driven enterprise demand nor is threatened by AI commoditization in the way software platforms are. The sole AI-resilient moat is the regulatory lock-in (SEC-regulated BTC exposure for institutional mandates), which AI cannot disrupt. However, the BI software segment faces direct AI-driven commoditization from Copilot, Gemini, and AI-native analytics, even as revenue growth reaccelerated to +11.9% YoY in Q1 2026. The bigger structural deterioration is the collapse of the capital markets flywheel: enterprise mNAV briefly fell below 1.0x in June 2026 for the first time in Strategy's history, and the company's June 29, 2026 Digital Credit Capital Framework formally abandoned its 'never sell' Bitcoin policy — authorizing up to $1.25B of BTC monetization to help fund preferred dividends and buybacks. Strategy can no longer reliably leverage its public equity to accumulate BTC at a premium to NAV; for the first time, it is a potential net seller of Bitcoin, which is why the already-weakened network effects moat has deteriorated further."
   },

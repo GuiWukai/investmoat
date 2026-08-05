@@ -99,11 +99,31 @@
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)", "value": "~25×", "note": "TTM GAAP EPS depressed by acquisition charges" },
-        { "label": "Forward P/E (NTM)", "value": "~19×", "note": "$24.88 mid 2026 EPS guide" },
-        { "label": "PEG Ratio", "value": "~2.1×", "note": "fwd P/E ÷ ~9% EPS CAGR" },
-        { "label": "Price / Sales (NTM)", "value": "~3.7×", "note": "$47.7B mid 2026 revenue" },
-        { "label": "Price / FCF", "value": "~24×", "note": "FCF conversion ~80% of net income" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~25×",
+          "note": "TTM GAAP EPS depressed by acquisition charges"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~19×",
+          "note": "$24.88 mid 2026 EPS guide"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~2.1×",
+          "note": "fwd P/E ÷ ~9% EPS CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~3.7×",
+          "note": "$47.7B mid 2026 revenue"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~24×",
+          "note": "FCF conversion ~80% of net income"
+        }
       ],
       "summary": "Forward P/E of ~19× is a meaningful discount to the healthcare-tools sector median (~24-28×), reflecting the bioprocessing softness already in the price. PEG ~2.1 sits in the 'premium-but-defensible' band given the recurring revenue base. The trailing-vs-forward gap signals the EPS ramp from Clario integration and bioproduction recovery rolling through 2026 numbers. A pending microbiology-business divestiture would modestly sharpen portfolio focus."
     }
@@ -147,8 +167,8 @@
       "note": "Customer SOPs and validated workflows are encoded against specific TMO instruments and reagent SKUs. Switching forces re-validation. Strong but not deeply customized like enterprise software."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — lab tools business does not derive moat from public datasets."
+      "status": "na",
+      "note": "lab tools business does not derive moat from public datasets."
     },
     "talentScarcity": {
       "status": "intact",

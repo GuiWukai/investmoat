@@ -4,12 +4,24 @@
   "name": "Vertiv Holdings",
   "lastAnalyzed": "May 2026",
   "headerStats": [
-    { "label": "Ticker", "value": "VRT" },
-    { "label": "Market Cap", "value": "~$50B" }
+    {
+      "label": "Ticker",
+      "value": "VRT"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$50B"
+    }
   ],
   "chips": [
-    { "label": "Power & Thermal | Data Center", "color": "primary" },
-    { "label": "AI Infrastructure Leader", "color": "success" }
+    {
+      "label": "Power & Thermal | Data Center",
+      "color": "primary"
+    },
+    {
+      "label": "AI Infrastructure Leader",
+      "color": "success"
+    }
   ],
   "metrics": [
     {
@@ -59,9 +71,21 @@
       "cagrEstimate": "20-25%",
       "scoreDerivation": "Base 80 (15-30% CAGR mid-band) + 5 backlog visibility (~$9B, book-to-bill >1.3) + 3 margin expansion (op margin +250 bps) - 4 capex cyclicality risk = 84",
       "drivers": [
-        { "name": "AI Data-Centre Capex", "metric": "Hyperscaler 2026 capex >$430B; Vertiv share growing on liquid-cooling spec wins", "trend": "accelerating" },
-        { "name": "Liquid Cooling Mix", "metric": "Liquid cooling revenue +60% YoY; CDU and RDHX dominant", "trend": "accelerating" },
-        { "name": "Service Recurring Base", "metric": "Service ~25% of revenue, growing mid-teens", "trend": "stable" }
+        {
+          "name": "AI Data-Centre Capex",
+          "metric": "Hyperscaler 2026 capex >$430B; Vertiv share growing on liquid-cooling spec wins",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Liquid Cooling Mix",
+          "metric": "Liquid cooling revenue +60% YoY; CDU and RDHX dominant",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Service Recurring Base",
+          "metric": "Service ~25% of revenue, growing mid-teens",
+          "trend": "stable"
+        }
       ],
       "primaryType": "TAM expansion",
       "keyRisk": "If hyperscaler capex digestion arrives in 2027 (as with the 2022-23 cycle), backlog growth pauses and the multiple compresses from ~30× to ~20× rapidly — the stock has demonstrated 30%+ drawdowns on early signs of capex moderation.",
@@ -75,11 +99,31 @@
     "peAnalysis": {
       "asOf": "May 2026",
       "rows": [
-        { "label": "Forward P/E (FY26)", "value": "~30×", "note": "EPS ~$4.30 mid; premium to industrial peers" },
-        { "label": "Forward P/E (FY27)", "value": "~24×", "note": "Assumes ~25% EPS growth on backlog conversion" },
-        { "label": "PEG Ratio", "value": "~1.4×", "note": "30× ÷ 22% growth; reasonable on visibility" },
-        { "label": "Price / Sales (FY26)", "value": "~4.4×", "note": "Reflects mission-critical premium" },
-        { "label": "EV / EBITDA (NTM)", "value": "~22×", "note": "Premium to Schneider ~17× and Eaton ~19×" }
+        {
+          "label": "Forward P/E (FY26)",
+          "value": "~30×",
+          "note": "EPS ~$4.30 mid; premium to industrial peers"
+        },
+        {
+          "label": "Forward P/E (FY27)",
+          "value": "~24×",
+          "note": "Assumes ~25% EPS growth on backlog conversion"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.4×",
+          "note": "30× ÷ 22% growth; reasonable on visibility"
+        },
+        {
+          "label": "Price / Sales (FY26)",
+          "value": "~4.4×",
+          "note": "Reflects mission-critical premium"
+        },
+        {
+          "label": "EV / EBITDA (NTM)",
+          "value": "~22×",
+          "note": "Premium to Schneider ~17× and Eaton ~19×"
+        }
       ],
       "summary": "The valuation is full but supported by the backlog and margin trajectory. The asymmetry is to the downside on AI-capex moderation, where the multiple historically halves quickly."
     }
@@ -115,16 +159,16 @@
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "destroyed",
-      "note": "N/A — physical infrastructure vendor with no end-user interface."
+      "status": "na",
+      "note": "physical infrastructure vendor with no end-user interface."
     },
     "businessLogic": {
       "status": "weakened",
       "note": "Vertiv's monitoring and management software (Environet, Trellis) is real but secondary to the hardware franchise."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — no public-data moat."
+      "status": "na",
+      "note": "no public-data moat."
     },
     "talentScarcity": {
       "status": "intact",
@@ -143,16 +187,16 @@
       "note": "UL/CE/IEC certifications and hyperscaler-specific qualification cycles take 18-24 months to clear; this is a meaningful new-entrant barrier."
     },
     "networkEffects": {
-      "status": "destroyed",
-      "note": "N/A — no network effects in mission-critical hardware sales."
+      "status": "na",
+      "note": "no network effects in mission-critical hardware sales."
     },
     "transactionEmbedding": {
       "status": "strong",
       "note": "Once installed, UPS and CDU equipment is effectively impossible to displace mid-life; service contracts run for the asset life (15-20 years)."
     },
     "systemOfRecord": {
-      "status": "destroyed",
-      "note": "N/A — hardware vendor, not a system of record."
+      "status": "na",
+      "note": "hardware vendor, not a system of record."
     },
     "verdict": "Vertiv is a durable AI-capex beneficiary with real hardware-engineering and switching-cost moats, but the business is structurally cyclical and the franchise concentrates around physical embedment rather than software-resilient moat sources. The fortress is real for the duration of the AI buildout — the question is what the run-rate looks like when capex normalises."
   }

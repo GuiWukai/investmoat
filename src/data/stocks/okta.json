@@ -4,12 +4,24 @@
   "name": "Okta Inc.",
   "lastAnalyzed": "July 5, 2026",
   "headerStats": [
-    { "label": "Ticker",       "value": "OKTA"    },
-    { "label": "Market Cap",   "value": "~$24.6B" }
+    {
+      "label": "Ticker",
+      "value": "OKTA"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$24.6B"
+    }
   ],
   "chips": [
-    { "label": "Identity Security | Workforce & Customer IAM", "color": "primary" },
-    { "label": "AI Agent Identity Pioneer",                    "color": "success" }
+    {
+      "label": "Identity Security | Workforce & Customer IAM",
+      "color": "primary"
+    },
+    {
+      "label": "AI Agent Identity Pioneer",
+      "color": "success"
+    }
   ],
   "metrics": [
     {
@@ -87,11 +99,31 @@
     "peAnalysis": {
       "asOf": "July 2026",
       "rows": [
-        { "label": "Trailing P/E (GAAP)",      "value": "~87×",  "note": "TTM GAAP EPS ~$1.63" },
-        { "label": "Forward P/E (NTM, non-GAAP)", "value": "~30×", "note": "consensus NTM EPS ~$4.71" },
-        { "label": "PEG Ratio",                "value": "~1.2×", "note": "fwd P/E ÷ ~25% EPS growth" },
-        { "label": "Price / Sales (NTM)",      "value": "~7.7×", "note": "$3.19B FY2027 guided revenue" },
-        { "label": "Price / FCF",              "value": "~27×",  "note": "$896M FCF (TTM)" }
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~87×",
+          "note": "TTM GAAP EPS ~$1.63"
+        },
+        {
+          "label": "Forward P/E (NTM, non-GAAP)",
+          "value": "~30×",
+          "note": "consensus NTM EPS ~$4.71"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.2×",
+          "note": "fwd P/E ÷ ~25% EPS growth"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~7.7×",
+          "note": "$3.19B FY2027 guided revenue"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~27×",
+          "note": "$896M FCF (TTM)"
+        }
       ],
       "summary": "At ~30× forward non-GAAP P/E, Okta has closed most of its prior discount to the 30–35× enterprise security SaaS sector median, despite FY2027 guidance of only 9–10% growth versus 20–30%+ at faster-growing peers like CrowdStrike and Zscaler. The PEG of ~1.2× looks reasonable on consensus EPS growth but assumes the AI agent identity ramp and NRR recovery (107%, up from 106%) both continue uninterrupted. The wide gap between trailing GAAP P/E (~87×) and forward non-GAAP (~30×) remains largely structural — GAAP still carries $500M+ in annual stock-based compensation — but the multiple expansion since April means the P/FCF of ~27× (versus ~15× three months ago) now reflects a business priced for continued execution rather than one trading below its intrinsic earnings power."
     }
@@ -138,8 +170,8 @@
       "note": "Each enterprise has years of HR-to-Okta provisioning rules, app-specific lifecycle policies, and group management logic — rebuilding this in Microsoft Entra or Ping Identity is a 12–24 month migration project."
     },
     "publicDataAccess": {
-      "status": "destroyed",
-      "note": "N/A — Okta's moat is not based on access to public datasets; its advantage is proprietary authentication event data and identity lifecycle records, which are distinct from public data access."
+      "status": "na",
+      "note": "Okta's moat is not based on access to public datasets; its advantage is proprietary authentication event data and identity lifecycle records, which are distinct from public data access."
     },
     "talentScarcity": {
       "status": "weakened",
