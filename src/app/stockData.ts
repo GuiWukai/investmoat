@@ -141,6 +141,7 @@ import zetaData     from '@/data/stocks/zeta.json';
 import samsungData  from '@/data/stocks/samsung.json';
 import rokData      from '@/data/stocks/rok.json';
 import terData      from '@/data/stocks/ter.json';
+import teamData     from '@/data/stocks/team.json';
 import harmonicData from '@/data/stocks/harmonic.json';
 import ionqData     from '@/data/stocks/ionq.json';
 import rgtiData     from '@/data/stocks/rgti.json';
@@ -294,6 +295,7 @@ const allCoverageData = [
     { name: "Baidu",             ticker: "BIDU",  slug: "bidu",        scores: [m(biduData),        g(biduData),        v(biduData)],        href: "/stocks/bidu",        category: "Big Tech",    ...t(biduData)        },
     { name: "Snowflake",         ticker: "SNOW",  slug: "snow",        scores: [m(snowData),        g(snowData),        v(snowData)],        href: "/stocks/snow",        category: "Big Tech",    ...t(snowData)        },
     { name: "Datadog",           ticker: "DDOG",  slug: "ddog",        scores: [m(ddogData),        g(ddogData),        v(ddogData)],        href: "/stocks/ddog",        category: "Big Tech",    ...t(ddogData)        },
+    { name: "Atlassian",         ticker: "TEAM",  slug: "team",        scores: [m(teamData),        g(teamData),        v(teamData)],        href: "/stocks/team",        category: "Big Tech",    ...t(teamData)        },
     { name: "MongoDB",           ticker: "MDB",   slug: "mdb",         scores: [m(mdbData),         g(mdbData),         v(mdbData)],         href: "/stocks/mdb",         category: "Big Tech",    ...t(mdbData)         },
     { name: "Synopsys",          ticker: "SNPS",  slug: "snps",        scores: [m(snpsData),        g(snpsData),        v(snpsData)],        href: "/stocks/snps",        category: "Big Tech",    ...t(snpsData)        },
     { name: "Cadence Design Systems", ticker: "CDNS", slug: "cdns",   scores: [m(cdnsData),        g(cdnsData),        v(cdnsData)],        href: "/stocks/cdns",        category: "Big Tech",    ...t(cdnsData)        },
