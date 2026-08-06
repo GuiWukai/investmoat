@@ -2,7 +2,7 @@
   "slug": "panw",
   "ticker": "PANW",
   "name": "Palo Alto Networks",
-  "lastAnalyzed": "June 2026",
+  "lastAnalyzed": "August 6, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "$216B"
+      "value": "$296B"
     }
   ],
   "chips": [
@@ -27,7 +27,7 @@
     {
       "title": "NGS ARR",
       "value": "$8.18B",
-      "label": "+60% YoY Q3 FY2026 (incl. CyberArk) — record outperformance vs guidance",
+      "label": "+60% YoY Q3 FY2026 (incl. CyberArk) — last print ahead of Sept 1 Q4 report",
       "icon": "Shield",
       "color": "#e8281b"
     },
@@ -47,116 +47,116 @@
     }
   ],
   "moat": {
-    "description": "Palo Alto Networks operates at the network perimeter — its NGFW sits in the literal packet flow of enterprise data traffic — and is executing the most ambitious platform consolidation in cybersecurity history, bundling firewall, SASE, cloud security, and AI SecOps into a single platformized offering.",
+    "description": "Palo Alto Networks operates at the network perimeter — its NGFW sits in the literal packet flow of enterprise data traffic — and is executing the most ambitious platform consolidation in cybersecurity history, bundling firewall, SASE, cloud security, identity (CyberArk), and AI SecOps into a single platformized offering.",
     "analysisTitle": "The Platformization Moat",
     "analysisSummary": "PANW's durable competitive position rests on **Transaction Embedding (NGFW in the network path), Regulatory Lock-in, and Platform Bundling at enterprise scale**:",
     "analysisPoints": [
       {
         "title": "NGFW — Embedded in the Network Path",
-        "text": "Palo Alto's Next-Generation Firewalls sit in the physical and virtual data path of enterprise networks — every packet flowing between the internet and internal systems passes through PANW's inspection. This is the deepest form of infrastructure embedding: the firewall is not optional, it processes millions of transactions per second, and replacing it means re-architecting the network during a security freeze. With 80,000+ enterprise customers and $16B in RPO, the NGFW installed base creates the most reliable revenue base in enterprise security."
+        "text": "Palo Alto's Next-Generation Firewalls sit in the physical and virtual data path of enterprise networks — every packet flowing between the internet and internal systems passes through PANW's inspection. This is the deepest form of infrastructure embedding: the firewall is not optional, it processes millions of transactions per second, and replacing it means re-architecting the network during a security freeze. With 80,000+ enterprise customers and $18.4B in RPO, the NGFW installed base creates the most reliable revenue base in enterprise security."
       },
       {
         "title": "Platformization — Replacing 8 Vendors with One",
-        "text": "PANW's strategic play is vendor consolidation: enterprises running 30–50 point-solution cybersecurity vendors are being pushed to consolidate onto PANW's platform (NGFW + Prisma Cloud + Cortex AI + SASE). With a 35% increase in total platformization count, the strategy is working — and once an enterprise has migrated to full-platform, the switching cost approaches the cost of replacing the entire security architecture simultaneously. The $6.3B NGS ARR growing 33% confirms the platform transition is accelerating."
+        "text": "PANW's strategic play is vendor consolidation: enterprises running 30–50 point-solution cybersecurity vendors are being pushed to consolidate onto PANW's platform (NGFW + Prisma Cloud + Cortex AI + SASE + CyberArk identity). With a 35% increase in total platformization count, the strategy is working — and once an enterprise has migrated to full-platform, the switching cost approaches the cost of replacing the entire security architecture simultaneously. The $8.18B NGS ARR growing 60% YoY (partly inorganic via CyberArk) confirms the platform transition is still the growth engine."
       },
       {
         "title": "Unit 42 + AI SecOps — Intelligence Flywheel",
-        "text": "Unit 42, PANW's threat intelligence and incident response division, generates proprietary threat data from real-world breach investigations that feeds PANW's detection models. Cortex XSIAM (AI security operations) uses this telemetry to automate SOC workflows, with Prisma AI scaling to 100+ customers. The more enterprise customers run Cortex XSIAM, the better the detection models become — creating a data flywheel similar to CrowdStrike's Threat Graph but at the network layer rather than the endpoint layer."
+        "text": "Unit 42, PANW's threat intelligence and incident response division, generates proprietary threat data from real-world breach investigations that feeds PANW's detection models. Cortex XSIAM (AI security operations) uses this telemetry to automate SOC workflows, with Prisma AI scaling past 100 customers and a recent Prisma AIRS integration into Anthropic Claude environments. The more enterprise customers run Cortex XSIAM, the better the detection models become — creating a data flywheel similar to CrowdStrike's Threat Graph but at the network layer rather than the endpoint layer."
       }
     ]
   },
   "growth": {
-    "description": "Q3 FY2026 (reported June 2, 2026) was a record beat-and-raise: revenue of $3.0B (+31% YoY) with NGS ARR surging 60% YoY to $8.18B — the largest quarterly outperformance to date — and RPO of $18.4B (+36%). CEO Nikesh Arora cited accelerating organic bookings and CyberArk integration running ahead of schedule. Management raised FY2026 guidance to revenue of $11.415–11.425B (24% growth), NGS ARR of $8.90–8.95B (59–60%), RPO of $20.9–21.0B, and non-GAAP EPS of $3.77–3.79 (above the prior $3.65–3.70). The CyberArk-driven margin digestion the May analysis flagged is resolving faster than feared — though part of the NGS ARR acceleration is inorganic.",
+    "description": "No new earnings since the June 2 Q3 FY2026 beat-and-raise (revenue $3.0B / +31% YoY, NGS ARR $8.18B / +60%, RPO $18.4B / +36%; FY26 guide lifted to ~$11.42B revenue, NGS ARR $8.90–8.95B, non-GAAP EPS $3.77–3.79). Q4 and full-year FY2026 results are scheduled for September 1, 2026. Between analyses the stock re-rated from ~$265 to ~$363 (+37%) on the AI-security narrative and CyberArk integration optimism — a price move with no incremental fundamental print. Street FY2027 revenue sits near $13.8B (~21% growth); the organic-vs-inorganic mix in NGS ARR remains the open question into the September report.",
     "growthAnalysis": {
       "cagrEstimate": "18–24%",
-      "scoreDerivation": "Base 84 (18–24% CAGR; FY2026 revenue guide +24%, organic bookings re-accelerating) + 4 trajectory (NGS ARR +60% YoY, platformization and CyberArk cross-sell all accelerating) + 0 margin (op margin ~30%, stable through CyberArk digestion) + 4 TAM expansion (identity/PAM via CyberArk, AI SecOps) − 5 valuation/inorganic-mix risk (stock re-rated sharply post-earnings, now ~$265; part of NGS ARR growth is inorganic CyberArk) = 87",
+      "scoreDerivation": "Base 84 (18–24% CAGR; FY2026 revenue guide +24%, Street FY2027 ~21%, blended toward high-teens as CyberArk laps) + 4 trajectory (all three drivers still accelerating on the last print) + 0 margin (op margin ~30%, stable through CyberArk digestion) − 5 valuation/inorganic-mix risk (stock at ~$363, ~22× NTM P/S, above the ~$339 Street mean with Q4 still ahead) = 83",
       "drivers": [
         {
           "name": "Next-Generation Security ARR",
-          "metric": "+60% YoY to $8.18B in Q3 FY2026 (incl. CyberArk); Prisma AI, XSIAM, SASE all contributing",
+          "metric": "+60% YoY to $8.18B in Q3 FY2026 (incl. CyberArk); Prisma AI, XSIAM, SASE all contributing — Q4 print due Sept 1",
           "trend": "accelerating"
         },
         {
           "name": "Platformization (Vendor Consolidation)",
-          "metric": "Organic bookings re-accelerating; enterprises replacing 5–8 point solutions with PANW's platform",
+          "metric": "Organic bookings re-accelerating on last print; enterprises replacing 5–8 point solutions with PANW's platform",
           "trend": "accelerating"
         },
         {
           "name": "CyberArk Integration (Identity Security)",
-          "metric": "Integration ahead of schedule; identity/PAM cross-sell into 80,000+ accounts; PANW now spans network + identity",
+          "metric": "Integration ahead of schedule on Q3 call; identity/PAM cross-sell into 80,000+ accounts; PANW now spans network + identity",
           "trend": "accelerating"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "With NGS ARR growth flattered by the inorganic CyberArk contribution and the stock still richly rated at ~$265, if organic bookings decelerate as CyberArk laps or integration costs resurface, FY2027 EPS estimates get cut and the multiple compresses from ~14× toward 10× NTM P/S, implying 25%+ downside",
+      "keyRisk": "With the stock at ~$363 (~22× NTM P/S, above the ~$339 Street mean) and NGS ARR growth still flattered by inorganic CyberArk, if organic bookings decelerate as CyberArk laps or the September Q4 print disappoints, FY2027 estimates get cut and the multiple compresses from ~22× toward 14–16× NTM P/S, implying 25–35% downside",
       "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 72,
-    "description": "PANW has eased to ~$265 (June 10, 2026) from the ~$277 post-earnings level, digesting the record Q3 FY2026 beat-and-raise (revenue +31%, NGS ARR +60% YoY, FY26 EPS guide lifted to $3.77–3.79). At ~16.5× NTM P/S and a ~60× forward non-GAAP P/E, the stock sits ~9% below the base case ($290) and well above the bear ($200). The CyberArk integration — the May valuation's principal risk — is running ahead of schedule, shifting the debate from execution to multiple sustainability now that much of the NGS ARR acceleration is inorganic.",
+    "score": 60,
+    "description": "PANW has rallied to ~$363 (August 5, 2026 close) from ~$265 at the June analysis — a +37% re-rating with no new earnings print, and now ~7% above the ~$339 Street mean target (highs at $420–$433). At ~$296B market cap, ~22× NTM P/S and a ~88× forward non-GAAP P/E, the stock sits above the reset base case ($340) and well below the reset bull ($440). Scenarios were rebuilt because price had traded through the prior $380 bull. The debate is no longer CyberArk execution (still ahead of schedule on the last print) but whether a ~22× sales multiple holds into the September 1 Q4 report.",
     "peAnalysis": {
-      "asOf": "June 2026",
+      "asOf": "August 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~190×",
-          "note": "GAAP net income depressed by CyberArk deal/SBC charges"
+          "value": "~350×",
+          "note": "GAAP net income still depressed by CyberArk deal/SBC charges; TTM EPS ~$1.15"
         },
         {
           "label": "Forward P/E (NTM, non-GAAP)",
-          "value": "~60×",
-          "note": "FY2027E non-GAAP EPS ~$4.40"
+          "value": "~88×",
+          "note": "FY2027E non-GAAP EPS ~$4.12 (Street)"
         },
         {
           "label": "PEG Ratio",
-          "value": "~2.7×",
-          "note": "fwd P/E ÷ ~22% non-GAAP EPS CAGR"
+          "value": "~6.2×",
+          "note": "fwd P/E ÷ ~14% near-term non-GAAP EPS CAGR; richer on revenue CAGR framing"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~16.5×",
-          "note": "~$13B NTM revenue (FY2027E incl. CyberArk)"
+          "value": "~22×",
+          "note": "~$13.8B NTM / FY2027E revenue (incl. CyberArk)"
         },
         {
           "label": "Price / FCF",
-          "value": "~43×",
-          "note": "~$5B FCF (FY2027E)"
+          "value": "~59×",
+          "note": "~$5B FCF (FY2027E); TTM FCF ~$3.8B implies ~78×"
         }
       ],
-      "summary": "The ~60% re-rating has lifted PANW to ~16.5× NTM P/S and a ~60× forward non-GAAP P/E — a clear premium to the cybersecurity median and approaching CrowdStrike-like territory. The PEG of ~2.9× signals the stock is now pricing in sustained 20%+ growth and a clean CyberArk integration. The $18.4B RPO keeps revenue low-risk; the open question is multiple sustainability, especially as the headline NGS ARR growth is partly inorganic and will decelerate as CyberArk laps."
+      "summary": "The post-June re-rating has lifted PANW from ~16.5× to ~22× NTM P/S and from ~60× to ~88× forward non-GAAP P/E — a clear premium to the cybersecurity median and into CrowdStrike-like territory on sales, with a PEG near 6× that leaves little room for organic deceleration. The $18.4B RPO still anchors revenue; the open question is multiple sustainability into the September Q4 print, especially with the Street mean already below the current price."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$200",
-      "description": "Organic bookings decelerate as CyberArk laps and integration costs resurface; ex-acquisition NGS ARR growth normalises below 30% and the multiple compresses toward 9–10× NTM P/S as the premium unwinds.",
+      "priceTarget": "$250",
+      "description": "Organic bookings decelerate as CyberArk laps and the September Q4 print disappoints versus the raised guide; the multiple compresses toward 14–16× NTM P/S as the AI-security premium unwinds.",
       "points": [
         "Organic NGS ARR growth (ex-CyberArk) proves to be in the high-20s rather than the 60% headline, disappointing investors who extrapolated the inorganic boost",
-        "CyberArk integration costs resurface in FY2027, causing non-GAAP EPS to undershoot estimates and the platformization ROI story to lose credibility",
+        "Q4 FY2026 (Sept 1) or early FY2027 guide undershoots, causing non-GAAP EPS estimates to roll over and the platformization ROI story to lose credibility",
         "Microsoft Defender + Sentinel + Intune bundling wins 5%+ of PANW's mid-market NGFW base by leveraging M365 enterprise agreements",
-        "Multiple compresses toward 9–10× NTM P/S as the AI-security premium fades — ~28% downside from current levels"
+        "Multiple compresses toward 14–16× NTM P/S as the AI-security premium fades — ~30% downside from current levels"
       ]
     },
     "base": {
-      "priceTarget": "$290",
-      "description": "PANW delivers the raised FY2026 guidance (revenue ~$11.4B, NGS ARR ~$8.9B, EPS ~$3.78), CyberArk cross-sell scales across 80,000+ accounts, and the multiple holds ~13–14× NTM P/S as the platformization flywheel sustains 20%+ growth into FY2027.",
+      "priceTarget": "$340",
+      "description": "PANW delivers the raised FY2026 guidance on September 1 (revenue ~$11.4B, NGS ARR ~$8.9B, EPS ~$3.78), CyberArk cross-sell scales across 80,000+ accounts, and the multiple normalises toward ~18–20× NTM P/S — roughly the Street mean — as 20%+ growth extends into FY2027.",
       "points": [
         "FY2026 revenue lands at ~$11.42B with NGS ARR reaching $8.90–8.95B per raised guidance, confirming platform revenue as the dominant growth engine",
-        "CyberArk integration stays ahead of schedule — identity/PAM cross-sell into the 80,000+ enterprise base unlocks a multi-billion incremental TAM with minimal customer-acquisition cost",
+        "CyberArk integration stays ahead of schedule — identity/PAM cross-sell into the 80,000+ enterprise base unlocks incremental TAM with minimal customer-acquisition cost",
         "Organic bookings growth sustains 20%+ as enterprises consolidate point-solution vendors onto PANW's platform amid budget pressure",
-        "Non-GAAP operating margin holds ~30% as CyberArk dilution winds down — EPS exits FY2026 near $3.78 and steps toward $4.40+ in FY2027"
+        "Non-GAAP operating margin holds ~29–30% as CyberArk dilution winds down — EPS exits FY2026 near $3.78 and steps toward ~$4.10–4.40 in FY2027"
       ]
     },
     "bull": {
-      "priceTarget": "$380",
-      "description": "An AI-security supercycle plus CyberArk identity cross-sell drives NGS ARR toward $12B+ and FY2027 EPS toward $5; PANW re-rates to ~17× NTM P/S as the dominant enterprise security platform of record.",
+      "priceTarget": "$440",
+      "description": "An AI-security supercycle plus CyberArk identity cross-sell drives NGS ARR toward $12B+ and FY2027–28 EPS toward $5; PANW sustains ~22–24× NTM P/S and reaches Street-high territory (~$420–$433) as the dominant enterprise security platform of record.",
       "points": [
         "AI agent proliferation (AI-generated phishing, autonomous malware, LLM jailbreaking) drives a new attack-surface explosion that PANW addresses through Cortex XSIAM + Unit 42 intelligence, pushing NGS ARR toward $12B+ by FY2027",
         "CyberArk identity cross-sell compounds within the 80,000+ enterprise base, making network + identity the most complete enterprise security platform available",
         "Platformization accelerates as government mandates (post-SEC cyber rules, DORA in Europe) force consolidated security vendor relationships, driving TAM capture above $25B",
-        "Revenue trajectory toward $16B+ and non-GAAP EPS toward $5/share by FY2028 — at ~17× NTM P/S the stock re-rates to ~$380"
+        "Revenue trajectory toward $16B+ and non-GAAP EPS toward $5/share by FY2028 — at ~22–24× NTM P/S the stock re-rates toward ~$440"
       ]
     }
   },
@@ -179,7 +179,7 @@
     },
     "bundling": {
       "status": "strong",
-      "note": "NGFW + Prisma Cloud + Cortex AI + SASE (Prisma Access) + Wildfire + Unit 42 intelligence — all from one vendor in a platformized bundle. The 35% increase in platformization count confirms enterprises are actively choosing consolidation onto PANW's stack, creating multi-layer switching costs that span network, endpoint, cloud, and identity."
+      "note": "NGFW + Prisma Cloud + Cortex AI + SASE (Prisma Access) + CyberArk identity + Wildfire + Unit 42 intelligence — all from one vendor in a platformized bundle. The 35% increase in platformization count confirms enterprises are actively choosing consolidation onto PANW's stack, creating multi-layer switching costs that span network, endpoint, cloud, and identity."
     },
     "proprietaryData": {
       "status": "strong",
