@@ -3,15 +3,19 @@
   "title": "Meta's Capex Has One Receipt, and It Is Price Per Ad",
   "dek": "Meta spent $31.1B in a quarter and printed $784M of free cash flow, and the tape traded the capex line. The line that tests the build is the other one: price per ad up 12% for a second straight quarter while impressions decelerated. Only the outcome owner can charge for a better match.",
   "published": "July 31, 2026",
-  "lastReviewed": "August 3, 2026",
+  "lastReviewed": "August 6, 2026",
   "tickers": ["META", "GOOGL", "AMZN", "APP", "ZETA", "TTD", "RDDT", "SPOT", "NFLX"],
   "tags": ["Advertising", "AI Capex", "Big Tech", "Ad Tech"],
-  "summary": "Three days before Meta reported, this site published a four-gate test for AI infrastructure builds and concluded that Meta's captive build — no third-party contracts, no backlog — could not be underwritten in advance at all. Meta's Q2 2026, reported July 29, shows that conclusion was half wrong. A captive advertising build has no backlog, but it does have a receipt: the price of its own inventory. Meta's ad revenue grew 27% on impressions decelerating to +14% from +19%, against a user base compounding at +3%, while average price per ad held at +12% for a second consecutive quarter — the volume term decaying on schedule and the price term carrying the difference. Read across the nine advertising names in coverage, the price term only moves for companies that observe the outcome an ad produces. AppLovin grew revenue 59% in Q1 2026 while install volume fell 18%; The Trade Desk, which sees the bid and not the sale, guided Q2 to roughly 8% growth with margins compressing. The sorting variable is not who owns the audience. It is who owns the conversion signal the model trains on.",
+  "summary": "Three days before Meta reported, this site published a four-gate test for AI infrastructure builds and concluded that Meta's captive build — no third-party contracts, no backlog — could not be underwritten in advance at all. Meta's Q2 2026, reported July 29, shows that conclusion was half wrong. A captive advertising build has no backlog, but it does have a receipt: the price of its own inventory. Meta's ad revenue grew 27% on impressions decelerating to +14% from +19%, against a user base compounding at +3%, while average price per ad held at +12% for a second consecutive quarter — the volume term decaying on schedule and the price term carrying the difference. Read across the nine advertising names in coverage, the price term only moves for companies that observe the outcome an ad produces. AppLovin grew revenue 53% in Q2 2026 on net revenue per install up 58% while install volume fell only 2%; The Trade Desk, which sees the bid and not the sale, guided Q2 to roughly 8% growth with margins compressing. The sorting variable is not who owns the audience. It is who owns the conversion signal the model trains on.",
   "falsifiableBy": {
     "claim": "Meta's average price per ad growing below 8% year-over-year in two consecutive quarters while ad impression growth falls into single digits — the price term failing to take over as the volume term decays — would show the build buying reach Meta cannot charge for. A second trip, on the mechanism rather than the name: AppLovin's revenue per install reverting while install volume keeps falling, which would place the 2026 pricing gains in the ad cycle rather than in the models.",
     "status": "holding"
   },
   "revisions": [
+    {
+      "date": "August 6, 2026",
+      "note": "Re-checked after AppLovin's Q2 2026 print on August 5. The second trip condition on the falsifiable claim has not fired: net revenue per install rose 58% year-over-year while install volume fell only 2% (from −18% in Q1), so the price term is still carrying growth rather than reverting into a falling-volume cycle. Revenue was $1.92B (+53%), near the low end of the company's own guide, because gaming model uplifts landed late — a cadence miss, not a mechanism miss — and consumer advertiser spend finished 28% above the Q4 2025 seasonal peak. The stock fell about 20% the next day; the thesis does not turn on that. Updated the AppLovin row and the related prose to the Q2 10-Q figures. Corrected one moat assertion that had drifted: Reddit's transaction-embedding pillar is now rated not applicable rather than destroyed, which is the framework's mark for a moat that never applied. Verified the rest: proprietary data still strong across the seven named cohort members, transaction embedding still strong for Meta/Alphabet/Amazon and intact for AppLovin and Zeta."
+    },
     {
       "date": "August 3, 2026",
       "note": "Re-checked after the stock analysis was re-read with the one-time costs stripped from Q2 EPS. GAAP diluted EPS of $6.18 embedded roughly $1.17 per share of after-tax legal-proceedings charges ($2.4B) and severance ($1.18B); ex both, EPS was about $7.35 — a beat of the roughly $7.20 consensus and up about 3% year-over-year — and operating income ex the charges was about $22.4B (+9% YoY). The thesis does not turn on the earnings print: price per ad held at +12% for a second quarter while impressions decelerated to +14%, so the falsifiable claim stays holding. What the re-read changes is the framing of the cost of the build — free cash flow of $784M and operating margin at roughly 37% even ex the one-offs, not the GAAP EPS miss. Verified the moat statuses the prose asserts: proprietary data still strong across the named cohort members, transaction embedding still strong for Meta/Alphabet/Amazon and intact for AppLovin and Zeta, destroyed for Reddit."
@@ -43,12 +47,20 @@
       "kind": "press-release"
     },
     {
-      "id": "app-q1-2026",
-      "label": "AppLovin Announces First Quarter 2026 Financial Results",
+      "id": "app-q2-2026",
+      "label": "AppLovin Announces Second Quarter 2026 Financial Results",
       "publisher": "AppLovin",
-      "date": "May 6, 2026",
-      "url": "https://investors.applovin.com/news/news-details/2026/AppLovin-Announces-First-Quarter-2026-Financial-Results/default.aspx",
+      "date": "August 5, 2026",
+      "url": "https://investors.applovin.com/news/news-details/2026/AppLovin-Announces-Second-Quarter-2026-Financial-Results/default.aspx",
       "kind": "press-release"
+    },
+    {
+      "id": "app-10q-q2-2026",
+      "label": "AppLovin Form 10-Q for the quarter ended June 30, 2026",
+      "publisher": "AppLovin / SEC",
+      "date": "August 5, 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/1751008/000175100826000059/app-20260630.htm",
+      "kind": "filing"
     },
     {
       "id": "rddt-q2-2026",
@@ -138,22 +150,22 @@
     {
       "type": "table",
       "caption": "The same question asked of six advertising businesses: is the gain arriving as more inventory, or as a higher price for the same inventory? Rows are not the same quarter — each carries the print it last reported, stamped. Disclosure is not comparable either: Meta publishes the impression and price split, Alphabet and Amazon do not, and AppLovin and Reddit report per-unit proxies rather than a price per ad.",
-      "asOf": "July 2026 — each row stamped with the print it came from",
-      "sources": ["meta-q2-2026", "googl-q2-2026", "amzn-q2-2026", "app-q1-2026", "rddt-q2-2026", "ttd-q1-2026"],
+      "asOf": "August 2026 — each row stamped with the print it came from",
+      "sources": ["meta-q2-2026", "googl-q2-2026", "amzn-q2-2026", "app-q2-2026", "app-10q-q2-2026", "rddt-q2-2026", "ttd-q1-2026"],
       "columns": ["Company — print", "Volume term", "Price term", "Whose outcome signal trains the model"],
       "highlightColumn": 2,
       "rows": [
         ["Meta (META) — Q2 2026, July 29", "Impressions +14%, from +19%; daily active people +3%", "Price per ad +12%, second straight quarter", "Its own — on-platform conversions, in-app purchase, business messaging"],
         ["Alphabet (GOOGL) — Q2 2026, July 22", "Not separately disclosed", "Not separately disclosed; Search revenue +17% to $63.3B", "Its own — query intent plus the conversion it routes to"],
         ["Amazon (AMZN) — Q2 2026, July 30", "Not separately disclosed", "Not separately disclosed; advertising services $19.8B, +26%", "Its own — the purchase completes on the same surface as the ad"],
-        ["AppLovin (APP) — Q1 2026, May 6", "Installs −18% YoY", "Revenue +59% on higher net revenue per install; 85% adj. EBITDA margin", "Its own SDK telemetry, running on other people's inventory"],
+        ["AppLovin (APP) — Q2 2026, August 5", "Installs −2% YoY, from −18% in Q1", "Net revenue per install +58% YoY; revenue +53%; 84% adj. EBITDA margin", "Its own SDK telemetry, running on other people's inventory"],
         ["Reddit (RDDT) — Q2 2026, July 30", "Daily active uniques +18%; US +6%", "Global ARPU +36% to $6.18; US ARPU +51% to $11.85", "Advertiser-side — Reddit observes the click, not the sale"],
         ["The Trade Desk (TTD) — Q1 2026, May 7", "Not disclosed", "Revenue +12%; Q2 guided to at least $750M, roughly +8%; adj. EBITDA margin 30% against 33.8%", "Its customers' — supplied by the buyer, not observed by the platform"]
       ]
     },
     {
       "type": "prose",
-      "body": "AppLovin is the row that settles what the mechanism actually is. In Q1 2026 it delivered 18% *fewer* installs and 59% more revenue, at an 85% adjusted EBITDA margin, because the price of an install its models placed went up by more than the volume went down. AppLovin owns almost none of the inventory it monetises. What it owns is the SDK sitting inside the app when the install converts — it sees the outcome. The Trade Desk is the control, and it is a clean one: the largest independent buying platform in the open internet, with an AI product of its own in Kokai, growing 12% and guiding to roughly 8% with margin going backwards. The difference is not model quality or engineering. The Trade Desk bids on inventory it does not own using conversion data its customers hand it. It cannot observe the outcome, so it cannot price the improvement — it passes the improvement through to the buyer as a lower cost per acquisition, and books the same fee."
+      "body": "AppLovin is the row that settles what the mechanism actually is. In Q2 2026 it delivered 2% *fewer* installs and 53% more revenue, at an 84% adjusted EBITDA margin, because net revenue per install rose 58% — the price of an install its models placed went up by more than the volume went down, for a second consecutive quarter. AppLovin owns almost none of the inventory it monetises. What it owns is the SDK sitting inside the app when the install converts — it sees the outcome. The Trade Desk is the control, and it is a clean one: the largest independent buying platform in the open internet, with an AI product of its own in Kokai, growing 12% and guiding to roughly 8% with margin going backwards. The difference is not model quality or engineering. The Trade Desk bids on inventory it does not own using conversion data its customers hand it. It cannot observe the outcome, so it cannot price the improvement — it passes the improvement through to the buyer as a lower cost per acquisition, and books the same fee."
     },
     {
       "type": "prose",
@@ -173,7 +185,7 @@
         "META": "Price per ad +12% for two quarters against a user base at +3% (Q2 2026)",
         "GOOGL": "Search $63.3B, +17%; no published price/volume split (Q2 2026)",
         "AMZN": "Advertising services $19.8B, +26%; the ad and the purchase share a surface (Q2 2026)",
-        "APP": "Installs −18%, revenue +59%; the self-serve opening to e-commerce is unproven (Q1 2026)",
+        "APP": "Installs −2%, net revenue per install +58%, revenue +53%; consumer spend 28% above Q4 peak (Q2 2026)",
         "ZETA": "Revenue +50% on a CDP it owns, with the data-sourcing allegations unresolved (Q1 2026)",
         "TTD": "Revenue +12% decelerating to a roughly +8% Q2 guide; margin 30% from 33.8% (Q1 2026)",
         "RDDT": "US ARPU +51% on US users +6% — the cohort's live challenge to this thesis (Q2 2026)",
@@ -198,7 +210,7 @@
     },
     {
       "type": "prose",
-      "body": "Two columns do the work, and one of them does it by refusing to. **Proprietary data does not sort this cohort at all** — seven of the nine reach strong on it, including Reddit, whose corpus is arguably the most differentiated in the group, and Netflix, whose viewing data nobody else has. Owning data was the moat of the 2010s and every survivor has some. Transaction embedding sorts it exactly: strong across the three that host the conversion, intact for AppLovin and Zeta, which instrument it, and destroyed for Reddit, which does not have one. That column is the fifth gate written as a pillar. It is the difference between a dataset about what people looked at and a dataset about what they then did."
+      "body": "Two columns do the work, and one of them does it by refusing to. **Proprietary data does not sort this cohort at all** — seven of the nine reach strong on it, including Reddit, whose corpus is arguably the most differentiated in the group, and Netflix, whose viewing data nobody else has. Owning data was the moat of the 2010s and every survivor has some. Transaction embedding sorts it exactly: strong across the three that host the conversion, intact for AppLovin and Zeta, which instrument it, and not applicable for Reddit, which does not have a conversion to embed. That column is the fifth gate written as a pillar. It is the difference between a dataset about what people looked at and a dataset about what they then did."
     },
     {
       "type": "prose",
@@ -229,7 +241,7 @@
     },
     {
       "type": "prose",
-      "body": "The second objection is AppLovin, which this piece used as its own strongest evidence and which cuts the other way just as hard. AppLovin captured the pricing gain with an 85% adjusted EBITDA margin on capital expenditure that rounds to nothing against Meta's. If the outcome signal is what matters, and an SDK inside somebody else's app is enough to own it, then Meta's $130–145B is buying a position that could have been rented for a rounding error. The rebuttal — that AppLovin's signal is confined to mobile app installs while Meta's spans a global commerce, messaging and content graph, and that the frontier models Meta is building are a different asset from an install-prediction engine — is the correct one, but it is a claim about the future, and the July evidence pushes back on it. AppLovin's June 2026 self-serve opening to general e-commerce advertisers, the move that would test whether Axon travels beyond gaming, drew a negative first read on cooling sign-ups and the shares gave up about a third of their value through the month. Both halves of that are uncomfortable: the cheap version of the strategy is being questioned at exactly the moment the expensive version has to justify itself."
+      "body": "The second objection is AppLovin, which this piece used as its own strongest evidence and which cuts the other way just as hard. AppLovin captured the pricing gain again in Q2 — net revenue per install +58%, installs −2% — at an 84% adjusted EBITDA margin on capital expenditure that rounds to nothing against Meta's. If the outcome signal is what matters, and an SDK inside somebody else's app is enough to own it, then Meta's $130–145B is buying a position that could have been rented for a rounding error. The rebuttal — that AppLovin's signal is confined to mobile app installs while Meta's spans a global commerce, messaging and content graph, and that the frontier models Meta is building are a different asset from an install-prediction engine — is the correct one, but it is a claim about the future. The August evidence softens one half of the earlier discomfort and sharpens another: consumer advertiser spend finished 28% above the Q4 2025 seasonal peak, so the cheap version of the strategy is no longer failing its first spend test, but the quarter still missed the company's own guide because gaming model uplifts landed late, and the shares fell about 20% the next day. The mechanism held. The cadence did not. That is a different kind of uncomfortable for the expensive version of the same bet."
     },
     {
       "type": "prose",
