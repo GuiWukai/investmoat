@@ -9,7 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$101B"
+      "value": "~$83B"
     }
   ],
   "chips": [
@@ -28,29 +28,29 @@
   ],
   "metrics": [
     {
-      "title": "Q1 2026 Revenue",
-      "value": "$1.006B",
-      "label": "+32% YoY (accelerated from 29%), first $1B quarter — FY26 guided $4.3-4.34B (+25-27%); Q2 print due Aug 6",
+      "title": "Q2 2026 Revenue",
+      "value": "$1.12B",
+      "label": "+36% YoY (accelerated from +32% Q1) — beat $1.07–1.08B guide; FY26 raised to $4.45–4.47B (~+30%)",
       "icon": "Activity",
       "color": "#632ca6"
     },
     {
       "title": "$100k+ ARR Customers",
-      "value": "~4,550",
-      "label": "+21% YoY (from ~3,770) — record new-logo bookings, more than doubled YoY",
+      "value": "~4,720",
+      "label": "+23% YoY (from ~3,850) — larger-customer growth remains the expansion engine",
       "icon": "TrendingUp",
       "color": "#2563eb"
     },
     {
-      "title": "AI-Native Customers",
-      "value": "~650+",
-      "label": "Incl. 14 of top 20 AI labs; DASH 2026 launched Bits AI autonomous suite (Code, Detection, Agent Builder)",
-      "icon": "Zap",
+      "title": "Non-GAAP EPS / FCF",
+      "value": "$0.65 / $279M",
+      "label": "EPS beat $0.58; FCF margin ~25%; FY26 EPS raised to $2.50–2.54; non-GAAP op. margin 23%",
+      "icon": "DollarSign",
       "color": "#10b981"
     }
   ],
   "moat": {
-    "description": "Datadog is the unified observability platform across infrastructure, APM, logs, security, and AI/LLM workloads — embedded as the operational nervous system at 30,000+ enterprises with deep agent-based instrumentation that compounds switching costs as architectures grow more complex. DASH 2026 (June 9-10) extended Bits AI from investigation into autonomous detection, code fix, release validation, and custom agent workflows — deepening the platform surface without changing the core embedment thesis.",
+    "description": "Datadog is the unified observability platform across infrastructure, APM, logs, security, and AI/LLM workloads — embedded as the operational nervous system at 30,000+ enterprises with deep agent-based instrumentation that compounds switching costs as architectures grow more complex. Q2's +36% print and the Adaptive ML acquisition (RLOps for agentic post-training on Datadog's telemetry) deepen the AI surface without changing the core embedment thesis; Bits AI, AI Guard, and Bits Agent Builder are now generally available after DASH 2026.",
     "analysisTitle": "The Observability Embedment Moat",
     "analysisSummary": "Datadog's moat is built on **Agent Embedding, Multi-Product Bundle Lock-In, and AI-Native Observability**:",
     "analysisPoints": [
@@ -60,107 +60,108 @@
       },
       {
         "title": "Multi-Product Bundle: 8+ Products, Land-and-Expand",
-        "text": "Customers using 8+ Datadog products represent a steadily growing share of the base, with $1M+ ARR customers up 31% YoY to 603. The cross-product correlation value — APM traces linked to logs, infrastructure metrics, security signals, and now LLM observability — cannot be replicated by single-product competitors (Splunk for logs, Grafana for metrics, New Relic for APM)."
+        "text": "Customers using 8+ Datadog products represent a steadily growing share of the base, and $100k+ ARR accounts reached ~4,720 (+23% YoY). The cross-product correlation value — APM traces linked to logs, infrastructure metrics, security signals, and now LLM observability — cannot be replicated by single-product competitors (Splunk for logs, Grafana for metrics, New Relic for APM)."
       },
       {
         "title": "AI-Native Observability Beachhead",
-        "text": "Datadog serves ~650 AI-native customers including 14 of the top 20 AI labs. LLM Observability and GPU Monitoring (Q1 2026) sit alongside the DASH 2026 Bits AI autonomous suite — Bits Code, Bits Detection, Bits Agent Builder, infrastructure remediation, and release validation — giving Datadog a head start as enterprises operationalize AI workloads. Generative AI is observability-hungry: prompt logs, token usage, model drift, hallucination rates, and GPU utilization all become billable telemetry."
+        "text": "AI workloads remain the growth accelerant: Q2 revenue re-accelerated to +36% YoY as customers build and deploy with AI on the Datadog platform. DASH 2026 capabilities are now GA — fully autonomous Bits AI (detect → investigate → remediate), AI Guard against prompt injection, Bits Agent Builder, and Bring Your Own Cloud — while the Adaptive ML acquisition adds RLOps and agentic LLM post-training on Datadog's real-world infra and security data. Generative AI is observability-hungry: prompt logs, token usage, model drift, hallucination rates, and GPU utilization all become billable telemetry."
       },
       {
         "title": "Compounding Data Volume from AI & Agents",
-        "text": "AI workloads generate exponentially more telemetry than traditional apps — every LLM call produces traces, every agent run produces step-level spans, every model output requires evaluation logs. Datadog's consumption-based pricing captures this expansion natively. Channel checks into Q1 pointed to 'very strong' AI adoption; the Aug 6 Q2 print is the next falsifiable read on whether that telemetry pull-through is sustaining into the summer."
+        "text": "AI workloads generate exponentially more telemetry than traditional apps — every LLM call produces traces, every agent run produces step-level spans, every model output requires evaluation logs. Datadog's consumption-based pricing captures this expansion natively. Q2's beat (+36% vs a +29–31% guide) confirmed the pull-through; the Q3 guide ($1.135–1.145B, only ~2% sequential) is the next falsifiable read on whether largest-customer conservatism and summer digestion mute that trajectory into H2."
       }
     ]
   },
   "growth": {
-    "description": "Q1 2026 revenue (reported May 7) grew 32% YoY to $1.006B — Datadog's first $1B quarter, accelerating from 29% in Q4 2025 and beating the high end of guidance. FY2026 guidance stands at $4.3-4.34B (+25-27%) with non-GAAP operating margin of 22-23% and non-GAAP EPS of $2.36-2.44; Q2 was guided to $1.07-1.08B (+29-31%), with results due August 6. $100k+ ARR customers reached ~4,550 (+21% YoY), and new-logo annualized bookings set an all-time record in Q1, more than doubling YoY. Management disclosed two major hyperscaler wins for superintelligence-lab training monitoring, and analysts identify OpenAI as the largest customer. DASH 2026 (June 9-10) launched 100+ capabilities centered on Bits AI autonomous operations — a product cycle that can deepen attach and retention, but does not yet change the measured revenue trajectory ahead of the Q2 print.",
+    "description": "Q2 2026 revenue grew 36% YoY to $1.12B — accelerating from +32% in Q1 and crushing the $1.07–1.08B (+29–31%) guide — with non-GAAP EPS of $0.65 (vs $0.58 consensus), non-GAAP operating margin of 23%, and free cash flow of $279M (~25% margin). FY2026 guidance was raised to $4.45–4.47B (~+30% YoY) and non-GAAP EPS to $2.50–2.54, from $4.3–4.34B / $2.36–2.44. Q3 was guided to $1.135–1.145B — a beat versus Street but only ~2% sequential off the Q2 print, which the market read as digestion into a fully priced multiple and gapped the stock ~18%. $100k+ ARR customers reached ~4,720 (+23% YoY). Bits AI, AI Guard, and Bits Agent Builder are now GA, and Adaptive ML brings RLOps onto Datadog's telemetry substrate.",
     "growthAnalysis": {
-      "cagrEstimate": "22-28%",
-      "scoreDerivation": "cagrEstimate 22-28% (midpoint 25% → base ~87) anchors on FY26 guided 25-27% with Q1 at +32% and Q2 guided +29-31% pending the Aug 6 print; all three drivers accelerating (+4 trajectory) for AI-native pull-through, DASH Bits AI suite, and core observability re-acceleration; marginTrend stable (0); keyRiskSeverity moderate (−5) for largest-customer concentration into a fully priced ~23× forward-sales multiple = 86",
+      "cagrEstimate": "24-30%",
+      "cagrBasis": "Measured on company revenue: FY2025 ~$3.43B → raised FY2026 guide midpoint $4.46B (~+30%) → fade toward mid-20s into FY2027–28 as the AI telemetry surge normalizes. Near-term prints are faster — Q4'25 +29%, Q1 +32%, Q2 +36% — so the 24–30% band sits between the raised 2026 slope and a multi-year decay, not an extrapolation of the Q2 print. The Q3 guide (~$1.14B, ~2% sequential) is the series to re-check for largest-customer digestion.",
+      "scoreDerivation": "cagrEstimate 24–30% (midpoint 27% → base ~88) anchors on raised FY26 ~+30% with Q2 at +36% and a conservative Q3 sequential; all three drivers accelerating (+4 trajectory) for core re-acceleration, AI-native pull-through, and Bits AI GA / Adaptive ML; marginTrend stable (0); keyRiskSeverity moderate (−5) for Q3 sequential soft-patch / largest-customer concentration into an ~18.5× forward-sales multiple after the post-print gap = 87",
       "drivers": [
         {
           "name": "Core Observability (Infra, APM, Logs)",
-          "metric": "+32% YoY Q1 2026 (vs +29% Q4 2025), first $1B quarter; Q2 guided $1.07-1.08B (+29-31%); ~4,550 $100k+ ARR customers (+21% YoY)",
+          "metric": "+36% YoY Q2 2026 (vs +32% Q1), $1.12B; FY26 raised to $4.45–4.47B (~+30%); ~4,720 $100k+ ARR customers (+23% YoY); Q3 guided $1.135–1.145B (~2% sequential)",
           "trend": "accelerating"
         },
         {
           "name": "AI-Native Workloads",
-          "metric": "650+ AI-native customers; 14 of top 20 AI labs; 2 hyperscaler superintelligence-lab wins; LLM Obs + GPU Monitoring",
+          "metric": "CEO: customers building/deploying with AI on Datadog; Adaptive ML (RLOps) acquired; AI Guard + BYOC launched; prior cohort included 14 of top 20 AI labs and hyperscaler superintelligence-lab wins",
           "trend": "accelerating"
         },
         {
           "name": "Bits AI & Agentic Operations",
-          "metric": "DASH 2026: Bits Code, Detection, Agent Builder, infra remediation, release validation — autonomous suite beyond investigation; monetization still early ahead of Q2",
+          "metric": "Bits AI (autonomous detect/investigate/remediate), Bits Code, Bits Chat, Bits Agent Builder now GA post-DASH 2026 — monetization still early but product surface is live",
           "trend": "accelerating"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "If the Aug 6 Q2 print shows sequential deceleration beyond the guided 6-7% (or the largest customer, OpenAI per analyst estimates, digests spend), headline growth could drop toward the low-20s; combined with Splunk-Cisco AI bundle pressure on enterprise renewals, that would compress a multiple that has re-rated from ~12× to ~23× forward sales since the May lows.",
+      "keyRisk": "Q3 guide implies only ~2% sequential growth off a $1.12B print — consistent with management's stated conservatism on the largest customer (OpenAI per analyst estimates). If that digestion persists into Q4 or AI-lab training spend pauses, headline growth could settle in the mid-20s even as the FY26 raise sticks; combined with Splunk-Cisco AI bundle pressure on enterprise renewals, that would re-rate a multiple that just compressed from ~23× to ~18.5× forward sales on the post-print gap.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 66,
-    "description": "At ~$285, DDOG has extended well past the June base case ($250) and the June 1 closing high of $277.49 — trading near fresh all-time highs with a market cap of ~$101B into the August 6 Q2 print. At ~23× forward sales and ~119× forward non-GAAP P/E on the $4.3-4.34B / $2.36-2.44 FY26 guide, the AI-winner re-rating is fully priced: Street consensus clusters around $270-276 with a wave of late-July raises into the $295-315 range (Morgan Stanley $300, BofA/Rosenblatt $305, DA Davidson $315, BMO $310). Against revised scenarios (bear $175 / base $290 / bull $400), spot sits roughly at base — fair value for the quality and acceleration, with little margin of safety into the print.",
+    "score": 79,
+    "description": "DDOG closed Aug 5 at $283 (~$101B) into the print, then gapped ~18% to ~$232 (~$83B) on Aug 6 despite beating revenue/EPS and raising FY26 to $4.45–4.47B / $2.50–2.54 EPS — the market focused on a Q3 guide ($1.135–1.145B) that is only ~2% sequential off Q2. At ~$232 the stock sits ~24% below our raised $305 base and trades ~18.5× forward sales / ~92× forward non-GAAP P/E on the raised guide (PEG ~3.1× on ~30% growth) — cheaper than the ~23× / ~119× setup at $285, with the AI-winner re-rating partially unwound into a still-rich but no-longer-fully-priced multiple.",
     "peAnalysis": {
-      "asOf": "August 2026",
+      "asOf": "August 6, 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~160×",
-          "note": "GAAP TTM EPS ~$1.75; price ~$285"
+          "value": "~130×",
+          "note": "GAAP TTM EPS ~$1.75–1.80; price ~$232"
         },
         {
           "label": "Forward P/E (NTM, non-GAAP)",
-          "value": "~119×",
-          "note": "FY2026 non-GAAP EPS guide $2.36-2.44"
+          "value": "~92×",
+          "note": "FY2026 non-GAAP EPS guide $2.50–2.54 midpoint"
         },
         {
           "label": "PEG Ratio",
-          "value": "~4.6×",
-          "note": "fwd P/E ÷ ~26% growth"
+          "value": "~3.1×",
+          "note": "fwd P/E ÷ ~30% FY26 growth — still rich, but down from ~4.6× at $285"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~23×",
-          "note": "$4.3-4.34B FY2026 revenue guide; ~$101B market cap"
+          "value": "~18.5×",
+          "note": "$4.45–4.47B FY2026 revenue guide; ~$83B market cap"
         },
         {
           "label": "Price / FCF",
-          "value": "~83×",
-          "note": "FCF margin ~28% on ~$4.3B guide"
+          "value": "~68×",
+          "note": "Q2 FCF $279M (~25% margin); ~28% FCF margin on ~$4.46B guide ≈ $1.25B"
         }
       ],
-      "summary": "The May-to-August re-rating moved Datadog from ~12× to ~23× forward sales — now priced as a confirmed AI infrastructure winner with DASH Bits AI optionality layered on. A PEG of ~4.6× is rich even for the acceleration profile, and the FY26 margin guide (22-23% non-GAAP) still embeds heavy AI investment. With the stock at the revised base into the Aug 6 Q2 print, the risk/reward is execution-priced-in: a clean beat-and-raise keeps the multiple; any soft sequential or largest-customer digestion has further to fall than in June."
+      "summary": "The post-print gap moved Datadog from ~23× to ~18.5× forward sales — still an AI-infrastructure premium, but no longer priced as if every sequential print must clear a double-digit bar. Against revised scenarios (bear $170 / base $305 / bull $420), ~$232 offers ~31% upside to base and ~81% to bull versus ~27% downside to bear: a constructive asymmetry the $285 pre-print tape did not have, provided the Q3 sequential soft-patch is conservatism rather than a lasting digestion of AI-lab spend."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$175",
-      "description": "Revised August 2026 after the stock ran through the prior $250 base to ~$285 (prior bear $150): largest customer renegotiates or digests; AI-lab spend pauses; growth decelerates below 20% and the multiple compresses toward ~12× forward sales.",
+      "priceTarget": "$170",
+      "description": "Revised August 6, 2026 after the Q2 beat-and-raise and ~18% post-print gap (prior bear $175): largest customer digests further; AI-lab spend pauses; growth decelerates below 22% and the multiple compresses toward ~12× forward sales.",
       "points": [
-        "Top customer (OpenAI, per analyst estimates) renegotiates pricing aggressively, digests training-related spend, or builds in-house observability — removing 4-6 points of headline growth in FY2027",
-        "Q2/Q3 sequential growth undershoots the guided 6-7% pace; AI-native cohort spending digests after the 2025-26 training buildout; Splunk-Cisco AI observability bundle wins large enterprise renewals, pushing net retention below 110%",
-        "Multiple compresses from ~23× to ~12× forward sales as growth decelerates toward 20% and the AI-winner premium partially unwinds — ~$62B market cap on ~$5.2B FY2027 revenue"
+        "Top customer (OpenAI, per analyst estimates) renegotiates pricing aggressively, digests training-related spend, or builds in-house observability — removing 4–6 points of headline growth in FY2027; Q3's ~2% sequential guide proves the start of a multi-quarter digestion rather than conservatism",
+        "Q3/Q4 sequential growth stays muted; AI-native cohort spending digests after the 2025–26 training buildout; Splunk-Cisco AI observability bundle wins large enterprise renewals, pushing net retention below 110%",
+        "Multiple compresses from ~18.5× to ~12× forward sales as growth decelerates toward low-20s and the AI-winner premium partially unwinds — ~$60B market cap on ~$5.0B FY2027 revenue"
       ]
     },
     "base": {
-      "priceTarget": "$290",
-      "description": "Revised August 2026 (prior base $250, exceeded after the summer run): FY2026 lands at the $4.3-4.34B guide with Q2 confirming the guided +29-31%; FY2027 sustains ~25% growth and the stock holds a high-teens forward sales multiple — roughly today's ~$285 fair-value path.",
+      "priceTarget": "$305",
+      "description": "Revised August 6, 2026 (prior base $290): FY2026 lands at the raised $4.45–4.47B guide; Q3's soft sequential is management conservatism that H2 converts; FY2027 sustains ~25% growth and the stock holds a mid-to-high-teens forward sales multiple.",
       "points": [
-        "FY2026 revenue lands at $4.35B+ (26-27% growth) with Q2-Q4 delivering on AI-native demand; FY2027 consensus moves to $5.4B+",
-        "AI-native customer count grows toward 1,000 by end of 2026; LLM Observability + GPU Monitoring + hyperscaler superintelligence-lab contracts contribute $300M+ run-rate; Bits AI autonomous suite begins measurable attach",
-        "Stock sustains ~17-18× forward sales on FY2027 revenue of ~$5.4B (~$95-100B market cap), consistent with the post-July Street cluster around $280-310"
+        "FY2026 revenue lands at $4.46B+ (~30% growth) with Q3–Q4 delivering on AI-native demand despite the conservative sequential guide; FY2027 consensus moves to $5.6B+",
+        "AI-native expansion continues; LLM Observability + GPU Monitoring + hyperscaler superintelligence-lab contracts contribute $300M+ run-rate; Bits AI autonomous suite begins measurable attach after GA",
+        "Stock sustains ~16–18× forward sales on FY2027 revenue of ~$5.6B (~$95–100B+ market cap), consistent with a partial re-rating back from the post-print gap"
       ]
     },
     "bull": {
-      "priceTarget": "$400",
-      "description": "Revised August 2026 (prior bull $360): Datadog becomes the standard observability-and-autonomy layer for the AI economy; AI telemetry re-accelerates growth to 30%+ in FY2027; Bits AI autonomous suite emerges as a material new ARR line.",
+      "priceTarget": "$420",
+      "description": "Revised August 6, 2026 (prior bull $400): Datadog becomes the standard observability-and-autonomy layer for the AI economy; AI telemetry re-accelerates growth to 30%+ in FY2027; Bits AI + Adaptive ML emerge as a material new ARR line.",
       "points": [
-        "AI workload telemetry re-accelerates total revenue growth to 30%+ in FY2027 as agentic systems and superintelligence-lab training generate exponentially more observability data",
-        "Bits AI (Code, Detection, Agent Builder, infra remediation) scales into a $500M+ ARR product line and becomes the de facto AIOps/autonomy layer for SRE teams",
-        "Net retention rises above 130% as 8+ product customers expand; multiple re-rates to ~22-24× forward sales (~$140B market cap on ~$6.0B FY2027 revenue)"
+        "AI workload telemetry re-accelerates total revenue growth to 30%+ in FY2027 as agentic systems and superintelligence-lab training generate exponentially more observability data — Q3's soft sequential proves one-off conservatism",
+        "Bits AI (Code, Detection, Agent Builder, infra remediation) plus Adaptive ML RLOps scales into a $500M+ ARR product line and becomes the de facto AIOps/autonomy layer for SRE teams",
+        "Net retention rises above 130% as 8+ product customers expand; multiple re-rates to ~22–24× forward sales (~$140B+ market cap on ~$6.2B FY2027 revenue)"
       ]
     }
   },
@@ -183,11 +184,11 @@
     },
     "bundling": {
       "status": "strong",
-      "note": "Datadog sells 20+ products (Infra, APM, Logs, RUM, Synthetics, Security, LLM Observability, GPU Monitoring, Bits AI suite, etc.) on a single agent and unified data model — 8+ product adoption drives outsized retention and expansion. DASH 2026's Bits Code/Detection/Agent Builder layer adds another attach surface on the same telemetry substrate; the cross-product correlation (traces ↔ logs ↔ metrics ↔ security signals) remains a structural advantage no single-domain competitor can match."
+      "note": "Datadog sells 20+ products (Infra, APM, Logs, RUM, Synthetics, Security, LLM Observability, GPU Monitoring, Bits AI suite, etc.) on a single agent and unified data model — 8+ product adoption drives outsized retention and expansion. Bits AI GA and Adaptive ML's RLOps layer add another attach surface on the same telemetry substrate; the cross-product correlation (traces ↔ logs ↔ metrics ↔ security signals) remains a structural advantage no single-domain competitor can match."
     },
     "proprietaryData": {
       "status": "strong",
-      "note": "Datadog ingests trillions of telemetry events daily across 30,000+ customers, creating one of the largest operational datasets in the world. This trains anomaly detection, AIOps recommendations, and Bits AI in ways no startup can replicate without first acquiring an equivalent installed base — a compounding flywheel as AI workloads explode."
+      "note": "Datadog ingests trillions of telemetry events daily across 30,000+ customers, creating one of the largest operational datasets in the world. Adaptive ML is explicitly meant to train specialized agents on that real-world infra and security data — a compounding flywheel as AI workloads explode that no startup can replicate without first acquiring an equivalent installed base."
     },
     "regulatoryLockIn": {
       "status": "intact",
@@ -199,13 +200,13 @@
     },
     "transactionEmbedding": {
       "status": "strong",
-      "note": "Every alert, every incident page, every postmortem, every SLO calculation, and every change deployment flows through Datadog at instrumented enterprises. The agent IS the operational nervous system — every code deploy, container start, and AI inference triggers Datadog telemetry by default. Bits AI autonomous remediation tightens that loop from detect → fix without leaving the platform."
+      "note": "Every alert, every incident page, every postmortem, every SLO calculation, and every change deployment flows through Datadog at instrumented enterprises. The agent IS the operational nervous system — every code deploy, container start, and AI inference triggers Datadog telemetry by default. Bits AI autonomous remediation (now GA) tightens that loop from detect → fix without leaving the platform."
     },
     "systemOfRecord": {
       "status": "strong",
       "note": "Datadog is the authoritative system of record for operational state, performance metrics, and incident history at most cloud-native enterprises. Audit trails for SLO performance and security events live in Datadog — migration requires rebuilding years of operational history."
     },
-    "verdict": "Datadog remains one of the cleanest AI-tailwind plays in enterprise software: AI workloads generate exponentially more telemetry than traditional apps, and Datadog's consumption pricing captures this expansion natively. The four AI-resilient moats (proprietary data flywheel, transaction embedding, system of record, multi-product bundle) are intact-to-strong, with DASH 2026's Bits AI autonomous suite deepening bundling and transaction embedding without yet changing measured revenue. Primary risks are customer concentration and Splunk-Cisco bundle pressure; after the summer extension to ~$285 (~$101B) — well through the June $250 base and into a ~23× forward-sales multiple — those risks are fully in the price heading into the August 6 Q2 print."
+    "verdict": "Datadog remains one of the cleanest AI-tailwind plays in enterprise software: AI workloads generate exponentially more telemetry than traditional apps, and Datadog's consumption pricing captures this expansion natively — confirmed by Q2's +36% re-acceleration and a FY26 raise to ~+30%. The four AI-resilient moats (proprietary data flywheel, transaction embedding, system of record, multi-product bundle) are intact-to-strong, with Bits AI GA and Adaptive ML deepening bundling and proprietary data without changing measured statuses. Primary risks are largest-customer concentration (visible in the soft Q3 sequential guide) and Splunk-Cisco bundle pressure; after the ~18% post-print gap to ~$232 (~$83B, ~18.5× forward sales), those risks are partially in the price rather than fully ahead of it."
   },
-  "lastAnalyzed": "August 5, 2026"
+  "lastAnalyzed": "August 6, 2026"
 }
