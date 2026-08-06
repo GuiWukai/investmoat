@@ -2,7 +2,7 @@
   "slug": "uber",
   "ticker": "UBER",
   "name": "Uber Technologies",
-  "lastAnalyzed": "August 5, 2026",
+  "lastAnalyzed": "August 6, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$138B"
+      "value": "~$144B"
     }
   ],
   "chips": [
@@ -69,7 +69,8 @@
     "description": "Q2 2026 gross bookings $58.0B (+24% YoY, +22% cc) beat the ~$57.2B Street estimate; Mobility +22% (+20% cc), Delivery +26% (+25% cc). Adj EBITDA $2.8B (+33% YoY) at 4.9% of gross bookings; Non-GAAP EPS $0.81 (+35%) landed in line. Revenue $14.2B (+12% YoY) missed slightly as business-model changes shaved 8pp off reported growth. TTM free cash flow exceeded $10B for the first time. Q3 guide — gross bookings $58.25–$60.25B (+18–22% cc, midpoint ~$59.25B), adj EBITDA $2.86–$2.96B, EPS $0.84–$0.88 — trailed consensus on bookings and EPS, and the stock fell ~6% to ~$68. Organic bookings compounding remains strong; the market reaction reflects soft forward guidance and the revenue miss, not a bookings deceleration.",
     "growthAnalysis": {
       "cagrEstimate": "15-20%",
-      "scoreDerivation": "Base ~82 on a 17.5% midpoint of the 15–20% bookings CAGR — anchored to Q2's +22% constant-currency print and the guided 18–22% Q3 range, decayed for autonomy and Delivery Hero integration drag rather than extrapolated. +2.7 trajectory (Delivery and Uber One accelerating; Mobility stable at +20% cc for two quarters) +4 margin (adj EBITDA +33%, 4.9% of bookings) −10 high autonomy risk (Waymo own-app path dated to 2028 in Austin/Atlanta; Tesla Cybercab production continuing) = 78. Q3 guide slightly below Street is charged in the narrative, not the CAGR — the midpoint still sits inside the band.",
+      "cagrBasis": "Gross bookings: Q2 2026 $58.0B (+24% YoY, +22% cc) with Mobility +20% cc and Delivery +25% cc; Q3 guide midpoint ~$59.25B (+18–22% cc). The 15–20% blended 3–5yr estimate decays that measured bookings series for autonomy share loss and Delivery Hero integration drag rather than extrapolating the Q2 print — the Q3 guide midpoint still sits inside the band.",
+      "scoreDerivation": "Base ~82 (17.5% midpoint of the 15–20% bookings CAGR) +2.7 trajectory (Delivery and Uber One accelerating; Mobility stable at +20% cc for two quarters) +4 margin (adj EBITDA +33%, 4.9% of bookings) −10 high autonomy risk (Waymo own-app path dated to 2028 in Austin/Atlanta; Tesla Cybercab production continuing) = 78. Q3 guide slightly below Street is charged in the narrative, not the CAGR.",
       "drivers": [
         {
           "name": "Mobility Bookings",
@@ -94,20 +95,20 @@
     }
   },
   "valuation": {
-    "score": 83,
-    "description": "At ~$68 (Aug 5 close; down ~6% post-earnings) Uber trades ~28% below the base case ($95) and ~36% below the ~$107 Wall Street average target (Strong Buy consensus, 32 analysts), at ~21× consensus FY26 EPS (~$3.30) and ~7% FCF yield on record TTM FCF exceeding $10B. The stock is down ~18% YTD and ~33% below the $101.99 52-week high despite Q2 bookings beating and adj EBITDA margin expanding to 4.9% — robotaxi competition (Waymo, Tesla) and a Q3 guide that trailed Street expectations remain the multiple compressors. The post-print selloff improves margin of safety without changing the autonomy overhang.",
+    "score": 82,
+    "description": "At ~$70.47 (August 6 close) Uber has recovered ~3% from the August 5 post-print close of ~$68 with no incremental fundamental print — still ~26% below the base case ($95) and ~31% below the ~$102 Wall Street average target (Buy consensus, 50 analysts), at ~21× consensus FY26 EPS (~$3.37) and ~7% FCF yield on record TTM FCF exceeding $10B. The stock is down ~15% YTD and ~31% below the $101.99 52-week high; post-earnings target cuts (BofA $101, DA Davidson $100, Cantor $90, Susquehanna $90) kept the Street mean near $102 while the organic Q2 beat stands. Robotaxi competition (Waymo, Tesla) and a Q3 guide that trailed Street expectations remain the multiple compressors — the partial bounce narrows but does not close the margin of safety opened by the print.",
     "peAnalysis": {
       "asOf": "August 2026",
       "rows": [
         {
           "label": "Forward P/E (FY26)",
           "value": "~21×",
-          "note": "Consensus EPS ~$3.30; multiple still compressed by AV competition fears"
+          "note": "Consensus EPS ~$3.37; multiple still compressed by AV competition fears"
         },
         {
           "label": "Forward P/E (FY27)",
-          "value": "~17×",
-          "note": "Assumes mid-20% EPS growth on operating leverage before Delivery Hero close"
+          "value": "~16×",
+          "note": "Consensus EPS ~$4.42; operating leverage before Delivery Hero close"
         },
         {
           "label": "FCF Yield",
@@ -125,7 +126,7 @@
           "note": "Premium to Lyft, discount to high-growth platforms"
         }
       ],
-      "summary": "Uber remains a free-cash compounder with network durability trading at a fear-discounted multiple after the Q2 print. Bookings beat and TTM FCF crossed $10B, but revenue missed and Q3 EPS guidance trailed consensus — the market chose the forward guide over the organic beat. Since June the two structural facts are unchanged: Delivery Hero (optionality, H2 2027 close) and a clearer Waymo own-app path in Austin/Atlanta from 2028. The post-earnings pullback moves spot closer to the bear end of the scenario ladder without resolving the autonomy question."
+      "summary": "Uber remains a free-cash compounder with network durability trading at a fear-discounted multiple one session after the Q2 print. Bookings beat and TTM FCF crossed $10B, but revenue missed and Q3 EPS guidance trailed consensus — the market chose the forward guide over the organic beat, and the August 6 bounce only partially retraced the selloff. Since June the two structural facts are unchanged: Delivery Hero (optionality, H2 2027 close) and a clearer Waymo own-app path in Austin/Atlanta from 2028. Spot still sits nearer the bear end of the scenario ladder without resolving the autonomy question."
     }
   },
   "scenarios": {
