@@ -2,7 +2,7 @@
   "slug": "axon",
   "ticker": "AXON",
   "name": "Axon Enterprise",
-  "lastAnalyzed": "July 7, 2026",
+  "lastAnalyzed": "August 6, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "$50B"
+      "value": "~$46B"
     }
   ],
   "chips": [
@@ -26,138 +26,139 @@
   "metrics": [
     {
       "title": "Revenue",
-      "value": "$807M",
-      "label": "Q1 2026 +34% YoY (9th straight quarter >30%); FY26 guide raised to +30–32%",
+      "value": "$904M",
+      "label": "Q2 2026 +35% YoY (10th straight quarter >30%); FY26 guide raised to +32–34%",
       "icon": "TrendingUp",
       "color": "#e8281b"
     },
     {
       "title": "Bookings Backlog",
-      "value": "$14.3B",
-      "label": "+44% YoY future contracted revenue — multi-year visibility to $6B 2028 target",
+      "value": "$15.1B",
+      "label": "+41% YoY future contracted revenue — ~4.1× FY26 guide midpoint; multi-year visibility to $6B 2028 target",
       "icon": "Zap",
       "color": "#3b82f6"
     },
     {
       "title": "ARR",
-      "value": "$1.5B",
-      "label": "+35% YoY; AI Era Plan revenue +700% YoY; software gross margin >80%",
+      "value": "$1.64B",
+      "label": "+39% YoY; NRR 126%; AI Era Plan revenue nearly +700% YoY",
       "icon": "Shield",
       "color": "#10b981"
     }
   ],
   "moat": {
-    "description": "Axon controls ~85% of major U.S. law enforcement body camera contracts, owns the only evidence management platform (Evidence.com) legally accepted in court at scale, and has $14.3B in contracted backlog (+44% YoY in Q1 2026) — the strongest regulatory and system-of-record moat in public safety technology.",
+    "description": "Axon controls ~85% of major U.S. law enforcement body camera contracts, owns the only evidence management platform (Evidence.com) legally accepted in court at scale, and has $15.1B in contracted backlog (+41% YoY in Q2 2026) — the strongest regulatory and system-of-record moat in public safety technology. Dedrone counter-drone just cleared $100M quarterly revenue and Axon landed its first full-scope Axon 911 customer, extending the bundle from evidence capture into airspace security and emergency dispatch.",
     "analysisTitle": "The Public Safety Operating System Moat",
     "analysisSummary": "Axon's moat is built on three interlocking and self-reinforcing pillars: **Regulatory Lock-in, System of Record, and Proprietary Training Data**:",
     "analysisPoints": [
       {
         "title": "Evidence.com — The Legal System of Record",
-        "text": "Evidence.com is the chain-of-custody platform for digital evidence submitted to courts across thousands of U.S. jurisdictions. Law enforcement agencies cannot switch evidence management providers mid-contract without potentially invalidating evidence admissibility — a legal risk that creates the highest-stakes switching costs in any software vertical. Multi-year contracts of 7–10 years, combined with $14.3B in contracted future bookings (+44% YoY), mean that Axon's revenue runway is visible through most of the current decade."
+        "text": "Evidence.com is the chain-of-custody platform for digital evidence submitted to courts across thousands of U.S. jurisdictions. Law enforcement agencies cannot switch evidence management providers mid-contract without potentially invalidating evidence admissibility — a legal risk that creates the highest-stakes switching costs in any software vertical. Multi-year contracts of 7–10 years, combined with $15.1B in contracted future bookings (+41% YoY), mean that Axon's revenue runway is visible through most of the current decade. More than one-third of software revenue now comes from offerings beyond core evidence management (Fusus real-time ops, Records, AI Era Plan, counter-drone software, Axon 911), which grew ~70% YoY in Q2 2026."
       },
       {
         "title": "Draft One — AI Moat Built on Irreplaceable Data",
-        "text": "Draft One uses generative AI trained on body-camera footage and police report data that Axon uniquely possesses. With ~85% market share in major U.S. cities, Axon holds a training data advantage that no competitor can replicate — you cannot build a police report AI without access to police body camera footage at scale. In Q1 2026, the AI Era Plan (Draft One + Axon Assistant) revenue grew >700% YoY, validating the willingness of agencies to pay for AI as a separate tier on top of the OSP bundle and creating a powerful new upsell driver within existing accounts."
+        "text": "Draft One uses generative AI trained on body-camera footage and police report data that Axon uniquely possesses. With ~85% market share in major U.S. cities, Axon holds a training data advantage that no competitor can replicate — you cannot build a police report AI without access to police body camera footage at scale. In Q2 2026, AI Era Plan revenue again grew nearly 700% YoY, and three of Axon's five largest AI Era Plan deals in the quarter were international — validating both willingness to pay for AI as a discrete OSP tier and geographic expansion of the attach story."
       },
       {
-        "title": "Bundled Platform — From TASER to Drone to 911",
-        "text": "Axon has extended its platform from TASER + Body Camera + Cloud Evidence to now include Drone First Responder, AI dispatch (Axon 911 via Prepared/Carbyne acquisitions), Draft One AI reports, and commercial body cameras (Axon Body Mini). Agencies that adopt the full Officer Safety Plan (OSP) bundle are locked in for a decade across hardware, software, and AI layers simultaneously — a bundle that point-solution competitors building only one component of the stack cannot compete against."
+        "title": "Bundled Platform — From TASER to Dedrone to 911",
+        "text": "Axon has extended its platform from TASER + Body Camera + Cloud Evidence to now include Dedrone counter-drone (>$100M quarterly revenue in Q2 2026; named in a $1.5B DHS C-UAS program), Drone First Responder, AI dispatch (first full-scope Axon 911 customer via Prepared/Carbyne), Draft One AI reports, and commercial body cameras (Axon Body Mini in enterprise trials). Agencies that adopt the full Officer Safety Plan (OSP) bundle are locked in for a decade across hardware, software, and AI layers simultaneously — a bundle that point-solution competitors building only one component of the stack cannot compete against."
       }
     ]
   },
   "growth": {
-    "description": "Q1 2026 delivered $807M revenue (+34% YoY), beating consensus by ~$29M and marking the 9th consecutive quarter of 30%+ growth. ARR reached $1.5B (+35% YoY), future contracted bookings grew 44% to $14.3B, and AI Era Plan revenue (Draft One, Axon Assistant) surged over 700% YoY. International revenue more than doubled (+100%) to 20% of mix. Management raised FY2026 revenue growth guidance to 30–32% (from 27–30%) and reaffirmed FY26 operating cash flow >$600M and free cash flow ~$450M, materially de-risking the path toward the $6B 2028 target.",
+    "description": "Q2 2026 delivered $904M revenue (+35% YoY), beating consensus by ~$28M and marking the 10th consecutive quarter of 30%+ growth. ARR re-accelerated to $1.64B (+39% YoY) with net revenue retention at 126%, future contracted bookings grew 41% to $15.1B, and AI Era Plan revenue again surged nearly 700% YoY. Platform Solutions jumped 123% to $150M as Dedrone cleared $100M quarterly revenue; international and enterprise bookings each roughly tripled YoY, and Axon signed its first full-scope Axon 911 customer plus two nine-figure city agreements (including its largest individual TASER order). Management raised FY2026 revenue growth guidance a second time, to 32–34% (from 30–32%), maintained the ~25.5% Adjusted EBITDA margin outlook, and reaffirmed ~$450M FY26 free cash flow — further de-risking the path toward the $6B 2028 target. Implied H2 growth at the guide midpoint (~32%) is a modest step-down from Q2's 35%, which is what the post-print after-hours selloff keyed on.",
     "growthAnalysis": {
       "cagrEstimate": "29–33%",
-      "scoreDerivation": "Base 90 (30%+ CAGR, blended 29–33% through 2028 guided target after FY26 guide raise to 30–32%) + 5 recurring (ARR $1.5B, 80%+ software gross margins, 7–10yr OSP contracts) + 5 TAM expansion (AI Era Plan revenue +700%, international +100%, Axon 911 dispatch, Axon Body Mini commercial) − 5 federal budget risk (DOJ grant cut proposal still in play, now partially offset by international/commercial diversification AND fresh federal immigration-enforcement demand — the ICE ~$220M TASER 10 solicitation shows federal buying expanding even as DOJ grants face cuts) = 95, capped at 93 to retain a margin-of-safety on federal-concentration and the new political/procurement-scrutiny tail risk = 93",
+      "cagrBasis": "Measured on company revenue against the $6B 2028 target: FY2025 sales $2.78B → raised FY2026 guide midpoint ~$3.70B (+33%) → $6B by 2028 implies a ~29% 2025–2028 CAGR. Near-term prints are faster — Q1 +34%, Q2 +35%, ARR +39% — so the 29–33% band sits between the raised 2026 slope and the multi-year fade required by the stated 2028 destination, not an extrapolation of any single quarter. Bookings ($15.1B, +41% YoY; >30% on the new five-year normalized basis) and ARR are the series to re-check each print.",
+      "scoreDerivation": "Base 90 (29–33% blended CAGR midpoint 31%) + 4 trajectory (all three drivers accelerating: ARR re-accelerated to +39%, AI Era ~+700%, Platform/Dedrone +123%) + 4 margin (Adjusted EBITDA margin 26.8% in Q2 vs 25.5% FY guide; connected-devices GM +330 bps YoY) − 5 moderate residual risk (federal/political procurement scrutiny and software GM compression to 71.3%) = 93. Kept the CAGR band: a second consecutive intra-year guide raise is charged in the drivers and in the guide itself, not by rebasing the multi-year slope on one print.",
       "drivers": [
         {
           "name": "Software & Services (ARR)",
-          "metric": "Q1 2026 software & services revenue $355M (+35% YoY); ARR $1.5B (+35%); software gross margin >80%",
+          "metric": "Q2 2026 software & services revenue $398M (+36% YoY); ARR $1.64B (+39%, re-accelerating from Q1's +35%); NRR 126%",
           "trend": "accelerating"
         },
         {
           "name": "AI Era Plan & Draft One",
-          "metric": "AI product revenue +700% YoY in Q1 2026; Draft One + Axon Assistant now standalone monetisation lines and primary new ACV driver",
+          "metric": "AI Era Plan revenue nearly +700% YoY in Q2 2026; three of five largest AI Era deals were international; still the primary new ACV attach driver inside OSP",
           "trend": "accelerating"
         },
         {
-          "name": "Platform & International Expansion",
-          "metric": "International revenue +100% YoY (20% of total); connected devices $453M (+33%); Axon Vision live, Axon 911 ramping, Axon Body Mini shipping mid-2026",
+          "name": "Platform, Dedrone & International",
+          "metric": "Platform Solutions $150M (+123% YoY); Dedrone >$100M quarterly; connected devices $507M (+35%); international and enterprise bookings each ~3× YoY; first full-scope Axon 911 customer",
           "trend": "accelerating"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "If U.S. federal DOJ grant funding is cut 15%+ under DOGE-driven budget reviews and 20%+ of agencies delay new OSP contract signings into 2027, bookings growth decelerates below 25% and the $6B 2028 target requires aggressive commercial market penetration not yet validated at scale — though Q1 2026's +100% international growth, +700% AI revenue, and expanding federal immigration-enforcement demand (the ICE ~$220M TASER 10 solicitation) partially offset this single-geography concentration risk. A newer, secondary risk is political/procurement scrutiny: the ICE award and disclosures of a presidential Axon stock purchase have drawn congressional and media attention that could complicate future no-bid federal deals or invite conflict-of-interest reviews",
+      "keyRisk": "If U.S. federal DOJ grant funding is cut 15%+ and 20%+ of agencies delay new OSP signings into 2027, or if Dedrone's World Cup / DHS pipeline proves event-driven rather than a durable product line, bookings growth decelerates below 25% and the $6B 2028 target needs commercial penetration not yet proven at scale — partially offset by Q2's ~3× international and enterprise bookings, ARR re-acceleration to +39%, and the $15.1B backlog (~4.1× FY26 sales). Two live secondary risks: (1) political/procurement scrutiny around federal immigration-enforcement awards and a disclosed presidential stock purchase that could complicate no-bid deals; (2) software & services gross margin compressed 430 bps YoY to 71.3% on newer-product mix, and SBC remains $590–620M (~16–17% of guided sales), so GAAP profitability and FCF conversion can lag the EBITDA print even when revenue beats.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 59,
-    "description": "AXON sits at ~$622 (~$50B market cap) as of July 6, 2026 — having ripped ~40% off the ~$445 late-June level after ICE issued a five-year, ~$220M solicitation for ~17,800 TASER 10-spec conducted-energy weapons (a federal immigration-enforcement demand catalyst), amplified by momentum and headlines around a disclosed presidential Axon stock purchase — and now trades ~30% below the August 2025 all-time high of $886. At ~13.7× NTM P/S on $3.65B 2026 guidance and ~79× forward non-GAAP P/E, June's discount has fully closed and the stock has pushed above our $540 base. With the bear at $320 (~49% downside) and base at $540 (~13% downside) vs ~29% upside to the $800 bull, the valuation asymmetry has turned unfavourable: the $14.3B backlog (+44% YoY) still underwrites the fundamentals, but PEG of ~2.5× now sits above the 2.0× 'expensive' threshold and the shares have run ahead of fair value on a sentiment-driven, single-catalyst spike.",
+    "score": 69,
+    "description": "AXON closed Aug 5 at $609 (~$49B) into the print, then sold off ~6.5% after-hours to ~$570 (~$46B) even after beating revenue/EPS/EBITDA and raising FY26 growth guidance to 32–34%. At ~$570 the stock sits ~8% below our raised $620 base and ~36% below the August 2025 ATH of ~$886. On the raised ~$3.70B FY26 revenue midpoint it trades ~12.4× NTM P/S and ~63× forward non-GAAP P/E (~$9.00 consensus) — PEG ~1.9×, back under the 2.0× line the July ICE-spike print had breached. With bear $340 (~40% downside), base $620 (~9% upside), and bull $850 (~49% upside), the asymmetry has flipped back from July's unfavourable setup: the Q2 beat, second guide raise, ARR re-acceleration, and Dedrone scale-up justify lifting the ladder, while the after-hours pullback restores a margin of safety the ~$622 ICE spike had spent.",
     "peAnalysis": {
-      "asOf": "July 7, 2026",
+      "asOf": "August 6, 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~395×",
-          "note": "GAAP heavily distorted by stock-based comp"
+          "value": "~245×",
+          "note": "GAAP heavily distorted by stock-based comp (~$144M in Q2; FY26 SBC guide $590–620M)"
         },
         {
           "label": "Forward P/E (NTM, non-GAAP)",
-          "value": "~79×",
-          "note": "consensus non-GAAP EPS ~$7.90 post-guide raise"
+          "value": "~63×",
+          "note": "~$9.00 consensus non-GAAP EPS at ~$570 after-hours (~67× at the $609 pre-print close)"
         },
         {
           "label": "PEG Ratio",
-          "value": "~2.5×",
-          "note": "fwd P/E ÷ ~31% non-GAAP EPS CAGR — now above the 2.0× 'expensive' threshold"
+          "value": "~1.9×",
+          "note": "fwd P/E ÷ ~33% revenue/EPS growth band — back under the 2.0× 'expensive' threshold"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~13.7×",
-          "note": "$3.65B NTM revenue (raised 2026 guide midpoint)"
+          "value": "~12.4×",
+          "note": "~$3.70B NTM revenue (raised 2026 guide midpoint of 32–34% on $2.78B FY25)"
         },
         {
           "label": "Price / FCF",
-          "value": "~111×",
-          "note": "guided FY26 FCF ~$450M; OCF >$600M"
+          "value": "~102×",
+          "note": "reaffirmed FY26 FCF ~$450M; Q2 FCF −$1M on inventory build, with FCF back-half weighted"
         }
       ],
-      "summary": "AXON trades at ~79× forward non-GAAP P/E and ~13.7× NTM P/S at ~$622 after a ~40% two-week re-rating on the ICE TASER solicitation and momentum — back above its 2024–25 average multiple and well beyond June's post-print discount. PEG of ~2.5× has crossed the 2.0× 'expensive' line, signalling the multiple now outruns the ~31% non-GAAP EPS growth even before Q2 (reports early August) confirms the trajectory. The $14.3B backlog (+44% YoY) and raised FY26 guide to 30–32% keep the fundamentals intact and floor revenue visibility through 2028, but against the $320 bear / $540 base / $800 bull triangulation the asymmetry has inverted from June: ~49% downside to bear and ~13% downside to base vs only ~29% upside to bull. The re-rating is catalyst- and sentiment-led rather than earnings-led, so the margin of safety that existed at ~$445 has been spent."
+      "summary": "At the ~$570 after-hours print AXON trades ~12.4× NTM P/S and ~63× forward non-GAAP P/E with PEG ~1.9× — cheaper than the ~$622 / ~13.7× / ~79× / ~2.5× PEG setup in early July, and roughly in line with the raised fundamentals rather than ahead of them. The $15.1B backlog (+41% YoY), second FY26 guide raise to 32–34%, ARR re-acceleration to +39%, and Dedrone clearing $100M quarterly support lifting the scenario ladder to $340 / $620 / $850. Against that triangulation the post-print tape offers ~9% upside to base and ~49% to bull versus ~40% downside to bear — a constructive asymmetry, provided software GM compression and SBC intensity do not keep GAAP/FCF conversion from validating the EBITDA story."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$320",
-      "description": "Federal DOJ grant cuts materially slow new contract signings and the ICE immigration-enforcement demand tailwind fades, antitrust and political/procurement scrutiny (following the disclosed presidential stock purchase) stalls Axon 911 expansion and no-bid federal awards, and Draft One faces regulatory backlash — 2026 revenue misses the low end of guidance, re-rating the multiple to 8× NTM revenue.",
+      "priceTarget": "$340",
+      "description": "Federal DOJ grant cuts and political/procurement scrutiny slow new OSP signings, Dedrone demand normalises after World Cup/DHS headlines, software gross-margin mix stays compressed, and Draft One faces regulatory backlash — 2026 revenue misses the low end of the raised guide, re-rating the multiple to ~8× NTM revenue.",
       "points": [
-        "DOJ federal grant cuts of 15%+ cause 25%+ of agencies to defer new OSP contract renewals into 2027–28 and the ICE ~$220M TASER demand proves one-off rather than a recurring federal channel, causing bookings growth to decelerate below 20% and consensus 2026 revenue estimates to come down by $300M+ to ~$3.27B",
-        "FTC or DOJ antitrust action targets Axon's acquisition of Prepared and Carbyne, blocking Axon 911 market entry and removing the emergency dispatch TAM expansion story",
-        "A high-profile wrongful arrest linked to a Draft One AI-generated report triggers congressional hearings, a federal moratorium on AI-generated police reports, and a sharp slowdown in software ARR growth to below 20%",
-        "Multiple compresses to ~8× NTM P/S on reduced ~$3.27B revenue (≈$26B mkt cap / ~$320), as growth expectations reset and the regulatory risk discount widens"
+        "DOJ federal grant cuts of 15%+ cause 25%+ of agencies to defer new OSP renewals into 2027–28, Dedrone's >$100M quarterly run-rate proves event-driven rather than a durable product line, and five-year normalized bookings decelerate below 20% — consensus 2026 revenue comes down by $300M+ toward ~$3.4B",
+        "FTC or DOJ antitrust action targets the Prepared/Carbyne acquisitions or the DHS C-UAS participation, stalling Axon 911 and counter-drone TAM expansion",
+        "A high-profile wrongful arrest linked to a Draft One AI-generated report triggers congressional hearings, a federal moratorium on AI-generated police reports, and software ARR growth slows below 20%",
+        "Multiple compresses to ~8× NTM P/S on reduced ~$3.4B revenue (≈$27B mkt cap / ~$340), as growth expectations reset and the regulatory/political risk discount widens"
       ]
     },
     "base": {
-      "priceTarget": "$540",
-      "description": "Axon delivers raised 2026 guidance of 30–32% revenue growth, ARR crosses $1.8B, AI Era Plan revenue continues to compound off Q1's +700% pace, and the $14.3B backlog provides revenue floor — multiple re-rates from ~8.5× back to ~11× NTM P/S as backlog conversion and international/AI diversification de-risk the path to the $6B 2028 target.",
+      "priceTarget": "$620",
+      "description": "Axon delivers the raised 2026 guide of 32–34% revenue growth (~$3.70B midpoint), ARR crosses $1.9B, Dedrone sustains as a >$100M quarterly product line, and the $15.1B backlog converts on plan — multiple holds ~12× on end-2026 NTM revenue (~$4.2B into 2027) as international/AI/counter-drone diversification de-risks the path to the $6B 2028 target.",
       "points": [
-        "FY2026 revenue lands at $3.60–3.70B, mid-range of raised guidance, with large agency renewals and AI Era Plan upsells driving ARR to $1.80–1.90B by Q4 2026",
-        "Software gross margins expand to 82–83% and overall adjusted EBITDA margin improves from 25% toward 27%, demonstrating operating leverage on the platform; FY26 FCF lands at or above the ~$450M guide",
-        "Axon Body Mini ships mid-2026 and signs initial commercial contracts with 3–5 major retailers/healthcare systems, establishing a proof-of-concept for TAM expansion beyond law enforcement",
-        "International revenue sustains the Q1 2026 +100% YoY pace, climbing from 20% toward 25%+ of total as EU/UK law enforcement agencies begin multi-year Evidence.com transitions",
-        "Multiple re-rates from current ~8.5× NTM P/S to ~11× on end-of-2026 NTM revenue (~$4.0B rolling into 2027), as $14.3B backlog conversion and AI revenue durability validate the $6B 2028 trajectory and compress execution risk"
+        "FY2026 revenue lands at $3.65–3.75B, mid-to-high end of raised guidance, with large agency renewals, AI Era Plan upsells, and Dedrone continuity driving ARR to $1.90–2.00B by Q4 2026",
+        "Adjusted EBITDA margin holds the ~25.5% guide (Q2 printed 26.8%) and FY26 FCF lands at or above the ~$450M reaffirmation as inventory investment moderates in H2",
+        "Dedrone annualises as a durable product line beyond World Cup deployments, with meaningful contribution from the DHS $1.5B C-UAS program and international/enterprise airspace-security demand",
+        "International and enterprise continue to compound off Q2's ~3× bookings pace, and Axon 911 converts the first full-scope customer into a referenceable pipeline of dual Prepared+Carbyne wins",
+        "Multiple holds ~12× on end-of-2026 NTM revenue (~$4.2B rolling into 2027) as $15.1B backlog conversion and ARR durability validate the $6B 2028 trajectory — fair value near ~$620, below street's pre-revision ~$690 average target"
       ]
     },
     "bull": {
-      "priceTarget": "$800",
-      "description": "Draft One becomes a mandatory element of every OSP contract, commercial markets validate at scale, and Axon 911 secures 200+ dispatch center contracts — revenue trajectory re-rates toward the $6B 2028 target ahead of schedule.",
+      "priceTarget": "$850",
+      "description": "Draft One becomes a default OSP attach, Dedrone wins a material share of federal/international C-UAS spend, and Axon 911 scales from the first full-scope win into hundreds of dispatch centers — revenue trajectory re-rates toward the $6B 2028 target ahead of schedule and the multiple expands back toward prior-cycle highs.",
       "points": [
-        "Draft One penetrates 80%+ of the installed base by end of 2026, doubling software ARR attach rates and pushing total ARR toward $2B — this requires ARR growth to re-accelerate above 2025's 35% pace to ~54% (the swing factor of the bull case, not a foregone conclusion), creating a step-change in recurring revenue mix",
-        "Axon Body Mini secures 5+ Fortune 500 retail and healthcare accounts totalling >$200M new ACV, validating the commercial TAM and adding a third revenue pillar beyond law enforcement",
-        "Axon 911 wins 300+ emergency dispatch contracts by end of 2026, creating the only end-to-end public safety platform from 911 call through court submission and re-rating the addressable market to $10B+",
-        "Revenue trajectory toward $5.5B in 2027 forces consensus upgrades, compressing apparent multiple back to 15× NTM revenue and driving re-rating toward all-time highs"
+        "Draft One / AI Era Plan penetrates 80%+ of the installed base by end of 2026, pushing total ARR toward $2.2B+ and sustaining ARR growth in the mid-40%s — the swing factor of the bull case, not a foregone conclusion",
+        "Dedrone plus Axon Body Mini commercial/enterprise wins add a third revenue pillar beyond traditional law enforcement, with Dedrone capturing a visible slice of the $1.5B DHS C-UAS program and Body Mini converting trials into Fortune 500 ACV",
+        "Axon 911 wins 200+ emergency dispatch contracts by end of 2027, creating the only end-to-end public safety platform from 911 call through court submission and re-rating the addressable market",
+        "Revenue trajectory toward $5.5B+ in 2027 forces consensus upgrades, supporting ~15× NTM revenue and a re-rating toward the prior ATH zone near $850–900"
       ]
     }
   },
@@ -180,7 +181,7 @@
     },
     "bundling": {
       "status": "strong",
-      "note": "TASER 10 + Body 4 + Evidence.com + Draft One + Axon Assistant + Drone + Axon 911 + Axon Vision in a single Officer Safety Plan bundle. The Q1 2026 introduction of the AI Era Plan as a discrete monetisation tier (driving +700% AI revenue growth) is a new bundle layer that compounds lock-in — agencies adopting the full suite cannot selectively replace one component without breaking the legal evidence chain."
+      "note": "TASER 10 + Body 4 + Evidence.com + Draft One + Axon Assistant + Dedrone + DFR + Axon 911 + Axon Vision in a single ecosystem. Q2 2026 confirmed two new bundle layers at commercial scale: Dedrone cleared $100M quarterly revenue and Axon signed its first full-scope 911 customer — agencies adopting the full suite cannot selectively replace one component without breaking the legal evidence chain or the airspace/dispatch workflow."
     },
     "proprietaryData": {
       "status": "strong",
@@ -188,20 +189,20 @@
     },
     "regulatoryLockIn": {
       "status": "strong",
-      "note": "Evidence.com is accepted in courts across thousands of U.S. jurisdictions for digital evidence submission. Switching mid-contract risks evidence admissibility challenges — a regulatory moat with near-zero precedent in software. CJIS compliance, FIPS encryption, and FedRAMP create additional government lock-in layers."
+      "note": "Evidence.com is accepted in courts across thousands of U.S. jurisdictions for digital evidence submission. Switching mid-contract risks evidence admissibility challenges — a regulatory moat with near-zero precedent in software. CJIS compliance, FIPS encryption, FedRAMP, and now DHS C-UAS program participation create additional government lock-in layers."
     },
     "networkEffects": {
       "status": "intact",
-      "note": "Indirect network effects: more agencies on Evidence.com → more prosecutors and public defenders building workflows around it → harder for agencies to switch without disrupting the entire judicial ecosystem. Draft One improves as more reports are generated, benefiting all users."
+      "note": "Indirect network effects: more agencies on Evidence.com → more prosecutors and public defenders building workflows around it → harder for agencies to switch without disrupting the entire judicial ecosystem. Draft One improves as more reports are generated, benefiting all users. Dedrone's multi-city World Cup deployment adds a weak cross-venue detection network effect that is still early."
     },
     "transactionEmbedding": {
       "status": "intact",
-      "note": "Axon sits in the critical workflow path of every incident: 911 call → dispatch → response → evidence capture → report → court submission. Not a financial transaction layer but deeply embedded in the operational chain that cannot be paused or switched mid-incident."
+      "note": "Axon sits in the critical workflow path of every incident: 911 call → dispatch → response → evidence capture → report → court submission. Not a financial transaction layer but deeply embedded in the operational chain that cannot be paused or switched mid-incident. The first full-scope Axon 911 customer extends that embedding upstream into the call itself."
     },
     "systemOfRecord": {
       "status": "strong",
       "note": "Evidence.com is the authoritative legal system of record for digital evidence in U.S. law enforcement. Courts accept it. Prosecutors build discovery workflows around it. Public defenders access evidence through it. Migrating away requires legal re-certification of every evidence submission protocol — the most durable system-of-record moat in any non-financial software vertical."
     },
-    "verdict": "Axon is a strong net beneficiary of AI — Draft One makes the platform more valuable per officer, deepens the software ARR attach rate, and creates a data flywheel built on body camera footage that competitors cannot access. The key AI-resilient moats are proprietary data (body camera training exclusivity), regulatory lock-in (Evidence.com court admissibility), and system of record (legal evidence chain of custody) — all three are strengthened, not threatened, by the AI era. The primary AI risk is commoditisation of police report-writing tools if body camera data becomes more accessible, though Axon's contractual data exclusivity makes this scenario unlikely within a 5-year horizon."
+    "verdict": "Axon remains a strong net beneficiary of AI — Draft One makes the platform more valuable per officer, deepens the software ARR attach rate (ARR re-accelerated to +39% in Q2), and creates a data flywheel built on body camera footage that competitors cannot access. The key AI-resilient moats are proprietary data, regulatory lock-in, and system of record — all three are strengthened, not threatened, by the AI era. Q2 also showed the bundle extending into airspace (Dedrone >$100M) and dispatch (first full-scope Axon 911), which deepens switching costs without changing any moat status. The primary AI risk is commoditisation of police report-writing tools if body camera data becomes more accessible; contractual data exclusivity makes that unlikely inside a five-year horizon. Watch software gross-margin mix (71.3% in Q2, −430 bps YoY) as the tell on whether newer AI and platform products dilute or eventually expand unit economics."
   }
 }
