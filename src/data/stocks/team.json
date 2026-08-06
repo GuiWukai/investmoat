@@ -1,0 +1,227 @@
+{
+  "slug": "team",
+  "ticker": "TEAM",
+  "name": "Atlassian Corporation",
+  "lastAnalyzed": "August 6, 2026",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "TEAM"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$37B"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Enterprise SaaS | Collaboration",
+      "color": "primary"
+    },
+    {
+      "label": "Teamwork Graph",
+      "color": "success"
+    },
+    {
+      "label": "AI Beneficiary",
+      "color": "secondary"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "Cloud Revenue",
+      "value": "$1.21B",
+      "label": "Q4 FY2026 — +31% YoY, first $1.2B+ cloud quarter",
+      "icon": "Cloud",
+      "color": "#0052CC"
+    },
+    {
+      "title": "Subscription ARR",
+      "value": "$6.61B",
+      "label": "+23% YoY as of June 30, 2026",
+      "icon": "TrendingUp",
+      "color": "#10b981"
+    },
+    {
+      "title": "RPO",
+      "value": "$4.82B",
+      "label": "+44% YoY — enterprise deal duration expanding",
+      "icon": "Lock",
+      "color": "#7c3aed"
+    }
+  ],
+  "moat": {
+    "description": "Atlassian owns the work-coordination layer for 350,000+ organisations — Jira as the system of record for engineering and service work, Confluence for institutional knowledge, and the Teamwork Graph as a proprietary context ontology that makes AI agents more accurate and cheaper to run inside the customer's own work history.",
+    "analysisTitle": "The Teamwork Graph Moat",
+    "analysisSummary": "Atlassian's moat is built on **System-of-Record Gravity and AI Context Compounding**:",
+    "analysisPoints": [
+      {
+        "title": "System of Record for How Work Gets Done",
+        "text": "Jira is the authoritative record of work items, sprints, dependencies, and delivery history across software and business teams at 85%+ of the Fortune 500. Confluence holds the architecture decisions, RFCs, and runbooks those teams reference. Migrating either product means rebuilding years of workflows, custom schemes, automations, and audit trails — a multi-year programme with high failure risk. Q4's record $1M+ / $3M+ / $5M+ ACV deal slate and the largest enterprise deal in company history confirm that this lock-in is deepening, not fading, as enterprises consolidate onto a single system of work."
+      },
+      {
+        "title": "Teamwork Graph: Context AI Cannot Hire",
+        "text": "The Teamwork Graph cross-references knowledge, work, communications, code, assets, and people contexts into a single enterprise ontology — over 200 billion objects and connections across customer graphs. Agents grounded in the graph deliver up to 44% more accurate answers while consuming 48% fewer tokens. MCP server and Teamwork Graph CLI MAU more than doubled in Q4 to surpass 1 million, with MCP calls up 400%+ — agents are now active contributors to the graph, not just consumers. This is the opposite of AI commoditisation: every agent deployment thickens the context moat that competitors without 25 years of structured work data cannot replicate."
+      },
+      {
+        "title": "Collections Bundle + Marketplace Ecosystem",
+        "text": "Teamwork Collection (inaugural year outperforming expectations) and Service Collection ($1B+ ARR, growing 30%+) package Jira, Confluence, Loom, JSM, and Rovo into higher-ARPU suites. Collection customers use >2× more AI credits per user and deploy 2× more agents than standalone seats. The Atlassian Marketplace and partner ecosystem add thousands of apps and implementation partners that raise switching costs further — ripping out Jira also means re-integrating or replacing every marketplace app wired into those workflows."
+      },
+      {
+        "title": "Enterprise Trust Layer for Agentic Work",
+        "text": "Isolated Cloud (GA), advanced AI admin controls, and HIPAA coverage for Rovo extend the platform into regulated workloads where generic AI tools cannot go. Rovo is already used by 80%+ of the Fortune 500; adopters grow ARR more than 2× faster than non-adopters and complete 20% more Jira work items. Assigning Claude, Cursor, or the Jira Coding Agent inside Jira with full graph context and audit trails turns Atlassian into the control plane for human–agent collaboration — a position Microsoft Copilot and ServiceNow contest, but neither starts from a comparable work-history graph."
+      }
+    ]
+  },
+  "growth": {
+    "description": "Q4 FY2026 (ended June 30, 2026) delivered revenue of $1.766B (+28% YoY), cloud revenue of $1.213B (+31% YoY, accelerating), Subscription ARR of $6.606B (+23% YoY), and RPO of $4.817B (+44% YoY). GAAP operating margin flipped to 12% (from −2%) with $475M free cash flow (27% margin); full-year FY2026 revenue was $6.572B (+26%). Initial FY2027 guidance cools the headline: Subscription ARR +~18%, total revenue +~13%, cloud +~25.5%, while Data Center is expected to decline ~17% as the FY26 EOL pull-forward laps and migrations continue. Cloud remains the durable growth engine; the DC cliff is the known drag on consolidated growth.",
+    "additionalNote": {
+      "title": "Key Growth Catalysts",
+      "points": [
+        "Cloud revenue accelerated to +31% YoY in Q4; FY2027 cloud guide of ~25.5% (Q1 ~28.5%) keeps the largest and highest-quality segment well above 20%",
+        "Rovo assisted actions +50%+ QoQ; Rovo and MCP adopters grow ARR ~2× faster than non-adopters — AI attach is expanding seats and ARPU, not cannibalising them",
+        "Teamwork Collection and Service Collection ($1B+ ARR, +30%+) drive multi-product attach; Collection customers use >2× AI credits and 2× agents vs. standalone",
+        "Enterprise deal motion at all-time highs: record $1M+ / $3M+ / $5M+ ACV quarters; $3M+ ARR cohort +50%+ YoY, $5M+ cohort +70%+ YoY; largest deal in company history signed in Q4",
+        "MCP server + Teamwork Graph CLI crossed 1M MAU (fastest integration surface in company history); Jira work items and Confluence pages generated via MCP nearly 4× QoQ",
+        "Founder Mike Cannon-Brookes announced a Rule 10b5-1 plan to buy up to $250M of Class A shares — a rare open-market purchase signal into the post-print tape"
+      ]
+    },
+    "growthAnalysis": {
+      "cagrEstimate": "16–20%",
+      "scoreDerivation": "Base ~82 (16–20% blended CAGR, midpoint 18% — anchored to FY27 Subscription ARR guide ~18% and cloud ~25.5% as DC declines) + 1.3 trajectory (Cloud and Enterprise Collections accelerating; Data Center decelerating) − 4 compressing margins (non-GAAP op margin guided 25% FY27 vs. 30% FY26) − 5 moderate keyRisk (DC cliff + Microsoft/ServiceNow agent competition) ≈ 74",
+      "drivers": [
+        {
+          "name": "Cloud Subscription",
+          "metric": "Q4 cloud $1.213B (+31% YoY); FY27 cloud growth guided ~25.5%; Subscription ARR $6.606B (+23% YoY)",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Enterprise Collections + AI (Rovo / MCP)",
+          "metric": "Record $1M+/$3M+/$5M+ ACV deals; Rovo assisted actions +50%+ QoQ; MCP+Graph CLI >1M MAU; Rovo adopters ARR grow ~2× non-adopters",
+          "trend": "accelerating"
+        },
+        {
+          "name": "Data Center",
+          "metric": "FY27 DC revenue guided ~(17)% as EOL recognition laps and Cloud migrations continue; Q1 DC guided ~(4)%",
+          "trend": "decelerating"
+        }
+      ],
+      "primaryType": "both",
+      "cagrBasis": "Subscription ARR +23% YoY FY2026 → guided ~18%/yr FY2027; Cloud revenue +31% YoY Q4 / guided ~25.5%/yr FY2027; total revenue +26% YoY FY2026 → guided ~13%/yr FY2027 (DC drag). Blended 16–20% weights ARR/cloud as DC washes out of the mix over 3–5 years.",
+      "keyRisk": "If FY2027 Data Center declines steeper than the guided ~17% (faster migrations or seat freezes) while cloud growth slips below 22%, or if Microsoft Copilot / ServiceNow Agentforce win the agent-orchestration narrative and cut new-logo win rates, Subscription ARR growth falls below 15% and the multiple re-rates toward mid-teens software.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "compressing"
+    }
+  },
+  "valuation": {
+    "score": 75,
+    "description": "TEAM closed August 6 at $110.17 (~$28B) into the Q4 print, then gapped ~33% after hours / next-session pre-market toward ~$146 (~$37B) on the cloud acceleration, GAAP profitability, and founder $250M buy plan. At ~$146 the stock sits ~21% below the $185 base case and ~23% below the prior ~$140 analyst average that is likely to revise higher — still a discount to fair value for a 25%+ cloud grower at ~5× FY2027 sales, even after the pop from a deeply washed-out pre-print tape (52-week low $56 in April 2026).",
+    "valuationNote": {
+      "text": "At ~$146 vs. a $185 base case, TEAM offers ~27% upside to base and ~88% to the $275 bull, versus ~38% downside to the $90 bear. FY2026 free cash flow of $1.32B (20% margin) and Q4 FCF of $475M (27% margin) underpin the cash-earnings case; non-GAAP FY2026 EPS of $5.85 puts the post-print tape at ~25× trailing non-GAAP earnings — GARP territory for mid-teens-to-20s ARR growth once the DC cliff is absorbed.",
+      "fairValue": "$185"
+    },
+    "peAnalysis": {
+      "asOf": "August 6, 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "N/A",
+          "note": "FY2026 GAAP net loss $(0.21)/share; Q4 GAAP EPS $0.55"
+        },
+        {
+          "label": "Trailing P/E (non-GAAP)",
+          "value": "~25×",
+          "note": "FY2026 non-GAAP EPS $5.85; price ~$146"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~5.0×",
+          "note": "~$7.4B FY2027 revenue at +13% guide; ~$37B market cap"
+        },
+        {
+          "label": "EV / Subscription ARR",
+          "value": "~5.5×",
+          "note": "$6.606B ARR; ~$1.24B cash"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~28×",
+          "note": "FY2026 FCF $1.32B (20% margin); Q4 run-rate higher at 27%"
+        }
+      ],
+      "summary": "Post-print at ~5× forward sales and ~25× trailing non-GAAP earnings, Atlassian screens cheap versus enterprise-SaaS peers growing cloud mid-20s (NOW, DDOG historically commanded mid-to-high teens sales multiples). The discount embeds legitimate DC-cliff and AI-seat-compression fears; Q4's cloud re-acceleration to +31%, RPO +44%, and founder open-market buy plan are the first hard rebuttals. A re-rating toward 6.5–7.5× FY2027 sales (~$185–$210) is the base path if cloud holds ~25% and ARR lands near the 18% guide."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$90",
+      "description": "Data Center declines steeper than guided and cloud decelerates into the low-20s; the multiple compresses toward ~3× forward sales as AI-seat and Microsoft/ServiceNow competition narratives dominate.",
+      "points": [
+        "FY2027 Data Center revenue falls 25%+ (vs. guided ~17%) as migrations and seat freezes compound; total revenue growth slips into high-single-digits",
+        "Cloud growth decelerates below 20% as Rovo/MCP usage fails to convert into paid AI credits fast enough to offset seat-price pressure from Copilot bundles",
+        "Multiple compresses from ~5× to ~3× forward sales (~$25B market cap on ~$7.5B revenue) — revisiting the April 2026 washout zone adjusted for higher earnings power"
+      ]
+    },
+    "base": {
+      "priceTarget": "$185",
+      "description": "Cloud sustains ~24–26% growth, Subscription ARR lands near the ~18% FY2027 guide, and the multiple re-rates to ~6.5–7× FY2027 sales as GAAP profitability and Teamwork Graph adoption rebuild confidence.",
+      "points": [
+        "FY2027 Subscription ARR grows ~18% and cloud ~25%; DC declines roughly as guided (~17%) and is increasingly irrelevant to the growth narrative by FY2028",
+        "Rovo + MCP attach continues to drive 2× ARR growth for adopters; Teamwork Collection and Service Collection push ARPU and multi-product penetration higher",
+        "Stock re-rates to ~6.5–7× ~$7.4B FY2027 revenue (~$48–52B market cap), consistent with a durable mid-teens-to-20s compounder that has proven cloud durability through the DC transition"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$275",
+      "description": "Teamwork Graph becomes the default enterprise context layer for agentic work; cloud re-accelerates above 28% and ARR above 22%, driving a re-rating toward ~9–10× forward sales.",
+      "points": [
+        "MCP/Graph CLI scales well beyond 1M MAU; agents writing Jira/Confluence objects become standard SDLC practice, and Atlassian captures a measurable AI-credits revenue line on top of seats",
+        "Cloud growth re-accelerates above 28% in FY2027/FY2028 as DC migrations and Collection upsells compound; Subscription ARR exceeds 22%",
+        "Multiple expands to ~9–10× forward sales (~$70B+ market cap) as the market re-rates Atlassian from 'legacy collab SaaS' to 'enterprise agent orchestration OS' — analogous to the ServiceNow AI re-rating path"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Jira query language (JQL), board configurations, Confluence spaces, and admin schemes represent years of muscle memory for millions of knowledge workers. Rovo and natural-language issue creation partially abstract the UI, but assigning agents, designing automations, and governing AI credits require deeper platform fluency — net, AI is neutral-to-slightly-weakening on pure UI lock-in while increasing demand for Atlassian architects."
+    },
+    "businessLogic": {
+      "status": "strong",
+      "note": "Enterprises encode decades of workflow DNA in Jira schemes, custom fields, automation rules, Confluence templates, and JSM SLAs — institutional logic that is nearly impossible to fully document or migrate. The Teamwork Graph now surfaces that logic to agents (Claude, Cursor, Jira Coding Agent) inside Atlassian's permissions and audit trail, making the encoded business logic more valuable in the AI era rather than easier to exit."
+    },
+    "publicDataAccess": {
+      "status": "na",
+      "note": "Atlassian operates on private customer work data and a commercial Marketplace; it does not control a scarce public data source."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Certified Jira/Confluence admins still command premiums, but Rovo and low-code automations are reducing scarcity for routine administration. Senior architects who design agentic workflows and Isolated Cloud deployments remain scarce, yet the overall talent moat is thinner than five years ago."
+    },
+    "bundling": {
+      "status": "strong",
+      "note": "Teamwork Collection and Service Collection package Jira, Confluence, Loom, JSM, Goals, and Rovo into higher-ARPU suites; Collection customers use >2× AI credits and deploy 2× agents vs. standalone. Marketplace apps and DX (developer productivity) deepen the bundle. Cross-product integration value — a Jira issue triggering Confluence docs, JSM tickets, and agent PRs — cannot be replicated by any single-domain competitor."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Twenty-five years of structured and unstructured work data across 350,000+ customers feed the Teamwork Graph — 200B+ objects linking knowledge, work, communications, code, assets, and people. Agents grounded in the graph are up to 44% more accurate on 48% fewer tokens; MCP adopters grow ARR 2× faster. This context flywheel compounds with every connected app and every agent-written Jira/Confluence object — a proprietary data advantage no startup or horizontal AI suite can hire."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "Isolated Cloud (GA Q4 FY2026), advanced AI admin controls, HIPAA coverage for Rovo, and existing SOC 2 / ISO certifications support regulated enterprise and healthcare deployments. Meaningful, but shallower than ServiceNow's FedRAMP High federal moat — enough to win trust-sensitive deals, not enough to lock an entire public-sector vertical alone."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "Strong intra-organisation network effects (every additional team on Jira/Confluence raises coordination value) plus indirect effects via the Marketplace and partner ecosystem. Not classic cross-customer Metcalfe dynamics, but the growing agent/MCP ecosystem and shared templates create adoption inertia that scales with the installed base."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "Every sprint commitment, incident ticket, page edit, PR review, and now agent-assigned task flows through Atlassian at 350,000+ customers. Q4's agent sessions in Jira, Claude/Cursor assignment, and Slack @Jira agent extend embedding from human workflows into the agent execution loop — Atlassian becomes the transaction layer for human–agent work, not just human work."
+    },
+    "systemOfRecord": {
+      "status": "strong",
+      "note": "Jira is the system of record for engineering and service work items; Confluence for institutional knowledge; JSM for ITSM tickets at tens of thousands of enterprises. Audit trails, sprint histories, and compliance records live here. Gartner MQ Leader recognition across ITSM, DevSecOps, and Developer Productivity Insight (DX) in 2026 reinforces the SoR position. Migration is a multi-year programme, not a procurement switch."
+    },
+    "verdict": "Atlassian is a clear AI beneficiary: the Teamwork Graph turns 25 years of work history into the context layer that makes enterprise agents accurate and cheap, and every MCP/Rovo deployment thickens that graph. The AI-resilient pillars — proprietary data, system of record, transaction embedding — are all strong and actively compounding, while bundling via Collections raises ARPU. The main vulnerabilities are a thinning talent-scarcity moat and a still-developing regulatory lock-in versus ServiceNow in federal. Near-term overhang is the FY2027 Data Center revenue cliff (~−17% guided) and competition from Microsoft Copilot and ServiceNow Agentforce for agent orchestration — but Q4's cloud re-acceleration to +31%, RPO +44%, and founder $250M buy plan argue the market had over-discounted those risks into the April $56 low and the $110 pre-print close."
+  }
+}

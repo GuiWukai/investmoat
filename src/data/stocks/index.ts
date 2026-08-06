@@ -123,6 +123,7 @@ import zeta from './zeta.json';
 import samsung from './samsung.json';
 import rok from './rok.json';
 import ter from './ter.json';
+import team from './team.json';
 import harmonic from './harmonic.json';
 import ionq from './ionq.json';
 import rgti from './rgti.json';
@@ -258,6 +259,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   samsung: samsung as StockAnalysisData,
   rok: rok as StockAnalysisData,
   ter: ter as StockAnalysisData,
+  team: team as StockAnalysisData,
   harmonic: harmonic as StockAnalysisData,
   ionq: ionq as StockAnalysisData,
   rgti: rgti as StockAnalysisData,
