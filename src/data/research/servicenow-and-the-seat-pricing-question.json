@@ -3,14 +3,14 @@
   "title": "ServiceNow and the Seat-Pricing Question",
   "dek": "The market spent the first half of 2026 pricing enterprise software for the collapse of per-seat billing. ServiceNow's Q2 is the first hard read on that fear — and it suggests the market indexed on the wrong variable.",
   "published": "July 28, 2026",
-  "lastReviewed": "August 3, 2026",
+  "lastReviewed": "August 6, 2026",
   "tickers": ["NOW", "CRM", "ADBE", "INTU", "OKTA", "FIG", "DDOG", "SNOW", "MDB", "NET"],
   "tags": ["Enterprise Software", "AI Monetization", "Business Models"],
   "summary": "Enterprise software de-rated through H1 2026 on the thesis that AI agents destroy per-seat pricing faster than task-based pricing can replace it. ServiceNow is the cleanest test case: it fell roughly 30% YTD on that fear, then reported Q2 2026 with subscription revenue re-accelerating to +24.5% YoY and AI ACV crossing $1B. Read across the ten names in our coverage that bill by seat or by consumption, the billing model turns out to be a poor predictor of AI exposure. What separates the winners is whether the vendor owns the system of record and the transaction layer that agents must act through — which is why ServiceNow, priced by seat, is better positioned than Snowflake and MongoDB, which are priced by consumption.",
   "falsifiableBy": {
     "claim": "ServiceNow AI ACV stalling short of the $1.5B FY2026 target, or subscription growth decelerating below 18% while AI ACV still grows — the combination that would show task-based revenue arriving as a substitute for seat revenue rather than as an addition to it.",
     "status": "holding",
-    "note": "Not yet testable on new data — ServiceNow next reports in October. What this review could check, it did: every moat status the piece names still matches the underlying stock analyses, so the cohort sorting the argument rests on is unchanged."
+    "note": "Still waiting on the October print. The last ServiceNow data is Q2 — AI ACV on track for the $1.5B FY target with subscription growth at 24.5% — so the substitution pattern the claim watches for has not appeared. Datadog's August 6 re-analysis did not change any cohort moat status the piece rests on."
   },
   "sources": [
     {
@@ -23,6 +23,10 @@
     }
   ],
   "revisions": [
+    {
+      "date": "August 6, 2026",
+      "note": "Triggered by Datadog's August 6 re-analysis after its Q2 beat — its four AI-resilient pillars are unchanged and still short of all-four-strong, so the consumption-vs-seat sorting is untouched. Re-verified every moat status the prose names: ServiceNow, Salesforce and Intuit still clear all four; Snowflake and MongoDB still carry weakened proprietary-data; Adobe's system-of-record, transaction-embedding and regulatory-lock-in still sit below strong; Figma still reaches strong on none, with regulatory lock-in not applicable; Salesforce's business-logic pillar still weakened where ServiceNow's is strong. Q2 metrics table left as-is — ServiceNow next reports in October. Salesforce, Snowflake, MongoDB and Intuit analyses remain May 2026."
+    },
     {
       "date": "August 3, 2026",
       "note": "Adobe MGV refreshed to Q2 FY2026 (beat-and-raise, Firefly ARR ~$300M, freemium doubled down with deferred Creative Cloud price increases). Re-verified every moat status the prose names — Adobe's system-of-record, transaction-embedding and regulatory-lock-in still sit below strong with proprietaryData the only strong AI-resilient pillar, so the counter-case holds. Updated the ADBE scorecard note and counter-case prose off the stale ~8.3% organic ARR guide to the Q2 freemium/ARR framing. Salesforce, Snowflake and MongoDB still carry May 2026 analyses."
