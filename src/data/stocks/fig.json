@@ -9,7 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "$11.28B"
+      "value": "~$12.8B"
     }
   ],
   "chips": [
@@ -24,29 +24,29 @@
   ],
   "metrics": [
     {
-      "title": "Q1 2026 Revenue",
-      "value": "$333.4M",
-      "label": "+46% YoY Growth",
+      "title": "Q2 2026 Revenue",
+      "value": "$370.1M",
+      "label": "+48% YoY — 3rd straight acceleration",
       "icon": "TrendingUp",
       "color": "#3b82f6"
     },
     {
       "title": "Net Dollar Retention",
-      "value": "139%",
-      "label": "Q1 2026 — 2-Year High",
+      "value": "136%",
+      "label": "Q2 2026 — still elevated vs prior peak cycle",
       "icon": "RefreshCw",
       "color": "#10b981"
     },
     {
       "title": "Gross Margin",
-      "value": "82%",
-      "label": "Non-GAAP — Q1 2026",
+      "value": "85%",
+      "label": "Non-GAAP — +2.5pp QoQ on AI credits",
       "icon": "Zap",
       "color": "#f7b600"
     }
   ],
   "moat": {
-    "description": "Deep collaborative network effects and high switching costs via embedded design systems and team workflows — early post-launch data (Q1 2026 revenue +46% YoY, NDR at a two-year high of 139%, and a raised FY26 guide delivered weeks after Claude Design went live) suggests the bundling and talent-scarcity threats from Claude Design and Google Vibe have not yet shown up in the numbers, though the AI-native competitive threat remains only ~2.5 months old.",
+    "description": "Deep collaborative network effects and high switching costs via embedded design systems and team workflows — Q2 2026 (the first full quarter after Claude Design and Google Vibe) delivered a third straight acceleration to +48% YoY, NDR of 136%, a $40M FY26 revenue raise, and >80% of $10K+ ARR customers consuming AI credits weekly, so the seat-threat thesis has still not shown up in the numbers even as AI inference costs and a flat OI guide triggered a ~15% post-print selloff.",
     "analysisTitle": "The Collaboration Lock-In Moat",
     "analysisSummary": "Figma's moat is built on **Network Effects and Organisational Switching Costs**:",
     "analysisPoints": [
@@ -56,114 +56,116 @@
       },
       {
         "title": "System of Record for Design",
-        "text": "At thousands of companies, Figma is the canonical source of truth for product design — brand guidelines, UI components, and interaction specs all live there. Dev Mode creates a direct design-to-developer handoff pipeline, making Figma structurally embedded in the software development lifecycle. Claude Design exports to HTML and Claude Code directly, creating a competing pathway, but years of accumulated organisational design assets remain in Figma and cannot be migrated cheaply."
+        "text": "At thousands of companies, Figma is the canonical source of truth for product design — brand guidelines, UI components, and interaction specs all live there. Dev Mode, Code Layers, and the Figma agent deepen the design-to-developer handoff on the canvas itself. Claude Design still offers a competing export path to Claude Code, but years of accumulated organisational design assets remain in Figma and cannot be migrated cheaply."
       },
       {
         "title": "Expanding Product Suite Under Pressure",
-        "text": "With eight products (Design, FigJam, Slides, Sites, Make, Draw, Dev Mode, Buzz), Figma's bundle raised switching costs across teams. Claude Design still directly competes with FigJam, Slides, Sites, and Make from a single text-prompt interface, but Q1 2026 results — reported after the April 17 launch was already priced into management's outlook — showed 690,000 paid customers (+54% YoY) and 1,525 accounts over $100K ARR (+48% YoY), with a raised FY26 guide suggesting the bundle is still driving expansion revenue rather than losing seats to Claude Design."
+        "text": "With eight products plus Config launches (Code Layers, Motion, Shaders, Weave Tools, Skills, generative plugins), Figma's bundle keeps raising switching costs. Claude Design still overlaps FigJam, Slides, Sites, and Make from a text-prompt interface, but Q2 — the first full quarter with Claude Design live — showed NDR at 136%, $100K+ ARR accounts +46% YoY to 1,635, and $10K+ ARR accounts +34% YoY to 15,964, with a raised FY26 guide suggesting the bundle and AI-credit add-ons are still driving expansion rather than losing seats."
       }
     ]
   },
   "growth": {
-    "description": "Q1 2026 revenue hit $333.4M (+46% YoY), accelerating from +40% in Q4 2025 and +38% in Q3 2025. NDR expanded to 139% — a two-year high — from 136% in Q4. FY2026 guidance was raised to $1.422–1.428B (+~35% YoY) and non-GAAP operating income guidance raised to $125–135M, delivered weeks after Anthropic's Claude Design launch (April 17, 2026) and Google's Vibe design tool. AI credit monetisation (live since March 18, 2026) is contributing to the beat. Key risk: Claude Design and Google Vibe target the zero-to-one design workflow; Q1 results predate most of their competitive impact, so the risk to new-logo acquisition and NDR remains unproven rather than resolved.",
+    "description": "Q2 2026 revenue hit $370.1M (+48% YoY), accelerating for a third straight quarter from +46% in Q1 and +40% in Q4 2025 — and this was the first full quarter of AI credit monetisation plus the first full quarter with Claude Design and Google Vibe in market. NDR held at 136% (off the 139% Q1 high as March 2025 pricing anniversaryed). Non-GAAP gross margin expanded 2.5pp QoQ to 85% as credit monetisation kicked in, while non-GAAP operating margin fell to 10% on Config seasonality and AI investment; free cash flow margin was 14%. FY2026 revenue guidance was raised $40M to $1.463–1.467B (+~39% YoY), but non-GAAP operating income was held at $125–135M (9% margin at midpoint) and Q3 revenue is guided to $373–375M (+~36% YoY) — the combination that drove the ~15% Aug 6 selloff. Over 80% of $10K+ ARR customers consume AI credits weekly; as of July 31, over 50% already use the Figma agent weekly. Key residual risk: whether AI credit revenue outruns inference costs as beta products (Agent, Code Layers, Make on local code) move to paid credits, and whether the guided Q3 deceleration to ~36% proves temporary or structural under AI-native competition.",
     "growthAnalysis": {
       "cagrEstimate": "30–35%",
-      "scoreDerivation": "Base 91 (30–35% CAGR, baseFromCagr formula) + 4 trajectory (3 of 3 drivers accelerating) + 4 expanding margins + 4 both TAM/share − 10 high keyRisk severity (Claude Design/Google Vibe AI-native disruption, unconfirmed in data but structural) = 93",
+      "cagrBasis": "Measured on company revenue: Q3 2025 +38% → Q4 +40% → Q1 2026 +46% → Q2 +48%, with raised FY2026 guide midpoint ~$1.465B (+~39% YoY) and Q3 guide midpoint ~$374M (+~36%). The 30–35% band sits between the raised near-term slope and a fade toward mid-20s by 2028 as the AI-credit overlay annualises and Claude Design/Vibe mature — not an extrapolation of the +48% print.",
+      "scoreDerivation": "Base 91 (30–35% CAGR) + 4 trajectory (3 of 3 drivers accelerating) + 0 stable margins (GM expanded on AI credits; OI% guided flat at 9% as Config/AI investment absorb the revenue raise) − 5 moderate keyRisk (Claude Design/Vibe seat threat still unconfirmed after two accelerating post-launch quarters; AI cost/operating-leverage risk now the live residual) = 90",
       "drivers": [
         {
           "name": "Core Design Platform",
-          "metric": "+46% YoY Q1 2026, $333.4M quarterly revenue, accelerating from +40% in Q4",
+          "metric": "+48% YoY Q2 2026, $370.1M quarterly revenue — third straight acceleration",
           "trend": "accelerating"
         },
         {
-          "name": "AI Credits (Make, Sites, Weave)",
-          "metric": "Monetisation live since March 2026; contributed to Q1 beat and raised FY26 opinc guide",
+          "name": "AI Credits (Make, Sites, Weave, Agent)",
+          "metric": "First full paid quarter; >80% of $10K+ ARR customers consume weekly; Agent weekly usage >50% of $10K+ ARR by Jul 31; drove $40M FY26 raise",
           "trend": "accelerating"
         },
         {
           "name": "Enterprise Expansion",
-          "metric": "NDR 139% Q1 2026 (2-yr high), $100K+ ARR cohort +48% YoY to 1,525 accounts",
+          "metric": "NDR 136% Q2 2026; $100K+ ARR cohort +46% YoY to 1,635; $10K+ ARR +34% YoY to 15,964",
           "trend": "accelerating"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "Claude Design and Google Vibe both launched after Q1 2026 closed, so the 46% growth and raised guidance do not yet reflect their full impact; if either captures meaningful zero-to-one share by Q3/Q4 2026, NDR could reverse from the current 139% high and growth could decelerate back toward or below the ~35% guided range",
-      "keyRiskSeverity": "high",
-      "marginTrend": "expanding"
+      "keyRisk": "If AI credit monetisation fails to outrun inference and hosting costs as Agent/Code Layers/Make leave beta — while Q3 already guides growth down to ~36% and non-GAAP OI stays pinned at $125–135M on a raised revenue line — operating leverage stalls and the multiple re-rates; Claude Design and Google Vibe remain a secondary seat-threat if zero-to-one share shifts by late 2026 despite two post-launch quarters of accelerating growth",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 79,
-    "description": "At $21.34, FIG sits between the revised bear ($15) and base ($30) cases, roughly 42% above bear and 29% below base. The stock briefly hit a 52-week low of $16.60 in late April 2026 on Claude Design and Google Vibe competitive fears, then rebounded 9.5% on July 2, 2026 after Citigroup initiated Buy coverage with a $36 target citing a $25B TAM and channel checks showing strong AI seat upgrades. Q1 2026's 46% revenue growth and a guidance raise delivered after Claude Design's launch suggest the bear case has not yet materialised, though the AI-native threat is still only ~2.5 months old.",
+    "score": 75,
+    "description": "At $23.97 (~$12.8B), FIG sits between the bear ($15) and base ($30) cases — roughly 60% above bear and 20% below base — after selling off ~15% on Aug 6 despite a Q2 beat-and-raise. The tape keyed on flat FY non-GAAP OI guidance ($125–135M) beside a $40M revenue raise, plus Q3 growth guided to ~36% from Q2's 48%, not on competitive share loss: NDR held at 136% and AI-credit adoption broadened through the first full quarter with Claude Design live. At ~8.7× forward sales on the raised ~$1.465B FY26 guide the multiple still prices meaningful AI-disruption and margin risk; the post-print wipeout restores more asymmetry to the $15/$30/$48 ladder than the mid-$28 pre-print tape did.",
     "peAnalysis": {
-      "asOf": "July 2026",
+      "asOf": "August 7, 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
           "value": "N/A",
-          "note": "GAAP op. loss; heavy SBC"
+          "note": "GAAP op. loss; heavy SBC (~$148M in Q2)"
         },
         {
           "label": "Forward P/E (NTM, non-GAAP)",
-          "value": "~76×",
-          "note": "early-stage margin expansion"
+          "value": "~85×",
+          "note": "early-stage margin expansion; FY26 non-GAAP OI held at $125–135M"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~8×",
-          "note": "$1.425B FY26 guide midpoint"
+          "value": "~8.7×",
+          "note": "$1.465B FY26 guide midpoint"
         },
         {
           "label": "EV / Revenue (NTM)",
-          "value": "~7×",
-          "note": "~$1.6B net cash backed out"
+          "value": "~7.6×",
+          "note": "~$1.7B net cash backed out"
         },
         {
           "label": "Price / FCF",
-          "value": "~29×",
-          "note": "27% Q1 2026 FCF margin"
+          "value": "~45×",
+          "note": "14% Q2 FCF margin (Config + inference); ~20% run-rate implies ~$290M"
         }
       ],
-      "summary": "At ~8× forward sales and ~7× EV/revenue, FIG trades well below high-growth SaaS peers despite 46% growth and a raised guide — the multiple still prices in meaningful AI-disruption risk. The ~76× non-GAAP forward P/E looks rich in isolation but reflects an early-stage profitability ramp (16% Q1 non-GAAP operating margin) rather than mature earnings power; investors are effectively paying via the sales multiple, not the P/E, until non-GAAP EPS scales further."
+      "summary": "At ~8.7× forward sales and ~7.6× EV/revenue after the Aug 6 selloff, FIG trades well below high-growth SaaS peers despite 48% growth and a second consecutive guide raise — the multiple still prices AI-disruption risk and now also AI-cost/margin risk. The ~85× non-GAAP forward P/E looks rich in isolation but reflects an investment year (9% guided OI margin) rather than mature earnings power; investors are paying via the sales multiple until credit monetisation proves it can outrun inference spend."
     }
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$15",
-      "description": "Claude Design and Google Vibe begin eroding Figma's zero-to-one pipeline in H2 2026, reversing the Q1 2026 NDR high of 139% toward 110–115% and decelerating growth to 15–18% by 2027, compressing the multiple to 4–5× forward revenue.",
+      "description": "AI credit gross profit fails to cover inference costs as Agent/Code Layers leave beta, and/or Claude Design and Google Vibe erode Figma's zero-to-one pipeline in H2 2026 — NDR slides from 136% toward 110–115%, growth decelerates to 15–18% by 2027, and the multiple compresses to 4–5× forward revenue.",
       "points": [
-        "Claude Design and Google Vibe capture meaningful share of zero-to-one design and prototyping workflows once fully rolled out, reversing Q1's +54% YoY paid-customer growth and stalling new-logo acquisition",
-        "Net dollar retention reverses from the 139% Q1 2026 high toward 110–115% as teams adopt AI-native tools for FigJam, Slides, and early-stage prototyping without paying Figma",
-        "Heavy SBC and AI R&D spend keep GAAP losses persistent while growth decelerates to 15–18%, triggering a re-rate to 4–5× forward revenue and a move below $8B market cap"
+        "AI inference and hosting costs keep absorbing incremental gross profit even as credit add-ons scale, stranding the flat $125–135M OI guide and forcing a re-rate on margin structure alone",
+        "Claude Design and Google Vibe capture meaningful share of zero-to-one design and prototyping once fully rolled out, reversing $10K+/$100K+ ARR cohort growth and stalling new-logo acquisition",
+        "Net dollar retention reverses from the 136% Q2 print toward 110–115% as teams adopt AI-native tools for FigJam, Slides, and early-stage prototyping without paying Figma",
+        "Heavy SBC and AI R&D spend keep GAAP losses persistent while growth decelerates to 15–18%, triggering a move below ~$8B market cap"
       ]
     },
     "base": {
       "priceTarget": "$30",
-      "description": "Figma's Q1 2026 beat proves durable — NDR holds in the 130–139% range, paid customers keep growing 40%+, and AI credit monetisation (live since March 2026) adds incremental high-margin revenue, sustaining 28–32% growth through 2027 even as Claude Design and Vibe compete at the margin.",
+      "description": "Figma's Q2 beat proves durable — NDR holds in the 130–136% range, $100K+ ARR keeps growing 40%+, and AI credit monetisation (now with Agent/Code Layers graduating toward paid usage) adds incremental high-margin revenue, sustaining 28–32% growth through 2027 even as Claude Design and Vibe compete at the margin and operating margin rebuilds off the guided 9% trough.",
       "points": [
-        "NDR sustains in the 130–139% range as enterprise design-system lock-in, Dev Mode embedding, and real-time collaboration continue to outweigh AI-native point solutions for professional teams",
-        "AI credit monetisation (live since March 18, 2026) plus Figma Make/Weave adoption drive FY2026 revenue to the guided $1.42–1.43B range (+~35% YoY) with non-GAAP operating income of $125–135M",
-        "Continued non-GAAP profitability (16% Q1 operating margin, 27% FCF margin) supports a valuation floor at ~8–9× forward revenue on ~$1.85–1.9B 2027E revenue"
+        "NDR sustains in the 130–136% range as enterprise design-system lock-in, Dev Mode/Code Layers embedding, and real-time collaboration continue to outweigh AI-native point solutions for professional teams",
+        "AI credit monetisation plus Agent/Make/Weave adoption drive FY2026 revenue to the guided $1.46–1.47B range (+~39% YoY) with non-GAAP operating income of $125–135M, then OI dollars expand in 2027 as beta inference costs flip to paid credits",
+        "Continued non-GAAP profitability and ~$1.7B net cash support a valuation floor at ~8–9× forward revenue on ~$1.9–2.0B 2027E revenue"
       ]
     },
     "bull": {
       "priceTarget": "$48",
-      "description": "Figma decisively wins the AI-native design category — growth re-accelerates above 40%, first-party design models and hyperscaler partnerships validate the platform, and Claude Design/Vibe prove more complementary top-of-funnel tools than direct replacements for professional workflows.",
+      "description": "Figma decisively wins the AI-native design category — growth re-accelerates above 40%, first-party design models cut inference cost and raise quality, and Claude Design/Vibe prove more complementary top-of-funnel tools than direct replacements for professional workflows.",
       "points": [
-        "Figma Make, Weave, and first-party design models (in development per the Q1 2026 call) drive sustained 40%+ growth as AI credit revenue scales faster than guided, offsetting any seat pressure from Claude Design/Vibe",
-        "The $100K+ ARR cohort (1,525 accounts, +48% YoY in Q1 2026) keeps compounding as Dev Mode and design-system lock-in become even more entrenched in the SDLC",
-        "The Q1 beat, raised guidance, and Citigroup's Buy initiation ($36 target, $25B TAM thesis) catalyse a re-rating to 12–13× forward revenue as sentiment shifts from AI-disruption fear to AI-monetisation optimism"
+        "Figma Make, Weave, Agent, Code Layers, and first-party design models drive sustained 40%+ growth as AI credit revenue scales faster than guided, with gross margin holding mid-80s as model routing and first-party models compress unit cost",
+        "The $100K+ ARR cohort (1,635 accounts, +46% YoY in Q2 2026) keeps compounding as Code Layers and design-system lock-in become even more entrenched in the SDLC",
+        "The second consecutive beat-and-raise and visible AI-credit operating leverage catalyse a re-rating to 12–13× forward revenue as sentiment shifts from AI-disruption/AI-cost fear to AI-monetisation optimism"
       ]
     }
   },
   "tenMoats": {
     "learnedInterfaces": {
       "status": "intact",
-      "note": "Claude Design (April 2026) abstracts away Figma's UI entirely for non-designers — founders, marketers, and PMs can now generate prototypes and slides via text prompts without learning Auto Layout or component variants. Power designers retain deep Figma muscle memory, but the moat no longer covers the zero-to-one design phase."
+      "note": "Claude Design (April 2026) abstracts away Figma's UI entirely for non-designers — founders, marketers, and PMs can generate prototypes and slides via text prompts without learning Auto Layout or component variants. Power designers retain deep Figma muscle memory, and Config 2026's Motion/Shaders/Code Layers deepen that interface for professionals, but the moat no longer covers the zero-to-one design phase."
     },
     "businessLogic": {
       "status": "intact",
-      "note": "Figma's component/variant architecture, design tokens, and shared library logic encode complex organisational design systems that are expensive to replicate or migrate. Claude Design can read these systems from codebases, but cannot yet replace the depth of multi-year enterprise design-system configuration stored in Figma."
+      "note": "Figma's component/variant architecture, design tokens, shared library logic, and new Skills/generative-plugin layer encode complex organisational design systems that are expensive to replicate or migrate. Claude Design can read these systems from codebases, but cannot yet replace the depth of multi-year enterprise design-system configuration stored in Figma."
     },
     "publicDataAccess": {
       "status": "na",
@@ -171,15 +173,15 @@
     },
     "talentScarcity": {
       "status": "weakened",
-      "note": "Claude Design (April 2026) still explicitly targets the 'non-designer' — founders, marketers, and PMs who previously hired Figma-trained designers for zero-to-one work — and Anthropic's CPO (Mike Krieger) left Figma's board days before the launch. But Q1 2026 paid customers grew +54% YoY to ~690,000 and FY26 guidance was raised $55M after the launch, suggesting the talent-substitution threat has not yet dented new-account acquisition. Upgraded from 'destroyed' to 'weakened' pending further quarters of evidence."
+      "note": "Claude Design still explicitly targets the 'non-designer' — founders, marketers, and PMs who previously hired Figma-trained designers for zero-to-one work. But two post-launch quarters of accelerating growth (Q1 +46%, Q2 +48%), a second FY26 guide raise, and management's own note that it is 'hiring fewer people than originally planned' because AI augments its workforce suggest the talent-substitution threat has not dented new-account or seat expansion. Held at 'weakened' — not upgraded to intact — until another quarter confirms the pattern past the guided Q3 deceleration."
     },
     "bundling": {
       "status": "intact",
-      "note": "Claude Design still directly overlaps with FigJam, Slides, Sites, and Make, offered to every paid Claude subscriber via text prompts. But Q1 2026 NDR hit a two-year high of 139% and $100K+ ARR accounts grew +48% YoY to 1,525 even with Claude Design live for part of the quarter, and Citigroup's channel checks with hyperscalers and large enterprises found strong seat upgrades and AI-credit utilisation. Upgraded from 'weakened' to 'intact' on this evidence, though the sample period is short."
+      "note": "Claude Design still directly overlaps with FigJam, Slides, Sites, and Make, offered to every paid Claude subscriber via text prompts. But Q2 — the first full quarter with Claude Design live — printed NDR of 136%, $100K+ ARR +46% YoY to 1,635, and >80% weekly AI-credit adoption among $10K+ ARR customers, with a $40M guide raise driven by credit consumption and conversion. Held at 'intact' on two quarters of post-launch evidence."
     },
     "proprietaryData": {
       "status": "weakened",
-      "note": "Figma holds vast design data from enterprise teams, but Claude Design can ingest a company's codebase and design files to extract and apply brand-consistent design systems — partially replicating Figma's proprietary-data advantage. Google, Canva, and Anthropic are training AI on comparable design corpora without Figma's data exclusivity."
+      "note": "Figma holds vast design data from enterprise teams and is training first-party models on that corpus for the Figma agent, but Claude Design can ingest a company's codebase and design files to extract brand-consistent systems — partially replicating the proprietary-data advantage. Google, Canva, and Anthropic train on comparable design corpora without Figma's data exclusivity."
     },
     "regulatoryLockIn": {
       "status": "na",
@@ -187,17 +189,17 @@
     },
     "networkEffects": {
       "status": "strong",
-      "note": "Shared design systems, component libraries, and real-time multiplayer collaboration make Figma exponentially more valuable as more teammates join. Claude Design routes collaborative editing to Canva rather than Figma, leaving Figma's organisational network effect largely intact for existing enterprise deployments."
+      "note": "Shared design systems, component libraries, and real-time multiplayer collaboration make Figma exponentially more valuable as more teammates join. Claude Design routes collaborative editing to Canva rather than Figma, leaving Figma's organisational network effect largely intact for existing enterprise deployments — and Config's Code Layers / agent features extend that shared canvas to code-backed prototypes."
     },
     "transactionEmbedding": {
       "status": "intact",
-      "note": "Dev Mode embeds Figma in the developer handoff layer of every product team's daily build cycle. Claude Design now offers a competing pathway — designs can be exported directly to Claude Code — but this pipeline is nascent and does not yet displace established enterprise Dev Mode workflows. A material threat to monitor over the next 2–4 quarters."
+      "note": "Dev Mode embeds Figma in the developer handoff layer of every product team's daily build cycle; Code Layers and Figma Make on local code deepen that embedding by putting interactive, code-backed prototypes on the canvas itself. Claude Design still offers a competing export path to Claude Code, but Q2 customer examples (engineers holding more paid seats than designers at a large tech account) suggest the Dev Mode / Code Layers pathway is gaining rather than losing share. Still not 'strong' — the Claude Code path remains a material threat to monitor."
     },
     "systemOfRecord": {
       "status": "intact",
       "note": "Figma remains the canonical system of record for product design assets, brand components, and interaction specs at thousands of companies. New design projects may increasingly start in Claude Design, but years of accumulated organisational design history remain in Figma and cannot be migrated cheaply — preserving the system-of-record moat for existing accounts."
     },
-    "verdict": "Figma's moat is pressured but has proven more resilient than the April 2026 analysis assumed. The Claude Design launch (April 17, 2026, backed by Anthropic's Opus 4.7) and Google's Vibe design tool still directly target the zero-to-one design workflow that drives Figma's new-seat acquisition, and the learned-interface moat has retreated to power-user workflows only. But Q1 2026 results — reported after Claude Design went live — showed revenue accelerating to +46% YoY, NDR at a two-year high of 139%, paid customers +54% YoY, and a $55M guidance raise, prompting upgrades to talent-scarcity (destroyed → weakened) and bundling (weakened → intact). Network effects and system-of-record status remain genuinely durable for existing enterprise accounts, and the bundle is still driving expansion revenue rather than losing seats. The evidence window is short (~2.5 months since Claude Design's launch), so this is a provisional read: Figma's AI-era durability still depends on whether Dev Mode embedding and enterprise design-system lock-in keep outpacing Claude Design and Vibe as they mature through 2026."
+    "verdict": "Figma's moat is pressured but has now survived a full quarter of Claude Design and Google Vibe with accelerating growth, which is stronger evidence than the July read had. Q2 2026 printed +48% YoY revenue (third straight acceleration), NDR of 136%, $100K+ ARR +46% YoY, >80% weekly AI-credit adoption among $10K+ ARR customers, and a $40M FY26 revenue raise — while the stock sold off ~15% on flat OI guidance and a guided Q3 deceleration to ~36%, not on share loss. Talent-scarcity stays weakened and bundling stays intact; network effects remain the durable core. The new live risk is whether AI credit gross profit outruns inference costs as Agent/Code Layers leave beta — a margin question, not yet a moat-destruction question. Figma's AI-era durability still depends on Dev Mode/Code Layers embedding and enterprise design-system lock-in keeping outpacing Claude Design and Vibe through the rest of 2026."
   },
-  "lastAnalyzed": "July 5, 2026"
+  "lastAnalyzed": "August 7, 2026"
 }
