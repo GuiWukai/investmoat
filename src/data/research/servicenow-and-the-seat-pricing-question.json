@@ -3,14 +3,14 @@
   "title": "ServiceNow and the Seat-Pricing Question",
   "dek": "The market spent the first half of 2026 pricing enterprise software for the collapse of per-seat billing. ServiceNow's Q2 is the first hard read on that fear — and it suggests the market indexed on the wrong variable.",
   "published": "July 28, 2026",
-  "lastReviewed": "August 6, 2026",
+  "lastReviewed": "August 7, 2026",
   "tickers": ["NOW", "CRM", "ADBE", "INTU", "OKTA", "FIG", "DDOG", "SNOW", "MDB", "NET"],
   "tags": ["Enterprise Software", "AI Monetization", "Business Models"],
   "summary": "Enterprise software de-rated through H1 2026 on the thesis that AI agents destroy per-seat pricing faster than task-based pricing can replace it. ServiceNow is the cleanest test case: it fell roughly 30% YTD on that fear, then reported Q2 2026 with subscription revenue re-accelerating to +24.5% YoY and AI ACV crossing $1B. Read across the ten names in our coverage that bill by seat or by consumption, the billing model turns out to be a poor predictor of AI exposure. What separates the winners is whether the vendor owns the system of record and the transaction layer that agents must act through — which is why ServiceNow, priced by seat, is better positioned than Snowflake and MongoDB, which are priced by consumption.",
   "falsifiableBy": {
     "claim": "ServiceNow AI ACV stalling short of the $1.5B FY2026 target, or subscription growth decelerating below 18% while AI ACV still grows — the combination that would show task-based revenue arriving as a substitute for seat revenue rather than as an addition to it.",
     "status": "holding",
-    "note": "Still waiting on the October print. The last ServiceNow data is Q2 — AI ACV on track for the $1.5B FY target with subscription growth at 24.5% — so the substitution pattern the claim watches for has not appeared. Datadog's August 6 re-analysis did not change any cohort moat status the piece rests on."
+    "note": "Still waiting on the October print. The last ServiceNow data is Q2 — AI ACV on track for the $1.5B FY target with subscription growth at 24.5% — so the substitution pattern the claim watches for has not appeared. Figma's August 7 Q2 re-analysis did not change any cohort moat status the piece rests on."
   },
   "sources": [
     {
@@ -23,6 +23,10 @@
     }
   ],
   "revisions": [
+    {
+      "date": "August 7, 2026",
+      "note": "Triggered by Figma's August 7 Q2 re-analysis after its beat-and-raise (+48% revenue, NDR 136%, $40M FY26 raise) and ~15% post-print selloff on flat OI guidance. Re-verified every moat status the prose names: Figma still reaches strong on none of the four AI-resilient pillars, with regulatory lock-in not applicable — so the seat-vs-consumption sorting is untouched. Updated the FIG scorecard note off the stale Q1 NDR 139% print to the Q2 136% / accelerating-growth framing. ServiceNow, Salesforce and Intuit still clear all four; Snowflake and MongoDB still carry weakened proprietary-data; Adobe's system-of-record, transaction-embedding and regulatory-lock-in still sit below strong. ServiceNow next reports in October."
+    },
     {
       "date": "August 6, 2026",
       "note": "Triggered by Datadog's August 6 re-analysis after its Q2 beat — its four AI-resilient pillars are unchanged and still short of all-four-strong, so the consumption-vs-seat sorting is untouched. Re-verified every moat status the prose names: ServiceNow, Salesforce and Intuit still clear all four; Snowflake and MongoDB still carry weakened proprietary-data; Adobe's system-of-record, transaction-embedding and regulatory-lock-in still sit below strong; Figma still reaches strong on none, with regulatory lock-in not applicable; Salesforce's business-logic pillar still weakened where ServiceNow's is strong. Q2 metrics table left as-is — ServiceNow next reports in October. Salesforce, Snowflake, MongoDB and Intuit analyses remain May 2026."
@@ -110,7 +114,7 @@
         "ADBE": "Q2 freemium double-down; ending ARR guide 10.2% incl. Semrush",
         "INTU": "QuickBooks system of record; TurboTax exposed",
         "OKTA": "NRR inflected to 107%; identity for AI agents",
-        "FIG": "NDR 139%, but AI-native competition is months old",
+        "FIG": "NDR 136% after Q2 +48% beat-and-raise; AI competition still months old",
         "DDOG": "Consumption scales with machine workloads",
         "SNOW": "Consumption, but contested by the lakehouse architecture",
         "MDB": "Consumption, but losing developer starts to pgvector",
