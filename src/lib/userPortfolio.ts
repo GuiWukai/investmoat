@@ -11,13 +11,15 @@ import {
 export type UserHolding = {
   slug: string;
   shares: number;
-  /** Average cost per share in the portfolio display currency. Optional. */
+  /** Average cost per share. Optional. Denominated in avgCostCurrency. */
   avgCost?: number;
+  /** Currency the average cost was entered in. Defaults to book currency when absent. */
+  avgCostCurrency?: PortfolioCurrency;
 };
 
 export type UserPortfolioState = {
   holdings: UserHolding[];
-  /** Book currency for totals, P&L, and average cost inputs. */
+  /** Book currency for totals, market value, and P&L display. */
   displayCurrency: PortfolioCurrency;
   updatedAt: string;
 };
@@ -50,6 +52,9 @@ function normalizeHolding(raw: unknown): UserHolding | null {
         : Number(obj.avgCost);
   if (avgCost !== undefined && isFinitePositive(avgCost)) {
     holding.avgCost = avgCost;
+    if (isPortfolioCurrency(obj.avgCostCurrency)) {
+      holding.avgCostCurrency = obj.avgCostCurrency;
+    }
   }
   return holding;
 }
