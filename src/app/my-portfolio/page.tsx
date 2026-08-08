@@ -19,14 +19,28 @@ import {
   ListBox,
   ListBoxItem,
   Spinner,
+  ToggleButton,
+  ToggleButtonGroup,
 } from '@heroui/react';
-import { allCoverageData } from '@/app/stockData';
+import { allCoverageData, getAverageScore } from '@/app/stockData';
+import {
+  convertBetweenPortfolioCurrencies,
+  convertToDisplay,
+  formatMoney,
+  PORTFOLIO_CURRENCIES,
+  roundMoney,
+  type PortfolioCurrency,
+} from '@/lib/portfolioCurrency';
 import {
   clearUserPortfolio,
   loadUserPortfolio,
   saveUserPortfolio,
   type UserHolding,
 } from '@/lib/userPortfolio';
+import {
+  computeValuationScore,
+  parseScenarioPrice,
+} from '@/lib/valuationScore';
 
 type CoverageStock = (typeof allCoverageData)[number];
 type StockOption = CoverageStock & { id: string };
@@ -34,22 +48,38 @@ type StockOption = CoverageStock & { id: string };
 type Quote = {
   price: number | null;
   changePercent: number | null;
+  currency: string | null;
 };
-
-function formatMoney(value: number | null | undefined): string {
-  if (value == null || !Number.isFinite(value)) return '—';
-  return value.toLocaleString('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  });
-}
 
 function formatPct(value: number | null | undefined): string {
   if (value == null || !Number.isFinite(value)) return '—';
   const sign = value > 0 ? '+' : '';
   return `${sign}${value.toFixed(2)}%`;
+}
+
+/** Same band colours as the IM25 holdings table. */
+function scoreColor(score: number): string {
+  if (score >= 90) return 'text-emerald-400';
+  if (score >= 80) return 'text-blue-400';
+  if (score >= 70) return 'text-amber-400';
+  return 'text-rose-400';
+}
+
+/** Live composite when a quote exists; otherwise the static coverage score. */
+function compositeForStock(
+  stock: CoverageStock | undefined,
+  nativePrice: number | null
+): number | null {
+  if (!stock) return null;
+  const [moat, growth, staticValuation] = stock.scores;
+  const bear = parseScenarioPrice(stock.bearTarget);
+  const base = parseScenarioPrice(stock.baseTarget);
+  const bull = parseScenarioPrice(stock.bullTarget);
+  const valuation =
+    nativePrice != null && bear && base && bull
+      ? computeValuationScore(nativePrice, bear, base, bull)
+      : staticValuation;
+  return Math.round(getAverageScore([moat, growth, valuation]));
 }
 
 function parsePositiveNumber(raw: string): number | null {
@@ -120,6 +150,7 @@ export default function MyPortfolioPage() {
   const router = useRouter();
 
   const [holdings, setHoldings] = useState<UserHolding[]>([]);
+  const [displayCurrency, setDisplayCurrency] = useState<PortfolioCurrency>('USD');
   const [hydrated, setHydrated] = useState(false);
 
   const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
@@ -127,22 +158,48 @@ export default function MyPortfolioPage() {
   const [sharesInput, setSharesInput] = useState('');
   const [avgCostInput, setAvgCostInput] = useState('');
   const [formError, setFormError] = useState<string | null>(null);
+  const [currencyError, setCurrencyError] = useState<string | null>(null);
 
   const [quotes, setQuotes] = useState<Record<string, Quote>>({});
   const [quotesLoading, setQuotesLoading] = useState(false);
+  const [usdCad, setUsdCad] = useState<number | null>(null);
+  const [fxLoading, setFxLoading] = useState(true);
 
   // Hydrate from localStorage after mount (avoids SSR mismatch).
   useEffect(() => {
     const state = loadUserPortfolio();
     setHoldings(state.holdings);
+    setDisplayCurrency(state.displayCurrency);
     setHydrated(true);
   }, []);
 
-  // Persist whenever holdings change post-hydration.
+  // Persist whenever holdings or book currency change post-hydration.
   useEffect(() => {
     if (!hydrated) return;
-    saveUserPortfolio(holdings);
-  }, [holdings, hydrated]);
+    saveUserPortfolio(holdings, displayCurrency);
+  }, [holdings, displayCurrency, hydrated]);
+
+  // USD/CAD mid for converting mixed-currency quotes into the book currency.
+  useEffect(() => {
+    let cancelled = false;
+    setFxLoading(true);
+    fetch('/api/fx/usd-cad')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => {
+        if (cancelled) return;
+        const rate = typeof d?.rate === 'number' && d.rate > 0 ? d.rate : null;
+        setUsdCad(rate);
+        setFxLoading(false);
+      })
+      .catch(() => {
+        if (cancelled) return;
+        setUsdCad(null);
+        setFxLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   // Live quotes for current holdings.
   useEffect(() => {
@@ -160,8 +217,24 @@ export default function MyPortfolioPage() {
       holdings.map((h) =>
         fetch(`/api/stock-price/${h.slug}`)
           .then((r) => (r.ok ? r.json() : null))
-          .then((d) => [h.slug, { price: d?.price ?? null, changePercent: d?.changePercent ?? null }] as const)
-          .catch(() => [h.slug, { price: null, changePercent: null }] as const)
+          .then(
+            (d) =>
+              [
+                h.slug,
+                {
+                  price: d?.price ?? null,
+                  changePercent: d?.changePercent ?? null,
+                  currency: typeof d?.currency === 'string' ? d.currency : null,
+                },
+              ] as const
+          )
+          .catch(
+            () =>
+              [
+                h.slug,
+                { price: null, changePercent: null, currency: null },
+              ] as const
+          )
       )
     ).then((entries) => {
       if (cancelled) return;
@@ -198,35 +271,51 @@ export default function MyPortfolioPage() {
     return matched.map((s) => ({ ...s, id: s.slug }));
   }, [query, heldSlugs]);
 
+  const needsFx = useMemo(() => {
+    if (holdings.length === 0) return false;
+    return holdings.some((h) => {
+      const quoteCurrency = (quotes[h.slug]?.currency ?? 'USD').toUpperCase();
+      return quoteCurrency !== displayCurrency;
+    });
+  }, [holdings, quotes, displayCurrency]);
+
   const rows = useMemo(() => {
     return holdings
       .map((h) => {
         const stock = coverageBySlug.get(h.slug);
         const quote = quotes[h.slug];
-        const price = quote?.price ?? null;
+        const nativePrice = quote?.price ?? null;
+        const quoteCurrency = quote?.currency ?? null;
         const changePercent = quote?.changePercent ?? null;
+        const price =
+          nativePrice == null
+            ? null
+            : convertToDisplay(nativePrice, quoteCurrency, displayCurrency, usdCad);
         const marketValue = price != null ? price * h.shares : null;
-        const costBasis =
-          h.avgCost != null ? h.avgCost * h.shares : null;
+        const costBasis = h.avgCost != null ? h.avgCost * h.shares : null;
         const gain =
           marketValue != null && costBasis != null ? marketValue - costBasis : null;
         const gainPct =
           gain != null && costBasis != null && costBasis > 0
             ? (gain / costBasis) * 100
             : null;
+        // Valuation uses the native quote (targets are in listing currency).
+        const score = compositeForStock(stock, nativePrice);
         return {
           ...h,
           stock,
+          quoteCurrency,
           price,
           changePercent,
           marketValue,
           costBasis,
           gain,
           gainPct,
+          score,
         };
       })
       .sort((a, b) => (b.marketValue ?? 0) - (a.marketValue ?? 0));
-  }, [holdings, coverageBySlug, quotes]);
+  }, [holdings, coverageBySlug, quotes, displayCurrency, usdCad]);
 
   const totals = useMemo(() => {
     let marketValue = 0;
@@ -254,8 +343,7 @@ export default function MyPortfolioPage() {
     const gain = hasMarket && hasCost ? marketValue - costBasis : null;
     const gainPct =
       gain != null && costBasis > 0 ? (gain / costBasis) * 100 : null;
-    const dayChange =
-      dayWeight > 0 ? dayChangeWeighted / dayWeight : null;
+    const dayChange = dayWeight > 0 ? dayChangeWeighted / dayWeight : null;
 
     return {
       marketValue: hasMarket ? marketValue : null,
@@ -346,20 +434,99 @@ export default function MyPortfolioPage() {
     clearUserPortfolio();
   }
 
+  function switchDisplayCurrency(next: PortfolioCurrency) {
+    if (next === displayCurrency) return;
+
+    const hasAvgCosts = holdings.some((h) => h.avgCost != null);
+    // Re-denominate stored avg costs with the live mid so P&L stays coherent.
+    if (hasAvgCosts) {
+      if (usdCad == null) {
+        setCurrencyError(
+          'Need a USD/CAD rate before switching book currency while average costs are set.'
+        );
+        return;
+      }
+      setHoldings((prev) =>
+        prev.map((h) => {
+          if (h.avgCost == null) return h;
+          return {
+            ...h,
+            avgCost: roundMoney(
+              convertBetweenPortfolioCurrencies(
+                h.avgCost,
+                displayCurrency,
+                next,
+                usdCad
+              )
+            ),
+          };
+        })
+      );
+    }
+
+    setCurrencyError(null);
+    setDisplayCurrency(next);
+  }
+
+  const money = (value: number | null | undefined) =>
+    formatMoney(value, displayCurrency);
+
   return (
     <div className="animate-fade-in dot-pattern">
       <header
         className="animate-fade-up stagger-fill-both pb-10 pt-6 md:pb-12 md:pt-12"
         style={{ animationDelay: '0s' }}
       >
-        <p className="section-label mb-3">Personal</p>
+        <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+          <p className="section-label">Personal</p>
+          <ToggleButtonGroup
+            aria-label="Portfolio currency"
+            className="flex items-center gap-1.5"
+            isDetached
+            selectedKeys={new Set([displayCurrency])}
+            onSelectionChange={(keys) => {
+              const key = [...keys][0];
+              if (key == null) return;
+              const next = String(key);
+              if (next === 'USD' || next === 'CAD') {
+                switchDisplayCurrency(next);
+              }
+            }}
+          >
+            {PORTFOLIO_CURRENCIES.map((code) => (
+              <ToggleButton
+                key={code}
+                id={code}
+                className="pill-toggle rounded-full px-3 py-1 text-xs font-semibold"
+              >
+                {code}
+              </ToggleButton>
+            ))}
+          </ToggleButtonGroup>
+        </div>
         <h1 className="mb-4 text-4xl font-extrabold leading-tight gradient-text-animated md:text-6xl">
           My Portfolio
         </h1>
         <p className="max-w-2xl text-base leading-relaxed text-foreground/45 md:text-lg">
           Track your own holdings against InvestMoat coverage. Shares and average
-          cost are saved in this browser only — nothing is uploaded.
+          cost are saved in this browser only — nothing is uploaded. Totals convert
+          USD and CAD quotes into your book currency.
         </p>
+        {currencyError && (
+          <p className="mt-3 text-sm text-rose-400">{currencyError}</p>
+        )}
+        {needsFx && !fxLoading && usdCad == null && (
+          <p className="mt-3 text-sm text-rose-400">
+            FX rate unavailable — mixed-currency positions show as — until the
+            USD/CAD mid loads.
+          </p>
+        )}
+        {usdCad != null && (
+          <p className="mt-3 text-xs text-foreground/28">
+            USDCAD {usdCad.toFixed(4)}
+            {needsFx ? ' · converting quote currencies into book currency' : ''}
+          </p>
+        )}
       </header>
 
       {/* Summary */}
@@ -373,11 +540,11 @@ export default function MyPortfolioPage() {
             <Spinner size="sm" color="current" />
           ) : (
             <p className="text-2xl font-black tabular-nums text-foreground">
-              {formatMoney(totals.marketValue)}
+              {money(totals.marketValue)}
             </p>
           )}
           <p className="mt-0.5 text-[10px] text-foreground/28">
-            {holdings.length} position{holdings.length === 1 ? '' : 's'}
+            {holdings.length} position{holdings.length === 1 ? '' : 's'} · {displayCurrency}
           </p>
         </Card>
 
@@ -405,7 +572,7 @@ export default function MyPortfolioPage() {
         <Card className="p-4">
           <p className="section-label mb-1.5">Cost basis</p>
           <p className="text-2xl font-black tabular-nums text-foreground">
-            {formatMoney(totals.costBasis)}
+            {money(totals.costBasis)}
           </p>
           <p className="mt-0.5 text-[10px] text-foreground/28">Optional · from avg cost</p>
         </Card>
@@ -420,7 +587,7 @@ export default function MyPortfolioPage() {
                 totals.gain >= 0 ? 'text-emerald-400' : 'text-rose-400'
               }`}
             >
-              <p className="text-2xl font-black tabular-nums">{formatMoney(totals.gain)}</p>
+              <p className="text-2xl font-black tabular-nums">{money(totals.gain)}</p>
               <p className="mt-0.5 text-[10px] tabular-nums opacity-80">
                 {formatPct(totals.gainPct)}
               </p>
@@ -525,9 +692,9 @@ export default function MyPortfolioPage() {
             </div>
 
             <div>
-              <p className="section-label mb-2">Avg cost (opt.)</p>
+              <p className="section-label mb-2">Avg cost ({displayCurrency})</p>
               <Input
-                aria-label="Average cost"
+                aria-label={`Average cost in ${displayCurrency}`}
                 inputMode="decimal"
                 onChange={(e) => {
                   setAvgCostInput(e.target.value);
@@ -602,6 +769,7 @@ export default function MyPortfolioPage() {
           <Card className="overflow-hidden">
             <div className="hidden items-center gap-3 border-b border-foreground/[0.05] bg-foreground/[0.02] px-4 py-2.5 md:flex md:gap-4 md:px-5">
               <div className="section-label min-w-[140px]">Holding</div>
+              <div className="section-label w-14 text-right">Score</div>
               <div className="section-label w-24 text-right">Shares</div>
               <div className="section-label w-28 text-right">Avg cost</div>
               <div className="section-label w-28 text-right">Price</div>
@@ -616,6 +784,11 @@ export default function MyPortfolioPage() {
                 const name = row.stock?.name ?? row.slug;
                 const ticker = row.stock?.ticker ?? row.slug.toUpperCase();
                 const href = row.stock?.href ?? `/stocks/${row.slug}`;
+                const quoteNote =
+                  row.quoteCurrency &&
+                  row.quoteCurrency.toUpperCase() !== displayCurrency
+                    ? row.quoteCurrency.toUpperCase()
+                    : null;
 
                 return (
                   <div
@@ -632,10 +805,24 @@ export default function MyPortfolioPage() {
                       </div>
                       <div className="mt-0.5 font-mono text-[10px] font-black uppercase tracking-[0.12em] text-foreground/28">
                         {ticker}
+                        {quoteNote ? ` · ${quoteNote}` : ''}
                       </div>
                     </button>
 
                     <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:contents">
+                      <div className="md:w-14 md:text-right">
+                        <span className="section-label mb-1 block md:hidden">Score</span>
+                        {row.score == null ? (
+                          <p className="font-mono text-sm text-foreground/25">—</p>
+                        ) : (
+                          <p
+                            className={`font-mono text-sm font-black tabular-nums ${scoreColor(row.score)}`}
+                          >
+                            {row.score}
+                          </p>
+                        )}
+                      </div>
+
                       <label className="block md:w-24">
                         <span className="section-label mb-1 block md:hidden">Shares</span>
                         <HoldingNumberField
@@ -649,10 +836,12 @@ export default function MyPortfolioPage() {
                       </label>
 
                       <label className="block md:w-28">
-                        <span className="section-label mb-1 block md:hidden">Avg cost</span>
+                        <span className="section-label mb-1 block md:hidden">
+                          Avg cost ({displayCurrency})
+                        </span>
                         <HoldingNumberField
                           allowEmpty
-                          aria-label={`${ticker} average cost`}
+                          aria-label={`${ticker} average cost in ${displayCurrency}`}
                           className="text-right"
                           onCommit={(n) => {
                             if (n !== row.avgCost) updateAvgCost(row.slug, n);
@@ -668,7 +857,7 @@ export default function MyPortfolioPage() {
                           {quotesLoading && row.price == null ? (
                             <Spinner size="sm" color="current" />
                           ) : (
-                            formatMoney(row.price)
+                            money(row.price)
                           )}
                         </p>
                       </div>
@@ -691,7 +880,7 @@ export default function MyPortfolioPage() {
                       <div className="md:w-28 md:text-right">
                         <span className="section-label mb-1 block md:hidden">Value</span>
                         <p className="font-mono text-sm font-semibold tabular-nums text-foreground/85">
-                          {formatMoney(row.marketValue)}
+                          {money(row.marketValue)}
                         </p>
                       </div>
 
@@ -705,7 +894,7 @@ export default function MyPortfolioPage() {
                               row.gain >= 0 ? 'text-emerald-400' : 'text-rose-400'
                             }`}
                           >
-                            <div>{formatMoney(row.gain)}</div>
+                            <div>{money(row.gain)}</div>
                             <div className="text-[10px] opacity-75">{formatPct(row.gainPct)}</div>
                           </div>
                         )}

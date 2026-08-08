@@ -6,7 +6,7 @@ const SITE_URL = 'https://investmoat.com';
 export const metadata: Metadata = {
   title: 'My Portfolio',
   description:
-    'Track your personal holdings in the browser — add covered names, set share counts, and see live values. Data stays on this device.',
+    'Track your personal holdings in USD or CAD — add covered names, set share counts, and see live values. Data stays on this device.',
   robots: { index: false, follow: false },
   openGraph: {
     title: 'My Portfolio | InvestMoat',
