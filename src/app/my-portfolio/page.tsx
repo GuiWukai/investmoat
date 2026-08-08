@@ -210,9 +210,30 @@ export default function MyPortfolioPage() {
     };
   }, [rows]);
 
+  function resolveSelectedSlug(): string | null {
+    if (selectedSlug && coverageBySlug.has(selectedSlug)) return selectedSlug;
+
+    const trimmed = query.trim().toLowerCase();
+    if (!trimmed) return null;
+
+    const exactTicker = allCoverageData.find((s) => s.ticker.toLowerCase() === trimmed);
+    if (exactTicker) return exactTicker.slug;
+
+    const exactName = allCoverageData.find((s) => s.name.toLowerCase() === trimmed);
+    if (exactName) return exactName.slug;
+
+    const labelMatch = allCoverageData.find(
+      (s) => `${s.name} (${s.ticker})`.toLowerCase() === trimmed
+    );
+    if (labelMatch) return labelMatch.slug;
+
+    return null;
+  }
+
   function addHolding() {
     setFormError(null);
-    if (!selectedSlug) {
+    const slug = resolveSelectedSlug();
+    if (!slug) {
       setFormError('Pick a stock from coverage.');
       return;
     }
@@ -227,12 +248,12 @@ export default function MyPortfolioPage() {
       setFormError('Average cost must be a positive number.');
       return;
     }
-    if (heldSlugs.has(selectedSlug)) {
+    if (heldSlugs.has(slug)) {
       setFormError('Already in your portfolio — edit the row instead.');
       return;
     }
 
-    const next: UserHolding = { slug: selectedSlug, shares };
+    const next: UserHolding = { slug, shares };
     if (avgCost != null) next.avgCost = avgCost;
 
     setHoldings((prev) => [...prev, next]);
@@ -375,8 +396,20 @@ export default function MyPortfolioPage() {
                 menuTrigger="input"
                 onInputChange={(value) => {
                   setQuery(value);
-                  setSelectedSlug(null);
                   setFormError(null);
+                  // Clearing on every input change races with onSelectionChange:
+                  // selecting an item updates the input label, which would wipe
+                  // selectedSlug before Add can see it. Only clear when the typed
+                  // value no longer matches the selected stock's label.
+                  setSelectedSlug((prev) => {
+                    if (!prev) return null;
+                    const stock = coverageBySlug.get(prev);
+                    if (!stock) return null;
+                    const label = `${stock.name} (${stock.ticker})`;
+                    return value === label || value === stock.ticker || value === stock.name
+                      ? prev
+                      : null;
+                  });
                 }}
                 onSelectionChange={(key) => {
                   if (key == null) {
