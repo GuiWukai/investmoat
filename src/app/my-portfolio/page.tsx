@@ -22,7 +22,7 @@ import {
   ToggleButton,
   ToggleButtonGroup,
 } from '@heroui/react';
-import { allCoverageData } from '@/app/stockData';
+import { allCoverageData, getAverageScore } from '@/app/stockData';
 import {
   convertBetweenPortfolioCurrencies,
   convertToDisplay,
@@ -37,6 +37,10 @@ import {
   saveUserPortfolio,
   type UserHolding,
 } from '@/lib/userPortfolio';
+import {
+  computeValuationScore,
+  parseScenarioPrice,
+} from '@/lib/valuationScore';
 
 type CoverageStock = (typeof allCoverageData)[number];
 type StockOption = CoverageStock & { id: string };
@@ -51,6 +55,31 @@ function formatPct(value: number | null | undefined): string {
   if (value == null || !Number.isFinite(value)) return '—';
   const sign = value > 0 ? '+' : '';
   return `${sign}${value.toFixed(2)}%`;
+}
+
+/** Same band colours as the IM25 holdings table. */
+function scoreColor(score: number): string {
+  if (score >= 90) return 'text-emerald-400';
+  if (score >= 80) return 'text-blue-400';
+  if (score >= 70) return 'text-amber-400';
+  return 'text-rose-400';
+}
+
+/** Live composite when a quote exists; otherwise the static coverage score. */
+function compositeForStock(
+  stock: CoverageStock | undefined,
+  nativePrice: number | null
+): number | null {
+  if (!stock) return null;
+  const [moat, growth, staticValuation] = stock.scores;
+  const bear = parseScenarioPrice(stock.bearTarget);
+  const base = parseScenarioPrice(stock.baseTarget);
+  const bull = parseScenarioPrice(stock.bullTarget);
+  const valuation =
+    nativePrice != null && bear && base && bull
+      ? computeValuationScore(nativePrice, bear, base, bull)
+      : staticValuation;
+  return Math.round(getAverageScore([moat, growth, valuation]));
 }
 
 function parsePositiveNumber(raw: string): number | null {
@@ -270,6 +299,8 @@ export default function MyPortfolioPage() {
           gain != null && costBasis != null && costBasis > 0
             ? (gain / costBasis) * 100
             : null;
+        // Valuation uses the native quote (targets are in listing currency).
+        const score = compositeForStock(stock, nativePrice);
         return {
           ...h,
           stock,
@@ -280,6 +311,7 @@ export default function MyPortfolioPage() {
           costBasis,
           gain,
           gainPct,
+          score,
         };
       })
       .sort((a, b) => (b.marketValue ?? 0) - (a.marketValue ?? 0));
@@ -737,6 +769,7 @@ export default function MyPortfolioPage() {
           <Card className="overflow-hidden">
             <div className="hidden items-center gap-3 border-b border-foreground/[0.05] bg-foreground/[0.02] px-4 py-2.5 md:flex md:gap-4 md:px-5">
               <div className="section-label min-w-[140px]">Holding</div>
+              <div className="section-label w-14 text-right">Score</div>
               <div className="section-label w-24 text-right">Shares</div>
               <div className="section-label w-28 text-right">Avg cost</div>
               <div className="section-label w-28 text-right">Price</div>
@@ -777,6 +810,19 @@ export default function MyPortfolioPage() {
                     </button>
 
                     <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:contents">
+                      <div className="md:w-14 md:text-right">
+                        <span className="section-label mb-1 block md:hidden">Score</span>
+                        {row.score == null ? (
+                          <p className="font-mono text-sm text-foreground/25">—</p>
+                        ) : (
+                          <p
+                            className={`font-mono text-sm font-black tabular-nums ${scoreColor(row.score)}`}
+                          >
+                            {row.score}
+                          </p>
+                        )}
+                      </div>
+
                       <label className="block md:w-24">
                         <span className="section-label mb-1 block md:hidden">Shares</span>
                         <HoldingNumberField
