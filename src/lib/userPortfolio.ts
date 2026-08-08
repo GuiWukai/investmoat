@@ -1,17 +1,24 @@
 /**
  * Personal portfolio holdings persisted in localStorage.
- * Kept intentionally small — slug + shares + optional average cost.
+ * Kept intentionally small — slug + shares + optional average cost + book currency.
  */
+
+import {
+  isPortfolioCurrency,
+  type PortfolioCurrency,
+} from '@/lib/portfolioCurrency';
 
 export type UserHolding = {
   slug: string;
   shares: number;
-  /** Average cost per share in USD. Optional. */
+  /** Average cost per share in the portfolio display currency. Optional. */
   avgCost?: number;
 };
 
 export type UserPortfolioState = {
   holdings: UserHolding[];
+  /** Book currency for totals, P&L, and average cost inputs. */
+  displayCurrency: PortfolioCurrency;
   updatedAt: string;
 };
 
@@ -19,6 +26,7 @@ export const USER_PORTFOLIO_STORAGE_KEY = 'investmoat:user-portfolio:v1';
 
 const EMPTY: UserPortfolioState = {
   holdings: [],
+  displayCurrency: 'USD',
   updatedAt: new Date(0).toISOString(),
 };
 
@@ -70,15 +78,29 @@ export function loadUserPortfolio(): UserPortfolioState {
         ? (parsed as { updatedAt: string }).updatedAt
         : new Date().toISOString();
 
-    return { holdings: Array.from(bySlug.values()), updatedAt };
+    const displayCurrency = isPortfolioCurrency(
+      (parsed as { displayCurrency?: unknown }).displayCurrency
+    )
+      ? (parsed as { displayCurrency: PortfolioCurrency }).displayCurrency
+      : 'USD';
+
+    return {
+      holdings: Array.from(bySlug.values()),
+      displayCurrency,
+      updatedAt,
+    };
   } catch {
     return { ...EMPTY, holdings: [] };
   }
 }
 
-export function saveUserPortfolio(holdings: UserHolding[]): UserPortfolioState {
+export function saveUserPortfolio(
+  holdings: UserHolding[],
+  displayCurrency: PortfolioCurrency = 'USD'
+): UserPortfolioState {
   const state: UserPortfolioState = {
     holdings,
+    displayCurrency,
     updatedAt: new Date().toISOString(),
   };
   if (typeof window === 'undefined') return state;
