@@ -531,7 +531,7 @@ export default function MyPortfolioPage() {
 
       {/* Summary */}
       <section
-        className="animate-fade-up stagger-fill-both mb-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4"
+        className="animate-fade-up stagger-fill-both mb-8 grid grid-cols-2 gap-3 lg:grid-cols-4"
         style={{ animationDelay: '0.1s' }}
       >
         <Card className="p-4">
