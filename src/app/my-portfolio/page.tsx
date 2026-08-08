@@ -60,6 +60,62 @@ function parsePositiveNumber(raw: string): number | null {
   return n;
 }
 
+const FIELD_INPUT_CLASS =
+  'w-full rounded-xl border border-border bg-foreground/[0.03] px-3 py-2 font-mono text-sm tabular-nums text-foreground outline-none transition-colors placeholder:text-foreground/25 focus:border-accent/40 focus:bg-foreground/[0.05]';
+
+/** Local draft input that commits a positive number (or clear) on blur. */
+function HoldingNumberField({
+  'aria-label': ariaLabel,
+  allowEmpty = false,
+  className = '',
+  onCommit,
+  placeholder,
+  value,
+}: {
+  'aria-label': string;
+  allowEmpty?: boolean;
+  className?: string;
+  onCommit: (next: number | undefined) => void;
+  placeholder?: string;
+  value: number | undefined;
+}) {
+  const [draft, setDraft] = useState(value != null ? String(value) : '');
+
+  useEffect(() => {
+    setDraft(value != null ? String(value) : '');
+  }, [value]);
+
+  return (
+    <input
+      aria-label={ariaLabel}
+      className={`${FIELD_INPUT_CLASS} ${className}`}
+      inputMode="decimal"
+      onBlur={() => {
+        const raw = draft.trim();
+        if (!raw) {
+          if (allowEmpty) {
+            onCommit(undefined);
+            setDraft('');
+          } else {
+            setDraft(value != null ? String(value) : '');
+          }
+          return;
+        }
+        const n = parsePositiveNumber(raw);
+        if (n == null) {
+          setDraft(value != null ? String(value) : '');
+          return;
+        }
+        onCommit(n);
+        setDraft(String(n));
+      }}
+      onChange={(e) => setDraft(e.target.value)}
+      placeholder={placeholder}
+      value={draft}
+    />
+  );
+}
+
 export default function MyPortfolioPage() {
   const router = useRouter();
 
@@ -582,47 +638,27 @@ export default function MyPortfolioPage() {
                     <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:contents">
                       <label className="block md:w-24">
                         <span className="section-label mb-1 block md:hidden">Shares</span>
-                        <Input
+                        <HoldingNumberField
                           aria-label={`${ticker} shares`}
                           className="text-right"
-                          defaultValue={String(row.shares)}
-                          inputMode="decimal"
-                          key={`${row.slug}-shares`}
-                          onBlur={(e) => {
-                            const n = parsePositiveNumber(e.target.value);
-                            if (n == null) {
-                              e.target.value = String(row.shares);
-                              return;
-                            }
-                            if (n !== row.shares) updateShares(row.slug, n);
+                          onCommit={(n) => {
+                            if (n != null && n !== row.shares) updateShares(row.slug, n);
                           }}
+                          value={row.shares}
                         />
                       </label>
 
                       <label className="block md:w-28">
                         <span className="section-label mb-1 block md:hidden">Avg cost</span>
-                        <Input
+                        <HoldingNumberField
+                          allowEmpty
                           aria-label={`${ticker} average cost`}
                           className="text-right"
-                          defaultValue={row.avgCost != null ? String(row.avgCost) : ''}
-                          inputMode="decimal"
-                          key={`${row.slug}-cost`}
-                          onBlur={(e) => {
-                            const raw = e.target.value.trim();
-                            if (!raw) {
-                              if (row.avgCost != null) updateAvgCost(row.slug, undefined);
-                              e.target.value = '';
-                              return;
-                            }
-                            const n = parsePositiveNumber(raw);
-                            if (n == null) {
-                              e.target.value =
-                                row.avgCost != null ? String(row.avgCost) : '';
-                              return;
-                            }
+                          onCommit={(n) => {
                             if (n !== row.avgCost) updateAvgCost(row.slug, n);
                           }}
                           placeholder="—"
+                          value={row.avgCost}
                         />
                       </label>
 
