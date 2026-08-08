@@ -3,7 +3,7 @@
 import React, { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
-import { Search, BarChart2, TrendingUp, Menu, FileText, CalendarDays } from 'lucide-react';
+import { Search, BarChart2, TrendingUp, Menu, FileText, CalendarDays, Briefcase } from 'lucide-react';
 import {
   Button,
   ComboBox,
@@ -19,6 +19,7 @@ import { MoatMark } from '@/components/MoatMark';
 
 const navLinks = [
   { name: 'IM25', href: '/portfolio', icon: BarChart2 },
+  { name: 'My Portfolio', href: '/my-portfolio', icon: Briefcase },
   { name: 'Stocks', href: '/stocks', icon: TrendingUp },
   { name: 'Earnings', href: '/earnings', icon: CalendarDays },
   { name: 'Research', href: '/research', icon: FileText },
