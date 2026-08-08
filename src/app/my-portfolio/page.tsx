@@ -805,54 +805,68 @@ export default function MyPortfolioPage() {
                 return (
                   <div key={row.slug}>
                     {/* Compact mobile card */}
-                    <div className="px-3 py-3 md:hidden">
+                    <div className="px-3 py-2.5 md:hidden">
                       <div className="flex items-start gap-2">
                         <button
                           className="min-w-0 flex-1 text-left"
                           onClick={() => router.push(href)}
                           type="button"
                         >
-                          <div className="truncate text-sm font-bold text-foreground/90">
-                            {name}
+                          <div className="flex min-w-0 items-baseline gap-1.5">
+                            <span className="truncate text-sm font-bold text-foreground/90">
+                              {name}
+                            </span>
+                            <span className="shrink-0 font-mono text-[10px] font-black uppercase tracking-[0.1em] text-foreground/28">
+                              {ticker}
+                              {quoteNote ? ` · ${quoteNote}` : ''}
+                            </span>
                           </div>
-                          <div className="mt-0.5 flex flex-wrap items-center gap-x-1.5 font-mono text-[10px] font-black uppercase tracking-[0.12em] text-foreground/28">
-                            <span>{ticker}</span>
-                            {quoteNote ? <span>· {quoteNote}</span> : null}
+                          <div className="mt-0.5 flex flex-wrap items-center gap-x-2 font-mono text-[11px] tabular-nums">
                             {row.score != null ? (
-                              <span className={`normal-case tracking-normal ${scoreColor(row.score)}`}>
-                                · {row.score}
+                              <span className={`font-black ${scoreColor(row.score)}`}>
+                                {row.score}
+                              </span>
+                            ) : (
+                              <span className="text-foreground/25">—</span>
+                            )}
+                            <span className={dayClass}>{formatPct(row.changePercent)}</span>
+                            {row.gain != null ? (
+                              <span className={gainClass}>
+                                {money(row.gain)}
+                                {row.gainPct != null ? (
+                                  <span className="ml-1 opacity-75">{formatPct(row.gainPct)}</span>
+                                ) : null}
                               </span>
                             ) : null}
                           </div>
                         </button>
-                        <div className="shrink-0 text-right">
+                        <div className="shrink-0 pt-0.5 text-right">
                           <p className="font-mono text-sm font-semibold tabular-nums text-foreground/85">
                             {money(row.marketValue)}
                           </p>
-                          <p className={`mt-0.5 font-mono text-[11px] tabular-nums ${dayClass}`}>
-                            {formatPct(row.changePercent)}
-                            {row.gain != null ? (
-                              <span className={`ml-1.5 ${gainClass}`}>
-                                {money(row.gain)}
-                              </span>
-                            ) : null}
+                          <p className="mt-0.5 font-mono text-[10px] tabular-nums text-foreground/28">
+                            {quotesLoading && row.price == null ? (
+                              <Spinner size="sm" color="current" />
+                            ) : (
+                              money(row.price)
+                            )}
                           </p>
                         </div>
-                        <Button
+                        <button
                           aria-label={`Remove ${ticker}`}
-                          className="shrink-0"
-                          isIconOnly
-                          onPress={() => removeHolding(row.slug)}
-                          size="sm"
-                          variant="ghost"
+                          className="-mr-1 -mt-0.5 shrink-0 rounded-md p-1.5 text-foreground/35 transition-colors hover:bg-foreground/[0.06] hover:text-foreground/60"
+                          onClick={() => removeHolding(row.slug)}
+                          type="button"
                         >
-                          <X size={14} className="text-foreground/35" />
-                        </Button>
+                          <X size={14} />
+                        </button>
                       </div>
 
-                      <div className="mt-2.5 grid grid-cols-2 gap-2">
-                        <label className="block min-w-0">
-                          <span className="section-label mb-1 block">Shares</span>
+                      <div className="mt-2 grid grid-cols-2 gap-1.5">
+                        <label className="flex min-w-0 items-center gap-1.5">
+                          <span className="shrink-0 text-[10px] font-semibold uppercase tracking-wide text-foreground/30">
+                            Sh
+                          </span>
                           <HoldingNumberField
                             aria-label={`${ticker} shares`}
                             className="text-right"
@@ -862,9 +876,9 @@ export default function MyPortfolioPage() {
                             value={row.shares}
                           />
                         </label>
-                        <label className="block min-w-0">
-                          <span className="section-label mb-1 block">
-                            Avg ({displayCurrency})
+                        <label className="flex min-w-0 items-center gap-1.5">
+                          <span className="shrink-0 text-[10px] font-semibold uppercase tracking-wide text-foreground/30">
+                            Avg
                           </span>
                           <HoldingNumberField
                             allowEmpty
@@ -878,19 +892,6 @@ export default function MyPortfolioPage() {
                           />
                         </label>
                       </div>
-
-                      <p className="mt-1.5 font-mono text-[10px] tabular-nums text-foreground/28">
-                        {quotesLoading && row.price == null ? (
-                          <Spinner size="sm" color="current" />
-                        ) : (
-                          <>Price {money(row.price)}</>
-                        )}
-                        {row.gainPct != null ? (
-                          <span className={`ml-2 ${gainClass}`}>
-                            {formatPct(row.gainPct)}
-                          </span>
-                        ) : null}
-                      </p>
                     </div>
 
                     {/* Desktop table row */}
