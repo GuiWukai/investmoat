@@ -91,7 +91,7 @@ function parsePositiveNumber(raw: string): number | null {
 }
 
 const FIELD_INPUT_CLASS =
-  'w-full rounded-xl border border-border bg-foreground/[0.03] px-3 py-2 font-mono text-sm tabular-nums text-foreground outline-none transition-colors placeholder:text-foreground/25 focus:border-accent/40 focus:bg-foreground/[0.05]';
+  'w-full rounded-lg border border-border bg-foreground/[0.03] px-2.5 py-1.5 font-mono text-xs tabular-nums text-foreground outline-none transition-colors placeholder:text-foreground/25 focus:border-accent/40 focus:bg-foreground/[0.05] md:rounded-xl md:px-3 md:py-2 md:text-sm';
 
 /** Local draft input that commits a positive number (or clear) on blur. */
 function HoldingNumberField({
@@ -745,11 +745,11 @@ export default function MyPortfolioPage() {
         </div>
 
         {!hydrated ? (
-          <Card className="flex items-center justify-center p-10">
+          <Card className="flex items-center justify-center p-6 md:p-10">
             <Spinner color="current" />
           </Card>
         ) : holdings.length === 0 ? (
-          <Card className="p-10 text-center">
+          <Card className="p-6 text-center md:p-10">
             <p className="text-sm text-foreground/45">
               No holdings yet. Add a covered name above — data stays in local storage.
             </p>
@@ -789,29 +789,127 @@ export default function MyPortfolioPage() {
                   row.quoteCurrency.toUpperCase() !== displayCurrency
                     ? row.quoteCurrency.toUpperCase()
                     : null;
+                const dayClass =
+                  row.changePercent == null
+                    ? 'text-foreground/25'
+                    : row.changePercent >= 0
+                      ? 'text-emerald-400'
+                      : 'text-rose-400';
+                const gainClass =
+                  row.gain == null
+                    ? 'text-foreground/25'
+                    : row.gain >= 0
+                      ? 'text-emerald-400'
+                      : 'text-rose-400';
 
                 return (
-                  <div
-                    key={row.slug}
-                    className="flex flex-col gap-3 px-4 py-4 md:flex-row md:items-center md:gap-4 md:px-5 md:py-3.5"
-                  >
-                    <button
-                      className="min-w-0 text-left md:min-w-[140px]"
-                      onClick={() => router.push(href)}
-                      type="button"
-                    >
-                      <div className="truncate text-sm font-bold text-foreground/90 hover:text-foreground">
-                        {name}
+                  <div key={row.slug}>
+                    {/* Compact mobile card */}
+                    <div className="px-3 py-3 md:hidden">
+                      <div className="flex items-start gap-2">
+                        <button
+                          className="min-w-0 flex-1 text-left"
+                          onClick={() => router.push(href)}
+                          type="button"
+                        >
+                          <div className="truncate text-sm font-bold text-foreground/90">
+                            {name}
+                          </div>
+                          <div className="mt-0.5 flex flex-wrap items-center gap-x-1.5 font-mono text-[10px] font-black uppercase tracking-[0.12em] text-foreground/28">
+                            <span>{ticker}</span>
+                            {quoteNote ? <span>· {quoteNote}</span> : null}
+                            {row.score != null ? (
+                              <span className={`normal-case tracking-normal ${scoreColor(row.score)}`}>
+                                · {row.score}
+                              </span>
+                            ) : null}
+                          </div>
+                        </button>
+                        <div className="shrink-0 text-right">
+                          <p className="font-mono text-sm font-semibold tabular-nums text-foreground/85">
+                            {money(row.marketValue)}
+                          </p>
+                          <p className={`mt-0.5 font-mono text-[11px] tabular-nums ${dayClass}`}>
+                            {formatPct(row.changePercent)}
+                            {row.gain != null ? (
+                              <span className={`ml-1.5 ${gainClass}`}>
+                                {money(row.gain)}
+                              </span>
+                            ) : null}
+                          </p>
+                        </div>
+                        <Button
+                          aria-label={`Remove ${ticker}`}
+                          className="shrink-0"
+                          isIconOnly
+                          onPress={() => removeHolding(row.slug)}
+                          size="sm"
+                          variant="ghost"
+                        >
+                          <X size={14} className="text-foreground/35" />
+                        </Button>
                       </div>
-                      <div className="mt-0.5 font-mono text-[10px] font-black uppercase tracking-[0.12em] text-foreground/28">
-                        {ticker}
-                        {quoteNote ? ` · ${quoteNote}` : ''}
-                      </div>
-                    </button>
 
-                    <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:contents">
-                      <div className="md:w-14 md:text-right">
-                        <span className="section-label mb-1 block md:hidden">Score</span>
+                      <div className="mt-2.5 grid grid-cols-2 gap-2">
+                        <label className="block min-w-0">
+                          <span className="section-label mb-1 block">Shares</span>
+                          <HoldingNumberField
+                            aria-label={`${ticker} shares`}
+                            className="text-right"
+                            onCommit={(n) => {
+                              if (n != null && n !== row.shares) updateShares(row.slug, n);
+                            }}
+                            value={row.shares}
+                          />
+                        </label>
+                        <label className="block min-w-0">
+                          <span className="section-label mb-1 block">
+                            Avg ({displayCurrency})
+                          </span>
+                          <HoldingNumberField
+                            allowEmpty
+                            aria-label={`${ticker} average cost in ${displayCurrency}`}
+                            className="text-right"
+                            onCommit={(n) => {
+                              if (n !== row.avgCost) updateAvgCost(row.slug, n);
+                            }}
+                            placeholder="—"
+                            value={row.avgCost}
+                          />
+                        </label>
+                      </div>
+
+                      <p className="mt-1.5 font-mono text-[10px] tabular-nums text-foreground/28">
+                        {quotesLoading && row.price == null ? (
+                          <Spinner size="sm" color="current" />
+                        ) : (
+                          <>Price {money(row.price)}</>
+                        )}
+                        {row.gainPct != null ? (
+                          <span className={`ml-2 ${gainClass}`}>
+                            {formatPct(row.gainPct)}
+                          </span>
+                        ) : null}
+                      </p>
+                    </div>
+
+                    {/* Desktop table row */}
+                    <div className="hidden items-center gap-3 px-4 py-3.5 md:flex md:gap-4 md:px-5">
+                      <button
+                        className="min-w-0 text-left md:min-w-[140px]"
+                        onClick={() => router.push(href)}
+                        type="button"
+                      >
+                        <div className="truncate text-sm font-bold text-foreground/90 hover:text-foreground">
+                          {name}
+                        </div>
+                        <div className="mt-0.5 font-mono text-[10px] font-black uppercase tracking-[0.12em] text-foreground/28">
+                          {ticker}
+                          {quoteNote ? ` · ${quoteNote}` : ''}
+                        </div>
+                      </button>
+
+                      <div className="w-14 text-right">
                         {row.score == null ? (
                           <p className="font-mono text-sm text-foreground/25">—</p>
                         ) : (
@@ -823,8 +921,7 @@ export default function MyPortfolioPage() {
                         )}
                       </div>
 
-                      <label className="block md:w-24">
-                        <span className="section-label mb-1 block md:hidden">Shares</span>
+                      <label className="block w-24">
                         <HoldingNumberField
                           aria-label={`${ticker} shares`}
                           className="text-right"
@@ -835,10 +932,7 @@ export default function MyPortfolioPage() {
                         />
                       </label>
 
-                      <label className="block md:w-28">
-                        <span className="section-label mb-1 block md:hidden">
-                          Avg cost ({displayCurrency})
-                        </span>
+                      <label className="block w-28">
                         <HoldingNumberField
                           allowEmpty
                           aria-label={`${ticker} average cost in ${displayCurrency}`}
@@ -851,8 +945,7 @@ export default function MyPortfolioPage() {
                         />
                       </label>
 
-                      <div className="md:w-28 md:text-right">
-                        <span className="section-label mb-1 block md:hidden">Price</span>
+                      <div className="w-28 text-right">
                         <p className="font-mono text-sm tabular-nums text-foreground/80">
                           {quotesLoading && row.price == null ? (
                             <Spinner size="sm" color="current" />
@@ -862,55 +955,40 @@ export default function MyPortfolioPage() {
                         </p>
                       </div>
 
-                      <div className="md:w-16 md:text-right">
-                        <span className="section-label mb-1 block md:hidden">1D %</span>
-                        <p
-                          className={`font-mono text-sm tabular-nums ${
-                            row.changePercent == null
-                              ? 'text-foreground/25'
-                              : row.changePercent >= 0
-                                ? 'text-emerald-400'
-                                : 'text-rose-400'
-                          }`}
-                        >
+                      <div className="w-16 text-right">
+                        <p className={`font-mono text-sm tabular-nums ${dayClass}`}>
                           {formatPct(row.changePercent)}
                         </p>
                       </div>
 
-                      <div className="md:w-28 md:text-right">
-                        <span className="section-label mb-1 block md:hidden">Value</span>
+                      <div className="w-28 text-right">
                         <p className="font-mono text-sm font-semibold tabular-nums text-foreground/85">
                           {money(row.marketValue)}
                         </p>
                       </div>
 
-                      <div className="md:w-28 md:text-right">
-                        <span className="section-label mb-1 block md:hidden">P&amp;L</span>
+                      <div className="w-28 text-right">
                         {row.gain == null ? (
                           <p className="font-mono text-sm text-foreground/25">—</p>
                         ) : (
-                          <div
-                            className={`font-mono text-sm tabular-nums ${
-                              row.gain >= 0 ? 'text-emerald-400' : 'text-rose-400'
-                            }`}
-                          >
+                          <div className={`font-mono text-sm tabular-nums ${gainClass}`}>
                             <div>{money(row.gain)}</div>
                             <div className="text-[10px] opacity-75">{formatPct(row.gainPct)}</div>
                           </div>
                         )}
                       </div>
-                    </div>
 
-                    <div className="flex justify-end md:w-9 md:shrink-0">
-                      <Button
-                        aria-label={`Remove ${ticker}`}
-                        isIconOnly
-                        onPress={() => removeHolding(row.slug)}
-                        size="sm"
-                        variant="ghost"
-                      >
-                        <X size={16} className="text-foreground/35" />
-                      </Button>
+                      <div className="w-9 shrink-0">
+                        <Button
+                          aria-label={`Remove ${ticker}`}
+                          isIconOnly
+                          onPress={() => removeHolding(row.slug)}
+                          size="sm"
+                          variant="ghost"
+                        >
+                          <X size={16} className="text-foreground/35" />
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 );
