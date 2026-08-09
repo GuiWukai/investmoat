@@ -24,9 +24,11 @@ import {
 } from '@heroui/react';
 import { allCoverageData, getAverageScore } from '@/app/stockData';
 import {
+  convertBetweenPortfolioCurrencies,
   convertToDisplay,
   formatMoney,
   PORTFOLIO_CURRENCIES,
+  roundMoney,
   type PortfolioCurrency,
 } from '@/lib/portfolioCurrency';
 import {
@@ -90,44 +92,6 @@ function parsePositiveNumber(raw: string): number | null {
 
 const FIELD_INPUT_CLASS =
   'w-full rounded-lg border border-border bg-foreground/[0.03] px-2.5 py-1.5 font-mono text-xs tabular-nums text-foreground outline-none transition-colors placeholder:text-foreground/25 focus:border-accent/40 focus:bg-foreground/[0.05] md:rounded-xl md:px-3 md:py-2 md:text-sm';
-
-/** Compact USD/CAD toggle for average-cost denomination. */
-function CostCurrencyToggle({
-  'aria-label': ariaLabel,
-  className = '',
-  onChange,
-  value,
-}: {
-  'aria-label': string;
-  className?: string;
-  onChange: (next: PortfolioCurrency) => void;
-  value: PortfolioCurrency;
-}) {
-  return (
-    <ToggleButtonGroup
-      aria-label={ariaLabel}
-      className={`flex items-center gap-1 ${className}`}
-      isDetached
-      selectedKeys={new Set([value])}
-      onSelectionChange={(keys) => {
-        const key = [...keys][0];
-        if (key == null) return;
-        const next = String(key);
-        if (next === 'USD' || next === 'CAD') onChange(next);
-      }}
-    >
-      {PORTFOLIO_CURRENCIES.map((code) => (
-        <ToggleButton
-          key={code}
-          id={code}
-          className="pill-toggle rounded-full px-2 py-0.5 text-[10px] font-semibold"
-        >
-          {code}
-        </ToggleButton>
-      ))}
-    </ToggleButtonGroup>
-  );
-}
 
 /** Local draft input that commits a positive number (or clear) on blur. */
 function HoldingNumberField({
@@ -193,8 +157,8 @@ export default function MyPortfolioPage() {
   const [query, setQuery] = useState('');
   const [sharesInput, setSharesInput] = useState('');
   const [avgCostInput, setAvgCostInput] = useState('');
-  const [avgCostCurrency, setAvgCostCurrency] = useState<PortfolioCurrency>('USD');
   const [formError, setFormError] = useState<string | null>(null);
+  const [currencyError, setCurrencyError] = useState<string | null>(null);
 
   const [quotes, setQuotes] = useState<Record<string, Quote>>({});
   const [quotesLoading, setQuotesLoading] = useState(false);
@@ -206,7 +170,6 @@ export default function MyPortfolioPage() {
     const state = loadUserPortfolio();
     setHoldings(state.holdings);
     setDisplayCurrency(state.displayCurrency);
-    setAvgCostCurrency(state.displayCurrency);
     setHydrated(true);
   }, []);
 
@@ -216,10 +179,41 @@ export default function MyPortfolioPage() {
     saveUserPortfolio(holdings, displayCurrency);
   }, [holdings, displayCurrency, hydrated]);
 
-  // Keep the add-form cost currency aligned with the book when the field is empty.
+  // Fold legacy per-holding cost currencies into the book currency once FX is ready.
   useEffect(() => {
-    if (!avgCostInput.trim()) setAvgCostCurrency(displayCurrency);
-  }, [displayCurrency, avgCostInput]);
+    if (!hydrated || usdCad == null) return;
+    setHoldings((prev) => {
+      let changed = false;
+      const next = prev.map((h) => {
+        if (h.avgCost == null) {
+          if (h.avgCostCurrency) {
+            changed = true;
+            return { slug: h.slug, shares: h.shares };
+          }
+          return h;
+        }
+        if (!h.avgCostCurrency) return h;
+        if (h.avgCostCurrency === displayCurrency) {
+          changed = true;
+          return { slug: h.slug, shares: h.shares, avgCost: h.avgCost };
+        }
+        changed = true;
+        return {
+          slug: h.slug,
+          shares: h.shares,
+          avgCost: roundMoney(
+            convertBetweenPortfolioCurrencies(
+              h.avgCost,
+              h.avgCostCurrency,
+              displayCurrency,
+              usdCad
+            )
+          ),
+        };
+      });
+      return changed ? next : prev;
+    });
+  }, [hydrated, usdCad, displayCurrency]);
 
   // USD/CAD mid for converting mixed-currency quotes into the book currency.
   useEffect(() => {
@@ -317,10 +311,7 @@ export default function MyPortfolioPage() {
     if (holdings.length === 0) return false;
     return holdings.some((h) => {
       const quoteCurrency = (quotes[h.slug]?.currency ?? 'USD').toUpperCase();
-      if (quoteCurrency !== displayCurrency) return true;
-      if (h.avgCost == null) return false;
-      const costCurrency = h.avgCostCurrency ?? displayCurrency;
-      return costCurrency !== displayCurrency;
+      return quoteCurrency !== displayCurrency;
     });
   }, [holdings, quotes, displayCurrency]);
 
@@ -337,11 +328,16 @@ export default function MyPortfolioPage() {
             ? null
             : convertToDisplay(nativePrice, quoteCurrency, displayCurrency, usdCad);
         const marketValue = price != null ? price * h.shares : null;
-        const costCurrency = h.avgCostCurrency ?? displayCurrency;
+        // Avg cost is book currency; convert only while a legacy denomination remains.
         const costPerShare =
           h.avgCost == null
             ? null
-            : convertToDisplay(h.avgCost, costCurrency, displayCurrency, usdCad);
+            : convertToDisplay(
+                h.avgCost,
+                h.avgCostCurrency ?? displayCurrency,
+                displayCurrency,
+                usdCad
+              );
         const costBasis =
           costPerShare != null ? costPerShare * h.shares : null;
         const gain =
@@ -354,7 +350,6 @@ export default function MyPortfolioPage() {
         const score = compositeForStock(stock, nativePrice);
         return {
           ...h,
-          costCurrency,
           stock,
           quoteCurrency,
           price,
@@ -450,17 +445,13 @@ export default function MyPortfolioPage() {
     }
 
     const next: UserHolding = { slug, shares };
-    if (avgCost != null) {
-      next.avgCost = avgCost;
-      next.avgCostCurrency = avgCostCurrency;
-    }
+    if (avgCost != null) next.avgCost = avgCost;
 
     setHoldings((prev) => [...prev, next]);
     setSelectedSlug(null);
     setQuery('');
     setSharesInput('');
     setAvgCostInput('');
-    setAvgCostCurrency(displayCurrency);
   }
 
   function updateShares(slug: string, shares: number) {
@@ -476,19 +467,8 @@ export default function MyPortfolioPage() {
         if (avgCost === undefined) {
           return { slug: h.slug, shares: h.shares };
         }
-        return {
-          ...h,
-          avgCost,
-          avgCostCurrency: h.avgCostCurrency ?? displayCurrency,
-        };
+        return { slug: h.slug, shares: h.shares, avgCost };
       })
-    );
-  }
-
-  function updateAvgCostCurrency(slug: string, currency: PortfolioCurrency) {
-    // Declares the denomination of the stored number — does not convert it.
-    setHoldings((prev) =>
-      prev.map((h) => (h.slug === slug ? { ...h, avgCostCurrency: currency } : h))
     );
   }
 
@@ -503,15 +483,32 @@ export default function MyPortfolioPage() {
 
   function switchDisplayCurrency(next: PortfolioCurrency) {
     if (next === displayCurrency) return;
-    // Legacy costs without a denomination were entered in the prior book currency —
-    // stamp that so flipping the book no longer silently reinterprets the number.
-    setHoldings((prev) =>
-      prev.map((h) => {
-        if (h.avgCost == null || h.avgCostCurrency) return h;
-        return { ...h, avgCostCurrency: displayCurrency };
-      })
-    );
-    // Avg costs keep their own denomination; only book totals / quotes re-FX.
+
+    const hasAvgCosts = holdings.some((h) => h.avgCost != null);
+    // Re-denominate stored avg costs with the live mid so P&L stays coherent.
+    if (hasAvgCosts) {
+      if (usdCad == null) {
+        setCurrencyError(
+          'Need a USD/CAD rate before switching book currency while average costs are set.'
+        );
+        return;
+      }
+      setHoldings((prev) =>
+        prev.map((h) => {
+          if (h.avgCost == null) return { slug: h.slug, shares: h.shares };
+          const from = h.avgCostCurrency ?? displayCurrency;
+          return {
+            slug: h.slug,
+            shares: h.shares,
+            avgCost: roundMoney(
+              convertBetweenPortfolioCurrencies(h.avgCost, from, next, usdCad)
+            ),
+          };
+        })
+      );
+    }
+
+    setCurrencyError(null);
     setDisplayCurrency(next);
   }
 
@@ -556,9 +553,12 @@ export default function MyPortfolioPage() {
         </h1>
         <p className="max-w-2xl text-base leading-relaxed text-foreground/45 md:text-lg">
           Track your own holdings against InvestMoat coverage. Shares and average
-          cost are saved in this browser only — nothing is uploaded. Enter each
-          average cost in USD or CAD; totals convert into your book currency.
+          cost are saved in this browser only — nothing is uploaded. Totals convert
+          USD and CAD quotes into your book currency.
         </p>
+        {currencyError && (
+          <p className="mt-3 text-sm text-rose-400">{currencyError}</p>
+        )}
         {needsFx && !fxLoading && usdCad == null && (
           <p className="mt-3 text-sm text-rose-400">
             FX rate unavailable — mixed-currency positions show as — until the
@@ -568,7 +568,7 @@ export default function MyPortfolioPage() {
         {usdCad != null && (
           <p className="mt-3 text-xs text-foreground/28">
             USDCAD {usdCad.toFixed(4)}
-            {needsFx ? ' · converting quotes and costs into book currency' : ''}
+            {needsFx ? ' · converting quote currencies into book currency' : ''}
           </p>
         )}
       </header>
@@ -736,22 +736,15 @@ export default function MyPortfolioPage() {
             </div>
 
             <div>
-              <div className="mb-2 flex items-center justify-between gap-2">
-                <p className="section-label">Avg cost</p>
-                <CostCurrencyToggle
-                  aria-label="Average cost currency"
-                  onChange={setAvgCostCurrency}
-                  value={avgCostCurrency}
-                />
-              </div>
+              <p className="section-label mb-2">Avg cost ({displayCurrency})</p>
               <Input
-                aria-label={`Average cost in ${avgCostCurrency}`}
+                aria-label={`Average cost in ${displayCurrency}`}
                 inputMode="decimal"
                 onChange={(e) => {
                   setAvgCostInput(e.target.value);
                   setFormError(null);
                 }}
-                placeholder={`e.g. 185.50 ${avgCostCurrency}`}
+                placeholder="e.g. 185.50"
                 value={avgCostInput}
               />
             </div>
@@ -822,7 +815,7 @@ export default function MyPortfolioPage() {
               <div className="section-label min-w-[140px]">Holding</div>
               <div className="section-label w-14 text-right">Score</div>
               <div className="section-label w-24 text-right">Shares</div>
-              <div className="section-label w-36 text-right">Avg cost</div>
+              <div className="section-label w-28 text-right">Avg cost</div>
               <div className="section-label w-28 text-right">Price</div>
               <div className="section-label w-16 text-right">1D %</div>
               <div className="section-label w-28 text-right">Value</div>
@@ -927,24 +920,13 @@ export default function MyPortfolioPage() {
                             value={row.shares}
                           />
                         </label>
-                        <div className="min-w-0">
-                          <div className="mb-1 flex items-center justify-between gap-1">
-                            <span className="shrink-0 text-[10px] font-semibold uppercase tracking-wide text-foreground/30">
-                              Avg
-                            </span>
-                            <CostCurrencyToggle
-                              aria-label={`${ticker} average cost currency`}
-                              onChange={(next) => {
-                                if (next !== row.costCurrency) {
-                                  updateAvgCostCurrency(row.slug, next);
-                                }
-                              }}
-                              value={row.costCurrency}
-                            />
-                          </div>
+                        <label className="flex min-w-0 items-center gap-1.5">
+                          <span className="shrink-0 text-[10px] font-semibold uppercase tracking-wide text-foreground/30">
+                            Avg
+                          </span>
                           <HoldingNumberField
                             allowEmpty
-                            aria-label={`${ticker} average cost in ${row.costCurrency}`}
+                            aria-label={`${ticker} average cost in ${displayCurrency}`}
                             className="text-right"
                             onCommit={(n) => {
                               if (n !== row.avgCost) updateAvgCost(row.slug, n);
@@ -952,7 +934,7 @@ export default function MyPortfolioPage() {
                             placeholder="—"
                             value={row.avgCost}
                           />
-                        </div>
+                        </label>
                       </div>
                     </div>
 
@@ -995,21 +977,10 @@ export default function MyPortfolioPage() {
                         />
                       </label>
 
-                      <div className="w-36">
-                        <div className="mb-1 flex justify-end">
-                          <CostCurrencyToggle
-                            aria-label={`${ticker} average cost currency`}
-                            onChange={(next) => {
-                              if (next !== row.costCurrency) {
-                                updateAvgCostCurrency(row.slug, next);
-                              }
-                            }}
-                            value={row.costCurrency}
-                          />
-                        </div>
+                      <label className="block w-28">
                         <HoldingNumberField
                           allowEmpty
-                          aria-label={`${ticker} average cost in ${row.costCurrency}`}
+                          aria-label={`${ticker} average cost in ${displayCurrency}`}
                           className="text-right"
                           onCommit={(n) => {
                             if (n !== row.avgCost) updateAvgCost(row.slug, n);
@@ -1017,7 +988,7 @@ export default function MyPortfolioPage() {
                           placeholder="—"
                           value={row.avgCost}
                         />
-                      </div>
+                      </label>
 
                       <div className="w-28 text-right">
                         <p className="font-mono text-sm tabular-nums text-foreground/80">
