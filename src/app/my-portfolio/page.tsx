@@ -4,11 +4,11 @@ import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import {
+  ChevronRight,
   Plus,
   Trash2,
   TrendingDown,
   TrendingUp,
-  X,
 } from 'lucide-react';
 import {
   Button,
@@ -74,70 +74,6 @@ function compositeForStock(
       ? computeValuationScore(nativePrice, bear, base, bull)
       : staticValuation;
   return Math.round(getAverageScore([moat, growth, valuation]));
-}
-
-function parsePositiveNumber(raw: string): number | null {
-  const trimmed = raw.trim().replace(/,/g, '');
-  if (!trimmed) return null;
-  const n = Number(trimmed);
-  if (!Number.isFinite(n) || n <= 0) return null;
-  return n;
-}
-
-const FIELD_INPUT_CLASS =
-  'w-full rounded-lg border border-border bg-foreground/[0.03] px-2.5 py-1.5 font-mono text-xs tabular-nums text-foreground outline-none transition-colors placeholder:text-foreground/25 focus:border-accent/40 focus:bg-foreground/[0.05] md:rounded-xl md:px-3 md:py-2 md:text-sm';
-
-/** Local draft input that commits a positive number (or clear) on blur. */
-function HoldingNumberField({
-  'aria-label': ariaLabel,
-  allowEmpty = false,
-  className = '',
-  onCommit,
-  placeholder,
-  value,
-}: {
-  'aria-label': string;
-  allowEmpty?: boolean;
-  className?: string;
-  onCommit: (next: number | undefined) => void;
-  placeholder?: string;
-  value: number | undefined;
-}) {
-  const [draft, setDraft] = useState(value != null ? String(value) : '');
-
-  useEffect(() => {
-    setDraft(value != null ? String(value) : '');
-  }, [value]);
-
-  return (
-    <input
-      aria-label={ariaLabel}
-      className={`${FIELD_INPUT_CLASS} ${className}`}
-      inputMode="decimal"
-      onBlur={() => {
-        const raw = draft.trim();
-        if (!raw) {
-          if (allowEmpty) {
-            onCommit(undefined);
-            setDraft('');
-          } else {
-            setDraft(value != null ? String(value) : '');
-          }
-          return;
-        }
-        const n = parsePositiveNumber(raw);
-        if (n == null) {
-          setDraft(value != null ? String(value) : '');
-          return;
-        }
-        onCommit(n);
-        setDraft(String(n));
-      }}
-      onChange={(e) => setDraft(e.target.value)}
-      placeholder={placeholder}
-      value={draft}
-    />
-  );
 }
 
 export default function MyPortfolioPage() {
@@ -371,28 +307,6 @@ export default function MyPortfolioPage() {
     };
   }, [rows]);
 
-  function updateShares(slug: string, shares: number) {
-    setHoldings((prev) =>
-      prev.map((h) => (h.slug === slug ? { ...h, shares } : h))
-    );
-  }
-
-  function updateAvgCost(slug: string, avgCost: number | undefined) {
-    setHoldings((prev) =>
-      prev.map((h) => {
-        if (h.slug !== slug) return h;
-        if (avgCost === undefined) {
-          return { slug: h.slug, shares: h.shares };
-        }
-        return { slug: h.slug, shares: h.shares, avgCost };
-      })
-    );
-  }
-
-  function removeHolding(slug: string) {
-    setHoldings((prev) => prev.filter((h) => h.slug !== slug));
-  }
-
   function clearAll() {
     setHoldings([]);
     clearUserPortfolio();
@@ -469,9 +383,9 @@ export default function MyPortfolioPage() {
           My Portfolio
         </h1>
         <p className="max-w-2xl text-base leading-relaxed text-foreground/45 md:text-lg">
-          Track your own holdings against InvestMoat coverage. Shares and average
-          cost are saved in this browser only — nothing is uploaded. Totals convert
-          USD and CAD quotes into your book currency.
+          Track your own holdings against InvestMoat coverage. Open a position to
+          edit shares or average cost — data stays in this browser only. Totals
+          convert USD and CAD quotes into your book currency.
         </p>
         {currencyError && (
           <p className="mt-3 text-sm text-rose-400">{currencyError}</p>
@@ -624,22 +538,22 @@ export default function MyPortfolioPage() {
         ) : (
           <Card className="overflow-hidden">
             <div className="hidden items-center gap-3 border-b border-foreground/[0.05] bg-foreground/[0.02] px-4 py-2.5 md:flex md:gap-4 md:px-5">
-              <div className="section-label min-w-[140px]">Holding</div>
+              <div className="section-label min-w-[140px] flex-1">Holding</div>
               <div className="section-label w-14 text-right">Score</div>
-              <div className="section-label w-24 text-right">Shares</div>
+              <div className="section-label w-20 text-right">Shares</div>
               <div className="section-label w-28 text-right">Avg cost</div>
               <div className="section-label w-28 text-right">Price</div>
               <div className="section-label w-16 text-right">1D %</div>
               <div className="section-label w-28 text-right">Value</div>
               <div className="section-label w-28 text-right">P&amp;L</div>
-              <div className="w-9 shrink-0" />
+              <div className="w-6 shrink-0" />
             </div>
 
             <div className="divide-y divide-foreground/[0.04]">
               {rows.map((row) => {
                 const name = row.stock?.name ?? row.slug;
                 const ticker = row.stock?.ticker ?? row.slug.toUpperCase();
-                const href = row.stock?.href ?? `/stocks/${row.slug}`;
+                const positionHref = `/my-portfolio/${row.slug}`;
                 const quoteNote =
                   row.quoteCurrency &&
                   row.quoteCurrency.toUpperCase() !== displayCurrency
@@ -659,15 +573,17 @@ export default function MyPortfolioPage() {
                       : 'text-rose-400';
 
                 return (
-                  <div key={row.slug}>
+                  <button
+                    key={row.slug}
+                    aria-label={`Open ${ticker} position`}
+                    className="block w-full text-left transition-colors hover:bg-foreground/[0.03]"
+                    onClick={() => router.push(positionHref)}
+                    type="button"
+                  >
                     {/* Compact mobile card */}
                     <div className="px-3 py-2.5 md:hidden">
                       <div className="flex items-start gap-2">
-                        <button
-                          className="min-w-0 flex-1 text-left"
-                          onClick={() => router.push(href)}
-                          type="button"
-                        >
+                        <div className="min-w-0 flex-1">
                           <div className="flex min-w-0 items-baseline gap-1.5">
                             <span className="truncate text-sm font-bold text-foreground/90">
                               {name}
@@ -686,6 +602,10 @@ export default function MyPortfolioPage() {
                               <span className="text-foreground/25">—</span>
                             )}
                             <span className={dayClass}>{formatPct(row.changePercent)}</span>
+                            <span className="text-foreground/35">
+                              {row.shares} sh
+                              {row.avgCost != null ? ` · avg ${money(row.avgCost)}` : ''}
+                            </span>
                             {row.gain != null ? (
                               <span className={gainClass}>
                                 {money(row.gain)}
@@ -695,7 +615,7 @@ export default function MyPortfolioPage() {
                               </span>
                             ) : null}
                           </div>
-                        </button>
+                        </div>
                         <div className="shrink-0 pt-0.5 text-right">
                           <p className="font-mono text-sm font-semibold tabular-nums text-foreground/85">
                             {money(row.marketValue)}
@@ -708,63 +628,25 @@ export default function MyPortfolioPage() {
                             )}
                           </p>
                         </div>
-                        <button
-                          aria-label={`Remove ${ticker}`}
-                          className="-mr-1 -mt-0.5 shrink-0 rounded-md p-1.5 text-foreground/35 transition-colors hover:bg-foreground/[0.06] hover:text-foreground/60"
-                          onClick={() => removeHolding(row.slug)}
-                          type="button"
-                        >
-                          <X size={14} />
-                        </button>
-                      </div>
-
-                      <div className="mt-2 grid grid-cols-2 gap-1.5">
-                        <label className="flex min-w-0 items-center gap-1.5">
-                          <span className="shrink-0 text-[10px] font-semibold uppercase tracking-wide text-foreground/30">
-                            Sh
-                          </span>
-                          <HoldingNumberField
-                            aria-label={`${ticker} shares`}
-                            className="text-right"
-                            onCommit={(n) => {
-                              if (n != null && n !== row.shares) updateShares(row.slug, n);
-                            }}
-                            value={row.shares}
-                          />
-                        </label>
-                        <label className="flex min-w-0 items-center gap-1.5">
-                          <span className="shrink-0 text-[10px] font-semibold uppercase tracking-wide text-foreground/30">
-                            Avg
-                          </span>
-                          <HoldingNumberField
-                            allowEmpty
-                            aria-label={`${ticker} average cost in ${displayCurrency}`}
-                            className="text-right"
-                            onCommit={(n) => {
-                              if (n !== row.avgCost) updateAvgCost(row.slug, n);
-                            }}
-                            placeholder="—"
-                            value={row.avgCost}
-                          />
-                        </label>
+                        <ChevronRight
+                          aria-hidden
+                          className="mt-1 shrink-0 text-foreground/25"
+                          size={16}
+                        />
                       </div>
                     </div>
 
                     {/* Desktop table row */}
                     <div className="hidden items-center gap-3 px-4 py-3.5 md:flex md:gap-4 md:px-5">
-                      <button
-                        className="min-w-0 text-left md:min-w-[140px]"
-                        onClick={() => router.push(href)}
-                        type="button"
-                      >
-                        <div className="truncate text-sm font-bold text-foreground/90 hover:text-foreground">
+                      <div className="min-w-0 flex-1 md:min-w-[140px]">
+                        <div className="truncate text-sm font-bold text-foreground/90">
                           {name}
                         </div>
                         <div className="mt-0.5 font-mono text-[10px] font-black uppercase tracking-[0.12em] text-foreground/28">
                           {ticker}
                           {quoteNote ? ` · ${quoteNote}` : ''}
                         </div>
-                      </button>
+                      </div>
 
                       <div className="w-14 text-right">
                         {row.score == null ? (
@@ -778,29 +660,17 @@ export default function MyPortfolioPage() {
                         )}
                       </div>
 
-                      <label className="block w-24">
-                        <HoldingNumberField
-                          aria-label={`${ticker} shares`}
-                          className="text-right"
-                          onCommit={(n) => {
-                            if (n != null && n !== row.shares) updateShares(row.slug, n);
-                          }}
-                          value={row.shares}
-                        />
-                      </label>
+                      <div className="w-20 text-right">
+                        <p className="font-mono text-sm tabular-nums text-foreground/80">
+                          {row.shares}
+                        </p>
+                      </div>
 
-                      <label className="block w-28">
-                        <HoldingNumberField
-                          allowEmpty
-                          aria-label={`${ticker} average cost in ${displayCurrency}`}
-                          className="text-right"
-                          onCommit={(n) => {
-                            if (n !== row.avgCost) updateAvgCost(row.slug, n);
-                          }}
-                          placeholder="—"
-                          value={row.avgCost}
-                        />
-                      </label>
+                      <div className="w-28 text-right">
+                        <p className="font-mono text-sm tabular-nums text-foreground/80">
+                          {row.avgCost == null ? '—' : money(row.avgCost)}
+                        </p>
+                      </div>
 
                       <div className="w-28 text-right">
                         <p className="font-mono text-sm tabular-nums text-foreground/80">
@@ -835,19 +705,15 @@ export default function MyPortfolioPage() {
                         )}
                       </div>
 
-                      <div className="w-9 shrink-0">
-                        <Button
-                          aria-label={`Remove ${ticker}`}
-                          isIconOnly
-                          onPress={() => removeHolding(row.slug)}
-                          size="sm"
-                          variant="ghost"
-                        >
-                          <X size={16} className="text-foreground/35" />
-                        </Button>
+                      <div className="flex w-6 shrink-0 justify-end">
+                        <ChevronRight
+                          aria-hidden
+                          className="text-foreground/25"
+                          size={16}
+                        />
                       </div>
                     </div>
-                  </div>
+                  </button>
                 );
               })}
             </div>

@@ -19,17 +19,10 @@ import {
   type UserHolding,
 } from '@/lib/userPortfolio';
 import type { PortfolioCurrency } from '@/lib/portfolioCurrency';
+import { parsePositiveNumber } from '../holdingField';
 
 type CoverageStock = (typeof allCoverageData)[number];
 type StockOption = CoverageStock & { id: string };
-
-function parsePositiveNumber(raw: string): number | null {
-  const trimmed = raw.trim().replace(/,/g, '');
-  if (!trimmed) return null;
-  const n = Number(trimmed);
-  if (!Number.isFinite(n) || n <= 0) return null;
-  return n;
-}
 
 export default function AddHoldingPage() {
   const router = useRouter();
@@ -114,7 +107,7 @@ export default function AddHoldingPage() {
       return;
     }
     if (heldSlugs.has(slug)) {
-      setFormError('Already in your portfolio — edit the row instead.');
+      router.push(`/my-portfolio/${slug}`);
       return;
     }
 
