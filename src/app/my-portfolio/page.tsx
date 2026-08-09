@@ -4,7 +4,6 @@ import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import {
-  Briefcase,
   Plus,
   Trash2,
   TrendingDown,
@@ -14,10 +13,6 @@ import {
 import {
   Button,
   Card,
-  ComboBox,
-  Input,
-  ListBox,
-  ListBoxItem,
   Spinner,
   ToggleButton,
   ToggleButtonGroup,
@@ -43,7 +38,6 @@ import {
 } from '@/lib/valuationScore';
 
 type CoverageStock = (typeof allCoverageData)[number];
-type StockOption = CoverageStock & { id: string };
 
 type Quote = {
   price: number | null;
@@ -152,12 +146,6 @@ export default function MyPortfolioPage() {
   const [holdings, setHoldings] = useState<UserHolding[]>([]);
   const [displayCurrency, setDisplayCurrency] = useState<PortfolioCurrency>('USD');
   const [hydrated, setHydrated] = useState(false);
-
-  const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
-  const [query, setQuery] = useState('');
-  const [sharesInput, setSharesInput] = useState('');
-  const [avgCostInput, setAvgCostInput] = useState('');
-  const [formError, setFormError] = useState<string | null>(null);
   const [currencyError, setCurrencyError] = useState<string | null>(null);
 
   const [quotes, setQuotes] = useState<Record<string, Quote>>({});
@@ -289,24 +277,6 @@ export default function MyPortfolioPage() {
     return map;
   }, []);
 
-  const heldSlugs = useMemo(() => new Set(holdings.map((h) => h.slug)), [holdings]);
-
-  const searchResults = useMemo<StockOption[]>(() => {
-    const trimmed = query.trim().toLowerCase();
-    const pool = allCoverageData.filter((s) => !heldSlugs.has(s.slug));
-    const matched = !trimmed
-      ? pool.slice(0, 8)
-      : pool
-          .filter(
-            (s) =>
-              s.name.toLowerCase().includes(trimmed) ||
-              s.ticker.toLowerCase().includes(trimmed) ||
-              s.slug.toLowerCase().includes(trimmed)
-          )
-          .slice(0, 8);
-    return matched.map((s) => ({ ...s, id: s.slug }));
-  }, [query, heldSlugs]);
-
   const needsFx = useMemo(() => {
     if (holdings.length === 0) return false;
     return holdings.some((h) => {
@@ -400,59 +370,6 @@ export default function MyPortfolioPage() {
       dayChange,
     };
   }, [rows]);
-
-  function resolveSelectedSlug(): string | null {
-    if (selectedSlug && coverageBySlug.has(selectedSlug)) return selectedSlug;
-
-    const trimmed = query.trim().toLowerCase();
-    if (!trimmed) return null;
-
-    const exactTicker = allCoverageData.find((s) => s.ticker.toLowerCase() === trimmed);
-    if (exactTicker) return exactTicker.slug;
-
-    const exactName = allCoverageData.find((s) => s.name.toLowerCase() === trimmed);
-    if (exactName) return exactName.slug;
-
-    const labelMatch = allCoverageData.find(
-      (s) => `${s.name} (${s.ticker})`.toLowerCase() === trimmed
-    );
-    if (labelMatch) return labelMatch.slug;
-
-    return null;
-  }
-
-  function addHolding() {
-    setFormError(null);
-    const slug = resolveSelectedSlug();
-    if (!slug) {
-      setFormError('Pick a stock from coverage.');
-      return;
-    }
-    const shares = parsePositiveNumber(sharesInput);
-    if (shares == null) {
-      setFormError('Enter a positive share count.');
-      return;
-    }
-    const avgCostRaw = avgCostInput.trim();
-    const avgCost = avgCostRaw ? parsePositiveNumber(avgCostRaw) : undefined;
-    if (avgCostRaw && avgCost == null) {
-      setFormError('Average cost must be a positive number.');
-      return;
-    }
-    if (heldSlugs.has(slug)) {
-      setFormError('Already in your portfolio — edit the row instead.');
-      return;
-    }
-
-    const next: UserHolding = { slug, shares };
-    if (avgCost != null) next.avgCost = avgCost;
-
-    setHoldings((prev) => [...prev, next]);
-    setSelectedSlug(null);
-    setQuery('');
-    setSharesInput('');
-    setAvgCostInput('');
-  }
 
   function updateShares(slug: string, shares: number) {
     setHoldings((prev) =>
@@ -640,152 +557,37 @@ export default function MyPortfolioPage() {
         </Card>
       </section>
 
-      {/* Add holding */}
-      <section
-        className="animate-fade-up stagger-fill-both mb-10"
-        style={{ animationDelay: '0.2s' }}
-      >
-        <Card className="p-5 md:p-6">
-          <div className="mb-5 flex items-center gap-2.5">
-            <Briefcase size={16} className="text-gold-bright" />
-            <h2 className="font-bold text-foreground/85">Add holding</h2>
-          </div>
-
-          <div className="grid gap-3 md:grid-cols-[minmax(0,1.4fr)_minmax(0,0.7fr)_minmax(0,0.7fr)_auto] md:items-end">
-            <div>
-              <p className="section-label mb-2">Stock</p>
-              <ComboBox
-                aria-label="Select stock"
-                allowsEmptyCollection
-                fullWidth
-                inputValue={query}
-                items={searchResults}
-                menuTrigger="input"
-                onInputChange={(value) => {
-                  setQuery(value);
-                  setFormError(null);
-                  // Clearing on every input change races with onSelectionChange:
-                  // selecting an item updates the input label, which would wipe
-                  // selectedSlug before Add can see it. Only clear when the typed
-                  // value no longer matches the selected stock's label.
-                  setSelectedSlug((prev) => {
-                    if (!prev) return null;
-                    const stock = coverageBySlug.get(prev);
-                    if (!stock) return null;
-                    const label = `${stock.name} (${stock.ticker})`;
-                    return value === label || value === stock.ticker || value === stock.name
-                      ? prev
-                      : null;
-                  });
-                }}
-                onSelectionChange={(key) => {
-                  if (key == null) {
-                    setSelectedSlug(null);
-                    return;
-                  }
-                  const slug = String(key);
-                  const stock = coverageBySlug.get(slug);
-                  setSelectedSlug(slug);
-                  setQuery(stock ? `${stock.name} (${stock.ticker})` : slug);
-                  setFormError(null);
-                }}
-                selectedKey={selectedSlug}
-              >
-                <ComboBox.InputGroup>
-                  <Input placeholder="Search name or ticker…" />
-                </ComboBox.InputGroup>
-                <ComboBox.Popover>
-                  <ListBox
-                    items={searchResults}
-                    renderEmptyState={() => (
-                      <p className="px-3 py-3 text-sm text-muted">
-                        {query.trim() ? 'No stocks found' : 'Type to search by name or ticker…'}
-                      </p>
-                    )}
-                  >
-                    {(item: StockOption) => (
-                      <ListBoxItem
-                        className="group flex items-center justify-between gap-3"
-                        id={item.slug}
-                        key={item.slug}
-                        textValue={`${item.name} ${item.ticker}`}
-                      >
-                        <span className="truncate text-sm">{item.name}</span>
-                        <span className="ml-auto font-mono text-xs font-bold text-muted">
-                          {item.ticker}
-                        </span>
-                      </ListBoxItem>
-                    )}
-                  </ListBox>
-                </ComboBox.Popover>
-              </ComboBox>
-            </div>
-
-            <div>
-              <p className="section-label mb-2">Shares</p>
-              <Input
-                aria-label="Shares"
-                inputMode="decimal"
-                onChange={(e) => {
-                  setSharesInput(e.target.value);
-                  setFormError(null);
-                }}
-                placeholder="e.g. 10"
-                value={sharesInput}
-              />
-            </div>
-
-            <div>
-              <p className="section-label mb-2">Avg cost ({displayCurrency})</p>
-              <Input
-                aria-label={`Average cost in ${displayCurrency}`}
-                inputMode="decimal"
-                onChange={(e) => {
-                  setAvgCostInput(e.target.value);
-                  setFormError(null);
-                }}
-                placeholder="e.g. 185.50"
-                value={avgCostInput}
-              />
-            </div>
-
-            <Button
-              className="mt-1 md:mt-0"
-              onPress={addHolding}
-              variant="primary"
-            >
-              <Plus size={16} />
-              Add
-            </Button>
-          </div>
-
-          {formError && (
-            <p className="mt-3 text-sm text-rose-400">{formError}</p>
-          )}
-        </Card>
-      </section>
-
       {/* Holdings */}
       <section
         className="animate-fade-up stagger-fill-both pb-16"
-        style={{ animationDelay: '0.3s' }}
+        style={{ animationDelay: '0.2s' }}
       >
-        <div className="mb-5 flex items-center gap-4">
+        <div className="mb-5 flex flex-wrap items-center gap-3 md:gap-4">
           <div>
             <p className="section-label mb-1">Holdings</p>
             <h2 className="text-xl font-bold text-foreground/85">Your book</h2>
           </div>
-          <div className="h-px flex-1 bg-foreground/[0.05]" />
-          {holdings.length > 0 && (
+          <div className="hidden h-px flex-1 bg-foreground/[0.05] md:block" />
+          <div className="ml-auto flex items-center gap-2">
             <Button
-              onPress={clearAll}
+              onPress={() => router.push('/my-portfolio/add')}
               size="sm"
-              variant="ghost"
+              variant="primary"
             >
-              <Trash2 size={14} />
-              Clear all
+              <Plus size={14} />
+              Add holding
             </Button>
-          )}
+            {holdings.length > 0 && (
+              <Button
+                onPress={clearAll}
+                size="sm"
+                variant="ghost"
+              >
+                <Trash2 size={14} />
+                Clear all
+              </Button>
+            )}
+          </div>
         </div>
 
         {!hydrated ? (
@@ -795,9 +597,19 @@ export default function MyPortfolioPage() {
         ) : holdings.length === 0 ? (
           <Card className="p-6 text-center md:p-10">
             <p className="text-sm text-foreground/45">
-              No holdings yet. Add a covered name above — data stays in local storage.
+              No holdings yet. Add a covered name to get started — data stays in
+              local storage.
             </p>
-            <p className="mt-3 text-xs text-foreground/28">
+            <div className="mt-5">
+              <Button
+                onPress={() => router.push('/my-portfolio/add')}
+                variant="primary"
+              >
+                <Plus size={16} />
+                Add holding
+              </Button>
+            </div>
+            <p className="mt-4 text-xs text-foreground/28">
               Browse the{' '}
               <Link className="text-gold-bright underline-offset-2 hover:underline" href="/stocks">
                 coverage universe
