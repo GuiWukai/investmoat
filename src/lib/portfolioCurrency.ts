@@ -1,6 +1,7 @@
 /**
  * Portfolio book currency helpers — My Portfolio can total in USD or CAD.
- * Quotes and average costs keep their own denomination; values convert via USDCAD.
+ * Quotes keep their listing denomination; average costs are stored in book currency.
+ * Values convert via USDCAD.
  */
 
 export type PortfolioCurrency = 'USD' | 'CAD';

@@ -11,15 +11,18 @@ import {
 export type UserHolding = {
   slug: string;
   shares: number;
-  /** Average cost per share. Optional. Denominated in avgCostCurrency. */
+  /** Average cost per share in the portfolio display currency. Optional. */
   avgCost?: number;
-  /** Currency the average cost was entered in. Defaults to book currency when absent. */
+  /**
+   * Legacy: currency the average cost was entered in (from a short-lived UI).
+   * New writes omit this; My Portfolio migrates it into book currency on load.
+   */
   avgCostCurrency?: PortfolioCurrency;
 };
 
 export type UserPortfolioState = {
   holdings: UserHolding[];
-  /** Book currency for totals, market value, and P&L display. */
+  /** Book currency for totals, P&L, and average cost inputs. */
   displayCurrency: PortfolioCurrency;
   updatedAt: string;
 };
@@ -52,6 +55,7 @@ function normalizeHolding(raw: unknown): UserHolding | null {
         : Number(obj.avgCost);
   if (avgCost !== undefined && isFinitePositive(avgCost)) {
     holding.avgCost = avgCost;
+    // Preserve legacy denomination so the page can FX it into book currency once.
     if (isPortfolioCurrency(obj.avgCostCurrency)) {
       holding.avgCostCurrency = obj.avgCostCurrency;
     }
@@ -103,8 +107,22 @@ export function saveUserPortfolio(
   holdings: UserHolding[],
   displayCurrency: PortfolioCurrency = 'USD'
 ): UserPortfolioState {
+  // Persist without legacy avgCostCurrency once the page has migrated.
+  const normalizedHoldings = holdings.map((h) => {
+    if (h.avgCost == null) return { slug: h.slug, shares: h.shares };
+    if (h.avgCostCurrency) {
+      return {
+        slug: h.slug,
+        shares: h.shares,
+        avgCost: h.avgCost,
+        avgCostCurrency: h.avgCostCurrency,
+      };
+    }
+    return { slug: h.slug, shares: h.shares, avgCost: h.avgCost };
+  });
+
   const state: UserPortfolioState = {
-    holdings,
+    holdings: normalizedHoldings,
     displayCurrency,
     updatedAt: new Date().toISOString(),
   };
