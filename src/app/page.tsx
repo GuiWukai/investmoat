@@ -7,6 +7,7 @@ import {
   ShieldCheck, TrendingUp, BarChart3, ChevronDown, ArrowRight,
   Brain, Target, Database, Lock, Network, CreditCard, BookMarked,
   MonitorSmartphone, Code2, Globe, GraduationCap, Layers, Zap, FileText,
+  Briefcase, CalendarDays,
 } from "lucide-react";
 
 // ─── FAQ Accordion ────────────────────────────────────────────────────────────
@@ -127,6 +128,18 @@ export default function HomePage() {
               className="flex items-center gap-2 px-6 py-3 primary-gradient rounded-lg font-bold text-[#0a0b0d] text-sm hover:opacity-90 transition-opacity"
             >
               View the IM25 <ArrowRight size={16} />
+            </Link>
+            <Link
+              href="/my-portfolio"
+              className="flex items-center gap-2 px-6 py-3 bg-foreground/[0.04] hover:bg-foreground/[0.07] border border-accent/20 rounded-lg font-bold text-foreground/80 text-sm transition-colors"
+            >
+              <Briefcase size={16} /> My Portfolio
+            </Link>
+            <Link
+              href="/earnings"
+              className="flex items-center gap-2 px-6 py-3 bg-foreground/[0.04] hover:bg-foreground/[0.07] border border-accent/20 rounded-lg font-bold text-foreground/80 text-sm transition-colors"
+            >
+              <CalendarDays size={16} /> Earnings
             </Link>
             <Link
               href="/stocks"
@@ -611,9 +624,9 @@ export default function HomePage() {
               View the IM25
             </h3>
             <p className="text-foreground/45 max-w-md mx-auto text-sm leading-relaxed mb-8">
-              Explore the current 25-position allocation, browse all 128 analyzed assets,
-              read the cross-cutting research, or dive into individual company reports with
-              moat scores, scenarios, and live valuations.
+              Explore the IM25 allocation, track your own holdings, check upcoming earnings,
+              browse coverage, or read the cross-cutting research — with moat scores,
+              scenarios, and live valuations throughout.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Link
@@ -621,6 +634,18 @@ export default function HomePage() {
                 className="flex items-center gap-2 px-6 py-3 primary-gradient rounded-lg font-bold text-[#0a0b0d] text-sm hover:opacity-90 transition-opacity"
               >
                 View the IM25 <ArrowRight size={16} />
+              </Link>
+              <Link
+                href="/my-portfolio"
+                className="flex items-center gap-2 px-6 py-3 bg-foreground/[0.04] hover:bg-foreground/[0.07] border border-accent/20 rounded-lg font-bold text-foreground/75 text-sm transition-colors"
+              >
+                <Briefcase size={16} /> My Portfolio
+              </Link>
+              <Link
+                href="/earnings"
+                className="flex items-center gap-2 px-6 py-3 bg-foreground/[0.04] hover:bg-foreground/[0.07] border border-accent/20 rounded-lg font-bold text-foreground/75 text-sm transition-colors"
+              >
+                <CalendarDays size={16} /> Earnings
               </Link>
               <Link
                 href="/stocks"
