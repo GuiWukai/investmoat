@@ -6,7 +6,6 @@ import { useRouter } from 'next/navigation';
 import {
   Briefcase,
   Plus,
-  Trash2,
   TrendingDown,
   TrendingUp,
   X,
@@ -32,7 +31,6 @@ import {
   type PortfolioCurrency,
 } from '@/lib/portfolioCurrency';
 import {
-  clearUserPortfolio,
   loadUserPortfolio,
   saveUserPortfolio,
   type UserHolding,
@@ -476,11 +474,6 @@ export default function MyPortfolioPage() {
     setHoldings((prev) => prev.filter((h) => h.slug !== slug));
   }
 
-  function clearAll() {
-    setHoldings([]);
-    clearUserPortfolio();
-  }
-
   function switchDisplayCurrency(next: PortfolioCurrency) {
     if (next === displayCurrency) return;
 
@@ -776,16 +769,6 @@ export default function MyPortfolioPage() {
             <h2 className="text-xl font-bold text-foreground/85">Your book</h2>
           </div>
           <div className="h-px flex-1 bg-foreground/[0.05]" />
-          {holdings.length > 0 && (
-            <Button
-              onPress={clearAll}
-              size="sm"
-              variant="ghost"
-            >
-              <Trash2 size={14} />
-              Clear all
-            </Button>
-          )}
         </div>
 
         {!hydrated ? (
