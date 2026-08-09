@@ -6,7 +6,6 @@ import { useRouter } from 'next/navigation';
 import {
   ChevronRight,
   Plus,
-  Trash2,
   TrendingDown,
   TrendingUp,
 } from 'lucide-react';
@@ -27,7 +26,6 @@ import {
   type PortfolioCurrency,
 } from '@/lib/portfolioCurrency';
 import {
-  clearUserPortfolio,
   loadUserPortfolio,
   saveUserPortfolio,
   type UserHolding,
@@ -307,11 +305,6 @@ export default function MyPortfolioPage() {
     };
   }, [rows]);
 
-  function clearAll() {
-    setHoldings([]);
-    clearUserPortfolio();
-  }
-
   function switchDisplayCurrency(next: PortfolioCurrency) {
     if (next === displayCurrency) return;
 
@@ -491,16 +484,6 @@ export default function MyPortfolioPage() {
               <Plus size={14} />
               Add holding
             </Button>
-            {holdings.length > 0 && (
-              <Button
-                onPress={clearAll}
-                size="sm"
-                variant="ghost"
-              >
-                <Trash2 size={14} />
-                Clear all
-              </Button>
-            )}
           </div>
         </div>
 
