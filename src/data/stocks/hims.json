@@ -2,7 +2,7 @@
   "slug": "hims",
   "ticker": "HIMS",
   "name": "Hims & Hers Health",
-  "lastAnalyzed": "May 2026",
+  "lastAnalyzed": "August 10, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$11B"
+      "value": "~$7.4B"
     }
   ],
   "chips": [
@@ -26,141 +26,142 @@
   "metrics": [
     {
       "title": "FY26 Revenue Guide",
-      "value": "$2.4-2.5B",
-      "label": "+45-50% YoY",
+      "value": "$2.8-3.0B",
+      "label": "+19-28% YoY (ex-Eucalyptus)",
       "icon": "TrendingUp",
       "color": "#0ea5e9"
     },
     {
-      "title": "Subscribers",
-      "value": "~3.0M",
-      "label": "Up from 2.2M end FY25",
+      "title": "Subscribers (Q1)",
+      "value": "~2.6M",
+      "label": "+9% YoY; MRR/sub $80 (−6%)",
       "icon": "Users",
       "color": "#10b981"
     },
     {
       "title": "Adj EBITDA Margin",
-      "value": "~12%",
-      "label": "Expanding on operational leverage",
+      "value": "10-12%",
+      "label": "FY26 guide; Q1 printed 7%",
       "icon": "Percent",
       "color": "#f59e0b"
     }
   ],
   "moat": {
-    "description": "DTC telehealth subscription brand with vertical pharmacy and personalised compounded prescriptions — narrow brand moat, expanding clinical footprint, real regulatory tail risk.",
+    "description": "DTC telehealth subscription brand with vertical pharmacy and multi-category bundle — narrow brand moat. March 2026 Novo Nordisk branded GLP-1 partnership resolved the compounding lawsuit overhang but compressed weight-loss unit economics; July 2026 FTC privacy/billing suit re-opens regulatory tail risk.",
     "analysisTitle": "The DTC Telehealth Brand Moat",
-    "analysisSummary": "Hims's moat is **brand recognition + vertical pharmacy operations** in telehealth subscription — real but narrow, with regulatory exposure to compounded GLP-1 fluctuations:",
+    "analysisSummary": "Hims's moat is **brand recognition + vertical pharmacy + multi-category subscription bundling** in telehealth — real but narrow, with regulatory exposure now centred on FTC consumer-protection claims and branded-GLP-1 margin mix rather than compounded-semaglutide enforcement alone:",
     "analysisPoints": [
       {
         "title": "DTC Brand Reach in Targeted Categories",
-        "text": "Hims has built genuine brand awareness in men's hair loss, sexual health, mental health, weight-loss, and women's hormonal health. The marketing flywheel and CAC-LTV economics in these categories are durable in normal market conditions, with subscriber retention in established categories averaging 12+ months."
+        "text": "Hims has built genuine brand awareness in men's hair loss, sexual health, mental health, weight-loss, and women's hormonal health. The marketing flywheel and CAC-LTV economics in established categories remain the franchise's core; Q1 subscribers reached 2.58M (+9% YoY) even as U.S. revenue dipped on the GLP-1 mix shift."
       },
       {
-        "title": "Vertical Pharmacy and Compounding Operations",
-        "text": "Hims operates its own 503A/503B-style compounding pharmacies, allowing personalised GLP-1 and dermatology formulations. The April 2025 FDA shortage delisting forced compounded semaglutide off the market, but Hims has pivoted to oral GLP-1 personalisation and licensed Wegovy distribution — narrower but legal channel."
+        "title": "Vertical Pharmacy and Branded GLP-1 Access",
+        "text": "Hims operates its own compounding pharmacies, but the March 2026 Novo Nordisk collaboration put FDA-approved Ozempic and Wegovy (injectable and oral) on the platform at Novo self-pay prices and ended Novo's patent suit. Compounded GLP-1 is now limited to clinically necessary cases — a cleaner legal channel at structurally lower margin than 2024 compounded semaglutide."
       },
       {
-        "title": "Clinical Network Scale",
-        "text": "Hims contracts with a national network of providers, allowing rapid intake-to-prescription on a single subscription stack. Switching costs for the patient are low but the convenience-and-pricing UX advantage vs traditional telehealth is real."
+        "title": "Clinical Network and International Scale",
+        "text": "A national provider network plus ZAVA, Livewell, and the June 2026 Eucalyptus close (Australia/Canada/Germany/Japan/UK footprint; ~850K prior customers) extend the closed-loop subscription stack. Switching costs for the patient remain low; convenience-and-pricing UX vs traditional care is the retention lever."
       }
     ]
   },
   "growth": {
-    "description": "FY26 revenue guide $2.4-2.5B (+45-50% YoY); subscribers ~3M. Weight-loss category remains the swing factor — branded Wegovy distribution licence + oral GLP-1 personalisation are growing but at lower margin than 2024 compounded semaglutide. New categories (testosterone, women's health) extend the platform.",
+    "description": "Q1 revenue $608M (+4% YoY) was a transition print after the branded-GLP-1 pivot; FY26 guide raised to $2.8-3.0B (+19-28%, ex-Eucalyptus) with Adj EBITDA $275-350M (10-12% margin). Q2 guide $680-700M (+25-28% YoY) is the first full quarter of branded weight-loss — results due AMC August 10, 2026 (not yet reported). 2030 targets remain ≥$6.5B revenue / $1.3B Adj EBITDA.",
     "growthAnalysis": {
-      "cagrEstimate": "30-45%",
-      "scoreDerivation": "Base 90 (>30% CAGR hypergrowth) + 3 platform extension (women's health, testosterone, weight-loss next-gen) - 7 regulatory/category risk (compounded GLP-1 ban, ongoing FTC/state-AG scrutiny) - 6 margin compression (branded GLP-1 lower margin than compounded) = 80",
+      "cagrEstimate": "20-28%",
+      "cagrBasis": "FY26 revenue guide $2.8-3.0B (+19-28% YoY off ~$2.35B FY25), raised on the May Q1 print and still excluding Eucalyptus. Management's 2030 target of ≥$6.5B revenue implies ~22% CAGR from FY25 and ~22% from the FY26 midpoint — the measured near-term series and the long-term target land in the same band. The 20-28% blend sits on that corridor rather than on the pre-pivot hypergrowth narrative; Q1's +4% is treated as mix-transition noise against Q2's guided +25-28% re-acceleration.",
+      "scoreDerivation": "Base 86 (24% midpoint of 20-28%) +1.3 trajectory (international/category accelerating; weight-loss and subscribers stable through the branded pivot) −4 margin (gross margin 65% vs 73% YoY; Adj EBITDA margin guided 10-12% after a 7% Q1) −10 high regulatory/FTC risk = 73. Down from ~81: the old 30-45% CAGR no longer answers to the guided or 2030 series after the compounded-to-branded GLP-1 reset.",
       "drivers": [
         {
           "name": "Weight-Loss Category",
-          "metric": "Branded Wegovy + oral GLP-1; revenue growing but mix margin lower than 2024",
+          "metric": "Branded Novo Wegovy/Ozempic live since late March; Q1 U.S. rev −8% on mix/shipping, Q2 guide implies re-acceleration",
           "trend": "stable"
         },
         {
           "name": "Subscriber Growth",
-          "metric": "+800K subscribers FY26; CAC payback <12 months in established categories",
-          "trend": "accelerating"
+          "metric": "2.58M end-Q1 (+9% YoY); monthly rev/sub $80 (−6% YoY) as mix shifts to branded GLP-1",
+          "trend": "stable"
         },
         {
-          "name": "New Category Expansion",
-          "metric": "Women's health, testosterone, longevity adding incremental cohorts",
+          "name": "International & Category Expansion",
+          "metric": "RoW rev $78M in Q1 (~10× YoY); Eucalyptus closed June 2026; women's health/testosterone cohorts still ramping",
           "trend": "accelerating"
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If FDA enforcement against personalised compounding tightens further or state regulators impose telehealth-prescription restrictions on GLP-1 in 2026-27, the weight-loss category could decline 30-40% and the margin profile compresses materially.",
+      "keyRisk": "If the July 2026 FTC/state privacy-and-billing suit forces a large settlement or advertising restrictions, or if branded GLP-1 gross margin stays near the Q1 65% level without the guided H2 Adj EBITDA ramp toward ~14% margins, FY26 EBITDA misses the $275-350M band and the multiple re-rates toward 1.5× sales.",
       "keyRiskSeverity": "high",
       "marginTrend": "compressing"
     }
   },
   "valuation": {
-    "score": 55,
-    "description": "At ~$50 HIMS trades at ~50× FY26 EPS — a hypergrowth multiple that prices in continued execution and expanding categories. Volatility around regulatory news cycles is high; the multiple has shown 40%+ drawdowns multiple times.",
+    "score": 77,
+    "description": "At ~$32 HIMS trades at ~2.5× FY26 sales (~$7.4B / ~$2.9B guide midpoint) — a sharp de-rating from the ~4.5-5× / ~$50 regime in May. Spot sits between bear ($22) and base ($42); the multiple now prices execution and FTC risk more honestly, but leaves limited cushion if Q2/H2 margins disappoint.",
     "peAnalysis": {
-      "asOf": "May 2026",
+      "asOf": "August 10, 2026",
       "rows": [
         {
-          "label": "Forward P/E (FY26)",
-          "value": "~50×",
-          "note": "EPS ~$1.00 mid; growth-stock multiple"
-        },
-        {
-          "label": "Forward P/E (FY27)",
-          "value": "~32×",
-          "note": "Assumes 50% EPS growth on subscriber + category"
-        },
-        {
           "label": "Price / Sales (FY26)",
-          "value": "~4.5×",
-          "note": "Premium vs Tele/DTC peers"
+          "value": "~2.5×",
+          "note": "~$7.4B mkt cap / $2.9B guide midpoint"
         },
         {
-          "label": "PEG Ratio",
-          "value": "~1.1×",
-          "note": "Fair on growth, none on regulatory risk"
+          "label": "EV / Adj EBITDA (FY26)",
+          "value": "~25×",
+          "note": "On ~$313M Adj EBITDA midpoint"
         },
         {
-          "label": "FCF Yield",
-          "value": "~3%",
-          "note": "FCF building as capex moderates"
+          "label": "Forward P/E (FY26)",
+          "value": "N/M",
+          "note": "TTM GAAP EPS negative; Street near-term EPS still volatile"
+        },
+        {
+          "label": "Street 12-mo PT",
+          "value": "~$30",
+          "note": "FactSet mean; range roughly $21–$40"
+        },
+        {
+          "label": "FCF (Q1)",
+          "value": "$53M",
+          "note": "Still FCF-positive through the mix transition"
         }
       ],
-      "summary": "Valuation discounts none of the regulatory or category-shift risk; the equity is a high-volatility growth-and-execution position rather than a quality compounder."
+      "summary": "Valuation has reset with the stock; the equity remains a high-volatility execution-and-regulatory position. Base case assumes the FY26 guide holds and FTC overhang is manageable — not a quality-compounder multiple."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$28",
-      "description": "FDA compounding enforcement tightens further, weight-loss category declines, multiple compresses to 20-25× on growth deceleration.",
+      "priceTarget": "$22",
+      "description": "FTC suit escalates costs/CAC, branded weight-loss margins stay compressed, FY26 EBITDA misses — multiple compresses toward ~1.5× sales.",
       "points": [
-        "FDA or state AG enforcement restricts personalised GLP-1 telehealth prescribing",
-        "Branded Wegovy distribution disappoints on margin and subscriber retention",
-        "Subscriber growth slows below 25% YoY as marketing CAC rises"
+        "FTC/state action forces material settlement, ad restrictions, or cancellation-UX changes that lift CAC",
+        "Branded Wegovy/Ozempic mix keeps gross margin near mid-60s without H2 operating leverage",
+        "Subscriber growth stalls below ~10% YoY as weight-loss ARPU normalises"
       ]
     },
     "base": {
-      "priceTarget": "$70",
-      "description": "FY26 revenue $2.5B at high end, subscriber growth +35%, EBITDA margin expands to 14%, multiple holds at 35×.",
+      "priceTarget": "$42",
+      "description": "FY26 revenue delivered near guide midpoint, Q2 confirms re-acceleration, Adj EBITDA margin exits toward guide, multiple holds ~3× sales.",
       "points": [
-        "Subscriber base reaches 3.5M end-FY26",
-        "Weight-loss category settles into branded + oral mix at sustainable margin",
-        "New categories (women's health, testosterone) reach 15%+ of revenue"
+        "Q2–Q4 print inside the $2.8-3.0B / $275-350M bands (plus initial Eucalyptus contribution)",
+        "Weight-loss settles into branded Novo mix with stabilising gross margin",
+        "International (Eucalyptus + ZAVA/Livewell) and new categories reach a meaningful revenue share"
       ]
     },
     "bull": {
-      "priceTarget": "$110",
-      "description": "Hims becomes the dominant DTC chronic-care platform, EBITDA margin expands toward 20%, multiple sustains 40×+ on durable growth.",
+      "priceTarget": "$68",
+      "description": "Hims becomes the leading multi-country DTC chronic-care platform, 2030 path looks credible, Adj EBITDA margin expands toward mid-teens, multiple re-rates toward 4×+ sales.",
       "points": [
-        "Subscriber base exceeds 4.5M with NRR >115%",
-        "International expansion (UK, Canada, EU pilot) materialises in 2026-27",
-        "Platform category mix diversifies the regulatory tail-risk concentration"
+        "Subscriber base scales past 3.5M with improving NRR as diagnostics/personalisation land",
+        "Eucalyptus integration lifts RoW without proportional margin dilution",
+        "FTC resolved without franchise damage; category mix diversifies away from GLP-1 concentration"
       ]
     }
   },
   "tenMoats": {
     "learnedInterfaces": {
       "status": "weakened",
-      "note": "Subscription UX and re-fill workflow drive some switching cost, but rivals can replicate the UI quickly."
+      "note": "Subscription UX and re-fill workflow drive some switching cost, but rivals can replicate the UI quickly — and FTC cancellation allegations undercut any claim that retention is earned convenience alone."
     },
     "businessLogic": {
       "status": "weakened",
@@ -180,11 +181,11 @@
     },
     "proprietaryData": {
       "status": "intact",
-      "note": "Subscription health-and-outcomes data accumulating across 3M+ patients is real, though monetisation pathways limited by HIPAA and consent."
+      "note": "Subscription health-and-outcomes data across 2.6M+ patients is real, though monetisation is constrained by HIPAA/consent — and the July 2026 FTC suit over alleged sharing with Meta/Snap puts that data advantage under active regulatory scrutiny."
     },
     "regulatoryLockIn": {
       "status": "weakened",
-      "note": "Telehealth and compounding regulation is fluid; the April 2025 GLP-1 compounding ban demonstrated the franchise's regulatory exposure."
+      "note": "Telehealth and compounding regulation remain fluid; the April 2025 GLP-1 compounding ban and the July 2026 FTC privacy/billing complaint show the franchise's regulatory exposure is structural, not episodic."
     },
     "networkEffects": {
       "status": "na",
@@ -198,6 +199,6 @@
       "status": "weakened",
       "note": "Hims is becoming the system of record for personalised chronic-care for younger demographics, but the moat is shallow vs primary care + EHR systems."
     },
-    "verdict": "Hims is a brand-and-bundle moat business in a regulated industry — AI is neutral-to-positive on cost (provider productivity) but the dominant moat questions are regulatory and competitive. The thesis is execution-and-category-expansion, not durable franchise economics, appropriately sized as speculative growth."
+    "verdict": "Hims is a brand-and-bundle moat business in a regulated industry — AI is neutral-to-positive on cost (provider productivity) but the dominant moat questions are regulatory (now FTC + compounding history) and competitive. The Novo partnership cleans up GLP-1 legality at the cost of margin; the thesis remains execution-and-category-expansion, appropriately sized as speculative growth."
   }
 }
