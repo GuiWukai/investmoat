@@ -2,7 +2,7 @@
   "slug": "smci",
   "ticker": "SMCI",
   "name": "Super Micro Computer",
-  "lastAnalyzed": "May 2026",
+  "lastAnalyzed": "August 10, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$26B"
+      "value": "~$21B"
     }
   ],
   "chips": [
@@ -26,38 +26,38 @@
   "metrics": [
     {
       "title": "FY26 Revenue Guide",
-      "value": "$33-37B",
-      "label": "+45-60% YoY on Blackwell ramp",
+      "value": "~$39-40B",
+      "label": "Raised path; Q4 prelim near low end of $11-12.5B (full print Aug 11)",
       "icon": "TrendingUp",
       "color": "#0ea5e9"
     },
     {
       "title": "Gross Margin",
-      "value": "~10.5%",
-      "label": "Compressed from ~17% on AI-server mix shift",
+      "value": "Q3 10.1%",
+      "label": "Non-GAAP; Q4 prelim 15-17% on mix — durability unconfirmed",
       "icon": "Percent",
       "color": "#f59e0b"
     },
     {
-      "title": "DLC Liquid Cooling",
-      "value": ">30% of mix",
-      "label": "Largest DLC shipper globally; key Blackwell differentiator",
-      "icon": "Snowflake",
+      "title": "Q4 New Orders",
+      "value": ">$60B",
+      "label": "Record backlog claim; conversion timing is the Aug 11 swing factor",
+      "icon": "Package",
       "color": "#10b981"
     }
   ],
   "moat": {
-    "description": "Fastest time-to-market integrator of NVIDIA reference designs with leading direct-liquid-cooling expertise — but ultimately a low-margin assembler with limited structural defensibility.",
+    "description": "Fastest time-to-market integrator of NVIDIA reference designs with leading direct-liquid-cooling / DCBBS depth — but ultimately a low-margin assembler with limited structural defensibility; the July $60B order print reinforces velocity, not pricing power.",
     "analysisTitle": "The Speed-and-DLC Moat",
-    "analysisSummary": "Super Micro's edge is **engineering velocity around NVIDIA's roadmap and direct-liquid-cooling depth** — real but narrow advantages in a fundamentally commoditising market:",
+    "analysisSummary": "Super Micro's edge is **engineering velocity around NVIDIA's roadmap and direct-liquid-cooling / DCBBS depth** — real but narrow advantages in a fundamentally commoditising market:",
     "analysisPoints": [
       {
         "title": "First-Mover Reference Design Velocity",
-        "text": "SMCI typically ships NVIDIA reference designs (HGX, GB200/NVL72, GB300) into volume production weeks ahead of Dell/HPE, capturing early-cycle hyperscaler and neocloud orders. The advantage compresses every generation as Dell and HPE invest to close the gap, but it remains real today."
+        "text": "SMCI typically ships NVIDIA reference designs (HGX, GB200/NVL72, GB300) into volume production weeks ahead of Dell/HPE, capturing early-cycle hyperscaler and neocloud orders. The July disclosure of >$60B Q4 new orders is consistent with that velocity edge — but conversion, not bookings, is what shows up in the P&L."
       },
       {
-        "title": "Direct Liquid Cooling Scale",
-        "text": "Super Micro is the highest-volume shipper of direct-liquid-cooling (DLC) AI racks, a capability that becomes mandatory at Blackwell-class power densities. DLC adoption inside SMCI's mix has crossed 30% and management targets the majority of FY26 shipments."
+        "title": "Direct Liquid Cooling & DCBBS Scale",
+        "text": "Super Micro is among the highest-volume shippers of direct-liquid-cooling AI racks and is pushing Data Center Building Block Solutions (full rack + cooling + power + networking). Management targets ~3,000 DLC racks/month capacity by end-FY26; DLC remains mandatory at Blackwell-class power densities."
       },
       {
         "title": "Building-Block Modularity",
@@ -66,94 +66,95 @@
     ]
   },
   "growth": {
-    "description": "FY26 revenue guide of $33-37B implies +45-60% YoY off the cleaned-up FY25 base. Blackwell GB200/GB300 NVL72 racks are the key driver, with DLC mix expanding rapidly. Margins remain the swing factor — gross margin compressed to ~10.5% on AI-server mix and pricing pressure from hyperscaler bake-offs.",
+    "description": "FY26 guide sits at $38.9-40.4B (~+80% YoY off FY25 ~$22B) after Q2's $12.7B record and Q3's $10.2B (+123% YoY) print slowed by site-readiness/supply. Q4 prelim (July 21) points to revenue near the low end of $11-12.5B with a claimed 15-17% gross margin and >$60B new orders — none of that is final until the August 11 report. Street FY27 revenue ~$53B (~+35%) is the near-term fade rate; margins and order conversion dominate EPS.",
     "growthAnalysis": {
       "cagrEstimate": "25-35%",
-      "scoreDerivation": "Base 80 (25-30% revenue CAGR mid-band) + 3 TAM expansion (AI infra capex still scaling 2026-27) − 5 margin compression (gross margin ~10.5% vs historical ~17%; pricing intensifies) − 2 governance overhang (FY24 audit issues residual) = 76",
+      "cagrBasis": "Measured on company revenue: FY25 ~$22.0B → FY26 guide midpoint ~$39.5B (+80% YoY) → Street FY27 ~$53B (~35%/yr). The 25-35% blended 3–5yr band decays that path toward low-20s as Blackwell Ultra / Vera-Rubin cycles normalise — not an extrapolation of FY26's spike or the unconfirmed >$60B Q4 order print (bookings are not revenue until delivered).",
+      "scoreDerivation": "Base 90 (25-35% revenue CAGR mid-band 30%) + 3 trajectory (2/3 drivers accelerating) + 0 margin (stable after Q2 trough; Q4 15-17% prelim unconfirmed) − 5 risk (order conversion + margin durability + export-control review) = 88",
       "drivers": [
         {
           "name": "Blackwell GB200/GB300 NVL72",
-          "metric": "Primary FY26 revenue driver; SMCI ships volume ahead of Dell/HPE",
+          "metric": "AI GPU platforms >80% of Q3 revenue; Q4 prelim >$60B new orders",
           "trend": "accelerating"
         },
         {
-          "name": "DLC Liquid Cooling Mix",
-          "metric": ">30% of revenue and rising; mandatory at Blackwell-class densities",
+          "name": "DLC / DCBBS Mix",
+          "metric": "DCBBS + liquid-cooling capacity scale; 3k DLC racks/mo FY26 target",
           "trend": "accelerating"
         },
         {
-          "name": "Neocloud Customer Base",
-          "metric": "CoreWeave, Lambda, and Tier-2 AI clouds remain core buyers; concentration risk",
+          "name": "Neocloud / Large Account Concentration",
+          "metric": "CoreWeave/Lambda-class and Tier-2 AI clouds remain core; Q3 site-readiness delays",
           "trend": "stable"
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If gross margin compresses below 9% sustained as Dell/HPE close the time-to-market gap on Blackwell-Ultra and Vera-Rubin in late 2026, EPS leverage reverses and the cyclical-multiple-trap thesis dominates — the stock has historically de-rated to <10× forward earnings on margin-compression scares.",
+      "keyRisk": "If the Q4 15-17% gross-margin print proves mix-driven and reverts toward high-single-digits as Dell/HPE close the Blackwell-Ultra/Vera-Rubin time-to-market gap, or if a material slice of the >$60B order book slips/cancels, EPS leverage reverses — compounded by the still-open board review of alleged export-control transactions (company not a DOJ defendant).",
       "keyRiskSeverity": "moderate",
-      "marginTrend": "compressing"
+      "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 70,
-    "description": "At ~$45 the stock trades at ~13× FY26 EPS — discounted vs Dell/HPE on governance overhang and margin uncertainty. Recovery thesis: clean audit, sustained AI capex, DLC leadership rerate to 16-18× = base case $65. Bear case is margin compression to <9% gross.",
+    "score": 80,
+    "description": "At ~$33 the stock trades at ~12× FY26 / ~10× FY27 consensus EPS — a deep discount to Dell/HPE that embeds margin volatility, working-capital intensity, and the export-control governance overhang. Base case ~$48 assumes FY27 consensus earns through and the multiple holds mid-teens; bear is a margin/order-conversion miss into the low-$20s.",
     "peAnalysis": {
-      "asOf": "May 2026",
+      "asOf": "August 10, 2026",
       "rows": [
         {
           "label": "Forward P/E (FY26)",
-          "value": "~13×",
-          "note": "EPS guide ~$3.50 mid; depressed on margin and governance"
+          "value": "~12×",
+          "note": "Street EPS ~$2.84; Q4 print Aug 11 can move the FY number"
         },
         {
           "label": "Forward P/E (FY27)",
-          "value": "~11×",
-          "note": "Assuming margin recovery to ~12% and revenue growth normalising"
+          "value": "~10×",
+          "note": "Street EPS ~$3.31; assumes margin normalises after Q4 mix spike"
         },
         {
           "label": "Price / Sales (FY26)",
-          "value": "~0.7×",
-          "note": "Reflects assembler, not vendor, multiple"
+          "value": "~0.5×",
+          "note": "Reflects assembler, not vendor, multiple on ~$39-40B sales"
         },
         {
           "label": "PEG Ratio",
-          "value": "~0.5×",
-          "note": "Cheap on growth; market discounts margin durability"
+          "value": "~0.3×",
+          "note": "Cheap on growth; market discounts margin durability and governance"
         },
         {
           "label": "EV / EBITDA (NTM)",
-          "value": "~10×",
-          "note": "Discount to Dell ~13× and HPE ~11×"
+          "value": "~9×",
+          "note": "Discount to Dell ~13× and HPE ~11×; WC/debt elevated"
         }
       ],
-      "summary": "The valuation is a margin-versus-growth wager. If gross margin holds 10-11% through Blackwell-Ultra ramp the stock rerates toward $65; if it compresses to high-single-digits the multiple stays at low-double-digits and the bear case prevails."
+      "summary": "The valuation is a margin-and-conversion wager into the August 11 print. If Q4's claimed 15-17% gross margin has a durable mix/DCBBS component and the order book converts on a normal lag, the stock can re-rate toward the mid-$40s; if margins snap back and bookings prove soft, the low-teens multiple stays and the bear case prevails."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$28",
-      "description": "Gross margin compresses below 9% as Dell/HPE close the time-to-market gap, hyperscaler pricing intensifies, and DLC commoditises. Multiple stays at 10× depressed earnings.",
+      "priceTarget": "$22",
+      "description": "Q4 margin spike reverses to high-single-digits, a slice of the >$60B order book slips or cancels, and the export-control review keeps the governance discount intact. Multiple stays at ~8-9× depressed earnings.",
       "points": [
-        "Gross margin falls below 9% sustained on Blackwell-Ultra pricing pressure",
-        "Dell/HPE close the time-to-market gap by H2 FY26, eroding the velocity moat",
-        "Concentration risk materialises as one of the top-3 neocloud customers reduces orders or insources"
+        "Gross margin reverts below 9% sustained once Q4 mix normalises and Dell/HPE close the time-to-market gap",
+        "Material portion of >$60B Q4 orders delays into FY28 or cancels; WC strain persists",
+        "Export-control board review or related enforcement expands the governance overhang"
       ]
     },
     "base": {
-      "priceTarget": "$65",
-      "description": "FY26 revenue lands at the $35B midpoint, gross margin stabilises at 10-11%, DLC penetration leads industry, multiple rerates toward 16-17× as governance overhang fades.",
+      "priceTarget": "$48",
+      "description": "FY26 lands near ~$39.5B, FY27 grows ~30-35% on Street, gross margin stabilises 10-12% after the Q4 mix spike, and the multiple holds ~14-15× as order conversion proves orderly.",
       "points": [
-        "FY26 revenue at $35B midpoint; FY27 grows 25-30% on Vera-Rubin platform launch",
-        "Gross margin holds 10-11%; DLC mix exceeds 50% of FY27 shipments",
-        "Audit overhang fully clears, removing the governance discount in the multiple"
+        "FY26 ~$39-40B; FY27 revenue near Street ~$53B on Blackwell Ultra / early Vera-Rubin",
+        "Gross margin holds 10-12% after Q4; DCBBS/enterprise mix supports double-digit GM",
+        "Order book converts over subsequent quarters without large cancellations; audit/export reviews stay contained"
       ]
     },
     "bull": {
-      "priceTarget": "$100",
-      "description": "AI capex super-cycle persists into 2027-28, SMCI captures outsized share on Vera-Rubin, gross margin recovers to 13-14% on DLC pricing power.",
+      "priceTarget": "$80",
+      "description": "Order book converts cleanly, mid-teens gross margin proves more structural on DCBBS/enterprise mix, AI capex sustains into Vera-Rubin, and governance overhang fades — multiple rerates toward ~18×.",
       "points": [
-        "FY27 revenue exceeds $45B as AI capex sustains into Vera-Rubin generation",
-        "Gross margin recovers to 13-14% on premium DLC mix and supply tightness",
-        "Hyperscaler design wins expand beyond neocloud Tier-2; multiple rerates to 20×+ on quality reassessment"
+        "FY27 revenue exceeds ~$55B as the >$60B backlog ships on schedule into Vera-Rubin generation",
+        "Gross margin sustains mid-teens on premium DCBBS/DLC mix rather than one-quarter mix",
+        "Export-control review closes without material company liability; multiple rerates on quality reassessment"
       ]
     }
   },
@@ -172,11 +173,11 @@
     },
     "talentScarcity": {
       "status": "intact",
-      "note": "DLC engineering and rack-scale integration talent is genuinely scarce; SMCI has the deepest bench of liquid-cooling production engineers in the West, but Dell/HPE/Foxconn are catching up."
+      "note": "DLC engineering and rack-scale / DCBBS integration talent is genuinely scarce; SMCI has one of the deepest benches of liquid-cooling production engineers in the West, but Dell/HPE/Foxconn are catching up."
     },
     "bundling": {
       "status": "weakened",
-      "note": "Building-block server portfolio offers customisation breadth, but bundling power is weak vs vertically integrated competitors and ODMs that pair compute, networking, and services."
+      "note": "DCBBS widens the bundle (compute + cooling + power + networking), but bundling power remains weak vs vertically integrated competitors and ODMs that pair hardware with deeper services attachments."
     },
     "proprietaryData": {
       "status": "na",
@@ -184,7 +185,7 @@
     },
     "regulatoryLockIn": {
       "status": "weakened",
-      "note": "Limited regulatory moat; FY24 audit and 10-K issues actively eroded customer-procurement and government-contract eligibility, only partially restored."
+      "note": "Limited regulatory moat; FY24 auditor resignation overhang persists in sentiment, and the March 2026 DOJ indictment of three individuals (company not a defendant) plus the ongoing independent board export-control review actively renew the governance discount."
     },
     "networkEffects": {
       "status": "na",
@@ -192,12 +193,12 @@
     },
     "transactionEmbedding": {
       "status": "weakened",
-      "note": "Once a hyperscaler qualifies a server platform there is some friction, but multi-vendor procurement strategies make embedment shallow vs software peers."
+      "note": "Once a hyperscaler qualifies a server platform there is some friction, but multi-vendor procurement strategies make embedment shallow vs software peers; Q3 site-readiness delays also show how little control SMCI has once a design win is booked."
     },
     "systemOfRecord": {
       "status": "na",
       "note": "hardware vendor, not a system of record."
     },
-    "verdict": "Super Micro is a direct AI-capex beneficiary at the revenue line but has thin structural moats — the business is fundamentally a high-velocity assembler whose advantages compress every NVIDIA cycle. The thesis is operating leverage and DLC scale, not durable economics, which keeps the multiple capped and the volatility high."
+    "verdict": "Super Micro is a direct AI-capex beneficiary at the revenue line but has thin structural moats — the business is fundamentally a high-velocity assembler whose advantages compress every NVIDIA cycle. The July order print and claimed Q4 margin spike raise the upside if durable, but until the August 11 statements confirm both, the thesis remains operating leverage and DLC/DCBBS scale, not durable economics."
   }
 }

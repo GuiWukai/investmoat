@@ -9,7 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$4.8T"
+      "value": "~$5.3T"
     }
   ],
   "chips": [
@@ -39,8 +39,8 @@
     },
     {
       "title": "Forward P/E",
-      "value": "~22×",
-      "label": "NTM EPS est. ~$9.00 unchanged since the print; ~21% price pullback since May compressed the multiple from ~28× — PEG ~0.4× vs. ~50% EPS CAGR",
+      "value": "~24×",
+      "label": "NTM EPS est. ~$9.00 unchanged since the May print; rebound from ~$198 to ~$220 lifted the multiple from ~22× — PEG ~0.5× vs. ~50% EPS CAGR",
       "icon": "TrendingUp",
       "color": "#10b981"
     }
@@ -65,7 +65,7 @@
     ]
   },
   "growth": {
-    "description": "Q1 FY2027 (reported May 20 2026) blew past the Street: revenue $81.6B (+85% YoY) vs. $78.8B consensus, EPS $1.87 vs. $1.76. Data center hit $75B (+92% YoY, +21% QoQ) with networking a record $14.8B (+199% YoY). Critically, management guided Q2 FY27 to $91B — well above the ~$86B Street had modelled and a clean rejection of the pre-print 'in-line/miss' bear scenario. The board added $80B to buyback authorization and raised the dividend 25×, with the first $0.25 payout made June 26 2026. On the earnings call (May 21), Huang conceded that China's AI-chip market has effectively gone to Huawei — Q1 China data-center revenue was near zero. In June 2026, roughly 10 Chinese firms (Alibaba, Tencent, ByteDance, JD, Lenovo, Foxconn) were conditionally approved to buy H200 chips under a 25%-of-China-revenue-to-Treasury arrangement, but no shipments had occurred as of this update — China remains a policy-gated wildcard, not a realized number. Vera Rubin has moved into full production with partner availability expected H2 2026. FY2027 EPS consensus remains ~$9.00, unchanged since the print. The next hard test of the thesis is the Q2 FY2027 print, due August 26, 2026, against the $91B guide.",
+    "description": "Q1 FY2027 (reported May 20 2026) blew past the Street: revenue $81.6B (+85% YoY) vs. $78.8B consensus, EPS $1.87 vs. $1.76. Data center hit $75B (+92% YoY, +21% QoQ) with networking a record $14.8B (+199% YoY). Critically, management guided Q2 FY27 to $91B — well above the ~$86B Street had modelled. The board added $80B to buyback authorization and raised the dividend 25×, with the first $0.25 payout made June 26 2026. On the May 21 call Huang conceded China's AI-chip market has effectively gone to Huawei — Q1 China data-center revenue was near zero. By mid-July a U.S. official confirmed only minimal H200 shipments under the June conditional approvals (still excluded from the $91B guide) — China remains a policy-gated option, not a realized number. Vera Rubin is in full production; early-August SpaceX exclusivity commentary on Rubin helped the stock rebound from the June/July ~$198 trough toward ~$220. FY2027 EPS consensus remains ~$9.00. The next hard test is the Q2 FY2027 print, due August 26, 2026, against the $91B guide.",
     "growthAnalysis": {
       "cagrEstimate": "35–50%",
       "scoreDerivation": "Base 93 (35–50% CAGR, baseFromCagr formula) + 3 trajectory (2 of 3 drivers accelerating) + 3 TAM expansion (sovereign AI, Rubin ramp) − 10 high keyRisk severity (China concession, antitrust scrutiny, Q2 FY27 print still pending) = 89",
@@ -87,44 +87,44 @@
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "The stock fell ~21% from ~$250 to ~$198 between the May 20 print and this update despite the beat-and-raise quarter — driven by GPU cloud rental rates (B200) falling ~31% over three weeks (May 30–June 21), Huang's China-to-Huawei concession, macro risk-off, and ~$410M of insider selling, not a change in reported fundamentals. The Q2 FY27 print ($91B guide) has not yet happened (due Aug 26, 2026) and is now the first real test since the pullback. Falsifiable test: if the Q2 FY27 print misses the $91B guide by more than 5%, or GPU rental-rate deflation continues into Q3 signalling actual demand softening rather than sentiment, or any top-3 hyperscaler cuts FY2027 AI capex guidance by >10% on a single earnings print before then, the demand-durability thesis weakens materially.",
+      "keyRisk": "The stock fell ~21% from ~$250 to ~$198 after the May 20 beat-and-raise on GPU cloud rental-rate deflation, Huang's China-to-Huawei concession, macro risk-off, and insider selling — then recovered toward ~$220 into early August on Rubin/SpaceX sentiment without a new earnings print. The Q2 FY27 print ($91B guide, due Aug 26, 2026) remains the first real fundamental test since the pullback. Falsifiable test: if the Q2 FY27 print misses the $91B guide by more than 5%, or GPU rental-rate deflation re-accelerates into Q3 signalling actual demand softening rather than sentiment, or any top-3 hyperscaler cuts FY2027 AI capex guidance by >10% on a single earnings print before then, the demand-durability thesis weakens materially.",
       "keyRiskSeverity": "high",
       "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 77,
-    "description": "At ~$198 (down ~21% from the ~$250 post-print level; market cap ~$4.8T), NVDA has round-tripped back below the $260 base case despite guidance ($91B Q2 FY27) that has not yet been tested — the print is due Aug 26, 2026. The decline tracks GPU cloud rental-rate deflation, Huang's May 21 concession that China's AI-chip market has gone to Huawei, broader macro risk-off, and insider selling — not a change in the earnings trajectory (NTM EPS consensus still ~$9.00). Forward P/E has compressed to ~22× (PEG ~0.4×) and the stock now sits meaningfully closer to the $130 bear case than the $430 bull case, a more attractive entry point than the May analysis implied, with Wall Street consensus (Strong Buy, ~$300 average target) not walking back estimates.",
+    "score": 73,
+    "description": "At ~$220 (market cap ~$5.3T), NVDA has recovered from the June/July ~$198 trough but remains ~15% below the $260 base case — still awaiting the Aug 26, 2026 Q2 FY27 print against the $91B guide. The rebound tracks Rubin production/SpaceX exclusivity sentiment and a modest easing of the post-May risk-off, not a change in reported fundamentals (NTM EPS consensus still ~$9.00; China H200 shipments remain minimal and excluded from the guide). Forward P/E has re-expanded to ~24× (PEG ~0.5×) from the ~22× trough — still well below the ~28× post-May peak — with the stock closer to base than bear but not yet pricing the full $91B confirmation.",
     "peAnalysis": {
-      "asOf": "July 2026",
+      "asOf": "August 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~30×",
+          "value": "~33×",
           "note": "TTM EPS ~$6.60 (post Q1 FY27 ramp)"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~22×",
+          "value": "~24×",
           "note": "consensus NTM EPS ~$9.00, unchanged since May"
         },
         {
           "label": "PEG Ratio",
-          "value": "~0.4×",
+          "value": "~0.5×",
           "note": "fwd P/E ÷ ~50% EPS CAGR (3–5yr)"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~13×",
+          "value": "~14×",
           "note": "~$370B NTM revenue est."
         },
         {
           "label": "Price / FCF",
-          "value": "~43×",
+          "value": "~47×",
           "note": "~$112B FCF (TTM est.)"
         }
       ],
-      "summary": "The ~21% price pullback since the May 20 print compressed the forward P/E from ~28× to ~22× on an unchanged ~$9.00 NTM EPS estimate, pulling the PEG to ~0.4× against a ~50% EPS CAGR — a growth-at-reasonable-price setup analysts have not walked back (Strong Buy consensus, ~$300 average 12-month target). Price/Sales (~13×) and Price/FCF (~43×) have de-rated roughly in line with the price decline but remain rich in absolute terms, leaving the multiple compression squarely a sentiment/macro story ahead of the Aug 26, 2026 Q2 FY27 print rather than an earnings reset."
+      "summary": "The rebound from ~$198 to ~$220 re-expanded the forward P/E from ~22× to ~24× on an unchanged ~$9.00 NTM EPS estimate (PEG ~0.5× vs. ~50% EPS CAGR) — still a growth-at-reasonable-price setup versus the ~28× post-May peak, with Street consensus (Strong Buy, ~$300 average target) not walked back. Price/Sales (~14×) and Price/FCF (~47×) remain rich in absolute terms; the Aug 26, 2026 Q2 FY27 print is the next catalyst that either validates the $91B guide or reopens the June de-rating."
     }
   },
   "scenarios": {
@@ -201,5 +201,5 @@
     },
     "verdict": "NVIDIA's moat remains predominantly AI-resilient — the CUDA network effect, proprietary compute-optimisation data, and infrastructure-layer transaction embedding all deepen as AI spend grows, and neither the Q1 FY27 beat nor the subsequent ~21% price pullback changed that trajectory. The moat's soft spot has widened this quarter: regulatory lock-in stays weakened by the China policy whipsaw (Huang's Huawei concession, unrealised H200 approvals) and now also by escalating antitrust scrutiny, and bundling itself has been downgraded to weakened as that scrutiny turned from investigation into a concrete French dominance-abuse finding. NVIDIA remains the infrastructure layer of the AI economy, but the regulatory tail risk to how freely it can bundle and price is now demonstrably larger than it was in May."
   },
-  "lastAnalyzed": "July 3, 2026"
+  "lastAnalyzed": "August 10, 2026"
 }

@@ -9,7 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$185B"
+      "value": "~$160B"
     }
   ],
   "chips": [
@@ -26,113 +26,145 @@
     {
       "title": "Revenue Growth",
       "value": "13%",
-      "label": "Q1 FY2027 YoY — $11.13B, beat $11.05B est.",
+      "label": "Q1 FY27 YoY — $11.13B (~8.5% organic ex-Informatica); Q2 due Aug 26 AMC",
       "icon": "Cloud",
       "color": "#00a1e0"
     },
     {
       "title": "Agentforce ARR",
       "value": "$1.2B",
-      "label": "+205% YoY; Agentforce + Data 360 ARR $3.4B (+200%)",
+      "label": "+205% YoY; Agentforce + Data 360 ARR $3.4B (incl. $1.1B Informatica Cloud)",
       "icon": "Zap",
       "color": "#3b82f6"
     },
     {
       "title": "FY2027 Guide",
       "value": "~$46B",
-      "label": "raised to $45.9–46.2B (+10–11%); $25B accelerated buyback",
+      "label": "$45.9–46.2B (+10–11%, ~3pts Informatica); cRPO $33.6B (+14%)",
       "icon": "BarChart3",
       "color": "#17c964"
     }
   ],
   "moat": {
-    "description": "High switching costs and 'Data Gravity' makes it the system of record for sales.",
+    "description": "High switching costs and Data Gravity make Salesforce the system of record for enterprise sales and service; Agentforce + Informatica deepen the data layer, while HubSpot (SMB/mid-market) and ServiceNow (workflow/ITSM agents) press the edges.",
     "analysisTitle": "The Data Gravity Moat",
-    "analysisSummary": "Salesforce's moat is built on **Ecosystem Stickiness**:",
+    "analysisSummary": "Salesforce's moat is built on **ecosystem stickiness and customer-data gravity**, now reinforced by Agentforce consumption attach and Informatica's integration/governance layer:",
     "analysisPoints": [
       {
         "title": "High Switching Costs",
-        "text": "Once an enterprise integrates its entire sales workflow and data into CRM, the cost and risk of migrating to a competitor like Oracle or SAP are prohibitive."
+        "text": "Once an enterprise integrates sales, service, and partner workflows into Salesforce, migrating to Oracle, SAP, HubSpot, or a ServiceNow-centric stack is multi-year and high-risk. AppExchange (7,000+ ISVs) and years of custom Apex/Flow logic compound that cost."
       },
       {
-        "title": "Platform Breadth",
-        "text": "With Sales, Service, Marketing, and Slack, Salesforce offers a unified platform that individual point-solutions cannot match."
+        "title": "Platform Breadth + Agentforce Attach",
+        "text": "Sales, Service, Marketing, Commerce, Slack, and Agentforce form the broadest enterprise CRM bundle. Agentforce ARR hit $1.2B (+205% YoY) with >50% of Agentforce/Data 360 bookings from existing-customer expansion — the attach path that turns seat-based CRM into consumption-based workflow revenue."
       },
       {
-        "title": "Data Cloud",
-        "text": "The ability to harmonize disparate data streams into a single customer profile creates a new layer of value for AI modeling."
+        "title": "Data Cloud + Informatica",
+        "text": "Data 360 harmonises customer profiles for AI modelling; Informatica (closed Nov 2025) adds $1.1B Cloud ARR and the integration/governance substrate Agentforce needs to read/write across enterprise systems reliably. That deepens data gravity versus point-solution agents from Microsoft Copilot, ServiceNow, or HubSpot Breeze."
       }
     ]
   },
   "growth": {
-    "description": "Q1 FY2027 (reported May 27 2026) delivered record revenue of $11.13B (+13% YoY), beating the $11.05B consensus, with non-GAAP EPS of $3.88 (+50%) and GAAP EPS of $2.42 (+52%). Agentforce + Data 360 ARR reached $3.4B (+200% YoY), with Agentforce alone at $1.2B (+205%) and >50% of bookings from existing customers. Management raised the FY27 revenue guide to $45.9–46.2B and launched a $25B accelerated share repurchase (returning $27.5B in the quarter, ~10% share-count reduction YoY). cRPO of $33.6B (+14%) signals durable demand. The primary risk is whether Agentforce pricing sustains ARPU expansion as it scales beyond early deployments.",
+    "description": "Latest reported quarter remains Q1 FY2027 (ended Apr 30, reported May 27): revenue $11.13B (+13% YoY / +12% CC), including ~$444M Informatica (~8.5% organic), non-GAAP EPS $3.88 (+50%), non-GAAP op. margin 34.8% (record). Agentforce ARR $1.2B (+205%); Agentforce + Data 360 ARR $3.4B (+200%, incl. $1.1B Informatica Cloud); cRPO $33.6B (+14%). FY27 revenue guide $45.9–46.2B (+10–11%, ~3pts Informatica); Q2 guide $11.27–11.35B (+10–11%, >4pts Informatica). $25B ASR cut diluted shares ~10% YoY. Q2 prints Aug 26 AMC — not yet reported. Competitive pressure from HubSpot (SMB/mid-market CRM) and ServiceNow (agentic workflow/ITSM) remains the share-gain risk at the edges.",
     "growthAnalysis": {
       "cagrEstimate": "9-12%",
-      "scoreDerivation": "Base 73 (9-12% CAGR mid-band) + 6 Agentforce ARR +169% YoY + 4 fastest revenue growth in two years + 3 margin/buyback discipline - 6 Microsoft Copilot competitive pressure = 80",
+      "cagrBasis": "Measured on company revenue: FY27 guide +10–11% YoY ($45.9–46.2B) with ~3pts Informatica, implying ~7–8% YoY organic at the guide midpoint; Q1 printed +13% YoY reported / ~8.5% YoY organic ex-$444M Informatica. Agentforce ARR $1.2B (+205% YoY) is still only ~2.6% of FY27 revenue, so the 9–12% blended 3–5yr band assumes gradual AI-attach and Data 360/Informatica mix lifting organic growth off the high-single-digit base — not an extrapolation of +205% YoY Agentforce or of inorganic Informatica contribution.",
+      "scoreDerivation": "Base ~74 (10.5% midpoint of 9–12%) + 2.7 trajectory (Agentforce/Data 360 and core multi-cloud accelerating; operating leverage stable) + 0 margin (record 34.8% non-GAAP op. margin already delivered; FY guide ~34.3%) − 5 moderate risk (Agentforce ARPU durability + Copilot/HubSpot/ServiceNow share pressure) = 71",
       "drivers": [
         {
           "name": "Agentforce / Data 360",
-          "metric": "Combined ARR $3.4B (+200% YoY); Agentforce alone $1.2B ARR (+205% YoY); >50% of bookings from existing-customer expansion",
+          "metric": "Combined ARR $3.4B (+200% YoY) incl. $1.1B Informatica Cloud; Agentforce alone $1.2B ARR (+205%); 3.8B Agentic Work Units (+111% QoQ); >50% bookings from existing-customer expansion",
           "trend": "accelerating"
         },
         {
           "name": "Core Multi-Cloud",
-          "metric": "Q1 FY27 revenue $11.13B (+13% YoY); cRPO $33.6B (+14%); FY27 guide raised to $45.9-46.2B (+10-11%)",
+          "metric": "Q1 FY27 revenue $11.13B (+13% / ~8.5% organic); cRPO $33.6B (+14%); FY27 guide $45.9–46.2B (+10–11%, ~3pts Informatica); Commerce/Tableau softness called out",
           "trend": "accelerating"
         },
         {
           "name": "Operating Leverage",
-          "metric": "Non-GAAP EPS $3.88 (+50%); $25B accelerated buyback cut share count ~10% YoY",
+          "metric": "Non-GAAP EPS $3.88 (+50%); non-GAAP op. margin 34.8% (+250 bps); $25B ASR → diluted shares ~871M (−10% YoY)",
           "trend": "stable"
         }
       ],
       "primaryType": "market share",
-      "keyRisk": "If Agentforce per-conversation pricing fails to translate pilot deployments into durable ARPU expansion by mid-FY2027 and Microsoft Dynamics 365 + Copilot accelerates net-new logo wins at the SMB/mid-market layer, Salesforce's seat-growth-plus-AI-attach narrative breaks and revenue growth re-decelerates below 9%.",
+      "keyRisk": "If Agentforce consumption pricing fails to convert pilots into durable ARPU by mid-FY2027 — while organic growth stays near the ~7–8% Informatica-adjusted guide — and Microsoft Copilot, HubSpot, or ServiceNow accelerate net-new logo wins at SMB/mid-market and workflow layers, Salesforce's seat-plus-AI-attach narrative breaks and revenue growth re-decelerates below 9%.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 80,
-    "description": "At ~$197 following the May 27 Q1 FY27 beat-and-raise (+8% reaction), trading ~21% below the base case ($250). Q1 delivered record $11.13B revenue (+13%) and non-GAAP EPS $3.88 (+50%); the FY27 guide was raised to $45.9–46.2B and a $25B accelerated buyback launched. Agentforce + Data 360 ARR of $3.4B (+200%) is monetising faster than the 'SaaSpocalypse' bears expected. Still attractively priced for the AI-agent re-acceleration despite the post-print pop."
+    "score": 79,
+    "description": "At ~$195 — roughly flat vs the May post-print pop and still ~22% below the base case ($250) — CRM screens cheap on ~21× forward earnings after the 2026 SaaSpocalypse de-rating. Q1's beat-and-raise, Agentforce $1.2B ARR, and $25B ASR are already in the tape; the open debate is organic growth (~7–8% at the FY27 guide once Informatica's ~3pts are stripped) versus AI-attach upside. Spot sits between bear ($150) and base into the Aug 26 Q2 print.",
+    "peAnalysis": {
+      "asOf": "August 10, 2026",
+      "rows": [
+        {
+          "label": "Forward P/E (non-GAAP)",
+          "value": "~21×",
+          "note": "on FY27 non-GAAP EPS guide ~$14.06–14.12"
+        },
+        {
+          "label": "EV / Sales (FY27)",
+          "value": "~3.5×",
+          "note": "~$160B equity / ~$46B guide; net debt elevated post-ASR + Informatica"
+        },
+        {
+          "label": "FCF Margin (TTM)",
+          "value": "~36%",
+          "note": "supports buybacks and dividend"
+        },
+        {
+          "label": "cRPO Growth",
+          "value": "+14%",
+          "note": "$33.6B; 12-month demand telescope"
+        },
+        {
+          "label": "Diluted Shares",
+          "value": "~871M",
+          "note": "−10% YoY after $25B ASR"
+        }
+      ],
+      "summary": "The multiple has compressed from 40×+ a year ago to ~21× forward as the market priced SaaS disruption; Agentforce traction and record margins argue that was overdone, but Informatica-adjusted organic growth in the high single digits and competition from HubSpot/ServiceNow/Microsoft keep a re-rating contingent on the Aug 26 print and sustained AI attach."
+    }
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$150",
-      "description": "Enterprise IT budgets compress further, Agentforce fails to monetize at scale, Microsoft Copilot gains more CRM share.",
+      "description": "Enterprise IT budgets compress, Agentforce stays stuck in pilots, organic growth fades toward mid-single digits, and Copilot/HubSpot/ServiceNow take share.",
       "points": [
-        "Seat growth turns flat due to global downsizing and AI-driven workforce reduction",
-        "Agentforce adoption remains limited to pilot programs, ARPU impact minimal",
-        "Increased competition from Microsoft Dynamics 365 Copilot accelerates churn"
+        "Seat growth turns flat due to global downsizing and AI-driven workforce reduction; Informatica synergies disappoint",
+        "Agentforce adoption remains limited to pilot programs, ARPU impact minimal — consumption pricing fails to scale",
+        "Microsoft Dynamics 365 Copilot, HubSpot, and ServiceNow accelerate churn and displace net-new mid-market/workflow deals"
       ]
     },
     "base": {
       "priceTarget": "$250",
-      "description": "Steady 10-12% growth continues, Agentforce begins contributing meaningfully to ARPU, margins expand via efficiency.",
+      "description": "Steady ~10–12% reported growth (high-single-digit organic plus Informatica), Agentforce begins contributing meaningfully to ARPU, margins hold near mid-30s non-GAAP.",
       "points": [
-        "Successful multi-cloud bundling strategies drive net revenue retention above 110%",
-        "Agentforce adoption reaches 20%+ of enterprise base, lifting ARPU 8-12%",
-        "Operating margins reach 35%+ as AI reduces implementation headcount"
+        "Successful multi-cloud bundling plus Agentforce attach keeps net revenue retention healthy even as Commerce/Tableau stay soft",
+        "Agentforce adoption reaches a meaningful share of the enterprise base, lifting ARPU via Agentic Work Unit consumption",
+        "Operating margins sustain ~34%+ non-GAAP as AI reduces implementation headcount; ASR continues to shrink share count"
       ]
     },
     "bull": {
       "priceTarget": "$350",
-      "description": "Agentforce becomes a mainstream enterprise workflow layer, driving 20%+ revenue acceleration and significant ARPU expansion.",
+      "description": "Agentforce becomes a mainstream enterprise workflow layer, Informatica unlocks cross-cloud data agents, and revenue re-accelerates with a multiple re-rate.",
       "points": [
-        "Agentforce becomes the default AI agent platform for Fortune 1000 enterprises",
-        "Data Cloud reaches $3B ARR, becoming a standalone business",
-        "Margin profile re-rates closer to best-in-class SaaS at 40%+ GAAP operating"
+        "Agentforce becomes the default AI agent platform for Fortune 1000 enterprises, outpacing Copilot/ServiceNow attach in CRM workflows",
+        "Data Cloud + Informatica compound past the current $3.4B combined ARR run-rate into a durable standalone growth engine",
+        "Margin profile re-rates closer to best-in-class SaaS at 40%+ GAAP operating as consumption mix scales"
       ]
     }
   },
   "tenMoats": {
     "learnedInterfaces": {
       "status": "weakened",
-      "note": "Traditional CRM dashboards are being replaced by AI-native conversational interfaces and agent-driven workflows."
+      "note": "Traditional CRM dashboards are being replaced by AI-native conversational interfaces and agent-driven workflows — including Salesforce's own Agentforce, which abstracts the UI that once created lock-in."
     },
     "businessLogic": {
       "status": "weakened",
-      "note": "AI agents can now perform many tasks previously requiring complex Salesforce configuration and customization."
+      "note": "AI agents can now perform many tasks previously requiring complex Salesforce configuration and customization; HubSpot and ServiceNow agents attack simpler workflow automation from adjacent seats."
     },
     "publicDataAccess": {
       "status": "na",
@@ -144,11 +176,11 @@
     },
     "bundling": {
       "status": "strong",
-      "note": "Sales Cloud + Service Cloud + Marketing Cloud + Slack + Einstein AI + Agentforce = the most complete enterprise CRM bundle."
+      "note": "Sales Cloud + Service Cloud + Marketing Cloud + Slack + Einstein + Agentforce + Informatica = the most complete enterprise CRM + data-integration bundle, harder for HubSpot or ServiceNow to match end-to-end."
     },
     "proprietaryData": {
       "status": "strong",
-      "note": "150k+ enterprise customers' CRM data harmonized in Salesforce Data Cloud — the definitive record of global B2B relationships."
+      "note": "150k+ enterprise customers' CRM data harmonized in Data 360, now paired with Informatica's integration/governance graph — the definitive record of global B2B relationships for agent reasoning."
     },
     "regulatoryLockIn": {
       "status": "strong",
@@ -160,13 +192,13 @@
     },
     "transactionEmbedding": {
       "status": "strong",
-      "note": "Sales pipeline, service cases, marketing campaigns, and partner portals are embedded in daily business operations globally."
+      "note": "Sales pipeline, service cases, marketing campaigns, and partner portals are embedded in daily business operations globally; Agentforce Work Units deepen that embedding via consumption."
     },
     "systemOfRecord": {
       "status": "strong",
       "note": "The de facto system of record for customer relationships, service history, and revenue pipeline in enterprise."
     },
-    "verdict": "Salesforce's transition to an AI-first platform (Agentforce) could deepen their data lock-in and system-of-record status, turning AI from a threat into the engine that reinforces their enterprise moat."
+    "verdict": "Salesforce's transition to an AI-first platform (Agentforce) plus Informatica's data layer could deepen data lock-in and system-of-record status, turning AI from a threat into the engine that reinforces the enterprise moat — provided organic growth re-accelerates and HubSpot/ServiceNow/Microsoft do not siphon the mid-market and workflow edge."
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "August 10, 2026"
 }

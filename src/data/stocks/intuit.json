@@ -9,7 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$89B"
+      "value": "~$90B"
     }
   ],
   "chips": [
@@ -26,93 +26,94 @@
     {
       "title": "GBS Online Growth",
       "value": "+19%",
-      "label": "Global Business Solutions Online Ecosystem Q3 FY26",
+      "label": "Global Business Solutions Online Ecosystem Q3 FY26 (ex-Mailchimp +22%)",
       "icon": "TrendingUp",
       "color": "#2ca01c"
     },
     {
       "title": "Non-GAAP EPS",
       "value": "$12.80",
-      "label": "Q3 FY26, Beat Est. by 2%",
+      "label": "Q3 FY26; FY26 guide $23.80–$23.85 (+18%)",
       "icon": "BarChart",
       "color": "#3b82f6"
     },
     {
       "title": "Forward P/E",
-      "value": "14.5×",
-      "label": "PEG 0.95 — GARP territory",
+      "value": "~15×",
+      "label": "PEG ~1.0 on ~15% EPS CAGR; Q4/FY due Aug 25 AMC",
       "icon": "DollarSign",
       "color": "#10b981"
     }
   ],
   "moat": {
-    "description": "QuickBooks dominates as a system of record for 7M+ SMBs with all five AI-resilient moats rated strong, but TurboTax faces secular margin pressure from free alternatives (Wealthsimple Tax in Canada, FreeTaxUSA in the US) even as IRS Direct File's death removed the biggest government threat.",
+    "description": "QuickBooks dominates as a system of record for 7M+ SMBs with all five AI-resilient moats rated strong, while TurboTax faces secular margin pressure from free alternatives even as IRS Direct File's death removed the biggest government threat. GenOS agent rollouts (3M customers, 85% return) deepen the proprietary-data flywheel without repairing the weakened bundle thesis after the Mailchimp pullback.",
     "analysisTitle": "The Ecosystem Moat — Polarised but Durable",
-    "analysisSummary": "Intuit's moat profile is **sharply polarised**: all five AI-resilient moats (proprietary data, regulatory lock-in, network effects, transaction embedding, system of record) remain strong, while all five AI-vulnerable moats are weakened or barely intact. The restructuring — 17% workforce cut and Mailchimp pullback — reflects management's bet that QuickBooks' data flywheel and AI monetisation can carry the business even as the TurboTax/Mailchimp bundle shrinks.",
+    "analysisSummary": "Intuit's moat profile is **sharply polarised**: all five AI-resilient moats (proprietary data, regulatory lock-in, network effects, transaction embedding, system of record) remain strong, while all five AI-vulnerable moats are weakened or barely intact. The restructuring — 17% workforce cut and Mailchimp pullback — plus GenOS agent monetisation is management's bet that QuickBooks' data flywheel can carry the business even as the TurboTax/Mailchimp bundle shrinks.",
     "analysisPoints": [
       {
         "title": "QuickBooks: The Fortress Holds (58% of Revenue)",
-        "text": "7M+ SMBs use QuickBooks as their system of record for payroll, invoicing, taxes, and lending. Global Business Solutions Online Ecosystem grew +19% in Q3 FY2026, and the segment growth guide was raised to ~16% for FY2026. Years of embedded transaction history, CPA-network effects, and payroll processing make migration prohibitive. AI-native challengers (Puzzle, Digits) remain subscale."
+        "text": "7M+ SMBs use QuickBooks as their system of record for payroll, invoicing, taxes, and lending. Global Business Solutions Online Ecosystem grew +19% in Q3 FY2026 (+22% ex-Mailchimp), and the segment growth guide was raised to ~16% for FY2026. GenOS agents (Payroll, Project Management in beta; Business Tax Agent) are shipping done-for-you workflows on that data — early claims include faster payment collection and higher deduction capture — while AI-native challengers (Puzzle, Digits) remain subscale."
       },
       {
-        "title": "TurboTax: Moat Eroding but Government Threat Removed (24%)",
-        "text": "TurboTax revenue grew just +7% in Q3 FY2026 ($4.4B) — the weakest growth in the portfolio. The IRS Direct File program was killed by DOGE in 2026, removing the biggest government competitor. However, free/low-cost alternatives continue to chip away: Wealthsimple Tax captured 4M+ Canadian filers with a pay-what-you-want model, and FreeTaxUSA offers free federal filing for nearly all tax situations. Intuit's pivot to TurboTax Live (human-assisted, higher ARPU) is the right strategy but hasn't offset unit-volume pressure."
+        "title": "TurboTax / Credit Karma: Seasonality and Free-Alternative Pressure (Consumer ~24%+)",
+        "text": "TurboTax revenue grew just +7% in Q3 FY2026 ($4.4B) — the weakest growth in the portfolio — while Credit Karma printed +15% ($631M) against a full-year CK guide of ~+19% as personal-loan demand normalises. IRS Direct File's elimination removed the biggest government competitor, but FreeTaxUSA and Wealthsimple Tax still chip the paid tier. TurboTax Live (human-assisted, higher ARPU) plus GenOS filing agents (returns completed ~12% faster in early cohorts) are the offsets heading into Investor Day (Sep 17)."
       },
       {
         "title": "Mailchimp Pullback Weakens the Bundle Thesis",
-        "text": "The 17% workforce reduction explicitly targets Mailchimp right-sizing and TurboTax/Credit Karma integration redundancy. Management is conceding that the four-product bundle (QuickBooks + TurboTax + Credit Karma + Mailchimp) isn't delivering synergies worth the cost structure. The bundling moat has been downgraded from intact to weakened — Intuit is becoming a QuickBooks-centric company with supporting products, not a true platform bundle."
+        "text": "The 17% workforce reduction explicitly targets Mailchimp right-sizing and TurboTax/Credit Karma integration redundancy. Management is conceding that the four-product bundle isn't delivering synergies worth the prior cost structure. The bundling moat stays weakened — Intuit is becoming a QuickBooks-centric GenOS platform with supporting consumer products, not a true four-way platform bundle."
       }
     ]
   },
   "growth": {
-    "description": "Q3 FY2026 revenue of $8.56B (+10% YoY) missed the $8.61B consensus — the slowest growth rate since 2024. GAAP EPS $11.09 (+11%) and non-GAAP EPS $12.80 (+10%) both beat estimates. Full-year FY2026 guidance was raised to $21.34–21.37B revenue (+13–14%) and $23.80–$23.85 non-GAAP EPS. The 17% workforce cut ($300–340M restructuring charges) is expected to drive meaningful margin expansion starting FY2027. Consumer segment grew +8% (TurboTax +7%, Credit Karma +15%), while GBS Online Ecosystem grew +19%. The deceleration trajectory is concerning, but the restructuring creates a clear EPS growth inflection ahead.",
+    "description": "Latest reported quarter remains Q3 FY2026 (ended Apr 30): revenue $8.56B (+10% YoY) slightly missed consensus, while GAAP EPS $11.09 and non-GAAP EPS $12.80 both beat. FY2026 guidance stands at $21.34–21.37B revenue (+13–14%) and $23.80–$23.85 non-GAAP EPS (+18%); GBS guide ~+16%, Consumer ~+10% (TurboTax ~+7%, Credit Karma ~+19%). The 17% workforce cut ($300–340M charges) is the margin bridge into FY2027. GenOS agentic experiences are live with early engagement metrics, but Q4/FY results (Aug 25 AMC) are not yet reported — do not treat agent KPIs as a substitute for the print.",
     "growthAnalysis": {
       "cagrEstimate": "10–13%",
-      "scoreDerivation": "Base 75 (8–15% CAGR, midpoint 11.5%) − 1 deceleration (Credit Karma slowed from +23% to +15%) + 4 margin (expanding via 17% workforce restructuring) + 4 type (both TAM and share) − 5 risk (moderate: AI-native bookkeeping + TurboTax free-alternative pressure) = 77",
+      "cagrBasis": "Measured on company revenue: FY26 guide +13–14% YoY ($21.34–21.37B) after Q3 +10% YoY, with GBS Online +19% YoY (ex-Mailchimp +22% YoY) carrying the stack while TurboTax runs ~+7% YoY and Credit Karma decelerated from +23% YoY (Q2) to +15% YoY (Q3) against a +19% YoY FY CK guide. The 10–13% blended 3–5yr band decays that mix toward mid-teens GBS + mid/high-single-digit Consumer as restructuring expands margins — not an extrapolation of GBS alone, and not a FY27 print (unreported).",
+      "scoreDerivation": "Base 75 (10–13% CAGR midpoint 11.5%) − 1.3 trajectory (Credit Karma decelerating; GBS and TurboTax stable) + 4 margin (expanding via 17% workforce restructuring) − 5 moderate risk (AI-native bookkeeping + TurboTax free-alternative pressure) = 73",
       "drivers": [
-        { "name": "Global Business Solutions (QuickBooks)", "metric": "+19% YoY GBS Online Ecosystem Q3 FY26; FY26 segment guide raised to +16%", "trend": "stable" },
-        { "name": "Credit Karma", "metric": "+15% YoY Q3 FY26 ($631M); decelerated from +23% in Q2 as personal loans normalise", "trend": "decelerating" },
-        { "name": "Consumer (TurboTax)", "metric": "+7% YoY Q3 FY26 ($4.4B); FY26 Consumer segment guide raised to +10%", "trend": "stable" }
+        { "name": "Global Business Solutions (QuickBooks)", "metric": "+19% YoY GBS Online Ecosystem Q3 FY26 (+22% ex-Mailchimp); FY26 segment guide raised to +16%", "trend": "stable" },
+        { "name": "Credit Karma", "metric": "+15% YoY Q3 FY26 ($631M) vs FY26 CK guide ~+19%; decelerated from +23% in Q2 as personal loans normalise", "trend": "decelerating" },
+        { "name": "Consumer (TurboTax)", "metric": "+7% YoY Q3 FY26 ($4.4B); FY26 Consumer guide ~+10%; GenOS agents early (3M users, 85% return) — monetisation TBD at Aug 25 print / Sep 17 Investor Day", "trend": "stable" }
       ],
       "primaryType": "both",
-      "keyRisk": "If AI-native bookkeeping startups (Puzzle, Digits, Campfire) capture 5%+ of the QuickBooks SMB base by end of FY2028, ARPU compression and churn acceleration would undercut the GBS growth thesis — the only segment carrying the company",
+      "keyRisk": "If AI-native bookkeeping startups (Puzzle, Digits, Campfire) capture 5%+ of the QuickBooks SMB base by end of FY2028, ARPU compression and churn acceleration would undercut the GBS growth thesis — the only segment carrying the company — while TurboTax free alternatives keep Consumer near mid-single digits",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 77,
-    "description": "Trading ~$320 — 24% below the base case ($420) — after plunging 20% on the Q3 earnings miss and 17% layoff announcement. At ~14.5× non-GAAP forward P/E and a PEG of ~0.95, Intuit trades at a deep discount to quality-software peers (~28–32×). The stock is down 60% from its 52-week high of $814, reflecting maximum pessimism about TurboTax disruption and AI-era moat erosion. Analyst consensus remains $553–$609, implying 70–90% upside. The $8B share buyback authorisation and 15% dividend increase provide downside support.",
+    "score": 76,
+    "description": "Trading ~$331 — ~21% below the base case ($420) — after the post-Q3 selloff and partial bounce. At ~15× non-GAAP forward P/E (NTM) and a PEG near 1.0, Intuit still screens cheap vs quality-software peers (~28–32×), though Street's ~$455 mean target is well below the prior $550–600 cluster. Spot sits between bear ($215) and base; the $8B buyback authorisation and dividend growth cushion downside into the Aug 25 FY print.",
     "peAnalysis": {
-      "asOf": "May 2026",
+      "asOf": "August 10, 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~22×",
-          "note": "FY2026E GAAP EPS ~$14.50 (incl. restructuring)"
+          "value": "~20×",
+          "note": "TTM EPS ~$16.4; restructuring charges still in the mix"
         },
         {
           "label": "Forward P/E (non-GAAP)",
-          "value": "~14.5×",
-          "note": "consensus NTM non-GAAP EPS ~$22"
+          "value": "~15×",
+          "note": "on ~$22 NTM non-GAAP EPS; ~14× on FY26 guide midpoint $23.82"
         },
         {
           "label": "PEG Ratio",
-          "value": "~0.95×",
+          "value": "~1.0×",
           "note": "fwd P/E ÷ ~15% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~3.7×",
-          "note": "~$24B FY2027E revenue"
+          "value": "~3.8×",
+          "note": "~$90B / ~$24B FY2027E revenue"
         },
         {
           "label": "Price / FCF",
-          "value": "~12.7×",
+          "value": "~13×",
           "note": "~$7B FCF TTM"
         }
       ],
-      "summary": "At ~14.5× non-GAAP forward P/E, Intuit trades at a deep discount to the quality-software sector median (~28–32×) following the Q3 revenue miss and 17% layoff shock. The PEG of ~0.95 — below the GARP threshold of 1.0 — signals the market is pricing in AI disruption risk that hasn't materialised in QuickBooks (still +19% GBS Online). The wide gap between trailing GAAP P/E (~22×, distorted by restructuring charges) and forward non-GAAP P/E (~14.5×) reflects both one-time charges and expected margin expansion from the workforce reduction — if restructuring delivers, the re-rating opportunity is substantial."
+      "summary": "At ~15× non-GAAP forward P/E, Intuit still trades at a deep discount to the quality-software sector median (~28–32×) following the Q3 revenue miss and 17% layoff shock. The PEG near 1.0 signals the market is still pricing AI disruption risk that hasn't shown up in QuickBooks (still +19% GBS Online, +22% ex-Mailchimp). Aug 25 results and Sep 17 Investor Day are the next catalysts for whether GenOS agents and restructuring margin expansion re-rate the multiple."
     }
   },
   "scenarios": {
@@ -121,37 +122,37 @@
       "description": "AI-native bookkeeping achieves mass SMB adoption, TurboTax unit volumes decline structurally, and a recession spikes QuickBooks churn.",
       "points": [
         "AI-native bookkeeping startups (Puzzle, Digits, Campfire) capture 10%+ of the QuickBooks SMB segment by end of FY2028, compressing ARPU below $1,500/customer",
-        "TurboTax unit volumes decline 10%+ annually as free alternatives (FreeTaxUSA, Wealthsimple Tax, Cash App Taxes) erode the paid tier — TurboTax Live fails to offset at higher ARPU",
+        "TurboTax unit volumes decline 10%+ annually as free alternatives (FreeTaxUSA, Wealthsimple Tax, Cash App Taxes) erode the paid tier — TurboTax Live and GenOS filing agents fail to offset at higher ARPU",
         "Recession-driven SMB failures spike QuickBooks annualised churn above 8%, while the Mailchimp pullback removes a cross-sell growth vector"
       ]
     },
     "base": {
       "priceTarget": "$420",
-      "description": "Restructuring delivers margin expansion, QuickBooks pricing power holds, AI challengers remain subscale through FY2028.",
+      "description": "Restructuring delivers margin expansion, QuickBooks pricing power holds, GenOS agents lift ARPU without displacing the data moat, and AI challengers remain subscale through FY2028.",
       "points": [
         "17% workforce reduction drives 200–300 bps operating margin expansion by FY2027, pushing non-GAAP EPS above $27",
-        "GBS Online Ecosystem sustains 15–18% growth driven by QBO ARPU expansion and mid-market adoption; Intuit Assist monetisation adds $200M+ incremental revenue",
-        "TurboTax Live stabilises Consumer segment at +8–10% growth as the mix shifts to higher-ARPU assisted filings, benefiting from IRS Direct File's elimination"
+        "GBS Online Ecosystem sustains 15–18% growth driven by QBO ARPU expansion, mid-market adoption, and GenOS agent attach; Intuit Assist / agent monetisation adds incremental high-margin revenue",
+        "TurboTax Live plus filing agents stabilise Consumer at +8–10% as mix shifts to higher-ARPU assisted filings, benefiting from IRS Direct File's elimination"
       ]
     },
     "bull": {
       "priceTarget": "$575",
-      "description": "QuickBooks becomes the AI-powered financial operating system for 12M+ SMBs, restructuring drives best-in-class margins, and multiple re-rates.",
+      "description": "QuickBooks becomes the AI-powered financial operating system for 12M+ SMBs, GenOS agents compound engagement, restructuring drives best-in-class margins, and the multiple re-rates.",
       "points": [
         "International QuickBooks reaches critical mass in UK, Canada, and ANZ, contributing 20%+ of GBS segment growth by FY2028",
-        "B2B payments volume through QuickBooks doubles to $200B+ annually, adding a high-margin transaction-embedded revenue layer",
-        "Credit Karma inflects as the rate cycle normalises, growing 20%+ in FY2027 and becoming a $3B+ annual revenue segment; the leaner cost structure drives non-GAAP operating margins above 45%"
+        "B2B payments volume through QuickBooks doubles to $200B+ annually, adding a high-margin transaction-embedded revenue layer alongside agent-driven collections",
+        "Credit Karma re-accelerates as the rate cycle normalises, growing 20%+ in FY2027 toward a $3B+ annual revenue segment; leaner cost structure drives non-GAAP operating margins above 45%"
       ]
     }
   },
   "tenMoats": {
     "learnedInterfaces": {
       "status": "weakened",
-      "note": "TurboTax's guided interview is directly challenged by AI agents that offer conversational, zero-UI tax filing. QuickBooks' interface is stickier but AI assistants (Intuit Assist, competitor copilots) are abstracting the complexity that created the switching cost."
+      "note": "TurboTax's guided interview is directly challenged by AI agents that offer conversational, zero-UI tax filing — including Intuit's own GenOS agents, which abstract the UI that created the switching cost. QuickBooks' interface is stickier but copilots are doing the same abstraction there."
     },
     "businessLogic": {
       "status": "intact",
-      "note": "QuickBooks' per-SMB configuration depth (chart of accounts, payroll rules, tax integrations, custom invoicing) still requires years of accumulated business logic that AI can't replicate from scratch. IRS Direct File's death removes the biggest government-backed alternative. Upgraded from weakened: AI startups haven't cracked enterprise-grade bookkeeping lock-in at scale."
+      "note": "QuickBooks' per-SMB configuration depth (chart of accounts, payroll rules, tax integrations, custom invoicing) still requires years of accumulated business logic that AI can't replicate from scratch. IRS Direct File's death removes the biggest government-backed alternative. AI startups haven't cracked enterprise-grade bookkeeping lock-in at scale."
     },
     "publicDataAccess": {
       "status": "weakened",
@@ -159,15 +160,15 @@
     },
     "talentScarcity": {
       "status": "weakened",
-      "note": "The 17% workforce cut is itself evidence that AI has reduced the talent moat — Intuit believes it can operate with 3,000 fewer employees. AI democratises tax and accounting expertise, lowering the barrier that made TurboTax's guided logic hard to replicate."
+      "note": "The 17% workforce cut is itself evidence that AI has reduced the talent moat — Intuit believes it can operate with 3,000 fewer employees. GenOS rebuilds (skills/tools architecture) further lower the barrier that made TurboTax's guided logic hard to replicate."
     },
     "bundling": {
       "status": "weakened",
-      "note": "Mailchimp right-sizing and the TurboTax/Credit Karma integration layoffs signal management conceding the four-product bundle thesis isn't delivering. Downgraded from intact: Intuit is becoming a QuickBooks-centric company with supporting products rather than a true synergistic platform bundle."
+      "note": "Mailchimp right-sizing and the TurboTax/Credit Karma integration layoffs signal management conceding the four-product bundle thesis isn't delivering. Intuit is becoming a QuickBooks-centric GenOS company with supporting products rather than a true synergistic platform bundle."
     },
     "proprietaryData": {
       "status": "strong",
-      "note": "Tax return data, SMB financial records, and credit profiles for 100M+ users is an irreplaceable dataset that improves underwriting, personalisation, and AI model training (Intuit Assist, Deduction Maximiser). AI makes this moat stronger as the data becomes the training advantage."
+      "note": "Tax return data, SMB financial records, and credit profiles for 100M+ users — with hundreds of thousands of attributes per SMB/consumer — is the training set behind GenOS agents (Intuit Assist, Deduction Maximiser, Business Tax Agent). AI makes this moat stronger as the data becomes the training advantage."
     },
     "regulatoryLockIn": {
       "status": "strong",
@@ -179,13 +180,13 @@
     },
     "transactionEmbedding": {
       "status": "strong",
-      "note": "Payroll runs, invoicing, tax filing, expense tracking, B2B payments, and lending are embedded in the daily operations of 7M+ SMBs — removing Intuit requires re-engineering core business processes."
+      "note": "Payroll runs, invoicing, tax filing, expense tracking, B2B payments, and lending are embedded in the daily operations of 7M+ SMBs — removing Intuit requires re-engineering core business processes. GenOS agents deepen that embedding by acting inside the workflow."
     },
     "systemOfRecord": {
       "status": "strong",
       "note": "QuickBooks is the system of record for 7M+ small business finances; TurboTax holds the authoritative tax history of tens of millions of households. Migration risk is prohibitive — you'd lose years of financial history, reconciliation records, and audit trails."
     },
-    "verdict": "Intuit is a net beneficiary of AI on balance — its proprietary financial dataset (100M+ users' tax returns, SMB financials, credit profiles) becomes the training-data moat as AI commoditises interface and business-logic advantages. The five AI-resilient moats (proprietary data, regulatory, network effects, transaction embedding, system of record) are all rated strong, making Intuit's core QuickBooks business structurally durable. The chief AI risk is across all five vulnerable moats: agentic point-solutions can replicate individual features cheaply, and the 17% layoff + Mailchimp pullback confirms management sees the bundle thesis weakening. In the AI era, Intuit's durability depends on whether its QuickBooks data flywheel monetises faster (Intuit Assist, Deduction Maximiser) than free alternatives erode TurboTax and unbundling shrinks the platform premium."
+    "verdict": "Intuit is a net beneficiary of AI on balance — its proprietary financial dataset (100M+ users' tax returns, SMB financials, credit profiles) becomes the training-data moat as GenOS agents commoditise interface and business-logic advantages. The five AI-resilient moats remain strong, making QuickBooks structurally durable. The chief AI risk is across the vulnerable moats: agentic point-solutions can replicate individual features cheaply, and the 17% layoff + Mailchimp pullback confirms the bundle thesis is weakening. Durability now hinges on whether GenOS monetises the QuickBooks data flywheel faster than free alternatives erode TurboTax and unbundling shrinks the platform premium — Aug 25 results and Sep 17 Investor Day are the next checkpoints."
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "August 10, 2026"
 }
