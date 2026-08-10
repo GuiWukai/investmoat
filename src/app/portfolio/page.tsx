@@ -2,90 +2,10 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import {
-  PieChart,
-  ShieldCheck,
-  ChevronRight,
-  TrendingUp,
-  TrendingDown,
-  Eye,
-  ArrowUp,
-  ArrowDown,
-  ArrowUpDown,
-} from "lucide-react";
-import {
-  Card,
-  ListBox,
-  ListBoxItem,
-  Select,
-  Spinner,
-} from "@heroui/react";
+import { PieChart, ShieldCheck, ChevronRight, TrendingUp, TrendingDown, Eye } from "lucide-react";
+import { Card, Spinner } from "@heroui/react";
 import { allCoverageData, getAverageScore } from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
-
-// ─── Holdings table sorting ───────────────────────────────────────────────────
-type HoldingsSortKey = "rank" | "name" | "category" | "return" | "score" | "change" | "weight";
-type SortDir = "asc" | "desc";
-
-const HOLDINGS_SORT_OPTIONS: { key: HoldingsSortKey; label: string }[] = [
-  { key: "rank",     label: "Rank" },
-  { key: "name",     label: "Holding" },
-  { key: "category", label: "Category" },
-  { key: "return",   label: "1-Yr Return" },
-  { key: "score",    label: "Score" },
-  { key: "change",   label: "1D %" },
-  { key: "weight",   label: "Weight" },
-];
-
-function SortIndicator({ active, dir }: { active: boolean; dir: SortDir }) {
-  if (!active) return <ArrowUpDown size={11} className="text-foreground/15" />;
-  return dir === "asc"
-    ? <ArrowUp size={11} className="text-gold-bright" />
-    : <ArrowDown size={11} className="text-gold-bright" />;
-}
-
-function SortHeader({
-  label,
-  sortKey,
-  active,
-  dir,
-  onSort,
-  className,
-  align = "left",
-}: {
-  label: string;
-  sortKey: HoldingsSortKey;
-  active: boolean;
-  dir: SortDir;
-  onSort: (k: HoldingsSortKey) => void;
-  className?: string;
-  align?: "left" | "right" | "center";
-}) {
-  const justify =
-    align === "right" ? "justify-end" : align === "center" ? "justify-center" : "justify-start";
-  return (
-    <button
-      type="button"
-      onClick={() => onSort(sortKey)}
-      className={`inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest transition-colors ${
-        active ? "text-gold-bright" : "text-foreground/20 hover:text-foreground/45"
-      } ${justify} ${className ?? ""}`}
-    >
-      <span>{label}</span>
-      <SortIndicator active={active} dir={dir} />
-    </button>
-  );
-}
-
-function scenarioReturnPct(
-  price: number | null | undefined,
-  target: string | undefined
-): number | null {
-  if (price == null || price <= 0 || !target) return null;
-  const t = parseScenarioPrice(target);
-  if (!t) return null;
-  return ((t - price) / price) * 100;
-}
 
 // ─── Portfolio threshold ──────────────────────────────────────────────────────
 // 80 = "near Strong Buy" floor. Currently 29 names clear it (under the geometric
@@ -314,8 +234,6 @@ export default function PortfolioPage() {
 
   const [hoveredPie, setHoveredPie] = useState<string | null>(null);
   const [scoreColumn, setScoreColumn] = useState<'score' | 'change'>('score');
-  const [sortKey, setSortKey] = useState<HoldingsSortKey>('score');
-  const [sortDir, setSortDir] = useState<SortDir>('desc');
   const scoresLoading = !allPricesLoaded;
 
   const SCORE_BASELINE = 70;
@@ -401,43 +319,9 @@ export default function PortfolioPage() {
     (s, p) => FIN_CATEGORIES.has(p.category) ? s + (dynamicWeights[p.ticker] ?? 0) : s, 0
   );
 
-  const sortedHoldings = [...portfolio].sort((a, b) => {
-    const value = (stock: (typeof portfolio)[number]): number | string => {
-      switch (sortKey) {
-        case "rank":
-          return stock.rank;
-        case "name":
-          return stock.name.toLowerCase();
-        case "category":
-          return stock.category.toLowerCase();
-        case "return": {
-          const r = scenarioReturnPct(allPrices[stock.ticker], stock.stock.baseTarget);
-          return r ?? Number.NEGATIVE_INFINITY;
-        }
-        case "score":
-          return liveScores[stock.ticker] ?? 0;
-        case "change":
-          return allChangePercents[stock.ticker] ?? Number.NEGATIVE_INFINITY;
-        case "weight":
-          return dynamicWeights[stock.ticker] ?? 0;
-      }
-    };
-    const av = value(a);
-    const bv = value(b);
-    let cmp: number;
-    if (typeof av === "string" && typeof bv === "string") cmp = av.localeCompare(bv);
-    else cmp = (av as number) - (bv as number);
-    return sortDir === "asc" ? cmp : -cmp;
-  });
-
-  function handleHoldingsSort(key: HoldingsSortKey) {
-    if (key === sortKey) {
-      setSortDir((d) => (d === "asc" ? "desc" : "asc"));
-    } else {
-      setSortKey(key);
-      setSortDir(key === "name" || key === "category" || key === "rank" ? "asc" : "desc");
-    }
-  }
+  const portfolioWithScores = [...portfolio].sort(
+    (a, b) => (liveScores[b.ticker] ?? 0) - (liveScores[a.ticker] ?? 0)
+  );
 
   const getScoreColor = (s: number) => {
     if (s >= 90) return "text-emerald-400";
@@ -636,277 +520,147 @@ export default function PortfolioPage() {
 
       {/* ── Allocation Breakdown ──────────────────────────────────────────── */}
       <section className="animate-fade-up stagger-fill-both pb-12" style={{ animationDelay: '0.3s' }}>
-        <div className="mb-5 flex flex-wrap items-center gap-3 md:gap-4">
+        <div className="flex items-center gap-4 mb-5">
           <div>
             <p className="section-label mb-1">Holdings</p>
             <h2 className="text-xl font-bold text-foreground/85">Allocation Breakdown</h2>
           </div>
-          <div className="hidden h-px flex-1 bg-foreground/[0.05] sm:block" />
-          {/* Mobile: sort control + score/1D column toggle */}
-          <div className="ml-auto flex lg:hidden items-center gap-2 shrink-0">
-            <Select
-              aria-label="Sort holdings"
-              className="w-[9.75rem]"
-              onSelectionChange={(key) => {
-                if (key == null) return;
-                handleHoldingsSort(String(key) as HoldingsSortKey);
-              }}
-              selectedKey={sortKey}
-            >
-              <Select.Trigger className="h-8 min-h-8 items-center gap-1.5 rounded-lg border border-foreground/[0.06] bg-foreground/[0.04] px-2.5 text-left">
-                <span className="flex min-w-0 flex-col leading-tight">
-                  <span className="text-[9px] font-bold uppercase tracking-widest text-foreground/30">
-                    Sort
-                  </span>
-                  <span className="flex min-w-0 items-center gap-1">
-                    <Select.Value className="truncate text-[11px] font-bold text-foreground/85">
-                      {({ isPlaceholder, selectedText, defaultChildren }) =>
-                        isPlaceholder ? defaultChildren : selectedText
-                      }
-                    </Select.Value>
-                    <SortIndicator active dir={sortDir} />
-                  </span>
-                </span>
-                <Select.Indicator className="ml-auto shrink-0" />
-              </Select.Trigger>
-              <Select.Popover>
-                <ListBox>
-                  {HOLDINGS_SORT_OPTIONS.map((opt) => (
-                    <ListBoxItem
-                      key={opt.key}
-                      className="flex items-center justify-between gap-2"
-                      id={opt.key}
-                      textValue={opt.label}
-                    >
-                      <span>{opt.label}</span>
-                      <SortIndicator active={sortKey === opt.key} dir={sortDir} />
-                    </ListBoxItem>
-                  ))}
-                </ListBox>
-              </Select.Popover>
-            </Select>
-            <div className="flex items-center gap-1 bg-foreground/[0.04] border border-foreground/[0.06] rounded-lg p-1">
-              {([['score', 'Score'], ['change', '1D %']] as const).map(([val, label]) => (
-                <button
-                  key={val}
-                  type="button"
-                  onClick={() => setScoreColumn(val)}
-                  className={`text-[11px] font-bold px-2.5 py-1 rounded-md transition-colors ${
-                    scoreColumn === val ? 'bg-foreground/[0.12] text-foreground' : 'text-foreground/30 hover:text-foreground/60'
-                  }`}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
+          <div className="h-px flex-1 bg-foreground/[0.05]" />
+          {/* Toggle only visible on mobile — desktop shows both columns */}
+          <div className="flex lg:hidden items-center gap-1 bg-foreground/[0.04] border border-foreground/[0.06] rounded-lg p-1 shrink-0">
+            {([['score', 'Score'], ['change', '1D %']] as const).map(([val, label]) => (
+              <button
+                key={val}
+                onClick={() => setScoreColumn(val)}
+                className={`text-[11px] font-bold px-2.5 py-1 rounded-md transition-colors ${
+                  scoreColumn === val ? 'bg-foreground/[0.12] text-foreground' : 'text-foreground/30 hover:text-foreground/60'
+                }`}
+              >
+                {label}
+              </button>
+            ))}
           </div>
         </div>
 
         <Card className="overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="w-full min-w-[640px] border-collapse text-left">
-              <thead>
-                <tr className="border-b border-foreground/[0.05] bg-foreground/[0.02]">
-                  <th scope="col" className="px-3 py-2.5 md:px-4 md:pl-5">
-                    <SortHeader
-                      label="#"
-                      sortKey="rank"
-                      active={sortKey === "rank"}
-                      dir={sortDir}
-                      onSort={handleHoldingsSort}
-                      align="center"
-                      className="w-full"
-                    />
-                  </th>
-                  <th scope="col" className="px-2 py-2.5 md:px-3">
-                    <SortHeader
-                      label="Holding"
-                      sortKey="name"
-                      active={sortKey === "name"}
-                      dir={sortDir}
-                      onSort={handleHoldingsSort}
-                    />
-                  </th>
-                  <th scope="col" className="hidden px-2 py-2.5 sm:table-cell md:px-3">
-                    <SortHeader
-                      label="Category"
-                      sortKey="category"
-                      active={sortKey === "category"}
-                      dir={sortDir}
-                      onSort={handleHoldingsSort}
-                    />
-                  </th>
-                  <th scope="col" className="hidden px-2 py-2.5 lg:table-cell md:px-3">
-                    <SortHeader
-                      label="1-Yr Return"
-                      sortKey="return"
-                      active={sortKey === "return"}
-                      dir={sortDir}
-                      onSort={handleHoldingsSort}
-                      align="right"
-                      className="w-full"
-                    />
-                  </th>
-                  <th
-                    scope="col"
-                    className={`px-2 py-2.5 md:px-3 ${scoreColumn !== "score" ? "hidden lg:table-cell" : ""}`}
-                  >
-                    <SortHeader
-                      label="Score"
-                      sortKey="score"
-                      active={sortKey === "score"}
-                      dir={sortDir}
-                      onSort={handleHoldingsSort}
-                      align="right"
-                      className="w-full"
-                    />
-                  </th>
-                  <th
-                    scope="col"
-                    className={`px-2 py-2.5 md:px-3 ${scoreColumn !== "change" ? "hidden lg:table-cell" : ""}`}
-                  >
-                    <SortHeader
-                      label="1D %"
-                      sortKey="change"
-                      active={sortKey === "change"}
-                      dir={sortDir}
-                      onSort={handleHoldingsSort}
-                      align="right"
-                      className="w-full"
-                    />
-                  </th>
-                  <th scope="col" className="px-2 py-2.5 md:px-3 md:pr-2">
-                    <SortHeader
-                      label="Wt."
-                      sortKey="weight"
-                      active={sortKey === "weight"}
-                      dir={sortDir}
-                      onSort={handleHoldingsSort}
-                      align="right"
-                      className="w-full"
-                    />
-                  </th>
-                  <th scope="col" className="w-8 px-2 py-2.5 md:pr-5">
-                    <span className="sr-only">Open</span>
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-foreground/[0.04]">
-                {sortedHoldings.map((stock) => (
-                  <tr
-                    key={stock.ticker}
-                    className="cursor-pointer hover:bg-foreground/[0.04] transition-colors group"
-                    onClick={() => router.push(stock.href)}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter" || e.key === " ") {
-                        e.preventDefault();
-                        router.push(stock.href);
-                      }
-                    }}
-                    tabIndex={0}
-                    role="link"
-                    aria-label={`Open ${stock.name} analysis`}
-                  >
-                    <td className="px-3 py-3.5 md:px-4 md:pl-5">
-                      <div className="flex items-center gap-2">
-                        <RankBadge rank={stock.rank} />
-                        <div
-                          className="w-0.5 self-stretch min-h-6 rounded-full shrink-0"
-                          style={{ background: stock.color }}
-                        />
-                      </div>
-                    </td>
-                    <td className="px-2 py-3.5 md:px-3">
-                      <div className="font-bold text-sm text-foreground/90 leading-tight">{stock.name}</div>
-                      <div className="text-[10px] text-foreground/28 tracking-[0.12em] font-black uppercase mt-0.5">
-                        {stock.ticker}
-                      </div>
-                    </td>
-                    <td className="hidden px-2 py-3.5 sm:table-cell md:px-3">
-                      <CategoryBadge category={stock.category} />
-                    </td>
-                    <td className="hidden px-2 py-3.5 lg:table-cell md:px-3">
-                      <div className="flex items-center justify-end">
-                        {!allPricesLoaded
-                          ? <Spinner size="sm" color="current" />
-                          : (() => {
-                              const price = allPrices[stock.ticker];
-                              const bear = scenarioReturnPct(price, stock.stock.bearTarget);
-                              const base = scenarioReturnPct(price, stock.stock.baseTarget);
-                              const bull = scenarioReturnPct(price, stock.stock.bullTarget);
-                              if (bear == null || base == null || bull == null)
-                                return <span className="text-xs text-foreground/25">—</span>;
-                              const fmt = (r: number) => ({
-                                str: `${r >= 0 ? "+" : ""}${r.toFixed(0)}%`,
-                                pos: r >= 0,
-                              });
-                              const b = fmt(bear), m = fmt(base), u = fmt(bull);
-                              return (
-                                <div className="flex gap-2.5 text-center">
-                                  {[
-                                    { label: "Bear", ...b },
-                                    { label: "Base", ...m },
-                                    { label: "Bull", ...u },
-                                  ].map(({ label, str, pos }) => (
-                                    <div key={label}>
-                                      <div className="text-[9px] text-foreground/20 uppercase">{label}</div>
-                                      <div className={`text-xs font-black ${pos ? "text-emerald-400" : "text-rose-400"}`}>
-                                        {str}
-                                      </div>
-                                    </div>
-                                  ))}
-                                </div>
-                              );
-                            })()
-                        }
-                      </div>
-                    </td>
-                    <td className={`px-2 py-3.5 text-right md:px-3 ${scoreColumn !== "score" ? "hidden lg:table-cell" : ""}`}>
-                      {scoresLoading
-                        ? <Spinner size="sm" color="current" />
-                        : (
-                          <span className={`text-sm font-black ${getScoreColor(scoreByTicker[stock.ticker] ?? 0)}`}>
-                            {scoreByTicker[stock.ticker] ?? 0}
-                          </span>
-                        )}
-                    </td>
-                    <td className={`px-2 py-3.5 text-right md:px-3 ${scoreColumn !== "change" ? "hidden lg:table-cell" : ""}`}>
-                      {!allPricesLoaded
-                        ? <Spinner size="sm" color="current" />
-                        : (() => {
-                            const cp = allChangePercents[stock.ticker];
-                            if (cp == null) return <span className="text-xs text-foreground/25">—</span>;
-                            const pos = cp >= 0;
-                            return (
-                              <div className={`inline-flex items-center justify-end gap-0.5 ${pos ? "text-emerald-400" : "text-rose-400"}`}>
-                                {pos ? <TrendingUp size={10} /> : <TrendingDown size={10} />}
-                                <span className="text-xs font-black tabular-nums">
-                                  {pos ? "+" : ""}{cp.toFixed(2)}%
-                                </span>
+          {/* Table header */}
+          <div className="flex items-center gap-3 md:gap-4 px-4 md:px-5 py-2.5 border-b border-foreground/[0.05] bg-foreground/[0.02]">
+            <div className="section-label w-6 md:w-7 text-center shrink-0">#</div>
+            <div className="w-0.5 shrink-0" />
+            <div className="section-label min-w-[110px] md:min-w-[140px]">Holding</div>
+            <div className="section-label hidden sm:block shrink-0 w-24">Category</div>
+            <div className="flex-1" />
+            {/* 1-Yr Return header — lg only */}
+            <div className="hidden lg:block section-label text-right shrink-0 w-36">1-Yr Return</div>
+            {/* Score header */}
+            <div className={`section-label text-right shrink-0 w-12 ${scoreColumn !== 'score' ? 'hidden lg:block' : ''}`}>Score</div>
+            {/* 1D header */}
+            <div className={`section-label text-right shrink-0 w-14 ${scoreColumn !== 'change' ? 'hidden lg:block' : ''}`}>1D %</div>
+            <div className="section-label text-right shrink-0 w-9">Wt.</div>
+            <div className="w-[15px] shrink-0" />
+          </div>
+
+          {/* Data rows */}
+          <div className="divide-y divide-foreground/[0.04]">
+            {portfolioWithScores.map((stock) => (
+              <button
+                key={stock.ticker}
+                onClick={() => router.push(stock.href)}
+                className="w-full flex items-center gap-3 md:gap-4 px-4 md:px-5 py-3.5 hover:bg-foreground/[0.04] transition-colors group text-left"
+              >
+                {/* Rank */}
+                <RankBadge rank={stock.rank} />
+
+                {/* Color accent */}
+                <div className="w-0.5 self-stretch rounded-full shrink-0" style={{ background: stock.color }} />
+
+                {/* Name + ticker */}
+                <div className="min-w-[110px] md:min-w-[140px]">
+                  <div className="font-bold text-sm text-foreground/90 leading-tight">{stock.name}</div>
+                  <div className="text-[10px] text-foreground/28 tracking-[0.12em] font-black uppercase mt-0.5">{stock.ticker}</div>
+                </div>
+
+                {/* Category badge */}
+                <div className="hidden sm:block shrink-0 w-24">
+                  <CategoryBadge category={stock.category} />
+                </div>
+
+                <div className="flex-1" />
+
+                {/* Per-stock bear/base/bull */}
+                <div className="hidden lg:flex items-center justify-end shrink-0 w-36">
+                  {!allPricesLoaded
+                    ? <Spinner size="sm" color="current" />
+                    : (() => {
+                        const price = allPrices[stock.ticker];
+                        const bear  = parseScenarioPrice(stock.stock.bearTarget);
+                        const base  = parseScenarioPrice(stock.stock.baseTarget);
+                        const bull  = parseScenarioPrice(stock.stock.bullTarget);
+                        if (price == null || !bear || !base || !bull || price <= 0)
+                          return <span className="text-xs text-foreground/25">—</span>;
+                        const fmt = (t: number) => {
+                          const r = ((t - price) / price) * 100;
+                          return { r, str: `${r >= 0 ? "+" : ""}${r.toFixed(0)}%`, pos: r >= 0 };
+                        };
+                        const b = fmt(bear), m = fmt(base), u = fmt(bull);
+                        return (
+                          <div className="flex gap-2.5 text-center">
+                            {[
+                              { label: "Bear", ...b },
+                              { label: "Base", ...m },
+                              { label: "Bull", ...u },
+                            ].map(({ label, str, pos }) => (
+                              <div key={label}>
+                                <div className="text-[9px] text-foreground/20 uppercase">{label}</div>
+                                <div className={`text-xs font-black ${pos ? "text-emerald-400" : "text-rose-400"}`}>{str}</div>
                               </div>
-                            );
-                          })()
-                      }
-                    </td>
-                    <td className="px-2 py-3.5 text-right tabular-nums md:px-3">
-                      {scoresLoading
-                        ? <Spinner size="sm" color="current" />
-                        : (
-                          <span className="text-base font-black text-foreground">
-                            {dynamicWeights[stock.ticker] ?? 0}%
-                          </span>
-                        )}
-                    </td>
-                    <td className="px-2 py-3.5 md:pr-5">
-                      <ChevronRight
-                        size={15}
-                        className="text-foreground/15 group-hover:text-foreground/50 transition-colors ml-auto"
-                      />
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+                            ))}
+                          </div>
+                        );
+                      })()
+                  }
+                </div>
+
+                {/* Score — always on desktop, toggle-gated on mobile */}
+                <div className={`text-right shrink-0 w-12 ${scoreColumn !== 'score' ? 'hidden lg:block' : ''}`}>
+                  {scoresLoading
+                    ? <Spinner size="sm" color="current" />
+                    : <span className={`text-sm font-black ${getScoreColor(scoreByTicker[stock.ticker] ?? 0)}`}>{scoreByTicker[stock.ticker] ?? 0}</span>
+                  }
+                </div>
+
+                {/* 1D% — always on desktop, toggle-gated on mobile */}
+                <div className={`text-right shrink-0 w-14 ${scoreColumn !== 'change' ? 'hidden lg:block' : ''}`}>
+                  {!allPricesLoaded
+                    ? <Spinner size="sm" color="current" />
+                    : (() => {
+                        const cp = allChangePercents[stock.ticker];
+                        if (cp == null) return <span className="text-xs text-foreground/25">—</span>;
+                        const pos = cp >= 0;
+                        return (
+                          <div className={`flex items-center justify-end gap-0.5 ${pos ? "text-emerald-400" : "text-rose-400"}`}>
+                            {pos ? <TrendingUp size={10} /> : <TrendingDown size={10} />}
+                            <span className="text-xs font-black tabular-nums">{pos ? "+" : ""}{cp.toFixed(2)}%</span>
+                          </div>
+                        );
+                      })()
+                  }
+                </div>
+
+                {/* Weight */}
+                <div className="tabular-nums w-9 text-right shrink-0">
+                  {scoresLoading
+                    ? <Spinner size="sm" color="current" />
+                    : <span className="text-base font-black text-foreground">{dynamicWeights[stock.ticker] ?? 0}%</span>
+                  }
+                </div>
+
+                <ChevronRight
+                  size={15}
+                  className="text-foreground/15 group-hover:text-foreground/50 transition-colors shrink-0"
+                />
+              </button>
+            ))}
           </div>
         </Card>
       </section>
