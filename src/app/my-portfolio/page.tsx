@@ -60,6 +60,7 @@ type HoldingsSortKey =
   | 'pnl';
 type SortDir = 'asc' | 'desc';
 
+/** Full desktop column set — used for table headers / sort. */
 const HOLDINGS_SORT_OPTIONS: { key: HoldingsSortKey; label: string }[] = [
   { key: 'name', label: 'Holding' },
   { key: 'score', label: 'Score' },
@@ -70,6 +71,11 @@ const HOLDINGS_SORT_OPTIONS: { key: HoldingsSortKey; label: string }[] = [
   { key: 'value', label: 'Value' },
   { key: 'pnl', label: 'P&L' },
 ];
+
+/** Columns visible on small screens — drives the mobile sort select. */
+const MOBILE_HOLDINGS_SORT_OPTIONS = HOLDINGS_SORT_OPTIONS.filter((opt) =>
+  (['name', 'score', 'shares', 'value', 'pnl'] as HoldingsSortKey[]).includes(opt.key)
+);
 
 function SortIndicator({ active, dir }: { active: boolean; dir: SortDir }) {
   if (!active) return <ArrowUpDown size={11} className="text-foreground/15" />;
@@ -611,7 +617,7 @@ export default function MyPortfolioPage() {
                 </Select.Trigger>
                 <Select.Popover>
                   <ListBox>
-                    {HOLDINGS_SORT_OPTIONS.map((opt) => (
+                    {MOBILE_HOLDINGS_SORT_OPTIONS.map((opt) => (
                       <ListBoxItem
                         key={opt.key}
                         className="flex items-center justify-between gap-2"
@@ -671,7 +677,7 @@ export default function MyPortfolioPage() {
         ) : (
           <Card className="overflow-hidden">
             <div className="overflow-x-auto">
-              <table className="w-full min-w-[720px] border-collapse text-left">
+              <table className="w-full border-collapse text-left md:min-w-[720px]">
                 <thead>
                   <tr className="border-b border-foreground/[0.05] bg-foreground/[0.02]">
                     <th scope="col" className="px-4 py-2.5 md:px-5">
@@ -703,7 +709,7 @@ export default function MyPortfolioPage() {
                         align="right"
                       />
                     </th>
-                    <th scope="col" className="px-2 py-2.5 md:px-3">
+                    <th scope="col" className="hidden px-2 py-2.5 md:table-cell md:px-3">
                       <SortHeader
                         label="Avg cost"
                         sortKey="avgCost"
@@ -713,7 +719,7 @@ export default function MyPortfolioPage() {
                         align="right"
                       />
                     </th>
-                    <th scope="col" className="px-2 py-2.5 md:px-3">
+                    <th scope="col" className="hidden px-2 py-2.5 md:table-cell md:px-3">
                       <SortHeader
                         label="Price"
                         sortKey="price"
@@ -723,7 +729,7 @@ export default function MyPortfolioPage() {
                         align="right"
                       />
                     </th>
-                    <th scope="col" className="px-2 py-2.5 md:px-3">
+                    <th scope="col" className="hidden px-2 py-2.5 md:table-cell md:px-3">
                       <SortHeader
                         label="1D %"
                         sortKey="change"
@@ -819,12 +825,12 @@ export default function MyPortfolioPage() {
                             {row.shares}
                           </span>
                         </td>
-                        <td className="px-2 py-3.5 text-right md:px-3">
+                        <td className="hidden px-2 py-3.5 text-right md:table-cell md:px-3">
                           <span className="font-mono text-sm tabular-nums text-foreground/80">
                             {row.avgCost == null ? '—' : money(row.avgCost)}
                           </span>
                         </td>
-                        <td className="px-2 py-3.5 text-right md:px-3">
+                        <td className="hidden px-2 py-3.5 text-right md:table-cell md:px-3">
                           <span className="font-mono text-sm tabular-nums text-foreground/80">
                             {quotesLoading && row.price == null ? (
                               <Spinner size="sm" color="current" />
@@ -833,14 +839,18 @@ export default function MyPortfolioPage() {
                             )}
                           </span>
                         </td>
-                        <td className="px-2 py-3.5 text-right md:px-3">
+                        <td className="hidden px-2 py-3.5 text-right md:table-cell md:px-3">
                           <span className={`font-mono text-sm tabular-nums ${dayClass}`}>
                             {formatPct(row.changePercent)}
                           </span>
                         </td>
                         <td className="px-2 py-3.5 text-right md:px-3">
                           <span className="font-mono text-sm font-semibold tabular-nums text-foreground/85">
-                            {money(row.marketValue)}
+                            {quotesLoading && row.marketValue == null ? (
+                              <Spinner size="sm" color="current" />
+                            ) : (
+                              money(row.marketValue)
+                            )}
                           </span>
                         </td>
                         <td className="px-2 py-3.5 text-right md:px-3">
