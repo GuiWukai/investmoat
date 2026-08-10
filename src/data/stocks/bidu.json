@@ -2,10 +2,10 @@
   "slug": "bidu",
   "ticker": "BIDU",
   "name": "Baidu",
-  "lastAnalyzed": "May 2026",
+  "lastAnalyzed": "August 10, 2026",
   "headerStats": [
     { "label": "Ticker", "value": "BIDU" },
-    { "label": "Market Cap", "value": "~$47B" }
+    { "label": "Market Cap", "value": "~$37B" }
   ],
   "chips": [
     { "label": "Search | AI Cloud | Apollo", "color": "primary" },
@@ -14,102 +14,103 @@
   "metrics": [
     {
       "title": "FY26 Revenue Growth",
-      "value": "+5-8%",
-      "label": "Cloud + autonomy offsetting search decline",
+      "value": "+0-3%",
+      "label": "General Business +2% YoY; ads -22% offset by AI cloud",
       "icon": "TrendingUp",
       "color": "#0ea5e9"
     },
     {
       "title": "AI Cloud Revenue",
-      "value": "~$5B run-rate",
-      "label": "Growing 30%+; ERNIE driving inference demand",
+      "value": "~$6.5B run-rate",
+      "label": "Q1 AI cloud RMB11.3B; Infra +79%, GPU cloud +184%",
       "icon": "Cloud",
       "color": "#10b981"
     },
     {
       "title": "Net Cash",
-      "value": "~$26B",
-      "label": "~80% of market cap",
+      "value": "~$28B",
+      "label": "~75% of market cap",
       "icon": "DollarSign",
       "color": "#f59e0b"
     }
   ],
   "moat": {
-    "description": "Chinese search incumbent transitioning to AI cloud + autonomous (Apollo) platform — moats real but eroding from generative search disruption and Bytedance / Tencent competition; valuation reflects deep skepticism.",
+    "description": "Chinese search incumbent transitioning to AI cloud + autonomous (Apollo) platform — moats real but eroding from generative search disruption and Bytedance / Tencent competition; Q1 2026 showed Core AI >50% of General Business for the first time, but valuation still prices deep skepticism.",
     "analysisTitle": "The Transition-to-AI Moat",
-    "analysisSummary": "Baidu's moat is **Chinese search history + AI cloud (ERNIE) + Apollo autonomous franchise** — search eroding, AI/autonomy emerging, valuation prices in failure:",
+    "analysisSummary": "Baidu's moat is **Chinese search history + AI cloud (ERNIE) + Apollo autonomous franchise** — search eroding fast, AI/autonomy emerging, valuation prices in failure:",
     "analysisPoints": [
       {
         "title": "ERNIE LLM and AI Cloud",
-        "text": "Baidu's ERNIE foundation model is among the leading Chinese LLM franchises with growing developer ecosystem and B2B inference demand. AI cloud revenue is growing 30%+ and represents the structural pivot away from declining search advertising. Execution is the question."
+        "text": "ERNIE 5.1 (May 2026) ranks first among Chinese models on LMArena text and fourth globally on search. Q1 AI Cloud Infra revenue hit RMB8.8B (+79% YoY) with GPU cloud +184%; combined AI cloud (infra + apps) RMB11.3B. Core AI-powered business is now 52% of General Business — the pivot is visible in the mix, not just the narrative."
       },
       {
         "title": "Apollo Robotaxi Platform",
-        "text": "Apollo Go is the leading Chinese robotaxi platform with operations in 15+ Chinese cities and 7M+ rides cumulative. The franchise is scaling but loss-making; commercial viability depends on Chinese regulatory approval pace and ride-economics improvement."
+        "text": "Apollo Go delivered 3.2M fully driverless rides in Q1 2026 (+120% YoY total rides); cumulative public rides exceeded 22M by April across 27 cities. RT6 testing began in London with Lyft/Freenow (Jul 2026); Dubai fully driverless zones live. Still loss-making; commercial viability depends on unit economics and overseas regulatory pace."
       },
       {
         "title": "Search Heritage and Distribution",
-        "text": "Baidu remains the dominant Chinese search engine with ~70% domestic share, but search advertising is declining as users migrate to Bytedance / Xiaohongshu / Wechat. The decline is structural — search is being commoditised by generative AI globally and Baidu's transition is uncertain."
+        "text": "Baidu remains the dominant Chinese search engine with ~70% domestic share, but Online Marketing Services fell 22% YoY in Q1 2026 to RMB12.6B — a sharp acceleration from mid-single-digit declines. Users continue migrating to Bytedance / Xiaohongshu / WeChat; the decline is structural."
       }
     ]
   },
   "growth": {
-    "description": "FY26 revenue growth +5-8% as cloud + autonomy growth offsets search advertising decline. Search ad revenue declining mid-single-digits; AI cloud +30%+; autonomy revenue still small. The transition is multi-year and execution-dependent.",
+    "description": "Q1 2026 General Business returned to +2% YoY as AI cloud (+42% Others) offset Online Marketing −22%. Company revenue roughly flat. FY26 growth guided low-single-digit as the mix shift continues; multi-year CAGR hinges on AI cloud sustaining 30%+ while search decline moderates.",
     "growthAnalysis": {
-      "cagrEstimate": "5-8%",
-      "scoreDerivation": "Base 65 (4-8% CAGR top of band) + 5 AI cloud + autonomy optionality - 7 search advertising structural decline - 8 competition (Bytedance, Tencent, Xiaohongshu) and Chinese geopolitical risk - 5 execution risk on transition = 50",
+      "cagrEstimate": "3-6%",
+      "cagrBasis": "Baidu General Business +2% YoY in Q1 2026 (RMB26.0B) after quarters of decline — Core AI-powered +49% to RMB13.6B (52% of mix) offsetting Legacy −29%; company revenue RMB32.1B roughly flat YoY. Estimate marks up modestly from the measured +2% blend as AI mix compounds, then decays toward mid-single-digit terminal.",
+      "scoreDerivation": "Base ~61 (3-6% CAGR) + trajectory net (AI cloud + Apollo accelerating vs search decelerating) − margin compression on AI investment and ad mix − moderate residual transition/geopolitical risk. Search acceleration and flat company print charged in the lower CAGR, not double-counted in severity.",
       "drivers": [
-        { "name": "AI Cloud (ERNIE-led)", "metric": "FY25 AI Cloud +34% to RMB30B; AI Cloud Infra +143% YoY in Q4; Q1 2026 print pending", "trend": "accelerating" },
-        { "name": "Apollo Robotaxi", "metric": "20M+ cumulative rides by Feb 2026 across 26 cities; 10M+ in 2025 alone; loss-making but scaling", "trend": "accelerating" },
-        { "name": "Search Advertising", "metric": "Core ads -6% YoY in Q4 2025; mid- to high-single-digit declines on user migration to short-video and social", "trend": "decelerating" }
+        { "name": "AI Cloud (ERNIE-led)", "metric": "Q1 AI Cloud Infra +79% to RMB8.8B; GPU cloud +184%; total AI cloud RMB11.3B; Core AI 52% of General Business", "trend": "accelerating" },
+        { "name": "Apollo Robotaxi", "metric": "3.2M fully driverless rides in Q1 (+120% YoY total); 22M+ cumulative; 27 cities; London RT6 testing with Lyft/Freenow", "trend": "accelerating" },
+        { "name": "Search Advertising", "metric": "Online Marketing −22% YoY in Q1 2026 to RMB12.6B (accelerated from −6% in Q4 2025)", "trend": "decelerating" }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If AI cloud growth fails to compensate for search decline through 2027 and Apollo commercial deployment is delayed by Chinese regulatory pace, Baidu's revenue compresses and the transition thesis collapses, leaving the equity as a melting search asset.",
-      "keyRiskSeverity": "high",
+      "keyRisk": "If AI cloud growth fails to keep offsetting the accelerated search decline through 2027 and Apollo commercial deployment is delayed by Chinese or overseas regulatory pace, Baidu's revenue compresses and the transition thesis collapses, leaving the equity as a melting search asset.",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "compressing"
     }
   },
   "valuation": {
-    "score": 63,
-    "description": "At ~$135 (Friday close $135.33, -5.6% into Q1 2026 print) Baidu trades fractionally above the $130 base case. Re-rating has compressed the distressed discount — operating business now ~5× EPS ex-cash. Still attractive vs $180 bull but no longer a deep-value layup; valuation now requires AI cloud + Apollo to keep delivering.",
+    "score": 74,
+    "description": "At ~$109 (Aug 10, 2026) Baidu trades below the $130 base case and well above the $70 bear — roughly midway in the bear–base corridor after sliding from the ~$135 May re-rating peak. Operating business ~4× forward EPS ex-cash with ~$28B net cash (~75% of mkt cap). Deep discount restored; Aug 18 Q2 print is the next catalyst.",
     "peAnalysis": {
-      "asOf": "May 2026",
+      "asOf": "August 10, 2026",
       "rows": [
-        { "label": "Forward P/E (FY26)", "value": "~13×", "note": "EPS ~$10.50; multiple expanded with re-rating" },
-        { "label": "Forward P/E ex-cash", "value": "~5×", "note": "Stripping $26B net cash + investments" },
-        { "label": "Price / Sales (FY26)", "value": "~2.3×", "note": "Still discount to global cloud + autonomy peers" },
-        { "label": "FCF Yield", "value": "~7%", "note": "Solid despite search decline" },
-        { "label": "EV / EBITDA (NTM)", "value": "~5×", "note": "Vs global cloud peers ~12-18×" }
+        { "label": "Forward P/E (FY26)", "value": "~15×", "note": "EPS ~$7.2; multiple reset after post-May drawdown" },
+        { "label": "Forward P/E ex-cash", "value": "~4×", "note": "Stripping ~$28B net cash + investments" },
+        { "label": "Price / Sales (FY26)", "value": "~2.0×", "note": "Still discount to global cloud + autonomy peers" },
+        { "label": "FCF Yield", "value": "~5%", "note": "OCF positive 3rd straight quarter; AI cloud capex weighs" },
+        { "label": "EV / EBITDA (NTM)", "value": "~3×", "note": "Vs global cloud peers ~12-18×" }
       ],
-      "summary": "Re-rating from ~$95 → ~$135 has unwound the deepest discount. Cash still covers ~55% of market cap but transition execution now matters more for the next leg."
+      "summary": "Drawdown from ~$135 → ~$109 restored the cash-heavy discount. Net cash covers ~75% of market cap; next leg still requires AI cloud + Apollo to keep delivering through the Aug 18 print."
     }
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$70",
-      "description": "Search decline accelerates, AI cloud growth disappoints, Apollo commercial viability delayed, multiple stays at 7× earnings.",
+      "description": "Search decline stays double-digit, AI cloud growth disappoints, Apollo commercial viability delayed, multiple stays at ~8× depressed earnings.",
       "points": [
-        "Search advertising revenue declines double-digits as users shift to short-video and Xiaohongshu",
-        "AI cloud growth slows below 20% on competitive pressure from Alicloud + Huawei",
-        "Apollo robotaxi commercial deployment delayed beyond 2027"
+        "Online Marketing declines remain ~20%+ as users shift to short-video and Xiaohongshu",
+        "AI cloud growth slows below 25% on competitive pressure from Alicloud + Huawei",
+        "Apollo robotaxi commercial deployment delayed beyond 2027; London/Dubai stall on regulation"
       ]
     },
     "base": {
       "priceTarget": "$130",
-      "description": "AI cloud + autonomy offset search decline, total revenue grows mid-single-digits, FY28 EPS reaches $13, multiple expands to 10×.",
+      "description": "AI cloud + autonomy offset search decline, total revenue grows low- to mid-single-digits, FY28 EPS reaches ~$11-12, multiple expands to ~11×.",
       "points": [
-        "AI cloud reaches $7B run-rate by FY28 with 25%+ growth",
-        "Apollo robotaxi achieves break-even in select cities by FY28",
-        "Search advertising decline moderates as the migration normalises"
+        "AI cloud reaches ~$9B+ run-rate by FY28 with 25%+ growth",
+        "Apollo robotaxi achieves break-even in select China cities by FY28; overseas still pre-revenue",
+        "Search advertising decline moderates from −22% toward high-single-digits as migration normalises"
       ]
     },
     "bull": {
       "priceTarget": "$180",
-      "description": "ERNIE establishes dominant Chinese LLM franchise, Apollo scales globally, FY29 EPS reaches $16, multiple rerates to 12× on franchise quality reassessment.",
+      "description": "ERNIE establishes dominant Chinese LLM franchise, Apollo scales internationally on RT6 economics, FY29 EPS reaches $15+, multiple rerates to 12× on franchise quality reassessment.",
       "points": [
-        "ERNIE achieves >40% Chinese LLM market share by FY29",
-        "Apollo robotaxi reaches commercial profitability and scales to 30+ cities",
-        "Capital return reignites with buybacks materially exceeding dividends"
+        "ERNIE sustains top-tier Chinese LLM share; AI cloud mix exceeds 60% of General Business",
+        "Apollo robotaxi reaches commercial profitability in China and launches public rides in London/Dubai",
+        "Capital return reignites with buybacks materially exceeding the Q1 $172M pace"
       ]
     }
   },
@@ -120,7 +121,7 @@
     },
     "businessLogic": {
       "status": "intact",
-      "note": "ERNIE foundation model + AI cloud platform is real differentiated business logic for B2B inference."
+      "note": "ERNIE 5.1 + full-stack AI cloud platform is real differentiated business logic for B2B inference; LMArena rankings support model quality claims."
     },
     "publicDataAccess": {
       "status": "intact",
@@ -140,20 +141,20 @@
     },
     "regulatoryLockIn": {
       "status": "intact",
-      "note": "Chinese internet content licences and Apollo robotaxi permits create real new-entrant friction in domestic market."
+      "note": "Chinese internet content licences and Apollo robotaxi permits create real new-entrant friction; overseas permits (UK, UAE, Switzerland) are incremental but early."
     },
     "networkEffects": {
       "status": "weakened",
-      "note": "Search network effects (more queries → better ranking) eroding on user migration; Apollo network effects emerging but small."
+      "note": "Search network effects (more queries → better ranking) eroding on user migration; Apollo network effects emerging with 22M+ rides but still small."
     },
     "transactionEmbedding": {
       "status": "weakened",
-      "note": "Search advertising integrations real but commoditising; AI cloud embedment building."
+      "note": "Search advertising integrations real but commoditising (−22% YoY); AI cloud embedment building on enterprise GPU demand."
     },
     "systemOfRecord": {
       "status": "weakened",
       "note": "Search no longer the system of record for many Chinese users; AI cloud emerging in B2B but small base."
     },
-    "verdict": "Baidu's search moat is the AI-vulnerable canonical example — generative AI directly disrupts the search-advertising franchise. The thesis question is whether ERNIE + Apollo offsets fast enough; valuation prices in failure with optionality on transition success."
+    "verdict": "Baidu's search moat is the AI-vulnerable canonical example — generative AI directly disrupts the search-advertising franchise, and Q1's −22% Online Marketing print confirmed the pace. The thesis question is whether ERNIE + Apollo offsets fast enough; Core AI crossing 50% of General Business is progress, but valuation still prices in failure with optionality on transition success."
   }
 }

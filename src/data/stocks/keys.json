@@ -2,7 +2,7 @@
   "slug": "keys",
   "ticker": "KEYS",
   "name": "Keysight Technologies",
-  "lastAnalyzed": "May 2026",
+  "lastAnalyzed": "August 10, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$30B"
+      "value": "~$59B"
     }
   ],
   "chips": [
@@ -26,28 +26,28 @@
   "metrics": [
     {
       "title": "FY26 Revenue Growth",
-      "value": "+8-11%",
-      "label": "Recovery from 2023-24 cyclical trough",
+      "value": "High-20s%",
+      "label": "Raised guide after record Q2; Street ~$6.9B",
       "icon": "TrendingUp",
       "color": "#0ea5e9"
     },
     {
-      "title": "Operating Margin",
-      "value": "~26%",
-      "label": "Recovering toward 28-30% pre-cycle",
+      "title": "Q2 Op. Margin (ex-tariff)",
+      "value": "30.4%",
+      "label": "Above pre-cycle; +25 bps YoY on 49% leverage",
       "icon": "Percent",
       "color": "#10b981"
     },
     {
-      "title": "AI / Datacom Mix",
-      "value": "~30%",
-      "label": "Growing 25%+ on AI infrastructure test demand",
+      "title": "AI-Related H1 Revenue",
+      "value": "$500-600M",
+      "label": "Already ≈ full-year FY25 AI; both R&D and mfg doubled",
       "icon": "Cpu",
       "color": "#f59e0b"
     }
   ],
   "moat": {
-    "description": "Premium electronic test and measurement franchise built on the Hewlett-Packard / Agilent legacy, with deep technical IP in RF/microwave, optical, and digital test — irreplaceable in regulated and bleeding-edge electronics development.",
+    "description": "Premium electronic test and measurement franchise built on the Hewlett-Packard / Agilent legacy, with deep technical IP in RF/microwave, optical, and digital test — irreplaceable in regulated and bleeding-edge electronics development. Q2 FY26's record AI/wireline bookings reinforce demand for the franchise without changing the competitive structure versus Anritsu or Rohde & Schwarz.",
     "analysisTitle": "The Test-Standards Moat",
     "analysisSummary": "Keysight's moat is **decades of accumulated test IP, calibration standards, and customer R&D embedment** — not flashy, but exceptionally durable:",
     "analysisPoints": [
@@ -57,103 +57,104 @@
       },
       {
         "title": "Software Embedment in R&D Workflows",
-        "text": "PathWave and KeysightCare software embed into customer R&D workflows for chip design, RF/wireless, optical, and EDA test. Designs validated on Keysight tools carry test scripts and reference suites that take years to re-author on competitor platforms. This is the modern moat compounding on top of the hardware franchise."
+        "text": "PathWave and KeysightCare software embed into customer R&D workflows for chip design, RF/wireless, optical, and EDA test. Designs validated on Keysight tools carry test scripts and reference suites that take years to re-author on competitor platforms. Software and services are ~36% of revenue and ARR ~27% of mix — the modern moat compounding on top of the hardware franchise."
       },
       {
         "title": "AI / Datacom and 6G Optionality",
-        "text": "AI infrastructure (800G/1.6T optical, PCIe 6.0, NVLink test) and 6G research are the next test-equipment supercycles. Keysight is the broadest portfolio test vendor for these standards — Anritsu and Rohde & Schwarz address subsets but only Keysight covers the full stack."
+        "text": "AI infrastructure (800G/1.6T optical, PCIe, Ethernet/UALink fabrics, system-level emulation) and early 6G/NTN research are the live test-equipment supercycle. H1 FY26 AI-related revenue of $500-600M already matched all of FY25; Anritsu and Rohde & Schwarz address subsets but only Keysight covers the full stack from physical layer through workload emulation."
       }
     ]
   },
   "growth": {
-    "description": "FY26 revenue growth +8-11% on recovery from cyclical trough; AI/datacom is the swing factor at +25% growth. Operating margin recovering toward 28-30% pre-cycle as utilisation normalises. Spirent acquisition adds incremental network test capabilities.",
+    "description": "Q2 FY26 set company records: revenue $1.72B (+31% reported / +35% ex-tariff), orders $2.05B (+56%), non-GAAP EPS $2.58 ex-tariff (+52%). CSG +35% (commercial communications +40%, aerospace & defence +24%); EISG +24%. Management raised FY26 revenue growth to the high-20s%; Q3 guided $1.73-1.75B (~29% YoY) and $2.43-2.49 EPS. AI/wireline is the swing factor — early innings per management, with Spirent/acquisition contribution ~$375M in FY26.",
     "growthAnalysis": {
-      "cagrEstimate": "7-10%",
-      "scoreDerivation": "Base 75 (8-15% CAGR low band) + 3 AI/datacom mix (highest-growth segment, 25%+) + 2 Spirent integration (network test capabilities) - 5 cyclicality (test capex follows electronics R&D capex with 12-18 month lag) - 5 mature commercial market growth = 70",
+      "cagrEstimate": "10-14%",
+      "cagrBasis": "Measured on company revenue: FY26 guide high-20s% (Street ~$6.9B, ~+28% YoY) after Q2 +31%/+35% ex-tariff, then Street FY27 ~$7.66B (~+11%). The 10-14% blended 3–5yr band decays that path toward a mid/high-single-digit through-cycle algorithm with an AI/defence structural step-up — not an extrapolation of the FY26 spike.",
+      "scoreDerivation": "Base ~76 (12% midpoint of 10-14%) + 4 trajectory (AI/wireline, commercial communications, and aerospace & defence all accelerating on Q2 prints) + 4 margin (ex-tariff op. margin 30.4%, expanding) − 10 high cyclical digestion risk = 74",
       "drivers": [
         {
           "name": "AI / Datacom Test",
-          "metric": "+25% YoY; 800G/1.6T optical and PCIe 6.0 test",
+          "metric": "H1 AI-related $500-600M (≈ FY25 full year); wireline R&D and manufacturing both doubled; 800G/1.6T + system emulation",
           "trend": "accelerating"
         },
         {
           "name": "Aerospace & Defence",
-          "metric": "+10% YoY; durable defence + space spend",
-          "trend": "stable"
+          "metric": "Q2 +24% YoY to $373M; broad Europe/Americas radar, EM spectrum, space demand",
+          "trend": "accelerating"
         },
         {
           "name": "Commercial Communications",
-          "metric": "Mid-single-digits; 5G mature, 6G research early",
-          "trend": "stable"
+          "metric": "Q2 +40% YoY to $858M; AI wireline plus wireless/NTN/6G research",
+          "trend": "accelerating"
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If AI infrastructure capex digestion arrives in 2027 (as with the 2022-23 5G cycle), the AI/datacom segment growth halves and operating margin recovery stalls — Keysight's cyclicality is real and historically the multiple compresses 25-30% during digestion phases.",
+      "keyRisk": "If AI infrastructure capex digestion arrives in 2027 (as with the 2022-23 5G cycle), the AI/datacom segment growth halves and the ~29–34× earnings multiple compresses 25-30% — Keysight's cyclicality is real even after the FY26 re-rating.",
       "keyRiskSeverity": "high",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 70,
-    "description": "At ~$170 KEYS trades at ~22× FY26 EPS — fair for a quality cyclical with margin recovery and AI exposure. Discount to specialty equipment peers reflects the test-instrument cycle pattern; reasonable risk-reward on 5-year hold.",
+    "score": 71,
+    "description": "At ~$341 KEYS trades at ~33× FY26 EPS (~$10.20) and ~29× FY27 (~$11.90) — a full re-rating from the mid-20s trough multiple after the AI/test recovery. Price sits between bear ($220) and base ($380), modestly below Street's ~$372 consensus target; quality + AI exposure is priced, so risk-reward hinges on whether high-20s growth normalises without a hard digestion air pocket.",
     "peAnalysis": {
-      "asOf": "May 2026",
+      "asOf": "August 10, 2026",
       "rows": [
         {
           "label": "Forward P/E (FY26)",
-          "value": "~22×",
-          "note": "EPS ~$7.70; mid-cycle multiple"
+          "value": "~33×",
+          "note": "EPS ~$10.20 Street; premium mid-cycle multiple"
         },
         {
           "label": "Forward P/E (FY27)",
-          "value": "~19×",
-          "note": "Assumes margin recovery + AI mix tailwind"
+          "value": "~29×",
+          "note": "EPS ~$11.90; still elevated vs historical mid-20s"
         },
         {
           "label": "Price / Sales (FY26)",
-          "value": "~5.5×",
-          "note": "Premium reflecting software embedment"
+          "value": "~8.5×",
+          "note": "On Street ~$6.9B; software/ARR mix supports premium"
         },
         {
           "label": "PEG Ratio",
-          "value": "~2.5×",
-          "note": "Premium on quality + AI mix; cyclic adjusted"
+          "value": "~2.8×",
+          "note": "On ~12% blended CAGR; rich if FY26 spike proves peak"
         },
         {
           "label": "EV / EBITDA (NTM)",
-          "value": "~16×",
-          "note": "Vs Anritsu ~12×, AMETEK ~17×"
+          "value": "~22-25×",
+          "note": "Re-rated with AI cycle; vs Anritsu lower-teens, AMETEK high-teens"
         }
       ],
-      "summary": "Valuation is fair-to-modest premium reflecting quality + AI exposure; cyclical risk is to the downside in a 2027 digestion."
+      "summary": "Valuation has re-rated with the AI/test recovery; fair only if high-20s growth decays orderly into the teens — a 2027 digestion is the clear downside case."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$130",
-      "description": "AI capex digestion in 2027 compresses datacom growth, commercial comms cycle stays soft, multiple compresses to 17-18× depressed earnings.",
+      "priceTarget": "$220",
+      "description": "AI capex digestion in 2027 compresses datacom growth, commercial comms decelerates, and the multiple compresses toward ~20× on a lower earnings base — roughly 35% below spot.",
       "points": [
-        "AI/datacom test growth slows below 10% in 2027 on capex moderation",
-        "Commercial communications fails to reaccelerate as 6G research stays early",
-        "Spirent integration disappoints; goodwill impairment risk"
+        "AI/datacom test growth slows below 10% in 2027 on infrastructure capex moderation",
+        "Commercial communications fails to hold mid-teens as 6G research stays early and wireline digestion hits",
+        "Spirent/acquisition synergies disappoint; multiple de-rates from the high-20s/low-30s zone"
       ]
     },
     "base": {
-      "priceTarget": "$210",
-      "description": "FY26 revenue +9-10%, AI/datacom sustains 25%, margin recovers to 28%, FY27 EPS reaches $9.50, multiple holds at 22-24×.",
+      "priceTarget": "$380",
+      "description": "FY26 high-20s growth delivers, AI/datacom stays structurally elevated into FY27 at ~10-15%, margins hold ~30%, and the stock earns into ~28-30× on FY27/FY28 EPS near Street's ~$372 consensus.",
       "points": [
-        "AI/datacom sustains 20-25% growth through 2027",
-        "Operating margin recovers to 28-30% on volume + Spirent synergies",
-        "Aerospace & defence remains durable amidst geopolitical demand"
+        "AI/datacom sustains double-digit growth through 2027 after the FY26 spike normalises",
+        "Operating margin holds near 30% on mix + acquisition cost synergies (>$100M targeted)",
+        "Aerospace & defence remains a durable mid-teens contributor amidst geopolitical demand"
       ]
     },
     "bull": {
-      "priceTarget": "$280",
-      "description": "AI capex super-cycle persists, 6G research begins meaningful capex spend by 2027-28, multiple expands to 28× on durable mid-teens growth.",
+      "priceTarget": "$520",
+      "description": "AI test supercycle persists through 2028, 6G/NTN research begins meaningful commercial spend, and the multiple holds ~32-35× on a larger mid-teens growth earnings base.",
       "points": [
-        "AI/datacom test sustains 25%+ growth through 2028",
-        "6G research drives commercial communications reacceleration in 2027-28",
-        "Defence spend accelerates with sustained geopolitical tension"
+        "AI/datacom test sustains 20%+ growth through 2028 across optical, SerDes, and system emulation",
+        "6G research and NTN/LEO validation drive commercial communications reacceleration beyond wireline AI",
+        "Defence and semiconductor test keep compounding; Street revises FY28 EPS through the mid-teens"
       ]
     }
   },
@@ -198,6 +199,6 @@
       "status": "intact",
       "note": "PathWave is becoming the system of record for R&D test scripts and calibration data in many customer organisations."
     },
-    "verdict": "Keysight is a high-quality test-and-measurement franchise with deep regulatory + software embedment moats. AI is a net positive demand driver (test capex follows AI infra capex) and the moat is largely AI-resilient — the primary risk is cyclical digestion, not technological disruption."
+    "verdict": "Keysight is a high-quality test-and-measurement franchise with deep regulatory + software embedment moats. AI is a net positive demand driver (test capex follows AI infra capex) and the moat is largely AI-resilient — the primary risk is cyclical digestion after the FY26 re-rating, not technological disruption."
   }
 }
