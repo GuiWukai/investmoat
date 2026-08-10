@@ -2,7 +2,7 @@
   "slug": "pdd",
   "ticker": "PDD",
   "name": "PDD Holdings",
-  "lastAnalyzed": "May 2026",
+  "lastAnalyzed": "August 10, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$170B"
+      "value": "~$132B"
     }
   ],
   "chips": [
@@ -25,135 +25,136 @@
   ],
   "metrics": [
     {
-      "title": "FY26 Revenue Growth",
-      "value": "+25-30%",
-      "label": "Pinduoduo + Temu blended",
+      "title": "Q1 Revenue Growth",
+      "value": "+11%",
+      "label": "RMB106.2B; transaction services +20%, ads +2.4%",
       "icon": "TrendingUp",
       "color": "#0ea5e9"
     },
     {
-      "title": "Operating Margin",
-      "value": "~25%",
-      "label": "Compressed from peak; Temu loss-making",
+      "title": "Non-GAAP Op. Margin",
+      "value": "~20%",
+      "label": "Q1 2026; op profit +22% YoY despite Temu transition",
       "icon": "Percent",
       "color": "#f59e0b"
     },
     {
-      "title": "Net Cash",
-      "value": "~$45B",
-      "label": "~25% of market cap",
+      "title": "Cash + ST Investments",
+      "value": "~$63B",
+      "label": "~48% of market cap (Mar 31, 2026)",
       "icon": "DollarSign",
       "color": "#10b981"
     }
   ],
   "moat": {
-    "description": "Domestic Chinese discount-commerce leader (Pinduoduo) plus global cross-border discount platform (Temu) — supplier-base scale + group-buying mechanics + ultra-low-price positioning create real network effects, but tariff and US regulatory risk are acute.",
+    "description": "Domestic Chinese discount-commerce leader (Pinduoduo) plus global cross-border discount platform (Temu) — supplier-base scale + group-buying mechanics + ultra-low-price positioning remain real, but US de minimis closure and Temu's forced shift from fully-managed to semi-managed have already impaired international unit economics, and Taobao/JD/Douyin are contesting the China value tier more aggressively.",
     "analysisTitle": "The Discount Commerce Network Moat",
-    "analysisSummary": "PDD's moat is **supplier-base scale + group-buying network mechanics + ultra-low-price positioning** — durable in China, exposed to regulatory disruption in Temu's international markets:",
+    "analysisSummary": "PDD's moat is **supplier-base scale + group-buying network mechanics + ultra-low-price positioning** — durable in China with rising competitive heat, and structurally re-priced in Temu's international markets after the tariff regime change:",
     "analysisPoints": [
       {
         "title": "Supplier-Base Scale and Manufacturer Direct",
-        "text": "Pinduoduo's Chinese supplier base + Temu's manufacturer-direct model eliminates middlemen and produces price points that Amazon/Walmart cannot match for non-branded categories. The supplier flywheel compounds — more buyers attract more manufacturers, lowering prices further."
+        "text": "Pinduoduo's Chinese supplier base + Temu's manufacturer-direct model still produces price points hard for Amazon/Walmart to match in non-branded categories. Management is doubling down via the Hundred Billion Support program and a new first-party brand vehicle (RMB15B injected; RMB100B planned over three years) to move factories from commodity OEM toward branded supply — a response to take-rate and quality pressure, not a retreat from the supplier flywheel."
       },
       {
         "title": "Group-Buying Network Effects",
-        "text": "Pinduoduo's group-buying mechanic creates real social network effects in Chinese commerce — friend-graph buying coordination produces demand aggregation that traditional e-commerce cannot replicate. The mechanic compounds engagement and retention."
+        "text": "Pinduoduo's group-buying mechanic remains a real social network effect in Chinese commerce. Q1 showed the domestic franchise under earnings pressure (online marketing +2.4% YoY) as Taobao's value tier, JD, and Douyin tightened on the same price band with AI recommendation upgrades — network effects intact, monetisation temporarily soft."
       },
       {
-        "title": "Temu International Brand and Platform",
-        "text": "Temu has built genuine consumer brand in US, EU, and Latam at speeds uncommon for Chinese platforms — supported by aggressive marketing investment. The thesis question is sustainability vs tariff and US regulatory exposure (de minimis rule changes, Section 301 tariffs)."
+        "title": "Temu International — Model Transition",
+        "text": "Temu built genuine consumer brand in US/EU/Latam, but US de minimis elimination and high Section 301-style parcel tariffs forced a shift from fully-managed (high take rate) toward semi-managed marketplace (much lower take rate). Near-term revenue and UE are mechanically pressured even when GMV holds; the thesis now turns on whether bonded-warehouse / regional fulfilment restores viable unit economics."
       }
     ]
   },
   "growth": {
-    "description": "FY26 revenue growth +25-30% blended (Pinduoduo +15-20%, Temu +50%+ but slowing). Operating margin compressed by Temu losses; standalone Pinduoduo margin remains industry-leading. Tariff and US regulatory risk are acute swing factors.",
+    "description": "Pre-Q2 print (due ~Aug 24). Latest reported Q1 2026: revenue +11% YoY to RMB106.2B (transaction services +20% to RMB56.3B; online marketing +2.4% to RMB49.9B). GAAP operating profit +22% to RMB19.6B (non-GAAP op margin ~20%); net income −15% on other-income noise. Growth has decelerated sharply from the prior mid-20s blended outlook as Temu adapts to tariffs and China value-tier competition intensifies.",
     "growthAnalysis": {
-      "cagrEstimate": "20-30%",
-      "scoreDerivation": "Base 85 (>30% CAGR mid-band) + 3 international scale (Temu in 70+ markets) - 3 Temu loss / margin compression - 3 US tariff / de minimis regulatory risk = 82",
+      "cagrEstimate": "12-18%",
+      "cagrBasis": "Q1 2026 group revenue +11% YoY (RMB106.2B) with transaction services +20% and online marketing +2.4%. Estimate marks up from the measured +11% as Temu's semi-managed mix stabilizes and domestic GMV recovers from the competitive trough, then decays toward mid-teens terminal under a multi-year supply-chain / 1P investment cycle.",
+      "scoreDerivation": "Base 80 (12-18% CAGR, midpoint 15%) + trajectory (−2.7 from two decelerating drivers) + 0 stable margins − 10 high residual Temu-adaptation / China-competition risk ≈ 67. De minimis closure is charged in the lower CAGR and decelerating Temu driver, not double-counted via severity.",
       "drivers": [
         {
           "name": "Pinduoduo (Domestic)",
-          "metric": "+15-20% YoY GMV; mature high-margin core",
-          "trend": "stable"
+          "metric": "Q1 online marketing +2.4% YoY; value-tier share contested by Taobao / JD / Douyin; transaction services still +20% blended",
+          "trend": "decelerating"
         },
         {
           "name": "Temu International",
-          "metric": "+50%+ YoY GMV; loss-making but scaling",
-          "trend": "accelerating"
+          "metric": "Forced fully→semi-managed shift after US de minimis closure; take rate compression; NA growth slowed into mid-teens",
+          "trend": "decelerating"
         },
         {
-          "name": "Duo Duo Group",
-          "metric": "Agriculture commerce growing on Chinese rural digitisation",
+          "name": "Duo Duo + Supply Chain / 1P",
+          "metric": "Hundred Billion Support + Duo Duo Premium Produce ongoing; RMB100B 1P brand plan launched Mar 2026",
           "trend": "stable"
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If US closes the de minimis loophole on Chinese cross-border parcels and applies broad Section 301 tariffs to Temu, Temu's unit economics flip from loss-leading to unviable in major markets and the international growth thesis collapses, compressing the multiple toward Pinduoduo standalone.",
+      "keyRisk": "If Temu's semi-managed marketplace model fails to restore unit economics after de minimis closure and Taobao/JD keep taking China value-tier share, blended growth stays low-teens with structurally lower take rates and the multiple stays pinned near a cash-discount floor.",
       "keyRiskSeverity": "high",
-      "marginTrend": "compressing"
+      "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 80,
-    "description": "At ~$120 PDD trades at ~12× FY26 EPS with ~$45B net cash (~25% of market cap). Operating business at ~9× EPS — extreme discount to growth profile. Valuation prices in tariff and geopolitical worst-case scenarios.",
+    "score": 76,
+    "description": "At ~$92 (Aug 10, 2026) PDD sits ~23% below the $120 base and ~54% above the $60 bear — still attractively priced after the post-Q1 drawdown from ~$120. ~$63B cash + ST investments (~48% of mkt cap) cushions downside; Aug 24 print needs to show Temu adaptation and domestic ads stabilising.",
     "peAnalysis": {
-      "asOf": "May 2026",
+      "asOf": "August 10, 2026",
       "rows": [
         {
           "label": "Forward P/E (FY26)",
           "value": "~12×",
-          "note": "EPS ~$10; deep growth discount"
+          "note": "EPS estimates cut after Q1 miss; still a deep growth discount"
         },
         {
           "label": "Forward P/E ex-cash",
-          "value": "~9×",
-          "note": "Stripping $45B net cash"
+          "value": "~6×",
+          "note": "Stripping ~$63B cash + ST investments"
         },
         {
           "label": "Price / Sales (FY26)",
-          "value": "~3×",
-          "note": "Discount to global peers"
+          "value": "~2×",
+          "note": "Compressed vs prior ~3× as mkt cap reset"
         },
         {
           "label": "PEG Ratio",
-          "value": "~0.5×",
-          "note": "Cheap on growth, none on regulatory"
+          "value": "~0.8×",
+          "note": "Cheap on mid-teens growth; tariff/competition still priced harshly"
         },
         {
           "label": "FCF Yield",
           "value": "~7%",
-          "note": "FCF strong despite Temu losses"
+          "note": "Q1 OCF RMB16.4B; FCF resilient vs Temu transition"
         }
       ],
-      "summary": "Valuation prices in worst-case Temu disruption; cash position alone supports significant downside cushion."
+      "summary": "Post-Q1 reset prices Temu tariff damage and domestic competitive heat; cash alone is ~half the equity value, so the residual operating business is still discounted if Temu adaptation works."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$80",
-      "description": "US closes de minimis, Section 301 tariffs apply to Temu, Pinduoduo growth slows to high-single-digits, multiple stays at 9× depressed earnings.",
+      "priceTarget": "$60",
+      "description": "Temu semi-managed UE stays unviable in US/EU, domestic ads stagnate under Taobao/JD pressure, multiple compresses toward a cash-heavy floor.",
       "points": [
-        "US closes de minimis loophole and applies broad Section 301 tariffs to Chinese cross-border",
-        "Temu unit economics flip to unviable in major US/EU markets",
-        "Pinduoduo domestic growth slows below 10% on Chinese consumer weakness"
+        "Temu bonded-warehouse / regional fulfilment fails to restore contribution profit in major markets",
+        "Pinduoduo online marketing stays low-single-digit as Taobao value tier and Douyin take share",
+        "Investment cycle (1P brands + Hundred Billion Support) keeps FCF below prior peak without GMV reacceleration"
       ]
     },
     "base": {
-      "priceTarget": "$170",
-      "description": "Tariff regime is manageable, Temu adapts unit economics, Pinduoduo sustains 15%+ growth, multiple holds 14×.",
+      "priceTarget": "$120",
+      "description": "Temu adapts unit economics under semi-managed model, domestic GMV/ads stabilize mid-teens, FY28 EPS recovers, multiple holds ~12× — in line with Street ~$120 target.",
       "points": [
-        "Temu adapts to tariff regime through bonded-warehouse / regional-fulfilment model",
-        "Pinduoduo domestic GMV sustains 15-18% growth",
-        "Operating margin recovers as Temu losses moderate; FY28 EPS reaches $14"
+        "Temu semi-managed mix stabilizes; international contribution losses narrow through FY27-28",
+        "Pinduoduo domestic GMV sustains low- to mid-teens; ads reaccelerate off the +2.4% Q1 trough",
+        "Operating margin holds ~20% as 1P investment scales; cash remains a large equity cushion"
       ]
     },
     "bull": {
-      "priceTarget": "$240",
-      "description": "Temu international scales to global discount-commerce leader, Pinduoduo retains share leadership, FY28 EPS exceeds $18, multiple rerates to 16×.",
+      "priceTarget": "$175",
+      "description": "Temu reaches contribution profit in major markets, domestic share stabilizes, FY28 EPS exceeds prior-cycle run-rate, multiple rerates toward mid-teens.",
       "points": [
-        "Temu reaches profitability in major markets by FY28",
-        "International GMV exceeds $200B with sustained 30%+ growth",
-        "Pinduoduo domestic growth reaccelerates on Chinese consumer recovery"
+        "Temu contribution-profitable in US/EU by FY28 on regional fulfilment",
+        "International GMV resumes 25%+ growth with healthier take-rate mix",
+        "Pinduoduo domestic growth reaccelerates as China value-tier competitive intensity cools"
       ]
     }
   },
@@ -164,7 +165,7 @@
     },
     "businessLogic": {
       "status": "intact",
-      "note": "Manufacturer-direct platform + group-buying logic + cross-border fulfilment is real differentiated business logic."
+      "note": "Manufacturer-direct platform + group-buying logic + cross-border fulfilment is real differentiated business logic — now being rewritten for semi-managed Temu economics."
     },
     "publicDataAccess": {
       "status": "na",
@@ -184,7 +185,7 @@
     },
     "regulatoryLockIn": {
       "status": "weakened",
-      "note": "Chinese commerce regulation broadly applies; US tariff and de minimis exposure is acute regulatory risk for Temu."
+      "note": "Chinese commerce regulation broadly applies; US de minimis closure and parcel tariffs have already materialised as Temu regulatory damage — residual risk is adaptation, not whether tariffs arrive."
     },
     "networkEffects": {
       "status": "strong",
@@ -192,12 +193,12 @@
     },
     "transactionEmbedding": {
       "status": "intact",
-      "note": "Stored payment + recurring purchase patterns create modest embedment; competitive (Amazon, Shein) limit depth."
+      "note": "Stored payment + recurring purchase patterns create modest embedment; competitive (Amazon, Shein, Taobao) limit depth."
     },
     "systemOfRecord": {
       "status": "weakened",
       "note": "Temu / Pinduoduo are not yet system of record for users — engagement is high but identity-and-history embedment is shallower than Alibaba or Amazon."
     },
-    "verdict": "PDD's moats are network + supplier-scale + group-buying mechanics — AI is a positive for ad targeting and recommendation but the dominant moat questions are tariff regulatory and competitive. The thesis is regulatory risk + execution; valuation provides material upside if tariff regime stays manageable."
+    "verdict": "PDD's moats are network + supplier-scale + group-buying mechanics — AI helps ads/recommendation but the dominant questions are Temu post-tariff unit economics and China value-tier competition with BABA/JD. Valuation after the Q1 drawdown embeds a harsh outcome; cash (~half of mkt cap) is the downside cushion if adaptation works slowly."
   }
 }

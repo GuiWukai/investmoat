@@ -9,7 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$74B"
+      "value": "~$80B"
     }
   ],
   "chips": [
@@ -65,7 +65,7 @@
     ]
   },
   "growth": {
-    "description": "Q2 FY2026 revenue of $2.276B (+42% YoY) reflected the second full quarter with Ansys consolidated. Core EDA grew ~8% organically on hardware-assisted verification and advanced-node demand, while Design IP ($454M, -6% YoY) confirmed its Q1 bottom and rose ~12% sequentially with sequential growth guided through the year. Management raised FY2026 guidance to $9.625–9.705B revenue and non-GAAP EPS of $14.72–14.80 (from $14.38–14.46), with ~$2B free cash flow and non-GAAP operating margin of ~39.5% (Design Automation segment margin 43.3%). Underlying organic growth runs ~8–12% with a ~20% non-GAAP EPS CAGR as Ansys synergies and AI-design product mix lift margins.",
+    "description": "Q2 FY2026 revenue of $2.276B (+42% YoY) reflected the second full quarter with Ansys consolidated. Core EDA grew ~8% organically on hardware-assisted verification and advanced-node demand, while Design IP ($454M, -6% YoY) confirmed its Q1 bottom and rose ~12% sequentially with sequential growth guided through the year. Management raised FY2026 guidance to $9.625–9.705B revenue and non-GAAP EPS of $14.72–14.80 (from $14.38–14.46), with ~$2B free cash flow and non-GAAP operating margin of ~39.5% (Design Automation segment margin 43.3%). On July 27 Synopsys unveiled AgentEngineer agentic AI chip-design workflows with AMD and Microsoft (available for evaluation on Microsoft Discovery) — a product-layer response to the July open-source/AI EDA scare rather than a change in reported numbers. Underlying organic growth runs ~8–12% with a ~20% non-GAAP EPS CAGR as Ansys synergies and AI-design product mix lift margins. Q3 FY2026 prints August 26, 2026; Investor Day is September 30.",
     "growthAnalysis": {
       "cagrEstimate": "10–15%",
       "scoreDerivation": "Base 76 (organic EDA ~8% and blended sustainable ~10–13% with ~20% EPS CAGR — mid 8–15% bracket, softer than prior 10–12% read) + 1 driver mix (DA accelerating vs IP recovering) + 4 margin expanding + 3 TAM expansion (multiphysics) − 5 moderate key risk (AI/open-source EDA overhang + Ansys divestitures) = 79",
@@ -93,10 +93,10 @@
     }
   },
   "valuation": {
-    "score": 78,
-    "description": "At ~$384 (after a ~9.5% one-day drop on July 17 and ~23% off the May highs), SNPS trades at ~26× forward FY2026 non-GAAP EPS of ~$14.76 — below its ~30× five-year average — even as management *raised* both revenue and EPS guidance. The selloff was driven by an AI/open-source-EDA moat scare (Moonshot's Kimi 45nm demo), Ansys antitrust-divestiture concerns, and auto/industrial cyclical softness rather than by any deterioration in results. Base-case fair value of ~$470 implies ~22% upside; the de-rating has restored a margin of safety to a wide-moat compounder, tempered by the new AI-disruption tail risk. Sell-side consensus sits far higher (~$560 average, Buy).",
+    "score": 74,
+    "description": "At ~$417 (market cap ~$80B; recovered from the July 17 ~$384 trough but still ~34% off the ~$629 52-week high), SNPS trades at ~28× forward FY2026 non-GAAP EPS of ~$14.76 — still below its ~30× five-year average — even as management *raised* both revenue and EPS guidance. The July selloff was driven by an AI/open-source-EDA moat scare (Moonshot's Kimi 45nm demo), Ansys antitrust-divestiture concerns, and auto/industrial cyclical softness rather than by any deterioration in results; the partial rebound and July 27 AgentEngineer announcement with AMD/Microsoft have eased some of that overhang without resetting the earnings path. Base-case fair value of ~$470 implies ~13% upside; sell-side consensus sits far higher (~$560 average, Buy). Q3 FY2026 prints August 26, 2026.",
     "peAnalysis": {
-      "asOf": "July 2026",
+      "asOf": "August 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
@@ -105,26 +105,26 @@
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~26×",
+          "value": "~28×",
           "note": "non-GAAP FY2026 EPS guide ~$14.76"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.3×",
+          "value": "~1.4×",
           "note": "fwd P/E ÷ ~20% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~7.5×",
-          "note": "$74B mkt cap / ~$9.66B FY2026 revenue"
+          "value": "~8.3×",
+          "note": "$80B mkt cap / ~$9.66B FY2026 revenue"
         },
         {
           "label": "Price / FCF",
-          "value": "~37×",
+          "value": "~40×",
           "note": "~$2B FY2026 FCF guide"
         }
       ],
-      "summary": "After the July selloff SNPS trades at ~26× forward P/E, a de-rate below its ~30× five-year average and its cheapest in years despite raised guidance. PEG of ~1.3× is reasonable for a recurring-license EDA franchise with ~95% renewal rates and structural AI-design tailwinds. The wide gap between distorted trailing GAAP (~100×+) and forward non-GAAP (~26×) is an Ansys-amortization artefact, not deteriorating economics — the valuation score reflects a genuinely more attractive entry, discounted for the AI-disruption and divestiture overhangs."
+      "summary": "The rebound from ~$384 to ~$417 lifted the forward P/E from ~26× to ~28× — still a de-rate vs. the ~30× five-year average and vs. May highs, despite raised guidance. PEG of ~1.4× remains reasonable for a recurring-license EDA franchise with ~95% renewal rates and structural AI-design tailwinds. The wide gap between distorted trailing GAAP (~100×+) and forward non-GAAP (~28×) is an Ansys-amortization artefact; the valuation still embeds a discount for AI-disruption and divestiture overhangs ahead of the Aug 26 Q3 print."
     }
   },
   "scenarios": {
@@ -199,5 +199,5 @@
     },
     "verdict": "Synopsys remains broadly AI-resilient at the leading edge: rising chip complexity increases EDA tool intensity, and the Cadence duopoly is protected by tape-out risk aversion, foundry certification cycles, and decades of accumulated methodology IP (the strong transactionEmbedding, systemOfRecord, bundling and proprietaryData moats). The July 2026 Moonshot Kimi demo — an AI taping out a toy 45nm design on open-source EDA — is a genuine new signal that the businessLogic moat is exposed at the low end over a multi-year horizon, and is the moat's most-watched AI risk, but it does not touch foundry-certified 3nm/2nm flows today. Ansys extends the moat into multiphysics, subject to working through antitrust-mandated divestitures. Net: still an AI beneficiary at the advanced node, with a credible long-tail AI-disruption watch item at the commodity end."
   },
-  "lastAnalyzed": "July 18, 2026"
+  "lastAnalyzed": "August 10, 2026"
 }
