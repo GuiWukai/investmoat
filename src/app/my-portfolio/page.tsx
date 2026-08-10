@@ -4,6 +4,9 @@ import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import {
+  ArrowDown,
+  ArrowUp,
+  ArrowUpDown,
   ChevronRight,
   Plus,
   TrendingDown,
@@ -12,6 +15,9 @@ import {
 import {
   Button,
   Card,
+  ListBox,
+  ListBoxItem,
+  Select,
   Spinner,
   ToggleButton,
   ToggleButtonGroup,
@@ -42,6 +48,68 @@ type Quote = {
   changePercent: number | null;
   currency: string | null;
 };
+
+type HoldingsSortKey =
+  | 'name'
+  | 'score'
+  | 'shares'
+  | 'avgCost'
+  | 'price'
+  | 'change'
+  | 'value'
+  | 'pnl';
+type SortDir = 'asc' | 'desc';
+
+const HOLDINGS_SORT_OPTIONS: { key: HoldingsSortKey; label: string }[] = [
+  { key: 'name', label: 'Holding' },
+  { key: 'score', label: 'Score' },
+  { key: 'shares', label: 'Shares' },
+  { key: 'avgCost', label: 'Avg cost' },
+  { key: 'price', label: 'Price' },
+  { key: 'change', label: '1D %' },
+  { key: 'value', label: 'Value' },
+  { key: 'pnl', label: 'P&L' },
+];
+
+function SortIndicator({ active, dir }: { active: boolean; dir: SortDir }) {
+  if (!active) return <ArrowUpDown size={11} className="text-foreground/15" />;
+  return dir === 'asc' ? (
+    <ArrowUp size={11} className="text-gold-bright" />
+  ) : (
+    <ArrowDown size={11} className="text-gold-bright" />
+  );
+}
+
+function SortHeader({
+  label,
+  sortKey,
+  active,
+  dir,
+  onSort,
+  className,
+  align = 'left',
+}: {
+  label: string;
+  sortKey: HoldingsSortKey;
+  active: boolean;
+  dir: SortDir;
+  onSort: (k: HoldingsSortKey) => void;
+  className?: string;
+  align?: 'left' | 'right';
+}) {
+  return (
+    <button
+      type="button"
+      onClick={() => onSort(sortKey)}
+      className={`inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest transition-colors ${
+        active ? 'text-gold-bright' : 'text-foreground/20 hover:text-foreground/45'
+      } ${align === 'right' ? 'justify-end w-full' : ''} ${className ?? ''}`}
+    >
+      <span>{label}</span>
+      <SortIndicator active={active} dir={dir} />
+    </button>
+  );
+}
 
 function formatPct(value: number | null | undefined): string {
   if (value == null || !Number.isFinite(value)) return '—';
@@ -86,6 +154,8 @@ export default function MyPortfolioPage() {
   const [quotesLoading, setQuotesLoading] = useState(false);
   const [usdCad, setUsdCad] = useState<number | null>(null);
   const [fxLoading, setFxLoading] = useState(true);
+  const [sortKey, setSortKey] = useState<HoldingsSortKey>('value');
+  const [sortDir, setSortDir] = useState<SortDir>('desc');
 
   // Hydrate from localStorage after mount (avoids SSR mismatch).
   useEffect(() => {
@@ -220,53 +290,90 @@ export default function MyPortfolioPage() {
   }, [holdings, quotes, displayCurrency]);
 
   const rows = useMemo(() => {
-    return holdings
-      .map((h) => {
-        const stock = coverageBySlug.get(h.slug);
-        const quote = quotes[h.slug];
-        const nativePrice = quote?.price ?? null;
-        const quoteCurrency = quote?.currency ?? null;
-        const changePercent = quote?.changePercent ?? null;
-        const price =
-          nativePrice == null
-            ? null
-            : convertToDisplay(nativePrice, quoteCurrency, displayCurrency, usdCad);
-        const marketValue = price != null ? price * h.shares : null;
-        // Avg cost is book currency; convert only while a legacy denomination remains.
-        const costPerShare =
-          h.avgCost == null
-            ? null
-            : convertToDisplay(
-                h.avgCost,
-                h.avgCostCurrency ?? displayCurrency,
-                displayCurrency,
-                usdCad
-              );
-        const costBasis =
-          costPerShare != null ? costPerShare * h.shares : null;
-        const gain =
-          marketValue != null && costBasis != null ? marketValue - costBasis : null;
-        const gainPct =
-          gain != null && costBasis != null && costBasis > 0
-            ? (gain / costBasis) * 100
-            : null;
-        // Valuation uses the native quote (targets are in listing currency).
-        const score = compositeForStock(stock, nativePrice);
-        return {
-          ...h,
-          stock,
-          quoteCurrency,
-          price,
-          changePercent,
-          marketValue,
-          costBasis,
-          gain,
-          gainPct,
-          score,
-        };
-      })
-      .sort((a, b) => (b.marketValue ?? 0) - (a.marketValue ?? 0));
-  }, [holdings, coverageBySlug, quotes, displayCurrency, usdCad]);
+    const mapped = holdings.map((h) => {
+      const stock = coverageBySlug.get(h.slug);
+      const quote = quotes[h.slug];
+      const nativePrice = quote?.price ?? null;
+      const quoteCurrency = quote?.currency ?? null;
+      const changePercent = quote?.changePercent ?? null;
+      const price =
+        nativePrice == null
+          ? null
+          : convertToDisplay(nativePrice, quoteCurrency, displayCurrency, usdCad);
+      const marketValue = price != null ? price * h.shares : null;
+      // Avg cost is book currency; convert only while a legacy denomination remains.
+      const costPerShare =
+        h.avgCost == null
+          ? null
+          : convertToDisplay(
+              h.avgCost,
+              h.avgCostCurrency ?? displayCurrency,
+              displayCurrency,
+              usdCad
+            );
+      const costBasis =
+        costPerShare != null ? costPerShare * h.shares : null;
+      const gain =
+        marketValue != null && costBasis != null ? marketValue - costBasis : null;
+      const gainPct =
+        gain != null && costBasis != null && costBasis > 0
+          ? (gain / costBasis) * 100
+          : null;
+      // Valuation uses the native quote (targets are in listing currency).
+      const score = compositeForStock(stock, nativePrice);
+      return {
+        ...h,
+        stock,
+        quoteCurrency,
+        price,
+        changePercent,
+        marketValue,
+        costBasis,
+        gain,
+        gainPct,
+        score,
+      };
+    });
+
+    const valueOf = (row: (typeof mapped)[number]): number | string => {
+      switch (sortKey) {
+        case 'name':
+          return (row.stock?.name ?? row.slug).toLowerCase();
+        case 'score':
+          return row.score ?? Number.NEGATIVE_INFINITY;
+        case 'shares':
+          return row.shares;
+        case 'avgCost':
+          return row.avgCost ?? Number.NEGATIVE_INFINITY;
+        case 'price':
+          return row.price ?? Number.NEGATIVE_INFINITY;
+        case 'change':
+          return row.changePercent ?? Number.NEGATIVE_INFINITY;
+        case 'value':
+          return row.marketValue ?? Number.NEGATIVE_INFINITY;
+        case 'pnl':
+          return row.gain ?? Number.NEGATIVE_INFINITY;
+      }
+    };
+
+    return [...mapped].sort((a, b) => {
+      const av = valueOf(a);
+      const bv = valueOf(b);
+      let cmp: number;
+      if (typeof av === 'string' && typeof bv === 'string') cmp = av.localeCompare(bv);
+      else cmp = (av as number) - (bv as number);
+      return sortDir === 'asc' ? cmp : -cmp;
+    });
+  }, [holdings, coverageBySlug, quotes, displayCurrency, usdCad, sortKey, sortDir]);
+
+  function handleHoldingsSort(key: HoldingsSortKey) {
+    if (key === sortKey) {
+      setSortDir((d) => (d === 'asc' ? 'desc' : 'asc'));
+    } else {
+      setSortKey(key);
+      setSortDir(key === 'name' ? 'asc' : 'desc');
+    }
+  }
 
   const totals = useMemo(() => {
     let marketValue = 0;
@@ -475,7 +582,50 @@ export default function MyPortfolioPage() {
             <h2 className="text-xl font-bold text-foreground/85">Your book</h2>
           </div>
           <div className="hidden h-px flex-1 bg-foreground/[0.05] md:block" />
-          <div className="ml-auto flex items-center gap-2">
+          <div className="ml-auto flex flex-wrap items-center gap-2">
+            {holdings.length > 0 && (
+              <Select
+                aria-label="Sort holdings"
+                className="w-[9.75rem] md:hidden"
+                onSelectionChange={(key) => {
+                  if (key == null) return;
+                  handleHoldingsSort(String(key) as HoldingsSortKey);
+                }}
+                selectedKey={sortKey}
+              >
+                <Select.Trigger className="h-8 min-h-8 items-center gap-1.5 rounded-lg border border-foreground/[0.06] bg-foreground/[0.04] px-2.5 text-left">
+                  <span className="flex min-w-0 flex-col leading-tight">
+                    <span className="text-[9px] font-bold uppercase tracking-widest text-foreground/30">
+                      Sort
+                    </span>
+                    <span className="flex min-w-0 items-center gap-1">
+                      <Select.Value className="truncate text-[11px] font-bold text-foreground/85">
+                        {({ isPlaceholder, selectedText, defaultChildren }) =>
+                          isPlaceholder ? defaultChildren : selectedText
+                        }
+                      </Select.Value>
+                      <SortIndicator active dir={sortDir} />
+                    </span>
+                  </span>
+                  <Select.Indicator className="ml-auto shrink-0" />
+                </Select.Trigger>
+                <Select.Popover>
+                  <ListBox>
+                    {HOLDINGS_SORT_OPTIONS.map((opt) => (
+                      <ListBoxItem
+                        key={opt.key}
+                        className="flex items-center justify-between gap-2"
+                        id={opt.key}
+                        textValue={opt.label}
+                      >
+                        <span>{opt.label}</span>
+                        <SortIndicator active={sortKey === opt.key} dir={sortDir} />
+                      </ListBoxItem>
+                    ))}
+                  </ListBox>
+                </Select.Popover>
+              </Select>
+            )}
             <Button
               onPress={() => router.push('/my-portfolio/add')}
               size="sm"
@@ -520,185 +670,201 @@ export default function MyPortfolioPage() {
           </Card>
         ) : (
           <Card className="overflow-hidden">
-            <div className="hidden items-center gap-3 border-b border-foreground/[0.05] bg-foreground/[0.02] px-4 py-2.5 md:flex md:gap-4 md:px-5">
-              <div className="section-label min-w-[140px] flex-1">Holding</div>
-              <div className="section-label w-14 text-right">Score</div>
-              <div className="section-label w-20 text-right">Shares</div>
-              <div className="section-label w-28 text-right">Avg cost</div>
-              <div className="section-label w-28 text-right">Price</div>
-              <div className="section-label w-16 text-right">1D %</div>
-              <div className="section-label w-28 text-right">Value</div>
-              <div className="section-label w-28 text-right">P&amp;L</div>
-              <div className="w-6 shrink-0" />
-            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[720px] border-collapse text-left">
+                <thead>
+                  <tr className="border-b border-foreground/[0.05] bg-foreground/[0.02]">
+                    <th scope="col" className="px-4 py-2.5 md:px-5">
+                      <SortHeader
+                        label="Holding"
+                        sortKey="name"
+                        active={sortKey === 'name'}
+                        dir={sortDir}
+                        onSort={handleHoldingsSort}
+                      />
+                    </th>
+                    <th scope="col" className="px-2 py-2.5 md:px-3">
+                      <SortHeader
+                        label="Score"
+                        sortKey="score"
+                        active={sortKey === 'score'}
+                        dir={sortDir}
+                        onSort={handleHoldingsSort}
+                        align="right"
+                      />
+                    </th>
+                    <th scope="col" className="px-2 py-2.5 md:px-3">
+                      <SortHeader
+                        label="Shares"
+                        sortKey="shares"
+                        active={sortKey === 'shares'}
+                        dir={sortDir}
+                        onSort={handleHoldingsSort}
+                        align="right"
+                      />
+                    </th>
+                    <th scope="col" className="px-2 py-2.5 md:px-3">
+                      <SortHeader
+                        label="Avg cost"
+                        sortKey="avgCost"
+                        active={sortKey === 'avgCost'}
+                        dir={sortDir}
+                        onSort={handleHoldingsSort}
+                        align="right"
+                      />
+                    </th>
+                    <th scope="col" className="px-2 py-2.5 md:px-3">
+                      <SortHeader
+                        label="Price"
+                        sortKey="price"
+                        active={sortKey === 'price'}
+                        dir={sortDir}
+                        onSort={handleHoldingsSort}
+                        align="right"
+                      />
+                    </th>
+                    <th scope="col" className="px-2 py-2.5 md:px-3">
+                      <SortHeader
+                        label="1D %"
+                        sortKey="change"
+                        active={sortKey === 'change'}
+                        dir={sortDir}
+                        onSort={handleHoldingsSort}
+                        align="right"
+                      />
+                    </th>
+                    <th scope="col" className="px-2 py-2.5 md:px-3">
+                      <SortHeader
+                        label="Value"
+                        sortKey="value"
+                        active={sortKey === 'value'}
+                        dir={sortDir}
+                        onSort={handleHoldingsSort}
+                        align="right"
+                      />
+                    </th>
+                    <th scope="col" className="px-2 py-2.5 md:px-3">
+                      <SortHeader
+                        label="P&L"
+                        sortKey="pnl"
+                        active={sortKey === 'pnl'}
+                        dir={sortDir}
+                        onSort={handleHoldingsSort}
+                        align="right"
+                      />
+                    </th>
+                    <th scope="col" className="w-8 px-2 py-2.5 md:pr-5">
+                      <span className="sr-only">Open</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-foreground/[0.04]">
+                  {rows.map((row) => {
+                    const name = row.stock?.name ?? row.slug;
+                    const ticker = row.stock?.ticker ?? row.slug.toUpperCase();
+                    const positionHref = `/my-portfolio/${row.slug}`;
+                    const quoteNote =
+                      row.quoteCurrency &&
+                      row.quoteCurrency.toUpperCase() !== displayCurrency
+                        ? row.quoteCurrency.toUpperCase()
+                        : null;
+                    const dayClass =
+                      row.changePercent == null
+                        ? 'text-foreground/25'
+                        : row.changePercent >= 0
+                          ? 'text-emerald-400'
+                          : 'text-rose-400';
+                    const gainClass =
+                      row.gain == null
+                        ? 'text-foreground/25'
+                        : row.gain >= 0
+                          ? 'text-emerald-400'
+                          : 'text-rose-400';
 
-            <div className="divide-y divide-foreground/[0.04]">
-              {rows.map((row) => {
-                const name = row.stock?.name ?? row.slug;
-                const ticker = row.stock?.ticker ?? row.slug.toUpperCase();
-                const positionHref = `/my-portfolio/${row.slug}`;
-                const quoteNote =
-                  row.quoteCurrency &&
-                  row.quoteCurrency.toUpperCase() !== displayCurrency
-                    ? row.quoteCurrency.toUpperCase()
-                    : null;
-                const dayClass =
-                  row.changePercent == null
-                    ? 'text-foreground/25'
-                    : row.changePercent >= 0
-                      ? 'text-emerald-400'
-                      : 'text-rose-400';
-                const gainClass =
-                  row.gain == null
-                    ? 'text-foreground/25'
-                    : row.gain >= 0
-                      ? 'text-emerald-400'
-                      : 'text-rose-400';
-
-                return (
-                  <button
-                    key={row.slug}
-                    aria-label={`Open ${ticker} position`}
-                    className="block w-full text-left transition-colors hover:bg-foreground/[0.03]"
-                    onClick={() => router.push(positionHref)}
-                    type="button"
-                  >
-                    {/* Compact mobile card */}
-                    <div className="px-3 py-2.5 md:hidden">
-                      <div className="flex items-start gap-2">
-                        <div className="min-w-0 flex-1">
-                          <div className="flex min-w-0 items-baseline gap-1.5">
-                            <span className="truncate text-sm font-bold text-foreground/90">
-                              {name}
-                            </span>
-                            <span className="shrink-0 font-mono text-[10px] font-black uppercase tracking-[0.1em] text-foreground/28">
-                              {ticker}
-                              {quoteNote ? ` · ${quoteNote}` : ''}
-                            </span>
+                    return (
+                      <tr
+                        key={row.slug}
+                        aria-label={`Open ${ticker} position`}
+                        className="cursor-pointer transition-colors hover:bg-foreground/[0.03] group"
+                        onClick={() => router.push(positionHref)}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            router.push(positionHref);
+                          }
+                        }}
+                        role="link"
+                        tabIndex={0}
+                      >
+                        <td className="px-4 py-3.5 md:px-5">
+                          <div className="truncate text-sm font-bold text-foreground/90">{name}</div>
+                          <div className="mt-0.5 font-mono text-[10px] font-black uppercase tracking-[0.12em] text-foreground/28">
+                            {ticker}
+                            {quoteNote ? ` · ${quoteNote}` : ''}
                           </div>
-                          <div className="mt-0.5 flex flex-wrap items-center gap-x-2 font-mono text-[11px] tabular-nums">
-                            {row.score != null ? (
-                              <span className={`font-black ${scoreColor(row.score)}`}>
-                                {row.score}
-                              </span>
-                            ) : (
-                              <span className="text-foreground/25">—</span>
-                            )}
-                            <span className={dayClass}>{formatPct(row.changePercent)}</span>
-                            <span className="text-foreground/35">
-                              {row.shares} sh
-                              {row.avgCost != null ? ` · avg ${money(row.avgCost)}` : ''}
+                        </td>
+                        <td className="px-2 py-3.5 text-right md:px-3">
+                          {row.score == null ? (
+                            <span className="font-mono text-sm text-foreground/25">—</span>
+                          ) : (
+                            <span
+                              className={`font-mono text-sm font-black tabular-nums ${scoreColor(row.score)}`}
+                            >
+                              {row.score}
                             </span>
-                            {row.gain != null ? (
-                              <span className={gainClass}>
-                                {money(row.gain)}
-                                {row.gainPct != null ? (
-                                  <span className="ml-1 opacity-75">{formatPct(row.gainPct)}</span>
-                                ) : null}
-                              </span>
-                            ) : null}
-                          </div>
-                        </div>
-                        <div className="shrink-0 pt-0.5 text-right">
-                          <p className="font-mono text-sm font-semibold tabular-nums text-foreground/85">
-                            {money(row.marketValue)}
-                          </p>
-                          <p className="mt-0.5 font-mono text-[10px] tabular-nums text-foreground/28">
+                          )}
+                        </td>
+                        <td className="px-2 py-3.5 text-right md:px-3">
+                          <span className="font-mono text-sm tabular-nums text-foreground/80">
+                            {row.shares}
+                          </span>
+                        </td>
+                        <td className="px-2 py-3.5 text-right md:px-3">
+                          <span className="font-mono text-sm tabular-nums text-foreground/80">
+                            {row.avgCost == null ? '—' : money(row.avgCost)}
+                          </span>
+                        </td>
+                        <td className="px-2 py-3.5 text-right md:px-3">
+                          <span className="font-mono text-sm tabular-nums text-foreground/80">
                             {quotesLoading && row.price == null ? (
                               <Spinner size="sm" color="current" />
                             ) : (
                               money(row.price)
                             )}
-                          </p>
-                        </div>
-                        <ChevronRight
-                          aria-hidden
-                          className="mt-1 shrink-0 text-foreground/25"
-                          size={16}
-                        />
-                      </div>
-                    </div>
-
-                    {/* Desktop table row */}
-                    <div className="hidden items-center gap-3 px-4 py-3.5 md:flex md:gap-4 md:px-5">
-                      <div className="min-w-0 flex-1 md:min-w-[140px]">
-                        <div className="truncate text-sm font-bold text-foreground/90">
-                          {name}
-                        </div>
-                        <div className="mt-0.5 font-mono text-[10px] font-black uppercase tracking-[0.12em] text-foreground/28">
-                          {ticker}
-                          {quoteNote ? ` · ${quoteNote}` : ''}
-                        </div>
-                      </div>
-
-                      <div className="w-14 text-right">
-                        {row.score == null ? (
-                          <p className="font-mono text-sm text-foreground/25">—</p>
-                        ) : (
-                          <p
-                            className={`font-mono text-sm font-black tabular-nums ${scoreColor(row.score)}`}
-                          >
-                            {row.score}
-                          </p>
-                        )}
-                      </div>
-
-                      <div className="w-20 text-right">
-                        <p className="font-mono text-sm tabular-nums text-foreground/80">
-                          {row.shares}
-                        </p>
-                      </div>
-
-                      <div className="w-28 text-right">
-                        <p className="font-mono text-sm tabular-nums text-foreground/80">
-                          {row.avgCost == null ? '—' : money(row.avgCost)}
-                        </p>
-                      </div>
-
-                      <div className="w-28 text-right">
-                        <p className="font-mono text-sm tabular-nums text-foreground/80">
-                          {quotesLoading && row.price == null ? (
-                            <Spinner size="sm" color="current" />
+                          </span>
+                        </td>
+                        <td className="px-2 py-3.5 text-right md:px-3">
+                          <span className={`font-mono text-sm tabular-nums ${dayClass}`}>
+                            {formatPct(row.changePercent)}
+                          </span>
+                        </td>
+                        <td className="px-2 py-3.5 text-right md:px-3">
+                          <span className="font-mono text-sm font-semibold tabular-nums text-foreground/85">
+                            {money(row.marketValue)}
+                          </span>
+                        </td>
+                        <td className="px-2 py-3.5 text-right md:px-3">
+                          {row.gain == null ? (
+                            <span className="font-mono text-sm text-foreground/25">—</span>
                           ) : (
-                            money(row.price)
+                            <div className={`font-mono text-sm tabular-nums ${gainClass}`}>
+                              <div>{money(row.gain)}</div>
+                              <div className="text-[10px] opacity-75">{formatPct(row.gainPct)}</div>
+                            </div>
                           )}
-                        </p>
-                      </div>
-
-                      <div className="w-16 text-right">
-                        <p className={`font-mono text-sm tabular-nums ${dayClass}`}>
-                          {formatPct(row.changePercent)}
-                        </p>
-                      </div>
-
-                      <div className="w-28 text-right">
-                        <p className="font-mono text-sm font-semibold tabular-nums text-foreground/85">
-                          {money(row.marketValue)}
-                        </p>
-                      </div>
-
-                      <div className="w-28 text-right">
-                        {row.gain == null ? (
-                          <p className="font-mono text-sm text-foreground/25">—</p>
-                        ) : (
-                          <div className={`font-mono text-sm tabular-nums ${gainClass}`}>
-                            <div>{money(row.gain)}</div>
-                            <div className="text-[10px] opacity-75">{formatPct(row.gainPct)}</div>
-                          </div>
-                        )}
-                      </div>
-
-                      <div className="flex w-6 shrink-0 justify-end">
-                        <ChevronRight
-                          aria-hidden
-                          className="text-foreground/25"
-                          size={16}
-                        />
-                      </div>
-                    </div>
-                  </button>
-                );
-              })}
+                        </td>
+                        <td className="px-2 py-3.5 md:pr-5">
+                          <ChevronRight
+                            aria-hidden
+                            className="ml-auto text-foreground/25 group-hover:text-foreground/50"
+                            size={16}
+                          />
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
             </div>
           </Card>
         )}
