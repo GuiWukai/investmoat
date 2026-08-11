@@ -60,7 +60,7 @@ type HoldingsSortKey =
   | 'pnl';
 type SortDir = 'asc' | 'desc';
 
-/** Full desktop column set — used for table headers / sort. */
+/** Full desktop column set — used for table headers / sort / mobile select. */
 const HOLDINGS_SORT_OPTIONS: { key: HoldingsSortKey; label: string }[] = [
   { key: 'name', label: 'Holding' },
   { key: 'score', label: 'Score' },
@@ -72,10 +72,19 @@ const HOLDINGS_SORT_OPTIONS: { key: HoldingsSortKey; label: string }[] = [
   { key: 'pnl', label: 'P&L' },
 ];
 
-/** Columns visible on small screens — drives the mobile sort select. */
-const MOBILE_HOLDINGS_SORT_OPTIONS = HOLDINGS_SORT_OPTIONS.filter((opt) =>
-  (['name', 'score', 'shares', 'value', 'pnl'] as HoldingsSortKey[]).includes(opt.key)
-);
+/**
+ * On mobile, Holding / Shares / Value / P&L stay put. Score, Avg cost, Price,
+ * and 1D % share one slot — the active sort key wins; otherwise Score.
+ */
+const MOBILE_SLOT_KEYS: HoldingsSortKey[] = ['score', 'avgCost', 'price', 'change'];
+
+function mobileSlotColumn(sortKey: HoldingsSortKey): HoldingsSortKey {
+  return MOBILE_SLOT_KEYS.includes(sortKey) ? sortKey : 'score';
+}
+
+function mobileSlotClass(column: HoldingsSortKey, slot: HoldingsSortKey): string {
+  return column === slot ? '' : 'hidden md:table-cell';
+}
 
 function SortIndicator({ active, dir }: { active: boolean; dir: SortDir }) {
   if (!active) return <ArrowUpDown size={11} className="text-foreground/15" />;
@@ -162,6 +171,7 @@ export default function MyPortfolioPage() {
   const [fxLoading, setFxLoading] = useState(true);
   const [sortKey, setSortKey] = useState<HoldingsSortKey>('value');
   const [sortDir, setSortDir] = useState<SortDir>('desc');
+  const mobileSlot = mobileSlotColumn(sortKey);
 
   // Hydrate from localStorage after mount (avoids SSR mismatch).
   useEffect(() => {
@@ -617,7 +627,7 @@ export default function MyPortfolioPage() {
                 </Select.Trigger>
                 <Select.Popover>
                   <ListBox>
-                    {MOBILE_HOLDINGS_SORT_OPTIONS.map((opt) => (
+                    {HOLDINGS_SORT_OPTIONS.map((opt) => (
                       <ListBoxItem
                         key={opt.key}
                         className="flex items-center justify-between gap-2"
@@ -689,7 +699,10 @@ export default function MyPortfolioPage() {
                         onSort={handleHoldingsSort}
                       />
                     </th>
-                    <th scope="col" className="px-2 py-2.5 md:px-3">
+                    <th
+                      scope="col"
+                      className={`px-2 py-2.5 md:px-3 ${mobileSlotClass('score', mobileSlot)}`}
+                    >
                       <SortHeader
                         label="Score"
                         sortKey="score"
@@ -709,7 +722,10 @@ export default function MyPortfolioPage() {
                         align="right"
                       />
                     </th>
-                    <th scope="col" className="hidden px-2 py-2.5 md:table-cell md:px-3">
+                    <th
+                      scope="col"
+                      className={`px-2 py-2.5 md:px-3 ${mobileSlotClass('avgCost', mobileSlot)}`}
+                    >
                       <SortHeader
                         label="Avg cost"
                         sortKey="avgCost"
@@ -719,7 +735,10 @@ export default function MyPortfolioPage() {
                         align="right"
                       />
                     </th>
-                    <th scope="col" className="hidden px-2 py-2.5 md:table-cell md:px-3">
+                    <th
+                      scope="col"
+                      className={`px-2 py-2.5 md:px-3 ${mobileSlotClass('price', mobileSlot)}`}
+                    >
                       <SortHeader
                         label="Price"
                         sortKey="price"
@@ -729,7 +748,10 @@ export default function MyPortfolioPage() {
                         align="right"
                       />
                     </th>
-                    <th scope="col" className="hidden px-2 py-2.5 md:table-cell md:px-3">
+                    <th
+                      scope="col"
+                      className={`px-2 py-2.5 md:px-3 ${mobileSlotClass('change', mobileSlot)}`}
+                    >
                       <SortHeader
                         label="1D %"
                         sortKey="change"
@@ -809,7 +831,9 @@ export default function MyPortfolioPage() {
                             {quoteNote ? ` · ${quoteNote}` : ''}
                           </div>
                         </td>
-                        <td className="px-2 py-3.5 text-right md:px-3">
+                        <td
+                          className={`px-2 py-3.5 text-right md:px-3 ${mobileSlotClass('score', mobileSlot)}`}
+                        >
                           {row.score == null ? (
                             <span className="font-mono text-sm text-foreground/25">—</span>
                           ) : (
@@ -825,12 +849,16 @@ export default function MyPortfolioPage() {
                             {row.shares}
                           </span>
                         </td>
-                        <td className="hidden px-2 py-3.5 text-right md:table-cell md:px-3">
+                        <td
+                          className={`px-2 py-3.5 text-right md:px-3 ${mobileSlotClass('avgCost', mobileSlot)}`}
+                        >
                           <span className="font-mono text-sm tabular-nums text-foreground/80">
                             {row.avgCost == null ? '—' : money(row.avgCost)}
                           </span>
                         </td>
-                        <td className="hidden px-2 py-3.5 text-right md:table-cell md:px-3">
+                        <td
+                          className={`px-2 py-3.5 text-right md:px-3 ${mobileSlotClass('price', mobileSlot)}`}
+                        >
                           <span className="font-mono text-sm tabular-nums text-foreground/80">
                             {quotesLoading && row.price == null ? (
                               <Spinner size="sm" color="current" />
@@ -839,7 +867,9 @@ export default function MyPortfolioPage() {
                             )}
                           </span>
                         </td>
-                        <td className="hidden px-2 py-3.5 text-right md:table-cell md:px-3">
+                        <td
+                          className={`px-2 py-3.5 text-right md:px-3 ${mobileSlotClass('change', mobileSlot)}`}
+                        >
                           <span className={`font-mono text-sm tabular-nums ${dayClass}`}>
                             {formatPct(row.changePercent)}
                           </span>
