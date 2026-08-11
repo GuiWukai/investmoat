@@ -2,7 +2,7 @@
   "slug": "smci",
   "ticker": "SMCI",
   "name": "Super Micro Computer",
-  "lastAnalyzed": "August 10, 2026",
+  "lastAnalyzed": "August 11, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$21B"
+      "value": "~$22B"
     }
   ],
   "chips": [
@@ -25,39 +25,39 @@
   ],
   "metrics": [
     {
-      "title": "FY26 Revenue Guide",
-      "value": "~$39-40B",
-      "label": "Raised path; Q4 prelim near low end of $11-12.5B (full print Aug 11)",
+      "title": "FY26 Revenue",
+      "value": "$39.1B",
+      "label": "+78% YoY; Q4 $11.1B (+93% YoY) — near low end of prior guide",
       "icon": "TrendingUp",
       "color": "#0ea5e9"
     },
     {
       "title": "Gross Margin",
-      "value": "Q3 10.1%",
-      "label": "Non-GAAP; Q4 prelim 15-17% on mix — durability unconfirmed",
+      "value": "Q4 17.6%",
+      "label": "Non-GAAP (GAAP 17.5%); FY26 10.9% — mix durability still open",
       "icon": "Percent",
       "color": "#f59e0b"
     },
     {
-      "title": "Q4 New Orders",
-      "value": ">$60B",
-      "label": "Record backlog claim; conversion timing is the Aug 11 swing factor",
+      "title": "FY27 Revenue Guide",
+      "value": "$65-72B",
+      "label": "Q1 $14.5-15.5B; >$60B Q4 orders into record backlog",
       "icon": "Package",
       "color": "#10b981"
     }
   ],
   "moat": {
-    "description": "Fastest time-to-market integrator of NVIDIA reference designs with leading direct-liquid-cooling / DCBBS depth — but ultimately a low-margin assembler with limited structural defensibility; the July $60B order print reinforces velocity, not pricing power.",
+    "description": "Fastest time-to-market integrator of NVIDIA reference designs with leading direct-liquid-cooling / DCBBS depth — but ultimately a low-margin assembler with limited structural defensibility; the confirmed >$60B Q4 order print and record backlog reinforce velocity, not pricing power.",
     "analysisTitle": "The Speed-and-DLC Moat",
     "analysisSummary": "Super Micro's edge is **engineering velocity around NVIDIA's roadmap and direct-liquid-cooling / DCBBS depth** — real but narrow advantages in a fundamentally commoditising market:",
     "analysisPoints": [
       {
         "title": "First-Mover Reference Design Velocity",
-        "text": "SMCI typically ships NVIDIA reference designs (HGX, GB200/NVL72, GB300) into volume production weeks ahead of Dell/HPE, capturing early-cycle hyperscaler and neocloud orders. The July disclosure of >$60B Q4 new orders is consistent with that velocity edge — but conversion, not bookings, is what shows up in the P&L."
+        "text": "SMCI typically ships NVIDIA reference designs (HGX, GB200/NVL72, GB300) into volume production weeks ahead of Dell/HPE, capturing early-cycle hyperscaler and neocloud orders. The confirmed >$60B Q4 new orders and record backlog into FY27 are consistent with that velocity edge — but conversion, not bookings, is what shows up in the P&L."
       },
       {
         "title": "Direct Liquid Cooling & DCBBS Scale",
-        "text": "Super Micro is among the highest-volume shippers of direct-liquid-cooling AI racks and is pushing Data Center Building Block Solutions (full rack + cooling + power + networking). Management targets ~3,000 DLC racks/month capacity by end-FY26; DLC remains mandatory at Blackwell-class power densities."
+        "text": "Super Micro is among the highest-volume shippers of direct-liquid-cooling AI racks and is pushing Data Center Building Block Solutions (full rack + cooling + power + networking). Management credits richer enterprise mix and broader DCBBS adoption for the Q4 margin spike; DLC remains mandatory at Blackwell-class power densities."
       },
       {
         "title": "Building-Block Modularity",
@@ -66,93 +66,93 @@
     ]
   },
   "growth": {
-    "description": "FY26 guide sits at $38.9-40.4B (~+80% YoY off FY25 ~$22B) after Q2's $12.7B record and Q3's $10.2B (+123% YoY) print slowed by site-readiness/supply. Q4 prelim (July 21) points to revenue near the low end of $11-12.5B with a claimed 15-17% gross margin and >$60B new orders — none of that is final until the August 11 report. Street FY27 revenue ~$53B (~+35%) is the near-term fade rate; margins and order conversion dominate EPS.",
+    "description": "FY26 printed $39.1B (+78% YoY off FY25 $22.0B) with Q4 at $11.1B (+93% YoY) and non-GAAP EPS $1.70 / $3.63 for the year. Management guided FY27 revenue to $65-72B (mid ~$68.5B, ~+75% YoY) and Q1 FY27 to $14.5-15.5B — a sharp raise vs the prior Street ~$53B path. Q4 non-GAAP GM hit 17.6% on mix/DCBBS, but FY26 GM was only 10.9% and Q1 non-GAAP EPS guide of $1.01-1.10 on higher sales already implies sequential fade; margins and order conversion still dominate EPS.",
     "growthAnalysis": {
-      "cagrEstimate": "25-35%",
-      "cagrBasis": "Measured on company revenue: FY25 ~$22.0B → FY26 guide midpoint ~$39.5B (+80% YoY) → Street FY27 ~$53B (~35%/yr). The 25-35% blended 3–5yr band decays that path toward low-20s as Blackwell Ultra / Vera-Rubin cycles normalise — not an extrapolation of FY26's spike or the unconfirmed >$60B Q4 order print (bookings are not revenue until delivered).",
-      "scoreDerivation": "Base 90 (25-35% revenue CAGR mid-band 30%) + 3 trajectory (2/3 drivers accelerating) + 0 margin (stable after Q2 trough; Q4 15-17% prelim unconfirmed) − 5 risk (order conversion + margin durability + export-control review) = 88",
+      "cagrEstimate": "30-40%",
+      "cagrBasis": "Measured on company revenue: FY25 $22.0B → FY26 $39.1B (+78% YoY) → FY27 company guide midpoint ~$68.5B (~+75%/yr). The 30-40% blended 3–5yr band decays that path toward low-20s as Blackwell Ultra / Vera-Rubin cycles normalise — not an extrapolation of FY26's spike or the >$60B Q4 order print (bookings are not revenue until delivered).",
+      "scoreDerivation": "Base 91 (30-40% revenue CAGR mid-band 35%) + 3 trajectory (2/3 drivers accelerating) + 0 margin (stable — Q4 17.6% mix spike confirmed but Q1 EPS guide implies sequential fade; FY26 GM 10.9% ≈ flat YoY) − 5 risk (order conversion + margin durability + export-control review) = 89",
       "drivers": [
         {
           "name": "Blackwell GB200/GB300 NVL72",
-          "metric": "AI GPU platforms >80% of Q3 revenue; Q4 prelim >$60B new orders",
+          "metric": "Q4 $11.1B (+93% YoY); >$60B new orders; FY27 guide $65-72B",
           "trend": "accelerating"
         },
         {
           "name": "DLC / DCBBS Mix",
-          "metric": "DCBBS + liquid-cooling capacity scale; 3k DLC racks/mo FY26 target",
+          "metric": "Q4 non-GAAP GM 17.6% on enterprise/DCBBS mix; management cites broader DCBBS adoption",
           "trend": "accelerating"
         },
         {
           "name": "Neocloud / Large Account Concentration",
-          "metric": "CoreWeave/Lambda-class and Tier-2 AI clouds remain core; Q3 site-readiness delays",
+          "metric": "Hundreds of new enterprise customers added; CoreWeave/Lambda-class and Tier-2 AI clouds remain core",
           "trend": "stable"
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "If the Q4 15-17% gross-margin print proves mix-driven and reverts toward high-single-digits as Dell/HPE close the Blackwell-Ultra/Vera-Rubin time-to-market gap, or if a material slice of the >$60B order book slips/cancels, EPS leverage reverses — compounded by the still-open board review of alleged export-control transactions (company not a DOJ defendant).",
+      "keyRisk": "If the Q4 17.6% gross-margin print proves mix-driven and reverts toward high-single-digits as Dell/HPE close the Blackwell-Ultra/Vera-Rubin time-to-market gap — Q1 non-GAAP EPS guide of $1.01-1.10 on $14.5-15.5B sales already implies sequential fade — or if a material slice of the >$60B order book slips/cancels, EPS leverage reverses. Compounded by FY26 operating-cash burn (−$6.8B) on inventory/AR build and the still-open board review of alleged export-control transactions (company not a DOJ defendant).",
       "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 80,
-    "description": "At ~$33 the stock trades at ~12× FY26 / ~10× FY27 consensus EPS — a deep discount to Dell/HPE that embeds margin volatility, working-capital intensity, and the export-control governance overhang. Base case ~$48 assumes FY27 consensus earns through and the multiple holds mid-teens; bear is a margin/order-conversion miss into the low-$20s.",
+    "score": 83,
+    "description": "At ~$34 (post-print AH) the stock trades at ~9× FY26 non-GAAP EPS ($3.63) and a deep discount to Dell/HPE on ~0.3× FY27 guided sales — embedding margin volatility, working-capital intensity, and the export-control governance overhang. Base case ~$58 assumes FY27 guide midpoint converts with GM back in the 10-12% range and the multiple holds low-teens; bear is a margin/order-conversion miss into the mid-$20s.",
     "peAnalysis": {
-      "asOf": "August 10, 2026",
+      "asOf": "August 11, 2026",
       "rows": [
         {
-          "label": "Forward P/E (FY26)",
-          "value": "~12×",
-          "note": "Street EPS ~$2.84; Q4 print Aug 11 can move the FY number"
+          "label": "Trailing P/E (FY26)",
+          "value": "~9×",
+          "note": "Non-GAAP EPS $3.63; GAAP $3.26 — Q4 mix spike inflated the year"
         },
         {
           "label": "Forward P/E (FY27)",
-          "value": "~10×",
-          "note": "Street EPS ~$3.31; assumes margin normalises after Q4 mix spike"
+          "value": "~7-8×",
+          "note": "Implies ~$4.50-5 EPS if ~$68.5B mid guide converts at ~FY-normalised margins"
         },
         {
           "label": "Price / Sales (FY26)",
-          "value": "~0.5×",
-          "note": "Reflects assembler, not vendor, multiple on ~$39-40B sales"
+          "value": "~0.6×",
+          "note": "Assembler multiple on $39.1B sales; ~0.3× on FY27 mid guide"
         },
         {
           "label": "PEG Ratio",
-          "value": "~0.3×",
-          "note": "Cheap on growth; market discounts margin durability and governance"
+          "value": "~0.2-0.3×",
+          "note": "Cheap on growth; market discounts margin durability, WC burn, and governance"
         },
         {
           "label": "EV / EBITDA (NTM)",
-          "value": "~9×",
-          "note": "Discount to Dell ~13× and HPE ~11×; WC/debt elevated"
+          "value": "~8-9×",
+          "note": "Discount to Dell ~13× and HPE ~11×; WC/debt elevated ($8.7B debt vs $7.5B cash)"
         }
       ],
-      "summary": "The valuation is a margin-and-conversion wager into the August 11 print. If Q4's claimed 15-17% gross margin has a durable mix/DCBBS component and the order book converts on a normal lag, the stock can re-rate toward the mid-$40s; if margins snap back and bookings prove soft, the low-teens multiple stays and the bear case prevails."
+      "summary": "The print confirmed revenue, the margin spike, and a step-up FY27 guide — but Q1 EPS guidance already prices sequential margin fade, and FY26 burned $6.8B of operating cash building inventory and receivables. If DCBBS/enterprise mix sustains double-digit GM and the order book converts on a normal lag, the stock can re-rate toward the high-$50s; if margins snap back and bookings prove soft, the low-teens multiple stays and the bear case prevails."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$22",
-      "description": "Q4 margin spike reverses to high-single-digits, a slice of the >$60B order book slips or cancels, and the export-control review keeps the governance discount intact. Multiple stays at ~8-9× depressed earnings.",
+      "priceTarget": "$24",
+      "description": "Q4 margin spike reverses to high-single-digits, a slice of the >$60B order book slips or cancels, FY27 lands well below the $65B guide floor, and the export-control review keeps the governance discount intact. Multiple stays at ~8-9× depressed earnings.",
       "points": [
         "Gross margin reverts below 9% sustained once Q4 mix normalises and Dell/HPE close the time-to-market gap",
-        "Material portion of >$60B Q4 orders delays into FY28 or cancels; WC strain persists",
+        "Material portion of >$60B Q4 orders delays into FY28 or cancels; WC strain ($12.9B inventory) persists",
         "Export-control board review or related enforcement expands the governance overhang"
       ]
     },
     "base": {
-      "priceTarget": "$48",
-      "description": "FY26 lands near ~$39.5B, FY27 grows ~30-35% on Street, gross margin stabilises 10-12% after the Q4 mix spike, and the multiple holds ~14-15× as order conversion proves orderly.",
+      "priceTarget": "$58",
+      "description": "FY27 lands near guide midpoint ~$68.5B, gross margin stabilises 10-12% after the Q4 mix spike, and the multiple holds ~12-14× as order conversion proves orderly.",
       "points": [
-        "FY26 ~$39-40B; FY27 revenue near Street ~$53B on Blackwell Ultra / early Vera-Rubin",
-        "Gross margin holds 10-12% after Q4; DCBBS/enterprise mix supports double-digit GM",
+        "FY26 $39.1B confirmed; FY27 revenue near mid guide ~$68.5B on Blackwell Ultra / early Vera-Rubin",
+        "Gross margin holds 10-12% after Q4; DCBBS/enterprise mix supports double-digit GM without mid-teens permanence",
         "Order book converts over subsequent quarters without large cancellations; audit/export reviews stay contained"
       ]
     },
     "bull": {
-      "priceTarget": "$80",
-      "description": "Order book converts cleanly, mid-teens gross margin proves more structural on DCBBS/enterprise mix, AI capex sustains into Vera-Rubin, and governance overhang fades — multiple rerates toward ~18×.",
+      "priceTarget": "$95",
+      "description": "Order book converts cleanly, mid-teens gross margin proves more structural on DCBBS/enterprise mix, FY27 approaches the $72B high end, AI capex sustains into Vera-Rubin, and governance overhang fades — multiple rerates toward ~16-18×.",
       "points": [
-        "FY27 revenue exceeds ~$55B as the >$60B backlog ships on schedule into Vera-Rubin generation",
+        "FY27 revenue approaches ~$72B as the >$60B backlog ships on schedule into Vera-Rubin generation",
         "Gross margin sustains mid-teens on premium DCBBS/DLC mix rather than one-quarter mix",
         "Export-control review closes without material company liability; multiple rerates on quality reassessment"
       ]
@@ -177,7 +177,7 @@
     },
     "bundling": {
       "status": "weakened",
-      "note": "DCBBS widens the bundle (compute + cooling + power + networking), but bundling power remains weak vs vertically integrated competitors and ODMs that pair hardware with deeper services attachments."
+      "note": "DCBBS widens the bundle (compute + cooling + power + networking) and management ties Q4's margin spike to broader DCBBS adoption, but bundling power remains weak vs vertically integrated competitors and ODMs that pair hardware with deeper services attachments."
     },
     "proprietaryData": {
       "status": "na",
@@ -185,7 +185,7 @@
     },
     "regulatoryLockIn": {
       "status": "weakened",
-      "note": "Limited regulatory moat; FY24 auditor resignation overhang persists in sentiment, and the March 2026 DOJ indictment of three individuals (company not a defendant) plus the ongoing independent board export-control review actively renew the governance discount."
+      "note": "Limited regulatory moat; FY24 auditor resignation overhang persists in sentiment, and the March 2026 DOJ indictment of three individuals (company not a defendant) plus the ongoing independent board export-control review — still flagged in the Aug 11 release — actively renew the governance discount."
     },
     "networkEffects": {
       "status": "na",
@@ -193,12 +193,12 @@
     },
     "transactionEmbedding": {
       "status": "weakened",
-      "note": "Once a hyperscaler qualifies a server platform there is some friction, but multi-vendor procurement strategies make embedment shallow vs software peers; Q3 site-readiness delays also show how little control SMCI has once a design win is booked."
+      "note": "Once a hyperscaler qualifies a server platform there is some friction, but multi-vendor procurement strategies make embedment shallow vs software peers; site-readiness delays earlier in FY26 also show how little control SMCI has once a design win is booked."
     },
     "systemOfRecord": {
       "status": "na",
       "note": "hardware vendor, not a system of record."
     },
-    "verdict": "Super Micro is a direct AI-capex beneficiary at the revenue line but has thin structural moats — the business is fundamentally a high-velocity assembler whose advantages compress every NVIDIA cycle. The July order print and claimed Q4 margin spike raise the upside if durable, but until the August 11 statements confirm both, the thesis remains operating leverage and DLC/DCBBS scale, not durable economics."
+    "verdict": "Super Micro is a direct AI-capex beneficiary at the revenue line but has thin structural moats — the business is fundamentally a high-velocity assembler whose advantages compress every NVIDIA cycle. The Aug 11 print confirmed Q4 revenue, a 17.6% non-GAAP gross-margin spike, >$60B orders, and a $65-72B FY27 guide; the thesis remains operating leverage and DLC/DCBBS scale, not durable economics, until mid-teens margins prove more than mix."
   }
 }
