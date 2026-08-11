@@ -2,7 +2,7 @@
   "slug": "anet",
   "ticker": "ANET",
   "name": "Arista Networks",
-  "lastAnalyzed": "May 2026",
+  "lastAnalyzed": "August 11, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "$217B"
+      "value": "$247B"
     }
   ],
   "chips": [
@@ -26,148 +26,149 @@
   "metrics": [
     {
       "title": "Revenue",
-      "value": "$2.71B",
-      "label": "Q1 2026 +35.1% YoY; Q2 2026 guide ~$2.8B; full-year tracking ahead of plan",
+      "value": "$3.04B",
+      "label": "Q2 2026 +37.7% YoY (first $3B+ quarter); Q3 guide ~$3.3B; FY2026 raised to ~$12.6B (+40%)",
       "icon": "TrendingUp",
       "color": "#6366f1"
     },
     {
       "title": "Operating Margin",
-      "value": "47.5%",
-      "label": "Non-GAAP; Q4 first $1B+ quarterly net income in company history",
+      "value": "49.9%",
+      "label": "Non-GAAP Q2; FY2026 OM target raised to 48–49%; non-GAAP EPS $1.02 (+39.7% YoY)",
       "icon": "Zap",
       "color": "#f59e0b"
     },
     {
       "title": "Deferred Revenue",
-      "value": "$4.7B",
-      "label": "+52% of annual revenue — multi-year visibility from contracted backlog",
+      "value": "$6.9B",
+      "label": "+$0.7B QoQ incl. ~$600M product deferred — multi-year visibility from contracted backlog",
       "icon": "Shield",
       "color": "#10b981"
     }
   ],
   "moat": {
-    "description": "Arista's EOS (Extensible Operating System) is a 20-year accumulation of network intelligence that locks hyperscalers and enterprises into Arista's ecosystem — CloudVision management, automation scripts, and network state management all compound switching costs into multi-year transitions.",
+    "description": "Arista's EOS (Extensible Operating System) is a 20-year accumulation of network intelligence that locks hyperscalers and enterprises into Arista's ecosystem — CloudVision management, automation scripts, and network state management all compound switching costs into multi-year transitions. Q2's first $3B+ quarter and Etherlink's expansion past 100 cumulative AI-fabric customers deepen that lock-in without changing the structural sources of durability.",
     "analysisTitle": "The EOS Software Moat in AI Networking",
     "analysisSummary": "Arista's competitive durability rests on **EOS Software Lock-in, AI Networking Leadership, and CloudVision System-of-Record Status**:",
     "analysisPoints": [
       {
         "title": "EOS — The Operating System Networks Can't Leave",
-        "text": "Arista's Extensible Operating System (EOS) is a single, consistent codebase across every product in the portfolio — a critical differentiation from Cisco's fragmented operating systems. Once enterprises configure their network automation, observability pipelines, and telemetry integrations against EOS's APIs, switching to a competitor means rebuilding years of operational tooling. With 150 million cumulative ports shipped as of 2025, the installed base creates an immense organizational dependency that extends far beyond the switch itself."
+        "text": "Arista's Extensible Operating System (EOS) is a single, consistent codebase across every product in the portfolio — a critical differentiation from Cisco's fragmented operating systems. Once enterprises configure their network automation, observability pipelines, and telemetry integrations against EOS's APIs, switching to a competitor means rebuilding years of operational tooling. With 150 million cumulative ports shipped as of 2025, the installed base creates an immense organizational dependency that extends far beyond the switch itself. Gartner naming Arista a Leader in the 2026 Magic Quadrant for Enterprise Wired and Wireless LAN extends that single-EOS advantage from the data center into campus."
       },
       {
         "title": "AI Networking Market Leadership",
-        "text": "Arista has captured 21.3% of the AI networking market via its Etherlink AI platform, competing directly with NVIDIA's InfiniBand as the Ethernet-first alternative for 100,000+ GPU clusters. As a founding member of the Ultra Ethernet Consortium, Arista is standardizing next-generation AI networking protocols — a standardization play that mirrors how Cisco dominated enterprise networking for two decades. The $3.25B AI networking revenue target for 2026 represents a 40%+ CAGR segment growing on top of a $9B revenue base."
+        "text": "Arista's Etherlink AI platform now serves more than 100 cumulative customers (up from 4–5 in 2024), competing directly with NVIDIA's InfiniBand as the Ethernet-first alternative for 100,000+ GPU clusters. As a founding member of the Ultra Ethernet Consortium, Arista is standardizing next-generation AI networking protocols — a standardization play that mirrors how Cisco dominated enterprise networking for two decades. Management raised the 2026 AI fabrics goal to at least $3.5B (scale-across alone ~30% / ~$1.2B), with 1.6 Tbps 7060X-E7 platforms entering trials in H2 2026."
       },
       {
         "title": "CloudVision — Network System of Record",
-        "text": "CloudVision, Arista's network management platform, serves as the system of record for network state, configuration, telemetry, and compliance across every Arista device in a customer's fleet. The $4.7B deferred revenue — representing 52% of annual revenue in contracted but unrecognised obligations — reflects how deeply CloudVision subscriptions are embedded in multi-year enterprise and hyperscaler planning cycles."
+        "text": "CloudVision, Arista's network management platform, serves as the system of record for network state, configuration, telemetry, and compliance across every Arista device in a customer's fleet. Deferred revenue of ~$6.9B — up from $6.2B in Q1, with ~$600M of the sequential increase in product deferred — reflects how deeply CloudVision subscriptions and customer-acceptance clauses are embedded in multi-year enterprise and hyperscaler planning cycles."
       }
     ]
   },
   "growth": {
-    "description": "Q1 2026 revenue hit $2.71B (+35.1% YoY) — meaningfully above the $2.6B guide — and Q2 is guided to ~$2.8B with non-GAAP operating margin 46–47%; AI networking revenue tracking ahead of the $3.25B 2026 target and consensus EPS estimate now $3.54.",
+    "description": "Q2 2026 revenue hit $3.04B (+37.7% YoY) — the first $3B+ quarter and well above the ~$2.8B guide — and Q3 is guided to ~$3.3B with non-GAAP operating margin 48–49%. Management raised FY2026 revenue guidance for the third time this year to ~$12.6B (+40% YoY), $1.1B above the May $11.5B outlook, with AI fabrics ≥$3.5B and campus ≥$1.25B.",
     "growthAnalysis": {
-      "cagrEstimate": "20–25%",
-      "scoreDerivation": "Base 80 (15–30% CAGR; FY2026 guided 25%, 2028 target implies ~19% CAGR) + 5 TAM expansion (TAM expanded from $60B to $105B; AI networking 40%+ CAGR sub-segment) + 3 deferred revenue visibility ($4.7B backlog = 52% annual revenue) − 3 customer concentration (Microsoft + Meta ~35% of revenue; hyperscaler capex sentiment risk) = 85",
+      "cagrEstimate": "25–30%",
+      "cagrBasis": "Q2 2026 revenue +37.7% YoY to $3.04B; FY2026 guided +40% to ~$12.6B. Estimate decays from that measured rate toward mid-teens by 2028 as AI-fabric and campus ramps mature off a larger base.",
+      "scoreDerivation": "Base 88 (25–30% CAGR midpoint 27.5%; FY2026 guided +40% decaying toward mid-teens) + 2.7 trajectory (AI fabrics and campus accelerating; core cloud stable) + 4 expanding margin (non-GAAP OM 49.9% in Q2; FY OM target raised to 48–49%) − 5 moderate risk (NVIDIA InfiniBand bundling / hyperscaler concentration) = 90",
       "drivers": [
         {
           "name": "AI Networking (Etherlink / Ultra Ethernet)",
-          "metric": "$2.75B 2025 AI revenue; $3.25B 2026 target; 40%+ CAGR in AI networking sub-segment",
+          "metric": "≥$3.5B 2026 AI fabrics goal (scale-across ~30% / ~$1.2B); 100+ Etherlink customers; 1.6T platforms in H2 trials",
           "trend": "accelerating"
         },
         {
           "name": "Core Cloud (Front-End Networking)",
-          "metric": "+18% YoY in 2025; stable growth from Microsoft, Meta, Oracle hyperscaler deployments",
+          "metric": "Part of the $1.1B FY raise vs May; management cites front-end data-center growth alongside AI and campus",
           "trend": "stable"
         },
         {
           "name": "Campus & Enterprise (Arista 2.0)",
-          "metric": "Expanding beyond data center into enterprise campus; TAM extension beyond core hyperscaler base",
+          "metric": "≥$1.25B 2026 campus goal; 2026 Gartner MQ Leader for Enterprise Wired and Wireless LAN",
           "trend": "accelerating"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "If NVIDIA successfully bundles NVLink/InfiniBand with GPU shipments at 3+ major hyperscalers by end of 2026, displacing Ethernet for AI clusters >50,000 GPUs, Arista's AI networking revenue growth decelerates to below 20% and the $3.25B 2026 target is revised down, triggering consensus cuts",
+      "keyRisk": "If NVIDIA successfully bundles NVLink/InfiniBand with GPU shipments at 3+ major hyperscalers by end of 2026, displacing Ethernet for AI clusters >50,000 GPUs, Arista's AI networking revenue growth decelerates to below 20% and the ≥$3.5B 2026 AI fabrics target is revised down, triggering consensus cuts",
       "keyRiskSeverity": "moderate",
-      "marginTrend": "stable"
+      "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 67,
-    "description": "ANET trades at ~$172.50 — up 33% YTD and back near 52-week highs after the Q1 beat — placing the stock between base ($180) and bull ($260). At ~49× 2026 forward P/E the multiple has re-expanded; the Q1 beat justifies upward estimate revisions but limits near-term margin of safety.",
+    "score": 75,
+    "description": "ANET trades at ~$196 — up after the Q2 beat-and-raise — placing the stock between bear ($125) and base ($240), about 17% below the base case and near Street's ~$240 average target. At ~47× raised FY2026 non-GAAP EPS the multiple remains premium; the third FY guide raise and $6.9B deferred revenue support the re-rated earnings path but leave limited margin of safety above $200.",
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "August 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~48×",
-          "note": "FY2025 GAAP EPS ~$2.74/share"
+          "value": "~62×",
+          "note": "TTM GAAP EPS ~$3.16/share"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~38×",
-          "note": "est. 2026 GAAP EPS ~$3.43"
+          "value": "~47×",
+          "note": "est. FY2026 non-GAAP EPS ~$4.15 after guide raise"
         },
         {
           "label": "PEG Ratio",
           "value": "~1.7×",
-          "note": "fwd P/E ÷ 23% EPS CAGR"
+          "note": "fwd P/E ÷ ~27.5% EPS CAGR midpoint"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~15×",
-          "note": "$11.26B NTM revenue (FY2026 guide)"
+          "value": "~17×",
+          "note": "~$14.5B NTM revenue (FY2026 ~$12.6B guide + FY2027 ramp)"
         },
         {
           "label": "Price / FCF",
-          "value": "~44×",
-          "note": "~$3.8B FCF (FY2025 est.)"
+          "value": "~50×",
+          "note": "~$5.0B FCF run-rate on raised earnings power"
         }
       ],
-      "summary": "ANET trades at ~38× forward P/E — above Cisco's 15× but justified by a fundamentally superior growth rate (25% vs Cisco's 3–5%), 47% operating margins, and AI networking market leadership that Cisco does not have. The PEG of ~1.7× is in the 'premium but fair' range for a business growing 25% with visible contracted revenue; the deferred revenue backlog essentially pre-funds two years of growth visibility. The gap between trailing (48×) and forward (38×) P/E reflects the ongoing earnings ramp as AI networking revenue scales; if the $3.25B AI networking target is achieved, this gap widens further in the bulls' favor."
+      "summary": "ANET trades at ~47× forward P/E — well above Cisco's teens multiple but justified by a fundamentally superior growth rate (FY2026 guided +40% vs Cisco's mid-single digits), near-50% operating margins, and AI networking leadership Cisco does not have. The PEG of ~1.7× is still in the 'premium but fair' range for a business compounding mid-to-high 20s with $6.9B of deferred revenue visibility; the third guide raise this year widens the earnings gap that the multiple is pricing. The gap between trailing (~62×) and forward (~47×) P/E reflects the ongoing earnings ramp as AI fabrics and campus scale — if the ≥$3.5B AI fabrics target is achieved, this gap widens further in the bulls' favor."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$90",
-      "description": "NVIDIA InfiniBand displaces Ethernet for the largest AI clusters, hyperscaler capex pulls back, and customer concentration at Microsoft/Meta materialises — revenue growth decelerates to 10–12% and multiple compresses to 10× NTM P/S.",
+      "priceTarget": "$125",
+      "description": "NVIDIA InfiniBand displaces Ethernet for the largest AI clusters, hyperscaler capex pulls back, and customer concentration at Microsoft/Meta materialises — revenue growth decelerates to low-teens and the multiple compresses toward ~25× forward earnings.",
       "points": [
-        "NVIDIA bundles NVLink + InfiniBand with Blackwell/Rubin GPU shipments at Microsoft and Meta by Q3 2026, winning 3–4 new hyperscale clusters that Arista had expected and cutting Arista's AI networking revenue estimate by $700M+",
-        "Microsoft or Meta reduces Arista networking purchases by 15%+ in 2026 as they vertically integrate networking hardware (similar to Google's own switching efforts), creating a hard revenue ceiling for the two largest customers",
-        "Hyperscaler capex sentiment shift causes sell-side to cut 2027 estimates by 15–20%, compressing the multiple from 38× to 22× forward P/E and the stock toward $90",
+        "NVIDIA bundles NVLink + InfiniBand with Blackwell/Rubin GPU shipments at Microsoft and Meta by Q4 2026, winning 3–4 new hyperscale clusters that Arista had expected and cutting Arista's AI networking revenue estimate by $700M+",
+        "Microsoft or Meta reduces Arista networking purchases by 15%+ in 2026–27 as they vertically integrate networking hardware (similar to Google's own switching efforts), creating a hard revenue ceiling for the two largest customers",
+        "Industry supply constraints (memory/silicon) persist into 2028 and Arista's $9.7B purchase commitments strain cash conversion, while sell-side cuts 2027 estimates 15–20% and compresses the multiple toward $125",
         "White-box switching competition from Broadcom-based vendors (Wedge, SONiC) accelerates at the 25.6T and 51.2T port speed tiers, compressing gross margins below 60%"
       ]
     },
     "base": {
-      "priceTarget": "$180",
-      "description": "Arista delivers FY2026 guidance of 25% growth ($11.26B) with AI networking reaching $3.25B, CloudVision subscriptions expand, and the multiple re-rates modestly as earnings ramp to $3.43/share.",
+      "priceTarget": "$240",
+      "description": "Arista delivers the raised FY2026 guide of ~$12.6B (+40%) with AI fabrics ≥$3.5B and campus ≥$1.25B; CloudVision subscriptions expand; multiple sustains ~45–50× as earnings ramp toward ~$4.80–5.20 on the FY2027 path — in line with Street's ~$240 average target.",
       "points": [
-        "FY2026 revenue reaches $11.0–11.3B as guided, with AI networking ($3.25B target) compensating for any near-term moderation in front-end cloud networking spend",
-        "Operating margins sustain at 46–48% (non-GAAP), net income grows to $4.2B+ (FY2026), and EPS reaches $3.30–3.50 — supporting a 38–40× forward P/E at fair value",
+        "FY2026 revenue reaches ~$12.6B as guided, with AI fabrics (≥$3.5B) and campus (≥$1.25B) contributing alongside front-end cloud networking",
+        "Operating margins sustain at 48–49% (non-GAAP), and non-GAAP EPS reaches ~$4.00–4.20 in FY2026 / ~$4.80–5.20 in FY2027 — supporting a mid-40s forward P/E near Street fair value",
         "Ultra Ethernet Consortium (UEC) Ethernet specification for 100K+ GPU clusters gains adoption at Oracle, xAI, and Tier 2 cloud providers, diversifying Arista's customer base beyond Microsoft/Meta concentration",
-        "Campus networking expansion (Arista 2.0) adds $800M+ incremental revenue by Q4 2026, reducing dependency on hyperscaler CapEx cycles"
+        "Campus networking expansion (Arista 2.0 / Gartner MQ Leader) delivers the ≥$1.25B 2026 goal and continues as a durable second growth engine beyond hyperscaler CapEx cycles"
       ]
     },
     "bull": {
-      "priceTarget": "$260",
-      "description": "Ultra Ethernet becomes the dominant AI cluster interconnect standard, Arista wins Tier 2 AI cloud deployments at scale, and campus expansion validates — re-rating revenue trajectory toward the $13.6B 2028 target ahead of schedule.",
+      "priceTarget": "$350",
+      "description": "Ultra Ethernet becomes the dominant AI cluster interconnect standard, Arista wins Tier 2 AI cloud deployments at scale, and campus expansion validates — re-rating the revenue trajectory well ahead of the prior $13.6B 2028 framing.",
       "points": [
-        "Ultra Ethernet Consortium specification becomes the de-facto standard for 100K+ GPU deployments across xAI, Oracle, CoreWeave, and sovereign AI clouds — Arista's AI networking revenue exceeds $5B in 2026 vs the $3.25B target",
+        "Ultra Ethernet Consortium specification becomes the de-facto standard for 100K+ GPU deployments across xAI, Oracle, CoreWeave, and sovereign AI clouds — Arista's AI fabrics revenue exceeds $5B in 2026–27 vs the ≥$3.5B 2026 goal",
         "Microsoft and Meta increase CapEx to build 300K+ GPU clusters in 2026–27, with Arista winning the majority of the Ethernet spine and leaf switching — expanding customer concentration risk into a revenue tailwind",
-        "Campus and enterprise networking (WiFi 7, private 5G, campus AI) generates $1.5B+ incremental revenue by end of 2026, establishing a durable second growth engine beyond data center",
-        "Revenue trajectory toward $15B+ by 2028 (ahead of $13.6B target) forces consensus upgrades and re-rates the stock toward 20× NTM revenue on $13B 2027 estimate"
+        "Campus and enterprise networking (WiFi 7, private 5G, campus AI) generates well above the $1.25B 2026 goal into 2027, establishing a durable second growth engine beyond data center",
+        "Revenue trajectory toward $16B+ by 2028 forces consensus upgrades and re-rates the stock toward high-teens NTM revenue on a raised 2027–28 estimate path"
       ]
     }
   },
   "tenMoats": {
     "learnedInterfaces": {
       "status": "strong",
-      "note": "Network engineers invest years mastering EOS CLI, eAPI automation, and CloudVision workflows. Enterprise network architects who have built Arista-native automation scripts represent institutional knowledge that cannot be transferred to Cisco or Juniper platforms without multi-year retraining programs."
+      "note": "Network engineers invest years mastering EOS CLI, eAPI automation, and CloudVision workflows. Enterprise network architects who have built Arista-native automation scripts represent institutional knowledge that cannot be transferred to Cisco or Juniper platforms without multi-year retraining programs. Gartner's 2026 MQ Leader recognition for Enterprise Wired and Wireless LAN extends that learned-interface lock-in into campus."
     },
     "businessLogic": {
       "status": "strong",
-      "note": "Customer networks have years of EOS configuration, automation templates, and compliance policies built into CloudVision. Hyperscaler-specific customizations, multi-tenant segmentation policies, and AI cluster networking configurations are deeply embedded business logic that would take years to migrate."
+      "note": "Customer networks have years of EOS configuration, automation templates, and compliance policies built into CloudVision. Hyperscaler-specific customizations, multi-tenant segmentation policies, and AI cluster networking configurations (including new MRC multipath and SRv6 congestion steering) are deeply embedded business logic that would take years to migrate."
     },
     "publicDataAccess": {
       "status": "na",
@@ -179,11 +180,11 @@
     },
     "bundling": {
       "status": "intact",
-      "note": "Hardware switches + EOS software + CloudVision management + support contracts create a full-stack bundle. Customers who adopt CloudVision subscriptions become dependent on Arista's hardware roadmap; separating them requires replacing both layers simultaneously."
+      "note": "Hardware switches + EOS software + CloudVision management + support contracts create a full-stack bundle. Customers who adopt CloudVision subscriptions become dependent on Arista's hardware roadmap; separating them requires replacing both layers simultaneously. New liquid-cooling and 1.6T platform options deepen the hardware–software stack for AI fabrics."
     },
     "proprietaryData": {
       "status": "intact",
-      "note": "CloudVision collects network telemetry, flow data, and performance analytics across every Arista deployment — a dataset that improves AI-driven network management products over time. The $4.7B deferred revenue base funds ongoing data collection from the world's largest AI networking deployments."
+      "note": "CloudVision collects network telemetry, flow data, and performance analytics across every Arista deployment — a dataset that improves AI-driven network management products over time. The $6.9B deferred revenue base funds ongoing data collection from the world's largest AI networking deployments."
     },
     "regulatoryLockIn": {
       "status": "intact",
@@ -191,7 +192,7 @@
     },
     "networkEffects": {
       "status": "intact",
-      "note": "EOS ecosystem network effects: more enterprises using EOS → more automation scripts and CloudVision integrations developed by the community → easier for new enterprises to adopt → harder for alternatives to catch up. Similar to how Cisco IOS created a generation of CCIE-certified engineers who perpetuated its adoption."
+      "note": "EOS ecosystem network effects: more enterprises using EOS → more automation scripts and CloudVision integrations developed by the community → easier for new enterprises to adopt → harder for alternatives to catch up. Similar to how Cisco IOS created a generation of CCIE-certified engineers who perpetuated its adoption. Etherlink's jump past 100 cumulative AI-fabric customers reinforces the same flywheel in AI networking."
     },
     "transactionEmbedding": {
       "status": "na",
@@ -201,6 +202,6 @@
       "status": "intact",
       "note": "CloudVision is the authoritative system of record for network state, device configuration, and network analytics across the enterprise. Compliance reporting, audit trails, and change management for networks all flow through CloudVision — migration would require rebuilding the entire network operations workflow."
     },
-    "verdict": "Arista is a strong net beneficiary of AI — AI data centers require orders of magnitude more high-speed networking than traditional cloud infrastructure, and Arista's Etherlink platform and Ultra Ethernet Consortium leadership position it as the default Ethernet alternative to NVIDIA's InfiniBand for 100K+ GPU clusters. EOS becomes more valuable as AI workloads require more sophisticated network automation. The primary AI risk is NVIDIA successfully bundling proprietary InfiniBand for the largest AI clusters before Ethernet standardization completes — but the UEC's backing from AMD, Intel, Microsoft, Meta, and Google makes this scenario difficult for NVIDIA to execute unilaterally."
+    "verdict": "Arista is a strong net beneficiary of AI — AI data centers require orders of magnitude more high-speed networking than traditional cloud infrastructure, and Arista's Etherlink platform (now 100+ customers) and Ultra Ethernet Consortium leadership position it as the default Ethernet alternative to NVIDIA's InfiniBand for 100K+ GPU clusters. The Q2 2026 beat-and-raise to ~$12.6B FY revenue, with AI fabrics ≥$3.5B and campus ≥$1.25B, confirms broad-based demand across back-end AI, front-end cloud, and campus. EOS becomes more valuable as AI workloads require more sophisticated network automation (MRC, SRv6, SSU). The primary AI risk remains NVIDIA successfully bundling proprietary InfiniBand for the largest AI clusters before Ethernet standardization completes — but Etherlink's customer expansion and the UEC's backing from AMD, Intel, Microsoft, Meta, and Google make this scenario difficult for NVIDIA to execute unilaterally."
   }
 }
