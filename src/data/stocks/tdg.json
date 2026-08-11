@@ -26,8 +26,8 @@
   "metrics": [
     {
       "title": "EBITDA Margin",
-      "value": "52.6%",
-      "label": "Q2 FY2026 — Revenue $2.544B (+18% YoY)",
+      "value": "52.8%",
+      "label": "Q3 FY2026 — Revenue $2.741B (+23% YoY, 13% organic)",
       "icon": "TrendingUp",
       "color": "#1a5276"
     },
@@ -40,8 +40,8 @@
     },
     {
       "title": "FY2026 Guidance",
-      "value": "$10.35B",
-      "label": "Revenue raised to $10.3-10.4B | Adj EPS $38.83-40.21",
+      "value": "$10.51B",
+      "label": "Revenue raised to $10.47-10.55B | Adj EPS $40.62-41.46",
       "icon": "Wrench",
       "color": "#148f77"
     }
@@ -61,34 +61,35 @@
       },
       {
         "title": "Serial Acquisition Compounding",
-        "text": "Since 1993, TransDigm has acquired 90+ aerospace businesses, each selected for high sole-source aftermarket content. The acquisition playbook is repeatable and the pipeline of private aerospace suppliers remains deep."
+        "text": "Since 1993, TransDigm has acquired 90+ aerospace businesses, each selected for high sole-source aftermarket content. The acquisition playbook is repeatable and the pipeline of private aerospace suppliers remains deep — Jet Parts Engineering, Victor Sierra, and the pending Prince & Izant deal continue the pattern."
       }
     ]
   },
   "growth": {
-    "description": "Q2 FY2026 revenue grew 18.3% YoY to $2.544B with adj EPS of $9.85 (vs $9.53 consensus) and EBITDA-as-defined of $1.337B (52.6% margin). Management raised FY2026 guidance: revenue $10.3-10.4B (from $9.94B), adj EPS $38.83-$40.21. The Jet Parts Engineering and Victor Sierra Aviation acquisitions (~$2.2B combined) closed and are integrating, adding ~$280M in annualized revenue. The acquisition compounding engine continues to deliver.",
+    "description": "Q3 FY2026 revenue grew 23% YoY to $2.741B (13% organic) with adj EPS of $10.87 (vs $10.29 consensus) and EBITDA-as-defined of $1.447B (52.8% margin). All three market channels delivered double-digit growth; commercial aftermarket rose 17%. Management raised FY2026 guidance again: revenue $10.47-10.55B, adj EPS $40.62-$41.46, EBITDA As Defined $5.49-5.55B (ex-pending Prince & Izant). Jet Parts Engineering and Victor Sierra (~$2.2B) are integrating; Prince & Izant (~$1.07B, ~$360M calendar-2026 revenue) was announced post-quarter.",
     "growthAnalysis": {
       "cagrEstimate": "12-18%",
-      "scoreDerivation": "Base 70 + 10 (raised FY2026 guide and 18.3% organic+M&A growth) + 5 (NATO defense ramp and aftermarket pricing) - 5 (leverage and rate sensitivity) = 80",
+      "cagrBasis": "Company net sales: FY2025 $8.831B → FY2026 guide midpoint ~$10.51B (+19% YoY, including M&A); Q3 FY2026 organic +13% with commercial aftermarket +17%. The 12–18% blended 3–5yr estimate decays the guided print toward pricing power (5–8%), aftermarket/MRO, and defense mid-teens as acquisition step-ups anniversary — not an extrapolation of the +23% reported quarter.",
+      "scoreDerivation": "Base 80 (15% midpoint of 12–18%) + ~2.7 (2 of 3 drivers accelerating) + 4 (base-business margins still expanding under acquisition dilution) − 5 (moderate leverage/cycle risk) = 82",
       "drivers": [
         {
           "name": "Aftermarket Price Escalation",
-          "metric": "5-8% annual price increases on ~85% sole-source parts",
+          "metric": "5–8% annual price increases on ~85% sole-source parts; commercial aftermarket +17% in Q3 FY2026",
           "trend": "stable"
         },
         {
           "name": "M&A Compounding",
-          "metric": "Jet Parts Engineering + Victor Sierra add ~$280M annualized revenue; FY2026 guide raised to $10.3-10.4B",
+          "metric": "JPE + Victor Sierra closed (~$2.2B); Prince & Izant pending (~$1.07B, ~$360M CY2026 rev); FY2026 sales guide raised $150M at midpoint",
           "trend": "accelerating"
         },
         {
           "name": "Defense & MRO Demand",
-          "metric": "Q2 FY2026 revenue +18.3% YoY; EBITDA margin 52.6% (+ ~100bps)",
+          "metric": "Q3 FY2026 revenue +23% YoY (13% organic); all three channels double-digit; defense backlog building",
           "trend": "accelerating"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "Sustained high interest rates lifting interest expense above $1.5B and a cyclical air-travel shock would simultaneously compress FCF and slow MRO volumes within 12-24 months.",
+      "keyRisk": "Interest expense is already running near a ~$2B annualized pace ($514M in Q3; $1.47B YTD). A cyclical air-travel shock or DoD procurement cut on top of that leverage — and closing Prince & Izant — would compress FCF and slow MRO volumes within 12–24 months.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     },
@@ -97,25 +98,25 @@
       "points": [
         "Global passenger traffic expected to grow 4–5% annually, directly driving MRO demand for TransDigm-certified parts",
         "NATO members committed to 2–3% GDP defense spending, benefiting the ~35% defense revenue segment",
-        "M&A pipeline: 3–5 acquisitions per year at 10–15× EBITDA contribute ~3–5% to annual revenue growth",
+        "M&A pipeline: 3–5 acquisitions per year at 10–15× EBITDA contribute ~3–5% to annual revenue growth; Prince & Izant adds another proprietary aerospace platform",
         "Price escalation: 5–8% annual price increases on sole-source parts, essentially a contractual inflation hedge"
       ]
     }
   },
   "valuation": {
-    "score": 78,
-    "description": "At ~$1,220 — 49% above bear ($850) and 24% below the base case ($1,600) — TransDigm offers attractive risk/reward after Q2 FY2026 beat-and-raise. Stock rallied ~6% pre-market on May 5 results. High leverage remains a structural feature, not a bug.",
+    "score": 77,
+    "description": "At ~$1,240 — 46% above bear ($850) and 23% below the base case ($1,600) — TransDigm still offers attractive risk/reward after the Q3 FY2026 beat-and-raise. High leverage remains a structural feature, not a bug; interest expense has already risen with the debt used to fund M&A and buybacks.",
     "valuationNote": {
-      "text": "TransDigm intentionally operates with 6–8× net debt/EBITDA, returning capital via special dividends rather than buybacks. At ~$1,220, risk/reward improves: 30% downside to bear ($850) vs. 31% upside to base ($1,600) and 72% to bull ($2,100).",
+      "text": "TransDigm intentionally operates with 6–8× net debt/EBITDA, returning capital via special dividends and buybacks ($1.8B YTD repurchases). At ~$1,240, risk/reward is balanced: ~32% downside to bear ($850) vs. ~29% upside to base ($1,600) and ~69% to bull ($2,100).",
       "fairValue": "$1,600"
     }
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$850",
-      "description": "Rising rates sharply increase interest expense on $20B+ debt, air travel demand stalls, and the DoD implements significant budget cuts.",
+      "description": "Elevated interest expense on $20B+ debt coincides with an air-travel demand stall and DoD budget cuts, compressing FCF and the multiple.",
       "points": [
-        "Sustained high interest rates push annual interest expense above $1.5B, compressing free cash flow",
+        "Interest expense already near a ~$2B annualized run-rate; further rate persistence or debt-funded M&A pushes FCF below buyback/dividend capacity",
         "Air travel demand shock (recession or pandemic-level event) reduces MRO volumes 20–30%",
         "DoD sequestration or continuing resolutions cut defense procurement by 15%+",
         "Multiple compresses to ~10× EBITDA as leverage risk is re-rated"
@@ -125,8 +126,8 @@
       "priceTarget": "$1,600",
       "description": "Steady 12–14% annual EPS growth from M&A compounding, 5–8% price escalation, and NATO defense ramp drives steady re-rating.",
       "points": [
-        "FY2026 guidance achieved: $9.94B revenue, $5.21B adj EBITDA — with Stellant, Jet Parts Engineering, and Victor Sierra contributing full-year acquired revenue",
-        "Defense segment grows 10–12% annually as NATO members execute 2–3% GDP spending commitments and electro-mechanical actuation demand accelerates",
+        "FY2026 guidance achieved: ~$10.51B revenue midpoint, ~$5.52B EBITDA As Defined midpoint — with JPE, Victor Sierra, and (once closed) Prince & Izant contributing acquired revenue",
+        "Defense segment grows high-single to low-double digits as NATO members execute 2–3% GDP spending commitments",
         "Two acquisitions per year add $300–500M in acquired EBITDA; net debt/EBITDA tracks toward 5× as FCF generation exceeds $3B annually",
         "Adj EPS approaches $45-50 by FY2028 at current multiples, supporting a gradual re-rating toward $1,600"
       ]
@@ -135,8 +136,8 @@
       "priceTarget": "$2,100",
       "description": "Accelerated defense spending, a transformational $5–7B acquisition, and a commercial aviation super-cycle drive EPS well above consensus.",
       "points": [
-        "NATO 3%+ GDP commitments accelerate defense budget growth; Stellant's electro-mechanical actuation systems win on multiple next-generation defense programs",
-        "A transformational acquisition ($5–7B) of a business with 90%+ sole-source aftermarket content expands the platform into adjacent aerospace verticals",
+        "NATO 3%+ GDP commitments accelerate defense budget growth; electro-mechanical actuation and proprietary aftermarket content win on next-generation defense programs",
+        "Prince & Izant integrates cleanly and a transformational acquisition ($5–7B) of a business with 90%+ sole-source aftermarket content expands the platform into adjacent aerospace verticals",
         "New narrow-body aircraft programs (Boeing 737 MAX successor, Airbus A220 derivatives) lock in TDG parts for the 2040s and beyond",
         "Special dividend of $70–100/share funded by record free cash flow generation as leverage reaches 4× net debt/EBITDA"
       ]
@@ -185,5 +186,5 @@
     },
     "verdict": "TransDigm's moat is almost entirely AI-immune. Regulatory certification cannot be automated — the FAA and DOD will not approve AI-designed substitutes without decades of physical certification testing. The sole-source aftermarket model becomes more durable, not weaker, as aircraft fleets age and alternatives become even less economical to certify."
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "August 11, 2026"
 }

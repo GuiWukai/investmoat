@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$103B"
+      "value": "~$100B"
     }
   ],
   "chips": [
@@ -27,37 +27,37 @@
     {
       "title": "Total Fleet Capacity",
       "value": "55 GW",
-      "label": "32.4 GW Nuclear + 26 GW Gas/Geo (Post-Calpine)",
+      "label": "Nuclear + Gas/Geo Post-Calpine; Brazos Valley (606 MW) Sale Pending YE26",
       "icon": "Zap",
       "color": "#0072CE"
     },
     {
       "title": "2026 Adj. EPS Guidance",
-      "value": "$11.37",
-      "label": "+21% YoY — Calpine Accretive from Day One",
+      "value": "$12.00",
+      "label": "Raised to $11.50–$12.50 Midpoint; Q2 Adj. EPS $2.55 (+34% YoY)",
       "icon": "TrendingUp",
       "color": "#00a650"
     },
     {
-      "title": "FY2025 Revenue",
-      "value": "$25.5B",
-      "label": "+8.3% YoY — EBITDA Margin Expanding to 21.4% in 2026",
+      "title": "Q2 2026 Revenue",
+      "value": "$7.50B",
+      "label": "+23% YoY; H1 Revenue $18.6B After Calpine Close",
       "icon": "DollarSign",
       "color": "#0072CE"
     }
   ],
   "moat": {
-    "description": "Constellation Energy's moat is a physically unreplicable nuclear fleet — 22 GW of zero-carbon baseload power locked under 20-year contracts with Microsoft, Meta, and Alphabet, protected by NRC licensing barriers that make new entry decades away and billions of dollars expensive.",
+    "description": "Constellation Energy's moat is a physically unreplicable nuclear fleet — ~22 GW of zero-carbon baseload locked under multi-decade contracts with Microsoft, Meta, Alphabet and a growing corporate book — now paired with Calpine's gas/geothermal platform and Powered Land co-location offer, all protected by NRC licensing barriers that make new entry decades away and billions of dollars expensive.",
     "analysisTitle": "The Nuclear Infrastructure Lock-In",
     "analysisSummary": "Constellation Energy sits at the intersection of **two irreversible megatrends** — AI data center power demand and the nuclear renaissance — with a moat built on physical assets that cannot be reproduced:",
     "analysisPoints": [
       {
         "title": "Physically Unreplicable Nuclear Fleet",
-        "text": "Constellation's 21 nuclear power plants represent 22 GW of installed capacity — assets that took decades to permit, license, construct, and operate. The NRC licensing process alone takes 10-20 years for a new reactor; building one costs $10-20B. No competitor can replicate Constellation's fleet in any foreseeable timeframe, and the supply of 24/7 carbon-free nuclear power in the US is structurally fixed near current levels for decades. This physical scarcity is the foundation of all other competitive advantages."
+        "text": "Constellation's 21 nuclear power plants represent ~22 GW of installed capacity — assets that took decades to permit, license, construct, and operate. The NRC licensing process alone takes 10-20 years for a new reactor; building one costs $10-20B. No competitor can replicate Constellation's fleet in any foreseeable timeframe, and the supply of 24/7 carbon-free nuclear power in the US is structurally fixed near current levels for decades. This physical scarcity is the foundation of all other competitive advantages."
       },
       {
         "title": "20-Year Hyperscaler PPAs: Revenue Visibility at Scale",
-        "text": "Constellation has locked in 20-year Power Purchase Agreements with Microsoft (Three Mile Island, 835 MW), Meta (Clinton Clean Energy Center, 1.1 GW), and Alphabet (new reactor development, 500 MW) — providing extraordinary revenue visibility at premium prices. These contracts are priced above prevailing grid rates to reflect the value of 24/7 carbon-free power, which is the only energy source that meets hyperscaler sustainability mandates while delivering the reliability AI data centers require. No intermittent renewable can substitute; no fossil fuel competitor offers carbon-free baseload."
+        "text": "Constellation has locked in 20-year Power Purchase Agreements with Microsoft (Three Mile Island / Crane, 835 MW), Meta (Clinton Clean Energy Center, 1.1 GW), and Alphabet (new reactor development, 500 MW), and in Q2 2026 added another 920 MW of 15–20 year nuclear PPAs (including 176 MW with Walmart tied to a Dresden uprate) starting 2029–2032. These contracts are priced above prevailing grid rates to reflect the value of 24/7 carbon-free power, which is the only energy source that meets hyperscaler sustainability mandates while delivering the reliability AI data centers require. No intermittent renewable can substitute; no fossil fuel competitor offers carbon-free baseload."
       },
       {
         "title": "Inflation-Protected by Nuclear Production Tax Credits",
@@ -66,76 +66,77 @@
     ]
   },
   "growth": {
-    "description": "Calpine acquisition closed January 7, 2026 ($26.6B total) — the largest US power deal since TXU in 2007 — creating the nation's largest electricity producer with 55 GW of combined nuclear, natural gas, and geothermal capacity. 2026 adj. EPS guidance of $11.37 (+21% YoY) and EBITDA margin expansion to 21.4% reflect accelerating contract repricing. Dividend raised 10% with another 10% increase pledged for 2026.",
+    "description": "Q2 2026 (reported Aug 6) delivered adj. operating EPS of $2.55 (+34% YoY; beat $2.33) on $7.50B revenue (+23% YoY; slight miss), with Calpine accretion and commercial margin strength offsetting a heavier nuclear refueling slate (86 outage days vs 41). Management raised FY2026 adj. EPS guidance to $11.50–$12.50 (midpoint ~$12.00) from $11.00–$12.00, citing commercial outperformance and ~$2.2B YTD buybacks. Crane cleared FERC CIR transfer and NRC fuel-license milestones toward a 2027 restart; +920 MW of new long-term nuclear PPAs were signed; Brazos Valley (606 MW) sale to LS Power for $860M is the last Calpine-required divestiture.",
     "growthAnalysis": {
-      "cagrEstimate": "10-15%",
-      "scoreDerivation": "Base 65 + 10 (Calpine accretion and 2026 EPS +21%) + 5 (TMI restart and hyperscaler PPA pipeline) - 5 (PPA renegotiation risk post AI executive order) = 75",
+      "cagrEstimate": "12-16%",
+      "cagrBasis": "Adj. operating EPS: FY2025 $9.39 → FY2026 guide midpoint ~$12.00 (~+28% YoY with Calpine). Management targets long-term rolling 3-year base EPS growth of 10%+ and cites a 20%+ opportunity path through 2029 (2029 base EPS $11.40–$11.90 excluding incremental deals). The 12–16% blended 3–5yr estimate starts from the guided step-up and decays toward the 10%+ base as contract repricing and Crane/PPA ramps anniversary.",
+      "scoreDerivation": "Base ~79 on 14% midpoint of 12–16% + 2.7 trajectory (PPA book and Calpine integration accelerating; Crane restart stable on 2027 path) + 4 expanding margins − 5 moderate keyRisk (PJM/ERCOT regulatory and PPA start-date timing) = 80. Crane FERC CIR + NRC fuel license cut the prior high restart-delay severity; residual risk is market-rule and load-timing, not whether the restart playbook exists.",
       "drivers": [
         {
-          "name": "Hyperscaler PPA Repricing",
-          "metric": "20-year contracts with Microsoft (835 MW), Meta (1.1 GW), Alphabet (500 MW) at 30-50% premium pricing",
+          "name": "Hyperscaler & Corporate PPA Repricing",
+          "metric": "Microsoft 835 MW, Meta 1.1 GW, Alphabet 500 MW plus Q2 +920 MW of 15–20yr nuclear PPAs (incl. Walmart 176 MW / Dresden uprate) starting 2029–2032",
           "trend": "accelerating"
         },
         {
           "name": "Calpine Integration",
-          "metric": "55 GW combined fleet; 2026 EPS guide $11.37 (+21% YoY); EBITDA margin 21.4%",
+          "metric": "55 GW combined fleet; FY26 adj. EPS guide raised to $11.50–$12.50; Q2 adj. EPS $2.55; last required divestiture (Brazos Valley) under agreement",
           "trend": "accelerating"
         },
         {
-          "name": "Three Mile Island Restart",
-          "metric": "835 MW Crane Clean Energy Center on track for Q4 2027 under Microsoft 20-year PPA",
+          "name": "Crane (TMI) Restart",
+          "metric": "835 MW Crane Clean Energy Center — FERC CIR waiver granted, NRC fuel license approved; still targeting 2027 under Microsoft 20-year PPA",
           "trend": "stable"
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "Hyperscaler PPA renegotiations following the Trump AI executive order, plus NRC delays on the TMI restart, could push major revenue catalysts from 2027 into 2028-2030.",
-      "keyRiskSeverity": "high",
+      "keyRisk": "If PJM/ERCOT market-rule changes or data-center interconnect delays push the 2029–2032 PPA start window out a year or more while nuclear outage intensity stays elevated, the 20%+ opportunity path through 2029 could compress toward the 10%+ base case even with Crane online in 2027.",
+      "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     },
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
-        "Contract repricing cycle: legacy power contracts written when nuclear PTCs didn't exist and AI demand was unknown are rolling off and being replaced at 30-50% premium prices; this margin expansion drives double-digit EPS growth even with flat revenue",
-        "Three Mile Island restart (Crane Clean Energy Center): backed by $1B DOE loan and Microsoft's 20-year PPA, the restart of TMI Unit 1 (~835 MW) adds high-margin generation capacity already committed to premium contracts",
-        "Calpine acquisition: adding the largest US natural gas generator diversifies the portfolio, expands the data center PPA opportunity beyond nuclear, and creates cross-selling opportunities — projected to be meaningfully accretive to EPS and FCF within 2 years",
-        "Nuclear renaissance tailwind: US government policy is actively supporting nuclear extension and new builds; advanced Small Modular Reactor (SMR) technology could create a new growth phase for CEG's development expertise if regulatory timelines compress"
+        "Contract repricing cycle: legacy power contracts written when nuclear PTCs didn't exist and AI demand was unknown are rolling off and being replaced at premium prices; Q2's +920 MW of 15–20 year nuclear PPAs extends that book into 2029–2032 and supports double-digit EPS growth even as wholesale volatility persists",
+        "Crane Clean Energy Center (Three Mile Island Unit 1): FERC CIR transfer waiver and NRC fuel-license approval clear critical restart hurdles; Microsoft's 20-year PPA still anchors 835 MW of premium carbon-free power targeted for 2027",
+        "Calpine platform: gas, geothermal, and Powered Land co-location (e.g., CyrusOne Freestone) diversify the data-center offer beyond pure nuclear; Brazos Valley sale ($860M to LS Power) completes the last required Calpine divestiture pending DOJ",
+        "Fleet life extensions: NRC license-renewal filings for Ginna and Nine Mile Point Unit 1 through 2049 protect long-duration baseload optionality; SMR/policy tailwinds remain a longer-dated option on development expertise"
       ]
     }
   },
   "valuation": {
-    "score": 76,
-    "description": "At ~$324, CEG sits roughly midway between bear ($200) and base ($420), implying meaningful upside ahead of the Q1 2026 print scheduled for May 11. Wall Street consensus is 14 Strong Buys / 1 Moderate Buy / 4 Holds with a mean target of $383, ~18% above spot. Calpine integration is on track and EPS guidance ($11.37 for 2026) is intact.",
+    "score": 81,
+    "description": "At ~$279 (Aug 11) — well off the ~$413 52-week high and below the May analysis print near $324 — CEG sits between bear ($200) and base ($420), ~34% below base and ~50% above bear on the corridor (valuation score 81). Street consensus averages ~$350–$366 (~25–30% upside) after the Q2 beat and guidance raise to $11.50–$12.50. Calpine integration is showing up in EPS; Crane regulatory milestones and +920 MW of new PPAs support the longer-dated $420 base case even as near-term Street targets cluster lower.",
     "valuationNote": {
-      "text": "Comparing CEG to traditional utilities on P/E or EV/EBITDA understates its quality — the appropriate peer group is contracted infrastructure (data center REITs, toll roads) where 20-year fixed-price contracts trade at 30-50x earnings. CEG's FCF yield of ~3.5% ($4B FCF / $116B market cap) is below historical averages for utilities, reflecting the AI contract premium. At the base case of $420, investors receive a 15% upside plus a growing dividend.",
+      "text": "Comparing CEG to traditional utilities on P/E or EV/EBITDA understates its quality — the appropriate peer group is contracted infrastructure (data center REITs, toll roads) where multi-decade fixed-price clean-power contracts trade at premium multiples. Management's 2028–2029 free cash flow before growth outlook of $11.5–$13.0B on a ~$100B equity value frames a mid-teens FCF yield into the back half of the decade if delivery holds. At the base case of $420, investors still need Crane online and the PPA book to convert — but spot already discounts a large share of that execution versus the May highs.",
       "fairValue": "$420"
     }
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$200",
-      "description": "AI data center power demand peaks earlier than expected, nuclear regulatory headwinds emerge, and power prices fall sharply — stranding CEG's premium valuation without the revenue growth to support it.",
+      "description": "AI data center interconnect delays and softer power forwards stall the PPA ramp, PJM/ERCOT rule changes cut capacity revenue, and Crane slips — leaving CEG's premium multiple unsupported by near-term EPS growth.",
       "points": [
-        "AI efficiency improvements (e.g., next-generation inference models requiring 80% less compute) cause hyperscalers to scale back power commitments; Microsoft and Meta negotiate contract modifications that reduce CEG's premium PPA pricing",
-        "Three Mile Island restart faces NRC regulatory delays, adding $500M+ in unexpected costs and pushing the online date from 2027 to 2030, impairing the economics of CEG's flagship growth project",
-        "Power prices collapse as record renewable capacity additions and demand response programs reduce grid scarcity; nuclear PTCs partially offset the decline but FCF falls to $2B, and the market de-rates CEG to 15-17x normalized earnings"
+        "Data-center queue audits and interconnect delays push 2029–2032 PPA energization later; hyperscalers and corporates renegotiate start dates or pricing, compressing the premium to grid power that underwrites today's multiple",
+        "Crane restart faces further NRC or interconnection setbacks despite the FERC CIR waiver and fuel-license approval, adding unexpected cost and pushing commercial operation past 2027 toward 2029–2030",
+        "Power prices and capacity revenues soften as renewables, batteries, and demand response reduce scarcity; nuclear PTCs cushion the floor but FCF undershoots the $11.5–$13.0B 2028–29 FCFbG band, and the stock de-rates toward mid-teens earnings multiples near $200"
       ]
     },
     "base": {
       "priceTarget": "$420",
-      "description": "Three Mile Island restarts on schedule in 2027, existing AI PPAs deliver as contracted, and additional data center deals fill remaining capacity — EPS compounds at 12-15% annually through contract repricing.",
+      "description": "Crane restarts in 2027, the raised $11.50–$12.50 FY26 guide is delivered, and the expanding PPA book plus Calpine commercial platform support low-to-mid-teens EPS compounding into the decade.",
       "points": [
-        "Crane Clean Energy Center (Three Mile Island) restarts in Q4 2027 under the 20-year Microsoft PPA, adding 835 MW of premium-priced carbon-free power and validating the nuclear restart playbook for future plant life extensions",
-        "2-3 additional 20-year data center PPAs are announced totaling 2-3 GW of additional committed capacity, from hyperscalers and/or AI infrastructure companies seeking carbon-free power for new data center clusters",
-        "EPS reaches $12-14 by FY2027 (from ~$8.50 in 2025) as legacy contracts reprice and PTC-protected margins expand; the stock re-rates to 30x forward earnings at $420"
+        "Crane Clean Energy Center restarts in 2027 under the Microsoft 20-year PPA after FERC CIR and NRC fuel-license milestones, validating the nuclear restart playbook for further life extensions and uprates",
+        "The Q2 +920 MW nuclear PPA cohort (plus Microsoft/Meta/Alphabet) and Calpine Powered Land deals convert on schedule; 2–3 GW of additional contracted capacity is announced over the next 12–24 months",
+        "Adj. EPS tracks toward the raised 2026 band and compounds at ~12–16% as legacy contracts reprice; at ~30× forward earnings the stock reaches ~$420 as FCFbG scales toward the guided 2028–29 range"
       ]
     },
     "bull": {
       "priceTarget": "$650",
-      "description": "Nuclear renaissance accelerates as AI power demand exceeds expectations — Constellation becomes the default power partner for all major hyperscalers, unlocking 10+ GW of new PPA commitments and positioning it as the infrastructure backbone of the AI economy.",
+      "description": "Nuclear renaissance and AI power scarcity accelerate — Constellation becomes the default clean firm-power partner across hyperscalers and corporates, unlocking multi-GW of new PPAs and a contracted-infrastructure re-rate.",
       "points": [
-        "CEG announces 5-8 GW of new data center PPAs totaling 10+ 20-year contracts — becoming the default clean energy infrastructure provider for every major hyperscaler and AI infrastructure company, with demand exceeding available capacity",
-        "Congress passes nuclear SMR permitting reform reducing NRC approval timelines from 15 years to 5 years; CEG announces 3-5 SMR development partnerships, providing a next-generation growth platform that transforms it from a legacy fleet manager to a growth company",
-        "FCF reaches $8-10B annually by FY2030 as the full portfolio reprices to AI-premium levels; at 65x FCF (comparable to contracted infrastructure), the market cap reaches $520-650B, implying $650/share"
+        "CEG announces several GW of incremental data-center and corporate PPAs beyond the existing Microsoft/Meta/Alphabet/+920 MW book — demand for 24/7 carbon-free and firm gas-backed power exceeds available interconnection, sustaining premium pricing",
+        "Permitting reform and/or SMR partnerships compress development timelines; Ginna/Nine Mile renewals and further uprates extend the nuclear cash-flow duration that the market capitalizes",
+        "FCFbG reaches the high end of (or above) the $11.5–$13.0B 2028–29 guide as the portfolio reprices; at contracted-infrastructure multiples the equity value approaches the $650/share bull case"
       ]
     }
   },
@@ -157,16 +158,16 @@
       "note": "NRC-licensed reactor operators, nuclear engineers, and health physicists are extraordinarily scarce — the NRC estimates a persistent 30%+ shortfall in qualified nuclear professionals; Constellation's ability to staff 21 operating nuclear plants with licensed operators is itself a competitive advantage that constrains the entire industry's growth capacity."
     },
     "bundling": {
-      "status": "weakened",
-      "note": "Constellation bundles power generation with carbon-free Renewable Energy Certificates (RECs) and long-term price hedging for corporate buyers — a real but limited bundling advantage that competitors offering renewable PPAs can partially replicate."
+      "status": "intact",
+      "note": "Post-Calpine, Constellation bundles firm generation with interconnection rights, site infrastructure, and carbon-free attributes via the Powered Land co-location model (e.g., CyrusOne at Freestone) plus long-term price hedging — a deeper package than RECs alone, though still partially replicable by other generators with spare land and gas peakers."
     },
     "proprietaryData": {
       "status": "intact",
-      "note": "Decades of nuclear plant operational data, fuel cycle performance data, and grid dispatch optimization data create efficiency advantages (96.8% capacity factor, ~4% above industry average) that new operators could not achieve without a similar operational history."
+      "note": "Decades of nuclear plant operational data, fuel-cycle performance data, and grid dispatch optimization data create efficiency advantages; Q2 2026 capacity factor was 93.0% on a heavier refueling slate (86 planned outage days vs 41), still reflecting operator skill versus a greenfield entrant without a comparable history."
     },
     "regulatoryLockIn": {
       "status": "strong",
-      "note": "NRC licenses require multi-year approvals for each reactor and individual licensed operators for specific plant positions; once granted and staffed, these licenses create near-insurmountable barriers to entry and plant-specific operational rights that cannot be transferred or replicated — nuclear regulatory lock-in is arguably the strongest physical-world regulatory moat in US industry."
+      "note": "NRC licenses require multi-year approvals for each reactor and individual licensed operators for specific plant positions; Q2 milestones — FERC CIR waiver and NRC fuel-license approval for Crane, plus Ginna/Nine Mile Unit 1 renewal filings through 2049 — show how plant-specific rights compound into barriers rivals cannot buy or shortcut."
     },
     "networkEffects": {
       "status": "na",
@@ -174,13 +175,13 @@
     },
     "transactionEmbedding": {
       "status": "strong",
-      "note": "20-year PPAs with Microsoft, Meta, and Alphabet embed Constellation as the power infrastructure partner for the next generation of AI data centers — contracts of this duration and strategic importance create deep bilateral dependencies; a hyperscaler replacing CEG would need to find alternative 24/7 carbon-free baseload power that effectively doesn't exist at scale today."
+      "note": "Multi-decade PPAs with Microsoft, Meta, and Alphabet — plus Q2's additional 920 MW of 15–20 year nuclear contracts (including Walmart) — embed Constellation as the firm clean-power partner for AI and corporate load; replacing CEG requires scarce 24/7 carbon-free baseload that does not exist at scale elsewhere today."
     },
     "systemOfRecord": {
       "status": "na",
       "note": "Constellation Energy is not a system of record for any information function; this moat category does not apply to a power generation business."
     },
-    "verdict": "Constellation Energy is a beneficiary of AI adoption through its data center PPA contracts, but AI cannot meaningfully strengthen or weaken its core nuclear infrastructure moat — the advantages (NRC licensing, physical plant ownership, operational expertise) are independent of AI. The primary risk is AI efficiency improvements reducing data center power demand growth; the primary upside is AI-driven demand accelerating faster than the grid can add capacity."
+    "verdict": "Constellation Energy is a beneficiary of AI adoption through its data center and corporate PPA contracts, but AI cannot meaningfully weaken its core nuclear infrastructure moat — the advantages (NRC licensing, physical plant ownership, operational expertise) are independent of AI. Calpine's Powered Land offer deepens bundling without changing the nuclear scarcity thesis. Primary risk is interconnect/market-rule delay to PPA start dates; primary upside is AI-driven demand outrunning grid additions."
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "August 11, 2026"
 }
