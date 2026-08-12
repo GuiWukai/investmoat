@@ -592,14 +592,15 @@ export default function MyPortfolioPage() {
         className="animate-fade-up stagger-fill-both pb-16"
         style={{ animationDelay: '0.2s' }}
       >
-        <div className="mb-5 flex flex-wrap items-center gap-3 md:gap-4">
-          <div>
-            <p className="section-label mb-1">Holdings</p>
-            <h2 className="text-xl font-bold text-foreground/85">Your book</h2>
-          </div>
-          <div className="hidden h-px flex-1 bg-foreground/[0.05] md:block" />
-          <div className="ml-auto flex flex-col items-end gap-2 md:flex-row md:items-center">
+        <div className="mb-5">
+          <div className="flex items-end gap-3 md:gap-4">
+            <div className="min-w-0">
+              <p className="section-label mb-1">Holdings</p>
+              <h2 className="text-xl font-bold text-foreground/85">Your book</h2>
+            </div>
+            <div className="mb-2.5 hidden h-px flex-1 bg-foreground/[0.05] md:block" />
             <Button
+              className="shrink-0"
               onPress={() => router.push('/my-portfolio/add')}
               size="sm"
               variant="primary"
@@ -607,50 +608,50 @@ export default function MyPortfolioPage() {
               <Plus size={14} />
               Add holding
             </Button>
-            {holdings.length > 0 && (
-              <Select
-                aria-label="Sort holdings"
-                className="w-[9.75rem] md:hidden"
-                onSelectionChange={(key) => {
-                  if (key == null) return;
-                  handleHoldingsSort(String(key) as HoldingsSortKey);
-                }}
-                selectedKey={sortKey}
-              >
-                <Select.Trigger className="h-8 min-h-8 items-center gap-1.5 rounded-lg border border-foreground/[0.06] bg-foreground/[0.04] px-2.5 text-left">
-                  <span className="flex min-w-0 flex-col leading-tight">
-                    <span className="text-[9px] font-bold uppercase tracking-widest text-foreground/30">
-                      Sort
-                    </span>
-                    <span className="flex min-w-0 items-center gap-1">
-                      <Select.Value className="truncate text-[11px] font-bold text-foreground/85">
-                        {({ isPlaceholder, selectedText, defaultChildren }) =>
-                          isPlaceholder ? defaultChildren : selectedText
-                        }
-                      </Select.Value>
-                      <SortIndicator active dir={sortDir} />
-                    </span>
-                  </span>
-                  <Select.Indicator className="ml-auto shrink-0" />
-                </Select.Trigger>
-                <Select.Popover>
-                  <ListBox>
-                    {HOLDINGS_SORT_OPTIONS.map((opt) => (
-                      <ListBoxItem
-                        key={opt.key}
-                        className="flex items-center justify-between gap-2"
-                        id={opt.key}
-                        textValue={opt.label}
-                      >
-                        <span>{opt.label}</span>
-                        <SortIndicator active={sortKey === opt.key} dir={sortDir} />
-                      </ListBoxItem>
-                    ))}
-                  </ListBox>
-                </Select.Popover>
-              </Select>
-            )}
           </div>
+          {holdings.length > 0 && (
+            <Select
+              aria-label="Sort holdings"
+              className="mt-3 w-full md:hidden"
+              onSelectionChange={(key) => {
+                if (key == null) return;
+                handleHoldingsSort(String(key) as HoldingsSortKey);
+              }}
+              selectedKey={sortKey}
+            >
+              <Select.Trigger className="h-10 min-h-10 items-center gap-2 rounded-lg border border-foreground/[0.06] bg-foreground/[0.04] px-3 text-left">
+                <span className="flex min-w-0 flex-col leading-tight">
+                  <span className="text-[9px] font-bold uppercase tracking-widest text-foreground/30">
+                    Sort
+                  </span>
+                  <span className="flex min-w-0 items-center gap-1">
+                    <Select.Value className="truncate text-xs font-semibold text-foreground/85">
+                      {({ isPlaceholder, selectedText, defaultChildren }) =>
+                        isPlaceholder ? defaultChildren : selectedText
+                      }
+                    </Select.Value>
+                    <SortIndicator active dir={sortDir} />
+                  </span>
+                </span>
+                <Select.Indicator className="ml-auto shrink-0" />
+              </Select.Trigger>
+              <Select.Popover>
+                <ListBox>
+                  {HOLDINGS_SORT_OPTIONS.map((opt) => (
+                    <ListBoxItem
+                      key={opt.key}
+                      className="flex items-center justify-between gap-2"
+                      id={opt.key}
+                      textValue={opt.label}
+                    >
+                      <span>{opt.label}</span>
+                      <SortIndicator active={sortKey === opt.key} dir={sortDir} />
+                    </ListBoxItem>
+                  ))}
+                </ListBox>
+              </Select.Popover>
+            </Select>
+          )}
         </div>
 
         {!hydrated ? (
