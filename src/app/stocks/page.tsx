@@ -104,13 +104,38 @@ function SortHeader({
   );
 }
 
+/** Score shown in the row's score pill for the active sort key. */
+function displayScoreForSort(
+  sortKey: SortKey,
+  stock: typeof allCoverageData[0],
+  liveScore: number,
+): number {
+  switch (sortKey) {
+    case "moat":   return Math.round(stock.scores[0]);
+    case "growth": return Math.round(stock.scores[1]);
+    case "val":    return Math.round(stock.scores[2]);
+    case "score":
+    case "name":
+      return liveScore;
+  }
+}
+
 function StockRow({
-  stock, rank, liveScore, loading,
+  stock, rank, liveScore, loading, sortKey,
 }: {
-  stock: typeof allCoverageData[0]; rank?: number; liveScore: number; loading: boolean;
+  stock: typeof allCoverageData[0];
+  rank?: number;
+  liveScore: number;
+  loading: boolean;
+  sortKey: SortKey;
 }) {
   const router = useRouter();
   const accentColor = TICKER_COLORS[stock.ticker] ?? '#6b7280';
+  // Mobile only shows one score pill — match it to the active sort so the
+  // number lines up with what the user asked to order by. Desktop keeps the
+  // full Moat/Growth/Val columns + composite Score.
+  const mobileScore = displayScoreForSort(sortKey, stock, liveScore);
+  const mobileNeedsLive = sortKey === "score" || sortKey === "name";
 
   return (
     <button
@@ -154,8 +179,14 @@ function StockRow({
       {/* Divider */}
       <div className="hidden md:block w-px h-6 bg-foreground/[0.07] shrink-0" />
 
-      {/* Overall score */}
-      <div className="shrink-0">
+      {/* Mobile: score matching active sort · Desktop: composite score */}
+      <div className="shrink-0 md:hidden">
+        {mobileNeedsLive && loading
+          ? <Spinner size="sm" color="current" />
+          : <ScorePill value={mobileScore} />
+        }
+      </div>
+      <div className="hidden md:block shrink-0">
         {loading
           ? <Spinner size="sm" color="current" />
           : <ScorePill value={liveScore} />
@@ -487,6 +518,7 @@ export default function StocksPage() {
                 rank={idx + 1}
                 liveScore={liveScores[stock.ticker] ?? Math.round(getAverageScore(stock.scores))}
                 loading={!pricesLoaded}
+                sortKey={sortKey}
               />
             ))}
           </Card>
