@@ -15,7 +15,7 @@ import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore"
 // dilutes with sub-quality names).
 const PORTFOLIO_THRESHOLD = 80;
 const MAX_PORTFOLIO = 25;
-const NEAR_TOP_COUNT = 10;
+const NEAR_TOP_COUNT = 25;
 
 // ─── Per-ticker metadata (display color, category, exclusion reason) ──────────
 const stockMeta: Record<string, { color: string; category: string; exclusionReason?: string }> = {
