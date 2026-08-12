@@ -73,16 +73,16 @@ const HOLDINGS_SORT_OPTIONS: { key: HoldingsSortKey; label: string }[] = [
 ];
 
 /**
- * On mobile, Holding / Shares / Value / P&L stay put. Score, Avg cost, Price,
- * and 1D % share one slot — the active sort key wins; otherwise Score.
+ * On mobile, Holding / Score / Shares / Value / P&L stay put. Avg cost, Price,
+ * and 1D % share one optional slot — shown only when that column is the active sort.
  */
-const MOBILE_SLOT_KEYS: HoldingsSortKey[] = ['score', 'avgCost', 'price', 'change'];
+const MOBILE_SLOT_KEYS: HoldingsSortKey[] = ['avgCost', 'price', 'change'];
 
-function mobileSlotColumn(sortKey: HoldingsSortKey): HoldingsSortKey {
-  return MOBILE_SLOT_KEYS.includes(sortKey) ? sortKey : 'score';
+function mobileSlotColumn(sortKey: HoldingsSortKey): HoldingsSortKey | null {
+  return MOBILE_SLOT_KEYS.includes(sortKey) ? sortKey : null;
 }
 
-function mobileSlotClass(column: HoldingsSortKey, slot: HoldingsSortKey): string {
+function mobileSlotClass(column: HoldingsSortKey, slot: HoldingsSortKey | null): string {
   return column === slot ? '' : 'hidden md:table-cell';
 }
 
@@ -699,10 +699,7 @@ export default function MyPortfolioPage() {
                         onSort={handleHoldingsSort}
                       />
                     </th>
-                    <th
-                      scope="col"
-                      className={`px-2 py-2.5 md:px-3 ${mobileSlotClass('score', mobileSlot)}`}
-                    >
+                    <th scope="col" className="px-2 py-2.5 md:px-3">
                       <SortHeader
                         label="Score"
                         sortKey="score"
@@ -831,9 +828,7 @@ export default function MyPortfolioPage() {
                             {quoteNote ? ` · ${quoteNote}` : ''}
                           </div>
                         </td>
-                        <td
-                          className={`px-2 py-3.5 text-right md:px-3 ${mobileSlotClass('score', mobileSlot)}`}
-                        >
+                        <td className="px-2 py-3.5 text-right md:px-3">
                           {row.score == null ? (
                             <span className="font-mono text-sm text-foreground/25">—</span>
                           ) : (
