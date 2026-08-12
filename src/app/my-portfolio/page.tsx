@@ -598,7 +598,15 @@ export default function MyPortfolioPage() {
             <h2 className="text-xl font-bold text-foreground/85">Your book</h2>
           </div>
           <div className="hidden h-px flex-1 bg-foreground/[0.05] md:block" />
-          <div className="ml-auto flex flex-wrap items-center gap-2">
+          <div className="ml-auto flex flex-col items-end gap-2 md:flex-row md:items-center">
+            <Button
+              onPress={() => router.push('/my-portfolio/add')}
+              size="sm"
+              variant="primary"
+            >
+              <Plus size={14} />
+              Add holding
+            </Button>
             {holdings.length > 0 && (
               <Select
                 aria-label="Sort holdings"
@@ -642,14 +650,6 @@ export default function MyPortfolioPage() {
                 </Select.Popover>
               </Select>
             )}
-            <Button
-              onPress={() => router.push('/my-portfolio/add')}
-              size="sm"
-              variant="primary"
-            >
-              <Plus size={14} />
-              Add holding
-            </Button>
           </div>
         </div>
 
