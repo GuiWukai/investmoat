@@ -1,6 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getStockData } from '@/data/stocks';
 
+// How long a Yahoo quote stays cached (Next data cache + browser/CDN).
+// 15 minutes keeps prices reasonably fresh without hammering Yahoo's
+// unofficial chart endpoint (no published quota; 429s are real).
+const PRICE_REVALIDATE_SECONDS = 900;
+
 // Yahoo Finance symbol overrides, for the slugs where the Yahoo symbol differs
 // from the `ticker` field in src/data/stocks/<slug>.json: commodities quoted as
 // futures contracts, crypto quoted as pairs, and non-US listings.
@@ -49,7 +54,7 @@ export async function GET(
     const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?interval=1d&range=1d`;
     const res = await fetch(url, {
       headers: { 'User-Agent': 'Mozilla/5.0 (compatible; investmoat/1.0)' },
-      next: { revalidate: 3600 },
+      next: { revalidate: PRICE_REVALIDATE_SECONDS },
     });
 
     if (!res.ok) {
@@ -75,7 +80,11 @@ export async function GET(
 
     return NextResponse.json(
       { symbol, price, previousClose, change, changePercent, currency, timestamp },
-      { headers: { 'Cache-Control': 'public, max-age=3600, s-maxage=3600, stale-while-revalidate=600' } },
+      {
+        headers: {
+          'Cache-Control': `public, max-age=${PRICE_REVALIDATE_SECONDS}, s-maxage=${PRICE_REVALIDATE_SECONDS}, stale-while-revalidate=300`,
+        },
+      },
     );
   } catch {
     return NextResponse.json({ error: 'Internal error' }, { status: 500 });
