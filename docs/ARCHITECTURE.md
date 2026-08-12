@@ -88,7 +88,7 @@ value  = json.valuation.score          // static fallback
 The portfolio is then derived: sort by composite, keep names clearing the minimum score, cap at 25. See [SCORING.md](./SCORING.md).
 
 ### Live prices (runtime, client)
-Pages that show live data fetch `/api/stock-price/[ticker]`, which proxies Yahoo Finance and is cached (`revalidate: 3600` + `s-maxage`). The client then recomputes the **valuation** pillar from the live price against the bear/base/bull targets (`computeValuationScore`) and blends it back into the composite, so scores reflect the current price.
+Pages that show live data fetch `/api/stock-price/[ticker]`, which proxies Yahoo Finance and is cached (`revalidate: 900` + `s-maxage`, 15 minutes). The client then recomputes the **valuation** pillar from the live price against the bear/base/bull targets (`computeValuationScore`) and blends it back into the composite, so scores reflect the current price.
 
 - `/portfolio` and `/stocks` fetch prices for the whole coverage list in parallel and recompute composites for ranking, weighting, and sorting.
 - `/stocks/[ticker]` fetches a single price for the live widget, valuation gauge, and scenario bar.
