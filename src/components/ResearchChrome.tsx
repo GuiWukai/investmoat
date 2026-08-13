@@ -258,7 +258,7 @@ export function BackToTop() {
         window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? 'auto' : 'smooth' })
       }
       aria-label="Back to top"
-      className="fixed bottom-5 right-5 z-[110] w-10 h-10 rounded-full border border-accent/25 bg-[#0b0e13]/90 backdrop-blur text-accent/70 hover:text-gold-bright hover:border-accent/50 flex items-center justify-center shadow-lg shadow-black/40 transition-colors"
+      className="fixed bottom-[5.75rem] right-5 z-[110] flex h-10 w-10 items-center justify-center rounded-full border border-accent/25 bg-[#0b0e13]/90 text-accent/70 shadow-lg shadow-black/40 backdrop-blur transition-colors hover:border-accent/50 hover:text-gold-bright lg:bottom-5"
     >
       <ArrowUp size={16} />
     </button>
