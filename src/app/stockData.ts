@@ -6,9 +6,10 @@
 //   v(json)  →  valuation score read from json.valuation.score
 //   t(json)  →  { bearTarget, baseTarget, bullTarget } from json.scenarios
 //
-// RULES (enforced dynamically below — see MAX_PORTFOLIO / MIN_AVG_SCORE):
+// RULES (enforced dynamically below — see MAX_PORTFOLIO / MIN_AVG_SCORE / MIN_MOAT_SCORE):
 //   • Maximum 25 stocks in the portfolio
 //   • Minimum composite score of 80 required for inclusion
+//   • Minimum moat score of 70 — growth/valuation alone cannot carry a weak-moat name in
 //
 // To add a new stock: import its JSON, add an entry to allCoverageData.
 // All scores and targets will be derived automatically.
@@ -157,8 +158,10 @@ import bdtData      from '@/data/stocks/bdt.json';
 export const getAverageScore = ([moat, growth, valuation]: number[]) =>
     computeCompositeRaw(moat, growth, valuation);
 
-const MAX_PORTFOLIO  = 25;
-const MIN_AVG_SCORE  = 80;
+export const MAX_PORTFOLIO  = 25;
+export const MIN_AVG_SCORE  = 80;
+/** Moat-first gate: growth/valuation cannot carry a sub-70 moat into the IM25. */
+export const MIN_MOAT_SCORE = 70;
 
 /**
  * Compute moat score by dispatching on the JSON's assetClass.
@@ -338,10 +341,13 @@ const allCoverageData = [
 // ─── All coverage (exported for the stocks list page) ────────────────────────
 export { allCoverageData };
 
-// ─── Portfolio: top MAX_PORTFOLIO stocks with avg >= MIN_AVG_SCORE ────────────
+// ─── Portfolio: top MAX_PORTFOLIO stocks clearing composite + moat floors ─────
 export const stockData = [...allCoverageData]
     .sort((a, b) => getAverageScore(b.scores) - getAverageScore(a.scores))
-    .filter(s => getAverageScore(s.scores) >= MIN_AVG_SCORE)
+    .filter(s =>
+      getAverageScore(s.scores) >= MIN_AVG_SCORE &&
+      s.scores[0] >= MIN_MOAT_SCORE
+    )
     .slice(0, MAX_PORTFOLIO);
 
 // ─── Excluded: all analyzed stocks not in the portfolio ───────────────────────

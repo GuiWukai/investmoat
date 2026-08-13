@@ -4,17 +4,21 @@ import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { PieChart, ShieldCheck, ChevronRight, TrendingUp, TrendingDown, Eye } from "lucide-react";
 import { Card, Spinner } from "@heroui/react";
-import { allCoverageData, getAverageScore } from "../stockData";
+import {
+  allCoverageData,
+  getAverageScore,
+  MAX_PORTFOLIO,
+  MIN_AVG_SCORE,
+  MIN_MOAT_SCORE,
+} from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
 
-// ─── Portfolio threshold ──────────────────────────────────────────────────────
-// 80 = "near Strong Buy" floor. Currently 29 names clear it (under the geometric
-// composite in valuationScore.ts), so the 25-cap binds with a small buffer —
-// the threshold becomes the binding constraint if coverage thins or valuations
-// get rich, which is the correct behaviour (portfolio shrinks rather than
-// dilutes with sub-quality names).
-const PORTFOLIO_THRESHOLD = 80;
-const MAX_PORTFOLIO = 25;
+// ─── Portfolio thresholds ─────────────────────────────────────────────────────
+// Composite ≥ 80 ("near Strong Buy") plus moat ≥ 70 so growth/valuation cannot
+// carry a weak-moat name into a moat-first book. The 25-cap still binds when
+// more names clear both floors; if coverage thins or valuations get rich, the
+// floors become binding and the portfolio shrinks rather than dilutes.
+const PORTFOLIO_THRESHOLD = MIN_AVG_SCORE;
 const NEAR_TOP_COUNT = 25;
 
 // ─── Per-ticker metadata (display color, category, exclusion reason) ──────────
@@ -64,7 +68,7 @@ const stockMeta: Record<string, { color: string; category: string; exclusionReas
   // Previously missing colors
   AAPL:  { color: "#a8a8a8", category: "Big Tech" },
   ANET:  { color: "#ff6900", category: "AI Infrastructure" },
-  APP:   { color: "#e8341c", category: "AdTech" },
+  APP:   { color: "#e8341c", category: "AdTech",          exclusionReason: "Moat (69) falls below the IM25 moat floor of 70. Composite clears the ≥80 threshold on growth and valuation — AXON still compounds installs into high-80s adj. EBITDA — but the durability case rests on a single AI data flywheel (MAX mediation + in-app behavioral signal) that is execution- and model-cadence-dependent rather than structural lock-in across multiple moat sources. Growth/valuation alone cannot carry a sub-70 moat into a moat-first book." },
   ARM:   { color: "#0091bd", category: "Semiconductors" },
   AXON:  { color: "#fbbf24", category: "Industrials" },
   CCJ:   { color: "#8b5e3c", category: "Hard Assets" },
@@ -212,7 +216,12 @@ export default function PortfolioPage() {
   }, [allPrices]);
 
   const portfolio = useMemo(
-    () => ranked.filter(r => r.composite >= PORTFOLIO_THRESHOLD).slice(0, MAX_PORTFOLIO),
+    () => ranked
+      .filter(r =>
+        r.composite >= PORTFOLIO_THRESHOLD &&
+        r.stock.scores[0] >= MIN_MOAT_SCORE
+      )
+      .slice(0, MAX_PORTFOLIO),
     [ranked]
   );
 
@@ -436,16 +445,21 @@ export default function PortfolioPage() {
           </div>
 
           {/* Key metrics */}
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-3 gap-3">
             <Card className="p-4">
               <p className="section-label mb-1.5">Positions</p>
               <p className="text-2xl font-black text-foreground">{portfolio.length}</p>
-              <p className="text-foreground/28 text-[10px] mt-0.5">High-conviction holdings</p>
+              <p className="text-foreground/28 text-[10px] mt-0.5">High-conviction</p>
             </Card>
             <Card className="p-4">
-              <p className="section-label mb-1.5">Threshold</p>
+              <p className="section-label mb-1.5">Composite</p>
               <p className="text-2xl font-black text-foreground">≥ {PORTFOLIO_THRESHOLD}</p>
-              <p className="text-foreground/28 text-[10px] mt-0.5">Score required / 100</p>
+              <p className="text-foreground/28 text-[10px] mt-0.5">Score required</p>
+            </Card>
+            <Card className="p-4">
+              <p className="section-label mb-1.5">Moat floor</p>
+              <p className="text-2xl font-black text-foreground">≥ {MIN_MOAT_SCORE}</p>
+              <p className="text-foreground/28 text-[10px] mt-0.5">Moat-first gate</p>
             </Card>
           </div>
 

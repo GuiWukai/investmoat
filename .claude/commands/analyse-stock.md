@@ -332,9 +332,10 @@ The recommendation is derived at render time from the composite score — do not
 | Below 60 | Avoid / Exclude |
 
 **Portfolio inclusion rules (from `src/app/stockData.ts`):**
-- Minimum average score: 75
+- Minimum composite score: 80
+- Minimum moat score: 70 (growth/valuation alone cannot carry a weak-moat name in)
 - Maximum portfolio size: 25 stocks
-- Stocks below 75 average or outside the top 25 by score are excluded
+- Stocks below either floor, or outside the top 25 by composite, are excluded
 
 ---
 

@@ -59,7 +59,7 @@ const FAQS = [
   },
   {
     q: "How is each stock scored?",
-    a: "Three pillars, each scored 0-100, all computed from a structured data file — there are no hand-typed ratings. Moat (40%): for equities, 10 individually-weighted moat types, each rated strong/intact/weakened/destroyed/na mapping to 100/65/35/0/excluded, so a moat score of 0 means all ten applicable moats are destroyed and 100 means all applicable moats are strong. AI-resilient moats (networkEffects w=15, proprietaryData w=12, systemOfRecord w=12, regulatoryLockIn w=11, transactionEmbedding w=10) carry 60% of the weight; AI-vulnerable moats (businessLogic w=14, bundling w=10, learnedInterfaces w=8, talentScarcity w=5, publicDataAccess w=3) carry 40%. A quality-gated breadth bonus of +1 to +4 rewards moats rated intact-or-better beyond the fifth, and a -5 discount applies where the vulnerable group outscores the resilient one. Crypto and commodities use their own pillar frameworks. Growth (30%): a blended 3-5 year revenue CAGR sets the base, adjusted for driver trajectory (±4), margin trend (±4, equities only — Bitcoin has no margins), and key-risk severity (down to -15). That CAGR carries roughly 78% of the pillar's variance, which is why it is expected to cite the measured series it answers to rather than being asserted. Valuation (30%): live price against bear/base/bull scenario targets on a piecewise scale — 100 points at 20% below the bear case, 90 at bear, 65 at base, 45 at bull, and 0 at double the bull case. The composite is a geometric blend, so a weak pillar genuinely drags the score rather than being averaged away. Each pillar is standardised against the coverage universe before weighting, so the declared 40/30/30 governs actual influence instead of whichever rubric happens to vary most. A composite of ≥80 makes an asset portfolio-eligible; the top 25 are held.",
+    a: "Three pillars, each scored 0-100, all computed from a structured data file — there are no hand-typed ratings. Moat (40%): for equities, 10 individually-weighted moat types, each rated strong/intact/weakened/destroyed/na mapping to 100/65/35/0/excluded, so a moat score of 0 means all ten applicable moats are destroyed and 100 means all applicable moats are strong. AI-resilient moats (networkEffects w=15, proprietaryData w=12, systemOfRecord w=12, regulatoryLockIn w=11, transactionEmbedding w=10) carry 60% of the weight; AI-vulnerable moats (businessLogic w=14, bundling w=10, learnedInterfaces w=8, talentScarcity w=5, publicDataAccess w=3) carry 40%. A quality-gated breadth bonus of +1 to +4 rewards moats rated intact-or-better beyond the fifth, and a -5 discount applies where the vulnerable group outscores the resilient one. Crypto and commodities use their own pillar frameworks. Growth (30%): a blended 3-5 year revenue CAGR sets the base, adjusted for driver trajectory (±4), margin trend (±4, equities only — Bitcoin has no margins), and key-risk severity (down to -15). That CAGR carries roughly 78% of the pillar's variance, which is why it is expected to cite the measured series it answers to rather than being asserted. Valuation (30%): live price against bear/base/bull scenario targets on a piecewise scale — 100 points at 20% below the bear case, 90 at bear, 65 at base, 45 at bull, and 0 at double the bull case. The composite is a geometric blend, so a weak pillar genuinely drags the score rather than being averaged away. Each pillar is standardised against the coverage universe before weighting, so the declared 40/30/30 governs actual influence instead of whichever rubric happens to vary most. Portfolio eligibility requires composite ≥80 and moat ≥70 — growth and valuation alone cannot carry a weak-moat name into the IM25 — and the top 25 by composite are held.",
   },
   {
     q: "What makes a moat 'AI-resilient'?",
@@ -164,7 +164,7 @@ export default function HomePage() {
           {[
             { value: "25", label: "Conviction Holdings" },
             { value: "128", label: "Under Coverage" },
-            { value: "≥ 80", label: "Inclusion Threshold" },
+            { value: "≥80 · ≥70", label: "Composite · Moat Floor" },
             { value: "10%", label: "Max Position Weight" },
           ].map(({ value, label }, i) => (
             <div
@@ -219,7 +219,7 @@ export default function HomePage() {
               iconBg: 'bg-emerald-500/10',
               border: 'border-emerald-500/[0.12]',
               title: 'Concentration Beats Diversification',
-              text: 'Owning 500 companies means funding mediocrity at scale. 25 high-conviction positions, each earning its place by scoring ≥80/100, concentrate capital where it compounds fastest.',
+              text: 'Owning 500 companies means funding mediocrity at scale. 25 high-conviction positions, each earning its place with composite ≥80 and moat ≥70, concentrate capital where it compounds fastest.',
             },
           ].map(({ num, icon, accent, iconBg, border, title, text }) => (
             <div
@@ -377,9 +377,11 @@ export default function HomePage() {
           <p className="text-foreground/25 text-xs leading-relaxed mt-4 pt-4 border-t border-foreground/[0.04]">
             The bands rate an asset on its own merits; portfolio inclusion is separate and stricter.
             Each pillar is standardised against the coverage universe before weighting, so a 1-sd move
-            in any pillar shifts the composite in proportion to its stated weight. A composite of{" "}
-            <span className="text-foreground/45 font-medium">≥ 80</span> makes an asset eligible, and the
-            top 25 by composite are held.
+            in any pillar shifts the composite in proportion to its stated weight. Eligibility requires
+            composite{" "}
+            <span className="text-foreground/45 font-medium">≥ 80</span> and moat{" "}
+            <span className="text-foreground/45 font-medium">≥ 70</span>, and the top 25 by composite
+            are held.
           </p>
         </Card>
       </section>
