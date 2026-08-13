@@ -24,23 +24,23 @@
   ],
   "metrics": [
     {
-      "title": "CNC Market Share",
-      "value": "~65%",
-      "label": "Global CNC Controller Dominance",
+      "title": "Q1 FY2026 Sales",
+      "value": "¥231B",
+      "label": "+17.7% YoY; FY guide raised to ¥948.1B",
       "icon": "Cpu",
       "color": "#f59e0b"
     },
     {
-      "title": "Revenue",
-      "value": "Record",
-      "label": "FY2025 Record Net Sales — Double-Digit Profit Growth",
+      "title": "Operating Income",
+      "value": "¥53.5B",
+      "label": "+26.1% YoY; margin above 23%",
       "icon": "TrendingUp",
       "color": "#f97316"
     },
     {
-      "title": "Net Cash",
-      "value": "$8B+",
-      "label": "Fortress Balance Sheet, Zero Meaningful Debt",
+      "title": "Orders",
+      "value": "¥281.9B",
+      "label": "+36.9% YoY; AI/CNC demand strong",
       "icon": "Shield",
       "color": "#eab308"
     }
@@ -65,63 +65,64 @@
     ]
   },
   "growth": {
-    "description": "FY2025 results (reported late April 2026) delivered record net sales and double-digit profit growth, driven by strong factory automation and robotics demand in China and the Americas. The post-pandemic destocking trough is firmly behind FANUC, with Citi and Bernstein reaffirming Buy ratings. Semiconductor fab buildouts (TSMC Arizona, Samsung Texas) and EV battery automation continue driving CNC demand. Humanoid robot motion-control optionality remains a medium-term upside catalyst.",
+    "description": "Q1 FY2026 (Japan fiscal year ending March 2027, reported July 31, 2026) showed the recovery accelerating: net sales rose 17.7% YoY to ¥231.0B, operating income rose 26.1% to ¥53.5B, net income rose 34.7% to ¥51.0B, and orders jumped 36.9% to ¥281.9B. FANUC raised FY2026 guidance from ¥909.6B to ¥948.1B of net sales and from ¥184.9B to ¥198.0B of net profit, helped by robust robot demand and AI-related equipment investment lifting CNC orders. The post-pandemic destocking trough is now clearly behind FANUC, though China capex cyclicality and Chinese robot OEM competition remain the main risks.",
     "growthAnalysis": {
-      "cagrEstimate": "5-9%",
-      "scoreDerivation": "Base 70 + CNC category monopoly (+4) + semi/EV automation tailwind (+3) + humanoid robot optionality (+2) - China capex cyclicality (-3) = 76",
+      "cagrEstimate": "8-11%",
+      "cagrBasis": "Q1 FY2026 net sales +17.7% YoY to ¥231.0B, operating income +26.1%, and orders +36.9%; revised FY2026 guidance implies net sales +10.5% YoY to ¥948.1B and net profit +18.9% to ¥198.0B. The 8-11% band decays the order surge toward a mid-cycle automation rate because robotics and CNC demand remain cyclical.",
+      "scoreDerivation": "Base 72 (9.5% midpoint from 8-11% sales/profit CAGR) + 4 trajectory (all three drivers accelerating) + 4 expanding margin − 5 moderate China/ASP risk = 75",
       "drivers": [
         {
           "name": "Factory Automation",
-          "metric": "FY2025 record net sales ¥857B, +8% YoY",
+          "metric": "Q1 FY2026 net sales ¥231.0B (+17.7% YoY); FY guide raised to ¥948.1B",
           "trend": "accelerating"
         },
         {
           "name": "Operating Margin",
-          "metric": "FY2025 op margin 21.4%, +150bps YoY; FY2026 guide 23.3%",
+          "metric": "Q1 FY2026 operating income ¥53.5B (+26.1% YoY); margin above 23%",
           "trend": "accelerating"
         },
         {
           "name": "Robot Orders",
-          "metric": "China + Americas robot demand recovering double-digit",
+          "metric": "Q1 FY2026 orders ¥281.9B (+36.9% YoY), supported by robot demand and AI-related CNC investment",
           "trend": "accelerating"
         }
       ],
       "primaryType": "market share",
-      "keyRisk": "China capex cycle stalls and Chinese robot OEMs (Estun, Inovance) drive ASP compression in FANUC's robot segment over 2-3 years.",
+      "keyRisk": "China capex cycle stalls after the Q1 FY2026 order surge and Chinese robot OEMs (Estun, Inovance) drive ASP compression in FANUC's robot segment over 2-3 years.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 75,
-    "description": "At ~$21.64 (FANUY ADR, ¥6,820 on TSE), FANUC is ~20% below the base-case target of $27. FY2025 results (released late April 2026) confirmed record net sales and double-digit profit growth driven by strong factory automation and robotics demand in China and the Americas. Citi and Bernstein reaffirmed Buy ratings post-earnings. Fortress balance sheet with $8B+ net cash supports the durable category-monopoly thesis."
+    "score": 80,
+    "description": "At $20.76, FANUY sits about 38% of the way from the revised bear case ($15) to base case ($30). The June-quarter order surge and raised FY2026 outlook support lifting the ladder, while the ADR still trades below a fair-value base that assumes only mid-cycle automation growth rather than humanoid-robot upside. The valuation is attractive but not distressed: forward multiples already reflect FANUC's category quality, and the bull case requires AI-related CNC/robot orders to remain above normal for more than one quarter."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$13",
-      "description": "China's economy stagnates through 2027, North American auto capex freezes on EV transition uncertainty, and FANUC's operating margins compress to low-teens as volume fails to recover above FY2024 trough.",
+      "priceTarget": "$15",
+      "description": "China's capex recovery stalls, AI-related CNC orders prove temporary, and FANUC's operating margins compress back toward the high teens as volumes miss the raised FY2026 guide.",
       "points": [
-        "China robot and CNC demand — still ~35% of FANUC's robot revenue — fails to recover as the property and auto sectors stagnate, dragging total company revenue back below ¥700B",
+        "China robot and CNC demand fails to sustain the Q1 FY2026 order surge as property and auto capex soften, pulling revenue materially below the raised ¥948.1B FY guide",
         "North American reshoring capex delays as high interest rates suppress factory investment, removing the key growth narrative for the Americas segment",
-        "FANUC's operating margin compresses from ~27% toward 15% as fixed-cost leverage works against declining volumes, forcing the first meaningful EPS estimate cuts since 2020"
+        "FANUC's operating margin compresses from the Q1 level above 23% toward the high teens as fixed-cost leverage works against declining volumes, forcing the first meaningful EPS estimate cuts since 2020"
       ]
     },
     "base": {
-      "priceTarget": "$27",
-      "description": "CNC and robot order intake normalises through H2 2025, semiconductor and EV battery factory buildouts drive incremental demand, and FANUC re-expands operating margins toward 30% as volumes recover toward FY2023 peak revenue.",
+      "priceTarget": "$30",
+      "description": "CNC and robot order intake normalises above the FY2025 run-rate, AI-related equipment investment sustains demand, and FANUC converts the raised FY2026 guide into higher margins.",
       "points": [
-        "Semiconductor equipment OEM capex (TSMC Arizona, Samsung Texas, Intel Ohio) drives CNC controller demand as precision machining of semiconductor tooling scales in the US and Japan",
-        "EV battery gigafactory automation — a large and growing robot application — provides a multi-year demand stream that partially offsets weakness in traditional ICE auto factory spending",
-        "FANUC's FIELD (Field Intelligence Edge Link & Drive) IIoT platform gains adoption, adding a recurring software/analytics revenue layer on top of hardware shipments and improving segment margin mix"
+        "FY2026 net sales land near the raised ¥948.1B guide and net profit approaches the revised ¥198.0B target",
+        "Semiconductor equipment and AI infrastructure capex drive CNC controller demand as precision machining of advanced tooling scales in the US, Japan, and Taiwan",
+        "EV battery, logistics, and general automation applications keep robot demand firm enough for operating margin to remain above 23%"
       ]
     },
     "bull": {
-      "priceTarget": "$42",
-      "description": "AI-accelerated factory automation creates a step-change in robot demand globally; FANUC's motion-control IP becomes a critical enabling component for humanoid robot manufacturers; China demand recovers faster than feared.",
+      "priceTarget": "$45",
+      "description": "AI-accelerated factory automation creates a step-change in robot and CNC demand globally; FANUC's motion-control IP becomes a critical enabling component for humanoid robot manufacturers; China demand recovers faster than feared.",
       "points": [
-        "Humanoid robot manufacturers (Tesla Optimus, Figure AI, 1X Technologies) adopt FANUC servo motors and motion-control modules as the precision actuation standard — creating a high-margin, high-volume new revenue stream not priced into any current estimate",
-        "China stimulus succeeds in re-accelerating fixed asset investment, restoring Asia-ex-Japan robot revenue to FY2023 levels and adding 6–8 percentage points to total company growth",
-        "FANUC announces a meaningful capital return acceleration — deploying a portion of its $8B+ net cash via buybacks or special dividends — catalysing a re-rating from the historically undemanding Japanese industrial valuation multiple toward a global robotics premium"
+        "Humanoid robot manufacturers (Tesla Optimus, Figure AI, 1X Technologies) adopt FANUC servo motors and motion-control modules as the precision actuation standard — creating a high-margin, high-volume new revenue stream not priced into current estimates",
+        "China stimulus succeeds in re-accelerating fixed asset investment, sustaining order growth above 20% and restoring Asia-ex-Japan robot revenue to FY2023 levels",
+        "FANUC announces a meaningful capital return acceleration — deploying a portion of its fortress net-cash balance via buybacks or special dividends — catalysing a re-rating from the historically undemanding Japanese industrial valuation multiple toward a global robotics premium"
       ]
     }
   },
@@ -168,5 +169,5 @@
     },
     "verdict": "FANUC is highly resilient to AI disruption — physical motion-control hardware and embedded servo algorithms represent physics-layer expertise that software AI cannot commoditise, and the rise of AI-driven factory automation is a direct demand accelerant for FANUC's robots and CNCs. The single genuine AI risk is that a software-defined motion-control startup could train general-purpose servo control on open hardware at far lower cost, but FANUC's certification ecosystem and data moat make this a 10+ year displacement scenario at best."
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "August 13, 2026"
 }

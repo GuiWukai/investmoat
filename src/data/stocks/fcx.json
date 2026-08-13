@@ -9,7 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$83B"
+      "value": "~$100B"
     },
     {
       "label": "Primary Metal",
@@ -28,23 +28,23 @@
   ],
   "metrics": [
     {
-      "title": "Q1 2026 Revenue",
-      "value": "$6.23B",
-      "label": "Adj EPS $0.57 Beat Consensus by 21%",
+      "title": "Q2 2026 Revenue",
+      "value": "$7.03B",
+      "label": "Adj EPS $0.74 beat consensus by ~25%",
       "icon": "TrendingUp",
       "color": "#b45309"
     },
     {
       "title": "2026 Copper Guidance",
       "value": "3.1B lbs",
-      "label": "Revised Down — Grasberg Ramp Slower",
+      "label": "2027 guide 3.8B lbs; 2028 guide 4.1B lbs",
       "icon": "Gem",
       "color": "#f59e0b"
     },
     {
       "title": "Grasberg Restart",
-      "value": "65% H2 2026",
-      "label": "~80% by Mid-2027 — Block Cave Phased Ramp",
+      "value": "69k tpd",
+      "label": "June rate; ~65% H2 2026, ~80% mid-2027",
       "icon": "Shield",
       "color": "#10b981"
     }
@@ -69,63 +69,63 @@
     ]
   },
   "growth": {
-    "description": "Q1 2026 beat on price strength: revenue $6.23B and adjusted EPS $0.57 cleared consensus by 21%, with EBITDA of $2.47B (+24% vs. estimate). Grasberg Block Cave restart is slower than originally planned — 2026 sales guidance revised down to 3.1B lbs copper / 650k oz gold, with ~65% of capacity by H2 2026 and ~80% by mid-2027. Indonesia signed an MoU for life-of-resource extension of PT Freeport Indonesia rights — a strong positive on long-term reserves.",
+    "description": "Q2 2026 beat again on copper price strength and improving Grasberg execution: revenue was about $7.03B, adjusted EPS $0.74 beat consensus by roughly 25%, and copper sales are expected to be more than 20% higher in H2 than H1. Grasberg Block Cave production rates doubled during the quarter, reaching 69,000 tons per day in June; management still targets ~65% of capacity in H2 2026, ~80% by mid-2027, and near full capacity by year-end 2027. Updated sales guidance keeps 2026 copper at 3.1B lbs / gold at 650k oz, then lifts to 3.8B lbs copper in 2027 and 4.1B lbs in 2028. The formal Grasberg license-extension application was submitted in June after the life-of-resource MoU, while refined-copper tariff policy remains unresolved.",
     "growthAnalysis": {
-      "cagrEstimate": "9-13%",
-      "scoreDerivation": "Base 60 + 8 (copper electrification/AI demand structural deficit) + 5 (Grasberg recovery to 1.6B lbs/yr by 2027-2029) + 2 (Indonesia life-of-resource MoU de-risks long-term reserves) - 5 (Grasberg phased ramp delayed; 2026 guidance cut) = 70",
+      "cagrEstimate": "10-14%",
+      "scoreDerivation": "Base 76 (12% midpoint from 10-14% copper/EBITDA CAGR) + 2.7 trajectory (copper price and Grasberg ramp accelerating; reserves stable) + 0 stable margin − 10 high Grasberg/copper-cycle risk = 69",
       "drivers": [
         {
           "name": "Copper price",
-          "metric": "Q1 2026 realized strength drove 21% adj EPS beat; structural demand from EVs, grid, AI data centers",
+          "metric": "Q2 2026 average copper price +41.5% YoY; adjusted EPS beat by ~25%; AI/grid demand keeps concentrate markets tight",
           "trend": "accelerating"
         },
         {
           "name": "Grasberg production ramp",
-          "metric": "2026 ~65% capacity H2, ~80% mid-2027; recovery to 1.6B lbs/yr 2027-2029",
-          "trend": "decelerating"
+          "metric": "June production rate 69,000 tpd; H2 copper sales expected >20% above H1; 2027 copper guide 3.8B lbs",
+          "trend": "accelerating"
         },
         {
           "name": "Reserve longevity",
-          "metric": "PT Freeport Indonesia life-of-resource MoU extends 30+ year mine life",
+          "metric": "Formal Grasberg license-extension application submitted in June 2026 after life-of-resource MoU",
           "trend": "stable"
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "Grasberg block-cave geomechanical setbacks or further mudslide events delay full ramp into late 2027+, combined with China property weakness pulling copper to $3.50/lb — would compress 2026-2027 EBITDA by 30-40%.",
+      "keyRisk": "Grasberg block-cave geomechanical setbacks or another mudflow event delaying full ramp into 2028, combined with China property weakness or a rejection of phased refined-copper tariffs pulling copper below $4/lb, would compress 2026-2027 EBITDA by 30-40%.",
       "keyRiskSeverity": "high",
       "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 67,
-    "description": "At ~$57.74, FCX trades just below the base case of $60 after a Q1 2026 beat on price strength. Grasberg ramp deferral (full capacity now mid-2027) keeps a discount in place; the Indonesia life-of-resource MoU is offsetting positive news on long-term reserves. Valuation is fair-to-attractive with Grasberg execution as the primary swing factor."
+    "score": 70,
+    "description": "At $69.22, FCX sits about 81% of the way from the revised bear case ($45) to base case ($75). Q2 supports lifting the ladder because Grasberg production is ramping on schedule, H2 copper volumes should step up, and 2027-2028 copper guidance is higher. The stock is no longer below fair value, though: it already prices a meaningful copper deficit and some benefit from U.S. policy optionality. Valuation is fair, with Grasberg execution and copper price/tariff policy as the swing factors."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$35",
-      "description": "Grasberg restart faces further geological setbacks, copper prices fall on China slowdown, and the market applies a deep discount for execution risk.",
+      "priceTarget": "$45",
+      "description": "Grasberg faces further geological setbacks, copper prices fall as China slows, and refined-copper tariff optionality fades — the market applies a deeper execution discount.",
       "points": [
-        "Grasberg phased restart encounters additional mudslide events or geomechanical instability, delaying full recovery to 2027+ and impairing the 2027–2029 production guidance of 1.6B lbs/year",
-        "Copper falls to $3.50/lb as China property sector weakness deepens and EV demand growth stalls below expectations, compressing FCX EBITDA by 40%+",
-        "Indonesia renegotiates PT Freeport Indonesia contract terms or imposes additional export duties, increasing effective royalty rates and reducing net cash flow by $500M+ annually"
+        "Grasberg phased restart encounters additional mudflow events or geomechanical instability, delaying near-full recovery beyond year-end 2027 and impairing the 2027 copper guide of 3.8B lbs",
+        "Copper falls below $4/lb as China property sector weakness deepens and EV/grid demand growth stalls below expectations, compressing FCX EBITDA by 30-40%",
+        "Indonesia delays the formal Grasberg license extension or imposes additional export duties, increasing effective royalty rates and reducing net cash flow by $500M+ annually"
       ]
     },
     "base": {
-      "priceTarget": "$60",
-      "description": "Grasberg restarts on schedule in Q2 2026, copper holds in the $4.75–5.25/lb range, and FCX generates normalized earnings as the Grasberg discount evaporates.",
+      "priceTarget": "$75",
+      "description": "Grasberg ramps on the disclosed schedule, copper holds around the high-$4 to low-$5/lb range, and FCX generates normalized earnings as the Grasberg discount fades.",
       "points": [
-        "Grasberg phased restart achieves 85% of district production capacity by H2 2026 as planned — restoring 2026 copper output to 3.7B lbs and validating the mine's long-term production trajectory",
-        "Copper averages $4.75/lb driven by AI data center buildout, grid electrification demand, and chronic underinvestment in new supply, maintaining FCX EBITDA above $6B",
-        "FCX resumes share buybacks as free cash flow recovers to $3B+ annually; net debt of $2.3B is paid down to near-zero by end of 2026"
+        "Grasberg reaches ~65% capacity in H2 2026, ~80% by mid-2027, and near full capacity by year-end 2027, validating the 3.8B lbs 2027 copper guide",
+        "Copper averages $4.75-5.25/lb driven by AI data center buildout, grid electrification demand, and chronic underinvestment in new supply",
+        "H2 2026 copper sales run more than 20% above H1, supporting normalized EBITDA and allowing capital returns to resume after ramp spending"
       ]
     },
     "bull": {
-      "priceTarget": "$95",
-      "description": "A copper supercycle materializes as supply deficits exceed consensus estimates and Grasberg ramps ahead of schedule, driving FCX to record earnings.",
+      "priceTarget": "$110",
+      "description": "A copper supercycle materializes as supply deficits exceed consensus estimates, U.S. tariff policy favors domestic producers, and Grasberg reaches full capacity on schedule.",
       "points": [
-        "Copper surges to $6.00+ per pound as electrification demand from EVs, AI data centers, and grid modernization creates a structural deficit that takes 5–7 years of new mine development to resolve",
-        "Grasberg full production recovery ahead of schedule in H1 2026 — restoring 240k+ tonnes/day and setting up a high-production 2027–2029 period with 1.6B lbs/year average copper output",
-        "FCX announces a transformational capital return program ($5B+ buybacks and special dividends) as free cash flow exceeds $8–10B annually at copper above $6.00/lb"
+        "Copper surges to $6.00+ per pound as electrification demand from EVs, AI data centers, and grid modernization creates a structural deficit that takes 5-7 years of new mine development to resolve",
+        "Grasberg reaches near-full capacity by year-end 2027 and the 2028 copper guide of 4.1B lbs proves conservative",
+        "A phased refined-copper tariff or sustained COMEX premium lifts U.S. realizations, enabling a transformational capital return program as free cash flow exceeds $8B annually at copper above $6.00/lb"
       ]
     }
   },
@@ -172,5 +172,5 @@
     },
     "verdict": "FCX's AI resilience is limited in the traditional sense — copper mining is a physical commodity business immune to AI disruption of its core product. However, FCX is paradoxically a direct beneficiary of the AI infrastructure build-out, as data centers require massive copper volumes for power and connectivity. AI is a demand driver, not a competitive threat."
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "August 13, 2026"
 }

@@ -2,7 +2,7 @@
   "slug": "tmo",
   "ticker": "TMO",
   "name": "Thermo Fisher Scientific",
-  "lastAnalyzed": "May 2026",
+  "lastAnalyzed": "August 13, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$181B"
+      "value": "~$226B"
     }
   ],
   "chips": [
@@ -25,23 +25,23 @@
   ],
   "metrics": [
     {
-      "title": "Q1 2026 Revenue",
-      "value": "$11.0B",
-      "label": "+6% YoY (1% organic + 3% M&A + 2% FX)",
+      "title": "Q2 2026 Revenue",
+      "value": "$12.0B",
+      "label": "+10% YoY; +5% organic growth",
       "icon": "TrendingUp",
       "color": "#0ea5e9"
     },
     {
       "title": "FY26 Adj EPS Guide",
-      "value": "$24.64-$25.12",
-      "label": "+8-10% YoY; raised after Q1 beat",
+      "value": "$24.93-$25.33",
+      "label": "+9-11% YoY; raised after Q2 beat",
       "icon": "Zap",
       "color": "#10b981"
     },
     {
       "title": "Adj Operating Margin",
-      "value": "21.8%",
-      "label": "−10bps YoY incl. 80bps tariff drag",
+      "value": "22.8%",
+      "label": "+90bps YoY; Q2 adjusted margin",
       "icon": "Shield",
       "color": "#f59e0b"
     }
@@ -66,38 +66,38 @@
     ]
   },
   "growth": {
-    "description": "Q1 2026 revenue +6% YoY ($11.01B) with only +1% organic — pharma/biotech bioprocessing recovery is partial. FY26 guide raised to $47.3-48.1B (6-8% reported, 3-4% organic) and adj EPS $24.64-25.12 (+8-10%). Pharma & biotech leading; tariff drag (80bps) compressing op margin near term.",
+    "description": "Q2 2026 showed a cleaner recovery than Q1: revenue grew 10% to $11.99B, organic revenue grew 5%, adjusted EPS rose 13% to $6.03, and adjusted operating margin expanded 90 bps to 22.8%. Management raised FY26 guidance to $47.4-48.1B revenue and $24.93-25.33 adjusted EPS, while now expecting organic growth at the upper end of the 3-4% range. The pending microbiology divestiture trims 2026 revenue by about $200M and adjusted EPS by $0.05, so the guidance raise is higher quality than the headline suggests.",
     "growthAnalysis": {
-      "cagrEstimate": "6-9%",
-      "scoreDerivation": "Base 60 (4-8% blended organic + bolt-on M&A puts top of range near 8% boundary) + 5 recurring (~80% consumables/service) + 2 TAM expansion (Clario clinical trial services) - 5 cyclical pharma/biotech end-market = 62",
+      "cagrEstimate": "7-10%",
+      "scoreDerivation": "Base 71 (8.5% midpoint from 7-10% blended organic/M&A/EPS CAGR) + 2.7 trajectory (two drivers accelerating, Clario stable) + 4 expanding margin − 5 moderate pharma/biotech funding risk = 72",
       "drivers": [
         {
           "name": "Life Sciences Solutions",
-          "metric": "+13% reported, +1% organic in Q1 2026 (bioproduction recovering)",
-          "trend": "stable"
+          "metric": "Q2 2026 total organic revenue +5%; bioproduction recovery stronger than Q1's +1% organic companywide print",
+          "trend": "accelerating"
         },
         {
           "name": "Lab Products & Biopharma Services",
-          "metric": "+7% reported, +4% organic (clinical research strong)",
+          "metric": "Q2 2026 revenue beat helped by stronger customer activity; FY organic outlook now upper end of 3-4%",
           "trend": "accelerating"
         },
         {
           "name": "M&A Bolt-Ons (Clario)",
-          "metric": "$0.01 EPS contribution Q1; full-year accretion to ramp",
+          "metric": "Clario integration continues while microbiology divestiture reduces 2026 revenue by ~$200M and EPS by $0.05",
           "trend": "stable"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "If pharma/biotech bioproduction capex stays soft through 2H 2026 with organic growth stuck below 3%, EPS guidance is at risk and the multi-year compounder narrative requires the next bolt-on to re-anchor — testing the 8-10% EPS-growth thesis.",
+      "keyRisk": "If pharma/biotech bioproduction demand rolls over again in 2H 2026 and organic growth falls back below 3% after the Q2 acceleration, the raised EPS guide becomes dependent on cost actions and M&A rather than the core recurring-revenue engine.",
       "keyRiskSeverity": "moderate",
-      "marginTrend": "compressing"
+      "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 78,
-    "description": "At ~$487 the stock has recovered off its lows but still sits ~24% below the 52-week high of $643.99 and ~22% above the bear case. Forward P/E of ~19× remains well below the healthcare-tools sector median (~24-28×) and TMO's own 5-year average. RBC Capital restarted coverage in late May 2026 (Sector Perform, $490 PT), and management used the May Investor Day to reaffirm the long-term compounder framework and the $0.47 quarterly dividend. The market is still pricing in bioprocessing softness; the consensus analyst target of ~$580-620 implies meaningful re-rating if organic growth re-accelerates.",
+    "score": 68,
+    "description": "At $603.01, TMO is now much closer to fair value: about 89% of the way from the rebuilt bear case ($470) to base case ($620). Q2 supports lifting the ladder because organic growth improved to 5%, margin expanded, and FY26 EPS guidance moved up despite the microbiology divestiture. The valuation score falls because the stock moved faster than the guide: upside now requires sustained 4%+ organic growth and bioprocessing recovery, not just a return to normal from the 2025 trough.",
     "peAnalysis": {
-      "asOf": "May 2026",
+      "asOf": "August 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
@@ -106,54 +106,54 @@
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~19×",
-          "note": "$24.88 mid 2026 EPS guide"
+          "value": "~24×",
+          "note": "$25.13 midpoint of raised 2026 adjusted EPS guide"
         },
         {
           "label": "PEG Ratio",
-          "value": "~2.1×",
+          "value": "~2.7×",
           "note": "fwd P/E ÷ ~9% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~3.7×",
-          "note": "$47.7B mid 2026 revenue"
+          "value": "~4.7×",
+          "note": "$47.75B midpoint of raised 2026 revenue guide"
         },
         {
           "label": "Price / FCF",
-          "value": "~24×",
+          "value": "~30×",
           "note": "FCF conversion ~80% of net income"
         }
       ],
-      "summary": "Forward P/E of ~19× is a meaningful discount to the healthcare-tools sector median (~24-28×), reflecting the bioprocessing softness already in the price. PEG ~2.1 sits in the 'premium-but-defensible' band given the recurring revenue base. The trailing-vs-forward gap signals the EPS ramp from Clario integration and bioproduction recovery rolling through 2026 numbers. A pending microbiology-business divestiture would modestly sharpen portfolio focus."
+      "summary": "Forward P/E has re-rated from a discount to roughly the middle of the healthcare-tools quality range. That is justified by Q2's 5% organic growth and 22.8% adjusted margin, but the easy valuation gap has closed. The microbiology divestiture sharpens the portfolio but is modestly dilutive, so the next leg depends on recurring consumables and bioprocessing demand staying firm."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$400",
-      "description": "Bioprocessing recovery stalls into 2027, organic growth stays at 1-2%, tariff drag persists, and the multiple compresses toward 16× forward earnings.",
+      "priceTarget": "$470",
+      "description": "Bioprocessing recovery stalls into 2027, Q2 organic strength proves temporary, tariff and funding headwinds return, and the multiple compresses toward 18-19× forward earnings.",
       "points": [
-        "Pharma/biotech capex remains soft, organic growth stuck at 1-2% through 2026 and 2027",
-        "Tariff and FX drag persist, compressing adjusted op margin below 21.5%",
-        "Forward P/E re-rates to ~16× as the slow-organic narrative becomes structural"
+        "Pharma/biotech capex remains soft, and organic growth falls back below 3% after the Q2 2026 acceleration",
+        "Tariff, FX, and microbiology separation costs offset productivity, pulling adjusted operating margin back toward 21.5%",
+        "Forward P/E re-rates to ~18-19× on a $25 EPS base as the slow-organic narrative becomes structural"
       ]
     },
     "base": {
-      "priceTarget": "$560",
-      "description": "FY26 guide hits midpoint ($47.7B / $24.88 EPS), organic growth re-accelerates to 4-5% in 2H, multiple holds at ~22× forward.",
+      "priceTarget": "$620",
+      "description": "FY26 guide hits the raised midpoint ($47.75B revenue / $25.13 EPS), organic growth holds near 4% in 2H, and the multiple holds around 24-25× forward earnings.",
       "points": [
-        "Organic growth re-accelerates to 4-5% in 2H 2026 as bioproduction inventory destocking ends",
-        "Clario integration contributes >$0.30 to 2027 EPS, M&A bolt-on cadence resumes",
-        "Adj op margin recovers to 22.5%+ as tariff impact annualises and productivity programs offset"
+        "Organic growth remains near the upper end of the 3-4% FY guide after Q2's 5% print, confirming that customer activity has strengthened",
+        "Clario integration contributes to 2027 EPS while the microbiology divestiture is absorbed without disrupting channel relationships",
+        "Adjusted operating margin stays above 22.5% as productivity offsets tariffs, FX, and divestiture dilution"
       ]
     },
     "bull": {
-      "priceTarget": "$700",
-      "description": "Bioprocessing fully recovers to mid-single-digit organic growth, M&A pipeline delivers a transformational deal, and multiple expands toward TMO's 5-year average ~26× forward.",
+      "priceTarget": "$770",
+      "description": "Bioprocessing fully recovers to sustained mid-single-digit organic growth, M&A returns to accretive bolt-ons, and the multiple expands toward TMO's premium historical range.",
       "points": [
-        "GLP-1 manufacturing capacity buildouts and biologics pipeline drive bioproduction back to 8%+ organic",
-        "Transformational M&A deal (>$10B) in clinical trials, diagnostics, or specialty consumables",
-        "Forward P/E re-rates to 24-26× as compounder narrative reasserts; EPS power approaches $28 by 2027"
+        "GLP-1 manufacturing capacity buildouts and biologics pipeline drive bioproduction back to high-single-digit organic growth",
+        "Accretive M&A resumes in clinical trials, diagnostics, or specialty consumables after the microbiology divestiture closes",
+        "Forward P/E re-rates to 27-28× as the compounder narrative reasserts and 2027 EPS power approaches $28"
       ]
     }
   },

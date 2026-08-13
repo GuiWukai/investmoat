@@ -11,11 +11,11 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$30T"
+      "value": "~$31T"
     },
     {
       "label": "Annual Mine Supply",
-      "value": "~3,500 tonnes"
+      "value": "~3,800 tonnes"
     }
   ],
   "chips": [
@@ -31,28 +31,28 @@
   "metrics": [
     {
       "title": "Spot Price",
-      "value": "~$4,591/oz",
-      "label": "ATH $5,595 (Jan 2026) — 18% Off Peak",
+      "value": "~$4,481/oz",
+      "label": "Near Q2 LBMA average of $4,506/oz after the early-2026 record spike",
       "icon": "Coins",
       "color": "#FFD700"
     },
     {
       "title": "Central Bank Buying",
-      "value": "1,045t",
-      "label": "3rd Consecutive Year >1,000t (2024) — 2026 Est. 850t+",
+      "value": "289t",
+      "label": "Q2 2026 net purchases, +62% YoY; WGC survey: 45% plan reserve increases",
       "icon": "TrendingUp",
       "color": "#10b981"
     },
     {
       "title": "Above-Ground Stock",
-      "value": "~212,582t",
-      "label": "Ever Mined; ~54,000t in Reserves",
+      "value": "~216,000t",
+      "label": "Ever mined; annual mine supply adds less than 2% to stock",
       "icon": "Globe",
       "color": "#3b82f6"
     },
     {
       "title": "Stock-to-Flow",
-      "value": "~62x",
+      "value": "~56x",
       "label": "Annual Production vs. Total Supply",
       "icon": "ShieldCheck",
       "color": "#8b5cf6"
@@ -77,47 +77,48 @@
       },
       {
         "title": "Central Bank Demand",
-        "text": "Global central banks purchased over 1,000 tonnes for the third consecutive year in 2024, driven by de-dollarisation trends and a desire to hold a reserve asset outside the US-dominated financial system."
+        "text": "Central banks added 289 tonnes in Q2 2026, up 62% year over year, and the WGC survey still shows 45% of respondents expecting to increase reserves. Official-sector demand remains the anchor even after the Q1 slowdown."
       }
     ]
   },
   "growth": {
-    "description": "Gold delivered 65%+ returns in 2025, posting 50+ all-time records. De-dollarisation momentum is accelerating (USD's share of global FX reserves at 30-year low of ~40%, gold at 30-year high of ~30%). Central bank buying projected at 850t+ in 2026. Gold does not compound like a business but is a powerful portfolio hedge with structural tailwinds.",
+    "description": "Gold is at $4,480.90/oz after the early-2026 spike cooled, but the demand mix is still unusually strong for a non-yielding asset. WGC Q2 2026 demand including OTC was flat YoY at 1,269t and H1 demand rose 2% YoY to 2,522t, while central banks bought 289t in Q2, up 62% YoY. ETFs were the swing factor: Q2 saw 45t of outflows as rate expectations and the dollar moved against gold, but July reversed two months of outflows with $3B of inflows and a 23t holdings increase to 4,068t. Mine production grew only 2% YoY in Q2 and recycling fell, so the growth case remains official-sector and investment demand rather than supply expansion.",
     "growthAnalysis": {
-      "cagrEstimate": "7-11%",
-      "scoreDerivation": "Base 50 (commodity has no underlying earnings compounding) + 5 (structural central bank demand >1,000t/yr) + 3 (de-dollarisation tailwind) - 8 (no organic compounding; 2025's 65% return pulled forward future returns) = 50",
+      "cagrEstimate": "6-9%",
+      "cagrBasis": "Demand accruing to gold is physical and investment tonnage: WGC H1 2026 total demand including OTC was +2% YoY, Q2 central-bank buying was +62% YoY to 288.9t, and July ETF holdings rose 23t after Q2 ETF demand fell by 45t. Estimate is marked above the low single-digit total-demand series because official-sector demand is price-insensitive, but below the old 7-11% after the early-2026 price spike pulled returns forward.",
+      "scoreDerivation": "Base 69 (6-9% demand/price CAGR, midpoint 7.5%, anchored on H1 total demand +2% YoY, Q2 central-bank buying +62% YoY and July ETF holdings +23t after Q2 outflows) + 1.3 trajectory (official buying accelerating, ETF demand stabilizing, supply stable) - 5 key risk moderate = 65",
       "drivers": [
-        { "name": "Central bank demand", "metric": "1,045t in 2024 (3rd consecutive year >1,000t); 2026 estimate 850t+", "trend": "stable" },
-        { "name": "De-dollarisation", "metric": "USD share of global FX reserves at 30-yr low ~40%; gold share at 30-yr high ~30%", "trend": "accelerating" },
-        { "name": "Real yields & macro", "metric": "G7 fiscal deficits structurally negative for fiat; tariff/geopolitical uncertainty premium", "trend": "stable" }
+        { "name": "Official-sector demand", "metric": "Central banks bought 288.9t in Q2 2026, +62% YoY; 45% of WGC survey respondents intend to increase gold reserves over the next 12 months", "trend": "accelerating" },
+        { "name": "ETF and OTC investment", "metric": "Q2 ETFs -45t, but July reversed two months of outflows with $3B inflows and +23t holdings; H1 OTC and other demand 571t", "trend": "stable" },
+        { "name": "Mine supply and recycling", "metric": "Q2 mine production 965.6t, +2% YoY; recycling 326.1t, -6% YoY, limiting the supply response to high prices", "trend": "stable" }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "Hawkish Fed surprise + rapid geopolitical de-escalation drives a 20-25% drawdown to ~$3,800/oz over 6-12 months as real yields rise and safe-haven premium unwinds.",
+      "keyRisk": "A hawkish Fed surprise, stronger dollar and rapid geopolitical de-escalation could turn July's ETF rebound back into outflows and push gold toward the $3,800/oz bear case. Jewelry demand is already price-sensitive, so the residual downside is that investment demand, not official-sector buying, sets the marginal price for several quarters.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 78,
-    "description": "Gold hit an all-time high of $5,595/oz on January 29, 2026 and is currently ~$4,591/oz — about 18% below the ATH. Trading between bear ($3,800) and base ($5,500) — a continued attractive entry zone given de-dollarisation momentum and structural central bank demand. Goldman Sachs year-end target: $5,400; J.P. Morgan: $6,000."
+    "score": 80,
+    "description": "At $4,480.90/oz, gold is 18% above the bear case ($3,800/oz) and 19% below the base case ($5,500/oz), about 40% of the way from bear to base. The ladder stays anchored to official-sector demand and the stock-to-flow reserve role rather than a multiple of another hard asset: the base requires central-bank buying and ETF demand to hold together, while the bull still needs a sovereign-debt or fiat-confidence event."
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$3,800/oz",
-      "description": "Rapid geopolitical de-escalation and a hawkish Fed surprise trigger a sharp risk-on reversal, dollar rallies strongly.",
+      "description": "A hawkish Fed surprise and stronger dollar reverse July's ETF rebound while jewelry demand stays price-sensitive.",
       "points": [
-        "Strong USD and rising real yields pressure gold price",
-        "Central bank buying slows as EM FX reserves come under strain",
-        "Risk assets rally broadly, reducing safe-haven demand"
+        "Gold ETF flows return to Q2-style outflows after the July $3B rebound, with North American products leading redemptions",
+        "Rising real yields and dollar strength reduce the marginal investment bid even if central banks keep buying",
+        "High prices keep jewelry volumes under pressure and recycling rises enough to absorb part of official-sector demand"
       ]
     },
     "base": {
       "priceTarget": "$5,500/oz",
-      "description": "Structural tailwinds hold: tariff uncertainty, de-dollarisation momentum, and 1,000t+/yr central bank demand sustain the geopolitical premium.",
+      "description": "Official-sector buying, Asian OTC demand and renewed ETF inflows keep gold near the reserve-asset fair-value band.",
       "points": [
-        "Real yields remain negative or near zero in key markets",
-        "BRICS+ gold settlement mechanism gains traction",
-        "Retail and institutional ETF flows resume after 2023–24 outflows"
+        "Central banks continue buying at a high, though not 2025-peak, pace after Q2's 288.9t net purchase quarter",
+        "Global ETF holdings keep rebuilding from 4,068t after July's 23t increase, with Europe and Asia offsetting North American sensitivity to real yields",
+        "Mine supply growth stays low single digit, so incremental investment demand sets price rather than a large new supply response"
       ]
     },
     "bull": {
@@ -126,18 +127,18 @@
       "points": [
         "US fiscal trajectory triggers a bond market dislocation",
         "One or more G20 central banks announce a gold-backed currency peg",
-        "Geopolitical shock drives mass retail flight from fiat savings globally"
+        "ETF holdings break above the February 2026 record of 4,176t while central-bank survey intentions translate into sustained reserve additions"
       ]
     }
   },
   "commodityMoats": {
     "absoluteScarcity": {
       "status": "intact",
-      "note": "Above-ground supply grows ~1.5% annually from mining; no synthesis path. Supply curve relatively inelastic to demand spikes — below BTC's mathematical scarcity but materially better than fiat. Annual issuance has been stable for decades."
+      "note": "Above-ground supply grows less than 2% annually from mining; no synthesis path. Supply curve remains relatively inelastic to demand spikes - below BTC's mathematical scarcity but materially better than fiat. Q2 2026 mine output rose only 2% YoY even at record price levels."
     },
     "monetaryHistory": {
       "status": "strong",
-      "note": "5,000 years of unbroken store-of-value status. Central bank reserves total ~$2T+. Basel III Tier 1 asset status. The Schelling point for institutional flight-to-safety predates every other monetary asset and is universally recognized across civilizations, governments, and institutions."
+      "note": "5,000 years of unbroken store-of-value status, Basel III Tier 1 treatment and official-sector reserve demand that added 288.9t in Q2 2026. The Schelling point for institutional flight-to-safety predates every other monetary asset and is universally recognized across civilizations, governments, and institutions."
     },
     "industrialUtility": {
       "status": "weakened",
@@ -169,5 +170,5 @@
       ]
     }
   ],
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "August 13, 2026"
 }

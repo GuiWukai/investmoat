@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$60B"
+      "value": "~$73B"
     }
   ],
   "chips": [
@@ -25,23 +25,23 @@
   ],
   "metrics": [
     {
-      "title": "EBITDA Margin",
-      "value": "39.1%",
-      "label": "Q1 FY2026 — €1.85B Revenue (+3%, +6% cc)",
+      "title": "Q2 FY2026 Revenue",
+      "value": "€1.94B",
+      "label": "+8% YoY (+11% cc); 2026 guide raised to ~€7.60B",
       "icon": "TrendingUp",
       "color": "#D40000"
     },
     {
-      "title": "EBIT Margin",
-      "value": "29.7%",
-      "label": "Q1 FY2026 — €548M EBIT | 2026 guide ≥€2.93B EBITDA",
+      "title": "EBITDA Margin",
+      "value": "39.0%",
+      "label": "Q2 FY2026 — €755M EBITDA; guide ≥€2.97B",
       "icon": "BarChart2",
       "color": "#D40000"
     },
     {
-      "title": "Return on Equity",
-      "value": "45%",
-      "label": "TTM — exceptional capital efficiency",
+      "title": "EBIT Margin",
+      "value": "31.2%",
+      "label": "Q2 FY2026 — €605M EBIT, +10% YoY",
       "icon": "Award",
       "color": "#c0a060"
     }
@@ -66,29 +66,30 @@
     ]
   },
   "growth": {
-    "description": "Q1 FY2026 revenue €1.85B (+3% reported, +6% constant currency) with EBITDA €722M (39.1% margin) and EBIT €548M (29.7%). Adj EPS $2.73 beat consensus by ~1%. FY2026 guidance reaffirmed: €7.5B revenue, adj EBITDA ≥€2.93B (≥39%), adj EPS ≥€9.45. Ferrari noted negative currency headwinds, higher D&A, and brand and racing investments. The Ferrari Luce EV will be fully unveiled in 2026 — the first full-electric model, expected to command €350,000+. Hybrid models now exceed 60% of deliveries.",
+    "description": "Q2 FY2026 revenue rose to €1.94B (+8% reported, +11% constant currency) with EBITDA of €755M (39.0% margin), EBIT of €605M (31.2% margin, +10% YoY), net profit of €463M and diluted EPS of €2.62. Industrial free cash flow rose 39% to €276M despite planned model change-overs and 3,366 shipments. Management raised FY2026 guidance to ~€7.60B revenue, adjusted EBITDA ≥€2.97B, adjusted EBIT ≥€2.26B, adjusted EPS ≥€9.68 and industrial FCF ≥€1.55B, citing stronger personalizations and lower-than-expected currency headwinds. The order book remains full through 2027, with personalization and richer sports-car mix carrying growth more than unit expansion.",
     "growthAnalysis": {
-      "cagrEstimate": "5-9%",
-      "scoreDerivation": "Base 60 + 10 (pricing power and Tailor Made mix) + 5 (Purosangue/EV launches) - 8 (FX and US tariff overhang capping volume upside) = 67",
+      "cagrEstimate": "6-9%",
+      "cagrBasis": "Q2 FY2026 revenue +8% YoY (+11% constant currency) and FY2026 revenue guidance raised to ~€7.60B from ~€7.50B, with adjusted EPS guided ≥€9.68 versus €8.96 in 2025. The band anchors to high-single-digit price/mix and personalization growth, decayed for planned model change-overs, FX and tariff drag.",
+      "scoreDerivation": "Base 68.8 (6-9% CAGR, midpoint 7.5%) + 1.3 trajectory (personalization accelerating; price/mix and EV launch stable) + 0 stable margins - 5 moderate tariff/FX risk = 65",
       "drivers": [
         {
           "name": "Personalization & Mix",
-          "metric": "Tailor Made >20% of revenue on flagships, growing faster than base ASP",
+          "metric": "Q2 FY2026 revenue +11% cc despite planned model change-overs; stronger personalizations drove the guidance raise",
           "trend": "accelerating"
         },
         {
           "name": "Price/Mix Pricing Power",
-          "metric": "Q1 FY2026 revenue +6% cc on roughly flat volumes; FY2026 guide €7.5B",
+          "metric": "FY2026 guide raised to ~€7.60B revenue and adjusted EPS ≥€9.68; order book full through 2027",
           "trend": "stable"
         },
         {
           "name": "Electrification Premium",
-          "metric": "Ferrari Luce EV unveil 2026 at €350,000+ base price",
-          "trend": "accelerating"
+          "metric": "First full-electric Ferrari still expected to be unveiled in 2026 as mix shifts through 12Cilindri, Purosangue and special-series launches",
+          "trend": "stable"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "US tariffs (28.8% of sales) and FX headwinds compress 2026-2027 reported growth; cyclical luxury demand in China and Middle East could slow waitlist conversion over 12-24 months.",
+      "keyRisk": "US tariffs, currency moves and planned model change-overs could cap reported growth even while order books remain full; cyclical luxury demand in China and the Middle East could slow waitlist conversion over 12-24 months.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     },
@@ -103,39 +104,39 @@
     }
   },
   "valuation": {
-    "score": 83,
-    "description": "At ~$334 — 19% above the bear case ($280) and 30% below the base case ($480) — Ferrari trades at an attractive entry. The stock sold off ~4% on May 5 Q1 FY2026 results despite an EPS beat, on concerns about Middle East geopolitical headwinds and FX. Shares sit ~35% below the 52-week high of $519, reflecting tariff overhang and cautious 2026 guidance.",
+    "score": 74,
+    "description": "At $407.21, Ferrari trades about 27% above the rebuilt bear case ($320) and roughly 11% below the new base case ($460). Q2 FY2026 confirmed the scarcity and personalization thesis, but the old $700 bull case treated a luxury-style re-rating as nearer-term fair value. The current setup is a quality-compounder entry rather than a deep-value dislocation.",
     "valuationNote": {
-      "text": "Ferrari's 35x P/E reflects its identity as a luxury goods business, not an automaker — Hermès trades at 55x and LVMH at 22x despite slower growth. Ferrari's combination of 10-12% earnings growth, 40%+ EBITDA margins, and unlimited pricing power justifies a premium multiple. The primary valuation risk is tariff impact (28.8% of sales in the US) and the electrification cost cycle, both of which are temporary headwinds rather than permanent impairments.",
-      "fairValue": "$480"
+      "text": "Ferrari still deserves a luxury multiple because Q2 showed 39% EBITDA margins, a full 2027 order book and guidance raised on personalization. At the new $460 base case, the stock prices a low-40s earnings multiple on the raised 2026 EPS floor and assumes continued price/mix execution; the bull case requires the EV and special-series pipeline to expand the addressable buyer pool without diluting scarcity.",
+      "fairValue": "$460"
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$280",
-      "description": "US tariffs add $50,000+ per car, reducing American demand materially while electrification investment compresses margins — the market de-rates Ferrari from a luxury premium to a transition discount.",
+      "priceTarget": "$320",
+      "description": "US tariffs, FX and model transition costs overwhelm personalization gains, pushing the market to value Ferrari closer to a premium automaker than a scarcity luxury house.",
       "points": [
-        "US tariffs of 25%+ are maintained for 2+ years, reducing US deliveries by 20-30% as the price premium pushes even wealthy buyers to alternatives; the US is 28.8% of net sales, making this a material revenue impact",
-        "Ferrari's first fully electric model requires more R&D and manufacturing capex than forecast, compressing FCF margins from 15% toward 10% during the electrification transition phase",
-        "A slowdown in global wealth creation reduces demand from aspirational first-time buyers, lengthening the wait to convert waiting lists to deliveries — the market re-rates Ferrari toward 25x P/E as growth visibility diminishes"
+        "US tariffs and adverse currency keep reported growth below the constant-currency demand signal for multiple quarters",
+        "The first full-electric Ferrari requires more R&D and manufacturing capex than forecast, compressing industrial FCF during the transition phase",
+        "A slowdown in global wealth creation reduces waitlist conversion and pushes the multiple toward the high-20s on 2026-2027 earnings"
       ]
     },
     "base": {
-      "priceTarget": "$480",
-      "description": "Ferrari executes its 2030 plan — EBITDA margins approach 40%, personalization revenue drives steady earnings growth, and the first EV launches successfully at ultra-luxury price points.",
+      "priceTarget": "$460",
+      "description": "Ferrari compounds through price/mix, personalization and a full order book, with the raised 2026 guide converting into 12-24 month fair value rather than a cycle-peak multiple.",
       "points": [
-        "Revenue reaches €9B by 2028 (5-year CAGR of ~8%) driven by price and mix improvements, with Tailor Made personalization growing to 30%+ of revenue on flagship models",
-        "The first Ferrari EV launches at €350,000+ base price, achieving sold-out status within weeks of announcement — reinforcing that electrification enhances rather than dilutes the Ferrari brand",
-        "EBITDA margins reach 40% by 2027-2028 as fixed cost leverage accrues; €3.5B share buyback program (through 2030) supports EPS growth of 12-15% annually even with modest revenue growth"
+        "FY2026 revenue lands near the raised ~€7.60B guide with adjusted EBITDA margin at or above 39%",
+        "Personalization and richer sports-car mix sustain high-single-digit constant-currency growth despite modest shipments",
+        "The 2026 EV reveal preserves brand scarcity and supports, rather than dilutes, Ferrari's pricing umbrella"
       ]
     },
     "bull": {
-      "priceTarget": "$700",
-      "description": "Ferrari's EV launch redefines ultra-luxury electric performance, the Purosangue becomes a multi-variant permanent segment, and the market re-rates Ferrari to Hermès-like multiples as earnings compound faster than expected.",
+      "priceTarget": "$620",
+      "description": "The EV launch and special-series pipeline deepen Ferrari's scarcity premium, while personalization and racing/brand revenue keep earnings compounding above the raised plan.",
       "points": [
-        "Ferrari EV achieves iconic status in the emerging ultra-luxury electric segment — attracting new buyer cohorts (tech billionaires, younger wealth) who previously aspired to the brand but preferred EVs, adding 500-1,000 incremental annual deliveries at 50%+ margins",
-        "Purosangue family expands to 2-3 variants over 5 years, each sold out on launch; SUV revenue grows to 25%+ of total, permanently expanding the addressable buyer universe without diluting exclusivity of the core sports car range",
-        "As earnings compound at 15-20% annually and the brand story strengthens, the market re-rates RACE toward 50x earnings — similar to Hermès — reflecting the recognition that Ferrari is a luxury goods company, not an automaker"
+        "The first Ferrari EV sells out quickly at ultra-luxury price points and adds younger wealth without increasing discounting risk",
+        "Purosangue, 12Cilindri and special-series mix keep personalization growth well above base-vehicle revenue growth",
+        "Investors re-rate Ferrari toward a higher luxury multiple as 39%+ EBITDA margins and full order books persist through 2027"
       ]
     }
   },
@@ -182,5 +183,5 @@
     },
     "verdict": "Ferrari's moat is built on physical scarcity, 75-year brand heritage, and collector psychology — dimensions that AI cannot replicate or erode, but also cannot enhance in the way it benefits data-driven businesses. The Ten Moats framework understates Ferrari's competitive position because its advantages (brand, scarcity, pricing power) are traditional luxury moats that predate the digital era and remain immune to AI disruption — AI is simply irrelevant to why a billionaire will wait two years and pay €500,000 for a Ferrari."
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "August 13, 2026"
 }
