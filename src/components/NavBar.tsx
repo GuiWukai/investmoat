@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import { Search, BarChart2, TrendingUp, Menu, FileText, CalendarDays, Briefcase, X } from 'lucide-react';
@@ -302,6 +302,114 @@ function NavLink({
   );
 }
 
+/**
+ * Mobile nav as a speed-dial above the FAB.
+ *
+ * A left drawer forces a reach across the screen; stacking the destinations
+ * on the same thumb that opened the menu keeps every tap in one corner.
+ * Items stay mounted so they can collapse back into the button on close.
+ */
+function MobileFabMenu({
+  isOpen,
+  onOpenChange,
+}: {
+  isOpen: boolean;
+  onOpenChange: (open: boolean) => void;
+}) {
+  const pathname = usePathname();
+  const count = navLinks.length;
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') onOpenChange(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', onKey);
+    };
+  }, [isOpen, onOpenChange]);
+
+  return (
+    <>
+      <div
+        aria-hidden={!isOpen}
+        className={`fixed inset-0 z-[190] bg-black/50 backdrop-blur-[2px] transition-opacity duration-200 lg:hidden ${
+          isOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
+        }`}
+        onClick={() => onOpenChange(false)}
+      />
+
+      <div
+        className="fixed right-5 z-[200] lg:hidden"
+        style={{ bottom: 'max(1.25rem, calc(env(safe-area-inset-bottom, 0px) + 0.75rem))' }}
+      >
+        <nav
+          aria-hidden={!isOpen}
+          aria-label="Menu"
+          className="fab-speed-dial absolute right-0 bottom-[calc(100%+0.65rem)] flex flex-col items-end gap-2"
+          data-open={isOpen || undefined}
+          id="mobile-fab-menu"
+        >
+          {navLinks.map((item, index) => {
+            const isActive = pathname === item.href || pathname.startsWith(item.href + '/');
+            const Icon = item.icon;
+            return (
+              <Link
+                key={item.href}
+                aria-current={isActive ? 'page' : undefined}
+                className={`fab-speed-dial__item flex h-11 items-center gap-2.5 rounded-full border px-3.5 no-underline shadow-lg shadow-black/40 backdrop-blur ${
+                  isActive
+                    ? 'border-accent/40 bg-accent-soft text-foreground'
+                    : 'border-accent/25 bg-[#0b0e13]/92 text-foreground/85'
+                }`}
+                href={item.href}
+                onClick={() => onOpenChange(false)}
+                style={
+                  {
+                    '--fab-i': isOpen ? count - 1 - index : index,
+                  } as React.CSSProperties
+                }
+              >
+                <Icon
+                  className={`size-4 shrink-0 ${isActive ? 'text-gold-bright' : 'text-accent'}`}
+                />
+                <span className="pr-0.5 text-[13px] font-medium">{item.name}</span>
+                {isActive && <span className="size-1.5 rounded-full bg-gold-bright" />}
+              </Link>
+            );
+          })}
+        </nav>
+
+        <Button
+          aria-controls="mobile-fab-menu"
+          aria-expanded={isOpen}
+          aria-label={isOpen ? 'Close menu' : 'Open menu'}
+          className="size-12 rounded-full border border-accent/25 bg-[#0b0e13]/90 text-accent shadow-lg shadow-black/40 backdrop-blur hover:border-accent/50 hover:text-gold-bright"
+          isIconOnly
+          onPress={() => onOpenChange(!isOpen)}
+        >
+          <span className="relative size-5">
+            <Menu
+              className={`absolute inset-0 size-5 transition-all duration-200 ${
+                isOpen ? 'rotate-90 opacity-0' : 'rotate-0 opacity-100'
+              }`}
+            />
+            <X
+              className={`absolute inset-0 size-5 transition-all duration-200 ${
+                isOpen ? 'rotate-0 opacity-100' : '-rotate-90 opacity-0'
+              }`}
+            />
+          </span>
+        </Button>
+      </div>
+    </>
+  );
+}
+
 function DeskFooter() {
   return (
     <div className="mt-auto pt-5">
@@ -342,43 +450,7 @@ export function NavBar() {
         </Button>
       </div>
 
-      {/* Mobile menu FAB — thumb-reach, bottom-right. Stays above the drawer
-          so the same control opens and closes. Hidden on the desktop sidebar. */}
-      <Button
-        aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-        className="fixed right-5 z-[200] size-12 rounded-full border border-accent/25 bg-[#0b0e13]/90 text-accent shadow-lg shadow-black/40 backdrop-blur hover:border-accent/50 hover:text-gold-bright lg:hidden"
-        isIconOnly
-        onPress={() => setIsMenuOpen((open) => !open)}
-        style={{ bottom: 'max(1.25rem, calc(env(safe-area-inset-bottom, 0px) + 0.75rem))' }}
-      >
-        {isMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
-      </Button>
-
-      {/* Mobile navigation drawer — Backdrop so a tap outside closes it */}
-      <Drawer isOpen={isMenuOpen} onOpenChange={setIsMenuOpen}>
-        <Drawer.Backdrop variant="blur">
-          <Drawer.Content className="w-[min(20rem,85vw)]" placement="left">
-            <Drawer.Dialog aria-label="Menu" className="flex h-full flex-col">
-              <Drawer.Header>
-                <BrandMark onClick={() => setIsMenuOpen(false)} />
-              </Drawer.Header>
-              <Drawer.Body className="flex flex-col gap-1">
-                <p className="section-label mb-2 px-3">Menu</p>
-                {navLinks.map((item) => (
-                  <NavLink
-                    key={item.href}
-                    href={item.href}
-                    icon={item.icon}
-                    name={item.name}
-                    onClick={() => setIsMenuOpen(false)}
-                  />
-                ))}
-                <DeskFooter />
-              </Drawer.Body>
-            </Drawer.Dialog>
-          </Drawer.Content>
-        </Drawer.Backdrop>
-      </Drawer>
+      <MobileFabMenu isOpen={isMenuOpen} onOpenChange={setIsMenuOpen} />
 
       {/* Mobile search sheet — full-width so results have room to breathe */}
       <MobileSearchSheet isOpen={isSearchOpen} onOpenChange={setIsSearchOpen} />
