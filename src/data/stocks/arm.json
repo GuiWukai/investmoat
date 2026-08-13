@@ -2,7 +2,7 @@
   "slug": "arm",
   "ticker": "ARM",
   "name": "Arm Holdings",
-  "lastAnalyzed": "May 2026",
+  "lastAnalyzed": "August 13, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,7 +10,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$232B"
+      "value": "~$286B"
     }
   ],
   "chips": [
@@ -25,23 +25,23 @@
   ],
   "metrics": [
     {
-      "title": "Q4 FY2026 Revenue",
-      "value": "$1.49B",
-      "label": "record (above guide midpoint); FY2026 total $4.92B (+~24% YoY); non-GAAP EPS $1.77",
+      "title": "Q1 FY2027 Revenue",
+      "value": "$1.29B",
+      "label": "+22% YoY; record first-quarter revenue",
       "icon": "TrendingUp",
       "color": "#0891b2"
     },
     {
       "title": "Royalty Revenue",
-      "value": "$671M",
-      "label": "Q4 FY2026 (+11% YoY) — decelerated from +23% in Q3 on softer smartphone units; data-center royalty >2× YoY",
+      "value": "$715M",
+      "label": "Q1 FY2027 +22% YoY; data-center royalty >2×",
       "icon": "Zap",
       "color": "#7c3aed"
     },
     {
-      "title": "Licensing / AGI CPU",
-      "value": "$819M",
-      "label": "Q4 licensing +29% YoY; Arm launched its first AGI-class data-center CPU — a step from licensor to seller of complete compute",
+      "title": "AGI CPU Demand",
+      "value": ">$2B",
+      "label": "FYE27-FYE28 demand; Q2 revenue guide $1.38B",
       "icon": "Shield",
       "color": "#059669"
     }
@@ -66,97 +66,97 @@
     ]
   },
   "growth": {
-    "description": "Q4 FY2026 (reported May 6 2026) delivered record total revenue of $1.49B: royalty $671M (+11% YoY) and licensing $819M (+29%). Royalty growth decelerated from +23% in Q3 as smartphone units softened, but data-center royalty more than doubled YoY and Arm launched its first AGI-class data-center CPU — its clearest step yet from pure licensor toward selling complete compute. FY2026 closed at a record $4.92B revenue (+~24% YoY; royalty $2.61B +21%, licensing $2.31B +25%) with non-GAAP EPS of $1.77. Management guided FY27 to ~20% revenue growth and reiterated a ~20% royalty CAGR through FY31.",
+    "description": "Q1 FY2027 (reported July 29, 2026) delivered another record quarter for a fiscal first quarter: revenue $1.289B (+22% YoY), royalty revenue $715M (+22%), licensing revenue $574M (+23%), and non-GAAP EPS $0.45 (+29%). Data-center royalties more than doubled again, Armv9/CSS adoption lifted royalty rates, and AGI CPU customer demand now exceeds $2B across FYE27-FYE28 versus the $1B opportunity outlined last quarter. Q2 guidance of $1.38B revenue and $0.47 non-GAAP EPS keeps the FY27 path around low-20s growth, but the stock has already repriced the AGI CPU optionality.",
     "growthAnalysis": {
-      "cagrEstimate": "22–28%",
-      "scoreDerivation": "Base 80 (15–30% CAGR; FY2026E $4.85B, +26% YoY) + 5 royalty ratchet (v9 architecture carries structurally higher royalty rates; as v9 penetrates from 50% to 80%+, per-unit economics improve without new customers) + 3 TAM expansion (data center AI inference becoming Arm's largest segment; TAM from $60B to $105B+) − 3 revenue lumpiness (large TLA license payments create quarterly volatility; FY forecast reliability lower than pure-SaaS) = 85",
+      "cagrEstimate": "22–30%",
+      "cagrBasis": "Reported/guided revenue series: FY2026 revenue $4.92B (+~24%) followed by Q1 FY2027 revenue $1.289B (+22%) and Q2 guidance of $1.38B at the midpoint (~22% YoY). The upper half is carried by royalty mix shift, data-center royalties more than doubling, and AGI CPU demand exceeding $2B across FYE27-FYE28; the lower half reflects management's low-teens Q2 royalty guide and licensing lumpiness.",
+      "scoreDerivation": "Base 87 (26% midpoint from 22–30% CAGR) + 2.7 trajectory (data center and AGI CPU accelerating; Armv9 royalty mix stable) + 0 stable margin − 5 moderate RISC-V / hyperscaler-in-house risk = 85",
       "drivers": [
         {
           "name": "Data Center Royalties (AI Inference)",
-          "metric": ">2× YoY in Q4 FY2026; AGI data-center CPU launched; AWS Graviton4, Apple M-series, Microsoft Cobalt, Google Axion all ARM-based",
+          "metric": ">2× YoY again in Q1 FY2027; AGI CPU demand >$2B across FYE27-FYE28; AWS Graviton4, Apple M-series, Microsoft Cobalt, Google Axion all ARM-based",
           "trend": "accelerating"
         },
         {
           "name": "Armv9 Architecture Penetration",
-          "metric": ">50% of royalty revenue; v9 carries 2× royalty rate vs v8; blended royalty +11% in Q4 as smartphone units softened",
+          "metric": "Q1 FY2027 royalty revenue $715M (+22% YoY), supported by Armv9 and CSS adoption; Q2 royalty guide low-teens YoY",
           "trend": "stable"
         },
         {
-          "name": "Total License Agreements (Hyperscalers)",
-          "metric": "TLA with Apple, Google, Microsoft, Amazon converts lumpy license payments to annuity revenue",
-          "trend": "stable"
+          "name": "Licensing / AGI CPU Platform",
+          "metric": "Q1 FY2027 licensing revenue $574M (+23% YoY); AGI CPU demand now >$2B vs $1B initial opportunity",
+          "trend": "accelerating"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "If RISC-V achieves >15% data center processor share by end of 2027 — driven by hyperscalers designing custom RISC-V chips (similar to Google's Tensor or Amazon's Inferentia) — ARM's data center royalty growth trajectory slows materially and the $8B+ FY2028 target requires revision",
+      "keyRisk": "If RISC-V or fully in-house hyperscaler CPU designs capture >15% of incremental data-center processor deployments by end-2027, while Arm's AGI CPU supply ramp stays below the >$2B demand signal, the data-center royalty growth trajectory slows materially and the market has to reprice ARM as an expensive IP licensor rather than a compute-platform company.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 45,
-    "description": "ARM trades at ~$220 after the record Q4 print and AGI CPU launch, now sitting at the bull target ($220) and well above the consensus analyst target of ~$164. The royalty deceleration to +11% (from +23%) is the key watch-item — it undercuts the 'royalty doubling' narrative even as data-center royalty more than doubled. With the catalyst that drove the run-up (the AGI CPU launch) now realised and FY27 guided to ~20% growth, risk/reward is unattractive at the top of the range.",
+    "score": 66,
+    "description": "At $271.87, ARM is almost exactly at the rebuilt base case ($275), after trading above the stale $220 bull case. The ladder is reset around the new reality: Q1 FY2027 proves the data-center and AGI CPU story is real, but a ~$286B market cap already prices a large share of that optionality. The stock is fair-to-slightly-rich rather than outright unscored upside; further gains require the >$2B AGI CPU demand signal to turn into shipped revenue without compressing the IP model's margin quality.",
     "peAnalysis": {
-      "asOf": "May 2026",
+      "asOf": "August 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~195×",
+          "value": ">250×",
           "note": "GAAP EPS distorted by SBC; not meaningful"
         },
         {
           "label": "Forward P/E (NTM, non-GAAP)",
-          "value": "~56×",
-          "note": "FY2027E non-GAAP EPS ~$2.35"
+          "value": "~115-125×",
+          "note": "Q1 FY2027 non-GAAP EPS $0.45; Q2 guide $0.47 +/- $0.04"
         },
         {
           "label": "PEG Ratio",
-          "value": "~2.2×",
-          "note": "fwd P/E ÷ 25% EPS CAGR"
+          "value": "~4.5×",
+          "note": "fwd P/E ÷ mid-20s EPS/revenue CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~27×",
-          "note": "FY2026 revenue $4.92B (actual)"
+          "value": "~48×",
+          "note": "~$5.9-6.0B FY2027 revenue run-rate from Q1 actual and Q2 guide"
         },
         {
           "label": "Price / FCF",
-          "value": "~60×",
-          "note": "~$2.2B FCF (FY2026E est.)"
+          "value": "~200×",
+          "note": "$1.4B trailing-12-month FCF; Q1 FY2027 FCF $665M"
         }
       ],
-      "summary": "ARM trades at ~56× forward non-GAAP P/E and ~27× NTM P/S — among the most premium valuations in semiconductors, reflecting the IP royalty business model's scarcity value rather than current earnings power. The PEG of ~2.2× is in 'expensive but justifiable' territory for the v9 royalty ratchet thesis; the risk is that the data center AI narrative has already been priced in at these levels. Unlike ASML (which has no alternative) or NVIDIA (a capital-light IP model is harder to displace), ARM faces RISC-V competition that could compress the multiple if data center share gains materialize."
+      "summary": "ARM now trades at a software-like sales multiple and a triple-digit forward earnings multiple, reflecting scarcity value in the IP royalty model plus a new AGI CPU narrative. That is defensible only if data-center royalties keep doubling and the AGI CPU business scales without turning ARM into a lower-margin silicon vendor. The scenario reset raises fair value, but it does not make the stock cheap."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$75",
-      "description": "RISC-V gains material data center traction, China licensing revenues face further restrictions, and the royalty ratchet slows — FY2028 targets are revised down and the multiple compresses toward 18× NTM P/S.",
+      "priceTarget": "$160",
+      "description": "RISC-V gains material data-center traction, AGI CPU supply/margins disappoint, and the royalty ratchet slows — ARM is revalued as a premium IP licensor rather than an AI compute platform.",
       "points": [
-        "RISC-V achieves 15% data center processor share by end of 2027 as Google, Alibaba, and Baidu launch custom RISC-V designs — slowing ARM data center royalty growth from doubling annually to below 30%",
-        "US export restrictions expand to prohibit ARM China from licensing Armv9 architecture, reducing Chinese royalty revenue by 25–30% and eliminating the $200M+ SoftBank-linked licensing deal",
-        "Smartphone unit volumes decline 8% in 2026 as macro headwinds and consumer spending weakness hit the largest ARM royalty segment — offsetting v9 mix improvements",
-        "Multiple compresses to 18× NTM P/S on $4.85B FY2026 revenue: $87.3B / 1.0B shares = $87/share"
+        "RISC-V achieves 15% data-center processor share by end-2027 as hyperscalers and Chinese cloud providers push custom designs, slowing ARM data-center royalty growth from more than doubling to below 30%",
+        "AGI CPU demand proves supply-constrained and lower-margin, converting less than $1B of the >$2B customer-demand signal by FY2028",
+        "Royalty revenue falls back to low-teens growth after Q2 FY2027, and the multiple compresses toward ~30× FY2027 sales — roughly $160 per share on a ~$5.8-6.0B revenue base"
       ]
     },
     "base": {
-      "priceTarget": "$160",
-      "description": "ARM delivers FY2026 consensus of $4.85B with data center continuing to grow 50%+ and v9 reaching 65% of royalty revenue — the March 24 investor day raises FY2028 targets above $8B and re-rates the stock to 28× NTM P/S.",
+      "priceTarget": "$275",
+      "description": "ARM sustains low-20s FY2027 revenue growth, data-center royalties remain the fastest-growing royalty pool, and the AGI CPU converts enough of the >$2B demand signal to justify today's premium multiple.",
       "points": [
-        "FY2026 revenue reaches $4.8–4.9B as data center royalties grow 60%+ YoY and smartphone royalties benefit from v9 mix shift to 60–65% of royalty revenue",
-        "March 24 investor day sets $8–9B FY2028 revenue target and introduces new licensing categories (automotive, AI edge, satellite) that expand the disclosed TAM above $100B",
-        "AWS, Microsoft, and Google all increase Graviton/Cobalt/Axion ARM chip deployments in their data centers, with ARM-based servers crossing 20% of cloud market share by end of 2026",
-        "v9 penetration reaches 70%+ of royalty revenue by Q4 FY2026, with the structural royalty rate increase sustaining royalty growth above 30% YoY even in moderate shipment growth environments"
+        "FY2027 revenue lands around $5.9-6.1B, with Q2 meeting the $1.38B midpoint guide and licensing growth near 30% YoY",
+        "Data-center royalties more than double again in FY2027 while Armv9/CSS mix keeps blended royalty growth above unit growth",
+        "AGI CPU shipments convert the original $1B opportunity across FYE27-FYE28 and preserve a path toward the larger >$2B demand pool",
+        "The stock holds around the current high-40s sales multiple because investors view ARM as the default CPU platform for AI inference rather than a cyclical semiconductor supplier"
       ]
     },
     "bull": {
-      "priceTarget": "$220",
-      "description": "The AGI CPU (launched May 2026) gains rapid adoption and AI inference makes ARM the dominant architecture in both edge and cloud AI — royalty growth re-accelerates above the +11% Q4 trough, re-rating the stock toward 40× NTM P/S as FY2028 revenue approaches $12B.",
+      "priceTarget": "$380",
+      "description": "The AGI CPU scales faster than management's initial capacity plan, AI inference makes ARM the dominant architecture in edge and cloud, and FY2028 revenue visibility moves above $8B without margin collapse.",
       "points": [
-        "AI edge inference (smartphones, PCs, cars, IoT) creates a new royalty category for NPU-integrated ARM chips at 3–4× the royalty rate of general-purpose ARM cores — adding $1B+ in incremental royalty revenue by FY2028",
-        "Apple transitions all Mac and iPad lines to M5/M6 ARM chips, NVIDIA develops an ARM-based CPU for AI servers, and ARM Neoverse reaches 35% of cloud server market by end of 2027",
-        "Automotive royalties accelerate as ADAS/autonomous driving requires ARM-based ECUs in 100M+ vehicles annually — a new $2B+ TAM segment at premium royalty rates",
-        "Revenue trajectory toward $12B by FY2028 forces FY2027 consensus upgrades and re-rates the stock toward 40× P/S on $5.5B 2026 revenue"
+        "Arm secures manufacturing capacity for the full >$2B AGI CPU demand signal and demonstrates a path to 50% gross margin as more work moves in-house",
+        "AI edge inference in smartphones, PCs, cars, and IoT creates a premium royalty category for NPU-integrated ARM chips at several times the rate of general-purpose cores",
+        "Neoverse-based platforms keep gaining hyperscaler share, with AWS, Microsoft, Google, and Chinese cloud providers expanding ARM-based instances for inference workloads",
+        "FY2028 revenue visibility moves above $8B and the market keeps a ~50× forward-sales multiple, supporting a bull case near $380 without assuming the prior $453 cycle high"
       ]
     }
   },

@@ -2,7 +2,7 @@
   "slug": "lmt",
   "ticker": "LMT",
   "name": "Lockheed Martin Corp.",
-  "lastAnalyzed": "May 2026",
+  "lastAnalyzed": "August 13, 2026",
   "titleColor": "#003087",
   "headerStats": [
     {
@@ -11,7 +11,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$120B"
+      "value": "~$140B"
     }
   ],
   "chips": [
@@ -26,23 +26,23 @@
   ],
   "metrics": [
     {
-      "title": "Q1 2026 Revenue",
-      "value": "$18.0B",
-      "label": "Flat YoY — EPS $6.44 missed $6.77 est",
+      "title": "Q2 2026 Sales",
+      "value": "$20.1B",
+      "label": "+11% YoY; EPS $7.94 and net earnings $1.8B",
       "icon": "Shield",
       "color": "#003087"
     },
     {
-      "title": "FY2026 FCF Guide",
-      "value": "$6.5–6.8B",
-      "label": "Q1 FCF -$291M (vs +$955M Q1'25)",
+      "title": "Record Backlog",
+      "value": "$230B",
+      "label": "$65B new orders; includes multi-year THAAD interceptor contract",
       "icon": "DollarSign",
       "color": "#1e5ba8"
     },
     {
-      "title": "ROIC",
-      "value": "23.6%",
-      "label": "Best-in-class for defense primes",
+      "title": "FY2026 FCF Guide",
+      "value": ">$7.0B",
+      "label": "Raised from $6.5-$6.8B; EPS guide $29.95-$30.65",
       "icon": "TrendingUp",
       "color": "#003087"
     }
@@ -67,107 +67,108 @@
     ]
   },
   "growth": {
-    "description": "Q1 2026 was a soft start: revenue flat at $18.0B (missed $18.4B est), EPS of $6.44 missed $6.77 estimate, and Q1 FCF swung to -$291M from +$955M as F-16 and C-130 program delays weighed on cash conversion. Management reaffirmed full-year guidance of ~5% revenue growth and 25% operating profit growth, but execution risk has risen. The $194B backlog and structural defense demand keep the long-term story intact.",
+    "description": "Q2 2026 reversed the soft Q1 narrative: sales rose 11% YoY to $20.1B, net earnings were $1.8B, EPS was $7.94, operating cash flow was $3.2B and free cash flow was $2.9B. New orders of $65B lifted backlog to a record $230B, helped by the multi-year THAAD interceptor award. Management raised FY2026 guidance to $79.75-$81.75B sales, $29.95-$30.65 EPS and more than $7.0B of free cash flow, framing 2026 as about 8% sales growth and 28% segment operating profit growth.",
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
         "Missiles & Fire Control scaling: PAC-3 MSE ramping from 600 to 2,000 units/year under a multi-year framework agreement; HIMARS backlog expanding with NATO commitments; MFC guiding 14% growth in 2026 and double-digit CAGR through end of decade — driven by geopolitical demand that structural defense budgets cannot quickly absorb",
         "F-35 sustainment acceleration: management guiding double-digit growth in F-35 sustainment revenue in 2026; as the global fleet expands past 1,000 aircraft and ages, the higher-margin ODIN data services and spare parts business becomes the dominant profit driver in Aeronautics",
-        "Next-generation classified programs (Skunk Works): X-59 supersonic flight, space-based interceptor (first flight 2028), and next-gen air dominance programs are in early phases that will monetize in the 2027-2032 window; these could represent $10B+ in new long-cycle revenue that is not in current consensus estimates",
-        "Capital return compounding: $3.7B in buybacks and $3.1B in dividends in FY2024; share count shrinking ~4% per year amplifies per-share metrics even in modest revenue growth environments; 2026 EPS guidance of $29.35-$30.25 represents ~40% jump from 2025's $21.49 as pension charges roll off"
+        "Next-generation classified programs and space: record $230B backlog after Q2 includes a step-up in Missiles and Fire Control demand plus space/interceptor work that can monetize over the 2027-2032 window",
+        "Capital return compounding: buybacks and dividends amplify per-share metrics even in modest revenue growth environments; 2026 EPS guidance now $29.95-$30.65 as pension and prior program-loss headwinds roll off"
       ]
     },
     "growthAnalysis": {
-      "cagrEstimate": "6–8%",
-      "scoreDerivation": "Base 67.5 (6–8% CAGR, 7% midpoint) + 2.7 trajectory (2 of 3 drivers accelerating: MFC and F-35 sustainment) + 4 expanding margins + 4 growth type 'both' (TAM expansion via space interceptors + share of allied procurement) − 5 moderate key-risk (FY2027 budget/sequestration) = 73",
+      "cagrEstimate": "7-9%",
+      "cagrBasis": "Q2 2026 sales +11% YoY to $20.1B, backlog rose to a record $230B, and FY2026 sales guidance increased to $79.75-$81.75B, implying about 8% growth at the midpoint. The band assumes elevated defense demand persists but decays toward high-single-digit prime-contractor growth.",
+      "scoreDerivation": "Base 70.0 (7-9% CAGR, midpoint 8%) + 2.7 trajectory (MFC/backlog and cash conversion accelerating) + 4 expanding margins - 5 moderate budget/program risk = 72",
       "drivers": [
         {
           "name": "Missiles & Fire Control",
-          "metric": "+14% YoY in 2026; PAC-3 MSE scaling 3× to 2,000 units/yr",
+          "metric": "Q2 backlog lifted by multi-year THAAD and missile demand; FY2026 sales outlook raised across segments",
           "trend": "accelerating"
         },
         {
-          "name": "F-35 Sustainment (ODIN)",
-          "metric": "Double-digit growth guided; $1B LMT strategic investment in spare parts",
-          "trend": "accelerating"
-        },
-        {
-          "name": "Skunk Works / Space",
-          "metric": "+5–7% YoY; X-59 first flight 2025; space interceptor 2028",
+          "name": "F-35 Sustainment / Aeronautics",
+          "metric": "Global F-35 fleet and sustainment demand continue to support raised 2026 sales guidance",
           "trend": "stable"
+        },
+        {
+          "name": "Backlog / Cash Conversion",
+          "metric": "Record $230B backlog, $65B new orders, Q2 FCF $2.9B and FY2026 FCF guide >$7.0B",
+          "trend": "accelerating"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "If the US defense budget faces sequestration or continuing resolution in FY2027 that cuts procurement by 10%+, MFC ramp delays and F-35 lot deferrals compress the 2027-2028 revenue bridge before the backlog converts — particularly vulnerable if classified program write-downs recur (LMT lost $1.5B after-tax in 2024 alone)",
+      "keyRisk": "If FY2027 defense budgeting shifts into a continuing resolution or sequestration while classified program charges recur, the record backlog converts more slowly and the market questions whether Q2's cash-flow rebound is sustainable.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 86,
-    "description": "At ~$518, LMT has fallen ~19% from March levels following the Q1 2026 miss and now trades only modestly above its bear case ($480) — implying 39% upside to the base case ($720). The forward P/E of ~17× on 2026 EPS of ~$29.80 is meaningfully below LMT's 5-year average of 18.9×, providing material margin of safety if management's reaffirmed guidance holds.",
+    "score": 81,
+    "description": "At $606.72, LMT trades about 17% above the rebuilt bear case ($520) and roughly 20% below the new base case ($760). Q2's record backlog, $2.9B FCF and raised guidance justify moving the ladder up, but the stock has already rallied from the Q1 miss. The setup remains attractive on defense demand and cash conversion, though it is no longer the near-bear bargain implied by the May file.",
     "valuationNote": {
-      "text": "The trailing-to-forward P/E gap (29.7× → 21×) is one of the clearest earnings ramp signals in the defense sector: 2025 EPS was depressed by $1.5B in after-tax classified program losses that management expects will not recur at the same scale. At the base case of $720, investors receive a 13% total return plus LMT's ~2.1% dividend — with downside well-supported by the $194B backlog.",
-      "fairValue": "$720"
+      "text": "At roughly 20x the updated 2026 EPS guide and about 20x the new FCF guide, LMT prices a healthier backlog conversion story without demanding a heroic multiple. The $760 base case assumes sales land near the raised guide and backlog quality remains high; the $950 bull case requires sustained missile/interceptor demand and clean execution on classified programs.",
+      "fairValue": "$760"
     },
     "peAnalysis": {
-      "asOf": "March 2026",
+      "asOf": "August 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~29.7×",
-          "note": "$21.49 TTM EPS (2025)"
+          "value": "~24×",
+          "note": "still affected by prior-year program losses rolling through the TTM base"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~21.3×",
-          "note": "consensus EPS est. ~$29.80 (2026)"
+          "value": "~20×",
+          "note": "spot price divided by updated FY2026 EPS guide midpoint of ~$30.30"
         },
         {
           "label": "PEG Ratio",
-          "value": "~1.15×",
-          "note": "fwd P/E ÷ ~18% EPS CAGR"
+          "value": "~2.5×",
+          "note": "fwd P/E ÷ ~8% sales growth, before buyback and margin leverage"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~1.9×",
-          "note": "$78.75B NTM revenue est."
+          "value": "~1.7×",
+          "note": "updated FY2026 sales guide $79.75-$81.75B"
         },
         {
           "label": "Price / FCF",
-          "value": "~21.4×",
-          "note": "$6.9B FCF (TTM 2025)"
+          "value": "~20×",
+          "note": "FY2026 FCF guide raised to more than $7.0B"
         }
       ],
-      "summary": "LMT's forward P/E of ~21× sits at the defense sector median and below its own 5-year average of 18.9× — reflecting current premium pricing driven by geopolitical demand and the record backlog, but not a stretched valuation. The PEG of 1.15× is the most attractive in defense (vs. NOC at 3.6×, GD at 2.4×, RTX at 2.9×), indicating genuine GARP characteristics. The large gap between trailing (29.7×) and forward (21.3×) P/E is a bullish signal — 2025 EPS was distorted by $1.5B in after-tax classified program charges that should not recur at the same scale, setting up a strong earnings rebound in 2026."
+      "summary": "The valuation is now anchored by Q2 evidence rather than Q1 faith: record backlog, $65B in new orders and a raised FCF guide support a fair-value multiple around 20x earnings. The stock is not cheap enough to ignore budget or program-charge risk, but a $230B backlog and raised segment-profit outlook give the base case better visibility than it had in May."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$480",
+      "priceTarget": "$520",
       "description": "Defense budget austerity combines with a repeat of large classified program write-downs, compressing FCF and forcing a multiple de-rating from the current premium.",
       "points": [
-        "US defense budget faces a continuing resolution or sequestration in FY2027, delaying $5-8B in MFC procurement orders and pushing the PAC-3 MSE ramp from 2,000 to 1,200 units/year — breaking the double-digit MFC growth trajectory",
-        "A second large classified program write-down ($1B+ after-tax) materializes in 2026-2027 at Skunk Works or space programs, triggering a downward EPS revision and eroding investor confidence in LMT's program execution",
-        "Rising interest rates increase the cost of LMT's $22.8B debt and reduce the pension surplus, eliminating the 2026 EPS tailwind and causing multiple compression to ~16× forward earnings — implying ~$480 on $30 EPS"
+        "US defense budget faces a continuing resolution or sequestration in FY2027, delaying missile and air-platform procurement",
+        "A second large classified program write-down materializes in 2026-2027, triggering EPS revisions and eroding confidence in execution",
+        "Higher interest expense and pension assumptions offset the 2026 EPS rebound, compressing the multiple toward the high teens"
       ]
     },
     "base": {
-      "priceTarget": "$720",
-      "description": "Backlog converts as guided, pension charges clear, MFC scales to double-digit growth, and 2026 EPS reaches the $29.35-$30.25 guidance range — the market re-rates to ~24× forward earnings.",
+      "priceTarget": "$760",
+      "description": "Backlog converts as guided, cash conversion holds, MFC demand stays elevated, and 2026 EPS reaches the $29.95-$30.65 guidance range.",
       "points": [
-        "FY2026 revenue achieves the $77.5-$80B guidance midpoint, driven by 14% MFC growth (PAC-3 MSE production ramp) and double-digit F-35 sustainment expansion under ODIN; segment operating profit grows 25%+ YoY as guided",
-        "Pension-related charges do not recur at 2025 scale — EPS reaches ~$29.80 midpoint, representing 39% growth from 2025 and validating the trailing-to-forward P/E normalization thesis",
-        "Book-to-bill remains above 1.0 through 2026 as NATO allies advance multi-year procurement frameworks; backlog grows to $200B+, extending revenue visibility through 2028-2029 and supporting a stable 23-24× forward P/E multiple"
+        "FY2026 sales land near the $79.75-$81.75B guide, with segment operating profit up roughly 28% YoY",
+        "Free cash flow exceeds $7.0B as Q2's cash conversion proves repeatable across the second half",
+        "Book-to-bill remains strong enough to keep backlog near record levels, extending revenue visibility into 2028-2029"
       ]
     },
     "bull": {
-      "priceTarget": "$900",
+      "priceTarget": "$950",
       "description": "MFC growth accelerates beyond guidance as NATO commits to 3% GDP defense spending, space-based interceptor contracts are awarded, and NGAD selection goes to LMT — adding $15-20B in new long-cycle backlog.",
       "points": [
-        "NATO member states formally adopt 3% GDP defense spending targets, directly accelerating PAC-3 MSE and HIMARS orders beyond the 2,000 unit/year framework — MFC growth reaches 20%+ in 2027, pulling blended revenue CAGR to 9-11% and forcing consensus estimate upgrades",
-        "Lockheed wins the Next Generation Air Dominance (NGAD) contract (vs. Boeing) or the space-based interceptor network program, adding $15-20B in new backlog and establishing a next-generation revenue platform for the 2030s",
-        "FCF reaches $9-10B annually by FY2028 as mix shifts toward higher-margin sustainment and services; at 22× FCF, the market cap reaches $200-220B — implying ~$900/share while the dividend compounds at 5-7% per year"
+        "NATO and allied missile-defense orders accelerate PAC-3, HIMARS and THAAD demand beyond the raised 2026 plan",
+        "Lockheed wins major next-generation air or space-based interceptor work, adding another long-cycle backlog layer",
+        "FCF approaches $9-10B annually by FY2028 as mix shifts toward sustainment, missiles and services while the dividend compounds"
       ]
     }
   },

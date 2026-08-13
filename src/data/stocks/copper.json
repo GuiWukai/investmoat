@@ -11,11 +11,11 @@
     },
     {
       "label": "Spot Price",
-      "value": "~$5.20/lb"
+      "value": "~$6.60/lb"
     },
     {
       "label": "Global Market",
-      "value": "~$320B/yr"
+      "value": "~$420B/yr"
     },
     {
       "label": "Annual Mine Supply",
@@ -39,22 +39,22 @@
   "metrics": [
     {
       "title": "Spot Price",
-      "value": "~$5.20/lb",
-      "label": "~$11,460/t LME — Within 3% of May 2024 ATH",
+      "value": "~$6.60/lb",
+      "label": "Record-zone COMEX price; roughly $14,500/t LME-equivalent tightness",
       "icon": "Coins",
       "color": "#b87333"
     },
     {
-      "title": "Supply Deficit",
-      "value": "−1.0 Mt",
-      "label": "ICSG 2026 Refined Deficit Forecast (vs −0.3 Mt 2025)",
+      "title": "Market Balance",
+      "value": "Tight",
+      "label": "ICSG April saw a small surplus; banks/market balances now cluster around small deficit risk",
       "icon": "TrendingDown",
       "color": "#ef4444"
     },
     {
       "title": "Data Center Demand",
-      "value": "+700 kt",
-      "label": "Incremental Copper / Yr by 2030 — AI Buildout (BHP, S&P)",
+      "value": "+400-572 kt",
+      "label": "Potential annual AI data-center copper demand by late decade",
       "icon": "Zap",
       "color": "#f59e0b"
     },
@@ -81,7 +81,7 @@
       },
       {
         "title": "Electrification Demand Floor",
-        "text": "EVs use ~4x the copper of an ICE vehicle. AI data centers require ~10x more copper per dollar of compute than traditional servers. Grid expansion, renewables, and heat pumps each add structural demand layers that compound rather than substitute for each other."
+        "text": "EVs use more copper than ICE vehicles, AI data centers require 20-40 tonnes per MW of applied power, and grid expansion, renewables and heat pumps each add structural demand layers that compound rather than substitute for each other."
       },
       {
         "title": "Chinese Concentration & Geopolitics",
@@ -90,62 +90,63 @@
     ]
   },
   "growth": {
-    "description": "Copper sits at the intersection of three accelerating demand vectors — AI data center buildout, grid modernisation, and EV/renewable electrification — against a supply curve that is structurally constrained for the next 7-10 years. BHP, Goldman Sachs, and Trafigura have all called for a 10+ Mt cumulative deficit by 2030. The ICSG forecasts a 1.0 Mt refined deficit in 2026 (vs. 0.3 Mt in 2025), the largest since 2004.",
+    "description": "Copper has already repriced into the shortage story at $6.604/lb, so the update separates the structural case from the valuation case. The physical setup is still tight: ICSG cut 2026 mine-production growth to 1.6% and refined-production growth to 0.4% because Grasberg, Kamoa-Kakula, Chile and DRC output disappointed, while usage is expected to grow about 1.6%. Forecast balances are noisy - ICSG's April view showed a small 96 kt surplus, while later bank and market balances cluster around deficit risk - but treatment charges, inventories and record prices all say the supply curve is not clearing easily. AI/data-center demand adds a new layer of 400-572 kt/yr potential annual demand late this decade, and S&P-style long-range work points to total copper demand rising from about 28 Mt in 2025 to 42 Mt by 2040.",
     "growthAnalysis": {
-      "cagrEstimate": "8-11%",
-      "scoreDerivation": "Base 72 (8-11% price CAGR midpoint reflecting structural deficit) + 3 trajectory (data centers accelerating, grid accelerating, EVs stable) + 0 margin (cyclical industrial metal — price trajectory not a compounding revenue base) + 3 TAM expansion (data center + grid layers compound on EV demand) − 5 moderate risk (Chinese property/EV demand swings; recession risk) = 73",
+      "cagrEstimate": "6-9%",
+      "cagrBasis": "The measured series accruing to copper is physical use versus mine/refined supply: ICSG expects 2026 refined usage +1.6% and mine production +1.6%, while longer-range demand work points to 28 Mt in 2025 rising to 42 Mt by 2040 (+50%, about 2.7%/yr). Estimate is marked above those tonnage rates because inventories and mine failures make price the clearing mechanism, but down from 8-11% because spot already reflects much of the shortage.",
+      "scoreDerivation": "Base 69 (6-9% price CAGR, midpoint 7.5%, anchored on refined usage +1.6%, mine production +1.6% and long-run demand +50% to 2040, then marked up for inelastic supply) + 2.7 trajectory (AI/data centers and grid/electrification accelerating; supply tightness stable) - 5 key risk moderate = 66",
       "drivers": [
         {
           "name": "AI Data Center Buildout",
-          "metric": "~700 kt incremental copper/yr by 2030 (BHP estimate); hyperscaler capex tracking $400B+ in 2026",
+          "metric": "AI facilities could consume roughly 400-572 kt/yr of copper by the late 2020s; data centers require about 20-40 tonnes per MW of applied power",
           "trend": "accelerating"
         },
         {
           "name": "Grid Modernisation",
-          "metric": "$600B+/yr global transmission & distribution capex by 2030 (IEA); US IRA + EU REPowerEU underwriting decade-long buildout",
+          "metric": "Global copper demand expected to rise from about 28 Mt in 2025 to 42 Mt by 2040 as grid, AI, defense and electrification demand stack",
           "trend": "accelerating"
         },
         {
-          "name": "EV & Renewables",
-          "metric": "EV penetration 25%+ of new sales globally; wind/solar capacity additions ~600 GW/yr — each uses 4-5x copper of conventional alternatives",
+          "name": "Mine Supply and Balances",
+          "metric": "ICSG cut 2026 mine growth to 1.6% and refined output growth to 0.4%; Grasberg, Kamoa-Kakula, Chile and DRC underperformance keep the balance sensitive to China demand",
           "trend": "stable"
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "A coordinated Chinese property and EV demand contraction combined with a US/EU recession in H2 2026 cuts refined copper demand growth from +4% to flat for 12-18 months, pushing the deficit narrative out and triggering a 25-30% price drawdown to $3.80/lb support.",
+      "keyRisk": "A coordinated Chinese property and EV demand contraction combined with US/EU recession cuts refined usage growth below the current +1.6% expectation just as scrap and secondary refined supply respond to record prices. That would turn today's tight balance into visible surplus and push copper back toward the new $5.00/lb bear support.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 74,
-    "description": "Copper at ~$5.20/lb sits between bear ($3.80) and base ($6.00), about 64% of the way from bear toward the base case — attractive but not deep value. The structural deficit narrative is partially priced in via the 2024-2026 rally; further upside requires the AI/grid demand layer to materialise on schedule. Goldman Sachs year-end target $6.10/lb; BHP CEO public guidance $5.50-6.00/lb sustained."
+    "score": 68,
+    "description": "At $6.604/lb, copper is no longer below the old $6.00/lb base; the old ladder understated how far the shortage story has already been priced. The rebuilt base is $6.80/lb, anchored to constrained mine supply, low inventories and AI/grid demand rather than a simple lift from spot. That leaves copper only 3% below base and 32% above the new bear case ($5.00/lb), so the valuation score moves down from attractive to close-to-fair."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$3.80/lb",
-      "description": "Coordinated Chinese property / EV demand contraction overlaps with a US/EU recession; refined copper demand flat for 12-18 months and supply growth from DRC and Mongolia projects arrives ahead of consensus.",
+      "priceTarget": "$5.00/lb",
+      "description": "Demand disappointment and secondary supply response turn the record-price shortage narrative into a small visible surplus.",
       "points": [
-        "Chinese property completions decline another 15%+ in 2026; EV subsidy unwind cuts domestic EV demand growth from +20% to single digits",
-        "Kamoa-Kakula (DRC) and Oyu Tolgoi (Mongolia) Phase 2 hit nameplate on schedule, adding ~400 kt/yr of incremental supply faster than the deficit narrative assumes",
-        "US/EU recession in H2 2026 pushes industrial production negative, removing the cyclical demand layer that the deficit thesis assumed would compound on top of structural drivers"
+        "Chinese property and EV weakness push refined usage below ICSG's +1.6% expectation, while Western recession removes cyclical industrial demand",
+        "Scrap and secondary refined supply respond to record prices, validating ICSG's small-surplus case rather than the bank-deficit case",
+        "Mine restarts and ramp-ups at Oyu Tolgoi, Kamoa-Kakula and other projects arrive faster than the market expects, easing concentrate scarcity"
       ]
     },
     "base": {
-      "priceTarget": "$6.00/lb",
-      "description": "The structural deficit materialises on schedule: AI data center copper demand growth holds, grid capex tracks IEA guidance, and supply additions disappoint at the project-execution margin.",
+      "priceTarget": "$6.80/lb",
+      "description": "Twelve-to-twenty-four month fair value for a tight but not panic-short copper market: AI/grid demand is real, mine supply disappoints, and China demand avoids a hard break.",
       "points": [
-        "ICSG 2026 deficit of ~1.0 Mt confirmed by year-end; LME inventories drop below 80 kt (vs ~150 kt avg) and Shanghai Futures Exchange stocks halve",
-        "Hyperscaler 2027 capex guidance signals continued AI buildout at >$500B/yr, locking in incremental copper demand of 150-200 kt/yr above 2024 base",
-        "Major project delays (Codelco's structural underperformance, Las Bambas community disruptions, Cobre Panamá closure) confirm supply growth tracks ~1.5%/yr vs the 3% needed to close the gap"
+        "Mine-supply growth stays near the downgraded 1.6% path and refined output growth remains constrained by concentrate tightness",
+        "AI/data-center demand tracks the 400-572 kt/yr late-decade path and grid capex keeps transformer, cable and substation order books tight",
+        "China demand stabilizes enough that the market prices a small deficit or near-zero balance rather than a surplus, keeping COMEX/LME prices in record territory"
       ]
     },
     "bull": {
-      "priceTarget": "$8.50/lb",
-      "description": "Acute physical shortage as AI capex inflects higher and a major supply disruption hits in 2026 — LME inventories fall below 50 kt and the price spike pulls forward 2028-2030 demand pricing.",
+      "priceTarget": "$9.00/lb",
+      "description": "Acute physical shortage as AI capex, grid orders and mine disruptions collide, forcing price to ration demand.",
       "points": [
-        "Hyperscaler AI capex doubles consensus by H2 2026, requiring 1+ Mt additional copper that physical markets cannot deliver within the year",
-        "A major mine disruption (Chilean strike, Peruvian community closure, or Indonesian export ban extension) removes 300+ kt of annualised supply, tipping the market into visible shortage with LME stocks below 50 kt",
+        "A major mine disruption in Chile, Peru, Indonesia or the DRC removes 300+ kt of annualized supply while Grasberg/Kamoa recover slower than planned",
+        "Hyperscaler and grid orders pull forward the late-decade AI demand curve, adding several hundred thousand tonnes of near-term procurement to an already tight market",
         "Western governments respond to AI-buildout supply risk by classifying copper as a critical mineral and accelerating strategic stockpiling — adding a sovereign demand layer that pulls forward 5-7 years of structural deficit pricing"
       ]
     }
@@ -161,7 +162,7 @@
     },
     "industrialUtility": {
       "status": "intact",
-      "note": "The conductor of the electrification age — EVs use ~4x ICE copper, AI data centers ~10x per dollar of compute, renewables 4-5x conventional, grid buildout decade-long. But aluminum genuinely substitutes in high-voltage transmission, thrifting continues to reduce copper-per-unit in EVs and solar, and sodium-ion battery progress threatens some demand layers. Real and growing utility, but not 'irreplaceable' the way the strong rating would imply."
+      "note": "The conductor of the electrification age - EVs, AI data centers, grid buildout, renewables and defense all need copper, with data centers using roughly 20-40 tonnes per MW of applied power. But aluminum genuinely substitutes in high-voltage transmission, thrifting continues to reduce copper-per-unit in some applications, and sodium-ion battery progress threatens parts of the demand stack. Real and growing utility, but not 'irreplaceable' the way the strong rating would imply."
     },
     "primaryMoat": "industrialUtility",
     "verdict": "Copper's moat is utility, but with substitution at the margin. Industrial indispensability — particularly for AI compute, EVs, and grid buildout — is the dominant pillar but rates intact rather than strong because aluminum and thrifting create genuine substitution paths. Monetary history and absolute scarcity are weak. A cyclical asset with a structural demand backdrop, not a moat-grade compounder."
@@ -176,7 +177,7 @@
       "cards": [
         {
           "label": "AI Buildout",
-          "text": "Hyperscaler data centers use ~10x the copper per dollar of compute than legacy servers. ~700 kt/yr of incremental demand by 2030 on BHP's estimate — entirely additive to the EV and grid layers."
+          "text": "AI data centers require roughly 20-40 tonnes of copper per MW of applied power. Late-decade annual demand estimates cluster around 400-572 kt/yr, additive to EV and grid demand rather than a substitute for it."
         },
         {
           "label": "Grid Modernisation",
@@ -189,5 +190,5 @@
       ]
     }
   ],
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "August 13, 2026"
 }

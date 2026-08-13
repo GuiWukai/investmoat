@@ -9,7 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$444B"
+      "value": "~$421B"
     }
   ],
   "chips": [
@@ -28,23 +28,23 @@
   ],
   "metrics": [
     {
-      "title": "Revenue",
-      "value": "$269.9B",
-      "label": "FY2025 Net Sales (+8.1% YoY)",
+      "title": "Q3 FY2026 Net Sales",
+      "value": "$69.15B",
+      "label": "+11.6% YoY; July sales $23.12B (+10.7%)",
       "icon": "DollarSign",
       "color": "#005DAA"
     },
     {
       "title": "Membership Fee Income",
-      "value": "$5.3B",
-      "label": "FY2025 Recurring Revenue (+10.3% YoY)",
+      "value": "$1.37B",
+      "label": "Q3 FY2026 +10.7% YoY; 36-week total $4.06B",
       "icon": "Users",
       "color": "#E31837"
     },
     {
-      "title": "Renewal Rate",
-      "value": "92.3%",
-      "label": "US/Canada Renewal (89.7% worldwide)",
+      "title": "July Adj. Comps",
+      "value": "+6.6%",
+      "label": "Ex gas/FX; digitally enabled comparable sales +18.2%",
       "icon": "RefreshCw",
       "color": "#10b981"
     }
@@ -73,7 +73,7 @@
     ]
   },
   "growth": {
-    "description": "New warehouse openings (targeting 28 net new in FY2026), international expansion, and digital commerce augment a durable high-single-digit revenue compounder. Q3 FY2026 (reported May 28 2026): net sales +11.6% to $69.2B, comparable sales +9.8% (+6.6% adjusted for gas/FX), digital comparable sales +21.5%, and EPS of $4.93 (+15% YoY). Membership fee income grew 10.7% YoY to $1.37B, underpinned by paid member growth and the September 2024 fee increase. Gross margin slipped 21bps to 11.04%.",
+    "description": "New warehouse openings, international expansion, and digital commerce continue to augment a durable high-single-digit to low-double-digit revenue compounder. Q3 FY2026 (reported May 28 2026): net sales +11.6% to $69.15B, net income $2.19B, diluted EPS $4.93 (+15% YoY), membership fee income +10.7% to $1.37B, and total comparable sales +9.8% (+6.6% adjusted for gas/FX). The July sales update kept the momentum intact: $23.12B net sales (+10.7%), first-48-week net sales +10.1% to $273.55B, total company adjusted comps +6.6%, and digitally enabled comps +18.2%. Costco operated 933 warehouses as of Aug. 2, 2026.",
     "additionalNote": {
       "title": "Key Growth Catalysts",
       "points": [
@@ -85,93 +85,92 @@
       ]
     },
     "growthAnalysis": {
-      "cagrEstimate": "8-10%",
-      "scoreDerivation": "Base 67 (8-10% blended CAGR; net sales +9.1% in Q2 FY2026, membership +13.6% YoY) + 5 recurring membership (100% recurring fee income, NRR effectively >100% as members rarely churn) − 2 mature market (limited TAM expansion beyond gradual warehouse opens; large-format retail is a slow-growing global format) = 70",
+      "cagrEstimate": "9-11%",
+      "cagrBasis": "Q3 FY2026 net sales +11.6% YoY, July 2026 net sales +10.7%, first-48-week net sales +10.1%, Q3 membership fee income +10.7%, and July adjusted comps +6.6% ex gas/FX. The band reflects the current low-double-digit run rate decaying toward Costco's high-single-digit mature-compounder profile.",
+      "scoreDerivation": "Base 72.9 (9-11% blended CAGR, midpoint 10%) + 1.3 trajectory (digital accelerating; warehouses and membership stable) + 0 stable margins - 5 moderate premium-multiple risk = 69",
       "drivers": [
         {
           "name": "Net New Warehouses",
-          "metric": "+24 FY2025, targeting +28 FY2026; 924 total; ~$250M revenue/warehouse",
+          "metric": "933 warehouses as of Aug. 2, 2026; first-48-week net sales +10.1% to $273.55B",
           "trend": "stable"
         },
         {
           "name": "Membership Fee Income",
-          "metric": "+10.7% Q3 FY2026 to $1.37B; ~92% US/Canada renewal; Sept-2024 fee increase flowing through",
+          "metric": "+10.7% Q3 FY2026 to $1.37B; 36-week membership fees $4.06B",
           "trend": "stable"
         },
         {
           "name": "Digitally Enabled Sales",
-          "metric": "+21.5% comparable Q3 FY2026; digital monetisation building on a small base",
+          "metric": "+21.5% comparable Q3 FY2026 and +18.2% adjusted comparable in July",
           "trend": "accelerating"
         }
       ],
       "primaryType": "market share",
-      "keyRisk": "If US consumer spending contracts due to tariff-driven inflation by mid-2026, comparable sales growth decelerates below 4% and the premium 50x+ multiple compresses to 33-35x, implying a stock price of $700-800 on FY2026 EPS of ~$21-22",
+      "keyRisk": "If traffic or discretionary comps slow below 4% while Costco still trades above 40x forward earnings, the premium multiple can compress even if membership renewal and warehouse economics remain intact.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },
   "valuation": {
     "score": 74,
-    "description": "At ~$1,000, Costco trades at approximately 47-49× forward earnings — a premium that reflects best-in-class earnings quality and predictability. The stock sits below the base case of $1,150, offering a modest margin of safety. Q3 FY2026 (EPS $4.93 +15% YoY, net sales +11.6%, comps +9.8%) confirmed execution is intact, but the headline EPS came in just shy of the loftiest estimates and the premium multiple left shares slightly lower post-print — a reminder that at ~48× there is little room for any comp slowdown.",
+    "description": "At $949.58, Costco trades about 23% above the rebuilt bear case ($775) and roughly 10% below the new base case ($1,050). Q3 FY2026 and July sales both confirmed the membership flywheel is intact, but the old $1,150 base case was too rich for a 12-24 month fair-value anchor at a still-premium ~41-42x forward earnings multiple. The stock offers modest upside, not a large margin of safety.",
     "valuationNote": {
-      "text": "At $1,013, Costco is priced for sustained 10-15% EPS compounding. FY2026 EPS estimates of ~$21-22 imply a 48-50× multiple — expensive vs. the market but historically fair for Costco. The digital channel (March 2026 +23.3% comparable) and international momentum support the premium. The base case of $1,150 offers ~14% upside; the bull case of $1,400 requires an additional fee hike and digital monetization acceleration.",
-      "fairValue": "$1,150"
+      "text": "Costco remains priced for sustained 10-15% EPS compounding. FY2026 EPS estimates around the low-$20s imply a low-40s forward multiple at the provided spot — expensive versus the market but consistent with Costco's quality when comps and membership fees grow near double digits. The base case of $1,050 assumes execution holds; the bull case requires international unit growth and digital monetization to keep the multiple elevated.",
+      "fairValue": "$1,050"
     },
     "peAnalysis": {
-      "asOf": "May 2026",
+      "asOf": "August 2026",
       "rows": [
         {
           "label": "Trailing P/E (GAAP)",
-          "value": "~55×",
-          "note": "FY2025 EPS $18.21"
+          "value": "~47×"
         },
         {
           "label": "Forward P/E (NTM)",
-          "value": "~47×",
-          "note": "consensus FY2026 EPS ~$21"
+          "value": "~41-42×",
+          "note": "market-data estimate after the stock pulled back from May levels"
         },
         {
           "label": "PEG Ratio",
-          "value": "~4.7×",
+          "value": "~4×",
           "note": "fwd P/E ÷ ~10% EPS CAGR"
         },
         {
           "label": "Price / Sales (NTM)",
-          "value": "~1.6×",
-          "note": "~$285B NTM revenue est."
+          "value": "~1.4×",
+          "note": "July first-48-week sales already $273.55B"
         },
         {
           "label": "Price / FCF",
-          "value": "~35×",
-          "note": "~$12.5B FCF (NTM est.)"
+          "value": "~30-35×"
         }
       ],
-      "summary": "Costco's forward P/E of ~47× is expensive vs. the S&P 500 (~21×) and consumer staples peers (~25-30×), but has historically commanded this premium due to its unmatched earnings predictability and membership flywheel. The PEG of 4.7 signals the growth-adjusted case is weak — the stock is priced for perfection, not value. The trailing-to-forward P/E gap is modest (+8×), consistent with steady 10-15% EPS growth rather than an earnings ramp."
+      "summary": "Costco's multiple remains high versus staples and the market, but Q3 and July results support the premium better than most retailers can: sales are still compounding near double digits, membership fee income grew 10.7% in Q3, and digitally enabled sales remain a high-teens to 20% growth layer. The valuation is still sensitive to any comp slowdown because a low-40s forward P/E leaves limited room for disappointment."
     }
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$750",
+      "priceTarget": "$775",
       "description": "A tariff-driven consumer recession causes comparable sales to stall, membership growth decelerates, and the premium multiple compresses to historical trough levels.",
       "points": [
-        "US tariff-driven cost inflation raises COGS, forcing Costco to absorb or pass on increases — either margin contraction or member pushback",
-        "Comparable sales growth falls below 4% for two consecutive quarters as members reduce discretionary bulk purchasing",
-        "P/E multiple compresses from 50x to 33-35x on decelerated growth, implying $750 on FY2027 EPS of ~$22",
+        "Tariff-driven cost inflation raises COGS, forcing Costco to absorb costs or pass through price increases that slow traffic",
+        "Comparable sales growth falls below 4% for two consecutive quarters as discretionary bulk purchasing weakens",
+        "P/E multiple compresses toward the mid-30s on decelerated growth, overwhelming the membership-fee resilience",
         "International expansion slows in China and Asia as local competition and consumer sentiment deteriorate"
       ]
     },
     "base": {
-      "priceTarget": "$1,150",
+      "priceTarget": "$1,050",
       "description": "Steady warehouse openings, sustained digital momentum, and 10-15% EPS compounding drive the stock toward fair value.",
       "points": [
-        "28 net new warehouses in FY2026; 30+ annually thereafter; international markets provide above-average unit economics",
-        "Digital comparable sales sustain 20%+ growth, driving incremental margin via personalized sales and fulfillment efficiency",
-        "Membership fee income grows 10%+ annually via member base expansion; next fee hike expected within 3-4 years",
+        "Warehouse count keeps expanding from 933 while international markets provide above-average unit economics",
+        "Digitally enabled comparable sales sustain high-teens growth, driving incremental member engagement",
+        "Membership fee income grows about 10% annually via member base expansion and the September 2024 fee increase flow-through",
         "Kirkland Signature continues to expand share; gross margin stable at ~11-12%"
       ]
     },
     "bull": {
-      "priceTarget": "$1,400",
+      "priceTarget": "$1,300",
       "description": "Aggressive international expansion, a larger-than-expected fee hike, and digital services monetization drive outsized earnings growth.",
       "points": [
         "China and India expansion materially accelerates, adding 100+ warehouses over 5 years",
@@ -224,5 +223,5 @@
     },
     "verdict": "Costco is highly resilient to AI disruption. Its moat is rooted in physical logistics, behavioral psychology, and supplier relationships — none of which AI can automate away. The membership flywheel and buying scale are structural advantages that compound over decades, making Costco one of the most durable retail businesses ever created."
   },
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "August 13, 2026"
 }

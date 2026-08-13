@@ -11,11 +11,11 @@
     },
     {
       "label": "Spot Price",
-      "value": "~$50/oz"
+      "value": "~$65.71/oz"
     },
     {
       "label": "Gold/Silver Ratio",
-      "value": "~92x"
+      "value": "~68x"
     },
     {
       "label": "Annual Mine Supply",
@@ -39,29 +39,29 @@
   "metrics": [
     {
       "title": "Spot Price",
-      "value": "~$50/oz",
-      "label": "Approaching 1980 Hunt-Brothers ATH ($50.35)",
+      "value": "~$65.71/oz",
+      "label": "Above the old $65 base; ratio compression has already done real work",
       "icon": "Coins",
       "color": "#c0c0c0"
     },
     {
       "title": "Supply Deficit",
-      "value": "−170 Moz",
-      "label": "Silver Institute 2025 — 5th Consecutive Annual Deficit",
+      "value": "−46.3 Moz",
+      "label": "Silver Institute 2026 forecast — 6th consecutive annual deficit",
       "icon": "TrendingDown",
       "color": "#ef4444"
     },
     {
       "title": "Solar PV Demand",
-      "value": "~230 Moz",
-      "label": "~20% of Total Demand; +12% YoY in 2025",
+      "value": "~151 Moz",
+      "label": "2026F PV silver use, -19% YoY as thrifting offsets installation growth",
       "icon": "Zap",
       "color": "#f59e0b"
     },
     {
       "title": "Gold/Silver Ratio",
-      "value": "~92x",
-      "label": "Long-Run Avg ~60x — Compression Catalyst for Silver",
+      "value": "~68x",
+      "label": "Still above long-run average, but no longer the easy 90x+ setup",
       "icon": "BarChart3",
       "color": "#3b82f6"
     }
@@ -73,7 +73,7 @@
     "analysisPoints": [
       {
         "title": "Dual Demand Profile",
-        "text": "Roughly 50% industrial (solar PV ~20%, electronics ~22%, brazing, antimicrobial coatings) and 50% investment/jewelry. Silver does not depend on monetary narrative alone — solar PV is a structural growth vector that compounds independently of safe-haven flows."
+        "text": "Industrial demand is still the core differentiator, but the mix has changed: PV demand is being thrifted down in 2026 while AI infrastructure, automotive, grid and electronics help offset the decline. Silver does not depend on monetary narrative alone, but the industrial floor is not a straight-line solar growth story."
       },
       {
         "title": "Constrained Supply Curve",
@@ -85,67 +85,68 @@
       },
       {
         "title": "Gold/Silver Ratio Mean Reversion",
-        "text": "Gold/silver ratio currently ~92x against a long-run average of ~60x and a bull-cycle compression target of 40-50x. In every prior precious-metals bull cycle, silver has out-performed gold on percentage basis as the ratio compresses."
+        "text": "The gold/silver ratio is now around 68x, down sharply from the stale 92x setup and close to the 50-year average near the mid-60s. Further compression can still drive upside, but the easy mean-reversion leg has already occurred."
       }
     ]
   },
   "growth": {
-    "description": "Silver demand growth is structural: solar PV (~20% of total demand and growing 12%+/yr), industrial electronics, and EV power systems are layering on top of cyclical investment demand. The Silver Institute confirmed a 5th consecutive annual deficit in 2025 (~170 Moz) — the longest deficit streak in modern silver-market history. Below-ground supply growth is constrained because ~70% of new silver comes from base-metal mines whose economics are not silver-driven.",
+    "description": "Silver is at $65.71/oz, so the old $65 base is no longer a valuation cushion. The physical market remains tight, but the growth mix is less clean than the stale file said. The Silver Institute's 2026 survey forecasts a sixth consecutive deficit of 46.3 Moz, wider than 2025's 40.3 Moz, because mine supply is flat and by-product supply cannot respond quickly. But industrial demand is forecast down 3% to 639.6 Moz, and PV silver demand is forecast down 19% to about 151 Moz as high prices accelerate thrifting and substitution. Investment demand partly offsets that: coin and net bar demand is expected to rise 18%, and ETP holdings remain large.",
     "growthAnalysis": {
-      "cagrEstimate": "7-10%",
-      "scoreDerivation": "Base 71 (7-10% price CAGR midpoint reflecting structural deficit + solar tailwind) + 1 trajectory (solar accelerating, industrial stable, investment stable) + 0 margin (cyclical industrial metal — price trajectory not a compounding revenue base) + 3 TAM expansion (solar PV, EV electronics) − 5 moderate risk (cyclical exposure to industrial recession) = 70",
+      "cagrEstimate": "5-8%",
+      "cagrBasis": "The measured series accruing to silver is physical demand and inventory draw: 2026 total demand is forecast -2%, industrial demand -3% to 639.6 Moz and PV demand -19% to about 151 Moz, while the market deficit widens from 40.3 Moz to 46.3 Moz (+15% YoY) and coin/net bar demand is forecast +18%. Estimate is cut from 7-10% because the biggest industrial growth series now points down even though the deficit still supports price.",
+      "scoreDerivation": "Base 66 (5-8% price CAGR, midpoint 6.5%, anchored on total demand -2%, industrial -3%, PV -19%, deficit +15% and coin/net bar +18%) + 0 trajectory (investment/deficit improving, PV decelerating, other industrial stable) - 5 key risk moderate = 61",
       "drivers": [
         {
           "name": "Solar PV Demand",
-          "metric": "~230 Moz silver consumed in PV in 2025 (+12% YoY); IEA forecasts 600 GW+/yr solar capacity additions through 2030",
+          "metric": "PV silver demand forecast down 19% YoY to about 151 Moz in 2026 as thrifting and substitution outweigh installation growth",
+          "trend": "decelerating"
+        },
+        {
+          "name": "Industrial, AI and Electronics",
+          "metric": "Industrial demand forecast down 3% to 639.6 Moz, with AI infrastructure, automotive, grid and other industrial uses offsetting only part of the PV decline",
+          "trend": "stable"
+        },
+        {
+          "name": "Investment Demand and Deficit",
+          "metric": "2026 deficit forecast 46.3 Moz, sixth consecutive annual shortfall; coin and net bar demand expected +18%; ETP holdings around 1.3B oz",
           "trend": "accelerating"
-        },
-        {
-          "name": "Industrial & Electronics",
-          "metric": "~310 Moz electronics demand; EV power electronics and 5G/AI semiconductor packaging adding incremental layers",
-          "trend": "stable"
-        },
-        {
-          "name": "Investment Demand",
-          "metric": "Coin & bar demand recovering after 2023-24 outflows; ETF holdings up 38% YoY in 2025 on PM cycle re-acceleration",
-          "trend": "stable"
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "A coordinated industrial slowdown (solar PV oversupply, EV demand contraction, China property drag) combined with a hawkish Fed surprise pushes silver back to $32/oz, expanding gold/silver ratio to 110+ as the safe-haven trade routes through gold rather than silver.",
+      "keyRisk": "A coordinated industrial slowdown, faster PV thrifting and a hawkish Fed surprise could widen the gold/silver ratio back toward the 90s and push silver toward the $48/oz bear case. The deficit is real, but at $65+ the market is already paying for ratio compression and continued inventory draw.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "stable"
     }
   },
   "valuation": {
-    "score": 76,
-    "description": "Silver at ~$50/oz is testing the 1980 Hunt-Brothers all-time high. Sits ~55% of the way from bear ($32) to base ($65) — attractive but the gold/silver ratio at 92x is still well above the long-run 60x, leaving room for compression-driven upside. JP Morgan year-end target $58/oz; Bank of America $65/oz; Silver Institute supply/demand model implies $70+/oz fair value at current deficit run-rate."
+    "score": 70,
+    "description": "At $65.71/oz, silver is already above the old $65 base and 37% above the rebuilt $48 bear. The new base moves to $70/oz, anchored to a sixth annual deficit and a gold/silver ratio near 64-68 rather than the stale 92x catch-up case. That leaves spot only 6% below base: still supported by physical tightness, but no longer a cheap ratio-compression setup."
   },
   "scenarios": {
     "bear": {
-      "priceTarget": "$32/oz",
-      "description": "Industrial demand contraction (solar PV oversupply, EV slowdown) combines with a hawkish Fed surprise to break the precious-metals bull; gold/silver ratio expands back to 110+ as silver de-rates faster than gold.",
+      "priceTarget": "$48/oz",
+      "description": "PV thrifting, industrial slowdown and higher real yields unwind the ratio-compression trade without breaking the long-term deficit.",
       "points": [
-        "Chinese solar PV capacity reaches a glut in 2026; module prices fall another 25%+ and thrifting reduces silver-per-cell by 15-20%",
-        "Global recession in H2 2026 pushes industrial silver demand from +4% to flat, breaking the structural-deficit narrative",
-        "Real yields rise sharply on a hawkish Fed pivot; both gold and silver de-rate but silver underperforms due to its industrial cyclical bias"
+        "PV silver demand falls more than the forecast 19% as thrifting and substitution accelerate at high prices",
+        "Industrial demand misses the 639.6 Moz forecast and the gold/silver ratio widens back toward 90x as silver's cyclical exposure is punished",
+        "Coin, bar and ETP demand reverse after the price spike, forcing the market to clear on physical users rather than investment flows"
       ]
     },
     "base": {
-      "priceTarget": "$65/oz",
-      "description": "Structural deficit holds for a 6th consecutive year; solar PV demand growth tracks IEA forecasts; gold/silver ratio compresses to ~70 as the PM bull cycle continues at moderate pace.",
+      "priceTarget": "$70/oz",
+      "description": "Twelve-to-twenty-four month fair value: the deficit persists, investment demand offsets PV thrifting, and the gold/silver ratio settles near the historical average.",
       "points": [
-        "Silver Institute confirms 2026 deficit of 150-200 Moz; combined deficit since 2021 surpasses 800 Moz, draining visible inventories below 5 months of demand",
-        "Gold sustains $4,500-5,500/oz range and gold/silver ratio compresses from 92 to ~70 as silver catches the precious-metals bid that gold has already absorbed",
-        "EV and AI-electronics silver demand adds 30-50 Moz/yr of incremental industrial demand, offsetting any solar-PV thrifting"
+        "Silver Institute's 46.3 Moz 2026 deficit is confirmed and cumulative post-2021 inventory draw keeps physical liquidity tight",
+        "Gold holds near the $4,500-$5,500/oz band and the gold/silver ratio trades around 64-68 rather than returning to the stale 90x setup",
+        "AI infrastructure, automotive, grid and other industrial uses offset enough PV weakness for total demand to decline only modestly"
       ]
     },
     "bull": {
-      "priceTarget": "$95/oz",
-      "description": "Precious-metals mania driven by sovereign-debt stress or a major fiat-confidence event compresses the gold/silver ratio to ~50; physical squeeze on registered COMEX inventories triggers a 1980-style spike.",
+      "priceTarget": "$100/oz",
+      "description": "Precious-metals stress and physical tightness compress the ratio below 50 while investment demand overwhelms PV thrifting.",
       "points": [
-        "Gold breaks $6,000/oz on a sovereign debt or fiat-confidence event; gold/silver ratio compresses from 92 to ~50 as silver follows gold higher on a percentage basis",
-        "Registered COMEX silver inventories fall below 30 Moz (vs ~50 Moz current); concentrated short positions face delivery-month squeeze risk",
+        "Gold breaks $5,500-$6,000/oz on sovereign-debt or fiat-confidence stress and the gold/silver ratio compresses below 50",
+        "Registered inventories and London liquidity tighten enough that delivery-month squeeze risk becomes the marginal price setter",
         "BRICS+ settlement mechanism adds silver to the basket alongside gold, creating a sovereign demand layer that previously did not exist"
       ]
     }
@@ -153,7 +154,7 @@
   "commodityMoats": {
     "absoluteScarcity": {
       "status": "intact",
-      "note": "~70% of silver comes from base-metal by-product mining (copper, zinc, lead, gold); primary silver mines are rare and supply cannot respond to a silver-only price signal. Stock-to-flow is materially worse than gold (silver ~1x vs gold ~62x) because industrial consumption is real and non-recoverable. Structural deficit has held for 5 consecutive years."
+      "note": "~70% of silver comes from base-metal by-product mining (copper, zinc, lead, gold); primary silver mines are rare and supply cannot respond to a silver-only price signal. Stock-to-flow is materially worse than gold because industrial consumption is real and non-recoverable. The Silver Institute now forecasts a sixth consecutive annual deficit, 46.3 Moz in 2026."
     },
     "monetaryHistory": {
       "status": "intact",
@@ -161,7 +162,7 @@
     },
     "industrialUtility": {
       "status": "intact",
-      "note": "~50% of demand is industrial — solar PV (~20%, growing 12%/yr), electronics (~22%), brazing, antimicrobial coatings. Highest electrical and thermal conductivity of any metal; antimicrobial properties make it irreplaceable in medical and food-contact applications. Smaller growth TAM than copper's electrification thesis but a structural demand floor that gold fundamentally lacks."
+      "note": "Industrial demand remains silver's differentiator - electronics, AI infrastructure, automotive, grid, brazing and medical uses - but PV demand is forecast down 19% in 2026 as thrifting and substitution accelerate. Highest electrical and thermal conductivity still gives silver a demand floor that gold lacks, just not the straight-line solar growth story the prior file carried."
     },
     "primaryMoat": "industrialUtility",
     "verdict": "Silver's moat is the hybrid case: real on all three pillars, strong on none. Monetary history is genuine but secondary to gold; industrial utility is genuine but smaller-TAM than copper; absolute scarcity is intact via by-product constraint rather than mathematical limit. Sits structurally between gold (77) and copper (51) — a real cycle play with two demand engines, but not a moat-grade compounder."
@@ -176,18 +177,18 @@
       "cards": [
         {
           "label": "Structural Deficit",
-          "text": "5 consecutive years of deficit per the Silver Institute. Combined 2021-2025 deficit ~800 Moz against annual mine supply of ~830 Moz — nearly one full year of mine production now drawn down from above-ground inventories."
+          "text": "The Silver Institute forecasts a sixth consecutive annual deficit in 2026 at 46.3 Moz, widening from 40.3 Moz in 2025. Flat mine supply and by-product dependence keep the market reliant on above-ground inventories."
         },
         {
           "label": "Solar PV Step-Change",
-          "text": "Solar PV consumed ~230 Moz of silver in 2025 (~20% of total demand) and is growing 12%/yr against IEA forecasts of 600+ GW/yr in new capacity additions through 2030. Thrifting reduces silver-per-cell at the margin but cannot offset the absolute demand growth."
+          "text": "PV is now the caution, not the clean accelerator: 2026 PV silver demand is forecast around 151 Moz, down 19% YoY, as thrifting and substitution offset installation growth. AI, automotive, grid and other industrial uses must carry the offset."
         },
         {
           "label": "Ratio Compression",
-          "text": "Gold/silver ratio currently ~92x vs long-run average ~60x. In every prior PM bull cycle since 1971 the ratio has compressed to 40-60x, with silver outperforming gold on a percentage basis. Mean reversion to 60x with gold flat would imply silver at ~$77/oz."
+          "text": "Gold/silver ratio is now around 68x, much closer to its long-run average than the stale 92x reading. Further upside needs either gold strength or compression below the average, not just easy mean reversion."
         }
       ]
     }
   ],
-  "lastAnalyzed": "May 2026"
+  "lastAnalyzed": "August 13, 2026"
 }
