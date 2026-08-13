@@ -3,7 +3,7 @@
 import React, { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
-import { Search, BarChart2, TrendingUp, Menu, FileText, CalendarDays, Briefcase } from 'lucide-react';
+import { Search, BarChart2, TrendingUp, Menu, FileText, CalendarDays, Briefcase, X } from 'lucide-react';
 import {
   Button,
   ComboBox,
@@ -326,18 +326,8 @@ export function NavBar() {
 
   return (
     <>
-      {/* Mobile top bar */}
+      {/* Mobile top bar — brand + search only; the menu lives on the FAB. */}
       <div className="sticky top-0 z-50 flex h-14 items-center gap-2 border-b border-border bg-background/85 px-4 backdrop-blur-xl lg:hidden">
-        <Button
-          aria-label="Open menu"
-          isIconOnly
-          onPress={() => setIsMenuOpen(true)}
-          size="sm"
-          variant="ghost"
-        >
-          <Menu className="size-5" />
-        </Button>
-
         <BrandMark compact />
 
         <Button
@@ -351,6 +341,18 @@ export function NavBar() {
           <Search className="size-[18px]" />
         </Button>
       </div>
+
+      {/* Mobile menu FAB — thumb-reach, bottom-right. Stays above the drawer
+          so the same control opens and closes. Hidden on the desktop sidebar. */}
+      <Button
+        aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+        className="fixed right-5 z-[200] size-12 rounded-full border border-accent/25 bg-[#0b0e13]/90 text-accent shadow-lg shadow-black/40 backdrop-blur hover:border-accent/50 hover:text-gold-bright lg:hidden"
+        isIconOnly
+        onPress={() => setIsMenuOpen((open) => !open)}
+        style={{ bottom: 'max(1.25rem, calc(env(safe-area-inset-bottom, 0px) + 0.75rem))' }}
+      >
+        {isMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+      </Button>
 
       {/* Mobile navigation drawer — Backdrop so a tap outside closes it */}
       <Drawer isOpen={isMenuOpen} onOpenChange={setIsMenuOpen}>
