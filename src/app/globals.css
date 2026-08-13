@@ -236,6 +236,29 @@ a.card:hover,
   }
 }
 
+/* Tucks off-screen on scroll-down; slides back when the reader looks up. */
+.fab-dock {
+  transition:
+    opacity 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fab-dock--hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(0, 4.5rem, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fab-dock {
+    transition: opacity 120ms linear;
+  }
+
+  .fab-dock--hidden {
+    transform: none;
+  }
+}
+
 /* HeroUI renders overlays into a container that paints its own background;
    left alone it washes the canvas out behind modals and popovers. */
 [data-overlay-container="true"] {

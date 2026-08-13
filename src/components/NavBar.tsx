@@ -303,6 +303,65 @@ function NavLink({
 }
 
 /**
+ * Reveal the mobile FAB only on an upward scroll.
+ *
+ * At rest at the top it stays hidden so the first screen is clean. A page
+ * that cannot scroll has no "up" gesture, so the button stays put there.
+ */
+function useFabRevealedOnScrollUp(forceVisible: boolean) {
+  const pathname = usePathname();
+  const [revealed, setRevealed] = useState(false);
+
+  useEffect(() => {
+    setRevealed(document.documentElement.scrollHeight <= window.innerHeight + 24);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (forceVisible) {
+      setRevealed(true);
+      return;
+    }
+
+    let lastY = window.scrollY;
+    let frame = 0;
+    const threshold = 6;
+
+    function pageCanScroll() {
+      return document.documentElement.scrollHeight > window.innerHeight + 24;
+    }
+
+    function update() {
+      frame = 0;
+      if (!pageCanScroll()) {
+        setRevealed(true);
+        lastY = window.scrollY;
+        return;
+      }
+      const y = window.scrollY;
+      const delta = y - lastY;
+      if (delta > threshold) {
+        setRevealed(false);
+      } else if (delta < -threshold) {
+        setRevealed(true);
+      }
+      lastY = y;
+    }
+
+    function onScroll() {
+      if (frame === 0) frame = requestAnimationFrame(update);
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      if (frame) cancelAnimationFrame(frame);
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, [forceVisible]);
+
+  return forceVisible || revealed;
+}
+
+/**
  * Mobile nav as a speed-dial above the FAB.
  *
  * A left drawer forces a reach across the screen; stacking the destinations
@@ -318,6 +377,7 @@ function MobileFabMenu({
 }) {
   const pathname = usePathname();
   const count = navLinks.length;
+  const revealed = useFabRevealedOnScrollUp(isOpen);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -344,7 +404,8 @@ function MobileFabMenu({
       />
 
       <div
-        className="fixed right-5 z-[200] lg:hidden"
+        aria-hidden={!revealed}
+        className={`fab-dock fixed right-5 z-[200] lg:hidden ${revealed ? '' : 'fab-dock--hidden'}`}
         style={{ bottom: 'max(1.25rem, calc(env(safe-area-inset-bottom, 0px) + 0.75rem))' }}
       >
         <nav
