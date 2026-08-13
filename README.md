@@ -11,7 +11,7 @@ A portfolio that works for everyone, built to beat the S&P 500 on average throug
 - **Moat-first** — Focus on businesses with durable competitive advantages that defend against disruption, especially from AI.
 - **AI-aware** — Weight the moats AI *cannot* easily replicate (proprietary data, regulatory lock-in, network effects) more heavily than the moats it can.
 - **Value investing** — Buy great businesses at fair prices, scored against explicit bear/base/bull scenarios using live market prices.
-- **Concentration** — 25 positions, each earning its place by clearing a hard score threshold. No diluting into mediocrity.
+- **Concentration** — 25 positions, each earning its place by clearing composite ≥80 and moat ≥70. No diluting into mediocrity.
 - **Transparent & reproducible** — Every score is computed from a stock's JSON file by a single, documented formula. Edit the data, not the numbers.
 
 ## Quick start

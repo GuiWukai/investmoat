@@ -65,7 +65,7 @@ Estimate the static valuation score based on where the current price sits relati
 - Price = bull → 45
 - Price ≥ 1.2× bull → 20
 
-**Portfolio inclusion requires an average score ≥ 75 across all three dimensions.**
+**Portfolio inclusion requires composite ≥ 80 and moat ≥ 70.**
 
 ---
 

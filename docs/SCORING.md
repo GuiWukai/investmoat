@@ -224,6 +224,7 @@ which prints the observed statistics, flags any pillar whose spread has drifted 
 In [`src/app/stockData.ts`](../src/app/stockData.ts):
 
 - `MIN_AVG_SCORE = 80` — minimum composite to be eligible.
+- `MIN_MOAT_SCORE = 70` — moat-first gate; growth/valuation alone cannot carry a weak-moat name in.
 - `MAX_PORTFOLIO = 25` — hard cap on positions.
 
-The coverage universe is sorted by composite (descending), filtered to those clearing the threshold, and the top 25 form the portfolio. The `/portfolio` page recomputes this live (using current prices) and assigns position weights from each holding's score, capped at 10% per name. Because the threshold and the 25-cap both bind, the portfolio shrinks rather than dilutes if coverage thins or valuations get rich.
+The coverage universe is sorted by composite (descending), filtered to those clearing both the composite and moat floors, and the top 25 form the portfolio. The `/portfolio` page recomputes this live (using current prices) and assigns position weights from each holding's score, capped at 10% per name. Because the floors and the 25-cap both bind, the portfolio shrinks rather than dilutes if coverage thins or valuations get rich.
