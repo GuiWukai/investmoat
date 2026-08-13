@@ -1,0 +1,224 @@
+{
+  "slug": "datadog-and-the-meter-on-the-cluster",
+  "title": "Datadog and the Meter on the Cluster",
+  "dek": "The market gapped Datadog on a ~2% sequential guide as if the observability bill were a residual of the training cluster. Two days earlier Arista had already printed +12% sequential. The variable that decides whether a meter digests with the cluster is whether the agent can be turned off.",
+  "published": "August 13, 2026",
+  "lastReviewed": "August 13, 2026",
+  "tickers": ["DDOG", "NET", "CRWD", "NVDA", "ANET", "SMCI"],
+  "tags": ["Observability", "AI Infrastructure", "Enterprise Software", "Business Models"],
+  "summary": "The market treated Datadog's Q2 2026 beat-and-raise as an AI-spend residual: revenue re-accelerated to +36% year-over-year, full-year guidance went up, and the stock gapped on a third-quarter sequential guide of roughly 2%. That is the same one-factor model used on the boxes and the switches — if the training cluster pauses, everything attached to it pauses. Read across the meters (Datadog, Cloudflare, CrowdStrike) and the cluster (NVIDIA, Arista, Super Micro) and the model does not survive. An agent already deployed keeps emitting; a switch order can be deferred. The honest counter-case is Datadog's own largest-customer concentration: a meter can still read as a residual when one lab is a material slice of consumption. That is a customer-mix fact, not a category digestion.",
+  "falsifiableBy": {
+    "claim": "Datadog Q3 2026 printing at or below the $1.135–$1.145B sequential guide and Q4 failing to re-accelerate, such that FY2026 lands below the raised $4.45–$4.47B range — the combination that would show the observability bill is a residual of a few AI labs rather than of an installed agent base.",
+    "status": "holding"
+  },
+  "sources": [
+    {
+      "id": "ddog-q2-2026",
+      "label": "Datadog Announces Second Quarter 2026 Financial Results",
+      "publisher": "Datadog",
+      "date": "August 6, 2026",
+      "url": "https://www.globenewswire.com/news-release/2026/08/06/3340086/0/en/datadog-announces-second-quarter-2026-financial-results.html",
+      "kind": "press-release"
+    },
+    {
+      "id": "anet-q2-2026",
+      "label": "Arista Networks, Inc. Reports Second Quarter 2026 Financial Results",
+      "publisher": "Arista Networks",
+      "date": "August 4, 2026",
+      "url": "https://investors.arista.com/Communications/Press-Releases-and-Events/Press-Release-Detail/2026/Arista-Networks-Inc--Reports-Second-Quarter-2026-Financial-Results/default.aspx",
+      "kind": "press-release"
+    },
+    {
+      "id": "smci-fy2026",
+      "label": "Supermicro Announces Fourth Quarter and Full Fiscal Year 2026 Financial Results",
+      "publisher": "Super Micro Computer",
+      "date": "August 11, 2026",
+      "url": "https://ir.supermicro.com/news/news-details/2026/Supermicro-Announces-Fourth-Quarter-and-Full-Fiscal-Year-2026-Financial-Results/default.aspx",
+      "kind": "press-release"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stat-strip",
+      "stats": [
+        { "label": "DDOG Composite", "live": { "ticker": "DDOG", "field": "composite" }, "note": "live, recomputed from the current price" },
+        { "label": "Moat", "live": { "ticker": "DDOG", "field": "moat" }, "note": "agent embedment, not the AI-lab tape" },
+        { "label": "Growth", "live": { "ticker": "DDOG", "field": "growth" }, "note": "Q2 re-accelerated; Q3 sequential is the test" },
+        { "label": "Valuation", "live": { "ticker": "DDOG", "field": "valuation" }, "note": "live price against the scenario band on the analysis page" }
+      ]
+    },
+    {
+      "type": "prose",
+      "body": "A prior piece on this site asked whether billing model predicts AI risk, and put Datadog in the consumption-billed control group. That question is settled enough to stop re-asking it. The question the tape actually asked on August 6 is different: **is the observability bill a residual of the training cluster?** If it is, Datadog belongs in the same trade as the GPUs, the switches and the racks. If it is not, the sequential guide that knocked the stock down is a customer-mix fact wearing a category costume."
+    },
+    {
+      "type": "heading",
+      "eyebrow": "The screen",
+      "text": "The market's one-factor model does not survive the cohort"
+    },
+    {
+      "type": "prose",
+      "body": "Six names in coverage sit inside the sentence \"AI infrastructure.\" Three of them meter the workload after it is running. Three of them sell the cluster that runs it. The scorecard below is the market's sorting applied to the framework's scores — meters first, cluster second — so the comparison is visible before any prose tries to win it."
+    },
+    {
+      "type": "scorecard",
+      "caption": "Meters versus the cluster. Sort is the article's grouping, not the composite rank — the point is the split, not the leaderboard.",
+      "tickers": ["DDOG", "NET", "CRWD", "NVDA", "ANET", "SMCI"],
+      "sort": "given",
+      "groups": [
+        { "label": "Meters the workload", "tickers": ["DDOG", "NET", "CRWD"] },
+        { "label": "Sells the cluster", "tickers": ["NVDA", "ANET", "SMCI"] }
+      ],
+      "notes": {
+        "DDOG": "Q2 +36% YoY; Q3 guided ~2% sequential off $1.12B",
+        "NET": "Q1 +34% YoY; every request still transits the edge",
+        "CRWD": "Q1 FY27 +26% YoY; Falcon agent on the endpoint",
+        "NVDA": "Q1 FY27 +85% YoY; owns the training run the residual is residual of",
+        "ANET": "Q2 +37.7% YoY and +12.1% sequential; Q3 ~$3.3B",
+        "SMCI": "FY26 +78% to $39.1B; assembler, not a system of record"
+      }
+    },
+    {
+      "type": "prose",
+      "body": "Two things fall out immediately. First, the framework does not treat this as one trade: the meters and Super Micro do not live in the same quality band, and they should not, because one group sells a control plane that is already installed and the other sells a rack that is re-bid every NVIDIA cycle. Second, **Datadog is not the name the composite is warning you about.** The disagreement the screen is built to find — durability ranked one way, the composite the other — is Super Micro and, less extremely, Arista. Datadog is a name the two halves of the framework agree on. The tape, for one morning, did not."
+    },
+    {
+      "type": "heading",
+      "eyebrow": "The evidence",
+      "text": "The print the market discarded, and the sequential it kept"
+    },
+    {
+      "type": "table",
+      "caption": "Datadog Q2 2026 — the metrics that speak to whether observability is digesting with the cluster",
+      "asOf": "August 6, 2026",
+      "sources": ["ddog-q2-2026"],
+      "columns": ["Metric", "Q2 2026", "What it tests"],
+      "highlightColumn": 1,
+      "rows": [
+        ["Revenue", "$1.12B, +36% YoY", "Whether the installed base is already slowing — it re-accelerated from +32% in Q1"],
+        ["Q3 revenue guide", "$1.135–1.145B", "Whether one sequential print can look like digestion after a beat"],
+        ["FY2026 revenue guide", "$4.45–4.47B (~+30%)", "Whether management still underwrites the year the sequential scare is about"],
+        ["$100k+ ARR customers", "~4,720, +23% YoY", "Whether land is compounding while the sequential guide goes quiet"],
+        ["Non-GAAP operating margin", "23%", "Whether the AI-telemetry surge is being bought with margin"],
+        ["Free cash flow", "$279M, ~25% margin", "Whether cash conversion confirms the same quarter the tape rejected"]
+      ]
+    },
+    {
+      "type": "prose",
+      "body": "The pairing that matters is the first two rows against the fourth. Year-over-year revenue accelerated. The customer count that pays real money grew 23%. Full-year guidance went up. The third-quarter sequential guide is the only line that looks like a pause, and it is a pause of roughly two percent off a $1.12B print — Q1 to Q2, from the same release, was an 11% sequential step. **The market indexed on the guide that was conservative, not on the quarter that just happened or on the year management still raised.**"
+    },
+    {
+      "type": "chart",
+      "variant": "bar",
+      "caption": "Datadog quarterly revenue — Q3 is the midpoint of company guidance, not a print. The sequential stall is real. It is also the only stall in the series.",
+      "asOf": "August 6, 2026",
+      "sources": ["ddog-q2-2026"],
+      "categories": ["Q1 2026", "Q2 2026", "Q3 2026 (guide)"],
+      "series": [
+        { "name": "Revenue", "values": [1.01, 1.12, 1.14] }
+      ],
+      "prefix": "$",
+      "unit": "B",
+      "note": "Q1 is first-half revenue minus Q2, both from the Q2 release. Q3 is the midpoint of the $1.135–1.145B guide."
+    },
+    {
+      "type": "prose",
+      "body": "That shape is what a digestion narrative looks like when you zoom in on one sequential step and ignore the year-over-year line. It is not what a cluster pause looks like when you read the companies that actually sell the cluster. Arista reported two days before Datadog. Super Micro reported five days after. Neither print is a pause."
+    },
+    {
+      "type": "table",
+      "caption": "Next-quarter sequential, same reporting season — the cluster was not the thing that went quiet",
+      "asOf": "August 2026",
+      "sources": ["ddog-q2-2026", "anet-q2-2026", "smci-fy2026"],
+      "columns": ["Name", "Last quarter", "Next-quarter guide", "Implied sequential", "What it tests"],
+      "highlightColumn": 3,
+      "rows": [
+        ["Datadog", "$1.12B, +36% YoY (Q2)", "$1.135–1.145B (Q3)", "~2%", "Whether the meter stalls with a lab"],
+        ["Arista", "$3.036B, +37.7% YoY / +12.1% QoQ (Q2)", "~$3.3B (Q3)", "~9%", "Whether the fabric is pausing"],
+        ["Super Micro", "$11.1B, +93% YoY (Q4 FY26)", "$14.5–15.5B (Q1 FY27)", "~31–40%", "Whether the rack assembler is pausing"]
+      ]
+    },
+    {
+      "type": "callout",
+      "tone": "insight",
+      "title": "The digestion test",
+      "body": "Apply this to any name the tape has dropped into the AI-spend residual trade: did the companies that sell the cluster actually print a pause in the same window, or did only the meter go quiet? If the fabric and the racks are still raising while the observability sequential guide goes flat, you are looking at customer mix inside the meter, not at category digestion. One quarter does not settle mix. It does move the burden of proof."
+    },
+    {
+      "type": "heading",
+      "eyebrow": "The mechanism",
+      "text": "An agent stays on; a purchase order does not"
+    },
+    {
+      "type": "prose",
+      "body": "The reason the sequential table sorts this way is not that Datadog had a better quarter than Arista. It is that the two businesses fail on different clocks. A training cluster that pauses stops ordering switches and racks. It does not uninstall the agent on the hosts that are still running inference, still paging SREs, still writing logs. Consumption pricing means the *bill* can fall when a lab digests. It does not mean the *instrumentation* leaves. That distinction is the whole article, and the matrix is where it becomes visible as a pillar rather than as a slogan."
+    },
+    {
+      "type": "moat-matrix",
+      "caption": "Five pillars that decide whether the product is a control plane already in the path, or a piece of equipment that gets re-bid. Statuses are read live from each stock's analysis.",
+      "moats": ["transactionEmbedding", "systemOfRecord", "proprietaryData", "bundling", "businessLogic"],
+      "groups": [
+        { "label": "Meters the workload", "tickers": ["DDOG", "NET", "CRWD"] },
+        { "label": "Sells the cluster", "tickers": ["NVDA", "ANET", "SMCI"] }
+      ],
+      "tickers": ["DDOG", "NET", "CRWD", "NVDA", "ANET", "SMCI"]
+    },
+    {
+      "type": "prose",
+      "body": "Transaction embedding is the column that does the work. It is strong across the three meters — Datadog's agent on the host, Cloudflare's path on the request, CrowdStrike's Falcon sensor on the endpoint — and it is not applicable for Arista and weakened for Super Micro, which is the framework saying a switch and a rack are not in the customer's transaction the way an agent is. NVIDIA is the exception inside the cluster group, and it should be: it owns the run the other two are residual of, and its embedding is the CUDA software layer, not a server chassis. Super Micro goes dark across system of record, proprietary data and business logic. That is not a scoring quirk. It is the honest description of an assembler."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Datadog.** The agent is already on the host, the container and the pod. Turning it off is an SRE program, not a capex meeting. The bill is usage of that control plane. Usage can dip with a lab; the install does not.",
+        "**Cloudflare.** Every customer request still transits the edge. AI Gateway puts rate limits, provider routing and agent-call logs in the same path. A training pause does not take the website off Cloudflare.",
+        "**CrowdStrike.** Falcon is the endpoint decision loop. Threat Graph compounds with every additional sensor. Security telemetry is not an AI-lab consumption line, which is why CrowdStrike was never in this trade — and why its presence in the meter group is the control.",
+        "**NVIDIA / Arista / Super Micro.** These are the purchase orders. NVIDIA's software layer is durable; Arista's EOS and CloudVision are durable relative to a white box; Super Micro's advantage is velocity around someone else's cycle. All three can have a quiet quarter because a cluster was not built. Only Super Micro has almost nothing underneath that quiet quarter except the next cycle."
+      ]
+    },
+    {
+      "type": "heading",
+      "eyebrow": "The counter-case",
+      "text": "A meter can still be a residual — Super Micro always is"
+    },
+    {
+      "type": "prose",
+      "body": "The residual frame is not confused. It is correct about Super Micro, and it can be correct about Datadog for a reason the matrix will not show you. Those are different failures, and the article that pretends they are the same is doing the tape's job rather than the framework's."
+    },
+    {
+      "type": "prose",
+      "body": "**Super Micro is the cohort member where the other side is right, and it is right all the way down.** The matrix does not give it a system of record, does not give it proprietary data, and rates transaction embedding weakened. Fiscal 2026 revenue of $39.1B, up from $22.0B, with Q4 at $11.1B and a first-quarter fiscal 2027 guide of $14.5–15.5B, is what a residual of NVIDIA's cycle looks like when the cycle is still on. Site-readiness delays earlier in that year — power, cooling, networking on the customer's side — already showed how little of the P&L Super Micro controls once a design win is booked. If cluster spend pauses, Super Micro pauses. There is no agent to keep emitting. Pricing it as an AI-spend residual is not a misread. It is the business."
+    },
+    {
+      "type": "prose",
+      "body": "Datadog's version of the same argument is narrower and more dangerous, because it can hide inside a strong matrix. Consumption pricing means the meter *reads* the customer's spend. If the largest customer is an AI lab that just finished a training buildout, sequential revenue can go quiet while every durability pillar stays exactly where it is. The Q2 release does not name that customer; it does not have to. A ~2% sequential guide after an 11% sequential quarter, against a 23% increase in $100k+ ARR customers, is what concentration looks like when land is still compounding and volume at the top of the funnel is not. **The bear case that deserves to be taken seriously is not that observability is AI capex. It is that Datadog's growth is still too much one lab's telemetry.**"
+    },
+    {
+      "type": "prose",
+      "body": "That bear case has a clean tell, and it is not another Datadog print in isolation. It is Datadog's sequential against Cloudflare's and CrowdStrike's. Those two meters do not carry the same AI-lab concentration in their last reported quarters, and they sit in the same embedding column. If Datadog's second half stays muted while the other two meters keep printing mid-20s or better year-over-year, the residual frame was right about this name and wrong about the category — which is still a reason not to own it, just a different one than the tape used. If all three meters decelerate together while Arista and Super Micro keep raising, then the category digestion story the tape told on August 6 was early rather than false. Watch the split, not the headline."
+    },
+    {
+      "type": "prose",
+      "body": "Arista sits between the poles and is the most useful name in the cluster group for that reason. EOS and CloudVision are a real system of record for network state, which Super Micro does not have, and Q2's +12.1% sequential with a ~$3.3B third-quarter guide is the opposite of a pause. The residual frame is still more true of Arista than of Datadog, because a fabric order can be deferred in a way an installed agent cannot. A future quarter in which Arista's sequential goes quiet while Datadog's $100k+ customer count keeps compounding would be evidence for the thesis, not against it. A quarter in which both go quiet together would be the cluster pause the August tape claimed and did not yet have."
+    },
+    {
+      "type": "heading",
+      "eyebrow": "Positioning",
+      "text": "What the framework concludes"
+    },
+    {
+      "type": "prose",
+      "body": "The useful output of the screen is not a ranking of six AI-infrastructure stocks. It is a rule for the next time the tape puts a meter in a cluster trade. Datadog's Q2 did not show a business that is rolling over. It showed a business whose next sequential step is conservative, whose larger-customer count is still compounding, and whose durability pillars are the ones you would want if the question is \"can this be turned off.\" The valuation pillar on the [analysis page](/stocks/ddog) is the live read on whether the post-print gap paid you for that distinction. This page is the argument that the distinction is real."
+    },
+    {
+      "type": "callout",
+      "tone": "risk",
+      "title": "What would break this",
+      "body": "Three things, in order. **One:** Q3 printing at or below the $1.135–$1.145B guide and Q4 failing to re-accelerate, so FY2026 comes in below the raised $4.45–$4.47B range — volume at a few labs was the growth, and embedment was the story told about it. **Two:** $100k+ ARR customer growth decelerating toward the low teens while sequential stays muted, which would mean land is slowing too, not just the top-of-funnel lab. **Three:** Cloudflare and CrowdStrike holding their year-over-year rates while Datadog's second half does not — concentration, not category, and still a reason the meter was priced as a residual."
+    },
+    {
+      "type": "prose",
+      "body": "The lesson is the same one the seat-pricing piece ended on, pointed at a different sorting. When a category-wide narrative re-prices the meters and the machines identically, the framework's job is to find the names where the narrative does not fit the install. On this cohort the AI-spend residual was the right read on Super Micro and a plausible read on Datadog's largest customer. It was the wrong read on the agent."
+    }
+  ]
+}
