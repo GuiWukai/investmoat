@@ -335,8 +335,8 @@ export function HeadingAnchor({ id }: { id: string }) {
   );
 }
 
-/** Appears once the reader is a screen deep. Same corner as the FAB cluster;
- *  the dock hides on scroll-down, so they don't fight while reading.
+/** Desktop-only. On a phone the article back-to-top lives in the FAB cluster
+ *  next to search and the menu, so this one would double up.
  */
 export function BackToTop() {
   const [show, setShow] = useState(false);
@@ -359,7 +359,7 @@ export function BackToTop() {
         window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? 'auto' : 'smooth' })
       }
       aria-label="Back to top"
-      className="fixed z-[110] flex h-10 w-10 items-center justify-center rounded-full border border-accent/25 bg-[#0b0e13]/90 text-accent/70 shadow-lg shadow-black/40 backdrop-blur transition-colors hover:border-accent/50 hover:text-gold-bright right-5 bottom-[max(1.25rem,calc(env(safe-area-inset-bottom,0px)+0.75rem))] lg:bottom-5"
+      className="hidden lg:flex fixed z-[110] h-10 w-10 items-center justify-center rounded-full border border-accent/25 bg-[#0b0e13]/90 text-accent/70 shadow-lg shadow-black/40 backdrop-blur transition-colors hover:border-accent/50 hover:text-gold-bright right-5 bottom-5"
     >
       <ArrowUp size={16} />
     </button>
