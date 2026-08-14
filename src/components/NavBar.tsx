@@ -303,17 +303,22 @@ function NavLink({
 }
 
 /**
- * Reveal the mobile FAB only on an upward scroll.
+ * Reveal the mobile FAB cluster on an upward scroll.
  *
- * At rest at the top it stays hidden so the first screen is clean. A page
- * that cannot scroll has no "up" gesture, so the button stays put there.
+ * Search lives on the cluster, so it stays visible at the top of a page —
+ * hiding it there would bury the most-used action. It tucks away while the
+ * reader scrolls down and slides back when they look up. A page that cannot
+ * scroll has no "up" gesture, so the cluster stays put there.
  */
 function useFabRevealedOnScrollUp(forceVisible: boolean) {
   const pathname = usePathname();
-  const [revealed, setRevealed] = useState(false);
+  const [revealed, setRevealed] = useState(true);
 
   useEffect(() => {
-    setRevealed(document.documentElement.scrollHeight <= window.innerHeight + 24);
+    setRevealed(
+      window.scrollY <= 24 ||
+        document.documentElement.scrollHeight <= window.innerHeight + 24
+    );
   }, [pathname]);
 
   useEffect(() => {
@@ -338,6 +343,11 @@ function useFabRevealedOnScrollUp(forceVisible: boolean) {
         return;
       }
       const y = window.scrollY;
+      if (y <= 24) {
+        setRevealed(true);
+        lastY = y;
+        return;
+      }
       const delta = y - lastY;
       if (delta > threshold) {
         setRevealed(false);
@@ -361,46 +371,54 @@ function useFabRevealedOnScrollUp(forceVisible: boolean) {
   return forceVisible || revealed;
 }
 
+const fabButtonClass =
+  'size-12 rounded-full border border-accent/25 bg-[#0b0e13]/90 text-accent shadow-lg shadow-black/40 backdrop-blur hover:border-accent/50 hover:text-gold-bright';
+
 /**
- * Mobile nav as a speed-dial above the FAB.
+ * Mobile chrome as a bottom-right cluster: search plus a speed-dial menu.
  *
- * A left drawer forces a reach across the screen; stacking the destinations
- * on the same thumb that opened the menu keeps every tap in one corner.
+ * Search is a sibling of the menu button so it stays one tap away — burying
+ * it in the dial would add a tap for the action used most. Destinations
+ * still fan up from the menu so a thumb never has to cross the screen.
  * Items stay mounted so they can collapse back into the button on close.
  */
-function MobileFabMenu({
-  isOpen,
-  onOpenChange,
+function MobileFabDock({
+  isMenuOpen,
+  isSearchOpen,
+  onMenuOpenChange,
+  onSearchPress,
 }: {
-  isOpen: boolean;
-  onOpenChange: (open: boolean) => void;
+  isMenuOpen: boolean;
+  isSearchOpen: boolean;
+  onMenuOpenChange: (open: boolean) => void;
+  onSearchPress: () => void;
 }) {
   const pathname = usePathname();
   const count = navLinks.length;
-  const revealed = useFabRevealedOnScrollUp(isOpen);
+  const revealed = useFabRevealedOnScrollUp(isMenuOpen) && !isSearchOpen;
 
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isMenuOpen) return;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     const onKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') onOpenChange(false);
+      if (event.key === 'Escape') onMenuOpenChange(false);
     };
     window.addEventListener('keydown', onKey);
     return () => {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener('keydown', onKey);
     };
-  }, [isOpen, onOpenChange]);
+  }, [isMenuOpen, onMenuOpenChange]);
 
   return (
     <>
       <div
-        aria-hidden={!isOpen}
+        aria-hidden={!isMenuOpen}
         className={`fixed inset-0 z-[190] bg-black/50 backdrop-blur-[2px] transition-opacity duration-200 lg:hidden ${
-          isOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
+          isMenuOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
         }`}
-        onClick={() => onOpenChange(false)}
+        onClick={() => onMenuOpenChange(false)}
       />
 
       <div
@@ -409,10 +427,10 @@ function MobileFabMenu({
         style={{ bottom: 'max(1.25rem, calc(env(safe-area-inset-bottom, 0px) + 0.75rem))' }}
       >
         <nav
-          aria-hidden={!isOpen}
+          aria-hidden={!isMenuOpen}
           aria-label="Menu"
           className="fab-speed-dial absolute right-0 bottom-[calc(100%+0.65rem)] flex flex-col items-end gap-2"
-          data-open={isOpen || undefined}
+          data-open={isMenuOpen || undefined}
           id="mobile-fab-menu"
         >
           {navLinks.map((item, index) => {
@@ -428,10 +446,10 @@ function MobileFabMenu({
                     : 'border-accent/25 bg-[#0b0e13]/92 text-foreground/85'
                 }`}
                 href={item.href}
-                onClick={() => onOpenChange(false)}
+                onClick={() => onMenuOpenChange(false)}
                 style={
                   {
-                    '--fab-i': isOpen ? count - 1 - index : index,
+                    '--fab-i': isMenuOpen ? count - 1 - index : index,
                   } as React.CSSProperties
                 }
               >
@@ -445,27 +463,38 @@ function MobileFabMenu({
           })}
         </nav>
 
-        <Button
-          aria-controls="mobile-fab-menu"
-          aria-expanded={isOpen}
-          aria-label={isOpen ? 'Close menu' : 'Open menu'}
-          className="size-12 rounded-full border border-accent/25 bg-[#0b0e13]/90 text-accent shadow-lg shadow-black/40 backdrop-blur hover:border-accent/50 hover:text-gold-bright"
-          isIconOnly
-          onPress={() => onOpenChange(!isOpen)}
-        >
-          <span className="relative size-5">
-            <Menu
-              className={`absolute inset-0 size-5 transition-all duration-200 ${
-                isOpen ? 'rotate-90 opacity-0' : 'rotate-0 opacity-100'
-              }`}
-            />
-            <X
-              className={`absolute inset-0 size-5 transition-all duration-200 ${
-                isOpen ? 'rotate-0 opacity-100' : '-rotate-90 opacity-0'
-              }`}
-            />
-          </span>
-        </Button>
+        <div className="flex items-center gap-2.5">
+          <Button
+            aria-label="Search stocks"
+            className={fabButtonClass}
+            isIconOnly
+            onPress={onSearchPress}
+          >
+            <Search className="size-5" />
+          </Button>
+
+          <Button
+            aria-controls="mobile-fab-menu"
+            aria-expanded={isMenuOpen}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            className={fabButtonClass}
+            isIconOnly
+            onPress={() => onMenuOpenChange(!isMenuOpen)}
+          >
+            <span className="relative size-5">
+              <Menu
+                className={`absolute inset-0 size-5 transition-all duration-200 ${
+                  isMenuOpen ? 'rotate-90 opacity-0' : 'rotate-0 opacity-100'
+                }`}
+              />
+              <X
+                className={`absolute inset-0 size-5 transition-all duration-200 ${
+                  isMenuOpen ? 'rotate-0 opacity-100' : '-rotate-90 opacity-0'
+                }`}
+              />
+            </span>
+          </Button>
+        </div>
       </div>
     </>
   );
@@ -495,23 +524,22 @@ export function NavBar() {
 
   return (
     <>
-      {/* Mobile top bar — brand + search only; the menu lives on the FAB. */}
-      <div className="sticky top-0 z-50 flex h-14 items-center gap-2 border-b border-border bg-background/85 px-4 backdrop-blur-xl lg:hidden">
+      {/* Mobile top bar — brand only; search and menu live on the FAB.
+          Not sticky: once the reader is into a page the bar scrolls away
+          and the viewport is theirs. */}
+      <div className="flex h-12 items-center border-b border-border px-4 lg:hidden">
         <BrandMark compact />
-
-        <Button
-          aria-label="Search stocks"
-          className="ml-auto"
-          isIconOnly
-          onPress={() => setIsSearchOpen(true)}
-          size="sm"
-          variant="ghost"
-        >
-          <Search className="size-[18px]" />
-        </Button>
       </div>
 
-      <MobileFabMenu isOpen={isMenuOpen} onOpenChange={setIsMenuOpen} />
+      <MobileFabDock
+        isMenuOpen={isMenuOpen}
+        isSearchOpen={isSearchOpen}
+        onMenuOpenChange={setIsMenuOpen}
+        onSearchPress={() => {
+          setIsMenuOpen(false);
+          setIsSearchOpen(true);
+        }}
+      />
 
       {/* Mobile search sheet — full-width so results have room to breathe */}
       <MobileSearchSheet isOpen={isSearchOpen} onOpenChange={setIsSearchOpen} />

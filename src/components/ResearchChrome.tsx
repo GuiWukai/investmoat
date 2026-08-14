@@ -32,8 +32,9 @@ function useActiveSection(sections: ArticleSection[]) {
         const visible = ids.filter((id) => seen.get(id));
         if (visible.length > 0) setActive(visible[0]);
       },
-      // Band sits just under the sticky header and covers the upper third of
-      // the viewport — where a reader's eye actually is.
+      // Band sits near the top of the viewport and covers the upper third —
+      // where a reader's eye actually is. The mobile header is not sticky,
+      // so there is no chrome to offset against.
       { rootMargin: '-88px 0px -66% 0px', threshold: 0 },
     );
 
