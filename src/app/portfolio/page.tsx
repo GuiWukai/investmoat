@@ -202,7 +202,7 @@ export default function PortfolioPage() {
         return { s, composite };
       })
       .sort((a, b) => b.composite - a.composite)
-      .map(({ s, composite }, idx) => ({
+      .map(({ s, composite }) => ({
         ticker:   s.ticker,
         name:     s.name,
         slug:     s.slug,
@@ -211,7 +211,6 @@ export default function PortfolioPage() {
         category: stockMeta[s.ticker]?.category ?? "Other",
         stock:    s,
         composite,
-        rank:     idx + 1,
       }));
   }, [allPrices]);
 
@@ -576,14 +575,14 @@ export default function PortfolioPage() {
 
           {/* Data rows */}
           <div className="divide-y divide-foreground/[0.04]">
-            {portfolioWithScores.map((stock) => (
+            {portfolioWithScores.map((stock, idx) => (
               <button
                 key={stock.ticker}
                 onClick={() => router.push(stock.href)}
                 className="w-full flex items-center gap-3 md:gap-4 px-4 md:px-5 py-3.5 hover:bg-foreground/[0.04] transition-colors group text-left"
               >
-                {/* Rank */}
-                <RankBadge rank={stock.rank} />
+                {/* Position in the IM25, not universe composite rank */}
+                <RankBadge rank={idx + 1} />
 
                 {/* Color accent */}
                 <div className="w-0.5 self-stretch rounded-full shrink-0" style={{ background: stock.color }} />
@@ -723,8 +722,8 @@ export default function PortfolioPage() {
                   className="w-full flex items-center gap-3 md:gap-4 px-4 md:px-5 py-3.5 hover:bg-foreground/[0.04] transition-colors group text-left animate-slide-in-left stagger-fill-both"
                   style={{ animationDelay: `${0.5 + idx * 0.035}s` }}
                 >
-                  {/* Rank */}
-                  <RankBadge rank={stock.rank} />
+                  {/* Continues after the IM25 so a gated #2 is not still marked 2 */}
+                  <RankBadge rank={portfolio.length + idx + 1} />
 
                   {/* Color accent */}
                   <div className="w-0.5 self-stretch rounded-full shrink-0" style={{ background: stock.color }} />
@@ -732,7 +731,14 @@ export default function PortfolioPage() {
                   {/* Name + ticker */}
                   <div className="min-w-[110px] md:min-w-[140px]">
                     <div className="font-bold text-sm text-foreground/90 leading-tight">{stock.name}</div>
-                    <div className="text-[10px] text-foreground/28 tracking-[0.12em] font-black uppercase mt-0.5">{stock.ticker}</div>
+                    <div className="flex items-center gap-1.5 mt-0.5">
+                      <div className="text-[10px] text-foreground/28 tracking-[0.12em] font-black uppercase">{stock.ticker}</div>
+                      {stock.stock.scores[0] < MIN_MOAT_SCORE && (
+                        <span className="text-[9px] font-bold uppercase tracking-wider text-rose-400/65">
+                          Moat floor
+                        </span>
+                      )}
+                    </div>
                   </div>
 
                   {/* Category badge */}
