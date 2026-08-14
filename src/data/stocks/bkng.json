@@ -1,0 +1,205 @@
+{
+  "slug": "bkng",
+  "ticker": "BKNG",
+  "name": "Booking Holdings",
+  "lastAnalyzed": "August 14, 2026",
+  "titleColor": "#003580",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "BKNG"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$161B"
+    }
+  ],
+  "chips": [
+    {
+      "label": "OTA | Travel Marketplace",
+      "color": "primary"
+    },
+    {
+      "label": "Two-Sided Network",
+      "color": "success"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "Gross Bookings (Q2 2026)",
+      "value": "$51.0B",
+      "label": "+9% YoY (+8% cc); room nights 325M (+5%); CC ADRs +2%",
+      "icon": "Globe",
+      "color": "#003580"
+    },
+    {
+      "title": "Adj EBITDA (Q2 2026)",
+      "value": "$2.6B",
+      "label": "+9% YoY; 36.0% margin (+40bps); adj EPS $2.54 (+15%)",
+      "icon": "Percent",
+      "color": "#10b981"
+    },
+    {
+      "title": "H1 2026 Buybacks",
+      "value": "$7.4B",
+      "label": "Avg ~$173; Q2 FCF $3.6B; $14.5B authorization left",
+      "icon": "Coins",
+      "color": "#0ea5e9"
+    }
+  ],
+  "moat": {
+    "description": "The world's largest online travel agency, with a two-sided hotel-and-alternative-accommodation network that independent European properties cannot replace and a Genius/direct-channel mix that is slowly reducing Google dependence — durable, not impregnable, and still more paid-search exposed than Airbnb.",
+    "analysisTitle": "The Default-Hotel Marketplace Moat",
+    "analysisSummary": "Booking's moat is **supply density in global accommodations plus a growing merchant-and-loyalty stack** — a two-sided marketplace that is the default hotel search in much of Europe, with Connected Trip and Genius as the compounding layers:",
+    "analysisPoints": [
+      {
+        "title": "Supply Density, Especially Independent Hotels",
+        "text": "Booking.com, Agoda, Priceline, and Kayak together are the largest OTA platform globally. Independent hotels and alternative accommodations — ~37% of Booking.com room nights — depend on Booking's demand in a way chains do not, because they have no comparable brand-dot-com funnel. That supply density pulls demand; demand pulls more supply. Airbnb is the verb in homes; Booking is the verb in hotels outside North America. The US remains the open flank: high-single-digit room-night growth is real progress, not yet category leadership."
+      },
+      {
+        "title": "Genius and the Direct Mix",
+        "text": "B2C direct mix has sat in the mid-60% range over the trailing four quarters, and the mobile app is high-50% of room nights — both up year over year even as SEO remains under pressure across consumer internet. Genius Level 2 and 3 members are more than 30% of the active customer base and a high-50% share of room nights; they book further ahead, return more often, and convert more on direct. That is the mechanism that makes the Google tax optional rather than structural — still unfinished, because the residual paid mix is large enough that a search-funnel shock would still hit growth."
+      },
+      {
+        "title": "Merchant Rails and Connected Trip",
+        "text": "Merchant gross bookings are ~73% of the total, up about four points year over year, and merchant revenue grew 15% in Q2 to $5.13B. The payments platform is what lets Booking stitch flights (+4% tickets despite Middle East capacity cuts), attractions (double digits), and stays into a Connected Trip — already a low-double-digit share of Booking.com transactions, growing more than twice the platform rate. Multi-vertical bookers return more frequently. The bundle is early, not locked; it is the path from a hotel search box to a travel operating system."
+      }
+    ]
+  },
+  "growth": {
+    "description": "Q2 2026 (reported August 4) beat the high end of guidance on room nights, gross bookings, revenue, and adj EBITDA: room nights 325M (+5%), gross bookings $51.0B (+9% / +8% cc), revenue $7.4B (+8% / +7% cc), adj EBITDA $2.6B (+9%) at 36.0% margin. Adj EPS $2.54 (+15%) outran EBITDA because average share count fell 6%. Domestic room nights grew high single digits; international only slightly, as long-haul stayed pressured by Middle East flight capacity and ticket prices. FY26 guide is high-single-digit gross bookings, revenue, and adj EBITDA, with adj EPS growth in the low-to-mid teens; Q3 room nights 3–5% and top-line 4–6%. Transformation run-rate savings were raised to ~$650M by end-2027.",
+    "growthAnalysis": {
+      "cagrEstimate": "7-11%",
+      "cagrBasis": "Reported revenue: FY2025 ~$26.9B, TTM to June 2026 $28.24B, Q2 2026 $7.35B (+8% YoY / +7% cc). FY2026 guide is high-single-digit revenue (Street ~$29.3B, ~+9% vs FY2025) with Q3 4–6% after Middle East long-haul drag. Unbounded and fully accruing — Booking books merchant, agency, and advertising revenue, not just GBV. The 7–11% blended 3–5yr estimate is that HSD path plus Connected Trip / merchant-mix lift and a fade of the Middle East headwind, decaying toward high-single digits as Europe matures, not an extrapolation of any single quarter or of adj EPS (which is running low-to-mid teens on buybacks that cut average diluted shares ~6% YoY).",
+      "scoreDerivation": "Base 71 (7–11% CAGR, midpoint 9%) + 0 trajectory (merchant/Connected Trip accelerating; room nights decelerating on ME long-haul) + 4 expanding margin (adj EBITDA +40bps, Transformation $650M) − 5 moderate Google/AI-funnel risk = 70",
+      "drivers": [
+        {
+          "name": "Room Nights",
+          "metric": "Q2 325M (+5% YoY; beat guide by ~1pp); Q3 guided 3–5%; domestic HSD, international slightly up; Europe/Asia/RoW mid-single digits, US HSD",
+          "trend": "decelerating"
+        },
+        {
+          "name": "Merchant Mix and Connected Trip",
+          "metric": "Merchant ~73% of GBV (+~4pp YoY); merchant revenue $5.13B (+15%); Connected Trip low-double-digit % of Booking.com transactions, growing >2× platform",
+          "trend": "accelerating"
+        },
+        {
+          "name": "US and Asia",
+          "metric": "US room nights HSD with direct-channel growth; Asia mid-single digits, domestic low-double digits via Booking.com + Agoda",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "If Google AI Overviews and Gemini trip-planning capture a material share of high-intent hotel queries by end of 2027 and Booking's mid-60% B2C direct mix fails to offset, paid-channel CAC rises and room-night growth stalls below 3% even after the Middle East long-haul drag fades.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 74,
+    "description": "At ~$214 (August 14, 2026; 25-for-1 split on April 2) BKNG trades at ~$161B, ~20× Street FY26 EPS of ~$10.51 and ~24× TTM GAAP EPS of $9.00 — a mid-teens-EPS compounder at a market multiple, not a discount. Price sits between the $155 bear and $245 base (Street mean ~$225; Argus $245, Susquehanna $240). The 52-week range is $150–$232; H1 buybacks of $7.4B at ~$173 average are accretive to the current tape.",
+    "peAnalysis": {
+      "asOf": "August 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~24×",
+          "note": "$9.00 TTM EPS on $28.24B revenue"
+        },
+        {
+          "label": "Forward P/E (FY26)",
+          "value": "~20×",
+          "note": "Street EPS ~$10.51; adj EPS guided low-to-mid teens growth"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~1.7×",
+          "note": "fwd P/E ÷ ~12% EPS CAGR (buybacks included)"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~5.5×",
+          "note": "~$29.3B Street FY26 revenue"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~19×",
+          "note": "TTM levered FCF ~$7.7B; Q2 FCF $3.6B"
+        }
+      ],
+      "summary": "The forward multiple is fair versus a high-single-digit revenue / low-to-mid-teens EPS compounder, not cheap: PEG ~1.7× prices in the buyback and the margin expansion, so upside is execution on Connected Trip and a fade of the Middle East long-haul drag rather than a re-rating from a depressed base. Trailing-to-forward compression (24× → 20×) is the share-count and earnings-ramp signal, not a growth re-acceleration in room nights."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$155",
+      "description": "Long-haul stays impaired into 2027, Google AI siphoning high-intent search lifts CAC, room nights stall in the low single digits, and the multiple compresses to ~15× FY26 EPS as Booking is re-rated a mature paid-traffic OTA.",
+      "points": [
+        "Room-night growth runs below 3% through 2027 as Middle East long-haul does not normalise and SEO/AI-overview traffic keeps sliding",
+        "Direct mix fails to rise from the mid-60s, so marketing as a share of gross bookings moves above 5% and incremental ROIs compress",
+        "Multiple compresses to ~15× on ~$10.50 FY26 EPS, revisiting the post-split 52-week low area"
+      ]
+    },
+    "base": {
+      "priceTarget": "$245",
+      "description": "FY26–27 revenue compounds high single digits as guided, adj EPS stays in the low-to-mid teens on buybacks plus modest margin expansion, Connected Trip remains a low-double-digit mix, and the stock holds ~20× FY27 earnings.",
+      "points": [
+        "FY26 revenue ~$29B (high single digits) and FY27 still HSD as the Middle East drag fades and US/Asia stay mid-to-high single digits",
+        "Adj EPS compounds low-to-mid teens on a ~6% annual share-count reduction and Transformation savings ramping toward $650M by end-2027",
+        "Connected Trip stays a low-double-digit share of Booking.com transactions; Genius L2/L3 mix keeps rising; multiple holds ~20× FY27 EPS ~$12.25"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$330",
+      "description": "Connected Trip and US share gains lift revenue into the low double digits by FY28, AI discovery becomes a net booking channel, and the multiple re-rates toward 24× as Booking is priced as a travel operating system rather than a hotel search box.",
+      "points": [
+        "Connected Trip mix moves into the high teens of Booking.com transactions by FY28, with merchant mix above 80% of gross bookings",
+        "US room nights sustain low-double-digit growth and Booking takes visible share from Expedia in the US hotel OTA pool",
+        "AI-powered discovery (Penny, Booking.com inspiration) plus partner AI tools become a measurable incremental channel, and the stock holds ~24× FY28 EPS approaching $14"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Genius, saved trips, and the Booking.com/Priceline/Agoda apps create real habit — app mix is high-50% of room nights — but the core search-and-filter UI is substitutable, and agentic assistants (including Booking's own Penny) lower the switching cost further."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Ranking, Genius scoring, cancellation prediction, and merchant-payment routing are differentiated systems trained on decades of bookings; they are not a unique ontology a competitor cannot eventually replicate with enough demand data."
+    },
+    "publicDataAccess": {
+      "status": "na",
+      "note": "Hotel and flight inventory is multi-homed across OTAs; Booking does not control a scarce public data source."
+    },
+    "talentScarcity": {
+      "status": "weakened",
+      "note": "Marketplace, payments, and ML talent is broadly available; AI coding tools further reduce any scarcity advantage in ranking and app engineering."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "Connected Trip (stays + flights + cars + attractions) is a real bundle at a low-double-digit share of Booking.com transactions, growing more than twice the platform; Genius is the loyalty glue. Early, not locked-in."
+    },
+    "proprietaryData": {
+      "status": "strong",
+      "note": "Decades of booking, search-intent, cancellation, review, and partner-performance data across hotels and alternative accommodations is unique at this scale and feeds ranking, Genius, and pricing in a way Expedia or Google cannot copy without the demand."
+    },
+    "regulatoryLockIn": {
+      "status": "na",
+      "note": "Travel and payments regulation is a cost of doing business, not a switching barrier; EU DMA/DSA pressure on Google is a possible tailwind, not a Booking lock-in."
+    },
+    "networkEffects": {
+      "status": "strong",
+      "note": "Largest global accommodations marketplace: independent-hotel supply density attracts demand, demand attracts more supply. Strongest in Europe; the US is still a share-gain story rather than a default. Classic two-sided OTA economics, with multi-homing as the cap."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Merchant mix ~73% of gross bookings and a stored-payment / Genius profile make Booking the checkout layer for a growing share of trips, but travel is episodic and travellers still multi-home — not a daily-spend embed like a card network or DashPass."
+    },
+    "systemOfRecord": {
+      "status": "intact",
+      "note": "Genius identity, trip history, and the partner extranet are the de-facto record of many independent hotels' demand and of frequent travellers' stays; they are not the hotel's PMS, so migration risk is real even if inconvenient."
+    },
+    "verdict": "Booking is a net AI beneficiary on operations — customer-service cost per booking is falling at a double-digit rate via Voice AI, and Penny/inspiration tools are being tested as discovery surfaces — while remaining a net risk on distribution, because a material slice of high-intent traffic still arrives via Google. The AI-resilient moats are the accommodations network and proprietary booking data; the AI-vulnerable ones are the learned search UI and any remaining paid-search dependence. Durability in the AI era tracks whether Genius and Connected Trip keep pulling that residual paid mix onto owned channels."
+  }
+}
