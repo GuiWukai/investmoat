@@ -59,8 +59,8 @@ Ambient gold glows, the gold scrollbar, and gold text selection are also defined
 
 ## Brand mark & favicon
 
-- [`src/components/MoatMark.tsx`](../src/components/MoatMark.tsx) — the logo glyph: a keep standing in a circular moat, with three rising crenellated towers that read as both a fortress and a growth chart, and a disc for the protected core. Fill-based, inherits `currentColor`, used inside the gold nav tile.
-- Favicon (same keep-in-a-moat mark, gold on a dark rounded tile): [`src/app/favicon.ico`](../src/app/favicon.ico) (16/32/48), [`src/app/icon.png`](../src/app/icon.png) (192), [`src/app/apple-icon.png`](../src/app/apple-icon.png) (180). Next.js App Router file conventions pick these up automatically.
+- [`src/components/MoatMark.tsx`](../src/components/MoatMark.tsx) — the logo glyph: a circular moat around three rising bars (invest + moat). Inherits `currentColor`, used inside the gold nav tile.
+- Favicon (same mark, gold on a dark rounded tile): [`src/app/favicon.ico`](../src/app/favicon.ico) (16/32/48), [`src/app/icon.png`](../src/app/icon.png) (192), [`src/app/apple-icon.png`](../src/app/apple-icon.png) (180). Next.js App Router file conventions pick these up automatically.
 
 ## OpenGraph / social images
 
