@@ -470,7 +470,9 @@ function MobileFabDock({
             isIconOnly
             onPress={onSearchPress}
           >
-            <Search className="size-5" />
+            <span className="relative size-5">
+              <Search className="absolute inset-0 size-5" />
+            </span>
           </Button>
 
           <Button
