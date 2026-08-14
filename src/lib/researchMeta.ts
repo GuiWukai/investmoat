@@ -25,13 +25,14 @@ export interface ArticleSection {
 }
 
 /**
- * The table-of-contents entries for an article: every `heading` block, plus
- * the falsifiable-claim panel when the article has one. Ids are de-duplicated
- * so two identically-titled headings still get distinct anchors.
+ * The table-of-contents entries for an article: the thesis panel, every
+ * `heading` block, then the standing foot sections the renderer emits.
+ * Ids are de-duplicated so two identically-titled headings still get
+ * distinct anchors.
  */
 export function getArticleSections(article: ResearchArticleData): ArticleSection[] {
   const seen = new Map<string, number>();
-  const sections: ArticleSection[] = [];
+  const sections: ArticleSection[] = [{ id: THESIS_ID, label: 'Thesis in brief' }];
 
   for (const block of article.blocks) {
     if (block.type !== 'heading') continue;
@@ -48,12 +49,21 @@ export function getArticleSections(article: ResearchArticleData): ArticleSection
   if (article.falsifiableBy) {
     sections.push({ id: FALSIFIABLE_ID, label: 'What would prove this wrong' });
   }
+  if (article.sources && article.sources.length > 0) {
+    sections.push({ id: SOURCES_ID, label: 'Sources' });
+  }
+  if (article.revisions && article.revisions.length > 0) {
+    sections.push({ id: REVISIONS_ID, label: 'Revisions' });
+  }
 
   return sections;
 }
 
-/** Anchor id for the falsifiable-claim panel — shared by the TOC and the view. */
+/** Standing section ids — shared by the TOC and the view. */
+export const THESIS_ID = 'thesis';
 export const FALSIFIABLE_ID = 'what-would-prove-this-wrong';
+export const SOURCES_ID = 'sources';
+export const REVISIONS_ID = 'revisions';
 
 /**
  * Resolve heading blocks to their anchor ids in render order, so the renderer

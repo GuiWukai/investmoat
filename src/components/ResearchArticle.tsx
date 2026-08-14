@@ -23,7 +23,10 @@ import {
   buildHeadingIds,
   getArticleSections,
   readingMinutes,
+  THESIS_ID,
   FALSIFIABLE_ID,
+  SOURCES_ID,
+  REVISIONS_ID,
 } from '@/lib/researchMeta';
 import {
   BackToTop,
@@ -267,8 +270,6 @@ function FigureCaption({ children }: { children: ReactNode }) {
 // against the document it came from. Every static figure block cites one, and
 // the citation is a link the reader can actually open.
 
-const SOURCES_ID = 'sources';
-
 /**
  * The citation line under a `table` or `chart`. Numbers match the Sources
  * section at the foot of the article, so a reader can go either direction.
@@ -315,7 +316,7 @@ const SOURCE_KIND_LABELS: Record<ArticleSource['kind'], string> = {
 
 function SourcesSection({ sources }: { sources: ArticleSource[] }) {
   return (
-    <section id={SOURCES_ID} className="mt-14 scroll-mt-24">
+    <section id={SOURCES_ID} className="mt-14 scroll-mt-20 xl:scroll-mt-8">
       <div className="section-label mb-4">Sources</div>
       <ol className="space-y-2.5 not-prose">
         {sources.map((source, i) => (
@@ -487,6 +488,28 @@ function Scorecard({
       <Card className="overflow-hidden">
         {/* Phone: stacked cards. Tablet and up: the full table. */}
         <div className="sm:hidden">
+          <div className="flex items-center gap-1 px-3 py-2 overflow-x-auto research-scroll">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-foreground/25 shrink-0 pr-1">
+              Sort
+            </span>
+            {columns.map((c) => {
+              const active = sort === c.key;
+              return (
+                <button
+                  type="button"
+                  key={c.key}
+                  onClick={() => setSort(active ? authored : c.key)}
+                  className={`shrink-0 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-widest transition-colors ${
+                    active
+                      ? 'text-foreground/80 bg-foreground/[0.07]'
+                      : 'text-foreground/30 hover:text-foreground/55'
+                  }`}
+                >
+                  {c.label}
+                </button>
+              );
+            })}
+          </div>
           {groups.map((g) => (
             <React.Fragment key={g.label || 'all'}>
               {g.label && (
@@ -620,6 +643,48 @@ function moatStatusFor(ticker: string, moat: TenMoatKey): string | null {
   return pillar?.status ?? null;
 }
 
+function MoatStatusPill({ status }: { status: string | null }) {
+  const style = status ? STATUS_STYLE[status] : null;
+  if (!style) return <span className="text-foreground/15 text-xs">—</span>;
+  return (
+    <span
+      className="inline-flex items-center justify-center px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wide whitespace-nowrap"
+      style={{
+        color: style.color,
+        background: `${style.color}15`,
+        border: `1px solid ${style.color}28`,
+      }}
+    >
+      {style.label}
+    </span>
+  );
+}
+
+/** Phone layout for a matrix row — five status columns don't fit a 390px screen. */
+function MoatMatrixCard({ ticker, moats }: { ticker: string; moats: TenMoatKey[] }) {
+  const entry = byTicker[ticker];
+  if (!entry) return null;
+  return (
+    <Link
+      href={entry.href}
+      className="block px-4 py-3.5 border-t border-foreground/[0.05] active:bg-foreground/[0.04] transition-colors"
+    >
+      <div className="min-w-0">
+        <div className="text-[13px] font-black tracking-wider text-foreground/90">{ticker}</div>
+        <div className="text-[11px] text-foreground/40 leading-tight truncate">{entry.name}</div>
+      </div>
+      <div className="mt-2.5 space-y-1.5">
+        {moats.map((m) => (
+          <div key={m} className="flex items-center justify-between gap-3">
+            <span className="text-[12px] text-foreground/45 leading-snug">{MOAT_LABELS[m]}</span>
+            <MoatStatusPill status={moatStatusFor(ticker, m)} />
+          </div>
+        ))}
+      </div>
+    </Link>
+  );
+}
+
 function MoatMatrix({ block }: { block: MoatMatrixBlock }) {
   const groups = block.groups
     ? block.groups.map((g) => ({
@@ -634,78 +699,78 @@ function MoatMatrix({ block }: { block: MoatMatrixBlock }) {
   return (
     <figure className="my-9 not-prose">
       <Card className="overflow-hidden">
-        <ScrollArea>
-          <table className="w-full min-w-[560px] text-left">
-            <thead>
-              <tr className="text-[10px] font-bold uppercase tracking-widest text-foreground/25">
-                <th
-                  scope="col"
-                  className="py-3 pl-4 pr-3 font-bold sticky left-0 bg-[#0b0e13] z-10"
-                >
-                  Name
-                </th>
-                {block.moats.map((m) => (
-                  <th key={m} scope="col" className="py-3 px-2 text-center font-bold">
-                    {MOAT_LABELS[m]}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {groups.map((g) => (
-                <React.Fragment key={g.label || 'all'}>
-                  {g.label && (
-                    <tr>
-                      <td
-                        colSpan={block.moats.length + 1}
-                        className="pt-4 pb-1.5 pl-4 text-[10px] font-bold uppercase tracking-widest text-accent bg-foreground/[0.015]"
-                      >
-                        {g.label}
-                      </td>
-                    </tr>
-                  )}
-                  {g.tickers.map((t) => (
-                    <tr
-                      key={t}
-                      className="group border-t border-foreground/[0.05] hover:bg-foreground/[0.03] transition-colors"
-                    >
-                      <td className="py-3 pl-4 pr-3 sticky left-0 bg-[#0b0e13] group-hover:bg-[#0d1016] transition-colors">
-                        <Link
-                          href={byTicker[t].href}
-                          className="text-[13px] font-black tracking-wider text-foreground/90 hover:text-gold-bright transition-colors"
-                        >
-                          {t}
-                        </Link>
-                      </td>
-                      {block.moats.map((m) => {
-                        const status = moatStatusFor(t, m);
-                        const style = status ? STATUS_STYLE[status] : null;
-                        return (
-                          <td key={m} className="py-3 px-2 text-center">
-                            {style ? (
-                              <span
-                                className="inline-flex items-center justify-center px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wide whitespace-nowrap"
-                                style={{
-                                  color: style.color,
-                                  background: `${style.color}15`,
-                                  border: `1px solid ${style.color}28`,
-                                }}
-                              >
-                                {style.label}
-                              </span>
-                            ) : (
-                              <span className="text-foreground/15 text-xs">—</span>
-                            )}
-                          </td>
-                        );
-                      })}
-                    </tr>
-                  ))}
-                </React.Fragment>
+        <div className="sm:hidden">
+          {groups.map((g) => (
+            <React.Fragment key={g.label || 'all'}>
+              {g.label && (
+                <div className="pt-3.5 pb-1.5 px-4 text-[10px] font-bold uppercase tracking-widest text-accent bg-foreground/[0.015] border-t border-foreground/[0.05]">
+                  {g.label}
+                </div>
+              )}
+              {g.tickers.map((t) => (
+                <MoatMatrixCard key={t} ticker={t} moats={block.moats} />
               ))}
-            </tbody>
-          </table>
-        </ScrollArea>
+            </React.Fragment>
+          ))}
+        </div>
+
+        <div className="hidden sm:block">
+          <ScrollArea>
+            <table className="w-full min-w-[560px] text-left">
+              <thead>
+                <tr className="text-[10px] font-bold uppercase tracking-widest text-foreground/25">
+                  <th
+                    scope="col"
+                    className="py-3 pl-4 pr-3 font-bold sticky left-0 bg-[#0b0e13] z-10"
+                  >
+                    Name
+                  </th>
+                  {block.moats.map((m) => (
+                    <th key={m} scope="col" className="py-3 px-2 text-center font-bold">
+                      {MOAT_LABELS[m]}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {groups.map((g) => (
+                  <React.Fragment key={g.label || 'all'}>
+                    {g.label && (
+                      <tr>
+                        <td
+                          colSpan={block.moats.length + 1}
+                          className="pt-4 pb-1.5 pl-4 text-[10px] font-bold uppercase tracking-widest text-accent bg-foreground/[0.015]"
+                        >
+                          {g.label}
+                        </td>
+                      </tr>
+                    )}
+                    {g.tickers.map((t) => (
+                      <tr
+                        key={t}
+                        className="group border-t border-foreground/[0.05] hover:bg-foreground/[0.03] transition-colors"
+                      >
+                        <td className="py-3 pl-4 pr-3 sticky left-0 bg-[#0b0e13] group-hover:bg-[#0d1016] transition-colors">
+                          <Link
+                            href={byTicker[t].href}
+                            className="text-[13px] font-black tracking-wider text-foreground/90 hover:text-gold-bright transition-colors"
+                          >
+                            {t}
+                          </Link>
+                        </td>
+                        {block.moats.map((m) => (
+                          <td key={m} className="py-3 px-2 text-center">
+                            <MoatStatusPill status={moatStatusFor(t, m)} />
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </React.Fragment>
+                ))}
+              </tbody>
+            </table>
+          </ScrollArea>
+        </div>
         <div className="px-4 py-2.5 border-t border-foreground/[0.05] flex flex-wrap items-center gap-x-3 gap-y-1.5">
           {legend.map((key) => (
             <span key={key} className="inline-flex items-center gap-1.5">
@@ -740,8 +805,8 @@ function StaticTable({ block, sources }: { block: TableBlock; sources: ArticleSo
                     key={c}
                     scope="col"
                     className={`py-3 px-4 font-bold ${
-                      i === block.highlightColumn ? 'text-gold-bright' : ''
-                    }`}
+                      i === 0 ? 'sticky left-0 bg-[#0b0e13] z-10' : ''
+                    } ${i === block.highlightColumn ? 'text-gold-bright' : ''}`}
                   >
                     {c}
                   </th>
@@ -752,18 +817,18 @@ function StaticTable({ block, sources }: { block: TableBlock; sources: ArticleSo
               {block.rows.map((row, ri) => (
                 <tr
                   key={ri}
-                  className="border-t border-foreground/[0.05] hover:bg-foreground/[0.03] transition-colors"
+                  className="group border-t border-foreground/[0.05] hover:bg-foreground/[0.03] transition-colors"
                 >
                   {row.map((cell, ci) => (
                     <td
                       key={ci}
                       className={`py-3 px-4 text-[13px] leading-snug ${
-                        ci === block.highlightColumn
+                        ci === 0
+                          ? 'sticky left-0 bg-[#0b0e13] group-hover:bg-[#0d1016] z-10 text-foreground/75 font-medium'
+                          : ci === block.highlightColumn
                           ? 'text-foreground/90 font-semibold tabular-nums'
-                          : ci === 0
-                          ? 'text-foreground/75 font-medium'
                           : 'text-foreground/50'
-                      }`}
+                      } ${ci === block.highlightColumn && ci === 0 ? 'text-foreground/90 font-semibold' : ''}`}
                     >
                       {renderInline(cell, `t${ri}-${ci}`)}
                     </td>
@@ -815,6 +880,7 @@ function formatValue(value: number, block: ChartBlock): string {
 }
 
 function Chart({ block, sources }: { block: ChartBlock; sources: ArticleSource[] }) {
+  const [active, setActive] = useState<number | null>(null);
   const values = block.series.flatMap((s) => s.values).filter((v): v is number => v !== null);
   const rawMin = Math.min(...values);
   const rawMax = Math.max(...values);
@@ -841,6 +907,21 @@ function Chart({ block, sources }: { block: ChartBlock; sources: ArticleSource[]
   const labelEvery = block.categories.length > 9 ? Math.ceil(block.categories.length / 8) : 1;
   const titleId = `chart-${block.categories.length}-${block.series[0].name.replace(/\W+/g, '')}`;
 
+  function indexFromPointer(clientX: number, target: Element) {
+    const rect = target.getBoundingClientRect();
+    const svgX = ((clientX - rect.left) / rect.width) * CHART_W;
+    let best = 0;
+    let bestDist = Infinity;
+    for (let i = 0; i < block.categories.length; i++) {
+      const d = Math.abs(x(i) - svgX);
+      if (d < bestDist) {
+        bestDist = d;
+        best = i;
+      }
+    }
+    return best;
+  }
+
   return (
     <figure className="my-9 not-prose">
       <Card className="p-4 md:p-5">
@@ -858,12 +939,17 @@ function Chart({ block, sources }: { block: ChartBlock; sources: ArticleSource[]
           ))}
         </div>
 
-        <ScrollArea>
+        <div className="relative">
           <svg
             viewBox={`0 0 ${CHART_W} ${CHART_H}`}
-            className="w-full min-w-[520px] h-auto"
+            className="w-full h-auto cursor-crosshair touch-manipulation"
             role="img"
             aria-labelledby={titleId}
+            onPointerMove={(e) => setActive(indexFromPointer(e.clientX, e.currentTarget))}
+            onPointerDown={(e) => setActive(indexFromPointer(e.clientX, e.currentTarget))}
+            onPointerLeave={(e) => {
+              if (e.pointerType === 'mouse') setActive(null);
+            }}
           >
             <title id={titleId}>
               {block.caption ?? `${block.series.map((s) => s.name).join(' and ')} by period`}
@@ -890,6 +976,17 @@ function Chart({ block, sources }: { block: ChartBlock; sources: ArticleSource[]
               </g>
             ))}
 
+            {active != null && (
+              <line
+                x1={x(active)}
+                x2={x(active)}
+                y1={PAD.top}
+                y2={PAD.top + innerH}
+                stroke="rgba(228, 201, 138, 0.4)"
+                strokeDasharray="3 3"
+              />
+            )}
+
             {block.categories.map((c, i) =>
               i % labelEvery === 0 ? (
                 <text
@@ -897,7 +994,7 @@ function Chart({ block, sources }: { block: ChartBlock; sources: ArticleSource[]
                   x={x(i)}
                   y={CHART_H - PAD.bottom + 22}
                   textAnchor="middle"
-                  className="fill-foreground/30"
+                  className={active === i ? 'fill-foreground/70' : 'fill-foreground/30'}
                   style={{ fontSize: 12 }}
                 >
                   {c}
@@ -919,7 +1016,7 @@ function Chart({ block, sources }: { block: ChartBlock; sources: ArticleSource[]
                       width={Math.max(groupW - 2, 1)}
                       height={Math.max(Math.abs(y(v) - y(Math.max(lo, 0))), 1)}
                       fill={color}
-                      opacity={0.85}
+                      opacity={active == null || active === i ? 0.85 : 0.35}
                       rx={2}
                     />
                   ),
@@ -954,23 +1051,57 @@ function Chart({ block, sources }: { block: ChartBlock; sources: ArticleSource[]
                   ))}
                   {s.values.map((v, i) =>
                     v === null ? null : (
-                      <circle key={i} cx={x(i)} cy={y(v)} r={3.25} fill={color} />
+                      <circle
+                        key={i}
+                        cx={x(i)}
+                        cy={y(v)}
+                        r={active === i ? 4.5 : 3.25}
+                        fill={color}
+                      />
                     ),
                   )}
                 </g>
               );
             })}
           </svg>
-        </ScrollArea>
 
-        {/* The same numbers, for screen readers and anyone copying the data out. */}
-        <table className="sr-only">
-          <caption>{block.caption ?? 'Chart data'}</caption>
+          {active != null && (
+            <div className="pointer-events-none absolute top-1 left-1 right-1 flex justify-end sm:justify-start">
+              <div className="rounded-lg border border-foreground/[0.08] bg-[#0b0e13]/92 px-3 py-2 shadow-lg shadow-black/40 backdrop-blur">
+                <div className="text-[11px] font-bold uppercase tracking-wider text-foreground/50 mb-1">
+                  {block.categories[active]}
+                </div>
+                <div className="space-y-0.5">
+                  {block.series.map((s, i) => (
+                    <div key={s.name} className="flex items-center gap-2 text-[12px]">
+                      <span
+                        className="w-1.5 h-1.5 rounded-full shrink-0"
+                        style={{ background: SERIES_COLORS[i % SERIES_COLORS.length] }}
+                      />
+                      <span className="text-foreground/45">{s.name}</span>
+                      <span className="ml-auto pl-3 tabular-nums font-semibold text-foreground/80">
+                        {s.values[active] === null
+                          ? '—'
+                          : formatValue(s.values[active] as number, block)}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* The same numbers, visible — a chart is an argument, not a picture. */}
+        <table className="mt-4 w-full">
+          <caption className="sr-only">{block.caption ?? 'Chart data'}</caption>
           <thead>
-            <tr>
-              <th scope="col">Period</th>
+            <tr className="text-[10px] font-bold uppercase tracking-widest text-foreground/25">
+              <th scope="col" className="py-1.5 pr-3 text-left font-bold">
+                Period
+              </th>
               {block.series.map((s) => (
-                <th key={s.name} scope="col">
+                <th key={s.name} scope="col" className="py-1.5 px-2 text-right font-bold">
                   {s.name}
                 </th>
               ))}
@@ -978,11 +1109,31 @@ function Chart({ block, sources }: { block: ChartBlock; sources: ArticleSource[]
           </thead>
           <tbody>
             {block.categories.map((c, i) => (
-              <tr key={c + i}>
-                <th scope="row">{c}</th>
+              <tr
+                key={c + i}
+                className={`border-t border-foreground/[0.05] cursor-pointer transition-colors ${
+                  active === i ? 'bg-foreground/[0.05]' : 'hover:bg-foreground/[0.03]'
+                }`}
+                onClick={() => setActive(i)}
+                onMouseEnter={() => setActive(i)}
+                onMouseLeave={() => setActive((cur) => (cur === i ? null : cur))}
+              >
+                <th
+                  scope="row"
+                  className={`py-1.5 pr-3 text-left text-[12px] font-medium ${
+                    active === i ? 'text-foreground/80' : 'text-foreground/55'
+                  }`}
+                >
+                  {c}
+                </th>
                 {block.series.map((s) => (
-                  <td key={s.name}>
-                    {s.values[i] === null ? 'not reported' : formatValue(s.values[i] as number, block)}
+                  <td
+                    key={s.name}
+                    className={`py-1.5 px-2 text-right text-[12px] tabular-nums ${
+                      active === i ? 'text-foreground/80' : 'text-foreground/45'
+                    }`}
+                  >
+                    {s.values[i] === null ? '—' : formatValue(s.values[i] as number, block)}
                   </td>
                 ))}
               </tr>
@@ -1145,7 +1296,7 @@ function Block({
   switch (block.type) {
     case 'heading':
       return (
-        <div className="mt-14 mb-5 scroll-mt-24" id={headingId}>
+        <div className="mt-14 mb-5 scroll-mt-20 xl:scroll-mt-8" id={headingId}>
           {block.eyebrow && <div className="section-label mb-2">{block.eyebrow}</div>}
           <h2 className="group text-[26px] md:text-[32px] font-bold text-foreground/90 leading-tight">
             {block.text}
@@ -1263,7 +1414,7 @@ function RevisionLog({
   published: string;
 }) {
   return (
-    <section className="mt-14">
+    <section id={REVISIONS_ID} className="mt-14 scroll-mt-20 xl:scroll-mt-8">
       <div className="section-label mb-4">Revisions</div>
       <ol className="not-prose space-y-3">
         {revisions.map((r, i) => (
@@ -1354,7 +1505,7 @@ export default function ResearchArticle({
                 <ArrowLeft size={12} />
                 Research
               </Link>
-              <CopyLinkButton />
+              <CopyLinkButton title={article.title} />
             </div>
 
             <div className="flex flex-wrap items-center gap-2 mt-5 mb-4">
@@ -1394,8 +1545,9 @@ export default function ResearchArticle({
 
           {/* Thesis up front — a reader who bounces should still leave with the argument. */}
           <section
+            id={THESIS_ID}
             aria-label="Thesis in brief"
-            className="rounded-2xl border border-foreground/[0.07] bg-foreground/[0.02] p-5 md:p-6"
+            className="rounded-2xl border border-foreground/[0.07] bg-foreground/[0.02] p-5 md:p-6 scroll-mt-20 xl:scroll-mt-8"
             style={{ borderLeft: '3px solid rgba(201, 169, 106, 0.55)' }}
           >
             <div className="section-label mb-2.5">Thesis in brief</div>
@@ -1439,7 +1591,7 @@ export default function ResearchArticle({
           )}
 
           <div className="mt-8">
-            <ContentsDisclosure sections={sections} />
+            <ContentsDisclosure sections={sections} minutes={minutes} />
           </div>
 
           {article.blocks.map((block, i) => (
@@ -1460,7 +1612,7 @@ export default function ResearchArticle({
           {article.falsifiableBy && (
             <div
               id={FALSIFIABLE_ID}
-              className="mt-14 scroll-mt-24 rounded-2xl border border-foreground/[0.06] bg-foreground/[0.02] p-5 md:p-6"
+              className="mt-14 scroll-mt-20 xl:scroll-mt-8 rounded-2xl border border-foreground/[0.06] bg-foreground/[0.02] p-5 md:p-6"
               style={{
                 borderLeft: `3px solid ${FALSIFIABLE_STYLE[article.falsifiableBy.status].color}`,
               }}
