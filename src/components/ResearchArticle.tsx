@@ -1189,9 +1189,9 @@ function AccentPanel({
     >
       <span
         aria-hidden
-        className="pointer-events-none absolute inset-x-5 top-0 h-px"
+        className="pointer-events-none absolute left-5 right-8 top-0 h-[2px]"
         style={{
-          background: `linear-gradient(90deg, ${color} 0%, ${color}66 32%, transparent 100%)`,
+          background: `linear-gradient(90deg, ${color} 0%, ${color} 24%, transparent 100%)`,
         }}
       />
       {children}
