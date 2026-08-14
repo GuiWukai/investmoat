@@ -1158,17 +1158,51 @@ const CALLOUT_STYLE = {
   method: { color: '#c9a96a', Icon: FlaskConical, fallback: 'Method' },
 } as const;
 
+/**
+ * Flagged panel — thesis, callouts, falsifiable claim. A thick left border on a
+ * rounded card traces the radius and reads as a bent edge; the accent is a
+ * straight top hairline inset from the corners instead, same language as the
+ * fund-rule under a heading.
+ */
+function AccentPanel({
+  color,
+  as: Tag = 'div',
+  className = '',
+  id,
+  children,
+  ...rest
+}: {
+  color: string;
+  as?: 'div' | 'aside' | 'section';
+  className?: string;
+  id?: string;
+  children: ReactNode;
+} & React.HTMLAttributes<HTMLElement>) {
+  return (
+    <Tag
+      id={id}
+      className={`relative rounded-2xl border border-foreground/[0.07] p-5 md:p-6 ${className}`}
+      {...rest}
+      style={{
+        background: `linear-gradient(180deg, ${color}0d 0%, rgba(255,255,255,0.012) 60%)`,
+      }}
+    >
+      <span
+        aria-hidden
+        className="pointer-events-none absolute inset-x-5 top-0 h-px"
+        style={{
+          background: `linear-gradient(90deg, ${color} 0%, ${color}66 32%, transparent 100%)`,
+        }}
+      />
+      {children}
+    </Tag>
+  );
+}
+
 function Callout({ block, index }: { block: CalloutBlock; index: number }) {
   const { color, Icon, fallback } = CALLOUT_STYLE[block.tone];
   return (
-    <aside
-      className="my-9 rounded-2xl p-5 md:p-6 not-prose"
-      style={{
-        background: `linear-gradient(180deg, ${color}0d 0%, rgba(255,255,255,0.015) 60%)`,
-        border: '1px solid rgba(255,255,255,0.06)',
-        borderLeft: `3px solid ${color}`,
-      }}
-    >
+    <AccentPanel as="aside" color={color} className="my-9 not-prose">
       <div className="flex items-center gap-2 mb-2.5">
         <Icon size={14} style={{ color }} />
         <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color }}>
@@ -1178,7 +1212,7 @@ function Callout({ block, index }: { block: CalloutBlock; index: number }) {
       <p className="research-prose text-[15.5px] text-foreground/70 leading-[1.7]">
         {renderInline(block.body, `c${index}`)}
       </p>
-    </aside>
+    </AccentPanel>
   );
 }
 
@@ -1343,14 +1377,7 @@ function Block({
 function MethodFooter({ slug }: { slug: string }) {
   const { color, Icon } = CALLOUT_STYLE.method;
   return (
-    <aside
-      className="my-9 rounded-2xl p-5 md:p-6 not-prose"
-      style={{
-        background: `linear-gradient(180deg, ${color}0d 0%, rgba(255,255,255,0.015) 60%)`,
-        border: '1px solid rgba(255,255,255,0.06)',
-        borderLeft: `3px solid ${color}`,
-      }}
-    >
+    <AccentPanel as="aside" color={color} className="my-9 not-prose">
       <div className="flex items-center gap-2 mb-2.5">
         <Icon size={14} style={{ color }} />
         <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color }}>
@@ -1379,7 +1406,7 @@ function MethodFooter({ slug }: { slug: string }) {
         </Link>{' '}
         resolves the same way.
       </p>
-    </aside>
+    </AccentPanel>
   );
 }
 
@@ -1544,17 +1571,18 @@ export default function ResearchArticle({
           <div className="fund-rule my-8" />
 
           {/* Thesis up front — a reader who bounces should still leave with the argument. */}
-          <section
+          <AccentPanel
+            as="section"
             id={THESIS_ID}
+            color="rgba(201, 169, 106, 0.9)"
+            className="scroll-mt-20 xl:scroll-mt-8"
             aria-label="Thesis in brief"
-            className="rounded-2xl border border-foreground/[0.07] bg-foreground/[0.02] p-5 md:p-6 scroll-mt-20 xl:scroll-mt-8"
-            style={{ borderLeft: '3px solid rgba(201, 169, 106, 0.55)' }}
           >
             <div className="section-label mb-2.5">Thesis in brief</div>
             <p className="research-prose text-[15.5px] md:text-base text-foreground/65 leading-[1.7]">
               {article.summary}
             </p>
-          </section>
+          </AccentPanel>
 
           {/* Names covered — live, so a skim still lands on current scores. */}
           {covered.length > 0 && (
@@ -1608,12 +1636,10 @@ export default function ResearchArticle({
           {hasLiveBlock && <MethodFooter slug={article.slug} />}
 
           {article.falsifiableBy && (
-            <div
+            <AccentPanel
               id={FALSIFIABLE_ID}
-              className="mt-14 scroll-mt-20 xl:scroll-mt-8 rounded-2xl border border-foreground/[0.06] bg-foreground/[0.02] p-5 md:p-6"
-              style={{
-                borderLeft: `3px solid ${FALSIFIABLE_STYLE[article.falsifiableBy.status].color}`,
-              }}
+              color={FALSIFIABLE_STYLE[article.falsifiableBy.status].color}
+              className="mt-14 scroll-mt-20 xl:scroll-mt-8"
             >
               <div className="flex flex-wrap items-center gap-3 mb-2.5">
                 <div className="section-label">What would prove this wrong</div>
@@ -1628,7 +1654,7 @@ export default function ResearchArticle({
                   {renderInline(article.falsifiableBy.note, 'fnote')}
                 </p>
               )}
-            </div>
+            </AccentPanel>
           )}
 
           {article.sources && article.sources.length > 0 && (
