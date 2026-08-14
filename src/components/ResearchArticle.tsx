@@ -1590,9 +1590,7 @@ export default function ResearchArticle({
             </div>
           )}
 
-          <div className="mt-8">
-            <ContentsDisclosure sections={sections} minutes={minutes} />
-          </div>
+          <ContentsDisclosure sections={sections} minutes={minutes} />
 
           {article.blocks.map((block, i) => (
             <Block
