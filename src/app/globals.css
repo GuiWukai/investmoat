@@ -335,7 +335,7 @@ html {
   min-height: 100vh;
   /* `clip`, not `hidden`: `overflow-x: hidden` turns this into a scroll
      container, which silently kills `position: sticky` for everything inside
-     it — the mobile nav bar and the research contents rail included. */
+     it — the research contents rail and stock-page score tabs included. */
   overflow-x: clip;
   background:
     radial-gradient(ellipse 70% 38% at 12% 0%, rgba(201, 169, 106, 0.055) 0%, transparent 60%),
