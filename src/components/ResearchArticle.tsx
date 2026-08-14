@@ -1159,10 +1159,12 @@ const CALLOUT_STYLE = {
 } as const;
 
 /**
- * Flagged panel — thesis, callouts, falsifiable claim. A thick left border on a
- * rounded card traces the radius and reads as a bent edge; the accent is a
- * straight top hairline inset from the corners instead, same language as the
- * fund-rule under a heading.
+ * Flagged panel — thesis, callouts, falsifiable claim.
+ *
+ * A thick left border on a fully-rounded card traces the radius (a bent
+ * stripe). A top tick avoids that but hides the accent. This treatment
+ * squares the left edge and paints a straight 2px rule there, so the
+ * colour is a hard vertical — rounded only on the right, like a pull-quote.
  */
 function AccentPanel({
   color,
@@ -1181,19 +1183,13 @@ function AccentPanel({
   return (
     <Tag
       id={id}
-      className={`relative rounded-2xl border border-foreground/[0.07] p-5 md:p-6 ${className}`}
+      className={`rounded-r-xl rounded-l-none border border-foreground/[0.07] p-5 md:p-6 ${className}`}
       {...rest}
       style={{
         background: `linear-gradient(180deg, ${color}0d 0%, rgba(255,255,255,0.012) 60%)`,
+        boxShadow: `inset 2px 0 0 ${color}`,
       }}
     >
-      <span
-        aria-hidden
-        className="pointer-events-none absolute left-5 right-8 top-0 h-[2px]"
-        style={{
-          background: `linear-gradient(90deg, ${color} 0%, ${color} 24%, transparent 100%)`,
-        }}
-      />
       {children}
     </Tag>
   );
