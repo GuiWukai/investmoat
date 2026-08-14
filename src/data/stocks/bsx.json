@@ -1,0 +1,212 @@
+{
+  "slug": "bsx",
+  "ticker": "BSX",
+  "name": "Boston Scientific Corporation",
+  "lastAnalyzed": "August 14, 2026",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "BSX"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$75B"
+    }
+  ],
+  "chips": [
+    {
+      "label": "MedTech | Cardiovascular | MedSurg",
+      "color": "primary"
+    },
+    {
+      "label": "Category Leader",
+      "color": "success"
+    },
+    {
+      "label": "Growth Reset",
+      "color": "warning"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "Q2 2026 Revenue",
+      "value": "$5.44B",
+      "label": "+7.5% reported / +7.0% organic",
+      "icon": "TrendingUp",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "FY26 Organic Guide",
+      "value": "5–6%",
+      "label": "Second cut; adj EPS $3.28–$3.32",
+      "icon": "Zap",
+      "color": "#f59e0b"
+    },
+    {
+      "title": "Adj Operating Margin",
+      "value": "28.4%",
+      "label": "+70bps YoY; adj GM 70.3% (+80bps)",
+      "icon": "Shield",
+      "color": "#10b981"
+    }
+  ],
+  "moat": {
+    "description": "A diversified medtech franchise whose durability comes from PMA/510(k) lock-in and per-procedure implants and catheters — category leadership in WATCHMAN and FARAPULSE, not a single-platform monopoly.",
+    "analysisTitle": "The Category-Leadership Moat",
+    "analysisSummary": "Boston Scientific's moat is **regulatory lock-in plus razor-and-blades consumables** across a hospital portfolio, not a da Vinci-style installed-base monopoly:",
+    "analysisPoints": [
+      {
+        "title": "PMA Fortress, Not a Single Platform",
+        "text": "WATCHMAN, FARAPULSE, AGENT DCB and AXIOS each required years of IDE trials and FDA PMA or 510(k) clearance, and implanting physicians must be credentialed on the specific device. That barrier is real and slow to clone — but it is an industry-level medtech barrier, not a Boston Scientific exclusive. Medtronic, Abbott and J&J run the same gauntlet and are now taking U.S. pulsed-field-ablation share, which is why the moat is durable without being a monopoly."
+      },
+      {
+        "title": "Per-Procedure Razor-and-Blades",
+        "text": "Revenue is generated at the moment of care: a WATCHMAN implant, a FARAPULSE catheter, an AGENT drug-coated balloon, an AXIOS lumen-apposing stent. Q2 2026 cardiovascular sales were $3.62B (67% of the company) and MedSurg $1.82B. Once a lab is trained and stocked, switching mid-procedure is not an option — the consumable is physically inseparable from the case. That is as close to transaction-embedded revenue as diversified medtech gets."
+      },
+      {
+        "title": "The 75% the Market Is Ignoring",
+        "text": "WATCHMAN is less than a tenth of sales. Management's own account is that three-quarters of the book is still compounding — Interventional Cardiology grew 15% organically in Q2 on AGENT DCB and complex PCI, Interventional Oncology +12%, Neuromodulation +12%, Endoscopy +7%. The stock has been priced as if the WATCHMAN/EP stumble were the whole company. Category leadership in those other franchises is the part of the moat the de-rating does not cancel."
+      },
+      {
+        "title": "EP Ecosystem, Not an EP Monopoly",
+        "text": "FARAPULSE plus OPAL mapping plus FARAPOINT is a genuine bundle: software releases every six months deepen the lab footprint, and AVANT GUARD showed statistical superiority versus anti-arrhythmic drugs in persistent AF. The U.S. PFA mix is now ~80% of the AFib ablation market, so conversion tailwinds are largely spent and Medtronic, J&J and Abbott are taking share. The ecosystem is intact; the growth monopoly is not."
+      }
+    ]
+  },
+  "growth": {
+    "description": "Q2 2026 printed $5.442B (+7.5% reported, +7.0% organic) and adjusted EPS of $0.86 (+15%), beating the $0.82–$0.84 guide, with adjusted operating margin 28.4% (+70bps). The print was not the story: management cut FY2026 organic growth for the second consecutive quarter, to 5–6% (from 7–8.5% in April and 10–11% at the FY2025 print), and cut adjusted EPS to $3.28–$3.32. The cuts concentrate in two former engines — WATCHMAN (+4% globally; U.S. stand-alone procedures down mid-teens; H2 guided mid- to high-single-digit decline with no 2027 recovery assumed) and Electrophysiology (+9% globally, +3% U.S.; H2 guided flat as PFA rivals take share). Interventional Cardiology (+15% organic on AGENT DCB), IO&E (+12%) and Neuromodulation (+12%) still compound, but CEO Mike Mahoney was explicit that 2027 brings limited adjusted EPS growth and that the 2028 pipeline (SEISMIQ IVL, FARAFLEX, MiRus TAVR option) is when the profile is expected to reaccelerate.",
+    "growthAnalysis": {
+      "cagrEstimate": "7-10%",
+      "cagrBasis": "Company organic net sales +12% YoY in FY2023, +18% YoY in FY2024 and +15.8% YoY in FY2025 ($20.074B reported). Q2 2026 organic +7.0% YoY; FY2026 organic guidance 5–6% after two cuts. Management has assumed WATCHMAN does not recover in 2027 and EP is flat in 2H 2026. The 7–10% blended 3–5yr estimate sits on that guided deceleration plus 2028 pipeline optionality (SEISMIQ IVL, FARAFLEX, MiRus TAVR option), not an extrapolation of the 2023–25 hypergrowth print.",
+      "scoreDerivation": "Base 71 (8.5% midpoint of 7–10% blended CAGR) + trajectory (−1.3: ICVT accelerating, WATCHMAN and EP decelerating) + margin expanding (+4) − moderate contagion/pipeline risk (−5) = 68",
+      "drivers": [
+        {
+          "name": "Interventional Cardiology (AGENT DCB)",
+          "metric": "Q2 2026 IC organic +15%; ICVT $1.33B +12% organic — coronary therapies still compounding",
+          "trend": "accelerating"
+        },
+        {
+          "name": "WATCHMAN LAAC",
+          "metric": "Q2 $507M +4% organic; U.S. stand-alone procedures −mid-teens; H2 guided mid- to high-single-digit decline, no 2027 recovery assumed",
+          "trend": "decelerating"
+        },
+        {
+          "name": "Electrophysiology / FARAPULSE",
+          "metric": "Q2 $916M +9% organic; U.S. +3% vs international +23%; H2 guided flat as U.S. PFA mix ~80% and rivals take share",
+          "trend": "decelerating"
+        }
+      ],
+      "primaryType": "both",
+      "keyRisk": "WATCHMAN's H2 decline and U.S. EP share loss spread into Interventional Cardiology or MedSurg in 2027, leaving company organic growth below 4% and pushing the 2028 pipeline reacceleration (SEISMIQ, FARAFLEX) that the 7–10% CAGR assumes out past the forecast window.",
+      "keyRiskSeverity": "moderate",
+      "marginTrend": "expanding"
+    }
+  },
+  "valuation": {
+    "score": 78,
+    "description": "At ~$52 (August 13, 2026), BSX has halved from the 52-week high of $109.50 and sits ~17% above the July 15 low of $42.20, at a ~$75B market cap. Forward P/E on the cut FY2026 adjusted EPS midpoint ($3.30) is ~16× — versus the 30–40×+ the stock commanded through the FARAPULSE/WATCHMAN hypergrowth years and versus a trailing GAAP P/E of ~21× on $2.48 TTM EPS. The stock is ~50% of the way from the $40 bear to the $64 base (Street mean target ~$63); that is a real margin of safety only if WATCHMAN/EP stay contained to those franchises. Street range is $44–$94.",
+    "peAnalysis": {
+      "asOf": "August 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~21×",
+          "note": "$2.48 TTM GAAP EPS"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~16×",
+          "note": "$3.30 midpoint of cut FY26 adjusted EPS guide $3.28–$3.32"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~2.0×",
+          "note": "16× ÷ ~8% blended EPS CAGR; Yahoo's 0.7× PEG still embeds pre-reset 5yr growth"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~3.5×",
+          "note": "~$21.4B FY26E revenue on 5.5–6.5% reported growth off $20.07B FY25"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~21×",
+          "note": "FY25 FCF $3.66B; TTM levered FCF $2.45B is lumpier (Q1'26 FCF only $171M)"
+        }
+      ],
+      "summary": "Forward P/E ~16× is a trough multiple for a still-growing, 70%+ gross-margin medtech — half the 30–40× the stock held when WATCHMAN and FARAPULSE were compounding 20%+. PEG ~2.0× on an 8% EPS CAGR is full rather than cheap, so the bargain is versus Boston Scientific's own history, not versus a 4–6% compounder. The de-rating is coherent if 2027 EPS is as limited as management now flags; it is excessive if three-quarters of the book keeps compounding and 2028 pipeline products (SEISMIQ, FARAFLEX) land."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$40",
+      "description": "WATCHMAN and EP stay broken through 2027, the slowdown leaks into Interventional Cardiology, and the multiple compresses toward distressed medtech levels on stalled earnings.",
+      "points": [
+        "U.S. WATCHMAN stand-alone procedures keep falling and FY2027 LAAC sales decline again after the guided H2 2026 drop, with no CHAMPION AF / WATCHMAN Elite offset",
+        "U.S. EP share loss to Medtronic, J&J and Abbott continues, leaving electrophysiology flat-to-down and FARAFLEX too late to recapture the lab",
+        "FY2027 adjusted EPS stalls near $3.20–$3.30 and the forward multiple compresses to ~12× as the double-digit-growth premium is fully written off"
+      ]
+    },
+    "base": {
+      "priceTarget": "$64",
+      "description": "WATCHMAN and EP stay contained to those franchises, FY2026 lands on the cut guide, 2027 EPS grows only modestly, and the multiple holds in the high-teens as 2028 pipeline visibility improves.",
+      "points": [
+        "FY2026 organic growth lands in the guided 5–6% range and adjusted EPS hits the $3.28–$3.32 midpoint; the remaining three-quarters of the book keeps compounding mid-single digits",
+        "WATCHMAN H2 decline plays out as assumed with no 2027 recovery, but Interventional Cardiology (AGENT DCB) and Endoscopy offset enough that company organic does not fall below 4%",
+        "FY2027 adjusted EPS reaches ~$3.45–$3.55 and the stock holds ~18× forward — in line with the ~$63 Street mean — as SEISMIQ and FARAFLEX timelines stay intact"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$88",
+      "description": "WATCHMAN referrals stabilize, FARAFLEX and OPAL recapture U.S. EP share, SEISMIQ IVL launches into a $1B+ market, and the multiple re-rates toward 22× as 2028 growth visibility returns.",
+      "points": [
+        "U.S. WATCHMAN stand-alone procedure declines bottom in 2H 2026 and CHAMPION AF / next-gen WATCHMAN Elite restore referral confidence into 2027",
+        "FARAFLEX pivotal data and OPAL software cadence recapture U.S. EP share, and SEISMIQ coronary IVL (FRACTURE IDE met endpoints) contributes a new double-digit growth vector",
+        "Forward multiple re-rates toward ~22× on FY2028 EPS power approaching $4.00 as management's 2028 reacceleration becomes visible in 2027 prints"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "intact",
+      "note": "Implanting a WATCHMAN or driving a FARAPULSE case is a credentialed, device-specific technique. Retraining is measured in cases, not years of muscle memory like da Vinci — enough to slow switching, not enough to prevent Medtronic/J&J/Abbott from taking U.S. PFA share."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "Hospital GPO contracts, procedure coding, consignment inventory and sales-force coverage embed Boston Scientific SKUs in cath-lab and endoscopy workflows. Switching is a contracting and credentialing project, not a software rewrite."
+    },
+    "publicDataAccess": {
+      "status": "na",
+      "note": "Boston Scientific does not control access to a public dataset. Clinical-trial evidence (WATCHMAN, AVANT GUARD, FRACTURE) is a regulatory and commercial asset, scored under regulatoryLockIn and proprietaryData."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "Clinical specialists and medtech R&D talent are scarce, but Medtronic, Abbott and J&J recruit from the same pool. A hiring advantage, not a structural talent monopoly."
+    },
+    "bundling": {
+      "status": "intact",
+      "note": "FARAPULSE + OPAL mapping + FARAPOINT is a real EP bundle, and the broader CV/MedSurg catalogue supports hospital GPO relationships. Hospitals still multi-source medtech, so the bundle deepens share of wallet without locking out rivals."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "OPAL mapping cases and WATCHMAN/FARAPULSE clinical registries compound, and software releases every six months feed that data back into the lab. The dataset is useful, not exclusive — competitors generate their own PFA and LAAC evidence."
+    },
+    "regulatoryLockIn": {
+      "status": "strong",
+      "note": "PMA and 510(k) clearances plus physician credentialing on each implant create a multi-year lag for any rival indication. This is the core medtech moat: WATCHMAN, FARAPULSE, AGENT DCB and AXIOS cannot be cloned on a software cycle."
+    },
+    "networkEffects": {
+      "status": "weakened",
+      "note": "Trained-physician density creates some demand pull when implanters move hospitals, but U.S. PFA share loss shows labs will switch platforms. Not a Metcalfe dynamic — scored as weakened rather than N/A because the KOL/referral loop still exists, it just no longer locks."
+    },
+    "transactionEmbedding": {
+      "status": "strong",
+      "note": "A WATCHMAN implant, PFA catheter or AGENT balloon is consumed in the case and cannot be substituted mid-procedure. Recurring, per-procedure revenue is physically inseparable from care delivery — the closest medtech analogue to transaction embedding."
+    },
+    "systemOfRecord": {
+      "status": "na",
+      "note": "The hospital EMR (Epic, Oracle Health) is the system of record for the patient. OPAL is a mapping workstation, not the authoritative record of the episode of care."
+    },
+    "verdict": "AI is a modest tailwind, not a threat: imaging, mapping and IVL guidance can sit on top of the implant without displacing it, and the PMA/credentialing layer is indifferent to software agents. The AI-vulnerable moats (learned interfaces, talent, business logic) are merely intact because the procedure is physical. The real competitive risk is other well-capitalised medtech platforms in PFA and LAAC, not model-driven disintermediation."
+  }
+}
