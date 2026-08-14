@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useCallback, useEffect, useState } from 'react';
-import { ArrowUp, Check, Link2, List } from 'lucide-react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { ArrowUp, Check, Link2, List, Share2 } from 'lucide-react';
 import type { ArticleSection } from '@/lib/researchMeta';
 import { Card } from "@heroui/react";
 
@@ -49,8 +49,8 @@ function useActiveSection(sections: ArticleSection[]) {
   return active;
 }
 
-/** Thin gold rule that fills as the article scrolls. */
-export function ReadingProgress() {
+/** 0–1 how far through the article the reader is. Shared by the gold rule and the sticky contents. */
+function useReadingProgress() {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -73,6 +73,13 @@ export function ReadingProgress() {
       window.removeEventListener('resize', onScroll);
     };
   }, []);
+
+  return progress;
+}
+
+/** Thin gold rule that fills as the article scrolls. */
+export function ReadingProgress() {
+  const progress = useReadingProgress();
 
   return (
     <div
@@ -145,77 +152,168 @@ export function ContentsRail({ sections }: { sections: ArticleSection[] }) {
   );
 }
 
-/** Collapsible contents for viewports too narrow for the rail. */
-export function ContentsDisclosure({ sections }: { sections: ArticleSection[] }) {
+/** Collapsible contents for viewports too narrow for the rail.
+ *
+ * The mobile header is not sticky, so once the reader is into the piece this
+ * panel pins under the progress rule and carries the current section plus
+ * remaining time — the wayfinding the gutter rail provides on a wide screen.
+ */
+export function ContentsDisclosure({
+  sections,
+  minutes,
+}: {
+  sections: ArticleSection[];
+  minutes: number;
+}) {
   const [open, setOpen] = useState(false);
+  const [stuck, setStuck] = useState(false);
+  const sentinelRef = useRef<HTMLDivElement>(null);
+  const active = useActiveSection(sections);
+  const progress = useReadingProgress();
+
+  useEffect(() => {
+    const node = sentinelRef.current;
+    if (!node) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setStuck(!entry.isIntersecting),
+      { threshold: 0 },
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
   if (sections.length < 2) return null;
 
+  const activeLabel = sections.find((s) => s.id === active)?.label;
+  const remaining =
+    progress > 0.97 ? 'Done' : `${Math.max(1, Math.round((1 - progress) * minutes))} min left`;
+
   return (
-    <Card className="xl:hidden mb-8 overflow-hidden">
-      <button
-        type="button"
-        onClick={() => setOpen((v) => !v)}
-        aria-expanded={open}
-        className="w-full flex items-center gap-2.5 px-4 py-3 text-left hover:bg-foreground/[0.02] transition-colors"
+    <>
+      <div ref={sentinelRef} className="xl:hidden h-px" aria-hidden="true" />
+      <nav
+        aria-label="Article contents"
+        className={`xl:hidden sticky top-0 z-[60] -mx-4 sm:-mx-6 mb-8 mt-8 ${
+          stuck
+            ? 'border-b border-foreground/[0.08] bg-[#0b0e13]/92 backdrop-blur-xl shadow-[0_12px_32px_rgba(0,0,0,0.35)]'
+            : ''
+        }`}
       >
-        <List size={14} className="text-accent" />
-        <span className="section-label">Contents</span>
-        <span className="ml-auto text-[11px] text-foreground/30 font-mono">
-          {open ? 'Hide' : `${sections.length} sections`}
-        </span>
-      </button>
-      {open && (
-        <ol className="px-4 pb-3 space-y-0.5 border-t border-foreground/[0.05] pt-2">
-          {sections.map((s, i) => (
-            <li key={s.id}>
-              <a
-                href={`#${s.id}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setOpen(false);
-                  scrollToSection(s.id);
-                }}
-                className="flex gap-2.5 py-1.5 text-[13.5px] text-foreground/50 hover:text-foreground transition-colors"
-              >
-                <span className="font-mono text-[10px] pt-[3px] text-foreground/20 tabular-nums">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <span>{s.label}</span>
-              </a>
-            </li>
-          ))}
-        </ol>
-      )}
-    </Card>
+        <Card
+          className={`overflow-hidden ${
+            stuck
+              ? 'rounded-none border-0 bg-transparent shadow-none mx-0'
+              : 'mx-4 sm:mx-6'
+          }`}
+        >
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            className="w-full flex items-center gap-2.5 px-4 min-h-12 py-3 text-left hover:bg-foreground/[0.02] transition-colors"
+          >
+            <List size={14} className="text-accent shrink-0" />
+            <span className="section-label shrink-0">Contents</span>
+            {!open && activeLabel && (
+              <span className="min-w-0 truncate text-[13px] text-foreground/55">
+                {activeLabel}
+              </span>
+            )}
+            <span className="ml-auto shrink-0 text-[11px] text-foreground/30 font-mono">
+              {open ? 'Hide' : stuck ? remaining : `${sections.length} sections`}
+            </span>
+          </button>
+          {open && (
+            <ol className="px-4 pb-3 space-y-0.5 border-t border-foreground/[0.05] pt-2 max-h-[min(60vh,24rem)] overflow-y-auto">
+              {sections.map((s, i) => {
+                const isActive = active === s.id;
+                return (
+                  <li key={s.id}>
+                    <a
+                      href={`#${s.id}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setOpen(false);
+                        scrollToSection(s.id);
+                      }}
+                      aria-current={isActive ? 'true' : undefined}
+                      className={`flex gap-2.5 py-1.5 text-[13.5px] transition-colors ${
+                        isActive
+                          ? 'text-foreground/85'
+                          : 'text-foreground/50 hover:text-foreground'
+                      }`}
+                    >
+                      <span
+                        className={`font-mono text-[10px] pt-[3px] tabular-nums ${
+                          isActive ? 'text-accent' : 'text-foreground/20'
+                        }`}
+                      >
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span>{s.label}</span>
+                    </a>
+                  </li>
+                );
+              })}
+            </ol>
+          )}
+        </Card>
+      </nav>
+    </>
   );
 }
 
-/** Copy-link button — shares the canonical URL of the article or a section. */
-export function CopyLinkButton({ className = '' }: { className?: string }) {
+/** Share / copy-link — native share on a phone, clipboard everywhere else.
+ *  Copies the current URL including the section hash, so a heading jump is shareable.
+ */
+export function CopyLinkButton({
+  title,
+  className = '',
+}: {
+  title?: string;
+  className?: string;
+}) {
   const [copied, setCopied] = useState(false);
+  const [canShare, setCanShare] = useState(false);
+
+  useEffect(() => {
+    setCanShare(typeof navigator !== 'undefined' && typeof navigator.share === 'function');
+  }, []);
 
   const copy = useCallback(async () => {
-    const url = `${window.location.origin}${window.location.pathname}`;
+    const url = `${window.location.origin}${window.location.pathname}${window.location.hash}`;
+    if (typeof navigator.share === 'function') {
+      try {
+        await navigator.share({ title, url });
+        return;
+      } catch (err) {
+        // User cancelled, or share isn't actually available — fall through to copy.
+        if (err instanceof DOMException && err.name === 'AbortError') return;
+      }
+    }
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);
       setTimeout(() => setCopied(false), 1800);
     } catch {
-      // Clipboard denied (insecure context, permissions) — leave the UI honest.
       setCopied(false);
     }
-  }, []);
+  }, [title]);
+
+  const sharing = canShare && !copied;
 
   return (
     <button
       type="button"
       onClick={copy}
       className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-foreground/[0.08] bg-foreground/[0.02] text-[11px] font-bold uppercase tracking-widest transition-colors ${
-        copied ? 'text-[#34d399] border-[#34d399]/30' : 'text-foreground/35 hover:text-foreground/80 hover:border-foreground/20'
+        copied
+          ? 'text-[#34d399] border-[#34d399]/30'
+          : 'text-foreground/35 hover:text-foreground/80 hover:border-foreground/20'
       } ${className}`}
     >
-      {copied ? <Check size={12} /> : <Link2 size={12} />}
-      {copied ? 'Copied' : 'Copy link'}
+      {copied ? <Check size={12} /> : sharing ? <Share2 size={12} /> : <Link2 size={12} />}
+      {copied ? 'Copied' : sharing ? 'Share' : 'Copy link'}
     </button>
   );
 }
@@ -237,7 +335,9 @@ export function HeadingAnchor({ id }: { id: string }) {
   );
 }
 
-/** Appears once the reader is a screen deep. */
+/** Desktop-only. On a phone the article back-to-top lives in the FAB cluster
+ *  next to search and the menu, so this one would double up.
+ */
 export function BackToTop() {
   const [show, setShow] = useState(false);
 
@@ -259,7 +359,7 @@ export function BackToTop() {
         window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? 'auto' : 'smooth' })
       }
       aria-label="Back to top"
-      className="fixed bottom-[5.75rem] right-5 z-[110] flex h-10 w-10 items-center justify-center rounded-full border border-accent/25 bg-[#0b0e13]/90 text-accent/70 shadow-lg shadow-black/40 backdrop-blur transition-colors hover:border-accent/50 hover:text-gold-bright lg:bottom-5"
+      className="hidden lg:flex fixed z-[110] h-10 w-10 items-center justify-center rounded-full border border-accent/25 bg-[#0b0e13]/90 text-accent/70 shadow-lg shadow-black/40 backdrop-blur transition-colors hover:border-accent/50 hover:text-gold-bright right-5 bottom-5"
     >
       <ArrowUp size={16} />
     </button>

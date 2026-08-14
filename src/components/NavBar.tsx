@@ -3,7 +3,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
-import { Search, BarChart2, TrendingUp, Menu, FileText, CalendarDays, Briefcase, X } from 'lucide-react';
+import { Search, BarChart2, TrendingUp, Menu, FileText, CalendarDays, Briefcase, X, ArrowUp } from 'lucide-react';
 import {
   Button,
   ComboBox,
@@ -380,8 +380,13 @@ const fabButtonClass =
  * Search is a sibling of the menu button so it stays one tap away — burying
  * it in the dial would add a tap for the action used most. Destinations
  * still fan up from the menu so a thumb never has to cross the screen.
- * Items stay mounted so they can collapse back into the button on close.
+ * On a research article, back-to-top joins the same row once the reader is
+ * a screen deep, so it is not a second floating control in the same corner.
  */
+function isResearchArticlePath(pathname: string) {
+  return pathname.startsWith('/research/');
+}
+
 function MobileFabDock({
   isMenuOpen,
   isSearchOpen,
@@ -395,7 +400,22 @@ function MobileFabDock({
 }) {
   const pathname = usePathname();
   const count = navLinks.length;
-  const revealed = useFabRevealedOnScrollUp(isMenuOpen) && !isSearchOpen;
+  const onArticle = isResearchArticlePath(pathname);
+  const [showBackToTop, setShowBackToTop] = useState(false);
+  const revealed = useFabRevealedOnScrollUp(isMenuOpen || showBackToTop) && !isSearchOpen;
+
+  useEffect(() => {
+    if (!onArticle) {
+      setShowBackToTop(false);
+      return;
+    }
+    function onScroll() {
+      setShowBackToTop(window.scrollY > 1200);
+    }
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [onArticle]);
 
   useEffect(() => {
     if (!isMenuOpen) return;
@@ -464,6 +484,22 @@ function MobileFabDock({
         </nav>
 
         <div className="flex items-center gap-2.5">
+          {showBackToTop && (
+            <Button
+              aria-label="Back to top"
+              className={fabButtonClass}
+              isIconOnly
+              onPress={() => {
+                const reduce =
+                  typeof window !== 'undefined' &&
+                  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+              }}
+            >
+              <ArrowUp className="size-5" />
+            </Button>
+          )}
+
           <Button
             aria-label="Search stocks"
             className={fabButtonClass}
