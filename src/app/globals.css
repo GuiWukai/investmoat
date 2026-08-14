@@ -265,6 +265,15 @@ a.card:hover,
   background-color: transparent !important;
 }
 
+/* Icon-only buttons: HeroUI's default SVG margins (`-mx-0.5 my-0.5`, and
+   `sm:my-1`) are for pairing an icon with a label. On a lone icon they
+   throw the glyph off-centre inside the square hit target — the mobile
+   burger is the obvious case. Unlayered so this wins over the component
+   layer regardless of the `:not()` specificity on the upstream rule. */
+.button--icon-only svg {
+  margin: 0;
+}
+
 /* ─────────────────────────────────────────────────────────────────────────────
    Base elements
    ───────────────────────────────────────────────────────────────────────────── */
