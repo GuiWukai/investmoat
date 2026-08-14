@@ -82,6 +82,7 @@ import hims from './hims.json';
 import spot from './spot.json';
 import uber from './uber.json';
 import abnb from './abnb.json';
+import bkng from './bkng.json';
 import keys from './keys.json';
 import keyence from './keyence.json';
 import cat from './cat.json';
@@ -216,6 +217,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   spot: spot as StockAnalysisData,
   uber: uber as StockAnalysisData,
   abnb: abnb as StockAnalysisData,
+  bkng: bkng as StockAnalysisData,
   keys: keys as StockAnalysisData,
   keyence: keyence as StockAnalysisData,
   cat: cat as StockAnalysisData,

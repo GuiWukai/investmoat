@@ -101,6 +101,7 @@ import himsData     from '@/data/stocks/hims.json';
 import spotData     from '@/data/stocks/spot.json';
 import uberData     from '@/data/stocks/uber.json';
 import abnbData     from '@/data/stocks/abnb.json';
+import bkngData     from '@/data/stocks/bkng.json';
 import keysData     from '@/data/stocks/keys.json';
 import keyenceData  from '@/data/stocks/keyence.json';
 import catData      from '@/data/stocks/cat.json';
@@ -287,6 +288,7 @@ const allCoverageData = [
     { name: "Spotify",           ticker: "SPOT",  slug: "spot",        scores: [m(spotData),        g(spotData),        v(spotData)],        href: "/stocks/spot",        category: "Big Tech",    ...t(spotData)        },
     { name: "Uber Technologies", ticker: "UBER",  slug: "uber",        scores: [m(uberData),        g(uberData),        v(uberData)],        href: "/stocks/uber",        category: "Big Tech",    ...t(uberData)        },
     { name: "Airbnb",            ticker: "ABNB",  slug: "abnb",        scores: [m(abnbData),        g(abnbData),        v(abnbData)],        href: "/stocks/abnb",        category: "Big Tech",    ...t(abnbData)        },
+    { name: "Booking Holdings",  ticker: "BKNG",  slug: "bkng",        scores: [m(bkngData),        g(bkngData),        v(bkngData)],        href: "/stocks/bkng",        category: "Big Tech",    ...t(bkngData)        },
     { name: "Keysight Technologies", ticker: "KEYS", slug: "keys",     scores: [m(keysData),        g(keysData),        v(keysData)],        href: "/stocks/keys",        category: "Industrials", ...t(keysData)        },
     { name: "Keyence Corporation",ticker: "6861.T",slug: "keyence",    scores: [m(keyenceData),     g(keyenceData),     v(keyenceData)],     href: "/stocks/keyence",     category: "Industrials", ...t(keyenceData)     },
     { name: "Caterpillar",       ticker: "CAT",   slug: "cat",         scores: [m(catData),         g(catData),         v(catData)],         href: "/stocks/cat",         category: "Industrials", ...t(catData)         },
