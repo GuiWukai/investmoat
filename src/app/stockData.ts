@@ -151,6 +151,7 @@ import qubtData     from '@/data/stocks/qubt.json';
 import beData       from '@/data/stocks/be.json';
 import snapData     from '@/data/stocks/snap.json';
 import bdtData      from '@/data/stocks/bdt.json';
+import bsxData      from '@/data/stocks/bsx.json';
 
 // Delegates to computeCompositeRaw in valuationScore.ts — the single source of
 // truth for the composite formula. Returns a float for precise sorting; callers
@@ -274,6 +275,7 @@ const allCoverageData = [
     { name: "Duolingo",          ticker: "DUOL",  slug: "duolingo",    scores: [m(duolingoData),    g(duolingoData),    v(duolingoData)],    href: "/stocks/duolingo",    category: "Other",       ...t(duolingoData)    },
     { name: "Robinhood Markets", ticker: "HOOD",  slug: "hood",        scores: [m(hoodData),        g(hoodData),        v(hoodData)],        href: "/stocks/hood",        category: "Financials",  ...t(hoodData)        },
     { name: "Thermo Fisher Scientific", ticker: "TMO", slug: "tmo",    scores: [m(tmoData),         g(tmoData),         v(tmoData)],         href: "/stocks/tmo",         category: "Healthcare",  ...t(tmoData)         },
+    { name: "Boston Scientific", ticker: "BSX",  slug: "bsx",         scores: [m(bsxData),         g(bsxData),         v(bsxData)],         href: "/stocks/bsx",         category: "Healthcare",  ...t(bsxData)         },
     { name: "KLA Corporation",   ticker: "KLAC",  slug: "klac",        scores: [m(klacData),        g(klacData),        v(klacData)],        href: "/stocks/klac",        category: "Big Tech",    ...t(klacData)        },
     { name: "Cheniere Energy",   ticker: "LNG",   slug: "lng",         scores: [m(lngData),         g(lngData),         v(lngData)],         href: "/stocks/lng",         category: "Other",       ...t(lngData)         },
     { name: "Super Micro Computer", ticker: "SMCI", slug: "smci",      scores: [m(smciData),        g(smciData),        v(smciData)],        href: "/stocks/smci",        category: "Big Tech",    ...t(smciData)        },

@@ -134,6 +134,7 @@ import okta from './okta.json';
 import be from './be.json';
 import snap from './snap.json';
 import bdt from './bdt.json';
+import bsx from './bsx.json';
 
 const stocksMap: Record<string, StockAnalysisData> = {
   aapl: aapl as StockAnalysisData,
@@ -270,6 +271,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   be: be as StockAnalysisData,
   snap: snap as StockAnalysisData,
   bdt: bdt as StockAnalysisData,
+  bsx: bsx as StockAnalysisData,
 };
 
 export function getStockData(slug: string): StockAnalysisData | null {
