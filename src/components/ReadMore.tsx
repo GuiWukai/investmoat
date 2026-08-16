@@ -40,15 +40,18 @@ export function ReadMore({
     if (!el || expanded) return;
 
     const measure = () => {
+      // Sub-pixel rounding routinely reports 1–2px of fake overflow on
+      // labels that already fit, which would show a no-op Read more.
       const over = singleLine
-        ? el.scrollWidth > el.clientWidth + 1
-        : el.scrollHeight > el.clientHeight + 1;
-      if (over) setOverflows(true);
+        ? el.scrollWidth - el.clientWidth > 8
+        : el.scrollHeight - el.clientHeight > 4;
+      setOverflows(over);
     };
 
     measure();
     const ro = new ResizeObserver(measure);
     ro.observe(el);
+    void document.fonts?.ready.then(measure);
     return () => ro.disconnect();
   }, [text, lines, expanded, singleLine]);
 
