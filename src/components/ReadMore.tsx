@@ -2,11 +2,13 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-const CLAMP: Record<1 | 2 | 3 | 4, string> = {
+const CLAMP: Record<1 | 2 | 3 | 4 | 5 | 6, string> = {
   1: 'line-clamp-1',
   2: 'line-clamp-2',
   3: 'line-clamp-3',
   4: 'line-clamp-4',
+  5: 'line-clamp-5',
+  6: 'line-clamp-6',
 };
 
 /**
@@ -15,12 +17,12 @@ const CLAMP: Record<1 | 2 | 3 | 4, string> = {
  */
 export function ReadMore({
   text,
-  lines = 3,
+  lines = 5,
   className = '',
   align = 'start',
 }: {
   text: string;
-  lines?: 1 | 2 | 3 | 4;
+  lines?: 1 | 2 | 3 | 4 | 5 | 6;
   className?: string;
   align?: 'start' | 'center';
 }) {
