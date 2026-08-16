@@ -32,7 +32,6 @@ export function ReadMore({
 
   useEffect(() => {
     setExpanded(false);
-    setOverflows(false);
   }, [text, lines]);
 
   useEffect(() => {
@@ -49,10 +48,17 @@ export function ReadMore({
     };
 
     measure();
+    const raf = requestAnimationFrame(() => {
+      measure();
+      requestAnimationFrame(measure);
+    });
     const ro = new ResizeObserver(measure);
     ro.observe(el);
     void document.fonts?.ready.then(measure);
-    return () => ro.disconnect();
+    return () => {
+      cancelAnimationFrame(raf);
+      ro.disconnect();
+    };
   }, [text, lines, expanded, singleLine]);
 
   if (!text) return null;
