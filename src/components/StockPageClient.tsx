@@ -150,7 +150,7 @@ function GrowthAnalysisCard({ ga, assetClass }: {
         <p className="section-label mb-1.5">Key Risk</p>
         <ReadMore
           text={ga.keyRisk}
-          lines={3}
+          lines={5}
           className="text-sm text-foreground/60"
         />
       </div>
@@ -196,7 +196,7 @@ function ForwardPECard({ data }: { data: NonNullable<StockAnalysisData['valuatio
       <div className="mt-4">
         <ReadMore
           text={data.summary}
-          lines={3}
+          lines={5}
           className="text-foreground/40 text-xs leading-relaxed"
         />
       </div>
@@ -217,7 +217,7 @@ function GridCardsSection({ section }: { section: NonNullable<StockAnalysisData[
         <div className="mb-5">
           <ReadMore
             text={section.intro}
-            lines={3}
+            lines={5}
             className="text-foreground/50 text-sm leading-relaxed"
           />
         </div>
@@ -229,7 +229,7 @@ function GridCardsSection({ section }: { section: NonNullable<StockAnalysisData[
                 <div className="mt-1.5">
                   <ReadMore
                     text={card.text}
-                    lines={3}
+                    lines={5}
                     className="text-sm text-foreground/60 leading-relaxed"
                   />
                 </div>
@@ -292,7 +292,7 @@ function ProductionTimelineSection({ section }: { section: NonNullable<StockAnal
         <div className="mb-5">
           <ReadMore
             text={section.intro}
-            lines={3}
+            lines={5}
             className="text-foreground/50 text-sm leading-relaxed"
           />
         </div>
@@ -310,7 +310,7 @@ function ProductionTimelineSection({ section }: { section: NonNullable<StockAnal
           <div className="mt-5">
             <ReadMore
               text={section.closing}
-              lines={3}
+              lines={5}
               className="text-foreground/50 text-sm leading-relaxed"
             />
           </div>
@@ -500,7 +500,7 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
                           <div className="w-1 h-1 rounded-full bg-emerald-400/60 shrink-0 mt-2" />
                           <ReadMore
                           text={point}
-                          lines={3}
+                          lines={5}
                           className="text-sm text-foreground/60 leading-relaxed"
                         />
                         </div>
@@ -536,7 +536,7 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
                     <h4 className="text-base font-bold text-foreground/85 mb-3">Valuation Analysis</h4>
                     <ReadMore
                       text={`${data.valuation.valuationNote.text} ${data.valuation.valuationNote.fairValue}.`}
-                      lines={3}
+                      lines={5}
                       className="text-sm text-foreground/55 leading-relaxed"
                     />
                   </Card>
@@ -582,7 +582,7 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
                         <div className="w-1 h-1 rounded-full bg-emerald-400/60 shrink-0 mt-2" />
                         <ReadMore
                           text={point}
-                          lines={3}
+                          lines={5}
                           className="text-sm text-foreground/60 leading-relaxed"
                         />
                       </div>
@@ -619,7 +619,7 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
                 <h4 className="text-base font-bold text-foreground/85 mb-3">Valuation Analysis</h4>
                 <ReadMore
                   text={`${data.valuation.valuationNote.text} ${data.valuation.valuationNote.fairValue}.`}
-                  lines={3}
+                  lines={5}
                   className="text-sm text-foreground/55 leading-relaxed"
                 />
               </Card>

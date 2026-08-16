@@ -110,7 +110,7 @@ export function ScoreGauge({ score, label, description }: ScoreGaugeProps) {
       <ArcGauge score={score} />
       <ReadMore
         text={description}
-        lines={3}
+        lines={5}
         align="center"
         className="text-xs text-foreground/40 leading-relaxed"
       />
@@ -339,7 +339,7 @@ export function ScenarioCard({
       </div>
       <ReadMore
         text={description}
-        lines={3}
+        lines={5}
         className="text-sm font-semibold text-foreground/80"
       />
       <ul className="space-y-1.5">
@@ -433,7 +433,7 @@ function MoatRow({ label, status, note }: { label: string; status: MoatStatus; n
         </div>
         <ReadMore
           text={note}
-          lines={2}
+          lines={3}
           className="text-xs text-foreground/40 leading-relaxed"
         />
       </div>
@@ -465,7 +465,7 @@ export function TenMoatsCard({ data }: { data: TenMoatsAssessment }) {
         <p className="section-label mb-2">Ten Moats Verdict</p>
         <ReadMore
           text={data.verdict}
-          lines={3}
+          lines={5}
           className="text-sm text-foreground/60 leading-relaxed"
         />
       </Card>
@@ -523,7 +523,7 @@ export function CryptoMoatsCard({ data }: { data: CryptoMoatsData }) {
         <p className="section-label mb-2">Crypto Moat Verdict</p>
         <ReadMore
           text={data.verdict}
-          lines={3}
+          lines={5}
           className="text-sm text-foreground/60 leading-relaxed"
         />
       </Card>
@@ -557,7 +557,7 @@ export function CommodityMoatsCard({ data }: { data: CommodityMoatsData }) {
         <p className="section-label mb-2">Commodity Moat Verdict</p>
         <ReadMore
           text={data.verdict}
-          lines={3}
+          lines={5}
           className="text-sm text-foreground/60 leading-relaxed"
         />
       </Card>
