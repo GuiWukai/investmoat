@@ -40,7 +40,6 @@ import {
   computeValuationScore,
   parseScenarioPrice,
 } from '@/lib/valuationScore';
-import { ReadMore } from '@/components/ReadMore';
 
 type CoverageStock = (typeof allCoverageData)[number];
 
@@ -822,18 +821,12 @@ export default function MyPortfolioPage() {
                         role="link"
                         tabIndex={0}
                       >
-                        <td className="max-w-[9.5rem] px-4 py-3.5 sm:max-w-[14rem] md:max-w-[18rem] md:px-5">
-                          <ReadMore
-                            text={name}
-                            lines={1}
-                            className="font-bold text-sm text-foreground/90 leading-tight"
-                            extra={
-                              <div className="font-mono text-[10px] font-black uppercase tracking-[0.12em] text-foreground/28">
-                                {ticker}
-                                {quoteNote ? ` · ${quoteNote}` : ''}
-                              </div>
-                            }
-                          />
+                        <td className="px-4 py-3.5 md:px-5">
+                          <div className="truncate text-sm font-bold text-foreground/90">{name}</div>
+                          <div className="mt-0.5 font-mono text-[10px] font-black uppercase tracking-[0.12em] text-foreground/28">
+                            {ticker}
+                            {quoteNote ? ` · ${quoteNote}` : ''}
+                          </div>
                         </td>
                         <td className="px-2 py-3.5 text-right md:px-3">
                           {row.score == null ? (
