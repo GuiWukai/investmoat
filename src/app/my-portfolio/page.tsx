@@ -140,7 +140,7 @@ function scoreColor(score: number): string {
   return 'text-rose-400';
 }
 
-/** One cell in the compact book-summary strip. */
+/** One metric in the compact book-summary strip. */
 function SummaryMetric({
   label,
   footnote,
@@ -153,12 +153,16 @@ function SummaryMetric({
   children: ReactNode;
 }) {
   return (
-    <div className={`min-w-0 px-3.5 py-2.5 md:px-5 md:py-3 ${className ?? ''}`}>
+    <div
+      className={`min-w-0 sm:border-r sm:border-foreground/[0.06] sm:pr-6 ${className ?? ''}`}
+    >
       <p className="section-label mb-0.5">{label}</p>
-      {children}
-      {footnote != null && (
-        <p className="mt-0.5 text-[10px] leading-tight text-foreground/28">{footnote}</p>
-      )}
+      <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+        {children}
+        {footnote != null && (
+          <span className="text-[10px] leading-tight text-foreground/28">{footnote}</span>
+        )}
+      </div>
     </div>
   );
 }
@@ -548,71 +552,66 @@ export default function MyPortfolioPage() {
         className="animate-fade-up stagger-fill-both mb-5"
         style={{ animationDelay: '0.1s' }}
       >
-        <Card className="overflow-hidden">
-          <div className="grid grid-cols-2 lg:grid-cols-4">
+        <Card className="px-3.5 py-2.5 md:px-5">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-2.5 sm:flex sm:flex-wrap sm:items-end sm:gap-x-6 sm:gap-y-2">
             <SummaryMetric
-              className="border-b border-r border-foreground/[0.06] lg:border-b-0"
               footnote={`${holdings.length} position${holdings.length === 1 ? '' : 's'} · ${displayCurrency}`}
               label="Market value"
             >
               {!hydrated || (quotesLoading && holdings.length > 0 && totals.marketValue == null) ? (
                 <Spinner size="sm" color="current" />
               ) : (
-                <p className="truncate text-lg font-black tabular-nums text-foreground md:text-xl">
+                <p className="text-base font-black tabular-nums text-foreground md:text-lg">
                   {money(totals.marketValue)}
                 </p>
               )}
             </SummaryMetric>
 
-            <SummaryMetric
-              className="border-b border-foreground/[0.06] lg:border-b-0 lg:border-r"
-              footnote="Value-weighted"
-              label="Today"
-            >
+            <SummaryMetric footnote="Value-weighted" label="Today">
               {!hydrated || quotesLoading ? (
                 <Spinner size="sm" color="current" />
               ) : totals.dayChange == null ? (
-                <p className="text-lg font-black text-foreground/20 md:text-xl">—</p>
+                <p className="text-base font-black text-foreground/20 md:text-lg">—</p>
               ) : (
                 <div
-                  className={`flex items-center gap-1.5 ${
+                  className={`flex items-center gap-1 ${
                     totals.dayChange >= 0 ? 'text-emerald-400' : 'text-rose-400'
                   }`}
                 >
-                  {totals.dayChange >= 0 ? <TrendingUp size={14} /> : <TrendingDown size={14} />}
-                  <span className="text-lg font-black tabular-nums md:text-xl">
+                  {totals.dayChange >= 0 ? <TrendingUp size={13} /> : <TrendingDown size={13} />}
+                  <span className="text-base font-black tabular-nums md:text-lg">
                     {formatPct(totals.dayChange)}
                   </span>
                 </div>
               )}
             </SummaryMetric>
 
-            <SummaryMetric
-              className="border-r border-foreground/[0.06]"
-              footnote="Optional · from avg cost"
-              label="Cost basis"
-            >
-              <p className="truncate text-lg font-black tabular-nums text-foreground md:text-xl">
+            <SummaryMetric footnote="from avg cost" label="Cost basis">
+              <p className="text-base font-black tabular-nums text-foreground md:text-lg">
                 {money(totals.costBasis)}
               </p>
             </SummaryMetric>
 
-            <SummaryMetric label="Unrealized P&amp;L">
+            <SummaryMetric className="sm:border-r-0 sm:pr-0" label="Unrealized P&amp;L">
               {totals.gain == null ? (
-                <p className="text-lg font-black text-foreground/20 md:text-xl">—</p>
+                <p className="text-base font-black text-foreground/20 md:text-lg">—</p>
               ) : (
-                <div
-                  className={`flex flex-wrap items-baseline gap-x-2 ${
-                    totals.gain >= 0 ? 'text-emerald-400' : 'text-rose-400'
-                  }`}
-                >
-                  <p className="truncate text-lg font-black tabular-nums md:text-xl">
+                <>
+                  <p
+                    className={`text-base font-black tabular-nums md:text-lg ${
+                      totals.gain >= 0 ? 'text-emerald-400' : 'text-rose-400'
+                    }`}
+                  >
                     {money(totals.gain)}
                   </p>
-                  <p className="text-[11px] tabular-nums opacity-80">
+                  <span
+                    className={`text-[11px] tabular-nums ${
+                      totals.gain >= 0 ? 'text-emerald-400/80' : 'text-rose-400/80'
+                    }`}
+                  >
                     {formatPct(totals.gainPct)}
-                  </p>
-                </div>
+                  </span>
+                </>
               )}
             </SummaryMetric>
           </div>
