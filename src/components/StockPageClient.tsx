@@ -22,6 +22,7 @@ import type { StockAnalysisData } from '@/types/stockAnalysis';
 import Link from 'next/link';
 import { TrendingUp, TrendingDown, Minus, ArrowRight } from 'lucide-react';
 import { Card } from "@heroui/react";
+import { ReadMore } from '@/components/ReadMore';
 
 // ─── Lucide icon registry ────────────────────────────────────────────────────
 import {
@@ -147,7 +148,11 @@ function GrowthAnalysisCard({ ga, assetClass }: {
 
       <div>
         <p className="section-label mb-1.5">Key Risk</p>
-        <p className="text-sm text-foreground/60">{ga.keyRisk}</p>
+        <ReadMore
+          text={ga.keyRisk}
+          lines={3}
+          className="text-sm text-foreground/60"
+        />
       </div>
 
       <div className="h-px bg-foreground/[0.05]" />
@@ -188,7 +193,13 @@ function ForwardPECard({ data }: { data: NonNullable<StockAnalysisData['valuatio
           ))}
         </tbody>
       </table>
-      <p className="text-foreground/40 text-xs mt-4 leading-relaxed">{data.summary}</p>
+      <div className="mt-4">
+        <ReadMore
+          text={data.summary}
+          lines={3}
+          className="text-foreground/40 text-xs leading-relaxed"
+        />
+      </div>
       {data.asOf && <p className="text-foreground/25 text-xs mt-1">Approximate figures as of {data.asOf}.</p>}
     </Card>
   );
@@ -203,13 +214,25 @@ function GridCardsSection({ section }: { section: NonNullable<StockAnalysisData[
       <Card className="p-5 md:p-6"
         style={{ borderLeftWidth: '3px', borderLeftColor: accent }}>
         {section.gridHeader && <h4 className="text-base font-bold text-foreground/85 mb-3">{section.gridHeader}</h4>}
-        <p className="text-foreground/50 mb-5 text-sm leading-relaxed">{section.intro}</p>
+        <div className="mb-5">
+          <ReadMore
+            text={section.intro}
+            lines={3}
+            className="text-foreground/50 text-sm leading-relaxed"
+          />
+        </div>
         {section.cards && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {section.cards.map((card, i) => (
               <div key={i} className="rounded-xl border border-foreground/[0.04] bg-foreground/[0.02] p-4">
                 <span className="text-[11px] font-bold" style={{ color: accent }}>{card.label}</span>
-                <div className="text-sm mt-1.5 text-foreground/60 leading-relaxed">{card.text}</div>
+                <div className="mt-1.5">
+                  <ReadMore
+                    text={card.text}
+                    lines={3}
+                    className="text-sm text-foreground/60 leading-relaxed"
+                  />
+                </div>
               </div>
             ))}
           </div>
@@ -266,7 +289,13 @@ function ProductionTimelineSection({ section }: { section: NonNullable<StockAnal
       <Card className="p-5 md:p-6"
         style={{ borderLeftWidth: '3px', borderLeftColor: accent }}>
         <h4 className="text-base font-bold text-foreground/85 mb-3">The Transformation Journey</h4>
-        <p className="text-foreground/50 mb-5 text-sm leading-relaxed">{section.intro}</p>
+        <div className="mb-5">
+          <ReadMore
+            text={section.intro}
+            lines={3}
+            className="text-foreground/50 text-sm leading-relaxed"
+          />
+        </div>
         {section.stats && (
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
             {section.stats.map((stat, i) => (
@@ -277,7 +306,15 @@ function ProductionTimelineSection({ section }: { section: NonNullable<StockAnal
             ))}
           </div>
         )}
-        {section.closing && <p className="text-foreground/50 mt-5 text-sm leading-relaxed">{section.closing}</p>}
+        {section.closing && (
+          <div className="mt-5">
+            <ReadMore
+              text={section.closing}
+              lines={3}
+              className="text-foreground/50 text-sm leading-relaxed"
+            />
+          </div>
+        )}
       </Card>
     </AnalysisSection>
   );
@@ -461,7 +498,11 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
                       {data.growth.additionalNote.points.map((point, i) => (
                         <div key={i} className="flex items-start gap-3">
                           <div className="w-1 h-1 rounded-full bg-emerald-400/60 shrink-0 mt-2" />
-                          <span className="text-sm text-foreground/60 leading-relaxed">{point}</span>
+                          <ReadMore
+                          text={point}
+                          lines={3}
+                          className="text-sm text-foreground/60 leading-relaxed"
+                        />
                         </div>
                       ))}
                     </div>
@@ -493,10 +534,11 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
                 {data.valuation.valuationNote && (
                   <Card className="p-5 md:p-6">
                     <h4 className="text-base font-bold text-foreground/85 mb-3">Valuation Analysis</h4>
-                    <p className="text-sm text-foreground/55 leading-relaxed">
-                      {data.valuation.valuationNote.text}{' '}
-                      <strong className="text-foreground text-lg">{data.valuation.valuationNote.fairValue}</strong>.
-                    </p>
+                    <ReadMore
+                      text={`${data.valuation.valuationNote.text} ${data.valuation.valuationNote.fairValue}.`}
+                      lines={3}
+                      className="text-sm text-foreground/55 leading-relaxed"
+                    />
                   </Card>
                 )}
                 {data.valuation.peAnalysis && <ForwardPECard data={data.valuation.peAnalysis} />}
@@ -538,7 +580,11 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
                     {data.growth.additionalNote.points.map((point, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <div className="w-1 h-1 rounded-full bg-emerald-400/60 shrink-0 mt-2" />
-                        <span className="text-sm text-foreground/60 leading-relaxed">{point}</span>
+                        <ReadMore
+                          text={point}
+                          lines={3}
+                          className="text-sm text-foreground/60 leading-relaxed"
+                        />
                       </div>
                     ))}
                   </div>
@@ -571,10 +617,11 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
             {data.valuation.valuationNote && (
               <Card className="p-5 md:p-6">
                 <h4 className="text-base font-bold text-foreground/85 mb-3">Valuation Analysis</h4>
-                <p className="text-sm text-foreground/55 leading-relaxed">
-                  {data.valuation.valuationNote.text}{' '}
-                  <strong className="text-foreground text-lg">{data.valuation.valuationNote.fairValue}</strong>.
-                </p>
+                <ReadMore
+                  text={`${data.valuation.valuationNote.text} ${data.valuation.valuationNote.fairValue}.`}
+                  lines={3}
+                  className="text-sm text-foreground/55 leading-relaxed"
+                />
               </Card>
             )}
             {data.valuation.peAnalysis && <ForwardPECard data={data.valuation.peAnalysis} />}
