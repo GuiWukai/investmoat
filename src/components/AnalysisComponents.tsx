@@ -6,6 +6,7 @@ import { motion, AnimatePresence, type PanInfo } from "framer-motion";
 import { Card, Chip, Meter, Spinner, Tabs } from "@heroui/react";
 import type { TenMoatsAssessment, MoatStatus } from "@/app/tenMoatsData";
 import type { CommodityMoatsData, CryptoMoatsData, StockAnalysisData } from "@/types/stockAnalysis";
+import { ReadMore } from '@/components/ReadMore';
 
 // ─── Count-up animation ────────────────────────────────────────────────────────
 function useCountUp(target: number, duration = 900): number {
@@ -107,7 +108,12 @@ export function ScoreGauge({ score, label, description }: ScoreGaugeProps) {
     <Card className="w-full lg:min-w-[200px] flex-1 p-5 items-center gap-4 text-center animate-fade-in-scale stagger-fill-both" style={{ animationDelay: '0.1s' }}>
       <p className="section-label">{label}</p>
       <ArcGauge score={score} />
-      <p className="text-xs text-foreground/40 leading-relaxed">{description}</p>
+      <ReadMore
+        text={description}
+        lines={3}
+        align="center"
+        className="text-xs text-foreground/40 leading-relaxed"
+      />
     </Card>
   );
 }
@@ -331,7 +337,11 @@ export function ScenarioCard({
         </span>
         <span className="text-xl font-black text-foreground">{priceTarget}</span>
       </div>
-      <p className="text-sm font-semibold text-foreground/80">{description}</p>
+      <ReadMore
+        text={description}
+        lines={3}
+        className="text-sm font-semibold text-foreground/80"
+      />
       <ul className="space-y-1.5">
         {points.map((point, i) => (
           <li key={i} className="flex items-start gap-2">
@@ -421,7 +431,11 @@ function MoatRow({ label, status, note }: { label: string; status: MoatStatus; n
             {cfg.label}
           </span>
         </div>
-        <p className="text-xs text-foreground/40 leading-relaxed">{note}</p>
+        <ReadMore
+          text={note}
+          lines={2}
+          className="text-xs text-foreground/40 leading-relaxed"
+        />
       </div>
     </div>
   );
@@ -449,7 +463,11 @@ export function TenMoatsCard({ data }: { data: TenMoatsAssessment }) {
       {/* Verdict */}
       <Card className="p-5">
         <p className="section-label mb-2">Ten Moats Verdict</p>
-        <p className="text-sm text-foreground/60 leading-relaxed">{data.verdict}</p>
+        <ReadMore
+          text={data.verdict}
+          lines={3}
+          className="text-sm text-foreground/60 leading-relaxed"
+        />
       </Card>
 
       {/* Moat grid */}
@@ -503,7 +521,11 @@ export function CryptoMoatsCard({ data }: { data: CryptoMoatsData }) {
     <div className="space-y-4">
       <Card className="p-5">
         <p className="section-label mb-2">Crypto Moat Verdict</p>
-        <p className="text-sm text-foreground/60 leading-relaxed">{data.verdict}</p>
+        <ReadMore
+          text={data.verdict}
+          lines={3}
+          className="text-sm text-foreground/60 leading-relaxed"
+        />
       </Card>
       <div className="rounded-2xl border border-emerald-500/[0.1] bg-emerald-500/[0.02] p-5">
         <div className="flex items-center gap-2 mb-4">
@@ -533,7 +555,11 @@ export function CommodityMoatsCard({ data }: { data: CommodityMoatsData }) {
     <div className="space-y-4">
       <Card className="p-5">
         <p className="section-label mb-2">Commodity Moat Verdict</p>
-        <p className="text-sm text-foreground/60 leading-relaxed">{data.verdict}</p>
+        <ReadMore
+          text={data.verdict}
+          lines={3}
+          className="text-sm text-foreground/60 leading-relaxed"
+        />
       </Card>
       <div className="rounded-2xl border border-emerald-500/[0.1] bg-emerald-500/[0.02] p-5">
         <div className="flex items-center gap-2 mb-4">

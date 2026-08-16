@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const CLAMP: Record<1 | 2 | 3 | 4, string> = {
   1: 'line-clamp-1',
@@ -15,15 +15,14 @@ const CLAMP: Record<1 | 2 | 3 | 4, string> = {
  */
 export function ReadMore({
   text,
-  lines = 2,
+  lines = 3,
   className = '',
-  extra,
+  align = 'start',
 }: {
   text: string;
   lines?: 1 | 2 | 3 | 4;
   className?: string;
-  /** Optional meta (ticker, badge) rendered on the same row as the toggle. */
-  extra?: ReactNode;
+  align?: 'start' | 'center';
 }) {
   const textRef = useRef<HTMLParagraphElement>(null);
   const [expanded, setExpanded] = useState(false);
@@ -40,7 +39,7 @@ export function ReadMore({
 
     const measure = () => {
       // Sub-pixel rounding routinely reports 1–2px of fake overflow on
-      // labels that already fit, which would show a no-op Read more.
+      // copy that already fits, which would show a no-op Read more.
       const over = singleLine
         ? el.scrollWidth - el.clientWidth > 8
         : el.scrollHeight - el.clientHeight > 4;
@@ -63,10 +62,8 @@ export function ReadMore({
 
   if (!text) return null;
 
-  const showBar = extra != null || overflows;
-
   return (
-    <div className="min-w-0">
+    <div className={`min-w-0 ${align === 'center' ? 'text-center' : ''}`}>
       <p
         ref={textRef}
         className={`${className} ${
@@ -75,26 +72,19 @@ export function ReadMore({
       >
         {text}
       </p>
-      {showBar && (
-        <div className="mt-0.5 flex min-w-0 flex-nowrap items-center gap-1.5">
-          {extra != null && <div className="min-w-0 truncate">{extra}</div>}
-          {overflows && (
-            <button
-              type="button"
-              aria-expanded={expanded}
-              className={`shrink-0 text-[10px] font-bold text-gold-bright hover:text-gold-bright/80 transition-colors ${
-                extra != null ? 'ml-auto' : ''
-              }`}
-              onClick={(event) => {
-                event.stopPropagation();
-                event.preventDefault();
-                setExpanded((open) => !open);
-              }}
-            >
-              {expanded ? 'Read less' : 'Read more'}
-            </button>
-          )}
-        </div>
+      {overflows && (
+        <button
+          type="button"
+          aria-expanded={expanded}
+          className="mt-1 text-[11px] font-bold text-gold-bright hover:text-gold-bright/80 transition-colors"
+          onClick={(event) => {
+            event.stopPropagation();
+            event.preventDefault();
+            setExpanded((open) => !open);
+          }}
+        >
+          {expanded ? 'Read less' : 'Read more'}
+        </button>
       )}
     </div>
   );
