@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from "next/navigation";
-import { useEffect, useMemo, useState, type KeyboardEvent } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { PieChart, ShieldCheck, ChevronRight, TrendingUp, TrendingDown, Eye } from "lucide-react";
 import { Card, Spinner } from "@heroui/react";
 import {
@@ -12,7 +12,6 @@ import {
   MIN_MOAT_SCORE,
 } from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
-import { ReadMore } from "@/components/ReadMore";
 
 // ─── Portfolio thresholds ─────────────────────────────────────────────────────
 // Composite ≥ 80 ("near Strong Buy") plus moat ≥ 70 so growth/valuation cannot
@@ -128,7 +127,7 @@ const CATEGORY_STYLES: Record<string, string> = {
 function CategoryBadge({ category }: { category: string }) {
   const cls = CATEGORY_STYLES[category] ?? "bg-foreground/5 text-foreground/40 border-foreground/10";
   return (
-    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border truncate inline-block max-w-full ${cls}`}>
+    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${cls}`}>
       {category}
     </span>
   );
@@ -155,13 +154,6 @@ function RankBadge({ rank }: { rank: number }) {
       <span className="text-[11px] font-black tabular-nums">{rank}</span>
     </div>
   );
-}
-
-function rowKeyDown(event: KeyboardEvent<HTMLDivElement>, go: () => void) {
-  if (event.key === 'Enter' || event.key === ' ') {
-    event.preventDefault();
-    go();
-  }
 }
 
 // ─── Sector sets for concentration display ────────────────────────────────────
@@ -217,7 +209,6 @@ export default function PortfolioPage() {
         href:     s.href,
         color:    stockMeta[s.ticker]?.color    ?? "#888888",
         category: stockMeta[s.ticker]?.category ?? "Other",
-        exclusionReason: stockMeta[s.ticker]?.exclusionReason,
         stock:    s,
         composite,
       }));
@@ -569,8 +560,9 @@ export default function PortfolioPage() {
           <div className="flex items-center gap-3 md:gap-4 px-4 md:px-5 py-2.5 border-b border-foreground/[0.05] bg-foreground/[0.02]">
             <div className="section-label w-6 md:w-7 text-center shrink-0">#</div>
             <div className="w-0.5 shrink-0" />
-            <div className="section-label flex-1 min-w-0">Holding</div>
+            <div className="section-label min-w-[110px] md:min-w-[140px]">Holding</div>
             <div className="section-label hidden sm:block shrink-0 w-24">Category</div>
+            <div className="flex-1" />
             {/* 1-Yr Return header — lg only */}
             <div className="hidden lg:block section-label text-right shrink-0 w-36">1-Yr Return</div>
             {/* Score header */}
@@ -584,13 +576,10 @@ export default function PortfolioPage() {
           {/* Data rows */}
           <div className="divide-y divide-foreground/[0.04]">
             {portfolioWithScores.map((stock, idx) => (
-              <div
+              <button
                 key={stock.ticker}
-                role="link"
-                tabIndex={0}
                 onClick={() => router.push(stock.href)}
-                onKeyDown={(event) => rowKeyDown(event, () => router.push(stock.href))}
-                className="w-full flex items-center gap-3 md:gap-4 px-4 md:px-5 py-3.5 hover:bg-foreground/[0.04] transition-colors group text-left cursor-pointer"
+                className="w-full flex items-center gap-3 md:gap-4 px-4 md:px-5 py-3.5 hover:bg-foreground/[0.04] transition-colors group text-left"
               >
                 {/* Position in the IM25, not universe composite rank */}
                 <RankBadge rank={idx + 1} />
@@ -598,24 +587,18 @@ export default function PortfolioPage() {
                 {/* Color accent */}
                 <div className="w-0.5 self-stretch rounded-full shrink-0" style={{ background: stock.color }} />
 
-                {/* Name + ticker — flex-1 so long names clamp instead of wrapping in a cramped column */}
-                <div className="flex-1 min-w-0">
-                  <ReadMore
-                    text={stock.name}
-                    lines={1}
-                    className="font-bold text-sm text-foreground/90 leading-tight"
-                    extra={
-                      <div className="text-[10px] text-foreground/28 tracking-[0.12em] font-black uppercase">
-                        {stock.ticker}
-                      </div>
-                    }
-                  />
+                {/* Name + ticker */}
+                <div className="min-w-[110px] md:min-w-[140px]">
+                  <div className="font-bold text-sm text-foreground/90 leading-tight">{stock.name}</div>
+                  <div className="text-[10px] text-foreground/28 tracking-[0.12em] font-black uppercase mt-0.5">{stock.ticker}</div>
                 </div>
 
                 {/* Category badge */}
                 <div className="hidden sm:block shrink-0 w-24">
                   <CategoryBadge category={stock.category} />
                 </div>
+
+                <div className="flex-1" />
 
                 {/* Per-stock bear/base/bull */}
                 <div className="hidden lg:flex items-center justify-end shrink-0 w-36">
@@ -689,7 +672,7 @@ export default function PortfolioPage() {
                   size={15}
                   className="text-foreground/15 group-hover:text-foreground/50 transition-colors shrink-0"
                 />
-              </div>
+              </button>
             ))}
           </div>
         </Card>
@@ -721,8 +704,9 @@ export default function PortfolioPage() {
             <div className="flex items-center gap-3 md:gap-4 px-4 md:px-5 py-2.5 border-b border-foreground/[0.05] bg-foreground/[0.02]">
               <div className="section-label w-6 md:w-7 text-center shrink-0">#</div>
               <div className="w-0.5 shrink-0" />
-              <div className="section-label flex-1 min-w-0">Holding</div>
+              <div className="section-label min-w-[110px] md:min-w-[140px]">Holding</div>
               <div className="section-label hidden sm:block shrink-0 w-24">Category</div>
+              <div className="flex-1" />
               <div className="hidden lg:block section-label text-right shrink-0 w-36">1-Yr Return</div>
               <div className={`section-label text-right shrink-0 w-12 ${scoreColumn !== 'score' ? 'hidden lg:block' : ''}`}>Score</div>
               <div className={`section-label text-right shrink-0 w-14 ${scoreColumn !== 'change' ? 'hidden lg:block' : ''}`}>1D %</div>
@@ -732,18 +716,12 @@ export default function PortfolioPage() {
             {/* Data rows */}
             <div className="divide-y divide-foreground/[0.04]">
               {nearTop.map((stock, idx) => (
-                <div
+                <button
                   key={stock.ticker}
-                  className="hover:bg-foreground/[0.04] transition-colors animate-slide-in-left stagger-fill-both"
+                  onClick={() => router.push(stock.href)}
+                  className="w-full flex items-center gap-3 md:gap-4 px-4 md:px-5 py-3.5 hover:bg-foreground/[0.04] transition-colors group text-left animate-slide-in-left stagger-fill-both"
                   style={{ animationDelay: `${0.5 + idx * 0.035}s` }}
                 >
-                  <div
-                    role="link"
-                    tabIndex={0}
-                    onClick={() => router.push(stock.href)}
-                    onKeyDown={(event) => rowKeyDown(event, () => router.push(stock.href))}
-                    className="w-full flex items-center gap-3 md:gap-4 px-4 md:px-5 py-3.5 group text-left cursor-pointer"
-                  >
                   {/* Continues after the IM25 so a gated #2 is not still marked 2 */}
                   <RankBadge rank={portfolio.length + idx + 1} />
 
@@ -751,30 +729,24 @@ export default function PortfolioPage() {
                   <div className="w-0.5 self-stretch rounded-full shrink-0" style={{ background: stock.color }} />
 
                   {/* Name + ticker */}
-                  <div className="flex-1 min-w-0">
-                    <ReadMore
-                      text={stock.name}
-                      lines={1}
-                      className="font-bold text-sm text-foreground/90 leading-tight"
-                      extra={
-                        <div className="flex min-w-0 items-center gap-1.5">
-                          <div className="text-[10px] text-foreground/28 tracking-[0.12em] font-black uppercase">
-                            {stock.ticker}
-                          </div>
-                          {stock.stock.scores[0] < MIN_MOAT_SCORE && (
-                            <span className="text-[9px] font-bold uppercase tracking-wider text-rose-400/65">
-                              Moat floor
-                            </span>
-                          )}
-                        </div>
-                      }
-                    />
+                  <div className="min-w-[110px] md:min-w-[140px]">
+                    <div className="font-bold text-sm text-foreground/90 leading-tight">{stock.name}</div>
+                    <div className="flex items-center gap-1.5 mt-0.5">
+                      <div className="text-[10px] text-foreground/28 tracking-[0.12em] font-black uppercase">{stock.ticker}</div>
+                      {stock.stock.scores[0] < MIN_MOAT_SCORE && (
+                        <span className="text-[9px] font-bold uppercase tracking-wider text-rose-400/65">
+                          Moat floor
+                        </span>
+                      )}
+                    </div>
                   </div>
 
                   {/* Category badge */}
                   <div className="hidden sm:block shrink-0 w-24">
                     <CategoryBadge category={stock.category} />
                   </div>
+
+                  <div className="flex-1" />
 
                   {/* Per-stock bear/base/bull */}
                   <div className="hidden lg:flex items-center justify-end shrink-0 w-36">
@@ -840,17 +812,7 @@ export default function PortfolioPage() {
                     size={15}
                     className="text-foreground/15 group-hover:text-foreground/50 transition-colors shrink-0"
                   />
-                  </div>
-                  {stock.exclusionReason && (
-                    <div className="px-4 md:px-5 pb-3.5 -mt-1">
-                      <ReadMore
-                        text={stock.exclusionReason}
-                        lines={2}
-                        className="text-[11px] text-foreground/40 leading-relaxed"
-                      />
-                    </div>
-                  )}
-                </div>
+                </button>
               ))}
             </div>
           </Card>
