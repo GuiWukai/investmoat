@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import {
@@ -138,6 +138,29 @@ function scoreColor(score: number): string {
   if (score >= 80) return 'text-blue-400';
   if (score >= 70) return 'text-amber-400';
   return 'text-rose-400';
+}
+
+/** One cell in the compact book-summary strip. */
+function SummaryMetric({
+  label,
+  footnote,
+  className,
+  children,
+}: {
+  label: string;
+  footnote?: ReactNode;
+  className?: string;
+  children: ReactNode;
+}) {
+  return (
+    <div className={`min-w-0 px-3.5 py-2.5 md:px-5 md:py-3 ${className ?? ''}`}>
+      <p className="section-label mb-0.5">{label}</p>
+      {children}
+      {footnote != null && (
+        <p className="mt-0.5 text-[10px] leading-tight text-foreground/28">{footnote}</p>
+      )}
+    </div>
+  );
 }
 
 /** Live composite when a quote exists; otherwise the static coverage score. */
@@ -522,68 +545,77 @@ export default function MyPortfolioPage() {
 
       {/* Summary */}
       <section
-        className="animate-fade-up stagger-fill-both mb-8 grid grid-cols-2 gap-3 lg:grid-cols-4"
+        className="animate-fade-up stagger-fill-both mb-5"
         style={{ animationDelay: '0.1s' }}
       >
-        <Card className="p-4">
-          <p className="section-label mb-1.5">Market value</p>
-          {!hydrated || (quotesLoading && holdings.length > 0 && totals.marketValue == null) ? (
-            <Spinner size="sm" color="current" />
-          ) : (
-            <p className="text-2xl font-black tabular-nums text-foreground">
-              {money(totals.marketValue)}
-            </p>
-          )}
-          <p className="mt-0.5 text-[10px] text-foreground/28">
-            {holdings.length} position{holdings.length === 1 ? '' : 's'} · {displayCurrency}
-          </p>
-        </Card>
-
-        <Card className="p-4">
-          <p className="section-label mb-1.5">Today</p>
-          {!hydrated || quotesLoading ? (
-            <Spinner size="sm" color="current" />
-          ) : totals.dayChange == null ? (
-            <p className="text-2xl font-black text-foreground/20">—</p>
-          ) : (
-            <div
-              className={`flex items-center gap-2 ${
-                totals.dayChange >= 0 ? 'text-emerald-400' : 'text-rose-400'
-              }`}
+        <Card className="overflow-hidden">
+          <div className="grid grid-cols-2 lg:grid-cols-4">
+            <SummaryMetric
+              className="border-b border-r border-foreground/[0.06] lg:border-b-0"
+              footnote={`${holdings.length} position${holdings.length === 1 ? '' : 's'} · ${displayCurrency}`}
+              label="Market value"
             >
-              {totals.dayChange >= 0 ? <TrendingUp size={20} /> : <TrendingDown size={20} />}
-              <span className="text-2xl font-black tabular-nums">
-                {formatPct(totals.dayChange)}
-              </span>
-            </div>
-          )}
-          <p className="mt-0.5 text-[10px] text-foreground/28">Value-weighted</p>
-        </Card>
+              {!hydrated || (quotesLoading && holdings.length > 0 && totals.marketValue == null) ? (
+                <Spinner size="sm" color="current" />
+              ) : (
+                <p className="truncate text-lg font-black tabular-nums text-foreground md:text-xl">
+                  {money(totals.marketValue)}
+                </p>
+              )}
+            </SummaryMetric>
 
-        <Card className="p-4">
-          <p className="section-label mb-1.5">Cost basis</p>
-          <p className="text-2xl font-black tabular-nums text-foreground">
-            {money(totals.costBasis)}
-          </p>
-          <p className="mt-0.5 text-[10px] text-foreground/28">Optional · from avg cost</p>
-        </Card>
-
-        <Card className="p-4">
-          <p className="section-label mb-1.5">Unrealized P&amp;L</p>
-          {totals.gain == null ? (
-            <p className="text-2xl font-black text-foreground/20">—</p>
-          ) : (
-            <div
-              className={`${
-                totals.gain >= 0 ? 'text-emerald-400' : 'text-rose-400'
-              }`}
+            <SummaryMetric
+              className="border-b border-foreground/[0.06] lg:border-b-0 lg:border-r"
+              footnote="Value-weighted"
+              label="Today"
             >
-              <p className="text-2xl font-black tabular-nums">{money(totals.gain)}</p>
-              <p className="mt-0.5 text-[10px] tabular-nums opacity-80">
-                {formatPct(totals.gainPct)}
+              {!hydrated || quotesLoading ? (
+                <Spinner size="sm" color="current" />
+              ) : totals.dayChange == null ? (
+                <p className="text-lg font-black text-foreground/20 md:text-xl">—</p>
+              ) : (
+                <div
+                  className={`flex items-center gap-1.5 ${
+                    totals.dayChange >= 0 ? 'text-emerald-400' : 'text-rose-400'
+                  }`}
+                >
+                  {totals.dayChange >= 0 ? <TrendingUp size={14} /> : <TrendingDown size={14} />}
+                  <span className="text-lg font-black tabular-nums md:text-xl">
+                    {formatPct(totals.dayChange)}
+                  </span>
+                </div>
+              )}
+            </SummaryMetric>
+
+            <SummaryMetric
+              className="border-r border-foreground/[0.06]"
+              footnote="Optional · from avg cost"
+              label="Cost basis"
+            >
+              <p className="truncate text-lg font-black tabular-nums text-foreground md:text-xl">
+                {money(totals.costBasis)}
               </p>
-            </div>
-          )}
+            </SummaryMetric>
+
+            <SummaryMetric label="Unrealized P&amp;L">
+              {totals.gain == null ? (
+                <p className="text-lg font-black text-foreground/20 md:text-xl">—</p>
+              ) : (
+                <div
+                  className={`flex flex-wrap items-baseline gap-x-2 ${
+                    totals.gain >= 0 ? 'text-emerald-400' : 'text-rose-400'
+                  }`}
+                >
+                  <p className="truncate text-lg font-black tabular-nums md:text-xl">
+                    {money(totals.gain)}
+                  </p>
+                  <p className="text-[11px] tabular-nums opacity-80">
+                    {formatPct(totals.gainPct)}
+                  </p>
+                </div>
+              )}
+            </SummaryMetric>
+          </div>
         </Card>
       </section>
 
