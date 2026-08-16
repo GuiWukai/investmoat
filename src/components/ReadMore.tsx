@@ -10,9 +10,8 @@ const CLAMP: Record<1 | 2 | 3 | 4, string> = {
 };
 
 /**
- * Collapse overflowing copy to a fixed number of lines and reveal the rest
- * with a Read more / Read less control. The toggle is omitted when the text
- * already fits, so short labels stay quiet.
+ * Collapse overflowing copy and reveal the rest with Read more / Read less.
+ * The toggle is omitted when the text already fits.
  */
 export function ReadMore({
   text,
@@ -29,6 +28,7 @@ export function ReadMore({
   const textRef = useRef<HTMLParagraphElement>(null);
   const [expanded, setExpanded] = useState(false);
   const [overflows, setOverflows] = useState(false);
+  const singleLine = lines === 1;
 
   useEffect(() => {
     setExpanded(false);
@@ -40,14 +40,17 @@ export function ReadMore({
     if (!el || expanded) return;
 
     const measure = () => {
-      if (el.scrollHeight > el.clientHeight + 1) setOverflows(true);
+      const over = singleLine
+        ? el.scrollWidth > el.clientWidth + 1
+        : el.scrollHeight > el.clientHeight + 1;
+      if (over) setOverflows(true);
     };
 
     measure();
     const ro = new ResizeObserver(measure);
     ro.observe(el);
     return () => ro.disconnect();
-  }, [text, lines, expanded]);
+  }, [text, lines, expanded, singleLine]);
 
   if (!text) return null;
 
@@ -57,18 +60,22 @@ export function ReadMore({
     <div className="min-w-0">
       <p
         ref={textRef}
-        className={`${className} ${expanded ? '' : CLAMP[lines]}`}
+        className={`${className} ${
+          expanded ? '' : singleLine ? 'truncate' : CLAMP[lines]
+        }`}
       >
         {text}
       </p>
       {showBar && (
-        <div className="mt-0.5 flex min-w-0 flex-wrap items-center gap-x-2 gap-y-0.5">
-          {extra != null && <div className="min-w-0">{extra}</div>}
+        <div className="mt-0.5 flex min-w-0 flex-nowrap items-center gap-1.5">
+          {extra != null && <div className="min-w-0 truncate">{extra}</div>}
           {overflows && (
             <button
               type="button"
               aria-expanded={expanded}
-              className="shrink-0 text-[10px] font-bold text-gold-bright hover:text-gold-bright/80 transition-colors"
+              className={`shrink-0 text-[10px] font-bold text-gold-bright hover:text-gold-bright/80 transition-colors ${
+                extra != null ? 'ml-auto' : ''
+              }`}
               onClick={(event) => {
                 event.stopPropagation();
                 event.preventDefault();
