@@ -90,6 +90,10 @@ const stockMeta: Record<string, { color: string; category: string; exclusionReas
   RDDT:  { color: "#ff4500", category: "Big Tech" },
   SE:    { color: "#ee2537", category: "Eco-System" },
   TTD:   { color: "#3363ff", category: "AdTech" },
+  DDOG:  { color: "#632ca6", category: "Enterprise SaaS" },
+  VST:   { color: "#00a651", category: "Utilities" },
+  CDNS:  { color: "#00a3e0", category: "Semiconductors" },
+  UBER:  { color: "#06C167", category: "Eco-System" },
 };
 
 // ─── Category colour helper ───────────────────────────────────────────────────
@@ -156,13 +160,105 @@ function RankBadge({ rank }: { rank: number }) {
   );
 }
 
-// ─── Sector sets for concentration display ────────────────────────────────────
-const TECH_CATEGORIES = new Set([
-  "Core SaaS", "Enterprise SaaS", "Big Tech",
-  "AI Infrastructure", "Lithography", "AI Analytics",
-  "Clean Tech", "Eco-System", "Cybersecurity", "Digital Assets", "Foundry", "Memory", "Semiconductors", "E-Commerce", "Enterprise Software",
-]);
-const FIN_CATEGORIES = new Set(["Payments", "Financials", "FinTech", "Financial Data"]);
+// ─── Allocation themes ────────────────────────────────────────────────────────
+// Per-name weights cluster around 4–5% under the 10% cap, so a 25-slice ticker
+// pie reads as a uniform ring. Rolling the granular stockMeta categories into
+// a handful of themes makes concentration visible at a glance; individual
+// weights stay in the holdings table below.
+type AllocationTheme = {
+  id: string;
+  label: string;
+  color: string;
+  categories: ReadonlySet<string>;
+};
+
+const ALLOCATION_THEMES: AllocationTheme[] = [
+  {
+    id: "software",
+    label: "Software & Platforms",
+    color: "#3b82f6",
+    categories: new Set([
+      "Core SaaS", "Enterprise SaaS", "Enterprise Software", "Big Tech",
+      "Eco-System", "E-Commerce", "AdTech", "Media", "Cybersecurity",
+    ]),
+  },
+  {
+    id: "semis",
+    label: "AI & Semiconductors",
+    color: "#f59e0b",
+    categories: new Set([
+      "AI Infrastructure", "AI Analytics", "Foundry", "Memory",
+      "Semiconductors", "Lithography",
+    ]),
+  },
+  {
+    id: "financials",
+    label: "Financials",
+    color: "#34d399",
+    categories: new Set(["Payments", "Financials", "FinTech", "Financial Data"]),
+  },
+  {
+    id: "healthcare",
+    label: "Healthcare",
+    color: "#14b8a6",
+    categories: new Set(["Healthcare"]),
+  },
+  {
+    id: "energy",
+    label: "Energy & Utilities",
+    color: "#f43f5e",
+    categories: new Set(["Utilities", "Clean Tech"]),
+  },
+  {
+    id: "industrials",
+    label: "Industrials",
+    color: "#fb923c",
+    categories: new Set(["Industrials", "Robotics"]),
+  },
+  {
+    id: "hard-assets",
+    label: "Hard Assets",
+    color: "#c4a574",
+    categories: new Set(["Hard Assets"]),
+  },
+  {
+    id: "digital",
+    label: "Digital Assets",
+    color: "#8b5cf6",
+    categories: new Set(["Digital Assets"]),
+  },
+];
+
+const OTHER_THEME: AllocationTheme = {
+  id: "other",
+  label: "Other",
+  color: "#64748b",
+  categories: new Set(["Luxury", "Consumer Retail", "Other"]),
+};
+
+function themeForCategory(category: string): AllocationTheme {
+  return ALLOCATION_THEMES.find((t) => t.categories.has(category)) ?? OTHER_THEME;
+}
+
+function donutSlicePath(
+  cx: number,
+  cy: number,
+  outerR: number,
+  innerR: number,
+  start: number,
+  end: number,
+): string {
+  const largeArc = end - start > Math.PI ? 1 : 0;
+  const cos = Math.cos;
+  const sin = Math.sin;
+  return [
+    `M ${cx + outerR * cos(start)} ${cy + outerR * sin(start)}`,
+    `A ${outerR} ${outerR} 0 ${largeArc} 1 ${cx + outerR * cos(end)} ${cy + outerR * sin(end)}`,
+    `L ${cx + innerR * cos(end)} ${cy + innerR * sin(end)}`,
+    `A ${innerR} ${innerR} 0 ${largeArc} 0 ${cx + innerR * cos(start)} ${cy + innerR * sin(start)}`,
+    "Z",
+  ].join(" ");
+}
 
 export default function PortfolioPage() {
   const router = useRouter();
@@ -208,7 +304,7 @@ export default function PortfolioPage() {
         slug:     s.slug,
         href:     s.href,
         color:    stockMeta[s.ticker]?.color    ?? "#888888",
-        category: stockMeta[s.ticker]?.category ?? "Other",
+        category: stockMeta[s.ticker]?.category ?? s.category ?? "Other",
         stock:    s,
         composite,
       }));
@@ -240,7 +336,7 @@ export default function PortfolioPage() {
   const liveScores: Record<string, number> = {};
   portfolio.forEach(p => { liveScores[p.ticker] = scoreByTicker[p.ticker]; });
 
-  const [hoveredPie, setHoveredPie] = useState<string | null>(null);
+  const [activeTheme, setActiveTheme] = useState<string | null>(null);
   const [scoreColumn, setScoreColumn] = useState<'score' | 'change'>('score');
   const scoresLoading = !allPricesLoaded;
 
@@ -320,12 +416,18 @@ export default function PortfolioPage() {
     return { bear: acc.bear / acc.w, base: acc.base / acc.w, bull: acc.bull / acc.w };
   })();
 
-  const techWeight = portfolio.reduce(
-    (s, p) => TECH_CATEGORIES.has(p.category) ? s + (dynamicWeights[p.ticker] ?? 0) : s, 0
-  );
-  const finWeight = portfolio.reduce(
-    (s, p) => FIN_CATEGORIES.has(p.category) ? s + (dynamicWeights[p.ticker] ?? 0) : s, 0
-  );
+  const themeBuckets = [...ALLOCATION_THEMES, OTHER_THEME]
+    .map((theme) => {
+      const holdings = portfolio
+        .filter((p) => themeForCategory(p.category).id === theme.id)
+        .sort((a, b) => (dynamicWeights[b.ticker] ?? 0) - (dynamicWeights[a.ticker] ?? 0));
+      const weight = holdings.reduce((sum, p) => sum + (dynamicWeights[p.ticker] ?? 0), 0);
+      return { ...theme, holdings, weight };
+    })
+    .filter((t) => t.weight > 0)
+    .sort((a, b) => b.weight - a.weight);
+  const maxThemeWeight = themeBuckets[0]?.weight || 1;
+  const activeBucket = themeBuckets.find((t) => t.id === activeTheme) ?? null;
 
   const portfolioWithScores = [...portfolio].sort(
     (a, b) => (liveScores[b.ticker] ?? 0) - (liveScores[a.ticker] ?? 0)
@@ -357,82 +459,123 @@ export default function PortfolioPage() {
       {/* ── Allocation chart + Strategy summary ──────────────────────────── */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5 animate-fade-up stagger-fill-both" style={{ animationDelay: '0.15s' }}>
 
-        {/* Visual Allocation */}
+        {/* Visual Allocation — themes, not 25 near-equal ticker slices */}
         <Card className="p-6">
-          <div className="flex items-center gap-2.5 mb-6">
-            <PieChart size={16} className="text-accent" />
-            <h3 className="font-bold text-foreground/85">Visual Allocation</h3>
+          <div className="flex items-center justify-between gap-3 mb-5">
+            <div className="flex items-center gap-2.5">
+              <PieChart size={16} className="text-accent" />
+              <h3 className="font-bold text-foreground/85">Visual Allocation</h3>
+            </div>
+            <p className="section-label">By theme</p>
           </div>
 
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center mb-5">
             <svg viewBox="0 0 200 200" className="w-56 h-56">
               {(() => {
                 const cx = 100, cy = 100, outerR = 88, innerR = 56;
-                const pieSorted = [...portfolio].sort((a, b) => (dynamicWeights[b.ticker] ?? 0) - (dynamicWeights[a.ticker] ?? 0));
-                const GAP = 0.016;
+                const GAP = 0.024;
                 let cumAngle = -Math.PI / 2;
-                return pieSorted.map((stock) => {
-                  const w = dynamicWeights[stock.ticker] ?? 0;
-                  const sliceAngle = (w / 100) * 2 * Math.PI;
+                return themeBuckets.map((theme, idx) => {
+                  const sliceAngle = (theme.weight / 100) * 2 * Math.PI;
                   const sa = cumAngle + GAP / 2;
                   const ea = cumAngle + sliceAngle - GAP / 2;
                   cumAngle += sliceAngle;
-                  const largeArc = (ea - sa) > Math.PI ? 1 : 0;
-                  const c = Math.cos, s = Math.sin;
-                  const d = [
-                    `M ${cx + outerR * c(sa)} ${cy + outerR * s(sa)}`,
-                    `A ${outerR} ${outerR} 0 ${largeArc} 1 ${cx + outerR * c(ea)} ${cy + outerR * s(ea)}`,
-                    `L ${cx + innerR * c(ea)} ${cy + innerR * s(ea)}`,
-                    `A ${innerR} ${innerR} 0 ${largeArc} 0 ${cx + innerR * c(sa)} ${cy + innerR * s(sa)}`,
-                    'Z',
-                  ].join(' ');
-                  const isHov = hoveredPie === stock.ticker;
+                  const isActive = activeTheme === theme.id;
                   return (
                     <path
-                      key={stock.ticker}
-                      d={d}
-                      fill={stock.color}
-                      opacity={hoveredPie && !isHov ? 0.2 : isHov ? 1 : 0.85}
+                      key={theme.id}
+                      d={donutSlicePath(cx, cy, outerR, innerR, sa, ea)}
+                      fill={theme.color}
+                      opacity={activeTheme && !isActive ? 0.18 : isActive ? 1 : 0.88}
                       className="transition-all duration-200 cursor-pointer"
                       style={{
-                        transformOrigin: '100px 100px',
-                        animation: `fade-in-scale 0.6s ease-out ${0.1 + pieSorted.indexOf(stock) * 0.04}s both`,
-                        transform: isHov ? 'scale(1.05)' : 'scale(1)',
+                        transformOrigin: "100px 100px",
+                        animation: `fade-in-scale 0.6s ease-out ${0.1 + idx * 0.05}s both`,
+                        transform: isActive ? "scale(1.05)" : "scale(1)",
                       }}
-                      onMouseEnter={() => setHoveredPie(stock.ticker)}
-                      onMouseLeave={() => setHoveredPie(null)}
+                      onPointerEnter={(e) => {
+                        if (e.pointerType === "mouse") setActiveTheme(theme.id);
+                      }}
+                      onPointerLeave={(e) => {
+                        if (e.pointerType === "mouse") setActiveTheme(null);
+                      }}
+                      onClick={() => setActiveTheme((id) => (id === theme.id ? null : theme.id))}
                     />
                   );
                 });
               })()}
-              {hoveredPie ? (() => {
-                const s = portfolio.find(p => p.ticker === hoveredPie)!;
-                return (
-                  <>
-                    <text x="100" y="95" textAnchor="middle" fill="white" fontSize="13" fontWeight="bold" fontFamily="system-ui,sans-serif">{s.ticker}</text>
-                    <text x="100" y="113" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="11" fontFamily="system-ui,sans-serif">{dynamicWeights[s.ticker] ?? 0}%</text>
-                  </>
-                );
-              })() : (
+              {activeBucket ? (
                 <>
-                  <text x="100" y="95" textAnchor="middle" fill="rgba(255,255,255,0.22)" fontSize="7.5" fontFamily="system-ui,sans-serif" letterSpacing="2.5">PORTFOLIO</text>
-                  <text x="100" y="114" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold" fontFamily="system-ui,sans-serif">{portfolio.length} Holdings</text>
+                  <text x="100" y="92" textAnchor="middle" fill="rgba(255,255,255,0.38)" fontSize="7.5" fontFamily="system-ui,sans-serif" letterSpacing="1.4">
+                    {activeBucket.holdings.length} {activeBucket.holdings.length === 1 ? "NAME" : "NAMES"}
+                  </text>
+                  <text x="100" y="114" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold" fontFamily="system-ui,sans-serif">
+                    {activeBucket.weight}%
+                  </text>
+                </>
+              ) : (
+                <>
+                  <text x="100" y="92" textAnchor="middle" fill="rgba(255,255,255,0.22)" fontSize="7.5" fontFamily="system-ui,sans-serif" letterSpacing="2.5">PORTFOLIO</text>
+                  <text x="100" y="114" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold" fontFamily="system-ui,sans-serif">{themeBuckets.length} Themes</text>
                 </>
               )}
             </svg>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-2.5">
-            {[...portfolio].sort((a, b) => (dynamicWeights[b.ticker] ?? 0) - (dynamicWeights[a.ticker] ?? 0)).map((stock) => (
-              <div key={stock.ticker} className="flex items-center gap-2 min-w-0">
-                <div className="w-2 h-2 rounded-full shrink-0" style={{ background: stock.color }} />
-                <span className="text-xs font-bold text-foreground/70 truncate">{stock.ticker}</span>
-                {scoresLoading
-                  ? <Spinner size="sm" color="current" />
-                  : <span className="text-xs text-foreground/30 ml-auto">{dynamicWeights[stock.ticker] ?? 0}%</span>
-                }
-              </div>
-            ))}
+          <div className="space-y-1">
+            {themeBuckets.map((theme) => {
+              const isActive = activeTheme === theme.id;
+              return (
+                <div
+                  key={theme.id}
+                  className={`rounded-xl px-2.5 py-2 cursor-pointer transition-colors ${
+                    isActive ? "bg-foreground/[0.07]" : "hover:bg-foreground/[0.03]"
+                  }`}
+                  onPointerEnter={(e) => {
+                    if (e.pointerType === "mouse") setActiveTheme(theme.id);
+                  }}
+                  onPointerLeave={(e) => {
+                    if (e.pointerType === "mouse") setActiveTheme(null);
+                  }}
+                  onClick={() => setActiveTheme((id) => (id === theme.id ? null : theme.id))}
+                >
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <div className="w-2 h-2 rounded-full shrink-0" style={{ background: theme.color }} />
+                    <span className="text-xs font-bold text-foreground/80 truncate">{theme.label}</span>
+                    {scoresLoading
+                      ? <Spinner size="sm" color="current" className="ml-auto" />
+                      : <span className="text-xs font-mono text-foreground/40 ml-auto tabular-nums">{theme.weight}%</span>
+                    }
+                  </div>
+                  <div className="h-[3px] bg-foreground/[0.05] rounded-full overflow-hidden mb-1.5">
+                    <div
+                      className="h-full rounded-full transition-all duration-500"
+                      style={{
+                        width: `${(theme.weight / maxThemeWeight) * 100}%`,
+                        background: theme.color,
+                        opacity: 0.85,
+                      }}
+                    />
+                  </div>
+                  <div className="flex flex-wrap gap-x-2.5 gap-y-0.5">
+                    {theme.holdings.map((stock) => (
+                      <button
+                        key={stock.ticker}
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          router.push(stock.href);
+                        }}
+                        className="text-[10px] font-bold text-foreground/45 hover:text-foreground transition-colors"
+                      >
+                        {stock.ticker}
+                        <span className="text-foreground/25 font-medium"> {dynamicWeights[stock.ticker] ?? 0}%</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </Card>
 
@@ -502,27 +645,6 @@ export default function PortfolioPage() {
                 ))}
               </div>
             )}
-          </div>
-
-          {/* Concentration bars */}
-          <div>
-            <p className="section-label mb-2">Sector Concentration</p>
-            <div className="space-y-2">
-              {[
-                { label: "Tech & SaaS", value: techWeight, color: "bg-blue-500" },
-                { label: "Financials & Payments", value: finWeight, color: "bg-emerald-500" },
-              ].map(({ label, value, color }) => (
-                <div key={label}>
-                  <div className="mb-1 flex justify-between">
-                    <span className="text-xs font-medium text-foreground/45">{label}</span>
-                    <span className="font-mono text-xs text-foreground/45">{Math.round(value)}%</span>
-                  </div>
-                  <div className="h-[3px] overflow-hidden rounded-full bg-foreground/[0.05]">
-                    <div className={`h-full ${color} rounded-full transition-all duration-700`} style={{ width: `${value}%` }} />
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </Card>
       </div>
