@@ -437,7 +437,7 @@ export default function PortfolioPage() {
         </Card>
 
         {/* Strategy Summary */}
-        <Card className="gap-4 p-4 md:p-5">
+        <Card className="gap-4 p-4 md:p-5 lg:self-start">
           <div className="flex items-center gap-2.5">
             <ShieldCheck size={16} className="text-emerald-400" />
             <h3 className="font-bold text-foreground/85">Strategy Summary</h3>
