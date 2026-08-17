@@ -24,6 +24,7 @@ import {
   loadFabHand,
   saveFabHand,
   tallyVote,
+  VOTE_DECAY_MS,
   type FabHand,
   type PointerSample,
 } from '@/lib/fabHandedness';
@@ -392,22 +393,30 @@ const FAB_LONG_PRESS_MS = 520;
  *
  * Side is a CSS concern (`html[data-fab-hand]`) so the first paint can
  * match a stored choice without a hydration flicker. This hook only
- * learns, persists, and announces.
+ * learns, persists, and announces. After both edges have been used,
+ * a later thumb-swap is one opposite-corner tap — not a new argument.
  */
 function useFabHandedness() {
   const [hand, setHand] = useState<FabHand>('right');
+  const [bothThumbs, setBothThumbs] = useState(false);
   const [announcement, setAnnouncement] = useState('');
   const votesRef = useRef({ left: 0, right: 0 });
   const handRef = useRef<FabHand>('right');
   const lockedRef = useRef(false);
+  const bothThumbsRef = useRef(false);
   const lastFlipAt = useRef(0);
+  const lastVoteAt = useRef(0);
 
   const commitHand = useCallback((next: FabHand, locked: boolean) => {
+    const swapped = next !== handRef.current;
+    const both = bothThumbsRef.current || swapped;
+    bothThumbsRef.current = both;
     handRef.current = next;
     lockedRef.current = locked;
     setHand(next);
+    setBothThumbs(both);
     applyFabHandToDocument(next);
-    saveFabHand({ hand: next, locked });
+    saveFabHand({ hand: next, locked, bothThumbs: both });
     setAnnouncement(
       next === 'left'
         ? 'Menu moved to the left, for a left thumb.'
@@ -428,7 +437,9 @@ function useFabHandedness() {
     if (!stored) return;
     handRef.current = stored.hand;
     lockedRef.current = stored.locked;
+    bothThumbsRef.current = stored.bothThumbs === true;
     setHand(stored.hand);
+    setBothThumbs(stored.bothThumbs === true);
     applyFabHandToDocument(stored.hand);
   }, []);
 
@@ -452,11 +463,18 @@ function useFabHandedness() {
       // opposite FAB slot is still "put it here" — that is the same
       // gesture that taught the dock in the first place.
       if (lockedRef.current && vote.reason !== 'opposite-corner') return;
-      const next = tallyVote(votesRef.current.left, votesRef.current.right, vote);
+      const now = Date.now();
+      if (now - lastVoteAt.current > VOTE_DECAY_MS) {
+        votesRef.current = { left: 0, right: 0 };
+      }
+      lastVoteAt.current = now;
+      const next = tallyVote(votesRef.current.left, votesRef.current.right, vote, {
+        bothThumbs: bothThumbsRef.current,
+      });
       votesRef.current = { left: next.leftVotes, right: next.rightVotes };
       if (next.inferred && next.inferred !== handRef.current) {
-        votesRef.current =
-          next.inferred === 'left' ? { left: 2, right: 0 } : { left: 0, right: 2 };
+        // Zero the tally so the other thumb is not fighting a leftover lead.
+        votesRef.current = { left: 0, right: 0 };
         commitHand(next.inferred, lockedRef.current);
       }
     }
@@ -526,7 +544,7 @@ function useFabHandedness() {
     };
   }, [commitHand]);
 
-  return { hand, announcement, flipHand };
+  return { hand, bothThumbs, announcement, flipHand };
 }
 
 function useFabLongPress(onLongPress: () => void) {
@@ -584,9 +602,11 @@ function useFabLongPress(onLongPress: () => void) {
  * Mobile chrome as a thumb-side cluster: search plus a speed-dial menu.
  *
  * The dock leans left or right with the reader's thumb — detected from
- * reach, or locked by holding the menu button. Search is a sibling of
- * the menu so it stays one tap away; destinations still fan up from the
- * menu so a thumb never has to cross the screen. On a research article,
+ * reach, or locked by holding the menu button / Switch side. Search is a
+ * sibling of the menu so it stays one tap away; destinations still fan
+ * up from the menu so a thumb never has to cross the screen. Readers who
+ * swap hands are followed: after both edges have been used, one reach
+ * for the empty corner moves the cluster. On a research article,
  * back-to-top joins the same row once the reader is a screen deep, so it
  * is not a second floating control in the same corner.
  */
@@ -610,7 +630,7 @@ function MobileFabDock({
   const onArticle = isResearchArticlePath(pathname);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const revealed = useFabRevealedOnScrollUp(isMenuOpen || showBackToTop) && !isSearchOpen;
-  const { hand, announcement, flipHand } = useFabHandedness();
+  const { hand, bothThumbs, announcement, flipHand } = useFabHandedness();
   const longPress = useFabLongPress(flipHand);
   const longPressRef = useRef(longPress);
   longPressRef.current = longPress;
@@ -760,7 +780,7 @@ function MobileFabDock({
           >
             <ArrowLeftRight className="size-4 shrink-0 text-accent" />
             <span className="pr-0.5 text-[13px] font-medium">
-              {hand === 'left' ? 'Use right hand' : 'Use left hand'}
+              {bothThumbs ? 'Switch side' : hand === 'left' ? 'Use right hand' : 'Use left hand'}
             </span>
           </button>
         </nav>

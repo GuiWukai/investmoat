@@ -3,8 +3,10 @@
  *
  * Browsers do not expose handedness. The signal is the thumb itself: empty
  * taps in the opposite bottom corner ("I expected the control here"), and
- * which edge a one-handed scroll starts from. A long-press on the menu
- * locks an explicit choice so the detector stops arguing.
+ * which edge a one-handed scroll starts from. Readers who swap hands are
+ * not stuck — after both edges have been used, one opposite-corner tap
+ * moves the dock, and stale votes decay so an old left-hand streak cannot
+ * block a right thumb a few seconds later.
  *
  * Default is the right edge — that is where most thumbs rest, and where
  * the dock already lived. The choice is persisted in localStorage so a
@@ -17,8 +19,10 @@ export const FAB_HAND_STORAGE_KEY = 'investmoat:fab-hand:v1';
 
 export type StoredFabHand = {
   hand: FabHand;
-  /** Long-pressed: auto-detect must not move it again. */
+  /** Menu / long-press: ignore casual scroll votes. Opposite-corner still wins. */
   locked: boolean;
+  /** Reader has used both edges; swapping thumbs is a one-tap reach. */
+  bothThumbs?: boolean;
 };
 
 export type PointerSample = {
@@ -50,6 +54,8 @@ export const FAB_SLOT_PX = 72;
 /** Outer columns that count as a one-handed scroll start. */
 export const SCROLL_GUTTER = 0.28;
 export const SCROLL_DY = 12;
+/** Forget a half-finished tally so a later thumb-swap is not fighting it. */
+export const VOTE_DECAY_MS = 8000;
 
 const INTERACTIVE_SELECTOR = [
   'a',
@@ -100,7 +106,8 @@ export function classifyPointer(sample: PointerSample, current: FabHand): HandVo
 
   const fromBottom = sample.viewportHeight - sample.y;
   const inLeftSlot = sample.x <= FAB_SLOT_PX + 20 && fromBottom <= FAB_SLOT_PX + 28;
-  const inRightSlot = sample.x >= sample.viewportWidth - FAB_SLOT_PX - 20 && fromBottom <= FAB_SLOT_PX + 28;
+  const inRightSlot =
+    sample.x >= sample.viewportWidth - FAB_SLOT_PX - 20 && fromBottom <= FAB_SLOT_PX + 28;
 
   if (inLeftSlot) {
     const opposite = current === 'right';
@@ -142,21 +149,36 @@ export function classifyPointer(sample: PointerSample, current: FabHand): HandVo
   return null;
 }
 
+export type TallyOptions = {
+  /**
+   * Both edges have already been used. One opposite-corner tap (weight 2)
+   * is enough to follow the thumb that is reaching now; first discovery
+   * still wants two taps so a stray corner hit does not move the dock.
+   */
+  bothThumbs?: boolean;
+};
+
 /**
- * Two empty taps on the far corner, or three same-edge scrolls, are
- * enough to move the dock. A mixed bag is not.
+ * First time: two empty taps on the far corner, or three same-edge
+ * scrolls. After both thumbs have been seen, a single opposite-corner
+ * reach follows the hand that just swapped in. A mixed bag is not.
  */
 export function tallyVote(
   leftVotes: number,
   rightVotes: number,
-  vote: HandVote
+  vote: HandVote,
+  options: TallyOptions = {}
 ): { leftVotes: number; rightVotes: number; inferred: FabHand | null } {
   const left = leftVotes + (vote.hand === 'left' ? vote.weight : 0);
   const right = rightVotes + (vote.hand === 'right' ? vote.weight : 0);
   const lead = Math.abs(left - right);
   const majority: FabHand | null = left > right ? 'left' : right > left ? 'right' : null;
-  const inferred =
-    majority && Math.max(left, right) >= 3 && lead >= 3 ? majority : null;
+  if (!majority) return { leftVotes: left, rightVotes: right, inferred: null };
+
+  const snap = options.bothThumbs && vote.reason === 'opposite-corner';
+  const min = snap ? 2 : 3;
+  const minLead = snap ? 2 : 3;
+  const inferred = Math.max(left, right) >= min && lead >= minLead ? majority : null;
   return { leftVotes: left, rightVotes: right, inferred };
 }
 
@@ -172,6 +194,7 @@ export function loadFabHand(): StoredFabHand | null {
     return {
       hand,
       locked: (parsed as { locked?: unknown }).locked === true,
+      bothThumbs: (parsed as { bothThumbs?: unknown }).bothThumbs === true,
     };
   } catch {
     return null;
