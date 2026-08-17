@@ -38,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `https://investmoat.com/research/${article.slug}`,
     lastModified: parseArticleDate(article.lastReviewed) ?? now,
     changeFrequency: 'monthly',
-    priority: 0.7,
+      priority: 0.8,
   }));
 
   const latestResearchUpdate = researchPages.reduce<Date>((acc, p) => {

@@ -3,15 +3,16 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllResearchArticles } from '@/data/research';
 import { readingMinutes } from '@/lib/researchMeta';
+import { researchIndexJsonLd, SITE_URL } from '@/lib/researchSeo';
 import ResearchIndexList, { type ResearchSummary } from '@/components/ResearchIndexList';
 import { Card } from "@heroui/react";
 
-const SITE_URL = 'https://investmoat.com';
+const INDEX_DESCRIPTION =
+  'Cross-cutting equity research from the InvestMoat framework — comparative analysis across the coverage universe, with live scores computed from the same data that drives every stock page.';
 
 export const metadata: Metadata = {
   title: 'Research',
-  description:
-    'Cross-cutting equity research from the InvestMoat framework — comparative analysis across the coverage universe, with live scores computed from the same data that drives every stock page.',
+  description: INDEX_DESCRIPTION,
   keywords: [
     'equity research',
     'moat investing research',
@@ -27,6 +28,15 @@ export const metadata: Metadata = {
     description:
       'Cross-cutting equity research — comparative analysis across the coverage universe, with live scores.',
     url: `${SITE_URL}/research`,
+    siteName: 'InvestMoat',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@investmoat',
+    title: 'Research | InvestMoat',
+    description:
+      'Cross-cutting equity research — comparative analysis across the coverage universe, with live scores.',
   },
 };
 
@@ -46,8 +56,15 @@ export default function ResearchIndexPage() {
 
   const names = new Set(articles.flatMap((a) => a.tickers));
 
+  const jsonLd = researchIndexJsonLd(articles);
+
   return (
-    <div className="research-page max-w-4xl mx-auto px-4 sm:px-6 py-8 md:py-16">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="research-page max-w-4xl mx-auto px-4 sm:px-6 py-8 md:py-16">
       <header>
         <div className="section-label mb-3">Research</div>
         <h1 className="text-[32px] md:text-5xl font-bold leading-[1.1] gradient-text">
@@ -89,7 +106,7 @@ export default function ResearchIndexPage() {
       {/* How to read these pieces — the promises that make them different from
           a blog post, stated once here instead of in every article. */}
       <section className="mt-12">
-        <div className="section-label mb-4">How this research works</div>
+        <h2 className="section-label mb-4">How this research works</h2>
         <div className="grid gap-3 sm:grid-cols-3">
           {METHOD_NOTES.map((note) => (
             <div
@@ -111,7 +128,8 @@ export default function ResearchIndexPage() {
           to see the underwriting each argument is built on.
         </p>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
 

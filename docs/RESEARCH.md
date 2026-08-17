@@ -20,14 +20,14 @@ Anything genuinely static (a capex guide, a quarterly metric) goes in a `table` 
 
 Unlike stocks there is **one** registry, not two — articles aren't scored or ranked, so nothing equivalent to `src/app/stockData.ts` is needed. The slug must match in three places: the filename, the `slug` field, and the key in `index.ts`.
 
-Everything downstream is automatic: the `/research` index, the sitemap entry, the site-level `llms.txt` listing, the Markdown mirror at `/research/{slug}/llms.txt`, the OG share image, and the "Research Covering This Name" section on every stock page whose ticker the article references.
+Everything downstream is automatic: the `/research` index, the sitemap entry, the site-level `llms.txt` listing, the Markdown mirror at `/research/{slug}/llms.txt`, the OG share image, JSON-LD (article + breadcrumbs + citations), and the "Research Covering This Name" section on every stock page whose ticker the article references.
 
 ## Article fields
 
 | Field | Notes |
 |---|---|
 | `slug` | Lowercase kebab-case; must match the filename. |
-| `title`, `dek` | Headline and one-sentence standfirst. The dek is reused for metadata and the index card. |
+| `title`, `dek` | Headline and one-sentence standfirst. The title is the search-result headline; the dek is the meta description and the index card. Write the dek last, once you know the argument. |
 | `published`, `lastReviewed` | Day-precision dates, e.g. `"July 28, 2026"`. Both are shown on the page. |
 | `tickers` | Names the article covers. Drives the ticker rail, the stock-page backlink, and index filtering. |
 | `tags` | 1–6 short topic labels. |
@@ -133,11 +133,26 @@ npm run screen:research -- stale
 
 [`scripts/research-screen.ts`](../scripts/research-screen.ts) reads the coverage registry and the stock JSONs and reports the cohorts, rank disagreements, category spreads and coverage gaps an article could be built on. It decides nothing — a screen produces candidates, and the article test in `write-research` decides whether a candidate is a piece.
 
+## Search and metadata
+
+The article JSON already feeds the page's SEO. There is nothing extra to author:
+
+- **Title** becomes `<title>` (`{title} | InvestMoat`) and the Open Graph / Twitter headline. A searcher should recognise the company or topic from the title alone — "ServiceNow and the Seat-Pricing Question" ranks; a clever-only phrase does not.
+- **Dek** becomes the meta description. One sentence, ≤320 characters, that states the argument rather than teasing it.
+- **Summary** becomes JSON-LD `abstract` and the Markdown mirror's standfirst. It is not the meta description; keep it 2–5 sentences.
+- **Tickers** become `about` corporations in JSON-LD (name + ticker + stock-page URL) and keyword variants (`NOW analysis`, `ServiceNow stock analysis`).
+- **Tags** become `article:tag` / `articleSection`.
+- **Sources** become `citation` CreativeWorks.
+- **`lastReviewed`** drives `dateModified` and the sitemap `lastModified`. A stale review date is a stale listing.
+
+The renderer also emits a BreadcrumbList, an ItemList on `/research`, a Markdown alternate (`text/markdown` → `/llms.txt`), and a per-article OG image. Do not hard-code scores into the title or dek — the same "tickers, never numbers" rule applies, and a title that freezes a composite will lie after the next review.
+
 ## Agent surfaces
 
 Research is wired into the same agent-readability layer as the stock pages:
 
 - `/research/{slug}/llms.txt` — clean Markdown mirror, with live blocks resolved from the stock data so the mirror can't contradict the page.
 - `/llms.txt` — site index gains a **Research** section listing every article with its coverage and review date.
-- `AnalysisNewsArticle` JSON-LD per article, including `about` entries for each ticker and an `encoding` pointer to the Markdown mirror.
+- `AnalysisNewsArticle` JSON-LD per article: breadcrumbs, company `about` entries (name + ticker + stock-page URL), source `citation`s, `wordCount` / `timeRequired`, and an `encoding` pointer to the Markdown mirror.
+- `CollectionPage` + `ItemList` JSON-LD on `/research`.
 - `sitemap.xml` — the index plus one entry per article, `lastModified` from `lastReviewed`.

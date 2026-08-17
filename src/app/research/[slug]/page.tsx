@@ -5,11 +5,9 @@ import {
   getResearchArticle,
   getAllResearchArticles,
   getAllResearchSlugs,
-  parseArticleDate,
 } from '@/data/research';
 import ResearchArticleView, { type RelatedArticle } from '@/components/ResearchArticle';
-
-const SITE_URL = 'https://investmoat.com';
+import { researchArticleJsonLd, researchArticleMetadata } from '@/lib/researchSeo';
 
 export async function generateStaticParams() {
   return getAllResearchSlugs().map((slug) => ({ slug }));
@@ -23,35 +21,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const article = getResearchArticle(slug);
   if (!article) return {};
-
-  const canonicalUrl = `${SITE_URL}/research/${article.slug}`;
-
-  return {
-    title: article.title,
-    description: article.dek,
-    keywords: [
-      ...article.tags,
-      ...article.tickers.map((t) => `${t} analysis`),
-      'moat investing',
-      'equity research',
-      'InvestMoat',
-    ],
-    alternates: { canonical: canonicalUrl },
-    openGraph: {
-      type: 'article',
-      title: article.title,
-      description: article.dek,
-      url: canonicalUrl,
-      publishedTime: parseArticleDate(article.published)?.toISOString(),
-      modifiedTime: parseArticleDate(article.lastReviewed)?.toISOString(),
-      tags: article.tags,
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: article.title,
-      description: article.dek,
-    },
-  };
+  return researchArticleMetadata(article);
 }
 
 /**
@@ -91,42 +61,19 @@ export default async function ResearchArticlePage({
   const article = getResearchArticle(slug);
   if (!article) notFound();
 
-  const canonicalUrl = `${SITE_URL}/research/${article.slug}`;
-
-  const articleJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'AnalysisNewsArticle',
-    '@id': `${canonicalUrl}#article`,
-    headline: article.title,
-    description: article.dek,
-    abstract: article.summary,
-    datePublished: parseArticleDate(article.published)?.toISOString(),
-    dateModified: parseArticleDate(article.lastReviewed)?.toISOString(),
-    mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
-    url: canonicalUrl,
-    isAccessibleForFree: true,
-    author: { '@id': `${SITE_URL}/#organization` },
-    publisher: { '@id': `${SITE_URL}/#organization` },
-    keywords: [...article.tags, ...article.tickers].join(', '),
-    about: article.tickers.map((ticker) => ({
-      '@type': 'Corporation',
-      tickerSymbol: ticker,
-    })),
-    // The Markdown mirror, advertised so agents can skip the HTML.
-    encoding: {
-      '@type': 'MediaObject',
-      encodingFormat: 'text/markdown',
-      contentUrl: `${canonicalUrl}/llms.txt`,
-    },
-  };
+  const related = relatedArticles(slug);
+  const jsonLd = researchArticleJsonLd(
+    article,
+    related.map((r) => ({ slug: r.slug, title: r.title })),
+  );
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <ResearchArticleView article={article} related={relatedArticles(slug)} />
+      <ResearchArticleView article={article} related={related} />
     </>
   );
 }

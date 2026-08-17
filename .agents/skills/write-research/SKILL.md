@@ -90,8 +90,11 @@ Field rules are tabulated in `docs/RESEARCH.md`. The ones that get fumbled:
 
 - `slug` — lowercase kebab-case, and it must match in **three** places: the
   filename, the `slug` field, and the key in `index.ts`.
-- `dek` — one sentence, ≤320 chars, does real work: it is reused for the page
-  metadata and the index card. Write it last, once you know the argument.
+- `dek` — one sentence, ≤320 chars, does real work: it is the meta
+  description and the index card. Write it last, once you know the argument.
+  A searcher who sees only the title and this sentence should get the thesis.
+- `title` — the search-result headline. Include the company or topic a
+  searcher would type; a clever-only phrase will not rank.
 - `published` / `lastReviewed` — day-precision, exactly `"July 28, 2026"`.
   Identical on a new article.
 - `summary` — 2–5 sentences, used in the Markdown mirror and JSON-LD
@@ -134,9 +137,9 @@ npm run lint
 ```
 
 Everything downstream is automatic once it validates: the `/research` index,
-the sitemap entry, `/llms.txt`, the Markdown mirror, the OG image, and the
-"Research Covering This Name" backlink on every stock page whose ticker the
-article cites.
+the sitemap entry, `/llms.txt`, the Markdown mirror, the OG image, JSON-LD,
+and the "Research Covering This Name" backlink on every stock page whose
+ticker the article cites.
 
 ## Checklist before calling it done
 

@@ -1,19 +1,17 @@
 import { ImageResponse } from 'next/og';
-import { getResearchArticle } from '@/data/research';
+import { getAllResearchArticles } from '@/data/research';
 
 export const runtime = 'edge';
-export const alt = 'InvestMoat Research';
+export const alt = 'InvestMoat Research — cross-cutting equity analysis';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
-export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const article = getResearchArticle(slug);
+export default async function Image() {
+  const articles = getAllResearchArticles();
+  const names = new Set(articles.flatMap((a) => a.tickers));
 
-  // Brand wordmark font (Libre Caslon Display) — bundled TTF passed to Satori,
-  // which doesn't read CSS/web fonts. Falls back to default sans on failure.
   const caslon = await fetch(
-    new URL('../../_fonts/LibreCaslonDisplay-Regular.ttf', import.meta.url),
+    new URL('../_fonts/LibreCaslonDisplay-Regular.ttf', import.meta.url),
   )
     .then((r) => r.arrayBuffer())
     .catch(() => null);
@@ -21,28 +19,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
     ? [{ name: 'Libre Caslon Display', data: caslon, weight: 400 as const, style: 'normal' as const }]
     : undefined;
 
-  if (!article) {
-    return new ImageResponse(
-      (
-        <div
-          style={{
-            width: '100%',
-            height: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            background: '#080a0e',
-            fontFamily: caslon ? 'Libre Caslon Display' : undefined,
-            fontSize: 64,
-            color: '#f4f1ea',
-          }}
-        >
-          InvestMoat
-        </div>
-      ),
-      { width: 1200, height: 630, fonts: brandFonts },
-    );
-  }
+  const latest = articles[0];
 
   return new ImageResponse(
     (
@@ -57,7 +34,6 @@ export default async function Image({ params }: { params: Promise<{ slug: string
           position: 'relative',
         }}
       >
-        {/* Grid overlay */}
         <div
           style={{
             position: 'absolute',
@@ -68,7 +44,6 @@ export default async function Image({ params }: { params: Promise<{ slug: string
           }}
         />
 
-        {/* Top: site name + section badge */}
         <div
           style={{
             display: 'flex',
@@ -106,11 +81,10 @@ export default async function Image({ params }: { params: Promise<{ slug: string
           </div>
         </div>
 
-        {/* Title + dek */}
         <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
           <div
             style={{
-              fontSize: article.title.length > 44 ? '58px' : '68px',
+              fontSize: '68px',
               fontWeight: 900,
               color: 'white',
               letterSpacing: '-1.6px',
@@ -118,7 +92,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
               marginBottom: '24px',
             }}
           >
-            {article.title}
+            Cross-cutting analysis
           </div>
           <div
             style={{
@@ -128,11 +102,12 @@ export default async function Image({ params }: { params: Promise<{ slug: string
               lineHeight: 1.5,
             }}
           >
-            {article.dek.length > 190 ? `${article.dek.slice(0, 187)}…` : article.dek}
+            {latest
+              ? `Latest: ${latest.title}`
+              : 'Comparative equity research across the coverage universe, with live scores.'}
           </div>
         </div>
 
-        {/* Bottom: tickers covered + date */}
         <div
           style={{
             display: 'flex',
@@ -141,40 +116,6 @@ export default async function Image({ params }: { params: Promise<{ slug: string
             marginTop: '40px',
           }}
         >
-          <div style={{ display: 'flex', gap: '10px' }}>
-            {article.tickers.slice(0, 7).map((ticker) => (
-              <div
-                key={ticker}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  background: 'rgba(255,255,255,0.05)',
-                  border: '1px solid rgba(255,255,255,0.09)',
-                  borderRadius: '10px',
-                  padding: '9px 15px',
-                  fontSize: '17px',
-                  fontWeight: 800,
-                  color: 'rgba(255,255,255,0.62)',
-                  letterSpacing: '0.06em',
-                }}
-              >
-                {ticker}
-              </div>
-            ))}
-            {article.tickers.length > 7 && (
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  fontSize: '16px',
-                  color: 'rgba(255,255,255,0.28)',
-                  padding: '9px 4px',
-                }}
-              >
-                +{article.tickers.length - 7}
-              </div>
-            )}
-          </div>
           <span
             style={{
               fontSize: '16px',
@@ -182,7 +123,16 @@ export default async function Image({ params }: { params: Promise<{ slug: string
               letterSpacing: '0.05em',
             }}
           >
-            {article.published}
+            {articles.length} {articles.length === 1 ? 'piece' : 'pieces'} · {names.size} names
+          </span>
+          <span
+            style={{
+              fontSize: '16px',
+              color: 'rgba(255,255,255,0.28)',
+              letterSpacing: '0.05em',
+            }}
+          >
+            Scores recomputed live
           </span>
         </div>
       </div>
