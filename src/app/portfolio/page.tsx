@@ -437,91 +437,87 @@ export default function PortfolioPage() {
         </Card>
 
         {/* Strategy Summary */}
-        <Card className="p-6 gap-6">
+        <Card className="gap-4 p-4 md:p-5">
           <div className="flex items-center gap-2.5">
             <ShieldCheck size={16} className="text-emerald-400" />
             <h3 className="font-bold text-foreground/85">Strategy Summary</h3>
           </div>
 
-          {/* Key metrics */}
-          <div className="grid grid-cols-3 gap-3">
-            <Card className="p-4">
-              <p className="section-label mb-1.5">Positions</p>
-              <p className="text-2xl font-black text-foreground">{portfolio.length}</p>
-              <p className="text-foreground/28 text-[10px] mt-0.5">High-conviction</p>
-            </Card>
-            <Card className="p-4">
-              <p className="section-label mb-1.5">Composite</p>
-              <p className="text-2xl font-black text-foreground">≥ {PORTFOLIO_THRESHOLD}</p>
-              <p className="text-foreground/28 text-[10px] mt-0.5">Score required</p>
-            </Card>
-            <Card className="p-4">
-              <p className="section-label mb-1.5">Moat floor</p>
-              <p className="text-2xl font-black text-foreground">≥ {MIN_MOAT_SCORE}</p>
-              <p className="text-foreground/28 text-[10px] mt-0.5">Moat-first gate</p>
-            </Card>
+          {/* Gates + today */}
+          <div className="grid grid-cols-2 gap-x-3 gap-y-2.5 border-y border-foreground/[0.06] py-2.5 sm:grid-cols-4 sm:gap-0">
+            <div className="min-w-0 sm:border-r sm:border-foreground/[0.06] sm:pr-3">
+              <p className="section-label mb-0.5">Positions</p>
+              <p className="text-lg font-black tabular-nums text-foreground">{portfolio.length}</p>
+            </div>
+            <div className="min-w-0 sm:border-r sm:border-foreground/[0.06] sm:px-3">
+              <p className="section-label mb-0.5">Composite</p>
+              <p className="text-lg font-black tabular-nums text-foreground">≥ {PORTFOLIO_THRESHOLD}</p>
+            </div>
+            <div className="min-w-0 sm:border-r sm:border-foreground/[0.06] sm:px-3">
+              <p className="section-label mb-0.5">Moat floor</p>
+              <p className="text-lg font-black tabular-nums text-foreground">≥ {MIN_MOAT_SCORE}</p>
+            </div>
+            <div className="min-w-0 sm:pl-3">
+              <p className="section-label mb-0.5">Today</p>
+              {!allPricesLoaded ? (
+                <Spinner size="sm" color="current" />
+              ) : weightedDailyChange == null ? (
+                <p className="text-lg font-black text-foreground/20">—</p>
+              ) : (
+                <div className={`flex items-center gap-1 ${weightedDailyChange >= 0 ? "text-emerald-400" : "text-rose-400"}`}>
+                  {weightedDailyChange >= 0 ? <TrendingUp size={13} /> : <TrendingDown size={13} />}
+                  <span className="text-lg font-black tabular-nums">
+                    {weightedDailyChange >= 0 ? "+" : ""}{weightedDailyChange.toFixed(2)}%
+                  </span>
+                </div>
+              )}
+            </div>
           </div>
-
-          {/* Today's change */}
-          <Card className="p-4">
-            <p className="section-label mb-2">Today&apos;s Portfolio Change</p>
-            {!allPricesLoaded ? (
-              <Spinner size="sm" color="current" />
-            ) : weightedDailyChange == null ? (
-              <p className="text-3xl font-black text-foreground/20">—</p>
-            ) : (
-              <div className={`flex items-center gap-2 ${weightedDailyChange >= 0 ? "text-emerald-400" : "text-rose-400"}`}>
-                {weightedDailyChange >= 0 ? <TrendingUp size={22} /> : <TrendingDown size={22} />}
-                <span className="text-3xl font-black tabular-nums">
-                  {weightedDailyChange >= 0 ? "+" : ""}{weightedDailyChange.toFixed(2)}%
-                </span>
-              </div>
-            )}
-            <p className="text-foreground/25 text-[10px] mt-1.5">Position-weighted · {portfolio.length} holdings</p>
-          </Card>
 
           {/* Est. 1-year returns */}
           <div>
-            <p className="section-label mb-3">Est. 1-Year Return</p>
+            <div className="mb-2 flex items-baseline justify-between gap-2">
+              <p className="section-label">Est. 1-Year Return</p>
+              <p className="text-[10px] text-foreground/22">Weighted avg</p>
+            </div>
             {!allPricesLoaded ? (
               <Spinner size="sm" color="current" />
             ) : (
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-3 gap-1.5">
                 {([
                   { label: "Bear", value: weightedScenarioReturns.bear, border: "border-rose-500/15" },
                   { label: "Base", value: weightedScenarioReturns.base, border: "border-blue-500/15" },
                   { label: "Bull", value: weightedScenarioReturns.bull, border: "border-emerald-500/15" },
                 ] as const).map(({ label, value, border }) => (
-                  <div key={label} className={`rounded-xl border ${border} bg-foreground/[0.02] py-3 px-2 text-center`}>
-                    <p className="section-label mb-1.5">{label}</p>
+                  <div key={label} className={`rounded-lg border ${border} bg-foreground/[0.02] px-2 py-1.5 text-center`}>
+                    <p className="section-label mb-0.5">{label}</p>
                     {value != null ? (
-                      <p className={`text-lg font-black ${value >= 0 ? "text-emerald-400" : "text-rose-400"}`}>
+                      <p className={`text-base font-black tabular-nums ${value >= 0 ? "text-emerald-400" : "text-rose-400"}`}>
                         {value >= 0 ? "+" : ""}{value.toFixed(1)}%
                       </p>
                     ) : (
-                      <p className="text-lg font-black text-foreground/20">—</p>
+                      <p className="text-base font-black text-foreground/20">—</p>
                     )}
                   </div>
                 ))}
               </div>
             )}
-            <p className="text-foreground/22 text-[10px] mt-2">Weighted avg · allocation-adjusted</p>
           </div>
 
           {/* Concentration bars */}
           <div>
-            <p className="section-label mb-3">Sector Concentration</p>
-            <div className="space-y-3">
+            <p className="section-label mb-2">Sector Concentration</p>
+            <div className="space-y-2">
               {[
                 { label: "Tech & SaaS", value: techWeight, color: "bg-blue-500" },
                 { label: "Financials & Payments", value: finWeight, color: "bg-emerald-500" },
               ].map(({ label, value, color }) => (
                 <div key={label}>
-                  <div className="flex justify-between mb-1.5">
-                    <span className="text-foreground/45 text-xs font-medium">{label}</span>
-                    <span className="text-foreground/45 text-xs font-mono">{Math.round(value)}%</span>
+                  <div className="mb-1 flex justify-between">
+                    <span className="text-xs font-medium text-foreground/45">{label}</span>
+                    <span className="font-mono text-xs text-foreground/45">{Math.round(value)}%</span>
                   </div>
-                  <div className="h-[3px] bg-foreground/[0.05] rounded-full overflow-hidden">
+                  <div className="h-[3px] overflow-hidden rounded-full bg-foreground/[0.05]">
                     <div className={`h-full ${color} rounded-full transition-all duration-700`} style={{ width: `${value}%` }} />
                   </div>
                 </div>
