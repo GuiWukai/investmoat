@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { getAllSlugs, getStockData } from '@/data/stocks';
 import { getAllResearchArticles, parseArticleDate } from '@/data/research';
+import { SECTORS } from '@/lib/sectorCatalog';
 
 const MONTHS: Record<string, number> = {
   january: 0, february: 1, march: 2, april: 3, may: 4, june: 5,
@@ -76,6 +77,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily',
       priority: 0.8,
     },
+    {
+      url: 'https://investmoat.com/sectors',
+      lastModified: latestStockUpdate,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    ...SECTORS.map((sector) => ({
+      url: `https://investmoat.com/sectors/${sector.slug}`,
+      lastModified: latestStockUpdate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
     ...(researchPages.length > 0
       ? [
           {

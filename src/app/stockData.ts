@@ -203,6 +203,7 @@ const t = (json: { scenarios: { bear: { priceTarget: string }; base: { priceTarg
 // ─── All analyzed stocks (single source of truth) ─────────────────────────────
 // scores = [computedMoatScore, growthScore, valuationScore]
 // All three scores and targets derive from the stock's JSON — edit the JSON, not this file.
+// category matches SECTORS[].key in src/lib/sectorCatalog.ts (drives /stocks filters and /sectors).
 const allCoverageData = [
     { name: "GE Vernova",        ticker: "GEV",   slug: "gev",         scores: [m(gevData),         g(gevData),         v(gevData)],         href: "/stocks/gev",         category: "Industrials", ...t(gevData)         },
     { name: "Cameco",            ticker: "CCJ",   slug: "ccj",         scores: [m(ccjData),         g(ccjData),         v(ccjData)],         href: "/stocks/ccj",         category: "Hard Assets", ...t(ccjData)         },

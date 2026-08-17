@@ -20,5 +20,8 @@
 | Route | Description |
 |---|---|
 | `/` or `/portfolio` | Portfolio overview with allocation breakdown |
+| `/stocks` | Coverage universe — searchable, filterable, sortable |
 | `/stocks/[ticker]` | Individual stock analysis (moat, growth, valuation, price scenarios) |
+| `/sectors` | Coverage grouped by sector, with average pillar scores |
+| `/sectors/[slug]` | Ranked names inside one sector |
 | `/api/stock-price/[ticker]` | API route fetching live price from Yahoo Finance |

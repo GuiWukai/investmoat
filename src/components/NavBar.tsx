@@ -3,7 +3,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
-import { Search, BarChart2, TrendingUp, Menu, FileText, CalendarDays, Briefcase, X, ArrowUp, ArrowLeftRight } from 'lucide-react';
+import { Search, BarChart2, TrendingUp, Menu, FileText, CalendarDays, Briefcase, X, ArrowUp, ArrowLeftRight, LayoutGrid } from 'lucide-react';
 import {
   Button,
   ComboBox,
@@ -33,6 +33,7 @@ const navLinks = [
   { name: 'IM25', href: '/portfolio', icon: BarChart2 },
   { name: 'My Portfolio', href: '/my-portfolio', icon: Briefcase },
   { name: 'Stocks', href: '/stocks', icon: TrendingUp },
+  { name: 'Sectors', href: '/sectors', icon: LayoutGrid },
   { name: 'Earnings', href: '/earnings', icon: CalendarDays },
   { name: 'Research', href: '/research', icon: FileText },
 ];
