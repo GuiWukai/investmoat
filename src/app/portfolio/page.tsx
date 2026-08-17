@@ -443,21 +443,13 @@ export default function PortfolioPage() {
             <h3 className="font-bold text-foreground/85">Strategy Summary</h3>
           </div>
 
-          {/* Gates + today */}
-          <div className="grid grid-cols-2 gap-x-3 gap-y-2.5 border-y border-foreground/[0.06] py-2.5 sm:grid-cols-4 sm:gap-0">
-            <div className="min-w-0 sm:border-r sm:border-foreground/[0.06] sm:pr-3">
+          {/* Live snapshot */}
+          <div className="grid grid-cols-2 gap-x-3 border-y border-foreground/[0.06] py-2.5">
+            <div className="min-w-0 border-r border-foreground/[0.06] pr-3">
               <p className="section-label mb-0.5">Positions</p>
               <p className="text-lg font-black tabular-nums text-foreground">{portfolio.length}</p>
             </div>
-            <div className="min-w-0 sm:border-r sm:border-foreground/[0.06] sm:px-3">
-              <p className="section-label mb-0.5">Composite</p>
-              <p className="text-lg font-black tabular-nums text-foreground">≥ {PORTFOLIO_THRESHOLD}</p>
-            </div>
-            <div className="min-w-0 sm:border-r sm:border-foreground/[0.06] sm:px-3">
-              <p className="section-label mb-0.5">Moat floor</p>
-              <p className="text-lg font-black tabular-nums text-foreground">≥ {MIN_MOAT_SCORE}</p>
-            </div>
-            <div className="min-w-0 sm:pl-3">
+            <div className="min-w-0 pl-3">
               <p className="section-label mb-0.5">Today</p>
               {!allPricesLoaded ? (
                 <Spinner size="sm" color="current" />
