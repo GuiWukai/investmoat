@@ -473,7 +473,7 @@ export default function PortfolioPage() {
     <div className="animate-fade-in dot-pattern">
 
       {/* ── Header ───────────────────────────────────────────────────────── */}
-      <header className="pt-6 md:pt-12 pb-12 animate-fade-up stagger-fill-both" style={{ animationDelay: '0s' }}>
+      <header className="pt-6 md:pt-10 pb-8 animate-fade-up stagger-fill-both" style={{ animationDelay: '0s' }}>
         <p className="section-label mb-3">IM25</p>
         <h1 className="text-4xl md:text-6xl font-extrabold gradient-text-animated leading-tight mb-4">
           The IM25
@@ -485,12 +485,12 @@ export default function PortfolioPage() {
         </p>
       </header>
 
-      {/* ── Allocation chart + Strategy summary ──────────────────────────── */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5 animate-fade-up stagger-fill-both" style={{ animationDelay: '0.15s' }}>
+      {/* ── Allocation (full width) + compact strategy strip ─────────────── */}
+      <div className="flex flex-col gap-4 mb-5 animate-fade-up stagger-fill-both" style={{ animationDelay: '0.15s' }}>
 
         {/* Visual Allocation — sectors, not 25 near-equal ticker slices */}
-        <Card className="p-6">
-          <div className="flex items-center justify-between gap-3 mb-5">
+        <Card className="p-5 md:p-6">
+          <div className="flex items-center justify-between gap-3 mb-4">
             <div className="flex items-center gap-2.5">
               <PieChart size={16} className="text-accent" />
               <h3 className="font-bold text-foreground/85">Visual Allocation</h3>
@@ -584,7 +584,7 @@ export default function PortfolioPage() {
               </svg>
             </div>
 
-            <div className="flex-1 min-w-0 space-y-0.5">
+            <div className="flex-1 min-w-0 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-0.5">
               {themeBuckets.map((theme) => {
                 const isActive = activeTheme === theme.id;
                 return (
@@ -642,15 +642,15 @@ export default function PortfolioPage() {
           </div>
         </Card>
 
-        {/* Strategy Summary */}
-        <Card className="gap-4 p-4 md:p-5 lg:self-start">
-          <div className="flex items-center gap-2.5">
+        {/* Strategy Summary — full-width strip on desktop so it doesn't leave a dead column */}
+        <Card className="gap-4 p-4 md:p-5 lg:flex-row lg:items-center lg:gap-6">
+          <div className="flex items-center gap-2.5 lg:shrink-0">
             <ShieldCheck size={16} className="text-emerald-400" />
             <h3 className="font-bold text-foreground/85">Strategy Summary</h3>
           </div>
 
           {/* Gates + today */}
-          <div className="grid grid-cols-2 gap-x-3 gap-y-2.5 border-y border-foreground/[0.06] py-2.5 sm:grid-cols-4 sm:gap-0">
+          <div className="grid grid-cols-2 gap-x-3 gap-y-2.5 border-y border-foreground/[0.06] py-2.5 sm:grid-cols-4 sm:gap-0 lg:flex-1 lg:border-y-0 lg:border-x lg:px-5 lg:py-0">
             <div className="min-w-0 sm:border-r sm:border-foreground/[0.06] sm:pr-3">
               <p className="section-label mb-0.5">Positions</p>
               <p className="text-lg font-black tabular-nums text-foreground">{portfolio.length}</p>
@@ -681,8 +681,8 @@ export default function PortfolioPage() {
           </div>
 
           {/* Est. 1-year returns */}
-          <div>
-            <div className="mb-2 flex items-baseline justify-between gap-2">
+          <div className="lg:w-80 lg:shrink-0">
+            <div className="mb-2 flex items-baseline justify-between gap-2 lg:mb-1.5">
               <p className="section-label">Est. 1-Year Return</p>
               <p className="text-[10px] text-foreground/22">Weighted avg</p>
             </div>
