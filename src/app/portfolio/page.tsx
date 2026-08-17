@@ -584,7 +584,7 @@ export default function PortfolioPage() {
               </svg>
             </div>
 
-            <div className="flex-1 min-w-0 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-0.5">
+            <div className="flex-1 min-w-0 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 lg:gap-x-6 xl:gap-x-5 gap-y-0.5">
               {themeBuckets.map((theme) => {
                 const isActive = activeTheme === theme.id;
                 return (
