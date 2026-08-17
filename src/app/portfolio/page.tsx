@@ -523,7 +523,6 @@ export default function PortfolioPage() {
                 })}
                 {donutSlices.map((slice) => {
                   if (slice.weight < DONUT.labelMinPct) return null;
-                  const isActive = activeTheme === slice.id;
                   const labelR = (DONUT.innerR + DONUT.outerR) / 2;
                   const x = DONUT.cx + labelR * Math.cos(slice.mid);
                   const y = DONUT.cy + labelR * Math.sin(slice.mid);
@@ -538,9 +537,8 @@ export default function PortfolioPage() {
                       fontSize="9"
                       fontWeight="bold"
                       fontFamily="system-ui,sans-serif"
-                      opacity={activeTheme && !isActive ? 0.2 : 0.95}
                       pointerEvents="none"
-                      className="tabular-nums transition-opacity duration-200"
+                      className="tabular-nums"
                     >
                       {slice.weight}%
                     </text>
@@ -605,13 +603,13 @@ export default function PortfolioPage() {
                   >
                     <div className="flex items-center gap-2 mb-1">
                       <div className="w-2 h-2 rounded-full shrink-0" style={{ background: theme.color }} />
-                      <span className="text-xs font-bold text-foreground/80 truncate">{theme.label}</span>
+                      <span className="text-xs font-bold text-foreground/80 leading-tight">{theme.label}</span>
                       {scoresLoading
                         ? <Spinner size="sm" color="current" className="ml-auto" />
                         : <span className="text-xs font-mono text-foreground/45 ml-auto tabular-nums">{theme.weight}%</span>
                       }
                     </div>
-                    <div className="h-1 bg-foreground/[0.07] rounded-full overflow-hidden mb-1">
+                    <div className="h-1 bg-foreground/10 rounded-full overflow-hidden mb-1">
                       <div
                         className="h-full rounded-full transition-all duration-500"
                         style={{
