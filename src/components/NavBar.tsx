@@ -453,7 +453,6 @@ function useFabHandedness() {
 
     function onPointerDown(event: PointerEvent) {
       if (!mobile.matches || lockedRef.current) return;
-      if (event.pointerType === 'mouse') return;
       pending = {
         x: event.clientX,
         y: event.clientY,

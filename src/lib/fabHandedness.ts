@@ -76,14 +76,14 @@ export function isInteractiveTarget(target: EventTarget | null): boolean {
 /**
  * Turn one pointer into a handedness vote, or ignore it.
  *
- * Mouse is ignored (narrow desktop windows are not a thumb). Taps on the
- * dock are ignored (they only prove the current side is reachable). A tap
- * on the empty corner opposite the dock is the strongest "put it here"
- * signal; a vertical scroll that starts on an outer edge is weaker but
- * plentiful, so it still counts.
+ * The hook already refuses to run on a desktop-width viewport, so mouse
+ * is allowed here: a narrow window still shows the dock, and an empty
+ * tap in the far corner is the same "put it here" signal as a thumb.
+ * Taps on the dock itself are ignored (they only prove the current side
+ * is reachable). A vertical scroll that starts on an outer edge is
+ * weaker but plentiful, so it still counts.
  */
 export function classifyPointer(sample: PointerSample, current: FabHand): HandVote | null {
-  if (sample.pointerType === 'mouse') return null;
   if (sample.viewportWidth <= 0 || sample.viewportHeight <= 0) return null;
   if (sample.onDock) return null;
 
