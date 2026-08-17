@@ -5,7 +5,7 @@ import SectorsIndexClient from './SectorsIndexClient';
 const SITE_URL = 'https://investmoat.com';
 
 const DESCRIPTION =
-  'Browse InvestMoat coverage by sector — Large Cap Tech, Financials & SaaS, Hard Assets, Healthcare, Industrials — with average moat, growth, and live valuation scores.';
+  'Browse InvestMoat coverage by sector — Platforms, Software, Semiconductors, Financials, Healthcare, Industrials, Energy, Consumer, Hard Assets, Crypto — with average moat, growth, and live valuation scores.';
 
 export const metadata: Metadata = {
   title: 'Sectors',
@@ -14,6 +14,8 @@ export const metadata: Metadata = {
     'stock sectors',
     'moat investing by sector',
     'tech stocks',
+    'software stocks',
+    'semiconductor stocks',
     'healthcare stocks',
     'industrials',
     'hard assets',

@@ -193,7 +193,7 @@ function screenCategory(): void {
   heading('Internal spread by category', 'where one label covers very different businesses');
   for (const r of rows) {
     console.log(
-      `  ${r.category.padEnd(18)} ${DIM}n=${String(r.count).padStart(2)}${RESET}  spread ${String(
+      `  ${r.category.padEnd(16)} ${DIM}n=${String(r.count).padStart(2)}${RESET}  spread ${String(
         r.spread,
       ).padStart(2)}  ${GOLD}${r.best.ticker}(${r.best.composite})${RESET} ${DIM}…${RESET} ${
         r.worst.ticker
