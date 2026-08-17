@@ -3,7 +3,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
-import { Search, BarChart2, TrendingUp, Menu, FileText, CalendarDays, Briefcase, X, ArrowUp } from 'lucide-react';
+import { Search, BarChart2, TrendingUp, Menu, FileText, CalendarDays, Briefcase, X, ArrowUp, ArrowLeftRight } from 'lucide-react';
 import {
   Button,
   ComboBox,
@@ -395,6 +395,7 @@ const FAB_LONG_PRESS_MS = 520;
  * learns, persists, and announces.
  */
 function useFabHandedness() {
+  const [hand, setHand] = useState<FabHand>('right');
   const [announcement, setAnnouncement] = useState('');
   const votesRef = useRef({ left: 0, right: 0 });
   const handRef = useRef<FabHand>('right');
@@ -404,6 +405,7 @@ function useFabHandedness() {
   const commitHand = useCallback((next: FabHand, locked: boolean) => {
     handRef.current = next;
     lockedRef.current = locked;
+    setHand(next);
     applyFabHandToDocument(next);
     saveFabHand({ hand: next, locked });
     setAnnouncement(
@@ -426,6 +428,7 @@ function useFabHandedness() {
     if (!stored) return;
     handRef.current = stored.hand;
     lockedRef.current = stored.locked;
+    setHand(stored.hand);
     applyFabHandToDocument(stored.hand);
   }, []);
 
@@ -443,20 +446,23 @@ function useFabHandedness() {
     const mobile = window.matchMedia('(max-width: 1023px)');
 
     function consider(sample: PointerSample) {
-      if (lockedRef.current) return;
       const vote = classifyPointer(sample, handRef.current);
       if (!vote) return;
+      // A lock ignores casual scroll-edge votes, but an empty tap in the
+      // opposite FAB slot is still "put it here" — that is the same
+      // gesture that taught the dock in the first place.
+      if (lockedRef.current && vote.reason !== 'opposite-corner') return;
       const next = tallyVote(votesRef.current.left, votesRef.current.right, vote);
       votesRef.current = { left: next.leftVotes, right: next.rightVotes };
       if (next.inferred && next.inferred !== handRef.current) {
         votesRef.current =
           next.inferred === 'left' ? { left: 2, right: 0 } : { left: 0, right: 2 };
-        commitHand(next.inferred, false);
+        commitHand(next.inferred, lockedRef.current);
       }
     }
 
     function onPointerDown(event: PointerEvent) {
-      if (!mobile.matches || lockedRef.current) return;
+      if (!mobile.matches) return;
       pending = {
         x: event.clientX,
         y: event.clientY,
@@ -520,7 +526,7 @@ function useFabHandedness() {
     };
   }, [commitHand]);
 
-  return { announcement, flipHand };
+  return { hand, announcement, flipHand };
 }
 
 function useFabLongPress(onLongPress: () => void) {
@@ -604,7 +610,7 @@ function MobileFabDock({
   const onArticle = isResearchArticlePath(pathname);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const revealed = useFabRevealedOnScrollUp(isMenuOpen || showBackToTop) && !isSearchOpen;
-  const { announcement, flipHand } = useFabHandedness();
+  const { hand, announcement, flipHand } = useFabHandedness();
   const longPress = useFabLongPress(flipHand);
   const longPressRef = useRef(longPress);
   longPressRef.current = longPress;
@@ -739,6 +745,24 @@ function MobileFabDock({
               </Link>
             );
           })}
+          <button
+            className="fab-speed-dial__item flex h-11 items-center gap-2.5 rounded-full border border-accent/25 bg-[#0b0e13]/92 px-3.5 text-foreground/85 shadow-lg shadow-black/40 backdrop-blur"
+            onClick={() => {
+              flipHand();
+              onMenuOpenChange(false);
+            }}
+            style={
+              {
+                '--fab-i': isMenuOpen ? 0 : count,
+              } as React.CSSProperties
+            }
+            type="button"
+          >
+            <ArrowLeftRight className="size-4 shrink-0 text-accent" />
+            <span className="pr-0.5 text-[13px] font-medium">
+              {hand === 'left' ? 'Use right hand' : 'Use left hand'}
+            </span>
+          </button>
         </nav>
 
         <div className="fab-dock__actions">
