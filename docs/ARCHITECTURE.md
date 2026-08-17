@@ -31,6 +31,9 @@ src/
 │   ├── sitemap.ts              # Dynamic sitemap
 │   ├── _fonts/                 # Bundled TTF for OG images (private folder, not a route)
 │   ├── portfolio/page.tsx      # Portfolio allocation, weights, scenario returns
+│   ├── sectors/
+│   │   ├── page.tsx            # Sector index — cards with average scores
+│   │   └── [slug]/page.tsx     # Ranked names inside one sector
 │   ├── stocks/
 │   │   ├── page.tsx            # Coverage universe — searchable, filterable, sortable
 │   │   └── [ticker]/
@@ -49,6 +52,8 @@ src/
 │   └── index.ts                # Registry for the /research routes
 ├── lib/
 │   ├── valuationScore.ts       # ★ All scoring formulas (single source of truth)
+│   ├── sectorCatalog.ts        # Sector labels, slugs, and colours for /sectors
+│   ├── sectors.ts              # Group coverage by sector + IM25 membership
 │   ├── stockSchema.ts          # Zod schema for stock JSON
 │   ├── researchSchema.ts       # Zod schema for research JSON
 │   └── researchMarkdown.ts     # Article → Markdown for the llms.txt mirror
@@ -67,11 +72,13 @@ The four ★ files are where most changes happen. See [DATA-MODEL.md](./DATA-MOD
 | `/portfolio` | Static (client-hydrated) | Allocation, position weights, weighted scenario returns |
 | `/stocks` | Static (client-hydrated) | Coverage universe — search, category filter, column sort |
 | `/stocks/[ticker]` | SSG (`generateStaticParams`) | Full per-asset analysis |
+| `/sectors` | Static (client-hydrated) | Coverage grouped by sector, with average pillar scores |
+| `/sectors/[slug]` | SSG (`generateStaticParams`) | Ranked names inside one sector |
 | `/research` | Static | Index of cross-cutting research articles |
 | `/research/[slug]` | SSG (`generateStaticParams`) | A research article — see [RESEARCH.md](./RESEARCH.md) |
 | `/llms.txt`, `/stocks/[ticker]/llms.txt`, `/research/[slug]/llms.txt` | Static | Markdown mirrors for LLM/agent consumption |
 | `/api/stock-price/[ticker]` | Dynamic (route handler) | Live price proxy to Yahoo Finance |
-| `/opengraph-image`, `/stocks/[ticker]/opengraph-image` | Edge (`next/og`) | Social share images |
+| `/opengraph-image`, `/stocks/[ticker]/opengraph-image`, `/sectors/opengraph-image` | Edge (`next/og`) | Social share images |
 | `/sitemap.xml` | Static | Generated from the coverage registry |
 
 ## Data flow
