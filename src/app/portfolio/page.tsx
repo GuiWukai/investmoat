@@ -260,6 +260,14 @@ function donutSlicePath(
   ].join(" ");
 }
 
+function wrapSectorLabel(label: string): string[] {
+  if (label.includes(" & ")) {
+    const [head, tail] = label.split(" & ");
+    return [`${head} &`, tail];
+  }
+  return [label];
+}
+
 export default function PortfolioPage() {
   const router = useRouter();
 
@@ -426,8 +434,20 @@ export default function PortfolioPage() {
     })
     .filter((t) => t.weight > 0)
     .sort((a, b) => b.weight - a.weight);
-  const maxThemeWeight = themeBuckets[0]?.weight || 1;
   const activeBucket = themeBuckets.find((t) => t.id === activeTheme) ?? null;
+
+  const DONUT = { cx: 100, cy: 100, outerR: 88, innerR: 56, gap: 0.024, labelMinPct: 12 } as const;
+  const donutSlices = (() => {
+    let cumAngle = -Math.PI / 2;
+    return themeBuckets.map((theme) => {
+      const sliceAngle = (theme.weight / 100) * 2 * Math.PI;
+      const sa = cumAngle + DONUT.gap / 2;
+      const ea = cumAngle + sliceAngle - DONUT.gap / 2;
+      const mid = (sa + ea) / 2;
+      cumAngle += sliceAngle;
+      return { ...theme, sa, ea, mid };
+    });
+  })();
 
   const portfolioWithScores = [...portfolio].sort(
     (a, b) => (liveScores[b.ticker] ?? 0) - (liveScores[a.ticker] ?? 0)
@@ -469,113 +489,151 @@ export default function PortfolioPage() {
             <p className="section-label">By sector</p>
           </div>
 
-          <div className="flex justify-center mb-5">
-            <svg viewBox="0 0 200 200" className="w-56 h-56">
-              {(() => {
-                const cx = 100, cy = 100, outerR = 88, innerR = 56;
-                const GAP = 0.024;
-                let cumAngle = -Math.PI / 2;
-                return themeBuckets.map((theme, idx) => {
-                  const sliceAngle = (theme.weight / 100) * 2 * Math.PI;
-                  const sa = cumAngle + GAP / 2;
-                  const ea = cumAngle + sliceAngle - GAP / 2;
-                  cumAngle += sliceAngle;
-                  const isActive = activeTheme === theme.id;
+          <div className="flex flex-col sm:flex-row sm:items-start gap-5">
+            <div className="flex justify-center shrink-0">
+              <svg viewBox="0 0 200 200" className="w-52 h-52 sm:w-44 sm:h-44 lg:w-48 lg:h-48">
+                {donutSlices.map((slice, idx) => {
+                  const isActive = activeTheme === slice.id;
                   return (
                     <path
-                      key={theme.id}
-                      d={donutSlicePath(cx, cy, outerR, innerR, sa, ea)}
-                      fill={theme.color}
-                      opacity={activeTheme && !isActive ? 0.18 : isActive ? 1 : 0.88}
-                      className="transition-all duration-200 cursor-pointer"
-                      style={{
-                        transformOrigin: "100px 100px",
-                        animation: `fade-in-scale 0.6s ease-out ${0.1 + idx * 0.05}s both`,
-                        transform: isActive ? "scale(1.05)" : "scale(1)",
-                      }}
+                      key={slice.id}
+                      d={donutSlicePath(DONUT.cx, DONUT.cy, DONUT.outerR, DONUT.innerR, slice.sa, slice.ea)}
+                      fill={slice.color}
+                      opacity={activeTheme && !isActive ? 0.18 : isActive ? 1 : 0.9}
+                      className="transition-opacity duration-200 cursor-pointer"
+                      style={{ animation: `fade-in-scale 0.6s ease-out ${0.1 + idx * 0.05}s both` }}
                       onPointerEnter={(e) => {
-                        if (e.pointerType === "mouse") setActiveTheme(theme.id);
+                        if (e.pointerType === "mouse") setActiveTheme(slice.id);
                       }}
                       onPointerLeave={(e) => {
                         if (e.pointerType === "mouse") setActiveTheme(null);
                       }}
-                      onClick={() => setActiveTheme((id) => (id === theme.id ? null : theme.id))}
+                      onClick={() => setActiveTheme((id) => (id === slice.id ? null : slice.id))}
                     />
                   );
-                });
-              })()}
-              {activeBucket ? (
-                <>
-                  <text x="100" y="92" textAnchor="middle" fill="rgba(255,255,255,0.38)" fontSize="7.5" fontFamily="system-ui,sans-serif" letterSpacing="1.4">
-                    {activeBucket.holdings.length} {activeBucket.holdings.length === 1 ? "NAME" : "NAMES"}
-                  </text>
-                  <text x="100" y="114" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold" fontFamily="system-ui,sans-serif">
-                    {activeBucket.weight}%
-                  </text>
-                </>
-              ) : (
-                <>
-                  <text x="100" y="92" textAnchor="middle" fill="rgba(255,255,255,0.22)" fontSize="7.5" fontFamily="system-ui,sans-serif" letterSpacing="2.5">PORTFOLIO</text>
-                  <text x="100" y="114" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold" fontFamily="system-ui,sans-serif">{themeBuckets.length} Sectors</text>
-                </>
-              )}
-            </svg>
-          </div>
-
-          <div className="space-y-1">
-            {themeBuckets.map((theme) => {
-              const isActive = activeTheme === theme.id;
-              return (
-                <div
-                  key={theme.id}
-                  className={`rounded-xl px-2.5 py-2 cursor-pointer transition-colors ${
-                    isActive ? "bg-foreground/[0.07]" : "hover:bg-foreground/[0.03]"
-                  }`}
-                  onPointerEnter={(e) => {
-                    if (e.pointerType === "mouse") setActiveTheme(theme.id);
-                  }}
-                  onPointerLeave={(e) => {
-                    if (e.pointerType === "mouse") setActiveTheme(null);
-                  }}
-                  onClick={() => setActiveTheme((id) => (id === theme.id ? null : theme.id))}
-                >
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <div className="w-2 h-2 rounded-full shrink-0" style={{ background: theme.color }} />
-                    <span className="text-xs font-bold text-foreground/80 truncate">{theme.label}</span>
-                    {scoresLoading
-                      ? <Spinner size="sm" color="current" className="ml-auto" />
-                      : <span className="text-xs font-mono text-foreground/40 ml-auto tabular-nums">{theme.weight}%</span>
-                    }
-                  </div>
-                  <div className="h-[3px] bg-foreground/[0.05] rounded-full overflow-hidden mb-1.5">
-                    <div
-                      className="h-full rounded-full transition-all duration-500"
-                      style={{
-                        width: `${(theme.weight / maxThemeWeight) * 100}%`,
-                        background: theme.color,
-                        opacity: 0.85,
-                      }}
-                    />
-                  </div>
-                  <div className="flex flex-wrap gap-x-2.5 gap-y-0.5">
-                    {theme.holdings.map((stock) => (
-                      <button
-                        key={stock.ticker}
-                        type="button"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          router.push(stock.href);
-                        }}
-                        className="text-[10px] font-bold text-foreground/45 hover:text-foreground transition-colors"
+                })}
+                {donutSlices.map((slice) => {
+                  if (slice.weight < DONUT.labelMinPct) return null;
+                  const isActive = activeTheme === slice.id;
+                  const labelR = (DONUT.innerR + DONUT.outerR) / 2;
+                  const x = DONUT.cx + labelR * Math.cos(slice.mid);
+                  const y = DONUT.cy + labelR * Math.sin(slice.mid);
+                  return (
+                    <text
+                      key={`${slice.id}-label`}
+                      x={x}
+                      y={y}
+                      dy="0.35em"
+                      textAnchor="middle"
+                      fill="white"
+                      stroke="rgba(0,0,0,0.45)"
+                      strokeWidth="3"
+                      paintOrder="stroke"
+                      fontSize="8"
+                      fontWeight="bold"
+                      fontFamily="system-ui,sans-serif"
+                      opacity={activeTheme && !isActive ? 0.2 : 1}
+                      className="pointer-events-none tabular-nums transition-opacity duration-200"
+                    >
+                      {slice.weight}%
+                    </text>
+                  );
+                })}
+                {activeBucket ? (() => {
+                  const lines = wrapSectorLabel(activeBucket.label);
+                  const twoLine = lines.length > 1;
+                  return (
+                    <>
+                      {lines.map((line, i) => (
+                        <text
+                          key={line}
+                          x="100"
+                          y={twoLine ? 78 + i * 11 : 86}
+                          textAnchor="middle"
+                          fill="rgba(255,255,255,0.5)"
+                          fontSize="8"
+                          fontFamily="system-ui,sans-serif"
+                        >
+                          {line}
+                        </text>
+                      ))}
+                      <text
+                        x="100"
+                        y={twoLine ? 110 : 108}
+                        textAnchor="middle"
+                        fill="white"
+                        fontSize="15"
+                        fontWeight="bold"
+                        fontFamily="system-ui,sans-serif"
                       >
-                        {stock.ticker}
-                        <span className="text-foreground/25 font-medium"> {dynamicWeights[stock.ticker] ?? 0}%</span>
-                      </button>
-                    ))}
+                        {activeBucket.weight}%
+                      </text>
+                    </>
+                  );
+                })() : (
+                  <>
+                    <text x="100" y="88" textAnchor="middle" fill="rgba(255,255,255,0.22)" fontSize="7.5" fontFamily="system-ui,sans-serif" letterSpacing="2.5">PORTFOLIO</text>
+                    <text x="100" y="108" textAnchor="middle" fill="white" fontSize="13" fontWeight="bold" fontFamily="system-ui,sans-serif">{themeBuckets.length} Sectors</text>
+                  </>
+                )}
+              </svg>
+            </div>
+
+            <div className="flex-1 min-w-0 space-y-0.5">
+              {themeBuckets.map((theme) => {
+                const isActive = activeTheme === theme.id;
+                return (
+                  <div
+                    key={theme.id}
+                    className={`rounded-xl px-2 py-1.5 cursor-pointer transition-colors ${
+                      isActive ? "bg-foreground/[0.07]" : "hover:bg-foreground/[0.03]"
+                    }`}
+                    onPointerEnter={(e) => {
+                      if (e.pointerType === "mouse") setActiveTheme(theme.id);
+                    }}
+                    onPointerLeave={(e) => {
+                      if (e.pointerType === "mouse") setActiveTheme(null);
+                    }}
+                    onClick={() => setActiveTheme((id) => (id === theme.id ? null : theme.id))}
+                  >
+                    <div className="flex items-center gap-2 mb-1">
+                      <div className="w-2 h-2 rounded-full shrink-0" style={{ background: theme.color }} />
+                      <span className="text-xs font-bold text-foreground/80 truncate">{theme.label}</span>
+                      {scoresLoading
+                        ? <Spinner size="sm" color="current" className="ml-auto" />
+                        : <span className="text-xs font-mono text-foreground/45 ml-auto tabular-nums">{theme.weight}%</span>
+                      }
+                    </div>
+                    <div className="h-[3px] bg-foreground/[0.05] rounded-full overflow-hidden mb-1">
+                      <div
+                        className="h-full rounded-full transition-all duration-500"
+                        style={{
+                          width: `${theme.weight}%`,
+                          background: theme.color,
+                          opacity: 0.85,
+                        }}
+                      />
+                    </div>
+                    <div className="flex flex-wrap gap-x-2 gap-y-0.5">
+                      {theme.holdings.map((stock) => (
+                        <button
+                          key={stock.ticker}
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            router.push(stock.href);
+                          }}
+                          className="text-[10px] font-bold text-foreground/60 hover:text-foreground transition-colors"
+                        >
+                          {stock.ticker}
+                          <span className="text-foreground/35 font-medium"> {dynamicWeights[stock.ticker] ?? 0}%</span>
+                        </button>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </Card>
 
