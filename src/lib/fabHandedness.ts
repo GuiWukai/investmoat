@@ -1,0 +1,175 @@
+/**
+ * Which thumb the mobile FAB should sit under.
+ *
+ * Browsers do not expose handedness. The signal is the thumb itself: empty
+ * taps in the opposite bottom corner ("I expected the control here"), and
+ * which edge a one-handed scroll starts from. A long-press on the menu
+ * locks an explicit choice so the detector stops arguing.
+ *
+ * Default is the right edge — that is where most thumbs rest, and where
+ * the dock already lived. The choice is persisted in localStorage so a
+ * return visit does not have to re-learn.
+ */
+
+export type FabHand = 'left' | 'right';
+
+export const FAB_HAND_STORAGE_KEY = 'investmoat:fab-hand:v1';
+
+export type StoredFabHand = {
+  hand: FabHand;
+  /** Long-pressed: auto-detect must not move it again. */
+  locked: boolean;
+};
+
+export type PointerSample = {
+  x: number;
+  y: number;
+  viewportWidth: number;
+  viewportHeight: number;
+  pointerType: string;
+  /** Landed on the FAB cluster — biased by wherever it already sits. */
+  onDock: boolean;
+  /** Landed on a link, button, or other control. */
+  onControl: boolean;
+  /** Vertical travel when this sample is a scroll, not a tap. */
+  scrollDy?: number;
+};
+
+export type HandVote = {
+  hand: FabHand;
+  weight: number;
+  reason: 'opposite-corner' | 'thumb-zone' | 'scroll-edge';
+};
+
+/** Bottom slice of the viewport where a resting thumb actually lands. */
+export const THUMB_ZONE_TOP = 0.58;
+/** Outer columns that count as a reach, not a content tap. */
+export const CORNER_GUTTER = 0.26;
+/** Outer columns that count as a one-handed scroll start. */
+export const SCROLL_GUTTER = 0.28;
+export const SCROLL_DY = 12;
+
+const INTERACTIVE_SELECTOR = [
+  'a',
+  'button',
+  'input',
+  'textarea',
+  'select',
+  'summary',
+  '[role="button"]',
+  '[role="link"]',
+  '[role="menuitem"]',
+].join(',');
+
+export function isFabHand(value: unknown): value is FabHand {
+  return value === 'left' || value === 'right';
+}
+
+export function isFabDockTarget(target: EventTarget | null): boolean {
+  return target instanceof Element && Boolean(target.closest('[data-fab-dock]'));
+}
+
+export function isInteractiveTarget(target: EventTarget | null): boolean {
+  return target instanceof Element && Boolean(target.closest(INTERACTIVE_SELECTOR));
+}
+
+/**
+ * Turn one pointer into a handedness vote, or ignore it.
+ *
+ * Mouse is ignored (narrow desktop windows are not a thumb). Taps on the
+ * dock are ignored (they only prove the current side is reachable). A tap
+ * on the empty corner opposite the dock is the strongest "put it here"
+ * signal; a vertical scroll that starts on an outer edge is weaker but
+ * plentiful, so it still counts.
+ */
+export function classifyPointer(sample: PointerSample, current: FabHand): HandVote | null {
+  if (sample.pointerType === 'mouse') return null;
+  if (sample.viewportWidth <= 0 || sample.viewportHeight <= 0) return null;
+  if (sample.onDock) return null;
+
+  const relX = sample.x / sample.viewportWidth;
+  const scrollDy = sample.scrollDy ?? 0;
+
+  if (scrollDy >= SCROLL_DY) {
+    if (relX <= SCROLL_GUTTER) return { hand: 'left', weight: 1, reason: 'scroll-edge' };
+    if (relX >= 1 - SCROLL_GUTTER) return { hand: 'right', weight: 1, reason: 'scroll-edge' };
+    return null;
+  }
+
+  const relY = sample.y / sample.viewportHeight;
+  if (relY < THUMB_ZONE_TOP) return null;
+  if (sample.onControl) return null;
+
+  if (relX <= CORNER_GUTTER) {
+    const opposite = current === 'right';
+    return {
+      hand: 'left',
+      weight: opposite ? 2 : 1,
+      reason: opposite ? 'opposite-corner' : 'thumb-zone',
+    };
+  }
+  if (relX >= 1 - CORNER_GUTTER) {
+    const opposite = current === 'left';
+    return {
+      hand: 'right',
+      weight: opposite ? 2 : 1,
+      reason: opposite ? 'opposite-corner' : 'thumb-zone',
+    };
+  }
+  return null;
+}
+
+/**
+ * Two empty taps on the far corner, or three same-edge scrolls, are
+ * enough to move the dock. A mixed bag is not.
+ */
+export function tallyVote(
+  leftVotes: number,
+  rightVotes: number,
+  vote: HandVote
+): { leftVotes: number; rightVotes: number; inferred: FabHand | null } {
+  const left = leftVotes + (vote.hand === 'left' ? vote.weight : 0);
+  const right = rightVotes + (vote.hand === 'right' ? vote.weight : 0);
+  const lead = Math.abs(left - right);
+  const majority: FabHand | null = left > right ? 'left' : right > left ? 'right' : null;
+  const inferred =
+    majority && Math.max(left, right) >= 3 && lead >= 3 ? majority : null;
+  return { leftVotes: left, rightVotes: right, inferred };
+}
+
+export function loadFabHand(): StoredFabHand | null {
+  if (typeof window === 'undefined') return null;
+  try {
+    const raw = window.localStorage.getItem(FAB_HAND_STORAGE_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as unknown;
+    if (!parsed || typeof parsed !== 'object') return null;
+    const hand = (parsed as { hand?: unknown }).hand;
+    if (!isFabHand(hand)) return null;
+    return {
+      hand,
+      locked: (parsed as { locked?: unknown }).locked === true,
+    };
+  } catch {
+    return null;
+  }
+}
+
+export function saveFabHand(stored: StoredFabHand): void {
+  if (typeof window === 'undefined') return;
+  try {
+    window.localStorage.setItem(FAB_HAND_STORAGE_KEY, JSON.stringify(stored));
+  } catch {
+    // Quota / private mode — keep the in-memory side only.
+  }
+}
+
+/** Drives CSS before (and after) React hydrates, so the dock does not jump. */
+export function applyFabHandToDocument(hand: FabHand): void {
+  if (typeof document === 'undefined') return;
+  if (hand === 'left') {
+    document.documentElement.dataset.fabHand = 'left';
+  } else {
+    delete document.documentElement.dataset.fabHand;
+  }
+}
