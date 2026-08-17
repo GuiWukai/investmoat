@@ -399,6 +399,7 @@ function useFabHandedness() {
   const votesRef = useRef({ left: 0, right: 0 });
   const handRef = useRef<FabHand>('right');
   const lockedRef = useRef(false);
+  const lastFlipAt = useRef(0);
 
   const commitHand = useCallback((next: FabHand, locked: boolean) => {
     handRef.current = next;
@@ -413,6 +414,9 @@ function useFabHandedness() {
   }, []);
 
   const flipHand = useCallback(() => {
+    const now = Date.now();
+    if (now - lastFlipAt.current < 700) return;
+    lastFlipAt.current = now;
     votesRef.current = { left: 0, right: 0 };
     commitHand(handRef.current === 'left' ? 'right' : 'left', true);
   }, [commitHand]);
@@ -552,11 +556,19 @@ function useFabLongPress(onLongPress: () => void) {
       firedRef.current = false;
       return fired;
     },
+    markFired: () => {
+      firedRef.current = true;
+    },
     bind: {
       onPressStart,
       onPressEnd,
       onContextMenu: (event: React.MouseEvent) => {
+        // Long-press / right-click is the explicit "move it" gesture.
+        // Swallow the browser menu so it cannot cancel the press first.
         event.preventDefault();
+        event.stopPropagation();
+        firedRef.current = true;
+        onLongPress();
       },
     },
   };
@@ -594,6 +606,24 @@ function MobileFabDock({
   const revealed = useFabRevealedOnScrollUp(isMenuOpen || showBackToTop) && !isSearchOpen;
   const { announcement, flipHand } = useFabHandedness();
   const longPress = useFabLongPress(flipHand);
+  const longPressRef = useRef(longPress);
+  longPressRef.current = longPress;
+  const dockRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const dock = dockRef.current;
+    if (!dock) return;
+    function onContextMenu(event: Event) {
+      event.preventDefault();
+      const target = event.target;
+      if (target instanceof Element && target.closest('button')) {
+        longPressRef.current.markFired();
+        flipHand();
+      }
+    }
+    dock.addEventListener('contextmenu', onContextMenu);
+    return () => dock.removeEventListener('contextmenu', onContextMenu);
+  }, [flipHand]);
 
   useEffect(() => {
     if (!onArticle) {
@@ -639,6 +669,7 @@ function MobileFabDock({
         aria-hidden={!revealed}
         className={`fab-dock fixed z-[200] lg:hidden ${revealed ? '' : 'fab-dock--hidden'}`}
         data-fab-dock=""
+        ref={dockRef}
         style={{ bottom: 'max(1.25rem, calc(env(safe-area-inset-bottom, 0px) + 0.75rem))' }}
       >
         <nav
