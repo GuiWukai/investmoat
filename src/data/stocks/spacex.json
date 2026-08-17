@@ -2,7 +2,7 @@
   "slug": "spacex",
   "ticker": "SPCX",
   "name": "Space Exploration Technologies (SpaceX)",
-  "lastAnalyzed": "August 5, 2026",
+  "lastAnalyzed": "August 17, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,16 +10,16 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$2.0T"
+      "value": "~$1.93T"
     },
     {
       "label": "Share Price",
-      "value": "$151"
+      "value": "$146"
     }
   ],
   "chips": [
     {
-      "label": "Aerospace | Launch | Satellite Broadband",
+      "label": "Aerospace | Starlink | SpaceXAI",
       "color": "primary"
     },
     {
@@ -30,118 +30,123 @@
   "metrics": [
     {
       "title": "Q2 2026 Revenue",
-      "value": "$7.18B",
-      "label": "+49% YoY, beat ~$6.85B consensus — first public quarter. Starlink $3.94B (+51% YoY), Launch $1.76B (+46% YoY, 47 orbital flights), SpaceXAI $1.08B (+85% YoY). Group adj. EBITDA $2.08B (~29% margin); GAAP net loss $(1.38)B.",
+      "value": "$7.81B",
+      "label": "+92% YoY ($4.07B). Connectivity $4.29B (+66% YoY), AI $2.56B (+247% YoY), Space $962M (+29% YoY). Adj. EBITDA $3.54B (45% margin); GAAP net loss $(541)M.",
       "icon": "Rocket",
       "color": "#005288"
     },
     {
       "title": "Starlink Engine",
-      "value": "$3.94B",
-      "label": "Q2 2026 — 12.1M subs (+17% QoQ from 10.3M Q1), ARPU $69/mo (up from $66 on May price hike), $1.44B operating income (+21% QoQ). The monetisation pivot is working: revenue grew faster than subs for the first time since the international mix shift.",
+      "value": "$4.29B",
+      "label": "Q2 2026 Connectivity — 12.0M subs (double YoY, +1.7M QoQ), ARPU $66 (flat QoQ, down from $85 YoY on mix). Consumer $2.49B; enterprise & government $1.81B (+108% YoY). Segment op. income $1.66B.",
       "icon": "Satellite",
       "color": "#1a8cff"
     },
     {
-      "title": "AI Segment — Grok 4.5",
-      "value": "~$27.8B/yr",
-      "label": "Contracted run-rate after the July 8 Grok 4.5 launch — Q2 SpaceXAI revenue was $1.08B (+85% YoY) but the segment lost $(920)M adj. EBITDA on Colossus depreciation. Anchor deals: ~$1.25B/mo Anthropic, ~$920M/mo Google through 2029. Revenue ramps from Q3; margin stays negative near term.",
-      "icon": "Cpu",
+      "title": "Cursor + Grok 4.6",
+      "value": "$60B",
+      "label": "Cursor closed Aug 14 — 389.3M Class A shares at a $60.0B implied equity value (8-K). Grok 4.6 launched Aug 12 inside Cursor; Q2 AI was already $2.56B with $14.1B of cloud-service contracted sales.",
+      "icon": "Laptop",
       "color": "#7c3aed"
     }
   ],
   "moat": {
-    "description": "Reusable-rocket cost monopoly (82% of global launch) plus the Starlink spectrum-and-scale flywheel — unchanged by the Q2 print; the earnings confirmed the physical moat is compounding, not eroding.",
+    "description": "Reusable-rocket cost position plus Starlink spectrum-and-scale remain the durability. Cursor's close and Grok 4.6 add a real application layer; they do not deepen the physical or regulatory moat, and they make a software interface newly applicable — intact, not strong.",
     "analysisTitle": "The Reusability + Spectrum Moat",
-    "analysisSummary": "SpaceX's durability is physical and regulatory, not software. Two reinforcing engines:",
+    "analysisSummary": "SpaceX's durability is still physical and regulatory. The two weeks after the Q2 print added a software surface on top; they did not replace the engines underneath:",
     "analysisPoints": [
       {
-        "title": "Reusable-Launch Cost Monopoly",
-        "text": "165 orbital launches in 2025 (82% global share) on a fleet of reusable Falcon boosters — one flew a 29th time. Q2 2026 added a record 47 orbital flights in a single quarter. No competitor (Blue Origin, Rocket Lab, ULA, China) has matched orbital-class reuse at cadence, giving SpaceX a structural cost-per-kg advantage measured in years, not quarters."
+        "title": "Reusable-Launch Cost Position",
+        "text": "H1 2026: 78 launches and 1,041 metric tons to orbit, most of it internal Starlink deployment. Q2 added 38 flights (10 customer / 28 internal). No competitor (Blue Origin, Rocket Lab, ULA, China) has matched orbital-class reuse at this cadence, so the cost-per-kg gap is still measured in years, not quarters."
       },
       {
         "title": "Spectrum + Orbital Slots",
-        "text": "Starlink's FCC spectrum grants and ITU orbital-slot filings are scarce, first-mover, government-allocated assets. A rival cannot simply out-spend its way past the regulatory queue — this is the single hardest part of the moat to replicate."
+        "text": "Starlink's FCC spectrum grants and ITU orbital-slot filings are scarce, first-mover, government-allocated assets. Q2 added the EchoStar transfer of 65 MHz of U.S. spectrum plus global mobile-satellite licences, and more than $6B of multi-year Starshield awards. A rival cannot simply out-spend its way past the regulatory queue."
       },
       {
         "title": "The Self-Funding Flywheel",
-        "text": "SpaceX launches its own constellation at internal cost, so every Falcon flight makes Starlink cheaper to deploy, and Starlink cash flow funds the next constellation tranche and Starship. Vertical integration competitors must buy launch on the open market to compete."
+        "text": "SpaceX launches its own constellation at internal cost, so every Falcon flight makes Starlink cheaper to deploy, and Starlink cash flow funds the next tranche and Starship. Vertical integration competitors must buy launch on the open market to compete."
+      },
+      {
+        "title": "Application Layer, Not a New Moat",
+        "text": "Cursor closed on August 14 as a wholly owned subsidiary (389.3M Class A shares, $60.0B implied equity value). Grok 4.6, trained with Cursor workflow data, shipped two days earlier and launched first inside Cursor and Grok Build. That is a genuine distribution and data loop for SpaceXAI. It is not a substitute for spectrum, slots, or reusable launch — and Cursor's category is already contested (Copilot, Claude Code) with share that has been sliding, so the new surface is intact rather than strong."
       }
     ]
   },
   "growth": {
-    "description": "Q2 2026 (reported August 4) was SpaceX's first public earnings and it delivered a clean beat on the core: revenue $7.18B (+49% YoY vs. ~$6.85B consensus), led by Starlink $3.94B (+51% YoY) on 12.1M subs and a stabilising $69/mo ARPU after the May price hike — the first quarter where revenue outpaced subscriber growth since the international mix shift. Launch hit a record 47 orbital flights ($1.76B, +46% YoY). SpaceXAI contributed $1.08B (+85% YoY) but lost $(920)M adj. EBITDA; Grok 4.5 launched July 8, after quarter-end, so the ~$27.8B/yr contracted compute book ramps from Q3, not Q2. Management raised FY2026 revenue guidance to $31–33B (from the IPO prospectus $28–32B band) but also lifted capex to $25–27B (from $24–26B), keeping FCF deeply negative — the stock rallied ~4% on the Starlink beat and retraced after-hours on the spend step-up, closing August 4 at ~$151. Starship flew 3 orbital test flights in H1 2026, on pace for the 8-flight full-year target (vs. 5 in all of 2025) — progress, not proof.",
+    "description": "The two weeks after the first public print changed the AI leg without changing the last reported quarter. Q2 2026 (8-K, August 4) was $7.81B of revenue (+92% YoY vs $4.07B), adj. EBITDA $3.54B, and a GAAP net loss of $(541)M — Connectivity $4.29B (+66% YoY) on 12.0M Starlink subscribers at a flat $66 ARPU, Space $962M (+29% YoY) on 38 launches, and AI $2.56B (+247% YoY) after $14.1B of cloud-service contracted sales, of which $1.6B was recognised in the quarter. AI segment adj. EBITDA flipped to +$1.15B; the GAAP AI operating loss was still $(1.26)B on $15.8B of AI capex. Then: August 6, SpaceX and Tesla sited Terafab in Grimes County, Texas, with a $16.8B first phase (construction this year, phase-one complete 2028; later phases $55–119B). August 12, Grok 4.6 shipped — a coding-and-agents model that matches GPT-5.6 Sol on the Artificial Analysis Intelligence Index, priced at $2 / $6 per million tokens, trained with Cursor. August 14, the Cursor merger closed. The stock closed August 17 at $146.23. Starship Flight 14 is still the next operational test: first orbital attempt and first ship catch, tentatively late August, pending FAA approval.",
     "growthAnalysis": {
       "cagrEstimate": "30–40%",
-      "scoreDerivation": "Base 91 (~35% blended CAGR, 30%+ band) + 5 recurring (Starlink subscription base, 12M+ and compounding) + 4 both (direct-to-cell + AI-compute TAM expansion on top of share gains) + ~3 trajectory (Starlink and launch accelerating on Q2 beat) − 10 high risk (Starship execution, FCF burn, AI segment losses) − 12 margin compressing (group adj. EBITDA margin fell to ~29% in Q2 from ~35% FY2025 on AI capex drag) = 81. Q2 beat confirms Starlink monetisation and launch cadence; Grok 4.5 contract book de-risks the AI leg from Q3 but does not earn margin credit yet; Starship H1 progress (3 flights) is noted but severity stays high until ≥15/yr cadence is demonstrated.",
+      "cagrBasis": "Company revenue: Q2 2026 $7.81B (+92% YoY vs $4.07B); H1 $12.51B (+54% vs $8.14B). Connectivity +66% YoY, AI +247% YoY, Space +29% YoY. The 30–40% blend decays that print toward Starlink subscriber compounding (12.0M, double YoY) and conversion of the $14.1B cloud-service book plus Cursor, not an extrapolation of +92%.",
+      "scoreDerivation": "Base 91 (30–40% CAGR, 35% midpoint) + 4 trajectory (Connectivity, Space, and AI all accelerating on the Q2 print) + 4 margin expanding (group adj. EBITDA $3.54B / ~45% vs $1.21B / ~30% a year ago; AI flipped to +$1.15B segment adj. EBITDA) − 10 high keyRisk (Starship cadence still unproven; Flight 14 is the next test) = 89.",
       "drivers": [
         {
-          "name": "Starlink Broadband",
-          "metric": "Q2 2026 $3.94B (+51% YoY, +21% QoQ); 12.1M subs; $1.44B op profit; ARPU $69/mo post-May hike",
+          "name": "Starlink / Connectivity",
+          "metric": "Q2 2026 $4.29B (+66% YoY, +32% QoQ); 12.0M subs; ARPU $66; op. income $1.66B; enterprise & government +108% YoY to $1.81B",
           "trend": "accelerating"
         },
         {
-          "name": "Launch Services",
-          "metric": "Q2 2026 $1.76B (+46% YoY); record 47 orbital launches in quarter; ~$22B cumulative federal contracts",
+          "name": "Launch / Space",
+          "metric": "Q2 2026 $962M (+29% YoY, +55% QoQ); 38 launches (10 customer / 28 internal); launch services $648M; H1 78 flights / 1,041 t to orbit",
           "trend": "accelerating"
         },
         {
-          "name": "Direct-to-Cell + AI Compute",
-          "metric": "D2C carrier deals reaching ~7–8M users; SpaceXAI Q2 $1.08B (+85% YoY); Grok 4.5 (Jul 8) anchors ~$27.8B/yr contracted compute ramping Q3+",
+          "name": "SpaceXAI + Cursor",
+          "metric": "Q2 AI $2.56B (+247% YoY); $14.1B CSA contracted sales ($1.6B recognised); 1.4 GW nameplate; Grok 4.6 (Aug 12); Cursor closed Aug 14",
           "trend": "accelerating"
         }
       ],
       "primaryType": "both",
-      "keyRisk": "Starship is the linchpin of the next constellation generation and the cost curve. H1 2026 delivered 3 orbital test flights — on pace for the 8-flight 2026 target and an improvement on 2025's 5-of-25 miss — but reliable orbital-class reuse at ≥15 launches/yr is still unproven. If Starship does not reach that cadence by end of 2027, V3 Starlink deployment and the launch-cost step-down slip, undercutting both the $60B run-rate bull case and the FCF turn the ~$2T valuation requires.",
+      "keyRisk": "Starship is still the linchpin of the next constellation generation and the cost curve. Flight 14 — tentatively late August, pending FAA approval — is the first orbital attempt and the first ship-catch. H1 delivered Flight 12 (May) and Flight 13 (July 24); that is progress, not ≥15 launches/yr with reliable reuse. If that cadence is not demonstrated by the end of 2027, V3 Starlink mass deployment and the launch-cost step-down slip. Terafab ($16.8B phase 1, production 2028) and Q2 AI capex of $15.8B are observed spend already in the cash-flow picture, not a second unmaterialised risk.",
       "keyRiskSeverity": "high",
-      "marginTrend": "compressing"
+      "marginTrend": "expanding"
     }
   },
   "valuation": {
-    "score": 67,
-    "description": "At ~$151 (August 4 close, +4% on the Q2 beat, retracing after-hours on the raised capex guide) SPCX has recovered from the July 10 all-time low of ~$145 but now sits essentially at the $155 base case — the post-earnings bounce closed the modest discount that existed at the July 19 review. The first public print confirmed Starlink monetisation and raised FY2026 revenue guidance to $31–33B, partially de-risking the forward run-rate, but the simultaneous capex lift to $25–27B reminded the market that GAAP losses and deeply negative FCF persist. At ~95× trailing sales / ~270× EV/EBITDA the stock remains among the richest large-caps; earnings multiples are still meaningless on a $(1.38)B quarterly GAAP loss. The margin of safety that existed at $145 is largely gone — the market now pays fair value for flawless Starlink execution and prices the AI-compute ramp as backlog, not yet as margin.",
+    "score": 69,
+    "description": "At $146.23 (August 17 close, +4.5% on the day, market cap ~$1.93T) SPCX sits just under the $155 base and well above the July 10 low near $145 — the post-IPO range has been $104.83–$225.64. The August 4 print was stronger than the first write-up recorded: revenue +92% YoY, adj. EBITDA $3.54B, AI already EBITDA-positive at the segment level. The two weeks since then added Cursor (389.3M new Class A shares, ~3% incremental supply at the June 30 share count) and a $16.8B Terafab first phase that extends the capex cycle into 2028. Trailing sales on a reconstructed TTM of ~$23B (FY2025 $18.7B − H1 2025 $8.1B + H1 2026 $12.5B) are ~84×; annualising Q2 implies ~62×. Earnings multiples remain meaningless on a $(541)M quarterly GAAP loss and H1 investing cash outflow of $34.5B against $3.5B of operating cash. The market is paying for the launch-and-spectrum position plus AI-compute and Cursor optionality — not current free cash flow.",
     "valuationNote": {
-      "text": "P/E is omitted — SpaceX is GAAP loss-making ($(1.38)B net loss in Q2 2026; $(4.94)B in FY2025) and FCF-negative ($2.1B OCF vs. $6.4B Q2 capex), so earnings multiples are meaningless. Valuation is anchored on price/sales (~95× trailing, ~60–65× 2026E on the raised $31–33B guide) and EV/EBITDA (~$2.0T vs. ~$8.3B annualised adj. EBITDA ≈ 240×). The premium is paid for monopoly cost position, spectrum, Grok/AI-compute optionality, and Mars/Starship — not current cash generation.",
-      "fairValue": "$155 (base) — stock now trades at fair value after the Q2 beat closed the post-IPO discount"
+      "text": "P/E is omitted — SpaceX is GAAP loss-making ($(541)M in Q2 2026; $(4.82)B in H1) and deeply FCF-negative (H1 operating cash $3.47B vs $28.5B of capex). Valuation is anchored on price/sales (~84× reconstructed TTM, ~62× annualised Q2) and EV/EBITDA (EV ~$1.87T after $100B cash and ~$39B of debt, against ~$14B annualised adj. EBITDA ≈ 130×). The premium is paid for reusable-launch cost position, spectrum, the Grok/Cursor application layer, and Starship — not current cash generation.",
+      "fairValue": "$155 (base) — stock trades a few percent below fair value after the Cursor close and Terafab site decision"
     }
   },
   "scenarios": {
     "bear": {
       "priceTarget": "$100",
-      "description": "Growth-stock derating meets lock-up supply and execution slips: the market stops paying ~110× sales for a GAAP-loss, dual-class-controlled company, and Starship disappointments compound into a permanent re-rate toward ~$1.3T.",
+      "description": "Growth-stock derating meets lock-up supply, Cursor share keeps sliding, and Starship misses again: the market stops paying 60–80× sales for a GAAP-loss, dual-class-controlled company, and the stock re-rates toward ~$1.3T.",
       "points": [
-        "Post-IPO lock-up expiries (2026–27) flood the thin ~3% float with insider supply as the Nasdaq-100 forced-buying bid fades",
-        "Starship keeps missing cadence targets through 2027 (as in 2025's 5-of-25), delaying V3 Starlink and the launch-cost step-down",
-        "Even after the May 2026 hike, Starlink ARPU re-rolls over and net adds slow as Amazon Kuiper reaches commercial scale, capping broadband growth below 30%"
+        "Post-IPO lock-up expiries (2026–27) plus the 389.3M Cursor shares flood the thin float as the Nasdaq-100 forced-buying bid fades",
+        "Starship Flight 14 slips or fails the ship-catch, and cadence stays well below 15/yr through 2027 — delaying V3 Starlink and the launch-cost step-down",
+        "Cursor's AI-coding share keeps eroding against Anthropic and GitHub Copilot, so the $60B application layer does not convert the $14.1B compute book into a durable franchise"
       ]
     },
     "base": {
       "priceTarget": "$155",
-      "description": "Starlink scales and monetises (post-hike ARPU stabilises), launch dominance holds, and the newly-contracted AI-compute book ramps but stays loss-making on Grok's sub-cost pricing — capex keeps FCF negative and the stock holds near its ~$1.9–2.0T level.",
+      "description": "Starlink compounds at a flat ARPU, launch leadership holds, Grok 4.6 plus Cursor consolidate as a coding surface, and AI-compute revenue ramps — while Terafab and Colossus keep FCF negative and the stock holds near ~$1.9–2.0T.",
       "points": [
-        "2026 revenue lands in the raised $31–33B guide on Starlink ~$18–22B (12M+ subs compounding) plus record launch volume, with the ~$27.8B/yr AI-compute contracts (Anthropic, Google) ramping from Q3 and adjusted EBITDA margin holding ~28–32%",
-        "The May 2026 price increase sticks, stabilising ARPU in the high-$60s and lifting Starlink operating margin even as subscribers grow — as Q2 demonstrated",
-        "Grok 4.5 wins share on price but the AI segment stays GAAP-negative on Colossus depreciation, and Starship reaches orbital reuse below 15/yr — so the full cost-curve and FCF turn arrive later than bulls assume"
+        "FY2026 lands in the high-$20Bs to low-$30Bs on Connectivity compounding (12M+ subs, enterprise mix lifting revenue faster than ARPU), Space at a $4B run-rate, and AI converting the $14.1B CSA book, with Cursor contributing from mid-August",
+        "Starlink ARPU holds in the mid-$60s; enterprise and Starshield, not a consumer price hike, do the monetisation work — as Q2 already showed",
+        "Grok 4.6 wins coding share on price and Cursor distribution, but the AI segment stays GAAP-negative on depreciation; Starship reaches orbital reuse below 15/yr, so the full cost-curve and FCF turn arrive later than bulls assume"
       ]
     },
     "bull": {
       "priceTarget": "$245",
-      "description": "The flywheel inflects on all cylinders: Starship hits cadence, Starlink + D2C compound with firming ARPU, and AI-compute contracts materialise toward a ~$60B run-rate, re-rating the company toward ~$3.2T.",
+      "description": "The flywheel inflects on all cylinders: Starship hits cadence, Starlink and Starshield compound, and Grok 4.6 plus Cursor turn the compute book into an application franchise — re-rating the company toward ~$3.2T.",
       "points": [
-        "Starship reaches ≥15 launches/yr with reliable reuse, collapsing $/kg and enabling V3 Starlink mass deployment",
-        "Grok 4.5's Opus-class benchmarks and price advantage convert the ~$27.8B/yr contract book into a durable franchise, and AI-compute/connectivity (enterprise/defence, orbital data centres from 2028) drives the exit-2026 run-rate toward $60B",
-        "Starlink crosses ~20M subscribers with ARPU rising post-hike, and free cash flow turns positive, validating a premium growth multiple"
+        "Starship Flight 14 succeeds (orbital + ship-catch) and the vehicle reaches ≥15 launches/yr with reliable reuse, collapsing $/kg and enabling V3 Starlink mass deployment",
+        "Grok 4.6's frontier coding scores and Cursor's enterprise footprint convert the $14.1B CSA book plus new attach into a durable franchise, and AI-plus-connectivity drives an exit-2026 run-rate toward $50B+",
+        "Starlink crosses ~20M subscribers with enterprise mix lifting effective ARPU, Terafab stays a 2028 story rather than a 2026 cash crisis, and free cash flow turns toward breakeven"
       ]
     }
   },
   "tenMoats": {
     "learnedInterfaces": {
-      "status": "na",
-      "note": "launch is a contracted service and the Starlink terminal is deliberately plug-and-play. There is no complex interface customers invest years mastering."
+      "status": "intact",
+      "note": "Upgraded from na on the August 14 Cursor close. Cursor is a complex agent IDE — rules, memories, codebase index, team workflows — that developers invest in. That is now a SpaceX product. Kept at intact, not strong: the category is three years old, GitHub Copilot and Claude Code are substitutes, and Cursor's share of AI-coding spend has already been sliding. The interface is the agent, so this leg is AI-vulnerable."
     },
     "businessLogic": {
       "status": "na",
-      "note": "SpaceX does not embed configurable software into customers' proprietary workflows. Launch and broadband are procurement/utility relationships, not business-logic lock-in."
+      "note": "Launch and Starlink remain procurement/utility relationships. Cursor enterprise rules and memories are real configuration, but they are not years-deep proprietary process logic — an engineering team can re-point an IDE in weeks. Not yet a business-logic lock-in."
     },
     "publicDataAccess": {
       "status": "na",
@@ -149,23 +154,23 @@
     },
     "talentScarcity": {
       "status": "strong",
-      "note": "Reusable-orbital propulsion, GNC, and large-scale satellite-manufacturing expertise is the scarcest engineering talent in aerospace, and SpaceX has assembled the only team operating it at cadence. AI augments but does not replace rocket and spacecraft engineers — this scarcity is AI-resilient."
+      "note": "Reusable-orbital propulsion, GNC, and large-scale satellite-manufacturing expertise is the scarcest engineering talent in aerospace, and SpaceX has assembled the only team operating it at cadence. The Cursor close adds a frontier coding-agent team; that deepens the AI bench without replacing the aerospace scarcity, which AI augments but does not replace."
     },
     "bundling": {
       "status": "intact",
-      "note": "Vertical integration is the bundle: in-house launch deploys Starlink at internal cost, ground network plus terminal plus connectivity is sold as one stack, and D2C bundles satellite into carrier plans. Competitors must assemble these pieces on the open market. AI-compute/connectivity is an emerging extension of the same bundle."
+      "note": "Vertical integration is still the bundle: in-house launch deploys Starlink at internal cost, and ground network plus terminal plus connectivity is sold as one stack. Grok 4.6 launching first inside Cursor, trained on Cursor workflow data, is a new software bundle on the same compute (Colossus). Competitors must assemble these pieces on the open market. Not strong: Microsoft (GitHub Copilot + Azure) and Google (Gemini + Cloud) already sell the same shape of bundle."
     },
     "proprietaryData": {
       "status": "intact",
-      "note": "500+ Falcon flights and 29× booster reuse generate proprietary reliability, recovery, and reuse telemetry no rival possesses, plus a continuous stream of constellation operations data. The xAI merger adds the Colossus I/II gigawatt clusters and Grok 4.5's frontier weights, fed by captive Tesla-fleet and SpaceX-engineering data — but frontier-model weights commoditise and Grok competes on price, so this leg is AI-vulnerable and does not deepen durability. Kept intact: the data is real and compounding, but it improves operations rather than being a directly-monetised, defensible product."
+      "note": "Falcon flight-and-reuse telemetry and constellation operations data remain unique and compounding. The xAI combination added Colossus and Grok weights; Grok 4.6's model card states supplemental training on anonymised Cursor workflow data — a new flywheel now inside the company. Frontier weights still commoditise and Grok still competes on price, so this leg is AI-vulnerable and does not deepen durability. Kept intact: the data is real, but it improves the product rather than being a directly-monetised, defensible dataset."
     },
     "regulatoryLockIn": {
       "status": "strong",
-      "note": "FCC spectrum grants, ITU orbital-slot priority, FAA launch licences, and NASA/DoD national-security launch certification are scarce, slow, first-mover-advantaged assets. Switching launch providers requires re-certification, and spectrum/slots cannot be out-spent past the regulatory queue. This is the hardest moat to replicate and is AI-irrelevant."
+      "note": "FCC spectrum grants, ITU orbital-slot priority, FAA launch licences, and NASA/DoD national-security launch certification are scarce, slow, first-mover-advantaged assets. Q2 added the EchoStar 65 MHz transfer and more than $6B of multi-year Starshield awards. Switching launch providers requires re-certification, and spectrum/slots cannot be out-spent past the regulatory queue. This is the hardest moat to replicate and is AI-irrelevant."
     },
     "networkEffects": {
       "status": "intact",
-      "note": "Upgraded from weakened (Jul 19 2026 review). Added users on a Starlink cell still congest shared capacity rather than improve it — the classic per-user effect is absent — but two ecosystem-level effects are demonstrably present: the self-funding launch↔Starlink flywheel (every Falcon flight lowers constellation deployment cost, every Starlink dollar funds more launch, and third-party rideshare demand deepens the same cost curve), and the direct-to-cell two-sided network now signing carriers (~7–8M reachable users; more carriers → more coverage → more attractive to the next carrier). Q2's record 47 launches and Starlink profit expansion reinforce the flywheel without changing the rating — it was already intact. Not strong: D2C is early and the per-user effect never arrives."
+      "note": "Added users on a Starlink cell still congest shared capacity rather than improve it — the classic per-user effect is absent — but two ecosystem-level effects are present: the self-funding launch↔Starlink flywheel, and the direct-to-cell two-sided network signing carriers (SoftBank, NTT Docomo, Spark NZ in Q2). Cursor adds a developer network (training data from usage → better Grok → better Cursor) that is real and early. Not strong: D2C is early, the per-user Starlink effect never arrives, and Cursor's category share has been sliding."
     },
     "transactionEmbedding": {
       "status": "na",
@@ -173,8 +178,8 @@
     },
     "systemOfRecord": {
       "status": "na",
-      "note": "it is not the authoritative record for any external business function."
+      "note": "it is not the authoritative record for any external business function. Graphite (code review) sits inside Cursor; that is not a system of record."
     },
-    "verdict": "SpaceX is a net AI beneficiary on the demand side — AI buildout drives launch demand, satellite connectivity, and, since the xAI merger, an in-house frontier-model and compute franchise (Grok 4.5, Colossus) with a ~$27.8B/yr contracted book — while its core moats (regulatory spectrum/slots, scarce aerospace talent, reusable-launch cost position) are essentially AI-irrelevant and therefore AI-resilient. The Grok/AI leg is the exception: it is a genuine growth and cash driver but the single AI-vulnerable part of the business — frontier weights commoditise, Grok competes on price, and the segment is deeply loss-making — so it lifts growth optionality without deepening the moat, which is why the moat score is unchanged after the Q2 print. It still carries almost none of the AI-vulnerable software moats (no learned interface, business-logic, public-data, transaction, or system-of-record exposure), so AI cannot erode the physical/regulatory durability it has. The honest limitation is that half the moat slate is N/A — the framework's heavyweight software categories structurally don't apply — and network effects, though upgraded to intact on the launch↔Starlink flywheel and the emerging direct-to-cell two-sided network, are ecosystem-deep rather than classic per-user effects. Durable physical/regulatory monopoly, but not a software-style compounder."
+    "verdict": "SpaceX is a net AI beneficiary on the demand side — AI buildout drives launch, satellite connectivity, and, since the xAI combination, an in-house frontier-model and compute franchise that Q2 already printed at $2.56B of revenue and +$1.15B of segment adj. EBITDA. Grok 4.6 and the Cursor close add a coding application layer on that compute; Terafab is a 2028 attempt to own the chip supply underneath it. The core moats (regulatory spectrum/slots, scarce aerospace talent, reusable-launch cost position) are essentially AI-irrelevant and therefore AI-resilient. The new software surface is the exception: learned interfaces is now applicable and only intact, frontier weights commoditise, and Cursor competes on price in a category that is already losing share — so the application layer lifts growth optionality without deepening durability, which is why the moat score does not rise with the close. The honest limitation is that half the moat slate is still N/A, and the software legs that just became applicable are the AI-vulnerable ones. Durable physical/regulatory franchise with a newly attached, contested application layer."
   }
 }
