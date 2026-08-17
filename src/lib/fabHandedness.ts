@@ -105,9 +105,10 @@ export function classifyPointer(sample: PointerSample, current: FabHand): HandVo
   }
 
   const fromBottom = sample.viewportHeight - sample.y;
-  const inLeftSlot = sample.x <= FAB_SLOT_PX + 20 && fromBottom <= FAB_SLOT_PX + 28;
-  const inRightSlot =
-    sample.x >= sample.viewportWidth - FAB_SLOT_PX - 20 && fromBottom <= FAB_SLOT_PX + 28;
+  const slotW = Math.min(FAB_SLOT_PX + 20, Math.max(48, Math.floor(sample.viewportWidth * 0.22)));
+  const slotH = FAB_SLOT_PX + 28;
+  const inLeftSlot = sample.x <= slotW && fromBottom <= slotH;
+  const inRightSlot = sample.x >= sample.viewportWidth - slotW && fromBottom <= slotH;
 
   if (inLeftSlot) {
     const opposite = current === 'right';
