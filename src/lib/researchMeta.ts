@@ -121,6 +121,14 @@ function blockWords(block: ResearchBlock): number {
 
 const DATA_BLOCKS = new Set(['table', 'chart', 'scorecard', 'moat-matrix', 'stat-strip']);
 
+/** Word count of the page-visible copy (dek, summary, and blocks). */
+export function articleWordCount(article: ResearchArticleData): number {
+  return article.blocks.reduce(
+    (sum, b) => sum + blockWords(b),
+    words(article.dek) + words(article.summary),
+  );
+}
+
 /** Estimated reading time in whole minutes (never less than 1). */
 export function readingMinutes(article: ResearchArticleData): number {
   const total = article.blocks.reduce((sum, b) => sum + blockWords(b), words(article.dek));

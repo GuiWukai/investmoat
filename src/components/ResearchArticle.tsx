@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { allCoverageData, getAverageScore } from '@/app/stockData';
 import { getStockData } from '@/data/stocks';
+import { parseArticleDate } from '@/data/research';
 import { Card } from "@heroui/react";
 import {
   computeValuationScore,
@@ -317,7 +318,7 @@ const SOURCE_KIND_LABELS: Record<ArticleSource['kind'], string> = {
 function SourcesSection({ sources }: { sources: ArticleSource[] }) {
   return (
     <section id={SOURCES_ID} className="mt-14 scroll-mt-20 xl:scroll-mt-8">
-      <div className="section-label mb-4">Sources</div>
+      <h2 className="section-label mb-4">Sources</h2>
       <ol className="space-y-2.5 not-prose">
         {sources.map((source, i) => (
           <li key={source.id} className="flex gap-3 text-[13px] leading-relaxed">
@@ -329,7 +330,7 @@ function SourcesSection({ sources }: { sources: ArticleSource[] }) {
                 rel="noopener noreferrer"
                 className="text-foreground/70 hover:text-gold-bright transition-colors break-words"
               >
-                {source.label}
+                <cite className="not-italic">{source.label}</cite>
               </a>
               <span className="text-foreground/30">
                 {' — '}
@@ -1326,14 +1327,21 @@ function Block({
   switch (block.type) {
     case 'heading':
       return (
-        <div className="mt-14 mb-5 scroll-mt-20 xl:scroll-mt-8" id={headingId}>
-          {block.eyebrow && <div className="section-label mb-2">{block.eyebrow}</div>}
-          <h2 className="group text-[26px] md:text-[32px] font-bold text-foreground/90 leading-tight">
+        <section
+          className="mt-14 mb-5 scroll-mt-20 xl:scroll-mt-8"
+          id={headingId}
+          aria-labelledby={headingId ? `${headingId}-title` : undefined}
+        >
+          {block.eyebrow && <p className="section-label mb-2">{block.eyebrow}</p>}
+          <h2
+            id={headingId ? `${headingId}-title` : undefined}
+            className="group text-[26px] md:text-[32px] font-bold text-foreground/90 leading-tight"
+          >
             {block.text}
             {headingId && <HeadingAnchor id={headingId} />}
           </h2>
           <div className="fund-rule mt-4" />
-        </div>
+        </section>
       );
     case 'prose':
       return (
@@ -1438,12 +1446,12 @@ function RevisionLog({
 }) {
   return (
     <section id={REVISIONS_ID} className="mt-14 scroll-mt-20 xl:scroll-mt-8">
-      <div className="section-label mb-4">Revisions</div>
+      <h2 className="section-label mb-4">Revisions</h2>
       <ol className="not-prose space-y-3">
         {revisions.map((r, i) => (
           <li key={`${r.date}-${i}`} className="flex flex-col sm:flex-row sm:gap-4">
             <span className="shrink-0 sm:w-36 text-[11px] uppercase tracking-widest text-foreground/30 pt-0.5">
-              {r.date}
+              <time dateTime={parseArticleDate(r.date)?.toISOString().slice(0, 10)}>{r.date}</time>
             </span>
             <span className="research-prose text-[14.5px] text-foreground/60 leading-[1.7]">
               {renderInline(r.note, `rev${i}`)}
@@ -1452,7 +1460,7 @@ function RevisionLog({
         ))}
         <li className="flex flex-col sm:flex-row sm:gap-4">
           <span className="shrink-0 sm:w-36 text-[11px] uppercase tracking-widest text-foreground/30 pt-0.5">
-            {published}
+            <time dateTime={parseArticleDate(published)?.toISOString().slice(0, 10)}>{published}</time>
           </span>
           <span className="text-[14.5px] text-foreground/35 leading-[1.7]">Published.</span>
         </li>
@@ -1521,13 +1529,27 @@ export default function ResearchArticle({
         <article className="min-w-0">
           <header>
             <div className="flex items-center justify-between gap-4">
-              <Link
-                href="/research"
-                className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-foreground/30 hover:text-gold-bright transition-colors"
-              >
-                <ArrowLeft size={12} />
-                Research
-              </Link>
+              <nav aria-label="Breadcrumb">
+                <ol className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-foreground/30">
+                  <li>
+                    <Link href="/" className="hover:text-gold-bright transition-colors">
+                      Home
+                    </Link>
+                  </li>
+                  <li aria-hidden="true" className="text-foreground/15">
+                    /
+                  </li>
+                  <li>
+                    <Link
+                      href="/research"
+                      className="inline-flex items-center gap-1.5 hover:text-gold-bright transition-colors"
+                    >
+                      <ArrowLeft size={12} />
+                      Research
+                    </Link>
+                  </li>
+                </ol>
+              </nav>
               <CopyLinkButton title={article.title} />
             </div>
 
@@ -1551,9 +1573,19 @@ export default function ResearchArticle({
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] uppercase tracking-widest text-foreground/30">
-              <span>Published {article.published}</span>
+              <span>
+                Published{' '}
+                <time dateTime={parseArticleDate(article.published)?.toISOString().slice(0, 10)}>
+                  {article.published}
+                </time>
+              </span>
               <span className="hidden sm:inline text-foreground/10">·</span>
-              <span>Reviewed {article.lastReviewed}</span>
+              <span>
+                Reviewed{' '}
+                <time dateTime={parseArticleDate(article.lastReviewed)?.toISOString().slice(0, 10)}>
+                  {article.lastReviewed}
+                </time>
+              </span>
               <span className="hidden sm:inline text-foreground/10">·</span>
               <span className="inline-flex items-center gap-1.5">
                 <Clock size={11} className="text-foreground/25" />
@@ -1574,7 +1606,7 @@ export default function ResearchArticle({
             className="scroll-mt-20 xl:scroll-mt-8"
             aria-label="Thesis in brief"
           >
-            <div className="section-label mb-2.5">Thesis in brief</div>
+            <h2 className="section-label mb-2.5">Thesis in brief</h2>
             <p className="research-prose text-[15.5px] md:text-base text-foreground/65 leading-[1.7]">
               {article.summary}
             </p>
@@ -1583,7 +1615,7 @@ export default function ResearchArticle({
           {/* Names covered — live, so a skim still lands on current scores. */}
           {covered.length > 0 && (
             <div className="mt-8 not-prose">
-              <div className="section-label mb-3">Names covered</div>
+              <h2 className="section-label mb-3">Names covered</h2>
               <div className="flex gap-2 overflow-x-auto research-scroll pb-1 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap sm:overflow-visible">
                 {covered.map((c) => (
                   <Link
@@ -1633,12 +1665,13 @@ export default function ResearchArticle({
 
           {article.falsifiableBy && (
             <AccentPanel
+              as="section"
               id={FALSIFIABLE_ID}
               color={FALSIFIABLE_STYLE[article.falsifiableBy.status].color}
               className="mt-14 scroll-mt-20 xl:scroll-mt-8"
             >
               <div className="flex flex-wrap items-center gap-3 mb-2.5">
-                <div className="section-label">What would prove this wrong</div>
+                <h2 className="section-label">What would prove this wrong</h2>
                 <StatusBadge status={article.falsifiableBy.status} />
               </div>
               <p className="research-prose text-[15.5px] md:text-base text-foreground/70 leading-[1.7]">
@@ -1663,7 +1696,7 @@ export default function ResearchArticle({
 
           {related.length > 0 && (
             <section className="mt-14">
-              <div className="section-label mb-4">More research</div>
+              <h2 className="section-label mb-4">More research</h2>
               <div className="grid gap-3 sm:grid-cols-2">
                 {related.map((r) => (
                   <Link
