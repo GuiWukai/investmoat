@@ -644,16 +644,16 @@ function MobileFabDock({
       }
     }
 
-    dock.addEventListener('pointerdown', onPointerDown);
-    dock.addEventListener('pointerup', clearHold);
-    dock.addEventListener('pointercancel', clearHold);
-    dock.addEventListener('contextmenu', onContextMenu);
+    dock.addEventListener('pointerdown', onPointerDown, true);
+    dock.addEventListener('pointerup', clearHold, true);
+    dock.addEventListener('pointercancel', clearHold, true);
+    dock.addEventListener('contextmenu', onContextMenu, true);
     return () => {
       clearHold();
-      dock.removeEventListener('pointerdown', onPointerDown);
-      dock.removeEventListener('pointerup', clearHold);
-      dock.removeEventListener('pointercancel', clearHold);
-      dock.removeEventListener('contextmenu', onContextMenu);
+      dock.removeEventListener('pointerdown', onPointerDown, true);
+      dock.removeEventListener('pointerup', clearHold, true);
+      dock.removeEventListener('pointercancel', clearHold, true);
+      dock.removeEventListener('contextmenu', onContextMenu, true);
     };
   }, [flipHand]);
 

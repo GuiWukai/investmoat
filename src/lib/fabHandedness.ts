@@ -42,9 +42,11 @@ export type HandVote = {
 };
 
 /** Bottom slice of the viewport where a resting thumb actually lands. */
-export const THUMB_ZONE_TOP = 0.58;
+export const THUMB_ZONE_TOP = 0.72;
 /** Outer columns that count as a reach, not a content tap. */
-export const CORNER_GUTTER = 0.26;
+export const CORNER_GUTTER = 0.22;
+/** Hit box of the opposite FAB slot, in CSS pixels. */
+export const FAB_SLOT_PX = 72;
 /** Outer columns that count as a one-handed scroll start. */
 export const SCROLL_GUTTER = 0.28;
 export const SCROLL_DY = 12;
@@ -94,6 +96,27 @@ export function classifyPointer(sample: PointerSample, current: FabHand): HandVo
     if (relX <= SCROLL_GUTTER) return { hand: 'left', weight: 1, reason: 'scroll-edge' };
     if (relX >= 1 - SCROLL_GUTTER) return { hand: 'right', weight: 1, reason: 'scroll-edge' };
     return null;
+  }
+
+  const fromBottom = sample.viewportHeight - sample.y;
+  const inLeftSlot = sample.x <= FAB_SLOT_PX + 20 && fromBottom <= FAB_SLOT_PX + 28;
+  const inRightSlot = sample.x >= sample.viewportWidth - FAB_SLOT_PX - 20 && fromBottom <= FAB_SLOT_PX + 28;
+
+  if (inLeftSlot) {
+    const opposite = current === 'right';
+    return {
+      hand: 'left',
+      weight: opposite ? 2 : 1,
+      reason: opposite ? 'opposite-corner' : 'thumb-zone',
+    };
+  }
+  if (inRightSlot) {
+    const opposite = current === 'left';
+    return {
+      hand: 'right',
+      weight: opposite ? 2 : 1,
+      reason: opposite ? 'opposite-corner' : 'thumb-zone',
+    };
   }
 
   const relY = sample.y / sample.viewportHeight;
