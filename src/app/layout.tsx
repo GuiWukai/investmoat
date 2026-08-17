@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Providers } from './providers';
 import { NavBar } from '@/components/NavBar';
+import { FAB_HAND_STORAGE_KEY } from '@/lib/fabHandedness';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://investmoat.com'),
@@ -94,6 +95,13 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        {/* Apply a stored left-thumb FAB side before paint so the dock does
+            not start on the right and jump. Right is the CSS default. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var r=localStorage.getItem(${JSON.stringify(FAB_HAND_STORAGE_KEY)});if(r){var d=JSON.parse(r);if(d&&d.hand==="left")document.documentElement.dataset.fabHand="left"}}catch(e){}`,
+          }}
         />
       </head>
       <body className="bg-background text-foreground antialiased">

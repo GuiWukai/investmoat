@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
-import { Search, BarChart2, TrendingUp, Menu, FileText, CalendarDays, Briefcase, X, ArrowUp } from 'lucide-react';
+import { Search, BarChart2, TrendingUp, Menu, FileText, CalendarDays, Briefcase, X, ArrowUp, ArrowLeftRight } from 'lucide-react';
 import {
   Button,
   ComboBox,
@@ -16,6 +16,18 @@ import {
 } from '@heroui/react';
 import { allCoverageData } from '@/app/stockData';
 import { MoatMark } from '@/components/MoatMark';
+import {
+  applyFabHandToDocument,
+  classifyPointer,
+  isFabDockTarget,
+  isInteractiveTarget,
+  loadFabHand,
+  saveFabHand,
+  tallyVote,
+  VOTE_DECAY_MS,
+  type FabHand,
+  type PointerSample,
+} from '@/lib/fabHandedness';
 
 const navLinks = [
   { name: 'IM25', href: '/portfolio', icon: BarChart2 },
@@ -374,14 +386,229 @@ function useFabRevealedOnScrollUp(forceVisible: boolean) {
 const fabButtonClass =
   'size-12 rounded-full border border-accent/25 bg-[#0b0e13]/90 text-accent shadow-lg shadow-black/40 backdrop-blur hover:border-accent/50 hover:text-gold-bright';
 
+const FAB_LONG_PRESS_MS = 520;
+
 /**
- * Mobile chrome as a bottom-right cluster: search plus a speed-dial menu.
+ * Lean the mobile FAB under the thumb that is actually using the phone.
  *
- * Search is a sibling of the menu button so it stays one tap away — burying
- * it in the dial would add a tap for the action used most. Destinations
- * still fan up from the menu so a thumb never has to cross the screen.
- * On a research article, back-to-top joins the same row once the reader is
- * a screen deep, so it is not a second floating control in the same corner.
+ * Side is a CSS concern (`html[data-fab-hand]`) so the first paint can
+ * match a stored choice without a hydration flicker. This hook only
+ * learns, persists, and announces. After both edges have been used,
+ * a later thumb-swap is one opposite-corner tap — not a new argument.
+ */
+function useFabHandedness() {
+  const [hand, setHand] = useState<FabHand>('right');
+  const [bothThumbs, setBothThumbs] = useState(false);
+  const [announcement, setAnnouncement] = useState('');
+  const votesRef = useRef({ left: 0, right: 0 });
+  const handRef = useRef<FabHand>('right');
+  const lockedRef = useRef(false);
+  const bothThumbsRef = useRef(false);
+  const lastFlipAt = useRef(0);
+  const lastVoteAt = useRef(0);
+
+  const commitHand = useCallback((next: FabHand, locked: boolean) => {
+    const swapped = next !== handRef.current;
+    const both = bothThumbsRef.current || swapped;
+    bothThumbsRef.current = both;
+    handRef.current = next;
+    lockedRef.current = locked;
+    setHand(next);
+    setBothThumbs(both);
+    applyFabHandToDocument(next);
+    saveFabHand({ hand: next, locked, bothThumbs: both });
+    setAnnouncement(
+      next === 'left'
+        ? 'Menu moved to the left, for a left thumb.'
+        : 'Menu moved to the right, for a right thumb.'
+    );
+  }, []);
+
+  const flipHand = useCallback(() => {
+    const now = Date.now();
+    if (now - lastFlipAt.current < 700) return;
+    lastFlipAt.current = now;
+    votesRef.current = { left: 0, right: 0 };
+    commitHand(handRef.current === 'left' ? 'right' : 'left', true);
+  }, [commitHand]);
+
+  useEffect(() => {
+    const stored = loadFabHand();
+    if (!stored) return;
+    handRef.current = stored.hand;
+    lockedRef.current = stored.locked;
+    bothThumbsRef.current = stored.bothThumbs === true;
+    setHand(stored.hand);
+    setBothThumbs(stored.bothThumbs === true);
+    applyFabHandToDocument(stored.hand);
+  }, []);
+
+  useEffect(() => {
+    type Pending = {
+      x: number;
+      y: number;
+      pointerType: string;
+      onDock: boolean;
+      onControl: boolean;
+      id: number;
+    };
+
+    let pending: Pending | null = null;
+    const mobile = window.matchMedia('(max-width: 1023px)');
+
+    function consider(sample: PointerSample) {
+      const vote = classifyPointer(sample, handRef.current);
+      if (!vote) return;
+      // A lock ignores casual scroll-edge votes, but an empty tap in the
+      // opposite FAB slot is still "put it here" — that is the same
+      // gesture that taught the dock in the first place.
+      if (lockedRef.current && vote.reason !== 'opposite-corner') return;
+      const now = Date.now();
+      if (now - lastVoteAt.current > VOTE_DECAY_MS) {
+        votesRef.current = { left: 0, right: 0 };
+      }
+      lastVoteAt.current = now;
+      const next = tallyVote(votesRef.current.left, votesRef.current.right, vote, {
+        bothThumbs: bothThumbsRef.current,
+      });
+      votesRef.current = { left: next.leftVotes, right: next.rightVotes };
+      if (next.inferred && next.inferred !== handRef.current) {
+        // Zero the tally so the other thumb is not fighting a leftover lead.
+        votesRef.current = { left: 0, right: 0 };
+        commitHand(next.inferred, lockedRef.current);
+      }
+    }
+
+    function onPointerDown(event: PointerEvent) {
+      if (!mobile.matches) return;
+      pending = {
+        x: event.clientX,
+        y: event.clientY,
+        pointerType: event.pointerType,
+        onDock: isFabDockTarget(event.target),
+        onControl: isInteractiveTarget(event.target),
+        id: event.pointerId,
+      };
+    }
+
+    function onPointerMove(event: PointerEvent) {
+      if (!pending || event.pointerId !== pending.id) return;
+      const dy = Math.abs(event.clientY - pending.y);
+      const dx = Math.abs(event.clientX - pending.x);
+      if (dy >= 12 && dy > dx) {
+        consider({
+          x: pending.x,
+          y: pending.y,
+          viewportWidth: window.innerWidth,
+          viewportHeight: window.innerHeight,
+          pointerType: pending.pointerType,
+          onDock: pending.onDock,
+          onControl: pending.onControl,
+          scrollDy: dy,
+        });
+        pending = null;
+      }
+    }
+
+    function onPointerUp(event: PointerEvent) {
+      if (!pending || event.pointerId !== pending.id) return;
+      const dy = Math.abs(event.clientY - pending.y);
+      const dx = Math.abs(event.clientX - pending.x);
+      if (dx < 10 && dy < 10) {
+        consider({
+          x: pending.x,
+          y: pending.y,
+          viewportWidth: window.innerWidth,
+          viewportHeight: window.innerHeight,
+          pointerType: pending.pointerType,
+          onDock: pending.onDock,
+          onControl: pending.onControl,
+        });
+      }
+      pending = null;
+    }
+
+    function onPointerCancel() {
+      pending = null;
+    }
+
+    window.addEventListener('pointerdown', onPointerDown, { passive: true });
+    window.addEventListener('pointermove', onPointerMove, { passive: true });
+    window.addEventListener('pointerup', onPointerUp, { passive: true });
+    window.addEventListener('pointercancel', onPointerCancel, { passive: true });
+    return () => {
+      window.removeEventListener('pointerdown', onPointerDown);
+      window.removeEventListener('pointermove', onPointerMove);
+      window.removeEventListener('pointerup', onPointerUp);
+      window.removeEventListener('pointercancel', onPointerCancel);
+    };
+  }, [commitHand]);
+
+  return { hand, bothThumbs, announcement, flipHand };
+}
+
+function useFabLongPress(onLongPress: () => void) {
+  const timerRef = useRef<number>(0);
+  const firedRef = useRef(false);
+
+  const clear = useCallback(() => {
+    if (timerRef.current) {
+      window.clearTimeout(timerRef.current);
+      timerRef.current = 0;
+    }
+  }, []);
+
+  useEffect(() => clear, [clear]);
+
+  const onPressStart = useCallback(() => {
+    firedRef.current = false;
+    clear();
+    timerRef.current = window.setTimeout(() => {
+      firedRef.current = true;
+      timerRef.current = 0;
+      onLongPress();
+    }, FAB_LONG_PRESS_MS);
+  }, [clear, onLongPress]);
+
+  const onPressEnd = useCallback(() => {
+    clear();
+  }, [clear]);
+
+  return {
+    consumeLongPress: () => {
+      const fired = firedRef.current;
+      firedRef.current = false;
+      return fired;
+    },
+    markFired: () => {
+      firedRef.current = true;
+    },
+    bind: {
+      onPressStart,
+      onPressEnd,
+      onContextMenu: (event: React.MouseEvent) => {
+        // Long-press / right-click is the explicit "move it" gesture.
+        // Swallow the browser menu so it cannot cancel the press first.
+        event.preventDefault();
+        event.stopPropagation();
+        firedRef.current = true;
+        onLongPress();
+      },
+    },
+  };
+}
+
+/**
+ * Mobile chrome as a thumb-side cluster: search plus a speed-dial menu.
+ *
+ * The dock leans left or right with the reader's thumb — detected from
+ * reach, or locked by holding the menu button / Switch side. Search is a
+ * sibling of the menu so it stays one tap away; destinations still fan
+ * up from the menu so a thumb never has to cross the screen. Readers who
+ * swap hands are followed: after both edges have been used, one reach
+ * for the empty corner moves the cluster. On a research article,
+ * back-to-top joins the same row once the reader is a screen deep, so it
+ * is not a second floating control in the same corner.
  */
 function isResearchArticlePath(pathname: string) {
   return pathname.startsWith('/research/');
@@ -403,6 +630,58 @@ function MobileFabDock({
   const onArticle = isResearchArticlePath(pathname);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const revealed = useFabRevealedOnScrollUp(isMenuOpen || showBackToTop) && !isSearchOpen;
+  const { hand, bothThumbs, announcement, flipHand } = useFabHandedness();
+  const longPress = useFabLongPress(flipHand);
+  const longPressRef = useRef(longPress);
+  longPressRef.current = longPress;
+  const dockRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const dock = dockRef.current;
+    if (!dock) return;
+    let holdTimer = 0;
+
+    function clearHold() {
+      if (holdTimer) {
+        window.clearTimeout(holdTimer);
+        holdTimer = 0;
+      }
+    }
+
+    function onPointerDown(event: PointerEvent) {
+      if (event.pointerType === 'mouse' && event.button !== 0) return;
+      const target = event.target;
+      if (!(target instanceof Element) || !target.closest('button')) return;
+      clearHold();
+      holdTimer = window.setTimeout(() => {
+        holdTimer = 0;
+        longPressRef.current.markFired();
+        flipHand();
+      }, FAB_LONG_PRESS_MS);
+    }
+
+    function onContextMenu(event: Event) {
+      event.preventDefault();
+      const target = event.target;
+      if (target instanceof Element && target.closest('button')) {
+        clearHold();
+        longPressRef.current.markFired();
+        flipHand();
+      }
+    }
+
+    dock.addEventListener('pointerdown', onPointerDown, true);
+    dock.addEventListener('pointerup', clearHold, true);
+    dock.addEventListener('pointercancel', clearHold, true);
+    dock.addEventListener('contextmenu', onContextMenu, true);
+    return () => {
+      clearHold();
+      dock.removeEventListener('pointerdown', onPointerDown, true);
+      dock.removeEventListener('pointerup', clearHold, true);
+      dock.removeEventListener('pointercancel', clearHold, true);
+      dock.removeEventListener('contextmenu', onContextMenu, true);
+    };
+  }, [flipHand]);
 
   useEffect(() => {
     if (!onArticle) {
@@ -433,6 +712,9 @@ function MobileFabDock({
 
   return (
     <>
+      <p className="sr-only" aria-live="polite">
+        {announcement}
+      </p>
       <div
         aria-hidden={!isMenuOpen}
         className={`fixed inset-0 z-[190] bg-black/50 backdrop-blur-[2px] transition-opacity duration-200 lg:hidden ${
@@ -443,13 +725,15 @@ function MobileFabDock({
 
       <div
         aria-hidden={!revealed}
-        className={`fab-dock fixed right-5 z-[200] lg:hidden ${revealed ? '' : 'fab-dock--hidden'}`}
+        className={`fab-dock fixed z-[200] lg:hidden ${revealed ? '' : 'fab-dock--hidden'}`}
+        data-fab-dock=""
+        ref={dockRef}
         style={{ bottom: 'max(1.25rem, calc(env(safe-area-inset-bottom, 0px) + 0.75rem))' }}
       >
         <nav
           aria-hidden={!isMenuOpen}
           aria-label="Menu"
-          className="fab-speed-dial absolute right-0 bottom-[calc(100%+0.65rem)] flex flex-col items-end gap-2"
+          className="fab-speed-dial absolute bottom-[calc(100%+0.65rem)] flex flex-col gap-2"
           data-open={isMenuOpen || undefined}
           id="mobile-fab-menu"
         >
@@ -481,9 +765,27 @@ function MobileFabDock({
               </Link>
             );
           })}
+          <button
+            className="fab-speed-dial__item flex h-11 items-center gap-2.5 rounded-full border border-accent/25 bg-[#0b0e13]/92 px-3.5 text-foreground/85 shadow-lg shadow-black/40 backdrop-blur"
+            onClick={() => {
+              flipHand();
+              onMenuOpenChange(false);
+            }}
+            style={
+              {
+                '--fab-i': isMenuOpen ? 0 : count,
+              } as React.CSSProperties
+            }
+            type="button"
+          >
+            <ArrowLeftRight className="size-4 shrink-0 text-accent" />
+            <span className="pr-0.5 text-[13px] font-medium">
+              {bothThumbs ? 'Switch side' : hand === 'left' ? 'Use right hand' : 'Use left hand'}
+            </span>
+          </button>
         </nav>
 
-        <div className="flex items-center gap-2.5">
+        <div className="fab-dock__actions">
           {showBackToTop && (
             <Button
               aria-label="Back to top"
@@ -512,10 +814,14 @@ function MobileFabDock({
           <Button
             aria-controls="mobile-fab-menu"
             aria-expanded={isMenuOpen}
-            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu. Hold to move to the other side.'}
             className={fabButtonClass}
             isIconOnly
-            onPress={() => onMenuOpenChange(!isMenuOpen)}
+            onPress={() => {
+              if (longPress.consumeLongPress()) return;
+              onMenuOpenChange(!isMenuOpen);
+            }}
+            {...longPress.bind}
           >
             <span className="relative size-5">
               <Menu

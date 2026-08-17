@@ -207,9 +207,13 @@ a.card:hover,
 
 /* Mobile FAB speed-dial: items fan up from the button so a thumb can reach
    every destination without crossing the screen. Closed items sit collapsed
-   on the FAB (down + slightly scaled) and stay out of the hit tree. */
+   on the FAB (down + slightly scaled) and stay out of the hit tree.
+   Default lean is the right edge; `html[data-fab-hand="left"]` mirrors it
+   for a left thumb (set before paint from localStorage, then by the detector). */
 .fab-speed-dial {
   --fab-stagger: 48ms;
+  right: 0;
+  align-items: flex-end;
 }
 
 .fab-speed-dial__item {
@@ -221,6 +225,16 @@ a.card:hover,
     opacity 160ms cubic-bezier(0.22, 1, 0.36, 1),
     transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: calc(var(--fab-i, 0) * var(--fab-stagger));
+}
+
+html[data-fab-hand="left"] .fab-speed-dial {
+  left: 0;
+  right: auto;
+  align-items: flex-start;
+}
+
+html[data-fab-hand="left"] .fab-speed-dial__item {
+  transform-origin: bottom left;
 }
 
 .fab-speed-dial[data-open] .fab-speed-dial__item {
@@ -236,11 +250,32 @@ a.card:hover,
   }
 }
 
-/* Tucks off-screen on scroll-down; slides back when the reader looks up. */
+/* Tucks off-screen on scroll-down; slides back when the reader looks up.
+   Horizontal side is a data attribute so a stored left-hand choice can
+   apply before React hydrates — swapping left/right utilities would flash. */
 .fab-dock {
+  right: max(1.25rem, calc(env(safe-area-inset-right, 0px) + 0.75rem));
+  left: auto;
+  user-select: none;
+  -webkit-touch-callout: none;
   transition:
     opacity 220ms cubic-bezier(0.22, 1, 0.36, 1),
     transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html[data-fab-hand="left"] .fab-dock {
+  left: max(1.25rem, calc(env(safe-area-inset-left, 0px) + 0.75rem));
+  right: auto;
+}
+
+.fab-dock__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+html[data-fab-hand="left"] .fab-dock__actions {
+  flex-direction: row-reverse;
 }
 
 .fab-dock--hidden {
