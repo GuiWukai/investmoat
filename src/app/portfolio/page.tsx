@@ -268,6 +268,15 @@ function wrapSectorLabel(label: string): string[] {
   return [label];
 }
 
+function contrastFill(hex: string): string {
+  const n = hex.replace("#", "");
+  const r = parseInt(n.slice(0, 2), 16);
+  const g = parseInt(n.slice(2, 4), 16);
+  const b = parseInt(n.slice(4, 6), 16);
+  const luma = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+  return luma > 0.55 ? "#0a0b0d" : "#f4f1ea";
+}
+
 export default function PortfolioPage() {
   const router = useRouter();
 
@@ -525,15 +534,13 @@ export default function PortfolioPage() {
                       y={y}
                       dy="0.35em"
                       textAnchor="middle"
-                      fill="white"
-                      stroke="rgba(0,0,0,0.45)"
-                      strokeWidth="3"
-                      paintOrder="stroke"
-                      fontSize="8"
+                      fill={contrastFill(slice.color)}
+                      fontSize="9"
                       fontWeight="bold"
                       fontFamily="system-ui,sans-serif"
-                      opacity={activeTheme && !isActive ? 0.2 : 1}
-                      className="pointer-events-none tabular-nums transition-opacity duration-200"
+                      opacity={activeTheme && !isActive ? 0.2 : 0.95}
+                      pointerEvents="none"
+                      className="tabular-nums transition-opacity duration-200"
                     >
                       {slice.weight}%
                     </text>
@@ -604,7 +611,7 @@ export default function PortfolioPage() {
                         : <span className="text-xs font-mono text-foreground/45 ml-auto tabular-nums">{theme.weight}%</span>
                       }
                     </div>
-                    <div className="h-[3px] bg-foreground/[0.05] rounded-full overflow-hidden mb-1">
+                    <div className="h-1 bg-foreground/[0.07] rounded-full overflow-hidden mb-1">
                       <div
                         className="h-full rounded-full transition-all duration-500"
                         style={{
