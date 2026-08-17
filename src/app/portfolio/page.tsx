@@ -454,11 +454,11 @@ export default function PortfolioPage() {
               {!allPricesLoaded ? (
                 <Spinner size="sm" color="current" />
               ) : weightedDailyChange == null ? (
-                <p className="text-2xl font-black text-foreground/20">—</p>
+                <p className="text-3xl font-black text-foreground/20">—</p>
               ) : (
                 <div className={`flex items-center gap-1.5 ${weightedDailyChange >= 0 ? "text-emerald-400" : "text-rose-400"}`}>
-                  {weightedDailyChange >= 0 ? <TrendingUp size={18} /> : <TrendingDown size={18} />}
-                  <span className="text-2xl font-black tabular-nums leading-none">
+                  {weightedDailyChange >= 0 ? <TrendingUp size={22} /> : <TrendingDown size={22} />}
+                  <span className="text-3xl font-black tabular-nums leading-none">
                     {weightedDailyChange >= 0 ? "+" : ""}{weightedDailyChange.toFixed(2)}%
                   </span>
                 </div>
