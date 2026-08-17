@@ -9,9 +9,11 @@ A stock must be registered in **two** places. Missing either one is the most com
 | File | Purpose | Symptom if missing |
 |---|---|---|
 | `src/data/stocks/index.ts` | Maps `slug → data` for the `/stocks/[ticker]` route via `getStockData()` | The stock page 404s |
-| `src/app/stockData.ts` | The `allCoverageData` array used by the list/portfolio pages and the score/portfolio logic | The stock is missing from `/stocks` and `/portfolio` |
+| `src/app/stockData.ts` | The `allCoverageData` array used by the list/portfolio/sector pages and the score/portfolio logic | The stock is missing from `/stocks`, `/sectors`, and `/portfolio` |
 
 The `slug` must match in four places: the filename (`{slug}.json`), the `slug` field inside the JSON, the key in `index.ts`, and the `href` (`/stocks/{slug}`).
+
+Each `allCoverageData` row also carries a `category` (`Big Tech`, `Financials`, `Hard Assets`, `Healthcare`, `Industrials`, `Other`). That key drives the filter pills on `/stocks` and the pages under `/sectors`. Display labels, slugs, and colours live in [`src/lib/sectorCatalog.ts`](../src/lib/sectorCatalog.ts) — keep the `key` in sync when you add a stock.
 
 `npm run validate:stocks` cross-checks the two registries and fails the build if they disagree, so this mistake can no longer ship silently.
 

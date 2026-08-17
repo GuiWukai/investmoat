@@ -7,7 +7,7 @@ import {
   ShieldCheck, TrendingUp, BarChart3, ChevronDown, ArrowRight,
   Brain, Target, Database, Lock, Network, CreditCard, BookMarked,
   MonitorSmartphone, Code2, Globe, GraduationCap, Layers, Zap, FileText,
-  Briefcase, CalendarDays,
+  Briefcase, CalendarDays, LayoutGrid,
 } from "lucide-react";
 
 // ─── FAQ Accordion ────────────────────────────────────────────────────────────
@@ -146,6 +146,12 @@ export default function HomePage() {
               className="flex items-center gap-2 px-6 py-3 bg-foreground/[0.04] hover:bg-foreground/[0.07] border border-accent/20 rounded-lg font-bold text-foreground/80 text-sm transition-colors"
             >
               Explore Coverage
+            </Link>
+            <Link
+              href="/sectors"
+              className="flex items-center gap-2 px-6 py-3 bg-foreground/[0.04] hover:bg-foreground/[0.07] border border-accent/20 rounded-lg font-bold text-foreground/80 text-sm transition-colors"
+            >
+              <LayoutGrid size={16} /> Sectors
             </Link>
             <Link
               href="/research"
@@ -627,8 +633,8 @@ export default function HomePage() {
             </h3>
             <p className="text-foreground/45 max-w-md mx-auto text-sm leading-relaxed mb-8">
               Explore the IM25 allocation, track your own holdings, check upcoming earnings,
-              browse coverage, or read the cross-cutting research — with moat scores,
-              scenarios, and live valuations throughout.
+              browse coverage by name or sector, or read the cross-cutting research — with
+              moat scores, scenarios, and live valuations throughout.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Link
@@ -654,6 +660,12 @@ export default function HomePage() {
                 className="flex items-center gap-2 px-6 py-3 bg-foreground/[0.04] hover:bg-foreground/[0.07] border border-accent/20 rounded-lg font-bold text-foreground/75 text-sm transition-colors"
               >
                 All Coverage
+              </Link>
+              <Link
+                href="/sectors"
+                className="flex items-center gap-2 px-6 py-3 bg-foreground/[0.04] hover:bg-foreground/[0.07] border border-accent/20 rounded-lg font-bold text-foreground/75 text-sm transition-colors"
+              >
+                <LayoutGrid size={16} /> Sectors
               </Link>
               <Link
                 href="/research"

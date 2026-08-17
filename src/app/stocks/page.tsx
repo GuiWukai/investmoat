@@ -2,7 +2,8 @@
 
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { useRouter } from "next/navigation";
-import { ChevronRight, SlidersHorizontal, ArrowUp, ArrowDown, ArrowUpDown } from "lucide-react";
+import Link from "next/link";
+import { ChevronRight, SlidersHorizontal, ArrowUp, ArrowDown, ArrowUpDown, LayoutGrid } from "lucide-react";
 import {
   Card,
   ListBox,
@@ -15,6 +16,7 @@ import {
 } from "@heroui/react";
 import { allCoverageData, getAverageScore } from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
+import { SECTORS } from "@/lib/sectorCatalog";
 
 const TICKER_COLORS: Record<string, string> = {
   MSFT: "#00a4ef", AMZN: "#f59e0b", ASML: "#0071c5", V:    "#1a1f71",
@@ -28,13 +30,8 @@ const TICKER_COLORS: Record<string, string> = {
 };
 
 const CATEGORIES = [
-  { label: "All",                  key: "all"        },
-  { label: "Large Cap Tech",       key: "Big Tech"   },
-  { label: "Financials & SaaS",    key: "Financials" },
-  { label: "Hard Assets",          key: "Hard Assets"},
-  { label: "Healthcare",           key: "Healthcare" },
-  { label: "Industrials",          key: "Industrials"},
-  { label: "Other",                key: "Other"      },
+  { label: "All", key: "all" },
+  ...SECTORS.map((s) => ({ label: s.label, key: s.key })),
 ];
 
 // ─── Sorting ───────────────────────────────────────────────────────────────────
@@ -359,6 +356,11 @@ export default function StocksPage() {
         </h1>
         <p className="text-foreground/40 text-sm md:text-base max-w-xl">
           {allCoverageData.length} stocks scored on moat durability, growth trajectory, and live valuation.
+          {" "}
+          <Link href="/sectors" className="text-foreground/55 hover:text-gold-bright transition-colors">
+            Browse by sector
+            <LayoutGrid size={12} className="ml-1 inline-block align-[-1px]" />
+          </Link>
         </p>
 
         {/* Quick stats */}
