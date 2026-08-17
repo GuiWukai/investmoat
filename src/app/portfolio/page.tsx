@@ -160,10 +160,10 @@ function RankBadge({ rank }: { rank: number }) {
   );
 }
 
-// ─── Allocation themes ────────────────────────────────────────────────────────
+// ─── Allocation sectors ───────────────────────────────────────────────────────
 // Per-name weights cluster around 4–5% under the 10% cap, so a 25-slice ticker
 // pie reads as a uniform ring. Rolling the granular stockMeta categories into
-// a handful of themes makes concentration visible at a glance; individual
+// a handful of sectors makes concentration visible at a glance; individual
 // weights stay in the holdings table below.
 type AllocationTheme = {
   id: string;
@@ -459,14 +459,14 @@ export default function PortfolioPage() {
       {/* ── Allocation chart + Strategy summary ──────────────────────────── */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5 animate-fade-up stagger-fill-both" style={{ animationDelay: '0.15s' }}>
 
-        {/* Visual Allocation — themes, not 25 near-equal ticker slices */}
+        {/* Visual Allocation — sectors, not 25 near-equal ticker slices */}
         <Card className="p-6">
           <div className="flex items-center justify-between gap-3 mb-5">
             <div className="flex items-center gap-2.5">
               <PieChart size={16} className="text-accent" />
               <h3 className="font-bold text-foreground/85">Visual Allocation</h3>
             </div>
-            <p className="section-label">By theme</p>
+            <p className="section-label">By sector</p>
           </div>
 
           <div className="flex justify-center mb-5">
@@ -516,7 +516,7 @@ export default function PortfolioPage() {
               ) : (
                 <>
                   <text x="100" y="92" textAnchor="middle" fill="rgba(255,255,255,0.22)" fontSize="7.5" fontFamily="system-ui,sans-serif" letterSpacing="2.5">PORTFOLIO</text>
-                  <text x="100" y="114" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold" fontFamily="system-ui,sans-serif">{themeBuckets.length} Themes</text>
+                  <text x="100" y="114" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold" fontFamily="system-ui,sans-serif">{themeBuckets.length} Sectors</text>
                 </>
               )}
             </svg>
