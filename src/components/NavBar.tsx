@@ -613,16 +613,48 @@ function MobileFabDock({
   useEffect(() => {
     const dock = dockRef.current;
     if (!dock) return;
+    let holdTimer = 0;
+
+    function clearHold() {
+      if (holdTimer) {
+        window.clearTimeout(holdTimer);
+        holdTimer = 0;
+      }
+    }
+
+    function onPointerDown(event: PointerEvent) {
+      if (event.pointerType === 'mouse' && event.button !== 0) return;
+      const target = event.target;
+      if (!(target instanceof Element) || !target.closest('button')) return;
+      clearHold();
+      holdTimer = window.setTimeout(() => {
+        holdTimer = 0;
+        longPressRef.current.markFired();
+        flipHand();
+      }, FAB_LONG_PRESS_MS);
+    }
+
     function onContextMenu(event: Event) {
       event.preventDefault();
       const target = event.target;
       if (target instanceof Element && target.closest('button')) {
+        clearHold();
         longPressRef.current.markFired();
         flipHand();
       }
     }
+
+    dock.addEventListener('pointerdown', onPointerDown);
+    dock.addEventListener('pointerup', clearHold);
+    dock.addEventListener('pointercancel', clearHold);
     dock.addEventListener('contextmenu', onContextMenu);
-    return () => dock.removeEventListener('contextmenu', onContextMenu);
+    return () => {
+      clearHold();
+      dock.removeEventListener('pointerdown', onPointerDown);
+      dock.removeEventListener('pointerup', clearHold);
+      dock.removeEventListener('pointercancel', clearHold);
+      dock.removeEventListener('contextmenu', onContextMenu);
+    };
   }, [flipHand]);
 
   useEffect(() => {
