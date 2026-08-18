@@ -10,6 +10,7 @@ import {
   Briefcase, CalendarDays, LayoutGrid,
 } from "lucide-react";
 import { MetricBand } from "@/components/MetricBand";
+import { allCoverageData } from "@/app/stockData";
 
 // ─── FAQ Accordion ────────────────────────────────────────────────────────────
 function FAQItem({ q, a }: { q: string; a: string }) {
@@ -151,7 +152,7 @@ export default function HomePage() {
           <h1 className="text-[clamp(3rem,8.5vw,6.25rem)] font-semibold leading-[0.92] tracking-[-0.045em] mb-7">
             <span className="text-foreground/90">Invest in</span><br />
             <span className="gradient-text-animated italic">Moats,</span><br />
-            <span className="text-foreground/[0.22]">Not Markets.</span>
+            <span className="text-foreground/40">Not Markets.</span>
           </h1>
 
           <p className="page-dek mb-10">
@@ -218,7 +219,7 @@ export default function HomePage() {
         <MetricBand
           items={[
             { value: "25", label: "Conviction holdings" },
-            { value: "128", label: "Names under coverage" },
+            { value: String(allCoverageData.length), label: "Names under coverage" },
             { value: "≥80 · ≥70", label: "Composite · moat floor" },
             { value: "10%", label: "Max position weight" },
           ]}
