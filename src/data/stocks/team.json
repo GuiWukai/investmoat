@@ -2,7 +2,7 @@
   "slug": "team",
   "ticker": "TEAM",
   "name": "Atlassian Corporation",
-  "lastAnalyzed": "August 6, 2026",
+  "lastAnalyzed": "August 18, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -187,8 +187,8 @@
       "note": "Jira query language (JQL), board configurations, Confluence spaces, and admin schemes represent years of muscle memory for millions of knowledge workers. Rovo and natural-language issue creation partially abstract the UI, but assigning agents, designing automations, and governing AI credits require deeper platform fluency — net, AI is neutral-to-slightly-weakening on pure UI lock-in while increasing demand for Atlassian architects."
     },
     "businessLogic": {
-      "status": "strong",
-      "note": "Enterprises encode decades of workflow DNA in Jira schemes, custom fields, automation rules, Confluence templates, and JSM SLAs — institutional logic that is nearly impossible to fully document or migrate. The Teamwork Graph now surfaces that logic to agents (Claude, Cursor, Jira Coding Agent) inside Atlassian's permissions and audit trail, making the encoded business logic more valuable in the AI era rather than easier to exit."
+      "status": "intact",
+      "note": "Enterprises encode decades of workflow DNA in Jira schemes, custom fields, automation rules, Confluence templates, and JSM SLAs — real switching cost, but it is customer-authored configuration rather than Atlassian-owned logic competitors cannot replicate. Same bar as Datadog monitors and Snowflake SQL (intact). The Teamwork Graph makes that customer record more valuable to agents; the vendor franchise is the work-item system of record, not the customer's field scheme."
     },
     "publicDataAccess": {
       "status": "na",

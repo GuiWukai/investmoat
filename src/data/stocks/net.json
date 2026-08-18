@@ -2,7 +2,7 @@
   "slug": "net",
   "ticker": "NET",
   "name": "Cloudflare",
-  "lastAnalyzed": "August 3, 2026",
+  "lastAnalyzed": "August 18, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -167,8 +167,8 @@
       "note": "Security engineers trained on Cloudflare's unified dashboard, Workers CLI, and Zero Trust policy engine invest significant institutional knowledge — Teams migrating would need to retrain and rebuild configurations. AI slightly weakens this moat by abstracting infrastructure management."
     },
     "businessLogic": {
-      "status": "strong",
-      "note": "Full SASE deployments (Magic WAN + Gateway + DLP + Access + Magic Firewall) are deeply configured per enterprise network topology. The 7-year, $12.7M/yr SASE deal demonstrates that Cloudflare's logic is embedded for a decade, not a quarter."
+      "status": "intact",
+      "note": "Full SASE deployments (Magic WAN + Gateway + DLP + Access + Magic Firewall) are deeply configured per enterprise network topology, and a 7-year deal shows the switching cost is real. That configuration is the customer's policy, not Cloudflare-owned logic competitors cannot replicate. Same bar as Palo Alto and CrowdStrike detection rules (intact). The franchise is the edge network and threat data, already scored on networkEffects and proprietaryData."
     },
     "publicDataAccess": {
       "status": "intact",

@@ -2,7 +2,7 @@
   "slug": "fico",
   "ticker": "FICO",
   "name": "Fair Isaac Corporation",
-  "lastAnalyzed": "July 31, 2026",
+  "lastAnalyzed": "August 18, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -167,8 +167,8 @@
       "note": "Credit risk officers, loan underwriters, and fraud analysts invest years mastering FICO Platform's decision management workflows. Compliance teams build institutional knowledge around FICO Score interpretation that is not transferable to VantageScore models without retraining entire origination teams across hundreds of lenders simultaneously."
     },
     "businessLogic": {
-      "status": "strong",
-      "note": "FICO Platform customers configure years of credit decisioning rules, fraud detection policies, and compliance workflows into the system. Banks that have migrated origination, account management, and collections to FICO Platform face multi-year re-implementation costs to switch — entirely independent of whether they adopt VantageScore 4.0 for their score pulls. Platform net retention of 148% in Q3 FY2026 is the direct measurement of that lock: migrated accounts expand rather than churn."
+      "status": "intact",
+      "note": "FICO Platform customers configure years of credit decisioning rules, fraud detection policies, and compliance workflows — multi-year re-implementation if they leave, independent of the score pull. That is customer-authored policy, not FICO-owned logic competitors cannot copy. Same bar as Snowflake SQL (intact). The FICO Score franchise is the unique asset, already scored on proprietaryData, systemOfRecord, and regulatoryLockIn; platform NRR measures switching cost, not a second copy of the score."
     },
     "publicDataAccess": {
       "status": "intact",
