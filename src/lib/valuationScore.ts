@@ -32,9 +32,11 @@ function moatPoints(m: { status: string; note: string }): number | null {
  * Per-moat base weights and default AI-exposure group.
  *
  * Resilient moats (default: networkEffects, proprietaryData, systemOfRecord,
- * regulatoryLockIn, transactionEmbedding) sum to 60. Vulnerable moats default
- * to 40. The split represents the framework's bias that AI-resilient sources
- * of durability matter more.
+ * regulatoryLockIn, transactionEmbedding) sum to 60 inside their group.
+ * Vulnerable moats default to 40 inside theirs. Those sums only weight the
+ * *group average* — the groups themselves blend 80/20 (resilient/vulnerable)
+ * in `moatScoreBreakdown`, which is the framework's actual bias that
+ * AI-resilient sources of durability are the moat.
  *
  * Weight calibration: networkEffects is the single most durable moat.
  * transactionEmbedding and regulatoryLockIn are raised vs. earlier calibration
@@ -66,61 +68,103 @@ const MOAT_SPEC: Record<MoatKey, { weight: number; defaultGroup: 'resilient' | '
   publicDataAccess:     { weight:  3, defaultGroup: 'vulnerable' },
 };
 
-const RESILIENT_BASE_TOTAL = 60;
-const VULNERABLE_BASE_TOTAL = 40;
+/** Group blend when both pools have applicable moats. Resilient is the moat;
+ *  vulnerable is a limited modifier — these pillars are defined as things AI
+ *  can substitute for, so they must not be able to outvote a fortress (or
+ *  inflate a software platform past a payments network). */
+const RESILIENT_BLEND = 0.80;
+const VULNERABLE_BLEND = 0.20;
 
 /**
- * Quality-gated breadth bonus: +1 pt per moat rated intact-or-better beyond 5,
- * capped at +4. Diversification only counts when the moats are demonstrably
- * present — a company with 10 applicable but mostly-weakened moats no longer
- * receives the breadth bonus, since broad mediocrity is not durability.
- *   ≤5 intact-or-better → +0
- *    6 intact-or-better → +1
- *    7 intact-or-better → +2
- *    8 intact-or-better → +3
- *   9–10 intact-or-better → +4
+ * Thin-coverage floor. Two `strong` resilient pillars and three N/As used to
+ * print a resilient score of 100 — Eaton (regulatory + embedding only) ranked
+ * with TSMC. Applicable resilient weight below this (~three typical pillars)
+ * is blended toward intact (65) so a thin book cannot score as a full slate.
  */
-function qualityGatedBreadthBonus(intactOrBetterCount: number): number {
-  return Math.min(4, Math.max(0, intactOrBetterCount - 5));
+const RESILIENT_COVERAGE_FULL = 36;
+
+/**
+ * Strength bonus: +1 per *strong* AI-resilient moat beyond 2, capped at +3.
+ * Rewards concentrated structural strength (Visa's five strong resilient
+ * pillars) rather than a software platform collecting +4 for nine intact
+ * boxes, which is what the old intact-or-better-across-ten bonus did.
+ *   ≤2 strong resilient → +0
+ *    3 strong resilient → +1
+ *    4 strong resilient → +2
+ *   ≥5 strong resilient → +3
+ */
+function strongResilientBonus(strongResilientCount: number): number {
+  return Math.min(3, Math.max(0, strongResilientCount - 2));
+}
+
+function coverageAdjustedResilient(
+  resilientScore: number,
+  resilientApplicableWeight: number,
+): number {
+  if (resilientApplicableWeight <= 0) return 0;
+  if (resilientApplicableWeight >= RESILIENT_COVERAGE_FULL) return resilientScore;
+  // Only regress a thin *strong* book toward intact. A thin weakened book
+  // (CoreWeave: one weakened embedding pillar) must not be lifted to 65.
+  if (resilientScore <= MOAT_POINTS.intact) return resilientScore;
+  const coverage = resilientApplicableWeight / RESILIENT_COVERAGE_FULL;
+  return resilientScore * coverage + MOAT_POINTS.intact * (1 - coverage);
+}
+
+export interface MoatBreakdown {
+  /** Weighted average of applicable AI-resilient pillars; null if none apply. */
+  resilientScore: number | null;
+  /** Weighted average of applicable AI-vulnerable pillars; null if none apply. */
+  vulnerableScore: number | null;
+  resilientApplicableWeight: number;
+  vulnerableApplicableWeight: number;
+  /** Resilient score after the thin-coverage adjustment. */
+  resilientAdjusted: number | null;
+  /** 80/20 blend (or the single group that applies). */
+  blend: number;
+  breadth: number;
+  strongResilientCount: number;
+  total: number;
 }
 
 /**
  * Compute a 0–100 moat score from the ten moats assessment.
  *
- * The framework splits moats into AI-resilient (default weight pool sums to 60)
- * and AI-vulnerable (default weight pool sums to 40) groups. Each individual
- * moat assessment may override its default classification via the optional
- * `aiExposure` field — this lets moats that are *strengthened* by AI for a
- * specific company (NVDA's CUDA learnedInterfaces, PLTR's businessLogic
- * ontology) route to the resilient pool where their economics belong, rather
- * than being demoted into the vulnerable group by default.
+ * The framework splits moats into AI-resilient and AI-vulnerable groups. Each
+ * assessment may override its default classification via `aiExposure` — so
+ * moats that are *strengthened* by AI for a specific company (NVDA's CUDA
+ * learnedInterfaces, PLTR's ontology businessLogic) sit in the resilient pool
+ * where their economics belong.
  *
- * N/A moats (`status: "na"`) are excluded from the score; their weight is
- * dropped so it redistributes naturally.
+ * N/A moats (`status: "na"`) are excluded from the group they would have sat
+ * in; they do not zero-fill. A thin resilient book (applicable weight below
+ * `RESILIENT_COVERAGE_FULL`) is blended toward intact so two strong pillars
+ * cannot print 100.
  *
- * Adjustments applied to the weighted base:
- *   • Quality-gated breadth bonus: +0 to +4 for moats rated intact-or-better
- *     beyond 5 (broad mediocrity is not durability).
- *   • AI-vulnerability discount: −5 when the AI-vulnerable group contributes
- *     more total score than the resilient group, catching companies whose moat
- *     is exclusively in the AI-disruption-prone category (e.g., Adobe). The
- *     `aiExposure` overrides flow through to this calculation so AI-strengthened
- *     moats don't trigger the discount.
+ * The two groups are not co-equal sources of durability. AI-vulnerable pillars
+ * are defined as things intelligent agents can substitute for, so they blend
+ * at 20% when both groups apply — enough for a real bundle to still count,
+ * not enough for weakened UI/talent to drag Visa below Datadog, and not enough
+ * for a strong bundle to lift Datadog past a five-pillar resilient fortress.
+ * A book with no applicable resilient pillars scores 20% of its vulnerable
+ * group (a talent-only firm cannot clear the portfolio moat gate on UI lock-in).
  *
- * Examples:
- *   all 10 apply, all strong, defaults → ~100 + 4 breadth − 0 discount = 100
- *   all 10 apply, all intact, defaults → ~65 + 4 breadth − 0 discount = 69
- *   strong vulnerable only, defaults   → ~85 + 0 breadth − 5 discount = 80
- *   NVDA-style w/ CUDA overrides       → learnedInterfaces+businessLogic
- *                                         route to resilient bucket; reflects
- *                                         AI-strengthened ecosystem economics
+ * Adjustments on top of the blend:
+ *   • Strength bonus: +0 to +3 for strong resilient moats beyond the second.
+ *
+ * Examples (rounded):
+ *   all 10 apply, all strong, defaults → 100 + 3 strength = 100 (capped)
+ *   all 10 apply, all intact, defaults → 65 + 0 = 65
+ *   Visa-style (5 strong resilient, 2 weakened vulnerable) → 87 + 3 = 90
+ *   Datadog-style (resilient ~85, vulnerable ~88, 3 strong resilient) → 85 + 1 = 86
+ *   vulnerable-only, all strong → 0.20 × 100 = 20
+ *   NVDA-style w/ CUDA overrides → learnedInterfaces routes to resilient
  */
-export function computeMoatScore(tenMoats: TenMoatsData): number {
+export function moatScoreBreakdown(tenMoats: TenMoatsData): MoatBreakdown {
   let resilientWeightedSum = 0;
   let resilientApplicableWeight = 0;
   let vulnerableWeightedSum = 0;
   let vulnerableApplicableWeight = 0;
-  let intactOrBetterCount = 0;
+  let strongResilientCount = 0;
 
   for (const key of Object.keys(MOAT_SPEC) as MoatKey[]) {
     const assessment = tenMoats[key];
@@ -132,34 +176,53 @@ export function computeMoatScore(tenMoats: TenMoatsData): number {
     if (effectiveGroup === 'resilient') {
       resilientWeightedSum += pts * weight;
       resilientApplicableWeight += weight;
+      if (pts >= MOAT_POINTS.strong) strongResilientCount++;
     } else {
       vulnerableWeightedSum += pts * weight;
       vulnerableApplicableWeight += weight;
     }
-    if (pts >= MOAT_POINTS.intact) intactOrBetterCount++;
   }
 
   const resilientScore = resilientApplicableWeight > 0
-    ? resilientWeightedSum / resilientApplicableWeight : 0;
+    ? resilientWeightedSum / resilientApplicableWeight
+    : null;
   const vulnerableScore = vulnerableApplicableWeight > 0
-    ? vulnerableWeightedSum / vulnerableApplicableWeight : 0;
+    ? vulnerableWeightedSum / vulnerableApplicableWeight
+    : null;
 
-  // Scale each group's contribution by the fraction of its base capacity that
-  // applies. Capacity = base total (60 / 40) — when overrides route moats from
-  // vulnerable to resilient, the resilient applicableWeight can exceed 60,
-  // dilating the resilient group's contribution proportionally.
-  const rW = RESILIENT_BASE_TOTAL * (resilientApplicableWeight / RESILIENT_BASE_TOTAL);
-  const vW = VULNERABLE_BASE_TOTAL * (vulnerableApplicableWeight / VULNERABLE_BASE_TOTAL);
-  const total = rW + vW;
-  if (total === 0) return 0;
-  const base = resilientScore * rW / total + vulnerableScore * vW / total;
-  const breadth = qualityGatedBreadthBonus(intactOrBetterCount);
-  // AI-vulnerability discount: triggers when the (effective) vulnerable group
-  // is the larger total contributor. AI-strengthened overrides flow through
-  // here because they route to resilient — so a stock like NVDA whose
-  // learnedInterfaces is marked resilient doesn't take the discount.
-  const aiDiscount = vulnerableScore * vW > resilientScore * rW ? -5 : 0;
-  return Math.max(0, Math.min(100, Math.round(base + breadth + aiDiscount)));
+  const resilientAdjusted = resilientScore == null
+    ? null
+    : coverageAdjustedResilient(resilientScore, resilientApplicableWeight);
+
+  let blend = 0;
+  if (resilientAdjusted == null && vulnerableScore == null) {
+    blend = 0;
+  } else if (resilientAdjusted == null) {
+    // No durable pillars apply — vulnerable lock-in cannot carry the score.
+    blend = VULNERABLE_BLEND * (vulnerableScore ?? 0);
+  } else if (vulnerableScore == null) {
+    blend = resilientAdjusted;
+  } else {
+    blend = RESILIENT_BLEND * resilientAdjusted + VULNERABLE_BLEND * vulnerableScore;
+  }
+
+  const breadth = strongResilientBonus(strongResilientCount);
+  const total = Math.max(0, Math.min(100, Math.round(blend + breadth)));
+  return {
+    resilientScore,
+    vulnerableScore,
+    resilientApplicableWeight,
+    vulnerableApplicableWeight,
+    resilientAdjusted,
+    blend,
+    breadth,
+    strongResilientCount,
+    total,
+  };
+}
+
+export function computeMoatScore(tenMoats: TenMoatsData): number {
+  return moatScoreBreakdown(tenMoats).total;
 }
 
 // ─── Asset-class-specific moat scoring ────────────────────────────────────────
@@ -636,9 +699,16 @@ export const COMPOSITE_WEIGHTS: Record<PillarKey, number> = {
  * pushed every asset's growth z-score down ~0.26 and dragged all 128 composites
  * with it, turning "remove a term that does nothing" into a book-wide markdown.
  * Re-baking keeps the change about discrimination, which was the point.
+ *
+ * Moat was re-baked August 2026 when the equity blend moved from 60/40
+ * applicable-weight to 80/20 resilient-first. That compressed moat logSd
+ * (software platforms stopped printing as fortresses). Left on the old
+ * larger logSd, moat z-scores would shrink and the declared 40% weight would
+ * under-govern; re-baking growth/valuation is out of scope (those formulae
+ * did not change).
  */
 export const PILLAR_CALIBRATION: Record<PillarKey, PillarCalibration> = {
-  moat:       { logMean: -0.3752, logSd: 0.2762 },
+  moat:       { logMean: -0.3536, logSd: 0.2382 },
   growth:     { logMean: -0.2976, logSd: 0.1499 },
   valuation:  { logMean: -0.3563, logSd: 0.1420 },
 };
@@ -658,7 +728,7 @@ export const PILLAR_CALIBRATION: Record<PillarKey, PillarCalibration> = {
 export const COMPOSITE_CALIBRATION = {
   logMean: -0.3315,
   logSd: 0.1333,
-  blendedZSd: 0.6129,
+  blendedZSd: 0.6220,
 };
 
 /**

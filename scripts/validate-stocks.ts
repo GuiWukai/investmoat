@@ -287,6 +287,53 @@ function checkGrowthDerivations(files: string[]): Warning[] {
   return warnings;
 }
 
+const MOAT_PILLAR_KEYS = [
+  'learnedInterfaces',
+  'businessLogic',
+  'publicDataAccess',
+  'talentScarcity',
+  'bundling',
+  'proprietaryData',
+  'regulatoryLockIn',
+  'networkEffects',
+  'transactionEmbedding',
+  'systemOfRecord',
+] as const;
+
+/**
+ * `strong` is 100 points on a pillar — the same 100 Visa's network and S&P's
+ * benchmark receive. Seven or more strongs is the signature of using the top
+ * label as a default rather than as category-defining intensity. Advisory
+ * because a handful of names (index franchise, card network, process monopoly)
+ * can legitimately be that strong; the warning is so the next author does not
+ * treat Datadog-style switching costs as the same 100.
+ */
+const MAX_STRONG_WITHOUT_NOTE = 6;
+
+function checkMoatLabelInflation(files: string[]): Warning[] {
+  const warnings: Warning[] = [];
+  for (const file of files) {
+    let data: { tenMoats?: Record<string, { status?: string }> };
+    try {
+      data = JSON.parse(readFileSync(join(STOCKS_DIR, file), 'utf-8'));
+    } catch {
+      continue;
+    }
+    if (!data.tenMoats) continue;
+    const strongs = MOAT_PILLAR_KEYS.filter((k) => data.tenMoats?.[k]?.status === 'strong');
+    if (strongs.length > MAX_STRONG_WITHOUT_NOTE) {
+      warnings.push({
+        file,
+        message:
+          `${strongs.length} pillars marked strong (${strongs.join(', ')}). strong is category-defining ` +
+          'intensity, not "switching costs exist" — the same 100 points Visa\'s network receives. ' +
+          'Downgrade any pillar that is real-but-not-unique to intact',
+      });
+    }
+  }
+  return warnings;
+}
+
 /**
  * Cross-check the two registries against each other and against the JSON files
  * on disk. A stock in src/app/stockData.ts but not src/data/stocks/index.ts is
@@ -413,6 +460,17 @@ function main(): void {
       `${YELLOW}Growth derivation drift (${derivationWarnings.length} of ${files.length}) — advisory, not failures:${RESET}`,
     );
     for (const { file, message } of derivationWarnings) {
+      console.log(`  ${DIM}•${RESET} ${YELLOW}${file}${RESET} ${message}`);
+    }
+    console.log('');
+  }
+
+  const moatWarnings = checkMoatLabelInflation(files);
+  if (moatWarnings.length > 0) {
+    console.log(
+      `${YELLOW}Moat label inflation (${moatWarnings.length}) — advisory, not failures:${RESET}`,
+    );
+    for (const { file, message } of moatWarnings) {
       console.log(`  ${DIM}•${RESET} ${YELLOW}${file}${RESET} ${message}`);
     }
     console.log('');

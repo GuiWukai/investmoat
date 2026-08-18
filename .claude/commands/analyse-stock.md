@@ -122,16 +122,20 @@ Calculate `moat.score` (0–100) using the following:
 | Status | Points |
 |---|---|
 | `strong` | 100 |
-| `intact` | 75 |
-| `weakened` | 40 |
-| `na` | excluded from average |
+| `intact` | 65 |
+| `weakened` | 35 |
+| `na` | excluded from the group average |
 | `destroyed` (genuine weakness) | 0 |
 
 **Weighting:**
-- AI-resilient moats (proprietaryData, regulatoryLockIn, networkEffects, transactionEmbedding, systemOfRecord): **60% weight**
-- AI-vulnerable moats (learnedInterfaces, businessLogic, publicDataAccess, talentScarcity, bundling): **40% weight**
+- AI-resilient moats (proprietaryData, regulatoryLockIn, networkEffects, transactionEmbedding, systemOfRecord): averaged as one group, **80% of the score**
+- AI-vulnerable moats (learnedInterfaces, businessLogic, publicDataAccess, talentScarcity, bundling): averaged as the other group, **20% of the score**
+- Thin resilient coverage (applicable weight < 36) is blended toward intact so two strong pillars cannot print 100
+- Strength bonus: +1 per strong resilient moat beyond 2, capped at +3
 
-**Exclude N/A moats from their group average.** If a group has all moats marked N/A, use only the other group's score.
+**`strong` means category-defining, not "switching costs exist."** Use `na` when a pillar is not part of the model; `weakened` is a real erosion. Do not mark `proprietaryData` `strong` because the company stores customer data — that is `intact` unless the dataset is unique and non-replicable.
+
+**Exclude N/A moats from their group average.** If the resilient group is empty, the score is 20% of the vulnerable group (a talent-only firm cannot clear the moat gate). If the vulnerable group is empty, use the resilient score.
 
 ### Calibration Anchors
 
@@ -139,14 +143,14 @@ Cross-check your score against these anchors before finalising:
 
 | Company | Score | Why |
 |---|---|---|
-| ASML | 94 | Physical monopoly on EUV; regulatory + proprietary process data; most moats are N/A (hardware) |
-| Visa / Mastercard | 88–90 | Network effects + transaction embedding + regulatory lock-in across 4B+ cards |
-| MSCI | 91 | Index standard = 50-year regulatory moat; system of record for global benchmarks |
-| Microsoft | 84 | Bundling + system of record + proprietary data; antitrust risk caps upside |
-| Meta | 79 | Network effects strong; AI-resilient moats solid; regulatory drag from GDPR/DMA |
-| Shopify | 78 | Proprietary merchant data + network effects; AI-vulnerable moats weakened |
-| Netflix | 63 | Content moat is non-durable; no structural lock-in; high substitutability |
-| AMD | 52 | No software moat (no CUDA equivalent); execution-dependent; hardware without monopoly |
+| ASML | 95 | Physical monopoly on EUV; five strong resilient pillars |
+| Visa / Mastercard | 90 | Network effects + transaction embedding + regulatory lock-in across 4B+ cards |
+| MSCI | 95 | Index standard = 50-year regulatory moat; system of record for global benchmarks |
+| Microsoft | 90 | Bundling + system of record + proprietary data; CUDA-class `aiExposure` overrides sit in the resilient group |
+| Meta | 81 | Network effects strong; AI-resilient moats solid; regulatory drag from GDPR/DMA |
+| Shopify | 83 | Proprietary merchant data + network effects; AI-vulnerable moats weakened |
+| Netflix | 64 | Content moat is non-durable; no structural lock-in; high substitutability |
+| AMD | 45 | No software moat (no CUDA equivalent); execution-dependent; hardware without monopoly |
 
 ### Peer-Group Consistency Check
 
@@ -172,10 +176,11 @@ If your score is more than 8 points outside the peer range, document why this co
 
 AI exposure is already captured in `moat.score`: each moat is routed into the
 AI-resilient or AI-vulnerable group (with optional per-moat `aiExposure`
-overrides), and the scoring formula applies an AI-vulnerability discount. So
-there is no separate score to compute here — for each moat, ask *Has AI made
-this moat stronger, weaker, or irrelevant since 2022?* and let that judgement
-drive the moat statuses and `aiExposure` overrides set in Step 3.
+overrides), and the scoring formula blends those groups 80/20 so disruption-prone
+pillars cannot outvote a fortress. So there is no separate score to compute
+here — for each moat, ask *Has AI made this moat stronger, weaker, or
+irrelevant since 2022?* and let that judgement drive the moat statuses and
+`aiExposure` overrides set in Step 3.
 
 Write a `verdict` of 2–4 sentences that:
 1. States whether the company is a net beneficiary or net loser from AI

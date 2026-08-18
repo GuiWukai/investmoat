@@ -63,11 +63,11 @@ const FAQS = [
   },
   {
     q: "How is each stock scored?",
-    a: "Three pillars, each scored 0-100, all computed from a structured data file — there are no hand-typed ratings. Moat (40%): for equities, 10 individually-weighted moat types, each rated strong/intact/weakened/destroyed/na mapping to 100/65/35/0/excluded, so a moat score of 0 means all ten applicable moats are destroyed and 100 means all applicable moats are strong. AI-resilient moats (networkEffects w=15, proprietaryData w=12, systemOfRecord w=12, regulatoryLockIn w=11, transactionEmbedding w=10) carry 60% of the weight; AI-vulnerable moats (businessLogic w=14, bundling w=10, learnedInterfaces w=8, talentScarcity w=5, publicDataAccess w=3) carry 40%. A quality-gated breadth bonus of +1 to +4 rewards moats rated intact-or-better beyond the fifth, and a -5 discount applies where the vulnerable group outscores the resilient one. Crypto and commodities use their own pillar frameworks. Growth (30%): a blended 3-5 year revenue CAGR sets the base, adjusted for driver trajectory (±4), margin trend (±4, equities only — Bitcoin has no margins), and key-risk severity (down to -15). That CAGR carries roughly 78% of the pillar's variance, which is why it is expected to cite the measured series it answers to rather than being asserted. Valuation (30%): live price against bear/base/bull scenario targets on a piecewise scale — 100 points at 20% below the bear case, 90 at bear, 65 at base, 45 at bull, and 0 at double the bull case. The composite is a geometric blend, so a weak pillar genuinely drags the score rather than being averaged away. Each pillar is standardised against the coverage universe before weighting, so the declared 40/30/30 governs actual influence instead of whichever rubric happens to vary most. Portfolio eligibility requires composite ≥80 and moat ≥70 — growth and valuation alone cannot carry a weak-moat name into the IM25 — and the top 25 by composite are held.",
+    a: "Three pillars, each scored 0-100, all computed from a structured data file — there are no hand-typed ratings. Moat (40%): for equities, 10 individually-weighted moat types, each rated strong/intact/weakened/destroyed/na mapping to 100/65/35/0/excluded, so a moat score of 0 means all ten applicable moats are destroyed and 100 means all applicable moats are strong. AI-resilient moats (networkEffects w=15, proprietaryData w=12, systemOfRecord w=12, regulatoryLockIn w=11, transactionEmbedding w=10) are averaged as one group and carry 80% of the score; AI-vulnerable moats (businessLogic w=14, bundling w=10, learnedInterfaces w=8, talentScarcity w=5, publicDataAccess w=3) average as the other group and carry 20% — they are things AI can substitute for, so they modify the durable score rather than matching it. A thin resilient book (fewer than three typical pillars) is blended toward intact so two strong labels cannot print 100, and a strength bonus of +1 to +3 rewards additional strong resilient moats beyond the second. Crypto and commodities use their own pillar frameworks. Growth (30%): a blended 3-5 year revenue CAGR sets the base, adjusted for driver trajectory (±4), margin trend (±4, equities only — Bitcoin has no margins), and key-risk severity (down to -15). That CAGR carries roughly 78% of the pillar's variance, which is why it is expected to cite the measured series it answers to rather than being asserted. Valuation (30%): live price against bear/base/bull scenario targets on a piecewise scale — 100 points at 20% below the bear case, 90 at bear, 65 at base, 45 at bull, and 0 at double the bull case. The composite is a geometric blend, so a weak pillar genuinely drags the score rather than being averaged away. Each pillar is standardised against the coverage universe before weighting, so the declared 40/30/30 governs actual influence instead of whichever rubric happens to vary most. Portfolio eligibility requires composite ≥80 and moat ≥70 — growth and valuation alone cannot carry a weak-moat name into the IM25 — and the top 25 by composite are held.",
   },
   {
     q: "What makes a moat 'AI-resilient'?",
-    a: "AI-resilient moats are advantages AI cannot easily replicate or destroy: proprietary data that compounds privately over time, regulatory lock-in (government certifications, index inclusion, licensed access), network effects following Metcalfe's Law, transaction embedding (sitting in the payment layer of daily operations), and system-of-record status (the authoritative source of truth for critical decisions). AI-vulnerable moats — learned interfaces, talent scarcity, proprietary business logic — receive lower weighting because AI agents can increasingly substitute for them.",
+    a: "AI-resilient moats are advantages AI cannot easily replicate or destroy: proprietary data that compounds privately over time, regulatory lock-in (government certifications, index inclusion, licensed access), network effects following Metcalfe's Law, transaction embedding (sitting in the payment layer of daily operations), and system-of-record status (the authoritative source of truth for critical decisions). They carry 80% of the equity moat score. AI-vulnerable moats — learned interfaces, talent scarcity, proprietary business logic, bundling — carry the remaining 20%, because they modify how much you trust the durable score rather than adding a second fortress. A company whose only strength is UI lock-in cannot clear the portfolio moat gate.",
   },
   {
     q: "Is this financial advice?",
@@ -253,7 +253,7 @@ export default function HomePage() {
               iconBg: 'bg-blue-500/10',
               border: 'border-blue-500/[0.12]',
               title: 'AI Rewrites the Playbook',
-              text: 'Most competitive advantages are AI-vulnerable. Network effects, proprietary data, and regulatory lock-in carry 60% of the moat score — the advantages AI cannot replicate or destroy.',
+              text: 'Most competitive advantages are AI-vulnerable. Network effects, proprietary data, and regulatory lock-in carry 80% of the moat score — the advantages AI cannot replicate or destroy. Bundling and encoded workflow still count, at 20%.',
             },
             {
               num: '03',
@@ -309,7 +309,7 @@ export default function HomePage() {
             </div>
             <div>
               <p className="text-foreground/35 text-xs leading-relaxed mb-3">
-                10 weighted moat types. Resilient moats 60%, vulnerable 40%. Quality-gated breadth bonus up to +4 pts.
+                10 weighted moat types. Resilient group 80%, vulnerable 20%. Strength bonus up to +3 for extra strong resilient pillars.
               </p>
               <div className="space-y-2">
                 {[
@@ -439,10 +439,11 @@ export default function HomePage() {
           </h2>
           <p className="text-foreground/40 text-sm leading-relaxed max-w-3xl">
             Every business is scored across 10 competitive advantages. Five are{" "}
-            <span className="text-blue-400 font-semibold">AI-resilient</span> (60% of the score) because
+            <span className="text-blue-400 font-semibold">AI-resilient</span> (80% of the score) because
             AI cannot replicate them; five are{" "}
-            <span className="text-amber-400 font-semibold">AI-vulnerable</span> (40%) because intelligent
-            agents can increasingly substitute for them. Each moat is rated{" "}
+            <span className="text-amber-400 font-semibold">AI-vulnerable</span> (20%) because intelligent
+            agents can increasingly substitute for them — they modify the durable score, they do not match it.
+            Each moat is rated{" "}
             <span className="text-foreground/60 font-medium">strong (100) · intact (65) · weakened (35) · destroyed (0) · na (excluded)</span>.
             Individual moats can be reclassified per company where AI strengthens rather than erodes them —
             NVIDIA&apos;s CUDA, Palantir&apos;s ontology.
@@ -456,7 +457,7 @@ export default function HomePage() {
               <Zap size={13} className="text-blue-400" />
               <span className="text-blue-400 text-[11px] font-bold uppercase tracking-wider">AI-Resilient Moats</span>
             </div>
-            <span className="text-foreground/20 text-xs">60% of moat score · weights: 15 / 12 / 12 / 11 / 10</span>
+            <span className="text-foreground/20 text-xs">80% of moat score · weights inside group: 15 / 12 / 12 / 11 / 10</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -540,7 +541,7 @@ export default function HomePage() {
               <Brain size={13} className="text-amber-400" />
               <span className="text-amber-400 text-[11px] font-bold uppercase tracking-wider">AI-Vulnerable Moats</span>
             </div>
-            <span className="text-foreground/20 text-xs">40% of moat score · weights: 14 / 10 / 8 / 5 / 3</span>
+            <span className="text-foreground/20 text-xs">20% of moat score · weights inside group: 14 / 10 / 8 / 5 / 3</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -627,11 +628,11 @@ export default function HomePage() {
             <p className="text-foreground/30 text-xs leading-relaxed">
               Each moat is rated{" "}
               <span className="text-foreground/50 font-medium">strong (100) · intact (65) · weakened (35) · destroyed (0) · na (excluded)</span>.
-              Inapplicable moats use status <span className="text-foreground/50 font-medium">na</span> and their weight redistributes. A{" "}
-              <span className="text-foreground/50 font-medium">quality-gated breadth bonus of +1 to +4</span> rewards
-              each moat rated intact-or-better beyond the fifth — broad mediocrity earns nothing — and a{" "}
-              <span className="text-foreground/50 font-medium">-5 discount</span> applies where the AI-vulnerable
-              group outscores the resilient one. That produces the{" "}
+              Inapplicable moats use status <span className="text-foreground/50 font-medium">na</span> and drop out of their group.
+              The two groups blend <span className="text-foreground/50 font-medium">80 / 20</span> (resilient / vulnerable).
+              A thin resilient book is blended toward intact, and a{" "}
+              <span className="text-foreground/50 font-medium">strength bonus of +1 to +3</span> rewards additional
+              strong resilient moats beyond the second. That produces the{" "}
               <span className="text-blue-400 font-semibold">Moat Score (40% of composite)</span>.
             </p>
           </div>
