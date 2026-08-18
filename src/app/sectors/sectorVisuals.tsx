@@ -1,22 +1,32 @@
 import type { ReactNode } from 'react';
 import {
+  Bitcoin,
+  Cloud,
   Cpu,
   Factory,
   Gem,
   HeartPulse,
   Landmark,
   Layers,
+  Share2,
+  ShoppingBag,
+  Zap,
   type LucideIcon,
 } from 'lucide-react';
 import type { SectorSlug } from '@/lib/sectorCatalog';
 import { scoreColor } from './scoreUi';
 
 const SECTOR_ICONS: Record<SectorSlug, LucideIcon> = {
-  'large-cap-tech': Cpu,
+  platforms: Share2,
+  software: Cloud,
+  semiconductors: Cpu,
   financials: Landmark,
-  'hard-assets': Gem,
   healthcare: HeartPulse,
   industrials: Factory,
+  energy: Zap,
+  consumer: ShoppingBag,
+  'hard-assets': Gem,
+  crypto: Bitcoin,
   other: Layers,
 };
 
