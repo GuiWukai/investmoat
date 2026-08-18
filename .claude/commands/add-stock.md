@@ -266,12 +266,14 @@ Add the stock to the `allCoverageData` array:
   slug: "{slug}",
   scores: [m({slug}Data), {growthScore}, {valuationScore}],
   href: "/stocks/{slug}",
-  category: "{Big Tech | Financials | Healthcare | Hard Assets | Industrials | Other}",
+  category: "{Platforms | Software | Semiconductors | Financials | Healthcare | Industrials | Energy | Consumer | Hard Assets | Crypto | Other}",
   bearTarget: "{e.g. $300}",
   baseTarget: "{e.g. $450}",
   bullTarget: "{e.g. $580}"
 },
 ```
+
+Pick `category` by the economics you would compare the name against on `/sectors/[slug]`, not by GICS or market cap. Hyperscalers and consumer internet go in Platforms; enterprise SaaS/security/data in Software; chips, equipment, EDA, and AI compute hardware in Semiconductors; generators and LNG in Energy (equipment stays Industrials); miners and physical commodities in Hard Assets; protocols and BTC-proxy equities in Crypto. Use Other only for benchmarks and leftovers that do not sit in a named bucket.
 
 Place it in the array sorted approximately by composite score (highest first). The portfolio/excluded split is automatic — stocks with average score ≥ 75 and within the top 20 enter the portfolio.
 

@@ -3,11 +3,14 @@ import type { Sector } from '@/lib/sectorCatalog';
 
 export {
   SECTORS,
+  LEGACY_SECTOR_REDIRECTS,
   getSectorBySlug,
   getSectorByKey,
   allSectorSlugs,
+  allSectorKeys,
   type Sector,
   type SectorSlug,
+  type SectorKey,
 } from '@/lib/sectorCatalog';
 
 export type CoverageStock = (typeof allCoverageData)[number];

@@ -13,7 +13,7 @@ A stock must be registered in **two** places. Missing either one is the most com
 
 The `slug` must match in four places: the filename (`{slug}.json`), the `slug` field inside the JSON, the key in `index.ts`, and the `href` (`/stocks/{slug}`).
 
-Each `allCoverageData` row also carries a `category` (`Big Tech`, `Financials`, `Hard Assets`, `Healthcare`, `Industrials`, `Other`). That key drives the filter pills on `/stocks` and the pages under `/sectors`. Display labels, slugs, and colours live in [`src/lib/sectorCatalog.ts`](../src/lib/sectorCatalog.ts) — keep the `key` in sync when you add a stock.
+Each `allCoverageData` row also carries a `category` (`Platforms`, `Software`, `Semiconductors`, `Financials`, `Healthcare`, `Industrials`, `Energy`, `Consumer`, `Hard Assets`, `Crypto`, `Other`). That key drives the filter pills on `/stocks` and the pages under `/sectors`. Display labels, slugs, and colours live in [`src/lib/sectorCatalog.ts`](../src/lib/sectorCatalog.ts) — keep the `key` in sync when you add a stock. `npm run validate:stocks` fails if a row uses an unknown key.
 
 `npm run validate:stocks` cross-checks the two registries and fails the build if they disagree, so this mistake can no longer ship silently.
 

@@ -25,6 +25,7 @@ import {
 import type { AssetClass } from '../src/types/stockAnalysis';
 import { getAllSlugs } from '../src/data/stocks';
 import { allCoverageData } from '../src/app/stockData';
+import { allSectorKeys } from '../src/lib/sectorCatalog';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const STOCKS_DIR = join(__dirname, '..', 'src', 'data', 'stocks');
@@ -330,6 +331,22 @@ function checkRegistries(files: string[]): Failure[] {
   return failures;
 }
 
+function checkCategories(): Failure[] {
+  const known = new Set<string>(allSectorKeys());
+  const failures: Failure[] = [];
+  for (const stock of allCoverageData) {
+    if (!known.has(stock.category)) {
+      failures.push({
+        file: `${stock.slug}.json`,
+        message:
+          `category "${stock.category}" is not a SECTORS[].key in src/lib/sectorCatalog.ts — ` +
+          `/stocks filters and /sectors would drop this name`,
+      });
+    }
+  }
+  return failures;
+}
+
 function main(): void {
   const files = readdirSync(STOCKS_DIR).filter((f) => extname(f) === '.json');
   if (files.length === 0) {
@@ -344,6 +361,7 @@ function main(): void {
   }
 
   failures.push(...checkRegistries(files));
+  failures.push(...checkCategories());
 
   if (failures.length > 0) {
     const failedFiles = new Set(failures.map((f) => f.file));

@@ -7,11 +7,11 @@ const SITE_URL = 'https://investmoat.com';
 export const metadata: Metadata = {
   title: 'Stock Coverage',
   description:
-    'Browse 80+ stocks scored on moat durability, growth trajectory, and live valuation. Filter by Large Cap Tech, Financials & SaaS, Hard Assets, and Healthcare.',
+    'Browse 80+ stocks scored on moat durability, growth trajectory, and live valuation. Filter by Platforms, Software, Semiconductors, Financials, Healthcare, and more.',
   openGraph: {
     title: 'Stock Coverage | InvestMoat',
     description:
-      'Browse 80+ stocks scored on moat durability, growth trajectory, and live valuation. Filter by Large Cap Tech, Financials & SaaS, Hard Assets, and Healthcare.',
+      'Browse 80+ stocks scored on moat durability, growth trajectory, and live valuation. Filter by Platforms, Software, Semiconductors, Financials, Healthcare, and more.',
     url: `${SITE_URL}/stocks`,
     type: 'website',
     siteName: 'InvestMoat',

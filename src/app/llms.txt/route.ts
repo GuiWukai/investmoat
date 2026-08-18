@@ -71,7 +71,7 @@ analysis below links to a clean Markdown mirror (append \`/llms.txt\` to any
 
 - [Portfolio overview](${SITE_URL}/portfolio): the concentrated, score-selected portfolio.
 - [All analyses](${SITE_URL}/stocks): the full ranked universe.
-- [Sectors](${SITE_URL}/sectors): coverage grouped by Large Cap Tech, Financials & SaaS, Hard Assets, Healthcare, Industrials, and Other.
+- [Sectors](${SITE_URL}/sectors): coverage grouped by Platforms, Software, Semiconductors, Financials, Healthcare, Industrials, Energy, Consumer, Hard Assets, and Crypto.
 - [Research](${SITE_URL}/research): cross-cutting analysis across the universe.
 - [Sitemap](${SITE_URL}/sitemap.xml)
 
