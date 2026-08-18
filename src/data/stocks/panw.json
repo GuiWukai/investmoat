@@ -2,7 +2,7 @@
   "slug": "panw",
   "ticker": "PANW",
   "name": "Palo Alto Networks",
-  "lastAnalyzed": "August 6, 2026",
+  "lastAnalyzed": "August 18, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -166,8 +166,8 @@
       "note": "Security engineers and SOC analysts deeply learn PANW's Panorama management, Cortex XSOAR playbooks, and Prisma Cloud policies. The transition to Cortex XSIAM represents a deliberate interface deepening strategy that compounds switching costs as AI automation integrates with security workflows."
     },
     "businessLogic": {
-      "status": "strong",
-      "note": "Enterprises configure years of security policy in PAN-OS — application IDs, user IDs, zone rules, decryption profiles, and threat prevention policies. For Cortex customers, XSOAR automation playbooks and XSIAM detection rules represent highly customized business logic that takes 12–18 months to rebuild on any alternative platform."
+      "status": "intact",
+      "note": "Enterprises configure years of security policy in PAN-OS — application IDs, user IDs, zone rules, decryption profiles, and threat prevention policies. Cortex XSOAR playbooks and XSIAM detection rules take 12–18 months to rebuild. That is real switching cost, but it is customer-owned configuration rather than Palo Alto-owned logic competitors cannot replicate. Same bar as CrowdStrike detection rules and Snowflake SQL (intact)."
     },
     "publicDataAccess": {
       "status": "intact",
