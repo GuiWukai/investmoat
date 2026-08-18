@@ -1,12 +1,12 @@
 /**
  * Which thumb the mobile FAB should sit under.
  *
- * Browsers do not expose handedness. The signal is the thumb itself: empty
- * taps in the opposite bottom corner ("I expected the control here"), and
- * which edge a one-handed scroll starts from. Readers who swap hands are
- * not stuck — after both edges have been used, one opposite-corner tap
- * moves the dock, and stale votes decay so an old left-hand streak cannot
- * block a right thumb a few seconds later.
+ * Browsers do not expose handedness. The signal is the thumb that is using
+ * the phone right now: a reach for the empty opposite FAB slot ("I expected
+ * the control here"), and which edge a one-handed scroll starts from. The
+ * same reader can swap hands mid-session — a vote for one thumb forgets the
+ * other, so an old right-hand streak cannot block a left thumb that just
+ * took over.
  *
  * Default is the right edge — that is where most thumbs rest, and where
  * the dock already lived. The choice is persisted in localStorage so a
@@ -19,9 +19,9 @@ export const FAB_HAND_STORAGE_KEY = 'investmoat:fab-hand:v1';
 
 export type StoredFabHand = {
   hand: FabHand;
-  /** Menu / long-press: ignore casual scroll votes. Opposite-corner still wins. */
+  /** Menu / long-press: prefer this side until the other thumb is seen. */
   locked: boolean;
-  /** Reader has used both edges; swapping thumbs is a one-tap reach. */
+  /** Reader has used both edges; the menu copy becomes "Switch side". */
   bothThumbs?: boolean;
 };
 
@@ -50,12 +50,14 @@ export const THUMB_ZONE_TOP = 0.72;
 /** Outer columns that count as a reach, not a content tap. */
 export const CORNER_GUTTER = 0.22;
 /** Hit box of the opposite FAB slot, in CSS pixels. */
-export const FAB_SLOT_PX = 72;
+export const FAB_SLOT_PX = 88;
 /** Outer columns that count as a one-handed scroll start. */
 export const SCROLL_GUTTER = 0.28;
 export const SCROLL_DY = 12;
-/** Forget a half-finished tally so a later thumb-swap is not fighting it. */
+/** Forget a half-finished streak so two far-apart flicks do not add up. */
 export const VOTE_DECAY_MS = 8000;
+/** Ignore auto-votes briefly after an explicit flip so the dock does not bounce. */
+export const FLIP_COOLDOWN_MS = 700;
 
 const INTERACTIVE_SELECTOR = [
   'a',
@@ -105,11 +107,13 @@ export function classifyPointer(sample: PointerSample, current: FabHand): HandVo
   }
 
   const fromBottom = sample.viewportHeight - sample.y;
-  const slotW = Math.min(FAB_SLOT_PX + 20, Math.max(48, Math.floor(sample.viewportWidth * 0.22)));
-  const slotH = FAB_SLOT_PX + 28;
+  const slotW = Math.min(FAB_SLOT_PX + 24, Math.max(56, Math.floor(sample.viewportWidth * 0.28)));
+  const slotH = FAB_SLOT_PX + 36;
   const inLeftSlot = sample.x <= slotW && fromBottom <= slotH;
   const inRightSlot = sample.x >= sample.viewportWidth - slotW && fromBottom <= slotH;
 
+  // The unused FAB slot is the strong "put it here" signal — even when
+  // the tap lands on content sitting in that corner.
   if (inLeftSlot) {
     const opposite = current === 'right';
     return {
@@ -131,38 +135,34 @@ export function classifyPointer(sample: PointerSample, current: FabHand): HandVo
   if (relY < THUMB_ZONE_TOP) return null;
   if (sample.onControl) return null;
 
+  // Broader empty gutter: a resting thumb, but not the FAB slot itself.
+  // Never treated as opposite-corner, so a margin tap does not snap the dock.
   if (relX <= CORNER_GUTTER) {
-    const opposite = current === 'right';
-    return {
-      hand: 'left',
-      weight: opposite ? 2 : 1,
-      reason: opposite ? 'opposite-corner' : 'thumb-zone',
-    };
+    return { hand: 'left', weight: 1, reason: 'thumb-zone' };
   }
   if (relX >= 1 - CORNER_GUTTER) {
-    const opposite = current === 'left';
-    return {
-      hand: 'right',
-      weight: opposite ? 2 : 1,
-      reason: opposite ? 'opposite-corner' : 'thumb-zone',
-    };
+    return { hand: 'right', weight: 1, reason: 'thumb-zone' };
   }
   return null;
 }
 
 export type TallyOptions = {
   /**
-   * Both edges have already been used. One opposite-corner tap (weight 2)
-   * is enough to follow the thumb that is reaching now; first discovery
-   * still wants two taps so a stray corner hit does not move the dock.
+   * Both edges have already been used. Two opposite-edge scrolls then
+   * follow the thumb that swapped in; first discovery wants one more
+   * so a single flick does not move the dock.
    */
   bothThumbs?: boolean;
 };
 
 /**
- * First time: two empty taps on the far corner, or three same-edge
- * scrolls. After both thumbs have been seen, a single opposite-corner
- * reach follows the hand that just swapped in. A mixed bag is not.
+ * Consecutive votes for one hand. A vote for the other side zeros the
+ * streak — that is what lets the same reader swap thumbs without fighting
+ * a leftover lead.
+ *
+ * Opposite FAB-slot reach: one tap follows the thumb, first time and every
+ * swap. Scrolls and empty-gutter taps: three the first time, two after
+ * both thumbs have been seen.
  */
 export function tallyVote(
   leftVotes: number,
@@ -170,16 +170,16 @@ export function tallyVote(
   vote: HandVote,
   options: TallyOptions = {}
 ): { leftVotes: number; rightVotes: number; inferred: FabHand | null } {
-  const left = leftVotes + (vote.hand === 'left' ? vote.weight : 0);
-  const right = rightVotes + (vote.hand === 'right' ? vote.weight : 0);
-  const lead = Math.abs(left - right);
-  const majority: FabHand | null = left > right ? 'left' : right > left ? 'right' : null;
-  if (!majority) return { leftVotes: left, rightVotes: right, inferred: null };
+  const left = vote.hand === 'left' ? leftVotes + vote.weight : 0;
+  const right = vote.hand === 'right' ? rightVotes + vote.weight : 0;
+  const score = vote.hand === 'left' ? left : right;
 
-  const snap = options.bothThumbs && vote.reason === 'opposite-corner';
-  const min = snap ? 2 : 3;
-  const minLead = snap ? 2 : 3;
-  const inferred = Math.max(left, right) >= min && lead >= minLead ? majority : null;
+  if (vote.reason === 'opposite-corner') {
+    return { leftVotes: left, rightVotes: right, inferred: vote.hand };
+  }
+
+  const min = options.bothThumbs ? 2 : 3;
+  const inferred = score >= min ? vote.hand : null;
   return { leftVotes: left, rightVotes: right, inferred };
 }
 

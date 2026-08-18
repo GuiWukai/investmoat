@@ -19,10 +19,12 @@ import { MoatMark } from '@/components/MoatMark';
 import {
   applyFabHandToDocument,
   classifyPointer,
+  FLIP_COOLDOWN_MS,
   isFabDockTarget,
   isInteractiveTarget,
   loadFabHand,
   saveFabHand,
+  SCROLL_DY,
   tallyVote,
   VOTE_DECAY_MS,
   type FabHand,
@@ -394,8 +396,9 @@ const FAB_LONG_PRESS_MS = 520;
  *
  * Side is a CSS concern (`html[data-fab-hand]`) so the first paint can
  * match a stored choice without a hydration flicker. This hook only
- * learns, persists, and announces. After both edges have been used,
- * a later thumb-swap is one opposite-corner tap — not a new argument.
+ * learns, persists, and announces. The same reader can swap hands: a
+ * reach for the empty opposite slot moves the dock on the first tap,
+ * and one-handed scrolls from the other edge follow after a short streak.
  */
 function useFabHandedness() {
   const [hand, setHand] = useState<FabHand>('right');
@@ -427,7 +430,7 @@ function useFabHandedness() {
 
   const flipHand = useCallback(() => {
     const now = Date.now();
-    if (now - lastFlipAt.current < 700) return;
+    if (now - lastFlipAt.current < FLIP_COOLDOWN_MS) return;
     lastFlipAt.current = now;
     votesRef.current = { left: 0, right: 0 };
     commitHand(handRef.current === 'left' ? 'right' : 'left', true);
@@ -452,19 +455,36 @@ function useFabHandedness() {
       onDock: boolean;
       onControl: boolean;
       id: number;
+      scrollY: number;
     };
 
     let pending: Pending | null = null;
+    let cancelTimer = 0;
     const mobile = window.matchMedia('(max-width: 1023px)');
+
+    function sampleFromPending(source: Pending, scrollDy?: number): PointerSample {
+      return {
+        x: source.x,
+        y: source.y,
+        viewportWidth: window.innerWidth,
+        viewportHeight: window.innerHeight,
+        pointerType: source.pointerType,
+        onDock: source.onDock,
+        onControl: source.onControl,
+        scrollDy,
+      };
+    }
 
     function consider(sample: PointerSample) {
       const vote = classifyPointer(sample, handRef.current);
       if (!vote) return;
-      // A lock ignores casual scroll-edge votes, but an empty tap in the
-      // opposite FAB slot is still "put it here" — that is the same
-      // gesture that taught the dock in the first place.
-      if (lockedRef.current && vote.reason !== 'opposite-corner') return;
       const now = Date.now();
+      // Explicit flip just happened — do not bounce back on the same gesture.
+      if (now - lastFlipAt.current < FLIP_COOLDOWN_MS) return;
+      // A lock used to ignore every vote except the empty opposite corner.
+      // That trapped anyone who then swapped thumbs: scrolling with the
+      // other hand never counted. Opposite-hand votes always get through.
+      if (lockedRef.current && vote.hand === handRef.current) return;
       if (now - lastVoteAt.current > VOTE_DECAY_MS) {
         votesRef.current = { left: 0, right: 0 };
       }
@@ -474,14 +494,18 @@ function useFabHandedness() {
       });
       votesRef.current = { left: next.leftVotes, right: next.rightVotes };
       if (next.inferred && next.inferred !== handRef.current) {
-        // Zero the tally so the other thumb is not fighting a leftover lead.
         votesRef.current = { left: 0, right: 0 };
-        commitHand(next.inferred, lockedRef.current);
+        // Auto-follow is not a lock — the next thumb-swap must still work.
+        commitHand(next.inferred, false);
       }
     }
 
     function onPointerDown(event: PointerEvent) {
       if (!mobile.matches) return;
+      if (cancelTimer) {
+        window.clearTimeout(cancelTimer);
+        cancelTimer = 0;
+      }
       pending = {
         x: event.clientX,
         y: event.clientY,
@@ -489,24 +513,29 @@ function useFabHandedness() {
         onDock: isFabDockTarget(event.target),
         onControl: isInteractiveTarget(event.target),
         id: event.pointerId,
+        scrollY: window.scrollY,
       };
+    }
+
+    function inOppositeFabSlot(source: Pending): boolean {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      const slotW = Math.min(112, Math.max(56, Math.floor(width * 0.28)));
+      const slotH = 124;
+      const fromBottom = height - source.y;
+      if (fromBottom > slotH) return false;
+      if (handRef.current === 'right') return source.x <= slotW;
+      return source.x >= width - slotW;
     }
 
     function onPointerMove(event: PointerEvent) {
       if (!pending || event.pointerId !== pending.id) return;
       const dy = Math.abs(event.clientY - pending.y);
       const dx = Math.abs(event.clientX - pending.x);
-      if (dy >= 12 && dy > dx) {
-        consider({
-          x: pending.x,
-          y: pending.y,
-          viewportWidth: window.innerWidth,
-          viewportHeight: window.innerHeight,
-          pointerType: pending.pointerType,
-          onDock: pending.onDock,
-          onControl: pending.onControl,
-          scrollDy: dy,
-        });
+      if (dy >= SCROLL_DY && dy > dx) {
+        // A jittery click in the unused FAB slot is "put it here", not a scroll.
+        if (inOppositeFabSlot(pending)) return;
+        consider(sampleFromPending(pending, dy));
         pending = null;
       }
     }
@@ -516,32 +545,44 @@ function useFabHandedness() {
       const dy = Math.abs(event.clientY - pending.y);
       const dx = Math.abs(event.clientX - pending.x);
       if (dx < 10 && dy < 10) {
-        consider({
-          x: pending.x,
-          y: pending.y,
-          viewportWidth: window.innerWidth,
-          viewportHeight: window.innerHeight,
-          pointerType: pending.pointerType,
-          onDock: pending.onDock,
-          onControl: pending.onControl,
-        });
+        consider(sampleFromPending(pending));
       }
       pending = null;
     }
 
-    function onPointerCancel() {
+    function onPointerCancel(event: PointerEvent) {
+      if (!pending || event.pointerId !== pending.id) return;
+      // Mobile browsers cancel the pointer when they take over for a
+      // scroll. Keep the sample so the scroll listener can vote; drop
+      // it if no scroll arrives.
+      const id = pending.id;
+      if (cancelTimer) window.clearTimeout(cancelTimer);
+      cancelTimer = window.setTimeout(() => {
+        cancelTimer = 0;
+        if (pending?.id === id) pending = null;
+      }, 400);
+    }
+
+    function onScroll() {
+      if (!pending || !mobile.matches) return;
+      const dy = Math.abs(window.scrollY - pending.scrollY);
+      if (dy < SCROLL_DY) return;
+      consider(sampleFromPending(pending, dy));
       pending = null;
     }
 
-    window.addEventListener('pointerdown', onPointerDown, { passive: true });
-    window.addEventListener('pointermove', onPointerMove, { passive: true });
-    window.addEventListener('pointerup', onPointerUp, { passive: true });
-    window.addEventListener('pointercancel', onPointerCancel, { passive: true });
+    window.addEventListener('pointerdown', onPointerDown, { capture: true, passive: true });
+    window.addEventListener('pointermove', onPointerMove, { capture: true, passive: true });
+    window.addEventListener('pointerup', onPointerUp, { capture: true, passive: true });
+    window.addEventListener('pointercancel', onPointerCancel, { capture: true, passive: true });
+    window.addEventListener('scroll', onScroll, { capture: true, passive: true });
     return () => {
-      window.removeEventListener('pointerdown', onPointerDown);
-      window.removeEventListener('pointermove', onPointerMove);
-      window.removeEventListener('pointerup', onPointerUp);
-      window.removeEventListener('pointercancel', onPointerCancel);
+      if (cancelTimer) window.clearTimeout(cancelTimer);
+      window.removeEventListener('pointerdown', onPointerDown, { capture: true });
+      window.removeEventListener('pointermove', onPointerMove, { capture: true });
+      window.removeEventListener('pointerup', onPointerUp, { capture: true });
+      window.removeEventListener('pointercancel', onPointerCancel, { capture: true });
+      window.removeEventListener('scroll', onScroll, { capture: true });
     };
   }, [commitHand]);
 
@@ -603,13 +644,14 @@ function useFabLongPress(onLongPress: () => void) {
  * Mobile chrome as a thumb-side cluster: search plus a speed-dial menu.
  *
  * The dock leans left or right with the reader's thumb — detected from
- * reach, or locked by holding the menu button / Switch side. Search is a
+ * reach, or set by holding the menu button / Switch side. Search is a
  * sibling of the menu so it stays one tap away; destinations still fan
- * up from the menu so a thumb never has to cross the screen. Readers who
- * swap hands are followed: after both edges have been used, one reach
- * for the empty corner moves the cluster. On a research article,
- * back-to-top joins the same row once the reader is a screen deep, so it
- * is not a second floating control in the same corner.
+ * up from the menu so a thumb never has to cross the screen. The same
+ * reader can swap hands: a reach for the empty opposite slot, or a
+ * short streak of one-handed scrolls from the other edge, moves the
+ * cluster. On a research article, back-to-top joins the same row once
+ * the reader is a screen deep, so it is not a second floating control
+ * in the same corner.
  */
 function isResearchArticlePath(pathname: string) {
   return pathname.startsWith('/research/');
