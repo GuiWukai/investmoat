@@ -64,9 +64,10 @@ Rate each moat as `strong / intact / weakened / destroyed / na`. For each, answe
 - *Weakened* if AI can abstract away the interface; *strong* if human expertise compounds (e.g., surgical robotics)
 
 **2. Business Logic Lock-in** (`businessLogic`)
-- Is the company's software deeply embedded in a customer's proprietary processes?
-- Could an AI re-implement the business logic from scratch in weeks?
-- *Strong* if the logic is customised per enterprise and has years of configuration; *destroyed* if it's a generic SaaS
+- Does the company own logic competitors cannot replicate, or only customer configuration on its platform?
+- *Strong* if the logic is the vendor's (Palantir ontology, Oracle PL/SQL, Intuit tax engine, FANUC motion control).
+- *Intact* if customers encoded monitors, SQL, detection rules, Jira schemes, firewall policies, or shipping rules — that is switching cost, same bar as Snowflake SQL. Years of configuration is not a second copy of the vendor's IP.
+- *na* if this is not a software-logic business (do not use `weakened` as a polite N/A).
 
 **3. Public Data Access** (`publicDataAccess`)
 - Does the company control access to a valuable dataset others can't replicate?
@@ -88,7 +89,8 @@ Rate each moat as `strong / intact / weakened / destroyed / na`. For each, answe
 **6. Proprietary Data** (`proprietaryData`)
 - Does the company own unique, non-public data that gets more valuable over time?
 - Is this data used to improve products in a way competitors can't replicate?
-- *Strong* if data is contractually exclusive, continuously updated, and central to the product (e.g., Bloomberg terminal data, credit card transaction flows)
+- *Strong* if the dataset cannot be replicated without the franchise (Threat Graph, claims files, genetics, benchmarks, two-sided card flows).
+- *Intact* if the company stores or ingests customer data the customer owns and can export. Scale of ingestion ("trillions of events") is not uniqueness.
 
 **7. Regulatory Lock-in** (`regulatoryLockIn`)
 - Does the product require government certification, compliance, or contract approval?
@@ -108,7 +110,9 @@ Rate each moat as `strong / intact / weakened / destroyed / na`. For each, answe
 **10. System of Record** (`systemOfRecord`)
 - Is this the authoritative source of truth for a critical business function?
 - Would migrating away require data cleansing, reconciliation, and business risk?
-- *Strong* if it stores identity, financial, legal, or healthcare records that can't be easily moved (e.g., Active Directory, core banking systems)
+- *Strong* if downstream systems must defer to it (identity, payments ledger, CMDB, credit ratings, design database).
+- *Intact* for operational history or a portable record (OpenTelemetry, endpoint telemetry).
+- *na* for "default vendor" or shopping habit — Costco trips are not a system of record. Do not use this pillar as a synonym for "they are the standard."
 
 ---
 
@@ -143,12 +147,13 @@ Cross-check your score against these anchors before finalising:
 
 | Company | Score | Why |
 |---|---|---|
-| ASML | 95 | Physical monopoly on EUV; five strong resilient pillars |
-| Visa / Mastercard | 90 | Network effects + transaction embedding + regulatory lock-in across 4B+ cards |
+| ASML | 95 | Physical monopoly on EUV; four strong resilient pillars |
+| Visa / Mastercard | 90 | Five strong resilient pillars; vulnerable group is weakened so 80/20 still prints 90 |
 | MSCI | 95 | Index standard = 50-year regulatory moat; system of record for global benchmarks |
 | Microsoft | 90 | Bundling + system of record + proprietary data; CUDA-class `aiExposure` overrides sit in the resilient group |
 | Meta | 81 | Network effects strong; AI-resilient moats solid; regulatory drag from GDPR/DMA |
-| Shopify | 83 | Proprietary merchant data + network effects; AI-vulnerable moats weakened |
+| Shopify | 80 | Checkout rail + merchant data; business logic is customer configuration (`intact`), same bar as Snowflake SQL |
+| Datadog | 72 | Agent + bundle `strong`; other resilient pillars `intact` — not a five-pillar fortress |
 | Netflix | 64 | Content moat is non-durable; no structural lock-in; high substitutability |
 | AMD | 45 | No software moat (no CUDA equivalent); execution-dependent; hardware without monopoly |
 
@@ -158,14 +163,15 @@ Before finalising the score, compare it to similar businesses already in the por
 
 | Peer Group | Expected Range |
 |---|---|
-| Financial data / index providers (MCO, MSCI, SPGI) | 87–92 |
+| Financial data / index providers (MCO, MSCI, SPGI) | 94–100 |
 | Payment networks (V, MA) | 88–91 |
-| Enterprise software with deep embedding (MSFT, ORCL) | 82–86 |
-| AI-native platforms (NVDA, CRWD, PLTR) | 78–86 |
+| Enterprise software with deep embedding (MSFT, ORCL, NOW) | 80–92 |
+| AI-native platforms (NVDA, CRWD, PLTR) | 77–91 |
+| Observability / security platforms (DDOG, PANW, NET) | 72–83 |
 | Consumer platforms (META, GOOGL, NFLX) | 63–88 |
-| Physical monopolies (ASML, TSM) | 88–94 |
+| Physical monopolies (ASML, TSM) | 88–98 |
 | Semiconductors — commodity (AMD, MU) | 50–65 |
-| Healthcare (ISRG, LLY, UNH) | 80–90 |
+| Healthcare (ISRG, LLY, UNH) | 80–91 |
 | Commodities / crypto | 50–76 |
 
 If your score is more than 8 points outside the peer range, document why this company is exceptional — or recalibrate.

@@ -116,7 +116,7 @@ Three anti-patterns `validate:stocks` will warn on, because they systematically 
 |---|---|---|
 | `proprietaryData` | A dataset that cannot be replicated without the franchise (Threat Graph, claims files, genetics, benchmarks) | Customer telemetry the customer owns and can export; "we ingest trillions of events" |
 | `businessLogic` | Vendor-owned logic competitors cannot copy (Palantir ontology, Oracle PL/SQL runtime) | Customer-encoded monitors, SLOs, SQL, detection rules — that is switching cost, same bar as Snowflake SQL (`intact`) |
-| `systemOfRecord` | Downstream systems must defer to it (payments ledger, CMDB, identity, design database) | Operational history, incident archives, "de facto peer knowledge" |
+| `systemOfRecord` | Downstream systems must defer to it (payments ledger, CMDB, identity, design database) | Operational history, incident archives, "de facto peer knowledge", shopping habit / "default destination" |
 
 ### AI Resilience Verdict
 AI resilience is computed from the moat statuses themselves (the 80/20
