@@ -155,7 +155,7 @@ export interface MoatBreakdown {
  *   all 10 apply, all strong, defaults → 100 + 3 strength = 100 (capped)
  *   all 10 apply, all intact, defaults → 65 + 0 = 65
  *   Visa-style (5 strong resilient, 2 weakened vulnerable) → 87 + 3 = 90
- *   Datadog-style (resilient ~85, vulnerable ~88, 3 strong resilient) → 85 + 1 = 86
+ *   Datadog-style (agent+bundle strong, other resilient intact) → 72
  *   vulnerable-only, all strong → 0.20 × 100 = 20
  *   NVDA-style w/ CUDA overrides → learnedInterfaces routes to resilient
  */

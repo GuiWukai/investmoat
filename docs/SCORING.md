@@ -63,14 +63,16 @@ Worked examples (rounded):
 | All ten apply, all `strong` | 100 |
 | All ten apply, all `intact` | 65 |
 | Visa-style: five `strong` resilient, two `weakened` vulnerable | 90 |
-| Datadog-style: resilient ~85, vulnerable ~88, three `strong` resilient | 86 |
+| Datadog-style: agent+bundle strong, other resilient intact | 72 |
 | Vulnerable-only, all `strong` | 20 |
 
 ### Known limits of this pillar
 
 The formula can rank a payments network above a software platform. It cannot stop an author marking `proprietaryData` `strong` because the company "ingests a lot of customer data." `strong` is 100 points on that pillar, the same 100 Visa's two-sided network receives. The 80/20 blend and the strength bonus reduce how much a generous software slate inflates the total; they do not replace judgement on the labels.
 
-Use `strong` for a category-defining, hard-to-replicate advantage — not for "switching costs exist." Use `na` when a pillar is not part of the business model; `weakened` is a real competitive erosion, not a polite N/A. `validate:stocks` warns when seven or more pillars are marked `strong`.
+Use `strong` for a category-defining, hard-to-replicate advantage — not for "switching costs exist." Use `na` when a pillar is not part of the business model; `weakened` is a real competitive erosion, not a polite N/A. `validate:stocks` warns when seven or more pillars are marked `strong`, and when a `strong` note describes customer telemetry, customer-encoded config, or a soft system of record (ops history, peer knowledge).
+
+The previous 60/40 applicable-weight blend plus an intact-or-better-across-ten bonus plus a −5 AI discount produced the opposite ranking: Datadog 90, Visa 81. The discount almost never fired (Adobe, the documented example, did not trigger it). Those three terms are gone. Remaining accuracy work is the labels, not another weight tweak.
 
 The previous 60/40 applicable-weight blend plus an intact-or-better-across-ten bonus plus a −5 AI discount produced the opposite ranking: Datadog 90, Visa 81. The discount almost never fired (Adobe, the documented example, did not trigger it). Those three terms are gone.
 

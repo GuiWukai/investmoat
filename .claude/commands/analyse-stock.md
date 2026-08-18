@@ -133,7 +133,7 @@ Calculate `moat.score` (0–100) using the following:
 - Thin resilient coverage (applicable weight < 36) is blended toward intact so two strong pillars cannot print 100
 - Strength bonus: +1 per strong resilient moat beyond 2, capped at +3
 
-**`strong` means category-defining, not "switching costs exist."** Use `na` when a pillar is not part of the model; `weakened` is a real erosion. Do not mark `proprietaryData` `strong` because the company stores customer data — that is `intact` unless the dataset is unique and non-replicable.
+**`strong` means category-defining, not "switching costs exist."** Use `na` when a pillar is not part of the model; `weakened` is a real erosion. Do not mark `proprietaryData` `strong` because the company stores customer data — that is `intact` unless the dataset is unique and non-replicable. Do not mark `businessLogic` `strong` because customers encoded monitors or SQL — that is switching cost (`intact`), same bar as Snowflake. Do not mark `systemOfRecord` `strong` for operational history or peer archives — strong is the record downstream systems must defer to.
 
 **Exclude N/A moats from their group average.** If the resilient group is empty, the score is 20% of the vulnerable group (a talent-only firm cannot clear the moat gate). If the vulnerable group is empty, use the resilient score.
 

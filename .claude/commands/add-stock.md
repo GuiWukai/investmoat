@@ -110,6 +110,14 @@ Rate each moat as `"strong"`, `"intact"`, `"weakened"`, `"destroyed"`, or `"na"`
 
 **`strong` is category-defining and hard to replicate at this intensity** (Visa's two-sided network, S&P's benchmark franchise, TSMC's process). "Switching costs exist" or "the company ingests a lot of customer data" is `intact`. The formula gives `strong` 100 points on that pillar — the same 100 every other `strong` in the book receives — so grade inflation on software platforms is how Datadog used to outrank Visa.
 
+Three anti-patterns `validate:stocks` will warn on, because they systematically inflate software names:
+
+| Pillar | `strong` means | Not `strong` |
+|---|---|---|
+| `proprietaryData` | A dataset that cannot be replicated without the franchise (Threat Graph, claims files, genetics, benchmarks) | Customer telemetry the customer owns and can export; "we ingest trillions of events" |
+| `businessLogic` | Vendor-owned logic competitors cannot copy (Palantir ontology, Oracle PL/SQL runtime) | Customer-encoded monitors, SLOs, SQL, detection rules — that is switching cost, same bar as Snowflake SQL (`intact`) |
+| `systemOfRecord` | Downstream systems must defer to it (payments ledger, CMDB, identity, design database) | Operational history, incident archives, "de facto peer knowledge" |
+
 ### AI Resilience Verdict
 AI resilience is computed from the moat statuses themselves (the 80/20
 resilient-vs-vulnerable blend lives in `computeMoatScore`), so there is no

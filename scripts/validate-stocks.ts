@@ -310,10 +310,26 @@ const MOAT_PILLAR_KEYS = [
  */
 const MAX_STRONG_WITHOUT_NOTE = 6;
 
+/** Customer-encoded config is switching cost, not vendor-owned business logic. */
+const CUSTOMER_CONFIG_LOGIC =
+  /customers encode|encode thousands of|monitors, SLO|SLO definitions|detection rules|threat hunting queries|SQL transformations|dbt models|dashboards, runbooks/i;
+
+/** Scale of ingested customer telemetry is not unique proprietary data. */
+const CUSTOMER_TELEMETRY_DATA =
+  /customers retain ownership|customers can export|customer-owned data|ingest(s)? trillions|telemetry events daily|customer telemetry/i;
+
+/** A public archive or ops history is not a business system of record. */
+const SOFT_SYSTEM_OF_RECORD =
+  /peer knowledge|incident history|operational state|operational history/i;
+
+/** Weakened used as a polite N/A — still scores 35 at full pillar weight. */
+const WEAKENED_AS_NA =
+  /does not meaningfully apply|category does not apply|this moat category is not|moat category does not apply/i;
+
 function checkMoatLabelInflation(files: string[]): Warning[] {
   const warnings: Warning[] = [];
   for (const file of files) {
-    let data: { tenMoats?: Record<string, { status?: string }> };
+    let data: { tenMoats?: Record<string, { status?: string; note?: string }> };
     try {
       data = JSON.parse(readFileSync(join(STOCKS_DIR, file), 'utf-8'));
     } catch {
@@ -329,6 +345,48 @@ function checkMoatLabelInflation(files: string[]): Warning[] {
           'intensity, not "switching costs exist" — the same 100 points Visa\'s network receives. ' +
           'Downgrade any pillar that is real-but-not-unique to intact',
       });
+    }
+
+    const bl = data.tenMoats.businessLogic;
+    if (bl?.status === 'strong' && bl.note && CUSTOMER_CONFIG_LOGIC.test(bl.note)) {
+      warnings.push({
+        file,
+        message:
+          'businessLogic is strong but the note describes customer-encoded config (monitors, SLOs, SQL, detection rules). ' +
+          'That is switching cost — learnedInterfaces or transactionEmbedding — not vendor-owned logic competitors cannot replicate. Rate intact (see Snowflake SQL) unless the logic is the company\'s',
+      });
+    }
+
+    const pd = data.tenMoats.proprietaryData;
+    if (pd?.status === 'strong' && pd.note && CUSTOMER_TELEMETRY_DATA.test(pd.note)) {
+      warnings.push({
+        file,
+        message:
+          'proprietaryData is strong but the note describes ingested customer telemetry or customer-owned data. ' +
+          'Scale is not uniqueness — Snowflake rates the same fact weakened because customers can export it. Rate intact unless the dataset cannot be replicated without the franchise (Threat Graph, claims, genetics, benchmarks)',
+      });
+    }
+
+    const sor = data.tenMoats.systemOfRecord;
+    if (sor?.status === 'strong' && sor.note && SOFT_SYSTEM_OF_RECORD.test(sor.note)) {
+      warnings.push({
+        file,
+        message:
+          'systemOfRecord is strong but the note describes operational history, incident archives, or peer knowledge. ' +
+          'strong is identity / payments / CMDB / design database — the record downstream systems must defer to. Rate intact (CrowdStrike endpoint telemetry) unless replacing it is a multi-year compliance programme',
+      });
+    }
+
+    for (const k of MOAT_PILLAR_KEYS) {
+      const a = data.tenMoats[k];
+      if (a?.status === 'weakened' && a.note && WEAKENED_AS_NA.test(a.note)) {
+        warnings.push({
+          file,
+          message:
+            `${k} is weakened but the note says the pillar does not apply. weakened still scores 35 at full weight ` +
+            'inside its group — use status na so the weight drops out',
+        });
+      }
     }
   }
   return warnings;
