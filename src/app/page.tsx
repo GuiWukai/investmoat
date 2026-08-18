@@ -4,31 +4,34 @@ import { useState } from "react";
 import Link from "next/link";
 import { Card } from "@heroui/react";
 import {
-  ShieldCheck, TrendingUp, BarChart3, ChevronDown, ArrowRight,
+  ShieldCheck, TrendingUp, BarChart3, ChevronDown, ArrowRight, ArrowUpRight,
   Brain, Target, Database, Lock, Network, CreditCard, BookMarked,
   MonitorSmartphone, Code2, Globe, GraduationCap, Layers, Zap, FileText,
   Briefcase, CalendarDays, LayoutGrid,
 } from "lucide-react";
+import { MetricBand } from "@/components/MetricBand";
 
 // ─── FAQ Accordion ────────────────────────────────────────────────────────────
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-foreground/[0.04] last:border-0">
+    <div className="border-b border-foreground/[0.06] last:border-0">
       <button
+        type="button"
+        aria-expanded={open}
         onClick={() => setOpen(!open)}
         className="w-full text-left py-5 flex justify-between items-start gap-4 group"
       >
-        <span className="font-semibold text-sm md:text-base text-foreground/70 group-hover:text-foreground transition-colors">
+        <span className="font-semibold text-[15px] md:text-base tracking-tight text-foreground/75 group-hover:text-foreground transition-colors">
           {q}
         </span>
         <ChevronDown
           size={18}
-          className={`text-foreground/20 group-hover:text-foreground/50 transition-all shrink-0 mt-0.5 ${open ? 'rotate-180' : ''}`}
+          className={`text-foreground/25 group-hover:text-foreground/50 transition-transform duration-200 shrink-0 mt-0.5 ${open ? 'rotate-180' : ''}`}
         />
       </button>
       {open && (
-        <p className="pb-5 text-foreground/45 leading-relaxed text-sm animate-fade-up stagger-fill-both">
+        <p className="pb-5 text-foreground/45 leading-relaxed text-[15px] max-w-3xl animate-fade-up stagger-fill-both">
           {a}
         </p>
       )}
@@ -71,6 +74,45 @@ const FAQS = [
   },
 ];
 
+const DESK_PRODUCTS = [
+  {
+    href: '/portfolio',
+    icon: BarChart3,
+    title: 'The IM25',
+    dek: 'Twenty-five high-conviction names, each earning its weight on moat, growth, and live valuation.',
+  },
+  {
+    href: '/my-portfolio',
+    icon: Briefcase,
+    title: 'My Portfolio',
+    dek: 'Track your own holdings against the same scores. Data stays in this browser.',
+  },
+  {
+    href: '/stocks',
+    icon: TrendingUp,
+    title: 'Coverage',
+    dek: 'The full universe — searchable, filterable, ranked on three live pillars.',
+  },
+  {
+    href: '/sectors',
+    icon: LayoutGrid,
+    title: 'Sectors',
+    dek: 'The book grouped by business model, with average pillar scores for each bucket.',
+  },
+  {
+    href: '/earnings',
+    icon: CalendarDays,
+    title: 'Earnings',
+    dek: 'Upcoming reports for names we cover, so the calendar lives on the desk.',
+  },
+  {
+    href: '/research',
+    icon: FileText,
+    title: 'Research',
+    dek: 'Cross-cutting pieces that read across the universe, with scores that stay live.',
+  },
+];
+
 // ─── Page ─────────────────────────────────────────────────────────────────────
 const faqJsonLd = {
   '@context': 'https://schema.org',
@@ -95,13 +137,10 @@ export default function HomePage() {
       />
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <header className="relative pt-6 md:pt-12 pb-20 md:pb-24">
-        {/* Ambient glows */}
-        <div className="pointer-events-none absolute -top-40 -left-40 w-[560px] h-[560px] rounded-full bg-accent/[0.06] blur-[100px]" />
-        <div className="pointer-events-none absolute -top-10 right-10 w-72 h-72 rounded-full bg-accent/[0.04] blur-[70px]" />
+      <header className="relative pt-8 md:pt-14 pb-16 md:pb-20">
+        <div className="hero-mesh" aria-hidden />
 
         <div className="relative animate-fade-up stagger-fill-both" style={{ animationDelay: '0s' }}>
-          {/* Eyebrow */}
           <div className="flex items-center gap-3 mb-8">
             <span className="h-px w-8 bg-accent/50" />
             <span className="text-[11px] font-bold text-accent/75 uppercase tracking-[0.22em] font-mono">
@@ -109,91 +148,88 @@ export default function HomePage() {
             </span>
           </div>
 
-          {/* Headline */}
-          <h1 className="text-[clamp(3.2rem,10vw,7rem)] font-bold leading-[0.9] tracking-tight mb-8">
-            <span className="text-foreground/85">Invest in</span><br />
+          <h1 className="text-[clamp(3rem,8.5vw,6.25rem)] font-semibold leading-[0.92] tracking-[-0.045em] mb-7">
+            <span className="text-foreground/90">Invest in</span><br />
             <span className="gradient-text-animated italic">Moats,</span><br />
-            <span className="text-foreground/[0.18]">Not Markets.</span>
+            <span className="text-foreground/[0.22]">Not Markets.</span>
           </h1>
 
-          <p className="text-foreground/50 text-base md:text-lg max-w-xl leading-relaxed mb-10">
+          <p className="page-dek mb-10">
             A high-conviction portfolio of 25 positions, each underwritten on moat durability,
             growth trajectory, and live valuation. Disciplined, transparent, and built to
             compound through the AI era.
           </p>
 
-          <div className="flex flex-wrap gap-3 mb-14">
-            <Link
-              href="/portfolio"
-              className="flex items-center gap-2 px-6 py-3 primary-gradient rounded-lg font-bold text-[#0a0b0d] text-sm hover:opacity-90 transition-opacity"
-            >
+          <div className="flex flex-wrap items-center gap-3">
+            <Link href="/portfolio" className="btn-primary">
               View the IM25 <ArrowRight size={16} />
             </Link>
-            <Link
-              href="/my-portfolio"
-              className="flex items-center gap-2 px-6 py-3 bg-foreground/[0.04] hover:bg-foreground/[0.07] border border-accent/20 rounded-lg font-bold text-foreground/80 text-sm transition-colors"
-            >
-              <Briefcase size={16} /> My Portfolio
+            <Link href="/stocks" className="btn-secondary">
+              Explore coverage
             </Link>
-            <Link
-              href="/earnings"
-              className="flex items-center gap-2 px-6 py-3 bg-foreground/[0.04] hover:bg-foreground/[0.07] border border-accent/20 rounded-lg font-bold text-foreground/80 text-sm transition-colors"
-            >
-              <CalendarDays size={16} /> Earnings
-            </Link>
-            <Link
-              href="/stocks"
-              className="flex items-center gap-2 px-6 py-3 bg-foreground/[0.04] hover:bg-foreground/[0.07] border border-accent/20 rounded-lg font-bold text-foreground/80 text-sm transition-colors"
-            >
-              Explore Coverage
-            </Link>
-            <Link
-              href="/sectors"
-              className="flex items-center gap-2 px-6 py-3 bg-foreground/[0.04] hover:bg-foreground/[0.07] border border-accent/20 rounded-lg font-bold text-foreground/80 text-sm transition-colors"
-            >
-              <LayoutGrid size={16} /> Sectors
-            </Link>
-            <Link
-              href="/research"
-              className="flex items-center gap-2 px-6 py-3 bg-foreground/[0.04] hover:bg-foreground/[0.07] border border-accent/20 rounded-lg font-bold text-foreground/80 text-sm transition-colors"
-            >
-              <FileText size={16} /> Read Research
+          </div>
+          <div className="mt-4 mb-2">
+            <Link href="/research" className="text-link">
+              Read the research <ArrowRight size={14} />
             </Link>
           </div>
         </div>
-
-        {/* Stats strip */}
-        <div
-          className="relative grid grid-cols-2 md:grid-cols-4 rounded-xl overflow-hidden border border-accent/[0.14] animate-fade-up stagger-fill-both"
-          style={{ animationDelay: '0.15s' }}
-        >
-          {[
-            { value: "25", label: "Conviction Holdings" },
-            { value: "128", label: "Under Coverage" },
-            { value: "≥80 · ≥70", label: "Composite · Moat Floor" },
-            { value: "10%", label: "Max Position Weight" },
-          ].map(({ value, label }, i) => (
-            <div
-              key={label}
-              className={`
-                bg-foreground/[0.02] p-5 md:p-6 flex flex-col gap-2
-                border-foreground/[0.05]
-                ${i < 3 ? 'border-r' : ''}
-                ${i < 2 ? 'border-b md:border-b-0' : ''}
-              `}
-            >
-              <p className="text-3xl md:text-4xl font-black text-foreground tracking-tight">{value}</p>
-              <p className="text-foreground/28 text-[10px] font-bold uppercase tracking-[0.15em]">{label}</p>
-            </div>
-          ))}
-        </div>
       </header>
 
+      {/* ── The desk ─────────────────────────────────────────────────────── */}
+      <section className="relative animate-fade-up stagger-fill-both pb-16 md:pb-20" style={{ animationDelay: '0.1s' }}>
+        <div className="mb-8">
+          <p className="section-label mb-3">The desk</p>
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-foreground/90">
+            Flexible tools for a concentrated book.
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+          {DESK_PRODUCTS.map(({ href, icon: Icon, title, dek }) => (
+            <Link key={href} href={href} className="group flex no-underline">
+              <Card className="product-card relative flex h-full w-full flex-col overflow-hidden p-6">
+                <span className="icon-tile mb-5">
+                  <Icon size={18} strokeWidth={1.7} />
+                </span>
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="text-[17px] font-semibold tracking-tight text-foreground/90 group-hover:text-foreground">
+                    {title}
+                  </h3>
+                  <ArrowUpRight
+                    size={16}
+                    className="mt-0.5 shrink-0 text-foreground/20 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-gold-bright"
+                  />
+                </div>
+                <p className="mt-2 text-[13.5px] leading-relaxed text-foreground/42">
+                  {dek}
+                </p>
+              </Card>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Stats ────────────────────────────────────────────────────────── */}
+      <div
+        className="relative animate-fade-up stagger-fill-both pb-16 md:pb-20"
+        style={{ animationDelay: '0.16s' }}
+      >
+        <MetricBand
+          items={[
+            { value: "25", label: "Conviction holdings" },
+            { value: "128", label: "Names under coverage" },
+            { value: "≥80 · ≥70", label: "Composite · moat floor" },
+            { value: "10%", label: "Max position weight" },
+          ]}
+        />
+      </div>
+
       {/* ── The Thesis ───────────────────────────────────────────────────── */}
-      <section className="animate-fade-up stagger-fill-both pb-20 md:pb-24" style={{ animationDelay: '0.2s' }}>
+      <section className="animate-fade-up stagger-fill-both pb-16 md:pb-20" style={{ animationDelay: '0.2s' }}>
         <div className="mb-10">
           <p className="section-label mb-3">The Thesis</p>
-          <h2 className="text-2xl md:text-3xl font-extrabold text-foreground/85">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-foreground/90">
             Why systematic moat investing?
           </h2>
         </div>
@@ -230,7 +266,7 @@ export default function HomePage() {
           ].map(({ num, icon, accent, iconBg, border, title, text }) => (
             <div
               key={num}
-              className={`relative overflow-hidden rounded-2xl border ${border} bg-foreground/[0.02] p-6 flex flex-col gap-5 group hover:bg-foreground/[0.035] transition-colors`}
+              className={`relative overflow-hidden rounded-2xl border ${border} bg-foreground/[0.02] p-6 md:p-7 flex flex-col gap-5`}
             >
               <span className="absolute -top-2 -right-1 text-[6.5rem] font-black text-foreground/[0.025] leading-none select-none pointer-events-none">
                 {num}
@@ -239,8 +275,9 @@ export default function HomePage() {
                 {icon}
               </div>
               <div className="relative">
-                <h3 className="font-bold text-base text-foreground/90 mb-2.5">{title}</h3>
-                <p className="text-foreground/40 text-sm leading-relaxed">{text}</p>
+                <p className="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-foreground/25 mb-2">{num}</p>
+                <h3 className="font-semibold text-[17px] tracking-tight text-foreground/90 mb-2.5">{title}</h3>
+                <p className="text-foreground/42 text-sm leading-relaxed">{text}</p>
               </div>
             </div>
           ))}
@@ -251,7 +288,7 @@ export default function HomePage() {
       <section className="animate-fade-up stagger-fill-both pb-20 md:pb-24" style={{ animationDelay: '0.3s' }}>
         <div className="mb-10">
           <p className="section-label mb-3">The Scoring Framework</p>
-          <h2 className="text-2xl md:text-3xl font-extrabold text-foreground/85">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-foreground/90">
             How every stock earns its score
           </h2>
         </div>
@@ -396,7 +433,7 @@ export default function HomePage() {
       <section className="animate-fade-up stagger-fill-both pb-20 md:pb-24" style={{ animationDelay: '0.35s' }}>
         <div className="mb-6">
           <p className="section-label mb-3">The 10 Moat Model</p>
-          <h2 className="text-2xl md:text-3xl font-extrabold text-foreground/85 mb-4">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-foreground/85 mb-4">
             Not all moats survive the AI era
           </h2>
           <p className="text-foreground/40 text-sm leading-relaxed max-w-3xl">
@@ -604,7 +641,7 @@ export default function HomePage() {
       <section className="animate-fade-up stagger-fill-both pb-20 md:pb-24" style={{ animationDelay: '0.4s' }}>
         <div className="mb-10">
           <p className="section-label mb-3">Common Questions</p>
-          <h2 className="text-2xl md:text-3xl font-extrabold text-foreground/85">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-foreground/90">
             Questions worth asking
           </h2>
         </div>
@@ -621,57 +658,39 @@ export default function HomePage() {
         className="animate-fade-up stagger-fill-both pb-12"
         style={{ animationDelay: '0.45s' }}
       >
-        <Card className="relative overflow-hidden p-10 md:p-14 text-center">
-          {/* Glow behind CTA */}
+        <Card className="relative overflow-hidden p-10 md:p-16 text-center">
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
             <div className="w-96 h-40 bg-accent/[0.08] blur-[60px] rounded-full" />
           </div>
           <div className="relative">
-            <p className="section-label mb-4">Ready to explore?</p>
-            <h3 className="text-2xl md:text-4xl font-bold gradient-text mb-4">
+            <p className="section-label mb-4">Ready to get started?</p>
+            <h3 className="text-2xl md:text-4xl font-semibold tracking-tight gradient-text mb-4">
               View the IM25
             </h3>
-            <p className="text-foreground/45 max-w-md mx-auto text-sm leading-relaxed mb-8">
-              Explore the IM25 allocation, track your own holdings, check upcoming earnings,
-              browse coverage by name or sector, or read the cross-cutting research — with
-              moat scores, scenarios, and live valuations throughout.
+            <p className="text-foreground/45 max-w-md mx-auto text-[15px] leading-relaxed mb-8">
+              Explore the allocation, then drill into coverage, sectors, or the
+              cross-cutting research — with moat scores, scenarios, and live valuations throughout.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
-              <Link
-                href="/portfolio"
-                className="flex items-center gap-2 px-6 py-3 primary-gradient rounded-lg font-bold text-[#0a0b0d] text-sm hover:opacity-90 transition-opacity"
-              >
+              <Link href="/portfolio" className="btn-primary">
                 View the IM25 <ArrowRight size={16} />
               </Link>
-              <Link
-                href="/my-portfolio"
-                className="flex items-center gap-2 px-6 py-3 bg-foreground/[0.04] hover:bg-foreground/[0.07] border border-accent/20 rounded-lg font-bold text-foreground/75 text-sm transition-colors"
-              >
-                <Briefcase size={16} /> My Portfolio
+              <Link href="/stocks" className="btn-secondary">
+                Explore coverage
               </Link>
-              <Link
-                href="/earnings"
-                className="flex items-center gap-2 px-6 py-3 bg-foreground/[0.04] hover:bg-foreground/[0.07] border border-accent/20 rounded-lg font-bold text-foreground/75 text-sm transition-colors"
-              >
-                <CalendarDays size={16} /> Earnings
+            </div>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+              <Link href="/my-portfolio" className="text-link text-sm">
+                My Portfolio <ArrowRight size={13} />
               </Link>
-              <Link
-                href="/stocks"
-                className="flex items-center gap-2 px-6 py-3 bg-foreground/[0.04] hover:bg-foreground/[0.07] border border-accent/20 rounded-lg font-bold text-foreground/75 text-sm transition-colors"
-              >
-                All Coverage
+              <Link href="/sectors" className="text-link text-sm">
+                Sectors <ArrowRight size={13} />
               </Link>
-              <Link
-                href="/sectors"
-                className="flex items-center gap-2 px-6 py-3 bg-foreground/[0.04] hover:bg-foreground/[0.07] border border-accent/20 rounded-lg font-bold text-foreground/75 text-sm transition-colors"
-              >
-                <LayoutGrid size={16} /> Sectors
+              <Link href="/earnings" className="text-link text-sm">
+                Earnings <ArrowRight size={13} />
               </Link>
-              <Link
-                href="/research"
-                className="flex items-center gap-2 px-6 py-3 bg-foreground/[0.04] hover:bg-foreground/[0.07] border border-accent/20 rounded-lg font-bold text-foreground/75 text-sm transition-colors"
-              >
-                <FileText size={16} /> Read Research
+              <Link href="/research" className="text-link text-sm">
+                Research <ArrowRight size={13} />
               </Link>
             </div>
           </div>

@@ -6,6 +6,7 @@ import { ChevronRight, Sunrise, Sunset, Clock } from 'lucide-react';
 import { Spinner, ToggleButton, ToggleButtonGroup } from '@heroui/react';
 import { stockData } from '@/app/stockData';
 import type { EarningsCalendarResult, EarningsEvent, EarningsSession } from '@/lib/earningsCalendar';
+import { MetricBand } from '@/components/MetricBand';
 
 type WindowKey = '7' | '30' | '60' | 'im25';
 
@@ -174,33 +175,34 @@ export default function EarningsPage() {
     return data.events.filter((e) => e.date <= weekEnd).length;
   }, [data, today]);
 
+  const im25InView = useMemo(
+    () => filtered.filter((e) => portfolioTickers.has(e.ticker)).length,
+    [filtered]
+  );
+
   return (
-    <div className="animate-fade-in space-y-8">
+    <div className="animate-fade-in space-y-8 md:space-y-10">
       <header className="animate-fade-up stagger-fill-both" style={{ animationDelay: '0s' }}>
-        <p className="section-label mb-2">Coverage Universe</p>
-        <h1 className="mb-3 text-3xl font-extrabold gradient-text-animated md:text-4xl">
+        <p className="section-label mb-3">Coverage Universe</p>
+        <h1 className="page-title gradient-text-animated mb-4">
           Earnings Calendar
         </h1>
-        <p className="max-w-xl text-sm text-foreground/40 md:text-base">
+        <p className="page-dek">
           Upcoming reports for names we cover — so you can see what&apos;s reporting soon
           without leaving the research desk.
         </p>
+      </header>
 
-        <div className="mt-5 flex flex-wrap items-center gap-6">
-          {[
+      <div className="animate-fade-up stagger-fill-both" style={{ animationDelay: '0.06s' }}>
+        <MetricBand
+          items={[
             { label: 'Next 7 days', value: loading ? '—' : soonCount },
             { label: 'In view', value: loading ? '—' : filtered.length },
             { label: 'Eligible names', value: data?.coverageCount ?? '—' },
-          ].map((stat) => (
-            <div key={stat.label} className="flex items-baseline gap-1.5">
-              <span className="text-2xl font-black tabular-nums text-foreground">
-                {stat.value}
-              </span>
-              <span className="text-[11px] font-medium text-foreground/25">{stat.label}</span>
-            </div>
-          ))}
-        </div>
-      </header>
+            { label: 'IM25 in view', value: loading ? '—' : im25InView },
+          ]}
+        />
+      </div>
 
       <div
         className="relative z-20 animate-fade-up stagger-fill-both"

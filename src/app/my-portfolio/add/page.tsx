@@ -137,10 +137,10 @@ export default function AddHoldingPage() {
           <Briefcase size={16} className="text-gold-bright" />
           <p className="section-label">Personal</p>
         </div>
-        <h1 className="mb-3 text-4xl font-extrabold leading-tight gradient-text-animated md:text-5xl">
+        <h1 className="page-title gradient-text-animated mb-4">
           Add holding
         </h1>
-        <p className="max-w-xl text-base leading-relaxed text-foreground/45 md:text-lg">
+        <p className="page-dek">
           Pick a covered name, set shares, and optionally average cost in{' '}
           {hydrated ? displayCurrency : 'your book currency'}. Saved in this browser
           only.

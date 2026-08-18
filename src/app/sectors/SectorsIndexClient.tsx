@@ -154,12 +154,13 @@ export default function SectorsIndexClient() {
     <div className="animate-fade-in space-y-10 md:space-y-12">
       <header className="animate-fade-up stagger-fill-both" style={{ animationDelay: '0s' }}>
         <p className="section-label mb-3">Coverage Universe</p>
-        <h1 className="max-w-2xl text-4xl font-bold leading-[1.08] tracking-tight gradient-text-animated md:text-5xl">
+        <h1 className="page-title gradient-text-animated max-w-2xl">
           The book, by sector.
         </h1>
-        <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-foreground/45 md:text-base">
-          Six buckets scored the same way as every stock page — so you can
-          compare moat, growth, and live valuation as a book, not a ticker.
+        <p className="page-dek mt-4">
+          Coverage grouped by business model — scored the same way as every
+          stock page, so you can compare moat, growth, and live valuation as a
+          book, not a ticker.
         </p>
       </header>
 

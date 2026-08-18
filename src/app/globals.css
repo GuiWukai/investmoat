@@ -91,9 +91,11 @@
   --scrollbar-thumb: rgba(201, 169, 106, 0.22);
   --scrollbar-track: transparent;
 
-  /* Geometry */
-  --radius: 0.75rem;
-  --field-radius: 0.75rem;
+  /* Geometry. Stripe marketing uses ~8px on controls and ~16px on product
+     tiles — keep the gold hairline, but match that radius language. */
+  --radius: 1rem;
+  --field-radius: 0.625rem;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 
   /* Shadows. The default dark theme drops shadows entirely; on this canvas a
      soft lift plus a gold inner hairline reads better than a flat card. */
@@ -103,6 +105,9 @@
   --overlay-shadow:
     0 0 0 1px rgba(201, 169, 106, 0.12),
     0 24px 48px -12px rgba(0, 0, 0, 0.85);
+  --lift-shadow:
+    0 1px 0 0 rgba(201, 169, 106, 0.1) inset,
+    0 22px 44px -18px rgba(0, 0, 0, 0.92);
 
   --tooltip-delay: 400ms;
   --tooltip-close-delay: 150ms;
@@ -167,9 +172,9 @@
      these read as fund documents rather than generic dashboard tiles. */
   border: var(--border-width) solid var(--border);
   transition:
-    border-color 0.3s ease,
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+    border-color 280ms var(--ease-out),
+    transform 280ms var(--ease-out),
+    box-shadow 280ms var(--ease-out);
 }
 
 /* Cards that are themselves links lift on hover, as the old .glass-card did. */
@@ -178,18 +183,28 @@ a.card:hover,
   border-color: color-mix(in oklab, var(--gold) 38%, transparent);
 }
 
-/* Sector product tiles — Stripe-style lift when the wrapping link is hovered.
-   The Card itself is not the <a>, so the rule above does not fire. */
-a.group:hover .sector-product-card {
+/* Product tiles — Stripe-style lift when the wrapping link is hovered.
+   The Card itself is often not the <a>, so the rule above does not fire. */
+a.group:hover .product-card,
+a.group:hover .sector-product-card,
+a.product-card:hover {
   transform: translateY(-4px);
   border-color: color-mix(in oklab, var(--gold) 42%, transparent);
-  box-shadow:
-    0 1px 0 0 rgba(201, 169, 106, 0.1) inset,
-    0 22px 44px -18px rgba(0, 0, 0, 0.92);
+  box-shadow: var(--lift-shadow);
+}
+
+.product-card,
+.sector-product-card {
+  transition:
+    border-color 280ms var(--ease-out),
+    transform 280ms var(--ease-out),
+    box-shadow 280ms var(--ease-out);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  a.group:hover .sector-product-card {
+  a.group:hover .product-card,
+  a.group:hover .sector-product-card,
+  a.product-card:hover {
     transform: none;
   }
 }
@@ -340,7 +355,7 @@ body {
 /* Editorial serif headlines — the core "investment fund" signal */
 h1, h2, h3, h4 {
   font-family: var(--font-serif);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.03em;
   font-feature-settings: 'liga' 1, 'kern' 1;
 }
 
@@ -416,17 +431,17 @@ html {
 @media (min-width: 1024px) {
   .sidebar {
     display: flex;
-    width: 280px;
+    width: 260px;
     height: 100vh;
     position: fixed;
     left: 0;
     top: 0;
     background:
       linear-gradient(180deg, rgba(201, 169, 106, 0.03) 0%, transparent 22%),
-      rgba(9, 11, 16, 0.72);
-    backdrop-filter: blur(20px);
+      rgba(9, 11, 16, 0.78);
+    backdrop-filter: blur(24px);
     border-right: 1px solid var(--border);
-    padding: 2.5rem 1.5rem;
+    padding: 1.75rem 1.15rem 1.5rem;
     z-index: 50;
     flex-direction: column;
   }
@@ -442,8 +457,8 @@ html {
 
 @media (min-width: 1024px) {
   .content {
-    margin-left: 280px;
-    padding: 4rem;
+    margin-left: 260px;
+    padding: 3.5rem 4rem 4.5rem;
   }
 }
 
@@ -506,6 +521,130 @@ html {
 .fund-rule {
   height: 1px;
   background: linear-gradient(90deg, rgba(201, 169, 106, 0.35), rgba(201, 169, 106, 0.04));
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Stripe-language primitives
+
+   Layout, motion, and CTA shapes from stripe.com, mapped onto the gold desk.
+   Keep serif headlines and champagne tokens — this is spacing and affordance,
+   not a purple rebrand.
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.page-title {
+  font-size: clamp(2.15rem, 5vw, 3.35rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+}
+
+.page-dek {
+  max-width: 36rem;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: color-mix(in oklab, var(--foreground) 48%, transparent);
+}
+
+.hero-mesh {
+  pointer-events: none;
+  position: absolute;
+  inset: -18% -12% auto -8%;
+  height: min(72vh, 640px);
+  background:
+    radial-gradient(ellipse 48% 52% at 18% 28%, rgba(201, 169, 106, 0.16), transparent 62%),
+    radial-gradient(ellipse 38% 46% at 82% 12%, rgba(228, 201, 138, 0.08), transparent 58%),
+    radial-gradient(ellipse 42% 38% at 62% 78%, rgba(201, 169, 106, 0.07), transparent 60%);
+  filter: blur(28px);
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.625rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  text-decoration: none;
+  transition:
+    transform 200ms var(--ease-out),
+    box-shadow 200ms var(--ease-out),
+    background-color 200ms var(--ease-out),
+    border-color 200ms var(--ease-out),
+    opacity 200ms var(--ease-out);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold-bright) 0%, var(--gold-deep) 100%);
+  color: #0a0b0d;
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.22) inset,
+    0 10px 22px -10px rgba(201, 169, 106, 0.55);
+}
+
+.btn-primary:hover {
+  opacity: 0.94;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--border);
+  color: color-mix(in oklab, var(--foreground) 88%, transparent);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: color-mix(in oklab, var(--gold) 36%, transparent);
+  color: var(--foreground);
+  transform: translateY(-1px);
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: color-mix(in oklab, var(--foreground) 62%, transparent);
+  text-decoration: none;
+  transition: color 180ms var(--ease-out), gap 180ms var(--ease-out);
+}
+
+.text-link:hover {
+  color: var(--gold-bright);
+}
+
+.text-link svg {
+  transition: transform 180ms var(--ease-out);
+}
+
+.text-link:hover svg {
+  transform: translateX(2px);
+}
+
+.icon-tile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(160deg, rgba(201, 169, 106, 0.22) 0%, rgba(201, 169, 106, 0.06) 100%);
+  box-shadow: inset 0 0 0 1px rgba(201, 169, 106, 0.28);
+  color: var(--gold-bright);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    transform: none;
+  }
 }
 
 /* Stagger delay utilities */

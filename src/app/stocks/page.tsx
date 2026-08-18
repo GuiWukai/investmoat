@@ -17,6 +17,7 @@ import {
 import { allCoverageData, getAverageScore } from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
 import { SECTORS } from "@/lib/sectorCatalog";
+import { MetricBand } from "@/components/MetricBand";
 
 const TICKER_COLORS: Record<string, string> = {
   MSFT: "#00a4ef", AMZN: "#f59e0b", ASML: "#0071c5", V:    "#1a1f71",
@@ -347,14 +348,14 @@ export default function StocksPage() {
   );
 
   return (
-    <div className="animate-fade-in space-y-8">
+    <div className="animate-fade-in space-y-8 md:space-y-10">
       {/* Header */}
       <header className="animate-fade-up stagger-fill-both" style={{ animationDelay: '0s' }}>
-        <p className="section-label mb-2">Coverage Universe</p>
-        <h1 className="text-3xl md:text-4xl font-extrabold gradient-text-animated mb-3">
+        <p className="section-label mb-3">Coverage Universe</p>
+        <h1 className="page-title gradient-text-animated mb-4">
           Stock Coverage
         </h1>
-        <p className="text-foreground/40 text-sm md:text-base max-w-xl">
+        <p className="page-dek">
           {allCoverageData.length} stocks scored on moat durability, growth trajectory, and live valuation.
           {" "}
           <Link href="/sectors" className="text-foreground/55 hover:text-gold-bright transition-colors">
@@ -362,24 +363,21 @@ export default function StocksPage() {
             <LayoutGrid size={12} className="ml-1 inline-block align-[-1px]" />
           </Link>
         </p>
-
-        {/* Quick stats */}
-        <div className="flex items-center gap-6 mt-5">
-          {[
-            { label: "Avg Score", value: avgScore },
-            { label: "Total Stocks", value: allCoverageData.length },
-            { label: "Categories", value: visibleCategories.length - 1 },
-          ].map(stat => (
-            <div key={stat.label} className="flex items-baseline gap-1.5">
-              <span className="text-2xl font-black text-foreground tabular-nums">{stat.value}</span>
-              <span className="text-[11px] text-foreground/25 font-medium">{stat.label}</span>
-            </div>
-          ))}
-        </div>
       </header>
 
+      <div className="animate-fade-up stagger-fill-both" style={{ animationDelay: '0.06s' }}>
+        <MetricBand
+          items={[
+            { label: "Avg score", value: avgScore },
+            { label: "Total stocks", value: allCoverageData.length },
+            { label: "Categories", value: visibleCategories.length - 1 },
+            { label: "In this view", value: sorted.length },
+          ]}
+        />
+      </div>
+
       {/* Controls */}
-      <div className="relative z-30 animate-fade-up stagger-fill-both space-y-3" style={{ animationDelay: '0.08s' }}>
+      <div className="relative z-30 animate-fade-up stagger-fill-both space-y-3" style={{ animationDelay: '0.1s' }}>
         <SearchField
           aria-label="Search coverage by name or ticker"
           className="max-w-sm"
