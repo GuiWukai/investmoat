@@ -181,11 +181,11 @@ a.card:hover,
 /* Sector product tiles — Stripe-style lift when the wrapping link is hovered.
    The Card itself is not the <a>, so the rule above does not fire. */
 a.group:hover .sector-product-card {
-  transform: translateY(-3px);
-  border-color: color-mix(in oklab, var(--gold) 38%, transparent);
+  transform: translateY(-4px);
+  border-color: color-mix(in oklab, var(--gold) 42%, transparent);
   box-shadow:
-    0 1px 0 0 rgba(201, 169, 106, 0.08) inset,
-    0 18px 40px -18px rgba(0, 0, 0, 0.9);
+    0 1px 0 0 rgba(201, 169, 106, 0.1) inset,
+    0 22px 44px -18px rgba(0, 0, 0, 0.92);
 }
 
 @media (prefers-reduced-motion: reduce) {

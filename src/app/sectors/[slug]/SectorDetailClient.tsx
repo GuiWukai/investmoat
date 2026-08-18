@@ -13,7 +13,7 @@ import {
   type CoverageStock,
   type Sector,
 } from '@/lib/sectors';
-import { ScorePill, SubScore } from '../scoreUi';
+import { scoreColor, ScorePill } from '../scoreUi';
 import { MetricBand, SectorIconTile, VsBookRow } from '../sectorVisuals';
 import { useLiveCoverageScores } from '../useLiveCoverageScores';
 
@@ -104,10 +104,16 @@ function StockRow({
           Val {val}
         </p>
       </div>
-      <div className="hidden items-center gap-5 shrink-0 md:flex">
-        <SubScore label="Moat" value={moat} />
-        <SubScore label="Growth" value={growth} />
-        <SubScore label="Val" value={val} />
+      <div className="hidden shrink-0 items-center gap-5 md:flex">
+        <span className="w-10 text-center text-sm font-semibold tabular-nums" style={{ color: scoreColor(moat) }}>
+          {moat}
+        </span>
+        <span className="w-10 text-center text-sm font-semibold tabular-nums" style={{ color: scoreColor(growth) }}>
+          {growth}
+        </span>
+        <span className="w-10 text-center text-sm font-semibold tabular-nums" style={{ color: scoreColor(val) }}>
+          {val}
+        </span>
       </div>
       <div className="hidden h-6 w-px shrink-0 bg-foreground/[0.07] md:block" />
       <div className="shrink-0">
@@ -274,13 +280,13 @@ export default function SectorDetailClient({
               label="Company" sortKey="name" active={sortKey === 'name'} dir={sortDir}
               onSort={handleSort} className="flex-1"
             />
-            <div className="flex items-center gap-5 shrink-0">
+            <div className="flex shrink-0 items-center gap-5">
               <SortHeader label="Moat" sortKey="moat" active={sortKey === 'moat'} dir={sortDir}
-                onSort={handleSort} className="min-w-[40px]" justify="center" />
+                onSort={handleSort} className="w-10" justify="center" />
               <SortHeader label="Growth" sortKey="growth" active={sortKey === 'growth'} dir={sortDir}
-                onSort={handleSort} className="min-w-[40px]" justify="center" />
+                onSort={handleSort} className="w-10" justify="center" />
               <SortHeader label="Val" sortKey="val" active={sortKey === 'val'} dir={sortDir}
-                onSort={handleSort} className="min-w-[40px]" justify="center" />
+                onSort={handleSort} className="w-10" justify="center" />
             </div>
             <div className="w-px shrink-0" />
             <SortHeader label="Score" sortKey="score" active={sortKey === 'score'} dir={sortDir}
@@ -311,15 +317,31 @@ export default function SectorDetailClient({
         <p className="section-label mb-4">Other sectors</p>
         <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-5">
           {others.map((s) => {
-            const count = stocksInSector(s).length;
+            const names = stocksInSector(s);
+            const count = names.length;
+            const avg = meanRounded(
+              names.map((st) => liveScores[st.ticker] ?? getAverageScore(st.scores)),
+            );
             return (
               <Link
                 key={s.slug}
                 href={`/sectors/${s.slug}`}
                 className="group flex no-underline"
               >
-                <Card className="sector-product-card flex h-full w-full flex-col p-4">
-                  <SectorIconTile slug={s.slug} color={s.color} size="sm" />
+                <Card className="sector-product-card relative flex h-full w-full flex-col overflow-hidden p-4">
+                  <span
+                    className="absolute inset-x-0 top-0 h-px"
+                    style={{ background: `linear-gradient(90deg, ${s.color}, transparent 75%)` }}
+                    aria-hidden
+                  />
+                  <div className="flex items-start justify-between gap-2">
+                    <SectorIconTile slug={s.slug} color={s.color} size="sm" />
+                    {pricesLoaded ? (
+                      <ScorePill value={avg} />
+                    ) : (
+                      <span className="text-xs tabular-nums text-foreground/20">—</span>
+                    )}
+                  </div>
                   <h3 className="mt-3 text-sm font-semibold leading-snug text-foreground/85 transition-colors group-hover:text-foreground">
                     {s.label}
                   </h3>

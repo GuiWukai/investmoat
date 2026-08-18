@@ -52,6 +52,11 @@ function SectorCard({
     <Link href={`/sectors/${sector.slug}`} className="group flex h-full no-underline">
       <Card className="sector-product-card relative flex h-full w-full flex-col overflow-hidden p-6 md:p-7">
         <span
+          className="absolute inset-x-0 top-0 h-px"
+          style={{ background: `linear-gradient(90deg, ${sector.color}, transparent 70%)` }}
+          aria-hidden
+        />
+        <span
           className="pointer-events-none absolute -right-10 -top-12 h-36 w-36 rounded-full opacity-[0.07] blur-2xl transition-opacity duration-300 group-hover:opacity-25"
           style={{ background: sector.color }}
           aria-hidden
@@ -59,22 +64,22 @@ function SectorCard({
 
         <div className="relative flex items-start justify-between gap-3">
           <SectorIconTile slug={sector.slug} color={sector.color} />
-          <div className="flex items-center gap-2">
-            {strongest && !loading && (
-              <span className="rounded-full border border-accent/25 bg-accent-soft px-2 py-0.5 font-mono text-[9px] font-bold uppercase tracking-widest text-gold-bright">
-                Strongest
-              </span>
-            )}
-            <span className="font-mono text-[11px] font-medium tabular-nums text-foreground/30">
-              {stocks.length}
-            </span>
-          </div>
+          <span className="font-mono text-[11px] font-medium tabular-nums text-foreground/30">
+            {stocks.length}
+          </span>
         </div>
 
-        <h2 className="relative mt-5 text-[22px] font-semibold leading-tight tracking-tight text-foreground/90 transition-colors group-hover:text-foreground">
-          {sector.label}
-        </h2>
-        <p className="relative mt-2 min-h-[3.6rem] text-[13.5px] leading-relaxed text-foreground/42">
+        <div className="relative mt-5 flex flex-wrap items-center gap-2">
+          <h2 className="text-[22px] font-semibold leading-tight tracking-tight text-foreground/90 transition-colors group-hover:text-foreground">
+            {sector.label}
+          </h2>
+          {strongest && !loading && (
+            <span className="rounded-full border border-accent/25 bg-accent-soft px-2 py-0.5 font-mono text-[9px] font-bold uppercase tracking-widest text-gold-bright">
+              Strongest
+            </span>
+          )}
+        </div>
+        <p className="relative mt-2 line-clamp-3 min-h-[3.6rem] text-[13.5px] leading-relaxed text-foreground/42">
           {sector.description}
         </p>
 
