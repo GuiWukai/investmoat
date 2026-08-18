@@ -208,13 +208,13 @@ export default function SectorDetailClient({
           <SectorIconTile slug={sector.slug} color={sector.color} size="lg" />
           <div className="min-w-0">
             <p className="section-label mb-2">Coverage Universe</p>
-            <h1 className="text-4xl font-bold leading-[1.08] tracking-tight gradient-text-animated md:text-5xl">
+            <h1 className="page-title gradient-text-animated">
               {sector.label}
             </h1>
           </div>
         </div>
 
-        <p className="relative mt-4 max-w-xl text-[15px] leading-relaxed text-foreground/45 md:text-base">
+        <p className="page-dek relative mt-4">
           {sector.description}
         </p>
       </header>

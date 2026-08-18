@@ -102,7 +102,7 @@ function FeaturedCard({ article }: { article: ResearchSummary }) {
   return (
     <Link
       href={`/research/${article.slug}`}
-      className="group block rounded-2xl border border-accent/20 bg-gradient-to-br from-accent/[0.055] to-foreground/[0.015] p-5 sm:p-6 md:p-8 hover:border-accent/40 transition-colors"
+      className="product-card group block rounded-2xl border border-accent/20 bg-gradient-to-br from-accent/[0.055] to-foreground/[0.015] p-5 sm:p-6 md:p-8"
     >
       <div className="flex flex-wrap items-center gap-2 mb-3">
         <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded bg-accent text-[#0a0b0d]">
@@ -139,7 +139,7 @@ function ArticleCard({ article }: { article: ResearchSummary }) {
   return (
     <Link
       href={`/research/${article.slug}`}
-      className="group block rounded-2xl border border-foreground/[0.07] bg-foreground/[0.02] p-5 md:p-7 hover:bg-foreground/[0.04] hover:border-foreground/15 transition-colors"
+      className="product-card group block rounded-2xl border border-foreground/[0.07] bg-foreground/[0.02] p-5 md:p-7"
     >
       <div className="flex flex-wrap items-center gap-2 mb-2.5 sm:mb-3">
         <TagChips tags={article.tags} />

@@ -67,7 +67,7 @@ export default function ResearchIndexPage() {
       <div className="research-page max-w-4xl mx-auto px-4 sm:px-6 py-8 md:py-16">
       <header>
         <div className="section-label mb-3">Research</div>
-        <h1 className="text-[32px] md:text-5xl font-bold leading-[1.1] gradient-text">
+        <h1 className="page-title gradient-text">
           Cross-cutting analysis
         </h1>
         <p className="research-prose mt-5 text-[17px] md:text-lg text-foreground/55 leading-relaxed max-w-2xl">
@@ -111,7 +111,7 @@ export default function ResearchIndexPage() {
           {METHOD_NOTES.map((note) => (
             <div
               key={note.title}
-              className="rounded-2xl border border-foreground/[0.06] bg-foreground/[0.02] p-5"
+              className="product-card rounded-2xl border border-foreground/[0.06] bg-foreground/[0.02] p-5 md:p-6"
             >
               <h3 className="text-[13px] font-bold text-foreground/80 tracking-wide">{note.title}</h3>
               <p className="mt-2 text-[13px] text-foreground/40 leading-relaxed">{note.body}</p>

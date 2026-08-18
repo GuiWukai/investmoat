@@ -495,10 +495,10 @@ export default function MyPortfolioPage() {
             ))}
           </ToggleButtonGroup>
         </div>
-        <h1 className="mb-4 text-4xl font-extrabold leading-tight gradient-text-animated md:text-6xl">
+        <h1 className="page-title gradient-text-animated mb-4">
           My Portfolio
         </h1>
-        <p className="max-w-2xl text-base leading-relaxed text-foreground/45 md:text-lg">
+        <p className="page-dek">
           Track your own holdings against InvestMoat coverage. Open a position to
           edit shares or average cost — data stays in this browser only. Totals
           convert USD and CAD quotes into your book currency.

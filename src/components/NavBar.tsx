@@ -295,24 +295,21 @@ function NavLink({
   return (
     <Link
       aria-current={isActive ? 'page' : undefined}
-      className={`group relative flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium no-underline transition-all duration-200 ${
-        isActive ? 'text-foreground' : 'text-muted hover:bg-default hover:text-foreground'
+      className={`group relative flex items-center gap-3 rounded-lg px-3 py-2 text-[13.5px] font-medium no-underline transition-colors duration-200 ${
+        isActive ? 'bg-foreground/[0.055] text-foreground' : 'text-muted hover:bg-foreground/[0.04] hover:text-foreground'
       }`}
       href={href}
       onClick={onClick}
     >
       {isActive && (
-        <span className="absolute inset-0 rounded-xl border border-accent/25 bg-accent-soft" />
+        <span className="absolute left-0 top-1.5 bottom-1.5 w-0.5 rounded-full bg-gold-bright" />
       )}
       <Icon
-        className={`relative z-10 size-4 shrink-0 transition-colors ${
+        className={`size-4 shrink-0 ${
           isActive ? 'text-gold-bright' : 'text-muted group-hover:text-foreground'
         }`}
       />
-      <span className="relative z-10">{name}</span>
-      {isActive && (
-        <span className="relative z-10 ml-auto size-1.5 rounded-full bg-gold-bright" />
-      )}
+      <span>{name}</span>
     </Link>
   );
 }
@@ -912,7 +909,7 @@ export function NavBar() {
       {/* Mobile top bar — brand only; search and menu live on the FAB.
           Not sticky: once the reader is into a page the bar scrolls away
           and the viewport is theirs. */}
-      <div className="flex h-12 items-center border-b border-border px-4 lg:hidden">
+      <div className="flex h-14 items-center border-b border-border px-5 lg:hidden">
         <BrandMark compact />
       </div>
 
@@ -931,16 +928,16 @@ export function NavBar() {
 
       {/* Desktop sidebar */}
       <aside className="sidebar hidden lg:flex">
-        <div className="mb-8">
+        <div className="mb-7">
           <BrandMark />
         </div>
 
-        <div className="mb-6">
+        <div className="mb-7">
           <StockSearch />
         </div>
 
         <div>
-          <p className="section-label mb-2 px-3">Menu</p>
+          <p className="section-label mb-2.5 px-3">Menu</p>
           <nav className="flex flex-col gap-0.5">
             {navLinks.map((item) => (
               <NavLink key={item.href} href={item.href} icon={item.icon} name={item.name} />

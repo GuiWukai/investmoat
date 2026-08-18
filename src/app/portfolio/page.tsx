@@ -475,10 +475,10 @@ export default function PortfolioPage() {
       {/* ── Header ───────────────────────────────────────────────────────── */}
       <header className="pt-6 md:pt-10 pb-8 animate-fade-up stagger-fill-both" style={{ animationDelay: '0s' }}>
         <p className="section-label mb-3">IM25</p>
-        <h1 className="text-4xl md:text-6xl font-extrabold gradient-text-animated leading-tight mb-4">
+        <h1 className="page-title gradient-text-animated mb-4">
           The IM25
         </h1>
-        <p className="text-foreground/45 text-base md:text-lg max-w-2xl leading-relaxed">
+        <p className="page-dek">
           {portfolio.length} high-conviction positions selected for moat durability, growth scaling,
           and valuation discipline. Higher-scoring positions receive proportionally larger allocations
           (max 10% per position).
