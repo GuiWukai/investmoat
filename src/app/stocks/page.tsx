@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { ChevronRight, SlidersHorizontal, ArrowUp, ArrowDown, ArrowUpDown, LayoutGrid } from "lucide-react";
 import {
+  Button,
   Card,
   ListBox,
   ListBoxItem,
@@ -91,6 +92,7 @@ function SortHeader({
 }) {
   return (
     <button
+      type="button"
       onClick={() => onSort(sortKey)}
       className={`flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest transition-colors ${
         active ? "text-gold-bright" : "text-foreground/20 hover:text-foreground/45"
@@ -212,21 +214,22 @@ const CATEGORY_PILL =
  * restores focus, supports type-ahead and arrow keys, and closes on Escape.
  */
 function MobileSelect({
-  label, icon, selectedKey, onSelectionChange, trailing, children,
+  label, icon, selectedKey, onSelectionChange, children,
 }: {
   label: string;
   icon: ReactNode;
   selectedKey: string;
   onSelectionChange: (key: string) => void;
-  /** Sits beside the selected value — the sort direction arrow, for Sort by. */
-  trailing?: ReactNode;
   children: ReactNode;
 }) {
   return (
     <Select
       aria-label={label}
       fullWidth
-      onSelectionChange={(key) => onSelectionChange(String(key))}
+      onSelectionChange={(key) => {
+        if (key == null) return;
+        onSelectionChange(String(key));
+      }}
       selectedKey={selectedKey}
     >
       <Select.Trigger className="items-center gap-2 text-left">
@@ -235,18 +238,11 @@ function MobileSelect({
           <span className="text-[9px] font-bold uppercase tracking-widest text-muted">
             {label}
           </span>
-          <span className="flex min-w-0 items-center gap-1">
-            {/* Text only. Rendering the option's full children here dragged the
-                sort arrow in with them, and it wrapped onto a second line —
-                which left the Sort trigger taller than the Filter one beside
-                it. `trailing` puts that arrow back on the same row. */}
-            <Select.Value className="truncate text-xs font-semibold text-foreground/85">
-              {({ isPlaceholder, selectedText, defaultChildren }) =>
-                isPlaceholder ? defaultChildren : selectedText
-              }
-            </Select.Value>
-            {trailing}
-          </span>
+          <Select.Value className="truncate text-xs font-semibold text-foreground/85">
+            {({ isPlaceholder, selectedText, defaultChildren }) =>
+              isPlaceholder ? defaultChildren : selectedText
+            }
+          </Select.Value>
         </span>
         <Select.Indicator className="ml-auto shrink-0" />
       </Select.Trigger>
@@ -457,25 +453,45 @@ export default function StocksPage() {
             ))}
           </MobileSelect>
 
-          <MobileSelect
-            icon={<ArrowUpDown size={14} />}
-            label="Sort by"
-            onSelectionChange={(key) => handleSort(key as SortKey)}
-            selectedKey={sortKey}
-            trailing={<SortIndicator active dir={sortDir} />}
-          >
-            {SORT_OPTIONS.map(opt => (
-              <ListBoxItem
-                key={opt.key}
-                className="flex items-center justify-between gap-2"
-                id={opt.key}
-                textValue={opt.label}
+          <div className="flex min-w-0 gap-1.5">
+            <div className="min-w-0 flex-1">
+              <MobileSelect
+                icon={<ArrowUpDown size={14} />}
+                label="Sort by"
+                onSelectionChange={(key) => {
+                  const next = key as SortKey;
+                  if (!SORT_OPTIONS.some((opt) => opt.key === next)) return;
+                  // HeroUI Select does not re-fire when the current option is
+                  // chosen again, so direction lives on the sibling button.
+                  if (next === sortKey) return;
+                  setSortKey(next);
+                  setSortDir(next === "name" ? "asc" : "desc");
+                }}
+                selectedKey={sortKey}
               >
-                <span>{opt.label}</span>
-                <SortIndicator active={sortKey === opt.key} dir={sortDir} />
-              </ListBoxItem>
-            ))}
-          </MobileSelect>
+                {SORT_OPTIONS.map(opt => (
+                  <ListBoxItem
+                    key={opt.key}
+                    className="flex items-center justify-between gap-2"
+                    id={opt.key}
+                    textValue={opt.label}
+                  >
+                    <span>{opt.label}</span>
+                    <SortIndicator active={sortKey === opt.key} dir={sortDir} />
+                  </ListBoxItem>
+                ))}
+              </MobileSelect>
+            </div>
+            <Button
+              aria-label={sortDir === "asc" ? "Sort descending" : "Sort ascending"}
+              className="self-stretch"
+              isIconOnly
+              onPress={() => setSortDir((d) => (d === "asc" ? "desc" : "asc"))}
+              variant="secondary"
+            >
+              <SortIndicator active dir={sortDir} />
+            </Button>
+          </div>
         </div>
       </div>
 
