@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { ChevronRight } from 'lucide-react';
-import { Card, Spinner } from '@heroui/react';
+import { ArrowUpRight } from 'lucide-react';
+import { Card } from '@heroui/react';
 import { allCoverageData, getAverageScore } from '@/app/stockData';
 import {
   IM25_TICKERS,
@@ -12,7 +12,8 @@ import {
   type CoverageStock,
   type Sector,
 } from '@/lib/sectors';
-import { scoreColor, ScorePill } from './scoreUi';
+import { ScorePill } from './scoreUi';
+import { MetricBand, PillarMeter, SectorIconTile } from './sectorVisuals';
 import { useLiveCoverageScores } from './useLiveCoverageScores';
 
 function sectorAverages(stocks: CoverageStock[], liveScores: Record<string, number>) {
@@ -31,93 +32,74 @@ function topNames(stocks: CoverageStock[], liveScores: Record<string, number>, n
     .slice(0, n);
 }
 
-function MiniStat({ label, value }: { label: string; value: number }) {
-  return (
-    <div className="flex flex-col items-center gap-0.5 min-w-[44px]">
-      <span className="text-[9px] font-bold uppercase tracking-widest text-foreground/25">{label}</span>
-      <span className="text-sm font-black tabular-nums" style={{ color: scoreColor(value) }}>
-        {value}
-      </span>
-    </div>
-  );
-}
-
 function SectorCard({
   sector,
   stocks,
   liveScores,
   loading,
+  strongest,
 }: {
   sector: Sector;
   stocks: CoverageStock[];
   liveScores: Record<string, number>;
   loading: boolean;
+  strongest: boolean;
 }) {
   const avg = sectorAverages(stocks, liveScores);
   const leaders = topNames(stocks, liveScores);
 
   return (
-    <Link href={`/sectors/${sector.slug}`} className="group block no-underline">
-      <Card className="relative h-full overflow-hidden p-5 transition-colors hover:bg-foreground/[0.035]">
+    <Link href={`/sectors/${sector.slug}`} className="group flex h-full no-underline">
+      <Card className="sector-product-card relative flex h-full w-full flex-col overflow-hidden p-6 md:p-7">
         <span
-          className="absolute inset-y-0 left-0 w-[3px]"
+          className="pointer-events-none absolute -right-10 -top-12 h-36 w-36 rounded-full opacity-[0.07] blur-2xl transition-opacity duration-300 group-hover:opacity-25"
           style={{ background: sector.color }}
+          aria-hidden
         />
-        <div className="flex items-start justify-between gap-3 pl-1">
-          <div className="min-w-0">
-            <h2 className="text-lg font-bold text-foreground/90 group-hover:text-foreground">
-              {sector.label}
-            </h2>
-            <p className="mt-1.5 text-[13px] leading-relaxed text-foreground/40">
-              {sector.description}
-            </p>
-          </div>
-          <div className="flex shrink-0 items-center gap-2">
-            <span className="font-mono text-xs font-bold tabular-nums text-foreground/35">
+
+        <div className="relative flex items-start justify-between gap-3">
+          <SectorIconTile slug={sector.slug} color={sector.color} />
+          <div className="flex items-center gap-2">
+            {strongest && !loading && (
+              <span className="rounded-full border border-accent/25 bg-accent-soft px-2 py-0.5 font-mono text-[9px] font-bold uppercase tracking-widest text-gold-bright">
+                Strongest
+              </span>
+            )}
+            <span className="font-mono text-[11px] font-medium tabular-nums text-foreground/30">
               {stocks.length}
             </span>
-            <ChevronRight
-              size={16}
-              className="text-foreground/15 transition-colors group-hover:text-gold-bright"
-            />
           </div>
         </div>
 
-        <div className="mt-5 flex items-center gap-4 pl-1">
-          {loading ? (
-            <Spinner size="sm" color="current" />
-          ) : (
-            <>
-              <MiniStat label="Moat" value={avg.moat} />
-              <MiniStat label="Growth" value={avg.growth} />
-              <MiniStat label="Val" value={avg.val} />
-              <div className="w-px h-7 bg-foreground/[0.07]" />
-              <div className="flex flex-col items-center gap-0.5">
-                <span className="text-[9px] font-bold uppercase tracking-widest text-foreground/25">
-                  Score
-                </span>
-                <ScorePill value={avg.score} />
-              </div>
-            </>
-          )}
+        <h2 className="relative mt-5 text-[22px] font-semibold leading-tight tracking-tight text-foreground/90 transition-colors group-hover:text-foreground">
+          {sector.label}
+        </h2>
+        <p className="relative mt-2 min-h-[3.6rem] text-[13.5px] leading-relaxed text-foreground/42">
+          {sector.description}
+        </p>
+
+        <div className="relative mt-6 space-y-2.5">
+          <PillarMeter label="Moat" value={avg.moat} loading={loading} />
+          <PillarMeter label="Growth" value={avg.growth} loading={loading} />
+          <PillarMeter label="Val" value={avg.val} loading={loading} />
         </div>
 
-        <div className="mt-5 flex flex-wrap items-center gap-1.5 pl-1">
+        <div className="relative mt-5 flex flex-wrap items-center gap-1.5">
           {leaders.map((s) => (
             <span
               key={s.ticker}
-              className="rounded-md border px-1.5 py-0.5 font-mono text-[10px] font-bold tracking-wide"
+              className="rounded-md px-1.5 py-0.5 font-mono text-[10px] font-bold tracking-wide"
               style={{
                 color: sector.color,
-                borderColor: `${sector.color}40`,
-                background: `${sector.color}14`,
+                background: `${sector.color}16`,
+                boxShadow: `inset 0 0 0 1px ${sector.color}38`,
               }}
             >
               {s.ticker}
             </span>
           ))}
           {stocks.length > leaders.length && (
-            <span className="text-[11px] text-foreground/25">
+            <span className="text-[11px] text-foreground/30">
               +{stocks.length - leaders.length}
             </span>
           )}
@@ -126,6 +108,26 @@ function SectorCard({
               {avg.im25} in IM25
             </span>
           )}
+        </div>
+
+        <div className="relative mt-auto flex items-center justify-between pt-6">
+          <span className="inline-flex items-center gap-1 text-[13px] font-medium text-foreground/40 transition-colors group-hover:text-gold-bright">
+            Explore
+            <ArrowUpRight
+              size={14}
+              className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            />
+          </span>
+          <div className="flex flex-col items-end gap-0.5">
+            <span className="text-[9px] font-bold uppercase tracking-widest text-foreground/25">
+              Score
+            </span>
+            {loading ? (
+              <span className="text-sm font-semibold tabular-nums text-foreground/20">—</span>
+            ) : (
+              <ScorePill value={avg.score} />
+            )}
+          </div>
         </div>
       </Card>
     </Link>
@@ -144,41 +146,36 @@ export default function SectorsIndexClient() {
   const im25Count = rows.reduce((sum, r) => sum + r.avg.im25, 0);
 
   return (
-    <div className="animate-fade-in space-y-8">
+    <div className="animate-fade-in space-y-10 md:space-y-12">
       <header className="animate-fade-up stagger-fill-both" style={{ animationDelay: '0s' }}>
-        <p className="section-label mb-2">Coverage Universe</p>
-        <h1 className="mb-3 text-3xl font-extrabold gradient-text-animated md:text-4xl">
-          Sectors
+        <p className="section-label mb-3">Coverage Universe</p>
+        <h1 className="max-w-2xl text-4xl font-bold leading-[1.08] tracking-tight gradient-text-animated md:text-5xl">
+          The book, by sector.
         </h1>
-        <p className="max-w-xl text-sm text-foreground/40 md:text-base">
-          The coverage book, sliced the same way the stocks filter is — so you can
-          compare moat, growth, and live valuation across buckets rather than one
-          name at a time.
+        <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-foreground/45 md:text-base">
+          Six buckets scored the same way as every stock page — so you can
+          compare moat, growth, and live valuation as a book, not a ticker.
         </p>
-
-        <div className="mt-5 flex flex-wrap items-center gap-6">
-          {[
-            { label: 'Sectors', value: SECTORS.length },
-            { label: 'Names', value: allCoverageData.length },
-            {
-              label: pricesLoaded ? `Strongest · ${strongest.sector.label}` : 'Strongest',
-              value: pricesLoaded ? strongest.avg.score : '—',
-            },
-            { label: 'In IM25', value: im25Count },
-          ].map((stat) => (
-            <div key={stat.label} className="flex items-baseline gap-1.5">
-              <span className="text-2xl font-black tabular-nums text-foreground">{stat.value}</span>
-              <span className="text-[11px] font-medium text-foreground/25">{stat.label}</span>
-            </div>
-          ))}
-        </div>
       </header>
 
-      <div className="fund-rule" />
+      <div className="animate-fade-up stagger-fill-both" style={{ animationDelay: '0.06s' }}>
+        <MetricBand
+          items={[
+            { label: 'Sectors', value: SECTORS.length },
+            { label: 'Names in coverage', value: allCoverageData.length },
+            {
+              label: 'Strongest book',
+              value: pricesLoaded ? strongest.avg.score : '—',
+              hint: pricesLoaded ? strongest.sector.label : 'Waiting on live prices',
+            },
+            { label: 'Names in IM25', value: im25Count },
+          ]}
+        />
+      </div>
 
       <div
-        className="grid grid-cols-1 gap-4 md:grid-cols-2 animate-fade-up stagger-fill-both"
-        style={{ animationDelay: '0.08s' }}
+        className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5 xl:grid-cols-3 animate-fade-up stagger-fill-both"
+        style={{ animationDelay: '0.12s' }}
       >
         {rows.map(({ sector, stocks }) => (
           <SectorCard
@@ -187,6 +184,7 @@ export default function SectorsIndexClient() {
             stocks={stocks}
             liveScores={liveScores}
             loading={!pricesLoaded}
+            strongest={pricesLoaded && sector.slug === strongest.sector.slug}
           />
         ))}
       </div>
