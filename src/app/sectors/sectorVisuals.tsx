@@ -1,14 +1,14 @@
 import {
+  Bitcoin,
+  Cloud,
   Cpu,
   Factory,
   Gem,
   HeartPulse,
   Landmark,
   Layers,
-  Coins,
-  ShoppingBag,
-  Code2,
   Share2,
+  ShoppingBag,
   Zap,
   type LucideIcon,
 } from 'lucide-react';
@@ -19,7 +19,7 @@ export { MetricBand } from '@/components/MetricBand';
 
 const SECTOR_ICONS: Record<SectorSlug, LucideIcon> = {
   platforms: Share2,
-  software: Code2,
+  software: Cloud,
   semiconductors: Cpu,
   financials: Landmark,
   healthcare: HeartPulse,
@@ -27,7 +27,7 @@ const SECTOR_ICONS: Record<SectorSlug, LucideIcon> = {
   energy: Zap,
   consumer: ShoppingBag,
   'hard-assets': Gem,
-  crypto: Coins,
+  crypto: Bitcoin,
   other: Layers,
 };
 
