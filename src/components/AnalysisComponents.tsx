@@ -4,8 +4,8 @@ import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { TrendingUp, PlusCircle, Minus, Zap, ShieldCheck, ShieldX, RefreshCw } from "lucide-react";
 import { motion, AnimatePresence, type PanInfo } from "framer-motion";
 import { Card, Chip, Meter, Spinner, Tabs } from "@heroui/react";
-import type { TenMoatsAssessment, MoatStatus } from "@/app/tenMoatsData";
-import type { CommodityMoatsData, CryptoMoatsData, StockAnalysisData } from "@/types/stockAnalysis";
+import type { CommodityMoatsData, CryptoMoatsData, MoatStatus, StockAnalysisData, TenMoatsData } from "@/types/stockAnalysis";
+import { moatScoreBreakdown } from '@/lib/valuationScore';
 import { ReadMore } from '@/components/ReadMore';
 
 // ─── Count-up animation ────────────────────────────────────────────────────────
@@ -441,8 +441,8 @@ function MoatRow({ label, status, note }: { label: string; status: MoatStatus; n
   );
 }
 
-export function TenMoatsCard({ data }: { data: TenMoatsAssessment }) {
-  const vulnerableMoats: Array<{ label: string; key: keyof TenMoatsAssessment }> = [
+export function TenMoatsCard({ data }: { data: TenMoatsData }) {
+  const vulnerableMoats: Array<{ label: string; key: keyof TenMoatsData }> = [
     { label: 'Learned Interfaces',  key: 'learnedInterfaces' },
     { label: 'Business Logic',      key: 'businessLogic' },
     { label: 'Public Data Access',  key: 'publicDataAccess' },
@@ -450,13 +450,25 @@ export function TenMoatsCard({ data }: { data: TenMoatsAssessment }) {
     { label: 'Bundling',            key: 'bundling' },
   ];
 
-  const resilientMoats: Array<{ label: string; key: keyof TenMoatsAssessment }> = [
+  const resilientMoats: Array<{ label: string; key: keyof TenMoatsData }> = [
     { label: 'Proprietary Data',      key: 'proprietaryData' },
     { label: 'Regulatory Lock-In',    key: 'regulatoryLockIn' },
     { label: 'Network Effects',       key: 'networkEffects' },
     { label: 'Transaction Embedding', key: 'transactionEmbedding' },
     { label: 'System of Record',      key: 'systemOfRecord' },
   ];
+
+  const breakdown = moatScoreBreakdown(data);
+  const r = breakdown.resilientAdjusted ?? breakdown.resilientScore;
+  const v = breakdown.vulnerableScore;
+  const derivation = [
+    r != null ? `${r.toFixed(1)} resilient` : null,
+    v != null && r != null ? `${v.toFixed(1)} vulnerable` : null,
+    v != null && r != null ? `80/20 = ${breakdown.blend.toFixed(1)}` : null,
+    v != null && r == null ? `${v.toFixed(1)} vulnerable × 0.20 = ${breakdown.blend.toFixed(1)}` : null,
+    breakdown.breadth > 0 ? `+ ${breakdown.breadth} strength` : null,
+    `= ${breakdown.total}`,
+  ].filter(Boolean).join(' · ');
 
   return (
     <div className="space-y-4">
@@ -468,6 +480,7 @@ export function TenMoatsCard({ data }: { data: TenMoatsAssessment }) {
           lines={5}
           className="text-sm text-foreground/60 leading-relaxed"
         />
+        <p className="text-xs text-foreground/55 font-mono mt-3">{derivation}</p>
       </Card>
 
       {/* Moat grid */}
@@ -584,6 +597,6 @@ export function MoatsCard({ data }: { data: StockAnalysisData }) {
   const ac = data.assetClass ?? 'equity';
   if (ac === 'crypto' && data.cryptoMoats)       return <CryptoMoatsCard data={data.cryptoMoats} />;
   if (ac === 'commodity' && data.commodityMoats) return <CommodityMoatsCard data={data.commodityMoats} />;
-  if (data.tenMoats) return <TenMoatsCard data={data.tenMoats as unknown as TenMoatsAssessment} />;
+  if (data.tenMoats) return <TenMoatsCard data={data.tenMoats} />;
   return null;
 }

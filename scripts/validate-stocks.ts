@@ -287,6 +287,160 @@ function checkGrowthDerivations(files: string[]): Warning[] {
   return warnings;
 }
 
+const MOAT_PILLAR_KEYS = [
+  'learnedInterfaces',
+  'businessLogic',
+  'publicDataAccess',
+  'talentScarcity',
+  'bundling',
+  'proprietaryData',
+  'regulatoryLockIn',
+  'networkEffects',
+  'transactionEmbedding',
+  'systemOfRecord',
+] as const;
+
+/**
+ * `strong` is 100 points on a pillar — the same 100 Visa's network and S&P's
+ * benchmark receive. Seven or more strongs is the signature of using the top
+ * label as a default rather than as category-defining intensity. Advisory
+ * because a handful of names (index franchise, card network, process monopoly)
+ * can legitimately be that strong; the warning is so the next author does not
+ * treat Datadog-style switching costs as the same 100.
+ */
+const MAX_STRONG_WITHOUT_NOTE = 6;
+
+/** Customer-encoded config is switching cost, not vendor-owned business logic. */
+const CUSTOMER_CONFIG_LOGIC =
+  /customers encode|encode thousands of|monitors, SLO|SLO definitions|detection rules|threat hunting queries|SQL transformations|dbt models|dashboards, runbooks|Jira schemes|custom fields, automation|customer-specific test scripts|shipping rules, tax logic|deeply configured per|years of \S+ configuration|configure years of/i;
+
+/** Scale of ingested customer telemetry is not unique proprietary data. */
+const CUSTOMER_TELEMETRY_DATA =
+  /customers retain ownership|customers can export|customer-owned data|ingest(s)? trillions|telemetry events daily|customer telemetry/i;
+
+/** A public archive, ops history, or shopping habit is not a business system of record. */
+const SOFT_SYSTEM_OF_RECORD =
+  /peer knowledge|incident history|operational state|operational history|primary and default destination|behavioral default|treasure hunt/i;
+
+/** Weakened used as a polite N/A — still scores 35 at full pillar weight. */
+const WEAKENED_AS_NA =
+  /does not meaningfully apply|category does not apply|this moat category is not|moat category does not apply/i;
+
+function checkMoatLabelInflation(files: string[]): Warning[] {
+  const warnings: Warning[] = [];
+  for (const file of files) {
+    let data: { tenMoats?: Record<string, { status?: string; note?: string }> };
+    try {
+      data = JSON.parse(readFileSync(join(STOCKS_DIR, file), 'utf-8'));
+    } catch {
+      continue;
+    }
+    if (!data.tenMoats) continue;
+    const strongs = MOAT_PILLAR_KEYS.filter((k) => data.tenMoats?.[k]?.status === 'strong');
+    if (strongs.length > MAX_STRONG_WITHOUT_NOTE) {
+      warnings.push({
+        file,
+        message:
+          `${strongs.length} pillars marked strong (${strongs.join(', ')}). strong is category-defining ` +
+          'intensity, not "switching costs exist" — the same 100 points Visa\'s network receives. ' +
+          'Downgrade any pillar that is real-but-not-unique to intact',
+      });
+    }
+
+    const bl = data.tenMoats.businessLogic;
+    if (bl?.status === 'strong' && bl.note && CUSTOMER_CONFIG_LOGIC.test(bl.note)) {
+      warnings.push({
+        file,
+        message:
+          'businessLogic is strong but the note describes customer-encoded config (monitors, SLOs, SQL, detection rules). ' +
+          'That is switching cost — learnedInterfaces or transactionEmbedding — not vendor-owned logic competitors cannot replicate. Rate intact (see Snowflake SQL) unless the logic is the company\'s',
+      });
+    }
+
+    const pd = data.tenMoats.proprietaryData;
+    if (pd?.status === 'strong' && pd.note && CUSTOMER_TELEMETRY_DATA.test(pd.note)) {
+      warnings.push({
+        file,
+        message:
+          'proprietaryData is strong but the note describes ingested customer telemetry or customer-owned data. ' +
+          'Scale is not uniqueness — Snowflake rates the same fact weakened because customers can export it. Rate intact unless the dataset cannot be replicated without the franchise (Threat Graph, claims, genetics, benchmarks)',
+      });
+    }
+
+    const sor = data.tenMoats.systemOfRecord;
+    if (sor?.status === 'strong' && sor.note && SOFT_SYSTEM_OF_RECORD.test(sor.note)) {
+      warnings.push({
+        file,
+        message:
+          'systemOfRecord is strong but the note describes operational history, incident archives, or peer knowledge. ' +
+          'strong is identity / payments / CMDB / design database — the record downstream systems must defer to. Rate intact (CrowdStrike endpoint telemetry) unless replacing it is a multi-year compliance programme',
+      });
+    }
+
+    for (const k of MOAT_PILLAR_KEYS) {
+      const a = data.tenMoats[k];
+      if (a?.status === 'weakened' && a.note && WEAKENED_AS_NA.test(a.note)) {
+        warnings.push({
+          file,
+          message:
+            `${k} is weakened but the note says the pillar does not apply. weakened still scores 35 at full weight ` +
+            'inside its group — use status na so the weight drops out',
+        });
+      }
+    }
+  }
+  return warnings;
+}
+
+/**
+ * Universe mix of `strong` among applicable (non-`na`) assessments.
+ * A pillar where half the book is `strong` is using the top label as a
+ * default — the same 100 points Visa's network receives — and that is how
+ * software platforms used to outrank payments networks before the 80/20 blend.
+ * Printed so an author can see inflation without opening 130 files.
+ */
+const STRONG_SHARE_WARN = 0.40;
+
+function reportMoatUniverseMix(files: string[]): void {
+  const tallies: Record<string, { strong: number; applicable: number }> = {};
+  for (const k of MOAT_PILLAR_KEYS) tallies[k] = { strong: 0, applicable: 0 };
+
+  for (const file of files) {
+    let data: { tenMoats?: Record<string, { status?: string }> };
+    try {
+      data = JSON.parse(readFileSync(join(STOCKS_DIR, file), 'utf-8'));
+    } catch {
+      continue;
+    }
+    if (!data.tenMoats) continue;
+    for (const k of MOAT_PILLAR_KEYS) {
+      const status = data.tenMoats[k]?.status;
+      if (!status || status === 'na') continue;
+      tallies[k].applicable += 1;
+      if (status === 'strong') tallies[k].strong += 1;
+    }
+  }
+
+  const inflated = MOAT_PILLAR_KEYS.filter((k) => {
+    const t = tallies[k];
+    return t.applicable > 0 && t.strong / t.applicable >= STRONG_SHARE_WARN;
+  });
+  if (inflated.length === 0) return;
+
+  console.log(
+    `${YELLOW}Moat universe mix — pillars with ≥${Math.round(STRONG_SHARE_WARN * 100)}% of applicable rated strong:${RESET}`,
+  );
+  for (const k of inflated) {
+    const t = tallies[k];
+    const pct = ((100 * t.strong) / t.applicable).toFixed(0);
+    console.log(
+      `  ${DIM}•${RESET} ${YELLOW}${k}${RESET} ${t.strong}/${t.applicable} applicable (${pct}%). ` +
+        `strong is category-defining intensity, not the default for "this moat exists"`,
+    );
+  }
+  console.log('');
+}
+
 /**
  * Cross-check the two registries against each other and against the JSON files
  * on disk. A stock in src/app/stockData.ts but not src/data/stocks/index.ts is
@@ -417,6 +571,18 @@ function main(): void {
     }
     console.log('');
   }
+
+  const moatWarnings = checkMoatLabelInflation(files);
+  if (moatWarnings.length > 0) {
+    console.log(
+      `${YELLOW}Moat label inflation (${moatWarnings.length}) — advisory, not failures:${RESET}`,
+    );
+    for (const { file, message } of moatWarnings) {
+      console.log(`  ${DIM}•${RESET} ${YELLOW}${file}${RESET} ${message}`);
+    }
+    console.log('');
+  }
+  reportMoatUniverseMix(files);
 
   console.log(`${GREEN}✓ Validated ${files.length} stock file(s)${RESET}`);
 }

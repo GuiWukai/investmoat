@@ -171,8 +171,8 @@
       "note": "Datadog dashboards, query language (DDQL), and notebook workflows require fluency that SRE teams build over years; Bits AI Chat and autonomous agents are partially abstracting this, but advanced incident analysis and custom monitor design still require platform expertise."
     },
     "businessLogic": {
-      "status": "strong",
-      "note": "Customers encode thousands of monitors, SLO definitions, dashboards, runbooks, and incident workflows in Datadog — institutional knowledge that represents years of operational tuning and is nearly impossible to migrate without rebuilding from scratch."
+      "status": "intact",
+      "note": "Customers encode thousands of monitors, SLO definitions, dashboards, runbooks, and incident workflows in Datadog — real switching cost, but it is customer-owned configuration rather than Datadog-owned logic competitors cannot replicate. Same bar as Snowflake SQL/dbt (intact): portable with effort, painful, not a vendor franchise."
     },
     "publicDataAccess": {
       "status": "na",
@@ -187,8 +187,8 @@
       "note": "Datadog sells 20+ products (Infra, APM, Logs, RUM, Synthetics, Security, LLM Observability, GPU Monitoring, Bits AI suite, etc.) on a single agent and unified data model — 8+ product adoption drives outsized retention and expansion. Bits AI GA and Adaptive ML's RLOps layer add another attach surface on the same telemetry substrate; the cross-product correlation (traces ↔ logs ↔ metrics ↔ security signals) remains a structural advantage no single-domain competitor can match."
     },
     "proprietaryData": {
-      "status": "strong",
-      "note": "Datadog ingests trillions of telemetry events daily across 30,000+ customers, creating one of the largest operational datasets in the world. Adaptive ML is explicitly meant to train specialized agents on that real-world infra and security data — a compounding flywheel as AI workloads explode that no startup can replicate without first acquiring an equivalent installed base."
+      "status": "intact",
+      "note": "Datadog ingests trillions of telemetry events daily across 30,000+ customers, and Adaptive ML trains agents on that infra and security data. The flywheel is real at scale, but the underlying data is the customer's and can be dual-homed or exported — not a unique corpus like CrowdStrike's Threat Graph or S&P's benchmarks. Scale of ingestion is not uniqueness."
     },
     "regulatoryLockIn": {
       "status": "intact",
@@ -203,10 +203,10 @@
       "note": "Every alert, every incident page, every postmortem, every SLO calculation, and every change deployment flows through Datadog at instrumented enterprises. The agent IS the operational nervous system — every code deploy, container start, and AI inference triggers Datadog telemetry by default. Bits AI autonomous remediation (now GA) tightens that loop from detect → fix without leaving the platform."
     },
     "systemOfRecord": {
-      "status": "strong",
-      "note": "Datadog is the authoritative system of record for operational state, performance metrics, and incident history at most cloud-native enterprises. Audit trails for SLO performance and security events live in Datadog — migration requires rebuilding years of operational history."
+      "status": "intact",
+      "note": "Datadog is the operational history for metrics, traces, logs, and incidents at instrumented cloud-native shops — sticky, but OpenTelemetry exists specifically to make that record portable. CrowdStrike rates the equivalent endpoint-telemetry SoR intact; identity, payments, and ServiceNow's CMDB are the strong bar."
     },
-    "verdict": "Datadog remains one of the cleanest AI-tailwind plays in enterprise software: AI workloads generate exponentially more telemetry than traditional apps, and Datadog's consumption pricing captures this expansion natively — confirmed by Q2's +36% re-acceleration and a FY26 raise to ~+30%. The four AI-resilient moats (proprietary data flywheel, transaction embedding, system of record, multi-product bundle) are intact-to-strong, with Bits AI GA and Adaptive ML deepening bundling and proprietary data without changing measured statuses. Primary risks are largest-customer concentration (visible in the soft Q3 sequential guide) and Splunk-Cisco bundle pressure; after the ~18% post-print gap to ~$232 (~$83B, ~18.5× forward sales), those risks are partially in the price rather than fully ahead of it."
+    "verdict": "Datadog's durability is the agent plus the multi-product bundle: transaction embedding and bundling are strong; the other AI-resilient pillars (proprietary data, system of record, network effects, regulatory lock-in) are intact. AI workloads generate more telemetry than traditional apps, and consumption pricing captures that expansion — confirmed by Q2's +36% re-acceleration and a FY26 raise to ~+30%. Bits AI GA and Adaptive ML deepen attach on the same substrate without turning customer telemetry into a unique dataset. Primary risks are largest-customer concentration (visible in the soft Q3 sequential guide) and Splunk-Cisco bundle pressure; after the ~18% post-print gap those risks are partially in the price rather than fully ahead of it."
   },
-  "lastAnalyzed": "August 6, 2026"
+  "lastAnalyzed": "August 18, 2026"
 }

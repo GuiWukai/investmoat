@@ -165,8 +165,8 @@
       "note": "Security analysts trained on Falcon's console, threat hunting workflows, and detection tuning are reluctant to migrate — institutional knowledge compounds switching costs."
     },
     "businessLogic": {
-      "status": "strong",
-      "note": "Custom detection rules, threat hunting queries, and automated response playbooks are encoded into each customer's Falcon instance — rebuilding this logic in a competitor platform is a multi-quarter project."
+      "status": "intact",
+      "note": "Custom detection rules, threat hunting queries, and automated response playbooks are encoded into each customer's Falcon instance — real switching cost, but it is customer-owned configuration rather than CrowdStrike-owned logic competitors cannot replicate. Same bar as Datadog monitors and Snowflake SQL (intact). The vendor franchise is the Threat Graph and the sensor, not the customer's query library."
     },
     "publicDataAccess": {
       "status": "weakened",
@@ -202,5 +202,5 @@
     },
     "verdict": "CrowdStrike's moat is highly AI-resilient — AI enhances the Threat Graph by processing more telemetry faster, and Charlotte AI adds a new consumption layer on top of existing data assets. AI is an accelerant to CrowdStrike's moat, not a disruptor."
   },
-  "lastAnalyzed": "August 10, 2026"
+  "lastAnalyzed": "August 18, 2026"
 }

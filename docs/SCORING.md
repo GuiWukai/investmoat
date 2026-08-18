@@ -30,9 +30,9 @@ Each moat/pillar is rated and converted to points:
 
 ### Equity: the 10-moat framework
 
-Moats split into two groups. **AI-resilient** moats (base pool = 60) are advantages AI cannot easily replicate; **AI-vulnerable** moats (base pool = 40) are ones intelligent agents increasingly substitute for.
+Moats split into two groups. **AI-resilient** pillars are advantages AI cannot easily replicate; **AI-vulnerable** pillars are ones intelligent agents increasingly substitute for. Weights inside each group still sum to 60 / 40 so the *group average* is well-defined. The groups themselves are **not** co-equal sources of durability — they blend **80 / 20**.
 
-| Group | Moat | Weight |
+| Group | Moat | Weight inside group |
 |---|---|---|
 | Resilient | `networkEffects` | 15 |
 | Resilient | `proprietaryData` | 12 |
@@ -45,12 +45,34 @@ Moats split into two groups. **AI-resilient** moats (base pool = 60) are advanta
 | Vulnerable | `talentScarcity` | 5 |
 | Vulnerable | `publicDataAccess` | 3 |
 
-The score is a weighted average within each group, the two groups blended by their applicable capacity, then two adjustments:
+The score is:
 
-- **Quality-gated breadth bonus:** `+1` per moat rated *intact-or-better* beyond 5, capped at `+4`. Broad mediocrity earns nothing — the moats must be demonstrably present.
-- **AI-vulnerability discount:** `−5` when the vulnerable group contributes *more* total score than the resilient group (catches businesses whose only strength is AI-disruptable, e.g. Adobe).
+1. A weighted average **within** each group (N/A dropped from that group).
+2. **Thin-coverage adjustment** on the resilient average: if applicable resilient weight is below 36 (~three typical pillars) *and* the average is above `intact`, blend that average toward 65. Two `strong` pillars and three N/As cannot print a resilient score of 100. A thin *weakened* book is left alone — it is not lifted toward intact.
+3. **80 / 20 blend** of (adjusted resilient, vulnerable). If no resilient pillars apply, the score is 20% of the vulnerable group — UI / talent / bundle lock-in cannot clear the portfolio moat gate on its own. If no vulnerable pillars apply, the score is the resilient group.
+4. **Strength bonus:** `+1` per *strong* resilient moat beyond 2, capped at `+3`. Concentrated structural strength (five strong resilient pillars) is rewarded; nine intact software boxes are not.
 
-**`aiExposure` override:** any moat assessment may set `aiExposure: 'resilient' | 'vulnerable'` to route it to the other bucket. This lets moats that are AI-*strengthened* for a specific company (NVIDIA's CUDA `learnedInterfaces`, Palantir's ontology `businessLogic`) sit in the resilient pool where their economics belong — and it flows through to the discount calculation.
+`moatScoreBreakdown()` returns every term, and the stock page renders the sum from that breakdown — the same inspectability pattern as growth.
+
+**`aiExposure` override:** any moat assessment may set `aiExposure: 'resilient' | 'vulnerable'` to route it to the other bucket. This lets moats that are AI-*strengthened* for a specific company (NVIDIA's CUDA `learnedInterfaces`, Palantir's ontology `businessLogic`) sit in the resilient pool where their economics belong.
+
+Worked examples (rounded):
+
+| Shape | Score |
+|---|---|
+| All ten apply, all `strong` | 100 |
+| All ten apply, all `intact` | 65 |
+| Visa-style: five `strong` resilient, two `weakened` vulnerable | 90 |
+| Datadog-style: agent+bundle strong, other resilient intact | 72 |
+| Vulnerable-only, all `strong` | 20 |
+
+### Known limits of this pillar
+
+The formula can rank a payments network above a software platform. It cannot stop an author marking `proprietaryData` `strong` because the company "ingests a lot of customer data." `strong` is 100 points on that pillar, the same 100 Visa's two-sided network receives. The 80/20 blend and the strength bonus reduce how much a generous software slate inflates the total; they do not replace judgement on the labels.
+
+Use `strong` for a category-defining, hard-to-replicate advantage — not for "switching costs exist." Use `na` when a pillar is not part of the business model; `weakened` is a real competitive erosion, not a polite N/A. `validate:stocks` warns when seven or more pillars are marked `strong`, when a `strong` note describes customer telemetry, customer-encoded config, or a soft system of record (ops history, peer knowledge, shopping habit), and when a pillar's universe `strong` share of applicable ratings is ≥ 40%.
+
+The previous 60/40 applicable-weight blend plus an intact-or-better-across-ten bonus plus a −5 AI discount produced the opposite ranking: Datadog 90, Visa 81. The discount almost never fired (Adobe, the documented example, did not trigger it). Those three terms are gone. Remaining accuracy work is the labels — especially `transactionEmbedding` and `proprietaryData`, where `strong` is still the plurality rating — not another weight tweak. Do not add a fifth intensity grade until the existing four are used as written.
 
 ### Crypto: 5-pillar monetary framework
 

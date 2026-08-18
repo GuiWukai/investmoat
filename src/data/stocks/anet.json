@@ -2,7 +2,7 @@
   "slug": "anet",
   "ticker": "ANET",
   "name": "Arista Networks",
-  "lastAnalyzed": "August 11, 2026",
+  "lastAnalyzed": "August 18, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -167,8 +167,8 @@
       "note": "Network engineers invest years mastering EOS CLI, eAPI automation, and CloudVision workflows. Enterprise network architects who have built Arista-native automation scripts represent institutional knowledge that cannot be transferred to Cisco or Juniper platforms without multi-year retraining programs. Gartner's 2026 MQ Leader recognition for Enterprise Wired and Wireless LAN extends that learned-interface lock-in into campus."
     },
     "businessLogic": {
-      "status": "strong",
-      "note": "Customer networks have years of EOS configuration, automation templates, and compliance policies built into CloudVision. Hyperscaler-specific customizations, multi-tenant segmentation policies, and AI cluster networking configurations (including new MRC multipath and SRv6 congestion steering) are deeply embedded business logic that would take years to migrate."
+      "status": "intact",
+      "note": "Customer networks have years of EOS configuration, automation templates, and compliance policies in CloudVision — real switching cost, but it is customer-authored network policy rather than Arista-owned logic competitors cannot replicate. Same bar as Palo Alto PAN-OS policies and Snowflake SQL (intact). The franchise is EOS plus CloudVision as the network-state record, not the customer's templates."
     },
     "publicDataAccess": {
       "status": "na",

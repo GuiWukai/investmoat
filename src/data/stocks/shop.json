@@ -176,8 +176,8 @@
       "note": "Merchants invest significant time mastering Shopify's admin, theme editor, and app integrations; AI tools like Sidekick reduce the onboarding curve but don't eliminate the operational depth embedded in years of store configuration and workflow customization."
     },
     "businessLogic": {
-      "status": "strong",
-      "note": "Years of configured shipping rules, tax logic, discount structures, checkout flows, and app integrations encode complex business logic that is painful to migrate — a merchant leaving Shopify must rebuild this entire operational layer from scratch on a new platform."
+      "status": "intact",
+      "note": "Years of configured shipping rules, tax logic, discount structures, checkout flows, and app integrations are painful to migrate — a merchant leaving Shopify rebuilds that operational layer. That is customer-authored configuration, not Shopify-owned logic competitors cannot replicate. Same bar as Snowflake SQL (intact). The franchise is the checkout rail and the merchant network, already scored on transactionEmbedding and networkEffects."
     },
     "publicDataAccess": {
       "status": "na",
@@ -213,5 +213,5 @@
     },
     "verdict": "Shopify is a net beneficiary of AI adoption — its proprietary cross-merchant data, transaction embedding, and agentic commerce positioning make AI a structural tailwind rather than a threat. Q2 2026 confirmed the platform compounding at scale: 34% revenue growth, 18% FCF margin, and low-thirties Q3 guidance. The primary AI vulnerability remains that lower development barriers could enable new commerce platform entrants, but Shopify's 5M+ merchant installed base and ecosystem gravity create compounding advantages that are increasingly difficult for AI-powered challengers to replicate quickly."
   },
-  "lastAnalyzed": "August 5, 2026"
+  "lastAnalyzed": "August 18, 2026"
 }

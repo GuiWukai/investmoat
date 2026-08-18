@@ -149,8 +149,8 @@
       "note": "MRO technicians learn aircraft-specific maintenance procedures tied to TransDigm part numbers. AI can assist with documentation but cannot bypass physical maintenance certification requirements."
     },
     "businessLogic": {
-      "status": "weakened",
-      "note": "Not a software company — business logic lock-in does not meaningfully apply. Proprietary engineering specifications are protected, but this moat category is not a primary driver for an aerospace components manufacturer."
+      "status": "na",
+      "note": "Not a software company — business logic lock-in does not apply. Proprietary engineering specifications are protected as design IP, scored under other pillars, not as encoded workflow software."
     },
     "publicDataAccess": {
       "status": "na",
@@ -186,5 +186,5 @@
     },
     "verdict": "TransDigm's moat is almost entirely AI-immune. Regulatory certification cannot be automated — the FAA and DOD will not approve AI-designed substitutes without decades of physical certification testing. The sole-source aftermarket model becomes more durable, not weaker, as aircraft fleets age and alternatives become even less economical to certify."
   },
-  "lastAnalyzed": "August 11, 2026"
+  "lastAnalyzed": "August 18, 2026"
 }
