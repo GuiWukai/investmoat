@@ -517,11 +517,24 @@ function useFabHandedness() {
       };
     }
 
+    function inOppositeFabSlot(source: Pending): boolean {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      const slotW = Math.min(112, Math.max(56, Math.floor(width * 0.28)));
+      const slotH = 124;
+      const fromBottom = height - source.y;
+      if (fromBottom > slotH) return false;
+      if (handRef.current === 'right') return source.x <= slotW;
+      return source.x >= width - slotW;
+    }
+
     function onPointerMove(event: PointerEvent) {
       if (!pending || event.pointerId !== pending.id) return;
       const dy = Math.abs(event.clientY - pending.y);
       const dx = Math.abs(event.clientX - pending.x);
       if (dy >= SCROLL_DY && dy > dx) {
+        // A jittery click in the unused FAB slot is "put it here", not a scroll.
+        if (inOppositeFabSlot(pending)) return;
         consider(sampleFromPending(pending, dy));
         pending = null;
       }
@@ -558,18 +571,18 @@ function useFabHandedness() {
       pending = null;
     }
 
-    window.addEventListener('pointerdown', onPointerDown, { passive: true });
-    window.addEventListener('pointermove', onPointerMove, { passive: true });
-    window.addEventListener('pointerup', onPointerUp, { passive: true });
-    window.addEventListener('pointercancel', onPointerCancel, { passive: true });
-    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('pointerdown', onPointerDown, { capture: true, passive: true });
+    window.addEventListener('pointermove', onPointerMove, { capture: true, passive: true });
+    window.addEventListener('pointerup', onPointerUp, { capture: true, passive: true });
+    window.addEventListener('pointercancel', onPointerCancel, { capture: true, passive: true });
+    window.addEventListener('scroll', onScroll, { capture: true, passive: true });
     return () => {
       if (cancelTimer) window.clearTimeout(cancelTimer);
-      window.removeEventListener('pointerdown', onPointerDown);
-      window.removeEventListener('pointermove', onPointerMove);
-      window.removeEventListener('pointerup', onPointerUp);
-      window.removeEventListener('pointercancel', onPointerCancel);
-      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('pointerdown', onPointerDown, { capture: true });
+      window.removeEventListener('pointermove', onPointerMove, { capture: true });
+      window.removeEventListener('pointerup', onPointerUp, { capture: true });
+      window.removeEventListener('pointercancel', onPointerCancel, { capture: true });
+      window.removeEventListener('scroll', onScroll, { capture: true });
     };
   }, [commitHand]);
 
