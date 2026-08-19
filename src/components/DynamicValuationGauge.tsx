@@ -1,12 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import { ScoreGauge } from '@/components/AnalysisComponents';
 import {
   computeValuationScore,
   parseScenarioPrice,
   valuationDescription,
 } from '@/lib/valuationScore';
+import { useStockPrice } from '@/lib/useStockPrice';
 
 interface DynamicValuationGaugeProps {
   slug: string;
@@ -29,42 +30,38 @@ export function DynamicValuationGauge({
   onScoreChange,
   onLoadingEnd,
 }: DynamicValuationGaugeProps) {
-  const [score, setScore] = useState<number>(fallbackScore);
-  const [description, setDescription] = useState<string>(fallbackDescription);
-
   const bear = parseScenarioPrice(bearTarget);
   const base = parseScenarioPrice(baseTarget);
   const bull = parseScenarioPrice(bullTarget);
+  const { data, loading } = useStockPrice(slug);
+
+  const live = useMemo(() => {
+    if (data?.price == null || !bear || !base || !bull) return null;
+    return {
+      score: computeValuationScore(data.price, bear, base, bull),
+      description: valuationDescription(
+        data.price,
+        bear, base, bull,
+        bearTarget, baseTarget, bullTarget,
+      ),
+    };
+  }, [data, bear, base, bull, bearTarget, baseTarget, bullTarget]);
+
+  const onScoreChangeRef = useRef(onScoreChange);
+  onScoreChangeRef.current = onScoreChange;
+  const onLoadingEndRef = useRef(onLoadingEnd);
+  onLoadingEndRef.current = onLoadingEnd;
 
   useEffect(() => {
-    if (!bear || !base || !bull) return;
-
-    let cancelled = false;
-    fetch(`/api/stock-price/${slug}`)
-      .then(r => (r.ok ? r.json() : null))
-      .then(d => {
-        if (cancelled || d?.price == null) return;
-        const liveScore = computeValuationScore(d.price, bear, base, bull);
-        const liveDesc = valuationDescription(
-          d.price,
-          bear, base, bull,
-          bearTarget, baseTarget, bullTarget,
-        );
-        setScore(liveScore);
-        setDescription(liveDesc);
-        onScoreChange?.(liveScore);
-        onLoadingEnd?.();
-      })
-      .catch(() => { if (!cancelled) onLoadingEnd?.(); });
-
-    return () => { cancelled = true; };
-  }, [slug, bear, base, bull, bearTarget, baseTarget, bullTarget, onScoreChange, onLoadingEnd]);
+    if (live) onScoreChangeRef.current?.(live.score);
+    if (!loading) onLoadingEndRef.current?.();
+  }, [live, loading]);
 
   return (
     <ScoreGauge
-      score={score}
+      score={live?.score ?? fallbackScore}
       label="Valuation Score"
-      description={description}
+      description={live?.description ?? fallbackDescription}
     />
   );
 }

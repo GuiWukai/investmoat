@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { TrendingUp, PlusCircle, Minus, Zap, ShieldCheck, ShieldX, RefreshCw } from "lucide-react";
-import { motion, AnimatePresence, type PanInfo } from "framer-motion";
+import { motion, type PanInfo } from "framer-motion";
 import { Card, Chip, Meter, Spinner, Tabs } from "@heroui/react";
 import type { CommodityMoatsData, CryptoMoatsData, MoatStatus, StockAnalysisData, TenMoatsData } from "@/types/stockAnalysis";
 import { moatScoreBreakdown } from '@/lib/valuationScore';
@@ -13,15 +13,19 @@ function useCountUp(target: number, duration = 900): number {
   const [value, setValue] = useState(0);
   const rafRef = useRef<number | null>(null);
   const startRef = useRef<number | null>(null);
+  const currentRef = useRef(0);
 
   useEffect(() => {
     startRef.current = null;
+    const from = currentRef.current;
     const step = (timestamp: number) => {
       if (!startRef.current) startRef.current = timestamp;
       const elapsed = timestamp - startRef.current;
       const progress = Math.min(elapsed / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
-      setValue(Math.round(eased * target));
+      const next = Math.round(from + (target - from) * eased);
+      currentRef.current = next;
+      setValue(next);
       if (progress < 1) rafRef.current = requestAnimationFrame(step);
     };
     rafRef.current = requestAnimationFrame(step);
@@ -198,36 +202,27 @@ interface ScoreTab {
 export function ScoreTabsRow({ tabs, overallScore, overallLoading }: { tabs: ScoreTab[], overallScore?: number, overallLoading?: boolean }) {
   const hasOverall = overallScore !== undefined;
   const [active, setActive] = React.useState(0);
-  const [direction, setDirection] = React.useState(0);
 
   const handleTabClick = useCallback((i: number) => {
-    setDirection(i > active ? 1 : -1);
     setActive(i);
-  }, [active]);
+  }, []);
 
   const handleDragEnd = useCallback((_e: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     const swipe = Math.abs(info.offset.x) > 50 || Math.abs(info.velocity.x) > 400;
     if (!swipe) return;
     if (info.offset.x < 0 && active < tabs.length - 1) {
-      setDirection(1);
       setActive(active + 1);
     } else if (info.offset.x > 0 && active > 0) {
-      setDirection(-1);
       setActive(active - 1);
     }
   }, [active, tabs.length]);
 
-  const slideVariants = {
-    enter: (dir: number) => ({ x: dir > 0 ? '40%' : '-40%', opacity: 0 }),
-    center: { x: 0, opacity: 1 },
-    exit: (dir: number) => ({ x: dir > 0 ? '-40%' : '40%', opacity: 0 }),
-  };
-
   return (
     <>
       {/* Mobile — a real tablist, so the scores are reachable by keyboard and
-          announced as tabs. The swipe gesture stays: HeroUI drives selection,
-          framer-motion animates the panel between selections. */}
+          announced as tabs. Panels stay mounted (`shouldForceMount`) so switching
+          to Value does not remount the live-price widgets or wait on Yahoo.
+          Inactive panels are `display: none` so they do not stack in layout. */}
       <div className="md:hidden">
         {hasOverall && (
           <div className="mb-4">
@@ -255,29 +250,25 @@ export function ScoreTabsRow({ tabs, overallScore, overallLoading }: { tabs: Sco
             </Tabs.List>
           </div>
           {tabs.map((tab, i) => (
-            <Tabs.Panel key={tab.label} className="overflow-hidden" id={String(i)}>
-              <AnimatePresence mode="wait" custom={direction} initial={false}>
-                <motion.div
-                  key={active}
-                  custom={direction}
-                  variants={slideVariants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  transition={{ type: "tween", duration: 0.25, ease: "easeOut" }}
-                  drag="x"
-                  dragConstraints={{ left: 0, right: 0 }}
-                  dragDirectionLock
-                  dragElastic={0.12}
-                  onDragEnd={handleDragEnd}
-                  style={{ touchAction: 'pan-y' }}
-                >
-                  {tab.gauge}
-                  {tab.detail && (
-                    <div className="mt-5 space-y-4">{tab.detail}</div>
-                  )}
-                </motion.div>
-              </AnimatePresence>
+            <Tabs.Panel
+              key={tab.label}
+              className={`overflow-hidden ${i === active ? '' : 'hidden'}`}
+              id={String(i)}
+              shouldForceMount
+            >
+              <motion.div
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragDirectionLock
+                dragElastic={0.12}
+                onDragEnd={handleDragEnd}
+                style={{ touchAction: 'pan-y' }}
+              >
+                {tab.gauge}
+                {tab.detail && (
+                  <div className="mt-5 space-y-4">{tab.detail}</div>
+                )}
+              </motion.div>
             </Tabs.Panel>
           ))}
         </Tabs>

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { notFound } from 'next/navigation';
 import {
   MetricCard,
@@ -17,7 +17,8 @@ import { ScenarioPriceBar } from '@/components/ScenarioPriceBar';
 import { stockData, getAverageScore } from '@/app/stockData';
 import { getStockData } from '@/data/stocks';
 import { getResearchForTicker } from '@/data/research';
-import { computeAssetMoatScore, computeGrowthScore, growthScoreBreakdown } from '@/lib/valuationScore';
+import { computeAssetMoatScore, computeGrowthScore, computeValuationScore, growthScoreBreakdown, parseScenarioPrice } from '@/lib/valuationScore';
+import { useStockPrice } from '@/lib/useStockPrice';
 import type { StockAnalysisData } from '@/types/stockAnalysis';
 import Link from 'next/link';
 import { TrendingUp, TrendingDown, Minus, ArrowRight } from 'lucide-react';
@@ -63,28 +64,17 @@ function StockIcon({ name, size = 18 }: { name: string; size?: number }) {
 // ─── Live price in header ─────────────────────────────────────────────────────
 
 function LiveHeaderPrice({ slug }: { slug: string }) {
-  const [price, setPrice] = useState<string | null>(null);
-  const [changePercent, setChangePercent] = useState<number | null>(null);
+  const { data } = useStockPrice(slug);
+  const price = data?.price ?? null;
+  const changePercent = data?.changePercent ?? null;
 
-  useEffect(() => {
-    let cancelled = false;
-    fetch(`/api/stock-price/${slug}`)
-      .then(r => (r.ok ? r.json() : null))
-      .then(d => {
-        if (cancelled || d?.price == null) return;
-        const fmt = d.price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-        setPrice(d.currency === 'USD' ? `$${fmt}` : `${fmt} ${d.currency}`);
-        if (d.changePercent != null) setChangePercent(d.changePercent);
-      })
-      .catch(() => {});
-    return () => { cancelled = true; };
-  }, [slug]);
-
-  if (!price) return <strong className="text-foreground">—</strong>;
+  if (price == null) return <strong className="text-foreground">—</strong>;
+  const fmt = price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const priceLabel = data?.currency === 'USD' ? `$${fmt}` : `${fmt} ${data?.currency}`;
   const positive = changePercent == null || changePercent >= 0;
   return (
     <>
-      <strong className="text-foreground">{price}</strong>
+      <strong className="text-foreground">{priceLabel}</strong>
       {changePercent != null && (
         <span className={`text-xs ml-1.5 font-semibold ${positive ? 'text-emerald-400' : 'text-rose-400'}`}>
           ({positive ? '+' : ''}{changePercent.toFixed(2)}%)
@@ -327,8 +317,15 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
   if (!data) notFound();
 
   const stockEntry = stockData.find(s => s.ticker === data.ticker);
-  const [liveValScore, setLiveValScore] = useState<number>(data.valuation.score);
-  const [valLoading, setValLoading] = useState(true);
+  const { data: quote, loading: priceLoading } = useStockPrice(data.slug);
+  const bear = parseScenarioPrice(data.scenarios.bear.priceTarget);
+  const base = parseScenarioPrice(data.scenarios.base.priceTarget);
+  const bull = parseScenarioPrice(data.scenarios.bull.priceTarget);
+  const liveValScore =
+    quote?.price != null && bear && base && bull
+      ? computeValuationScore(quote.price, bear, base, bull)
+      : data.valuation.score;
+  const valLoading = priceLoading && quote == null;
   const liveMoatScore = computeAssetMoatScore(data);
   const growthScore = computeGrowthScore(data.growth.growthAnalysis, data.assetClass ?? 'equity') ?? 0;
   const dynamicOverallScore = Math.round(getAverageScore([liveMoatScore, growthScore, liveValScore]));
@@ -521,8 +518,6 @@ export default function StockPageClient({ ticker }: { ticker: string }) {
                 bullTarget={data.scenarios.bull.priceTarget}
                 fallbackScore={data.valuation.score}
                 fallbackDescription={data.valuation.description}
-                onScoreChange={setLiveValScore}
-                onLoadingEnd={() => setValLoading(false)}
               />
             ),
             detail: (

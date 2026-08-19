@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import { parseScenarioPrice } from '@/lib/valuationScore';
+import { useStockPrice } from '@/lib/useStockPrice';
 import { Card } from "@heroui/react";
 
 interface ScenarioPriceBarProps {
@@ -25,33 +25,9 @@ export function ScenarioPriceBar({
   const base = parseScenarioPrice(baseTarget);
   const bull = parseScenarioPrice(bullTarget);
 
-  const [price, setPrice] = useState<number | null>(null);
-  const [currency, setCurrency] = useState<string>('USD');
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    if (!bear || !base || !bull) {
-      setLoading(false);
-      return;
-    }
-    let cancelled = false;
-    fetch(`/api/stock-price/${slug}`)
-      .then(r => (r.ok ? r.json() : null))
-      .then(d => {
-        if (cancelled) return;
-        if (d?.price != null) {
-          setPrice(d.price);
-          if (d.currency) setCurrency(d.currency);
-        }
-        setLoading(false);
-      })
-      .catch(() => {
-        if (!cancelled) setLoading(false);
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, [slug, bear, base, bull]);
+  const { data: quote, loading } = useStockPrice(slug);
+  const price = quote?.price ?? null;
+  const currency = quote?.currency ?? 'USD';
 
   if (!bear || !base || !bull) return null;
 
