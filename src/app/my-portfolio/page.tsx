@@ -2,7 +2,6 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import {
   ArrowDown,
   ArrowUp,
@@ -13,7 +12,6 @@ import {
   TrendingUp,
 } from 'lucide-react';
 import {
-  Button,
   Card,
   ListBox,
   ListBoxItem,
@@ -158,8 +156,6 @@ function compositeForStock(
 }
 
 export default function MyPortfolioPage() {
-  const router = useRouter();
-
   const [holdings, setHoldings] = useState<UserHolding[]>([]);
   const [displayCurrency, setDisplayCurrency] = useState<PortfolioCurrency>('USD');
   const [hydrated, setHydrated] = useState(false);
@@ -599,14 +595,13 @@ export default function MyPortfolioPage() {
           </div>
           <div className="hidden h-px flex-1 bg-foreground/[0.05] md:block" />
           <div className="ml-auto flex flex-col items-end gap-2 md:flex-row md:items-center">
-            <Button
-              onPress={() => router.push('/my-portfolio/add')}
-              size="sm"
-              variant="primary"
+            <Link
+              href="/my-portfolio/add"
+              className="btn-primary h-8 min-h-8 px-3 text-[13px]"
             >
               <Plus size={14} />
               Add holding
-            </Button>
+            </Link>
             {holdings.length > 0 && (
               <Select
                 aria-label="Sort holdings"
@@ -664,13 +659,10 @@ export default function MyPortfolioPage() {
               local storage.
             </p>
             <div className="mt-5">
-              <Button
-                onPress={() => router.push('/my-portfolio/add')}
-                variant="primary"
-              >
+              <Link href="/my-portfolio/add" className="btn-primary">
                 <Plus size={16} />
                 Add holding
-              </Button>
+              </Link>
             </div>
             <p className="mt-4 text-xs text-foreground/28">
               Browse the{' '}
@@ -809,19 +801,14 @@ export default function MyPortfolioPage() {
                     return (
                       <tr
                         key={row.slug}
-                        aria-label={`Open ${ticker} position`}
-                        className="cursor-pointer transition-colors hover:bg-foreground/[0.03] group"
-                        onClick={() => router.push(positionHref)}
-                        onKeyDown={(e) => {
-                          if (e.key === 'Enter' || e.key === ' ') {
-                            e.preventDefault();
-                            router.push(positionHref);
-                          }
-                        }}
-                        role="link"
-                        tabIndex={0}
+                        className="group relative transition-colors hover:bg-foreground/[0.03]"
                       >
                         <td className="px-4 py-3.5 md:px-5">
+                          <Link
+                            href={positionHref}
+                            aria-label={`Open ${ticker} position`}
+                            className="absolute inset-0 z-[1]"
+                          />
                           <div className="truncate text-sm font-bold text-foreground/90">{name}</div>
                           <div className="mt-0.5 font-mono text-[10px] font-black uppercase tracking-[0.12em] text-foreground/28">
                             {ticker}

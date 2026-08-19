@@ -107,8 +107,11 @@ export default function RootLayout({
       <body className="bg-background text-foreground antialiased">
         <Providers>
           <div className="main-container">
+            <a className="skip-link" href="#main-content">
+              Skip to content
+            </a>
             <NavBar />
-            <main className="content">
+            <main className="content" id="main-content" tabIndex={-1}>
               {children}
             </main>
           </div>

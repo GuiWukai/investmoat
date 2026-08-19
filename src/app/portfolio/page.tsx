@@ -1,6 +1,6 @@
 'use client';
 
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { PieChart, ShieldCheck, ChevronRight, TrendingUp, TrendingDown, Eye } from "lucide-react";
 import { Card, Spinner } from "@heroui/react";
@@ -160,6 +160,11 @@ function RankBadge({ rank }: { rank: number }) {
   );
 }
 
+/** Full-row stock link. Children use pointer-events-none so iOS taps on empty
+ *  flex space, scores, and the chevron hit the <a> rather than only the name. */
+const HOLDING_ROW_CLASS =
+  "group relative flex w-full cursor-pointer touch-manipulation items-center gap-3 px-4 py-3.5 text-left no-underline transition-colors hover:bg-foreground/[0.04] md:gap-4 md:px-5 [&>*]:pointer-events-none";
+
 // ─── Allocation sectors ───────────────────────────────────────────────────────
 // Per-name weights cluster around 4–5% under the 10% cap, so a 25-slice ticker
 // pie reads as a uniform ring. Rolling the granular stockMeta categories into
@@ -278,8 +283,6 @@ function contrastFill(hex: string): string {
 }
 
 export default function PortfolioPage() {
-  const router = useRouter();
-
   const [allPrices, setAllPrices] = useState<Record<string, number | null>>({});
   const [allChangePercents, setAllChangePercents] = useState<Record<string, number | null>>({});
   const [allPricesLoaded, setAllPricesLoaded] = useState(false);
@@ -621,18 +624,15 @@ export default function PortfolioPage() {
                     </div>
                     <div className="flex flex-wrap gap-x-2 gap-y-0.5">
                       {theme.holdings.map((stock) => (
-                        <button
+                        <Link
                           key={stock.ticker}
-                          type="button"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            router.push(stock.href);
-                          }}
-                          className="text-[10px] font-bold text-foreground/60 hover:text-foreground transition-colors"
+                          href={stock.href}
+                          onClick={(e) => e.stopPropagation()}
+                          className="text-[10px] font-bold text-foreground/60 no-underline transition-colors hover:text-foreground"
                         >
                           {stock.ticker}
                           <span className="text-foreground/35 font-medium"> {dynamicWeights[stock.ticker] ?? 0}%</span>
-                        </button>
+                        </Link>
                       ))}
                     </div>
                   </div>
@@ -757,10 +757,11 @@ export default function PortfolioPage() {
           {/* Data rows */}
           <div className="divide-y divide-foreground/[0.04]">
             {portfolioWithScores.map((stock, idx) => (
-              <button
+              <Link
                 key={stock.ticker}
-                onClick={() => router.push(stock.href)}
-                className="w-full flex items-center gap-3 md:gap-4 px-4 md:px-5 py-3.5 hover:bg-foreground/[0.04] transition-colors group text-left"
+                href={stock.href}
+                aria-label={`Open ${stock.name} analysis`}
+                className={HOLDING_ROW_CLASS}
               >
                 {/* Position in the IM25, not universe composite rank */}
                 <RankBadge rank={idx + 1} />
@@ -853,7 +854,7 @@ export default function PortfolioPage() {
                   size={15}
                   className="text-foreground/15 group-hover:text-foreground/50 transition-colors shrink-0"
                 />
-              </button>
+              </Link>
             ))}
           </div>
         </Card>
@@ -897,10 +898,11 @@ export default function PortfolioPage() {
             {/* Data rows */}
             <div className="divide-y divide-foreground/[0.04]">
               {nearTop.map((stock, idx) => (
-                <button
+                <Link
                   key={stock.ticker}
-                  onClick={() => router.push(stock.href)}
-                  className="w-full flex items-center gap-3 md:gap-4 px-4 md:px-5 py-3.5 hover:bg-foreground/[0.04] transition-colors group text-left animate-slide-in-left stagger-fill-both"
+                  href={stock.href}
+                  aria-label={`Open ${stock.name} analysis`}
+                  className={`${HOLDING_ROW_CLASS} animate-slide-in-left stagger-fill-both`}
                   style={{ animationDelay: `${0.5 + idx * 0.035}s` }}
                 >
                   {/* Continues after the IM25 so a gated #2 is not still marked 2 */}
@@ -993,7 +995,7 @@ export default function PortfolioPage() {
                     size={15}
                     className="text-foreground/15 group-hover:text-foreground/50 transition-colors shrink-0"
                   />
-                </button>
+                </Link>
               ))}
             </div>
           </Card>
