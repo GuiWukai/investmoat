@@ -70,57 +70,72 @@ function useStockResults(query: string, limit: number): StockResult[] {
  * an Escape key. On touch it does not, which is why mobile gets its own surface
  * below rather than this component inside a drawer.
  */
-function StockSearch() {
+function StockSearch({ inputRef }: { inputRef: React.RefObject<HTMLInputElement | null> }) {
   const [query, setQuery] = useState('');
   const router = useRouter();
   const results = useStockResults(query, 6);
+  const [shortcut, setShortcut] = useState('Ctrl+K');
+
+  useEffect(() => {
+    const mac = /Mac|iPhone|iPad/.test(navigator.platform) || /Mac OS X/.test(navigator.userAgent);
+    setShortcut(mac ? '⌘K' : 'Ctrl+K');
+  }, []);
 
   return (
-    <ComboBox
-      aria-label="Search stocks"
-      allowsEmptyCollection
-      fullWidth
-      inputValue={query}
-      items={results}
-      menuTrigger="input"
-      onInputChange={setQuery}
-      onSelectionChange={(key) => {
-        if (key == null) return;
-        setQuery('');
-        router.push(String(key));
-      }}
-      selectedKey={null}
-    >
-      <ComboBox.InputGroup>
-        <Search className="pointer-events-none size-4 shrink-0 text-muted" />
-        <Input placeholder="Search stocks…" />
-      </ComboBox.InputGroup>
+    <div data-desk-search="">
+      <ComboBox
+        aria-label="Search stocks"
+        allowsEmptyCollection
+        fullWidth
+        inputValue={query}
+        items={results}
+        menuTrigger="input"
+        onInputChange={setQuery}
+        onSelectionChange={(key) => {
+          if (key == null) return;
+          setQuery('');
+          router.push(String(key));
+        }}
+        selectedKey={null}
+      >
+        <ComboBox.InputGroup>
+          <Search className="pointer-events-none size-4 shrink-0 text-muted" />
+          <Input
+            ref={inputRef}
+            aria-keyshortcuts="Meta+K Control+K"
+            placeholder="Search stocks…"
+          />
+          <kbd className="pointer-events-none mr-1 hidden shrink-0 rounded-md border border-border bg-foreground/[0.04] px-1.5 py-0.5 font-mono text-[10px] font-medium text-muted lg:inline">
+            {shortcut}
+          </kbd>
+        </ComboBox.InputGroup>
 
-      <ComboBox.Popover>
-        <ListBox
-          items={results}
-          renderEmptyState={() => (
-            <p className="px-3 py-3 text-sm text-muted">
-              {query.trim() ? 'No stocks found' : 'Type to search by name or ticker…'}
-            </p>
-          )}
-        >
-          {(item: StockResult) => (
-            <ListBoxItem
-              key={item.href}
-              className="group flex items-center justify-between gap-3"
-              id={item.href}
-              textValue={item.name}
-            >
-              <span className="truncate text-sm">{item.name}</span>
-              <span className="ml-auto font-mono text-xs font-bold text-muted">
-                {item.ticker}
-              </span>
-            </ListBoxItem>
-          )}
-        </ListBox>
-      </ComboBox.Popover>
-    </ComboBox>
+        <ComboBox.Popover>
+          <ListBox
+            items={results}
+            renderEmptyState={() => (
+              <p className="px-3 py-3 text-sm text-muted">
+                {query.trim() ? 'No stocks found' : 'Type to search by name or ticker…'}
+              </p>
+            )}
+          >
+            {(item: StockResult) => (
+              <ListBoxItem
+                key={item.href}
+                className="group flex items-center justify-between gap-3"
+                id={item.href}
+                textValue={item.name}
+              >
+                <span className="truncate text-sm">{item.name}</span>
+                <span className="ml-auto font-mono text-xs font-bold text-muted">
+                  {item.ticker}
+                </span>
+              </ListBoxItem>
+            )}
+          </ListBox>
+        </ComboBox.Popover>
+      </ComboBox>
+    </div>
   );
 }
 
@@ -903,6 +918,32 @@ function DeskFooter() {
 export function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const desktopSearchRef = useRef<HTMLInputElement>(null);
+
+  const openSearch = useCallback(() => {
+    const mobile = window.matchMedia('(max-width: 1023px)').matches;
+    if (mobile) {
+      setIsMenuOpen(false);
+      setIsSearchOpen(true);
+      return;
+    }
+    const node =
+      desktopSearchRef.current ??
+      document.querySelector<HTMLInputElement>('[data-desk-search] input');
+    node?.focus();
+    node?.select();
+  }, []);
+
+  useEffect(() => {
+    function onKey(event: KeyboardEvent) {
+      if (event.isComposing) return;
+      if (!(event.metaKey || event.ctrlKey) || event.key.toLowerCase() !== 'k') return;
+      event.preventDefault();
+      openSearch();
+    }
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [openSearch]);
 
   return (
     <>
@@ -933,7 +974,7 @@ export function NavBar() {
         </div>
 
         <div className="mb-7">
-          <StockSearch />
+          <StockSearch inputRef={desktopSearchRef} />
         </div>
 
         <div>

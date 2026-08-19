@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { ChevronRight, Sunrise, Sunset, Clock } from 'lucide-react';
 import { Spinner, ToggleButton, ToggleButtonGroup } from '@heroui/react';
 import { stockData } from '@/app/stockData';
@@ -59,12 +59,10 @@ function formatDayHeader(iso: string, today: string): { title: string; relative:
 }
 
 function EventRow({ event, inPortfolio }: { event: EarningsEvent; inPortfolio: boolean }) {
-  const router = useRouter();
-
   return (
-    <button
-      onClick={() => router.push(event.href)}
-      className="group flex w-full items-center gap-3 px-4 py-3.5 text-left transition-colors hover:bg-foreground/[0.04] sm:gap-4 sm:px-5"
+    <Link
+      href={event.href}
+      className="group flex w-full items-center gap-3 px-4 py-3.5 text-left no-underline transition-colors hover:bg-foreground/[0.04] sm:gap-4 sm:px-5"
     >
       <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
@@ -107,7 +105,7 @@ function EventRow({ event, inPortfolio }: { event: EarningsEvent; inPortfolio: b
       </div>
 
       <ChevronRight className="size-4 shrink-0 text-foreground/15 transition-colors group-hover:text-gold-bright" />
-    </button>
+    </Link>
   );
 }
 
