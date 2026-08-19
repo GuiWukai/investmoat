@@ -1,17 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import { TrendingUp, TrendingDown, RefreshCw } from 'lucide-react';
 import { Card } from "@heroui/react";
-
-interface LivePriceData {
-  symbol: string;
-  price: number | null;
-  change: number | null;
-  changePercent: number | null;
-  currency: string;
-  timestamp: string | null;
-}
+import { useStockPrice } from '@/lib/useStockPrice';
 
 interface LivePriceWidgetProps {
   slug: string;
@@ -33,28 +24,9 @@ function formatPrice(price: number, currency: string): string {
 }
 
 export function LivePriceWidget({ slug, fairValue }: LivePriceWidgetProps) {
-  const [data, setData] = useState<LivePriceData | null>(null);
-  const [loading, setLoading] = useState(true);
+  const { data, loading } = useStockPrice(slug);
 
-  useEffect(() => {
-    let cancelled = false;
-    async function fetchPrice() {
-      try {
-        const res = await fetch(`/api/stock-price/${slug}`);
-        if (!res.ok) throw new Error('fetch failed');
-        const json: LivePriceData = await res.json();
-        if (!cancelled) setData(json);
-      } catch {
-        // silently fail
-      } finally {
-        if (!cancelled) setLoading(false);
-      }
-    }
-    fetchPrice();
-    return () => { cancelled = true; };
-  }, [slug]);
-
-  if (loading) {
+  if (loading && !data) {
     return (
       <Card className="p-4 flex items-center gap-2">
         <RefreshCw size={13} className="animate-spin text-foreground/30" />
