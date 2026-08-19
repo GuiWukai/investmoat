@@ -3,6 +3,7 @@
   "ticker": "MSCI",
   "name": "MSCI Inc.",
   "titleColor": "#c0392b",
+  "lastAnalyzed": "August 19, 2026",
   "headerStats": [
     {
       "label": "Ticker",
@@ -10,7 +11,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$43B"
+      "value": "~$44B"
     }
   ],
   "chips": [
@@ -19,41 +20,41 @@
       "color": "success"
     },
     {
-      "label": "Strong Buy",
+      "label": "Index Standard",
       "color": "success"
     }
   ],
   "metrics": [
     {
-      "title": "Q1 2026 Revenue",
-      "value": "$850.8M",
-      "label": "+14.1% YoY — Adj EPS $4.55 beat $4.43 est",
+      "title": "Q2 2026 Revenue",
+      "value": "$867M",
+      "label": "+12.2% YoY organic; Adj EPS $4.94 (+18.5%)",
       "icon": "BarChart2",
       "color": "#c0392b"
     },
     {
       "title": "Asset-Based Fee Run Rate",
-      "value": "$872M",
-      "label": "Record — +25% YoY; ETF-linked AUM at $7T",
+      "value": "$948M",
+      "label": "+25% YoY; Index segment +17.5%; record ETF-linked AUM",
       "icon": "RefreshCw",
       "color": "#922b21"
     },
     {
-      "title": "Organic Growth",
-      "value": "13%+",
-      "label": "Adj EPS +14% / Adj EBITDA +19% YoY",
+      "title": "Total Run Rate",
+      "value": "$3.48B",
+      "label": "+12.0%; organic subscription run-rate +8.1%; retention 95.3%",
       "icon": "TrendingUp",
       "color": "#76b041"
     }
   ],
   "moat": {
-    "description": "MSCI owns the global standard for equity benchmarking — $15.5T in AUM is legally bound to its indexes through fund prospectuses and investment mandates that cannot be changed without regulatory filings and investor notification.",
+    "description": "MSCI owns the global standard for equity benchmarking — trillions in AUM is legally bound to its indexes through fund prospectuses and investment mandates that cannot be changed without regulatory filings and investor notification. Q2 2026 (Index +17.5%, ABF run-rate $948M +25%) is that standard collecting fees as AUM compounds, not a new moat.",
     "analysisTitle": "The Index Standard Monopoly",
     "analysisSummary": "MSCI's moat is built on **Self-Reinforcing Network Effects and Regulatory Entrenchment**:",
     "analysisPoints": [
       {
         "title": "The AUM Flywheel",
-        "text": "The more AUM benchmarked to MSCI indexes, the greater the market impact when MSCI rebalances — which forces active managers to track MSCI to manage benchmark risk, entrenching the standard further. This flywheel has been compounding for 50+ years and is structurally impossible to replicate."
+        "text": "The more AUM benchmarked to MSCI indexes, the greater the market impact when MSCI rebalances — which forces active managers to track MSCI to manage benchmark risk, entrenching the standard further. Q2 took asset-based fee run-rate to a record $948M (+25% YoY) on record ETF and non-ETF AUM linked to MSCI indexes. This flywheel has been compounding for 50+ years and is structurally impossible to replicate."
       },
       {
         "title": "Legal and Regulatory Lock-in",
@@ -61,41 +62,73 @@
       },
       {
         "title": "Data + Analytics Bundle",
-        "text": "The Barra risk factor models are built on decades of MSCI index data and are deeply embedded in portfolio management workflows at the world's largest asset managers. An MSCI index client has 3× the incentive to adopt MSCI analytics, ESG, and real assets data, creating a compounding cross-sell flywheel."
+        "text": "The Barra risk factor models are built on decades of MSCI index data and are deeply embedded in portfolio management workflows at the world's largest asset managers. An MSCI index client has 3× the incentive to adopt MSCI analytics, ESG, and real assets data, creating a compounding cross-sell flywheel. Recurring subscription revenue +9.0% in Q2 is that bundle, growing slower than the AUM-linked half — the same split the ratings/index research piece documents."
       }
     ]
   },
   "growth": {
-    "description": "Q1 2026 was a clear acceleration: revenue +14.1% YoY to $850.8M, organic growth above 13%, adj EPS +14%, adj EBITDA +19%, with index asset-based fee run rate hitting a record $872M (+25% YoY) and ETF-linked AUM reaching ~$7T. Both EPS and revenue beat consensus, confirming the AUM flywheel and the BlackRock 2035 anchor are compounding through equity market strength.",
+    "description": "Q2 2026 extended the Q1 acceleration at a slightly slower headline: revenue +12.2% organic to $867M, adj. EPS +18.5% to $4.94, adj. EBITDA margin 62.1%. Index +17.5%; asset-based fees +26.6% and ABF run-rate $948M (+25% YoY); recurring subscriptions +9.0% with organic subscription run-rate +8.1% and retention 95.3%. Total run-rate $3.48B (+12.0%). Fee compression from mix shift into lower-fee products is the one blemish management flagged — they remain focused on overall run-rate growth.",
     "growthAnalysis": {
       "cagrEstimate": "12-16%",
-      "scoreDerivation": "Base 72 + AUM flywheel acceleration (+5) + private assets TAM (+3) + 95% recurring revenue (+2) - equity market cyclicality risk (-2) = 80",
+      "cagrBasis": "Q2 2026 organic revenue +12.2% YoY; Index +17.5% YoY; ABF run-rate $948M (+25% YoY); organic subscription run-rate +8.1% YoY. The 12–16% blend is the subscription engine plus a decayed AUM-linked rate — not the +25% YoY ABF quarter annualised.",
+      "scoreDerivation": "Base 79 (12–16% CAGR midpoint 14%) + 2.7 trajectory (ABF and private assets accelerating; index subscriptions stable) + 4 expanding margins − 5 moderate equity-drawdown risk = 80.",
       "drivers": [
-        { "name": "Asset-Based Fees", "metric": "Q1 2026 ABF run-rate $872M, +25% YoY", "trend": "accelerating" },
-        { "name": "Index Subscriptions", "metric": "Organic subscription growth ~8-9% YoY", "trend": "stable" },
-        { "name": "Private Assets", "metric": "Burgiss/RCA segment scaling double-digit", "trend": "accelerating" }
+        { "name": "Asset-Based Fees", "metric": "Q2 2026 ABF run-rate $948M, +25% YoY; asset-based fees +26.6% in the quarter", "trend": "accelerating" },
+        { "name": "Index Subscriptions", "metric": "Recurring subscriptions +9.0%; organic subscription run-rate +8.1%; retention 95.3%", "trend": "stable" },
+        { "name": "Private Assets", "metric": "Burgiss/RCA segment still scaling double-digit inside the analytics/real-assets bundle", "trend": "accelerating" }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "Sustained 30%+ global equity drawdown over 12-18 months would compress AUM-linked fees and re-rate the multiple.",
+      "keyRisk": "Sustained 30%+ global equity drawdown over 12-18 months would compress AUM-linked fees (now $948M run-rate) and re-rate the multiple. Mix-shift fee compression is observed; a drawdown is the unmaterialised half.",
       "keyRiskSeverity": "moderate",
       "marginTrend": "expanding"
     },
     "additionalNote": {
       "title": "Growth Drivers (3-Year Horizon)",
       "points": [
-        "Global passive ETF AUM expected to grow 12–15% annually; MSCI's AUM-linked fees compound directly with market appreciation",
-        "Private assets analytics: MSCI's acquisitions of Burgiss and Real Capital Analytics position it as the data standard for private equity, real estate, and infrastructure — a $10B+ TAM expansion",
-        "ESG and climate demand: EU SFDR, UK SDR, and SEC climate disclosure rules drive structural demand for MSCI ESG ratings; the First Street acquisition (physics-based climate-risk data) deepens this franchise regardless of US political environment",
-        "AI analytics layer: MSCI AI capabilities applied to factor models and portfolio construction tools command premium pricing"
+        "Global passive ETF AUM expected to grow 12–15% annually; MSCI's AUM-linked fees compound directly with market appreciation — Q2 ABF +25% is that flywheel on a strong tape",
+        "Private assets analytics: MSCI's acquisitions of Burgiss and Real Capital Analytics position it as the data standard for private equity, real estate, and infrastructure",
+        "ESG and climate demand: EU SFDR, UK SDR, and SEC climate disclosure rules drive structural demand for MSCI ESG ratings; the First Street acquisition (physics-based climate-risk data) deepens this franchise",
+        "Fee mix: management flagged ABF fee compression from mix shift into lower-fee products; run-rate growth is the metric they will defend, not per-AUM yield"
       ]
     }
   },
   "valuation": {
-    "score": 73,
-    "description": "At ~$555 (June 26, 2026 close), MSCI has pulled back ~9% from its early-June high near $608 and now trades ~10% below the base case ($620) at ~28× FY2026 consensus EPS of $19.60. The selloff has restored a margin of safety — the stock sits ~68% of the way from bear ($420) to base ($620), versus near-fair-value three weeks ago — even as fundamentals are unchanged after the strong Q1 print. Sell-side consensus price targets near $690 (high $730) imply analysts see further upside; bull-case execution (private assets flywheel, First Street climate analytics, AI pricing) remains the driver beyond base.",
+    "score": 72,
+    "description": "At ~$565 (August 19, 2026) MSCI sits ~9% below the $620 base — 72 on the piecewise scale, almost unchanged from the June ~$555 / 73 print even as Q2 confirmed the AUM flywheel (ABF run-rate $948M). ~29× a mid-teens EPS compounder is still a quality premium, not a bargain, with the discount versus base restored by the June pullback rather than by this print.",
     "valuationNote": {
-      "text": "At ~$555 MSCI trades at ~28× forward earnings — a premium to the market but justified by 95%+ recurring revenue, ~58% EBITDA margins, and near-zero capital intensity. PEG of ~2.0 (28× ÷ ~14% EPS CAGR) leaves limited margin of safety on the multiple itself, so returns track EPS compounding plus the AUM-linked tailwind in rising equity markets. Capital return remains aggressive: MSCI returned $549M to shareholders in Q1 2026 ($399M of buybacks), raised the dividend 14%, and has ~$1.7B remaining on its repurchase authorization.",
+      "text": "At ~$565 MSCI trades at a premium to the market justified by 95%+ recurring revenue, 62% adj. EBITDA margins, and near-zero capital intensity. PEG near 2× (29× ÷ ~14% EPS CAGR) leaves limited margin of safety on the multiple itself, so returns track EPS compounding plus the AUM-linked tailwind in rising equity markets.",
       "fairValue": "$620"
+    },
+    "peAnalysis": {
+      "asOf": "August 19, 2026",
+      "rows": [
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~29×",
+          "note": "adj. EPS $4.94 in Q2; run-rate implies ~$20 FY26"
+        },
+        {
+          "label": "Adj. EBITDA margin",
+          "value": "62.1%",
+          "note": "Q2; Index adj. EBITDA margin 77.8%"
+        },
+        {
+          "label": "Total run-rate",
+          "value": "$3.48B",
+          "note": "+12.0% YoY"
+        },
+        {
+          "label": "Retention",
+          "value": "95.3%",
+          "note": "Q2 vs 94.4% prior year"
+        },
+        {
+          "label": "PEG",
+          "value": "~2.0×",
+          "note": "fwd P/E ÷ ~14% blended EPS CAGR"
+        }
+      ],
+      "summary": "Q2 did not cheapen the stock and did not need to — it confirmed the flywheel the June pullback had already discounted. The remaining gap to the $620 base is a modest margin of safety on a 62-margin franchise, not a deep value argument."
     }
   },
   "scenarios": {
@@ -103,7 +136,7 @@
       "priceTarget": "$420",
       "description": "Global equity bear market deflates AUM-linked revenues, ESG regulatory rollback collapses ESG segment, and passive investing growth stalls as active management resurges.",
       "points": [
-        "30%+ global equity market decline reduces AUM-linked fee revenue by $300–400M",
+        "30%+ global equity market decline reduces AUM-linked fee revenue by $300–400M off the $948M run-rate",
         "US regulatory hostility to ESG mandates spreads globally, reducing ESG segment revenues 40%+",
         "Passive investing growth plateaus as AI-driven active management gains market share",
         "Multiple compresses to 28–30× as AUM-linked revenue cyclicality is re-rated"
@@ -113,10 +146,10 @@
       "priceTarget": "$620",
       "description": "Steady 10–12% annual revenue growth driven by AUM expansion, private assets product ramp, and continued ESG institutional demand outside the US.",
       "points": [
-        "Global ETF AUM grows 12–15% annually, driving AUM-linked revenue compounding",
+        "Global ETF AUM grows 12–15% annually, driving AUM-linked revenue compounding off the $948M ABF run-rate",
         "Private assets analytics segment reaches $400M+ run rate within 3 years",
-        "Analytics and ESG segments grow 8–10% annually on subscription renewal + upsell",
-        "Multiple holds at 37–40× forward earnings given superior recurring revenue quality"
+        "Analytics and ESG segments grow 8–10% annually on subscription renewal + upsell (Q2 organic subscription run-rate +8.1%)",
+        "Multiple holds in the high-30s forward given superior recurring revenue quality"
       ]
     },
     "bull": {
@@ -161,7 +194,7 @@
     },
     "networkEffects": {
       "status": "strong",
-      "note": "The more AUM benchmarked to MSCI indexes, the greater the market impact of MSCI rebalances, which forces active managers to track MSCI to manage benchmark risk. This self-reinforcing flywheel has compounded for 50+ years and is structurally indistinguishable from a natural monopoly in equity benchmarking."
+      "note": "The more AUM benchmarked to MSCI indexes, the greater the market impact of MSCI rebalances, which forces active managers to track MSCI to manage benchmark risk. Q2's $948M ABF run-rate is that flywheel in dollars. This self-reinforcing loop has compounded for 50+ years and is structurally indistinguishable from a natural monopoly in equity benchmarking."
     },
     "transactionEmbedding": {
       "status": "intact",
@@ -171,7 +204,6 @@
       "status": "strong",
       "note": "MSCI indexes are THE system of record for global equity classification. When MSCI reclassifies a country or adjusts index weights, it triggers billions in institutional flows. Fund documents, regulatory filings, and investment mandates globally reference MSCI as the authoritative source — a standard that took 50 years to establish."
     },
-    "verdict": "MSCI's moat is almost entirely AI-immune. The index standard network effect, legal lock-in via fund prospectuses, and 50-year data history cannot be replicated by AI — and AI analytics capabilities built on top of MSCI data actually strengthen the bundle moat. This is one of the most durable franchises in financial services."
-  },
-  "lastAnalyzed": "June 28, 2026"
+    "verdict": "MSCI's moat is almost entirely AI-immune. The index standard network effect, legal lock-in via fund prospectuses, and 50-year data history cannot be replicated by AI — and AI analytics capabilities built on top of MSCI data actually strengthen the bundle moat. Q2 2026 (Index +17.5%, ABF run-rate $948M) is the standard collecting its fee, not a thesis change. This remains one of the most durable franchises in financial services."
+  }
 }
