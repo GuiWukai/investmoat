@@ -109,7 +109,10 @@ function StockSearch({ inputRef }: { inputRef: React.RefObject<HTMLInputElement 
           <Input
             ref={inputRef}
             aria-keyshortcuts="Meta+K Control+K"
+            autoCapitalize="off"
+            autoCorrect="off"
             placeholder="Search stocks…"
+            spellCheck={false}
           />
           <kbd className="pointer-events-none mr-1 hidden shrink-0 rounded-md border border-border bg-foreground/[0.04] px-1.5 py-0.5 font-mono text-[10px] font-medium text-muted lg:inline">
             {shortcut}
@@ -218,9 +221,12 @@ function MobileSearchSheet({
                   <SearchField.Group className="h-11">
                     <SearchField.SearchIcon />
                     <SearchField.Input
+                      autoCapitalize="off"
+                      autoCorrect="off"
                       autoFocus
                       enterKeyHint="search"
                       placeholder="Search by name or ticker…"
+                      spellCheck={false}
                     />
                     <SearchField.ClearButton className="mr-2 size-5 before:absolute before:-inset-2 before:content-['']" />
                   </SearchField.Group>

@@ -440,8 +440,11 @@ function StocksPageInner() {
             <SearchField.SearchIcon />
             <SearchField.Input
               ref={searchInputRef}
+              autoCapitalize="off"
+              autoCorrect="off"
               enterKeyHint="search"
               placeholder="Search by name or ticker…"
+              spellCheck={false}
             />
             {/* The 20px chip is a fiddly thing to hit with a thumb, but scaling
                 it up turns it into a blob. Grow the hit area instead and leave
