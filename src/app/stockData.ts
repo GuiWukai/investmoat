@@ -61,6 +61,7 @@ import pltrData    from '@/data/stocks/pltr.json';
 import raceData    from '@/data/stocks/race.json';
 import shopData    from '@/data/stocks/shop.json';
 import mstrData    from '@/data/stocks/mstr.json';
+import mrnaData    from '@/data/stocks/mrna.json';
 import sofiData    from '@/data/stocks/sofi.json';
 import solanaData  from '@/data/stocks/solana.json';
 import spgiData    from '@/data/stocks/spgi.json';
@@ -324,6 +325,7 @@ const allCoverageData = [
     { name: "Elevance Health",   ticker: "ELV",   slug: "elv",         scores: [m(elvData),         g(elvData),         v(elvData)],         href: "/stocks/elv",         category: "Healthcare",  ...t(elvData)         },
     { name: "Vertex Pharmaceuticals", ticker: "VRTX", slug: "vrtx",   scores: [m(vrtxData),        g(vrtxData),        v(vrtxData)],        href: "/stocks/vrtx",        category: "Healthcare",  ...t(vrtxData)        },
     { name: "Regeneron",         ticker: "REGN",  slug: "regn",        scores: [m(regnData),        g(regnData),        v(regnData)],        href: "/stocks/regn",        category: "Healthcare",  ...t(regnData)        },
+    { name: "Moderna",           ticker: "MRNA",  slug: "mrna",        scores: [m(mrnaData),        g(mrnaData),        v(mrnaData)],        href: "/stocks/mrna",        category: "Healthcare",  ...t(mrnaData)        },
     { name: "DoorDash",          ticker: "DASH",  slug: "dash",        scores: [m(dashData),        g(dashData),        v(dashData)],        href: "/stocks/dash",        category: "Platforms",       ...t(dashData)        },
     { name: "Roblox",            ticker: "RBLX",  slug: "rblx",        scores: [m(rblxData),        g(rblxData),        v(rblxData)],        href: "/stocks/rblx",        category: "Platforms",       ...t(rblxData)        },
     { name: "iShares Semiconductor ETF", ticker: "SOXX", slug: "soxx", scores: [m(soxxData),        g(soxxData),        v(soxxData)],        href: "/stocks/soxx",        category: "Semiconductors",    ...t(soxxData)        },
