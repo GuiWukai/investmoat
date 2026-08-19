@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
-import { useRouter } from "next/navigation";
+import { Suspense, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { ChevronRight, SlidersHorizontal, ArrowUp, ArrowDown, ArrowUpDown, LayoutGrid } from "lucide-react";
 import {
@@ -47,6 +47,42 @@ const SORT_OPTIONS: { key: SortKey; label: string }[] = [
   { key: "val",    label: "Val"    },
   { key: "name",   label: "Name"   },
 ];
+
+function isSortKey(value: string | null): value is SortKey {
+  return SORT_OPTIONS.some((opt) => opt.key === value);
+}
+
+function defaultSortDir(key: SortKey): SortDir {
+  return key === "name" ? "asc" : "desc";
+}
+
+function parseStocksParams(sp: URLSearchParams): {
+  q: string;
+  cat: string;
+  sort: SortKey;
+  dir: SortDir;
+} {
+  const q = sp.get("q") ?? "";
+  const catRaw = sp.get("cat") ?? "all";
+  const cat = CATEGORIES.some((c) => c.key === catRaw) ? catRaw : "all";
+  const sortParam = sp.get("sort");
+  const sort = isSortKey(sortParam) ? sortParam : "score";
+  const dirRaw = sp.get("dir");
+  const dir: SortDir = dirRaw === "asc" || dirRaw === "desc" ? dirRaw : defaultSortDir(sort);
+  return { q, cat, sort, dir };
+}
+
+/** Omit defaults so `/stocks` stays a clean URL when nothing is filtered. */
+function stocksHref(state: { q: string; cat: string; sort: SortKey; dir: SortDir }): string {
+  const params = new URLSearchParams();
+  const q = state.q.trim();
+  if (q) params.set("q", q);
+  if (state.cat !== "all") params.set("cat", state.cat);
+  if (state.sort !== "score") params.set("sort", state.sort);
+  if (state.dir !== defaultSortDir(state.sort)) params.set("dir", state.dir);
+  const qs = params.toString();
+  return qs ? `/stocks?${qs}` : "/stocks";
+}
 
 function scoreColor(score: number) {
   if (score >= 90) return "#10b981";
@@ -129,7 +165,6 @@ function StockRow({
   loading: boolean;
   sortKey: SortKey;
 }) {
-  const router = useRouter();
   const accentColor = TICKER_COLORS[stock.ticker] ?? '#6b7280';
   // Mobile only shows one score pill — match it to the active sort so the
   // number lines up with what the user asked to order by. Desktop keeps the
@@ -138,9 +173,9 @@ function StockRow({
   const mobileNeedsLive = sortKey === "score" || sortKey === "name";
 
   return (
-    <button
-      onClick={() => router.push(stock.href)}
-      className="group w-full flex items-center gap-3 sm:gap-4 px-4 sm:px-5 py-3.5 hover:bg-foreground/[0.04] transition-colors text-left"
+    <Link
+      href={stock.href}
+      className="group flex w-full items-center gap-3 px-4 py-3.5 text-left no-underline transition-colors hover:bg-foreground/[0.04] sm:gap-4 sm:px-5"
     >
       {/* Rank */}
       {rank !== undefined && (
@@ -197,7 +232,7 @@ function StockRow({
         size={14}
         className="shrink-0 text-foreground/15 group-hover:text-foreground/50 transition-colors"
       />
-    </button>
+    </Link>
   );
 }
 
@@ -253,12 +288,27 @@ function MobileSelect({
   );
 }
 
-export default function StocksPage() {
-  const [query, setQuery] = useState("");
-  const [activeCategory, setActiveCategory] = useState("all");
-  const [sortKey, setSortKey] = useState<SortKey>("score");
-  const [sortDir, setSortDir] = useState<SortDir>("desc");
+function StocksPageInner() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const initial = parseStocksParams(searchParams);
+
+  const [query, setQuery] = useState(initial.q);
+  const [activeCategory, setActiveCategory] = useState(initial.cat);
+  const [sortKey, setSortKey] = useState<SortKey>(initial.sort);
+  const [sortDir, setSortDir] = useState<SortDir>(initial.dir);
   const searchInputRef = useRef<HTMLInputElement>(null);
+
+  // Keep the address bar in sync so a filtered view is shareable — and so the
+  // JSON-LD SearchAction (`/stocks?q=`) actually lands on a matching list.
+  useEffect(() => {
+    const href = stocksHref({ q: query, cat: activeCategory, sort: sortKey, dir: sortDir });
+    const current = `${pathname}${searchParams.toString() ? `?${searchParams}` : ""}`;
+    if (href !== current) {
+      router.replace(href, { scroll: false });
+    }
+  }, [query, activeCategory, sortKey, sortDir, pathname, router, searchParams]);
 
   // Live prices fetched once at the page level so the Score column can be sorted
   // against price-adjusted valuations (not just the static fallback).
@@ -330,7 +380,7 @@ export default function StocksPage() {
       setSortDir(d => (d === "asc" ? "desc" : "asc"));
     } else {
       setSortKey(key);
-      setSortDir(key === "name" ? "asc" : "desc");
+      setSortDir(defaultSortDir(key));
     }
   }
 
@@ -390,8 +440,11 @@ export default function StocksPage() {
             <SearchField.SearchIcon />
             <SearchField.Input
               ref={searchInputRef}
+              autoCapitalize="off"
+              autoCorrect="off"
               enterKeyHint="search"
               placeholder="Search by name or ticker…"
+              spellCheck={false}
             />
             {/* The 20px chip is a fiddly thing to hit with a thumb, but scaling
                 it up turns it into a blob. Grow the hit area instead and leave
@@ -465,7 +518,7 @@ export default function StocksPage() {
                   // chosen again, so direction lives on the sibling button.
                   if (next === sortKey) return;
                   setSortKey(next);
-                  setSortDir(next === "name" ? "asc" : "desc");
+                  setSortDir(defaultSortDir(next));
                 }}
                 selectedKey={sortKey}
               >
@@ -521,9 +574,21 @@ export default function StocksPage() {
 
         {sorted.length === 0 ? (
           <Card className="px-6 py-16 text-center">
-            <p className="text-foreground/30 text-sm">
-              {trimmed ? `No stocks match "${query.trim()}"` : "No stocks in this category"}
+            <p className="text-sm text-foreground/30">
+              {trimmed ? `No stocks match “${query.trim()}”` : "No stocks in this category"}
             </p>
+            {(trimmed || activeCategory !== "all") && (
+              <button
+                type="button"
+                className="mt-4 text-sm font-semibold text-gold-bright transition-colors hover:text-gold"
+                onClick={() => {
+                  setQuery("");
+                  setActiveCategory("all");
+                }}
+              >
+                Clear search and filters
+              </button>
+            )}
           </Card>
         ) : (
           <Card className="overflow-hidden divide-y divide-foreground/[0.04]">
@@ -548,6 +613,25 @@ export default function StocksPage() {
           </p>
         )}
       </div>
+    </div>
+  );
+}
+
+export default function StocksPage() {
+  return (
+    <Suspense fallback={<StocksPageFallback />}>
+      <StocksPageInner />
+    </Suspense>
+  );
+}
+
+function StocksPageFallback() {
+  return (
+    <div className="animate-fade-in space-y-8 md:space-y-10">
+      <header>
+        <p className="section-label mb-3">Coverage Universe</p>
+        <h1 className="page-title gradient-text-animated mb-4">Stock Coverage</h1>
+      </header>
     </div>
   );
 }

@@ -386,9 +386,42 @@ h1, h2, h3, h4 {
   outline-offset: 2px;
 }
 
+/* Skip link — off-canvas until focused, then sits over the gold canvas. */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4.5rem;
+  z-index: 400;
+  padding: 0.55rem 0.95rem;
+  border-radius: 0.5rem;
+  background: var(--gold);
+  color: #0a0b0d;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: var(--overlay-shadow);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Skip-to-content focuses <main>; a 2px ring around the whole column is noise. */
+#main-content:focus,
+#main-content:focus-visible {
+  outline: none;
+}
+
 /* Hash navigation eases instead of jumping — undone under reduced motion. */
 html {
   scroll-behavior: smooth;
+}
+
+@media (max-width: 1023px) {
+  html {
+    /* Keep in-page jumps and focused rows out from under the FAB. */
+    scroll-padding-bottom: calc(6.5rem + env(safe-area-inset-bottom, 0px));
+  }
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -450,6 +483,10 @@ html {
 .content {
   flex: 1;
   padding: 1.5rem;
+  /* Leave room for the mobile FAB cluster so the last list row stays tappable
+     even when the dock is revealed (scroll-up). Two 48px buttons plus gap and
+     the safe-area offset. */
+  padding-bottom: calc(1.5rem + 6.5rem + env(safe-area-inset-bottom, 0px));
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;

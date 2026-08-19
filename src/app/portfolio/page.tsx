@@ -1,6 +1,5 @@
 'use client';
 
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { PieChart, ShieldCheck, ChevronRight, TrendingUp, TrendingDown, Eye } from "lucide-react";
@@ -284,8 +283,6 @@ function contrastFill(hex: string): string {
 }
 
 export default function PortfolioPage() {
-  const router = useRouter();
-
   const [allPrices, setAllPrices] = useState<Record<string, number | null>>({});
   const [allChangePercents, setAllChangePercents] = useState<Record<string, number | null>>({});
   const [allPricesLoaded, setAllPricesLoaded] = useState(false);
@@ -627,18 +624,15 @@ export default function PortfolioPage() {
                     </div>
                     <div className="flex flex-wrap gap-x-2 gap-y-0.5">
                       {theme.holdings.map((stock) => (
-                        <button
+                        <Link
                           key={stock.ticker}
-                          type="button"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            router.push(stock.href);
-                          }}
-                          className="text-[10px] font-bold text-foreground/60 hover:text-foreground transition-colors"
+                          href={stock.href}
+                          onClick={(e) => e.stopPropagation()}
+                          className="text-[10px] font-bold text-foreground/60 no-underline transition-colors hover:text-foreground"
                         >
                           {stock.ticker}
                           <span className="text-foreground/35 font-medium"> {dynamicWeights[stock.ticker] ?? 0}%</span>
-                        </button>
+                        </Link>
                       ))}
                     </div>
                   </div>
