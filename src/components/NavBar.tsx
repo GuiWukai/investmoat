@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import { Search, BarChart2, TrendingUp, Menu, FileText, CalendarDays, Briefcase, X, ArrowUp, ArrowLeftRight, LayoutGrid } from 'lucide-react';
@@ -70,16 +70,22 @@ function useStockResults(query: string, limit: number): StockResult[] {
  * an Escape key. On touch it does not, which is why mobile gets its own surface
  * below rather than this component inside a drawer.
  */
+function useSearchShortcutLabel() {
+  return useSyncExternalStore(
+    () => () => {},
+    () => {
+      const mac = /Mac|iPhone|iPad/.test(navigator.platform) || /Mac OS X/.test(navigator.userAgent);
+      return mac ? '⌘K' : 'Ctrl+K';
+    },
+    () => 'Ctrl+K',
+  );
+}
+
 function StockSearch({ inputRef }: { inputRef: React.RefObject<HTMLInputElement | null> }) {
   const [query, setQuery] = useState('');
   const router = useRouter();
   const results = useStockResults(query, 6);
-  const [shortcut, setShortcut] = useState('Ctrl+K');
-
-  useEffect(() => {
-    const mac = /Mac|iPhone|iPad/.test(navigator.platform) || /Mac OS X/.test(navigator.userAgent);
-    setShortcut(mac ? '⌘K' : 'Ctrl+K');
-  }, []);
+  const shortcut = useSearchShortcutLabel();
 
   return (
     <div data-desk-search="">
