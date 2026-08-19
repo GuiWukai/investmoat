@@ -48,8 +48,12 @@ function ArcGauge({ score }: { score: number }) {
   const animated = useCountUp(score);
   const R = 50;
   const C = 2 * Math.PI * R;
-  const offset = C - (animated / 100) * C;
   const hex = scoreHex(score);
+  // A dashed circle with round caps never quite closes: at 100 the dash
+  // starts and ends at 12 o'clock, and the two round caps leave a notch.
+  // Draw a solid closed stroke instead so a perfect score looks full.
+  const isComplete = animated >= 100;
+  const offset = C - (animated / 100) * C;
 
   return (
     <svg width="120" height="120" viewBox="0 0 120 120">
@@ -59,9 +63,9 @@ function ArcGauge({ score }: { score: number }) {
         fill="none"
         stroke={hex}
         strokeWidth="7"
-        strokeLinecap="round"
-        strokeDasharray={`${C}`}
-        strokeDashoffset={`${offset}`}
+        strokeLinecap={isComplete ? 'butt' : 'round'}
+        strokeDasharray={isComplete ? undefined : C}
+        strokeDashoffset={isComplete ? undefined : offset}
         transform="rotate(-90 60 60)"
         style={{ transition: 'stroke-dashoffset 0.9s cubic-bezier(0.4,0,0.2,1)', filter: `drop-shadow(0 0 6px ${hex}55)` }}
       />
