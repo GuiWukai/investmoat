@@ -160,6 +160,11 @@ function RankBadge({ rank }: { rank: number }) {
   );
 }
 
+/** Full-row stock link. Children use pointer-events-none so iOS taps on empty
+ *  flex space, scores, and the chevron hit the <a> rather than only the name. */
+const HOLDING_ROW_CLASS =
+  "group relative flex w-full cursor-pointer touch-manipulation items-center gap-3 px-4 py-3.5 text-left no-underline transition-colors hover:bg-foreground/[0.04] md:gap-4 md:px-5 [&>*]:pointer-events-none";
+
 // ─── Allocation sectors ───────────────────────────────────────────────────────
 // Per-name weights cluster around 4–5% under the 10% cap, so a 25-slice ticker
 // pie reads as a uniform ring. Rolling the granular stockMeta categories into
@@ -755,7 +760,8 @@ export default function PortfolioPage() {
               <Link
                 key={stock.ticker}
                 href={stock.href}
-                className="group flex w-full items-center gap-3 px-4 py-3.5 text-left no-underline transition-colors hover:bg-foreground/[0.04] md:gap-4 md:px-5"
+                aria-label={`Open ${stock.name} analysis`}
+                className={HOLDING_ROW_CLASS}
               >
                 {/* Position in the IM25, not universe composite rank */}
                 <RankBadge rank={idx + 1} />
@@ -895,7 +901,8 @@ export default function PortfolioPage() {
                 <Link
                   key={stock.ticker}
                   href={stock.href}
-                  className="group flex w-full animate-slide-in-left items-center gap-3 px-4 py-3.5 text-left no-underline stagger-fill-both transition-colors hover:bg-foreground/[0.04] md:gap-4 md:px-5"
+                  aria-label={`Open ${stock.name} analysis`}
+                  className={`${HOLDING_ROW_CLASS} animate-slide-in-left stagger-fill-both`}
                   style={{ animationDelay: `${0.5 + idx * 0.035}s` }}
                 >
                   {/* Continues after the IM25 so a gated #2 is not still marked 2 */}
