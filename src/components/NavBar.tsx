@@ -346,18 +346,20 @@ function NavLink({
  *
  * Search lives on the cluster, so it stays visible at the top of a page —
  * hiding it there would bury the most-used action. It tucks away while the
- * reader scrolls down and slides back when they look up. A page that cannot
- * scroll has no "up" gesture, so the cluster stays put there.
+ * reader scrolls down and slides back when they look up. At the bottom of a
+ * long list there is no further "down", so the cluster stays put there too
+ * (the page leaves padding under the last row for it). A page that cannot
+ * scroll has no "up" gesture, so the cluster stays put there as well.
  */
 function useFabRevealedOnScrollUp(forceVisible: boolean) {
   const pathname = usePathname();
   const [revealed, setRevealed] = useState(true);
 
   useEffect(() => {
-    setRevealed(
-      window.scrollY <= 24 ||
-        document.documentElement.scrollHeight <= window.innerHeight + 24
-    );
+    const doc = document.documentElement;
+    const y = window.scrollY;
+    const atBottom = y + window.innerHeight >= doc.scrollHeight - 24;
+    setRevealed(y <= 24 || atBottom || doc.scrollHeight <= window.innerHeight + 24);
   }, [pathname]);
 
   useEffect(() => {
@@ -374,6 +376,11 @@ function useFabRevealedOnScrollUp(forceVisible: boolean) {
       return document.documentElement.scrollHeight > window.innerHeight + 24;
     }
 
+    function atDocumentBottom() {
+      const doc = document.documentElement;
+      return window.scrollY + window.innerHeight >= doc.scrollHeight - 24;
+    }
+
     function update() {
       frame = 0;
       if (!pageCanScroll()) {
@@ -382,7 +389,7 @@ function useFabRevealedOnScrollUp(forceVisible: boolean) {
         return;
       }
       const y = window.scrollY;
-      if (y <= 24) {
+      if (y <= 24 || atDocumentBottom()) {
         setRevealed(true);
         lastY = y;
         return;
