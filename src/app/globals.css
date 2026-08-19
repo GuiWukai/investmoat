@@ -417,6 +417,13 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (max-width: 1023px) {
+  html {
+    /* Keep in-page jumps and focused rows out from under the FAB. */
+    scroll-padding-bottom: calc(6.5rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+
 /* ─────────────────────────────────────────────────────────────────────────────
    Layout shell
    ───────────────────────────────────────────────────────────────────────────── */
@@ -476,8 +483,10 @@ html {
 .content {
   flex: 1;
   padding: 1.5rem;
-  /* Leave room for the mobile FAB cluster so the last list row stays tappable. */
-  padding-bottom: calc(1.5rem + 5.25rem + env(safe-area-inset-bottom, 0px));
+  /* Leave room for the mobile FAB cluster so the last list row stays tappable
+     even when the dock is revealed (scroll-up). Two 48px buttons plus gap and
+     the safe-area offset. */
+  padding-bottom: calc(1.5rem + 6.5rem + env(safe-area-inset-bottom, 0px));
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
