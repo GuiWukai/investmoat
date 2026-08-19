@@ -801,6 +801,7 @@ function MobileFabDock({
         aria-hidden={!revealed}
         className={`fab-dock fixed z-[200] lg:hidden ${revealed ? '' : 'fab-dock--hidden'}`}
         data-fab-dock=""
+        inert={!revealed ? true : undefined}
         ref={dockRef}
         style={{ bottom: 'max(1.25rem, calc(env(safe-area-inset-bottom, 0px) + 0.75rem))' }}
       >
@@ -810,6 +811,7 @@ function MobileFabDock({
           className="fab-speed-dial absolute bottom-[calc(100%+0.65rem)] flex flex-col gap-2"
           data-open={isMenuOpen || undefined}
           id="mobile-fab-menu"
+          inert={!isMenuOpen ? true : undefined}
         >
           {navLinks.map((item, index) => {
             const isActive = pathname === item.href || pathname.startsWith(item.href + '/');
