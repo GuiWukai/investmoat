@@ -238,13 +238,16 @@ a.product-card:hover {
 
 /* Mobile FAB speed-dial: items fan up from the button so a thumb can reach
    every destination without crossing the screen. Closed items sit collapsed
-   on the FAB (down + slightly scaled) and stay out of the hit tree.
+   on the FAB (down + slightly scaled). Transforms do not shrink layout, so
+   the nav would still be a tall invisible column above the dock unless the
+   container itself is out of the hit tree — items opt back in when open.
    Default lean is the right edge; `html[data-fab-hand="left"]` mirrors it
    for a left thumb (set before paint from localStorage, then by the detector). */
 .fab-speed-dial {
   --fab-stagger: 48ms;
   right: 0;
   align-items: flex-end;
+  pointer-events: none;
 }
 
 .fab-speed-dial__item {
