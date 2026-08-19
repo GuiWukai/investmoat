@@ -50,6 +50,7 @@ import unh from './unh.json';
 import mco from './mco.json';
 import sofi from './sofi.json';
 import mstr from './mstr.json';
+import mrna from './mrna.json';
 import fanuc from './fanuc.json';
 import now from './now.json';
 import fig from './fig.json';
@@ -185,6 +186,7 @@ const stocksMap: Record<string, StockAnalysisData> = {
   mco: mco as StockAnalysisData,
   sofi: sofi as StockAnalysisData,
   mstr: mstr as StockAnalysisData,
+  mrna: mrna as StockAnalysisData,
   fanuc: fanuc as StockAnalysisData,
   now: now as StockAnalysisData,
   fig: fig as StockAnalysisData,

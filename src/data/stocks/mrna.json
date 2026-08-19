@@ -1,0 +1,240 @@
+{
+  "slug": "mrna",
+  "ticker": "MRNA",
+  "name": "Moderna, Inc.",
+  "lastAnalyzed": "August 19, 2026",
+  "headerStats": [
+    {
+      "label": "Ticker",
+      "value": "MRNA"
+    },
+    {
+      "label": "Market Cap",
+      "value": "~$70B"
+    }
+  ],
+  "chips": [
+    {
+      "label": "Healthcare | mRNA Vaccines + Oncology",
+      "color": "primary"
+    },
+    {
+      "label": "Phase 3 Cancer Vaccine",
+      "color": "success"
+    },
+    {
+      "label": "COVID Revenue Reset",
+      "color": "warning"
+    }
+  ],
+  "metrics": [
+    {
+      "title": "INTerpath-001",
+      "value": "Phase 3 hit",
+      "label": "Intismeran + KEYTRUDA met RFS and DMFS vs KEYTRUDA alone in resected stage IIB–IV melanoma (Aug 19)",
+      "icon": "Award",
+      "color": "#10b981"
+    },
+    {
+      "title": "Q2 2026 Revenue",
+      "value": "$145M",
+      "label": "Flat YoY; H1 $534M (+114%) on international COVID deliveries. FY2026 guide: up to +10% vs $1.9B FY2025",
+      "icon": "TrendingUp",
+      "color": "#0ea5e9"
+    },
+    {
+      "title": "Cash & Investments",
+      "value": "$6.9B",
+      "label": "June 30, before $950M Arbutus settlement paid in July; YE 2026 guided $4.7–5.2B",
+      "icon": "DollarSign",
+      "color": "#7c3aed"
+    }
+  ],
+  "moat": {
+    "description": "Moderna's moat is an mRNA design-and-manufacture platform that just produced the first positive Phase 3 individualized neoantigen cancer therapy — intismeran autogene, 50/50 with Merck — sitting on top of a still-resetting respiratory vaccine franchise. The platform is real and now clinically validated in adjuvant melanoma; it is not a patent fortress, and COVID IP was just settled for $950 million.",
+    "analysisTitle": "The mRNA Platform, Now with a Phase 3 Oncology Proof",
+    "analysisSummary": "The competitive position rests on **individualized neoantigen manufacturing plus a 50/50 Merck oncology collaboration**, not on COVID vaccine share which has already collapsed:",
+    "analysisPoints": [
+      {
+        "title": "Intismeran: first Phase 3 mRNA cancer therapy",
+        "text": "On August 19, 2026 Merck and Moderna reported that INTerpath-001 (1,137 patients, 2:1, resected stage IIB–IV melanoma) met recurrence-free survival and distant metastasis-free survival at a pre-specified interim versus KEYTRUDA alone — the first Phase 3 win for an individualized neoantigen therapy and the first to show a clinically meaningful improvement over KEYTRUDA monotherapy in adjuvant melanoma. Hazard ratios were not disclosed; full data go to a medical meeting and to regulators. Five-year Phase 2b (KEYNOTE-942) showed a 49% cut in recurrence or death (HR 0.51) and a 59% cut in distant metastasis or death (HR 0.411). Nine Phase 2/3 INTerpath trials are underway across melanoma, NSCLC, bladder cancer and renal cell carcinoma; adjuvant RCC Phase 2 is fully enrolled and may be the next readout."
+      },
+      {
+        "title": "Personalized manufacturing, 50/50 with Merck",
+        "text": "Each intismeran dose is built from a patient's tumor mutational signature — synthetic mRNA coding for up to 34 neoantigens inside Moderna's LNP. That workflow (sequencing → design → GMP batch per patient) is the switching cost, and it is also the scale risk: commercial adjuvant melanoma would require industrializing one-lot-per-patient manufacturing. Merck paid $250 million in 2022 to exercise its option; costs and profits are shared equally worldwide. Moderna does not own the oncology P&L outright, but it keeps the manufacturing node and the platform IP."
+      },
+      {
+        "title": "Respiratory franchise after the COVID cliff",
+        "text": "FY2025 revenue was $1.9 billion after the pandemic unwind. Spikevax, mNEXSPIKE and mRESVIA remain the cash products; mFLUSIVA (mRNA-1010) won FDA approval on August 5, 2026 for adults 50+ (traditional 50–64, accelerated 65+) for the 2026–27 season, and mCOMBRIAX (flu+COVID) is authorized in the EU. 2026 guidance is up to +10% growth, ~50/50 US/international, with ~55% of H2 recognized in Q3. Norovirus (mRNA-1403) missed early-success criteria at the Phase 3 interim and needs another cohort. The respiratory book funds the oncology build; it is not a growth engine on the scale of 2021–22."
+      },
+      {
+        "title": "IP settlement and remaining legal drag",
+        "text": "H1 2026 cost of sales included $884 million of royalties tied to a $950 million Arbutus/Genevant settlement paid in July. That cleared the largest LNP-patent overhang but left potential additional exposure of up to $1.3 billion and other ongoing litigation. Regulatory lock-in on approved vaccines is real; the COVID IP estate is no longer a free option."
+      }
+    ]
+  },
+  "growth": {
+    "description": "The 3–5 year growth path is no longer a COVID-decline story. FY2025 printed $1.9B; 2026 is guided up to +10% (~$2.1B) on international partnerships and mNEXSPIKE, with mFLUSIVA adding from the 2026–27 flu season. Intismeran is still pre-revenue — a 2027 filing and 2027–28 approval is the base path after today's Phase 3 hit — but a melanoma launch plus even one additional INTerpath indication would make oncology the second franchise by 2029. Q2 revenue was $145M (flat YoY) with a $(782)M GAAP loss ($(1.97)/sh); H1 revenue of $534M (+114%) is a seasonal-base effect, not the run-rate. Opex is still being cut (R&D guided $2.9B, SG&A $1.0B) and year-end cash is guided $4.7–5.2B after the settlement.",
+    "growthAnalysis": {
+      "cagrEstimate": "12-20%",
+      "cagrBasis": "FY2025 revenue of $1.9B is the accrual series. 2026 is guided up to +10% YoY (~$2.1B); Q2 2026 was $145M (flat YoY) while H1 was $534M (+114% YoY on a depressed 2025 base). The 12–20% 3–5 year band decays that near-term +10% YoY respiratory path and layers intismeran from a 2027–28 melanoma launch (Moderna's 50% of a multi-billion peak) plus mFLUSIVA's first seasons. It is not an extrapolation of H1's +114% YoY, and it assumes oncology contributes inside the forecast window rather than remaining option value.",
+      "scoreDerivation": "Base ~81 (12–20% CAGR, midpoint 16%) + 2.7 trajectory (intismeran and flu accelerating, respiratory stable) + 0 stable margins − 10 high residual risk (Phase 3 HRs unpublished, OS immature, other tumors unproven) ≈ 73. The COVID cliff is already in the $1.9B base, not double-counted in severity.",
+      "drivers": [
+        {
+          "name": "Intismeran autogene (mRNA-4157 / V940)",
+          "metric": "INTerpath-001 Phase 3 hit RFS + DMFS (Aug 19); 9 P2/P3 trials; Merck 50/50; pre-revenue, filing talks next",
+          "trend": "accelerating"
+        },
+        {
+          "name": "mFLUSIVA + respiratory combos",
+          "metric": "FDA approved Aug 5 for adults 50+; 2026–27 US season launch; mCOMBRIAX EU-authorized; norovirus interim miss",
+          "trend": "accelerating"
+        },
+        {
+          "name": "COVID + RSV (Spikevax, mNEXSPIKE, mRESVIA)",
+          "metric": "Q2 product sales $94M; FY2026 up to +10% vs $1.9B, COVID-rate declines already in the guide",
+          "trend": "stable"
+        }
+      ],
+      "primaryType": "TAM expansion",
+      "keyRisk": "If FDA requires mature overall survival before accepting an intismeran filing and INTerpath-001 OS is not ready by mid-2027, and the fully enrolled Phase 2 adjuvant RCC readout (possible by year-end 2026) fails to corroborate the melanoma signal, intismeran stays a single-indication option while cash burns toward the $4.7–5.2B year-end floor — collapsing the platform multiple now in the price.",
+      "keyRiskSeverity": "high",
+      "marginTrend": "stable"
+    }
+  },
+  "valuation": {
+    "score": 59,
+    "description": "At $174.38 the stock has nearly tripled from the $62.96 close before the INTerpath-001 release, taking market cap to ~$70B. That is ~33× the ~$2.1B 2026 revenue guide and prices a multi-indication oncology platform, not a melanoma-only launch. 12–24 month fair value after the spike settles is the $145 base: melanoma filing in 2027 with one additional INTerpath signal. Spot sits ~20% above that base, 28% of the way toward the $250 bull. Trailing EPS is negative ($(7.98)); P/E is not a useful multiple until profitability, which is still a 2028–29 question.",
+    "peAnalysis": {
+      "asOf": "August 19, 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "N/A",
+          "note": "TTM EPS $(7.98); Q2 2026 GAAP EPS $(1.97)"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "N/A",
+          "note": "Still GAAP-unprofitable; 2026 framework is a $(2–3)B operating loss on ~$2.1B revenue"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "N/A",
+          "note": "No forward earnings denominator until the opex cut and oncology launch converge"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~33×",
+          "note": "~$70B market cap / ~$2.1B FY2026 revenue (up to +10% on $1.9B FY2025)"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "N/A",
+          "note": "H1 2026 operating cash outflow $1.16B; YE cash guided $4.7–5.2B after the $950M settlement"
+        }
+      ],
+      "summary": "On current sales the stock is expensive: ~33× NTM revenue for a still-unprofitable vaccine company. The multiple is a platform claim, not a respiratory claim — pre-readout the same $2.1B book was valued at ~$25B (~12×). That re-rating is only earned if intismeran files on RFS/DMFS, melanoma launches in 2027–28, and at least one more tumor type corroborates. Until Phase 3 hazard ratios are public and OS matures, the $174 print is closer to the bull path than to a melanoma-only DCF."
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "priceTarget": "$85",
+      "description": "FDA wants mature OS before filing, the RCC readout does not corroborate melanoma, and COVID vaccination rates keep falling — the platform multiple unwinds toward the pre-readout capitalization plus a modest Phase 3 premium.",
+      "points": [
+        "Regulators decline to file on RFS/DMFS alone and INTerpath-001 overall survival is not mature by mid-2027, pushing any melanoma launch past 2028",
+        "The fully enrolled Phase 2 adjuvant RCC study fails to show a KEYTRUDA-like additive benefit, cutting the multi-tumor read-through that today's move priced",
+        "FY2026 revenue misses the +10% guide as US COVID demand undershoots and mFLUSIVA's first season is formulary-constrained, with cash through the $4.7B low end of the year-end range"
+      ]
+    },
+    "base": {
+      "priceTarget": "$145",
+      "description": "Intismeran files on the Phase 3 melanoma package in 2027, mFLUSIVA contributes in the 2026–27 season, and one additional INTerpath indication (RCC or bladder) produces a supportive signal — enough to hold a diversified-platform multiple without assuming NSCLC is already won.",
+      "points": [
+        "Merck and Moderna present INTerpath-001 HRs in line with the Phase 2b direction of effect and open FDA/EMA filing talks in 1H 2027",
+        "FY2026 revenue lands near the +10% guide (~$2.1B) and mFLUSIVA is available for the 2026–27 US season in adults 50+",
+        "Adjuvant RCC Phase 2 (fully enrolled) or muscle-invasive bladder Phase 2 prints a directional win by mid-2027, keeping the nine-trial program intact"
+      ]
+    },
+    "bull": {
+      "priceTarget": "$250",
+      "description": "Melanoma is approved on RFS/DMFS, a second tumor type hits a registrational bar, and the market treats intismeran as a multi-indication KEYTRUDA-combination franchise rather than a single-cancer vaccine.",
+      "points": [
+        "FDA accepts an adjuvant-melanoma filing without waiting for mature OS, and a 2027–28 approval makes intismeran the first individualized neoantigen therapy on the market",
+        "A second INTerpath study (adjuvant RCC, which William Blair flagged as potentially registrational, or high-risk Stage 1 NSCLC) meets its primary endpoint, unlocking a multi-billion peak-sales path beyond melanoma",
+        "Personalized manufacturing scales without a capacity bottleneck, mFLUSIVA plus mCOMBRIAX lift the respiratory floor, and the cash-burn path to 2028 profitability becomes visible"
+      ]
+    }
+  },
+  "tenMoats": {
+    "learnedInterfaces": {
+      "status": "na",
+      "note": "Physicians prescribe on trial evidence and guidelines, not a software workflow; interface learning costs do not apply to vaccines or individualized therapies."
+    },
+    "businessLogic": {
+      "status": "intact",
+      "note": "The per-patient neoantigen design, LNP formulation and one-lot GMP workflow is vendor-owned process knowledge BioNTech and others can contest but cannot copy from a label. It is a real process moat, not a monopoly — Pfizer/BioNTech already commercialized mRNA at scale."
+    },
+    "publicDataAccess": {
+      "status": "na",
+      "note": "Moderna does not control access to a public data source; tumor sequencing for intismeran is patient-specific and contractual, not a public-data franchise."
+    },
+    "talentScarcity": {
+      "status": "intact",
+      "note": "mRNA design, LNP chemistry and personalized GMP remain specialist skills, but the post-COVID talent pool is deeper than in 2019 and BioNTech, Pfizer, CureVac and large-pharma mRNA groups compete for the same people."
+    },
+    "bundling": {
+      "status": "na",
+      "note": "Vaccines and individualized therapies are sold as labeled products, not a software-style suite; government respiratory contracts are procurement, not a bundle moat."
+    },
+    "proprietaryData": {
+      "status": "intact",
+      "note": "INTerpath-001 plus KEYNOTE-942 give Moderna and Merck the largest clinical neoantigen-response dataset in melanoma, and each commercial patient would add a tumor-to-dose record. That is compounding and hard to replicate quickly, but it is not yet a genetics-scale franchise on Regeneron Genetics Center terms — and Phase 3 HRs are still unpublished."
+    },
+    "regulatoryLockIn": {
+      "status": "intact",
+      "note": "Spikevax, mNEXSPIKE, mRESVIA and now mFLUSIVA (FDA, Aug 5 2026) plus EU mCOMBRIAX are approved products with GMP and national-program placement. Intismeran is not yet approved. The $950M Arbutus/Genevant settlement removed the largest LNP-patent cloud but confirmed that the COVID IP estate was contestable, not a Lilly-style patent wall."
+    },
+    "networkEffects": {
+      "status": "intact",
+      "note": "A weak data flywheel: more sequenced tumors and more T-cell-response outcomes should improve neoantigen selection. Prescriber experience with mRNA in oncology is still early. This is not a two-sided network."
+    },
+    "transactionEmbedding": {
+      "status": "intact",
+      "note": "Long-term government partnerships (UK, Canada, Australia) and EU joint procurement for mRESVIA embed the respiratory products in national immunization calendars. Intismeran would embed in adjuvant-melanoma pathways only after approval and guideline inclusion — that is still ahead."
+    },
+    "systemOfRecord": {
+      "status": "na",
+      "note": "Moderna is a drug and vaccine manufacturer, not the authoritative record for a customer's clinical or financial system."
+    },
+    "verdict": "Moderna is a net beneficiary of AI in the narrow sense that sequence-to-neoantigen design and trial operations compress with better models — that strengthens the process, it does not create a new moat. The AI-resilient pillars that actually matter are regulatory approvals on the respiratory franchise and the still-unapproved but now Phase-3-positive oncology dataset; both are intact, not strong. Talent and process knowledge are contestable. The COVID IP settlement showed the vulnerable side: LNP patents were never exclusive. Durability in the AI era depends on converting intismeran into approved, guideline-embedded therapy, not on software-style switching costs."
+  },
+  "extraSections": [
+    {
+      "type": "grid-cards",
+      "title": "INTerpath program — what Phase 3 melanoma does and does not settle",
+      "accentColor": "#e8294b",
+      "gridHeader": "Nine trials, one readout",
+      "intro": "INTerpath-001 is the first positive Phase 3 for an individualized neoantigen therapy. It de-risks adjuvant melanoma. It does not, by itself, de-risk NSCLC, bladder, kidney, or the manufacturing of one lot per patient at commercial scale.",
+      "cards": [
+        {
+          "label": "Settled today",
+          "text": "Intismeran + KEYTRUDA beat KEYTRUDA alone on RFS and DMFS in resected stage IIB–IV melanoma at a pre-specified interim. Safety matched prior studies. Merck and Moderna will take the package to a medical meeting and to regulators."
+        },
+        {
+          "label": "Still unpublished",
+          "text": "Phase 3 hazard ratios, p-values and subgroup detail were withheld. Phase 2b five-year data (HR 0.51 RFS, HR 0.411 DMFS) set the bar investors will compare against. Overall survival continues per protocol."
+        },
+        {
+          "label": "Next tumor tests",
+          "text": "Fully enrolled: adjuvant RCC Phase 2 (possible year-end 2026; flagged as potentially registrational) and adjuvant muscle-invasive bladder Phase 2. Also running: high-risk Stage 1 NSCLC Phase 3 (monotherapy and with KEYTRUDA QLEX) plus further melanoma, lung and bladder cohorts."
+        },
+        {
+          "label": "Economics",
+          "text": "Worldwide 50/50 cost and profit share with Merck after the 2022 $250M option exercise. Peak-sales talk is multi-billion; Moderna keeps half, and only after approval, scale manufacturing and payer coverage. Melanoma incidence in the US is ~112,000 new cases in 2026 — adjuvant stage IIB–IV is a slice of that, not the whole TAM."
+        }
+      ],
+      "closing": "Treat today's move as a melanoma de-risking event with optional read-through, not as proof that mRNA is a pan-tumor standard of care."
+    }
+  ]
+}
