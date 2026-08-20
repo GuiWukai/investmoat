@@ -30,8 +30,10 @@ export interface EarningsEvent {
   lastAnalyzedISO: string | null;
   /** True when the report date is before today (UTC). */
   reported: boolean;
-  /** True when the on-desk analysis predates this report date. */
+  /** True when the print has happened (or is today) and the analysis predates it. */
   stale: boolean;
+  /** True when an upcoming name has not been re-read in ~a quarter. */
+  aging: boolean;
 }
 
 export interface EarningsCalendarResult {
@@ -186,6 +188,7 @@ export async function getEarningsCalendar(
   const to = dates[dates.length - 1] ?? today;
 
   const dayRows = await Promise.all(dates.map((d) => fetchNasdaqDay(d)));
+  const agingCutoff = addUtcDays(today, -75);
 
   const events: EarningsEvent[] = [];
   for (let i = 0; i < dates.length; i++) {
@@ -196,7 +199,15 @@ export async function getEarningsCalendar(
       if (!covered) continue;
 
       const reported = date < today;
-      const stale = Boolean(covered.lastAnalyzedISO && covered.lastAnalyzedISO < date);
+      const printReached = date <= today;
+      const stale = Boolean(
+        printReached && covered.lastAnalyzedISO && covered.lastAnalyzedISO < date,
+      );
+      const aging = Boolean(
+        !printReached &&
+          covered.lastAnalyzedISO &&
+          covered.lastAnalyzedISO < agingCutoff,
+      );
 
       events.push({
         date,
@@ -215,6 +226,7 @@ export async function getEarningsCalendar(
         lastAnalyzedISO: covered.lastAnalyzedISO,
         reported,
         stale,
+        aging,
       });
     }
   }

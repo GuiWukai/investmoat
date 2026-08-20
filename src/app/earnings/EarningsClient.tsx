@@ -117,7 +117,12 @@ function EventRow({ event, inPortfolio }: { event: EarningsEvent; inPortfolio: b
           )}
           {event.stale && (
             <span className="rounded-md border border-amber-300/25 bg-amber-300/10 px-1.5 py-0.5 font-mono text-[9px] font-bold uppercase tracking-widest text-amber-200/80">
-              {event.reported ? 'Needs refresh' : 'Pre-print'}
+              Needs refresh
+            </span>
+          )}
+          {event.aging && (
+            <span className="rounded-md border border-foreground/10 bg-foreground/[0.04] px-1.5 py-0.5 font-mono text-[9px] font-bold uppercase tracking-widest text-foreground/40">
+              Aging
             </span>
           )}
         </div>
@@ -271,7 +276,7 @@ export default function EarningsClient({
             {
               label: 'Needs refresh',
               value: loading ? '—' : staleInView,
-              hint: staleInView > 0 ? 'Analysis predates the print' : 'Analyses are current',
+              hint: staleInView > 0 ? 'Print is in, analysis is not' : 'Analyses are current',
             },
           ]}
         />
