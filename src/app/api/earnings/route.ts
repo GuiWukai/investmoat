@@ -3,6 +3,7 @@ import { getEarningsCalendar } from '@/lib/earningsCalendar';
 
 // Must be a literal — Next.js segment config is statically analyzed.
 export const revalidate = 21600; // 6 hours
+export const maxDuration = 60;
 
 export async function GET() {
   try {

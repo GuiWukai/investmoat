@@ -6,11 +6,11 @@ const SITE_URL = 'https://investmoat.com';
 export const metadata: Metadata = {
   title: 'Earnings Calendar',
   description:
-    'Upcoming earnings reports for the InvestMoat coverage universe — see which covered names report soon, with session timing and consensus EPS.',
+    'Upcoming earnings reports for the InvestMoat coverage universe — session timing, consensus EPS, and which analyses still predate the print.',
   openGraph: {
     title: 'Earnings Calendar | InvestMoat',
     description:
-      'Upcoming earnings reports for the InvestMoat coverage universe — see which covered names report soon.',
+      'Upcoming earnings reports for the InvestMoat coverage universe — see which covered names report soon, and which analyses still predate the print.',
     url: `${SITE_URL}/earnings`,
     type: 'website',
     siteName: 'InvestMoat',

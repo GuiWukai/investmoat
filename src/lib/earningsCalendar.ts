@@ -1,7 +1,12 @@
+import { allCoverageData, getAverageScore } from '@/app/stockData';
 import { getAllSlugs, getStockData } from '@/data/stocks';
+import { getSectorByKey } from '@/lib/sectorCatalog';
 
 /** How far ahead to scan the Nasdaq earnings calendar. */
 export const EARNINGS_LOOKAHEAD_DAYS = 60;
+
+/** Recently reported names stay on the desk for this many days. */
+export const EARNINGS_LOOKBACK_DAYS = 7;
 
 /** Cache window for upstream day fetches and the aggregated calendar. */
 export const EARNINGS_REVALIDATE_SECONDS = 6 * 60 * 60; // 6 hours
@@ -17,12 +22,25 @@ export interface EarningsEvent {
   session: EarningsSession;
   epsForecast: string | null;
   fiscalQuarterEnding: string | null;
+  category: string | null;
+  sectorSlug: string | null;
+  sectorColor: string | null;
+  score: number | null;
+  lastAnalyzed: string | null;
+  lastAnalyzedISO: string | null;
+  /** True when the report date is before today (UTC). */
+  reported: boolean;
+  /** True when the print has happened (or is today) and the analysis predates it. */
+  stale: boolean;
+  /** True when an upcoming name has not been re-read in ~a quarter. */
+  aging: boolean;
 }
 
 export interface EarningsCalendarResult {
   events: EarningsEvent[];
   asOf: string;
   from: string;
+  today: string;
   to: string;
   coverageCount: number;
 }
@@ -41,14 +59,31 @@ type NasdaqDayResponse = {
   } | null;
 };
 
+type CoverageMeta = {
+  slug: string;
+  name: string;
+  href: string;
+  category: string | null;
+  sectorSlug: string | null;
+  sectorColor: string | null;
+  score: number | null;
+  lastAnalyzed: string | null;
+  lastAnalyzedISO: string | null;
+};
+
 /** Tickers that never report earnings (ETFs, private companies). */
 const NON_REPORTERS = new Set(['SPCX', 'VOO', 'SOXX', 'INIO']);
 
-function isoDateUTC(d: Date): string {
+const MONTHS: Record<string, number> = {
+  january: 0, february: 1, march: 2, april: 3, may: 4, june: 5,
+  july: 6, august: 7, september: 8, october: 9, november: 10, december: 11,
+};
+
+export function isoDateUTC(d: Date): string {
   return d.toISOString().slice(0, 10);
 }
 
-function addUtcDays(iso: string, days: number): string {
+export function addUtcDays(iso: string, days: number): string {
   const [y, m, day] = iso.split('-').map(Number);
   const dt = new Date(Date.UTC(y, m - 1, day));
   dt.setUTCDate(dt.getUTCDate() + days);
@@ -70,15 +105,25 @@ function parseSession(time: string | undefined): EarningsSession {
   }
 }
 
+/** "August 10, 2026" or "August 2026" → YYYY-MM-DD (day defaults to 1). */
+export function lastAnalyzedToISO(value: string | undefined | null): string | null {
+  if (!value) return null;
+  const match = value.trim().match(/^([A-Za-z]+)\s+(?:(\d{1,2}),\s+)?(\d{4})$/);
+  if (!match) return null;
+  const month = MONTHS[match[1].toLowerCase()];
+  if (month === undefined) return null;
+  const day = match[2] ? parseInt(match[2], 10) : 1;
+  const year = parseInt(match[3], 10);
+  return isoDateUTC(new Date(Date.UTC(year, month, day)));
+}
+
 /**
  * Coverage names that can appear on a US earnings calendar.
  * Crypto, commodities, ETFs, and private companies are excluded.
  */
-export function getEarningsEligibleCoverage(): Map<
-  string,
-  { slug: string; name: string; href: string }
-> {
-  const map = new Map<string, { slug: string; name: string; href: string }>();
+export function getEarningsEligibleCoverage(): Map<string, CoverageMeta> {
+  const byTicker = new Map(allCoverageData.map((row) => [row.ticker, row]));
+  const map = new Map<string, CoverageMeta>();
 
   for (const slug of getAllSlugs()) {
     const stock = getStockData(slug);
@@ -92,10 +137,20 @@ export function getEarningsEligibleCoverage(): Map<
     // Nasdaq calendar is US-listed symbols; skip exchange-suffixed tickers.
     if (ticker.includes('.')) continue;
 
+    const row = byTicker.get(ticker);
+    const sector = row ? getSectorByKey(row.category) : undefined;
+    const lastAnalyzed = stock.lastAnalyzed ?? null;
+
     map.set(ticker, {
       slug: stock.slug,
       name: stock.name,
       href: `/stocks/${stock.slug}`,
+      category: row?.category ?? null,
+      sectorSlug: sector?.slug ?? null,
+      sectorColor: sector?.color ?? null,
+      score: row ? Math.round(getAverageScore(row.scores)) : null,
+      lastAnalyzed,
+      lastAnalyzedISO: lastAnalyzedToISO(lastAnalyzed),
     });
   }
 
@@ -119,18 +174,21 @@ async function fetchNasdaqDay(date: string): Promise<NasdaqRow[]> {
 }
 
 /**
- * Upcoming earnings for the InvestMoat coverage universe.
+ * Upcoming (and recently reported) earnings for the InvestMoat coverage universe.
  * Sourced from Nasdaq's public earnings calendar, filtered to covered equities.
  */
 export async function getEarningsCalendar(
   lookaheadDays: number = EARNINGS_LOOKAHEAD_DAYS,
+  lookbackDays: number = EARNINGS_LOOKBACK_DAYS,
 ): Promise<EarningsCalendarResult> {
   const coverage = getEarningsEligibleCoverage();
-  const from = isoDateUTC(new Date());
-  const dates = dateRange(from, lookaheadDays);
-  const to = dates[dates.length - 1] ?? from;
+  const today = isoDateUTC(new Date());
+  const from = addUtcDays(today, -lookbackDays);
+  const dates = dateRange(from, lookbackDays + lookaheadDays);
+  const to = dates[dates.length - 1] ?? today;
 
   const dayRows = await Promise.all(dates.map((d) => fetchNasdaqDay(d)));
+  const agingCutoff = addUtcDays(today, -75);
 
   const events: EarningsEvent[] = [];
   for (let i = 0; i < dates.length; i++) {
@@ -139,6 +197,17 @@ export async function getEarningsCalendar(
       const ticker = (row.symbol ?? '').trim().toUpperCase();
       const covered = coverage.get(ticker);
       if (!covered) continue;
+
+      const reported = date < today;
+      const printReached = date <= today;
+      const stale = Boolean(
+        printReached && covered.lastAnalyzedISO && covered.lastAnalyzedISO < date,
+      );
+      const aging = Boolean(
+        !printReached &&
+          covered.lastAnalyzedISO &&
+          covered.lastAnalyzedISO < agingCutoff,
+      );
 
       events.push({
         date,
@@ -149,6 +218,15 @@ export async function getEarningsCalendar(
         session: parseSession(row.time),
         epsForecast: row.epsForecast?.trim() || null,
         fiscalQuarterEnding: row.fiscalQuarterEnding?.trim() || null,
+        category: covered.category,
+        sectorSlug: covered.sectorSlug,
+        sectorColor: covered.sectorColor,
+        score: covered.score,
+        lastAnalyzed: covered.lastAnalyzed,
+        lastAnalyzedISO: covered.lastAnalyzedISO,
+        reported,
+        stale,
+        aging,
       });
     }
   }
@@ -163,6 +241,7 @@ export async function getEarningsCalendar(
     events,
     asOf: new Date().toISOString(),
     from,
+    today,
     to,
     coverageCount: coverage.size,
   };
