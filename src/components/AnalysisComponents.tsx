@@ -48,23 +48,39 @@ function ArcGauge({ score }: { score: number }) {
   const animated = useCountUp(score);
   const R = 50;
   const C = 2 * Math.PI * R;
-  const offset = C - (animated / 100) * C;
   const hex = scoreHex(score);
+  // A dashed circle with round caps never quite closes: at 100 the dash
+  // starts and ends at 12 o'clock, and the two round caps leave a notch.
+  // Remount a solid circle instead of clearing dash props with `undefined` —
+  // React leaves the old stroke-dasharray on the SVG node, so the notch stays.
+  const isComplete = animated >= 100;
+  const offset = C - (animated / 100) * C;
+  const glow = { filter: `drop-shadow(0 0 6px ${hex}55)` } as const;
 
   return (
     <svg width="120" height="120" viewBox="0 0 120 120">
       <circle cx="60" cy="60" r={R} fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="7" />
-      <circle
-        cx="60" cy="60" r={R}
-        fill="none"
-        stroke={hex}
-        strokeWidth="7"
-        strokeLinecap="round"
-        strokeDasharray={`${C}`}
-        strokeDashoffset={`${offset}`}
-        transform="rotate(-90 60 60)"
-        style={{ transition: 'stroke-dashoffset 0.9s cubic-bezier(0.4,0,0.2,1)', filter: `drop-shadow(0 0 6px ${hex}55)` }}
-      />
+      {isComplete ? (
+        <circle
+          cx="60" cy="60" r={R}
+          fill="none"
+          stroke={hex}
+          strokeWidth="7"
+          style={glow}
+        />
+      ) : (
+        <circle
+          cx="60" cy="60" r={R}
+          fill="none"
+          stroke={hex}
+          strokeWidth="7"
+          strokeLinecap="round"
+          strokeDasharray={C}
+          strokeDashoffset={offset}
+          transform="rotate(-90 60 60)"
+          style={{ transition: 'stroke-dashoffset 0.9s cubic-bezier(0.4,0,0.2,1)', ...glow }}
+        />
+      )}
       <text x="60" y="56" textAnchor="middle" fill="white" fontSize="26" fontWeight="900"
         fontFamily="system-ui,-apple-system,sans-serif">{animated}</text>
       <text x="60" y="72" textAnchor="middle" fill="rgba(255,255,255,0.25)" fontSize="10" fontWeight="700"
