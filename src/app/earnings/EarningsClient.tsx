@@ -180,8 +180,6 @@ export default function EarningsClient({
   useEffect(() => {
     if (initialData) return;
     let cancelled = false;
-    setLoading(true);
-    setError(null);
 
     fetch('/api/earnings')
       .then((r) => {
