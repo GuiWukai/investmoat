@@ -3,15 +3,10 @@
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useParams, useRouter } from 'next/navigation';
-import {
-  ArrowLeft,
-  ExternalLink,
-  Trash2,
-  TrendingDown,
-  TrendingUp,
-} from 'lucide-react';
-import { Button, Card, Spinner } from '@heroui/react';
-import { allCoverageData, getAverageScore } from '@/app/stockData';
+import { ArrowUpRight, Trash2 } from 'lucide-react';
+import { Card, Spinner } from '@heroui/react';
+import { allCoverageData } from '@/app/stockData';
+import { IM25_TICKERS } from '@/lib/sectors';
 import {
   convertToDisplay,
   formatMoney,
@@ -22,46 +17,27 @@ import {
   saveUserPortfolio,
   type UserHolding,
 } from '@/lib/userPortfolio';
-import {
-  computeValuationScore,
-  parseScenarioPrice,
-} from '@/lib/valuationScore';
 import { HoldingNumberField } from '../holdingField';
+import {
+  accentForCategory,
+  BackToBookLink,
+  BookHero,
+  compositeForStock,
+  DeltaBadge,
+  formatPct,
+  formatShares,
+  ScorePill,
+  SignedMoney,
+  StatCell,
+  StatStrip,
+  TickerBadge,
+} from '../portfolioUi';
 
 type Quote = {
   price: number | null;
   changePercent: number | null;
   currency: string | null;
 };
-
-function formatPct(value: number | null | undefined): string {
-  if (value == null || !Number.isFinite(value)) return '—';
-  const sign = value > 0 ? '+' : '';
-  return `${sign}${value.toFixed(2)}%`;
-}
-
-function scoreColor(score: number): string {
-  if (score >= 90) return 'text-emerald-400';
-  if (score >= 80) return 'text-blue-400';
-  if (score >= 70) return 'text-amber-400';
-  return 'text-rose-400';
-}
-
-function compositeForStock(
-  stock: (typeof allCoverageData)[number] | undefined,
-  nativePrice: number | null
-): number | null {
-  if (!stock) return null;
-  const [moat, growth, staticValuation] = stock.scores;
-  const bear = parseScenarioPrice(stock.bearTarget);
-  const base = parseScenarioPrice(stock.baseTarget);
-  const bull = parseScenarioPrice(stock.bullTarget);
-  const valuation =
-    nativePrice != null && bear && base && bull
-      ? computeValuationScore(nativePrice, bear, base, bull)
-      : staticValuation;
-  return Math.round(getAverageScore([moat, growth, valuation]));
-}
 
 export default function PositionPage() {
   const params = useParams<{ slug: string }>();
@@ -210,6 +186,8 @@ export default function PositionPage() {
   const name = stock?.name ?? slug;
   const ticker = stock?.ticker ?? slug.toUpperCase();
   const analysisHref = stock?.href ?? `/stocks/${slug}`;
+  const accent = accentForCategory(stock?.category);
+  const inIm25 = IM25_TICKERS.has(ticker);
 
   if (!hydrated) {
     return (
@@ -222,15 +200,11 @@ export default function PositionPage() {
   if (!stock) {
     return (
       <div className="animate-fade-in pb-16 pt-8">
-        <Link
-          className="mb-6 inline-flex items-center gap-1.5 text-sm text-foreground/45 transition-colors hover:text-foreground/70"
-          href="/my-portfolio"
-        >
-          <ArrowLeft size={14} />
-          My Portfolio
-        </Link>
+        <BackToBookLink />
         <Card className="p-6 md:p-10">
-          <h1 className="text-2xl font-bold text-foreground/85">Position not found</h1>
+          <h1 className="text-2xl font-semibold tracking-tight text-foreground/90">
+            Position not found
+          </h1>
           <p className="mt-2 text-sm text-foreground/45">
             <span className="font-mono">{slug || '—'}</span> is not in InvestMoat coverage.
           </p>
@@ -242,45 +216,29 @@ export default function PositionPage() {
   if (!holding) {
     return (
       <div className="animate-fade-in pb-16 pt-8">
-        <Link
-          className="mb-6 inline-flex items-center gap-1.5 text-sm text-foreground/45 transition-colors hover:text-foreground/70"
-          href="/my-portfolio"
-        >
-          <ArrowLeft size={14} />
-          My Portfolio
-        </Link>
-        <Card className="p-6 md:p-10">
-          <p className="section-label mb-2">{ticker}</p>
-          <h1 className="text-2xl font-bold text-foreground/85">{name}</h1>
+        <BackToBookLink />
+        <Card className="overflow-hidden p-6 md:p-10">
+          <div className="mb-4 flex items-center gap-3">
+            <TickerBadge color={accent} ticker={ticker} />
+            <p className="section-label mb-0">{ticker}</p>
+          </div>
+          <h1 className="text-2xl font-semibold tracking-tight text-foreground/90">{name}</h1>
           <p className="mt-2 text-sm text-foreground/45">
             This name is not in your portfolio yet. Add it from My Portfolio.
           </p>
-          <div className="mt-5 flex flex-wrap gap-3">
-            <Button onPress={() => router.push('/my-portfolio')} variant="primary">
-              Back to My Portfolio
-            </Button>
-            <Button onPress={() => router.push(analysisHref)} variant="ghost">
-              View analysis
-              <ExternalLink size={14} />
-            </Button>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link href="/my-portfolio/add" className="btn-primary">
+              Add holding
+            </Link>
+            <Link href={analysisHref} className="btn-secondary">
+              View analysis <ArrowUpRight size={14} />
+            </Link>
           </div>
         </Card>
       </div>
     );
   }
 
-  const dayClass =
-    metrics?.changePercent == null
-      ? 'text-foreground/25'
-      : metrics.changePercent >= 0
-        ? 'text-emerald-400'
-        : 'text-rose-400';
-  const gainClass =
-    metrics?.gain == null
-      ? 'text-foreground/25'
-      : metrics.gain >= 0
-        ? 'text-emerald-400'
-        : 'text-rose-400';
   const quoteNote =
     metrics?.quoteCurrency &&
     metrics.quoteCurrency.toUpperCase() !== displayCurrency
@@ -289,116 +247,110 @@ export default function PositionPage() {
 
   return (
     <div className="animate-fade-in dot-pattern pb-16">
-      <header
-        className="animate-fade-up stagger-fill-both pb-8 pt-6 md:pb-10 md:pt-12"
-        style={{ animationDelay: '0s' }}
-      >
-        <Link
-          className="mb-5 inline-flex items-center gap-1.5 text-sm text-foreground/45 transition-colors hover:text-foreground/70"
-          href="/my-portfolio"
-        >
-          <ArrowLeft size={14} />
-          My Portfolio
-        </Link>
-        <p className="section-label mb-2">Position · {displayCurrency}</p>
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <h1 className="text-3xl font-extrabold leading-tight text-foreground md:text-5xl">
-              {name}
-            </h1>
-            <p className="mt-2 font-mono text-xs font-black uppercase tracking-[0.14em] text-foreground/35">
-              {ticker}
-              {quoteNote ? ` · quoted ${quoteNote}` : ''}
-            </p>
-          </div>
-          <Button onPress={() => router.push(analysisHref)} size="sm" variant="ghost">
-            Analysis
-            <ExternalLink size={14} />
-          </Button>
-        </div>
-      </header>
+      <BookHero
+        back={<BackToBookLink />}
+        eyebrow={`Position · ${displayCurrency}`}
+        title={name}
+        dek={
+          <>
+            {ticker}
+            {inIm25 ? ' · IM25' : ''}
+            {quoteNote ? ` · quoted ${quoteNote}` : ''}
+            {stock.category ? ` · ${stock.category}` : ''}
+          </>
+        }
+        actions={
+          <>
+            <Link href={analysisHref} className="btn-secondary w-full sm:w-auto">
+              Analysis <ArrowUpRight size={16} />
+            </Link>
+          </>
+        }
+      />
 
       <section
-        className="animate-fade-up stagger-fill-both mb-8 grid grid-cols-2 gap-3 lg:grid-cols-4"
-        style={{ animationDelay: '0.1s' }}
+        className="relative animate-fade-up stagger-fill-both mb-8"
+        style={{ animationDelay: '0.08s' }}
       >
-        <Card className="p-4">
-          <p className="section-label mb-1.5">Market value</p>
-          {quoteLoading && metrics?.marketValue == null ? (
-            <Spinner size="sm" color="current" />
-          ) : (
-            <p className="text-2xl font-black tabular-nums text-foreground">
-              {money(metrics?.marketValue)}
-            </p>
-          )}
-          <p className="mt-0.5 font-mono text-[10px] tabular-nums text-foreground/28">
-            {quoteLoading && metrics?.price == null ? '…' : money(metrics?.price)} / sh
-          </p>
-        </Card>
-
-        <Card className="p-4">
-          <p className="section-label mb-1.5">Today</p>
-          {quoteLoading ? (
-            <Spinner size="sm" color="current" />
-          ) : metrics?.changePercent == null ? (
-            <p className="text-2xl font-black text-foreground/20">—</p>
-          ) : (
-            <div className={`flex items-center gap-2 ${dayClass}`}>
-              {metrics.changePercent >= 0 ? (
-                <TrendingUp size={20} />
-              ) : (
-                <TrendingDown size={20} />
-              )}
-              <span className="text-2xl font-black tabular-nums">
-                {formatPct(metrics.changePercent)}
-              </span>
-            </div>
-          )}
-        </Card>
-
-        <Card className="p-4">
-          <p className="section-label mb-1.5">Score</p>
-          {metrics?.score == null ? (
-            <p className="text-2xl font-black text-foreground/20">—</p>
-          ) : (
-            <p
-              className={`text-2xl font-black tabular-nums ${scoreColor(metrics.score)}`}
-            >
-              {metrics.score}
-            </p>
-          )}
-          <p className="mt-0.5 text-[10px] text-foreground/28">Live composite</p>
-        </Card>
-
-        <Card className="p-4">
-          <p className="section-label mb-1.5">Unrealized P&amp;L</p>
-          {metrics?.gain == null ? (
-            <p className="text-2xl font-black text-foreground/20">—</p>
-          ) : (
-            <div className={gainClass}>
-              <p className="text-2xl font-black tabular-nums">{money(metrics.gain)}</p>
-              <p className="mt-0.5 text-[10px] tabular-nums opacity-80">
-                {formatPct(metrics.gainPct)}
+        <Card className="overflow-hidden p-4 sm:p-5 md:p-7">
+          <div className="flex items-center justify-between gap-3">
+            <TickerBadge color={accent} ticker={ticker} />
+            {metrics?.score != null && <ScorePill value={metrics.score} />}
+          </div>
+          <p className="section-label mb-0 mt-4">Market value</p>
+          <div className="mt-3">
+            {quoteLoading && metrics?.marketValue == null ? (
+              <Spinner size="sm" color="current" />
+            ) : (
+              <p className="text-[1.85rem] font-semibold leading-none tracking-tight tabular-nums text-foreground sm:text-[40px]">
+                {money(metrics?.marketValue)}
               </p>
+            )}
+            <div className="mt-2.5">
+              <DeltaBadge loading={quoteLoading} value={metrics?.changePercent} />
             </div>
-          )}
+            <p className="mt-2.5 text-[12px] text-foreground/35 sm:text-[13px]">
+              {quoteLoading && metrics?.price == null ? '…' : money(metrics?.price)} / sh
+              {' · '}
+              {formatShares(holding.shares)} shares
+            </p>
+          </div>
+
+          <StatStrip>
+            <StatCell label="Cost basis" shortLabel="Cost">
+              <p className="text-[15px] font-semibold tabular-nums tracking-tight text-foreground sm:text-xl">
+                {money(metrics?.costBasis)}
+              </p>
+            </StatCell>
+            <StatCell label="Unrealized P&amp;L" shortLabel="P&amp;L">
+              {metrics?.gain == null ? (
+                <p className="text-[15px] font-semibold text-foreground/20 sm:text-xl">—</p>
+              ) : (
+                <div>
+                  <p>
+                    <SignedMoney formatted={money(metrics.gain)} size="lg" value={metrics.gain} />
+                  </p>
+                  <p className="mt-0.5 text-[11px] tabular-nums text-foreground/40">
+                    {formatPct(metrics.gainPct)}
+                  </p>
+                </div>
+              )}
+            </StatCell>
+            <StatCell label="Today">
+              {quoteLoading ? (
+                <Spinner size="sm" color="current" />
+              ) : metrics?.changePercent == null ? (
+                <p className="text-[15px] font-semibold text-foreground/20 sm:text-xl">—</p>
+              ) : (
+                <p
+                  className={`text-[15px] font-semibold tabular-nums tracking-tight sm:text-xl ${
+                    metrics.changePercent >= 0 ? 'text-emerald-400' : 'text-rose-400'
+                  }`}
+                >
+                  {formatPct(metrics.changePercent)}
+                </p>
+              )}
+            </StatCell>
+          </StatStrip>
         </Card>
       </section>
 
       <section
-        className="animate-fade-up stagger-fill-both"
-        style={{ animationDelay: '0.2s' }}
+        className="relative animate-fade-up stagger-fill-both"
+        style={{ animationDelay: '0.16s' }}
       >
-        <Card className="p-5 md:p-6">
-          <div className="mb-5">
+        <Card className="p-5 md:p-8">
+          <div className="mb-6">
             <p className="section-label mb-1">Edit position</p>
-            <h2 className="text-xl font-bold text-foreground/85">Shares &amp; cost</h2>
-            <p className="mt-1 text-sm text-foreground/40">
+            <h2 className="text-xl font-semibold tracking-tight text-foreground/90">
+              Shares &amp; cost
+            </h2>
+            <p className="mt-2 text-sm text-foreground/42">
               Changes save in this browser when you leave a field.
             </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-5 sm:grid-cols-2">
             <label className="block">
               <span className="section-label mb-2 block">Shares</span>
               <HoldingNumberField
@@ -425,29 +377,18 @@ export default function PositionPage() {
             </label>
           </div>
 
-          <div className="mt-4 grid gap-3 sm:grid-cols-2">
-            <div className="rounded-xl bg-foreground/[0.03] px-4 py-3">
-              <p className="section-label mb-1">Cost basis</p>
-              <p className="font-mono text-lg font-semibold tabular-nums text-foreground/80">
-                {money(metrics?.costBasis)}
-              </p>
-            </div>
-            <div className="rounded-xl bg-foreground/[0.03] px-4 py-3">
-              <p className="section-label mb-1">Market value</p>
-              <p className="font-mono text-lg font-semibold tabular-nums text-foreground/80">
-                {money(metrics?.marketValue)}
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-foreground/[0.05] pt-5">
-            <p className="text-xs text-foreground/28">
+          <div className="mt-8 flex flex-col gap-3 border-t border-border pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+            <p className="text-[12px] text-foreground/28">
               Book currency is set on My Portfolio ({displayCurrency}).
             </p>
-            <Button onPress={removeHolding} variant="danger">
+            <button
+              type="button"
+              onClick={removeHolding}
+              className="inline-flex min-h-11 items-center justify-center gap-1.5 text-sm font-medium text-rose-400/75 transition-colors hover:text-rose-300 sm:min-h-0 sm:justify-start"
+            >
               <Trash2 size={14} />
               Remove position
-            </Button>
+            </button>
           </div>
         </Card>
       </section>

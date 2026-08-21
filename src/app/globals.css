@@ -644,6 +644,30 @@ html {
   transform: translateY(-1px);
 }
 
+/* My Portfolio phone toolbar. Sort is a <button> (HeroUI Select.Trigger);
+   Add is an <a>. iOS Safari ignores height on appearance:button, so both
+   must share one unlayered chrome — longhands beat .select__trigger py-2. */
+.portfolio-toolbar-ctrl {
+  -webkit-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  height: 2.5rem;
+  min-height: 2.5rem;
+  max-height: 2.5rem;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.625rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
 .text-link {
   display: inline-flex;
   align-items: center;

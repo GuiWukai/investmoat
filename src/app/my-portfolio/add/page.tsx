@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { ArrowLeft, Briefcase, Plus } from 'lucide-react';
+import { Plus } from 'lucide-react';
 import {
   Button,
   Card,
@@ -20,6 +20,13 @@ import {
 } from '@/lib/userPortfolio';
 import type { PortfolioCurrency } from '@/lib/portfolioCurrency';
 import { parsePositiveNumber } from '../holdingField';
+import {
+  accentForCategory,
+  AlertBanner,
+  BackToBookLink,
+  BookHero,
+  TickerBadge,
+} from '../portfolioUi';
 
 type CoverageStock = (typeof allCoverageData)[number];
 type StockOption = CoverageStock & { id: string };
@@ -51,6 +58,8 @@ export default function AddHoldingPage() {
   }, []);
 
   const heldSlugs = useMemo(() => new Set(holdings.map((h) => h.slug)), [holdings]);
+
+  const selectedStock = selectedSlug ? coverageBySlug.get(selectedSlug) : undefined;
 
   const searchResults = useMemo<StockOption[]>(() => {
     const trimmed = query.trim().toLowerCase();
@@ -122,37 +131,41 @@ export default function AddHoldingPage() {
 
   return (
     <div className="animate-fade-in dot-pattern">
-      <header
-        className="animate-fade-up stagger-fill-both pb-8 pt-6 md:pb-10 md:pt-12"
-        style={{ animationDelay: '0s' }}
-      >
-        <Link
-          className="mb-4 inline-flex items-center gap-1.5 text-sm text-foreground/45 transition-colors hover:text-foreground/70"
-          href="/my-portfolio"
-        >
-          <ArrowLeft size={14} />
-          My Portfolio
-        </Link>
-        <div className="mb-3 flex items-center gap-2.5">
-          <Briefcase size={16} className="text-gold-bright" />
-          <p className="section-label">Personal</p>
-        </div>
-        <h1 className="page-title gradient-text-animated mb-4">
-          Add holding
-        </h1>
-        <p className="page-dek">
-          Pick a covered name, set shares, and optionally average cost in{' '}
-          {hydrated ? displayCurrency : 'your book currency'}. Saved in this browser
-          only.
-        </p>
-      </header>
+      <BookHero
+        back={<BackToBookLink />}
+        title="Add a holding."
+        dek={
+          <>
+            Pick a covered name, set shares, and optionally average cost in{' '}
+            {hydrated ? displayCurrency : 'your book currency'}. Saved in this browser
+            only.
+          </>
+        }
+      />
 
       <section
-        className="animate-fade-up stagger-fill-both pb-16"
-        style={{ animationDelay: '0.1s' }}
+        className="relative animate-fade-up stagger-fill-both pb-16"
+        style={{ animationDelay: '0.08s' }}
       >
-        <Card className="p-5 md:p-6">
-          <div className="grid gap-4 md:grid-cols-[minmax(0,1.4fr)_minmax(0,0.7fr)_minmax(0,0.7fr)] md:items-end">
+        <Card className="overflow-hidden p-5 md:p-8">
+          {selectedStock && (
+            <div className="mb-6 flex items-center gap-3 rounded-xl border border-border bg-foreground/[0.025] px-4 py-3">
+              <TickerBadge
+                color={accentForCategory(selectedStock.category)}
+                ticker={selectedStock.ticker}
+              />
+              <div className="min-w-0">
+                <p className="truncate text-sm font-semibold tracking-tight text-foreground/90">
+                  {selectedStock.name}
+                </p>
+                <p className="mt-0.5 text-[11px] text-foreground/35">
+                  {selectedStock.category ?? 'Coverage'}
+                </p>
+              </div>
+            </div>
+          )}
+
+          <div className="grid gap-5 md:grid-cols-[minmax(0,1.4fr)_minmax(0,0.7fr)_minmax(0,0.7fr)] md:items-end">
             <div>
               <p className="section-label mb-2">Stock</p>
               <ComboBox
@@ -249,27 +262,22 @@ export default function AddHoldingPage() {
                   setAvgCostInput(e.target.value);
                   setFormError(null);
                 }}
-                placeholder="e.g. 185.50"
+                placeholder="Optional"
                 value={avgCostInput}
               />
             </div>
           </div>
 
-          {formError && (
-            <p className="mt-4 text-sm text-rose-400">{formError}</p>
-          )}
+          {formError && <AlertBanner>{formError}</AlertBanner>}
 
-          <div className="mt-6 flex flex-wrap items-center gap-3">
-            <Button onPress={addHolding} variant="primary">
+          <div className="mt-8 flex flex-col gap-3 border-t border-border pt-6 sm:flex-row sm:flex-wrap sm:items-center">
+            <Button className="w-full sm:w-auto" onPress={addHolding} variant="primary">
               <Plus size={16} />
               Add holding
             </Button>
-            <Button
-              onPress={() => router.push('/my-portfolio')}
-              variant="ghost"
-            >
+            <Link href="/my-portfolio" className="btn-secondary w-full sm:w-auto">
               Cancel
-            </Button>
+            </Link>
           </div>
         </Card>
       </section>

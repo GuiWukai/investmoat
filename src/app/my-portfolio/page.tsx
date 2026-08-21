@@ -2,30 +2,14 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
-import {
-  ArrowDown,
-  ArrowUp,
-  ArrowUpDown,
-  ChevronRight,
-  Plus,
-  TrendingDown,
-  TrendingUp,
-} from 'lucide-react';
-import {
-  Card,
-  ListBox,
-  ListBoxItem,
-  Select,
-  Spinner,
-  ToggleButton,
-  ToggleButtonGroup,
-} from '@heroui/react';
-import { allCoverageData, getAverageScore } from '@/app/stockData';
+import { ArrowRight, ChevronRight, Plus } from 'lucide-react';
+import { Card, ListBox, ListBoxItem, Select, Spinner } from '@heroui/react';
+import { allCoverageData } from '@/app/stockData';
+import { IM25_TICKERS } from '@/lib/sectors';
 import {
   convertBetweenPortfolioCurrencies,
   convertToDisplay,
   formatMoney,
-  PORTFOLIO_CURRENCIES,
   roundMoney,
   type PortfolioCurrency,
 } from '@/lib/portfolioCurrency';
@@ -35,9 +19,31 @@ import {
   type UserHolding,
 } from '@/lib/userPortfolio';
 import {
-  computeValuationScore,
-  parseScenarioPrice,
-} from '@/lib/valuationScore';
+  accentForCategory,
+  AllocationBar,
+  AlertBanner,
+  BookHero,
+  compositeForStock,
+  CurrencyToggle,
+  DeltaBadge,
+  EmptyBook,
+  formatPct,
+  formatShares,
+  formatWeight,
+  HOLDING_ROW_CLASS,
+  HOLDINGS_SORT_OPTIONS,
+  PORTFOLIO_TOOLBAR_CTRL,
+  ScorePill,
+  SignedMoney,
+  SortHeader,
+  SortIndicator,
+  StatCell,
+  StatStrip,
+  TickerBadge,
+  type AllocationSlice,
+  type HoldingsSortKey,
+  type SortDir,
+} from './portfolioUi';
 
 type CoverageStock = (typeof allCoverageData)[number];
 
@@ -46,114 +52,6 @@ type Quote = {
   changePercent: number | null;
   currency: string | null;
 };
-
-type HoldingsSortKey =
-  | 'name'
-  | 'score'
-  | 'shares'
-  | 'avgCost'
-  | 'price'
-  | 'change'
-  | 'value'
-  | 'pnl';
-type SortDir = 'asc' | 'desc';
-
-/** Full desktop column set — used for table headers / sort / mobile select. */
-const HOLDINGS_SORT_OPTIONS: { key: HoldingsSortKey; label: string }[] = [
-  { key: 'name', label: 'Holding' },
-  { key: 'score', label: 'Score' },
-  { key: 'shares', label: 'Shares' },
-  { key: 'avgCost', label: 'Avg cost' },
-  { key: 'price', label: 'Price' },
-  { key: 'change', label: '1D %' },
-  { key: 'value', label: 'Value' },
-  { key: 'pnl', label: 'P&L' },
-];
-
-/**
- * On mobile, Holding / Score / Shares / Value / P&L stay put. Avg cost, Price,
- * and 1D % share one optional slot — shown only when that column is the active sort.
- */
-const MOBILE_SLOT_KEYS: HoldingsSortKey[] = ['avgCost', 'price', 'change'];
-
-function mobileSlotColumn(sortKey: HoldingsSortKey): HoldingsSortKey | null {
-  return MOBILE_SLOT_KEYS.includes(sortKey) ? sortKey : null;
-}
-
-function mobileSlotClass(column: HoldingsSortKey, slot: HoldingsSortKey | null): string {
-  return column === slot ? '' : 'hidden md:table-cell';
-}
-
-function SortIndicator({ active, dir }: { active: boolean; dir: SortDir }) {
-  if (!active) return <ArrowUpDown size={11} className="text-foreground/15" />;
-  return dir === 'asc' ? (
-    <ArrowUp size={11} className="text-gold-bright" />
-  ) : (
-    <ArrowDown size={11} className="text-gold-bright" />
-  );
-}
-
-function SortHeader({
-  label,
-  sortKey,
-  active,
-  dir,
-  onSort,
-  className,
-  align = 'left',
-}: {
-  label: string;
-  sortKey: HoldingsSortKey;
-  active: boolean;
-  dir: SortDir;
-  onSort: (k: HoldingsSortKey) => void;
-  className?: string;
-  align?: 'left' | 'right';
-}) {
-  return (
-    <button
-      type="button"
-      onClick={() => onSort(sortKey)}
-      className={`inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest transition-colors ${
-        active ? 'text-gold-bright' : 'text-foreground/20 hover:text-foreground/45'
-      } ${align === 'right' ? 'justify-end w-full' : ''} ${className ?? ''}`}
-    >
-      <span>{label}</span>
-      <SortIndicator active={active} dir={dir} />
-    </button>
-  );
-}
-
-function formatPct(value: number | null | undefined): string {
-  if (value == null || !Number.isFinite(value)) return '—';
-  const sign = value > 0 ? '+' : '';
-  return `${sign}${value.toFixed(2)}%`;
-}
-
-/** Same band colours as the IM25 holdings table. */
-function scoreColor(score: number): string {
-  if (score >= 90) return 'text-emerald-400';
-  if (score >= 80) return 'text-blue-400';
-  if (score >= 70) return 'text-amber-400';
-  return 'text-rose-400';
-}
-
-/** Live composite when a quote exists; otherwise the static coverage score. */
-function compositeForStock(
-  stock: CoverageStock | undefined,
-  nativePrice: number | null
-): number | null {
-  if (!stock) return null;
-  const [moat, growth, staticValuation] = stock.scores;
-  const bear = parseScenarioPrice(stock.bearTarget);
-  const base = parseScenarioPrice(stock.baseTarget);
-  const bull = parseScenarioPrice(stock.bullTarget);
-  const valuation =
-    nativePrice != null && bear && base && bull
-      ? computeValuationScore(nativePrice, bear, base, bull)
-      : staticValuation;
-  return Math.round(getAverageScore([moat, growth, valuation]));
-}
 
 export default function MyPortfolioPage() {
   const [holdings, setHoldings] = useState<UserHolding[]>([]);
@@ -167,7 +65,7 @@ export default function MyPortfolioPage() {
   const [fxLoading, setFxLoading] = useState(true);
   const [sortKey, setSortKey] = useState<HoldingsSortKey>('value');
   const [sortDir, setSortDir] = useState<SortDir>('desc');
-  const mobileSlot = mobileSlotColumn(sortKey);
+  const [activeSlug, setActiveSlug] = useState<string | null>(null);
 
   // Hydrate from localStorage after mount (avoids SSR mismatch).
   useEffect(() => {
@@ -344,6 +242,7 @@ export default function MyPortfolioPage() {
         gain,
         gainPct,
         score,
+        accent: accentForCategory(stock?.category),
       };
     });
 
@@ -424,6 +323,29 @@ export default function MyPortfolioPage() {
     };
   }, [rows]);
 
+  const rowsWithWeight = useMemo(() => {
+    const total = totals.marketValue;
+    return rows.map((row) => ({
+      ...row,
+      weight:
+        total != null && total > 0 && row.marketValue != null
+          ? (row.marketValue / total) * 100
+          : null,
+    }));
+  }, [rows, totals.marketValue]);
+
+  const allocationSlices = useMemo<AllocationSlice[]>(() => {
+    return rowsWithWeight
+      .filter((row) => row.weight != null && row.weight > 0)
+      .map((row) => ({
+        slug: row.slug,
+        ticker: row.stock?.ticker ?? row.slug.toUpperCase(),
+        color: row.accent,
+        weight: row.weight as number,
+      }))
+      .sort((a, b) => b.weight - a.weight);
+  }, [rowsWithWeight]);
+
   function switchDisplayCurrency(next: PortfolioCurrency) {
     if (next === displayCurrency) return;
 
@@ -458,438 +380,408 @@ export default function MyPortfolioPage() {
   const money = (value: number | null | undefined) =>
     formatMoney(value, displayCurrency);
 
+  const quotesPending =
+    !hydrated || (quotesLoading && holdings.length > 0 && totals.marketValue == null);
+
   return (
     <div className="animate-fade-in dot-pattern">
-      <header
-        className="animate-fade-up stagger-fill-both pb-10 pt-6 md:pb-12 md:pt-12"
-        style={{ animationDelay: '0s' }}
-      >
-        <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
-          <p className="section-label">Personal</p>
-          <ToggleButtonGroup
-            aria-label="Portfolio currency"
-            className="flex items-center gap-1.5"
-            isDetached
-            selectedKeys={new Set([displayCurrency])}
-            onSelectionChange={(keys) => {
-              const key = [...keys][0];
-              if (key == null) return;
-              const next = String(key);
-              if (next === 'USD' || next === 'CAD') {
-                switchDisplayCurrency(next);
-              }
-            }}
-          >
-            {PORTFOLIO_CURRENCIES.map((code) => (
-              <ToggleButton
-                key={code}
-                id={code}
-                className="pill-toggle rounded-full px-3 py-1 text-xs font-semibold"
-              >
-                {code}
-              </ToggleButton>
-            ))}
-          </ToggleButtonGroup>
-        </div>
-        <h1 className="page-title gradient-text-animated mb-4">
-          My Portfolio
-        </h1>
-        <p className="page-dek">
-          Track your own holdings against InvestMoat coverage. Open a position to
-          edit shares or average cost — data stays in this browser only. Totals
-          convert USD and CAD quotes into your book currency.
-        </p>
-        {currencyError && (
-          <p className="mt-3 text-sm text-rose-400">{currencyError}</p>
-        )}
-        {needsFx && !fxLoading && usdCad == null && (
-          <p className="mt-3 text-sm text-rose-400">
-            FX rate unavailable — mixed-currency positions show as — until the
-            USD/CAD mid loads.
-          </p>
-        )}
-        {usdCad != null && (
-          <p className="mt-3 text-xs text-foreground/28">
-            USDCAD {usdCad.toFixed(4)}
-            {needsFx ? ' · converting quote currencies into book currency' : ''}
-          </p>
-        )}
-      </header>
+      <BookHero
+        compact={hydrated && holdings.length > 0}
+        title="Your book."
+        dek="Track your own holdings against InvestMoat coverage. Open a position to edit shares or average cost — data stays in this browser only."
+        end={
+          !hydrated || holdings.length === 0 ? (
+            <CurrencyToggle
+              value={displayCurrency}
+              onChange={switchDisplayCurrency}
+            />
+          ) : null
+        }
+        actions={
+          <>
+            <Link href="/my-portfolio/add" className="btn-primary w-full sm:w-auto">
+              Add holding <Plus size={16} />
+            </Link>
+            <Link href="/stocks" className="btn-secondary w-full sm:w-auto">
+              Browse coverage
+            </Link>
+            <Link href="/portfolio" className="text-link justify-center sm:ml-1 sm:justify-start">
+              Compare with the IM25 <ArrowRight size={14} />
+            </Link>
+          </>
+        }
+      />
 
-      {/* Summary */}
-      <section
-        className="animate-fade-up stagger-fill-both mb-8 grid grid-cols-2 gap-3 lg:grid-cols-4"
-        style={{ animationDelay: '0.1s' }}
-      >
-        <Card className="p-4">
-          <p className="section-label mb-1.5">Market value</p>
-          {!hydrated || (quotesLoading && holdings.length > 0 && totals.marketValue == null) ? (
-            <Spinner size="sm" color="current" />
-          ) : (
-            <p className="text-2xl font-black tabular-nums text-foreground">
-              {money(totals.marketValue)}
-            </p>
-          )}
-          <p className="mt-0.5 text-[10px] text-foreground/28">
-            {holdings.length} position{holdings.length === 1 ? '' : 's'} · {displayCurrency}
-          </p>
-        </Card>
+      {currencyError && <AlertBanner>{currencyError}</AlertBanner>}
+      {needsFx && !fxLoading && usdCad == null && (
+        <AlertBanner>
+          FX rate unavailable — mixed-currency positions show as — until the USD/CAD
+          mid loads.
+        </AlertBanner>
+      )}
 
-        <Card className="p-4">
-          <p className="section-label mb-1.5">Today</p>
-          {!hydrated || quotesLoading ? (
-            <Spinner size="sm" color="current" />
-          ) : totals.dayChange == null ? (
-            <p className="text-2xl font-black text-foreground/20">—</p>
-          ) : (
-            <div
-              className={`flex items-center gap-2 ${
-                totals.dayChange >= 0 ? 'text-emerald-400' : 'text-rose-400'
-              }`}
-            >
-              {totals.dayChange >= 0 ? <TrendingUp size={20} /> : <TrendingDown size={20} />}
-              <span className="text-2xl font-black tabular-nums">
-                {formatPct(totals.dayChange)}
-              </span>
+      {/* Balance */}
+      {hydrated && holdings.length > 0 && (
+        <section
+          className="animate-fade-up stagger-fill-both mb-8"
+          style={{ animationDelay: '0.08s' }}
+        >
+          <Card className="overflow-hidden p-4 sm:p-5 md:p-7">
+            <div className="flex items-center justify-between gap-3">
+              <p className="section-label mb-0">Market value</p>
+              <CurrencyToggle
+                value={displayCurrency}
+                onChange={switchDisplayCurrency}
+              />
             </div>
-          )}
-          <p className="mt-0.5 text-[10px] text-foreground/28">Value-weighted</p>
-        </Card>
-
-        <Card className="p-4">
-          <p className="section-label mb-1.5">Cost basis</p>
-          <p className="text-2xl font-black tabular-nums text-foreground">
-            {money(totals.costBasis)}
-          </p>
-          <p className="mt-0.5 text-[10px] text-foreground/28">Optional · from avg cost</p>
-        </Card>
-
-        <Card className="p-4">
-          <p className="section-label mb-1.5">Unrealized P&amp;L</p>
-          {totals.gain == null ? (
-            <p className="text-2xl font-black text-foreground/20">—</p>
-          ) : (
-            <div
-              className={`${
-                totals.gain >= 0 ? 'text-emerald-400' : 'text-rose-400'
-              }`}
-            >
-              <p className="text-2xl font-black tabular-nums">{money(totals.gain)}</p>
-              <p className="mt-0.5 text-[10px] tabular-nums opacity-80">
-                {formatPct(totals.gainPct)}
+            <div className="mt-3">
+              {quotesPending ? (
+                <Spinner size="sm" color="current" />
+              ) : (
+                <p className="text-[1.85rem] font-semibold leading-none tracking-tight tabular-nums text-foreground sm:text-[40px] md:text-[44px]">
+                  {money(totals.marketValue)}
+                </p>
+              )}
+              <div className="mt-2.5">
+                <DeltaBadge
+                  loading={!hydrated || quotesLoading}
+                  value={totals.dayChange}
+                />
+              </div>
+              <p className="mt-2.5 text-[12px] text-foreground/35 sm:text-[13px]">
+                {holdings.length} position{holdings.length === 1 ? '' : 's'}
+                {usdCad != null ? ` · USDCAD ${usdCad.toFixed(4)}` : ''}
               </p>
             </div>
-          )}
+
+            <div className="mt-5 sm:mt-6">
+              <p className="section-label mb-2.5">Allocation</p>
+              <AllocationBar
+                slices={allocationSlices}
+                activeSlug={activeSlug}
+                onActiveChange={setActiveSlug}
+              />
+            </div>
+
+            <StatStrip>
+              <StatCell hint="Optional · from avg cost" label="Cost basis" shortLabel="Cost">
+                <p className="text-[15px] font-semibold tabular-nums tracking-tight text-foreground sm:text-xl">
+                  {money(totals.costBasis)}
+                </p>
+              </StatCell>
+              <StatCell label="Unrealized P&amp;L" shortLabel="P&amp;L">
+                {totals.gain == null ? (
+                  <p className="text-[15px] font-semibold text-foreground/20 sm:text-xl">—</p>
+                ) : (
+                  <div>
+                    <p>
+                      <SignedMoney formatted={money(totals.gain)} size="lg" value={totals.gain} />
+                    </p>
+                    <p className="mt-0.5 text-[11px] tabular-nums text-foreground/40">
+                      {formatPct(totals.gainPct)}
+                    </p>
+                  </div>
+                )}
+              </StatCell>
+              <StatCell hint="Value-weighted" label="Today">
+                {!hydrated || quotesLoading ? (
+                  <Spinner size="sm" color="current" />
+                ) : totals.dayChange == null ? (
+                  <p className="text-[15px] font-semibold text-foreground/20 sm:text-xl">—</p>
+                ) : (
+                  <p
+                    className={`text-[15px] font-semibold tabular-nums tracking-tight sm:text-xl ${
+                      totals.dayChange >= 0 ? 'text-emerald-400' : 'text-rose-400'
+                    }`}
+                  >
+                    {formatPct(totals.dayChange)}
+                  </p>
+                )}
+              </StatCell>
+            </StatStrip>
+          </Card>
+        </section>
+      )}
+
+      {!hydrated && (
+        <Card className="mb-8 flex items-center justify-center p-10">
+          <Spinner color="current" />
         </Card>
-      </section>
+      )}
 
       {/* Holdings */}
       <section
         className="animate-fade-up stagger-fill-both pb-16"
-        style={{ animationDelay: '0.2s' }}
+        style={{ animationDelay: '0.16s' }}
       >
-        <div className="mb-5 flex flex-wrap items-center gap-3 md:gap-4">
-          <div>
-            <p className="section-label mb-1">Holdings</p>
-            <h2 className="text-xl font-bold text-foreground/85">Your book</h2>
-          </div>
-          <div className="hidden h-px flex-1 bg-foreground/[0.05] md:block" />
-          <div className="ml-auto flex flex-col items-end gap-2 md:flex-row md:items-center">
-            <Link
-              href="/my-portfolio/add"
-              className="btn-primary h-8 min-h-8 px-3 text-[13px]"
-            >
-              <Plus size={14} />
-              Add holding
-            </Link>
-            {holdings.length > 0 && (
-              <Select
-                aria-label="Sort holdings"
-                className="w-[9.75rem] md:hidden"
-                onSelectionChange={(key) => {
-                  if (key == null) return;
-                  handleHoldingsSort(String(key) as HoldingsSortKey);
-                }}
-                selectedKey={sortKey}
-              >
-                <Select.Trigger className="h-8 min-h-8 items-center gap-1.5 rounded-lg border border-foreground/[0.06] bg-foreground/[0.04] px-2.5 text-left">
-                  <span className="flex min-w-0 flex-col leading-tight">
-                    <span className="text-[9px] font-bold uppercase tracking-widest text-foreground/30">
-                      Sort
-                    </span>
-                    <span className="flex min-w-0 items-center gap-1">
-                      <Select.Value className="truncate text-[11px] font-bold text-foreground/85">
-                        {({ isPlaceholder, selectedText, defaultChildren }) =>
-                          isPlaceholder ? defaultChildren : selectedText
-                        }
-                      </Select.Value>
-                      <SortIndicator active dir={sortDir} />
-                    </span>
-                  </span>
-                  <Select.Indicator className="ml-auto shrink-0" />
-                </Select.Trigger>
-                <Select.Popover>
-                  <ListBox>
-                    {HOLDINGS_SORT_OPTIONS.map((opt) => (
-                      <ListBoxItem
-                        key={opt.key}
-                        className="flex items-center justify-between gap-2"
-                        id={opt.key}
-                        textValue={opt.label}
-                      >
-                        <span>{opt.label}</span>
-                        <SortIndicator active={sortKey === opt.key} dir={sortDir} />
-                      </ListBoxItem>
-                    ))}
-                  </ListBox>
-                </Select.Popover>
-              </Select>
-            )}
-          </div>
-        </div>
-
-        {!hydrated ? (
-          <Card className="flex items-center justify-center p-6 md:p-10">
-            <Spinner color="current" />
-          </Card>
-        ) : holdings.length === 0 ? (
-          <Card className="p-6 text-center md:p-10">
-            <p className="text-sm text-foreground/45">
-              No holdings yet. Add a covered name to get started — data stays in
-              local storage.
-            </p>
-            <div className="mt-5">
-              <Link href="/my-portfolio/add" className="btn-primary">
-                <Plus size={16} />
-                Add holding
-              </Link>
+        {hydrated && holdings.length === 0 ? (
+          <EmptyBook />
+        ) : hydrated ? (
+          <>
+            <div className="mb-4 flex items-center gap-3 md:mb-5">
+              <div>
+                <p className="section-label mb-1">Holdings</p>
+                <h2 className="text-xl font-semibold tracking-tight text-foreground/90">
+                  Positions
+                </h2>
+              </div>
+              <div className="hidden h-px flex-1 bg-foreground/[0.05] md:block" />
+              <div className="ml-auto flex h-10 items-stretch gap-2">
+                <Select
+                  aria-label="Sort holdings"
+                  className="h-10 w-[8.5rem] gap-0 md:hidden"
+                  onSelectionChange={(key) => {
+                    if (key == null) return;
+                    handleHoldingsSort(String(key) as HoldingsSortKey);
+                  }}
+                  selectedKey={sortKey}
+                >
+                  <Select.Trigger className={`${PORTFOLIO_TOOLBAR_CTRL} h-full w-full justify-between text-left`}>
+                    <Select.Value className="min-w-0 truncate font-semibold text-foreground/85">
+                      {({ isPlaceholder, selectedText, defaultChildren }) =>
+                        isPlaceholder ? defaultChildren : selectedText
+                      }
+                    </Select.Value>
+                    <SortIndicator active dir={sortDir} />
+                    <Select.Indicator className="ml-auto shrink-0" />
+                  </Select.Trigger>
+                  <Select.Popover>
+                    <ListBox>
+                      {HOLDINGS_SORT_OPTIONS.map((opt) => (
+                        <ListBoxItem
+                          key={opt.key}
+                          className="flex items-center justify-between gap-2"
+                          id={opt.key}
+                          textValue={opt.label}
+                        >
+                          <span>{opt.label}</span>
+                          <SortIndicator active={sortKey === opt.key} dir={sortDir} />
+                        </ListBoxItem>
+                      ))}
+                    </ListBox>
+                  </Select.Popover>
+                </Select>
+                <Link
+                  href="/my-portfolio/add"
+                  className={`${PORTFOLIO_TOOLBAR_CTRL} h-full shrink-0 justify-center px-3 no-underline transition-colors hover:bg-foreground/[0.06] hover:text-foreground`}
+                >
+                  <Plus size={14} />
+                  Add
+                </Link>
+              </div>
             </div>
-            <p className="mt-4 text-xs text-foreground/28">
-              Browse the{' '}
-              <Link className="text-gold-bright underline-offset-2 hover:underline" href="/stocks">
-                coverage universe
-              </Link>{' '}
-              or the{' '}
-              <Link className="text-gold-bright underline-offset-2 hover:underline" href="/portfolio">
-                IM25
-              </Link>
-              .
-            </p>
-          </Card>
-        ) : (
-          <Card className="overflow-hidden">
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse text-left md:min-w-[720px]">
-                <thead>
-                  <tr className="border-b border-foreground/[0.05] bg-foreground/[0.02]">
-                    <th scope="col" className="px-4 py-2.5 md:px-5">
-                      <SortHeader
-                        label="Holding"
-                        sortKey="name"
-                        active={sortKey === 'name'}
-                        dir={sortDir}
-                        onSort={handleHoldingsSort}
-                      />
-                    </th>
-                    <th scope="col" className="px-2 py-2.5 md:px-3">
-                      <SortHeader
-                        label="Score"
-                        sortKey="score"
-                        active={sortKey === 'score'}
-                        dir={sortDir}
-                        onSort={handleHoldingsSort}
-                        align="right"
-                      />
-                    </th>
-                    <th scope="col" className="px-2 py-2.5 md:px-3">
-                      <SortHeader
-                        label="Shares"
-                        sortKey="shares"
-                        active={sortKey === 'shares'}
-                        dir={sortDir}
-                        onSort={handleHoldingsSort}
-                        align="right"
-                      />
-                    </th>
-                    <th
-                      scope="col"
-                      className={`px-2 py-2.5 md:px-3 ${mobileSlotClass('avgCost', mobileSlot)}`}
-                    >
-                      <SortHeader
-                        label="Avg cost"
-                        sortKey="avgCost"
-                        active={sortKey === 'avgCost'}
-                        dir={sortDir}
-                        onSort={handleHoldingsSort}
-                        align="right"
-                      />
-                    </th>
-                    <th
-                      scope="col"
-                      className={`px-2 py-2.5 md:px-3 ${mobileSlotClass('price', mobileSlot)}`}
-                    >
-                      <SortHeader
-                        label="Price"
-                        sortKey="price"
-                        active={sortKey === 'price'}
-                        dir={sortDir}
-                        onSort={handleHoldingsSort}
-                        align="right"
-                      />
-                    </th>
-                    <th
-                      scope="col"
-                      className={`px-2 py-2.5 md:px-3 ${mobileSlotClass('change', mobileSlot)}`}
-                    >
-                      <SortHeader
-                        label="1D %"
-                        sortKey="change"
-                        active={sortKey === 'change'}
-                        dir={sortDir}
-                        onSort={handleHoldingsSort}
-                        align="right"
-                      />
-                    </th>
-                    <th scope="col" className="px-2 py-2.5 md:px-3">
-                      <SortHeader
-                        label="Value"
-                        sortKey="value"
-                        active={sortKey === 'value'}
-                        dir={sortDir}
-                        onSort={handleHoldingsSort}
-                        align="right"
-                      />
-                    </th>
-                    <th scope="col" className="px-2 py-2.5 md:px-3">
-                      <SortHeader
-                        label="P&L"
-                        sortKey="pnl"
-                        active={sortKey === 'pnl'}
-                        dir={sortDir}
-                        onSort={handleHoldingsSort}
-                        align="right"
-                      />
-                    </th>
-                    <th scope="col" className="w-8 px-2 py-2.5 md:pr-5">
-                      <span className="sr-only">Open</span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-foreground/[0.04]">
-                  {rows.map((row) => {
-                    const name = row.stock?.name ?? row.slug;
-                    const ticker = row.stock?.ticker ?? row.slug.toUpperCase();
-                    const positionHref = `/my-portfolio/${row.slug}`;
-                    const quoteNote =
-                      row.quoteCurrency &&
-                      row.quoteCurrency.toUpperCase() !== displayCurrency
-                        ? row.quoteCurrency.toUpperCase()
-                        : null;
-                    const dayClass =
-                      row.changePercent == null
-                        ? 'text-foreground/25'
-                        : row.changePercent >= 0
-                          ? 'text-emerald-400'
-                          : 'text-rose-400';
-                    const gainClass =
-                      row.gain == null
-                        ? 'text-foreground/25'
-                        : row.gain >= 0
-                          ? 'text-emerald-400'
-                          : 'text-rose-400';
 
-                    return (
-                      <tr
-                        key={row.slug}
-                        className="group relative transition-colors hover:bg-foreground/[0.03]"
-                      >
-                        <td className="px-4 py-3.5 md:px-5">
-                          <Link
-                            href={positionHref}
-                            aria-label={`Open ${ticker} position`}
-                            className="absolute inset-0 z-[1]"
-                          />
-                          <div className="truncate text-sm font-bold text-foreground/90">{name}</div>
-                          <div className="mt-0.5 font-mono text-[10px] font-black uppercase tracking-[0.12em] text-foreground/28">
-                            {ticker}
-                            {quoteNote ? ` · ${quoteNote}` : ''}
-                          </div>
-                        </td>
-                        <td className="px-2 py-3.5 text-right md:px-3">
-                          {row.score == null ? (
-                            <span className="font-mono text-sm text-foreground/25">—</span>
-                          ) : (
-                            <span
-                              className={`font-mono text-sm font-black tabular-nums ${scoreColor(row.score)}`}
-                            >
-                              {row.score}
+            <Card className="overflow-hidden">
+              <div className="hidden items-center gap-3 border-b border-foreground/[0.05] bg-foreground/[0.02] px-4 py-2.5 md:flex md:gap-4 md:px-5">
+                <div className="min-w-0 flex-1">
+                  <SortHeader
+                    label="Holding"
+                    sortKey="name"
+                    active={sortKey === 'name'}
+                    dir={sortDir}
+                    onSort={handleHoldingsSort}
+                  />
+                </div>
+                <div className="hidden w-11 shrink-0 lg:block">
+                  <SortHeader
+                    label="Score"
+                    sortKey="score"
+                    active={sortKey === 'score'}
+                    dir={sortDir}
+                    onSort={handleHoldingsSort}
+                    align="right"
+                  />
+                </div>
+                <div className="hidden w-16 shrink-0 lg:block">
+                  <SortHeader
+                    label="1D %"
+                    sortKey="change"
+                    active={sortKey === 'change'}
+                    dir={sortDir}
+                    onSort={handleHoldingsSort}
+                    align="right"
+                  />
+                </div>
+                <div className="w-[7.5rem] shrink-0">
+                  <SortHeader
+                    label="Value"
+                    sortKey="value"
+                    active={sortKey === 'value'}
+                    dir={sortDir}
+                    onSort={handleHoldingsSort}
+                    align="right"
+                  />
+                </div>
+                <div className="hidden w-[7.25rem] shrink-0 sm:block">
+                  <SortHeader
+                    label="P&L"
+                    sortKey="pnl"
+                    active={sortKey === 'pnl'}
+                    dir={sortDir}
+                    onSort={handleHoldingsSort}
+                    align="right"
+                  />
+                </div>
+                <div className="hidden w-14 shrink-0 md:block">
+                  <span className="block w-full text-right text-[10px] font-bold uppercase tracking-widest text-foreground/20">
+                    Wt.
+                  </span>
+                </div>
+                <div className="w-[15px] shrink-0" />
+              </div>
+
+              <div className="divide-y divide-foreground/[0.04]">
+                {rowsWithWeight.map((row) => {
+                  const name = row.stock?.name ?? row.slug;
+                  const ticker = row.stock?.ticker ?? row.slug.toUpperCase();
+                  const inIm25 = IM25_TICKERS.has(ticker);
+                  const quoteNote =
+                    row.quoteCurrency &&
+                    row.quoteCurrency.toUpperCase() !== displayCurrency
+                      ? row.quoteCurrency.toUpperCase()
+                      : null;
+                  const highlighted = activeSlug === row.slug;
+                  const showScoreOnMobile = sortKey === 'score';
+                  const showChangeOnMobile = sortKey === 'change';
+
+                  return (
+                    <Link
+                      key={row.slug}
+                      href={`/my-portfolio/${row.slug}`}
+                      aria-label={`Open ${ticker} position`}
+                      className={`${HOLDING_ROW_CLASS} ${
+                        highlighted ? 'bg-foreground/[0.04]' : ''
+                      }`}
+                      onPointerEnter={(e) => {
+                        if (e.pointerType === 'mouse') setActiveSlug(row.slug);
+                      }}
+                      onPointerLeave={(e) => {
+                        if (e.pointerType === 'mouse') setActiveSlug(null);
+                      }}
+                    >
+                      <span
+                        className={`absolute inset-y-2 left-0 w-0.5 rounded-full transition-opacity ${
+                          highlighted ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                        }`}
+                        style={{ background: row.accent }}
+                        aria-hidden
+                      />
+
+                      <TickerBadge color={row.accent} ticker={ticker} />
+
+                      <div className="min-w-0 flex-1">
+                        <div className="flex min-w-0 items-center gap-2">
+                          <span className="truncate text-sm font-semibold tracking-tight text-foreground/90 group-hover:text-foreground">
+                            {name}
+                          </span>
+                          {inIm25 && (
+                            <span className="hidden shrink-0 rounded-md border border-accent/25 bg-accent-soft px-1.5 py-0.5 font-mono text-[9px] font-bold uppercase tracking-widest text-gold-bright md:inline">
+                              IM25
                             </span>
                           )}
-                        </td>
-                        <td className="px-2 py-3.5 text-right md:px-3">
-                          <span className="font-mono text-sm tabular-nums text-foreground/80">
-                            {row.shares}
+                        </div>
+                        <div className="mt-0.5 truncate text-[11px] text-foreground/35">
+                          {formatShares(row.shares)} sh
+                          {row.avgCost != null ? ` · ${money(row.avgCost)} avg` : ''}
+                          {row.weight != null ? ` · ${formatWeight(row.weight)}` : ''}
+                          {inIm25 ? <span className="md:hidden"> · IM25</span> : null}
+                          {quoteNote ? ` · ${quoteNote}` : ''}
+                        </div>
+                      </div>
+
+                      <div
+                        className={`shrink-0 ${showScoreOnMobile ? 'flex' : 'hidden'} lg:flex`}
+                      >
+                        {row.score == null ? (
+                          <span className="w-11 text-right font-mono text-sm text-foreground/25">
+                            —
                           </span>
-                        </td>
-                        <td
-                          className={`px-2 py-3.5 text-right md:px-3 ${mobileSlotClass('avgCost', mobileSlot)}`}
+                        ) : (
+                          <ScorePill value={row.score} />
+                        )}
+                      </div>
+
+                      <div
+                        className={`w-16 shrink-0 text-right ${
+                          showChangeOnMobile ? 'block' : 'hidden'
+                        } lg:block`}
+                      >
+                        <span
+                          className={`font-mono text-[13px] font-semibold tabular-nums ${
+                            row.changePercent == null
+                              ? 'text-foreground/25'
+                              : row.changePercent >= 0
+                                ? 'text-emerald-400'
+                                : 'text-rose-400'
+                          }`}
                         >
-                          <span className="font-mono text-sm tabular-nums text-foreground/80">
-                            {row.avgCost == null ? '—' : money(row.avgCost)}
-                          </span>
-                        </td>
-                        <td
-                          className={`px-2 py-3.5 text-right md:px-3 ${mobileSlotClass('price', mobileSlot)}`}
-                        >
-                          <span className="font-mono text-sm tabular-nums text-foreground/80">
-                            {quotesLoading && row.price == null ? (
-                              <Spinner size="sm" color="current" />
-                            ) : (
-                              money(row.price)
-                            )}
-                          </span>
-                        </td>
-                        <td
-                          className={`px-2 py-3.5 text-right md:px-3 ${mobileSlotClass('change', mobileSlot)}`}
-                        >
-                          <span className={`font-mono text-sm tabular-nums ${dayClass}`}>
-                            {formatPct(row.changePercent)}
-                          </span>
-                        </td>
-                        <td className="px-2 py-3.5 text-right md:px-3">
-                          <span className="font-mono text-sm font-semibold tabular-nums text-foreground/85">
-                            {quotesLoading && row.marketValue == null ? (
-                              <Spinner size="sm" color="current" />
-                            ) : (
-                              money(row.marketValue)
-                            )}
-                          </span>
-                        </td>
-                        <td className="px-2 py-3.5 text-right md:px-3">
-                          {row.gain == null ? (
-                            <span className="font-mono text-sm text-foreground/25">—</span>
+                          {formatPct(row.changePercent)}
+                        </span>
+                      </div>
+
+                      <div className="min-w-[5.25rem] shrink-0 text-right sm:w-[7.5rem]">
+                        <div className="font-mono text-sm font-semibold tabular-nums text-foreground/90">
+                          {quotesLoading && row.marketValue == null ? (
+                            <Spinner size="sm" color="current" />
                           ) : (
-                            <div className={`font-mono text-sm tabular-nums ${gainClass}`}>
-                              <div>{money(row.gain)}</div>
-                              <div className="text-[10px] opacity-75">{formatPct(row.gainPct)}</div>
-                            </div>
+                            money(row.marketValue)
                           )}
-                        </td>
-                        <td className="px-2 py-3.5 md:pr-5">
-                          <ChevronRight
-                            aria-hidden
-                            className="ml-auto text-foreground/25 group-hover:text-foreground/50"
-                            size={16}
+                        </div>
+                        <div className="mt-0.5 sm:hidden">
+                          {row.gain == null ? (
+                            <span className="text-[11px] text-foreground/25">—</span>
+                          ) : (
+                            <span
+                              className={`font-mono text-[11px] tabular-nums ${
+                                row.gain >= 0 ? 'text-emerald-400' : 'text-rose-400'
+                              }`}
+                            >
+                              {money(row.gain)} · {formatPct(row.gainPct)}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+
+                      <div className="hidden w-[7.25rem] shrink-0 text-right sm:block">
+                        {row.gain == null ? (
+                          <span className="font-mono text-sm text-foreground/25">—</span>
+                        ) : (
+                          <div>
+                            <SignedMoney formatted={money(row.gain)} value={row.gain} />
+                            <div className="mt-0.5 font-mono text-[11px] tabular-nums text-foreground/35">
+                              {formatPct(row.gainPct)}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+
+                      <div className="hidden w-14 shrink-0 text-right md:block">
+                        <span className="font-mono text-[13px] font-semibold tabular-nums text-foreground/70">
+                          {formatWeight(row.weight)}
+                        </span>
+                        <div className="mt-1 h-1 overflow-hidden rounded-full bg-foreground/[0.07]">
+                          <div
+                            className="h-full rounded-full"
+                            style={{
+                              width: `${Math.min(100, Math.max(0, row.weight ?? 0))}%`,
+                              background: row.accent,
+                            }}
                           />
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-          </Card>
-        )}
+                        </div>
+                      </div>
+
+                      <ChevronRight
+                        aria-hidden
+                        className="ml-0.5 hidden shrink-0 text-foreground/15 transition-colors group-hover:text-gold-bright sm:block"
+                        size={15}
+                      />
+                    </Link>
+                  );
+                })}
+              </div>
+            </Card>
+          </>
+        ) : null}
       </section>
     </div>
   );
