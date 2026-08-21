@@ -525,29 +525,27 @@ export default function MyPortfolioPage() {
                 </h2>
               </div>
               <div className="hidden h-px flex-1 bg-foreground/[0.05] md:block" />
-              <div className="ml-auto flex items-center gap-2">
+              <div className="ml-auto flex h-10 items-stretch gap-2">
                 <Select
                   aria-label="Sort holdings"
-                  className="w-[9.75rem] md:hidden"
+                  className="h-10 w-[9.75rem] md:hidden"
                   onSelectionChange={(key) => {
                     if (key == null) return;
                     handleHoldingsSort(String(key) as HoldingsSortKey);
                   }}
                   selectedKey={sortKey}
                 >
-                  <Select.Trigger className="h-8 min-h-8 items-center gap-1.5 rounded-lg border border-foreground/[0.06] bg-foreground/[0.04] px-2.5 text-left">
-                    <span className="flex min-w-0 flex-col leading-tight">
-                      <span className="text-[9px] font-bold uppercase tracking-widest text-foreground/30">
+                  <Select.Trigger className="box-border h-10 min-h-10 items-center gap-1.5 rounded-[0.625rem] border border-border bg-foreground/[0.035] px-2.5 py-0 text-left">
+                    <span className="flex min-w-0 items-center gap-1.5">
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-foreground/30">
                         Sort
                       </span>
-                      <span className="flex min-w-0 items-center gap-1">
-                        <Select.Value className="truncate text-[11px] font-bold text-foreground/85">
-                          {({ isPlaceholder, selectedText, defaultChildren }) =>
-                            isPlaceholder ? defaultChildren : selectedText
-                          }
-                        </Select.Value>
-                        <SortIndicator active dir={sortDir} />
-                      </span>
+                      <Select.Value className="truncate text-xs font-semibold text-foreground/85">
+                        {({ isPlaceholder, selectedText, defaultChildren }) =>
+                          isPlaceholder ? defaultChildren : selectedText
+                        }
+                      </Select.Value>
+                      <SortIndicator active dir={sortDir} />
                     </span>
                     <Select.Indicator className="ml-auto shrink-0" />
                   </Select.Trigger>
@@ -569,7 +567,7 @@ export default function MyPortfolioPage() {
                 </Select>
                 <Link
                   href="/my-portfolio/add"
-                  className="btn-secondary h-8 min-h-8 px-3 text-[13px]"
+                  className="inline-flex h-10 min-h-10 shrink-0 items-center justify-center gap-1.5 rounded-[0.625rem] border border-border bg-foreground/[0.035] px-3 text-[13px] font-semibold text-foreground/85 no-underline transition-colors hover:bg-foreground/[0.06] hover:text-foreground"
                 >
                   <Plus size={14} />
                   Add
