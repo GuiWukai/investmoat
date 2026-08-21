@@ -36,6 +36,10 @@ export type HoldingsSortKey =
   | 'pnl';
 export type SortDir = 'asc' | 'desc';
 
+/** Shared Sort + Add chrome on the phone Positions toolbar. */
+export const PORTFOLIO_TOOLBAR_CTRL =
+  'portfolio-toolbar-ctrl inline-flex items-center gap-1.5 border border-border bg-foreground/[0.035] px-2.5 font-semibold text-foreground/85';
+
 export const HOLDINGS_SORT_OPTIONS: { key: HoldingsSortKey; label: string }[] = [
   { key: 'name', label: 'Holding' },
   { key: 'score', label: 'Score' },

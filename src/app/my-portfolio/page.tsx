@@ -32,6 +32,7 @@ import {
   formatWeight,
   HOLDING_ROW_CLASS,
   HOLDINGS_SORT_OPTIONS,
+  PORTFOLIO_TOOLBAR_CTRL,
   ScorePill,
   SignedMoney,
   SortHeader,
@@ -528,15 +529,15 @@ export default function MyPortfolioPage() {
               <div className="ml-auto flex h-10 items-stretch gap-2">
                 <Select
                   aria-label="Sort holdings"
-                  className="h-10 w-[8.5rem] md:hidden"
+                  className="h-10 w-[8.5rem] gap-0 md:hidden"
                   onSelectionChange={(key) => {
                     if (key == null) return;
                     handleHoldingsSort(String(key) as HoldingsSortKey);
                   }}
                   selectedKey={sortKey}
                 >
-                  <Select.Trigger className="portfolio-toolbar-ctrl items-center gap-1.5 border-border bg-foreground/[0.035] px-2.5 text-left">
-                    <Select.Value className="min-w-0 truncate text-xs font-semibold text-foreground/85">
+                  <Select.Trigger className={`${PORTFOLIO_TOOLBAR_CTRL} h-full w-full justify-between text-left`}>
+                    <Select.Value className="min-w-0 truncate font-semibold text-foreground/85">
                       {({ isPlaceholder, selectedText, defaultChildren }) =>
                         isPlaceholder ? defaultChildren : selectedText
                       }
@@ -562,7 +563,7 @@ export default function MyPortfolioPage() {
                 </Select>
                 <Link
                   href="/my-portfolio/add"
-                  className="portfolio-toolbar-ctrl inline-flex shrink-0 items-center justify-center gap-1.5 border border-border bg-foreground/[0.035] px-3 text-[13px] font-semibold text-foreground/85 no-underline transition-colors hover:bg-foreground/[0.06] hover:text-foreground"
+                  className={`${PORTFOLIO_TOOLBAR_CTRL} h-full shrink-0 justify-center px-3 no-underline transition-colors hover:bg-foreground/[0.06] hover:text-foreground`}
                 >
                   <Plus size={14} />
                   Add
