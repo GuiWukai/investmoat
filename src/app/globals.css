@@ -698,6 +698,31 @@ html {
   box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--gold) 55%, transparent);
 }
 
+.select__trigger.portfolio-toolbar-ctrl .select__value {
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: keep-all;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+/* HeroUI's focus-ring uses a 2px ring + offset, which makes Sort look taller
+   than Add after a selection leaves the trigger focused. Keep the gold cue
+   inside the 40px box. */
+.select__trigger.portfolio-toolbar-ctrl:focus,
+.select__trigger.portfolio-toolbar-ctrl:focus-visible,
+.select__trigger.portfolio-toolbar-ctrl[data-focus-visible="true"] {
+  outline: none;
+  --tw-ring-offset-width: 0px;
+  --ring-offset-width: 0px;
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--gold) 55%, transparent);
+}
+
 .text-link {
   display: inline-flex;
   align-items: center;
