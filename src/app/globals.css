@@ -647,8 +647,8 @@ html {
 /* My Portfolio phone toolbar. Sort is a <button> (HeroUI Select.Trigger);
    Add is an <a>. iOS Safari ignores height on appearance:button, so both
    must share one unlayered chrome — longhands beat .select__trigger py-2.
-   .select__value uses wrap-break-word + text-base on phones, so labels like
-   "1D %" wrap and stretch the trigger unless we force a single 40px line. */
+   Size to the selected label (no ellipsis). Keep nowrap + a locked 40px
+   box so labels like "1D %" cannot wrap and stretch Sort past Add. */
 .portfolio-toolbar-ctrl {
   -webkit-appearance: none;
   appearance: none;
@@ -662,20 +662,22 @@ html {
   margin: 0;
   padding-top: 0;
   padding-bottom: 0;
-  overflow: hidden;
+  overflow: visible;
   border-width: 1px;
   border-style: solid;
   border-radius: 0.625rem;
   font-size: 0.8125rem;
   font-weight: 600;
   line-height: 1;
+  width: max-content;
+  max-width: none;
 }
 
 .select__trigger.portfolio-toolbar-ctrl .select__value {
-  flex: 1 1 0;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  flex: 0 0 auto;
+  min-width: max-content;
+  overflow: visible;
+  text-overflow: clip;
   white-space: nowrap;
   overflow-wrap: normal;
   word-break: keep-all;

@@ -51,6 +51,126 @@ export const HOLDINGS_SORT_OPTIONS: { key: HoldingsSortKey; label: string }[] = 
   { key: 'pnl', label: 'P&L' },
 ];
 
+const MOBILE_METRIC =
+  'font-mono text-sm font-semibold tabular-nums text-foreground/90';
+
+/** Phone list: one supporting line that follows the active sort. */
+export function holdingMobileMeta(
+  sortKey: HoldingsSortKey,
+  row: {
+    shares: number;
+    avgCost?: number;
+    price: number | null;
+    changePercent: number | null;
+    gainPct: number | null;
+    weight: number | null;
+  },
+  money: (n: number | null | undefined) => string,
+  extras: { inIm25: boolean; quoteNote: string | null }
+): string {
+  const parts: string[] = [];
+  switch (sortKey) {
+    case 'name':
+      if (extras.inIm25) parts.push('IM25');
+      if (extras.quoteNote) parts.push(extras.quoteNote);
+      break;
+    case 'score':
+      if (extras.inIm25) parts.push('IM25');
+      break;
+    case 'shares':
+      if (row.avgCost != null) parts.push(`${money(row.avgCost)} avg`);
+      break;
+    case 'avgCost':
+      parts.push(`${formatShares(row.shares)} sh`);
+      break;
+    case 'price':
+      if (row.changePercent != null) parts.push(formatPct(row.changePercent));
+      if (extras.quoteNote) parts.push(extras.quoteNote);
+      break;
+    case 'change':
+      if (row.price != null) parts.push(money(row.price));
+      break;
+    case 'value':
+      if (row.weight != null) parts.push(formatWeight(row.weight));
+      if (extras.inIm25) parts.push('IM25');
+      break;
+    case 'pnl':
+      if (row.gainPct != null) parts.push(formatPct(row.gainPct));
+      break;
+  }
+  return parts.join(' · ');
+}
+
+/** Phone list: the sort key as the row's single leading figure. */
+export function HoldingMobilePrimary({
+  sortKey,
+  shares,
+  avgCost,
+  price,
+  changePercent,
+  marketValue,
+  gain,
+  score,
+  weight,
+  money,
+  quotesLoading,
+}: {
+  sortKey: HoldingsSortKey;
+  shares: number;
+  avgCost?: number;
+  price: number | null;
+  changePercent: number | null;
+  marketValue: number | null;
+  gain: number | null;
+  score: number | null;
+  weight: number | null;
+  money: (n: number | null | undefined) => string;
+  quotesLoading: boolean;
+}) {
+  const dash = (
+    <span className="font-mono text-sm tabular-nums text-foreground/25">—</span>
+  );
+  const pending = quotesLoading ? <Spinner size="sm" color="current" /> : dash;
+
+  switch (sortKey) {
+    case 'name':
+      return weight == null ? dash : (
+        <span className={MOBILE_METRIC}>{formatWeight(weight)}</span>
+      );
+    case 'score':
+      return score == null ? dash : <ScorePill value={score} />;
+    case 'shares':
+      return <span className={MOBILE_METRIC}>{formatShares(shares)}</span>;
+    case 'avgCost':
+      return avgCost == null ? dash : (
+        <span className={MOBILE_METRIC}>{money(avgCost)}</span>
+      );
+    case 'price':
+      return price == null ? pending : (
+        <span className={MOBILE_METRIC}>{money(price)}</span>
+      );
+    case 'change': {
+      if (changePercent == null || !Number.isFinite(changePercent)) return dash;
+      const up = changePercent >= 0;
+      return (
+        <span
+          className={`font-mono text-sm font-semibold tabular-nums ${
+            up ? 'text-emerald-400' : 'text-rose-400'
+          }`}
+        >
+          {formatPct(changePercent)}
+        </span>
+      );
+    }
+    case 'value':
+      return marketValue == null ? pending : (
+        <span className={MOBILE_METRIC}>{money(marketValue)}</span>
+      );
+    case 'pnl':
+      return <SignedMoney formatted={money(gain)} value={gain} />;
+  }
+}
+
 /** Full-row link — children are pointer-events-none so iOS taps hit the <a>. */
 export const HOLDING_ROW_CLASS =
   'group relative flex w-full cursor-pointer touch-manipulation items-center gap-2.5 px-3 py-3 text-left no-underline transition-colors hover:bg-foreground/[0.035] sm:gap-3 sm:px-4 sm:py-3.5 md:gap-4 md:px-5 [&>*]:pointer-events-none';

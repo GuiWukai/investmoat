@@ -32,6 +32,8 @@ import {
   formatWeight,
   HOLDING_ROW_CLASS,
   HOLDINGS_SORT_OPTIONS,
+  HoldingMobilePrimary,
+  holdingMobileMeta,
   PORTFOLIO_TOOLBAR_CTRL,
   ScorePill,
   SignedMoney,
@@ -526,18 +528,18 @@ export default function MyPortfolioPage() {
                 </h2>
               </div>
               <div className="hidden h-px flex-1 bg-foreground/[0.05] md:block" />
-              <div className="ml-auto flex h-10 items-center gap-2">
+              <div className="ml-auto flex h-10 shrink-0 items-center gap-2">
                 <Select
                   aria-label="Sort holdings"
-                  className="h-10 max-h-10 min-h-10 w-[8.5rem] shrink-0 overflow-hidden gap-0 md:hidden"
+                  className="h-10 max-h-10 min-h-10 w-max shrink-0 gap-0 md:hidden"
                   onSelectionChange={(key) => {
                     if (key == null) return;
                     handleHoldingsSort(String(key) as HoldingsSortKey);
                   }}
                   selectedKey={sortKey}
                 >
-                  <Select.Trigger className={`${PORTFOLIO_TOOLBAR_CTRL} w-full min-w-0 justify-between text-left`}>
-                    <Select.Value className="min-w-0 flex-1 truncate whitespace-nowrap font-semibold text-foreground/85">
+                  <Select.Trigger className={`${PORTFOLIO_TOOLBAR_CTRL} w-max justify-start text-left`}>
+                    <Select.Value className="whitespace-nowrap font-semibold text-foreground/85">
                       {({ isPlaceholder, selectedText, defaultChildren }) =>
                         isPlaceholder ? defaultChildren : selectedText
                       }
@@ -612,7 +614,7 @@ export default function MyPortfolioPage() {
                     align="right"
                   />
                 </div>
-                <div className="hidden w-[7.25rem] shrink-0 sm:block">
+                <div className="hidden w-[7.25rem] shrink-0 md:block">
                   <SortHeader
                     label="P&L"
                     sortKey="pnl"
@@ -641,8 +643,12 @@ export default function MyPortfolioPage() {
                       ? row.quoteCurrency.toUpperCase()
                       : null;
                   const highlighted = activeSlug === row.slug;
-                  const showScoreOnMobile = sortKey === 'score';
-                  const showChangeOnMobile = sortKey === 'change';
+                  const mobileMeta = holdingMobileMeta(
+                    sortKey,
+                    row,
+                    money,
+                    { inIm25, quoteNote }
+                  );
 
                   return (
                     <Link
@@ -680,18 +686,34 @@ export default function MyPortfolioPage() {
                             </span>
                           )}
                         </div>
-                        <div className="mt-0.5 truncate text-[11px] text-foreground/35">
-                          {formatShares(row.shares)} sh
-                          {row.avgCost != null ? ` · ${money(row.avgCost)} avg` : ''}
-                          {row.weight != null ? ` · ${formatWeight(row.weight)}` : ''}
-                          {inIm25 ? <span className="md:hidden"> · IM25</span> : null}
-                          {quoteNote ? ` · ${quoteNote}` : ''}
+                        <div className="mt-0.5 text-[11px] text-foreground/35">
+                          <span className="md:hidden">{mobileMeta}</span>
+                          <span className="hidden md:inline">
+                            {formatShares(row.shares)} sh
+                            {row.avgCost != null ? ` · ${money(row.avgCost)} avg` : ''}
+                            {row.weight != null ? ` · ${formatWeight(row.weight)}` : ''}
+                            {quoteNote ? ` · ${quoteNote}` : ''}
+                          </span>
                         </div>
                       </div>
 
-                      <div
-                        className={`shrink-0 ${showScoreOnMobile ? 'flex' : 'hidden'} lg:flex`}
-                      >
+                      <div className="shrink-0 text-right md:hidden">
+                        <HoldingMobilePrimary
+                          avgCost={row.avgCost}
+                          changePercent={row.changePercent}
+                          gain={row.gain}
+                          marketValue={row.marketValue}
+                          money={money}
+                          price={row.price}
+                          quotesLoading={quotesLoading}
+                          score={row.score}
+                          shares={row.shares}
+                          sortKey={sortKey}
+                          weight={row.weight}
+                        />
+                      </div>
+
+                      <div className="hidden w-11 shrink-0 lg:flex">
                         {row.score == null ? (
                           <span className="w-11 text-right font-mono text-sm text-foreground/25">
                             —
@@ -701,11 +723,7 @@ export default function MyPortfolioPage() {
                         )}
                       </div>
 
-                      <div
-                        className={`w-16 shrink-0 text-right ${
-                          showChangeOnMobile ? 'block' : 'hidden'
-                        } lg:block`}
-                      >
+                      <div className="hidden w-16 shrink-0 text-right lg:block">
                         <span
                           className={`font-mono text-[13px] font-semibold tabular-nums ${
                             row.changePercent == null
@@ -719,7 +737,7 @@ export default function MyPortfolioPage() {
                         </span>
                       </div>
 
-                      <div className="min-w-[5.25rem] shrink-0 text-right sm:w-[7.5rem]">
+                      <div className="hidden min-w-[5.25rem] shrink-0 text-right sm:w-[7.5rem] md:block">
                         <div className="font-mono text-sm font-semibold tabular-nums text-foreground/90">
                           {quotesLoading && row.marketValue == null ? (
                             <Spinner size="sm" color="current" />
@@ -727,22 +745,9 @@ export default function MyPortfolioPage() {
                             money(row.marketValue)
                           )}
                         </div>
-                        <div className="mt-0.5 sm:hidden">
-                          {row.gain == null ? (
-                            <span className="text-[11px] text-foreground/25">—</span>
-                          ) : (
-                            <span
-                              className={`font-mono text-[11px] tabular-nums ${
-                                row.gain >= 0 ? 'text-emerald-400' : 'text-rose-400'
-                              }`}
-                            >
-                              {money(row.gain)} · {formatPct(row.gainPct)}
-                            </span>
-                          )}
-                        </div>
                       </div>
 
-                      <div className="hidden w-[7.25rem] shrink-0 text-right sm:block">
+                      <div className="hidden w-[7.25rem] shrink-0 text-right md:block">
                         {row.gain == null ? (
                           <span className="font-mono text-sm text-foreground/25">—</span>
                         ) : (
