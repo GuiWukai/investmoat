@@ -662,20 +662,22 @@ html {
   margin: 0;
   padding-top: 0;
   padding-bottom: 0;
-  overflow: hidden;
+  overflow: visible;
   border-width: 1px;
   border-style: solid;
   border-radius: 0.625rem;
   font-size: 0.8125rem;
   font-weight: 600;
   line-height: 1;
+  width: max-content;
+  max-width: none;
 }
 
 .select__trigger.portfolio-toolbar-ctrl .select__value {
-  flex: 1 1 0;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  flex: 0 0 auto;
+  min-width: max-content;
+  overflow: visible;
+  text-overflow: clip;
   white-space: nowrap;
   overflow-wrap: normal;
   word-break: keep-all;
