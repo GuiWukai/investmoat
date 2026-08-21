@@ -11,7 +11,7 @@ export function parsePositiveNumber(raw: string): number | null {
 }
 
 const FIELD_INPUT_CLASS =
-  'w-full rounded-lg border border-border bg-foreground/[0.03] px-2.5 py-1.5 font-mono text-xs tabular-nums text-foreground outline-none transition-colors placeholder:text-foreground/25 focus:border-accent/40 focus:bg-foreground/[0.05] md:rounded-xl md:px-3 md:py-2 md:text-sm';
+  'w-full rounded-[0.625rem] border border-border bg-foreground/[0.03] px-3 py-2.5 font-mono text-sm tabular-nums text-foreground outline-none transition-colors placeholder:text-foreground/25 focus:border-accent/40 focus:bg-foreground/[0.05]';
 
 /** Local draft input that commits a positive number (or clear) on blur. */
 export function HoldingNumberField({
