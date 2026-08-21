@@ -644,6 +644,16 @@ html {
   transform: translateY(-1px);
 }
 
+/* My Portfolio phone toolbar — beat HeroUI .select__trigger py-2 so Sort
+   and Add share one 40px row. Unlayered so it wins over the component layer. */
+.portfolio-toolbar-ctrl {
+  box-sizing: border-box;
+  height: 2.5rem;
+  min-height: 2.5rem;
+  padding-block: 0;
+  border-radius: 0.625rem;
+}
+
 .text-link {
   display: inline-flex;
   align-items: center;

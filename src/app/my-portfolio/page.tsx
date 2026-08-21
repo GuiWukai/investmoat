@@ -528,25 +528,20 @@ export default function MyPortfolioPage() {
               <div className="ml-auto flex h-10 items-stretch gap-2">
                 <Select
                   aria-label="Sort holdings"
-                  className="h-10 w-[9.75rem] md:hidden"
+                  className="h-10 w-[8.5rem] md:hidden"
                   onSelectionChange={(key) => {
                     if (key == null) return;
                     handleHoldingsSort(String(key) as HoldingsSortKey);
                   }}
                   selectedKey={sortKey}
                 >
-                  <Select.Trigger className="box-border h-10 min-h-10 items-center gap-1.5 rounded-[0.625rem] border border-border bg-foreground/[0.035] px-2.5 py-0 text-left">
-                    <span className="flex min-w-0 items-center gap-1.5">
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-foreground/30">
-                        Sort
-                      </span>
-                      <Select.Value className="truncate text-xs font-semibold text-foreground/85">
-                        {({ isPlaceholder, selectedText, defaultChildren }) =>
-                          isPlaceholder ? defaultChildren : selectedText
-                        }
-                      </Select.Value>
-                      <SortIndicator active dir={sortDir} />
-                    </span>
+                  <Select.Trigger className="portfolio-toolbar-ctrl items-center gap-1.5 border-border bg-foreground/[0.035] px-2.5 text-left">
+                    <Select.Value className="min-w-0 truncate text-xs font-semibold text-foreground/85">
+                      {({ isPlaceholder, selectedText, defaultChildren }) =>
+                        isPlaceholder ? defaultChildren : selectedText
+                      }
+                    </Select.Value>
+                    <SortIndicator active dir={sortDir} />
                     <Select.Indicator className="ml-auto shrink-0" />
                   </Select.Trigger>
                   <Select.Popover>
@@ -567,7 +562,7 @@ export default function MyPortfolioPage() {
                 </Select>
                 <Link
                   href="/my-portfolio/add"
-                  className="inline-flex h-10 min-h-10 shrink-0 items-center justify-center gap-1.5 rounded-[0.625rem] border border-border bg-foreground/[0.035] px-3 text-[13px] font-semibold text-foreground/85 no-underline transition-colors hover:bg-foreground/[0.06] hover:text-foreground"
+                  className="portfolio-toolbar-ctrl inline-flex shrink-0 items-center justify-center gap-1.5 border border-border bg-foreground/[0.035] px-3 text-[13px] font-semibold text-foreground/85 no-underline transition-colors hover:bg-foreground/[0.06] hover:text-foreground"
                 >
                   <Plus size={14} />
                   Add
