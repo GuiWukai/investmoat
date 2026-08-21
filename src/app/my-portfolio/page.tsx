@@ -36,6 +36,8 @@ import {
   SignedMoney,
   SortHeader,
   SortIndicator,
+  StatCell,
+  StatStrip,
   TickerBadge,
   type AllocationSlice,
   type HoldingsSortKey,
@@ -383,6 +385,7 @@ export default function MyPortfolioPage() {
   return (
     <div className="animate-fade-in dot-pattern">
       <BookHero
+        compact={hydrated && holdings.length > 0}
         title="Your book."
         dek="Track your own holdings against InvestMoat coverage. Open a position to edit shares or average cost — data stays in this browser only."
         end={
@@ -395,13 +398,13 @@ export default function MyPortfolioPage() {
         }
         actions={
           <>
-            <Link href="/my-portfolio/add" className="btn-primary">
+            <Link href="/my-portfolio/add" className="btn-primary w-full sm:w-auto">
               Add holding <Plus size={16} />
             </Link>
-            <Link href="/stocks" className="btn-secondary">
+            <Link href="/stocks" className="btn-secondary w-full sm:w-auto">
               Browse coverage
             </Link>
-            <Link href="/portfolio" className="text-link ml-1">
+            <Link href="/portfolio" className="text-link justify-center sm:ml-1 sm:justify-start">
               Compare with the IM25 <ArrowRight size={14} />
             </Link>
           </>
@@ -422,38 +425,35 @@ export default function MyPortfolioPage() {
           className="animate-fade-up stagger-fill-both mb-8"
           style={{ animationDelay: '0.08s' }}
         >
-          <Card className="overflow-hidden p-5 md:p-7">
-            <div className="flex flex-wrap items-start justify-between gap-4">
-              <div>
-                <p className="section-label mb-3">Market value</p>
-                <div className="flex flex-wrap items-end gap-3">
-                  {quotesPending ? (
-                    <Spinner size="sm" color="current" />
-                  ) : (
-                    <p className="text-[40px] font-semibold leading-none tracking-tight tabular-nums text-foreground sm:text-[44px]">
-                      {money(totals.marketValue)}
-                    </p>
-                  )}
-                  <div className="mb-1">
-                    <DeltaBadge
-                      loading={!hydrated || quotesLoading}
-                      value={totals.dayChange}
-                    />
-                  </div>
-                </div>
-                <p className="mt-3 text-[13px] text-foreground/35">
-                  {holdings.length} position{holdings.length === 1 ? '' : 's'} ·{' '}
-                  {displayCurrency}
-                  {usdCad != null ? ` · USDCAD ${usdCad.toFixed(4)}` : ''}
-                </p>
-              </div>
+          <Card className="overflow-hidden p-4 sm:p-5 md:p-7">
+            <div className="flex items-center justify-between gap-3">
+              <p className="section-label mb-0">Market value</p>
               <CurrencyToggle
                 value={displayCurrency}
                 onChange={switchDisplayCurrency}
               />
             </div>
+            <div className="mt-3">
+              {quotesPending ? (
+                <Spinner size="sm" color="current" />
+              ) : (
+                <p className="text-[1.85rem] font-semibold leading-none tracking-tight tabular-nums text-foreground sm:text-[40px] md:text-[44px]">
+                  {money(totals.marketValue)}
+                </p>
+              )}
+              <div className="mt-2.5">
+                <DeltaBadge
+                  loading={!hydrated || quotesLoading}
+                  value={totals.dayChange}
+                />
+              </div>
+              <p className="mt-2.5 text-[12px] text-foreground/35 sm:text-[13px]">
+                {holdings.length} position{holdings.length === 1 ? '' : 's'}
+                {usdCad != null ? ` · USDCAD ${usdCad.toFixed(4)}` : ''}
+              </p>
+            </div>
 
-            <div className="mt-6">
+            <div className="mt-5 sm:mt-6">
               <p className="section-label mb-2.5">Allocation</p>
               <AllocationBar
                 slices={allocationSlices}
@@ -462,47 +462,42 @@ export default function MyPortfolioPage() {
               />
             </div>
 
-            <div className="mt-6 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-3">
-              <div className="bg-surface px-5 py-4">
-                <p className="section-label mb-1.5">Cost basis</p>
-                <p className="text-xl font-semibold tabular-nums tracking-tight text-foreground">
+            <StatStrip>
+              <StatCell hint="Optional · from avg cost" label="Cost basis" shortLabel="Cost">
+                <p className="text-[15px] font-semibold tabular-nums tracking-tight text-foreground sm:text-xl">
                   {money(totals.costBasis)}
                 </p>
-                <p className="mt-1 text-[11px] text-foreground/28">Optional · from avg cost</p>
-              </div>
-              <div className="bg-surface px-5 py-4">
-                <p className="section-label mb-1.5">Unrealized P&amp;L</p>
+              </StatCell>
+              <StatCell label="Unrealized P&amp;L" shortLabel="P&amp;L">
                 {totals.gain == null ? (
-                  <p className="text-xl font-semibold text-foreground/20">—</p>
+                  <p className="text-[15px] font-semibold text-foreground/20 sm:text-xl">—</p>
                 ) : (
                   <div>
                     <p>
                       <SignedMoney formatted={money(totals.gain)} size="lg" value={totals.gain} />
                     </p>
-                    <p className="mt-1 text-[11px] tabular-nums text-foreground/40">
+                    <p className="mt-0.5 text-[11px] tabular-nums text-foreground/40">
                       {formatPct(totals.gainPct)}
                     </p>
                   </div>
                 )}
-              </div>
-              <div className="bg-surface px-5 py-4">
-                <p className="section-label mb-1.5">Today</p>
+              </StatCell>
+              <StatCell hint="Value-weighted" label="Today">
                 {!hydrated || quotesLoading ? (
                   <Spinner size="sm" color="current" />
                 ) : totals.dayChange == null ? (
-                  <p className="text-xl font-semibold text-foreground/20">—</p>
+                  <p className="text-[15px] font-semibold text-foreground/20 sm:text-xl">—</p>
                 ) : (
                   <p
-                    className={`text-xl font-semibold tabular-nums tracking-tight ${
+                    className={`text-[15px] font-semibold tabular-nums tracking-tight sm:text-xl ${
                       totals.dayChange >= 0 ? 'text-emerald-400' : 'text-rose-400'
                     }`}
                   >
                     {formatPct(totals.dayChange)}
                   </p>
                 )}
-                <p className="mt-1 text-[11px] text-foreground/28">Value-weighted</p>
-              </div>
-            </div>
+              </StatCell>
+            </StatStrip>
           </Card>
         </section>
       )}
@@ -522,7 +517,7 @@ export default function MyPortfolioPage() {
           <EmptyBook />
         ) : hydrated ? (
           <>
-            <div className="mb-5 flex flex-wrap items-end gap-3 md:gap-4">
+            <div className="mb-4 flex items-center gap-3 md:mb-5">
               <div>
                 <p className="section-label mb-1">Holdings</p>
                 <h2 className="text-xl font-semibold tracking-tight text-foreground/90">
@@ -681,12 +676,12 @@ export default function MyPortfolioPage() {
                       <TickerBadge color={row.accent} ticker={ticker} />
 
                       <div className="min-w-0 flex-1">
-                        <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
+                        <div className="flex min-w-0 items-center gap-2">
                           <span className="truncate text-sm font-semibold tracking-tight text-foreground/90 group-hover:text-foreground">
                             {name}
                           </span>
                           {inIm25 && (
-                            <span className="rounded-md border border-accent/25 bg-accent-soft px-1.5 py-0.5 font-mono text-[9px] font-bold uppercase tracking-widest text-gold-bright">
+                            <span className="hidden shrink-0 rounded-md border border-accent/25 bg-accent-soft px-1.5 py-0.5 font-mono text-[9px] font-bold uppercase tracking-widest text-gold-bright md:inline">
                               IM25
                             </span>
                           )}
@@ -694,7 +689,9 @@ export default function MyPortfolioPage() {
                         <div className="mt-0.5 truncate text-[11px] text-foreground/35">
                           {formatShares(row.shares)} sh
                           {row.avgCost != null ? ` · ${money(row.avgCost)} avg` : ''}
-                          {quoteNote ? ` · quoted ${quoteNote}` : ''}
+                          {row.weight != null ? ` · ${formatWeight(row.weight)}` : ''}
+                          {inIm25 ? <span className="md:hidden"> · IM25</span> : null}
+                          {quoteNote ? ` · ${quoteNote}` : ''}
                         </div>
                       </div>
 
@@ -728,7 +725,7 @@ export default function MyPortfolioPage() {
                         </span>
                       </div>
 
-                      <div className="w-[7.5rem] shrink-0 text-right">
+                      <div className="min-w-[5.25rem] shrink-0 text-right sm:w-[7.5rem]">
                         <div className="font-mono text-sm font-semibold tabular-nums text-foreground/90">
                           {quotesLoading && row.marketValue == null ? (
                             <Spinner size="sm" color="current" />
@@ -781,7 +778,7 @@ export default function MyPortfolioPage() {
 
                       <ChevronRight
                         aria-hidden
-                        className="ml-auto shrink-0 text-foreground/15 transition-colors group-hover:text-gold-bright"
+                        className="ml-0.5 hidden shrink-0 text-foreground/15 transition-colors group-hover:text-gold-bright sm:block"
                         size={15}
                       />
                     </Link>

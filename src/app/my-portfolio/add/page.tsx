@@ -270,12 +270,12 @@ export default function AddHoldingPage() {
 
           {formError && <AlertBanner>{formError}</AlertBanner>}
 
-          <div className="mt-8 flex flex-wrap items-center gap-3 border-t border-border pt-6">
-            <Button onPress={addHolding} variant="primary">
+          <div className="mt-8 flex flex-col gap-3 border-t border-border pt-6 sm:flex-row sm:flex-wrap sm:items-center">
+            <Button className="w-full sm:w-auto" onPress={addHolding} variant="primary">
               <Plus size={16} />
               Add holding
             </Button>
-            <Link href="/my-portfolio" className="btn-secondary">
+            <Link href="/my-portfolio" className="btn-secondary w-full sm:w-auto">
               Cancel
             </Link>
           </div>

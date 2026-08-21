@@ -49,7 +49,7 @@ export const HOLDINGS_SORT_OPTIONS: { key: HoldingsSortKey; label: string }[] = 
 
 /** Full-row link — children are pointer-events-none so iOS taps hit the <a>. */
 export const HOLDING_ROW_CLASS =
-  'group relative flex w-full cursor-pointer touch-manipulation items-center gap-3 px-4 py-3.5 text-left no-underline transition-colors hover:bg-foreground/[0.035] md:gap-4 md:px-5 [&>*]:pointer-events-none';
+  'group relative flex w-full cursor-pointer touch-manipulation items-center gap-2.5 px-3 py-3 text-left no-underline transition-colors hover:bg-foreground/[0.035] sm:gap-3 sm:px-4 sm:py-3.5 md:gap-4 md:px-5 [&>*]:pointer-events-none';
 
 const CURRENCY_PILL =
   'pill-toggle rounded-full px-3 py-1 text-xs font-semibold';
@@ -101,7 +101,7 @@ export function TickerBadge({
 }) {
   return (
     <div
-      className="flex h-9 min-w-[52px] shrink-0 items-center justify-center rounded-lg px-2 font-mono text-[11px] font-black tracking-wider"
+      className="flex h-8 min-w-[44px] shrink-0 items-center justify-center rounded-lg px-1.5 font-mono text-[10px] font-black tracking-wider sm:h-9 sm:min-w-[52px] sm:px-2 sm:text-[11px]"
       style={{
         background: `${color}18`,
         border: `1px solid ${color}30`,
@@ -158,7 +158,11 @@ export function SignedMoney({
   const up = value >= 0;
   const cls = up ? 'text-emerald-400' : 'text-rose-400';
   const text =
-    size === 'lg' ? 'text-xl tracking-tight' : size === 'sm' ? 'text-[13px]' : 'text-sm';
+    size === 'lg'
+      ? 'text-[15px] tracking-tight sm:text-xl'
+      : size === 'sm'
+        ? 'text-[13px]'
+        : 'text-sm';
   return (
     <span className={`font-mono font-semibold tabular-nums ${text} ${cls}`}>
       {formatted}
@@ -238,6 +242,7 @@ export function BookHero({
   actions,
   back,
   end,
+  compact = false,
 }: {
   eyebrow?: string;
   title: ReactNode;
@@ -245,28 +250,79 @@ export function BookHero({
   actions?: ReactNode;
   back?: ReactNode;
   end?: ReactNode;
+  /** Shrink the hero on phones once the book has holdings — money first. */
+  compact?: boolean;
 }) {
   return (
-    <header className="relative pb-10 pt-6 md:pb-12 md:pt-10">
+    <header
+      className={`relative ${
+        compact ? 'pb-5 pt-4 md:pb-12 md:pt-10' : 'pb-6 pt-4 md:pb-12 md:pt-10'
+      }`}
+    >
       <div className="hero-mesh" aria-hidden />
       <div className="relative animate-fade-up stagger-fill-both" style={{ animationDelay: '0s' }}>
         {back}
-        <div className="mb-6 flex items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
+        <div className="mb-4 flex items-center justify-between gap-3 md:mb-6">
+          <div className="flex min-w-0 items-center gap-2.5 sm:gap-3">
             <span className="icon-tile">
               <Briefcase size={18} strokeWidth={1.7} />
             </span>
-            <p className="section-label mb-0">{eyebrow}</p>
+            <p className="section-label mb-0 truncate">{eyebrow}</p>
           </div>
           {end}
         </div>
-        <h1 className="page-title gradient-text-animated mb-4">{title}</h1>
-        <p className="page-dek">{dek}</p>
+        <h1 className="page-title gradient-text-animated mb-3 md:mb-4">{title}</h1>
+        <p className={`page-dek ${compact ? 'hidden md:block' : ''}`}>{dek}</p>
         {actions ? (
-          <div className="mt-8 flex flex-wrap items-center gap-3">{actions}</div>
+          <div
+            className={`mt-6 flex flex-col gap-2.5 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 ${
+              compact ? 'hidden md:flex' : ''
+            }`}
+          >
+            {actions}
+          </div>
         ) : null}
       </div>
     </header>
+  );
+}
+
+export function StatStrip({ children }: { children: ReactNode }) {
+  return (
+    <div className="mt-5 grid grid-cols-3 gap-px overflow-hidden rounded-xl border border-border bg-border">
+      {children}
+    </div>
+  );
+}
+
+export function StatCell({
+  label,
+  shortLabel,
+  hint,
+  children,
+}: {
+  label: string;
+  shortLabel?: string;
+  hint?: ReactNode;
+  children: ReactNode;
+}) {
+  return (
+    <div className="bg-surface px-2.5 py-3 sm:px-5 sm:py-4">
+      <p className="section-label mb-1 sm:mb-1.5">
+        {shortLabel ? (
+          <>
+            <span className="sm:hidden">{shortLabel}</span>
+            <span className="hidden sm:inline">{label}</span>
+          </>
+        ) : (
+          label
+        )}
+      </p>
+      {children}
+      {hint ? (
+        <p className="mt-1 hidden text-[11px] text-foreground/28 sm:block">{hint}</p>
+      ) : null}
+    </div>
   );
 }
 
@@ -285,7 +341,7 @@ export function EmptyBook() {
         this browser.
       </p>
       <div className="mt-8">
-        <Link href="/my-portfolio/add" className="btn-primary">
+        <Link href="/my-portfolio/add" className="btn-primary w-full max-w-xs">
           <Plus size={16} />
           Add holding
         </Link>
@@ -406,7 +462,7 @@ export function AllocationBar({
             <button
               key={slice.slug}
               type="button"
-              className={`inline-flex items-center gap-1.5 rounded-full px-1.5 py-0.5 text-[11px] font-semibold transition-colors ${
+              className={`inline-flex min-h-8 items-center gap-1.5 rounded-full px-2 py-1 text-[11px] font-semibold transition-colors ${
                 active ? 'bg-foreground/[0.07] text-foreground' : 'text-foreground/45 hover:text-foreground/75'
               }`}
               onPointerEnter={(e) => {

@@ -28,6 +28,8 @@ import {
   formatShares,
   ScorePill,
   SignedMoney,
+  StatCell,
+  StatStrip,
   TickerBadge,
 } from '../portfolioUi';
 
@@ -259,7 +261,7 @@ export default function PositionPage() {
         }
         actions={
           <>
-            <Link href={analysisHref} className="btn-secondary">
+            <Link href={analysisHref} className="btn-secondary w-full sm:w-auto">
               Analysis <ArrowUpRight size={16} />
             </Link>
           </>
@@ -270,78 +272,66 @@ export default function PositionPage() {
         className="relative animate-fade-up stagger-fill-both mb-8"
         style={{ animationDelay: '0.08s' }}
       >
-        <Card className="overflow-hidden p-5 md:p-7">
-          <div className="flex flex-wrap items-start justify-between gap-4">
-            <div className="flex items-start gap-4">
-              <TickerBadge color={accent} ticker={ticker} />
-              <div>
-                <p className="section-label mb-3">Market value</p>
-                <div className="flex flex-wrap items-end gap-3">
-                  {quoteLoading && metrics?.marketValue == null ? (
-                    <Spinner size="sm" color="current" />
-                  ) : (
-                    <p className="text-[36px] font-semibold leading-none tracking-tight tabular-nums text-foreground sm:text-[40px]">
-                      {money(metrics?.marketValue)}
-                    </p>
-                  )}
-                  <div className="mb-1">
-                    <DeltaBadge loading={quoteLoading} value={metrics?.changePercent} />
-                  </div>
-                </div>
-                <p className="mt-3 text-[13px] text-foreground/35">
-                  {quoteLoading && metrics?.price == null ? '…' : money(metrics?.price)} / sh
-                  {' · '}
-                  {formatShares(holding.shares)} shares
-                </p>
-              </div>
-            </div>
-            {metrics?.score != null && (
-              <div className="text-right">
-                <p className="section-label mb-2">Score</p>
-                <ScorePill value={metrics.score} />
-              </div>
+        <Card className="overflow-hidden p-4 sm:p-5 md:p-7">
+          <div className="flex items-center justify-between gap-3">
+            <TickerBadge color={accent} ticker={ticker} />
+            {metrics?.score != null && <ScorePill value={metrics.score} />}
+          </div>
+          <p className="section-label mb-0 mt-4">Market value</p>
+          <div className="mt-3">
+            {quoteLoading && metrics?.marketValue == null ? (
+              <Spinner size="sm" color="current" />
+            ) : (
+              <p className="text-[1.85rem] font-semibold leading-none tracking-tight tabular-nums text-foreground sm:text-[40px]">
+                {money(metrics?.marketValue)}
+              </p>
             )}
+            <div className="mt-2.5">
+              <DeltaBadge loading={quoteLoading} value={metrics?.changePercent} />
+            </div>
+            <p className="mt-2.5 text-[12px] text-foreground/35 sm:text-[13px]">
+              {quoteLoading && metrics?.price == null ? '…' : money(metrics?.price)} / sh
+              {' · '}
+              {formatShares(holding.shares)} shares
+            </p>
           </div>
 
-          <div className="mt-6 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-3">
-            <div className="bg-surface px-5 py-4">
-              <p className="section-label mb-1.5">Cost basis</p>
-              <p className="text-xl font-semibold tabular-nums tracking-tight text-foreground">
+          <StatStrip>
+            <StatCell label="Cost basis" shortLabel="Cost">
+              <p className="text-[15px] font-semibold tabular-nums tracking-tight text-foreground sm:text-xl">
                 {money(metrics?.costBasis)}
               </p>
-            </div>
-            <div className="bg-surface px-5 py-4">
-              <p className="section-label mb-1.5">Unrealized P&amp;L</p>
+            </StatCell>
+            <StatCell label="Unrealized P&amp;L" shortLabel="P&amp;L">
               {metrics?.gain == null ? (
-                <p className="text-xl font-semibold text-foreground/20">—</p>
+                <p className="text-[15px] font-semibold text-foreground/20 sm:text-xl">—</p>
               ) : (
                 <div>
                   <p>
                     <SignedMoney formatted={money(metrics.gain)} size="lg" value={metrics.gain} />
                   </p>
-                  <p className="mt-1 text-[11px] tabular-nums text-foreground/40">
+                  <p className="mt-0.5 text-[11px] tabular-nums text-foreground/40">
                     {formatPct(metrics.gainPct)}
                   </p>
                 </div>
               )}
-            </div>
-            <div className="bg-surface px-5 py-4">
-              <p className="section-label mb-1.5">Today</p>
+            </StatCell>
+            <StatCell label="Today">
               {quoteLoading ? (
                 <Spinner size="sm" color="current" />
               ) : metrics?.changePercent == null ? (
-                <p className="text-xl font-semibold text-foreground/20">—</p>
+                <p className="text-[15px] font-semibold text-foreground/20 sm:text-xl">—</p>
               ) : (
                 <p
-                  className={`text-xl font-semibold tabular-nums tracking-tight ${
+                  className={`text-[15px] font-semibold tabular-nums tracking-tight sm:text-xl ${
                     metrics.changePercent >= 0 ? 'text-emerald-400' : 'text-rose-400'
                   }`}
                 >
                   {formatPct(metrics.changePercent)}
                 </p>
               )}
-            </div>
-          </div>
+            </StatCell>
+          </StatStrip>
         </Card>
       </section>
 
@@ -387,14 +377,14 @@ export default function PositionPage() {
             </label>
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-border pt-6">
+          <div className="mt-8 flex flex-col gap-3 border-t border-border pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
             <p className="text-[12px] text-foreground/28">
               Book currency is set on My Portfolio ({displayCurrency}).
             </p>
             <button
               type="button"
               onClick={removeHolding}
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-rose-400/75 transition-colors hover:text-rose-300"
+              className="inline-flex min-h-11 items-center justify-center gap-1.5 text-sm font-medium text-rose-400/75 transition-colors hover:text-rose-300 sm:min-h-0 sm:justify-start"
             >
               <Trash2 size={14} />
               Remove position
