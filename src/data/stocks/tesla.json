@@ -9,7 +9,7 @@
     },
     {
       "label": "Market Cap",
-      "value": "~$1.04T"
+      "value": "~$1.36T"
     }
   ],
   "chips": [
@@ -46,68 +46,100 @@
     }
   ],
   "moat": {
-    "description": "Vertical integration, a real-world autonomous driving data flywheel, and the Optimus robotics platform create a multi-year moat — though EV delivery headwinds and margin compression are testing it.",
+    "description": "The FSD fleet dataset is a real, compounding AI-resilient advantage. The rest of the slate is a car-and-energy manufacturer with a vertical cost stack — not a payments rail, not a system of record, and not yet an Optimus franchise. NACS opening, BYD's cost gap in China, and pre-revenue Robotaxi/Optimus keep the durable moat narrower than the autonomy narrative implies.",
     "analysisTitle": "The Autonomous Data Flywheel",
-    "analysisSummary": "Tesla's moat is evolving from **manufacturing cost** to **real-world AI data**:",
+    "analysisSummary": "Tesla's moat is evolving from **manufacturing cost** to **real-world AI data** — but only the data leg is category-defining today:",
     "analysisPoints": [
       {
         "title": "FSD Data Flywheel",
-        "text": "3B+ real-world FSD miles logged across millions of active vehicles give Tesla the largest proprietary autonomous driving dataset on earth. Every mile widens the gap vs. competitors who rely on synthetic simulation data."
+        "text": "3B+ real-world FSD miles logged across millions of active vehicles give Tesla the largest consumer-fleet autonomous-driving dataset on earth. Every mile widens the gap vs. competitors who rely on synthetic simulation. That dataset cannot be replicated without Tesla's installed base — the one strong resilient pillar."
       },
       {
-        "title": "Optimus Robotics Platform",
-        "text": "Tesla committed $20B toward autonomous and humanoid robots in 2026. If Optimus achieves commercial-scale production (target: 1M+ units by 2027), it creates an entirely new revenue stream in a TAM that dwarfs automotive."
+        "title": "Optimus Is Still Capex, Not a Moat",
+        "text": "Tesla committed ~$20B toward autonomy and humanoid robots in 2026. Model S/X lines at Fremont have been decommissioned for first-generation Optimus, with production 'later this year' for internal training data — public sales pointed at end-2027. Until units ship to customers, Optimus is optionality, not bundling or embedding."
       },
       {
-        "title": "Vertical Integration",
-        "text": "From 4680 battery cells to Dojo supercomputer to Giga casting — Tesla's cost-per-vehicle is structurally below legacy OEMs. While BYD has closed the gap in China, no Western OEM can match Tesla's integrated manufacturing stack."
+        "title": "Vertical Integration, Not Exclusivity",
+        "text": "From 4680 cells to Giga casting, Tesla's cost-per-vehicle is still below Western OEMs. BYD has closed the gap in China, Supercharger NACS is now the North American standard (shared, not exclusive), and no Western OEM matches the integrated stack. Cost advantage is real; it is not a Visa-class lock-in."
       }
     ]
   },
   "growth": {
-    "description": "Full Q2 2026 results (reported July 22) delivered a record $28.24B in revenue (+26% YoY, beating the ~$26.3B consensus) but a sharp profitability miss: adjusted EPS of $0.33 badly missed the ~$0.50 estimate, GAAP operating income fell 57% YoY to $398M, and operating margin compressed to 1.4% (from 4.1% a year ago). Gross margin dropped to 16.8% — down from 21.1% in Q1 and below the ~19.4% expected — as average selling prices fell and regulatory-credit revenue collapsed to $146M (−67% YoY from $439M, and down from $380M in Q1). Free cash flow swung to −$1.09B (vs +$146M a year ago) as capex jumped 142% YoY to $5.79B; management reiterated FY2026 capex above $25B and flagged elevated spend for another 2–3 years as Robotaxi, Optimus, the Terafab chip project and solar all scale at once. The bright spots were volume and energy: Q2 deliveries of 480,126 (+25% YoY) reversed the Q1 inventory build, and energy storage hit a near-record 13.5 GWh (+40% YoY, +53% QoQ, beating the ~11.8 GWh consensus). On Optimus, Musk tempered expectations — limited Fremont production starts in late July/August with high-volume output pushed to 2027. The market read the margin/FCF deterioration harshly, sending the stock down ~14% to ~$322.",
+    "description": "Full Q2 2026 results (reported July 22) delivered a record $28.24B in revenue (+26% YoY, beating the ~$26.3B consensus) but a sharp profitability miss: adjusted EPS of $0.33 badly missed the ~$0.50 estimate, GAAP operating income fell 57% YoY to $398M, and operating margin compressed to 1.4% (from 4.1% a year ago). Gross margin dropped to 16.8% — down from 21.1% in Q1 and below the ~19.4% expected — as average selling prices fell and regulatory-credit revenue collapsed to $146M (−67% YoY from $439M). Free cash flow swung to −$1.09B (vs +$146M a year ago) as capex jumped 142% YoY to $5.79B; management reiterated FY2026 capex above $25B for another 2–3 years. Volume and energy storage were the bright spots on units: Q2 deliveries of 480,126 (+25% YoY) reversed the Q1 inventory build (358,023 deliveries, +6% YoY). Energy deployed a near-record 13.5 GWh (+40% YoY, +53% QoQ) but energy revenue was only $3.14B (+13% YoY); H1 energy revenue was essentially flat at $5.55B vs $5.52B. Services and other jumped 50% to $4.58B. Robotaxi is now live in seven US metros (Austin, Dallas, Houston, Miami, Orlando, Tampa unsupervised; Bay Area supervised). On Optimus, Musk tempered expectations — Fremont lines installing, high-volume output and public sales pushed toward 2027. The 3–5 year growth rate is not the Q2 bounce: TTM revenue is $103.6B (+12% YoY) after FY2025 $94.8B (−3%) and three years of roughly flat auto revenue.",
     "growthAnalysis": {
-      "cagrEstimate": "15-20%",
-      "scoreDerivation": "Base 81.7 (15-20% CAGR, 17.5% midpoint) + 2.7 trajectory (2 of 3 drivers accelerating — deliveries and energy — with autonomy stable) − 4 margin compression (Q2 gross margin 16.8% vs 21.1% Q1; op margin 1.4% vs 4.1% YoY) + 3 TAM expansion (Robotaxi/Optimus/Energy) − 10 high keyRisk severity = 73",
+      "cagrEstimate": "10-15%",
+      "cagrBasis": "TTM revenue through Q2 2026 $103.6B (+12% YoY) after FY2025 $94.8B (−3% vs FY2024 $97.7B) and FY2023 $96.8B — a ~3% three-year CAGR. Q2 2026 +26% is a bounce off a weak Q2 2025 compare, not a new slope (one print does not rebase, same rule as CAT). Mix in Q2: auto $20.5B (~73%), energy $3.14B (~11%; GWh +40% but revenue only +13% / H1 flat), services $4.58B (~16%, +50%). The 10–15% band sits between TTM +12% and a 3–5yr fade that includes energy/services mix-shift without booking pre-revenue Robotaxi or Optimus in the base.",
+      "scoreDerivation": "Base 76 (10–15% CAGR, 12.5% midpoint) + 1.3 trajectory (energy accelerating on GWh; auto and autonomy stable) − 4 margin compression (Q2 gross 16.8% vs 21.1% Q1; op margin 1.4%) − 10 high keyRisk (unmaterialised Robotaxi/Optimus/multiple) = 64. Observed margin/FCF deterioration is charged in marginTrend and in the CAGR band; TAM expansion is descriptive only and does not add points.",
       "drivers": [
         {
           "name": "Auto Deliveries",
-          "metric": "Q2 2026 deliveries 480,126 (+25% YoY), auto revenue a record $28.24B total (+26% YoY) and reversed the Q1 inventory build — but ASPs and margins fell: gross margin 16.8%, op margin 1.4%",
-          "trend": "accelerating"
+          "metric": "Q2 480,126 (+25% YoY) reversed Q1's 358,023 (+6% YoY) inventory build; H1 +16% vs 2025. Auto revenue $20.5B of $28.2B. Three-year auto revenue is roughly flat (FY2023–25) — one strong quarter is a bounce, not acceleration.",
+          "trend": "stable"
         },
         {
           "name": "Energy Storage",
-          "metric": "Q2 2026 deployments a near-record 13.5 GWh (+40% YoY, +53% QoQ), beating the ~11.8 GWh consensus; Megafactory Shanghai ramping — highest-margin, fastest-growing segment",
+          "metric": "Q2 deployments 13.5 GWh (+40% YoY, +53% QoQ) vs revenue $3.14B (+13% YoY); H1 energy revenue $5.55B vs $5.52B a year ago — volume is accelerating, ASP/mix is not.",
           "trend": "accelerating"
         },
         {
           "name": "FSD / Robotaxi / Optimus",
-          "metric": "Austin Robotaxi network expanding; Optimus limited Fremont production starts Jul/Aug 2026 but high-volume slipped to 2027 (Musk tempered guidance); FY26 capex >$25B weighted to autonomy",
+          "metric": "Robotaxi live in 7 US metros (6 unsupervised); Cybercab production/testing begun in Texas. Optimus: S/X lines decommissioned, first-gen Fremont lines installing, public sales pointed at end-2027. Pre-revenue. Capex >$25B/yr weighted here.",
           "trend": "stable"
         }
       ],
       "primaryType": "TAM expansion",
-      "keyRisk": "Q2 confirmed the core risk rather than resolving it: the delivery and energy beats did not translate to profit — operating margin fell to 1.4% and free cash flow turned −$1.09B. If margins stay compressed through 2026 (regulatory-credit revenue is structurally fading toward zero), the sub-$30K vehicle dilutes ASPs further, Robotaxi stays sub-scale outside Texas without NHTSA federal approval, and Optimus slips past its 2027 volume target, the multiple compresses from autonomy-option levels toward premium-auto (15-20x), implying further downside even on record revenue.",
+      "keyRisk": "If Robotaxi stays sub-scale outside a handful of permissive metros without an NHTSA federal framework, Optimus slips past the 2027 commercial target, and auto margins stay in the low-single-digits as regulatory credits fade toward zero, the multiple compresses from autonomy-option levels (~180× NTM earnings) toward premium-auto (15–20×). Margin compression and negative FCF are already observed — they are charged in marginTrend and in the 10–15% CAGR, not again here.",
       "keyRiskSeverity": "high",
       "marginTrend": "compressing"
     },
     "additionalNote": {
       "title": "2026 Growth Catalysts",
       "points": [
-        "Robotaxi commercial expansion: Austin network growing; regulatory approvals in Texas and other non-California states critical to the scaling story",
-        "Optimus production ramp: transitioning from 1,000+ prototypes to limited commercial production at Fremont by end-2026; early external orders from manufacturing and logistics customers",
-        "Energy Storage re-accelerating — 13.5 GWh deployed in Q2 2026 (+40% YoY, +53% QoQ), the second-largest quarter ever, with grid-scale demand and Megafactory Shanghai ramping",
-        "Next-gen affordable vehicle (sub-$30K) planned to re-accelerate volume growth in 2026 after the 2025 delivery decline",
-        "FSD licensing negotiations ongoing — a deal with a major OEM would be a high-multiple-expansion catalyst"
+        "Robotaxi commercial expansion: now live in seven US metros; regulatory approvals beyond Texas and Florida — especially California unsupervised and an NHTSA federal framework — are what turn miles into material revenue",
+        "Optimus: Fremont first-generation lines installing after S/X decommissioning; internal training units in 2026, public sales pointed at end-2027 — not a 2026 revenue line",
+        "Energy Storage: 13.5 GWh in Q2 is real volume; energy revenue +13% and H1 flat means the earnings contribution trails GWh until Megapack 3 / Texas Megafactory mix improves ASPs",
+        "Next-gen affordable vehicle (sub-$30K) planned to re-accelerate volume after the 2025 delivery decline — at the cost of further ASP dilution",
+        "FSD licensing negotiations ongoing — a deal with a major OEM would be a high-multiple-expansion catalyst still absent from the base"
       ]
     }
   },
   "valuation": {
-    "score": 67,
-    "description": "After the Q2 margin/FCF miss the stock fell ~14% to ~$322, roughly 4% below the revised $335 base case — fairly valued rather than cheap. Revenue and energy storage set records, but operating margin collapsed to 1.4% and free cash flow turned negative (−$1.09B) on a 142% capex surge, and regulatory-credit revenue is structurally fading. Roughly half the price still reflects option value on Robotaxi and Optimus that remains pre-revenue, so the margin of safety is thin until autonomy monetises or auto margins recover.",
+    "score": 63,
+    "description": "At ~$363 (August 21) Tesla sits ~8% above the $335 base case — slightly rich, not cheap. The July Q2 bounce from ~$322 has closed the thin discount the prior file recorded. Revenue and energy storage set records on units, but operating margin collapsed to 1.4% and free cash flow turned negative (−$1.09B) on a 142% capex surge. Trailing P/E is ~340× on $1.07 TTM EPS; forward P/E is ~180×. Roughly half the price still reflects option value on Robotaxi and Optimus that remains pre-revenue, so there is no margin of safety until autonomy monetises or auto margins recover.",
     "valuationNote": {
-      "text": "Sum-of-parts after the Q2 reset: ~$70 for the auto business at trough margins, ~$120 for Energy & Services (13.5 GWh/quarter, +40% YoY), and ~$145 residual option value on Robotaxi/Optimus. At ~$322 vs. the $335 base case, margin of safety is minimal — Hold; accumulate only on pullbacks toward the $180 bear zone or on hard evidence of margin recovery or autonomy revenue.",
+      "text": "Sum-of-parts after the Q2 reset: ~$70 for the auto business at trough margins, ~$120 for Energy & Services, and ~$145 residual option value on Robotaxi/Optimus. At ~$363 vs. the $335 base case the stock is through fair value on that SOTP — Hold only if the optionality is the thesis; accumulate on pullbacks toward the $180 bear zone or on hard evidence of margin recovery or autonomy revenue.",
       "fairValue": "~$335"
+    },
+    "peAnalysis": {
+      "asOf": "August 2026",
+      "rows": [
+        {
+          "label": "Trailing P/E (GAAP)",
+          "value": "~340×",
+          "note": "TTM EPS $1.07; ~$363 spot"
+        },
+        {
+          "label": "Forward P/E (NTM)",
+          "value": "~180×",
+          "note": "consensus NTM EPS ~$2.00"
+        },
+        {
+          "label": "PEG Ratio",
+          "value": "~14×",
+          "note": "fwd P/E ÷ 12.5% revenue CAGR"
+        },
+        {
+          "label": "Price / Sales (NTM)",
+          "value": "~11×",
+          "note": "~$1.36T / ~$119B NTM sales"
+        },
+        {
+          "label": "Price / FCF",
+          "value": "~230×",
+          "note": "TTM FCF rolling down after Q2 −$1.09B"
+        }
+      ],
+      "summary": "Tesla is expensive on every earnings multiple that does not assume Robotaxi/Optimus re-rate the story: ~180× NTM earnings vs. a growth-tech median in the high 20s–30s, PEG ~14× on the 10–15% revenue CAGR this file uses (Street PEG ~5× only if you grant ~35% EPS CAGR from autonomy). Trailing-to-forward P/E compression (340× → 180×) is an earnings-recovery hope, not an observed ramp — Q2 EPS missed, operating margin is 1.4%, and FCF is negative. Price/sales ~11× NTM is a software multiple on a business that is still ~73% cars."
     }
   },
   "scenarios": {
@@ -117,9 +149,9 @@
       "points": [
         "Operating margin stalls at 1–3% through 2027 as ASPs fall on the sub-$30K launch and regulatory-credit revenue (just $146M in Q2, −67% YoY) keeps shrinking toward zero",
         "Free cash flow stays negative as capex holds above $25B/yr for 2–3 years, forcing shareholders to fund Robotaxi, Optimus, Terafab and solar simultaneously with no near-term payback",
-        "Robotaxi stays confined to a few permissive states without an NHTSA federal framework; California approval slips to 2028+",
-        "Optimus misses its 2027 high-volume target after the limited-production start; the humanoid TAM thesis is pushed out again",
-        "Multiple compresses toward premium-auto (15–20x) as the autonomy narrative loses credibility — roughly 45% downside from ~$322"
+        "Robotaxi stays confined to a handful of permissive metros without an NHTSA federal framework; California unsupervised approval slips to 2028+",
+        "Optimus misses its 2027 high-volume / public-sales target after the limited-production start; the humanoid TAM thesis is pushed out again",
+        "Multiple compresses toward premium-auto (15–20×) as the autonomy narrative loses credibility — roughly 50% downside from ~$363"
       ]
     },
     "base": {
@@ -127,8 +159,8 @@
       "description": "Q2 marks the margin trough; deliveries and energy compound while Robotaxi scales gradually and Optimus limited production validates the architecture — but heavy capex caps free cash flow and holds the re-rating on pause.",
       "points": [
         "Operating margin recovers modestly off the 1.4% Q2 low toward 4–6% as new-platform cost reductions offset pricing pressure; EPS re-accelerates into 2027",
-        "Energy Storage compounds 40%+ YoY (13.5 GWh in Q2) toward $15B+ revenue as the highest-margin segment",
-        "Robotaxi expands to 5+ US states generating $0.5–1B in revenue; California approval remains the 2027 catalyst",
+        "Energy Storage GWh compounds while revenue growth catches volume (H1 was flat); segment approaches $15B+ as mix improves",
+        "Robotaxi expands beyond the current 7 metros and generates $0.5–1B in revenue; California unsupervised approval remains the 2027 catalyst",
         "Optimus ships limited volume for internal use, validating the production line ahead of a 2027 commercial ramp",
         "Deliveries hold near 1.8M+ as the sub-$30K vehicle offsets the normalisation of EV-credit-driven pull-forward"
       ]
@@ -152,41 +184,41 @@
     },
     "businessLogic": {
       "status": "na",
-      "note": "as a primary competitive moat in automotive manufacturing."
+      "note": "Tesla is an automotive and energy manufacturer, not a software-logic vendor. FSD/Optimus weights are captured under proprietaryData, not as customer-encoded business logic."
     },
     "publicDataAccess": {
       "status": "na",
-      "note": "to Tesla's competitive advantage framework."
+      "note": "Tesla does not monetise gated access to a public dataset."
     },
     "talentScarcity": {
       "status": "intact",
-      "note": "Battery chemistry expertise, Gigafactory manufacturing engineers, FSD AI/ML researchers, and Optimus robotics talent remain genuinely scarce and concentrated at Tesla."
+      "note": "Battery chemistry, Gigafactory process engineers, FSD researchers, and Optimus robotics talent remain scarce and concentrated. Not strong: the bench is real but turnover is high and the franchise is still keyed off one principal."
     },
     "bundling": {
-      "status": "strong",
-      "note": "EV + FSD Software + Energy Storage + Supercharging + Insurance + Optimus + Service = a vertical integration bundle no OEM has replicated or can replicate without decades of investment."
+      "status": "intact",
+      "note": "EV + FSD + Supercharging + Energy is a real vertical stack customers can buy together, but it is not category-defining. Supercharger NACS is now the shared North American standard, BYD sells EV+battery+energy, insurance is US-limited, and Optimus is not a customer product. Strong would require a bundle rivals cannot assemble — CAT equipment+parts+finance, not an aspirational robot."
     },
     "proprietaryData": {
       "status": "strong",
-      "note": "3B+ real-world FSD driving miles, energy grid optimization data from Megapack deployments, and Optimus telemetry constitute the world's most valuable AI training dataset for physical-world robotics."
+      "note": "3B+ real-world FSD miles across the consumer fleet cannot be replicated without Tesla's installed base — the Threat-Graph-class test. Waymo has more paid robotaxi miles; Tesla has the consumer-fleet corpus that trains FSD. Energy and Optimus telemetry are secondary. This is the one pillar that is category-defining today."
     },
     "regulatoryLockIn": {
       "status": "intact",
-      "note": "Supercharger NACS standard adopted as the North American default, Megapack grid storage contracts with utilities, and federal infrastructure relationships create durable regulatory entrenchment."
+      "note": "NACS as the North American charging standard and Megapack utility contracts are real new-entrant friction. Not strong: NACS is shared, FSD/Robotaxi still need NHTSA and state-by-state approval, and credits (the old regulatory tailwind) are fading."
     },
     "networkEffects": {
       "status": "intact",
-      "note": "Every new Tesla on the road contributes FSD training data for all other Teslas — a compounding fleet intelligence network effect. Supercharger density improves with each new vehicle sold."
+      "note": "FSD training data compounds with the fleet — that flywheel is scored primarily as proprietaryData. Supercharger density still improves with Tesla volume, but NACS opening means other OEMs now add utilisation rather than being locked out. Not a two-sided Visa network."
     },
     "transactionEmbedding": {
-      "status": "strong",
-      "note": "OTA updates, FSD subscriptions, Powerwall energy management, insurance, and Robotaxi platform are embedded in the daily life and infrastructure of Tesla owners and utility operators."
+      "status": "intact",
+      "note": "FSD subscriptions, Supercharger payments, Powerwall, and insurance sit in owner workflows, but take-rates are not universal and alternatives exist. Strong is a rail between buyer and seller at scale (Mastercard, Cat Financial). Robotaxi is pre-revenue and cannot mint this pillar."
     },
     "systemOfRecord": {
-      "status": "intact",
-      "note": "Tesla remains the definitive reference standard for consumer EVs, grid-scale battery storage, and autonomous driving technology benchmarks."
+      "status": "na",
+      "note": "Tesla is not the authoritative record downstream systems must defer to. Being a 'reference standard' for EVs or autonomy benchmarks is category reputation, not a system of record — the Costco/shopping-habit failure mode the rubric forbids. CAT and SpaceX correctly mark this na for manufacturers."
     },
-    "verdict": "Tesla's pivot from auto OEM to autonomous AI platform is the defining investment question of the decade. The FSD data flywheel and Optimus platform are genuinely AI-resilient moats — but the transition requires flawless execution while auto margins are under pressure. The bull case is transformative; the bear case is a very expensive car company."
+    "verdict": "Tesla is a net AI beneficiary on the data-and-demand side — FSD miles, Robotaxi, and Optimus are the AI-era option — but only proprietaryData clears the strong bar today. Network effects, regulatory lock-in, bundling, and transaction embedding are intact industrial advantages, not fortress rails. Learned interfaces have already been copied. The investment question is unchanged: if autonomy monetises, the multiple is earned; if it does not, this is a very expensive car company with 1.4% operating margin and a fading credit line. The bull case is transformative; the labels should not pretend it has already arrived."
   },
-  "lastAnalyzed": "July 23, 2026"
+  "lastAnalyzed": "August 21, 2026"
 }
