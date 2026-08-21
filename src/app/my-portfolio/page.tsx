@@ -526,24 +526,24 @@ export default function MyPortfolioPage() {
                 </h2>
               </div>
               <div className="hidden h-px flex-1 bg-foreground/[0.05] md:block" />
-              <div className="ml-auto flex h-10 items-stretch gap-2">
+              <div className="ml-auto flex h-10 items-center gap-2">
                 <Select
                   aria-label="Sort holdings"
-                  className="h-10 w-[8.5rem] gap-0 md:hidden"
+                  className="h-10 max-h-10 min-h-10 w-[8.5rem] shrink-0 overflow-hidden gap-0 md:hidden"
                   onSelectionChange={(key) => {
                     if (key == null) return;
                     handleHoldingsSort(String(key) as HoldingsSortKey);
                   }}
                   selectedKey={sortKey}
                 >
-                  <Select.Trigger className={`${PORTFOLIO_TOOLBAR_CTRL} h-full w-full justify-between text-left`}>
-                    <Select.Value className="min-w-0 truncate font-semibold text-foreground/85">
+                  <Select.Trigger className={`${PORTFOLIO_TOOLBAR_CTRL} w-full min-w-0 justify-between text-left`}>
+                    <Select.Value className="min-w-0 flex-1 truncate whitespace-nowrap font-semibold text-foreground/85">
                       {({ isPlaceholder, selectedText, defaultChildren }) =>
                         isPlaceholder ? defaultChildren : selectedText
                       }
                     </Select.Value>
                     <SortIndicator active dir={sortDir} />
-                    <Select.Indicator className="ml-auto shrink-0" />
+                    <Select.Indicator />
                   </Select.Trigger>
                   <Select.Popover>
                     <ListBox>
