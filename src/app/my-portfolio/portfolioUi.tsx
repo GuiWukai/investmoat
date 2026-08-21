@@ -59,7 +59,7 @@ export function holdingMobileMeta(
   sortKey: HoldingsSortKey,
   row: {
     shares: number;
-    avgCost: number | undefined;
+    avgCost?: number;
     price: number | null;
     changePercent: number | null;
     gainPct: number | null;
@@ -117,7 +117,7 @@ export function HoldingMobilePrimary({
 }: {
   sortKey: HoldingsSortKey;
   shares: number;
-  avgCost: number | undefined;
+  avgCost?: number;
   price: number | null;
   changePercent: number | null;
   marketValue: number | null;
