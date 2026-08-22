@@ -8,7 +8,7 @@ import {
   Button,
   ComboBox,
   Drawer,
-  Input,
+  InputGroup,
   ListBox,
   ListBoxItem,
   SearchField,
@@ -104,19 +104,24 @@ function StockSearch({ inputRef }: { inputRef: React.RefObject<HTMLInputElement 
         }}
         selectedKey={null}
       >
+        {/* ComboBox.InputGroup is a flex slot, not field chrome. InputGroup is
+            the single field, so the icon and shortcut sit inside the border. */}
         <ComboBox.InputGroup>
-          <Search className="pointer-events-none size-4 shrink-0 text-muted" />
-          <Input
-            ref={inputRef}
-            aria-keyshortcuts="Meta+K Control+K"
-            autoCapitalize="off"
-            autoCorrect="off"
-            placeholder="Search stocks…"
-            spellCheck={false}
-          />
-          <kbd className="pointer-events-none mr-1 hidden shrink-0 rounded-md border border-border bg-foreground/[0.04] px-1.5 py-0.5 font-mono text-[10px] font-medium text-muted lg:inline">
-            {shortcut}
-          </kbd>
+          <InputGroup fullWidth>
+            <Search className="pointer-events-none ml-2.5 size-4 shrink-0 text-muted" />
+            <InputGroup.Input
+              ref={inputRef}
+              aria-keyshortcuts="Meta+K Control+K"
+              autoCapitalize="off"
+              autoCorrect="off"
+              className="min-w-0 pl-2"
+              placeholder="Search stocks…"
+              spellCheck={false}
+            />
+            <kbd className="pointer-events-none mr-1.5 shrink-0 rounded-md border border-border bg-foreground/[0.04] px-1.5 py-0.5 font-mono text-[10px] font-medium text-muted">
+              {shortcut}
+            </kbd>
+          </InputGroup>
         </ComboBox.InputGroup>
 
         <ComboBox.Popover>
