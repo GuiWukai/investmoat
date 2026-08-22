@@ -158,39 +158,35 @@ export function StrategySummary({
           <h3 className="font-bold text-foreground/85">Strategy Summary</h3>
         </div>
         <div className="flex min-w-0 max-w-full flex-wrap gap-1.5 sm:justify-end">
+          <GateChip>
+            {positions} of {maxPositions}
+            {slotsOpen > 0 ? ` · ${slotsOpen} open` : ""}
+          </GateChip>
           <GateChip>Composite ≥ {compositeFloor}</GateChip>
           <GateChip>Moat ≥ {moatFloor}</GateChip>
           <GateChip>Max {maxWeightPct}%</GateChip>
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.45fr)]">
-        <div className="grid grid-cols-2 divide-x divide-border border-b border-border lg:border-b-0 lg:border-r">
-          <KpiCell
-            label="Positions"
-            hint={slotsOpen === 0 ? `of ${maxPositions} cap` : `${slotsOpen} open of ${maxPositions}`}
-          >
-            <span className="text-foreground">{positions}</span>
-          </KpiCell>
-          <KpiCell label="Today" hint="Score-weighted 1-day">
-            {!pricesLoaded ? (
-              <Spinner size="sm" color="current" />
-            ) : today == null ? (
-              <span className="text-foreground/20">—</span>
-            ) : (
-              <span className={`inline-flex items-center gap-1.5 whitespace-nowrap ${pctTone(today)}`}>
-                {today >= 0 ? (
-                  <TrendingUp size={18} strokeWidth={2.4} className="shrink-0" />
-                ) : (
-                  <TrendingDown size={18} strokeWidth={2.4} className="shrink-0" />
-                )}
-                {signedPct(today, 2)}
-              </span>
-            )}
-          </KpiCell>
-        </div>
+      <div className="grid lg:grid-cols-[minmax(11rem,0.38fr)_minmax(0,1fr)]">
+        <KpiCell label="Today" hint="Score-weighted 1-day">
+          {!pricesLoaded ? (
+            <Spinner size="sm" color="current" />
+          ) : today == null ? (
+            <span className="text-foreground/20">—</span>
+          ) : (
+            <span className={`inline-flex items-center gap-1.5 whitespace-nowrap ${pctTone(today)}`}>
+              {today >= 0 ? (
+                <TrendingUp size={18} strokeWidth={2.4} className="shrink-0" />
+              ) : (
+                <TrendingDown size={18} strokeWidth={2.4} className="shrink-0" />
+              )}
+              {signedPct(today, 2)}
+            </span>
+          )}
+        </KpiCell>
 
-        <div className="flex flex-col justify-center px-5 py-5 sm:px-6 sm:py-6">
+        <div className="flex flex-col justify-center border-t border-border px-5 py-5 sm:px-6 sm:py-6 lg:border-t-0 lg:border-l">
           <div className="mb-3 flex items-baseline justify-between gap-3">
             <p className="section-label mb-0">Est. 1-year return</p>
             <p className="text-[11px] text-foreground/28">Score-weighted vs live price</p>
