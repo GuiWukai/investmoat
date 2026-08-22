@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { PieChart, ShieldCheck, ChevronRight, TrendingUp, TrendingDown, Eye } from "lucide-react";
+import { PieChart, ChevronRight, TrendingUp, TrendingDown, Eye } from "lucide-react";
 import { Card, Spinner } from "@heroui/react";
 import {
   allCoverageData,
@@ -12,6 +12,7 @@ import {
   MIN_MOAT_SCORE,
 } from "../stockData";
 import { computeValuationScore, parseScenarioPrice } from "@/lib/valuationScore";
+import { StrategySummary } from "./StrategySummary";
 
 // ─── Portfolio thresholds ─────────────────────────────────────────────────────
 // Composite ≥ 80 ("near Strong Buy") plus moat ≥ 70 so growth/valuation cannot
@@ -642,74 +643,16 @@ export default function PortfolioPage() {
           </div>
         </Card>
 
-        {/* Strategy Summary — full-width strip on desktop so it doesn't leave a dead column */}
-        <Card className="gap-4 p-4 md:p-5 lg:flex-row lg:items-center lg:gap-6">
-          <div className="flex items-center gap-2.5 lg:shrink-0">
-            <ShieldCheck size={16} className="text-emerald-400" />
-            <h3 className="font-bold text-foreground/85">Strategy Summary</h3>
-          </div>
-
-          {/* Gates + today */}
-          <div className="grid grid-cols-2 gap-x-3 gap-y-2.5 border-y border-foreground/[0.06] py-2.5 sm:grid-cols-4 sm:gap-0 lg:flex-1 lg:border-y-0 lg:border-x lg:px-5 lg:py-0">
-            <div className="min-w-0 sm:border-r sm:border-foreground/[0.06] sm:pr-3">
-              <p className="section-label mb-0.5">Positions</p>
-              <p className="text-lg font-black tabular-nums text-foreground">{portfolio.length}</p>
-            </div>
-            <div className="min-w-0 sm:border-r sm:border-foreground/[0.06] sm:px-3">
-              <p className="section-label mb-0.5">Composite</p>
-              <p className="text-lg font-black tabular-nums text-foreground">≥ {PORTFOLIO_THRESHOLD}</p>
-            </div>
-            <div className="min-w-0 sm:border-r sm:border-foreground/[0.06] sm:px-3">
-              <p className="section-label mb-0.5">Moat floor</p>
-              <p className="text-lg font-black tabular-nums text-foreground">≥ {MIN_MOAT_SCORE}</p>
-            </div>
-            <div className="min-w-0 sm:pl-3">
-              <p className="section-label mb-0.5">Today</p>
-              {!allPricesLoaded ? (
-                <Spinner size="sm" color="current" />
-              ) : weightedDailyChange == null ? (
-                <p className="text-lg font-black text-foreground/20">—</p>
-              ) : (
-                <div className={`flex items-center gap-1 ${weightedDailyChange >= 0 ? "text-emerald-400" : "text-rose-400"}`}>
-                  {weightedDailyChange >= 0 ? <TrendingUp size={13} /> : <TrendingDown size={13} />}
-                  <span className="text-lg font-black tabular-nums">
-                    {weightedDailyChange >= 0 ? "+" : ""}{weightedDailyChange.toFixed(2)}%
-                  </span>
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* Est. 1-year returns */}
-          <div className="lg:w-80 lg:shrink-0">
-            <div className="mb-2 flex items-baseline justify-between gap-2 lg:mb-1.5">
-              <p className="section-label">Est. 1-Year Return</p>
-              <p className="text-[10px] text-foreground/22">Weighted avg</p>
-            </div>
-            {!allPricesLoaded ? (
-              <Spinner size="sm" color="current" />
-            ) : (
-              <div className="grid grid-cols-3 gap-1.5">
-                {([
-                  { label: "Bear", value: weightedScenarioReturns.bear, border: "border-rose-500/15" },
-                  { label: "Base", value: weightedScenarioReturns.base, border: "border-blue-500/15" },
-                  { label: "Bull", value: weightedScenarioReturns.bull, border: "border-emerald-500/15" },
-                ] as const).map(({ label, value, border }) => (
-                  <div key={label} className={`rounded-lg border ${border} bg-foreground/[0.02] px-2 py-1.5 text-center`}>
-                    <p className="section-label mb-0.5">{label}</p>
-                    {value != null ? (
-                      <p className={`text-base font-black tabular-nums ${value >= 0 ? "text-emerald-400" : "text-rose-400"}`}>
-                        {value >= 0 ? "+" : ""}{value.toFixed(1)}%
-                      </p>
-                    ) : (
-                      <p className="text-base font-black text-foreground/20">—</p>
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        </Card>
+        <StrategySummary
+          positions={portfolio.length}
+          maxPositions={MAX_PORTFOLIO}
+          compositeFloor={PORTFOLIO_THRESHOLD}
+          moatFloor={MIN_MOAT_SCORE}
+          maxWeightPct={MAX_WEIGHT_PCT}
+          today={weightedDailyChange}
+          pricesLoaded={allPricesLoaded}
+          scenario={weightedScenarioReturns}
+        />
       </div>
 
       {/* ── Allocation Breakdown ──────────────────────────────────────────── */}
