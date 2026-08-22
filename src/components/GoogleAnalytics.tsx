@@ -33,10 +33,9 @@ function sendPageView(measurementId: string, pathname: string, search: string) {
 function GoogleAnalyticsPageViews({ measurementId }: { measurementId: string }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const search = searchParams.toString();
 
   useEffect(() => {
-    const search = searchParams.toString();
-
     if (typeof window.gtag === 'function') {
       sendPageView(measurementId, pathname, search);
       return;
@@ -54,7 +53,7 @@ function GoogleAnalyticsPageViews({ measurementId }: { measurementId: string }) 
       window.clearInterval(poll);
       window.clearTimeout(timeout);
     };
-  }, [measurementId, pathname, searchParams]);
+  }, [measurementId, pathname, search]);
 
   return null;
 }
