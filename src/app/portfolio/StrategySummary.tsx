@@ -32,7 +32,7 @@ function KpiCell({
   children: ReactNode;
 }) {
   return (
-    <div className="flex min-w-0 flex-col gap-1.5 px-5 py-5 sm:px-6 sm:py-6">
+    <div className="flex h-full min-w-0 flex-col justify-center gap-1.5 px-5 py-5 sm:px-6 sm:py-6">
       <div className="text-[32px] font-semibold leading-none tracking-tight tabular-nums sm:text-[36px]">
         {children}
       </div>
@@ -55,20 +55,17 @@ function ReturnRange({
 }) {
   const lo = Math.min(bear, base, bull);
   const hi = Math.max(bear, base, bull);
-  const pad = (hi - lo) * 0.08 || 1;
-  const min = lo - pad;
-  const max = hi + pad;
-  const span = max - min;
-  const pct = (v: number) => Math.max(0, Math.min(100, ((v - min) / span) * 100));
+  const span = hi - lo || 1;
+  const pct = (v: number) => Math.max(0, Math.min(100, ((v - lo) / span) * 100));
   const bearPct = pct(bear);
   const basePct = pct(base);
   const bullPct = pct(bull);
   const crossesZero = lo < 0 && hi > 0;
 
   return (
-    <div className="relative mt-5 h-2" aria-hidden>
+    <div className="relative mx-1 mt-4 h-3" aria-hidden>
       <div
-        className="absolute inset-x-0 top-1/2 h-1.5 -translate-y-1/2 rounded-full"
+        className="absolute inset-x-0 top-1/2 h-2 -translate-y-1/2 rounded-full"
         style={{
           background: `linear-gradient(to right,
             rgba(251,113,133,0.22) 0%,
@@ -167,7 +164,7 @@ export function StrategySummary({
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.25fr)]">
+      <div className="grid lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.45fr)]">
         <div className="grid grid-cols-2 divide-x divide-border border-b border-border lg:border-b-0 lg:border-r">
           <KpiCell
             label="Positions"
@@ -212,7 +209,7 @@ export function StrategySummary({
               </p>
               <p className="mt-2 text-[13px] text-foreground/40">Base case</p>
               <ReturnRange bear={bear!} base={base!} bull={bull!} />
-              <div className="mt-3 flex items-start justify-between gap-4">
+              <div className="mt-3 mx-1 flex items-start justify-between gap-4">
                 <div>
                   <p className={`text-sm font-semibold tabular-nums ${pctTone(bear!)}`}>
                     {signedPct(bear!, 1)}
