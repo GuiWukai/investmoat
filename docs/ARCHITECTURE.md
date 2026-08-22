@@ -21,7 +21,7 @@ InvestMoat is a single [Next.js 16](https://nextjs.org) (App Router) application
 ```
 src/
 ├── app/
-│   ├── layout.tsx              # Root layout, <html>, metadata, JSON-LD, NavBar + <main>
+│   ├── layout.tsx              # Root layout, <html>, metadata, JSON-LD, NavBar + <main>, GA4 tag
 │   ├── page.tsx                # Home — thesis, scoring framework, 10-moat model, FAQ
 │   ├── globals.css             # Design tokens, fonts, utility classes
 │   ├── providers.tsx           # HeroUIProvider
@@ -107,6 +107,7 @@ If a fetch fails, the UI falls back to the static valuation score and shows `—
 - The app is dark-mode only (`<html className="dark">`); `globals.css` defines the palette.
 - `next/og` (Satori) does **not** read CSS or web fonts, so OG images bundle their own TTF from `src/app/_fonts/` — see [DESIGN-SYSTEM.md](./DESIGN-SYSTEM.md).
 - SEO: per-page `metadata`, `WebSite`/`Organization`/`FAQPage` JSON-LD, sitemap, and robots.
+- Analytics: GA4 (`gtag.js`) loads from the root layout when `NEXT_PUBLIC_GA_MEASUREMENT_ID` is set. Client navigations fire `page_view` via `src/components/GoogleAnalytics.tsx`.
 
 ## Conventions
 

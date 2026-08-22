@@ -2,8 +2,10 @@ import React from 'react';
 import type { Metadata } from 'next';
 import './globals.css';
 import { Providers } from './providers';
+import { GoogleAnalytics } from '@/components/GoogleAnalytics';
 import { NavBar } from '@/components/NavBar';
 import { FAB_HAND_STORAGE_KEY } from '@/lib/fabHandedness';
+import { getGaMeasurementId } from '@/lib/googleAnalytics';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://investmoat.com'),
@@ -89,6 +91,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaMeasurementId = getGaMeasurementId();
+
   return (
     <html lang="en" className="dark">
       <head>
@@ -116,6 +120,9 @@ export default function RootLayout({
             </main>
           </div>
         </Providers>
+        {gaMeasurementId ? (
+          <GoogleAnalytics measurementId={gaMeasurementId} />
+        ) : null}
       </body>
     </html>
   );
