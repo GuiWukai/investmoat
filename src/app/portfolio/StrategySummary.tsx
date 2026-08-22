@@ -16,7 +16,7 @@ function pctTone(value: number) {
 
 function GateChip({ children }: { children: ReactNode }) {
   return (
-    <span className="rounded-full border border-border bg-foreground/[0.03] px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-foreground/50">
+    <span className="shrink-0 rounded-full border border-border bg-foreground/[0.03] px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-foreground/50">
       {children}
     </span>
   );
@@ -152,12 +152,12 @@ export function StrategySummary({
       aria-label={`Strategy summary. ${summary}.`}
       className="gap-0 overflow-hidden p-0"
     >
-      <div className="flex flex-col gap-3 border-b border-border px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+      <div className="flex min-w-0 flex-col gap-3 border-b border-border px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
         <div className="flex items-center gap-2.5 min-w-0">
           <ShieldCheck size={16} className="text-accent shrink-0" />
           <h3 className="font-bold text-foreground/85">Strategy Summary</h3>
         </div>
-        <div className="flex flex-wrap gap-1.5">
+        <div className="flex min-w-0 max-w-full flex-wrap gap-1.5 sm:justify-end">
           <GateChip>Composite ≥ {compositeFloor}</GateChip>
           <GateChip>Moat ≥ {moatFloor}</GateChip>
           <GateChip>Max {maxWeightPct}%</GateChip>
