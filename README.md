@@ -25,6 +25,17 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Live prices come from Yahoo Finance (`query1.finance.yahoo.com`); no API key is required. If the upstream is unavailable, pages degrade gracefully (price shows `—`, scores fall back to their static valuation).
 
+## Google Analytics
+
+Page views are recorded with [GA4](https://analytics.google.com) when a measurement ID is set. The tag is omitted when the variable is missing, so local `next dev` stays quiet unless you opt in.
+
+1. In [Google Analytics](https://analytics.google.com), create a GA4 property and a **Web** data stream for `investmoat.com`.
+2. Copy the **Measurement ID** (`G-XXXXXXXXXX`).
+3. Set `NEXT_PUBLIC_GA_MEASUREMENT_ID` in the Vercel project environment (Production, and Preview if you want hits from PR deploys).
+4. Redeploy. The root layout loads `gtag.js` and sends a `page_view` on the first load and on every App Router client navigation.
+
+To send test hits from your machine, copy [`.env.example`](./.env.example) to `.env.local`, uncomment the variable, and restart `npm run dev`. Real-time reports in GA4 should show `/` within a minute.
+
 ## Scripts
 
 | Script | What it does |

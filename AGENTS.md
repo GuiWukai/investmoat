@@ -8,6 +8,7 @@
 
 - `npm run dev` starts the dev server on port 3000.
 - Live stock prices are fetched from Yahoo Finance (`query1.finance.yahoo.com`); no API key is needed. If the external API is unavailable, pages degrade gracefully (price shows "—").
+- Google Analytics (GA4) is optional. Set `NEXT_PUBLIC_GA_MEASUREMENT_ID` (`G-XXXXXXXXXX`) in the environment to load `gtag.js` and record page views, including App Router client navigations. Leave it unset locally to avoid sending localhost hits.
 
 ### Lint / Build / Test
 
